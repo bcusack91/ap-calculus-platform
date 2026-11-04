@@ -1,14 +1,16 @@
 import type { LessonData } from './registry'
 
-export const dcCircuitsMcatPart3: LessonData = {
-  topicSlug: 'mcat-physics-electricity-dc-circuits-mcat',
+export const kirchhoffPowerMcatPart1: LessonData = {
+  topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat',
   sections: [
     {
       id: 'dc3-intro',
       type: 'text' as const,
-      content: `# Circuits Part 1: Current & Resistance
+      content: `# Circuits Part 2: Kirchhoff's Rules & Power
 
-**Part 3 of 4 — Kirchhoff's Rules & Reducing Networks**
+**Part 1 of 2 — Kirchhoff's Rules & Reducing Networks**
+
+**Where this fits.** The *Circuits Part 1: Current & Resistance* lesson gave you current, voltage, Ohm's law and the series and parallel rules. This lesson applies them to whole circuits: Kirchhoff's junction and loop rules, network reduction and dividers, then how a circuit responds to changes and how power sets bulb brightness and electrical safety. Next comes the *Circuits Part 3: EMF & Capacitance* lesson, which makes the battery real and adds the capacitor.
 
 ### Kirchhoff's Rules
 

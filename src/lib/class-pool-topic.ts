@@ -38,7 +38,14 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   'mcat-physics-electricity-mcat': 'mcat-area-physics-electricity',
   // Circuits Part 1 and Part 2 both play the bank's circuits subtopic.
   'mcat-physics-electricity-dc-circuits-mcat': 'mcat-physics-electricity-circuits-mcat',
+  'mcat-physics-electricity-kirchhoff-power-mcat': 'mcat-physics-electricity-circuits-mcat',
   'mcat-physics-electricity-emf-capacitors-mcat': 'mcat-physics-electricity-circuits-mcat',
+  'mcat-physics-electricity-rc-circuits-mcat': 'mcat-physics-electricity-circuits-mcat',
+  // Fluids in Motion and the first two waves lessons play the bank's fluids /
+  // waves subtopics (Fluids at Rest and Sound ARE those subtopics' slugs).
+  'mcat-physics-mechanics-fluid-dynamics-mcat': 'mcat-physics-mechanics-fluids-mcat',
+  'mcat-physics-waves-periodic-motion-mcat': 'mcat-physics-waves-sound-mcat',
+  'mcat-physics-waves-interference-mcat': 'mcat-physics-waves-sound-mcat',
   'mcat-biochemistry-foundations-mcat': 'mcat-area-biochemistry',
   'mcat-lab-methods-mcat': 'mcat-area-lab-data',
   'mcat-biostatistics-mcat': 'mcat-research-methods-biostats-mcat',

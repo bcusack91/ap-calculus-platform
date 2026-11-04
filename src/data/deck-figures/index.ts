@@ -133,6 +133,23 @@ export interface DeckFigurePlacement {
   blocks?: string[]
 }
 
+/**
+ * The physics lessons split again in Nov 2026 (one topic per 90-minute
+ * class): each topic gets the figures for the sections its lesson now holds.
+ */
+function figuresAt(figs: DeckFigurePlacement[], ats: readonly string[], keep: boolean): DeckFigurePlacement[] {
+  return figs.filter((f) => ats.includes(f.at) === keep)
+}
+const DC_ALL = [...mcatDcCircuitsFigures, ...mcatDcCircuitsExtraFigures]
+const KIRCHHOFF_POWER_AT = ['Kirchhoff', 'Worked Example — A Two-Step Network', 'Voltage Dividers and Current Dividers', 'Electrical Power', 'When a Bulb Burns Out or One Is Added', 'Electricity and the Body']
+const EC_ALL = [...mcatEmfCapacitorsFigures, ...mcatEmfCapacitorsExtraFigures]
+const RC_CIRCUITS_AT = ['Capacitor Networks', 'The Time Constant', 'Worked Example — Steady-State Voltage', 'The Cell Membrane Is an RC Circuit', 'Myelin and Conduction Speed', 'Defibrillators and Capacitor Discharge']
+const FL_ALL = [...mcatFluidsFigures, ...mcatFluidsExtraFigures]
+const FLUIDS_IN_MOTION_AT = ['Continuity: Mass In = Mass Out', 'Bernoulli: Energy Conservation', 'Viscosity: When Fluids Are Real', 'The Circulation as a Fluids Problem', 'Grading a Stenosis: Which Law Applies?']
+const WS_ALL = [...mcatWavesSoundFigures, ...mcatWavesSoundExtraFigures]
+const PERIODIC_AT = ['Describing Anything That Repeats', 'Simple Harmonic Motion', 'The Wave Equation and Who Controls What']
+const INTERFERENCE_AT = ['Path Difference Decides the Phase', 'Beats', 'Superposition and Standing Waves']
+
 export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-learning-memory-mcat': mcatLearningMemoryFigures,
   'mcat-psychology-behavior-sensation-perception-mcat': mcatSensationPerceptionFigures,
@@ -189,12 +206,17 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-mechanics-forces-newton-laws-mcat': mcatForcesFigures,
   'mcat-physics-mechanics-work-energy-power-mcat': mcatWorkEnergyFigures,
   'mcat-physics-mechanics-momentum-collisions-mcat': mcatMomentumFigures,
-  'mcat-physics-mechanics-fluids-mcat': [...mcatFluidsFigures, ...mcatFluidsExtraFigures],
-  'mcat-physics-waves-sound-mcat': [...mcatWavesSoundFigures, ...mcatWavesSoundExtraFigures],
+  'mcat-physics-mechanics-fluids-mcat': figuresAt(FL_ALL, FLUIDS_IN_MOTION_AT, false),
+  'mcat-physics-mechanics-fluid-dynamics-mcat': figuresAt(FL_ALL, FLUIDS_IN_MOTION_AT, true),
+  'mcat-physics-waves-periodic-motion-mcat': figuresAt(WS_ALL, PERIODIC_AT, true),
+  'mcat-physics-waves-interference-mcat': figuresAt(WS_ALL, INTERFERENCE_AT, true),
+  'mcat-physics-waves-sound-mcat': figuresAt(figuresAt(WS_ALL, PERIODIC_AT, false), INTERFERENCE_AT, false),
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
   'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
-  'mcat-physics-electricity-dc-circuits-mcat': [...mcatDcCircuitsFigures, ...mcatDcCircuitsExtraFigures],
-  'mcat-physics-electricity-emf-capacitors-mcat': [...mcatEmfCapacitorsFigures, ...mcatEmfCapacitorsExtraFigures],
+  'mcat-physics-electricity-dc-circuits-mcat': figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, false),
+  'mcat-physics-electricity-kirchhoff-power-mcat': figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, true),
+  'mcat-physics-electricity-emf-capacitors-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, false),
+  'mcat-physics-electricity-rc-circuits-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, true),
   'mcat-physics-electricity-magnetism-mcat': mcatMagnetismFigures,
   'mcat-physics-electricity-optics-mcat': mcatOpticsFigures,
   'mcat-physics-electricity-electrochemistry-mcat': mcatElectrochemistryFigures,

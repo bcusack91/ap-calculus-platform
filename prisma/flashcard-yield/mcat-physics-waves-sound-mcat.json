@@ -1,21 +1,9 @@
 [
  {
-  "front": "A mass on a spring has period $T = 2\\pi\\sqrt{m/k}$, so its period is independent of {{c1::amplitude and gravity}}.",
-  "fp": "eb8aa5d18981",
-  "yield": "ULTRA_HIGH",
-  "why": "Spring period equation and its amplitude independence; calculated every year"
- },
- {
   "front": "A plot of sound level in dB against the logarithm of $I/I_0$ is a straight line with slope {{c1::10}}.",
   "fp": "8ef9fc76088f",
   "yield": "LOW",
   "why": "dB semi-log slope is graph trivia; the definition card covers it"
- },
- {
-  "front": "A simple pendulum has period $T = 2\\pi\\sqrt{L/g}$, so its period is independent of {{c1::the bob's mass}}.",
-  "fp": "820ca6bdd585",
-  "yield": "ULTRA_HIGH",
-  "why": "Pendulum period equation and mass independence; tested every year"
  },
  {
   "front": "A siren and a listener move at the same velocity in the same direction; the observed frequency is {{c1::unchanged}}.",
@@ -30,46 +18,16 @@
   "why": "10x intensity = +10 dB; standard decibel reasoning"
  },
  {
-  "front": "A sound wave passes from air into soft tissue. Which wave properties change?",
-  "fp": "df02e9bd2c65",
-  "yield": "HIGH",
-  "why": "Frequency fixed across media; restated by the shorter constant-frequency card"
- },
- {
-  "front": "A standing wave forms when:",
-  "fp": "3c6fb8f6954d",
-  "yield": "HIGH",
-  "why": "Standing wave from counter-propagating waves; common discrete"
- },
- {
   "front": "Acoustic impedance is {{c1::$Z = \\rho v$}}, and reflection at a boundary is strongest when {{c1::the mismatch is large}}.",
   "fp": "b7061bdee9a4",
   "yield": "MEDIUM",
   "why": "Acoustic impedance Z=rho*v is prep-book ultrasound detail beyond the outline"
  },
  {
-  "front": "Contrast longitudinal and transverse waves.",
-  "fp": "4752a12a78e2",
-  "yield": "ULTRA_HIGH",
-  "why": "Longitudinal vs transverse waves; foundational wave definition"
- },
- {
   "front": "Describe the Doppler effect.",
   "fp": "e28e6c27077d",
   "yield": "ULTRA_HIGH",
   "why": "Doppler effect direction; on essentially every administration"
- },
- {
-  "front": "For a string fixed at both ends, the allowed wavelengths are {{c1::$\\lambda_n = 2L/n$}}.",
-  "fp": "b4cd8f1eefbf",
-  "yield": "ULTRA_HIGH",
-  "why": "String harmonics lambda_n=2L/n; standing-wave calculation every year"
- },
- {
-  "front": "How do the harmonics of an open pipe differ from a pipe closed at one end?",
-  "fp": "4475ee8a55c7",
-  "yield": "ULTRA_HIGH",
-  "why": "Open vs closed pipe harmonics; tested every year"
  },
  {
   "front": "How do you reason out the direction of a Doppler shift without the formula?",
@@ -90,28 +48,10 @@
   "why": "Doppler beam angle cos(theta) is off-outline ultrasound detail"
  },
  {
-  "front": "In simple harmonic motion, where are speed and acceleration each maximal?",
-  "fp": "4be6d0d8001f",
-  "yield": "HIGH",
-  "why": "SHM speed max at equilibrium, acceleration max at extremes; common discrete"
- },
- {
-  "front": "Leg swing during walking behaves like a pendulum, so a taller person's natural cadence is {{c1::slower}}.",
-  "fp": "3873bbb363fe",
-  "yield": "LOW",
-  "why": "Walking cadence pendulum analogy is trivia"
- },
- {
   "front": "Raising sound intensity by a factor of 1000 raises the level by {{c1::30 dB}}.",
   "fp": "7dea6b9aef69",
   "yield": "HIGH",
   "why": "Factor 1000 intensity = +30 dB; standard decibel arithmetic"
- },
- {
-  "front": "Relate wave speed, frequency, and wavelength.",
-  "fp": "ef5e90ee8d37",
-  "yield": "ULTRA_HIGH",
-  "why": "v=f*lambda; foundational wave equation"
  },
  {
   "front": "Sound intensity is proportional to {{c1::amplitude squared}}, so doubling the amplitude multiplies intensity by {{c1::4}}.",
@@ -126,52 +66,16 @@
   "why": "Decibel definition beta=10log(I/I0); calculated every year"
  },
  {
-  "front": "Sound passing through the interior of a liquid or gas travels only as a {{c1::longitudinal}} wave.",
-  "fp": "c981812c21cf",
-  "yield": "MEDIUM",
-  "why": "Sound only longitudinal in fluids; supporting detail for the wave-type card"
- },
- {
-  "front": "Sound travels fastest in:",
-  "fp": "378f4932db3f",
-  "yield": "HIGH",
-  "why": "Sound fastest in solids, none in vacuum; common discrete"
- },
- {
   "front": "The threshold of hearing is {{c1::$10^{-12}$ W/m$^2$}}, defined as {{c1::0 dB}}.",
   "fp": "7d80ca82c2ad",
   "yield": "HIGH",
   "why": "Threshold of hearing 1e-12 W/m^2 = 0 dB; reference value used in dB problems"
  },
  {
-  "front": "Two tuning forks at 440 Hz and 444 Hz sound together; the beat frequency is {{c1::4 Hz}}.",
-  "fp": "9d77c44c2e59",
-  "yield": "HIGH",
-  "why": "Beat frequency equals frequency difference; common discrete"
- },
- {
   "front": "Ultrasound imaging relies on:",
   "fp": "7631dd246951",
   "yield": "MEDIUM",
   "why": "Ultrasound relies on impedance reflection; passage context"
- },
- {
-  "front": "Wave speed on a string is $v = \\sqrt{T/\\mu}$, so tightening a string {{c1::raises}} its pitch.",
-  "fp": "15cb0ab64c9a",
-  "yield": "MEDIUM",
-  "why": "String wave speed sqrt(T/mu) and pitch; beyond outline sound-speed basics"
- },
- {
-  "front": "What is resonance, and where does it matter physiologically?",
-  "fp": "c65fb093c8a8",
-  "yield": "MEDIUM",
-  "why": "Resonance definition with physiological examples; secondary"
- },
- {
-  "front": "When a wave enters a new medium, what stays constant?",
-  "fp": "27e85bbd867f",
-  "yield": "ULTRA_HIGH",
-  "why": "Frequency constant across media; foundational wave fact"
  },
  {
   "front": "Why do higher-frequency ultrasound probes give better resolution but shallower penetration?",
@@ -184,90 +88,6 @@
   "fp": "43f5766e1201",
   "yield": "LOW",
   "why": "Coupling gel impedance matching is ultrasound trivia"
- },
- {
-  "front": "A resting heart beats $90$ times per minute. What are the frequency and the period of one cardiac cycle?",
-  "fp": "0d1ac3deb8b2",
-  "yield": "HIGH",
-  "why": "Period-frequency conversion with a per-minute unit trap is common in physiology passages."
- },
- {
-  "front": "Angular frequency is {{c1::$\\omega = 2\\pi f$}}, measured in rad/s.",
-  "fp": "77b3172156aa",
-  "yield": "MEDIUM",
-  "why": "SHM notation shows up mainly as passage context."
- },
- {
-  "front": "Two identical pendulums swing side by side; whenever one is at its far-left turning point, the other is at its far-right. Their phase difference is {{c1::$180^\\circ$ ($\\pi$ rad)}}.",
-  "fp": "dfa9bfc80dfc",
-  "yield": "HIGH",
-  "why": "Phase difference is the basis of every interference question."
- },
- {
-  "front": "A mass oscillates on a spring. What happens to its period if the mass is quadrupled? If the spring is swapped for one four times stiffer?",
-  "fp": "2df7e8131ec8",
-  "yield": "MEDIUM",
-  "why": "SHM period formulas are secondary on the MCAT and appear mostly in passages."
- },
- {
-  "front": "The speed of sound in a medium is {{c1::$v = \\sqrt{B/\\rho}$}}, where $B$ is the bulk modulus (stiffness against compression) and $\\rho$ the density.",
-  "fp": "2a32dea7f7bc",
-  "yield": "HIGH",
-  "why": "The 'denser means faster' misconception is commonly tested."
- },
- {
-  "front": "Two pulses meet on a rope: an upright pulse $3$ cm high and an inverted pulse $1$ cm deep. What is the displacement when they exactly overlap, and what happens afterward?",
-  "fp": "cf793111f0ab",
-  "yield": "HIGH",
-  "why": "Signed superposition underlies all interference reasoning."
- },
- {
-  "front": "Two in-phase sources interfere constructively where the path difference is {{c1::a whole number of wavelengths}} and destructively where it is {{c2::an odd number of half-wavelengths}}.",
-  "fp": "2520037d0408",
-  "yield": "HIGH",
-  "why": "Path-difference interference is commonly tested for both sound and light."
- },
- {
-  "front": "A tuner hears $4$ beats per second between a $440$ Hz tuning fork and a string. Tightening the string makes the beats slower. What was the string's frequency?",
-  "fp": "6f98b550386a",
-  "yield": "HIGH",
-  "why": "Beat-direction reasoning in tuning is a classic MCAT sound question."
- },
- {
-  "front": "In a standing wave, adjacent nodes are {{c1::$\\lambda/2$}} apart, and a node and the next antinode are {{c2::$\\lambda/4$}} apart.",
-  "fp": "3adf909b38f9",
-  "yield": "HIGH",
-  "why": "Node spacing drives every standing-wave length calculation."
- },
- {
-  "front": "The first overtone is which harmonic for a string or open pipe, and which for a pipe closed at one end?",
-  "fp": "2eb57291d168",
-  "yield": "HIGH",
-  "why": "Overtone-versus-harmonic numbering is a frequent trap in pipe questions."
- },
- {
-  "front": "Described by pressure, an open end of a pipe is a pressure {{c1::node}} and a closed end is a pressure {{c2::antinode}}.",
-  "fp": "d08d16dc9fd9",
-  "yield": "MEDIUM",
-  "why": "Pressure descriptions of pipes appear in passages; the formulas do not change."
- },
- {
-  "front": "A tube's two consecutive resonances are $150$ Hz and $250$ Hz. Is it open or closed at one end, and what is its fundamental?",
-  "fp": "01065d958fc9",
-  "yield": "ULTRA_HIGH",
-  "why": "Closed-pipe odd harmonics are tested on nearly every MCAT."
- },
- {
-  "front": "The ear canal acts as a pipe {{c1::closed at one end}} (sealed by the eardrum), so a $2.5$ cm canal resonates near $3400$ Hz.",
-  "fp": "d3eeaae5f6af",
-  "yield": "HIGH",
-  "why": "A favorite physiology application of closed-pipe resonance."
- },
- {
-  "front": "Heavier damping makes a driven system's resonance {{c1::weaker and less sharp}}.",
-  "fp": "522dd56f84f4",
-  "yield": "MEDIUM",
-  "why": "Damping appears qualitatively in resonance passages."
  },
  {
   "front": "A vibrating surface pushing outward creates a {{c1::compression}} in the air; pulling back leaves a {{c2::rarefaction}}.",

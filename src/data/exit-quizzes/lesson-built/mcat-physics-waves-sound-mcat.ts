@@ -1,385 +1,13 @@
 /**
- * Exit-quiz pool for the MCAT Waves & Sound lesson, written from the lesson
+ * Exit-quiz pool for the MCAT Sound, Doppler & Ultrasound lesson, written from the lesson
  * itself and tagged by exam-yield tier (see ../lesson-built.ts). Default items
  * are answerable from the lesson's default view; LOW items test only its
- * low-yield boxes (P- vs S-waves, the temperature coefficient of sound speed,
- * the 85 dB exposure guideline, tissue attenuation per MHz, the reflection
- * fraction, colour Doppler colours, the Mach-cone angle, the cracking whip).
+ * low-yield boxes. Split out of the two-session lessons in Nov 2026 (one
+ * topic per 90-minute class); `part` is this lesson's own part number.
  */
 import { makeLessonExitQuiz, type LessonExitItem } from '../lesson-built'
 
 export const EXIT_POOL: LessonExitItem[] = [
-  // ───────────────────────── Part 1 — default ─────────────────────────
-  {
-    question: `A block on a horizontal spring oscillates with a period of $0.80\\;\\text{s}$. The block is replaced with one four times as massive, and it is released from twice the original displacement. What is the new period?`,
-    options: [`$3.2\\;\\text{s}$`, `$1.6\\;\\text{s}$`, `$0.40\\;\\text{s}$`, `$0.80\\;\\text{s}$`],
-    correctAnswer: 1,
-    explanation: `$T = 2\\pi\\sqrt{m/k}$, so four times the mass gives $\\sqrt{4} = 2$ times the period, and amplitude never changes an SHM period: $1.6\\;\\text{s}$. $3.2\\;\\text{s}$ wrongly doubles the period a second time for the larger amplitude. $0.80\\;\\text{s}$ borrows the pendulum rule that mass does not matter, and $0.40\\;\\text{s}$ puts the mass in the denominator.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `A pendulum clock keeps correct time on Earth. It is carried to a planet where the gravitational acceleration is one-quarter of Earth's, with its length and bob unchanged. How does its period change?`,
-    options: [`It is halved`, `It quadruples`, `It is quartered`, `It doubles`],
-    correctAnswer: 3,
-    explanation: `$T = 2\\pi\\sqrt{L/g}$: with $g$ one-quarter as large, $L/g$ is four times larger, so the period grows by $\\sqrt{4} = 2$. Halving puts $g$ in the numerator, as if weaker gravity made the bob swing faster. Quadrupling forgets the square root, and quartering both forgets it and inverts the dependence.`,
-    difficulty: 'easy',
-    yield: 'MEDIUM',
-    part: 1,
-  },
-  {
-    question: `In a lab, a student doubles the amplitude of a mass-spring oscillator. Separately, she doubles the mass of a simple pendulum's bob, keeping its swings small. Which period or periods change?`,
-    options: [`Only the spring's`, `Only the pendulum's`, `Neither period`, `Both of the periods`],
-    correctAnswer: 2,
-    explanation: `Amplitude never changes an SHM period: a wider oscillation covers more distance but moves faster. A pendulum's period, $2\\pi\\sqrt{L/g}$, contains no mass, because a heavier bob feels a proportionally larger pull of gravity. Changing only the spring's period treats amplitude as if it mattered, changing only the pendulum's applies the spring's mass dependence to the wrong system, and "both" makes both errors.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `A mass on a spring oscillates without friction. Where is the restoring force on the mass greatest, and what is the mass's kinetic energy at that point?`,
-    options: [
-      `At equilibrium; kinetic energy is maximum`,
-      `At maximum displacement; kinetic energy is zero`,
-      `At maximum displacement; kinetic energy is maximum`,
-      `At equilibrium; kinetic energy is zero`,
-    ],
-    correctAnswer: 1,
-    explanation: `Hooke's law, $F = -kx$, makes the force largest where the displacement is largest, at the turning points, where the mass is momentarily at rest and all the energy is potential. At equilibrium $x = 0$, so the force is zero and the kinetic energy is greatest. The mixed pairings attach maximum kinetic energy to the turning points or zero kinetic energy to equilibrium, misplacing where the speed peaks.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `A passage models the bobbing of a buoy as $y = A\\cos\\omega t$ with $\\omega = \\pi\\;\\text{rad/s}$. What is the period of the motion?`,
-    options: [`$0.50\\;\\text{s}$`, `$0.32\\;\\text{s}$`, `$1.0\\;\\text{s}$`, `$2.0\\;\\text{s}$`],
-    correctAnswer: 3,
-    explanation: `Angular frequency is $\\omega = 2\\pi f$, so $f = \\pi/2\\pi = 0.50\\;\\text{Hz}$ and $T = 1/f = 2.0\\;\\text{s}$. $0.50\\;\\text{s}$ reports the frequency as if it were the period, and $0.32\\;\\text{s}$ takes $T = 1/\\omega$, skipping the $2\\pi$. $1.0\\;\\text{s}$ is only half a cycle, the time to travel from one extreme to the other.`,
-    difficulty: 'medium',
-    yield: 'MEDIUM',
-    part: 1,
-  },
-  {
-    question: `A speaker cone moves between $0.6\\;\\text{mm}$ in front of and $0.6\\;\\text{mm}$ behind its resting position, completing 40 full cycles every second. What are its amplitude and period?`,
-    options: [
-      `$1.2\\;\\text{mm}$; $25\\;\\text{ms}$`,
-      `$0.6\\;\\text{mm}$; $40\\;\\text{ms}$`,
-      `$0.6\\;\\text{mm}$; $25\\;\\text{ms}$`,
-      `$1.2\\;\\text{mm}$; $40\\;\\text{ms}$`,
-    ],
-    correctAnswer: 2,
-    explanation: `Amplitude is measured from the rest position to one extreme, $0.6\\;\\text{mm}$; the $1.2\\;\\text{mm}$ span is the peak-to-peak distance, $2A$. The period is the reciprocal of the frequency: $T = 1/40\\;\\text{s} = 0.025\\;\\text{s} = 25\\;\\text{ms}$. A period of $40\\;\\text{ms}$ simply relabels the frequency's number as a time.`,
-    difficulty: 'easy',
-    yield: 'MEDIUM',
-    part: 1,
-  },
-  {
-    question: `Classify (i) a pulse sent along a stretched rope and (ii) an ultrasound pulse travelling through soft tissue.`,
-    options: [
-      `(i) longitudinal; (ii) transverse`,
-      `(i) transverse; (ii) longitudinal`,
-      `Both are transverse waves`,
-      `Both are longitudinal waves`,
-    ],
-    correctAnswer: 1,
-    explanation: `The rope moves up and down, perpendicular to the pulse's travel, so the pulse is transverse. Sound in water and tissue is longitudinal, travelling as compressions and rarefactions, because a fluid has no restoring force against sideways shear. Calling both transverse ignores how sound propagates in fluids, calling both longitudinal ignores the rope's sideways motion, and the swapped pairing reverses the definitions.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `Why can sound travel through air only as a longitudinal wave?`,
-    options: [
-      `Air offers no restoring force against sideways (shear) displacement`,
-      `Air molecules are too far apart to pass a sideways push along`,
-      `Air is too low in density to support crests and troughs`,
-      `Transverse waves can travel only through a vacuum, like light`,
-    ],
-    correctAnswer: 0,
-    explanation: `A transverse wave needs the medium to pull a sideways-displaced bit back, and a fluid has no such restoring force; it pushes back only when squeezed or stretched along the travel direction. Molecular spacing is not the issue, since air passes compressions along perfectly well, and low density does not forbid crests. Transverse waves are not limited to a vacuum either: waves on a string are transverse and travel through matter.`,
-    difficulty: 'medium',
-    yield: 'MEDIUM',
-    part: 1,
-  },
-  {
-    question: `A $1.0\\;\\text{kHz}$ tone travels from air into water. Compared with the tone in air, its frequency, speed and wavelength in water are:`,
-    options: [
-      `Frequency increased; speed higher; wavelength unchanged`,
-      `Frequency unchanged; speed higher; wavelength shorter`,
-      `Frequency unchanged; speed reduced; wavelength shorter`,
-      `Frequency unchanged; speed higher; wavelength longer`,
-    ],
-    correctAnswer: 3,
-    explanation: `Every crest arriving at the boundary launches one crest beyond it, so the frequency is unchanged. Water carries sound about four times faster than air, so by $\\lambda = v/f$ the wavelength grows in the same proportion. A higher frequency lets the boundary change $f$, a shorter wavelength at a higher speed breaks $v = f\\lambda$, and a lower speed in water reverses the solids > liquids > gases ordering.`,
-    difficulty: 'easy',
-    yield: 'ULTRA_HIGH',
-    part: 1,
-  },
-  {
-    question: `A vibrator drives a string at a fixed $120\\;\\text{Hz}$. The string is replaced by one with four times the linear mass density, under the same tension. How do the wave speed and wavelength change?`,
-    options: [
-      `Speed halves; wavelength doubles`,
-      `Speed quarters; wavelength quarters`,
-      `Speed unchanged; wavelength halves`,
-      `Speed halves; wavelength halves`,
-    ],
-    correctAnswer: 3,
-    explanation: `$v = \\sqrt{F_T/\\mu}$, so four times $\\mu$ gives half the speed. The vibrator still sets $120\\;\\text{Hz}$, so $\\lambda = v/f$ halves too. Quartering both forgets the square root, keeping the speed fixed ignores that the medium sets $v$, and a doubled wavelength with a halved speed would require the frequency to quarter, which the vibrator does not allow.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `Rank the speed of sound in these media from fastest to slowest: soft tissue, air at 0 °C, bone, air at 30 °C.`,
-    options: [
-      `Soft tissue > bone > air at 30 °C > air at 0 °C`,
-      `Bone > soft tissue > air at 0 °C > air at 30 °C`,
-      `Bone > soft tissue > air at 30 °C > air at 0 °C`,
-      `Soft tissue > bone > air at 0 °C > air at 30 °C`,
-    ],
-    correctAnswer: 2,
-    explanation: `Sound is fastest in solids, slower in liquids and soft tissue (bone roughly 3000 to 4000 m/s, tissue about 1540 m/s), because stiffness outweighs density. Air is slowest, and in a gas warmer means faster, so 30 °C air beats 0 °C air. Putting tissue ahead of bone treats bone's greater density as slowing it, and putting cold air ahead of warm reverses the temperature effect.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `A sound wave's amplitude is halved while its frequency stays the same. By what factor does the power it carries change?`,
-    options: [`It falls to one-half`, `It stays the same`, `It falls to one-quarter`, `It falls to one-eighth`],
-    correctAnswer: 2,
-    explanation: `Wave energy grows with the square of amplitude, so half the amplitude carries $(1/2)^2 = 1/4$ of the power. One-half treats power as proportional to amplitude, and one-eighth cubes the ratio. "Unchanged" assumes a wave's energy depends only on its frequency.`,
-    difficulty: 'medium',
-    yield: 'MEDIUM',
-    part: 1,
-  },
-  {
-    question: `A steady tone travels from a speaker across a quiet room. Over many cycles, what does one particular air molecule in its path do?`,
-    options: [
-      `Oscillates back and forth along the travel direction about one spot`,
-      `Travels across the room with the wave at about 343 m/s`,
-      `Oscillates up and down, perpendicular to the travel direction`,
-      `Drifts slowly away from the speaker as each compression passes`,
-    ],
-    correctAnswer: 0,
-    explanation: `A wave carries energy, not the medium: each air molecule oscillates about its own resting position while the pattern moves on. Sound is longitudinal, so that oscillation is parallel to the travel direction. Riding along at $343\\;\\text{m/s}$ or drifting away confuses the wave's motion with the medium's, and perpendicular oscillation describes a transverse wave.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 1,
-  },
-  {
-    question: `A mass on a spring is moved to a spring nine times as stiff. What happens to its oscillation frequency?`,
-    options: [`It triples`, `It falls to one-third`, `It rises ninefold`, `It falls to one-ninth`],
-    correctAnswer: 0,
-    explanation: `$T = 2\\pi\\sqrt{m/k}$, so nine times the stiffness gives one-third the period, and frequency is the reciprocal of period: it triples. One-third is the period's change mislabelled as the frequency's. The ninefold options forget the square root, and one-ninth also inverts the direction.`,
-    difficulty: 'medium',
-    yield: 'MEDIUM',
-    part: 1,
-  },
-
-  // ───────────────────────── Part 1 — LOW ─────────────────────────
-  {
-    question: `Seismometers on the far side of Earth from an earthquake record one type of body wave but not the other, because Earth's outer core is liquid. Which wave is blocked by the core, and why?`,
-    options: [
-      `S-waves, because they are transverse`,
-      `P-waves, because they are longitudinal`,
-      `S-waves, because they are longitudinal`,
-      `P-waves, because they are transverse`,
-    ],
-    correctAnswer: 0,
-    explanation: `A liquid has no restoring force against shear, so it cannot carry transverse waves: the transverse S-waves stop at the outer core, while the longitudinal P-waves pass through. P-waves are longitudinal and travel through fluids, so they are not the blocked waves. Labelling S-waves longitudinal or P-waves transverse reverses the two wave types.`,
-    difficulty: 'medium',
-    yield: 'LOW',
-    part: 1,
-  },
-  {
-    question: `Using the approximate temperature dependence of the speed of sound in air, by how much does it increase when the air warms from 10 °C to 30 °C?`,
-    options: [`About $6\\;\\text{m/s}$`, `About $12\\;\\text{m/s}$`, `About $20\\;\\text{m/s}$`, `About $60\\;\\text{m/s}$`],
-    correctAnswer: 1,
-    explanation: `Sound speed in air rises by about $0.6\\;\\text{m/s}$ per degree Celsius, so a 20-degree rise adds about $0.6 \\times 20 = 12\\;\\text{m/s}$. $6\\;\\text{m/s}$ counts only a 10-degree change, and $20\\;\\text{m/s}$ assumes $1\\;\\text{m/s}$ per degree. $60\\;\\text{m/s}$ would need $3\\;\\text{m/s}$ per degree, five times the real rate.`,
-    difficulty: 'medium',
-    yield: 'LOW',
-    part: 1,
-  },
-
-  // ───────────────────────── Part 2 — default ─────────────────────────
-  {
-    question: `Two waves on the same string have amplitudes of $5\\;\\text{mm}$ and $3\\;\\text{mm}$ and the same frequency. As their phase difference varies, what are the largest and smallest amplitudes their superposition can have?`,
-    options: [
-      `$8\\;\\text{mm}$ and $0\\;\\text{mm}$`,
-      `$5\\;\\text{mm}$ and $3\\;\\text{mm}$`,
-      `$8\\;\\text{mm}$ and $2\\;\\text{mm}$`,
-      `$4\\;\\text{mm}$ and $1\\;\\text{mm}$`,
-    ],
-    correctAnswer: 2,
-    explanation: `In phase, the amplitudes add to $5 + 3 = 8\\;\\text{mm}$; $180^\\circ$ out of phase, they subtract to $|5 - 3| = 2\\;\\text{mm}$. Complete cancellation to zero needs equal amplitudes. Leaving the amplitudes at $5$ and $3\\;\\text{mm}$ ignores superposition, and $4$ and $1\\;\\text{mm}$ averages the amplitudes and halves their difference instead of adding and subtracting them.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `Two speakers produce a steady tone, and a microphone finds a spot between them where the sound almost vanishes. What has happened to the sound energy that would have reached that spot?`,
-    options: [
-      `It is destroyed where crest and trough meet`,
-      `It is converted to heat in the air at that spot`,
-      `It is stored in the air until the waves separate`,
-      `It is redistributed to spots where the waves reinforce`,
-    ],
-    correctAnswer: 3,
-    explanation: `Destructive interference does not destroy energy; it redistributes it, so the quiet spots are balanced by loud spots elsewhere, where the same waves interfere constructively. Energy cannot simply vanish where crest meets trough. Cancellation is not absorption into heat, and the waves never pause to store energy; they pass through each other and continue unchanged.`,
-    difficulty: 'easy',
-    yield: 'MEDIUM',
-    part: 2,
-  },
-  {
-    question: `Two speakers driven in phase emit a $170\\;\\text{Hz}$ tone ($v = 340\\;\\text{m/s}$). A listener stands $5.0\\;\\text{m}$ from one speaker and $6.0\\;\\text{m}$ from the other. What does she hear, and why?`,
-    options: [
-      `A loud spot; the path difference is one wavelength`,
-      `A quiet spot; the path difference is half a wavelength`,
-      `A loud spot; the path difference is a whole metre`,
-      `A quiet spot; the path difference is one wavelength`,
-    ],
-    correctAnswer: 1,
-    explanation: `$\\lambda = v/f = 340/170 = 2.0\\;\\text{m}$, so the $1.0\\;\\text{m}$ path difference is half a wavelength and the waves arrive $180^\\circ$ out of phase: destructive. Treating $1.0\\;\\text{m}$ as one wavelength skips the conversion, and a whole number of metres means nothing until it is expressed in wavelengths. A full-wavelength difference would be constructive, not quiet.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `Two in-phase speakers send a tone to a microphone whose distances to them differ by $0.50\\;\\text{m}$ ($v = 340\\;\\text{m/s}$). What is the LOWEST frequency that produces destructive interference at the microphone?`,
-    options: [`$170\\;\\text{Hz}$`, `$680\\;\\text{Hz}$`, `$1020\\;\\text{Hz}$`, `$340\\;\\text{Hz}$`],
-    correctAnswer: 3,
-    explanation: `Destructive interference needs an odd number of half-wavelengths, and the lowest frequency means the longest wavelength: $0.50\\;\\text{m} = \\lambda/2$, so $\\lambda = 1.0\\;\\text{m}$ and $f = 340\\;\\text{Hz}$. At $680\\;\\text{Hz}$ the difference is one full wavelength, which is constructive. $1020\\;\\text{Hz}$ makes it $\\tfrac{3}{2}\\lambda$, also destructive but not the lowest, and at $170\\;\\text{Hz}$ it is only a quarter wavelength.`,
-    difficulty: 'hard',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `Tuning forks of $256\\;\\text{Hz}$ and $262\\;\\text{Hz}$ are sounded together. What beat frequency is heard, and at about what pitch?`,
-    options: [
-      `$3$ beats per second, at about $259\\;\\text{Hz}$`,
-      `$6$ beats per second, at about $518\\;\\text{Hz}$`,
-      `$6$ beats per second, at about $259\\;\\text{Hz}$`,
-      `$3$ beats per second, at about $518\\;\\text{Hz}$`,
-    ],
-    correctAnswer: 2,
-    explanation: `The beat frequency is the difference, $262 - 256 = 6$ per second, and the tone heard is the average of the two, about $259\\;\\text{Hz}$, swelling and fading in loudness. Three beats per second halves the difference, and $518\\;\\text{Hz}$ adds the two frequencies instead of averaging them.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `A string starts $3\\;\\text{Hz}$ flat of a $440\\;\\text{Hz}$ tuning fork. A tuner tightens it: the beats slow, vanish, and then return at $2$ beats per second as she keeps tightening. What is the string's frequency now?`,
-    options: [`$438\\;\\text{Hz}$`, `$442\\;\\text{Hz}$`, `$437\\;\\text{Hz}$`, `$443\\;\\text{Hz}$`],
-    correctAnswer: 1,
-    explanation: `Tightening raises the string's frequency, from $437\\;\\text{Hz}$ up through $440\\;\\text{Hz}$ (where the beats vanish) and past it, so the returning beats mean the string is now sharp: $440 + 2 = 442\\;\\text{Hz}$. $438\\;\\text{Hz}$ puts it on the flat side, which would require loosening. $437\\;\\text{Hz}$ is the starting value, and $443\\;\\text{Hz}$ reuses the old beat frequency.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `A standing wave on a string vibrating at $150\\;\\text{Hz}$ has adjacent nodes $20\\;\\text{cm}$ apart. What is the speed of waves on the string?`,
-    options: [`$30\\;\\text{m/s}$`, `$120\\;\\text{m/s}$`, `$60\\;\\text{m/s}$`, `$375\\;\\text{m/s}$`],
-    correctAnswer: 2,
-    explanation: `Adjacent nodes are half a wavelength apart, so $\\lambda = 0.40\\;\\text{m}$ and $v = f\\lambda = 150 \\times 0.40 = 60\\;\\text{m/s}$. $30\\;\\text{m/s}$ takes the node spacing as the whole wavelength, and $120\\;\\text{m/s}$ uses four times the spacing, the node-to-antinode rule applied backward. $375\\;\\text{m/s}$ divides the frequency by the wavelength.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `A guitar string $0.80\\;\\text{m}$ long, fixed at both ends, has a fundamental frequency of $125\\;\\text{Hz}$. What is the speed of waves on the string?`,
-    options: [`$100\\;\\text{m/s}$`, `$200\\;\\text{m/s}$`, `$400\\;\\text{m/s}$`, `$156\\;\\text{m/s}$`],
-    correctAnswer: 1,
-    explanation: `Both fixed ends are nodes, so the fundamental fits half a wavelength: $\\lambda_1 = 2L = 1.6\\;\\text{m}$, and $v = f\\lambda = 125 \\times 1.6 = 200\\;\\text{m/s}$. $100\\;\\text{m/s}$ takes the wavelength as $L$, and $400\\;\\text{m/s}$ uses the closed-pipe $4L$. $156\\;\\text{m/s}$ divides the frequency by the length.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `A pipe open at both ends has a fundamental of $400\\;\\text{Hz}$. What is the frequency of its first overtone, and of the first overtone of a pipe of the same length closed at one end?`,
-    options: [
-      `Open $800\\;\\text{Hz}$; closed $600\\;\\text{Hz}$`,
-      `Open $800\\;\\text{Hz}$; closed $400\\;\\text{Hz}$`,
-      `Open $1200\\;\\text{Hz}$; closed $600\\;\\text{Hz}$`,
-      `Open $1200\\;\\text{Hz}$; closed $400\\;\\text{Hz}$`,
-    ],
-    correctAnswer: 0,
-    explanation: `The first overtone is the next resonance above the fundamental. For the open pipe that is the 2nd harmonic, $800\\;\\text{Hz}$. Capping one end halves the fundamental to $200\\;\\text{Hz}$ and removes the even harmonics, so the closed pipe's first overtone is its 3rd harmonic, $600\\;\\text{Hz}$. $1200\\;\\text{Hz}$ wrongly skips the open pipe's 2nd harmonic, and $400\\;\\text{Hz}$ gives the closed pipe an even harmonic it does not have.`,
-    difficulty: 'hard',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `A pipe closed at one end has a fundamental frequency of $85\\;\\text{Hz}$ ($v = 340\\;\\text{m/s}$). How long is the pipe?`,
-    options: [`$4.0\\;\\text{m}$`, `$2.0\\;\\text{m}$`, `$0.50\\;\\text{m}$`, `$1.0\\;\\text{m}$`],
-    correctAnswer: 3,
-    explanation: `A closed pipe holds a quarter-wavelength at its fundamental: $\\lambda_1 = v/f = 340/85 = 4.0\\;\\text{m}$, so $L = \\lambda_1/4 = 1.0\\;\\text{m}$. $4.0\\;\\text{m}$ is the wavelength itself, not the length. $2.0\\;\\text{m}$ uses the open-pipe relation $L = \\lambda/2$, and $0.50\\;\\text{m}$ divides the wavelength by 8.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `A pipe closed at one end has a fundamental of $110\\;\\text{Hz}$. Which of these frequencies is NOT one of its resonances?`,
-    options: [`$330\\;\\text{Hz}$`, `$550\\;\\text{Hz}$`, `$220\\;\\text{Hz}$`, `$770\\;\\text{Hz}$`],
-    correctAnswer: 2,
-    explanation: `A closed pipe resonates only at odd multiples of its fundamental ($110$, $330$, $550$, $770\\;\\text{Hz}$, and so on), because node to antinode fits only an odd number of quarter-wavelengths. $220\\;\\text{Hz}$ would be the 2nd harmonic, which a closed pipe cannot hold. The other three are its 3rd, 5th and 7th harmonics.`,
-    difficulty: 'easy',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `In a hospital lab, a loose metal panel rattles loudly only when a centrifuge spins at one particular speed, and stays quiet at higher or lower speeds. Which explanation fits?`,
-    options: [
-      `At that speed the centrifuge's push is the strongest`,
-      `At that speed its driving frequency matches the panel's natural frequency`,
-      `At that speed its sound travels fastest through the metal panel`,
-      `At that speed the panel's natural frequency shifts to match it`,
-    ],
-    correctAnswer: 1,
-    explanation: `This is resonance: when the driving frequency equals one of the panel's natural frequencies, each push arrives in phase with its motion and the amplitude builds up. A stronger push would rattle the panel at higher speeds too, not at one speed only. The medium, not the source, sets the speed of sound, and a natural frequency belongs to the object itself, so it does not shift to follow the driver.`,
-    difficulty: 'easy',
-    yield: 'MEDIUM',
-    part: 2,
-  },
-  {
-    question: `A cello string $0.70\\;\\text{m}$ long vibrates in its fundamental at $170\\;\\text{Hz}$. What is the wavelength of the sound it produces in the air ($v = 340\\;\\text{m/s}$)?`,
-    options: [`$2.0\\;\\text{m}$`, `$1.4\\;\\text{m}$`, `$0.70\\;\\text{m}$`, `$1.0\\;\\text{m}$`],
-    correctAnswer: 0,
-    explanation: `The sound in the air has the string's frequency, $170\\;\\text{Hz}$, but travels at the air's speed: $\\lambda = 340/170 = 2.0\\;\\text{m}$. $1.4\\;\\text{m}$ is the wavelength on the string ($2L$), which does not carry over into a new medium. $0.70\\;\\text{m}$ is the string's length, and $1.0\\;\\text{m}$ uses $v/2f$ as if the air were an open pipe.`,
-    difficulty: 'medium',
-    yield: 'HIGH',
-    part: 2,
-  },
-  {
-    question: `At the closed end of an organ pipe that is closed at one end, the air's displacement and pressure variation are:`,
-    options: [
-      `Displacement antinode; pressure node`,
-      `Displacement node; pressure antinode`,
-      `Displacement node; pressure node`,
-      `Displacement antinode; pressure antinode`,
-    ],
-    correctAnswer: 1,
-    explanation: `Air cannot move into a wall, so the closed end is a displacement node, and because the displacement and pressure descriptions are swapped, it is a pressure antinode. A displacement antinode with a pressure node describes the open end, which stays at room pressure. The matching-node and matching-antinode pairings forget that the two descriptions are swapped.`,
-    difficulty: 'medium',
-    yield: 'MEDIUM',
-    part: 2,
-  },
-  {
-    question: `Two identical masses on identical springs are driven at their natural frequency by identical motors, but one is immersed in thick oil. Compared with the mass in air, the oil-immersed mass reaches an amplitude that is:`,
-    options: [
-      `Smaller, because damping drains energy each cycle`,
-      `Larger, because the oil stores energy and returns it`,
-      `The same, because both are being driven at resonance`,
-      `The same, because damping only lowers the frequency`,
-    ],
-    correctAnswer: 0,
-    explanation: `Damping removes energy through friction or viscosity on every cycle, so a heavily damped system resonates less sharply and reaches a smaller amplitude. Viscous oil dissipates energy rather than storing and returning it. Being driven at resonance does not guarantee equal amplitude, because the peak depends on how much energy is lost per cycle, and damping's effect here is on the amplitude, not a change of frequency.`,
-    difficulty: 'easy',
-    yield: 'MEDIUM',
-    part: 2,
-  },
-
-  // ───────────────────────── Part 3 — default ─────────────────────────
   {
     question: `A small speaker radiates equally in all directions. A listener $2\\;\\text{m}$ away receives intensity $I$. Ignoring absorption, what intensity does she receive after moving to $6\\;\\text{m}$?`,
     options: [`$I/9$`, `$I/3$`, `$I/27$`, `$I/81$`],
@@ -387,7 +15,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Tripling the distance spreads the same power over a sphere with $3^2 = 9$ times the area, so the intensity is $I/9$. $I/3$ uses $1/r$ instead of $1/r^2$, $I/27$ cubes the distance ratio, and $I/81$ squares it twice.`,
     difficulty: 'easy',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `A point source radiates $16\\pi\\;\\text{W}$ of sound power equally in all directions. What is the intensity $2.0\\;\\text{m}$ away?`,
@@ -396,7 +24,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `$I = P/(4\\pi r^2) = 16\\pi/(4\\pi \\times 4) = 1.0\\;\\text{W/m}^2$. $2.0\\;\\text{W/m}^2$ uses $r$ instead of $r^2$, and $4.0\\;\\text{W/m}^2$ leaves out the distance entirely. $12.6\\;\\text{W/m}^2$ drops the $4\\pi$ from the sphere's area.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `A quiet office conversation measures $50\\;\\text{dB}$. What is its intensity? ($I_0 = 10^{-12}\\;\\text{W/m}^2$)`,
@@ -405,7 +33,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Fifty decibels is five powers of ten above the reference: $I = 10^{5} \\times 10^{-12} = 10^{-7}\\;\\text{W/m}^2$. $10^{-17}$ moves five powers of ten in the wrong direction, below the threshold of hearing. $10^{17}$ divides by $I_0$ instead of multiplying by it, and $10^{38}$ forgets to divide the level by 10, using $10^{50}$.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `Earplugs reduce a $100\\;\\text{dB}$ noise to $70\\;\\text{dB}$ at the eardrum. What fraction of the original intensity gets through?`,
@@ -414,7 +42,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `A $30\\;\\text{dB}$ drop is three factors of ten, so the intensity falls to $10^{-3}$, or $1/1000$. $7/10$ takes a ratio of the levels, which a logarithmic scale never allows. $1/30$ reads the decibel drop as a direct divisor, and $1/100$ counts only two factors of ten.`,
     difficulty: 'easy',
     yield: 'ULTRA_HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `Each identical cooling fan in a hospital equipment room produces $60\\;\\text{dB}$ at a technician's desk. How many fans running together produce $80\\;\\text{dB}$ there?`,
@@ -423,7 +51,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `A rise from $60$ to $80\\;\\text{dB}$ is $+20\\;\\text{dB}$, a factor of $100$ in intensity, and identical sources add their intensities, so 100 fans are needed. Ten fans give only $70\\;\\text{dB}$, and $1000$ fans reach $90\\;\\text{dB}$. Twenty fans treats each decibel of the difference as one more fan.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `An MRI scanner produces $80\\;\\text{dB}$ in its control room, and a ventilation unit alone produces $60\\;\\text{dB}$ there. With both running, the level is closest to:`,
@@ -432,7 +60,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The scanner is $100$ times as intense as the ventilation unit, so the unit adds only $1\\%$ more intensity and the level stays at about $80\\;\\text{dB}$: the louder source dominates. $140\\;\\text{dB}$ adds decibels directly, and $70\\;\\text{dB}$ averages them. $83\\;\\text{dB}$ applies the two-equal-sources rule to sources that are not equal.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `A loudspeaker treated as a point source gives $76\\;\\text{dB}$ at $2\\;\\text{m}$. Ignoring absorption, what level does a listener at $8\\;\\text{m}$ hear?`,
@@ -441,7 +69,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Four times the distance means $1/4^2 = 1/16$ of the intensity. That is two doublings of distance at about $6\\;\\text{dB}$ each, so the level falls by about $12\\;\\text{dB}$ to $64\\;\\text{dB}$. $70\\;\\text{dB}$ counts only one doubling (the same answer $1/r$ would give), $58\\;\\text{dB}$ counts three doublings, and $19\\;\\text{dB}$ divides the level itself by 4.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `A sound wave's amplitude increases tenfold at the same frequency. By how much does its sound level rise?`,
@@ -450,7 +78,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Intensity grows as amplitude squared, so ten times the amplitude means $10^2 = 100$ times the intensity, which is $+20\\;\\text{dB}$. $+10\\;\\text{dB}$ treats the amplitude ratio as an intensity ratio. $+100\\;\\text{dB}$ turns the factor of 100 directly into decibels, and $+40\\;\\text{dB}$ squares the ratio twice.`,
     difficulty: 'hard',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `A tone is measured at exactly $0\\;\\text{dB}$. What does this level mean?`,
@@ -464,7 +92,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `$0\\;\\text{dB}$ means $I = I_0 = 10^{-12}\\;\\text{W/m}^2$, the reference intensity defined as the threshold of hearing, since $10\\log 1 = 0$. That is a real, nonzero intensity. Fainter sounds exist and simply have negative levels, so $0\\;\\text{dB}$ is no physical floor, and the threshold of pain lies near $120$ to $130\\;\\text{dB}$.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `An oboe and a trumpet play the same note at the same loudness, yet a listener easily tells them apart. Which property of the two sounds differs?`,
@@ -473,7 +101,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The same note means the same fundamental frequency, and so the same pitch; equal loudness means about equal intensity. What differs is timbre, the blend of overtones each instrument adds above that fundamental. Both sounds travel at the same speed, which the air sets.`,
     difficulty: 'easy',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
   {
     question: `A tone generator's frequency is raised from $220\\;\\text{Hz}$ to $440\\;\\text{Hz}$ at the same intensity. How does the pitch the listener perceives change?`,
@@ -482,7 +110,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Pitch follows frequency, and doubling the frequency raises the pitch by one octave. Two octaves would need four times the frequency, and a lower pitch would need a lower frequency. A change in frequency is heard as a change in pitch, not in loudness, which follows intensity.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `Classify (i) a $10\\;\\text{Hz}$ elephant rumble and (ii) a $45\\;\\text{kHz}$ bat call, relative to the range of human hearing.`,
@@ -496,7 +124,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Human hearing spans about $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$. The $10\\;\\text{Hz}$ rumble lies below that range (infrasound) and the $45\\;\\text{kHz}$ call lies above it (ultrasound). Calling either sound audible ignores those limits: one is too low and the other too high for a human ear.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `Which frequencies are typically lost first with age and noise exposure, and where along the cochlea's basilar membrane are they decoded?`,
@@ -510,7 +138,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The upper limit of hearing falls with age and noise, so high frequencies go first, and high frequencies are decoded near the base of the basilar membrane, low ones near its apex. Pairing high frequencies with the apex reverses the place map. The low-frequency options reverse which end of the hearing range fades first.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `Measured carefully in a real medium, the intensity of sound from a point source falls with distance:`,
@@ -524,7 +152,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The inverse-square law accounts only for geometric spreading; a real medium also absorbs sound, turning its energy into heat, so intensity falls faster than $1/r^2$. Absorption weakens the high-frequency components but does not change any component's frequency. Nothing refocuses the spreading wave, and absorption acts on top of spreading rather than replacing it.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
-    part: 3,
+    part: 1,
   },
   {
     question: `A flutist notices that her instrument plays slightly sharp (higher in pitch) after it has warmed up with her breath. Which explanation fits?`,
@@ -538,10 +166,8 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `In a pipe, the length fixes the resonant wavelengths, so $f_n = v/\\lambda_n$ follows the speed of sound, and warmer air carries sound faster: every resonance rises. A lower speed would make the flute go flat, not sharp. Longer wavelengths at the same speed would also lower the resonances, so neither lengthening explanation can make the flute sharp.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 3,
+    part: 1,
   },
-
-  // ───────────────────────── Part 3 — LOW ─────────────────────────
   {
     question: `Occupational hearing guidelines treat long exposure above roughly what sound level as a risk of hearing damage?`,
     options: [`$60\\;\\text{dB}$`, `$85\\;\\text{dB}$`, `$120\\;\\text{dB}$`, `$30\\;\\text{dB}$`],
@@ -549,7 +175,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Guidelines flag prolonged exposure above about $85\\;\\text{dB}$, near heavy-traffic level. $60\\;\\text{dB}$ is ordinary conversation and $30\\;\\text{dB}$ a whisper, both safe for long periods. $120\\;\\text{dB}$ is near the threshold of pain, far above where long-term risk begins.`,
     difficulty: 'easy',
     yield: 'LOW',
-    part: 3,
+    part: 1,
   },
   {
     question: `Using the typical attenuation of ultrasound in soft tissue, about how much attenuation does a $4\\;\\text{MHz}$ pulse suffer travelling to a boundary $5\\;\\text{cm}$ deep and back?`,
@@ -558,10 +184,8 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Soft tissue attenuates ultrasound by about $0.5\\;\\text{dB}$ per centimetre per megahertz. The round trip is $10\\;\\text{cm}$, so the loss is $0.5 \\times 4 \\times 10 = 20\\;\\text{dB}$. $10\\;\\text{dB}$ counts only the trip down, $5\\;\\text{dB}$ leaves out the frequency, and $40\\;\\text{dB}$ doubles the coefficient.`,
     difficulty: 'hard',
     yield: 'LOW',
-    part: 3,
+    part: 1,
   },
-
-  // ───────────────────────── Part 4 — default ─────────────────────────
   {
     question: `A fire truck's siren emits $720\\;\\text{Hz}$ as the truck drives directly away from a stationary listener at $20\\;\\text{m/s}$ ($v = 340\\;\\text{m/s}$). What frequency does the listener hear?`,
     options: [`$765\\;\\text{Hz}$`, `$700\\;\\text{Hz}$`, `$720\\;\\text{Hz}$`, `$680\\;\\text{Hz}$`],
@@ -569,7 +193,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `A receding source adds its speed in the denominator: $f' = 720 \\times 340/(340 + 20) = 720 \\times 340/360 = 680\\;\\text{Hz}$. $765\\;\\text{Hz}$ uses the approaching sign, raising the pitch for a source moving away. $700\\;\\text{Hz}$ subtracts the speed from the frequency, mixing units, and $720\\;\\text{Hz}$ ignores the source's motion.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A motorist drives directly away from a stationary $500\\;\\text{Hz}$ warning siren at $34\\;\\text{m/s}$ ($v = 340\\;\\text{m/s}$). What frequency does she hear?`,
@@ -578,7 +202,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `An observer moving away subtracts her speed in the numerator: $f' = 500 \\times (340 - 34)/340 = 500 \\times 0.90 = 450\\;\\text{Hz}$. $550\\;\\text{Hz}$ uses the approaching sign, and $466\\;\\text{Hz}$ subtracts the speed straight from the frequency. $500\\;\\text{Hz}$ assumes only a moving source produces a shift.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `In case 1, a siren moves toward a stationary listener at speed $u$. In case 2, the listener moves toward the stationary siren at the same speed $u$. In which case is the wavelength of the sound in the air shortened?`,
@@ -587,7 +211,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `A moving source chases its own wavefronts and bunches them up ahead, shortening the wavelength. A moving observer leaves the wavelength in the air untouched and simply meets wavefronts more often; both listeners hear a higher pitch, but for different reasons. Case 2 alone, both, or neither each misplace which motion reshapes the wave.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A drone carrying a speaker flies toward a fixed microphone. Compared with when the drone hovers, the microphone measures sound with:`,
@@ -601,7 +225,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The medium alone sets the speed of sound, so it is unchanged. The approaching source bunches its wavefronts, shortening the wavelength, and $f = v/\\lambda$ rises. A higher speed is the classic misconception, and keeping the wavelength fixed describes a moving observer, not a moving source.`,
     difficulty: 'medium',
     yield: 'ULTRA_HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A car sounding its horn passes a pedestrian on a straight road. Consider the sound emitted at the instant the car is directly beside her, moving perpendicular to her line of sight. The frequency she hears from that sound is:`,
@@ -615,7 +239,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Only motion along the line joining source and listener shifts the frequency. At that instant the car moves sideways relative to her, so its approach speed along the line of sight is zero and there is no shift. Being closest, or standing nearer the road, changes loudness rather than pitch, and the drop to a lower pitch comes from sound emitted after the car has begun to recede.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
-    part: 4,
+    part: 2,
   },
   {
     question: `A train approaches a crossing at $17\\;\\text{m/s}$ sounding a $1000\\;\\text{Hz}$ horn ($v = 340\\;\\text{m/s}$). Using the slow-motion estimate, a person at the crossing hears about:`,
@@ -624,7 +248,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The fractional shift is about $u/v = 17/340 = 5\\%$, and an approaching source raises the frequency: about $1050\\;\\text{Hz}$. $950\\;\\text{Hz}$ applies the shift in the receding direction, and $1100\\;\\text{Hz}$ doubles it as if the sound were reflected. $1017\\;\\text{Hz}$ adds the speed to the frequency directly.`,
     difficulty: 'easy',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A stationary parking sensor emits $40.0\\;\\text{kHz}$ pulses at a car approaching it at $3.4\\;\\text{m/s}$ ($v = 340\\;\\text{m/s}$). At about what frequency does the echo from the car return to the sensor?`,
@@ -633,7 +257,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The car receives the sound as a moving observer and re-emits it as a moving source, so the echo is shifted by about $2fu/v = 2(40\\,000)(3.4)/340 = 800\\;\\text{Hz}$, upward because the car approaches: $40.8\\;\\text{kHz}$. $40.4\\;\\text{kHz}$ is only the one-way shift, $39.2\\;\\text{kHz}$ shifts in the wrong direction, and $41.6\\;\\text{kHz}$ doubles the double shift.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A Doppler probe aligned with blood flow ($\\theta = 0^\\circ$) records a $3.0\\;\\text{kHz}$ shift. The probe is then tilted so that the beam meets the same flow at $60^\\circ$. What shift does it record now?`,
@@ -642,7 +266,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Only the velocity component along the beam counts: $\\Delta f \\propto \\cos\\theta$, and $\\cos 60^\\circ = 0.5$, so the shift halves to $1.5\\;\\text{kHz}$. $2.6\\;\\text{kHz}$ uses $\\sin 60^\\circ$, and $3.0\\;\\text{kHz}$ ignores the angle. $6.0\\;\\text{kHz}$ divides by $\\cos\\theta$ instead of multiplying.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A tissue boundary lies $4.0\\;\\text{cm}$ below an ultrasound probe ($v = 1540\\;\\text{m/s}$). About how long after the pulse leaves does its echo return?`,
@@ -651,7 +275,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The pulse travels down and back, $2d = 0.080\\;\\text{m}$, so $t = 0.080/1540 \\approx 5.2 \\times 10^{-5}\\;\\text{s} = 52\\;\\mu\\text{s}$. $26\\;\\mu\\text{s}$ counts only the one-way trip, $104\\;\\mu\\text{s}$ doubles the round trip again, and $13\\;\\mu\\text{s}$ halves the one-way time.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A clinic must image a fetus about $12\\;\\text{cm}$ deep and, separately, an Achilles tendon just under the skin. Which probe frequencies suit the two jobs?`,
@@ -665,7 +289,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Higher frequencies resolve finer detail but are absorbed more strongly, so they penetrate less. The deep fetus needs a lower frequency that survives the trip, while the shallow tendon can use a higher frequency for detail. The swapped choice would lose the fetal echo to attenuation, and a single frequency for both sacrifices either depth or detail where it matters.`,
     difficulty: 'easy',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `An ultrasound probe operates at $7.7\\;\\text{MHz}$ in soft tissue ($v = 1540\\;\\text{m/s}$). Roughly what is the smallest detail it can resolve?`,
@@ -674,7 +298,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Resolution is limited to about one wavelength, and $\\lambda = v/f = 1540/(7.7 \\times 10^{6}) = 2.0 \\times 10^{-4}\\;\\text{m} = 0.20\\;\\text{mm}$. $0.020$ and $2.0\\;\\text{mm}$ each slip a power of ten, and $0.40\\;\\text{mm}$ doubles the wavelength, borrowing the round-trip factor from echo timing.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
-    part: 4,
+    part: 2,
   },
   {
     question: `Rank these boundaries by how strongly they reflect an ultrasound pulse, strongest first: soft tissue to soft tissue, soft tissue to bone, soft tissue to air.`,
@@ -688,7 +312,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Reflection grows with the mismatch in acoustic impedance, $Z = \\rho v$. Tissue and air differ enormously, so nearly all the sound reflects; tissue and bone differ substantially, so bone reflects strongly and casts a shadow; neighbouring soft tissues differ only slightly and return weak echoes. Ranking bone above air underestimates the mismatch that makes gel necessary, and the other orders invert the role of the mismatch.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `Why does a sonographer spread gel between the probe and the patient's skin?`,
@@ -702,7 +326,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Tissue and air differ enormously in acoustic impedance, so even a thin air gap would reflect almost all the sound before it entered the body; gel pushes the air out. The probe's crystal sets the frequency, and crossing a medium never changes it. Gel neither speeds up the pulse nor absorbs echoes; its job is to remove the air gap.`,
     difficulty: 'easy',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `An ultrasound probe uses a single crystal both to send pulses and to detect their echoes. Which property of the crystal makes this possible?`,
@@ -716,7 +340,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The crystal is piezoelectric: a voltage makes it deform, launching a pulse, and a returning echo squeezes it, generating a voltage the machine records. Heating and warming are not how the probe makes or senses sound. Conducting only during sound, or magnetizing and storing energy, describe no part of the probe's operation.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
-    part: 4,
+    part: 2,
   },
   {
     question: `Upstream of a carotid stenosis, a Doppler probe records a $1.5\\;\\text{kHz}$ shift. The stenosis halves the lumen's diameter. Assuming steady flow and the same probe settings and beam angle, what shift should the probe record inside the stenosis?`,
@@ -725,7 +349,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Halving the diameter makes the area $(1/2)^2 = 1/4$ as large, so continuity ($A_1u_1 = A_2u_2$) requires four times the blood speed, and the Doppler shift, proportional to speed, quadruples to $6.0\\;\\text{kHz}$. $3.0\\;\\text{kHz}$ scales with the diameter instead of the area, and $1.5\\;\\text{kHz}$ confuses a constant flow rate with a constant speed. $24.0\\;\\text{kHz}$ uses the fourth power of the radius, which belongs to Poiseuille resistance, not to continuity.`,
     difficulty: 'hard',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `A $5.0\\;\\text{MHz}$ probe aligned with a vessel receives echoes from the blood shifted DOWN by $1.3\\;\\text{kHz}$ ($v = 1540\\;\\text{m/s}$). Which way is the blood moving relative to the probe, and how fast?`,
@@ -739,7 +363,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `A downward shift means the blood is receding. For a reflection, $\\Delta f = 2fu/v$, so $u = v\\,\\Delta f/2f = (1540)(1300)/(2 \\times 5.0 \\times 10^{6}) \\approx 0.20\\;\\text{m/s}$. The $0.40\\;\\text{m/s}$ options drop the factor of 2 for the double shift, and "toward" reverses the meaning of a downward shift.`,
     difficulty: 'medium',
     yield: 'HIGH',
-    part: 4,
+    part: 2,
   },
   {
     question: `Jet A flies at Mach 1.2 and jet B at Mach 2.0 through the same air. How do their shock cones compare?`,
@@ -753,7 +377,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Any source faster than sound trails a Mach cone, and the faster it moves, the narrower that cone, so jet B's is narrower. A slower supersonic source trails a wider cone, not a narrower one. The cone's shape depends on the Mach number $v_s/v$, not on the speed of sound alone, and any $v_s > v$, not just Mach 2, produces a cone.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
-    part: 4,
+    part: 2,
   },
   {
     question: `Lithotripsy breaks up a kidney stone without surgery. How does it work?`,
@@ -767,10 +391,8 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Lithotripsy focuses shock waves, thin zones of abrupt, large pressure change produced outside the body, onto the stone and shatters it. A Doppler shift measures motion; it does not heat anything. The technique does not rely on driving the stone at resonance with audible sound, and it uses no ionizing radiation.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
-    part: 4,
+    part: 2,
   },
-
-  // ───────────────────────── Part 4 — LOW ─────────────────────────
   {
     question: `At a boundary where the second tissue's acoustic impedance is three times the first's, what fraction of the incident ultrasound intensity is reflected?`,
     options: [`$1/2$`, `$1/4$`, `$3/4$`, `$1/9$`],
@@ -778,7 +400,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The reflected fraction is $\\left(\\frac{Z_2 - Z_1}{Z_2 + Z_1}\\right)^2 = \\left(\\frac{2}{4}\\right)^2 = 1/4$. $1/2$ forgets to square the ratio, and $3/4$ is the transmitted fraction. $1/9$ squares the inverse of the impedance ratio instead.`,
     difficulty: 'medium',
     yield: 'LOW',
-    part: 4,
+    part: 2,
   },
   {
     question: `On a colour Doppler display using the standard convention, a vessel appears blue. What does the blue indicate?`,
@@ -792,7 +414,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `Colour Doppler codes direction relative to the probe: blue away, red toward ("BART"). Flow toward the probe is shown red, not blue. The colours encode direction, not oxygenation, so an artery whose flow runs away from the probe also appears blue, and they do not encode speed alone.`,
     difficulty: 'easy',
     yield: 'LOW',
-    part: 4,
+    part: 2,
   },
   {
     question: `A projectile moves through air at Mach 2. What is the half-angle of its Mach cone?`,
@@ -801,7 +423,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The half-angle satisfies $\\sin\\theta = 1/M = 1/2$, so $\\theta = 30^\\circ$. $60^\\circ$ uses cosine instead of sine, and $45^\\circ$ would need $\\sin\\theta \\approx 0.71$, about Mach 1.4. $15^\\circ$ halves the correct angle.`,
     difficulty: 'medium',
     yield: 'LOW',
-    part: 4,
+    part: 2,
   },
   {
     question: `What produces the sharp crack of a whip?`,
@@ -815,7 +437,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     explanation: `The whip's tip briefly exceeds the speed of sound, producing a small shock wave: a miniature sonic boom. Beats need two steady tones of nearly equal frequency, and resonance needs periodic driving, neither of which describes a single crack. Strands colliding would make a dull slap, not the sharp report of a shock wave.`,
     difficulty: 'easy',
     yield: 'LOW',
-    part: 4,
+    part: 2,
   },
 ]
 

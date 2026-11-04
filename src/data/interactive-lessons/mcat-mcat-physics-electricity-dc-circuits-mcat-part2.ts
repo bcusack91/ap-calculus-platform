@@ -8,7 +8,7 @@ export const dcCircuitsMcatPart2: LessonData = {
       type: 'text' as const,
       content: `# Circuits Part 1: Current & Resistance
 
-**Part 2 of 4 — Resistance, Ohm's Law & Series vs. Parallel**
+**Part 2 of 2 — Resistance, Ohm's Law & Series vs. Parallel**
 
 ### Resistance and Ohm's Law
 
@@ -116,7 +116,7 @@ Identify the arrangement by current paths and shared connection points (nodes), 
 
 **Short circuits.** A wire of negligible resistance connected across an element holds both of its ends at the same potential. Then $V = 0$ across the element and $I = V/R = 0$ through it: the element is bypassed and drops out of the circuit, and all the current takes the wire. Shorting a source directly makes $R_{eq}$ nearly zero, which drives a dangerously large current and heats the wiring.
 
-**Open branches.** A broken branch carries no current and can be erased from the drawing. If an ideal source sits directly across a parallel bank, the remaining branches keep their voltage and current. (Parts 3 and 4 of this lesson show what changes when a series resistor sits in front of the bank.)`
+**Open branches.** A broken branch carries no current and can be erased from the drawing. If an ideal source sits directly across a parallel bank, the remaining branches keep their voltage and current. (The *Circuits Part 2: Kirchhoff's Rules & Power* lesson shows what changes when a series resistor sits in front of the bank.)`
     },
     {
       id: 'dc2-worked',
@@ -214,7 +214,9 @@ Identify the arrangement by current paths and shared connection points (nodes), 
 
 <!-- yield:low -->
 - Low-yield extras: semiconductors and superconductors versus temperature; diodes as non-ohmic devices.
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Circuits Part 2: Kirchhoff's Rules & Power* lesson — Kirchhoff's junction and loop rules, reducing whole networks, voltage and current dividers, and how power sets bulb brightness and electrical safety.`
     }
   ]
 }

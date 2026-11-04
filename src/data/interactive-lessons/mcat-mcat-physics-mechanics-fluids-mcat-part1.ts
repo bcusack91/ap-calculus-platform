@@ -1,16 +1,16 @@
 import type { LessonData } from './registry'
 
-export const fluidsMcatPart1: LessonData = {
+export const fluidsAtRestMcatPart1: LessonData = {
   topicSlug: 'mcat-physics-mechanics-fluids-mcat',
   sections: [
     {
       id: 'fl1-intro',
       type: 'text' as const,
-      content: `# Fluids
+      content: `# Fluids at Rest
 
-**Part 1 of 4 — Density, Pressure & Pascal's Principle**
+**Part 1 of 2 — Density, Pressure & Pascal's Principle**
 
-**Where this fits.** This lesson covers fluids at rest and in motion: density and pressure, buoyancy and surface tension, the ideal-flow equations (continuity and Bernoulli), and viscous flow through blood vessels. Its companion, the *Waves & Sound* lesson, covers periodic motion, waves, sound intensity and decibels, the Doppler effect and ultrasound. Here we start with fluids that are not moving at all.
+**Where this fits.** This lesson starts the fluids-and-waves sequence with fluids that are not moving at all: density and pressure, Pascal's principle, buoyancy and surface tension. The next lesson, *Fluids in Motion*, sets the fluid flowing with continuity, Bernoulli, viscosity and blood flow.
 
 A **fluid** is any substance that flows: liquids and gases. A fluid at rest cannot hold a sideways (shear) force, so it can only push perpendicular to any surface it touches. That one fact is the root of everything about pressure.
 
@@ -122,7 +122,7 @@ A millimetre of mercury (mmHg) is literally the pressure under a 1 mm column of 
 - Arteries in the head, above the heart, have LOWER pressure than at heart level, for the same reason.
 - An IV bag works by hydrostatics: hung above the arm, the column of fluid in the line makes the pressure at the needle higher than the pressure in the vein, so fluid flows in.
 
-How pressure falls along the circulation as blood moves (because of resistance, not gravity) is Part 4 of this lesson, and the physiology is in the *Cardiovascular System* lesson.
+How pressure falls along the circulation as blood moves (because of resistance, not gravity) is in the *Fluids in Motion* lesson, and the physiology is in the *Cardiovascular System* lesson.
 
 ### Pascal's Principle
 
@@ -211,7 +211,7 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
             options: [`Twice as high in the narrow syringe`, `Four times as high in the narrow syringe`, `Sixteen times as high in the narrow syringe`, `The same in both, as forces are equal`],
             correctAnswer: 1,
             yield: 'MEDIUM',
-            explanation: `$P = F/A$, and half the diameter means one-quarter of the area, so the same force produces four times the pressure in the narrow syringe. "Twice as high" forgets to square the diameter ratio, "sixteen times" uses the fourth power that belongs to Poiseuille's law for flow (Part 4 of this lesson), not to pressure on a piston, and equal forces give equal pressures only on equal areas.`,
+            explanation: `$P = F/A$, and half the diameter means one-quarter of the area, so the same force produces four times the pressure in the narrow syringe. "Twice as high" forgets to square the diameter ratio, "sixteen times" uses the fourth power that belongs to Poiseuille's law for flow (the *Fluids in Motion* lesson), not to pressure on a piston, and equal forces give equal pressures only on equal areas.`,
           }
         ]
       }

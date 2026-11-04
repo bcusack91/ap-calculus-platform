@@ -126,6 +126,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Fluids & Waves split in two (Nov 2026); the old slug's loader stays for attempt history.
   'mcat-physics-mechanics-fluids-mcat': () => import('./lesson-built/mcat-physics-mechanics-fluids-mcat'),
   'mcat-physics-waves-sound-mcat': () => import('./lesson-built/mcat-physics-waves-sound-mcat'),
+  'mcat-physics-mechanics-fluid-dynamics-mcat': () => import('./lesson-built/mcat-physics-mechanics-fluid-dynamics-mcat'),
+  'mcat-physics-waves-periodic-motion-mcat': () => import('./lesson-built/mcat-physics-waves-periodic-motion-mcat'),
+  'mcat-physics-waves-interference-mcat': () => import('./lesson-built/mcat-physics-waves-interference-mcat'),
   'mcat-physics-electricity': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias
   'mcat-physics-electricity-electrostatics-mcat': () => import('./mcat-physics-electricity'),
@@ -133,6 +136,8 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Circuits split in two (Nov 2026); the old slug's loader stays for attempt history.
   'mcat-physics-electricity-dc-circuits-mcat': () => import('./lesson-built/mcat-physics-electricity-dc-circuits-mcat'),
   'mcat-physics-electricity-emf-capacitors-mcat': () => import('./lesson-built/mcat-physics-electricity-emf-capacitors-mcat'),
+  'mcat-physics-electricity-kirchhoff-power-mcat': () => import('./lesson-built/mcat-physics-electricity-kirchhoff-power-mcat'),
+  'mcat-physics-electricity-rc-circuits-mcat': () => import('./lesson-built/mcat-physics-electricity-rc-circuits-mcat'),
   'mcat-physics-electricity-magnetism-mcat': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-optics-mcat': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-electrochemistry-mcat': () => import('./mcat-physics-electricity'),

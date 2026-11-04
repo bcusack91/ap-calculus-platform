@@ -1,0 +1,206 @@
+[
+ {
+  "front": "A $60$ W and a $100$ W bulb rated for the same line voltage are wired in series. Which is brighter?",
+  "fp": "ae8f23df2750",
+  "yield": "ULTRA_HIGH",
+  "why": "Series bulb brightness by rating is a classic every-year reasoning question"
+ },
+ {
+  "front": "A fuse protects a circuit by:",
+  "fp": "f632d9941f90",
+  "yield": "LOW",
+  "why": "Fuse function is generic household detail"
+ },
+ {
+  "front": "A new resistor is added in parallel with an existing element. What happens to total current from the battery?",
+  "fp": "8d721b2e1e16",
+  "yield": "HIGH",
+  "why": "Adding a parallel branch raises total current; common qualitative question"
+ },
+ {
+  "front": "A third identical bulb is added in series to two bulbs already in series. What happens to the original two?",
+  "fp": "a1cc6644bc4e",
+  "yield": "HIGH",
+  "why": "Adding a series bulb dims all; classic qualitative question"
+ },
+ {
+  "front": "Distinguish the kilowatt-hour from the watt.",
+  "fp": "05ab60016c63",
+  "yield": "MEDIUM",
+  "why": "kWh vs W unit distinction is secondary"
+ },
+ {
+  "front": "For elements in series, compare power with $P = {{c1::I^2R}}$, so the larger resistor dissipates more.",
+  "fp": "e07952b01829",
+  "yield": "ULTRA_HIGH",
+  "why": "Choosing I^2R for series comparisons is a required step nearly every year"
+ },
+ {
+  "front": "For household AC, $V_{rms} = {{c1::V_{peak}/\\sqrt{2}}}$, so a $120$ V outlet actually peaks near $170$ V.",
+  "fp": "c50ec4601bea",
+  "yield": "MEDIUM",
+  "why": "rms voltage is on the outline but rarely tested"
+ },
+ {
+  "front": "How is total power delivered by a battery related to power dissipated in the resistors?",
+  "fp": "ffbe5bb01217",
+  "yield": "MEDIUM",
+  "why": "Power balance is supporting reasoning"
+ },
+ {
+  "front": "If one of two identical bulbs wired in series burns out, {{c1::both go dark}}, because the single current path is broken.",
+  "fp": "2e859df12057",
+  "yield": "HIGH",
+  "why": "Series break kills the circuit; common qualitative question"
+ },
+ {
+  "front": "Kirchhoff's junction rule is based on conservation of:",
+  "fp": "4400e3d7ac36",
+  "yield": "ULTRA_HIGH",
+  "why": "Junction rule = charge conservation is a stock discrete"
+ },
+ {
+  "front": "Kirchhoff's loop rule says potential changes around a closed loop sum to zero, expressing {{c1::energy conservation}}.",
+  "fp": "e889e23f20e0",
+  "yield": "ULTRA_HIGH",
+  "why": "Loop rule = energy conservation is a stock discrete"
+ },
+ {
+  "front": "One bulb is in series with a parallel pair of identical bulbs. Which bulb is brightest?",
+  "fp": "a15180c95a24",
+  "yield": "HIGH",
+  "why": "Series bulb vs parallel pair brightness is a classic reasoning question"
+ },
+ {
+  "front": "The power dissipated by a 100 Ω resistor carrying 0.5 A of current is:",
+  "fp": "3f9b139a37b1",
+  "yield": "MEDIUM",
+  "why": "Trivial P = I^2R calculation; the formula card carries it"
+ },
+ {
+  "front": "Traversing a resistor in the same direction as the current, what is the sign of the potential change?",
+  "fp": "dac8fd4563f6",
+  "yield": "HIGH",
+  "why": "Sign conventions for loop-rule traversal are a common step"
+ },
+ {
+  "front": "Two identical bulbs are in parallel across a battery and one burns out. What happens to the other bulb and to the total current?",
+  "fp": "f26eb82f8968",
+  "yield": "HIGH",
+  "why": "Parallel bulb burns out, other unchanged; classic qualitative question"
+ },
+ {
+  "front": "What are the equivalent expressions for power dissipated by a resistor?",
+  "fp": "5afcc789ab57",
+  "yield": "ULTRA_HIGH",
+  "why": "Power expressions P = IV = I^2R = V^2/R are used every year"
+ },
+ {
+  "front": "What condition trips a GFCI outlet, and why does an ordinary fuse not protect against the same hazard?",
+  "fp": "03ba968279e3",
+  "yield": "LOW",
+  "why": "GFCI mechanism is off-outline detail"
+ },
+ {
+  "front": "Why is current, not voltage, the quantity that determines the severity of electrical injury?",
+  "fp": "da711490d295",
+  "yield": "LOW",
+  "why": "Electrical injury detail is off-outline"
+ },
+ {
+  "front": "Why is household wiring parallel rather than series?",
+  "fp": "c110e75b536a",
+  "yield": "LOW",
+  "why": "Household wiring rationale is generic"
+ },
+ {
+  "front": "Solving Kirchhoff's equations gives a negative value for a current whose direction you guessed. What does that mean?",
+  "fp": "5b1ef473e0bc",
+  "yield": "MEDIUM",
+  "why": "Loop-rule bookkeeping matters for multi-step problems but is rarely tested directly."
+ },
+ {
+  "front": "A $9$ V and a $3$ V battery push in opposite directions in one loop with a $2\\,\\Omega$ resistor. What is the current?",
+  "fp": "963f37f2a6d6",
+  "yield": "MEDIUM",
+  "why": "Opposing sources appear occasionally; most MCAT loops have one source."
+ },
+ {
+  "front": "A $9$ V battery drives current through $1\\,\\text{k}\\Omega$ (at its positive terminal) and then $2\\,\\text{k}\\Omega$ in series. The node between them is grounded. What is the potential of the negative terminal?",
+  "fp": "539af8653cca",
+  "yield": "MEDIUM",
+  "why": "Ground and reference potentials appear in passages and figure questions."
+ },
+ {
+  "front": "For two resistors in series across a voltage $V$, the voltage across $R_1$ is the total $V$ multiplied by {{c1::$R_1/(R_1 + R_2)$}}.",
+  "fp": "9575cfbafe27",
+  "yield": "HIGH",
+  "why": "Voltage dividers are a common shortcut in series circuit questions."
+ },
+ {
+  "front": "$5.0$ mA enters a $1\\,\\text{k}\\Omega$ muscle path in parallel with a $4\\,\\text{k}\\Omega$ fat path. How much current goes through the muscle path?",
+  "fp": "b2ee710ff5bc",
+  "yield": "HIGH",
+  "why": "Current dividers are commonly tested, often in physiology contexts."
+ },
+ {
+  "front": "A $12$ V ideal battery feeds a $2\\,\\Omega$ resistor in series with a parallel pair of $6\\,\\Omega$ and $3\\,\\Omega$. Find the current in each parallel branch.",
+  "fp": "42721b857c8b",
+  "yield": "ULTRA_HIGH",
+  "why": "Reducing a mixed network and walking back out is tested on essentially every MCAT."
+ },
+ {
+  "front": "A resistor $R_s$ sits in series in front of a parallel bank. A new branch is added to the bank. What happens to the current in each original branch?",
+  "fp": "258ee2575c7e",
+  "yield": "HIGH",
+  "why": "Predicting circuit changes in mixed networks is commonly tested."
+ },
+ {
+  "front": "A $24$ V ideal source drives a $2\\,\\Omega$ resistor in series with two $4\\,\\Omega$ resistors in parallel. One $4\\,\\Omega$ resistor fails open. What happens to the current in the other?",
+  "fp": "984beed35d9d",
+  "yield": "HIGH",
+  "why": "Removing a branch from a mixed network is a common change-the-circuit question."
+ },
+ {
+  "front": "A wire connected across one branch of a parallel bank shorts {{c1::every branch of the bank}}.",
+  "fp": "c4066754227c",
+  "yield": "HIGH",
+  "why": "Shorts are a common trap in circuit-change questions."
+ },
+ {
+  "front": "A heater on a fixed-voltage outlet gets a new element with half the resistance. What happens to the power it draws?",
+  "fp": "66313c55c905",
+  "yield": "ULTRA_HIGH",
+  "why": "Choosing the right power form is tested on essentially every MCAT."
+ },
+ {
+  "front": "A $2000$ W space heater runs for $5$ hours at 15 cents per kilowatt-hour. What does it cost?",
+  "fp": "1a8f6179038b",
+  "yield": "HIGH",
+  "why": "Energy-cost and kWh conversions are a commonly tested application of power."
+ },
+ {
+  "front": "Each of $n$ identical bulbs in series on an ideal source dissipates {{c1::$P_0/n^2$}}, where $P_0$ is one bulb's power when connected alone.",
+  "fp": "bd8638298c02",
+  "yield": "HIGH",
+  "why": "Bulb-brightness ratios between series and parallel are commonly tested."
+ },
+ {
+  "front": "Bulb A is in series with identical bulbs B and C in parallel, all across an ideal battery. C burns out. What happens to A and B?",
+  "fp": "4db14a04d38e",
+  "yield": "HIGH",
+  "why": "Burnout in mixed bulb circuits is a classic commonly tested question."
+ },
+ {
+  "front": "A $120$ V shock passes hand to hand. The body path is $10^5\\,\\Omega$ with dry skin and $10^3\\,\\Omega$ with wet skin. Compare the currents.",
+  "fp": "0d566d0ce428",
+  "yield": "MEDIUM",
+  "why": "Body-current calculations appear in physiology-framed passages."
+ },
+ {
+  "front": "Approximate body-current thresholds: about {{c1::1 mA}} is perceptible, and about {{c2::100 mA}} across the chest can trigger ventricular fibrillation.",
+  "fp": "c595226bfc7d",
+  "yield": "LOW",
+  "why": "Specific thresholds sit in the lesson's low-yield block; passages provide them."
+ }
+]

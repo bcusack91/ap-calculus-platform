@@ -12,12 +12,6 @@
   "why": "Gauge pressure rho*g*h calculation; appears every year"
  },
  {
-  "front": "A vessel narrows to half its radius at constant driving pressure. By what factor does flow drop?",
-  "fp": "cfa455c69983",
-  "yield": "HIGH",
-  "why": "Poiseuille r^4 numeric application (half radius, 1/16 flow)"
- },
- {
   "front": "An IV bag must hang high enough that {{c1::$\\rho g h$}} exceeds {{c1::the patient's venous pressure}}.",
   "fp": "bb00851e05be",
   "yield": "HIGH",
@@ -36,18 +30,6 @@
   "why": "Specific gravity definition with blood value; supporting detail"
  },
  {
-  "front": "By Bernoulli's principle, where a fluid speeds up at constant height its pressure {{c1::decreases}}.",
-  "fp": "e690d58f0a3b",
-  "yield": "ULTRA_HIGH",
-  "why": "Bernoulli: faster flow, lower pressure; tested every year"
- },
- {
-  "front": "Continuity or Poiseuille: which explains slow capillary flow, and which explains high resistance in a stenosis?",
-  "fp": "e4e5b4644cad",
-  "yield": "HIGH",
-  "why": "Continuity vs Poiseuille for capillaries vs stenosis; common circulation passage step"
- },
- {
   "front": "Does the buoyant force on a fully submerged object increase with depth?",
   "fp": "4dc9fd6f3bcd",
   "yield": "HIGH",
@@ -60,12 +42,6 @@
   "why": "Hydrostatic pressure P=P0+rho*g*h; core fluids equation"
  },
  {
-  "front": "Give the continuity equation.",
-  "fp": "a9a8786faee8",
-  "yield": "ULTRA_HIGH",
-  "why": "Continuity equation A1v1=A2v2; used every year"
- },
- {
   "front": "How does absolute pressure at depth differ from gauge pressure?",
   "fp": "032a38ba92c8",
   "yield": "ULTRA_HIGH",
@@ -76,24 +52,6 @@
   "fp": "c78b51020305",
   "yield": "MEDIUM",
   "why": "Hydrostatic weighing application; plausible passage context"
- },
- {
-  "front": "How does raising hematocrit affect cardiac workload?",
-  "fp": "34ac96f7324b",
-  "yield": "MEDIUM",
-  "why": "Hematocrit and viscosity in Poiseuille; secondary physiology link"
- },
- {
-  "front": "How does vessel radius affect flow (Poiseuille)?",
-  "fp": "b9cb4b959fdd",
-  "yield": "ULTRA_HIGH",
-  "why": "Poiseuille r^4 dependence; the qualitative Poiseuille fact tested every year"
- },
- {
-  "front": "In Poiseuille's law, flow rate is proportional to {{c1::the fourth power of the radius}}.",
-  "fp": "59bca7febc02",
-  "yield": "HIGH",
-  "why": "Poiseuille r^4 cloze; restates the main Poiseuille card"
  },
  {
   "front": "Laplace's law for an alveolus gives $P = 2\\gamma/r$. What does it predict?",
@@ -120,12 +78,6 @@
   "why": "Archimedes' principle; on essentially every administration"
  },
  {
-  "front": "State Bernoulli's principle.",
-  "fp": "51c88a623f3d",
-  "yield": "ULTRA_HIGH",
-  "why": "Bernoulli's equation; core fluids equation"
- },
- {
   "front": "State Pascal's principle and its hydraulic consequence.",
   "fp": "bebf5735b159",
   "yield": "ULTRA_HIGH",
@@ -144,46 +96,10 @@
   "why": "Buoyant force equals displaced fluid weight; restates Archimedes card"
  },
  {
-  "front": "Vascular resistance is {{c1::$8\\eta L/(\\pi r^4)$}}, so viscosity and length enter {{c1::linearly}}.",
-  "fp": "a5dd0b44fab8",
-  "yield": "HIGH",
-  "why": "Resistance 8*eta*L/(pi*r^4); viscosity and length linear vs r^4"
- },
- {
-  "front": "What distinguishes turbulent from laminar flow, and why does it matter clinically?",
-  "fp": "314d94b4009d",
-  "yield": "MEDIUM",
-  "why": "Turbulent vs laminar and Reynolds number; secondary qualitative detail"
- },
- {
-  "front": "What four assumptions does Bernoulli's equation require?",
-  "fp": "dd23ebb8835b",
-  "yield": "MEDIUM",
-  "why": "Bernoulli assumptions; useful for understanding, rarely the tested point"
- },
- {
   "front": "What fraction of a floating object sits below the surface?",
   "fp": "ae4e6e1b52f6",
   "yield": "ULTRA_HIGH",
   "why": "Submerged fraction equals density ratio; classic buoyancy calculation"
- },
- {
-  "front": "What happens to pressure inside an arterial stenosis?",
-  "fp": "150eae6c957a",
-  "yield": "HIGH",
-  "why": "Pressure drop inside a stenosis; standard Bernoulli application"
- },
- {
-  "front": "Which raises resistance more: halving a vessel's radius, or doubling its length?",
-  "fp": "dd61d304468f",
-  "yield": "MEDIUM",
-  "why": "Radius vs length effect on resistance; restates the Poiseuille cards"
- },
- {
-  "front": "Why can a forced expiration collapse an airway (dynamic compression)?",
-  "fp": "0290888c01e6",
-  "yield": "LOW",
-  "why": "Dynamic airway compression is respiratory-physiology detail"
  },
  {
   "front": "Why do stiletto heels damage a floor when flat shoes do not, if body weight is unchanged?",
@@ -204,22 +120,10 @@
   "why": "Restates float/sink by density using body-fat trivia"
  },
  {
-  "front": "Why does an aneurysm tend to enlarge once it forms?",
-  "fp": "130c88ab8a08",
-  "yield": "LOW",
-  "why": "Aneurysm growth combines Bernoulli and Laplace; off-outline clinical detail"
- },
- {
   "front": "Why is arterial pressure higher in the feet than at the heart when standing?",
   "fp": "0159cf60661a",
   "yield": "HIGH",
   "why": "Hydrostatic column adds rho*g*h to arterial pressure; common physiology application"
- },
- {
-  "front": "Why is blood slowest in capillaries even though each capillary is tiny?",
-  "fp": "065f0df44dab",
-  "yield": "MEDIUM",
-  "why": "Capillary velocity via continuity; restates the continuity vs Poiseuille card"
  },
  {
   "front": "A $50.0$ cm$^3$ sample of olive oil has a mass of $46.0$ g. What are its density in SI units and its specific gravity?",
@@ -298,77 +202,5 @@
   "fp": "788177ba0d51",
   "yield": "LOW",
   "why": "The lesson marks the normal urine SG range as low-yield."
- },
- {
-  "front": "An infusion pump delivers $120$ mL/min through tubing of cross-sectional area $0.10$ cm$^2$. What is the saline's average speed?",
-  "fp": "84e92b7e4905",
-  "yield": "HIGH",
-  "why": "Flow rate vs speed with unit conversion is a common discrete calculation."
- },
- {
-  "front": "Doppler shows blood speeding from $30$ to $270$ cm/s through a stenosis at unchanged flow, so the lumen radius is about {{c1::one-third}} of normal.",
-  "fp": "b668ded30b57",
-  "yield": "ULTRA_HIGH",
-  "why": "Continuity with the radius-squared step is tested on every MCAT."
- },
- {
-  "front": "Water flows at $1$ m/s through a horizontal pipe of area $10$ cm$^2$ into a throat of area $2$ cm$^2$. How much lower is the throat pressure, and what height difference do the Venturi tubes show?",
-  "fp": "c060fe2f95c7",
-  "yield": "HIGH",
-  "why": "The Venturi meter is a common continuity-then-Bernoulli application."
- },
- {
-  "front": "Water at $1$ m/s in a $6$ cm$^2$ pipe rises $2$ m into a $2$ cm$^2$ section. How much lower is the pressure in the upper section? ($g = 10$ m/s$^2$)",
-  "fp": "0863195bb77c",
-  "yield": "ULTRA_HIGH",
-  "why": "Full Bernoulli with speed and height changes is tested on every MCAT."
- },
- {
-  "front": "Liquid leaks from a small hole a depth $h$ below the surface of a wide open tank at speed {{c1::$v = \\sqrt{2gh}$}}.",
-  "fp": "ec65e6bea604",
-  "yield": "HIGH",
-  "why": "Torricelli's theorem is a frequently tested Bernoulli special case."
- },
- {
-  "front": "A pitot tube reads a stagnation pressure $250$ Pa above the static pressure in an air stream ($\\rho = 1.25$ kg/m$^3$). What is the air speed?",
-  "fp": "84250b40cca5",
-  "yield": "MEDIUM",
-  "why": "Pitot tubes appear as passage-context applications of Bernoulli."
- },
- {
-  "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
-  "fp": "67c3cf47859b",
-  "yield": "ULTRA_HIGH",
-  "why": "Poiseuille's $r^4$ dependence is tested on every MCAT."
- },
- {
-  "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
-  "fp": "6bab07922d57",
-  "yield": "HIGH",
-  "why": "Where pressure falls in the circulation is a commonly tested physics-physiology link."
- },
- {
-  "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
-  "fp": "4e491c757308",
-  "yield": "HIGH",
-  "why": "Series vs parallel vascular beds and $MAP = CO \\times TPR$ are commonly tested."
- },
- {
-  "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
-  "fp": "81e2e3db484e",
-  "yield": "HIGH",
-  "why": "Choosing the right law for a stenosis is a frequent passage question."
- },
- {
-  "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
-  "fp": "eb074bf076a9",
-  "yield": "HIGH",
-  "why": "Regime selection is the gateway step for fluids passages."
- },
- {
-  "front": "Why can severe anemia produce a heart murmur even with normal valves?",
-  "fp": "1ac24722098d",
-  "yield": "MEDIUM",
-  "why": "Reynolds-number reasoning appears mainly in clinical passages."
  }
 ]

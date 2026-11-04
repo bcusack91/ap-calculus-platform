@@ -3360,7 +3360,13 @@
     "importPath": "./mcat-mcat-physics-electricity-dc-circuits-mcat",
     "partTitles": [
       "Charge, Current & Voltage",
-      "Resistance, Ohm's Law & Series vs. Parallel",
+      "Resistance, Ohm's Law & Series vs. Parallel"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-kirchhoff-power-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-kirchhoff-power-mcat",
+    "partTitles": [
       "Kirchhoff's Rules & Reducing Networks",
       "Circuit Changes, Power & Bulb Brightness"
     ]
@@ -3370,7 +3376,13 @@
     "importPath": "./mcat-mcat-physics-electricity-emf-capacitors-mcat",
     "partTitles": [
       "EMF, Internal Resistance & Meters",
-      "Capacitance, Dielectrics & Stored Energy",
+      "Capacitance, Dielectrics & Stored Energy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-rc-circuits-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-rc-circuits-mcat",
+    "partTitles": [
       "Capacitor Networks & RC Circuits",
       "Bioelectricity & Passage Strategy"
     ]
@@ -3460,17 +3472,35 @@
     "importPath": "./mcat-mcat-physics-mechanics-fluids-mcat",
     "partTitles": [
       "Density, Pressure & Pascal's Principle",
-      "Buoyancy, Archimedes & Surface Tension",
+      "Buoyancy, Archimedes & Surface Tension"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-fluid-dynamics-mcat",
+    "partTitles": [
       "Fluid Dynamics: Continuity & Bernoulli",
       "Viscosity, Poiseuille & Blood Flow"
+    ]
+  },
+  {
+    "slug": "mcat-physics-waves-periodic-motion-mcat",
+    "importPath": "./mcat-mcat-physics-waves-periodic-motion-mcat",
+    "partTitles": [
+      "Periodic Motion & Wave Basics"
+    ]
+  },
+  {
+    "slug": "mcat-physics-waves-interference-mcat",
+    "importPath": "./mcat-mcat-physics-waves-interference-mcat",
+    "partTitles": [
+      "Superposition, Interference & Standing Waves"
     ]
   },
   {
     "slug": "mcat-physics-waves-sound-mcat",
     "importPath": "./mcat-mcat-physics-waves-sound-mcat",
     "partTitles": [
-      "Periodic Motion & Wave Basics",
-      "Superposition, Interference & Standing Waves",
       "Sound: Intensity, Decibels & Hearing",
       "Doppler, Ultrasound & Shock Waves"
     ]

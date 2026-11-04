@@ -1,0 +1,98 @@
+[
+ {
+  "front": "An infusion pump delivers $120$ mL/min through tubing of cross-sectional area $0.10$ cm$^2$. What is the saline's average speed?",
+  "back": "$20$ cm/s. $Q = 120/60 = 2$ cm$^3$/s, and $v = Q/A = 2/0.10 = 20$ cm/s. Convert minutes to seconds first, and remember $1$ mL $= 1$ cm$^3$.",
+  "hint": "$Q = Av$",
+  "yield": "HIGH",
+  "why": "Flow rate vs speed with unit conversion is a common discrete calculation.",
+  "part": 1
+ },
+ {
+  "front": "Doppler shows blood speeding from $30$ to $270$ cm/s through a stenosis at unchanged flow, so the lumen radius is about {{c1::one-third}} of normal.",
+  "back": "Speed rose 9-fold, so by $A_1v_1 = A_2v_2$ the area fell to one-ninth. Area goes as $r^2$, so the radius is $\\sqrt{1/9} = 1/3$ of normal. Answering one-ninth confuses area with radius.",
+  "hint": "Speed ratio gives the area ratio; then take a square root.",
+  "yield": "ULTRA_HIGH",
+  "why": "Continuity with the radius-squared step is tested on every MCAT.",
+  "part": 1
+ },
+ {
+  "front": "Water flows at $1$ m/s through a horizontal pipe of area $10$ cm$^2$ into a throat of area $2$ cm$^2$. How much lower is the throat pressure, and what height difference do the Venturi tubes show?",
+  "back": "$12$ kPa and $1.2$ m. Continuity: $v_2 = 5$ m/s. Bernoulli: $\\Delta P = \\tfrac{1}{2}(1000)(25 - 1) = 12{,}000$ Pa, using $v_2^2 - v_1^2$, not $(v_2 - v_1)^2$. Then $\\Delta h = \\Delta P/(\\rho g) = 1.2$ m, lower over the throat.",
+  "hint": "Continuity first, then Bernoulli, then $\\Delta P = \\rho g \\Delta h$.",
+  "yield": "HIGH",
+  "why": "The Venturi meter is a common continuity-then-Bernoulli application.",
+  "part": 1
+ },
+ {
+  "front": "Water at $1$ m/s in a $6$ cm$^2$ pipe rises $2$ m into a $2$ cm$^2$ section. How much lower is the pressure in the upper section? ($g = 10$ m/s$^2$)",
+  "back": "$24$ kPa. Continuity gives $v_2 = 3$ m/s. Bernoulli: $\\tfrac{1}{2}(1000)(9 - 1) + (1000)(10)(2) = 4000 + 20{,}000$ Pa. Speeding up and climbing both lower the pressure, so the terms add.",
+  "hint": "Keep both the kinetic and the height terms.",
+  "yield": "ULTRA_HIGH",
+  "why": "Full Bernoulli with speed and height changes is tested on every MCAT.",
+  "part": 1
+ },
+ {
+  "front": "Liquid leaks from a small hole a depth $h$ below the surface of a wide open tank at speed {{c1::$v = \\sqrt{2gh}$}}.",
+  "back": "Torricelli: surface and jet are both at atmospheric pressure, so the jet has the free-fall speed from the surface. At $h = 1.8$ m, $v = \\sqrt{36} = 6$ m/s; doubling the depth multiplies $v$ by only $\\sqrt{2}$.",
+  "hint": "Same speed as an object dropped from height $h$.",
+  "yield": "HIGH",
+  "why": "Torricelli's theorem is a frequently tested Bernoulli special case.",
+  "part": 1
+ },
+ {
+  "front": "A pitot tube reads a stagnation pressure $250$ Pa above the static pressure in an air stream ($\\rho = 1.25$ kg/m$^3$). What is the air speed?",
+  "back": "$20$ m/s. Bringing the flow to rest at the tip turns the kinetic term into pressure: $\\tfrac{1}{2}\\rho v^2 = 250$, so $v^2 = 2(250)/1.25 = 400$.",
+  "hint": "Stagnation minus static $= \\tfrac{1}{2}\\rho v^2$",
+  "yield": "MEDIUM",
+  "why": "Pitot tubes appear as passage-context applications of Bernoulli.",
+  "part": 1
+ },
+ {
+  "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
+  "back": "Poiseuille flow scales as $r^4$, and $0.84^4 \\approx 0.50$. That is why small changes in arteriolar tone produce large changes in flow.",
+  "hint": "Which radius factor, raised to the fourth power, gives one-half?",
+  "yield": "ULTRA_HIGH",
+  "why": "Poiseuille's $r^4$ dependence is tested on every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
+  "back": "Billions of capillaries sit in parallel, so their combined resistance is lower than the arterioles'. Pressure falls from about 90 to about 35 mmHg across the arterioles, whose smooth muscle sets resistance.",
+  "hint": "Series vs parallel resistance.",
+  "yield": "HIGH",
+  "why": "Where pressure falls in the circulation is a commonly tested physics-physiology link.",
+  "part": 2
+ },
+ {
+  "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
+  "back": "Both rise. Parallel resistances combine to less than any single branch, so removing one raises the total; since $MAP \\approx CO \\times TPR$, MAP rises too.",
+  "hint": "$1/R_{\\text{total}} = 1/R_1 + 1/R_2 + \\dots$",
+  "yield": "HIGH",
+  "why": "Series vs parallel vascular beds and $MAP = CO \\times TPR$ are commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
+  "back": "Bernoulli fits a SHORT narrowing: speed changes quickly and friction is small, explaining the pressure dip in the jet. Poiseuille fits a LONG narrowing or a fixed driving pressure: resistance rises as $1/r^4$ and flow falls.",
+  "hint": "How long is the narrowed segment?",
+  "yield": "HIGH",
+  "why": "Choosing the right law for a stenosis is a frequent passage question.",
+  "part": 2
+ },
+ {
+  "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
+  "back": "Static (depth, floating, pistons): $P = P_0 + \\rho g h$, Pascal, Archimedes. Ideal flow (non-viscous, short constrictions): continuity, Bernoulli, Torricelli. Viscous flow (long vessels, viscosity given): Poiseuille, $Q = \\Delta P/R$. If turbulent, neither equation holds.",
+  "hint": "Is anything flowing? Does viscosity matter?",
+  "yield": "HIGH",
+  "why": "Regime selection is the gateway step for fluids passages.",
+  "part": 2
+ },
+ {
+  "front": "Why can severe anemia produce a heart murmur even with normal valves?",
+  "back": "Low hematocrit lowers blood viscosity, and cardiac output rises to compensate, so blood moves faster. Both raise the Reynolds number $Re = \\rho v D/\\eta$, pushing flow toward turbulence, which is audible.",
+  "hint": "Which two factors in $Re$ change?",
+  "yield": "MEDIUM",
+  "why": "Reynolds-number reasoning appears mainly in clinical passages.",
+  "part": 2
+ }
+]

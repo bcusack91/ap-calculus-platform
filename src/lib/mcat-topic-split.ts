@@ -12,13 +12,19 @@
  */
 
 export const MCAT_SPLIT_TOPICS: Record<string, readonly string[]> = {
+  // Successors in course order. Split twice (Nov 2026): first into two
+  // lessons each, then into one topic per 90-minute class.
   'mcat-physics-electricity-circuits-mcat': [
     'mcat-physics-electricity-dc-circuits-mcat',
+    'mcat-physics-electricity-kirchhoff-power-mcat',
     'mcat-physics-electricity-emf-capacitors-mcat',
+    'mcat-physics-electricity-rc-circuits-mcat',
   ],
-  // The successors reuse the competitive bank's own subtopic slugs.
   'mcat-physics-mechanics-fluids-waves-mcat': [
     'mcat-physics-mechanics-fluids-mcat',
+    'mcat-physics-mechanics-fluid-dynamics-mcat',
+    'mcat-physics-waves-periodic-motion-mcat',
+    'mcat-physics-waves-interference-mcat',
     'mcat-physics-waves-sound-mcat',
   ],
 }
@@ -26,9 +32,14 @@ export const MCAT_SPLIT_TOPICS: Record<string, readonly string[]> = {
 /** Topic titles of the successors, for recommendations remapped from a retired slug. */
 export const MCAT_SPLIT_TITLES: Record<string, string> = {
   'mcat-physics-electricity-dc-circuits-mcat': 'Circuits Part 1: Current & Resistance',
-  'mcat-physics-electricity-emf-capacitors-mcat': 'Circuits Part 2: EMF & Capacitors',
-  'mcat-physics-mechanics-fluids-mcat': 'Fluids',
-  'mcat-physics-waves-sound-mcat': 'Waves & Sound',
+  'mcat-physics-electricity-kirchhoff-power-mcat': "Circuits Part 2: Kirchhoff's Rules & Power",
+  'mcat-physics-electricity-emf-capacitors-mcat': 'Circuits Part 3: EMF & Capacitance',
+  'mcat-physics-electricity-rc-circuits-mcat': 'Circuits Part 4: Capacitor Networks & Bioelectricity',
+  'mcat-physics-mechanics-fluids-mcat': 'Fluids at Rest',
+  'mcat-physics-mechanics-fluid-dynamics-mcat': 'Fluids in Motion',
+  'mcat-physics-waves-periodic-motion-mcat': 'Periodic Motion & Waves',
+  'mcat-physics-waves-interference-mcat': 'Interference & Standing Waves',
+  'mcat-physics-waves-sound-mcat': 'Sound, Doppler & Ultrasound',
 }
 
 /** True for a retired pre-split slug. */

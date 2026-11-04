@@ -1,14 +1,16 @@
 import type { LessonData } from './registry'
 
-export const emfCapacitorsMcatPart3: LessonData = {
-  topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat',
+export const rcCircuitsMcatPart1: LessonData = {
+  topicSlug: 'mcat-physics-electricity-rc-circuits-mcat',
   sections: [
     {
       id: 'ec3-intro',
       type: 'text' as const,
-      content: `# Circuits Part 2: EMF & Capacitors
+      content: `# Circuits Part 4: Capacitor Networks & Bioelectricity
 
-**Part 3 of 4 — Capacitor Networks & RC Circuits**
+**Part 1 of 2 — Capacitor Networks & RC Circuits**
+
+**Where this fits.** The *Circuits Part 3: EMF & Capacitance* lesson introduced the single capacitor: $C = Q/V$, dielectrics and stored energy. This final Circuits lesson wires capacitors into networks and RC circuits, then reads the cell membrane, myelin and the defibrillator as circuits and closes with passage strategy. Next comes the *Magnetism & Electromagnetic Induction* lesson.
 
 ### Capacitor Networks
 
@@ -99,7 +101,7 @@ The bridge between them: **a capacitor's voltage cannot change instantly**, beca
 **Steady-state recipe:**
 
 1. Delete every capacitor branch (treat it as open).
-2. Solve the remaining resistor network with the tools from the *Circuits Part 1: Current & Resistance* lesson.
+2. Solve the remaining resistor network with the tools from the *Circuits Part 2: Kirchhoff's Rules & Power* lesson.
 3. Find $V_C$ as the potential difference between the two points the capacitor connects. A resistor in series with the capacitor carries no current, so it drops no voltage and can be ignored.
 4. Then $Q = CV_C$ and $U = \\frac{1}{2}CV_C^2$.
 
@@ -202,7 +204,7 @@ $$I_0 = \\frac{12}{4.0} = 3.0\\;\\text{A}$$
     {
       id: 'ec3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 3
+      content: `### Key Takeaways — Part 1
 
 - **Resistor rules reversed.** Parallel capacitances add; series capacitances combine by reciprocals.
 - **Shared Q or shared V.** Series capacitors share $Q$ (smaller $C$ takes more voltage); parallel ones share $V$.

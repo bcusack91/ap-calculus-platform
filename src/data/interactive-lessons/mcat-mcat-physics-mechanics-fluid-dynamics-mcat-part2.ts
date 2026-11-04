@@ -1,16 +1,16 @@
 import type { LessonData } from './registry'
 
-export const fluidsMcatPart4: LessonData = {
-  topicSlug: 'mcat-physics-mechanics-fluids-mcat',
+export const fluidsInMotionMcatPart2: LessonData = {
+  topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat',
   sections: [
     {
       id: 'fl4-intro',
       type: 'text' as const,
-      content: `# Fluids
+      content: `# Fluids in Motion
 
-**Part 4 of 4 — Viscosity, Poiseuille & Blood Flow**
+**Part 2 of 2 — Viscosity, Poiseuille & Blood Flow**
 
-Part 3 of this lesson assumed a fluid with no internal friction. Real fluids, blood included, have friction, and that friction is why the heart has to keep pumping.
+Part 1 of this lesson assumed a fluid with no internal friction. Real fluids, blood included, have friction, and that friction is why the heart has to keep pumping.
 
 ### Viscosity: When Fluids Are Real
 
@@ -107,11 +107,11 @@ The MCAT rarely asks about pipes; it asks about blood vessels. The physiology is
 
 - **$Q = \\Delta P/R$ for the whole circuit.** For the systemic circulation, $Q$ is the cardiac output (CO, about 5 L/min at rest), $\\Delta P$ is the mean arterial pressure (MAP, the average pressure in the aorta, about 93 mmHg) minus the near-zero pressure in the right atrium, and $R$ is the total peripheral resistance (TPR) of all the systemic vessels. So $MAP \\approx CO \\times TPR$.
 - **Series and parallel.** Blood passes through vessel types in SERIES (artery, arteriole, capillary, venule, vein): their resistances add, and the same flow $Q$ passes through each level. The organs branch off the aorta in PARALLEL: $1/R_{\\text{total}} = 1/R_1 + 1/R_2 + \\dots$, so the total is lower than any single organ's resistance. Opening more beds lowers TPR; closing or removing one raises it.
-- **Total cross-sectional area sets speed.** Continuity applies to the SUMMED area at each level (worked in Part 3 of this lesson). Each capillary is microscopic, but there are billions of them, so the capillaries have by far the largest total area and the slowest blood (giving time for exchange). The aorta has the smallest total area and the fastest blood, and blood speeds up again as veins merge.
+- **Total cross-sectional area sets speed.** Continuity applies to the SUMMED area at each level (worked in Part 1 of this lesson). Each capillary is microscopic, but there are billions of them, so the capillaries have by far the largest total area and the slowest blood (giving time for exchange). The aorta has the smallest total area and the fastest blood, and blood speeds up again as veins merge.
 - **Where pressure falls.** The largest pressure drop is across the **arterioles** (from about 90 to about 35 mmHg). Each capillary is narrower than an arteriole, but so many capillaries sit in parallel that their combined resistance is lower.
 - **Why radius control is so powerful.** Arteriole walls contain smooth muscle, and because $R \\propto 1/r^4$, a small change in radius makes a large change in resistance. Constricting one organ's arterioles also diverts flow to the other parallel beds.
 - **Viscosity counts too.** A higher hematocrit raises $\\eta$, raising resistance and the heart's workload.
-- **Gravity still applies.** Standing adds $\\rho g h$ to pressures below the heart, as in Part 1 of this lesson.
+- **Gravity still applies.** Standing adds $\\rho g h$ to pressures below the heart, as in the *Fluids at Rest* lesson.
 - **Air in the lungs.** Airflow obeys the same $Q = \\Delta P/R$ logic: the pressure difference between the alveoli and the atmosphere drives air through the airways, and airway radius dominates resistance through $r^4$. Narrowing of the airways in asthma therefore sharply cuts airflow. Passages supply the details; reason with $r^4$.
 
 <!-- yield:low -->
@@ -134,7 +134,7 @@ A **stenosis** is an abnormal narrowing of a vessel or valve. Three laws answer 
 - **The reverse case: an aneurysm** (an abnormal widening of an artery). Continuity says blood slows in the wider segment; Bernoulli says slower blood means higher pressure on the wall there; that pressure stretches the wall further, a vicious cycle that lets an aneurysm keep growing.
 - They do not contradict each other. Continuity assumes $Q$ stays fixed; Poiseuille tells you what it costs (a larger $\\Delta P$) to keep $Q$ fixed, or how far $Q$ falls if $\\Delta P$ cannot rise.
 
-Clinicians measure the jet speed with Doppler ultrasound; the wave physics behind that is in the *Waves & Sound* lesson.
+Clinicians measure the jet speed with Doppler ultrasound; the wave physics behind that is in the *Sound, Doppler & Ultrasound* lesson.
 
 ### Passage Strategy: Pick the Regime First
 
@@ -223,7 +223,7 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 - the critical Reynolds number (about 2000); the Korotkoff name; airway resistance peaking in the medium bronchi; the Fåhræus–Lindqvist effect.
 <!-- /yield -->
 
-**Next up:** the *Waves & Sound* lesson, which covers periodic motion, standing waves, decibels, the Doppler effect and ultrasound.`
+**Next up:** the *Periodic Motion & Waves* lesson, which covers oscillations, simple harmonic motion and the basics of waves, including $v = f\\lambda$.`
     }
   ]
 }

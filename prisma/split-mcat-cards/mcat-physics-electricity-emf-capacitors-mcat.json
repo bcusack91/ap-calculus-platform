@@ -1,226 +1,146 @@
 [
-  {
-    "front": "Why can a worn-out battery read its full EMF on a voltmeter, yet fail as soon as a real load is attached?",
-    "back": "An ideal voltmeter draws almost no current, so $Ir \\approx 0$ and the open-circuit reading equals $\\varepsilon$. Aging raises the internal resistance $r$, so under load the drop $Ir$ is large and $V_{\\text{term}} = \\varepsilon - Ir$ sags.",
-    "hint": "What does an open-circuit test fail to reveal?",
-    "yield": "HIGH",
-    "why": "Open-circuit voltage vs loaded terminal voltage is a standard real-battery question.",
-    "part": 1
-  },
-  {
-    "front": "A voltmeter reads $9.0$ V across an unloaded battery and $8.0$ V once a $4.0\\,\\Omega$ resistor is connected across it. What is the internal resistance?",
-    "back": "$0.50\\,\\Omega$. The open-circuit reading is the EMF. Loaded, $I = 8.0/4.0 = 2.0$ A, and the missing $1.0$ V is dropped inside the battery: $r = (9.0 - 8.0)/2.0 = 0.50\\,\\Omega$.",
-    "hint": "Open-circuit reading gives $\\varepsilon$; loaded reading plus current gives $r$.",
-    "yield": "HIGH",
-    "why": "Extracting internal resistance from two readings is a common discrete calculation.",
-    "part": 1
-  },
-  {
-    "front": "Four $1.5$ V cells are stacked in series, but one is inserted backward. The total EMF is {{c1::$3.0$ V}}.",
-    "back": "In series, EMFs (and internal resistances) add, but a reversed cell pushes against the others and subtracts: $1.5 + 1.5 + 1.5 - 1.5 = 3.0$ V, not $4.5$ V.",
-    "hint": "A backward cell does not just contribute nothing.",
-    "yield": "HIGH",
-    "why": "Series cell stacks and the reversed-cell trap appear in circuit questions regularly.",
-    "part": 1
-  },
-  {
-    "front": "Two identical $1.5$ V cells, each with internal resistance $r$, are connected in parallel. What are the pack's EMF and internal resistance?",
-    "back": "The EMF stays $1.5$ V, and the internal resistances are in parallel, giving $r/2$. The pack sags less under load and lasts longer. Rule of thumb: series for more voltage, parallel for more current capacity.",
-    "hint": "Parallel cells share the same two terminals.",
-    "yield": "MEDIUM",
-    "why": "Parallel battery packs are secondary to series stacks on the exam.",
-    "part": 1
-  },
-  {
-    "front": "A phone battery is rated $2000$ mAh at $3.7$ V. How much charge does it hold, and roughly how much energy?",
-    "back": "A mAh rating is charge, since $Q = It$: $(2.0\\text{ A})(3600\\text{ s}) = 7200$ C. The energy is roughly $QV = (7200)(3.7) \\approx 2.7 \\times 10^4$ J.",
-    "hint": "Convert milliamp-hours to amp-seconds.",
-    "yield": "MEDIUM",
-    "why": "Capacity unit conversions show up in passage-based device questions.",
-    "part": 1
-  },
-  {
-    "front": "What happens if an ammeter is mistakenly connected in parallel across a lamp?",
-    "back": "Its near-zero resistance shorts the lamp. Almost all the current detours through the meter, the lamp goes dark (nearly $0$ V across it), and the large current can blow the meter's fuse.",
-    "hint": "An ideal ammeter has about zero resistance.",
-    "yield": "HIGH",
-    "why": "Misplaced-meter consequences are a classic conceptual circuit question.",
-    "part": 1
-  },
-  {
-    "front": "A voltmeter wired in series with a $100\\,\\Omega$ resistor across an ideal $9.0$ V battery reads about {{c1::$9.0$ V}}.",
-    "back": "The meter's enormous resistance chokes the current to nearly zero, so the resistor drops almost nothing ($IR \\approx 0$) and nearly the whole EMF appears across the meter. Everything else in the loop goes dark.",
-    "hint": "A voltmeter reads the potential difference across itself.",
-    "yield": "HIGH",
-    "why": "Misplaced-meter consequences are a classic conceptual circuit question.",
-    "part": 1
-  },
-  {
-    "front": "A battery's EMF is the cell potential of its galvanic cell, set by the redox reaction through $\\Delta G = -nFE$; the battery's positive terminal is the {{c1::cathode}}.",
-    "back": "In a galvanic cell, reduction occurs at the cathode, which sits at the higher potential. A spontaneous reaction ($\\Delta G < 0$) gives a positive cell potential, which is the EMF the circuit sees.",
-    "hint": "Link to the Electrochemistry topic.",
-    "yield": "MEDIUM",
-    "why": "The electrochemistry bridge is tested, but mostly in the chemistry topic.",
-    "part": 1
-  },
-  {
-    "front": "Capacitance is the charge stored per volt, $C = Q/V$, measured in {{c1::farads}} ($1\\text{ F} = 1\\text{ C/V}$).",
-    "back": "$C$ is fixed by construction, so doubling $V$ doubles $Q$; it does not halve $C$. $Q$ means the charge on EACH plate. A farad is huge: real capacitors run from $\\mu$F to pF, and $\\mu\\text{F} \\times \\text{V} = \\mu\\text{C}$.",
-    "hint": "Capacitance does not depend on the voltage applied.",
-    "yield": "ULTRA_HIGH",
-    "why": "C = Q/V underlies every capacitor question on the MCAT.",
-    "part": 2
-  },
-  {
-    "front": "A parallel-plate capacitor's plate area is doubled and its plate gap is tripled. What is the new capacitance?",
-    "back": "$C = \\kappa\\varepsilon_0 A/d$, so $C \\propto A/d$: $\\times 2$ then $\\div 3$ gives $\\tfrac{2}{3}C$. Bigger plates and a smaller gap raise $C$; a dielectric multiplies it by $\\kappa$.",
-    "hint": "Capacitance FALLS as the plates move apart.",
-    "yield": "ULTRA_HIGH",
-    "why": "Parallel-plate scaling is tested on nearly every exam.",
-    "part": 2
-  },
-  {
-    "front": "$12$ V is applied across capacitor plates $2.0$ mm apart. What is the electric field between them?",
-    "back": "The field is uniform and points from the $+$ plate to the $-$ plate: $E = V/d = 12/(2.0 \\times 10^{-3}\\text{ m}) = 6.0 \\times 10^3$ V/m. Skipping the mm conversion gives an answer 1000 times too small.",
-    "hint": "Convert millimeters to meters first.",
-    "yield": "HIGH",
-    "why": "$E = V/d$ between plates links capacitors to electrostatics questions.",
-    "part": 2
-  },
-  {
-    "front": "How does a dielectric between the plates raise a capacitor's capacitance?",
-    "back": "Its molecules polarize, lining up negative charge next to the $+$ plate and positive charge next to the $-$ plate. These induced charges partly cancel the field, so for the same $Q$ the field and voltage drop by $\\kappa$, and $C = \\kappa C_0$.",
-    "hint": "Think about what the induced surface charges do to the field.",
-    "yield": "HIGH",
-    "why": "The mechanism of dielectrics is a common conceptual question.",
-    "part": 2
-  },
-  {
-    "front": "A dielectric ($\\kappa$) is slid into a capacitor that stays connected to its battery. What happens to $Q$, $V$, $E$, and $U$?",
-    "back": "The battery holds $V$ fixed, so $V$ and $E = V/d$ are unchanged. $C$ rises by $\\kappa$, so the battery pushes on more charge: $Q \\times \\kappa$, and $U = \\tfrac{1}{2}CV^2 \\times \\kappa$.",
-    "hint": "Connected battery: which quantity cannot change?",
-    "yield": "ULTRA_HIGH",
-    "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
-    "part": 2
-  },
-  {
-    "front": "A $2.0\\,\\mu$F capacitor charged to $100$ V is disconnected, then filled with a $\\kappa = 4$ slab. What are its new voltage and stored energy?",
-    "back": "The $200\\,\\mu$C is trapped. $C$ becomes $8.0\\,\\mu$F, so $V = 200/8.0 = 25$ V, and $U = Q^2/2C$ falls by 4: from $1.0 \\times 10^{-2}$ J to $2.5 \\times 10^{-3}$ J. The field also falls by 4.",
-    "hint": "Disconnected means $Q$ is fixed.",
-    "yield": "ULTRA_HIGH",
-    "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
-    "part": 2
-  },
-  {
-    "front": "The plates of a charged, isolated capacitor are pulled apart to twice their separation. What happens to $C$, $Q$, $V$, and $U$?",
-    "back": "$Q$ is trapped. $C$ halves, so $V = Q/C$ doubles and $U = Q^2/2C$ doubles. The extra energy is the work done pulling the attracting plates apart.",
-    "hint": "Isolated means $Q$ is fixed.",
-    "yield": "ULTRA_HIGH",
-    "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
-    "part": 2
-  },
-  {
-    "front": "With the battery still connected, doubling a capacitor's plate separation {{c1::halves}} both its charge and its stored energy.",
-    "back": "$V$ is held fixed while $C$ halves, so $Q = CV$ halves and $U = \\tfrac{1}{2}CV^2$ halves. The same move on an ISOLATED capacitor doubles $V$ and $U$ instead.",
-    "hint": "Connected means $V$ is fixed.",
-    "yield": "ULTRA_HIGH",
-    "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
-    "part": 2
-  },
-  {
-    "front": "A capacitor's stored energy is $U = \\tfrac{1}{2}QV = \\tfrac{1}{2}CV^2 =$ {{c1::$Q^2/2C$}}.",
-    "back": "Pick the form whose variables stay fixed: battery connected ($V$ fixed) use $\\tfrac{1}{2}CV^2$, so $U \\propto C$; isolated ($Q$ fixed) use $Q^2/2C$, so $U \\propto 1/C$.",
-    "hint": "Substitute $V = Q/C$ into $\\tfrac{1}{2}QV$.",
-    "yield": "ULTRA_HIGH",
-    "why": "Choosing the right energy form drives every capacitor energy question.",
-    "part": 2
-  },
-  {
-    "front": "A battery charges an uncharged capacitor through a resistor, moving charge $Q$ at voltage $V$. How much energy does the battery supply, and where does it all go?",
-    "back": "The battery supplies $QV$, but the capacitor stores only $\\tfrac{1}{2}QV$. The other half is lost as heat in the resistance, whatever the resistance's size.",
-    "hint": "Compare $QV$ with $\\tfrac{1}{2}QV$.",
-    "yield": "MEDIUM",
-    "why": "The half-lost-as-heat result appears mainly as a passage-level conceptual trap.",
-    "part": 2
-  },
-  {
-    "front": "A $3.0\\,\\mu$F and a $6.0\\,\\mu$F capacitor are in series across $12$ V. What voltage does each one take?",
-    "back": "$C_{\\text{eq}} = (3.0)(6.0)/(3.0 + 6.0) = 2.0\\,\\mu$F, so each holds $Q = 24\\,\\mu$C. Then $V_3 = 24/3.0 = 8.0$ V and $V_6 = 24/6.0 = 4.0$ V: the SMALLER capacitor takes the larger voltage.",
-    "hint": "Series capacitors share $Q$; use $V = Q/C$.",
-    "yield": "HIGH",
-    "why": "Voltage division in series capacitors is a common network calculation.",
-    "part": 3
-  },
-  {
-    "front": "When a charged capacitor discharges through a resistor, the current flows in the {{c1::opposite}} direction to the charging current.",
-    "back": "Charge now leaves the plates instead of arriving. During discharge, charge, voltage and current all start at their maximum and decay toward zero.",
-    "hint": "Are charges arriving at or leaving the plates?",
-    "yield": "HIGH",
-    "why": "Charging-vs-discharging behavior is commonly tested with RC graphs.",
-    "part": 3
-  },
-  {
-    "front": "A charging capacitor follows $Q(t) =$ {{c1::$C\\varepsilon(1 - e^{-t/RC})$}}, rising quickly and then leveling off.",
-    "back": "Recognize the shape; a passage will supply the formula. At $t = RC$, $1 - e^{-1} \\approx 0.63$. The current does the opposite: it starts at $\\varepsilon/R$ and decays toward zero.",
-    "hint": "It must equal $0$ at $t = 0$ and $C\\varepsilon$ as $t \\to \\infty$.",
-    "yield": "MEDIUM",
-    "why": "Exact exponential forms are recognition-only, supplied in passages.",
-    "part": 3
-  },
-  {
-    "front": "A $2.0\\text{ k}\\Omega$ resistor charges a $50\\,\\mu$F capacitor from a battery. About how long until the capacitor is essentially fully charged?",
-    "back": "$\\tau = RC = (2.0 \\times 10^3)(5.0 \\times 10^{-5}) = 0.10$ s, and \"essentially full\" takes about $5\\tau = 0.50$ s. After one $\\tau$ it holds only about 63%.",
-    "hint": "Convert kilo and micro prefixes before multiplying.",
-    "yield": "MEDIUM",
-    "why": "Time-constant arithmetic is secondary, mostly in passage questions.",
-    "part": 3
-  },
-  {
-    "front": "A capacitor reaches half its final charge (or loses half while discharging) after about {{c1::$0.69\\tau$}}.",
-    "back": "Setting $e^{-t/\\tau} = \\tfrac{1}{2}$ gives $t = \\tau \\ln 2 \\approx 0.69\\tau$, a bit less than one time constant.",
-    "hint": "$\\ln 2 \\approx 0.69$.",
-    "yield": "LOW",
-    "why": "The half-time is marked low-yield in the lesson.",
-    "part": 3
-  },
-  {
-    "front": "A toxin opens many extra $\\text{K}^+$ leak channels in a neuron. How do the membrane resistance and time constant change?",
-    "back": "Each open channel is another resistor in parallel, so $R_m$ falls; with $C_m$ unchanged, $\\tau = R_mC_m$ shortens. The membrane responds faster, but each input fades faster.",
-    "hint": "Adding parallel paths lowers total resistance.",
-    "yield": "HIGH",
-    "why": "Channel opening as parallel resistors is a common bioelectricity translation.",
-    "part": 4
-  },
-  {
-    "front": "Why does myelin LOWER the axon's membrane capacitance?",
-    "back": "Myelin is many membrane wraps stacked in series, and series capacitors act like a wider gap $d$, so $C_m$ falls. Less charge is needed to change each stretch's voltage, so depolarization spreads farther and faster.",
-    "hint": "Recall $C = \\kappa\\varepsilon_0 A/d$.",
-    "yield": "HIGH",
-    "why": "Myelin as series capacitors is a favorite physics-in-biology question.",
-    "part": 4
-  },
-  {
-    "front": "In a myelinated axon, the action potential is regenerated only at the {{c1::nodes of Ranvier}}, where voltage-gated $\\text{Na}^+$ channels are concentrated.",
-    "back": "The signal seems to jump node to node: saltatory conduction. It is fast and energy-efficient, because ions cross the membrane only at the nodes, leaving less for the $\\text{Na}^+/\\text{K}^+$ pump to restore.",
-    "hint": "Gaps between myelin segments.",
-    "yield": "HIGH",
-    "why": "Saltatory conduction is tested in both physics and biology contexts.",
-    "part": 4
-  },
-  {
-    "front": "In multiple sclerosis, how do a demyelinated internode's capacitance and resistance compare with a healthy one, and why does conduction suffer?",
-    "back": "$C_m$ rises and $R_m$ falls, because the series layers are gone. More charge is needed per millivolt and current leaks out across the membrane, so conduction slows or fails.",
-    "hint": "Reverse what myelin does.",
-    "yield": "HIGH",
-    "why": "Demyelination is a common clinical framing of membrane RC properties.",
-    "part": 4
-  },
-  {
-    "front": "A defibrillator charges its capacitor over $6.0$ s and delivers the same energy in about $6.0$ ms. How does the delivery power compare with the charging power?",
-    "back": "Power is energy per time, so the same energy in $10^{-3}$ of the time means about $10^3$ times the power. The capacitor is a time compressor, not an energy source.",
-    "hint": "Equal energy does not mean equal power.",
-    "yield": "HIGH",
-    "why": "Defibrillator energy-and-power reasoning is a common applied capacitor question.",
-    "part": 4
-  }
+ {
+  "front": "Why can a worn-out battery read its full EMF on a voltmeter, yet fail as soon as a real load is attached?",
+  "back": "An ideal voltmeter draws almost no current, so $Ir \\approx 0$ and the open-circuit reading equals $\\varepsilon$. Aging raises the internal resistance $r$, so under load the drop $Ir$ is large and $V_{\\text{term}} = \\varepsilon - Ir$ sags.",
+  "hint": "What does an open-circuit test fail to reveal?",
+  "yield": "HIGH",
+  "why": "Open-circuit voltage vs loaded terminal voltage is a standard real-battery question.",
+  "part": 1
+ },
+ {
+  "front": "A voltmeter reads $9.0$ V across an unloaded battery and $8.0$ V once a $4.0\\,\\Omega$ resistor is connected across it. What is the internal resistance?",
+  "back": "$0.50\\,\\Omega$. The open-circuit reading is the EMF. Loaded, $I = 8.0/4.0 = 2.0$ A, and the missing $1.0$ V is dropped inside the battery: $r = (9.0 - 8.0)/2.0 = 0.50\\,\\Omega$.",
+  "hint": "Open-circuit reading gives $\\varepsilon$; loaded reading plus current gives $r$.",
+  "yield": "HIGH",
+  "why": "Extracting internal resistance from two readings is a common discrete calculation.",
+  "part": 1
+ },
+ {
+  "front": "Four $1.5$ V cells are stacked in series, but one is inserted backward. The total EMF is {{c1::$3.0$ V}}.",
+  "back": "In series, EMFs (and internal resistances) add, but a reversed cell pushes against the others and subtracts: $1.5 + 1.5 + 1.5 - 1.5 = 3.0$ V, not $4.5$ V.",
+  "hint": "A backward cell does not just contribute nothing.",
+  "yield": "HIGH",
+  "why": "Series cell stacks and the reversed-cell trap appear in circuit questions regularly.",
+  "part": 1
+ },
+ {
+  "front": "Two identical $1.5$ V cells, each with internal resistance $r$, are connected in parallel. What are the pack's EMF and internal resistance?",
+  "back": "The EMF stays $1.5$ V, and the internal resistances are in parallel, giving $r/2$. The pack sags less under load and lasts longer. Rule of thumb: series for more voltage, parallel for more current capacity.",
+  "hint": "Parallel cells share the same two terminals.",
+  "yield": "MEDIUM",
+  "why": "Parallel battery packs are secondary to series stacks on the exam.",
+  "part": 1
+ },
+ {
+  "front": "A phone battery is rated $2000$ mAh at $3.7$ V. How much charge does it hold, and roughly how much energy?",
+  "back": "A mAh rating is charge, since $Q = It$: $(2.0\\text{ A})(3600\\text{ s}) = 7200$ C. The energy is roughly $QV = (7200)(3.7) \\approx 2.7 \\times 10^4$ J.",
+  "hint": "Convert milliamp-hours to amp-seconds.",
+  "yield": "MEDIUM",
+  "why": "Capacity unit conversions show up in passage-based device questions.",
+  "part": 1
+ },
+ {
+  "front": "What happens if an ammeter is mistakenly connected in parallel across a lamp?",
+  "back": "Its near-zero resistance shorts the lamp. Almost all the current detours through the meter, the lamp goes dark (nearly $0$ V across it), and the large current can blow the meter's fuse.",
+  "hint": "An ideal ammeter has about zero resistance.",
+  "yield": "HIGH",
+  "why": "Misplaced-meter consequences are a classic conceptual circuit question.",
+  "part": 1
+ },
+ {
+  "front": "A voltmeter wired in series with a $100\\,\\Omega$ resistor across an ideal $9.0$ V battery reads about {{c1::$9.0$ V}}.",
+  "back": "The meter's enormous resistance chokes the current to nearly zero, so the resistor drops almost nothing ($IR \\approx 0$) and nearly the whole EMF appears across the meter. Everything else in the loop goes dark.",
+  "hint": "A voltmeter reads the potential difference across itself.",
+  "yield": "HIGH",
+  "why": "Misplaced-meter consequences are a classic conceptual circuit question.",
+  "part": 1
+ },
+ {
+  "front": "A battery's EMF is the cell potential of its galvanic cell, set by the redox reaction through $\\Delta G = -nFE$; the battery's positive terminal is the {{c1::cathode}}.",
+  "back": "In a galvanic cell, reduction occurs at the cathode, which sits at the higher potential. A spontaneous reaction ($\\Delta G < 0$) gives a positive cell potential, which is the EMF the circuit sees.",
+  "hint": "Link to the Electrochemistry topic.",
+  "yield": "MEDIUM",
+  "why": "The electrochemistry bridge is tested, but mostly in the chemistry topic.",
+  "part": 1
+ },
+ {
+  "front": "Capacitance is the charge stored per volt, $C = Q/V$, measured in {{c1::farads}} ($1\\text{ F} = 1\\text{ C/V}$).",
+  "back": "$C$ is fixed by construction, so doubling $V$ doubles $Q$; it does not halve $C$. $Q$ means the charge on EACH plate. A farad is huge: real capacitors run from $\\mu$F to pF, and $\\mu\\text{F} \\times \\text{V} = \\mu\\text{C}$.",
+  "hint": "Capacitance does not depend on the voltage applied.",
+  "yield": "ULTRA_HIGH",
+  "why": "C = Q/V underlies every capacitor question on the MCAT.",
+  "part": 2
+ },
+ {
+  "front": "A parallel-plate capacitor's plate area is doubled and its plate gap is tripled. What is the new capacitance?",
+  "back": "$C = \\kappa\\varepsilon_0 A/d$, so $C \\propto A/d$: $\\times 2$ then $\\div 3$ gives $\\tfrac{2}{3}C$. Bigger plates and a smaller gap raise $C$; a dielectric multiplies it by $\\kappa$.",
+  "hint": "Capacitance FALLS as the plates move apart.",
+  "yield": "ULTRA_HIGH",
+  "why": "Parallel-plate scaling is tested on nearly every exam.",
+  "part": 2
+ },
+ {
+  "front": "$12$ V is applied across capacitor plates $2.0$ mm apart. What is the electric field between them?",
+  "back": "The field is uniform and points from the $+$ plate to the $-$ plate: $E = V/d = 12/(2.0 \\times 10^{-3}\\text{ m}) = 6.0 \\times 10^3$ V/m. Skipping the mm conversion gives an answer 1000 times too small.",
+  "hint": "Convert millimeters to meters first.",
+  "yield": "HIGH",
+  "why": "$E = V/d$ between plates links capacitors to electrostatics questions.",
+  "part": 2
+ },
+ {
+  "front": "How does a dielectric between the plates raise a capacitor's capacitance?",
+  "back": "Its molecules polarize, lining up negative charge next to the $+$ plate and positive charge next to the $-$ plate. These induced charges partly cancel the field, so for the same $Q$ the field and voltage drop by $\\kappa$, and $C = \\kappa C_0$.",
+  "hint": "Think about what the induced surface charges do to the field.",
+  "yield": "HIGH",
+  "why": "The mechanism of dielectrics is a common conceptual question.",
+  "part": 2
+ },
+ {
+  "front": "A dielectric ($\\kappa$) is slid into a capacitor that stays connected to its battery. What happens to $Q$, $V$, $E$, and $U$?",
+  "back": "The battery holds $V$ fixed, so $V$ and $E = V/d$ are unchanged. $C$ rises by $\\kappa$, so the battery pushes on more charge: $Q \\times \\kappa$, and $U = \\tfrac{1}{2}CV^2 \\times \\kappa$.",
+  "hint": "Connected battery: which quantity cannot change?",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "A $2.0\\,\\mu$F capacitor charged to $100$ V is disconnected, then filled with a $\\kappa = 4$ slab. What are its new voltage and stored energy?",
+  "back": "The $200\\,\\mu$C is trapped. $C$ becomes $8.0\\,\\mu$F, so $V = 200/8.0 = 25$ V, and $U = Q^2/2C$ falls by 4: from $1.0 \\times 10^{-2}$ J to $2.5 \\times 10^{-3}$ J. The field also falls by 4.",
+  "hint": "Disconnected means $Q$ is fixed.",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "The plates of a charged, isolated capacitor are pulled apart to twice their separation. What happens to $C$, $Q$, $V$, and $U$?",
+  "back": "$Q$ is trapped. $C$ halves, so $V = Q/C$ doubles and $U = Q^2/2C$ doubles. The extra energy is the work done pulling the attracting plates apart.",
+  "hint": "Isolated means $Q$ is fixed.",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "With the battery still connected, doubling a capacitor's plate separation {{c1::halves}} both its charge and its stored energy.",
+  "back": "$V$ is held fixed while $C$ halves, so $Q = CV$ halves and $U = \\tfrac{1}{2}CV^2$ halves. The same move on an ISOLATED capacitor doubles $V$ and $U$ instead.",
+  "hint": "Connected means $V$ is fixed.",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "A capacitor's stored energy is $U = \\tfrac{1}{2}QV = \\tfrac{1}{2}CV^2 =$ {{c1::$Q^2/2C$}}.",
+  "back": "Pick the form whose variables stay fixed: battery connected ($V$ fixed) use $\\tfrac{1}{2}CV^2$, so $U \\propto C$; isolated ($Q$ fixed) use $Q^2/2C$, so $U \\propto 1/C$.",
+  "hint": "Substitute $V = Q/C$ into $\\tfrac{1}{2}QV$.",
+  "yield": "ULTRA_HIGH",
+  "why": "Choosing the right energy form drives every capacitor energy question.",
+  "part": 2
+ },
+ {
+  "front": "A battery charges an uncharged capacitor through a resistor, moving charge $Q$ at voltage $V$. How much energy does the battery supply, and where does it all go?",
+  "back": "The battery supplies $QV$, but the capacitor stores only $\\tfrac{1}{2}QV$. The other half is lost as heat in the resistance, whatever the resistance's size.",
+  "hint": "Compare $QV$ with $\\tfrac{1}{2}QV$.",
+  "yield": "MEDIUM",
+  "why": "The half-lost-as-heat result appears mainly as a passage-level conceptual trap.",
+  "part": 2
+ }
 ]

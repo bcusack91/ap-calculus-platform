@@ -1,22 +1,24 @@
 import type { LessonData } from './registry'
 
-export const fluidsMcatPart3: LessonData = {
-  topicSlug: 'mcat-physics-mechanics-fluids-mcat',
+export const fluidsInMotionMcatPart1: LessonData = {
+  topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat',
   sections: [
     {
       id: 'fl3-intro',
       type: 'text' as const,
-      content: `# Fluids
+      content: `# Fluids in Motion
 
-**Part 3 of 4 — Fluid Dynamics: Continuity & Bernoulli**
+**Part 1 of 2 — Fluid Dynamics: Continuity & Bernoulli**
 
-Parts 1 and 2 of this lesson dealt with fluids at rest. Now the fluid moves. Throughout this part we assume an **ideal fluid**, which has three properties:
+**Where this fits.** The previous lesson, *Fluids at Rest*, covered density, pressure, buoyancy and surface tension. This lesson sets the fluid moving: continuity and Bernoulli for ideal flow, then viscosity, Poiseuille's law and blood flow. The next lesson, *Periodic Motion & Waves*, turns from fluids to oscillations and waves.
+
+Throughout this part we assume an **ideal fluid**, which has three properties:
 
 - **incompressible**: its density stays constant;
 - **non-viscous**: no internal friction, so no mechanical energy is lost to heat;
 - **laminar** (and steady): it flows in smooth layers that do not mix, with the pattern unchanging in time.
 
-Part 4 of this lesson drops the "non-viscous" assumption to handle real blood flow.
+Part 2 of this lesson drops the "non-viscous" assumption to handle real blood flow.
 
 ### Flow Rate
 
@@ -116,14 +118,14 @@ Every term is an **energy per unit volume** ($\\text{J/m}^3$, which is the same 
 | $\\tfrac{1}{2}\\rho v^2$ | kinetic energy per unit volume |
 | $\\rho g h$ | gravitational potential energy per unit volume |
 
-Here $h$ is HEIGHT above a chosen reference level, so pressure falls as the fluid rises. (In Part 1 of this lesson $h$ was depth.) Bernoulli is simply conservation of energy, which is why it needs the ideal-fluid assumptions: with viscosity, energy leaks away as heat.
+Here $h$ is HEIGHT above a chosen reference level, so pressure falls as the fluid rises. (In the *Fluids at Rest* lesson $h$ was depth.) Bernoulli is simply conservation of energy, which is why it needs the ideal-fluid assumptions: with viscosity, energy leaks away as heat.
 
-- **Fluid at rest:** $v = 0$, so $P + \\rho g h$ is constant, which is the hydrostatic result from Part 1 of this lesson.
+- **Fluid at rest:** $v = 0$, so $P + \\rho g h$ is constant, which is the hydrostatic result from the *Fluids at Rest* lesson.
 - **Horizontal flow:** the $\\rho g h$ terms cancel, leaving $P + \\tfrac{1}{2}\\rho v^2 = \\text{constant}$. **Where the fluid moves faster, its pressure is lower.**
 - **Why it feels backwards.** Fast fluid hits hard when something STOPS it, but the pressure it exerts on the walls alongside it is lower. In fact, the fluid speeds up into a narrowing BECAUSE the pressure behind it is higher: the pressure difference is what accelerates it.
 - **The standard chain:** area down, so speed up (continuity), so pressure down (Bernoulli).
 
-**Venturi effect and the Venturi meter.** Pressure drops in a constriction. A **Venturi meter** is a horizontal pipe with a narrow throat; vertical tubes open to the air above the wide section and the throat show the pressure difference as a difference in liquid heights ($\\Delta P = \\rho g \\Delta h$, from Part 1 of this lesson). From $\\Delta P$ and the two areas, the flow speed can be calculated. The same effect lets an atomizer or aspirator pull liquid up a tube: a fast air stream across the tube's top lowers the pressure there.
+**Venturi effect and the Venturi meter.** Pressure drops in a constriction. A **Venturi meter** is a horizontal pipe with a narrow throat; vertical tubes open to the air above the wide section and the throat show the pressure difference as a difference in liquid heights ($\\Delta P = \\rho g \\Delta h$, from the *Fluids at Rest* lesson). From $\\Delta P$ and the two areas, the flow speed can be calculated. The same effect lets an atomizer or aspirator pull liquid up a tube: a fast air stream across the tube's top lowers the pressure there.
 
 **Torricelli's theorem.** Liquid leaks from a small hole a depth $h$ below the open surface of a wide tank. The surface and the jet are both at atmospheric pressure, and the surface barely moves, so Bernoulli reduces to
 

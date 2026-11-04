@@ -46,8 +46,11 @@ const mcatSubtopics: ParentSeed[] = [
       { slug: 'mcat-physics-mechanics-momentum-collisions-mcat', title: 'Momentum & Collisions', description: 'Impulse, conservation of momentum, and collision analysis' },
       // Fluids & Waves was split in two (Nov 2026, one live-class session each);
       // the old 'mcat-physics-mechanics-fluids-waves-mcat' row is retired.
-      { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids', description: 'Pressure, buoyancy, continuity, Bernoulli, viscosity, and blood flow' },
-      { slug: 'mcat-physics-waves-sound-mcat', title: 'Waves & Sound', description: 'Periodic motion, standing waves, sound intensity and decibels, Doppler, and ultrasound' }
+      { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids at Rest', description: 'Density, hydrostatic pressure, Pascal\'s principle, buoyancy, and surface tension' },
+      { slug: 'mcat-physics-mechanics-fluid-dynamics-mcat', title: 'Fluids in Motion', description: 'Continuity, Bernoulli, viscosity, Poiseuille flow, and blood flow' },
+      { slug: 'mcat-physics-waves-periodic-motion-mcat', title: 'Periodic Motion & Waves', description: 'Period and frequency, simple harmonic motion, and wave speed' },
+      { slug: 'mcat-physics-waves-interference-mcat', title: 'Interference & Standing Waves', description: 'Superposition, beats, standing waves in strings and pipes, and resonance' },
+      { slug: 'mcat-physics-waves-sound-mcat', title: 'Sound, Doppler & Ultrasound', description: 'Sound intensity and decibels, the Doppler effect, ultrasound, and shock waves' }
     ]
   },
   {
@@ -56,8 +59,10 @@ const mcatSubtopics: ParentSeed[] = [
       { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics', description: 'Electric force, fields, potential, and capacitance' },
       // Circuits was split in two (Nov 2026, one live-class session each); the
       // old 'mcat-physics-electricity-circuits-mcat' row is retired.
-      { slug: 'mcat-physics-electricity-dc-circuits-mcat', title: 'Circuits Part 1: Current & Resistance', description: 'Current, voltage, Ohm\'s law, resistivity, series and parallel resistors, Kirchhoff\'s rules, and power' },
-      { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 2: EMF & Capacitors', description: 'EMF and internal resistance, meters, capacitors and dielectrics, RC circuits, and bioelectricity' },
+      { slug: 'mcat-physics-electricity-dc-circuits-mcat', title: 'Circuits Part 1: Current & Resistance', description: 'Current, voltage, conduction, Ohm\'s law, resistivity, and series and parallel resistors' },
+      { slug: 'mcat-physics-electricity-kirchhoff-power-mcat', title: "Circuits Part 2: Kirchhoff's Rules & Power", description: 'Kirchhoff\'s rules, network reduction, dividers, circuit changes, power, bulbs, and electrical safety' },
+      { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 3: EMF & Capacitance', description: 'EMF and internal resistance, meters, capacitance, dielectrics, and stored energy' },
+      { slug: 'mcat-physics-electricity-rc-circuits-mcat', title: 'Circuits Part 4: Capacitor Networks & Bioelectricity', description: 'Capacitor networks, RC circuits, the membrane as an RC circuit, myelin, and defibrillators' },
       { slug: 'mcat-physics-electricity-magnetism-mcat', title: 'Magnetism & Electromagnetic Induction', description: 'Magnetic fields, forces, and induced current concepts' },
       { slug: 'mcat-physics-electricity-optics-mcat', title: 'Optics', description: 'Reflection, refraction, mirrors, lenses, and image formation' },
       { slug: 'mcat-physics-electricity-electrochemistry-mcat', title: 'Electrochemistry', description: 'Galvanic/electrolytic cells, redox, and Nernst equation' }

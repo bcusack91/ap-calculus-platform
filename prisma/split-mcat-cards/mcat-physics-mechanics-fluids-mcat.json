@@ -1,202 +1,106 @@
 [
-  {
-    "front": "A $50.0$ cm$^3$ sample of olive oil has a mass of $46.0$ g. What are its density in SI units and its specific gravity?",
-    "back": "$920$ kg/m$^3$ and SG $= 0.92$. $\\rho = 46.0/50.0 = 0.92$ g/cm$^3$, and multiplying by 1000 gives kg/m$^3$. SG divides by water's $1000$ kg/m$^3$, so it has no units and equals the density in g/cm$^3$.",
-    "hint": "To go from g/cm$^3$ to kg/m$^3$, multiply by 1000.",
-    "yield": "HIGH",
-    "why": "Density and SG conversions feed every buoyancy and pressure calculation.",
-    "part": 1
-  },
-  {
-    "front": "Absolute pressure is about $2$ atm at a depth of $10$ m in a freshwater lake, so at $30$ m it is about {{c1::$4$ atm}}.",
-    "back": "Each 10 m of water adds about 1 atm, so 30 m adds 3 atm on top of the 1 atm at the surface. Only the $\\rho g h$ part scales with depth; tripling the total to 6 atm is the trap.",
-    "hint": "Does the atmospheric pressure on the surface triple too?",
-    "yield": "ULTRA_HIGH",
-    "why": "Applying $P = P_0 + \\rho g h$ to absolute pressure is tested on every MCAT.",
-    "part": 1
-  },
-  {
-    "front": "A mercury barometer stands at $760$ mm. Filled with water instead, its column would be about {{c1::$10.3$ m}} tall.",
-    "back": "Both columns balance the same atmosphere, so $\\rho_{\\text{Hg}} h_{\\text{Hg}} = \\rho_w h_w$ and $h_w = 13.6 \\times 0.76 \\approx 10.3$ m. The near-vacuum above the column means a barometer reads absolute pressure.",
-    "hint": "Mercury's specific gravity is 13.6; the less dense liquid needs a taller column.",
-    "yield": "MEDIUM",
-    "why": "Barometer column comparisons appear mainly as passage context.",
-    "part": 1
-  },
-  {
-    "front": "In an open-tube U manometer, the liquid is pushed down on the {{c1::higher-pressure}} side, and the level difference gives $P - P_{\\text{atm}} = \\rho g \\Delta h$.",
-    "back": "The open arm already carries atmospheric pressure, so the height difference measures only the excess: a gauge reading. A gas below atmospheric pressure lets the liquid rise on its own side.",
-    "hint": "Which surface gets pushed harder?",
-    "yield": "HIGH",
-    "why": "Reading gauge pressure from a height difference recurs in pressure questions.",
-    "part": 1
-  },
-  {
-    "front": "Intrapleural pressure is normally about $-4$ mmHg. What does the negative sign mean, and what is the absolute pressure at sea level?",
-    "back": "It is a gauge reading: 4 mmHg below atmospheric, not a negative absolute pressure. Absolute pressure $= 760 - 4 = 756$ mmHg. Gauge pressure can be negative; absolute pressure never can.",
-    "hint": "Absolute = gauge + atmospheric.",
-    "yield": "HIGH",
-    "why": "Gauge vs absolute conversions, including negative gauge values, are commonly tested.",
-    "part": 1
-  },
-  {
-    "front": "A hydraulic jack's output piston has $5$ times the input piston's diameter. What load can a $200$ N input force support?",
-    "back": "$5000$ N. Area scales with diameter squared, so the area ratio is $5^2 = 25$ and $F_2 = 200 \\times 25$. Using the diameter ratio without squaring gives the 1000 N trap.",
-    "hint": "Pascal's principle uses the AREA ratio.",
-    "yield": "HIGH",
-    "why": "Diameter-given hydraulic problems are a standard Pascal trap.",
-    "part": 1
-  },
-  {
-    "front": "A rock weighs $50$ N in air and $40$ N when hung fully submerged in water. What is its specific gravity?",
-    "back": "$5$. $F_B = 50 - 40 = 10$ N, the weight of an equal volume of water, so $SG = W/F_B = 50/10 = 5$ (density $5000$ kg/m$^3$). Divide the TRUE weight, not the apparent weight, by $F_B$.",
-    "hint": "$SG = W/(W - W_{\\text{app}})$",
-    "yield": "HIGH",
-    "why": "Apparent-weight SG problems are a common Archimedes application.",
-    "part": 2
-  },
-  {
-    "front": "A floating object displaces its own {{c1::weight}} of fluid; a fully submerged object displaces its own {{c2::volume}} of fluid.",
-    "back": "Floating is equilibrium, so $F_B = W$ and the displaced fluid weighs as much as the object. A submerged object pushes aside its full volume of fluid, whatever its weight.",
-    "hint": "One case is set by equilibrium, the other by geometry.",
-    "yield": "ULTRA_HIGH",
-    "why": "Core Archimedes reasoning tested on every MCAT.",
-    "part": 2
-  },
-  {
-    "front": "A block floats in water with $60\\%$ of its volume submerged. What fraction is submerged when it floats in oil of SG $0.8$?",
-    "back": "$75\\%$. The submerged fraction in water is the SG, so $\\rho_{\\text{block}} = 600$ kg/m$^3$; in oil the fraction is $0.6/0.8 = 0.75$. It rides lower in the less dense fluid and would sink in any fluid with SG below 0.6.",
-    "hint": "Submerged fraction $= \\rho_{\\text{object}}/\\rho_{\\text{fluid}}$",
-    "yield": "HIGH",
-    "why": "Moving a floater between fluids is a common quantitative buoyancy question.",
-    "part": 2
-  },
-  {
-    "front": "An object denser than oil but less dense than water is dropped into a beaker of oil floating on water. Where does it come to rest?",
-    "back": "At the oil-water boundary, partly in each layer. It sinks through the oil but cannot sink fully into the water, so it settles where the displaced oil and water together weigh as much as it does.",
-    "hint": "Compare its density with each layer separately.",
-    "yield": "MEDIUM",
-    "why": "Two-fluid floating shows up mainly in passage or lab scenarios.",
-    "part": 2
-  },
-  {
-    "front": "When an ice cube floating in a glass of water melts completely, the water level {{c1::stays the same}}.",
-    "back": "Floating ice displaces exactly its own weight of water, and melting turns it into exactly that weight of water, which fills the volume it had displaced.",
-    "hint": "A floater displaces its own weight.",
-    "yield": "HIGH",
-    "why": "Classic buoyancy conceptual question.",
-    "part": 2
-  },
-  {
-    "front": "In a narrow glass tube, water forms a {{c1::concave}} meniscus and rises, while mercury forms a {{c2::convex}} meniscus and is depressed.",
-    "back": "Water's adhesion to glass exceeds its cohesion, so it climbs the walls; mercury's cohesion wins, so it domes up and sits below the outside level. Narrower tubes give a larger rise or fall.",
-    "hint": "Adhesion vs cohesion.",
-    "yield": "MEDIUM",
-    "why": "Capillary action is secondary content, usually seen in passages.",
-    "part": 2
-  },
-  {
-    "front": "Normal urine specific gravity runs from about {{c1::$1.005$ to $1.030$}}.",
-    "back": "Measured with a hydrometer, which rides higher in denser urine. Values near the top of the range mean concentrated urine, as in dehydration.",
-    "hint": "Just above water's 1.000.",
-    "yield": "LOW",
-    "why": "The lesson marks the normal urine SG range as low-yield.",
-    "part": 2
-  },
-  {
-    "front": "An infusion pump delivers $120$ mL/min through tubing of cross-sectional area $0.10$ cm$^2$. What is the saline's average speed?",
-    "back": "$20$ cm/s. $Q = 120/60 = 2$ cm$^3$/s, and $v = Q/A = 2/0.10 = 20$ cm/s. Convert minutes to seconds first, and remember $1$ mL $= 1$ cm$^3$.",
-    "hint": "$Q = Av$",
-    "yield": "HIGH",
-    "why": "Flow rate vs speed with unit conversion is a common discrete calculation.",
-    "part": 3
-  },
-  {
-    "front": "Doppler shows blood speeding from $30$ to $270$ cm/s through a stenosis at unchanged flow, so the lumen radius is about {{c1::one-third}} of normal.",
-    "back": "Speed rose 9-fold, so by $A_1v_1 = A_2v_2$ the area fell to one-ninth. Area goes as $r^2$, so the radius is $\\sqrt{1/9} = 1/3$ of normal. Answering one-ninth confuses area with radius.",
-    "hint": "Speed ratio gives the area ratio; then take a square root.",
-    "yield": "ULTRA_HIGH",
-    "why": "Continuity with the radius-squared step is tested on every MCAT.",
-    "part": 3
-  },
-  {
-    "front": "Water flows at $1$ m/s through a horizontal pipe of area $10$ cm$^2$ into a throat of area $2$ cm$^2$. How much lower is the throat pressure, and what height difference do the Venturi tubes show?",
-    "back": "$12$ kPa and $1.2$ m. Continuity: $v_2 = 5$ m/s. Bernoulli: $\\Delta P = \\tfrac{1}{2}(1000)(25 - 1) = 12{,}000$ Pa, using $v_2^2 - v_1^2$, not $(v_2 - v_1)^2$. Then $\\Delta h = \\Delta P/(\\rho g) = 1.2$ m, lower over the throat.",
-    "hint": "Continuity first, then Bernoulli, then $\\Delta P = \\rho g \\Delta h$.",
-    "yield": "HIGH",
-    "why": "The Venturi meter is a common continuity-then-Bernoulli application.",
-    "part": 3
-  },
-  {
-    "front": "Water at $1$ m/s in a $6$ cm$^2$ pipe rises $2$ m into a $2$ cm$^2$ section. How much lower is the pressure in the upper section? ($g = 10$ m/s$^2$)",
-    "back": "$24$ kPa. Continuity gives $v_2 = 3$ m/s. Bernoulli: $\\tfrac{1}{2}(1000)(9 - 1) + (1000)(10)(2) = 4000 + 20{,}000$ Pa. Speeding up and climbing both lower the pressure, so the terms add.",
-    "hint": "Keep both the kinetic and the height terms.",
-    "yield": "ULTRA_HIGH",
-    "why": "Full Bernoulli with speed and height changes is tested on every MCAT.",
-    "part": 3
-  },
-  {
-    "front": "Liquid leaks from a small hole a depth $h$ below the surface of a wide open tank at speed {{c1::$v = \\sqrt{2gh}$}}.",
-    "back": "Torricelli: surface and jet are both at atmospheric pressure, so the jet has the free-fall speed from the surface. At $h = 1.8$ m, $v = \\sqrt{36} = 6$ m/s; doubling the depth multiplies $v$ by only $\\sqrt{2}$.",
-    "hint": "Same speed as an object dropped from height $h$.",
-    "yield": "HIGH",
-    "why": "Torricelli's theorem is a frequently tested Bernoulli special case.",
-    "part": 3
-  },
-  {
-    "front": "A pitot tube reads a stagnation pressure $250$ Pa above the static pressure in an air stream ($\\rho = 1.25$ kg/m$^3$). What is the air speed?",
-    "back": "$20$ m/s. Bringing the flow to rest at the tip turns the kinetic term into pressure: $\\tfrac{1}{2}\\rho v^2 = 250$, so $v^2 = 2(250)/1.25 = 400$.",
-    "hint": "Stagnation minus static $= \\tfrac{1}{2}\\rho v^2$",
-    "yield": "MEDIUM",
-    "why": "Pitot tubes appear as passage-context applications of Bernoulli.",
-    "part": 3
-  },
-  {
-    "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
-    "back": "Poiseuille flow scales as $r^4$, and $0.84^4 \\approx 0.50$. That is why small changes in arteriolar tone produce large changes in flow.",
-    "hint": "Which radius factor, raised to the fourth power, gives one-half?",
-    "yield": "ULTRA_HIGH",
-    "why": "Poiseuille's $r^4$ dependence is tested on every MCAT.",
-    "part": 4
-  },
-  {
-    "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
-    "back": "Billions of capillaries sit in parallel, so their combined resistance is lower than the arterioles'. Pressure falls from about 90 to about 35 mmHg across the arterioles, whose smooth muscle sets resistance.",
-    "hint": "Series vs parallel resistance.",
-    "yield": "HIGH",
-    "why": "Where pressure falls in the circulation is a commonly tested physics-physiology link.",
-    "part": 4
-  },
-  {
-    "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
-    "back": "Both rise. Parallel resistances combine to less than any single branch, so removing one raises the total; since $MAP \\approx CO \\times TPR$, MAP rises too.",
-    "hint": "$1/R_{\\text{total}} = 1/R_1 + 1/R_2 + \\dots$",
-    "yield": "HIGH",
-    "why": "Series vs parallel vascular beds and $MAP = CO \\times TPR$ are commonly tested.",
-    "part": 4
-  },
-  {
-    "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
-    "back": "Bernoulli fits a SHORT narrowing: speed changes quickly and friction is small, explaining the pressure dip in the jet. Poiseuille fits a LONG narrowing or a fixed driving pressure: resistance rises as $1/r^4$ and flow falls.",
-    "hint": "How long is the narrowed segment?",
-    "yield": "HIGH",
-    "why": "Choosing the right law for a stenosis is a frequent passage question.",
-    "part": 4
-  },
-  {
-    "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
-    "back": "Static (depth, floating, pistons): $P = P_0 + \\rho g h$, Pascal, Archimedes. Ideal flow (non-viscous, short constrictions): continuity, Bernoulli, Torricelli. Viscous flow (long vessels, viscosity given): Poiseuille, $Q = \\Delta P/R$. If turbulent, neither equation holds.",
-    "hint": "Is anything flowing? Does viscosity matter?",
-    "yield": "HIGH",
-    "why": "Regime selection is the gateway step for fluids passages.",
-    "part": 4
-  },
-  {
-    "front": "Why can severe anemia produce a heart murmur even with normal valves?",
-    "back": "Low hematocrit lowers blood viscosity, and cardiac output rises to compensate, so blood moves faster. Both raise the Reynolds number $Re = \\rho v D/\\eta$, pushing flow toward turbulence, which is audible.",
-    "hint": "Which two factors in $Re$ change?",
-    "yield": "MEDIUM",
-    "why": "Reynolds-number reasoning appears mainly in clinical passages.",
-    "part": 4
-  }
+ {
+  "front": "A $50.0$ cm$^3$ sample of olive oil has a mass of $46.0$ g. What are its density in SI units and its specific gravity?",
+  "back": "$920$ kg/m$^3$ and SG $= 0.92$. $\\rho = 46.0/50.0 = 0.92$ g/cm$^3$, and multiplying by 1000 gives kg/m$^3$. SG divides by water's $1000$ kg/m$^3$, so it has no units and equals the density in g/cm$^3$.",
+  "hint": "To go from g/cm$^3$ to kg/m$^3$, multiply by 1000.",
+  "yield": "HIGH",
+  "why": "Density and SG conversions feed every buoyancy and pressure calculation.",
+  "part": 1
+ },
+ {
+  "front": "Absolute pressure is about $2$ atm at a depth of $10$ m in a freshwater lake, so at $30$ m it is about {{c1::$4$ atm}}.",
+  "back": "Each 10 m of water adds about 1 atm, so 30 m adds 3 atm on top of the 1 atm at the surface. Only the $\\rho g h$ part scales with depth; tripling the total to 6 atm is the trap.",
+  "hint": "Does the atmospheric pressure on the surface triple too?",
+  "yield": "ULTRA_HIGH",
+  "why": "Applying $P = P_0 + \\rho g h$ to absolute pressure is tested on every MCAT.",
+  "part": 1
+ },
+ {
+  "front": "A mercury barometer stands at $760$ mm. Filled with water instead, its column would be about {{c1::$10.3$ m}} tall.",
+  "back": "Both columns balance the same atmosphere, so $\\rho_{\\text{Hg}} h_{\\text{Hg}} = \\rho_w h_w$ and $h_w = 13.6 \\times 0.76 \\approx 10.3$ m. The near-vacuum above the column means a barometer reads absolute pressure.",
+  "hint": "Mercury's specific gravity is 13.6; the less dense liquid needs a taller column.",
+  "yield": "MEDIUM",
+  "why": "Barometer column comparisons appear mainly as passage context.",
+  "part": 1
+ },
+ {
+  "front": "In an open-tube U manometer, the liquid is pushed down on the {{c1::higher-pressure}} side, and the level difference gives $P - P_{\\text{atm}} = \\rho g \\Delta h$.",
+  "back": "The open arm already carries atmospheric pressure, so the height difference measures only the excess: a gauge reading. A gas below atmospheric pressure lets the liquid rise on its own side.",
+  "hint": "Which surface gets pushed harder?",
+  "yield": "HIGH",
+  "why": "Reading gauge pressure from a height difference recurs in pressure questions.",
+  "part": 1
+ },
+ {
+  "front": "Intrapleural pressure is normally about $-4$ mmHg. What does the negative sign mean, and what is the absolute pressure at sea level?",
+  "back": "It is a gauge reading: 4 mmHg below atmospheric, not a negative absolute pressure. Absolute pressure $= 760 - 4 = 756$ mmHg. Gauge pressure can be negative; absolute pressure never can.",
+  "hint": "Absolute = gauge + atmospheric.",
+  "yield": "HIGH",
+  "why": "Gauge vs absolute conversions, including negative gauge values, are commonly tested.",
+  "part": 1
+ },
+ {
+  "front": "A hydraulic jack's output piston has $5$ times the input piston's diameter. What load can a $200$ N input force support?",
+  "back": "$5000$ N. Area scales with diameter squared, so the area ratio is $5^2 = 25$ and $F_2 = 200 \\times 25$. Using the diameter ratio without squaring gives the 1000 N trap.",
+  "hint": "Pascal's principle uses the AREA ratio.",
+  "yield": "HIGH",
+  "why": "Diameter-given hydraulic problems are a standard Pascal trap.",
+  "part": 1
+ },
+ {
+  "front": "A rock weighs $50$ N in air and $40$ N when hung fully submerged in water. What is its specific gravity?",
+  "back": "$5$. $F_B = 50 - 40 = 10$ N, the weight of an equal volume of water, so $SG = W/F_B = 50/10 = 5$ (density $5000$ kg/m$^3$). Divide the TRUE weight, not the apparent weight, by $F_B$.",
+  "hint": "$SG = W/(W - W_{\\text{app}})$",
+  "yield": "HIGH",
+  "why": "Apparent-weight SG problems are a common Archimedes application.",
+  "part": 2
+ },
+ {
+  "front": "A floating object displaces its own {{c1::weight}} of fluid; a fully submerged object displaces its own {{c2::volume}} of fluid.",
+  "back": "Floating is equilibrium, so $F_B = W$ and the displaced fluid weighs as much as the object. A submerged object pushes aside its full volume of fluid, whatever its weight.",
+  "hint": "One case is set by equilibrium, the other by geometry.",
+  "yield": "ULTRA_HIGH",
+  "why": "Core Archimedes reasoning tested on every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "A block floats in water with $60\\%$ of its volume submerged. What fraction is submerged when it floats in oil of SG $0.8$?",
+  "back": "$75\\%$. The submerged fraction in water is the SG, so $\\rho_{\\text{block}} = 600$ kg/m$^3$; in oil the fraction is $0.6/0.8 = 0.75$. It rides lower in the less dense fluid and would sink in any fluid with SG below 0.6.",
+  "hint": "Submerged fraction $= \\rho_{\\text{object}}/\\rho_{\\text{fluid}}$",
+  "yield": "HIGH",
+  "why": "Moving a floater between fluids is a common quantitative buoyancy question.",
+  "part": 2
+ },
+ {
+  "front": "An object denser than oil but less dense than water is dropped into a beaker of oil floating on water. Where does it come to rest?",
+  "back": "At the oil-water boundary, partly in each layer. It sinks through the oil but cannot sink fully into the water, so it settles where the displaced oil and water together weigh as much as it does.",
+  "hint": "Compare its density with each layer separately.",
+  "yield": "MEDIUM",
+  "why": "Two-fluid floating shows up mainly in passage or lab scenarios.",
+  "part": 2
+ },
+ {
+  "front": "When an ice cube floating in a glass of water melts completely, the water level {{c1::stays the same}}.",
+  "back": "Floating ice displaces exactly its own weight of water, and melting turns it into exactly that weight of water, which fills the volume it had displaced.",
+  "hint": "A floater displaces its own weight.",
+  "yield": "HIGH",
+  "why": "Classic buoyancy conceptual question.",
+  "part": 2
+ },
+ {
+  "front": "In a narrow glass tube, water forms a {{c1::concave}} meniscus and rises, while mercury forms a {{c2::convex}} meniscus and is depressed.",
+  "back": "Water's adhesion to glass exceeds its cohesion, so it climbs the walls; mercury's cohesion wins, so it domes up and sits below the outside level. Narrower tubes give a larger rise or fall.",
+  "hint": "Adhesion vs cohesion.",
+  "yield": "MEDIUM",
+  "why": "Capillary action is secondary content, usually seen in passages.",
+  "part": 2
+ },
+ {
+  "front": "Normal urine specific gravity runs from about {{c1::$1.005$ to $1.030$}}.",
+  "back": "Measured with a hydrometer, which rides higher in denser urine. Values near the top of the range mean concentrated urine, as in dehydration.",
+  "hint": "Just above water's 1.000.",
+  "yield": "LOW",
+  "why": "The lesson marks the normal urine SG range as low-yield.",
+  "part": 2
+ }
 ]

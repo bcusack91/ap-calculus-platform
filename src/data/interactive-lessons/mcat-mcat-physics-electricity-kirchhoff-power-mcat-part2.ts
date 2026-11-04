@@ -1,18 +1,18 @@
 import type { LessonData } from './registry'
 
-export const dcCircuitsMcatPart4: LessonData = {
-  topicSlug: 'mcat-physics-electricity-dc-circuits-mcat',
+export const kirchhoffPowerMcatPart2: LessonData = {
+  topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat',
   sections: [
     {
       id: 'dc4-intro',
       type: 'text' as const,
-      content: `# Circuits Part 1: Current & Resistance
+      content: `# Circuits Part 2: Kirchhoff's Rules & Power
 
-**Part 4 of 4 — Circuit Changes, Power & Bulb Brightness**
+**Part 2 of 2 — Circuit Changes, Power & Bulb Brightness**
 
 ### What Changes When the Circuit Changes
 
-Part 3 of this lesson collapsed networks that stay put. Now predict how a network responds when something changes. Reason in a fixed order: the change, then $R_{eq}$, then the total current, then the voltage across any fixed series resistor, then whatever voltage is left for the parallel part.
+Part 1 of this lesson collapsed networks that stay put. Now predict how a network responds when something changes. Reason in a fixed order: the change, then $R_{eq}$, then the total current, then the voltage across any fixed series resistor, then whatever voltage is left for the parallel part.
 
 - **Add a branch in parallel:** $R_{eq}$ falls and the total current rises. If the bank sits directly across an ideal source, the existing branches are unaffected. If a series resistor sits in front of the bank, the larger total current drops MORE voltage across that resistor, leaving LESS for the bank, so the existing branch currents FALL.
 - **Remove (open) a branch:** the reverse. $R_{eq}$ rises, the total current falls, the series resistor drops less voltage, and the remaining branches get MORE voltage and more current.
@@ -95,7 +95,7 @@ $$1\\;\\text{kWh} = (1000\\;\\text{W})(3600\\;\\text{s}) = 3.6 \\times 10^6\\;\\
       type: 'text' as const,
       content: `### Bulb Brightness in Series and Parallel
 
-Brightness tracks the POWER a bulb dissipates. Unless told otherwise, treat bulbs as ohmic resistors (an MCAT simplification; real filaments are non-ohmic, as Part 2 of this lesson noted). For identical bulbs of resistance $R$ on an ideal source $V$, call one bulb's power alone $P_0 = V^2/R$:
+Brightness tracks the POWER a bulb dissipates. Unless told otherwise, treat bulbs as ohmic resistors (an MCAT simplification; real filaments are non-ohmic, as the *Circuits Part 1: Current & Resistance* lesson noted). For identical bulbs of resistance $R$ on an ideal source $V$, call one bulb's power alone $P_0 = V^2/R$:
 
 | Arrangement | Voltage per bulb | Power per bulb | Total power |
 |---|---|---|---|
@@ -120,7 +120,7 @@ A burned-out bulb is an open circuit.
 
 ### Electricity and the Body
 
-**Current, not voltage, does the harm.** What disrupts nerve and heart tissue, and heats it, is the current through it, $I = V/R_{body}$. Voltage matters only because it drives that current. Most of the body's resistance is in dry skin; the interior is salty, ionic fluid and conducts well (Part 1 of this lesson).
+**Current, not voltage, does the harm.** What disrupts nerve and heart tissue, and heats it, is the current through it, $I = V/R_{body}$. Voltage matters only because it drives that current. Most of the body's resistance is in dry skin; the interior is salty, ionic fluid and conducts well (the *Circuits Part 1: Current & Resistance* lesson).
 
 - Dry skin gives a body path on the order of $10^5\\;\\Omega$; wet or broken skin drops it to the order of $10^3\\;\\Omega$. At the same voltage, wet skin can pass about $100$ times the current.
 - The path matters: hand-to-hand or hand-to-foot current crosses the chest and can disrupt the heart's rhythm.
@@ -231,7 +231,7 @@ Most "which element dissipates the most power" questions fall to steps 1 and 2 i
 - Low-yield extras: specific body-current thresholds (perception, let-go, fibrillation).
 <!-- /yield -->
 
-**Next up:** the *Circuits Part 2: EMF & Capacitors* lesson — real batteries with internal resistance, meters, capacitors and dielectrics, RC behaviour, and the membrane as a circuit.`
+**Next up:** the *Circuits Part 3: EMF & Capacitance* lesson — real batteries with EMF and internal resistance, ammeters and voltmeters, then capacitance, dielectrics and stored energy.`
     }
   ]
 }

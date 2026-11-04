@@ -6527,12 +6527,12 @@
   "back": "Its side chain carries sulfur, which outranks the carboxyl carbon under CIP. The priority order of the side chain and the COOH group swaps, reversing the apparent rotation label even though cysteine's three-dimensional arrangement matches the other L-amino acids."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "$R_1$ and $R_2$ are in series across a battery and a capacitor is wired in parallel with $R_2$. What charge does it hold at steady state?",
   "back": "No current enters the capacitor, so the resistors form a simple divider: $V_2 = \\varepsilon R_2/(R_1 + R_2)$ and $Q = CV_2$. A capacitor takes the voltage of whatever it parallels, not the battery voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A $12$ V battery, a $2$ k$\\Omega$ resistor, and an uncharged $10\\ \\mu$F capacitor sit in series. What is the current the instant the switch closes?",
   "back": "An uncharged capacitor initially behaves like a wire, so $I = 12/2000 = 6$ mA, the maximum value. The current then decays exponentially toward zero with $\\tau = RC = 0.02$ s."
  },
@@ -6542,7 +6542,7 @@
   "back": "$2\\,\\Omega$, from the product-over-sum shortcut $R_1R_2/(R_1+R_2) = 18/9$. Notice the result is smaller than either individual resistor."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $60$ W and a $100$ W bulb rated for the same line voltage are wired in series. Which is brighter?",
   "back": "The $60$ W bulb. Its higher resistance, from $R = V^2/P$, dissipates more power once the current is shared. Wattage ratings hold only at the rated voltage."
  },
@@ -6557,27 +6557,27 @@
   "back": "$12 - (4)(0.5) = 10$ V. The missing $2$ V is dissipated as heat inside the battery itself."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A defibrillator must deliver $200$ J from a $100\\,\\mu$F capacitor. What principle sets the charging voltage?",
   "back": "Stored energy is $U = \\frac{1}{2}CV^2$, so $V = \\sqrt{2U/C} = 2000$ V. Capacitors charge slowly and then dump that energy in milliseconds."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A defibrillator's $100\\ \\mu$F capacitor charged to $2000$ V stores $U = \\frac12 CV^2 =$ {{c1::$200$ J}}.",
   "back": "Rearranged, a required energy fixes the charging voltage: $V = \\sqrt{2U/C}$. Because energy scales with $V^2$, doubling the charging voltage quadruples the delivered shock."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A fuse protects a circuit by:",
   "back": "**Melting and breaking the circuit at excess current**\n\nCircuit breakers serve the same function reusably."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A neuron's membrane time constant is $\\tau = R_mC_m$, so a longer $\\tau$ produces {{c1::greater temporal summation}} of successive inputs.",
   "back": "Typical neuronal $\\tau$ runs from a few to tens of milliseconds. Slow decay of a postsynaptic potential lets a second input arrive before the first fades, so their depolarizations add."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A new resistor is added in parallel with an existing element. What happens to total current from the battery?",
   "back": "Total resistance drops, so total current from the battery rises. The original branch keeps the same voltage across it and therefore the same current."
  },
@@ -6592,7 +6592,7 @@
   "back": "**Very low resistance allows very high current**\n\nHigh current generates heat and fire risk."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A third identical bulb is added in series to two bulbs already in series. What happens to the original two?",
   "back": "Total resistance rises, so the shared current falls and all three bulbs are dimmer than the original pair. Each bulb now drops one third of the battery voltage instead of one half, and each dissipates less power ($P = I^2R$)."
  },
@@ -6607,12 +6607,12 @@
   "back": "Every existing branch therefore dims slightly. This is why lights dim when a high-draw appliance switches on, and why a battery with large internal resistance sags badly under load."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "After a long time in a DC circuit, current through a capacitor is:",
   "back": "**Zero (fully charged)**\n\nIt behaves like an open circuit at steady state."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "After one time constant, what fraction of its final charge does a charging capacitor hold?",
   "back": "About $63$ percent, since $1 - e^{-1}$ is roughly $0.63$. It is about $95$ percent charged after $3\\tau$ and effectively complete after $5\\tau$."
  },
@@ -6622,42 +6622,42 @@
   "back": "Series placement forces all the measured current through it. A high-resistance ammeter would reduce the very current it is trying to read."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "At steady state a capacitor in series with a resistor passes {{c1::zero}} current, so the full battery voltage sits across the capacitor.",
   "back": "With $12$ V and $C = 10\\ \\mu$F the final charge is $Q = CV = 1.2\\times 10^{-4}$ C. Because no current flows, there is no $IR$ drop across the resistor no matter how large it is."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "At the instant an uncharged capacitor is connected, it behaves like:",
   "back": "**A wire (short circuit)**\n\nZero voltage across it initially permits maximum current."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Capacitors in parallel add directly: $C_{eq} = {{c1::C_1 + C_2}}$.",
   "back": "They share the same voltage and the total stored charge is the sum, so capacitances add like resistors in series. It is equivalent to enlarging the plate area."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Capacitors in parallel:",
   "back": "**Add directly ($C_{total} = C_1 + C_2$)**\n\nOpposite of resistors — parallel capacitors effectively increase plate area."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} = {{c1::1/C_1 + 1/C_2}}$.",
   "back": "Series capacitors carry the same charge but split the voltage, so the equivalent is less than the smallest one. The rule is the exact reverse of resistors."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Distinguish the kilowatt-hour from the watt.",
   "back": "The watt is power, energy per second. The kilowatt-hour is energy, the amount a $1$ kW device uses in one hour, about $3.6 \\times 10^6$ J."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Doubling $R$ in a charging RC circuit changes what, and what stays the same?",
   "back": "The time constant doubles so charging takes twice as long, and the initial current is halved. The final stored charge $Q = C\\varepsilon$ is unchanged."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "During discharge, capacitor charge decays {{c1::exponentially}}, following $Q = Q_0e^{-t/\\tau}$.",
   "back": "Current and voltage decay with the same exponential. After one time constant about $37$ percent of the original charge remains."
  },
@@ -6667,12 +6667,12 @@
   "back": "A battery converts chemical energy into electrical potential energy for each coulomb moved. Terminal voltage is what the external circuit actually receives."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "For elements in series, compare power with $P = {{c1::I^2R}}$, so the larger resistor dissipates more.",
   "back": "Series elements share the same current, making power directly proportional to resistance. Do not apply $V^2/R$ intuition to series comparisons."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "For household AC, $V_{rms} = {{c1::V_{peak}/\\sqrt{2}}}$, so a $120$ V outlet actually peaks near $170$ V.",
   "back": "Rms values are defined so that $P = V_{rms}I_{rms}$ and $P = V_{rms}^2/R$ give the true average power. Quoted voltages and current ratings are rms unless a problem says otherwise."
  },
@@ -6682,17 +6682,17 @@
   "back": "Resistance increases, because greater lattice vibration scatters conduction electrons more. Semiconductors behave oppositely, with resistance falling as temperature rises."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "How is total power delivered by a battery related to power dissipated in the resistors?",
   "back": "They are equal in steady state: $P = I\\varepsilon$ from the battery equals the sum of $I^2R$ over all resistors. Energy per unit time is conserved."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "If one of two identical bulbs wired in series burns out, {{c1::both go dark}}, because the single current path is broken.",
   "back": "Series elements share one current, so any break stops everything. A parallel string keeps each branch independent, which is exactly why household outlets are wired in parallel."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "In a charging RC circuit, when is the current largest?",
   "back": "At $t = 0$, when the capacitor voltage is zero and the full emf drives current through $R$. Current then decays exponentially toward zero as capacitor voltage builds."
  },
@@ -6702,7 +6702,7 @@
   "back": "**1 A**\n\nIn series: R_total = 4 + 4 + 4 = 12 Ω. I = V/R = 12/12 = 1 A."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "In an RC circuit an uncharged capacitor acts like a {{c1::wire}} at $t = 0$ and like an open switch at steady state.",
   "back": "With no stored charge there is no opposing voltage, so current is maximal immediately. Once fully charged, no further current flows into it."
  },
@@ -6712,27 +6712,27 @@
   "back": "Series shares current (resistances add); parallel shares voltage (1/R adds)."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Kirchhoff's junction rule is based on conservation of:",
   "back": "**Charge**\n\nKirchhoff's junction (current) rule states that the total current entering a junction equals the total current leaving it, based on conservation of charge."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Kirchhoff's loop rule says potential changes around a closed loop sum to zero, expressing {{c1::energy conservation}}.",
   "back": "A charge returning to its starting point must have the same potential energy. Batteries raise the potential and resistors drop it."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Myelin raises membrane resistance, lengthening the axon's length constant, so a passive signal decays {{c1::less}} with distance.",
   "back": "Current leaking out through the membrane is what degrades a spreading signal. Higher $R_m$ and lower $C_m$ keep more current flowing axially, so the depolarization still reaches the next node of Ranvier above threshold."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "One bulb is in series with a parallel pair of identical bulbs. Which bulb is brightest?",
   "back": "The series bulb, because it carries the full circuit current while the pair splits it. With $P = I^2R$ and equal resistances, more current means more power."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Physically, why does putting capacitors in series lower the total capacitance?",
   "back": "It behaves like increasing the effective plate separation, and $C = \\varepsilon_0 A/d$ falls as $d$ grows. Parallel connection instead increases effective plate area."
  },
@@ -6754,7 +6754,7 @@
   "hint": "The foundation of circuit analysis."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "That $2000$ V defibrillator discharges through a $50\\ \\Omega$ thorax. Estimate the peak current and the pulse duration.",
   "back": "Peak $I = V/R = 40$ A, and $\\tau = RC = (50)(100\\times 10^{-6}) = 5$ ms, so the shock lasts a few milliseconds. Very high current for a very short time is what depolarizes the whole myocardium at once."
  },
@@ -6764,12 +6764,12 @@
   "back": "Adding parallel branches gives current more routes, lowering the total. Use this as an instant sanity check on any parallel calculation."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "The power dissipated by a 100 Ω resistor carrying 0.5 A of current is:",
   "back": "**25 W**\n\nP = $I^{2}R$ = $(0.5)^{2}$ × 100 = 0.25 × 100 = 25 W."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "The RC time constant is $\\tau = {{c1::RC}}$ and carries units of seconds.",
   "back": "Ohms times farads gives seconds. It sets how quickly a capacitor charges or discharges and does not depend on the battery voltage."
  },
@@ -6779,7 +6779,7 @@
   "back": "**2 Ω**\n\n1/R_total = 1/6 + 1/6 + 1/6 = 3/6 = 1/2. So R_total = 2 Ω. For n identical resistors R in parallel, R_total = R/n."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Traversing a resistor in the same direction as the current, what is the sign of the potential change?",
   "back": "Negative: the potential drops by $IR$. Going against the current gives $+IR$, and crossing a battery from the negative to the positive terminal gives $+\\varepsilon$."
  },
@@ -6789,23 +6789,23 @@
   "back": "**12 Ω**\n\nSeries resistances add directly."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Two identical bulbs are in parallel across a battery and one burns out. What happens to the other bulb and to the total current?",
   "back": "The surviving bulb still has the full battery voltage across it, so its brightness is unchanged. Equivalent resistance doubles and total current from the battery halves."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Two identical capacitors are connected across the same battery, first in parallel and then in series. Which arrangement stores more energy?",
   "back": "Parallel. The voltage is the same in both cases, but parallel gives $C_{eq} = 2C$ versus $C/2$ in series, so $U = \\frac12 CV^2$ is four times larger in the parallel arrangement."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "What are the equivalent expressions for power dissipated by a resistor?",
   "back": "$P = IV = I^{2}R = \\frac{V^{2}}{R}$, in watts.\n\nUse $I^{2}R$ when the current is fixed (series elements) and $V^{2}/R$ when the voltage is fixed (parallel elements).",
   "hint": "Three equivalent formulas."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "What condition trips a GFCI outlet, and why does an ordinary fuse not protect against the same hazard?",
   "back": "It trips when current in the hot wire differs from the returning current by a few milliamps, meaning current is leaking through another path such as a person. A fuse reacts only to large total current, far above the fibrillation threshold."
  },
@@ -6825,12 +6825,12 @@
   "back": "The starter draws a huge current, so the drop $Ir$ across the battery's internal resistance grows and terminal voltage falls. Less voltage then reaches the headlights."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Why do series capacitors carry equal charge while parallel capacitors carry equal voltage?",
   "back": "The isolated conductors between series capacitors must remain neutral, forcing equal and opposite induced charge. Parallel elements connect to the same two nodes, so they share voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Why is an axon membrane modeled as a resistor and capacitor in parallel?",
   "back": "The lipid bilayer stores separated charge like a capacitor, while ion channels provide a leak resistance. Their product is the membrane time constant governing how fast voltage can change."
  },
@@ -6925,62 +6925,62 @@
   "back": "The battery supplies $QV$, but the capacitor stores only $\\tfrac{1}{2}QV$. The other half is lost as heat in the resistance, whatever the resistance's size."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A $3.0\\,\\mu$F and a $6.0\\,\\mu$F capacitor are in series across $12$ V. What voltage does each one take?",
   "back": "$C_{\\text{eq}} = (3.0)(6.0)/(3.0 + 6.0) = 2.0\\,\\mu$F, so each holds $Q = 24\\,\\mu$C. Then $V_3 = 24/3.0 = 8.0$ V and $V_6 = 24/6.0 = 4.0$ V: the SMALLER capacitor takes the larger voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "When a charged capacitor discharges through a resistor, the current flows in the {{c1::opposite}} direction to the charging current.",
   "back": "Charge now leaves the plates instead of arriving. During discharge, charge, voltage and current all start at their maximum and decay toward zero."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A charging capacitor follows $Q(t) =$ {{c1::$C\\varepsilon(1 - e^{-t/RC})$}}, rising quickly and then leveling off.",
   "back": "Recognize the shape; a passage will supply the formula. At $t = RC$, $1 - e^{-1} \\approx 0.63$. The current does the opposite: it starts at $\\varepsilon/R$ and decays toward zero."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A $2.0\\text{ k}\\Omega$ resistor charges a $50\\,\\mu$F capacitor from a battery. About how long until the capacitor is essentially fully charged?",
   "back": "$\\tau = RC = (2.0 \\times 10^3)(5.0 \\times 10^{-5}) = 0.10$ s, and \"essentially full\" takes about $5\\tau = 0.50$ s. After one $\\tau$ it holds only about 63%."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A capacitor reaches half its final charge (or loses half while discharging) after about {{c1::$0.69\\tau$}}.",
   "back": "Setting $e^{-t/\\tau} = \\tfrac{1}{2}$ gives $t = \\tau \\ln 2 \\approx 0.69\\tau$, a bit less than one time constant."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A toxin opens many extra $\\text{K}^+$ leak channels in a neuron. How do the membrane resistance and time constant change?",
   "back": "Each open channel is another resistor in parallel, so $R_m$ falls; with $C_m$ unchanged, $\\tau = R_mC_m$ shortens. The membrane responds faster, but each input fades faster."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "Why does myelin LOWER the axon's membrane capacitance?",
   "back": "Myelin is many membrane wraps stacked in series, and series capacitors act like a wider gap $d$, so $C_m$ falls. Less charge is needed to change each stretch's voltage, so depolarization spreads farther and faster."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "In a myelinated axon, the action potential is regenerated only at the {{c1::nodes of Ranvier}}, where voltage-gated $\\text{Na}^+$ channels are concentrated.",
   "back": "The signal seems to jump node to node: saltatory conduction. It is fast and energy-efficient, because ions cross the membrane only at the nodes, leaving less for the $\\text{Na}^+/\\text{K}^+$ pump to restore."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "In multiple sclerosis, how do a demyelinated internode's capacitance and resistance compare with a healthy one, and why does conduction suffer?",
   "back": "$C_m$ rises and $R_m$ falls, because the series layers are gone. More charge is needed per millivolt and current leaks out across the membrane, so conduction slows or fails."
  },
  {
-  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
   "front": "A defibrillator charges its capacitor over $6.0$ s and delivers the same energy in about $6.0$ ms. How does the delivery power compare with the charging power?",
   "back": "Power is energy per time, so the same energy in $10^{-3}$ of the time means about $10^3$ times the power. The capacitor is a time compressor, not an energy source."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Why is current, not voltage, the quantity that determines the severity of electrical injury?",
   "back": "Damage comes from charge actually flowing through tissue, causing fibrillation or burns. Dry skin's high resistance limits that current, which is why wet skin is far more dangerous."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Why is household wiring parallel rather than series?",
   "back": "Every outlet then receives the full line voltage, and devices operate independently, so switching one off or having one fail does not interrupt the rest. The tradeoff is that added devices raise total current, requiring breakers."
  },
@@ -7060,77 +7060,77 @@
   "back": "It rises by a factor of $3/2$: $R_{eq}$ falls from $3R$ to $2R$, so $I$ goes from $V/3R$ to $V/2R$. The shorted resistor has $0$ V across it and carries no current."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Solving Kirchhoff's equations gives a negative value for a current whose direction you guessed. What does that mean?",
   "back": "The current flows opposite to your guess, and its magnitude is still correct. Either walking direction around a loop works, as long as the sign conventions are applied consistently."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $9$ V and a $3$ V battery push in opposite directions in one loop with a $2\\,\\Omega$ resistor. What is the current?",
   "back": "$3$ A. Opposing sources subtract: $+9 - 3 - 2I = 0$, so $I = 6/2 = 3$ A, in the direction the $9$ V battery pushes."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $9$ V battery drives current through $1\\,\\text{k}\\Omega$ (at its positive terminal) and then $2\\,\\text{k}\\Omega$ in series. The node between them is grounded. What is the potential of the negative terminal?",
   "back": "$-6$ V. The current is $9/3000 = 3$ mA, so the $2\\,\\text{k}\\Omega$ resistor drops $6$ V on the way to the negative terminal; the positive terminal sits at $+3$ V. Ground shifts potentials, never differences."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "For two resistors in series across a voltage $V$, the voltage across $R_1$ is the total $V$ multiplied by {{c1::$R_1/(R_1 + R_2)$}}.",
   "back": "Series resistors share voltage in proportion to resistance. A $2\\,\\text{k}\\Omega$ and an $8\\,\\text{k}\\Omega$ resistor across $10$ V drop $2$ V and $8$ V."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "$5.0$ mA enters a $1\\,\\text{k}\\Omega$ muscle path in parallel with a $4\\,\\text{k}\\Omega$ fat path. How much current goes through the muscle path?",
   "back": "$4.0$ mA. Current divides in inverse proportion to resistance: $I_1 = I\\,R_2/(R_1 + R_2) = 5.0 \\times 4/5$. The OTHER resistor goes in the numerator."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $12$ V ideal battery feeds a $2\\,\\Omega$ resistor in series with a parallel pair of $6\\,\\Omega$ and $3\\,\\Omega$. Find the current in each parallel branch.",
   "back": "$1$ A and $2$ A. The pair is $18/9 = 2\\,\\Omega$, so $R_{eq} = 4\\,\\Omega$ and $I = 3$ A. The series resistor drops $6$ V, leaving $6$ V across the pair: $6/6$ and $6/3$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A resistor $R_s$ sits in series in front of a parallel bank. A new branch is added to the bank. What happens to the current in each original branch?",
   "back": "It falls. $R_{eq}$ drops and the total current rises, so $R_s$ drops more voltage and less is left across the bank. Branches stay independent only when the bank sits directly across an ideal source."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $24$ V ideal source drives a $2\\,\\Omega$ resistor in series with two $4\\,\\Omega$ resistors in parallel. One $4\\,\\Omega$ resistor fails open. What happens to the current in the other?",
   "back": "It rises from $3$ A to $4$ A. Before: $R_{eq} = 2 + 2 = 4\\,\\Omega$, so $6$ A splits evenly. After: $R_{eq} = 6\\,\\Omega$ and all $4$ A goes through the survivor. The total current fell, yet the survivor's rose."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A wire connected across one branch of a parallel bank shorts {{c1::every branch of the bank}}.",
   "back": "All the branches share the same two nodes, so all of them now have $0$ V across them and carry no current. The total current flows through the wire."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A heater on a fixed-voltage outlet gets a new element with half the resistance. What happens to the power it draws?",
   "back": "It doubles. At fixed $V$, use $P = V^2/R$. Using $I^2R$ while holding $I$ fixed wrongly predicts halving; the current actually doubles too."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $2000$ W space heater runs for $5$ hours at 15 cents per kilowatt-hour. What does it cost?",
   "back": "1.50 dollars. $E = Pt = (2.0\\,\\text{kW})(5\\,\\text{h}) = 10$ kWh, and $10 \\times 15$ cents is 150 cents. Convert watts to kilowatts before multiplying."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Each of $n$ identical bulbs in series on an ideal source dissipates {{c1::$P_0/n^2$}}, where $P_0$ is one bulb's power when connected alone.",
   "back": "Each bulb gets $V/n$, and $P = V^2/R$ squares that factor. Two in series each glow at one quarter of solo power; in parallel each keeps full power."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Bulb A is in series with identical bulbs B and C in parallel, all across an ideal battery. C burns out. What happens to A and B?",
   "back": "A dims and B brightens. $R_{eq}$ rises from $1.5R$ to $2R$, so the total current falls. A's share of the voltage drops from two thirds to one half, leaving B one half instead of one third."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "A $120$ V shock passes hand to hand. The body path is $10^5\\,\\Omega$ with dry skin and $10^3\\,\\Omega$ with wet skin. Compare the currents.",
   "back": "Dry: $120/10^5 = 1.2$ mA, a tingle. Wet: $120/10^3 = 0.12$ A, $100$ times larger and potentially lethal. The voltage never changed; only the resistance did."
  },
  {
-  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
   "front": "Approximate body-current thresholds: about {{c1::1 mA}} is perceptible, and about {{c2::100 mA}} across the chest can trigger ventricular fibrillation.",
   "back": "Roughly $10$ to $20$ mA prevents letting go. The values vary with path, duration and frequency, and passages supply them when needed."
  },
@@ -8720,7 +8720,7 @@
   "back": "The fluid is incompressible so displaced volumes match, $A_1d_1 = A_2d_2$, and work in equals work out. Machines trade force for distance and never create energy."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "A mass on a spring has period $T = 2\\pi\\sqrt{m/k}$, so its period is independent of {{c1::amplitude and gravity}}.",
   "back": "Only mass and spring constant matter, so the same spring-mass system oscillates at the same rate horizontally, vertically, or on the Moon, and a larger pull does not slow it down."
  },
@@ -8730,7 +8730,7 @@
   "back": "The definition $\\beta = 10\\log(I/I_0)$ is linear in the log of intensity. Semi-log axes are the standard presentation in acoustics and audiology data, where a straight line signals a power-law relationship in the raw variables."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "A simple pendulum has period $T = 2\\pi\\sqrt{L/g}$, so its period is independent of {{c1::the bob's mass}}.",
   "back": "For small angles it is also independent of amplitude, but unlike a spring it does depend on the local value of $g$, which is why pendulum clocks run slow at high altitude."
  },
@@ -8745,12 +8745,12 @@
   "back": "Ten decibels louder, since each tenfold intensity increase adds 10 dB. Perceptually it sounds only about twice as loud, because loudness perception is itself roughly logarithmic and a 10 dB rise is heard as a doubling."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "A sound wave passes from air into soft tissue. Which wave properties change?",
   "back": "Frequency is fixed by the source and does not change; speed changes with the medium, so wavelength adjusts through $v = f\\lambda$. This behavior underlies ultrasound imaging."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A standing wave forms when:",
   "back": "**Two identical waves travel in opposite directions**\n\nInterference creates fixed nodes and antinodes."
  },
@@ -8760,7 +8760,7 @@
   "back": "**$1.005 \\times 10^{6}$ Pa**\n\nGauge pressure = ρgh = 1025 × 9.8 × 100 = 1,004,500 Pa ≈ $1.005 \\times 10^{6}$ Pa. This is the pressure due to the water column above, not including atmospheric pressure."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "A vessel narrows to half its radius at constant driving pressure. By what factor does flow drop?",
   "back": "Sixteenfold, because Poiseuille flow scales with $r^4$. This sensitivity is why arteriolar radius dominates blood pressure regulation, and why plaque can grow substantially before flow limitation becomes clinically obvious."
  },
@@ -8785,17 +8785,17 @@
   "back": "Specific gravity is density relative to water at $1000$ kg/m$^3$ and is dimensionless. It feeds directly into buoyancy and hydrostatic pressure calculations for body fluids."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "By Bernoulli's principle, where a fluid speeds up at constant height its pressure {{c1::decreases}}.",
   "back": "The sum $P + \\rho gh + \\frac{1}{2}\\rho v^2$ stays constant along a streamline, so kinetic energy per unit volume rises at the expense of pressure energy."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Continuity or Poiseuille: which explains slow capillary flow, and which explains high resistance in a stenosis?",
   "back": "Continuity, with $Av$ constant, explains capillary speed: their enormous combined cross-sectional area forces low velocity. Poiseuille explains resistance through a narrowed vessel. Continuity is about conserved volume flow; Poiseuille is about pressure cost."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Contrast longitudinal and transverse waves.",
   "back": "Longitudinal oscillates parallel to travel (sound); transverse oscillates perpendicular (light, string waves)."
  },
@@ -8810,7 +8810,7 @@
   "back": "No. In an incompressible fluid, displaced volume and density are unchanged, so buoyancy is constant. Pressure rises on both the top and bottom surfaces, leaving the difference the same."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "For a string fixed at both ends, the allowed wavelengths are {{c1::$\\lambda_n = 2L/n$}}.",
   "back": "Nodes must sit at both ends, so every integer harmonic exists and $f_n = nv/(2L)$. The fundamental has one antinode, at the midpoint."
  },
@@ -8820,12 +8820,12 @@
   "back": "$P = P_0 + \\rho gh$. It depends on depth and density, not container shape or total volume."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Give the continuity equation.",
   "back": "$A_1v_1 = A_2v_2$ — fluid speeds up where the pipe narrows, since volumetric flow rate is constant."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "How do the harmonics of an open pipe differ from a pipe closed at one end?",
   "back": "An open pipe supports all harmonics with $f_n = nv/(2L)$; a closed pipe supports only odd harmonics with $f_n = nv/(4L)$, so its fundamental is an octave below an open pipe of equal length."
  },
@@ -8845,7 +8845,7 @@
   "back": "Apparent weight underwater equals true weight minus buoyant force, which yields body volume and thus density. Fat is less dense than water and lean tissue is denser, so density predicts body fat fraction."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "How does raising hematocrit affect cardiac workload?",
   "back": "It raises blood viscosity, and Poiseuille resistance is proportional to viscosity, so a larger pressure gradient is needed for the same flow. The heart must generate more pressure per beat."
  },
@@ -8855,7 +8855,7 @@
   "back": "It falls as $1/r^2$, since the same power spreads over a sphere of area $4\\pi r^2$. Doubling the distance quarters intensity but lowers the level by only about 6 dB."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "How does vessel radius affect flow (Poiseuille)?",
   "back": "Flow $\\propto r^{4}$ — halving the radius cuts flow to $\\frac{1}{16}$. Small arterial narrowing has outsized effect."
  },
@@ -8865,12 +8865,12 @@
   "back": "Only the velocity component along the beam produces a shift, so the measured value scales with $\\cos\\theta$. A beam perpendicular to the vessel yields no shift at all, and a poorly aligned probe systematically underestimates flow velocity."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "In Poiseuille's law, flow rate is proportional to {{c1::the fourth power of the radius}}.",
   "back": "Halving a vessel's radius cuts flow to one-sixteenth at fixed pressure gradient, which is why small changes in arteriolar tone dominate total peripheral resistance."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "In simple harmonic motion, where are speed and acceleration each maximal?",
   "back": "Speed peaks at the equilibrium position where the restoring force is zero; acceleration peaks at the extremes where displacement and restoring force are largest. The two are exactly out of phase."
  },
@@ -8880,7 +8880,7 @@
   "back": "At fixed surface tension, smaller alveoli generate higher collapsing pressure and would empty into larger ones. Surfactant lowers tension more in small alveoli, stabilizing the whole lung."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Leg swing during walking behaves like a pendulum, so a taller person's natural cadence is {{c1::slower}}.",
   "back": "Pendulum period goes as the square root of $L/g$ and is independent of mass, so longer legs swing more slowly. Taller people compensate with longer strides, which is why walking speed still increases with height even as step frequency falls."
  },
@@ -8900,7 +8900,7 @@
   "back": "Each factor of ten in intensity adds 10 dB, so factors of 10, 100, and 1000 add 10, 20, and 30 dB. Conversely every 10 dB step is a tenfold intensity change."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Relate wave speed, frequency, and wavelength.",
   "back": "$v = f\\lambda$. In a fixed medium $v$ is constant, so $f$ and $\\lambda$ are inversely related."
  },
@@ -8915,12 +8915,12 @@
   "back": "The reference $I_0$ is $10^{-12}$ W/m$^2$, the threshold of hearing. The logarithm compresses the enormous dynamic range of human hearing onto a manageable scale."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Sound passing through the interior of a liquid or gas travels only as a {{c1::longitudinal}} wave.",
   "back": "Fluids cannot support shear, so transverse mechanical waves die out within them and survive only on surfaces. This is why ultrasound imaging relies on compression waves."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Sound travels fastest in:",
   "back": "**Solids**\n\nStiffer media transmit compressions faster; sound cannot travel in vacuum."
  },
@@ -8930,7 +8930,7 @@
   "back": "Buoyant force equals the weight of displaced fluid: $F_b = \\rho_{fluid}Vg$. An object floats if it can displace its own weight."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "State Bernoulli's principle.",
   "back": "Where fluid speed is higher, pressure is lower: $P + \\frac{1}{2}\\rho v^{2} + \\rho gh$ is constant. Explains airfoil lift and the Venturi effect."
  },
@@ -8955,7 +8955,7 @@
   "back": "Conversation sits near 60 dB and the pain threshold near 120 dB, spanning a trillionfold range of intensity. The scale is logarithmic because the ear's usable range is that wide, not because intensity itself behaves logarithmically."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Two tuning forks at 440 Hz and 444 Hz sound together; the beat frequency is {{c1::4 Hz}}.",
   "back": "Beats occur at the difference of the two frequencies, heard as loudness rising and falling at that rate. Musicians tune an instrument by driving the beat frequency to zero."
  },
@@ -8965,22 +8965,22 @@
   "back": "**Reflection at tissue interfaces of differing impedance**\n\nEcho timing localizes structures."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Vascular resistance is {{c1::$8\\eta L/(\\pi r^4)$}}, so viscosity and length enter {{c1::linearly}}.",
   "back": "Flow rate equals the pressure difference divided by that resistance. Polycythemia raises viscosity and therefore resistance proportionally, while even a small radius change dominates everything else through the fourth power."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Wave speed on a string is $v = \\sqrt{T/\\mu}$, so tightening a string {{c1::raises}} its pitch.",
   "back": "Higher tension or lower linear mass density raises wave speed, and with length fixed, $f_1 = v/(2L)$ rises with it. Thicker strings have larger mass per length and sound lower."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "What distinguishes turbulent from laminar flow, and why does it matter clinically?",
   "back": "Turbulence appears above a critical Reynolds number, favored by high velocity, large diameter, high density, and low viscosity. It produces sound, which is why murmurs, bruits, and Korotkoff sounds are audible."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "What four assumptions does Bernoulli's equation require?",
   "back": "Steady, laminar flow of an incompressible, nonviscous fluid along one streamline. Real blood is viscous, so pressure also falls steadily along a vessel of uniform diameter."
  },
@@ -8990,27 +8990,27 @@
   "back": "The density ratio $\\rho_{obj}/\\rho_{fluid}$. Ice near $920$ kg/m$^3$ floats with roughly 92 percent of its volume submerged in fresh water."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "What happens to pressure inside an arterial stenosis?",
   "back": "Flow accelerates through the narrowing, so pressure drops there, which can partly collapse a compliant vessel and generate turbulence and an audible bruit just downstream."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "What is resonance, and where does it matter physiologically?",
   "back": "Driving a system at its natural frequency transfers energy efficiently and builds large amplitude. The ear canal resonates near 3 kHz, boosting sensitivity there, and the basilar membrane resonates tonotopically by position."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "When a wave enters a new medium, what stays constant?",
   "back": "**Frequency**\n\nThe source sets frequency; speed and wavelength adjust together."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Which raises resistance more: halving a vessel's radius, or doubling its length?",
   "back": "Halving the radius, by a factor of 16, versus only a factor of 2 for doubled length. Radius carries the fourth power in Poiseuille's law, making vasoconstriction a far more powerful control than any change in length or viscosity."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Why can a forced expiration collapse an airway (dynamic compression)?",
   "back": "Fast flow lowers the pressure inside the airway by Bernoulli's principle, while pleural pressure outside rises during the effort. Once outside exceeds inside, the compliant airway narrows, which raises velocity further, a self-reinforcing collapse prominent in COPD."
  },
@@ -9035,7 +9035,7 @@
   "back": "Fat has density near 0.9 g/cm$^3$ while lean tissue and bone run near 1.1. More fat pulls whole-body density toward or below water's 1.0, so a larger fraction floats above the surface. Hydrostatic weighing converts that buoyancy into a body-fat estimate."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Why does an aneurysm tend to enlarge once it forms?",
   "back": "The widened segment slows the flow, so Bernoulli predicts higher local pressure pushing the wall outward. Laplace's law compounds it, since wall tension rises with radius at fixed pressure."
  },
@@ -9045,7 +9045,7 @@
   "back": "The extra hydrostatic column adds $\\rho g h$, roughly 80 to 100 mmHg over about 1.3 m. Venous valves and the skeletal muscle pump are needed to return blood against that column."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Why is blood slowest in capillaries even though each capillary is tiny?",
   "back": "The combined cross-sectional area of all capillaries far exceeds the aorta's, so continuity forces the lowest velocity there. Slow transit maximizes time for gas and solute exchange."
  },
@@ -9115,62 +9115,62 @@
   "back": "Measured with a hydrometer, which rides higher in denser urine. Values near the top of the range mean concentrated urine, as in dehydration."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "An infusion pump delivers $120$ mL/min through tubing of cross-sectional area $0.10$ cm$^2$. What is the saline's average speed?",
   "back": "$20$ cm/s. $Q = 120/60 = 2$ cm$^3$/s, and $v = Q/A = 2/0.10 = 20$ cm/s. Convert minutes to seconds first, and remember $1$ mL $= 1$ cm$^3$."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Doppler shows blood speeding from $30$ to $270$ cm/s through a stenosis at unchanged flow, so the lumen radius is about {{c1::one-third}} of normal.",
   "back": "Speed rose 9-fold, so by $A_1v_1 = A_2v_2$ the area fell to one-ninth. Area goes as $r^2$, so the radius is $\\sqrt{1/9} = 1/3$ of normal. Answering one-ninth confuses area with radius."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Water flows at $1$ m/s through a horizontal pipe of area $10$ cm$^2$ into a throat of area $2$ cm$^2$. How much lower is the throat pressure, and what height difference do the Venturi tubes show?",
   "back": "$12$ kPa and $1.2$ m. Continuity: $v_2 = 5$ m/s. Bernoulli: $\\Delta P = \\tfrac{1}{2}(1000)(25 - 1) = 12{,}000$ Pa, using $v_2^2 - v_1^2$, not $(v_2 - v_1)^2$. Then $\\Delta h = \\Delta P/(\\rho g) = 1.2$ m, lower over the throat."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Water at $1$ m/s in a $6$ cm$^2$ pipe rises $2$ m into a $2$ cm$^2$ section. How much lower is the pressure in the upper section? ($g = 10$ m/s$^2$)",
   "back": "$24$ kPa. Continuity gives $v_2 = 3$ m/s. Bernoulli: $\\tfrac{1}{2}(1000)(9 - 1) + (1000)(10)(2) = 4000 + 20{,}000$ Pa. Speeding up and climbing both lower the pressure, so the terms add."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Liquid leaks from a small hole a depth $h$ below the surface of a wide open tank at speed {{c1::$v = \\sqrt{2gh}$}}.",
   "back": "Torricelli: surface and jet are both at atmospheric pressure, so the jet has the free-fall speed from the surface. At $h = 1.8$ m, $v = \\sqrt{36} = 6$ m/s; doubling the depth multiplies $v$ by only $\\sqrt{2}$."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "A pitot tube reads a stagnation pressure $250$ Pa above the static pressure in an air stream ($\\rho = 1.25$ kg/m$^3$). What is the air speed?",
   "back": "$20$ m/s. Bringing the flow to rest at the tip turns the kinetic term into pressure: $\\tfrac{1}{2}\\rho v^2 = 250$, so $v^2 = 2(250)/1.25 = 400$."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
   "back": "Poiseuille flow scales as $r^4$, and $0.84^4 \\approx 0.50$. That is why small changes in arteriolar tone produce large changes in flow."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
   "back": "Billions of capillaries sit in parallel, so their combined resistance is lower than the arterioles'. Pressure falls from about 90 to about 35 mmHg across the arterioles, whose smooth muscle sets resistance."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
   "back": "Both rise. Parallel resistances combine to less than any single branch, so removing one raises the total; since $MAP \\approx CO \\times TPR$, MAP rises too."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
   "back": "Bernoulli fits a SHORT narrowing: speed changes quickly and friction is small, explaining the pressure dip in the jet. Poiseuille fits a LONG narrowing or a fixed driving pressure: resistance rises as $1/r^4$ and flow falls."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
   "back": "Static (depth, floating, pistons): $P = P_0 + \\rho g h$, Pascal, Archimedes. Ideal flow (non-viscous, short constrictions): continuity, Bernoulli, Torricelli. Viscous flow (long vessels, viscosity given): Poiseuille, $Q = \\Delta P/R$. If turbulent, neither equation holds."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
   "front": "Why can severe anemia produce a heart murmur even with normal valves?",
   "back": "Low hematocrit lowers blood viscosity, and cardiac output rises to compensate, so blood moves faster. Both raise the Reynolds number $Re = \\rho v D/\\eta$, pushing flow toward turbulence, which is audible."
  },
@@ -9180,72 +9180,72 @@
   "back": "Air has an acoustic impedance thousands of times lower than tissue, so an air gap reflects nearly all the sound before it can enter the body. The gel matches impedances closely enough for the beam to transmit and for echoes to return."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "A resting heart beats $90$ times per minute. What are the frequency and the period of one cardiac cycle?",
   "back": "Convert to seconds first: $f = 90/60 = 1.5$ Hz, so $T = 1/f \\approx 0.67$ s. Taking $1/90$ without converting the minute is the classic error."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Angular frequency is {{c1::$\\omega = 2\\pi f$}}, measured in rad/s.",
   "back": "One cycle is $2\\pi$ radians, so $f$ cycles per second is $2\\pi f$ radians per second. Passages may write the motion as $x = A\\cos\\omega t$."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "Two identical pendulums swing side by side; whenever one is at its far-left turning point, the other is at its far-right. Their phase difference is {{c1::$180^\\circ$ ($\\pi$ rad)}}.",
   "back": "Opposite extremes at the same instant means half a cycle apart. A $360^\\circ$ offset is the same as $0^\\circ$ (in phase), and $90^\\circ$ would put one at a turning point while the other passes equilibrium."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "A mass oscillates on a spring. What happens to its period if the mass is quadrupled? If the spring is swapped for one four times stiffer?",
   "back": "$T = 2\\pi\\sqrt{m/k}$, so four times the mass doubles $T$, and four times the stiffness halves it. Both enter under a square root."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
   "front": "The speed of sound in a medium is {{c1::$v = \\sqrt{B/\\rho}$}}, where $B$ is the bulk modulus (stiffness against compression) and $\\rho$ the density.",
   "back": "Greater density alone would slow sound, but solids are vastly stiffer than gases, and stiffness wins. That is why steel carries sound about 15 times faster than air despite being thousands of times denser."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Two pulses meet on a rope: an upright pulse $3$ cm high and an inverted pulse $1$ cm deep. What is the displacement when they exactly overlap, and what happens afterward?",
   "back": "Displacements add with their signs: $+3 + (-1) = +2$ cm. Superposition is temporary, so each pulse then continues on with its original shape."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Two in-phase sources interfere constructively where the path difference is {{c1::a whole number of wavelengths}} and destructively where it is {{c2::an odd number of half-wavelengths}}.",
   "back": "A path difference of $\\lambda$ shifts the phase by $360^\\circ$ (back in step); $\\lambda/2$ shifts it by $180^\\circ$ (crest on trough). Always convert the path difference into wavelengths before judging."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A tuner hears $4$ beats per second between a $440$ Hz tuning fork and a string. Tightening the string makes the beats slower. What was the string's frequency?",
   "back": "Four beats puts the string at $436$ or $444$ Hz. Tightening raises its frequency, and slower beats mean it moved toward $440$, so it started flat, at $436$ Hz."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "In a standing wave, adjacent nodes are {{c1::$\\lambda/2$}} apart, and a node and the next antinode are {{c2::$\\lambda/4$}} apart.",
   "back": "Nodes never move; antinodes swing most, midway between nodes. These spacings are why strings and open pipes hold half-wavelengths and closed pipes hold quarter-wavelengths."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "The first overtone is which harmonic for a string or open pipe, and which for a pipe closed at one end?",
   "back": "Overtones count the harmonics above the fundamental. Strings and open pipes have every harmonic, so the first overtone is the 2nd harmonic; a closed pipe has odd harmonics only, so its first overtone is the 3rd harmonic."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Described by pressure, an open end of a pipe is a pressure {{c1::node}} and a closed end is a pressure {{c2::antinode}}.",
   "back": "Pressure and displacement patterns are swapped: air at an open end moves freely but stays at room pressure, while air at a closed end cannot move but its pressure swings most. The harmonic formulas are unchanged."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A tube's two consecutive resonances are $150$ Hz and $250$ Hz. Is it open or closed at one end, and what is its fundamental?",
   "back": "The gap is $100$ Hz. An open tube would have $f_1 = 100$ Hz, but $150$ is not a multiple of $100$. A closed tube's gap is $2f_1$, so $f_1 = 50$ Hz, with $150 = 3f_1$ and $250 = 5f_1$: closed."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "The ear canal acts as a pipe {{c1::closed at one end}} (sealed by the eardrum), so a $2.5$ cm canal resonates near $3400$ Hz.",
   "back": "$f_1 = v/4L = 340/(4 \\times 0.025) = 340/0.10 = 3400$ Hz. This resonance helps make human hearing most sensitive at about $2$ to $5$ kHz."
  },
  {
-  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Heavier damping makes a driven system's resonance {{c1::weaker and less sharp}}.",
   "back": "Damping drains vibrational energy to friction, viscosity or absorption, so amplitude dies away and the peak at the natural frequency is smaller. Damping of a travelling sound wave is called attenuation."
  },

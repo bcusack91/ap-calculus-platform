@@ -6,11 +6,11 @@ export const emfCapacitorsMcatPart1: LessonData = {
     {
       id: 'ec1-intro',
       type: 'text' as const,
-      content: `# Circuits Part 2: EMF & Capacitors
+      content: `# Circuits Part 3: EMF & Capacitance
 
-**Part 1 of 4 — EMF, Internal Resistance & Meters**
+**Part 1 of 2 — EMF, Internal Resistance & Meters**
 
-**Where this fits.** In the *Circuits Part 1: Current & Resistance* lesson you learned the rules for steady current: $V = IR$, resistivity, series and parallel resistors, Kirchhoff's junction and loop rules, network reduction, and power. There, every battery was a perfect, fixed voltage. This lesson makes the battery real, then adds the element that stores charge instead of passing it: the capacitor.
+**Where this fits.** The *Circuits Part 1: Current & Resistance* and *Circuits Part 2: Kirchhoff's Rules & Power* lessons gave you the rules for steady current ($V = IR$, series and parallel resistors, Kirchhoff's rules, network reduction and power), with every battery a perfect, fixed voltage. This lesson makes the battery real (EMF, internal resistance, meters), then adds the element that stores charge instead of passing it: the capacitor, with its dielectrics and stored energy. Next, the *Circuits Part 4: Capacitor Networks & Bioelectricity* lesson wires capacitors into networks and RC circuits and finds them in neurons and defibrillators.
 
 ### What EMF Means
 

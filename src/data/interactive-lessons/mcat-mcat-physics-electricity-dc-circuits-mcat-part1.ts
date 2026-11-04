@@ -8,9 +8,9 @@ export const dcCircuitsMcatPart1: LessonData = {
       type: 'text' as const,
       content: `# Circuits Part 1: Current & Resistance
 
-**Part 1 of 4 — Charge, Current & Voltage**
+**Part 1 of 2 — Charge, Current & Voltage**
 
-**Where this fits.** This lesson builds DC circuits from the ground up: what current and voltage are, how resistance limits current, how to reduce any resistor network, and how power decides which bulb glows brightest. Its companion, the *Circuits Part 2: EMF & Capacitors* lesson, picks up with real batteries (EMF and internal resistance), meters, capacitors and bioelectricity. Here every source is ideal and every element is a resistor.
+**Where this fits.** The *Electrostatics* lesson treated charges at rest; this first of four Circuits lessons sets them moving. It covers what current and voltage are, how resistance limits current, and how resistors combine in series and parallel, with every source ideal and every element a resistor. Next, the *Circuits Part 2: Kirchhoff's Rules & Power* lesson uses these tools to reduce whole networks and decide which bulb glows brightest.
 
 ### Charge and Current
 
@@ -110,7 +110,7 @@ Voltage is always a DIFFERENCE between two points. **Ground** is the point we de
 
 ### Why Current Flows — and the Water Analogy
 
-A battery maintains a potential difference between its terminals, so charge sent around an external path gains energy inside the battery and spends it in the circuit. (What a real battery does inside, its EMF and internal resistance, is covered in the *Circuits Part 2: EMF & Capacitors* lesson.)
+A battery maintains a potential difference between its terminals, so charge sent around an external path gains energy inside the battery and spends it in the circuit. (What a real battery does inside, its EMF and internal resistance, is covered in the *Circuits Part 3: EMF & Capacitance* lesson.)
 
 | Circuit | Water system |
 |---|---|

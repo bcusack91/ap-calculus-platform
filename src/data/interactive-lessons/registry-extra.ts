@@ -3073,8 +3073,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Charge, Current & Voltage', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[0]) },
       { title: 'Resistance, Ohm\'s Law & Series vs. Parallel', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[1]) },
-      { title: 'Kirchhoff\'s Rules & Reducing Networks', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[2]) },
-      { title: 'Circuit Changes, Power & Bulb Brightness', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-kirchhoff-power-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Kirchhoff\'s Rules & Reducing Networks', loader: () => import('./mcat-mcat-physics-electricity-kirchhoff-power-mcat').then((m) => m.parts[0]) },
+      { title: 'Circuit Changes, Power & Bulb Brightness', loader: () => import('./mcat-mcat-physics-electricity-kirchhoff-power-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-physics-electricity-emf-capacitors-mcat': {
@@ -3082,8 +3087,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'EMF, Internal Resistance & Meters', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[0]) },
       { title: 'Capacitance, Dielectrics & Stored Energy', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[1]) },
-      { title: 'Capacitor Networks & RC Circuits', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[2]) },
-      { title: 'Bioelectricity & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-rc-circuits-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Capacitor Networks & RC Circuits', loader: () => import('./mcat-mcat-physics-electricity-rc-circuits-mcat').then((m) => m.parts[0]) },
+      { title: 'Bioelectricity & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-rc-circuits-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-physics-electricity-magnetism-mcat': {
@@ -3163,17 +3173,32 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Density, Pressure & Pascal\'s Principle', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[0]) },
       { title: 'Buoyancy, Archimedes & Surface Tension', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[1]) },
-      { title: 'Fluid Dynamics: Continuity & Bernoulli', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[2]) },
-      { title: 'Viscosity, Poiseuille & Blood Flow', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-mechanics-fluid-dynamics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Fluid Dynamics: Continuity & Bernoulli', loader: () => import('./mcat-mcat-physics-mechanics-fluid-dynamics-mcat').then((m) => m.parts[0]) },
+      { title: 'Viscosity, Poiseuille & Blood Flow', loader: () => import('./mcat-mcat-physics-mechanics-fluid-dynamics-mcat').then((m) => m.parts[1]) },
+    ],
+  },
+  'mcat-physics-waves-periodic-motion-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Periodic Motion & Wave Basics', loader: () => import('./mcat-mcat-physics-waves-periodic-motion-mcat').then((m) => m.parts[0]) },
+    ],
+  },
+  'mcat-physics-waves-interference-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Superposition, Interference & Standing Waves', loader: () => import('./mcat-mcat-physics-waves-interference-mcat').then((m) => m.parts[0]) },
     ],
   },
   'mcat-physics-waves-sound-mcat': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Periodic Motion & Wave Basics', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[0]) },
-      { title: 'Superposition, Interference & Standing Waves', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[1]) },
-      { title: 'Sound: Intensity, Decibels & Hearing', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[2]) },
-      { title: 'Doppler, Ultrasound & Shock Waves', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[3]) },
+      { title: 'Sound: Intensity, Decibels & Hearing', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[0]) },
+      { title: 'Doppler, Ultrasound & Shock Waves', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-psychology-behavior-sensation-perception-mcat': {

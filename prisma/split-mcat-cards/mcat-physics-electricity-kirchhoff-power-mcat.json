@@ -1,0 +1,122 @@
+[
+ {
+  "front": "Solving Kirchhoff's equations gives a negative value for a current whose direction you guessed. What does that mean?",
+  "back": "The current flows opposite to your guess, and its magnitude is still correct. Either walking direction around a loop works, as long as the sign conventions are applied consistently.",
+  "hint": "The guess only sets the sign.",
+  "yield": "MEDIUM",
+  "why": "Loop-rule bookkeeping matters for multi-step problems but is rarely tested directly.",
+  "part": 1
+ },
+ {
+  "front": "A $9$ V and a $3$ V battery push in opposite directions in one loop with a $2\\,\\Omega$ resistor. What is the current?",
+  "back": "$3$ A. Opposing sources subtract: $+9 - 3 - 2I = 0$, so $I = 6/2 = 3$ A, in the direction the $9$ V battery pushes.",
+  "hint": "Net source voltage drives current through the total resistance.",
+  "yield": "MEDIUM",
+  "why": "Opposing sources appear occasionally; most MCAT loops have one source.",
+  "part": 1
+ },
+ {
+  "front": "A $9$ V battery drives current through $1\\,\\text{k}\\Omega$ (at its positive terminal) and then $2\\,\\text{k}\\Omega$ in series. The node between them is grounded. What is the potential of the negative terminal?",
+  "back": "$-6$ V. The current is $9/3000 = 3$ mA, so the $2\\,\\text{k}\\Omega$ resistor drops $6$ V on the way to the negative terminal; the positive terminal sits at $+3$ V. Ground shifts potentials, never differences.",
+  "hint": "Ground is just the point you call $0$ V.",
+  "yield": "MEDIUM",
+  "why": "Ground and reference potentials appear in passages and figure questions.",
+  "part": 1
+ },
+ {
+  "front": "For two resistors in series across a voltage $V$, the voltage across $R_1$ is the total $V$ multiplied by {{c1::$R_1/(R_1 + R_2)$}}.",
+  "back": "Series resistors share voltage in proportion to resistance. A $2\\,\\text{k}\\Omega$ and an $8\\,\\text{k}\\Omega$ resistor across $10$ V drop $2$ V and $8$ V.",
+  "hint": "The bigger resistor takes the bigger share.",
+  "yield": "HIGH",
+  "why": "Voltage dividers are a common shortcut in series circuit questions.",
+  "part": 1
+ },
+ {
+  "front": "$5.0$ mA enters a $1\\,\\text{k}\\Omega$ muscle path in parallel with a $4\\,\\text{k}\\Omega$ fat path. How much current goes through the muscle path?",
+  "back": "$4.0$ mA. Current divides in inverse proportion to resistance: $I_1 = I\\,R_2/(R_1 + R_2) = 5.0 \\times 4/5$. The OTHER resistor goes in the numerator.",
+  "hint": "Current favours the smaller resistance.",
+  "yield": "HIGH",
+  "why": "Current dividers are commonly tested, often in physiology contexts.",
+  "part": 1
+ },
+ {
+  "front": "A $12$ V ideal battery feeds a $2\\,\\Omega$ resistor in series with a parallel pair of $6\\,\\Omega$ and $3\\,\\Omega$. Find the current in each parallel branch.",
+  "back": "$1$ A and $2$ A. The pair is $18/9 = 2\\,\\Omega$, so $R_{eq} = 4\\,\\Omega$ and $I = 3$ A. The series resistor drops $6$ V, leaving $6$ V across the pair: $6/6$ and $6/3$.",
+  "hint": "Collapse inside-out, then walk back out.",
+  "yield": "ULTRA_HIGH",
+  "why": "Reducing a mixed network and walking back out is tested on essentially every MCAT.",
+  "part": 1
+ },
+ {
+  "front": "A resistor $R_s$ sits in series in front of a parallel bank. A new branch is added to the bank. What happens to the current in each original branch?",
+  "back": "It falls. $R_{eq}$ drops and the total current rises, so $R_s$ drops more voltage and less is left across the bank. Branches stay independent only when the bank sits directly across an ideal source.",
+  "hint": "Order: $R_{eq}$, total current, series drop, what is left.",
+  "yield": "HIGH",
+  "why": "Predicting circuit changes in mixed networks is commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "A $24$ V ideal source drives a $2\\,\\Omega$ resistor in series with two $4\\,\\Omega$ resistors in parallel. One $4\\,\\Omega$ resistor fails open. What happens to the current in the other?",
+  "back": "It rises from $3$ A to $4$ A. Before: $R_{eq} = 2 + 2 = 4\\,\\Omega$, so $6$ A splits evenly. After: $R_{eq} = 6\\,\\Omega$ and all $4$ A goes through the survivor. The total current fell, yet the survivor's rose.",
+  "hint": "Total current does not stay fixed when the network changes.",
+  "yield": "HIGH",
+  "why": "Removing a branch from a mixed network is a common change-the-circuit question.",
+  "part": 2
+ },
+ {
+  "front": "A wire connected across one branch of a parallel bank shorts {{c1::every branch of the bank}}.",
+  "back": "All the branches share the same two nodes, so all of them now have $0$ V across them and carry no current. The total current flows through the wire.",
+  "hint": "Parallel branches share both nodes.",
+  "yield": "HIGH",
+  "why": "Shorts are a common trap in circuit-change questions.",
+  "part": 2
+ },
+ {
+  "front": "A heater on a fixed-voltage outlet gets a new element with half the resistance. What happens to the power it draws?",
+  "back": "It doubles. At fixed $V$, use $P = V^2/R$. Using $I^2R$ while holding $I$ fixed wrongly predicts halving; the current actually doubles too.",
+  "hint": "Pick the power form containing the quantity held constant.",
+  "yield": "ULTRA_HIGH",
+  "why": "Choosing the right power form is tested on essentially every MCAT.",
+  "part": 2
+ },
+ {
+  "front": "A $2000$ W space heater runs for $5$ hours at 15 cents per kilowatt-hour. What does it cost?",
+  "back": "1.50 dollars. $E = Pt = (2.0\\,\\text{kW})(5\\,\\text{h}) = 10$ kWh, and $10 \\times 15$ cents is 150 cents. Convert watts to kilowatts before multiplying.",
+  "hint": "The kilowatt-hour is a unit of energy.",
+  "yield": "HIGH",
+  "why": "Energy-cost and kWh conversions are a commonly tested application of power.",
+  "part": 2
+ },
+ {
+  "front": "Each of $n$ identical bulbs in series on an ideal source dissipates {{c1::$P_0/n^2$}}, where $P_0$ is one bulb's power when connected alone.",
+  "back": "Each bulb gets $V/n$, and $P = V^2/R$ squares that factor. Two in series each glow at one quarter of solo power; in parallel each keeps full power.",
+  "hint": "Power goes as voltage squared.",
+  "yield": "HIGH",
+  "why": "Bulb-brightness ratios between series and parallel are commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "Bulb A is in series with identical bulbs B and C in parallel, all across an ideal battery. C burns out. What happens to A and B?",
+  "back": "A dims and B brightens. $R_{eq}$ rises from $1.5R$ to $2R$, so the total current falls. A's share of the voltage drops from two thirds to one half, leaving B one half instead of one third.",
+  "hint": "A burned-out bulb is an open branch.",
+  "yield": "HIGH",
+  "why": "Burnout in mixed bulb circuits is a classic commonly tested question.",
+  "part": 2
+ },
+ {
+  "front": "A $120$ V shock passes hand to hand. The body path is $10^5\\,\\Omega$ with dry skin and $10^3\\,\\Omega$ with wet skin. Compare the currents.",
+  "back": "Dry: $120/10^5 = 1.2$ mA, a tingle. Wet: $120/10^3 = 0.12$ A, $100$ times larger and potentially lethal. The voltage never changed; only the resistance did.",
+  "hint": "$I = V/R_{body}$",
+  "yield": "MEDIUM",
+  "why": "Body-current calculations appear in physiology-framed passages.",
+  "part": 2
+ },
+ {
+  "front": "Approximate body-current thresholds: about {{c1::1 mA}} is perceptible, and about {{c2::100 mA}} across the chest can trigger ventricular fibrillation.",
+  "back": "Roughly $10$ to $20$ mA prevents letting go. The values vary with path, duration and frequency, and passages supply them when needed.",
+  "hint": "Milliamps, not amps, are dangerous.",
+  "yield": "LOW",
+  "why": "Specific thresholds sit in the lesson's low-yield block; passages provide them.",
+  "part": 2
+ }
+]

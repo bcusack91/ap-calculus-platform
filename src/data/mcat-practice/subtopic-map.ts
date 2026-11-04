@@ -51,13 +51,17 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
   ],
 
   physics: [
-    // Circuits is split across two lessons (Nov 2026). Part 2's vocabulary
-    // (capacitors, EMF, meters) must come first: those stems also say
-    // "circuit" or "voltage", which would otherwise route them to Part 1.
-    { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 2: EMF & Capacitors',
-      pattern: /capacit|dielectric|\bemf\b|electromotive|internal resistance|terminal (voltage|potential)|ammeter|voltmeter|time constant|\bRC (circuit|time)|defibrillat/i },
+    // Circuits is four lessons (Nov 2026). Most specific vocabulary first:
+    // RC and bioelectric stems also say "capacitor"; capacitor and EMF stems
+    // also say "circuit"; Kirchhoff and power stems also say "resistor".
+    { slug: 'mcat-physics-electricity-rc-circuits-mcat', title: 'Circuits Part 4: Capacitor Networks & Bioelectricity',
+      pattern: /time constant|\bRC (circuit|time)|capacitors? in (series|parallel)|charging capacitor|discharg|defibrillat|myelin|membrane capacit/i },
+    { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 3: EMF & Capacitance',
+      pattern: /capacit|dielectric|\bemf\b|electromotive|internal resistance|terminal (voltage|potential)|ammeter|voltmeter/i },
+    { slug: 'mcat-physics-electricity-kirchhoff-power-mcat', title: "Circuits Part 2: Kirchhoff's Rules & Power",
+      pattern: /kirchhoff|junction rule|loop rule|voltage divider|current divider|power dissipat|\bwatts?\b|brightness|brighter|bulb|kilowatt|kWh/i },
     { slug: 'mcat-physics-electricity-dc-circuits-mcat', title: 'Circuits Part 1: Current & Resistance',
-      pattern: /circuit|resistor|resistivity|ohm'?s law|current of|voltage|in series|in parallel|kirchhoff|power dissipat/i },
+      pattern: /circuit|resistor|resistivity|ohm'?s law|current of|voltage|in series|in parallel/i },
     { slug: 'mcat-physics-electricity-electrochemistry-mcat', title: 'Electrochemistry',
       pattern: /electrochem|galvanic|electrolytic|cathode|anode|electrode|cell potential|nernst|redox|oxidation state/i },
     { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics',
@@ -66,12 +70,17 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
       pattern: /magnet|induction|flux|solenoid|lorentz/i },
     { slug: 'mcat-physics-electricity-optics-mcat', title: 'Optics',
       pattern: /lens|mirror|refract|reflect|snell|focal|diffraction|interference|polariz|optic/i },
-    // Fluids & Waves was split in two (Nov 2026). Sound and oscillation
-    // vocabulary is specific; fluid vocabulary follows it.
-    { slug: 'mcat-physics-waves-sound-mcat', title: 'Waves & Sound',
-      pattern: /wavelength|sound|doppler|resonan|harmonic|standing wave|decibel|ultrasound|beat frequenc|pendulum|oscillat/i },
-    { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids',
-      pattern: /fluid|buoyan|bernoulli|viscos|pascal|archimedes|hydrostatic|specific gravity|poiseuille|continuity equation|flow rate|surface tension/i },
+    // Fluids & Waves is five lessons (Nov 2026); specific vocabulary first.
+    { slug: 'mcat-physics-waves-sound-mcat', title: 'Sound, Doppler & Ultrasound',
+      pattern: /decibel|doppler|ultrasound|sound intensity|intensity level|loudness|sonic boom|shock wave|\becho/i },
+    { slug: 'mcat-physics-waves-interference-mcat', title: 'Interference & Standing Waves',
+      pattern: /standing wave|harmonic|overtone|resonan|beat frequenc|\bbeats\b|\bnodes?\b|antinode|closed (pipe|tube)|open (pipe|tube)|superposition/i },
+    { slug: 'mcat-physics-waves-periodic-motion-mcat', title: 'Periodic Motion & Waves',
+      pattern: /wavelength|sound|pendulum|oscillat|simple harmonic|spring constant|period of|transverse|longitudinal/i },
+    { slug: 'mcat-physics-mechanics-fluid-dynamics-mcat', title: 'Fluids in Motion',
+      pattern: /bernoulli|continuity equation|flow rate|viscos|poiseuille|turbulen|laminar|venturi|torricelli|stenosis/i },
+    { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids at Rest',
+      pattern: /fluid|buoyan|pascal|archimedes|hydrostatic|specific gravity|surface tension|gauge pressure/i },
     { slug: 'mcat-physics-mechanics-momentum-collisions-mcat', title: 'Momentum & Collisions',
       pattern: /momentum|collision|impulse|elastic|inelastic/i },
     { slug: 'mcat-physics-mechanics-work-energy-power-mcat', title: 'Work, Energy, and Power',

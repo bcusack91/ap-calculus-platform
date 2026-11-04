@@ -1,0 +1,82 @@
+[
+ {
+  "front": "A $3.0\\,\\mu$F and a $6.0\\,\\mu$F capacitor are in series across $12$ V. What voltage does each one take?",
+  "back": "$C_{\\text{eq}} = (3.0)(6.0)/(3.0 + 6.0) = 2.0\\,\\mu$F, so each holds $Q = 24\\,\\mu$C. Then $V_3 = 24/3.0 = 8.0$ V and $V_6 = 24/6.0 = 4.0$ V: the SMALLER capacitor takes the larger voltage.",
+  "hint": "Series capacitors share $Q$; use $V = Q/C$.",
+  "yield": "HIGH",
+  "why": "Voltage division in series capacitors is a common network calculation.",
+  "part": 1
+ },
+ {
+  "front": "When a charged capacitor discharges through a resistor, the current flows in the {{c1::opposite}} direction to the charging current.",
+  "back": "Charge now leaves the plates instead of arriving. During discharge, charge, voltage and current all start at their maximum and decay toward zero.",
+  "hint": "Are charges arriving at or leaving the plates?",
+  "yield": "HIGH",
+  "why": "Charging-vs-discharging behavior is commonly tested with RC graphs.",
+  "part": 1
+ },
+ {
+  "front": "A charging capacitor follows $Q(t) =$ {{c1::$C\\varepsilon(1 - e^{-t/RC})$}}, rising quickly and then leveling off.",
+  "back": "Recognize the shape; a passage will supply the formula. At $t = RC$, $1 - e^{-1} \\approx 0.63$. The current does the opposite: it starts at $\\varepsilon/R$ and decays toward zero.",
+  "hint": "It must equal $0$ at $t = 0$ and $C\\varepsilon$ as $t \\to \\infty$.",
+  "yield": "MEDIUM",
+  "why": "Exact exponential forms are recognition-only, supplied in passages.",
+  "part": 1
+ },
+ {
+  "front": "A $2.0\\text{ k}\\Omega$ resistor charges a $50\\,\\mu$F capacitor from a battery. About how long until the capacitor is essentially fully charged?",
+  "back": "$\\tau = RC = (2.0 \\times 10^3)(5.0 \\times 10^{-5}) = 0.10$ s, and \"essentially full\" takes about $5\\tau = 0.50$ s. After one $\\tau$ it holds only about 63%.",
+  "hint": "Convert kilo and micro prefixes before multiplying.",
+  "yield": "MEDIUM",
+  "why": "Time-constant arithmetic is secondary, mostly in passage questions.",
+  "part": 1
+ },
+ {
+  "front": "A capacitor reaches half its final charge (or loses half while discharging) after about {{c1::$0.69\\tau$}}.",
+  "back": "Setting $e^{-t/\\tau} = \\tfrac{1}{2}$ gives $t = \\tau \\ln 2 \\approx 0.69\\tau$, a bit less than one time constant.",
+  "hint": "$\\ln 2 \\approx 0.69$.",
+  "yield": "LOW",
+  "why": "The half-time is marked low-yield in the lesson.",
+  "part": 1
+ },
+ {
+  "front": "A toxin opens many extra $\\text{K}^+$ leak channels in a neuron. How do the membrane resistance and time constant change?",
+  "back": "Each open channel is another resistor in parallel, so $R_m$ falls; with $C_m$ unchanged, $\\tau = R_mC_m$ shortens. The membrane responds faster, but each input fades faster.",
+  "hint": "Adding parallel paths lowers total resistance.",
+  "yield": "HIGH",
+  "why": "Channel opening as parallel resistors is a common bioelectricity translation.",
+  "part": 2
+ },
+ {
+  "front": "Why does myelin LOWER the axon's membrane capacitance?",
+  "back": "Myelin is many membrane wraps stacked in series, and series capacitors act like a wider gap $d$, so $C_m$ falls. Less charge is needed to change each stretch's voltage, so depolarization spreads farther and faster.",
+  "hint": "Recall $C = \\kappa\\varepsilon_0 A/d$.",
+  "yield": "HIGH",
+  "why": "Myelin as series capacitors is a favorite physics-in-biology question.",
+  "part": 2
+ },
+ {
+  "front": "In a myelinated axon, the action potential is regenerated only at the {{c1::nodes of Ranvier}}, where voltage-gated $\\text{Na}^+$ channels are concentrated.",
+  "back": "The signal seems to jump node to node: saltatory conduction. It is fast and energy-efficient, because ions cross the membrane only at the nodes, leaving less for the $\\text{Na}^+/\\text{K}^+$ pump to restore.",
+  "hint": "Gaps between myelin segments.",
+  "yield": "HIGH",
+  "why": "Saltatory conduction is tested in both physics and biology contexts.",
+  "part": 2
+ },
+ {
+  "front": "In multiple sclerosis, how do a demyelinated internode's capacitance and resistance compare with a healthy one, and why does conduction suffer?",
+  "back": "$C_m$ rises and $R_m$ falls, because the series layers are gone. More charge is needed per millivolt and current leaks out across the membrane, so conduction slows or fails.",
+  "hint": "Reverse what myelin does.",
+  "yield": "HIGH",
+  "why": "Demyelination is a common clinical framing of membrane RC properties.",
+  "part": 2
+ },
+ {
+  "front": "A defibrillator charges its capacitor over $6.0$ s and delivers the same energy in about $6.0$ ms. How does the delivery power compare with the charging power?",
+  "back": "Power is energy per time, so the same energy in $10^{-3}$ of the time means about $10^3$ times the power. The capacitor is a time compressor, not an energy source.",
+  "hint": "Equal energy does not mean equal power.",
+  "yield": "HIGH",
+  "why": "Defibrillator energy-and-power reasoning is a common applied capacitor question.",
+  "part": 2
+ }
+]

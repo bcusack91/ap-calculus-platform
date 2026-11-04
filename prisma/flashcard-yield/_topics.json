@@ -399,14 +399,26 @@
     "aamc": [
       "4C"
     ],
-    "tested": "Current and conventional direction, metallic vs electrolytic conduction, Ohm's law, resistivity, series/parallel resistors, Kirchhoff's rules, power and bulb brightness."
+    "tested": "Current and conventional direction, metallic vs electrolytic conduction, voltage as energy per charge, Ohm's law, resistivity, series/parallel resistors, shorts and opens."
+  },
+  "mcat-physics-electricity-kirchhoff-power-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Kirchhoff's junction and loop rules, network reduction, voltage and current dividers, what changes when a branch changes, power forms, kWh, bulb brightness, electrical safety."
   },
   "mcat-physics-electricity-emf-capacitors-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "EMF, internal resistance and terminal voltage, cells in series/parallel, meters, capacitance, parallel plates, dielectrics, stored energy."
+  },
+  "mcat-physics-electricity-rc-circuits-mcat": {
     "aamc": [
       "4C",
       "3A"
     ],
-    "tested": "EMF, internal resistance and terminal voltage, meters, capacitance, dielectrics, stored energy, capacitor networks, RC qualitative behavior, membrane-as-RC and myelin."
+    "tested": "Capacitor networks, t = 0 vs steady state, RC time constant, membrane as RC circuit, myelin, defibrillators."
   },
   "mcat-physics-electricity-electrochemistry-mcat": {
     "aamc": [
@@ -444,13 +456,31 @@
     "aamc": [
       "4B"
     ],
-    "tested": "Density and specific gravity, hydrostatic pressure and gauge vs absolute, Pascal, buoyancy and floating fraction, continuity, Bernoulli and Venturi, viscosity and Poiseuille r^4, turbulence, surface tension, blood flow."
+    "tested": "Density and specific gravity, hydrostatic pressure, gauge vs absolute, Pascal, buoyancy and floating fraction, apparent weight, surface tension."
+  },
+  "mcat-physics-mechanics-fluid-dynamics-mcat": {
+    "aamc": [
+      "4B"
+    ],
+    "tested": "Flow rate, continuity, Bernoulli, Venturi, Torricelli, pitot, viscosity and Poiseuille r^4, turbulence, circulation, stenosis."
+  },
+  "mcat-physics-waves-periodic-motion-mcat": {
+    "aamc": [
+      "4D"
+    ],
+    "tested": "Period, frequency, phase, SHM springs and pendulums, transverse vs longitudinal, v = f lambda and what sets wave speed."
+  },
+  "mcat-physics-waves-interference-mcat": {
+    "aamc": [
+      "4D"
+    ],
+    "tested": "Superposition, path difference, beats, standing waves in strings and pipes, harmonics and overtones, resonance and damping."
   },
   "mcat-physics-waves-sound-mcat": {
     "aamc": [
       "4D"
     ],
-    "tested": "Periodic motion, v = f lambda and what sets wave speed, superposition and beats, standing waves in strings and pipes, resonance, intensity and decibels, Doppler, ultrasound, shock waves."
+    "tested": "Sound production, intensity and inverse square, decibels, attenuation, pitch and loudness, Doppler, ultrasound, shock waves."
   },
   "mcat-physics-mechanics-forces-newton-laws-mcat": {
     "aamc": [

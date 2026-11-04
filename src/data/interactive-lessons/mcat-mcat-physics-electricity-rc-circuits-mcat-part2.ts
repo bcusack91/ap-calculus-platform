@@ -1,14 +1,14 @@
 import type { LessonData } from './registry'
 
-export const emfCapacitorsMcatPart4: LessonData = {
-  topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat',
+export const rcCircuitsMcatPart2: LessonData = {
+  topicSlug: 'mcat-physics-electricity-rc-circuits-mcat',
   sections: [
     {
       id: 'ec4-intro',
       type: 'text' as const,
-      content: `# Circuits Part 2: EMF & Capacitors
+      content: `# Circuits Part 4: Capacitor Networks & Bioelectricity
 
-**Part 4 of 4 — Bioelectricity & Passage Strategy**
+**Part 2 of 2 — Bioelectricity & Passage Strategy**
 
 The MCAT loves to hide capacitors inside biology. Every idea in this part is physics you already have (batteries, resistors, capacitors, $\\tau = RC$) wearing a neuron or a heart.
 
@@ -22,7 +22,7 @@ Map each piece of a neuron onto a circuit element:
 | Ion channels | Resistors ($R_m$) in parallel with the capacitor | Each open channel is a path for ionic current across the insulator |
 | Ion concentration gradients | Batteries | Each ion's equilibrium (Nernst) potential drives current through its channels |
 
-The field inside the membrane is enormous: about $70\\;\\text{mV}$ across a bilayer about $7\\;\\text{nm}$ thick gives $E = V/d = (7 \\times 10^{-2}\\;\\text{V})/(7 \\times 10^{-9}\\;\\text{m}) = 1 \\times 10^7\\;\\text{V/m}$, the parallel-plate formula from Part 2 of this lesson.
+The field inside the membrane is enormous: about $70\\;\\text{mV}$ across a bilayer about $7\\;\\text{nm}$ thick gives $E = V/d = (7 \\times 10^{-2}\\;\\text{V})/(7 \\times 10^{-9}\\;\\text{m}) = 1 \\times 10^7\\;\\text{V/m}$, the parallel-plate formula from the *Circuits Part 3: EMF & Capacitance* lesson.
 
 Consequences the MCAT tests:
 
@@ -91,7 +91,7 @@ The other speed lever is **axon diameter**: a wider axon has lower internal resi
 
 In ventricular fibrillation, heart muscle cells fire chaotically and the heart stops pumping. A defibrillator delivers a brief, strong current that depolarizes most of the myocardium at once, which halts the chaos and lets the SA node take back control.
 
-Why use a capacitor? A small battery has only a few volts of EMF, and its internal resistance caps its current at $\\varepsilon/r$ (Part 1 of this lesson), so it cannot drive tens of amps through the chest directly; it CAN slowly fill a capacitor to a high voltage:
+Why use a capacitor? A small battery has only a few volts of EMF, and its internal resistance caps its current at $\\varepsilon/r$ (the *Circuits Part 3: EMF & Capacitance* lesson), so it cannot drive tens of amps through the chest directly; it CAN slowly fill a capacitor to a high voltage:
 
 1. **Charge slowly:** the device's battery and circuitry charge a capacitor to a high voltage over several seconds, at modest power.
 2. **Store:** the capacitor holds $U = \\frac{1}{2}CV^2$. The energy setting the operator chooses is reached by charging to the matching voltage, since $C$ is fixed.
@@ -198,7 +198,7 @@ $$P_{\\text{deliver}} \\approx \\frac{200\\;\\text{J}}{1.0 \\times 10^{-2}\\;\\t
     {
       id: 'ec4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 4
+      content: `### Key Takeaways — Part 2
 
 - **Membrane as RC circuit.** Bilayer = capacitor, channels = parallel resistors; more open channels shorten $\\tau = R_mC_m$.
 - **Myelin in series.** Stacked layers lower $C_m$ and raise $R_m$, so the signal jumps node to node (saltatory conduction).
@@ -221,11 +221,12 @@ $$P_{\\text{deliver}} \\approx \\frac{200\\;\\text{J}}{1.0 \\times 10^{-2}\\;\\t
       type: 'text' as const,
       content: `### Lesson Recap
 
-- **Real batteries:** EMF minus the internal drop, $V_{\\text{term}} = \\varepsilon - Ir$; ammeters go in series (~0 Ω), voltmeters in parallel (~∞ Ω).
-- **Capacitors:** $C = Q/V = \\kappa\\varepsilon_0A/d$, $U = \\frac{1}{2}CV^2$; series and parallel rules are the reverse of resistors; empty = wire, full = open branch, timescale $\\tau = RC$.
-- **Network rules:** whenever a capacitor problem reduces to a resistor network (steady state, $t = 0$), the series/parallel, Kirchhoff and power tools come from the *Circuits Part 1: Current & Resistance* lesson. Review them there.
+- **Real batteries** (from the *Circuits Part 3: EMF & Capacitance* lesson): EMF minus the internal drop, $V_{\\text{term}} = \\varepsilon - Ir$; ammeters go in series (~0 Ω), voltmeters in parallel (~∞ Ω).
+- **Capacitors:** $C = Q/V = \\kappa\\varepsilon_0A/d$, $U = \\frac{1}{2}CV^2$ (the *Circuits Part 3: EMF & Capacitance* lesson); series and parallel rules are the reverse of resistors; empty = wire, full = open branch, timescale $\\tau = RC$ (Part 1 of this lesson).
+- **Bioelectricity** (Part 2 of this lesson): the membrane is an RC circuit, myelin is capacitors in series, and a defibrillator charges slowly and discharges fast.
+- **Network rules:** whenever a capacitor problem reduces to a resistor network (steady state, $t = 0$), the series/parallel rules come from the *Circuits Part 1: Current & Resistance* lesson and the Kirchhoff and power tools from the *Circuits Part 2: Kirchhoff's Rules & Power* lesson. If any network step felt shaky, review them there before the exit quiz.
 
-**Next up:** if any network step in this lesson felt shaky, revisit the *Circuits Part 1: Current & Resistance* lesson before the exit quiz.`
+**Next up:** the *Magnetism & Electromagnetic Induction* lesson.`
     }
   ]
 }

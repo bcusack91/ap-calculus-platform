@@ -1,233 +1,256 @@
 import type { LessonData } from './registry'
 
-export const wavesSoundMcatPart2: LessonData = {
+export const soundDopplerMcatPart2: LessonData = {
   topicSlug: 'mcat-physics-waves-sound-mcat',
   sections: [
     {
-      id: 'ws2-intro',
+      id: 'ws4-intro',
       type: 'text' as const,
-      content: `# Waves & Sound
+      content: `# Sound, Doppler & Ultrasound
 
-**Part 2 of 4 — Superposition, Interference & Standing Waves**
+**Part 2 of 2 — Doppler, Ultrasound & Shock Waves**
 
-### Superposition: Overlapping Waves Simply Add
+### Doppler: Relative Approach Raises Pitch
 
-When two waves pass through the same point at the same time, the medium's displacement there is the SUM of the displacements each wave would cause alone. This is the **principle of superposition**. Displacements carry signs: a crest is positive, a trough negative. After the overlap, each wave continues on exactly as before, unchanged by the meeting.
+When a sound source and a listener move toward each other, the listener hears a higher frequency than the source emits; when they move apart, a lower one. That is the **Doppler effect**:
 
-- **Constructive interference**: the waves arrive **in phase** (crest on crest). The amplitudes add: $A_1 + A_2$.
-- **Destructive interference**: the waves arrive **$180^\\circ$ out of phase** (crest on trough). The amplitudes subtract: $|A_1 - A_2|$. Equal amplitudes cancel completely at that point.
-- Any other phase difference gives an amplitude somewhere in between.
+$$f' = f\\,\\frac{v \\pm v_o}{v \\mp v_s}$$
 
-Energy is not destroyed where waves cancel. It is redistributed: the quiet spots are matched by loud spots elsewhere, where the same waves reinforce.
+Here $f$ is the emitted frequency, $f'$ the frequency heard, $v$ the speed of sound in the medium, $v_o$ the observer's speed and $v_s$ the source's speed, both measured relative to the air (or other medium). Use speeds as positive numbers and let the signs carry the direction. The two signs are chosen independently: observer toward or away, source toward or away.
 
-### Path Difference Decides the Phase
+**The sign ritual: approach raises.** Choose each sign so that motion TOWARD the other party raises $f'$:
 
-Two speakers driven by the same signal start out in phase. A listener hears them in or out of phase depending on how much farther one sound has travelled. Call the **path difference** $\\Delta d = |d_1 - d_2|$, where $d_1$ and $d_2$ are the listener's distances from the two speakers.
+- Observer moving toward the source: $+v_o$ in the numerator (bigger top). Moving away: $-v_o$.
+- Source moving toward the observer: $-v_s$ in the denominator (smaller bottom). Moving away: $+v_s$.
+- Anyone standing still contributes zero.
 
-| Path difference | Phase difference | Result |
+**Why it happens.** A moving SOURCE chases its own wavefronts, bunching them up ahead (shorter $\\lambda$) and spreading them out behind. Since the air still carries them at $v$, the bunched waves arrive more often: $f = v/\\lambda$ rises. A moving OBSERVER leaves the wavelength untouched but runs into wavefronts more often. Either way, the speed of the sound in the air does not change.
+
+- Only motion along the line joining source and listener counts. Sound emitted when a passing car is exactly beside you carries no shift, because at that instant its motion is sideways.
+- **Shortcut for slow motion**: when the relative approach speed $u$ is much smaller than $v$, the fractional shift is $\\Delta f/f \\approx u/v$.
+
+**Reflection from a moving object gives a double shift.** Bounce sound off a moving target and two Doppler shifts happen in sequence: the target first RECEIVES the sound as a moving observer, then RE-EMITS it as a moving source. For a target moving at speed $u$ (much slower than sound), the echo's shift is about twice the one-way shift, the shift a stationary listener would hear from a source moving at $u$:
+
+$$\\Delta f \\approx \\frac{2fu}{v}$$
+
+The shift is upward for an approaching target and downward for a receding one. Bats, police radar guns (with radio waves) and Doppler ultrasound all use this.
+
+### Worked Example — Doppler Direction Check
+
+**Problem.** An ambulance siren at $600\\;\\text{Hz}$ approaches a stationary pedestrian at $34\\;\\text{m/s}$. Take $v = 340\\;\\text{m/s}$ for clean arithmetic.
+
+- **(a)** Before calculating, roughly what should the pedestrian hear as the ambulance approaches, and after it passes?
+- **(b)** Exactly what frequency does she hear while it approaches?
+- **(c)** What does she hear after it passes?
+- **(d)** If instead she runs at $34\\;\\text{m/s}$ toward a parked ambulance, what does she hear?
+
+**(a) Estimate first.** $u/v = 34/340 = 10\\%$, so expect a shift of about $60\\;\\text{Hz}$: roughly $660\\;\\text{Hz}$ approaching and $540\\;\\text{Hz}$ receding. Answer choices are usually far enough apart for the estimate to pick the right one.
+
+**(b) Approaching source.** The source approaches, so subtract in the denominator:
+
+$f' = 600\\,\\dfrac{340}{340 - 34} = 600\\,\\dfrac{340}{306} \\approx 667\\;\\text{Hz}$
+
+Approach, so the answer must exceed $600$: the minus sign was chosen to make that happen. (The room-temperature value, $343\\;\\text{m/s}$, gives about $666\\;\\text{Hz}$, the same to the precision tested.)
+
+**(c) After it passes.** Now the source recedes, the denominator becomes $340 + 34 = 374$, and $f' = 600(340/374) \\approx 545\\;\\text{Hz}$: the classic drive-by pitch drop.
+
+**(d) Switch who moves.** A moving observer changes the numerator: $f' = 600(340 + 34)/340 = 600(1.1) = 660\\;\\text{Hz}$. Close to the $667\\;\\text{Hz}$ of (b), but not identical, because only a moving source changes the wavelength.`
+    },
+    {
+      id: 'ws4-quiz1',
+      type: 'multiple-choice' as const,
+      content: `**Practice: The Doppler Effect** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: `An ambulance drives toward a stationary observer with its siren on. Compared with the frequency the siren emits, the observer hears:`,
+            options: [`A lower frequency, because its waves are stretched out`, `A higher frequency, because the wavefronts ahead are bunched`, `The same frequency, but growing louder as it gets nearer`, `A higher frequency, because the sound itself moves faster`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `The moving source chases its own wavefronts and shortens the wavelength ahead of it; the air still carries sound at the same speed, so $f = v/\\lambda$ rises. The speed of sound is set by the medium, so a faster-moving sound is the tested misconception. Stretched waves describe a receding source, and loudness changes do not cancel the frequency shift.`
+          },
+          {
+            question: `A cyclist rides at $17\\;\\text{m/s}$ directly toward a stationary alarm emitting $680\\;\\text{Hz}$. Taking $v = 340\\;\\text{m/s}$, what frequency does she hear?`,
+            options: [`$646\\;\\text{Hz}$`, `$697\\;\\text{Hz}$`, `$714\\;\\text{Hz}$`, `$680\\;\\text{Hz}$`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `An approaching observer adds her speed in the numerator: $f' = 680(340 + 17)/340 = 680(1.05) = 714\\;\\text{Hz}$. $646\\;\\text{Hz}$ uses the receding sign, and $680\\;\\text{Hz}$ assumes only a moving source causes a shift. $697\\;\\text{Hz}$ adds the speed directly to the frequency, mixing units.`
+          },
+          {
+            question: `A stationary Doppler ultrasound probe is aimed along a vein in which blood flows directly away from it. Compared with the transmitted frequency, the echo from the moving red blood cells is shifted:`,
+            options: [`Up, by about twice the one-way shift`, `Down, by about the one-way shift`, `Down, by about twice the one-way shift`, `Up, by about the one-way shift`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `Receding red blood cells lower the frequency twice: once as moving observers receiving the beam, and again as moving sources sending the echo back. The result is a downward shift of about $2fu/v$. An upward shift would mean the blood approached, and a single shift forgets that reflection involves two Doppler steps.`
+          }
+        ]
+      }
+    },
+    {
+      id: 'ws4-ultrasound',
+      type: 'text' as const,
+      content: `### Ultrasound Imaging
+
+Medical ultrasound uses frequencies of about 1 to 20 MHz, far above the $20\\;\\text{kHz}$ limit of hearing. A probe held on the skin contains a crystal that turns a brief electrical pulse into a burst of sound, then listens, turning returning echoes back into electrical signals.
+
+The crystal is **piezoelectric**: it deforms when a voltage is applied and generates a voltage when squeezed.
+
+**Depth from echo time.** Each tissue boundary reflects part of the pulse. The machine times each echo and assumes sound moves at $1540\\;\\text{m/s}$ in soft tissue. The pulse travels to the boundary AND back, so:
+
+$$d = \\frac{vt}{2}$$
+
+Forgetting the factor of 2 doubles every depth.
+
+**Resolution vs. penetration.** An ultrasound beam cannot resolve details much smaller than its wavelength, and $\\lambda = v/f$: about $1\\;\\text{mm}$ at $1.5\\;\\text{MHz}$, about $0.1\\;\\text{mm}$ at $15\\;\\text{MHz}$. So higher frequency gives FINER detail. But tissue absorbs higher frequencies more strongly (attenuation, Part 1 of this lesson), so higher frequency penetrates LESS deeply.
+
+Typical choices (approximate; no need to memorize the numbers):
+
+| Target | Typical choice | Why |
 |---|---|---|
-| $0, \\lambda, 2\\lambda, \\ldots$ (a whole number of wavelengths) | $0^\\circ$, $360^\\circ, \\ldots$ | constructive: loud |
-| $\\tfrac{1}{2}\\lambda, \\tfrac{3}{2}\\lambda, \\ldots$ (an odd number of half-wavelengths) | $180^\\circ$, $540^\\circ, \\ldots$ | destructive: quiet |
+| deep: liver, kidney, fetus | 2 to 5 MHz | penetration matters most |
+| shallow: thyroid, carotid artery, tendons | 10 to 15 MHz | fine detail, and depth is small |
 
-Always convert the path difference into WAVELENGTHS before deciding. A path difference of $0.5\\;\\text{m}$ is destructive if $\\lambda = 1.0\\;\\text{m}$ (half a wavelength); if $\\lambda = 0.5\\;\\text{m}$ it is one full wavelength, and the sound is loud.
+**Why echoes happen, and why gel is needed.** How strongly a boundary reflects depends on the mismatch in **acoustic impedance**, $Z = \\rho v$, the product of a tissue's density and its speed of sound. Soft tissues differ only slightly, so they return weak echoes that build up the image. Tissue and bone differ more, so bone reflects strongly and casts an acoustic shadow behind it; gallstones do the same. Tissue and air differ enormously, so almost all the sound is reflected at an air gap. That is why gel is spread between probe and skin (to push out the air), and why gas-filled lungs and bowel block the view.
 
-**Noise-cancelling headphones** put this to work. A microphone samples the incoming noise, and the speaker plays a copy with the same frequency and amplitude, shifted by half a cycle. The two cancel at the ear. The same rules govern light's interference patterns, which belong to the *Optics* lesson.
+Ultrasound uses no ionizing radiation, which is why it is the imaging method of choice in pregnancy.
 
-### Beats
+<!-- yield:low -->
+- The fraction of intensity reflected at a boundary is $\\left(\\frac{Z_2 - Z_1}{Z_2 + Z_1}\\right)^2$.
+<!-- /yield -->
 
-Play two tones of slightly different frequencies, $f_1$ and $f_2$, together. They drift in and out of phase, so the loudness swells and fades in a regular throb. The number of throbs per second is the **beat frequency**:
+### Doppler Ultrasound and Blood Flow
 
-$$f_{\\text{beat}} = |f_1 - f_2|$$
+**Doppler ultrasound** measures blood velocity from the double shift of echoes off moving red blood cells. Blood flowing toward the probe shifts the echo up, flowing away shifts it down, and the size of the shift is proportional to the speed. Only the velocity component along the beam counts: at beam-to-flow angle $\\theta$, $\\Delta f = 2fu\\cos\\theta/v$. A perpendicular beam gives zero shift, so the probe is tilted along the vessel; in a ratio of two shifts taken at the same angle, $\\theta$ cancels. The shifts are typically a few kilohertz, which is audible: Doppler machines play them as the familiar whooshing pulse.
 
-The pitch you hear is the average of the two frequencies, and it pulses in loudness.
+**Grading a stenosis.** A **stenosis** is a narrowing of a vessel's **lumen**, the open channel the blood flows through. Continuity gives $A_1u_1 = A_2u_2$ ($u$ = blood speed; the *Fluids in Motion* lesson writes it as $v$), so blood speeds up where the lumen narrows, and the Doppler shift is proportional to that speed. A stenosis therefore shows up as a local jump in the shift, and the shift ratio gives the area ratio (Problem 3 below works the numbers).
 
-### Worked Example — Tuning by Beats
+<!-- yield:low -->
+- Colour Doppler displays flow toward the probe in red and away in blue (remembered as "BART": blue away, red toward).
+<!-- /yield -->
 
-**Problem.** A tuner sounds a $440\\;\\text{Hz}$ tuning fork together with a string and hears $3$ beats per second. Tightening a string raises its frequency.
+### Shock Waves and Sonic Booms
 
-- **(a)** What frequency could the string have?
-- **(b)** She tightens the string slightly. What does it mean if the beats get SLOWER, and what if they get FASTER?
-- **(c)** How does she know when the string is in tune?
+As a source speeds up toward the speed of sound, the wavefronts ahead of it crowd closer and closer. At $v_s = v$ they pile into a single intense front, and the Doppler formula's denominator reaches zero: the formula no longer applies.
 
-**(a) Two candidates.** $f_{\\text{beat}} = |f_1 - f_2| = 3\\;\\text{Hz}$, so the string is at either $437$ or $443\\;\\text{Hz}$; the beats alone cannot say which.
+When the source moves FASTER than sound ($v_s > v$), it outruns its own wavefronts. They overlap along a cone trailing behind the source, the **Mach cone**, and the cone's surface is a **shock wave**: a thin zone of abrupt, large pressure change. The **Mach number** is $M = v_s/v$; the faster the source, the narrower the cone.
 
-**(b) Change it and listen.** Tightening raises the string's frequency. If the beats slow down, the string is approaching $440$: it was flat ($437\\;\\text{Hz}$). If they speed up, it is moving away: it was sharp ($443\\;\\text{Hz}$).
+- A **sonic boom** is the shock cone sweeping past a listener. The aircraft drags the cone along for as long as it flies supersonically, so the boom is not a one-time event at the moment of "breaking the sound barrier". Each listener under the flight path hears it once, AFTER the plane has passed overhead.
+- Medicine uses shock waves too: **lithotripsy** focuses shock waves generated outside the body onto a kidney stone and shatters it.
 
-**(c) In tune.** When the beats vanish, the frequencies match.`
+<!-- yield:low -->
+- The cone's half-angle $\\theta$ satisfies $\\sin\\theta = 1/M$. A cracking whip is a small sonic boom: the tip briefly moves faster than sound.
+<!-- /yield -->`
     },
     {
-      id: 'ws2-quiz1',
+      id: 'ws4-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Depth, Frequency and a Stenosis
+
+**Problem 1 — How deep?** A pulse leaves the probe, and an echo from the far edge of the liver returns $130\\;\\mu\\text{s}$ later ($1\\;\\mu\\text{s} = 10^{-6}\\;\\text{s}$; $v = 1540\\;\\text{m/s}$).
+
+- **(a)** How far does the pulse travel, there and back?
+- **(b)** How deep is the far edge of the liver?
+- **(c)** How soon would an echo return from a carotid artery about $2\\;\\text{cm}$ below the skin?
+
+**(a) Round trip.** $vt = (1540)(1.30 \\times 10^{-4}) \\approx 0.20\\;\\text{m}$
+
+**(b) Halve it.** The $0.20\\;\\text{m}$ from (a) covers the depth twice: $d \\approx 0.10\\;\\text{m} = 10\\;\\text{cm}$.
+
+**(c) Run it backward.** The round trip is $2(0.02) = 0.04\\;\\text{m}$, so $t = 0.04/1540 \\approx 26\\;\\mu\\text{s}$.
+
+**Problem 2 — Which probe?** A sonographer must image a carotid artery about $2\\;\\text{cm}$ deep and a liver $10\\;\\text{cm}$ deep, with a $12\\;\\text{MHz}$ or a $3\\;\\text{MHz}$ probe ($v = 1540\\;\\text{m/s}$).
+
+- **(a)** What wavelength does the $12\\;\\text{MHz}$ probe give, and is it fine enough for the carotid wall?
+- **(b)** What wavelength does the $3\\;\\text{MHz}$ probe give?
+- **(c)** Which probe should image the liver, and why?
+
+**(a) The 12 MHz probe.** $\\lambda = 1540/(1.2 \\times 10^{7}) \\approx 0.13\\;\\text{mm}$, fine enough to see the vessel wall of the shallow carotid.
+
+**(b) The 3 MHz probe.** $\\lambda = 1540/(3 \\times 10^{6}) \\approx 0.51\\;\\text{mm}$: coarser.
+
+**(c) The liver.** The $3\\;\\text{MHz}$ probe. Its $0.51\\;\\text{mm}$ wavelength from (b) is coarser, but at $10\\;\\text{cm}$ deep a $12\\;\\text{MHz}$ beam would be absorbed before its echo returned.
+
+**Problem 3 — Grading a stenosis with Doppler.** A $4.0\\;\\text{MHz}$ beam is aligned with carotid flow ($v = 1540\\;\\text{m/s}$). The echo shift is $2.0\\;\\text{kHz}$ upstream and $8.0\\;\\text{kHz}$ inside a narrowing.
+
+- **(a)** How fast is the blood moving upstream, and inside the narrowing?
+- **(b)** How does the lumen's area inside the narrowing compare with the upstream area?
+- **(c)** How does its radius compare?
+- **(d)** What does the Doppler signal show just beyond the narrowing?
+
+**(a) Speeds from the double shift.** $u = \\dfrac{v\\,\\Delta f}{2f}$. Upstream: $u = \\dfrac{(1540)(2000)}{2(4.0 \\times 10^{6})} \\approx 0.39\\;\\text{m/s}$. Inside: four times the shift, so four times the speed, about $1.5\\;\\text{m/s}$.
+
+**(b) Area by continuity.** At (nearly) constant flow, $A \\propto 1/u$. With four times the speed from (a), the lumen's area is one-quarter of the upstream area.
+
+**(c) Radius.** $A \\propto r^2$, so one-quarter the area means the radius is halved, about a 50% diameter narrowing. Note that a ratio question never needs the factor of 2 or the probe frequency; they cancel.
+
+**(d) Interpret.** Beyond the stenosis, turbulence widens the spread of shifts. The pressure and resistance consequences of the narrowing (Bernoulli and Poiseuille) are in the *Fluids in Motion* lesson.`
+    },
+    {
+      id: 'ws4-quiz2',
       type: 'multiple-choice' as const,
-      content: `**Practice: Superposition, Interference & Beats** 🎯`,
+      content: `**Practice: Ultrasound, Stenosis & Shock Waves** 🎯`,
       exercise: {
         questions: [
           {
-            question: `Two pulses travel toward each other on a rope. One is an upright pulse of height $3\\;\\text{cm}$; the other is an inverted pulse of depth $1\\;\\text{cm}$. What is the rope's displacement at the moment they exactly overlap, and what happens afterward?`,
-            options: [`$+4\\;\\text{cm}$; then both continue unchanged`, `$+2\\;\\text{cm}$; then they travel on as one pulse`, `$+2\\;\\text{cm}$; then both continue unchanged`, `$+4\\;\\text{cm}$; then they travel on as one pulse`],
-            correctAnswer: 2,
-            yield: 'HIGH',
-            explanation: `Displacements add with their signs: $+3 + (-1) = +2\\;\\text{cm}$. Superposition is temporary, so after the overlap each pulse emerges with its original shape and keeps going. A value of $+4\\;\\text{cm}$ ignores that the second pulse is inverted, and "one pulse" wrongly treats the overlap as a permanent merger.`
-          },
-          {
-            question: `Two speakers driven in phase emit a $680\\;\\text{Hz}$ tone ($v = 340\\;\\text{m/s}$). At which listener position, given as the distances to the two speakers, is the sound quietest?`,
-            options: [`$2.00\\;\\text{m}$ and $2.00\\;\\text{m}$`, `$2.00\\;\\text{m}$ and $2.50\\;\\text{m}$`, `$2.00\\;\\text{m}$ and $3.00\\;\\text{m}$`, `$2.00\\;\\text{m}$ and $2.75\\;\\text{m}$`],
-            correctAnswer: 3,
-            yield: 'HIGH',
-            explanation: `The wavelength is $340/680 = 0.50\\;\\text{m}$. A path difference of $0.75\\;\\text{m}$ is $1.5\\lambda$, an odd number of half-wavelengths, so the waves cancel. A $0.50\\;\\text{m}$ difference looks like "half" but is one full wavelength, and $1.00\\;\\text{m}$ is two wavelengths; both are loud, as is the equidistant point with no path difference.`
-          },
-          {
-            question: `Noise-cancelling headphones reduce a steady engine drone. Compared with the drone arriving at the ear, the sound the headphones play has:`,
-            options: [`The same frequency and amplitude, but shifted by half a cycle`, `The same frequency, but twice the amplitude, in step with it`, `A frequency a few hertz higher, so the two beat and fade`, `A much larger amplitude, so the drone is drowned out`],
-            correctAnswer: 0,
-            yield: 'HIGH',
-            explanation: `Cancellation needs crest meeting trough at every instant: equal frequency and amplitude, $180^\\circ$ out of phase. An in-step sound of any amplitude interferes constructively and makes the drone louder. A slightly different frequency produces beats, a throbbing sound rather than silence, and a louder masking sound adds noise instead of removing it.`
-          },
-          {
-            question: `A piano tuner sounds a $440\\;\\text{Hz}$ tuning fork together with a piano string and hears $4$ beats per second. She tightens the string slightly, and the beats slow down. What was the string's frequency before she tightened it?`,
-            options: [`$444\\;\\text{Hz}$`, `$436\\;\\text{Hz}$`, `$440\\;\\text{Hz}$`, `$448\\;\\text{Hz}$`],
+            question: `A $2.0\\;\\text{MHz}$ Doppler probe is aimed along an artery in which blood moves directly toward it at $0.77\\;\\text{m/s}$. The speed of sound in tissue is $1540\\;\\text{m/s}$. By about how much is the echo's frequency shifted?`,
+            options: [`$1000\\;\\text{Hz}$`, `$2000\\;\\text{Hz}$`, `$500\\;\\text{Hz}$`, `$0\\;\\text{Hz}$`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Four beats per second puts the string at $436$ or $444\\;\\text{Hz}$. Tightening raises its frequency, and the beats slowed, so the string moved closer to $440$: it started at $436\\;\\text{Hz}$. Choosing $444\\;\\text{Hz}$ assumes tightening lowers the pitch. Beats mean the two frequencies differ, which rules out $440\\;\\text{Hz}$, and $448\\;\\text{Hz}$ wrongly doubles the beat frequency.`
+            explanation: `For a reflection, $\\Delta f \\approx 2fu/v = 2(2.0 \\times 10^{6})(0.77)/1540 = 2000\\;\\text{Hz}$, an upward shift. $1000\\;\\text{Hz}$ is the one-way shift, forgetting that the moving cells both receive and re-emit. $500\\;\\text{Hz}$ halves instead of doubling, borrowing the factor of 2 from the echo-depth rule. $0\\;\\text{Hz}$ assumes a stationary probe cannot detect a shift, but the moving blood cells create it.`
+          },
+          {
+            question: `An echo from the surface of a kidney returns $65\\;\\mu\\text{s}$ after the pulse leaves the probe. Taking the speed of sound in tissue as $1540\\;\\text{m/s}$, how deep is the kidney's surface?`,
+            options: [`$100\\;\\text{mm}$`, `$25\\;\\text{mm}$`, `$50\\;\\text{mm}$`, `$200\\;\\text{mm}$`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `The round trip is $vt = (1540)(6.5 \\times 10^{-5}) \\approx 0.10\\;\\text{m}$, and the depth is half of that: $0.050\\;\\text{m} = 50\\;\\text{mm}$. $100\\;\\text{mm}$ forgets that the echo travels there and back, and $200\\;\\text{mm}$ doubles instead of halving. $25\\;\\text{mm}$ halves the round trip twice.`
+          },
+          {
+            question: `A sonographer switches from a $3\\;\\text{MHz}$ probe to a $12\\;\\text{MHz}$ probe. Compared with the $3\\;\\text{MHz}$ beam, the $12\\;\\text{MHz}$ beam gives:`,
+            options: [`Coarser resolution, but deeper penetration`, `Finer resolution and deeper penetration`, `Coarser resolution and less penetration`, `Finer resolution, but shallower penetration`],
+            correctAnswer: 3,
+            yield: 'HIGH',
+            explanation: `Four times the frequency in the same tissue gives one-quarter the wavelength, so finer detail can be resolved. Absorption rises with frequency, so the beam fades sooner and penetrates less. Believing a higher frequency also reaches deeper ignores attenuation, and coarser resolution would require a longer wavelength, which needs a lower frequency.`
+          },
+          {
+            question: `With the same probe, frequency and beam angle, the Doppler shift from blood inside a carotid stenosis is three times the shift measured just upstream. Treating blood as incompressible, the lumen's cross-sectional area inside the stenosis, compared with upstream, is:`,
+            options: [`One-ninth as large`, `One-third as large`, `Two-thirds as large`, `Three times as large`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `The shift is proportional to blood speed, so the speed has tripled. Continuity ($A_1u_1 = A_2u_2$, with $u$ the blood speed; the *Fluids in Motion* lesson writes it as $v$) then requires one-third of the area. One-ninth squares the speed ratio, as if area tracked kinetic energy. Two-thirds wrongly halves the shift ratio for the reflection, though that factor of 2 cancels in a ratio, and "three times as large" reverses continuity.`
+          },
+          {
+            question: `A jet flies level at Mach 1.5 over a town. Which statement about its sonic boom is correct?`,
+            options: [`There is no boom, because the jet outruns all of its sound`, `A single boom occurs at the instant the jet passes Mach 1`, `A shock cone trails the jet throughout supersonic flight`, `The boom reaches each listener before the jet passes overhead`],
+            correctAnswer: 2,
+            yield: 'MEDIUM',
+            explanation: `A supersonic source continuously piles its wavefronts into a trailing Mach cone, and each listener hears the boom when the cone sweeps past. Because the cone trails the jet, the boom arrives after the jet has passed overhead. Outrunning the sound does not erase it, and the boom is not a single event at Mach 1.`
           }
         ]
       }
     },
     {
-      id: 'ws2-standing',
-      type: 'text' as const,
-      content: `### Superposition and Standing Waves
-
-Send a wave down a string fixed at the far end and it reflects back. The outgoing and returning waves, identical but travelling in opposite directions, superpose into a **standing wave**: a pattern that oscillates in place instead of travelling.
-
-- **Nodes** are points that never move; the two waves always cancel there.
-- **Antinodes** are points that oscillate with the greatest amplitude, midway between nodes.
-- Adjacent nodes are $\\lambda/2$ apart; a node and the next antinode are $\\lambda/4$ apart.
-
-Only certain wavelengths fit a given length, because the ends force a node or an antinode. Each allowed pattern is a **harmonic**. The lowest-frequency one is the **fundamental**, or first harmonic ($f_1$), and the $n$th harmonic has frequency $nf_1$.
-
-- **String fixed at both ends**: both ends are nodes, so the string must hold a whole number of half-wavelengths: $L = n\\lambda/2$.
-- **Pipe open at both ends**: air at an open end moves freely, so both ends are displacement antinodes. Antinode to antinode also fits whole half-wavelengths: $L = n\\lambda/2$.
-- **Pipe closed at one end**: the closed end is a displacement node (air cannot move into a wall), and the open end is an antinode. Node to antinode fits an ODD number of quarter-wavelengths: $L = n\\lambda/4$ with $n = 1, 3, 5, \\ldots$
-
-| System | Ends (displacement) | Allowed $n$ | $\\lambda_n$ | $f_n$ |
-|---|---|---|---|---|
-| String fixed at both ends | node, node | all: $1, 2, 3, \\ldots$ | $\\dfrac{2L}{n}$ | $\\dfrac{nv}{2L}$ |
-| Pipe open at both ends | antinode, antinode | all: $1, 2, 3, \\ldots$ | $\\dfrac{2L}{n}$ | $\\dfrac{nv}{2L}$ |
-| Pipe closed at one end | node, antinode | odd only: $1, 3, 5, \\ldots$ | $\\dfrac{4L}{n}$ | $\\dfrac{nv}{4L}$ |
-
-Four things to remember:
-
-- **The closed pipe has no even harmonics.** Its resonances are $f_1, 3f_1, 5f_1, \\ldots$, so consecutive resonances differ by $2f_1$. For strings and open pipes, consecutive resonances differ by $f_1$.
-- **Overtones** are the harmonics above the fundamental. The first overtone is the 2nd harmonic for strings and open pipes, but the 3rd harmonic for a closed pipe.
-- **A closed pipe's fundamental is half that of an open pipe of the same length**: its fundamental wavelength is $4L$ rather than $2L$.
-- **$v$ is the speed in the vibrating medium.** For a string, it is the wave speed on the string, $\\sqrt{F_T/\\mu}$. The sound the string sends into the air has the SAME frequency but a different wavelength, because air carries it at $343\\;\\text{m/s}$ (Part 1 of this lesson: the source sets $f$, the medium sets $v$).
-
-A passage may describe pipes by pressure instead of displacement. The two are swapped: an open end is a pressure node (it stays at room pressure), and a closed end is a pressure antinode. The harmonic formulas are the same.
-
-### Resonance, Natural Frequency & Damping
-
-The harmonics of an object are its **natural frequencies**. Push an object periodically at one of them and each push arrives in phase with the motion, so the amplitude builds up dramatically. That build-up is **resonance**.
-
-- A child on a swing goes higher when pushed once per swing, at the swing's natural frequency.
-- A singer holding the natural frequency of a wine glass can make it vibrate hard enough to shatter.
-- **The ear canal is a pipe closed at one end** (open to the air, closed by the eardrum). About $2.5\\;\\text{cm}$ long, it resonates near $v/4L = 340/0.10 = 3400\\;\\text{Hz}$, which helps explain why human hearing is most sensitive at roughly $2$ to $5\\;\\text{kHz}$.
-
-**Damping** is the gradual loss of a vibration's energy to friction, viscosity or absorption, so its amplitude dies away. A heavily damped system resonates less sharply: its amplitude at resonance is smaller. Damping of sound travelling through a medium is called attenuation, covered in Part 3 of this lesson.`
-    },
-    {
-      id: 'ws2-worked',
-      type: 'text' as const,
-      content: `### Worked Example — Pipes, Strings and Tuning
-
-**Problem 1 — A closed organ pipe.** A pipe $0.85\\;\\text{m}$ long is closed at one end ($v = 340\\;\\text{m/s}$).
-
-- **(a)** What is its fundamental frequency?
-- **(b)** What are the next two resonances above it?
-- **(c)** What are the fundamental and the resonance series of an open pipe of the same length?
-
-**(a) Fundamental.** A closed pipe holds a quarter-wavelength: $\\lambda_1 = 4L = 3.4\\;\\text{m}$, so $f_1 = v/4L = 340/3.4 = 100\\;\\text{Hz}$.
-
-**(b) Next resonances.** Even harmonics are missing, so the next is the THIRD: $f_3 = 300\\;\\text{Hz}$, then $f_5 = 500\\;\\text{Hz}$.
-
-**(c) Compare an open pipe.** $f_1 = v/2L = 340/1.7 = 200\\;\\text{Hz}$, with the full series $200, 400, 600\\;\\text{Hz}$. Against the closed pipe's $100, 300, 500\\;\\text{Hz}$: capping one end halves the fundamental and deletes every even harmonic.
-
-**Problem 2 — A guitar string.** A string $0.50\\;\\text{m}$ long carries waves at $200\\;\\text{m/s}$. Sound travels at $340\\;\\text{m/s}$ in the surrounding air.
-
-- **(a)** What is the string's fundamental frequency?
-- **(b)** What are the third harmonic's frequency and wavelength, and how many antinodes and nodes does it show?
-- **(c)** When the fundamental reaches your ear, what are its frequency and wavelength in the air?
-
-**(a) Fundamental.** $\\lambda_1 = 2L = 1.0\\;\\text{m}$, so $f_1 = 200/1.0 = 200\\;\\text{Hz}$.
-
-**(b) Third harmonic.** $f_3 = 600\\;\\text{Hz}$ and $\\lambda_3 = 2L/3 \\approx 0.33\\;\\text{m}$. The string shows three antinodes ("loops") and four nodes, counting both fixed ends.
-
-**(c) The sound in the air.** The fundamental reaches your ear at $200\\;\\text{Hz}$, but its wavelength in air is $340/200 = 1.7\\;\\text{m}$, not the string's $1.0\\;\\text{m}$. Frequency carries over; wavelength does not.
-
-**Problem 3 — Identify a mystery tube.** A tube's two consecutive resonances are $150\\;\\text{Hz}$ and $250\\;\\text{Hz}$.
-
-- **(a)** What is the gap between consecutive resonances?
-- **(b)** Could the tube be open at both ends?
-- **(c)** Could it be closed at one end, and if so, what is its fundamental?
-
-**(a) The gap.** Consecutive resonances differ by $250 - 150 = 100\\;\\text{Hz}$.
-
-**(b) Test an open tube.** If open, the $100\\;\\text{Hz}$ gap from (a) equals $f_1$, so every resonance would be a multiple of $100$; but $150$ is not. It is not open at both ends.
-
-**(c) Test a closed tube.** If closed, the gap is $2f_1$, so $f_1 = 50\\;\\text{Hz}$, and $150 = 3f_1$, $250 = 5f_1$. Both odd: the tube is closed at one end.`
-    },
-    {
-      id: 'ws2-quiz2',
-      type: 'multiple-choice' as const,
-      content: `**Practice: Standing Waves & Resonance** 🎯`,
-      exercise: {
-        questions: [
-          {
-            question: `A string fixed at both ends vibrates in its third harmonic. Counting both ends, how many nodes does the pattern have, and what is the wavelength in terms of the string's length $L$?`,
-            options: [`$3$ nodes; $\\lambda = 2L/3$`, `$4$ nodes; $\\lambda = 2L/3$`, `$4$ nodes; $\\lambda = 3L/2$`, `$3$ nodes; $\\lambda = 3L/2$`],
-            correctAnswer: 1,
-            yield: 'HIGH',
-            explanation: `The third harmonic fits three half-wavelengths: $L = 3\\lambda/2$, so $\\lambda = 2L/3$. Three loops need four nodes, the two ends plus two between. Counting three nodes confuses nodes with loops (antinodes), and $3L/2$ inverts the relationship between $L$ and $\\lambda$.`
-          },
-          {
-            question: `A passage reports that a tube's two consecutive resonant frequencies are $300\\;\\text{Hz}$ and $500\\;\\text{Hz}$, with no resonance between them. Which description of the tube fits?`,
-            options: [`Open at both ends; fundamental $200\\;\\text{Hz}$`, `Open at both ends; fundamental $100\\;\\text{Hz}$`, `Closed at one end; fundamental $200\\;\\text{Hz}$`, `Closed at one end; fundamental $100\\;\\text{Hz}$`],
-            correctAnswer: 3,
-            yield: 'HIGH',
-            explanation: `Closed at one end with $f_1 = 100\\;\\text{Hz}$ gives odd harmonics $100, 300, 500\\;\\text{Hz}$, matching both values with nothing between. An open tube with $f_1 = 200\\;\\text{Hz}$ resonates at multiples of $200$, which excludes $300$; with $f_1 = 100\\;\\text{Hz}$ it would also resonate at $400\\;\\text{Hz}$, between the two. A closed tube with $f_1 = 200\\;\\text{Hz}$ resonates at $200$ and $600\\;\\text{Hz}$, not $300$.`
-          },
-          {
-            question: `An organ pipe open at both ends has a fundamental of $260\\;\\text{Hz}$. One end is then capped, with the length unchanged. What are the capped pipe's fundamental and the next resonance above it?`,
-            options: [`$130\\;\\text{Hz}$ and $390\\;\\text{Hz}$`, `$130\\;\\text{Hz}$ and $260\\;\\text{Hz}$`, `$520\\;\\text{Hz}$ and $1560\\;\\text{Hz}$`, `$520\\;\\text{Hz}$ and $1040\\;\\text{Hz}$`],
-            correctAnswer: 0,
-            yield: 'HIGH',
-            explanation: `Capping changes the fundamental wavelength from $2L$ to $4L$, halving the frequency to $130\\;\\text{Hz}$. A closed pipe has only odd harmonics, so the next resonance is $3 \\times 130 = 390\\;\\text{Hz}$. Pairing $130$ with $260\\;\\text{Hz}$ forgets that the second harmonic is missing, and the $520\\;\\text{Hz}$ options double the fundamental instead of halving it.`
-          },
-          {
-            question: `A patient's ear canal behaves like a pipe $3.0\\;\\text{cm}$ long, open to the air at one end and closed by the eardrum at the other. Taking $v = 340\\;\\text{m/s}$, what is its lowest resonant frequency?`,
-            options: [`About $5.7\\;\\text{kHz}$`, `About $11.3\\;\\text{kHz}$`, `About $2.8\\;\\text{kHz}$`, `About $8.5\\;\\text{kHz}$`],
-            correctAnswer: 2,
-            yield: 'HIGH',
-            explanation: `A pipe closed at one end has $f_1 = v/4L = 340/(4 \\times 0.030) = 340/0.12 \\approx 2800\\;\\text{Hz}$: a longer canal resonates lower than the typical $3.4\\;\\text{kHz}$. $5.7\\;\\text{kHz}$ uses the open-pipe formula $v/2L$, and $11.3\\;\\text{kHz}$ drops the 4 entirely ($v/L$). $8.5\\;\\text{kHz}$ is a real resonance of the canal, but it is the third harmonic ($3f_1$), not the lowest.`
-          }
-        ]
-      }
-    },
-    {
-      id: 'ws2-summary',
+      id: 'ws4-summary',
       type: 'text' as const,
       content: `### Key Takeaways
 
-- **Interference.** Displacements add with signs; whole wavelengths of path difference are loud, odd half-wavelengths quiet.
-- **Beats.** Two close tones throb at $f_{\\text{beat}} = |f_1 - f_2|$; tighten or loosen and listen to tell which side you are on.
-- **Standing waves.** Strings and open pipes: $f_n = nv/2L$, every $n$; a pipe closed at one end: $f_n = nv/4L$, odd $n$ only.
-- **Resonance.** Driving at a natural frequency builds large amplitude; the ear canal, a closed pipe, resonates near $3.4\\;\\text{kHz}$.
+- **Approach raises pitch.** In $f' = f(v \\pm v_o)/(v \\mp v_s)$ pick each sign so approach raises $f'$; estimate with $u/v$.
+- **Ultrasound imaging.** Depth is $d = vt/2$; higher frequency resolves finer detail but penetrates less deeply.
+- **Doppler blood flow.** Echoes off moving blood shift by $2fu/v$; continuity turns a shift ratio into an area ratio.
+- **Shock waves.** A source faster than sound trails a Mach cone, whose boom sweeps each listener after the plane passes.
 
 **Common traps**
 
-- **Metres instead of wavelengths.** Convert the path difference first: $0.5\\;\\text{m}$ is quiet if $\\lambda = 1.0\\;\\text{m}$, loud if $\\lambda = 0.5\\;\\text{m}$.
-- **Counting loops as nodes.** The $n$th harmonic on a string has $n$ loops but $n + 1$ nodes, counting both fixed ends.
-- **Even harmonics in a closed pipe.** A closed pipe has only odd harmonics, and its fundamental wavelength is $4L$, not $2L$.
-- **The string's wavelength in air.** The sound keeps the string's frequency, but air carries it at its own speed, so $\\lambda$ changes.`
+- **A faster-moving sound.** A moving source changes the wavelength, never the speed of sound, which the medium sets.
+- **Forgetting the factors of 2.** Echoes shift twice ($2fu/v$), and echo depth halves the round trip ($vt/2$).
+- **Higher frequency, deeper view.** Higher-frequency ultrasound is absorbed sooner, so it penetrates less, not more.
+- **Squaring the speed ratio.** Continuity makes area inverse to speed: three times the shift means one-third the area.
+
+<!-- yield:low -->
+- Low-yield extras: the reflection-fraction formula; the colour Doppler red/blue convention; the Mach-cone angle formula; the cracking whip.
+<!-- /yield -->
+
+**Next up:** the *Optics* lesson, which turns from sound to light: reflection, refraction, mirrors, lenses and the wave behaviour of light.`
     }
   ]
 }

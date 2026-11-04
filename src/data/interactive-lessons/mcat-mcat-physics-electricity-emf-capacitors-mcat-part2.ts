@@ -6,9 +6,9 @@ export const emfCapacitorsMcatPart2: LessonData = {
     {
       id: 'ec2-intro',
       type: 'text' as const,
-      content: `# Circuits Part 2: EMF & Capacitors
+      content: `# Circuits Part 3: EMF & Capacitance
 
-**Part 2 of 4 — Capacitance, Dielectrics & Stored Energy**
+**Part 2 of 2 — Capacitance, Dielectrics & Stored Energy**
 
 ### Capacitance
 
@@ -236,7 +236,9 @@ Energy fell by the factor $\\kappa = 4$. The ratio shortcut gets there in one li
 
 <!-- yield:low -->
 - Low-yield extras: the value of $\\varepsilon_0$ ($8.85 \\times 10^{-12}\\;\\text{F/m}$); $E = \\sigma/\\varepsilon_0$; tabulated dielectric constants and air's breakdown field; field energy density $u = \\frac{1}{2}\\varepsilon_0 E^2$
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Circuits Part 4: Capacitor Networks & Bioelectricity* lesson — capacitors in series and parallel, RC charging and the time constant, and the cell membrane, myelin and defibrillators as circuits.`
     }
   ]
 }

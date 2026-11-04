@@ -1,14 +1,14 @@
 import type { LessonData } from './registry'
 
-export const fluidsMcatPart2: LessonData = {
+export const fluidsAtRestMcatPart2: LessonData = {
   topicSlug: 'mcat-physics-mechanics-fluids-mcat',
   sections: [
     {
       id: 'fl2-intro',
       type: 'text' as const,
-      content: `# Fluids
+      content: `# Fluids at Rest
 
-**Part 2 of 4 — Buoyancy, Archimedes & Surface Tension**
+**Part 2 of 2 — Buoyancy, Archimedes & Surface Tension**
 
 Earlier in this lesson we saw that pressure grows with depth: $P = P_0 + \\rho g h$. That single fact explains why things float.
 
@@ -244,7 +244,9 @@ The submerged fraction IS the specific gravity: 0.6.
 **Low-yield extras**
 
 - the normal urine specific-gravity range; the law of Laplace formula $\\Delta P = 2\\gamma/r$; Jurin's law for capillary rise
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Fluids in Motion* lesson, which sets the fluid flowing: continuity, Bernoulli, viscosity, Poiseuille's law and blood flow.`
     }
   ]
 }
