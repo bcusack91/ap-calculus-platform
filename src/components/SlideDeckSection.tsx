@@ -38,7 +38,7 @@ if (typeof window !== 'undefined') {
 
 type Slide =
   | { kind: 'title'; title: string; subtitle: string }
-  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' }
+  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' | 'grid' }
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 

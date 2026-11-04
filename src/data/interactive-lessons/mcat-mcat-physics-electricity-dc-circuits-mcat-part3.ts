@@ -206,18 +206,17 @@ $$I_6 = \\dfrac{6}{6} = 1\\;\\text{A}, \\quad I_3 = \\dfrac{6}{3} = 2\\;\\text{A
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Junction rule = conservation of charge: current in equals current out at every node
-- Loop rule = conservation of energy: potential changes around any closed loop sum to zero
-- Walking a loop: resistor with the current $-IR$, against $+IR$; source $-$ to $+$ is a rise
-- Ground is a reference choice; it shifts potentials but never differences
-- Collapse networks inside-out, find the total current, then walk back out splitting voltage (series) and current (parallel)
-- Voltage divider: share proportional to $R$. Current divider: share inversely proportional to $R$ (the other resistor goes on top)
+- **Junction rule.** Charge is conserved, so the current into every node equals the current out of it.
+- **Loop rule.** Energy is conserved: around a closed loop, $-IR$ with the current and $+V$ from $-$ to $+$ sum to zero.
+- **Collapse inside-out.** Reduce the innermost series or parallel group, find $I = V/R_{eq}$, then walk back out.
+- **Voltage and current dividers.** Series voltage splits in proportion to $R$; parallel current splits inversely, favouring the smaller $R$.
 
 **Common traps**
 
-- Trusting the drawing instead of the nodes
-- Adding opposing sources instead of subtracting
-- Assuming total current stays fixed after the network changes
+- **Trusting the drawing.** Elements between the same two nodes are in parallel, however the figure stretches them.
+- **Adding opposing sources.** Sources that push against each other subtract; only sources pushing the same way add.
+- **Fixed total current.** Changing a network changes $R_{eq}$, so the total current changes too; recompute it.
+- **Wrong divider numerator.** In $I_1 = I\\,R_2/(R_1 + R_2)$ the OTHER resistor goes on top, because current favours the smaller $R$.
 
 <!-- yield:low -->
 - Low-yield extras: simultaneous-equation solutions for multi-source networks.

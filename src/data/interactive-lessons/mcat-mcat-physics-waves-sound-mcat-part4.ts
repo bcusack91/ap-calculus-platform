@@ -234,29 +234,17 @@ When the source moves FASTER than sound ($v_s > v$), it outruns its own wavefron
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Doppler: $f' = f(v \\pm v_o)/(v \\mp v_s)$; choose signs so that approach raises $f'$ and recession lowers it
-- A moving source changes the wavelength; a moving observer only meets wavefronts more often; the speed of sound never changes
-- Slow motion: $\\Delta f/f \\approx u/v$; only motion along the line of sight counts
-- Reflection off a moving target: double shift, $\\Delta f \\approx 2fu/v$, up if approaching, down if receding
-- Ultrasound: 1 to 20 MHz; depth $d = vt/2$ with $v \\approx 1540\\;\\text{m/s}$ in tissue
-- Higher frequency = shorter wavelength = finer resolution, but stronger attenuation = less depth
-- Echo strength depends on acoustic impedance mismatch ($Z = \\rho v$); gel removes the air gap; bone and gas reflect strongly
-- Doppler ultrasound: the shift is proportional to blood speed; a stenosis shows a local jump, and continuity turns the speed ratio into an area ratio
-- Source faster than sound: a trailing Mach cone, a shock wave; the sonic boom lasts as long as the flight is supersonic
-- Passage checklist: decide what is fixed (medium, source or geometry; see Part 3 of this lesson) before you compute
-- Intensity or level? Convert through a ratio, never by proportion
-- Doppler: who moves, toward or away? Approach raises; reflection doubles; estimate with $u/v$ first
-- Echo timing? Halve the round trip
-- Watch the powers: square roots in string speed and pendulum period; squares in amplitude-energy and inverse-square spreading
+- **Approach raises pitch.** In $f' = f(v \\pm v_o)/(v \\mp v_s)$ pick each sign so approach raises $f'$; estimate with $u/v$.
+- **Ultrasound imaging.** Depth is $d = vt/2$; higher frequency resolves finer detail but penetrates less deeply.
+- **Doppler blood flow.** Echoes off moving blood shift by $2fu/v$; continuity turns a shift ratio into an area ratio.
+- **Shock waves.** A source faster than sound trails a Mach cone, whose boom sweeps each listener after the plane passes.
 
 **Common traps**
 
-- Saying a moving source makes sound travel faster
-- Choosing the Doppler signs by memory instead of by "approach raises"
-- Forgetting the double shift for echoes, or the factor of 2 in echo depth
-- Thinking higher-frequency ultrasound penetrates deeper
-- Squaring a speed ratio to get an area ratio
-- Thinking the sonic boom happens only once, at Mach 1
+- **A faster-moving sound.** A moving source changes the wavelength, never the speed of sound, which the medium sets.
+- **Forgetting the factors of 2.** Echoes shift twice ($2fu/v$), and echo depth halves the round trip ($vt/2$).
+- **Higher frequency, deeper view.** Higher-frequency ultrasound is absorbed sooner, so it penetrates less, not more.
+- **Squaring the speed ratio.** Continuity makes area inverse to speed: three times the shift means one-third the area.
 
 <!-- yield:low -->
 - Low-yield extras: the reflection-fraction formula; the colour Doppler red/blue convention; the Mach-cone angle formula; the cracking whip.

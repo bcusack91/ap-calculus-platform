@@ -221,22 +221,17 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
       type: 'text' as const,
       content: `### Key Takeaways
 
-- $\\rho = m/V$; water is $1\\;\\text{g/cm}^3 = 1000\\;\\text{kg/m}^3$; $SG = \\rho/\\rho_{\\text{water}}$ has no units; mercury's SG is 13.6
-- $P = F/A$ is a scalar; at rest a fluid pushes equally in all directions and perpendicular to every surface
-- $P = P_0 + \\rho g h$: depends on depth, density and $g$ only, never on container shape or volume; about +1 atm per 10 m of water
-- Gauge pressure is pressure above atmospheric; blood pressure and most medical readings are gauge; absolute = gauge + atmospheric
-- $1\\;\\text{atm} \\approx 10^5\\;\\text{Pa} = 760\\;\\text{mmHg}$; $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$
-- Barometers read absolute atmospheric pressure; open manometers read gauge pressure from $\\rho g \\Delta h$
-- Body hydrostatics: pressure is higher below the heart and lower above it, so blood pressure is measured at heart level
-- Pascal: $F_1/A_1 = F_2/A_2$; force multiplied, distance divided, work conserved
+- **Density and specific gravity.** $\\rho = m/V$; water is $1000\\;\\text{kg/m}^3$, and $SG = \\rho/\\rho_{\\text{water}}$ has no units (mercury 13.6).
+- **Pressure grows with depth.** $P = P_0 + \\rho g h$ depends on depth, never container shape: about +1 atm per 10 m of water.
+- **Gauge versus absolute.** Barometers read absolute pressure; manometers and blood pressure read gauge; absolute = gauge + 760 mmHg.
+- **Pascal's principle.** $F_1/A_1 = F_2/A_2$: a hydraulic lift multiplies force, divides distance and conserves work.
 
 **Common traps**
 
-- Reporting absolute pressure when the question asks for gauge (or the reverse)
-- Thinking a wider or fuller container gives more pressure at the same depth
-- Scaling the total pressure with depth instead of only the $\\rho g h$ part
-- Using a diameter ratio as an area ratio without squaring
-- Believing Pascal's principle transmits force rather than pressure`
+- **Gauge or absolute.** Check which one is asked: absolute pressure is the gauge reading PLUS atmospheric pressure.
+- **Wider container, more pressure.** A wider or fuller container adds nothing at the same depth; only $\\rho$, $g$ and $h$ count.
+- **Scaling the total pressure.** Doubling the depth doubles only the $\\rho g h$ part, not the total $P$, since $P_0$ stays fixed.
+- **Pistons and diameters.** Pascal transmits PRESSURE, not force, and a diameter ratio must be squared to give the area ratio.`
     }
   ]
 }

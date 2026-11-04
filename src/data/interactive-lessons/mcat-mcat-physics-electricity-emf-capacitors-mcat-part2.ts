@@ -222,21 +222,17 @@ Energy fell by the factor $\\kappa = 4$. The ratio shortcut gets there in one li
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- $C = Q/V$ (farads); $Q$ is the charge on each plate; $C$ is set by construction, not by $Q$ or $V$
-- Parallel plates: $C = \\kappa \\varepsilon_0 A / d$ (bigger plates, smaller gap, better dielectric all raise $C$)
-- Uniform field between the plates: $E = V/d$, directed from $+$ to $-$
-- Dielectrics polarize, partly cancel the field and multiply $C$ by $\\kappa$; breakdown sets the maximum field and voltage
-- $U = \\frac{1}{2}QV = \\frac{1}{2}CV^2 = Q^2/2C$; use $\\frac{1}{2}CV^2$ when $V$ is fixed, $Q^2/2C$ when $Q$ is fixed
-- Battery connected: $V$ fixed; inserting a dielectric raises $Q$ and $U$ by $\\kappa$. Disconnected: $Q$ fixed; $V$, $E$ and $U$ fall by $\\kappa$
-- Charging through a resistor: the battery supplies $QV$, the capacitor stores half, and the other half becomes heat
+- **Capacitance.** $C = Q/V$ is set by construction, not by $Q$ or $V$; $Q$ means the charge on each plate.
+- **Parallel plates.** $C = \\kappa \\varepsilon_0 A/d$, and the field between the plates is uniform: $E = V/d$.
+- **Stored energy.** $U = \\frac{1}{2}QV = \\frac{1}{2}CV^2 = Q^2/2C$; charging through a resistor, the battery supplies $QV$ and half is heat.
+- **Dielectrics.** $C \\times \\kappa$. Connected: $Q$ and $U$ rise by $\\kappa$. Isolated: $V$, $E$ and $U$ fall by $\\kappa$.
 
 **Common traps**
 
-- Reading $C = Q/V$ as "more voltage means less capacitance"
-- Forgetting to convert millimeters, microfarads or microcoulombs before computing
-- Using $\\frac{1}{2}CV^2$ for an isolated capacitor whose voltage is changing: pick the form whose variables stay fixed
-- Ranking stored energy by charge or capacitance alone: energy scales with $V^2$
-- Assuming a dielectric always increases stored energy (it lowers it when $Q$ is fixed)
+- **Misreading C = Q/V.** More voltage does not mean less capacitance; $C$ stays fixed and $Q$ rises with $V$.
+- **Skipped unit conversions.** Convert millimeters, microfarads and microcoulombs to SI units before computing.
+- **The wrong energy form.** For an isolated capacitor use $U = Q^2/2C$; use $\\frac{1}{2}CV^2$ only when $V$ stays fixed.
+- **Dielectrics always add energy.** With $Q$ fixed a dielectric LOWERS $U$ by $\\kappa$; it raises $U$ only when $V$ is fixed.
 
 <!-- yield:low -->
 - Low-yield extras: the value of $\\varepsilon_0$ ($8.85 \\times 10^{-12}\\;\\text{F/m}$); $E = \\sigma/\\varepsilon_0$; tabulated dielectric constants and air's breakdown field; field energy density $u = \\frac{1}{2}\\varepsilon_0 E^2$

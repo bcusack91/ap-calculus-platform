@@ -207,21 +207,17 @@ Current needs a complete conducting loop, a **closed circuit**. Open a switch an
       type: 'text' as const,
       content: `### Key Takeaways
 
-- $I = \\Delta Q/\\Delta t$, with $1\\;\\text{A} = 1\\;\\text{C/s}$; count carriers with $N = \\Delta Q/q_{carrier}$ ($2e$ for $\\text{Ca}^{2+}$)
-- Conventional current is the direction positive charge flows, $+$ to $-$ through the external circuit; electrons in metals drift the opposite way
-- Metals conduct with electrons (conductivity falls when heated); electrolytes and body fluids conduct with ions moving both ways (conductivity rises with temperature and ion concentration); $\\sigma = 1/\\rho$
-- Voltage is energy per charge: $\\Delta U = q\\Delta V$, $1\\;\\text{V} = 1\\;\\text{J/C}$, $1\\;\\text{eV} = 1.6 \\times 10^{-19}\\;\\text{J}$
-- Positive charges fall to lower potential, negative charges to higher; both lose potential energy
-- Only differences matter: ground is a chosen $0\\;\\text{V}$, and ideal wires are equipotential
-- Open loop: zero current everywhere, and the full source voltage across the gap
+- **Current is a rate.** $I = \\Delta Q/\\Delta t$, $1\\;\\text{A} = 1\\;\\text{C/s}$; count carriers with $N = \\Delta Q/q$, using $2e$ for $\\text{Ca}^{2+}$.
+- **Conventional current.** It points the way positive charge flows, $+$ to $-$ outside the source; metal electrons drift the opposite way.
+- **Metals vs. electrolytes.** Metals carry current with electrons and conduct worse when hot; ions in solution conduct better when warm.
+- **Voltage is energy per charge.** $\\Delta U = q\\Delta V$: positive charges fall to lower potential, negative to higher, and both lose energy.
 
 **Common traps**
 
-- Drawing current along the electron motion
-- Thinking cation and anion flows cancel in a solution
-- Believing bulbs "use up" current
-- Dividing by $e$ for a divalent ion
-- Forgetting to convert millivolts before computing energy
+- **Cancelling ion flows.** Cations moving one way and anions the other carry current in the same direction, so they add.
+- **Bulbs using up current.** Series bulbs carry the same current; a bulb converts potential energy, not charge.
+- **Dividing every ion by $e$.** A $\\text{Ca}^{2+}$ ion carries $2e$, so the same charge takes only half as many ions.
+- **Open switch, zero volts.** An open loop carries no current, yet the full source voltage sits across the gap.
 
 <!-- yield:low -->
 - Low-yield extras: the actual drift-speed magnitude; the historical origin of the sign convention.

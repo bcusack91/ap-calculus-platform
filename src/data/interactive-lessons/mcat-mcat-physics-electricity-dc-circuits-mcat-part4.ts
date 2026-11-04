@@ -215,24 +215,17 @@ Most "which element dissipates the most power" questions fall to steps 1 and 2 i
       type: 'text' as const,
       content: `### Key Takeaways
 
-- When a circuit changes, reason in order: $R_{eq}$, total current, the drop across any series resistor, then what is left for the parallel bank; shorting one branch of a bank shorts the whole bank
-- $P = IV = I^2R = V^2/R$: use $I^2R$ when current is shared (series, larger $R$ wins) and $V^2/R$ when voltage is shared (parallel, smaller $R$ wins)
-- Energy $E = Pt$; $1\\;\\text{kWh} = 3.6 \\times 10^6\\;\\text{J}$ is energy, not power
-- Joule heating converts all of a resistor's electrical energy to heat; high-voltage transmission cuts $I^2R$ losses
-- Brightness = power. $n$ identical bulbs in series each get $P_0/n^2$; in parallel each gets $P_0$
-- Lower wattage rating means higher resistance; rated bulbs swap brightness order in series
-- Series burnout darkens everything; parallel burnout across an ideal source changes nothing else; in mixed circuits, track $R_{eq}$, then total current, then the voltage split
-- Household wiring is parallel; breakers sit in series and trip on total current
-- Current through the body does the harm: wet skin can pass about 100 times the current at the same voltage
-- Rank without computing: identify the constant, pick the form, multiply factors
+- **Reason in order.** After any change: $R_{eq}$, then total current, then the series drop, then what is left for the bank.
+- **Pick the power form.** $P = I^2R$ when current is shared (larger $R$ wins); $P = V^2/R$ when voltage is shared (smaller $R$ wins).
+- **Brightness is power.** $n$ identical bulbs in series each get $P_0/n^2$; in parallel each keeps the full $P_0$.
+- **Current does the harm.** $I = V/R_{body}$, so wet skin passes about 100 times the current at the same voltage.
 
 **Common traps**
 
-- Assuming parallel branches never change (true only directly across an ideal source)
-- Using $I^2R$ at fixed voltage while holding $I$ constant
-- Calling the kilowatt-hour a unit of power
-- Assuming the higher-wattage bulb is brighter in every circuit
-- Saying voltage, rather than current, causes shock injury
+- **Branches never change.** A bank keeps its voltage only directly across an ideal source, not behind a series resistor.
+- **Fixing $I$ at fixed $V$.** Halving $R$ at fixed voltage doubles $I$ and so doubles $P$; it does not halve it.
+- **The kWh as power.** The kilowatt-hour is energy: $1\\;\\text{kWh} = 3.6 \\times 10^6\\;\\text{J}$.
+- **Higher wattage always brighter.** A lower rating means higher $R$, so in series the lower-wattage bulb glows brighter.
 
 <!-- yield:low -->
 - Low-yield extras: specific body-current thresholds (perception, let-go, fibrillation).

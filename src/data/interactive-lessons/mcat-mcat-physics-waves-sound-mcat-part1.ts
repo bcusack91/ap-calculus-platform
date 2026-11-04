@@ -219,24 +219,17 @@ Finally, the energy a wave carries grows with the **square of its amplitude**: t
       type: 'text' as const,
       content: `### Key Takeaways
 
-- $f = 1/T$; amplitude is centre to peak; phase is position in the cycle ($360^\\circ$ per cycle, $180^\\circ$ = opposite)
-- SHM: restoring force proportional to displacement; $T_{\\text{spring}} = 2\\pi\\sqrt{m/k}$, $T_{\\text{pendulum}} = 2\\pi\\sqrt{L/g}$
-- Amplitude never changes an SHM period; a pendulum's mass does not either
-- At the turning points: speed zero, acceleration maximum (all potential energy); at equilibrium: speed maximum, acceleration zero (all kinetic)
-- Transverse = medium moves perpendicular to travel; longitudinal = parallel (compressions and rarefactions); sound in fluids is longitudinal
-- $v = f\\lambda$: the medium sets $v$, the source sets $f$, and $\\lambda$ follows
-- String: $v = \\sqrt{F_T/\\mu}$; sound: solids > liquids > gases (stiffness beats density); air about $343\\;\\text{m/s}$, tissue about $1540\\;\\text{m/s}$
-- Crossing a boundary changes $v$ and $\\lambda$ together; $f$ never changes
-- Wave energy grows as amplitude squared
+- **Periods in SHM.** $f = 1/T$; $T = 2\\pi\\sqrt{m/k}$ for a spring, $2\\pi\\sqrt{L/g}$ for a pendulum; amplitude never changes $T$.
+- **Energy sloshes back and forth.** Turning points: speed zero, acceleration maximum; equilibrium: speed maximum, acceleration zero.
+- **Who controls what.** In $v = f\\lambda$ the medium sets $v$, the source sets $f$, and $\\lambda$ follows.
+- **Sound in different media.** Sound in fluids is longitudinal, fastest in solids (stiffness beats density); air is about $343\\;\\text{m/s}$.
 
 **Common traps**
 
-- Leaving a rate "per minute" when computing a period
-- Thinking a heavier pendulum bob, or a wider swing, changes the period
-- Believing denser media carry sound faster because they are denser
-- Letting frequency change at a boundary
-- Thinking a higher-frequency sound travels faster in the same medium
-- Forgetting the square root in $v = \\sqrt{F_T/\\mu}$
+- **Leaving it per minute.** Convert to hertz first: 72 beats per minute is $1.2\\;\\text{Hz}$, so $T \\approx 0.83\\;\\text{s}$.
+- **Heavier bob, wider swing.** Neither changes a pendulum's period; only the length and $g$ do.
+- **Frequency changing at a boundary.** A new medium changes $v$ and $\\lambda$ together; $f$ stays what the source set.
+- **Forgetting the square root.** $v = \\sqrt{F_T/\\mu}$, so four times the tension only doubles the wave speed.
 
 <!-- yield:low -->
 - Low-yield extras: P-waves vs S-waves in earthquakes; the exact temperature coefficient of the speed of sound in air.

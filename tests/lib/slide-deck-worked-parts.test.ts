@@ -5,7 +5,7 @@
  * an online class, and a problem must ask its question).
  */
 import { describe, it, expect } from 'vitest'
-import { applyDeckFigures, pollsInsideUnits, slideUnitKey, workedExampleSlides, type Slide } from '@/lib/slide-deck'
+import { applyDeckFigures, pollsInsideUnits, slideUnitKey, takeawayGridSlides, workedExampleSlides, type Slide } from '@/lib/slide-deck'
 
 const LIMITS = { maxChars: 700, maxBlocks: 5, maxSlides: 100, maxPolls: 8 }
 const T = 'Worked Example — Counting Charge'
@@ -55,5 +55,38 @@ describe('workedExampleSlides', () => {
     const out = applyDeckFigures(slides, [{ at: T, figure, mode: 'after' }])
     expect(out.map((s) => s.title)).toEqual([T, `${T} · Part (a)`, `${T} · Part (b)`, `${T} (cont.)`])
     expect((out[3] as Extract<Slide, { kind: 'content' }>).figure?.alt).toBe('the solved circuit')
+  })
+})
+
+describe('takeawayGridSlides', () => {
+  const box = (t: string) => `- **${t}.** One short sentence about ${t}.`
+  it('turns boxed takeaways and traps into grids of at most four, and keeps other lines', () => {
+    const blocks = [box('A'), box('B'), box('C'), box('D'), box('E'), '**Common traps**', box('T1'), box('T2'), '**Next up:** the next lesson.']
+    const slides = takeawayGridSlides('Key Takeaways', blocks)!
+    expect(slides.map((s) => [s.title, s.blocks.length, s.layout])).toEqual([
+      ['Key Takeaways', 3, 'grid'],
+      ['Key Takeaways (cont.)', 2, 'grid'],
+      ['Common Traps', 2, 'grid'],
+      ['Key Takeaways (cont.)', 1, undefined],
+    ])
+  })
+  it('leaves plain bulleted takeaways alone', () => {
+    expect(takeawayGridSlides('Key Takeaways', [box('A'), '- a plain bullet'])).toBeNull()
+  })
+})
+
+describe("applyDeckFigures 'replace'", () => {
+  it('swaps a dense section (and its continuation pages) for the figure and short lines', () => {
+    const c = (title: string, blocks: string[]) => ({ kind: 'content' as const, title, blocks })
+    const figure = { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"></svg>', alt: 'two I–V graphs' }
+    const out = applyDeckFigures(
+      [c('Resistance', ['r']), c('Ohmic vs. Non-Ohmic Elements', ['a long paragraph']), c('Ohmic vs. Non-Ohmic Elements (cont.)', ['more']), c('Series', ['s'])],
+      [{ at: 'Ohmic vs. Non-Ohmic', figure, mode: 'replace', blocks: ['- **Ohmic:** R constant'] }],
+    )
+    expect(out.map((s) => s.kind === 'content' ? [s.title, s.blocks, (s as Extract<Slide, { kind: 'content' }>).layout] : s.kind)).toEqual([
+      ['Resistance', ['r'], undefined],
+      ['Ohmic vs. Non-Ohmic Elements', ['- **Ohmic:** R constant'], 'full'],
+      ['Series', ['s'], undefined],
+    ])
   })
 })

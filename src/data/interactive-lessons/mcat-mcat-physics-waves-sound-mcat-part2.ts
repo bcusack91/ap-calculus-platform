@@ -217,23 +217,17 @@ The harmonics of an object are its **natural frequencies**. Push an object perio
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Superposition: displacements add with signs; waves pass through each other unchanged
-- In phase = constructive ($A_1 + A_2$); $180^\\circ$ out of phase = destructive ($|A_1 - A_2|$); energy is redistributed, not destroyed
-- Path difference of whole wavelengths = loud; odd half-wavelengths = quiet; convert to wavelengths first
-- Beats: $f_{\\text{beat}} = |f_1 - f_2|$; tighten or loosen and listen to decide which side you are on
-- Standing waves: nodes never move, antinodes swing most; nodes are $\\lambda/2$ apart
-- Strings and open pipes: $\\lambda_n = 2L/n$, $f_n = nv/2L$, all harmonics
-- Pipe closed at one end: $\\lambda_n = 4L/n$, $f_n = nv/4L$, odd harmonics only; fundamental half that of an equal open pipe
-- Resonance: driving at a natural frequency builds large amplitude; the ear canal (closed pipe) resonates near $3.4\\;\\text{kHz}$
-- Damping drains energy and weakens resonance
+- **Interference.** Displacements add with signs; whole wavelengths of path difference are loud, odd half-wavelengths quiet.
+- **Beats.** Two close tones throb at $f_{\\text{beat}} = |f_1 - f_2|$; tighten or loosen and listen to tell which side you are on.
+- **Standing waves.** Strings and open pipes: $f_n = nv/2L$, every $n$; a pipe closed at one end: $f_n = nv/4L$, odd $n$ only.
+- **Resonance.** Driving at a natural frequency builds large amplitude; the ear canal, a closed pipe, resonates near $3.4\\;\\text{kHz}$.
 
 **Common traps**
 
-- Judging interference from the path difference in metres instead of wavelengths
-- Counting loops as nodes
-- Giving a closed pipe an even harmonic, or using $2L$ for its fundamental
-- Using the string's wavelength for the sound it makes in air
-- Assuming tightening a string lowers its pitch`
+- **Metres instead of wavelengths.** Convert the path difference first: $0.5\\;\\text{m}$ is quiet if $\\lambda = 1.0\\;\\text{m}$, loud if $\\lambda = 0.5\\;\\text{m}$.
+- **Counting loops as nodes.** The $n$th harmonic on a string has $n$ loops but $n + 1$ nodes, counting both fixed ends.
+- **Even harmonics in a closed pipe.** A closed pipe has only odd harmonics, and its fundamental wavelength is $4L$, not $2L$.
+- **The string's wavelength in air.** The sound keeps the string's frequency, but air carries it at its own speed, so $\\lambda$ changes.`
     }
   ]
 }

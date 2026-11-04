@@ -225,23 +225,17 @@ A violin and a flute playing the same note share the same fundamental frequency,
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Sound: a vibrating source makes compressions and rarefactions, a longitudinal pressure wave; it needs a medium
-- Intensity $I = P/A$ in $\\text{W/m}^2$; a point source gives $I = P/(4\\pi r^2)$, so $I \\propto 1/r^2$
-- Level $\\beta = 10\\log(I/I_0)$ with $I_0 = 10^{-12}\\;\\text{W/m}^2$ (0 dB, the threshold of hearing)
-- $+10\\;\\text{dB} = \\times 10$ intensity, $+20\\;\\text{dB} = \\times 100$, $+3\\;\\text{dB} \\approx \\times 2$; doubling distance costs about $6\\;\\text{dB}$
-- Two equal sources add $3\\;\\text{dB}$; ten add $10\\;\\text{dB}$; the louder of two unequal sources dominates
-- Attenuation: absorption adds to inverse-square spreading, and it is stronger at higher frequencies
-- Pitch follows frequency, loudness follows intensity, timbre follows the mix of harmonics
-- Human hearing about $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$, most sensitive near $2$ to $5\\;\\text{kHz}$; infrasound below, ultrasound above
-- The cochlea decodes pitch by place: high frequencies at the base, low at the apex
+- **Inverse-square law.** A point source gives $I = P/(4\\pi r^2)$, so doubling the distance cuts the intensity to $1/4$.
+- **The decibel scale.** $\\beta = 10\\log(I/I_0)$, $I_0 = 10^{-12}\\;\\text{W/m}^2$; each $+10\\;\\text{dB}$ is $\\times 10$ intensity, $+3\\;\\text{dB}$ about $\\times 2$.
+- **Attenuation.** Absorption adds to spreading and is stronger at higher frequencies, so distant sounds lose their treble.
+- **Pitch, loudness, timbre.** Pitch follows frequency, loudness intensity, timbre the harmonic mix; hearing spans $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$.
 
 **Common traps**
 
-- Adding decibels ($70 + 70 = 140$)
-- Taking a ratio of levels ($70/40$) instead of converting the difference to an intensity ratio
-- Forgetting to divide by $I_0$, or forgetting the factor of 10, in $\\beta = 10\\log(I/I_0)$
-- Using $1/r$ instead of $1/r^2$
-- Thinking a louder sound has a higher pitch
+- **Adding decibels.** Two $70\\;\\text{dB}$ sources double the intensity: about $73\\;\\text{dB}$, never $140$.
+- **Taking a ratio of levels.** From $40$ to $70\\;\\text{dB}$ is $\\times 1000$ in intensity, not $\\times 70/40$.
+- **Dropping the square.** Intensity falls as $1/r^2$: ten times farther is $1/100$ the intensity, or $-20\\;\\text{dB}$.
+- **Louder means higher.** A bigger amplitude makes a sound louder at the same pitch; pitch follows frequency alone.
 
 <!-- yield:low -->
 - Low-yield extras: the $85\\;\\text{dB}$ occupational exposure guideline; the attenuation coefficient of soft tissue.

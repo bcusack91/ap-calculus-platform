@@ -1,5 +1,5 @@
 import type { DeckFigurePlacement } from './index'
-import { SVG_OPEN, ARROW, T, BOX, ARR, LINE, SUB, RES, BULB, BULB_GLOW, WIRE_BAT } from './mcat-cp-circuits'
+import { SVG_OPEN, ARROW, T, BOX, ARR, LINE, SUB, PATH, RES, BULB, BULB_GLOW, WIRE_BAT } from './mcat-cp-circuits'
 
 /**
  * Circuits Part 1: Current & Resistance (MCAT C/P, topic split Nov 2026) —
@@ -300,6 +300,59 @@ ${T(600, 292, 18, 'R ~ 10³ Ω')}
 <g class="fig-accent-2">${T(765, 428, 16, 'a modest V across wet skin can be lethal', 'middle', '700')}</g>
 </svg>`
 
+/* 6 — Ohmic vs non-ohmic I–V graphs (replace, 1000×460). Illustrative shapes, no numbers. */
+const OHM_OX = 90, OHM_OY = 380 // left origin
+const NO_OX = 560, NO_OY = 380 // right origin
+/** Illustrative filament curve: current rises steeply, then flattens as the filament heats. */
+const filamentI = (dv: number) => 210 * (1 - Math.exp(-dv / 150))
+const filamentPts: [number, number][] = Array.from({ length: 35 }, (_, k) => [NO_OX + k * 10, NO_OY - filamentI(k * 10)])
+const P1: [number, number] = [NO_OX + 150, NO_OY - filamentI(150)] // at V
+const P2: [number, number] = [NO_OX + 300, NO_OY - filamentI(300)] // at 2V
+const Q: [number, number] = [NO_OX + 300, NO_OY - 2 * filamentI(150)] // 2I, if R stayed fixed
+const ohmPanelBg = (ox: number) => `<g class="fig-muted"><rect x="${ox}" y="20" width="470" height="420" rx="14" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.5"/></g>`
+const ohmAxes = (ox: number, oy: number, marker: string) => `<g class="fig-muted"><defs>${ARROW(marker)}</defs>
+${ARR(ox, oy, ox + 370, oy, marker, 2)}
+${ARR(ox, oy, ox, 84, marker, 2)}
+</g>
+${T(ox + 12, 100, 17, 'current I')}
+${T(ox + 370, 428, 17, 'voltage V', 'end')}`
+const ohmicSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+${ohmPanelBg(20)}${ohmPanelBg(510)}
+${T(255, 56, 22, 'Ohmic (a resistor)', 'middle', '700')}
+${ohmAxes(OHM_OX, OHM_OY, 'arr-dc-ohm-m1')}
+<g class="fig-muted">
+<path d="M230 275 L330 275 L330 200" fill="none" stroke="currentColor" stroke-width="2.5"/>
+${T(280, 298, 16, 'ΔV', 'middle')}
+${T(342, 244, 16, 'ΔI')}
+</g>
+<g class="fig-accent">${LINE(OHM_OX, OHM_OY, 430, 125, 4)}</g>
+${T(112, 146, 19, 'slope = ΔI / ΔV = 1/R', 'start', '700')}
+${T(112, 174, 18, 'R constant → a straight line', 'start')}
+${T(112, 198, 18, 'through the origin', 'start')}
+${T(745, 56, 22, 'Non-ohmic (a filament bulb)', 'middle', '700')}
+${ohmAxes(NO_OX, NO_OY, 'arr-dc-ohm-m2')}
+<g class="fig-muted">
+${LINE(P1[0], NO_OY, P1[0], P1[1], 1.5, true)}${LINE(NO_OX, P1[1], P1[0], P1[1], 1.5, true)}
+${LINE(P2[0], NO_OY, P2[0], P2[1], 1.5, true)}${LINE(NO_OX, Q[1], Q[0], Q[1], 1.5, true)}
+${LINE(P1[0], P1[1], Q[0], Q[1], 2.5, true)}
+<circle class="fig-bg" cx="${Q[0]}" cy="${Q[1].toFixed(1)}" r="6" stroke="currentColor" stroke-width="2.5"/>
+</g>
+${T(P1[0], 404, 17, 'V', 'middle', '700')}${T(P2[0], 404, 17, '2V', 'middle', '700')}
+${T(NO_OX - 10, P1[1] + 6, 17, 'I', 'end', '700')}${T(NO_OX - 10, Q[1] + 6, 17, '2I', 'end', '700')}
+${T(Q[0], Q[1] - 16, 15, 'if R stayed fixed', 'middle')}
+<g class="fig-accent-2">
+${LINE(NO_OX, NO_OY, P1[0], P1[1], 2.5)}${LINE(NO_OX, NO_OY, P2[0], P2[1], 2.5)}
+${T(582, 158, 18, 'filament heats → R rises', 'start', '700')}
+${T(582, 184, 17, 'slope 1/R shrinks')}
+${T(582, 206, 15, '(red lines from 0)')}
+${T(P2[0] + 10, P2[1] + 34, 16, 'less than 2I', 'start', '700')}
+</g>
+<g class="fig-accent">
+<path d="${PATH(filamentPts)}" fill="none" stroke="currentColor" stroke-width="4"/>
+<circle cx="${P1[0]}" cy="${P1[1].toFixed(1)}" r="6" fill="currentColor"/><circle cx="${P2[0]}" cy="${P2[1].toFixed(1)}" r="6" fill="currentColor"/>
+</g>
+</svg>`
+
 export const mcatDcCircuitsExtraFigures: DeckFigurePlacement[] = [
   {
     at: 'Conventional Current vs. Electron Drift',
@@ -387,6 +440,21 @@ export const mcatDcCircuitsExtraFigures: DeckFigurePlacement[] = [
       '- Current does the harm: $I = V/R_{body}$, and most of $R_{body}$ is in dry skin',
       '- Dry skin ~$10^5\\;\\Omega$, wet ~$10^3\\;\\Omega$: same voltage, about 100× the current',
       '- Hand-to-hand or hand-to-foot paths cross the chest and can disrupt the heart',
+    ],
+  },
+  {
+    at: 'Ohmic vs. Non-Ohmic',
+    mode: 'replace',
+    figure: {
+      svg: ohmicSvg,
+      alt:
+        'Two graphs side by side, each with current I on the vertical axis and voltage V on the horizontal axis. Left, ohmic (a resistor): a straight blue line through the origin, with a small grey rise-over-run triangle marked ΔV along the bottom and ΔI up the side; slope = ΔI / ΔV = 1/R; R is constant, so the graph is a straight line through the origin. Right, non-ohmic (a filament bulb): a blue curve that rises steeply from the origin and then flattens as V grows. Two points on it sit at V and at 2V. Red straight lines run from the origin to each point; the line to the 2V point is shallower, so the slope 1/R shrinks: the filament heats and R rises. A grey dashed line continues the first red line from the point at V out to 2V, where it reaches 2I (if R stayed fixed); the curve at 2V sits below that, labelled less than 2I. The curves are illustrative.',
+      caption: 'Illustrative I–V graphs: a resistor gives a straight line (R constant); a heating filament curves over, so doubling V gives less than 2I.',
+    },
+    blocks: [
+      '- **Ohmic:** $R$ stays constant → straight $I$–$V$ line, slope $1/R$',
+      '- **Non-ohmic:** $R$ changes → curved line (hot filament: $R$ rises)',
+      '- $V = IR$ still defines $R$ at every instant',
     ],
   },
 ]

@@ -31,7 +31,7 @@ export type SlideFigure = { svg: string; alt: string; caption?: string }
 
 export type Slide =
   | { kind: 'title'; title: string; subtitle: string }
-  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' }
+  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' | 'grid' }
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 
@@ -173,6 +173,45 @@ function exampleRevealSlides(question: string, solution: string): ContentSlide[]
 }
 
 type ContentSlide = Extract<Slide, { kind: 'content' }>
+
+/** A takeaway written as a box: "- **Short title.** One sentence." */
+const BOX_BULLET = /^[-*]\s+\*\*[^*]+\*\*/
+const TRAPS_LINE = /^\*\*Common traps:?\*\*:?$/i
+
+/**
+ * A "Key Takeaways" section whose bullets are all "- **Title.** sentence"
+ * becomes 2 × 2 grids of boxes (layout 'grid'): the takeaways, then its
+ * "**Common traps**" list under its own title, each split evenly into slides
+ * of at most four boxes. Any other line (a "Next up" pointer) follows on a
+ * plain slide. Owner, 2026-11-04: bulleted takeaways read as clutter.
+ * Returns null when any bullet is not in box form (the section is then
+ * chunked as before).
+ */
+export function takeawayGridSlides(title: string, blocks: string[]): ContentSlide[] | null {
+  const groups: { title: string; items: string[] }[] = [{ title, items: [] }]
+  const rest: string[] = []
+  for (const b of blocks) {
+    const line = b.trim()
+    if (TRAPS_LINE.test(line)) { groups.push({ title: 'Common Traps', items: [] }); continue }
+    if (/^[-*]\s+/.test(line)) {
+      if (!BOX_BULLET.test(line)) return null
+      groups[groups.length - 1].items.push(line)
+      continue
+    }
+    rest.push(line)
+  }
+  if (groups[0].items.length === 0) return null
+  const out: ContentSlide[] = []
+  for (const g of groups) {
+    const n = Math.ceil(g.items.length / 4)
+    for (let i = 0; i < n; i++) {
+      const items = g.items.slice(Math.ceil((i * g.items.length) / n), Math.ceil(((i + 1) * g.items.length) / n))
+      out.push({ kind: 'content', title: i === 0 ? g.title : `${g.title} (cont.)`, blocks: items, layout: 'grid' })
+    }
+  }
+  if (rest.length) out.push({ kind: 'content', title: `${title} (cont.)`, blocks: rest })
+  return out
+}
 
 const PROBLEM_BLOCK = /^\*\*Problem\b/i
 const QUESTION_BLOCK = /^[-*]\s+\*\*\(([a-z])\)\*\*/i
@@ -381,7 +420,7 @@ const CONT = ' (cont.)'
  */
 export function applyDeckFigures<T extends Slide>(
   slides: readonly T[],
-  placements: readonly { at: string; figure: SlideFigure; mode?: 'lead' | 'after' | 'replace-table' | 'beside'; blocks?: string[] }[] | undefined,
+  placements: readonly { at: string; figure: SlideFigure; mode?: 'lead' | 'after' | 'replace' | 'replace-table' | 'beside'; blocks?: string[] }[] | undefined,
 ): T[] {
   if (!placements?.length) return [...slides]
   // Works on a pure content list (the generator) and on a whole deck (a
@@ -404,6 +443,11 @@ export function applyDeckFigures<T extends Slide>(
       let at = idx + 1
       while (at < out.length && out[at].kind === 'content' && PART_SUFFIX.test((out[at] as ContentSlide).title.replace(/\s*\(cont\.\)\s*$/i, '')) && slideUnitKey((out[at] as ContentSlide).title) === base) at++
       out.splice(at, 0, after)
+    } else if (mode === 'replace') {
+      // The figure and its short lines ARE the section on the slides; the
+      // lesson keeps the full text. Continuation pages of the section go too.
+      out[idx] = { ...target, title: base, blocks: p.blocks ?? [], figure: p.figure, layout: 'full' as const }
+      while (idx + 1 < out.length && out[idx + 1].kind === 'content' && (out[idx + 1] as ContentSlide).title === `${base}${CONT}`) out.splice(idx + 1, 1)
     } else if (mode === 'replace-table') {
       const blocks = p.blocks ?? target.blocks.filter((b) => !isTableBlock(b))
       out[idx] = { ...target, blocks, figure: p.figure, layout: 'side' as const }
@@ -441,6 +485,14 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string, limits: Deck
   const flushSlide = () => {
     flushTable()
     flushParagraph()
+    if (/^Key Takeaways\b/i.test(currentTitle)) {
+      const grid = takeawayGridSlides(currentTitle, blocks)
+      if (grid) {
+        slides.push(...grid)
+        blocks = []
+        return
+      }
+    }
     if (/^Worked Example\b/i.test(currentTitle)) {
       const parts = workedExampleSlides(currentTitle, blocks, limits)
       if (parts) {

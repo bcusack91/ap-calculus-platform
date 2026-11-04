@@ -195,21 +195,17 @@ Check with the loop: $I = \\varepsilon / (R + r) = 9.0 / 4.5 = 2.0\\;\\text{A}$.
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- EMF $\\varepsilon$ = work per coulomb done by the battery (volts, not a force); it equals the terminal voltage only when no current flows
-- Real battery = ideal EMF in series with internal resistance $r$: $I = \\varepsilon/(R + r)$
-- Discharging: $V_{\\text{term}} = \\varepsilon - Ir$ (sags more at higher current); charging: $V_{\\text{term}} = \\varepsilon + Ir$
-- Short circuit: $I_{\\max} = \\varepsilon / r$, $V_{\\text{term}} = 0$, all power heats the battery
-- Cells in series: EMFs and internal resistances add (a reversed cell subtracts); identical cells in parallel: same EMF, lower internal resistance, longer life
-- Ammeter: series, ~0 Ω. Voltmeter: parallel, ~∞ Ω
-- Battery EMF comes from a galvanic cell's potential; the positive terminal is the cathode
+- **EMF vs. terminal voltage.** EMF is work per coulomb; under load $V_{\\text{term}} = \\varepsilon - Ir$, with $I = \\varepsilon/(R + r)$.
+- **Charging and shorting.** A charger must supply $\\varepsilon + Ir$; a short draws $I_{\\max} = \\varepsilon/r$ and heats the battery.
+- **Cells in series or parallel.** Series cells add EMFs and internal resistances; identical parallel cells keep the EMF, lower $r$.
+- **Ideal meters.** An ammeter goes in series with ~0 Ω; a voltmeter goes in parallel with ~∞ Ω.
 
 **Common traps**
 
-- Treating a battery's labeled voltage as fixed under load: the terminal voltage sags by $Ir$
-- Forgetting the sign flip when a battery is being charged ($\\varepsilon + Ir$, not $\\varepsilon - Ir$)
-- Thinking current is "used up": charge circulates; only energy is converted
-- Ammeter in parallel = short circuit; voltmeter in series = current nearly stops and the meter reads about the full EMF
-- An unloaded voltmeter test reads the EMF even on a worn-out cell; internal resistance only shows under load
+- **A fixed battery voltage.** The label gives the EMF; under load the terminal voltage sags by $Ir$.
+- **The charging sign.** A battery being charged has $V_{\\text{term}} = \\varepsilon + Ir$, not $\\varepsilon - Ir$.
+- **Swapped meters.** An ammeter in parallel shorts the element; a voltmeter in series stops the current and reads about the EMF.
+- **The unloaded voltmeter test.** A worn cell still reads its full EMF with no load; its high $r$ shows only under load.
 
 <!-- yield:low -->
 - Low-yield extras: an ohmmeter supplies its own test current, so it is used only on an unpowered, isolated component

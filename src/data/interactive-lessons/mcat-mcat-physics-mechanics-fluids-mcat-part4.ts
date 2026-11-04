@@ -205,22 +205,17 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Viscosity $\\eta$ is internal friction; it causes a steady pressure drop along a uniform tube, which Bernoulli cannot see
-- Blood viscosity rises with hematocrit; liquids get less viscous when warmed
-- Turbulence: favoured by high speed, large diameter, high density and low viscosity (a high $Re = \\rho v D/\\eta$); noisy (murmurs, bruits, cuff sounds); neither Bernoulli nor Poiseuille applies
-- Poiseuille: $Q = \\pi\\Delta P r^4/(8\\eta L)$; $R = 8\\eta L/(\\pi r^4)$; $Q = \\Delta P/R$; radius to the fourth power
-- Circulation: $MAP \\approx CO \\times TPR$; series resistances add; parallel organ beds keep TPR low; removing a bed raises TPR
-- Capillary blood is slowest because the capillaries' TOTAL area is largest; the largest pressure drop is across the arterioles
-- Stenosis: faster (continuity), lower pressure in the jet (Bernoulli), higher resistance (Poiseuille), turbulence downstream; an aneurysm runs the chain in reverse (slower, higher wall pressure, more widening)
-- Passages: pick the regime first: static, ideal flow, or viscous flow
+- **Viscosity costs pressure.** Internal friction makes pressure fall along even a uniform tube, a drop Bernoulli cannot see.
+- **Poiseuille's fourth power.** $Q = \\pi\\Delta P r^4/(8\\eta L)$ and $R = 8\\eta L/(\\pi r^4)$: double the radius, 16 times the flow.
+- **Circulation as a circuit.** $MAP \\approx CO \\times TPR$; parallel beds keep TPR low, and the arterioles take the largest pressure drop.
+- **Grading a stenosis.** Faster (continuity), lower jet pressure (Bernoulli), higher resistance (Poiseuille), then a turbulent bruit.
 
 **Common traps**
 
-- Saying blood speeds up in the narrow capillaries
-- Using $r^2$ (continuity) where $r^4$ (Poiseuille) belongs, or the reverse
-- Applying Bernoulli to a long, viscous vessel
-- Treating parallel vascular beds as if they were in series
-- Expecting more flow through one series level than another
+- **Fast capillary blood.** Capillary blood is the SLOWEST in the circulation, because the capillaries' TOTAL area is the largest.
+- **Squared versus fourth power.** Use $r^2$ for speed at fixed flow (continuity) and $r^4$ for flow at fixed pressure (Poiseuille).
+- **Bernoulli in long vessels.** A long, viscous vessel loses pressure to friction, so Poiseuille applies there, not Bernoulli.
+- **Parallel as series.** Parallel beds total less than any one bed, so removing a bed RAISES TPR rather than lowering it.
 
 <!-- yield:low -->
 **Low-yield extras**

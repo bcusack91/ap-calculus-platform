@@ -226,24 +226,17 @@ The narrow, fast section is LOWER in pressure by $12\\;\\text{kPa}$. Squaring th
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Ideal fluid: incompressible, non-viscous, laminar and steady
-- Flow rate $Q = Av$ (volume per time) is not speed; $1\\;\\text{mL} = 1\\;\\text{cm}^3$; convert minutes to seconds
-- Continuity: $A_1v_1 = A_2v_2$; $v \\propto 1/r^2$, so half the radius means four times the speed
-- Branches share the flow: speed depends on their TOTAL area, which is why capillary blood crawls
-- Bernoulli: $P + \\tfrac{1}{2}\\rho v^2 + \\rho g h$ is constant (energy per volume); at the same height, faster means lower pressure
-- Chain: area to speed (continuity), then speed to pressure (Bernoulli), using $v_2^2 - v_1^2$
-- Venturi meter: pressure drop in a throat, read as a difference in liquid heights
-- Torricelli: $v = \\sqrt{2gh}$, the free-fall speed from the surface
-- Pitot tube: stagnation pressure minus static pressure $= \\tfrac{1}{2}\\rho v^2$
-- Lift: faster flow over a wing's top means lower pressure above it
+- **Flow rate is not speed.** $Q = Av$ is volume per time; $1\\;\\text{mL} = 1\\;\\text{cm}^3$, and convert minutes to seconds.
+- **Continuity.** $A_1v_1 = A_2v_2$: half the radius means four times the speed, and branches share the flow by TOTAL area.
+- **Bernoulli.** $P + \\tfrac{1}{2}\\rho v^2 + \\rho g h$ is constant, so at one height faster fluid has lower pressure (Venturi, lift).
+- **Torricelli and pitot.** A tank leaks at $v = \\sqrt{2gh}$; a pitot tube reads stagnation minus static pressure $= \\tfrac{1}{2}\\rho v^2$.
 
 **Common traps**
 
-- Assuming fast-moving fluid has high pressure
-- Forgetting to square the radius ratio in continuity
-- Computing $(v_2 - v_1)^2$ instead of $v_2^2 - v_1^2$
-- Forgetting the square root in Torricelli's theorem
-- Applying Bernoulli to viscous or turbulent flow
+- **Fast means high pressure.** Backwards: at the same height, faster fluid has LOWER pressure on the walls beside it.
+- **Unsquared radius.** Speed goes as $1/r^2$, so half the radius gives four times the speed, not twice.
+- **Squaring the difference.** Bernoulli uses $v_2^2 - v_1^2$, never $(v_2 - v_1)^2$.
+- **Missing square root.** In $v = \\sqrt{2gh}$, twice the depth gives $\\sqrt{2}$ times the speed, not twice.
 
 <!-- yield:low -->
 **Low-yield extras**

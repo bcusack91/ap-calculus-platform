@@ -41,7 +41,9 @@ $$R = \\rho\\frac{L}{A}$$
 - Semiconductors lose resistance as they warm, because heating frees more carriers; certain materials become superconductors, with exactly zero resistance, below a critical temperature.
 <!-- /yield -->
 
-**Ohmic vs. non-ohmic.** An **ohmic** element keeps the same $R$ whatever the voltage. Its graph of $I$ against $V$ is a straight line through the origin with slope $1/R$ (a graph of $V$ against $I$ has slope $R$). A **non-ohmic** element curves. On an $I$-vs-$V$ graph, a filament bulb's curve flattens as the filament heats (the slope $1/R$ shrinks): its resistance climbs, so doubling the voltage less than doubles the current. $V = IR$ still DEFINES $R$ at each instant; "ohmic" simply means that $R$ stays constant.
+### Ohmic vs. Non-Ohmic Elements
+
+An **ohmic** element keeps the same $R$ whatever the voltage. Its graph of $I$ against $V$ is a straight line through the origin with slope $1/R$ (a graph of $V$ against $I$ has slope $R$). A **non-ohmic** element curves. On an $I$-vs-$V$ graph, a filament bulb's curve flattens as the filament heats (the slope $1/R$ shrinks): its resistance climbs, so doubling the voltage less than doubles the current. $V = IR$ still DEFINES $R$ at each instant; "ohmic" simply means that $R$ stays constant.
 
 <!-- yield:low -->
 - A diode is an extreme non-ohmic device: it passes current easily in one direction and almost none in the other.
@@ -198,20 +200,17 @@ Identify the arrangement by current paths and shared connection points (nodes), 
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Ohm's law $V = IR$: fixed $R$ gives $I \\propto V$; fixed $V$ gives $I \\propto 1/R$; fixed $I$ gives $V \\propto R$
-- $R = \\rho L/A$: long and thin means high resistance; doubling the diameter quarters $R$; stretching by $n$ at constant volume multiplies $R$ by $n^2$
-- Metal resistivity rises with temperature; an ohmic element has a straight $I$–$V$ line (slope $1/R$), a filament bulb does not
-- Series: same current, voltages add, $R_{eq}$ grows above the largest element, largest $R$ takes the most voltage
-- Parallel: same voltage, currents add, $R_{eq}$ shrinks below the smallest branch, smallest $R$ takes the most current
-- Product over sum for two; $R/n$ for $n$ identical in parallel
-- A shorted element carries no current and drops out; an open branch can be erased
+- **Ohm's law three ways.** $V = IR$: fixed $R$ gives $I \\propto V$, fixed $V$ gives $I \\propto 1/R$, fixed $I$ gives $V \\propto R$.
+- **Geometry sets resistance.** $R = \\rho L/A$: doubling the diameter quarters $R$; stretching by $n$ at constant volume multiplies it by $n^2$.
+- **Series vs. parallel.** Series shares current and $R_{eq}$ adds up; parallel shares voltage and $R_{eq}$ falls below the smallest branch.
+- **Shorts and opens.** A shorted element carries no current and drops out; an open branch carries none and can be erased.
 
 **Common traps**
 
-- Using diameter instead of area (or the fluid $r^4$ law) for wire resistance
-- Swapping the series and parallel formulas
-- Forgetting to invert $1/R_{eq}$ at the end
-- Accepting a parallel $R_{eq}$ larger than a branch
+- **Diameter for area.** Wire resistance goes as $1/r^2$ through the area, not as $1/d$ and not as the fluid $1/r^4$ law.
+- **Swapped formulas.** Resistances add in series; in parallel it is the conductances $1/R$ that add.
+- **Un-inverted reciprocal.** The sum $1/R_1 + 1/R_2$ is $1/R_{eq}$; invert it at the end to get $R_{eq}$.
+- **Oversized parallel result.** A parallel $R_{eq}$ above any branch is an error; it is always below the smallest branch.
 
 <!-- yield:low -->
 - Low-yield extras: semiconductors and superconductors versus temperature; diodes as non-ohmic devices.

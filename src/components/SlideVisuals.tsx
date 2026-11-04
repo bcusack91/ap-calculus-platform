@@ -292,7 +292,49 @@ function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean 
   )
 }
 
-export function ContentSlideView({ title, blocks, palette, figure, layout }: { title: string; blocks: string[]; palette: DeckPalette; figure?: SlideFigure; layout?: 'side' | 'full' }) {
+/**
+ * A takeaways slide as a 2 × 2 grid of boxes (owner, 2026-11-04: bulleted
+ * takeaways read as clutter). Each block is "- **Title.** sentence"; the boxes
+ * borrow the next palettes' tints so they differ but stay one family, in both
+ * themes.
+ */
+function GridSlideBody({ blocks, palette }: { blocks: string[]; palette: DeckPalette }) {
+  const start = Math.max(0, PALETTES.indexOf(palette))
+  return (
+    <div className={`grid h-[540px] grid-cols-2 gap-6 ${blocks.length > 2 ? 'grid-rows-2' : 'grid-rows-1'}`}>
+      {blocks.map((raw, i) => {
+        const text = raw.trim().replace(/^[-*•]\s+/, '')
+        const m = text.match(/^\*\*(.+?)\*\*[.:]?\s*([\s\S]*)$/)
+        const tone = PALETTES[(start + i) % PALETTES.length]
+        return (
+          <div key={i} className={`flex flex-col justify-center rounded-2xl border-2 px-8 py-6 ${tone.solutionCard} ${blocks.length % 2 === 1 && i === blocks.length - 1 ? 'col-span-2' : ''}`}>
+            {m ? (
+              <>
+                <MathText inline text={m[1].replace(/[.:]$/, '')} className={`block text-[1.75em] font-bold leading-tight ${tone.accentText}`} />
+                <MathText text={mdLite(m[2])} className="mt-3 block text-[1.5em] leading-snug text-gray-800 dark:text-gray-100" />
+              </>
+            ) : (
+              <MathText text={mdLite(text)} className="block text-[1.5em] leading-snug text-gray-800 dark:text-gray-100" />
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export function ContentSlideView({ title, blocks, palette, figure, layout }: { title: string; blocks: string[]; palette: DeckPalette; figure?: SlideFigure; layout?: 'side' | 'full' | 'grid' }) {
+  if (layout === 'grid' && !figure) {
+    return (
+      <div style={SLIDE_IN} className="min-h-full px-14 py-10">
+        <div className="mb-7 flex items-center gap-4">
+          <span className={`h-[2.25em] w-1.5 shrink-0 rounded-full bg-gradient-to-b ${palette.grad}`} />
+          <h2 className="text-[2.25em] font-bold leading-tight text-gray-900 dark:text-white"><MathText inline text={title} /></h2>
+        </div>
+        <GridSlideBody blocks={blocks} palette={palette} />
+      </div>
+    )
+  }
   // A figure sits beside short text ('side') or above it, full width ('full').
   const side = !!figure && (layout ?? (blocks.length > 0 ? 'side' : 'full')) === 'side'
   // Under a full-width figure the lines are its takeaway, not the lesson

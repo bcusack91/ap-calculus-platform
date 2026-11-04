@@ -200,19 +200,17 @@ $$P_{\\text{deliver}} \\approx \\frac{200\\;\\text{J}}{1.0 \\times 10^{-2}\\;\\t
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Membrane = RC circuit: bilayer = capacitor, channels = parallel resistors, concentration gradients = batteries; $\\tau = R_mC_m$
-- The resting potential is a tiny separated charge ($Q = C_mV$); the membrane voltage cannot change instantly
-- Opening channels lowers $R_m$ and shortens $\\tau$; a longer $\\tau$ favors temporal summation
-- Myelin = membranes in series: lower $C_m$ and higher $R_m$, so current travels farther and faster; action potentials regenerate only at nodes of Ranvier (saltatory conduction). Wider axons also conduct faster; demyelination (multiple sclerosis) slows or blocks conduction
-- Defibrillator: slow charge, store $\\frac{1}{2}CV^2$, fast discharge with $\\tau = RC$; same energy, far more power
-- Passage strategy: decide what is held constant ($V$, $Q$, $C$ or $U$), then scale with ratios and check units
+- **Membrane as RC circuit.** Bilayer = capacitor, channels = parallel resistors; more open channels shorten $\\tau = R_mC_m$.
+- **Myelin in series.** Stacked layers lower $C_m$ and raise $R_m$, so the signal jumps node to node (saltatory conduction).
+- **Defibrillator timing.** Charge slowly, store $\\frac{1}{2}CV^2$, discharge fast with $\\tau = RC$: same energy, far more power.
+- **What is held constant?** Decide whether $V$, $Q$, $C$ or $U$ is fixed, then scale with ratios and check units.
 
 **Common traps**
 
-- Saying myelin RAISES capacitance (it lowers it, like widening the gap)
-- Forgetting that adding channels adds resistors in PARALLEL, which lowers resistance
-- Equating equal energy with equal power
-- Scaling voltage linearly with energy ($U \\propto V^2$, so double the energy needs $\\sqrt{2}$ times the voltage)
+- **Myelin raises capacitance.** Myelin LOWERS capacitance, like widening the gap between the plates.
+- **Channels in series.** Added channels are resistors in PARALLEL, so the membrane resistance falls.
+- **Equal energy, equal power.** Power is energy per time; the same energy delivered faster means far more power.
+- **Voltage linear in energy.** $U \\propto V^2$, so doubling the energy needs $\\sqrt{2}$ times the voltage, not twice.
 
 <!-- yield:low -->
 - Low-yield extras: specific membrane capacitance of about $1\\;\\mu\\text{F/cm}^2$; the length constant $\\lambda$; typical defibrillator energies (120 to 360 J) and chest resistance (50 to 100 Ω)

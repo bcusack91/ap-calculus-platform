@@ -228,23 +228,17 @@ The submerged fraction IS the specific gravity: 0.6.
       type: 'text' as const,
       content: `### Key Takeaways
 
-- Buoyancy comes from the pressure difference between an object's bottom and top faces
-- Archimedes: $F_B = \\rho_{\\text{fluid}} V_{\\text{sub}} g$, the weight of the displaced fluid; fluid density and submerged volume only
-- A fully submerged object's buoyant force does not change with depth or with what the object is made of
-- Average density decides: less than the fluid floats, equal hovers, greater sinks
-- Floating: $F_B = W$ and $V_{\\text{sub}}/V = \\rho_{\\text{object}}/\\rho_{\\text{fluid}}$ (the SG, in water); floaters displace their weight, submerged objects their volume
-- Apparent weight $= W - F_B$; $SG = W/F_B$
-- A hydrometer rides higher in a denser liquid; a floater rides higher in denser fluid; melting floating ice does not change the water level
-- Surface tension comes from cohesion at the surface; adhesion > cohesion gives a concave meniscus and capillary rise (water), the reverse gives a convex meniscus and depression (mercury)
-- Pulmonary surfactant lowers alveolar surface tension and keeps small alveoli from collapsing
+- **Archimedes' principle.** $F_B = \\rho_{\\text{fluid}} V_{\\text{sub}} g$, the displaced fluid's weight, whatever the depth or material.
+- **Average density decides.** Less dense than the fluid floats, with submerged fraction $\\rho_{\\text{object}}/\\rho_{\\text{fluid}}$; equal hovers; denser sinks.
+- **Weighing under water.** Apparent weight $= W - F_B$, and $SG = W/F_B$, which is how a crown or an ore sample is tested.
+- **Surface tension.** Cohesion makes a surface skin; water rises in glass by adhesion; lung surfactant lowers tension so alveoli stay open.
 
 **Common traps**
 
-- Using the object's density instead of the fluid's in $F_B$
-- Thinking a deeper or denser submerged object feels more buoyant force
-- Confusing the fraction submerged with the fraction above the surface
-- Dividing the apparent weight, rather than the true weight, by $F_B$
-- Crediting buoyancy for objects held up by surface tension
+- **Wrong density for buoyancy.** $F_B$ uses the FLUID's density; the object's density only decides whether it sinks or floats.
+- **Deeper means more buoyancy.** A fully submerged object's buoyant force does not grow with depth or with a denser object.
+- **Submerged versus above.** $\\rho_{\\text{object}}/\\rho_{\\text{fluid}}$ is the fraction BELOW the surface; the part above is the rest.
+- **Apparent weight in SG.** Divide the TRUE weight by $F_B$ to get the specific gravity, not the apparent weight.
 
 <!-- yield:low -->
 **Low-yield extras**

@@ -204,21 +204,17 @@ $$I_0 = \\frac{12}{4.0} = 3.0\\;\\text{A}$$
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Capacitor rules are resistor rules reversed: parallel capacitances add; series combine by reciprocals
-- Series capacitors share the same $Q$ (smaller $C$ takes the larger voltage); parallel capacitors share the same $V$ (larger $C$ holds more charge)
-- Uncharged capacitor at $t = 0$ = wire; fully charged capacitor = open branch
-- Steady state: delete capacitor branches, solve the resistor network, read $V_C$ between the capacitor's two nodes (series resistors in its branch drop nothing), then $Q = CV_C$
-- $\\tau = RC$: about 63% charged (or 37% left when discharging) after $1\\tau$; essentially complete after about $5\\tau$
-- Charging: charge and capacitor voltage rise and level off; current starts at $\\varepsilon/R$ and decays. Discharging: everything decays, and the current reverses direction
-- Exact forms (a passage supplies them): $Q = C\\varepsilon(1 - e^{-t/RC})$ charging, $Q = Q_0e^{-t/RC}$ discharging; the battery's voltage changes the final charge, not $\\tau$
+- **Resistor rules reversed.** Parallel capacitances add; series capacitances combine by reciprocals.
+- **Shared Q or shared V.** Series capacitors share $Q$ (smaller $C$ takes more voltage); parallel ones share $V$.
+- **Wire, then open branch.** An empty capacitor is a wire at $t = 0$; a full one is an open branch, so read $V_C$ across its nodes.
+- **The time constant.** $\\tau = RC$: about 63% charged (37% left when discharging) after $1\\tau$, essentially done by $5\\tau$.
 
 **Common traps**
 
-- Applying resistor formulas to capacitors (or vice versa)
-- Giving the larger series capacitor the larger voltage
-- Subtracting a voltage drop across a resistor that is in series with a fully charged capacitor (no current, no drop)
-- Treating "one time constant" as fully charged: it is only about 63%
-- Thinking a capacitor's voltage can jump when a switch closes (its current can; its voltage cannot)
+- **Resistor formulas on capacitors.** Capacitors combine the opposite way: series by reciprocals, parallel by adding.
+- **Larger C, larger voltage.** In series the SMALLER capacitor takes the larger voltage, the reverse of resistors.
+- **Steady-state drop across R.** A resistor in series with a full capacitor carries no current, so it drops no voltage.
+- **One time constant means full.** After $1\\tau$ the capacitor is only about 63% charged; its voltage also cannot jump.
 
 <!-- yield:low -->
 - Low-yield extras: the half-time of about $0.69\\tau$

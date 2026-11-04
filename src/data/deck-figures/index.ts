@@ -109,6 +109,10 @@ import { mcatSciencePassageStrategyFigures } from './mcat-st-science-passage-str
  *    (a poll can never land between the picture and its words).
  *  - after: the same, but BEHIND the matched slide (a graph the passage text
  *    describes). Title = "<section> (cont.)".
+ *  - replace: the figure and `blocks` ARE the section on the slides — its
+ *    lesson text (and any "(cont.)" pages) is dropped from the deck, kept in
+ *    the lesson (owner, 2026-11-04: dense text → pictures + a few lines the
+ *    instructor fills in). Full width, like lead.
  *  - replace-table: the figure IS the table — the pipe-table block(s) on the
  *    matched slide are dropped, the figure sits beside the remaining blocks
  *    (or `blocks`, when given, replace them all). Keep those lines short: the
@@ -124,7 +128,7 @@ export interface DeckFigurePlacement {
   /** Section title prefix to find (case-insensitive). */
   at: string
   figure: SlideFigure
-  mode?: 'lead' | 'after' | 'replace-table' | 'beside'
+  mode?: 'lead' | 'after' | 'replace' | 'replace-table' | 'beside'
   /** Short lines shown with the figure (see each mode). Same block syntax as deck slides. */
   blocks?: string[]
 }
