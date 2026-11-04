@@ -635,6 +635,11 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // Polls from the topic's exit-quiz pool — tried FIRST so lesson mining
   // knows whether it also needs to hunt for poll material.
   let polls: Slide[] = []
+  // Lesson part each pool question tests (lesson-built pools tag every item),
+  // and the part each lesson slide came from: a poll is placed inside its own
+  // part, never in a neighbouring part that happens to share vocabulary.
+  const pollPart = new Map<PollSlide, number>()
+  const slidePart = new Map<Slide, number>()
   try {
     const pool = await generateExitQuiz(topicSlug, MAX_POLL_CANDIDATES)
     const seen = new Set<string>()
@@ -648,7 +653,9 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
       // option B, lesson exercises key option A — and the deck shows them as
       // given. Seeded by the stem so a pre-built deck and a live rebuild agree.
       const shuffled = shuffleOptions(q.options, correctIndex, q.question)
-      polls.push({ kind: 'poll', question: q.question, options: shuffled.options, correctIndex: shuffled.correctIndex, explanation: q.explanation })
+      const poll: PollSlide = { kind: 'poll', question: q.question, options: shuffled.options, correctIndex: shuffled.correctIndex, explanation: q.explanation }
+      polls.push(poll)
+      if (typeof raw.partNumber === 'number' && raw.partNumber > 0) pollPart.set(poll, raw.partNumber)
       if (polls.length >= MAX_POLL_CANDIDATES) break
     }
   } catch { polls = [] }
@@ -713,7 +720,11 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
       if (!budgets.has(part)) budgets.set(part, { problems: MAX_DECK_PROBLEMS_PER_PART, dropped: [] })
       return budgets.get(part)!
     }
-    const lessonSlides = lessonMd.flatMap((md, i) => contentSlidesFrom(md, topic.title, limits, budgetFor(lessonMdPart[i]))).filter((s) => s.blocks.length > 0)
+    const lessonSlides = lessonMd.flatMap((md, i) => {
+      const made = contentSlidesFrom(md, topic.title, limits, budgetFor(lessonMdPart[i]))
+      for (const s of made) slidePart.set(s, lessonMdPart[i])
+      return made
+    }).filter((s) => s.blocks.length > 0)
     droppedSections.push(...[...budgets.values()].flatMap((b) => b.dropped))
     // Topic.textContent is a summary of the same lesson; once the lesson
     // itself is on the slides, the summary only repeats it (a second "Key
@@ -841,9 +852,31 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   if (process.env.DECK_DEBUG) console.error(`[deck] ${topicSlug}: ${twins.size} of ${polls.length} poll candidates restate a worked problem`, [...twins].map((p) => p.question.slice(0, 70)))
   const pollsBySeg = new Map<number, { poll: PollSlide; score: number }[]>()
   const reviewPolls: PollSlide[] = []
+  // Each beat belongs to the lesson part most of its slides came from (figure
+  // and summary slides carry no part). A part-tagged poll is matched only
+  // against its own part's beats; when none shares its vocabulary it goes
+  // after that part's last beat, once the whole part has been taught. Reviews
+  // (2026-11-04) found polls landing a part early or late on shared words.
+  const segPart = segments.map((seg) => {
+    const counts = new Map<number, number>()
+    for (const s of seg) {
+      const p = slidePart.get(s)
+      if (p !== undefined) counts.set(p, (counts.get(p) ?? 0) + 1)
+    }
+    let best: number | undefined
+    for (const [p, n] of counts) if (best === undefined || n > counts.get(best)!) best = p
+    return best
+  })
+  const placePoll = (p: PollSlide, terms: Set<string>): number => {
+    const part = pollPart.get(p)
+    const own = part === undefined ? [] : segPart.flatMap((sp, i) => (sp === part ? [i] : []))
+    if (own.length === 0) return bestSegment(terms, segTerms)
+    const local = bestSegment(terms, own.map((i) => segTerms[i]))
+    return local >= 0 ? own[local] : own[own.length - 1]
+  }
   for (const p of polls as PollSlide[]) {
     const terms = new Set([...termsOf(`${p.question} ${p.options.join(' ')}`)].filter((t) => !deckCommon.has(t)))
-    const idx = bestSegment(terms, segTerms)
+    const idx = placePoll(p, terms)
     if (idx >= 0) {
       const score = [...terms].filter((t) => segTerms[idx].has(t)).length
       pollsBySeg.set(idx, [...(pollsBySeg.get(idx) ?? []), { poll: p, score }])
@@ -870,24 +903,58 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     ] as const),
   )
   const matchedBeats = [...rankedBySeg.keys()].sort((a, b) => a - b)
-  const spread = matchedBeats.length > pollBudget && pollBudget > 1
-    ? [...new Set(Array.from({ length: pollBudget }, (_, k) => matchedBeats[Math.round((k * (matchedBeats.length - 1)) / (pollBudget - 1))]))]
-    : matchedBeats
-  // Twins sort last, so the non-twin list is a prefix of each beat's ranking
-  // and `have` always indexes into it; the final pass lets twins fill gaps.
-  for (const [perBeat, allowTwins] of [[1, false], [2, false], [2, true]] as const) {
-    for (const i of perBeat === 1 ? spread : matchedBeats) {
-      if (pollBudget <= 0) break
-      const have = chosenBySeg.get(i) ?? []
-      const ranked = (rankedBySeg.get(i) ?? []).filter((p) => allowTwins || !twins.has(p))
-      const take = ranked.slice(have.length, Math.min(perBeat, have.length + pollBudget))
-      if (take.length === 0) continue
-      chosenBySeg.set(i, [...have, ...take])
-      pollBudget -= take.length
-      matchedChosen += take.length
+  // Spend `budget` over `beats`: one poll per beat spread evenly, then a
+  // second per beat in lesson order, then twins fill any gap. Twins sort last,
+  // so the non-twin list is a prefix of each beat's ranking and `have` always
+  // indexes into it. Returns what it spent.
+  const fill = (beats: number[], budget: number): number => {
+    let left = budget
+    const spread = beats.length > left && left > 1
+      ? [...new Set(Array.from({ length: left }, (_, k) => beats[Math.round((k * (beats.length - 1)) / (left - 1))]))]
+      : beats
+    for (const [perBeat, allowTwins] of [[1, false], [2, false], [2, true]] as const) {
+      for (const i of perBeat === 1 ? spread : beats) {
+        if (left <= 0) break
+        const have = chosenBySeg.get(i) ?? []
+        const ranked = (rankedBySeg.get(i) ?? []).filter((p) => allowTwins || !twins.has(p))
+        const take = ranked.slice(have.length, Math.min(perBeat, have.length + left))
+        if (take.length === 0) continue
+        chosenBySeg.set(i, [...have, ...take])
+        left -= take.length
+      }
+    }
+    return budget - left
+  }
+  // Lessons with parts share the budget evenly across parts (a part that runs
+  // out of questions hands its share on), so one long part cannot take most
+  // of the checks. Beats without a part form their own group.
+  const groups = [...new Set(matchedBeats.map((i) => segPart[i] ?? -1))].map((p) => matchedBeats.filter((i) => (segPart[i] ?? -1) === p))
+  if (groups.length <= 1) {
+    const spent = fill(matchedBeats, pollBudget)
+    pollBudget -= spent
+    matchedChosen += spent
+  } else {
+    let open = groups
+    while (pollBudget > 0 && open.length > 0) {
+      const share = Math.max(1, Math.floor(pollBudget / open.length))
+      const next: number[][] = []
+      for (const g of open) {
+        if (pollBudget <= 0) break
+        const want = Math.min(share, pollBudget)
+        const spent = fill(g, want)
+        pollBudget -= spent
+        matchedChosen += spent
+        if (spent === want) next.push(g)
+      }
+      open = next
     }
   }
   const chosenReview = reviewPolls.slice(0, Math.min(pollBudget, Math.max(0, 2 - matchedChosen)))
+  if (process.env.DECK_DEBUG === 'parts') {
+    for (const [i, ps] of [...chosenBySeg].sort((a, b) => a[0] - b[0])) {
+      for (const p of ps) console.error(`[part] beat ${i} (part ${segPart[i] ?? '-'}) ← poll part ${pollPart.get(p) ?? '-'}${twins.has(p) ? ' TWIN' : ''}: ${p.question.slice(0, 60)}`)
+    }
+  }
 
   // ---- Intro: title + "what we'll cover" agenda built from section titles ----
   const slides: Slide[] = [{
