@@ -55,35 +55,40 @@ Same charge deposits HALF as many moles of a $2+$ ion as of a $1+$ ion — the c
       type: 'text' as const,
       content: `### Worked Example — Copper Electroplating (Passage Style)
 
-A technician plates copper from $\\text{CuSO}_4$ solution ($\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$, molar mass $63.5\\;\\text{g/mol}$) using a $2.0\\;\\text{A}$ current for $965\\;\\text{s}$.
+**Problem 1.** A technician plates copper from $\\text{CuSO}_4$ solution ($\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$, molar mass $63.5\\;\\text{g/mol}$) using a $2.0\\;\\text{A}$ current for $965\\;\\text{s}$.
 
-**Step 1 — Total charge.**
+- **(a)** How much charge passes through the cell?
+- **(b)** How many moles of electrons is that?
+- **(c)** How many moles, and what mass, of copper are deposited?
+- **(d)** On which electrode does the copper appear, and how would the deposit change with double the current or a $1+$ metal ion?
 
-$Q = It = (2.0)(965) = 1930\\;\\text{C}$
+**(a) Total charge.** $Q = It = (2.0)(965) = 1930\\;\\text{C}$
 
-**Step 2 — Moles of electrons.**
+**(b) Moles of electrons.** With $Q = 1930\\;\\text{C}$ from (a):
 
 $n_{e^-} = \\frac{1930}{96{,}500} = 0.020\\;\\text{mol}$
 
 (MCAT arithmetic: $1930$ is $2\\%$ of $96{,}500$.)
 
-**Step 3 — Moles and mass of copper.** Two electrons per copper:
+**(c) Moles and mass of copper.** Two electrons per copper, so the $0.020\\;\\text{mol}\\;e^-$ from (b) gives:
 
 $n_{Cu} = \\frac{0.020}{2} = 0.010\\;\\text{mol}, \\quad m = (0.010)(63.5) = 0.635\\;\\text{g}$
 
-The copper appears on the CATHODE — the electrode wired to the supply's negative terminal.
-
-**Doubling check:** doubling current, time, or both scales the deposit linearly; switching to a $1+$ metal at the same charge would double the moles deposited.
+**(d) Where, and how it scales.** The copper appears on the CATHODE — the electrode wired to the supply's negative terminal. Doubling current, time, or both scales the deposit linearly; switching to a $1+$ metal at the same charge would double the moles deposited.
 
 ### Worked Example — Which Electrode Is Which?
 
-A student electrolyzes molten $\\text{NaCl}$. Where does each product form?
+**Problem 1.** A student electrolyzes molten $\\text{NaCl}$ between two electrodes wired to a DC power supply.
 
-**Step 1 — Identify the redox.** $\\text{Na}^+ + e^- \\rightarrow \\text{Na}$ is reduction; $2\\text{Cl}^- \\rightarrow \\text{Cl}_2 + 2e^-$ is oxidation.
+- **(a)** Which ion is reduced and which is oxidized?
+- **(b)** Which product forms at which electrode, and what is each electrode's sign?
+- **(c)** How do the products' energies compare with the salt's?
 
-**Step 2 — Apply the iron laws.** Reduction at the cathode → shiny sodium at the NEGATIVE electrode. Oxidation at the anode → green chlorine gas bubbling off the POSITIVE electrode.
+**(a) Identify the redox.** $\\text{Na}^+ + e^- \\rightarrow \\text{Na}$ is reduction; $2\\text{Cl}^- \\rightarrow \\text{Cl}_2 + 2e^-$ is oxidation.
 
-**Step 3 — Sanity.** Both products are higher-energy than the salt — exactly what "pumping energy in" should produce. Left alone, they would happily react back.`
+**(b) Apply the iron laws.** Reduction at the cathode → shiny sodium at the NEGATIVE electrode. Oxidation at the anode → yellow-green chlorine gas bubbling off the POSITIVE electrode.
+
+**(c) Sanity check.** Both products are higher-energy than the salt — exactly what "pumping energy in" should produce. Left alone, they would happily react back.`
     },
     {
       id: 'echem2-quiz1',
@@ -95,30 +100,35 @@ A student electrolyzes molten $\\text{NaCl}$. Where does each product form?
             question: `Which statement is true of BOTH galvanic and electrolytic cells?`,
             options: [`Reduction occurs at the cathode`, `The anode carries a negative sign`, `The reaction is spontaneous`, `Electrical energy is converted to chemical energy`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `RED CAT is universal (as is AN OX). Signs, spontaneity, and the energy-flow direction are exactly what DIFFER between the two cell types.`
           },
           {
             question: `In an electrolytic cell, the anode is:`,
             options: [`Negative, because oxidation releases electrons`, `Neutral, since no net charge flows`, `Positive, because it is wired to the power supply's positive terminal`, `Alternately positive and negative`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The supply's $+$ terminal pulls electrons out of the anode to force oxidation there. (In a GALVANIC cell the anode is the negative terminal — same chemistry, flipped sign.)`
           },
           {
             question: `The charge required to deposit $0.10\\;\\text{mol}$ of silver from $\\text{Ag}^+$ solution is approximately:`,
             options: [`$965\\;\\text{C}$`, `$96{,}500\\;\\text{C}$`, `$4825\\;\\text{C}$`, `$9650\\;\\text{C}$`],
             correctAnswer: 3,
-            explanation: `$\\text{Ag}^+$ takes one electron each: $0.10\\;\\text{mol} \\times 96{,}500\\;\\text{C/mol} = 9650\\;\\text{C}$. A $2+$ ion would need twice this for the same moles of metal.`
+            yield: 'HIGH',
+            explanation: `$\\text{Ag}^+$ takes one electron each: $0.10\\;\\text{mol} \\times 96{,}500\\;\\text{C/mol} = 9650\\;\\text{C}$. A $2+$ ion would need twice this for the same moles of metal. $96{,}500\\;\\text{C}$ deposits a full mole, ten times too much; $965\\;\\text{C}$ is a tenth of the right charge (a slipped decimal); $4825\\;\\text{C}$ halves it, as if each $\\text{Ag}^+$ needed only half an electron.`
           },
           {
             question: `A current of $5.0\\;\\text{A}$ runs for $1930\\;\\text{s}$. The number of moles of electrons passed is:`,
             options: [`$0.05$`, `$0.10$`, `$0.20$`, `$1.0$`],
             correctAnswer: 1,
-            explanation: `$Q = It = 9650\\;\\text{C}$; $9650/96{,}500 = 0.10\\;\\text{mol}\\;e^-$ (9650 is 10 percent of a faraday).`
+            yield: 'HIGH',
+            explanation: `$Q = It = 9650\\;\\text{C}$; $9650/96{,}500 = 0.10\\;\\text{mol}\\;e^-$ (9650 is 10 percent of a faraday). $0.05$ halves the answer, as if counting moles of a $2+$ metal rather than moles of electrons; $0.20$ doubles it; $1.0$ treats $9650\\;\\text{C}$ as a full faraday.`
           },
           {
             question: `An electrolytic cell converts:`,
             options: [`Electrical energy into chemical energy`, `Chemical energy into electrical energy`, `Thermal energy into electrical energy`, `Chemical energy into thermal energy only`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The external supply pushes a nonspontaneous reaction uphill, storing electrical energy in higher-energy products. Chemical-to-electrical is the galvanic direction.`
           }
         ]
@@ -129,11 +139,17 @@ A student electrolyzes molten $\\text{NaCl}$. Where does each product form?
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Electrolytic = driven, nonspontaneous ($\\Delta G > 0$); electrical energy stored as chemical energy
-- AN OX, RED CAT, and electrons-enter-at-cathode never change; electrode SIGNS flip (electrolytic anode $+$, cathode $-$)
-- Plating and metal deposition happen at the cathode; gas from anion oxidation at the anode
-- $F \\approx 96{,}500\\;\\text{C/mol}$; moles $e^- = It/F$; divide by $n$ for moles of metal, then multiply by molar mass
-- Aqueous electrolysis: water can out-compete the salt's ions at either electrode`
+- **Electrolytic means driven.** An external supply forces a nonspontaneous reaction ($\\Delta G > 0$), storing energy chemically.
+- **What flips, what stays.** AN OX, RED CAT and electrons entering at the cathode hold; the anode is now $(+)$, the cathode $(-)$.
+- **Plating at the cathode.** Cations drift to the $(-)$ cathode and deposit as metal; anions are oxidized at the anode, often to gas.
+- **The Faraday chain.** Moles $e^- = It/F$ with $F \\approx 96{,}500\\;\\text{C/mol}$; divide by $n$, then multiply by molar mass.
+
+**Common traps**
+
+- **An always-negative anode.** Only a galvanic anode is $(-)$; an electrolytic anode is $(+)$ and is still where oxidation happens.
+- **Forgetting the ion's charge.** Depositing one mole of $\\text{M}^{n+}$ takes $n$ moles of electrons, so divide moles $e^-$ by $n$.
+- **Sodium from salt water.** In aqueous NaCl, water is reduced first, so the cathode makes $\\text{H}_2$, not sodium metal.
+- **Reversing the energy flow.** An electrolytic cell turns electrical energy into chemical energy; chemical to electrical is galvanic.`
     }
   ]
 };

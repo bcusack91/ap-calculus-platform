@@ -57,28 +57,31 @@ $\\vec{E} = \\frac{\\vec{F}}{q}$ — the force per unit positive test charge, in
       type: 'text' as const,
       content: `### Worked Example — Ratio Reasoning with Coulomb's Law
 
-Two ions attract each other with force $F$. The distance between them is then doubled and one ion's charge is replaced by an ion of three times the charge. What is the new force?
+**Problem.** Two ions attract each other with force $F$. The distance between them is then doubled, and one ion is replaced by an ion of three times the charge (same sign).
 
-**Step 1 — Write the proportionality.** $F \\propto \\dfrac{q_1 q_2}{r^2}$.
+- **(a)** By what factor does tripling one charge change the force?
+- **(b)** By what factor does doubling the distance change the force?
+- **(c)** What is the new force, and is it still attractive?
 
-**Step 2 — Apply each change as a factor.**
+**(a) The charge factor.** $F \\propto \\dfrac{q_1 q_2}{r^2}$, and one charge enters to the first power, so tripling it multiplies $F$ by $3$.
 
-- Tripling one charge multiplies $F$ by $3$.
-- Doubling $r$ multiplies $F$ by $\\dfrac{1}{2^2} = \\dfrac{1}{4}$.
+**(b) The distance factor.** $r$ enters squared in the denominator, so doubling it multiplies $F$ by $\\dfrac{1}{2^2} = \\dfrac{1}{4}$.
 
-**Step 3 — Combine.**
-
-$F_{new} = F \\times 3 \\times \\frac{1}{4} = \\frac{3}{4}F$
-
-The new force is $0.75F$, still attractive. This factor-by-factor style is how the MCAT expects you to handle Coulomb's law — almost never with a full plug-and-chug.
+**(c) Combine.** With the factors from (a) and (b): $F_{new} = F \\times 3 \\times \\frac{1}{4} = \\frac{3}{4}F$. The new force is $0.75F$, still attractive. This factor-by-factor style is how the MCAT expects you to handle Coulomb's law, almost never with a full plug-and-chug.
 
 ### Worked Example — Which Way Does the Charge Move?
 
-A chloride ion ($\\text{Cl}^-$, charge $-e$) sits in a region where the potential increases from left ($V = -20\\;\\text{mV}$) to right ($V = +40\\;\\text{mV}$). Which way does the electric force push it?
+**Problem.** A chloride ion ($\\text{Cl}^-$, charge $-e$) sits in a region where the potential increases from left ($V = -20\\;\\text{mV}$) to right ($V = +40\\;\\text{mV}$).
 
-**Step 1 — Use energy.** $U = qV$. With $q < 0$, the ion's energy is LOWEST where $V$ is HIGHEST.
+- **(a)** Where is the ion's potential energy lowest?
+- **(b)** Which way does the electric force push it?
+- **(c)** Which way does $\\vec{E}$ point, and does the field picture agree?
 
-**Step 2 — Conclusion.** The force pushes the chloride ion to the right, toward $+40\\;\\text{mV}$. Equivalently: $\\vec{E}$ points from high to low potential (right to left here), and a negative charge feels force opposite $\\vec{E}$ — again, to the right.`
+**(a) Use energy.** $U = qV$. With $q < 0$, the ion's energy is LOWEST where $V$ is HIGHEST: at the right, $+40\\;\\text{mV}$.
+
+**(b) The push.** A charge is pushed toward lower potential energy, so with the low-energy side from (a) on the right, the force pushes the chloride ion to the right, toward $+40\\;\\text{mV}$.
+
+**(c) Field check.** $\\vec{E}$ points from high to low potential, here right to left. A negative charge feels a force opposite $\\vec{E}$: again to the right, agreeing with (b).`
     },
     {
       id: 'es1-quiz1',
@@ -88,33 +91,38 @@ A chloride ion ($\\text{Cl}^-$, charge $-e$) sits in a region where the potentia
         questions: [
           {
             question: `A glass rod is rubbed with silk and becomes positively charged. This happens because:`,
-            options: [`The rod gains protons from the silk`, `Positive charge is created by friction`, `The rod loses electrons to the silk`, `The silk loses electrons to the rod`],
+            options: [`The rod gains protons rubbed off the silk`, `Friction creates new positive charge on it`, `The rod loses electrons to the silk`, `Electrons flow from the silk onto the rod`],
             correctAnswer: 2,
-            explanation: `Charging by friction only ever transfers electrons — protons are locked in nuclei, and charge is never created. Losing electrons leaves the rod with net positive charge.`
+            yield: 'HIGH',
+            explanation: `Charging by friction only ever transfers electrons: protons are locked in nuclei, and charge is never created. Losing electrons leaves the rod with net positive charge. Electrons flowing ONTO the rod would make it negative.`
           },
           {
             question: `Inside a metal sphere in electrostatic equilibrium, the electric field is:`,
-            options: [`Zero everywhere inside`, `Equal to $kQ/r^2$`, `Strongest at the center`, `Directed radially outward`],
+            options: [`Zero everywhere inside the metal`, `Equal to $kQ/r^2$, as for a point charge`, `Strongest at the center of the sphere`, `Directed radially outward from the center`],
             correctAnswer: 0,
-            explanation: `Free charges in a conductor rearrange on the surface until they cancel any interior field. If the interior field were nonzero, charges would still be moving — not equilibrium.`
+            yield: 'HIGH',
+            explanation: `Free charges in a conductor rearrange on the surface until they cancel any interior field. If the interior field were nonzero, charges would still be moving, which is not equilibrium. The point-charge field $kQ/r^2$ applies only OUTSIDE the sphere.`
           },
           {
             question: `Which statement correctly contrasts electric field and electric potential?`,
             options: [`Both are vectors`, `Potential is a vector; field is a scalar`, `Both are scalars`, `Field is a vector; potential is a scalar`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `$\\vec{E}$ has magnitude and direction (N/C); $V$ is a scalar (volts). This is why potentials from several charges simply add algebraically, while fields must be added as vectors.`
           },
           {
             question: `Left on its own in an electric field, a negative charge will spontaneously move:`,
-            options: [`Toward lower potential`, `Toward higher potential`, `Along an equipotential`, `Opposite to its velocity`],
+            options: [`Toward lower potential, lowering its energy`, `Toward higher potential, lowering its energy`, `Toward higher potential, raising its energy`, `Toward lower potential, raising its energy`],
             correctAnswer: 1,
-            explanation: `Spontaneous motion lowers $U = qV$. With $q < 0$, $U$ decreases as $V$ increases, so negative charges "fall uphill" in potential. (Positive charges move toward lower $V$.)`
+            yield: 'ULTRA_HIGH',
+            explanation: `Spontaneous motion always lowers the potential energy $U = qV$. With $q < 0$, $U$ decreases as $V$ increases, so negative charges "fall uphill" in potential. Moving toward lower potential is the rule for positive charges, and no charge released on its own gains potential energy.`
           },
           {
-            question: `A water molecule (a permanent dipole) is placed in a uniform electric field. It experiences:`,
-            options: [`A net force but no torque`, `Both a net force and a torque in all orientations`, `A torque but no net force`, `Neither force nor torque`],
+            question: `A water molecule (a permanent dipole) is placed in a uniform electric field, not aligned with it. It experiences:`,
+            options: [`A net force, but no torque`, `Both a net force and a torque`, `A torque, but no net force`, `Neither a net force nor a torque`],
             correctAnswer: 2,
-            explanation: `In a UNIFORM field the $+$ and $-$ ends feel equal and opposite forces — zero net force — but unless the dipole is already aligned, those forces form a couple that rotates it into alignment with $\\vec{E}$.`
+            yield: 'HIGH',
+            explanation: `In a UNIFORM field the $+$ and $-$ ends feel equal and opposite forces, so the net force is zero; that rules out both answers with a net force. Because the dipole is not aligned, those equal and opposite forces act along different lines and form a couple, a torque that rotates it into alignment with $\\vec{E}$, so "neither" is wrong too. A net force appears only in a NONuniform field.`
           }
         ]
       }
@@ -124,12 +132,17 @@ A chloride ion ($\\text{Cl}^-$, charge $-e$) sits in a region where the potentia
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Charge is quantized (multiples of $e = 1.6 \\times 10^{-19}\\;\\text{C}$) and conserved; friction moves electrons only
-- Conductors: zero interior field, charge on surface; insulators (like membranes) hold charge in place
-- Coulomb: $F \\propto q_1 q_2/r^2$ — solve MCAT problems with factor-by-factor ratio reasoning
-- Field $\\vec{E}$ is a vector (away from $+$, toward $-$); potential $V$ is a scalar; energy $U = qV$
-- Positive charges fall toward low $V$; negative charges toward high $V$ — both lower $U$
-- Uniform field + dipole = torque without net force`
+- **Quantized and conserved.** Every charge is a multiple of $e = 1.6 \\times 10^{-19}\\;\\text{C}$, and rubbing only moves electrons.
+- **Conductors vs. insulators.** A conductor in equilibrium has zero interior field; insulators like membranes hold charge in place.
+- **Coulomb by ratios.** $F \\propto q_1 q_2/r^2$: apply each change as a factor instead of plugging in numbers.
+- **Field, potential, energy.** $\\vec{E}$ is a vector from $+$ toward $-$, $V$ is a scalar, and $U = qV$ belongs to the charge.
+
+**Common traps**
+
+- **Protons moving on rubbing.** Friction transfers electrons only; protons stay locked in nuclei.
+- **Negatives falling to low $V$.** Negative charges move toward HIGHER potential, yet both signs lower $U = qV$.
+- **Adding fields as numbers.** Fields add as vectors and can cancel; only potentials add as signed numbers.
+- **Net force on a dipole.** In a uniform field a dipole feels zero net force, only a torque toward alignment.`
     }
   ]
 };

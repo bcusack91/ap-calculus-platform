@@ -124,6 +124,14 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-physics-electricity-rc-circuits-mcat',
   'mcat-physics-mechanics-fluid-dynamics-mcat',
   'mcat-physics-waves-interference-mcat',
+  'mcat-physics-mechanics-momentum-collisions-mcat',
+  'mcat-physics-mechanics-kinematics-mcat',
+  'mcat-physics-mechanics-forces-newton-laws-mcat',
+  'mcat-physics-electricity-magnetism-mcat',
+  'mcat-physics-mechanics-work-energy-power-mcat',
+  'mcat-physics-electricity-electrostatics-mcat',
+  'mcat-physics-electricity-electrochemistry-mcat',
+  'mcat-physics-electricity-optics-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

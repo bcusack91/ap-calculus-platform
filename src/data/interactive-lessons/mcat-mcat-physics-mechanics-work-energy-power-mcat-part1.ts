@@ -12,7 +12,7 @@ export const mcatMechWorkPart1Data = {
 
 $W = Fd\\cos\\theta$
 
-where $\\theta$ is the angle between the **force** and the **displacement**. Work is a scalar, measured in joules ($1\\;\\text{J} = 1\\;\\text{N}\\cdot\\text{m}$), and it can be positive, negative, or zero:
+where $\\theta$ is the angle between the **force** and the **displacement**. Work is a scalar, measured in joules ($1\\;\\text{J} = 1\\;\\text{N}\\cdot\\text{m}$, and since $1\\;\\text{N} = 1\\;\\text{kg}\\cdot\\text{m/s}^2$, $1\\;\\text{J} = 1\\;\\text{kg}\\cdot\\text{m}^2/\\text{s}^2$), and it can be positive, negative, or zero:
 
 | Situation | $\\theta$ | Work |
 |---|---|---|
@@ -43,27 +43,23 @@ This theorem is the fastest route whenever a question links **force, distance, a
       type: 'text' as const,
       content: `### Worked Example — Pulling a Sled
 
-A $6\\;\\text{kg}$ sled starts from rest and is pulled $10\\;\\text{m}$ across snow by a rope exerting $50\\;\\text{N}$ at $37^\\circ$ above the horizontal. Friction opposes with $10\\;\\text{N}$. ($\\cos 37^\\circ \\approx 0.8$)
+**Problem.** A $6\\;\\text{kg}$ sled starts from rest and is pulled $10\\;\\text{m}$ across snow by a rope exerting $50\\;\\text{N}$ at $37^\\circ$ above the horizontal. Friction opposes with $10\\;\\text{N}$. ($\\cos 37^\\circ \\approx 0.8$)
 
-**Step 1 — Work by the rope.** Only the horizontal component moves the sled forward:
+- **(a)** How much work does the rope do on the sled?
+- **(b)** How much work does friction do?
+- **(c)** How much work do gravity and the normal force do?
+- **(d)** What is the net work, and how fast is the sled moving after $10\\;\\text{m}$?
+- **(e)** If friction had done $-325\\;\\text{J}$ instead, what would the final speed be?
 
-$W_{rope} = Fd\\cos\\theta = (50)(10)(0.8) = 400\\;\\text{J}$
+**(a) Work by the rope.** Only the horizontal component moves the sled forward: $W_{rope} = Fd\\cos\\theta = (50)(10)(0.8) = 400\\;\\text{J}$
 
-**Step 2 — Work by friction.** Friction points opposite the displacement:
+**(b) Work by friction.** Friction points opposite the displacement: $W_{fric} = -(10)(10) = -100\\;\\text{J}$
 
-$W_{fric} = -(10)(10) = -100\\;\\text{J}$
+**(c) Gravity and the normal force.** Both are perpendicular to the horizontal displacement, so each does zero work.
 
-**Step 3 — Work by gravity and normal force.** Both are perpendicular to the horizontal displacement: zero.
+**(d) Net work and final speed.** With $+400\\;\\text{J}$ from (a) and $-100\\;\\text{J}$ from (b), $W_{net} = 300\\;\\text{J}$. Then $W_{net} = \\Delta KE$: $300 = \\tfrac{1}{2}(6)v^2 \\Rightarrow v^2 = 100 \\Rightarrow v = 10\\;\\text{m/s}$. No acceleration and no time: the theorem jumps straight from forces and distance to speed.
 
-**Step 4 — Net work and final speed.**
-
-$W_{net} = 400 - 100 = 300\\;\\text{J}$
-
-$W_{net} = \\Delta KE \\Rightarrow 300 = \\tfrac{1}{2}(6)v^2 \\Rightarrow v^2 = 100 \\Rightarrow v = 10\\;\\text{m/s}$
-
-No kinematics, no acceleration, no time — the work-energy theorem jumps straight from forces and distance to speed.
-
-**Check the sign logic:** positive net work speeds the sled up; if friction had done $-400\\;\\text{J}$ instead, net work would be zero and the sled would end at the same speed it started (here, rest — meaning it never gets going; you would need to check statics first).`
+**(e) The sign logic.** Net work would be $400 - 325 = 75\\;\\text{J}$, so $75 = \\tfrac{1}{2}(6)v^2 \\Rightarrow v^2 = 25 \\Rightarrow v = 5\\;\\text{m/s}$. Positive net work speeds an object up, and more negative work from friction leaves less of it.`
     },
     {
       id: 'wke1-quiz1',
@@ -75,30 +71,35 @@ No kinematics, no acceleration, no time — the work-energy theorem jumps straig
             question: `A waiter carries a tray horizontally across a room at constant velocity. The work done on the tray by his upward supporting force is:`,
             options: [`Positive`, `Negative`, `Zero`, `Equal to $mgd$`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The support force is vertical; the displacement is horizontal. $W = Fd\\cos 90^\\circ = 0$. Muscular fatigue is not mechanical work.`
           },
           {
             question: `A $20\\;\\text{N}$ force pushes a box $5\\;\\text{m}$ in the direction of the force. The work done by the force is:`,
-            options: [`$100\\;\\text{J}$`, `$4\\;\\text{J}$`, `$25\\;\\text{J}$`, `$500\\;\\text{J}$`],
+            options: [`$100\\;\\text{J}$`, `$4\\;\\text{J}$`, `$25\\;\\text{J}$`, `$50\\;\\text{J}$`],
             correctAnswer: 0,
-            explanation: `$W = Fd\\cos 0^\\circ = (20)(5)(1) = 100$ J. Dividing gives $4$; there is no reason to square anything here.`
+            yield: 'HIGH',
+            explanation: `$W = Fd\\cos 0^\\circ = (20)(5)(1) = 100$ J. Dividing force by distance gives $4$ J, adding them gives $25$ J, and borrowing the $\\tfrac{1}{2}$ from kinetic energy gives $50$ J; work is simply force times distance.`
           },
           {
             question: `If a car's speed doubles, its kinetic energy:`,
             options: [`Doubles`, `Quadruples`, `Halves`, `Stays the same`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `$KE = \\tfrac{1}{2}mv^2 \\propto v^2$, so $2v$ gives $4\\times$ the KE — and roughly $4\\times$ the braking distance, since the brakes must remove it over distance.`
           },
           {
             question: `A net work of how many joules is required to accelerate a $2\\;\\text{kg}$ object from $3\\;\\text{m/s}$ to $5\\;\\text{m/s}$?`,
             options: [`$4\\;\\text{J}$`, `$25\\;\\text{J}$`, `$34\\;\\text{J}$`, `$16\\;\\text{J}$`],
             correctAnswer: 3,
-            explanation: `$W_{net} = \\Delta KE = \\tfrac{1}{2}(2)(5^2 - 3^2) = 25 - 9 = 16$ J. The trap is computing $\\tfrac{1}{2}m(v_f - v_0)^2 = 4$ J — square the speeds BEFORE subtracting.`
+            yield: 'ULTRA_HIGH',
+            explanation: `$W_{net} = \\Delta KE = \\tfrac{1}{2}(2)(5^2 - 3^2) = 25 - 9 = 16$ J. The trap is computing $\\tfrac{1}{2}m(v_f - v_0)^2 = 4$ J — square the speeds BEFORE subtracting. $25$ J is the final kinetic energy alone, ignoring the $9$ J the object already had, and $34$ J adds the two kinetic energies instead of subtracting them.`
           },
           {
             question: `A box slides across a rough floor and comes to rest. The work done by friction on the box during the slide is:`,
             options: [`Positive`, `Negative`, `Zero`, `Equal to $+\\tfrac{1}{2}mv_0^2$`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Friction points opposite the displacement ($\\theta = 180^\\circ$), so its work is negative — specifically $-\\tfrac{1}{2}mv_0^2$, removing all the kinetic energy as heat.`
           }
         ]
@@ -109,12 +110,17 @@ No kinematics, no acceleration, no time — the work-energy theorem jumps straig
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- $W = Fd\\cos\\theta$: only the force component along the displacement does work
-- Perpendicular forces do zero work: normal force, centripetal force, carrying a load horizontally
-- Holding something still is zero mechanical work, whatever your muscles say
-- $W_{net} = \\Delta KE$ — the shortcut whenever force, distance, and speed appear without time
-- $KE \\propto v^2$: double the speed, quadruple the energy (and the stopping distance)
-- Square speeds before subtracting when computing $\\Delta KE$`
+- **Work is $Fd\\cos\\theta$.** Only the force component along the displacement does work; work is a scalar in joules.
+- **Perpendicular forces do no work.** The normal force, the centripetal force and a tray carried level all do zero work.
+- **Net work equals $\\Delta KE$.** $W_{net} = \\Delta KE$ links force, distance and speed whenever time is not involved.
+- **KE grows as $v^2$.** Double the speed and the kinetic energy quadruples, and so does the braking distance.
+
+**Common traps**
+
+- **Holding still as work.** A weight held still has $d = 0$, so no mechanical work is done, however tired the muscles get.
+- **Subtracting speeds first.** Square each speed, then subtract: $\\tfrac{1}{2}m(v_f^2 - v_0^2)$, not $\\tfrac{1}{2}m(v_f - v_0)^2$.
+- **One force, not the net.** The work-energy theorem needs the work of ALL forces, friction included, not just the push.
+- **Full force on a slanted rope.** Only the component $F\\cos\\theta$ along the motion does work; the vertical part does none.`
     }
   ]
 };

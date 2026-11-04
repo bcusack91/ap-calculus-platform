@@ -302,7 +302,7 @@ ${T(700, 220, 20, 'E = V/d', 'start', '700')}
 ${T(700, 250, 17, '70 mV over 7 nm (worked example)')}
 ${T(700, 282, 20, '≈ 1 × 10⁷ V/m', 'start', '700')}
 ${T(700, 325, 17, 'tiny voltage, giant field')}
-<g class="fig-muted">${T(700, 358, 15, 'depolarize: |V| shrinks → E shrinks')}${T(700, 384, 15, 'E points outside → inside at rest')}</g>
+<g class="fig-muted">${T(700, 358, 15, 'depolarizing toward 0: |V| and E shrink')}${T(700, 384, 15, 'E points outside → inside at rest')}</g>
 </svg>`
 
 /* 8 — Gel electrophoresis: uniform field, DNA runs to the anode, gel sorts by size (lead, 1000×460) */
@@ -322,7 +322,7 @@ ${T(330, 36, 17, '− electrode (cathode)', 'middle', '700')}
 ${T(330, 452, 17, '+ electrode (anode)', 'middle', '700')}
 </g>
 ${BOX(180, 80, 300, 334, 8, 2.5, 0.04)}
-${ARR(205, 110, 205, 400, 'arr-es-gel', 3)}
+${ARR(205, 400, 205, 110, 'arr-es-gel', 3)}
 ${T(214, 258, 18, 'E', 'start', '700')}
 ${lane(260, 160, 'large')}
 ${lane(340, 250, 'medium')}
@@ -456,12 +456,12 @@ export const mcatElectrostaticsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: membraneSvg,
       alt:
-        'A horizontal grey band, the lipid bilayer (insulator), with conducting fluid above (outside: 0 mV) and below (inside: −70 mV). Red plus signs line the outer face and blue minus signs the inner face, like capacitor plates. Three arrows E inside the band point downward, from outside to inside; a dimension line gives the thickness d ≈ 5–10 nm. An open channel breaks the band and a red Na⁺ ion in it has an arrow pointing inward: pushed inward by the field. Right: a capacitor in the cell — positive charge lines the outer face, negative the inner face; E = V/d, 70 mV over 7 nm (worked example) ≈ 1 × 10⁷ V/m: tiny voltage, giant field; depolarizing shrinks |V| and so shrinks E; E points outside → inside at rest.',
+        'A horizontal grey band, the lipid bilayer (insulator), with conducting fluid above (outside: 0 mV) and below (inside: −70 mV). Red plus signs line the outer face and blue minus signs the inner face, like capacitor plates. Three arrows E inside the band point downward, from outside to inside; a dimension line gives the thickness d ≈ 5–10 nm. An open channel breaks the band and a red Na⁺ ion in it has an arrow pointing inward: pushed inward by the field. Right: a capacitor in the cell — positive charge lines the outer face, negative the inner face; E = V/d, 70 mV over 7 nm (worked example) ≈ 1 × 10⁷ V/m: tiny voltage, giant field; depolarizing toward 0: |V| and E shrink; E points outside → inside at rest.',
       caption: 'The resting membrane as a parallel-plate capacitor: charge on the two faces of an insulating bilayer gives a uniform field E = V/d of about 10⁷ V/m pointing inward.',
     },
     blocks: [
       '- Insulating bilayer between two conducting fluids = parallel plates: $E = V/d$, pointing outside → inside',
-      '- 70 mV over 7 nm gives $E \\approx 10^7$ V/m — a tiny voltage, a giant field; depolarizing shrinks both',
+      '- 70 mV over 7 nm: $E \\approx 10^7$ V/m, a giant field; depolarizing toward 0 mV shrinks |V| and with it E',
     ],
   },
   {
@@ -470,7 +470,7 @@ export const mcatElectrostaticsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: gelSvg,
       alt:
-        'A vertical gel with a blue negative electrode (cathode) along the top and a red positive electrode (anode) along the bottom; an arrow E inside the gel points downward from cathode to anode. Three wells at the top, labelled large, medium and small, each with a dashed travel arrow down to a band: the large fragment has moved least, the medium one farther, the small one farthest. Right: same force per charge, drag sorts by size — the phosphate backbone makes DNA uniformly negative, so F = qE drives it toward the positive electrode; drag in the gel grows with size, so small fragments travel farthest in the same time; in SDS-PAGE the SDS coat gives proteins a uniform negative charge-to-mass, so they are again sorted by size. The field pulls; the gel sieves.',
+        'A vertical gel with a blue negative electrode (cathode) along the top and a red positive electrode (anode) along the bottom; an arrow E points upward from the + anode to the − cathode; negative DNA moves against E, toward the anode. Three wells at the top, labelled large, medium and small, each with a dashed travel arrow down to a band: the large fragment has moved least, the medium one farther, the small one farthest. Right: same force per charge, drag sorts by size — the phosphate backbone makes DNA uniformly negative, so F = qE drives it toward the positive electrode; drag in the gel grows with size, so small fragments travel farthest in the same time; in SDS-PAGE the SDS coat gives proteins a uniform negative charge-to-mass, so they are again sorted by size. The field pulls; the gel sieves.',
       caption: 'Gel electrophoresis: a uniform field pulls negatively charged DNA toward the anode with the same force per charge, and the gel’s size-dependent drag does the sorting.',
     },
     blocks: [
@@ -488,7 +488,7 @@ export const mcatElectrostaticsFigures: DeckFigurePlacement[] = [
       caption: 'Superposition at the midpoint: two equal positive charges give E = 0 but V = 2kQ/r; a positive and a negative charge give V = 0 but a doubled field pointing from + to −.',
     },
     blocks: [
-      '- Fields add as **vectors** (can cancel), potentials as **signed numbers** (can cancel) — never assume both',
+      '- Fields add as **vectors**, potentials as **signed numbers**: one being zero says nothing about the other',
       '- $+Q,+Q$ midpoint: $E = 0$, $V = 2kQ/r$ · $+Q,-Q$ midpoint: $V = 0$, $E$ adds, pointing from $+$ to $-$',
     ],
   },

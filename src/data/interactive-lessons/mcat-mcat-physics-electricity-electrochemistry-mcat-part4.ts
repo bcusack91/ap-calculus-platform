@@ -45,7 +45,7 @@ Doubling a half-reaction's coefficients does NOT double its $E^\\circ$ — volts
 
 ### Strategy 5 — Connect the Chapters
 
-- Cell EMF drives circuit analysis: current through an external resistor is $I = \\varepsilon/(R + r)$, power delivered $I^2R$ — circuits vocabulary, electrochemical source.
+- Cell EMF drives circuit analysis: current through an external resistor is $I = \\varepsilon/(R + r)$, power delivered $I^2R$ — circuits vocabulary, electrochemical source (EMF and internal resistance are taught in the *Circuits Part 3: EMF & Capacitance* lesson).
 - Electrolysis stoichiometry is dimensional analysis: $\\text{A}\\cdot\\text{s} \\rightarrow \\text{C} \\rightarrow \\text{mol}\\;e^- \\rightarrow \\text{mol metal} \\rightarrow \\text{grams}$. Write the chain; never freelance.
 - Membrane potentials, electrophoresis, and galvanic corrosion are the same ideas wearing biology, lab-methods, and materials costumes.`
     },
@@ -54,27 +54,32 @@ Doubling a half-reaction's coefficients does NOT double its $E^\\circ$ — volts
       type: 'text' as const,
       content: `### Worked Example — Interrogating a Potential Table
 
-A passage provides standard reduction potentials: $\\text{F}_2/\\text{F}^-$ $+2.87\\;\\text{V}$; $\\text{Ag}^+/\\text{Ag}$ $+0.80\\;\\text{V}$; $\\text{Zn}^{2+}/\\text{Zn}$ $-0.76\\;\\text{V}$; $\\text{Li}^+/\\text{Li}$ $-3.04\\;\\text{V}$.
+**Problem 1.** A passage lists these reduction potentials: $\\text{F}_2/\\text{F}^-$ $+2.87\\;\\text{V}$; $\\text{Ag}^+/\\text{Ag}$ $+0.80\\;\\text{V}$; $\\text{Zn}^{2+}/\\text{Zn}$ $-0.76\\;\\text{V}$; $\\text{Li}^+/\\text{Li}$ $-3.04\\;\\text{V}$.
 
-**Best oxidizing agent:** $\\text{F}_2$ — it owns the most positive reduction potential, so it is reduced most readily.
+- **(a)** Which species is the best oxidizing agent?
+- **(b)** Which species is the best reducing agent?
+- **(c)** What is the largest cell voltage these couples can give, and from which pairing?
 
-**Best reducing agent:** solid $\\text{Li}$ — the product side of the most NEGATIVE half-reaction; reversing that half-reaction (oxidation of Li) is the most favorable electron donation. Note it is Li metal, not $\\text{Li}^+$: the ion has no electron to give.
+**(a) Best oxidizing agent.** $\\text{F}_2$ — it owns the most positive reduction potential, so it is reduced most readily.
 
-**Largest cell voltage available:**
+**(b) Best reducing agent.** Solid $\\text{Li}$ — the product side of the most NEGATIVE half-reaction; reversing that half-reaction (oxidation of Li) is the most favorable electron donation. Note it is Li metal, not $\\text{Li}^+$: the ion has no electron to give.
+
+**(c) Largest cell voltage.** Pair fluorine reduction (cathode) with lithium oxidation (anode), the oxidizer from (a) with the reducer from (b):
 
 $E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode} = 2.87 - (-3.04) = 5.91\\;\\text{V}$
 
-pairing fluorine reduction with lithium oxidation — which is why lithium chemistry (tamed) powers batteries.
+That is why lithium chemistry (tamed) powers batteries.
 
 ### Worked Example — Galvanic or Electrolytic? Follow the Wire
 
-A passage shows a cell wired to a DC power supply, silver bar on one side, spoon on the other, in $\\text{Ag}^+$ solution. The spoon is connected to the supply's negative terminal. What happens?
+**Problem 1.** A passage shows a cell wired to a DC power supply: a silver bar on one side and a spoon on the other, both in $\\text{Ag}^+$ solution. The spoon is connected to the supply's negative terminal.
 
-**Step 1 — Cell type.** External supply drives it → electrolytic.
+- **(a)** Is the cell galvanic or electrolytic, which electrode is the spoon, and what happens on it?
+- **(b)** What happens at the silver bar, and what happens to the solution's concentration?
 
-**Step 2 — Electrode roles.** Negative terminal feeds electrons to the spoon → the spoon is the cathode → $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$ deposits silver onto the spoon. That is electroplating.
+**(a) Cell type and the spoon.** External supply drives it → electrolytic. Negative terminal feeds electrons to the spoon → the spoon is the cathode → $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$ deposits silver onto the spoon. That is electroplating.
 
-**Step 3 — The other side.** The silver bar (anode, $+$) oxidizes: $\\text{Ag} \\rightarrow \\text{Ag}^+ + e^-$, replenishing the solution. The bar shrinks at the same rate the spoon gains — the solution concentration holds steady.`
+**(b) The other side.** The silver bar (anode, $+$) oxidizes: $\\text{Ag} \\rightarrow \\text{Ag}^+ + e^-$, replenishing the solution. The bar shrinks at the same rate the spoon gains — the solution concentration holds steady.`
     },
     {
       id: 'echem4-quiz1',
@@ -83,33 +88,38 @@ A passage shows a cell wired to a DC power supply, silver bar on one side, spoon
       exercise: {
         questions: [
           {
-            question: `Given reduction potentials $\\text{F}_2$ $+2.87\\;\\text{V}$, $\\text{Ag}^+$ $+0.80\\;\\text{V}$, $\\text{Zn}^{2+}$ $-0.76\\;\\text{V}$, $\\text{Li}^+$ $-3.04\\;\\text{V}$, the strongest OXIDIZING agent listed is:`,
-            options: [`$\\text{Li}^+$`, `$\\text{F}_2$`, `$\\text{Zn}^{2+}$`, `$\\text{Ag}^+$`],
+            question: `Given reduction potentials $\\text{Br}_2/\\text{Br}^-$ $+1.07\\;\\text{V}$, $\\text{Cu}^{2+}/\\text{Cu}$ $+0.34\\;\\text{V}$, $\\text{Fe}^{2+}/\\text{Fe}$ $-0.44\\;\\text{V}$, $\\text{Na}^+/\\text{Na}$ $-2.71\\;\\text{V}$, the strongest OXIDIZING agent listed is:`,
+            options: [`$\\text{Na}^+$`, `$\\text{Br}_2$`, `$\\text{Fe}^{2+}$`, `$\\text{Cu}^{2+}$`],
             correctAnswer: 1,
-            explanation: `The strongest oxidizing agent is the species most easily REDUCED — the most positive reduction potential, $\\text{F}_2$ at $+2.87\\;\\text{V}$. ($\\text{Li}^+$ is the WEAKEST oxidizer; Li METAL is the strongest reducer.)`
+            yield: 'HIGH',
+            explanation: `The strongest oxidizing agent is the species most easily REDUCED — the most positive reduction potential, $\\text{Br}_2$ at $+1.07\\;\\text{V}$. $\\text{Cu}^{2+}$ and $\\text{Fe}^{2+}$ sit lower on the ladder, so they are weaker oxidizers. ($\\text{Na}^+$ is the WEAKEST oxidizer; Na METAL is the strongest reducer.)`
           },
           {
             question: `Using the same table, the maximum standard cell potential obtainable from any pair of these couples is:`,
-            options: [`$5.91\\;\\text{V}$`, `$2.07\\;\\text{V}$`, `$3.84\\;\\text{V}$`, `$2.24\\;\\text{V}$`],
+            options: [`$3.78\\;\\text{V}$`, `$6.49\\;\\text{V}$`, `$3.05\\;\\text{V}$`, `$1.51\\;\\text{V}$`],
             correctAnswer: 0,
-            explanation: `Pair the most positive couple as cathode with the most negative as anode: $2.87 - (-3.04) = 5.91\\;\\text{V}$. Any other pairing spans a smaller gap on the ladder.`
+            yield: 'HIGH',
+            explanation: `Pair the most positive couple as cathode with the most negative as anode: $1.07 - (-2.71) = 3.78\\;\\text{V}$. $6.49\\;\\text{V}$ doubles sodium's potential because two Na are oxidized per $\\text{Br}_2$, but potentials never scale with coefficients. The other values are real pairings with smaller gaps: copper with sodium gives $3.05\\;\\text{V}$, bromine with iron $1.51\\;\\text{V}$.`
           },
           {
             question: `In the cell diagram $\\text{Zn}\\;|\\;\\text{Zn}^{2+}\\;||\\;\\text{Cu}^{2+}\\;|\\;\\text{Cu}$, the double vertical line represents:`,
             options: [`The external wire`, `A phase boundary between solid and solution`, `The direction of electron flow`, `The salt bridge`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Double bar = salt bridge separating the half-cells; single bars are phase boundaries. Convention also puts the anode on the left — so electrons flow left to right in the wire.`
           },
           {
-            question: `Which feature is the SAME in galvanic and electrolytic cells?`,
-            options: [`The polarity sign of the anode`, `The sign of $\\Delta G$ for the cell reaction`, `Oxidation occurring at the anode`, `The direction of energy conversion`],
+            question: `In an electrolytic cell, the cathode is:`,
+            options: [`Positive, and the site of reduction`, `Negative, and the site of oxidation`, `Negative, and the site of reduction`, `Positive, and the site of oxidation`],
             correctAnswer: 2,
-            explanation: `AN OX / RED CAT never flip. Anode sign ($-$ galvanic, $+$ electrolytic), spontaneity, and energy direction are precisely what distinguish the two types.`
+            yield: 'HIGH',
+            explanation: `RED CAT holds in every cell, so the cathode is always where reduction happens; oxidation belongs to the anode. The sign is what flips: the supply's $-$ terminal pushes electrons into the electrolytic cathode, making it negative. "Positive, and the site of reduction" describes a GALVANIC cathode.`
           },
           {
             question: `A battery with EMF $1.5\\;\\text{V}$ reads only $1.3\\;\\text{V}$ across its terminals while powering a device. The missing $0.2\\;\\text{V}$ is best explained by:`,
             options: [`The voltage drop across the battery's internal resistance`, `A violation of Kirchhoff's loop rule`, `The Nernst equation raising $E$ above standard`, `Electrons losing charge as they traverse the circuit`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Under load, $V_{terminal} = \\varepsilon - Ir$: the chemistry still generates $1.5\\;\\text{V}$, but $0.2\\;\\text{V}$ is spent pushing current through the cell's own internals. Charge is conserved and Kirchhoff holds — the loop rule is exactly what this equation expresses.`
           }
         ]
@@ -120,12 +130,17 @@ A passage shows a cell wired to a DC power supply, silver bar on one side, spoon
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Master table: chemistry fixed (AN OX, RED CAT), signs flip (galvanic anode $-$, electrolytic anode $+$)
-- Cell notation: anode left, cathode right; $|$ phase boundary, $||$ salt bridge
-- Table ladder: most positive $E^\\circ$ = best oxidizer (that species gets reduced); most negative couple's METAL = best reducer; max voltage = top minus bottom
-- $E^\\circ$ is intensive — never doubled with coefficients; only $\\Delta G = -nFE$ scales with $n$
-- Follow the wire to classify a cell: external supply = electrolytic; plating happens where electrons enter (cathode)
-- Battery in a circuit: $I = \\varepsilon/(R + r)$, terminal voltage sags by $Ir$`
+- **The master sign table.** AN OX and RED CAT never change; the anode is $(-)$ in galvanic cells and $(+)$ in electrolytic ones.
+- **Cell notation.** Anode on the left, cathode on the right; $|$ is a phase boundary and $||$ is the salt bridge.
+- **The potential ladder.** Top-left species is the best oxidizer, bottom-right metal the best reducer; max voltage is top minus bottom.
+- **Follow the wire.** An external supply means electrolytic; plating happens where electrons enter, at the cathode.
+
+**Common traps**
+
+- **Doubling $E^\\circ$ with coefficients.** Volts are already per coulomb; only $\\Delta G = -nFE$ scales with $n$.
+- **The ion as best reducer.** The best reducer is Li metal, not $\\text{Li}^+$; the ion has no electron left to give.
+- **Expecting the full EMF under load.** A working battery reads $\\varepsilon - Ir$, less than its EMF, because of internal resistance.
+- **Signs before cell type.** Decide galvanic or electrolytic first; only then assign the electrode signs.`
     }
   ]
 };

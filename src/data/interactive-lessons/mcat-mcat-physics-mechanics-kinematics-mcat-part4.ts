@@ -15,7 +15,7 @@ On the real exam, kinematics rarely arrives as a bare "plug into the Big 5" prob
 - **Reaction-time experiments:** a ruler or light is dropped and the subject responds. Distance fallen from rest obeys $d = 5t^2$ (with $g = 10\\;\\text{m/s}^2$), so the fall distance is a clock: $t = \\sqrt{d/5}$.
 - **Motion-sensor / video-frame data:** you get a table of position or velocity vs. time. Slope and area, not equations, answer these fastest.
 - **Relative velocity:** velocities along one line simply add or subtract. A swimmer at $v_{swim}$ relative to the water in a current $v_{current}$ moves at $v_{swim} \\pm v_{current}$ relative to the shore.
-- **Air resistance (qualitative only):** drag grows with speed. A falling object approaches **terminal velocity**, where drag balances weight, so $a = 0$ while $v$ is at its maximum — the exam loves this "zero acceleration, nonzero velocity" inversion of the apex fact from Part 2.
+- **Air resistance (qualitative only):** drag grows with speed. A falling object approaches **terminal velocity**, where drag balances weight, so $a = 0$ while $v$ is at its maximum — the exam loves this "zero acceleration, nonzero velocity" inversion of the apex fact from Part 2 of this lesson (vertical throws).
 
 ### Estimation Beats Algebra
 
@@ -32,25 +32,30 @@ The MCAT gives no calculator, so it gives clean numbers. Train these reflexes:
       type: 'text' as const,
       content: `### Worked Example — A Reaction-Time Passage
 
-*Researchers measure driver reaction time with a drop test: a vertical ruler is released without warning, and the subject pinches it as fast as possible. The distance the ruler falls before capture is recorded. Trials for one subject (well rested vs. sleep deprived) average $0.20\\;\\text{m}$ and $0.45\\;\\text{m}$ respectively. Use* $g = 10\\;\\text{m/s}^2$.
+*Researchers measure driver reaction time with a drop test: a vertical ruler is released without warning, and the subject pinches it as fast as possible. The distance the ruler falls before capture is recorded, and trials for one subject are averaged when well rested and when sleep deprived.*
 
-**Step 1 — Convert distance to time (rested).** The ruler falls from rest:
+**Problem 1.** In the drop test, the ruler falls an average of $0.20\\;\\text{m}$ before the well-rested subject catches it and $0.45\\;\\text{m}$ when the same subject is sleep deprived ($g = 10\\;\\text{m/s}^2$).
 
-$d = \\tfrac{1}{2}gt^2 = 5t^2 \\Rightarrow 0.20 = 5t^2 \\Rightarrow t^2 = 0.04 \\Rightarrow t = 0.2\\;\\text{s}$
+- **(a)** What is the subject's reaction time when well rested?
+- **(b)** What is the reaction time when sleep deprived?
+- **(c)** By how much, and by what percentage, did the reaction time grow, and how does that compare with the growth in fall distance?
 
-**Step 2 — Sleep-deprived trial.**
+**(a) Rested trial.** The ruler falls from rest, so $d = \\tfrac{1}{2}gt^2 = 5t^2$:
 
-$0.45 = 5t^2 \\Rightarrow t^2 = 0.09 \\Rightarrow t = 0.3\\;\\text{s}$
+$0.20 = 5t^2 \\Rightarrow t^2 = 0.04 \\Rightarrow t = 0.2\\;\\text{s}$
 
-Sleep deprivation added $0.1\\;\\text{s}$ — a $50\\%$ increase in reaction time, even though the fall distance more than doubled. **Distance is not proportional to time** ($d \\propto t^2$): a classic passage trap is to ask about the ratio of times, hoping you answer with the ratio of distances.
+**(b) Sleep-deprived trial.** $0.45 = 5t^2 \\Rightarrow t^2 = 0.09 \\Rightarrow t = 0.3\\;\\text{s}$
 
-**Step 3 — Translate to the road.** At highway speed, $30\\;\\text{m/s}$, the extra $0.1\\;\\text{s}$ of reaction time adds
+**(c) Time vs. distance.** From $0.2\\;\\text{s}$ in (a) to $0.3\\;\\text{s}$ in (b), the reaction time grew by $0.1\\;\\text{s}$, or $50\\%$, while the fall distance grew $2.25$-fold. Since $d \\propto t^2$, passages ask for the time ratio hoping you give the distance ratio.
 
-$\\Delta x = (30)(0.1) = 3\\;\\text{m}$
+**Problem 2.** The same subject drives at highway speed, $30\\;\\text{m/s}$, and needs the extra $0.1\\;\\text{s}$ of reaction time found in Problem 1 when sleep deprived.
 
-of travel before braking even begins — the passage will typically close the loop with exactly this kind of constant-velocity distance question.
+- **(a)** How much farther does the car travel before braking even begins?
+- **(b)** Why can't $d = 5t^2$ give the car's extra distance?
 
-**Passage strategy recap:** identify which phase of motion each question targets (constant velocity before the response vs. free fall of the ruler), pull only the numbers that phase needs, and keep the phases separate — the same discipline as splitting projectile motion into $x$ and $y$.`
+**(a) Extra distance.** Before the response the car moves at constant velocity: $\\Delta x = (30)(0.1) = 3\\;\\text{m}$. Passages typically close the loop with exactly this kind of constant-velocity distance question.
+
+**(b) Two phases of motion.** During the reaction time the driver has not yet braked, so the car's speed is constant and $\\Delta x = vt$. Free fall, $d = 5t^2$, describes only the ruler. Keep the phases separate — the same discipline as splitting projectile motion into $x$ and $y$.`
     },
     {
       id: 'kin4-quiz1',
@@ -59,34 +64,39 @@ of travel before braking even begins — the passage will typically close the lo
       exercise: {
         questions: [
           {
-            question: `In a drop test, a meter stick falls $0.45\\;\\text{m}$ before the subject catches it ($g = 10\\;\\text{m/s}^2$). The subject's reaction time is:`,
-            options: [`$0.09\\;\\text{s}$`, `$0.3\\;\\text{s}$`, `$0.45\\;\\text{s}$`, `$0.9\\;\\text{s}$`],
+            question: `In a drop test, a meter stick falls $0.80\\;\\text{m}$ before the subject catches it ($g = 10\\;\\text{m/s}^2$). The subject's reaction time is:`,
+            options: [`$0.16\\;\\text{s}$`, `$0.40\\;\\text{s}$`, `$0.80\\;\\text{s}$`, `$0.28\\;\\text{s}$`],
             correctAnswer: 1,
-            explanation: `$0.45 = 5t^2 \\Rightarrow t^2 = 0.09 \\Rightarrow t = 0.3$ s. Choosing $0.09$ forgets the square root; $0.45$ just recycles the distance.`
+            yield: 'MEDIUM',
+            explanation: `$0.80 = 5t^2 \\Rightarrow t^2 = 0.16 \\Rightarrow t = 0.40$ s. Choosing $0.16$ forgets the square root; $0.80$ just recycles the distance; $0.28$ drops the $\\tfrac{1}{2}$ ($0.80 = 10t^2$, so $t^2 = 0.08$).`
           },
           {
             question: `A motion sensor records a velocity that decreases linearly from $8\\;\\text{m/s}$ to $0$ over $4\\;\\text{s}$. The distance traveled during this interval is:`,
             options: [`$32\\;\\text{m}$`, `$8\\;\\text{m}$`, `$4\\;\\text{m}$`, `$16\\;\\text{m}$`],
             correctAnswer: 3,
-            explanation: `Distance is the area under the $v$-$t$ graph — here a triangle: $\\tfrac{1}{2}(8)(4) = 16$ m. Multiplying $8 \\times 4 = 32$ treats the motion as constant velocity.`
+            yield: 'HIGH',
+            explanation: `Distance is the area under the $v$-$t$ graph — here a triangle: $\\tfrac{1}{2}(8)(4) = 16$ m. Multiplying $8 \\times 4 = 32$ treats the motion as constant velocity; $8$ m reads the starting speed as a distance, and $4$ m reads the elapsed time as one.`
           },
           {
             question: `A swimmer swims upstream at $1.5\\;\\text{m/s}$ relative to the water; the current flows at $2\\;\\text{m/s}$. Relative to the riverbank, the swimmer moves:`,
-            options: [`$0.5\\;\\text{m/s}$ downstream`, `$3.5\\;\\text{m/s}$ upstream`, `$1.5\\;\\text{m/s}$ upstream`, `$0.5\\;\\text{m/s}$ upstream`],
+            options: [`$0.5\\;\\text{m/s}$ downstream`, `$3.5\\;\\text{m/s}$ upstream`, `$1.5\\;\\text{m/s}$ upstream`, `$2\\;\\text{m/s}$ downstream`],
             correctAnswer: 0,
-            explanation: `Along one line, velocities add: $1.5$ upstream $- 2$ downstream $= 0.5$ m/s downstream — the current wins. Adding to get $3.5$ m/s upstream reverses the current's direction.`
+            yield: 'MEDIUM',
+            explanation: `Along one line, signed velocities add: taking downstream as positive, $-1.5 + 2 = +0.5$ m/s, so the swimmer drifts $0.5$ m/s downstream — the current wins. Adding the magnitudes to get $3.5$ m/s upstream reverses the current's direction; $1.5$ m/s upstream ignores the current, and $2$ m/s downstream ignores the swimming.`
           },
           {
             question: `A skydiver has reached terminal velocity. Which statement is correct?`,
-            options: [`Velocity is zero and acceleration is $g$`, `Both velocity and acceleration are at their maximum`, `Velocity is at its maximum and acceleration is zero`, `Velocity is constant because gravity has stopped acting`],
+            options: [`Velocity is zero and acceleration is $g$ downward`, `Both velocity and acceleration are at their maximum`, `Velocity is maximal and acceleration is zero`, `Velocity is constant because gravity has stopped acting`],
             correctAnswer: 2,
-            explanation: `At terminal velocity, drag has grown to balance weight, so the net force and acceleration are zero while speed sits at its maximum. Gravity never stops acting — it is exactly canceled by drag.`
+            yield: 'HIGH',
+            explanation: `At terminal velocity, drag has grown to balance weight, so the net force and acceleration are zero while speed sits at its maximum. Gravity never stops acting — it is exactly canceled by drag. Zero velocity with acceleration $g$ describes the top of a vertical throw, not a falling skydiver, and acceleration cannot be at a maximum once it has dropped to zero.`
           },
           {
-            question: `A ball is thrown straight up at $25\\;\\text{m/s}$ and caught at the same height ($g = 10\\;\\text{m/s}^2$). Estimate the total flight time:`,
-            options: [`$2.5\\;\\text{s}$`, `$5\\;\\text{s}$`, `$10\\;\\text{s}$`, `$50\\;\\text{s}$`],
+            question: `A ball thrown straight up rises to $20\\;\\text{m}$ ($g = 10\\;\\text{m/s}^2$). Its launch speed was:`,
+            options: [`$10\\;\\text{m/s}$`, `$20\\;\\text{m/s}$`, `$40\\;\\text{m/s}$`, `$200\\;\\text{m/s}$`],
             correctAnswer: 1,
-            explanation: `$T = 2v_0/g = 2(25)/10 = 5$ s. Answering $2.5$ s counts only the way up — the round trip doubles it by symmetry.`
+            yield: 'HIGH',
+            explanation: `From $H = v_0^2/2g$, $v_0 = \\sqrt{2gH} = \\sqrt{2(10)(20)} = \\sqrt{400} = 20$ m/s. The rise takes $2$ s, so $10$ m/s is the AVERAGE speed on the way up ($20/2$), not the launch speed; $40$ m/s multiplies $g$ by the $4$ s round trip instead of the $2$ s rise; $200$ m/s is $gH$, missing both the 2 and the square root.`
           }
         ]
       }
@@ -96,12 +106,17 @@ of travel before braking even begins — the passage will typically close the lo
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Reaction-time drop tests are free fall in disguise: $t = \\sqrt{d/5}$ with $g = 10\\;\\text{m/s}^2$
-- On data tables and graphs, reach for slope and area before reaching for equations
-- Relative velocity along a line is simple addition and subtraction of signed velocities
-- Terminal velocity: maximum speed with zero acceleration — drag balances weight
-- Triage answer choices first: powers of ten, missing square roots, and $x$ vs. $x^2$ pairs give answers away
-- Keep motion phases separate (constant-velocity travel vs. free fall), just like $x$ and $y$ in projectiles`
+- **Drop tests are free fall.** A ruler caught after falling $d$ gives the reaction time $t = \\sqrt{d/5}$ with $g = 10\\;\\text{m/s}^2$.
+- **Relative velocity on a line.** Signed velocities simply add: $v_{swim} \\pm v_{current}$ relative to the shore.
+- **Terminal velocity.** Drag balances weight, so the speed is at its maximum while the acceleration is zero.
+- **Triage before computing.** Options a power of ten apart, or paired as $x$ and $x^2$, are settled by a quick estimate.
+
+**Common traps**
+
+- **Distance ratio as time ratio.** Since $d \\propto t^2$, a fall $2.25$ times as far takes only $1.5$ times as long.
+- **Adding opposing velocities.** Swimming $1.5\\;\\text{m/s}$ upstream in a $2\\;\\text{m/s}$ current gives $0.5\\;\\text{m/s}$ downstream, not $3.5$.
+- **Gravity stops at terminal velocity.** Gravity still acts; drag cancels it exactly, so the net force is zero.
+- **Mixing motion phases.** Constant-velocity travel before the response and the ruler's free fall need separate equations.`
     }
   ]
 };

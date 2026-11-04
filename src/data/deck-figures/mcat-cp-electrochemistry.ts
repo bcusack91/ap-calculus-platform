@@ -361,7 +361,7 @@ ${T(725, 168, 15, 'the drive is entropic: equalize [Cu²⁺]')}
 <g class="fig-accent-2">${T(725, 230, 15, 'oxidation on the DILUTE side')}</g>
 ${T(725, 275, 16, 'E = (0.0592 / n) log(conc / dilute)')}
 ${T(725, 303, 17, '= 0.0296 × log 100 = 0.059 V', 'start', '700')}
-<g class="fig-muted">${T(725, 330, 15, '≈ 59 mV per decade per electron')}</g>
+<g class="fig-muted">${T(725, 330, 15, '≈ 59/n mV per decade (30 mV for n = 2)')}</g>
 ${T(725, 375, 16, 'runs until equal, then E = 0')}
 <g class="fig-muted">${T(725, 415, 15, 'neuron: the K⁺ gradient ≈ −90 mV')}</g>
 </svg>`
@@ -528,12 +528,12 @@ export const mcatElectrochemistryFigures: DeckFigurePlacement[] = [
     figure: {
       svg: concentrationSvg,
       alt:
-        'Two copper electrodes in Cu²⁺ solutions of different strength: the left beaker is faintly blue, 0.010 M Cu²⁺ (dilute), and its copper is the anode (−, red): Cu → Cu²⁺ + 2e⁻ tops the dilute side up. The right beaker is deep blue, 1.0 M Cu²⁺ (concentrated), and its copper is the cathode (+, blue): Cu²⁺ + 2e⁻ → Cu uses up the excess. Electrons cross the wire from the dilute side to the concentrated side; a salt bridge carries anions toward the anode beaker and cations toward the cathode beaker. Right column: same metal, same ion, only the concentration differs; E° = 0 because the half-cells are identical and the drive is entropic — equalize [Cu²⁺]; reduction on the concentrated side, oxidation on the dilute side; E = (0.0592/n) log(conc/dilute) = 0.0296 × log 100 = 0.059 V, about 59 mV per decade per electron; the cell runs until the concentrations are equal, then E = 0; a neuron’s K⁺ gradient gives about −90 mV the same way.',
+        'Two copper electrodes in Cu²⁺ solutions of different strength: the left beaker is faintly blue, 0.010 M Cu²⁺ (dilute), and its copper is the anode (−, red): Cu → Cu²⁺ + 2e⁻ tops the dilute side up. The right beaker is deep blue, 1.0 M Cu²⁺ (concentrated), and its copper is the cathode (+, blue): Cu²⁺ + 2e⁻ → Cu uses up the excess. Electrons cross the wire from the dilute side to the concentrated side; a salt bridge carries anions toward the anode beaker and cations toward the cathode beaker. Right column: same metal, same ion, only the concentration differs; E° = 0 because the half-cells are identical and the drive is entropic — equalize [Cu²⁺]; reduction on the concentrated side, oxidation on the dilute side; E = (0.0592/n) log(conc/dilute) = 0.0296 × log 100 = 0.059 V, about 59/n mV per decade (30 mV for n = 2); the cell runs until the concentrations are equal, then E = 0; a neuron’s K⁺ gradient gives about −90 mV the same way.',
       caption: 'The copper concentration cell: identical half-cells (E° = 0) driven only by the concentration difference — reduction on the concentrated side, 0.059 V for a hundredfold ratio with n = 2.',
     },
     blocks: [
       '- Identical half-cells → $E^\\circ = 0$; reduction in the **concentrated** beaker, oxidation in the dilute one, until they match',
-      '- $E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$: $0.010$ vs $1.0$ M, $n = 2$ → $0.059$ V (≈ 59 mV per decade per electron)',
+      '- $E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$: $0.010$ vs $1.0$ M, $n = 2$ → $0.059$ V (≈ 59/n mV per decade, 30 mV for $n = 2$)',
     ],
   },
   {

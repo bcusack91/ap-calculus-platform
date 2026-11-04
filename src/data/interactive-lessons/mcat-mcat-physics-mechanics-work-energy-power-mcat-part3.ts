@@ -10,7 +10,9 @@ export const mcatMechWorkPart3Data = {
 
 ### Power: The Rate of Doing Work
 
-$P = \\frac{W}{t} = \\frac{\\Delta E}{t} \\qquad \\text{and for a force moving at speed } v: \\quad P = Fv$
+$P = W/t = \\Delta E/t$
+
+For a force moving at speed $v$: $P = Fv$
 
 Units: watts ($1\\;\\text{W} = 1\\;\\text{J/s}$). A motor's power rating tells you how FAST it converts energy, not how much work it can ultimately do — a weak motor can lift any weight given a pulley system and enough time.
 
@@ -41,31 +43,37 @@ A ramp $6\\;\\text{m}$ long rising $1.5\\;\\text{m}$ has $MA = 4$: one quarter t
       type: 'text' as const,
       content: `### Worked Example — A Construction Hoist
 
-A motor lifts a $100\\;\\text{kg}$ beam $20\\;\\text{m}$ at constant speed in $40\\;\\text{s}$. ($g = 10\\;\\text{m/s}^2$)
+**Problem.** A motor lifts a $100\\;\\text{kg}$ beam $20\\;\\text{m}$ at constant speed in $40\\;\\text{s}$. ($g = 10\\;\\text{m/s}^2$)
 
-**Step 1 — Useful work.**
+- **(a)** How much useful work does the motor do on the beam?
+- **(b)** What is the motor's useful power output?
+- **(c)** What electrical power must the motor draw if it is 50% efficient?
+- **(d)** Does $P = Fv$ give the same output power?
 
-$W = mgh = (100)(10)(20) = 20000\\;\\text{J}$
+**(a) Useful work.** $W = mgh = (100)(10)(20) = 20000\\;\\text{J}$
 
-**Step 2 — Useful power output.**
+**(b) Useful power output.** With $20000\\;\\text{J}$ from (a): $P = \\dfrac{W}{t} = \\dfrac{20000}{40} = 500\\;\\text{W}$
 
-$P = \\frac{W}{t} = \\frac{20000}{40} = 500\\;\\text{W}$
+**(c) Electrical input.** With the $500\\;\\text{W}$ output from (b): $P_{in} = \\dfrac{500}{0.5} = 1000\\;\\text{W}$. Half the electrical energy becomes heat in the motor; only half lifts the beam.
 
-**Step 3 — Electrical input if the motor is 50% efficient.**
-
-$P_{in} = \\frac{500}{0.5} = 1000\\;\\text{W}$
-
-Half the electrical energy becomes heat in the motor; only half lifts the beam.
-
-**Cross-check with** $P = Fv$: the beam rises at $v = 20/40 = 0.5\\;\\text{m/s}$ and the lifting force at constant speed equals the weight, $1000\\;\\text{N}$, so $P = (1000)(0.5) = 500\\;\\text{W}$. Same answer, two routes — a good MCAT self-audit.
+**(d) Cross-check.** The beam rises at $v = 20/40 = 0.5\\;\\text{m/s}$, and at constant speed the lifting force equals the weight, $1000\\;\\text{N}$, so $P = Fv = (1000)(0.5) = 500\\;\\text{W}$. Same answer as (b) by a second route, a good MCAT self-audit.
 
 ### Worked Example — Why the Ramp Helps
 
-Loading an $800\\;\\text{N}$ barrel straight up onto a $1.5\\;\\text{m}$ platform takes $800\\;\\text{N}$ of force. Rolling it up a frictionless $6\\;\\text{m}$ ramp instead:
+**Problem.** An $800\\;\\text{N}$ barrel must be raised onto a $1.5\\;\\text{m}$ platform, either lifted straight up or rolled at constant speed up a frictionless ramp $6\\;\\text{m}$ long.
 
-$MA = \\frac{6}{1.5} = 4 \\Rightarrow F = \\frac{800}{4} = 200\\;\\text{N}$
+- **(a)** What force does lifting it straight up take?
+- **(b)** What is the ramp's mechanical advantage, and what force does the ramp route take?
+- **(c)** How much work does each route take?
+- **(d)** How would friction on the ramp change the total work?
 
-Work is identical either way: $(800)(1.5) = 1200\\;\\text{J}$ vertically, or $(200)(6) = 1200\\;\\text{J}$ along the ramp. The ramp lowers the force, never the energy bill — with friction, the ramp actually costs MORE total work.`
+**(a) Straight up.** At constant speed the lift must match the weight: $800\\;\\text{N}$.
+
+**(b) Up the ramp.** $MA = \\dfrac{6}{1.5} = 4 \\Rightarrow F = \\dfrac{800}{4} = 200\\;\\text{N}$
+
+**(c) Work.** With the $200\\;\\text{N}$ from (b), the work is identical either way: $(800)(1.5) = 1200\\;\\text{J}$ vertically, or $(200)(6) = 1200\\;\\text{J}$ along the ramp. The ramp lowers the force, never the energy bill.
+
+**(d) Friction.** Friction adds work over the whole $6\\;\\text{m}$, so the ramp route with friction actually costs MORE than $1200\\;\\text{J}$ in total.`
     },
     {
       id: 'wke3-quiz1',
@@ -75,33 +83,38 @@ Work is identical either way: $(800)(1.5) = 1200\\;\\text{J}$ vertically, or $(2
         questions: [
           {
             question: `A machine does $3000\\;\\text{J}$ of work in $60\\;\\text{s}$. Its power output is:`,
-            options: [`$180\\;\\text{kW}$`, `$20\\;\\text{W}$`, `$3000\\;\\text{W}$`, `$50\\;\\text{W}$`],
+            options: [`$180\\;\\text{kW}$`, `$0.02\\;\\text{W}$`, `$3000\\;\\text{W}$`, `$50\\;\\text{W}$`],
             correctAnswer: 3,
-            explanation: `$P = W/t = 3000/60 = 50$ W. Multiplying gives the $180000$ distractor; power is a RATE, so divide by time.`
+            yield: 'HIGH',
+            explanation: `$P = W/t = 3000/60 = 50$ W. Multiplying gives $180$ kW, dividing time by work gives $0.02$ W, and $3000$ W forgets the time altogether; power is a RATE, so divide work by time.`
           },
           {
             question: `A car's engine provides a $2000\\;\\text{N}$ forward force while cruising at a constant $15\\;\\text{m/s}$. The engine's useful power output is:`,
             options: [`$30\\;\\text{kW}$`, `$133\\;\\text{W}$`, `$2\\;\\text{kW}$`, `$15\\;\\text{kW}$`],
             correctAnswer: 0,
-            explanation: `$P = Fv = (2000)(15) = 30000$ W $= 30$ kW. Constant speed means this power all goes to fighting drag and friction.`
+            yield: 'HIGH',
+            explanation: `$P = Fv = (2000)(15) = 30000$ W $= 30$ kW. Constant speed means this power all goes to fighting drag and friction. $133$ W divides force by speed instead of multiplying, and $2$ kW and $15$ kW each keep only one factor (the force or the speed) and drop the other.`
           },
           {
-            question: `A frictionless ramp is $6\\;\\text{m}$ long and rises $1.5\\;\\text{m}$. The force needed to push an $800\\;\\text{N}$ barrel up at constant speed is:`,
-            options: [`$800\\;\\text{N}$`, `$3200\\;\\text{N}$`, `$200\\;\\text{N}$`, `$133\\;\\text{N}$`],
+            question: `A frictionless ramp is $8\\;\\text{m}$ long and rises $2\\;\\text{m}$. The force needed to push a $1000\\;\\text{N}$ crate up at constant speed is:`,
+            options: [`$1000\\;\\text{N}$`, `$4000\\;\\text{N}$`, `$250\\;\\text{N}$`, `$125\\;\\text{N}$`],
             correctAnswer: 2,
-            explanation: `$MA = 6/1.5 = 4$, so $F = 800/4 = 200$ N. Equivalently $F = W\\sin\\theta$ with $\\sin\\theta = 1.5/6 = 0.25$. The work, $1200$ J, is unchanged.`
+            yield: 'HIGH',
+            explanation: `$MA = 8/2 = 4$, so $F = 1000/4 = 250$ N. Equivalently $F = mg\\sin\\theta$ with $\\sin\\theta = 2/8 = 0.25$. The work, $2000$ J, is unchanged. $1000$ N is the force to lift the crate straight up with no ramp, $4000$ N multiplies by the mechanical advantage instead of dividing, and $125$ N divides the weight by the ramp length alone.`
           },
           {
             question: `An ideal simple machine can multiply:`,
             options: [`Work`, `Force`, `Energy`, `Power`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Machines trade force for distance: $F_{in}d_{in} = F_{out}d_{out}$. Work and energy can never be multiplied (conservation of energy), and an ideal machine transmits power unchanged.`
           },
           {
             question: `A motor consumes $2000\\;\\text{J}$ of electrical energy while doing $1500\\;\\text{J}$ of useful work. Its efficiency is:`,
             options: [`$25\\%$`, `$133\\%$`, `$50\\%$`, `$75\\%$`],
             correctAnswer: 3,
-            explanation: `$e = 1500/2000 = 0.75 = 75\\%$. The other $500$ J becomes heat. An answer above $100\\%$ ($133\\%$) is physically impossible — free elimination.`
+            yield: 'HIGH',
+            explanation: `$e = 1500/2000 = 0.75 = 75\\%$. The other $500$ J becomes heat. $25\\%$ is that wasted fraction ($500/2000$), not the useful one; $50\\%$ would need only $1000$ J of useful work. An answer above $100\\%$ ($133\\%$, the inverted ratio) is physically impossible — free elimination.`
           }
         ]
       }
@@ -111,12 +124,17 @@ Work is identical either way: $(800)(1.5) = 1200\\;\\text{J}$ vertically, or $(2
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- $P = W/t = \\Delta E/t$, and $P = Fv$ for a force pushing at speed $v$; watts are joules per second
-- Constant cruising speed still requires power — it feeds drag and friction, not kinetic energy
-- Efficiency $=$ useful out / total in; the rest is heat; muscle runs near $20$-$25\\%$
-- Ideal machines conserve work: less force means proportionally more distance ($MA = d_{in}/d_{out}$)
-- Ramp $MA =$ length/height; pulley $MA =$ supporting strands; lever $MA =$ arm ratio
-- Cross-check power answers by computing both $W/t$ and $Fv$ when the data allows`
+- **Power is a rate.** $P = W/t = \\Delta E/t$ in watts (J/s), and $P = Fv$ for a force pushing at speed $v$.
+- **Cruising still costs power.** At constant speed the engine's $P = Fv$ feeds drag and friction, not kinetic energy.
+- **Efficiency is out over in.** Useful energy out divided by total energy in; the rest is heat, and muscle runs near $20$-$25\\%$.
+- **Machines trade force for distance.** Ideally $F_{in}d_{in} = F_{out}d_{out}$; ramp MA is length/height, pulley MA is strands.
+
+**Common traps**
+
+- **Multiplying by time.** Power is work DIVIDED by time; $W \\times t$ gives a huge, meaningless number.
+- **Machines saving work.** An ideal machine cuts the force but never the work, and friction makes the real total larger.
+- **Efficiency above 100%.** Any answer over 100% means the ratio is inverted: useful output goes on top.
+- **Rating as capacity.** A power rating says how fast energy converts, not how much work a motor can eventually do.`
     }
   ]
 };

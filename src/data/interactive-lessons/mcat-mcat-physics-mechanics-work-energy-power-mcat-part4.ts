@@ -16,7 +16,7 @@ Energy methods shine exactly where kinematics struggles:
 - **No time given, none wanted:** energy equations never contain $t$; power questions then bring time back in at the end.
 - **"How much was lost?" questions:** compute mechanical energy before and after; the gap is heat.
 
-Force methods win when a question asks about a force, a normal force, or an acceleration at one instant — energy conservation cannot see individual forces.
+Force methods win when a question asks about a force, a normal force, or an acceleration — energy alone cannot give a force or acceleration at one instant.
 
 ### The Physiology Crossover
 
@@ -24,7 +24,11 @@ MCAT passages love metabolic energy accounting:
 
 - $1$ food Calorie (kcal) $= 4184\\;\\text{J} \\approx 4200\\;\\text{J}$
 - Muscle efficiency $\\approx 20\\%$: metabolic power $\\approx 5\\times$ the mechanical power output
-- Stair-climb and ergometer experiments measure **useful** power as $mgh/t$ or from a flywheel's friction; the passage then asks you to scale up to metabolic cost
+- Stair-climb experiments measure **useful** power as $mgh/t$; the passage then asks you to scale up to metabolic cost
+
+<!-- yield:low -->
+- Cycle-ergometer studies measure useful power instead from the friction force braking the machine's flywheel.
+<!-- /yield -->
 
 ### Scaling Arguments Answer Whole Question Sets
 
@@ -39,25 +43,23 @@ Because $KE = \\tfrac{1}{2}mv^2$ and $W = Fd$:
       type: 'text' as const,
       content: `### Worked Example — A Stair-Climb Metabolic Study (Passage Style)
 
-*Exercise physiologists have a* $60\\;\\text{kg}$ *subject run up a staircase rising* $3\\;\\text{m}$ *in* $5\\;\\text{s}$*. Oxygen-uptake measurements independently show the subject's metabolic power during the climb is about* $1800\\;\\text{W}$*. (*$g = 10\\;\\text{m/s}^2$*)*
+**Problem.** Exercise physiologists have a $60\\;\\text{kg}$ subject run up a staircase rising $3\\;\\text{m}$ in $4\\;\\text{s}$. Oxygen-uptake measurements independently put her metabolic power during the climb at about $2250\\;\\text{W}$. ($g = 10\\;\\text{m/s}^2$)
 
-**Step 1 — Useful mechanical work.** Only the vertical rise stores energy:
+- **(a)** How much useful mechanical work does the climb do?
+- **(b)** What is the subject's useful power output?
+- **(c)** What is her muscular efficiency?
+- **(d)** How many food Calories does the climb cost?
+- **(e)** What efficiency would you get by dividing the wrong way, and what goes wrong if you use the stair length?
 
-$W = mgh = (60)(10)(3) = 1800\\;\\text{J}$
+**(a) Useful mechanical work.** Only the vertical rise stores energy: $W = mgh = (60)(10)(3) = 1800\\;\\text{J}$
 
-**Step 2 — Useful power output.**
+**(b) Useful power output.** With $1800\\;\\text{J}$ from (a): $P_{out} = \\dfrac{1800}{4} = 450\\;\\text{W}$
 
-$P_{out} = \\frac{1800}{5} = 360\\;\\text{W}$
+**(c) Efficiency.** With $450\\;\\text{W}$ from (b): $e = \\dfrac{P_{out}}{P_{met}} = \\dfrac{450}{2250} = 20\\%$, right at the textbook value for muscle. A passage will often make you extract this number from a data table across several subjects.
 
-**Step 3 — Efficiency.**
+**(d) Fuel cost.** At $2250\\;\\text{W}$ for $4\\;\\text{s}$, the climb costs $9000\\;\\text{J} \\approx 2$ food Calories. Climbing stairs is cheap in Calories and expensive in perceived effort, a contrast passages exploit in their discussion paragraphs.
 
-$e = \\frac{P_{out}}{P_{met}} = \\frac{360}{1800} = 20\\%$
-
-Right at the textbook value for muscle — a passage will often make you extract this number from a data table across several subjects.
-
-**Step 4 — Fuel cost sanity check.** At $1800\\;\\text{W}$ for $5\\;\\text{s}$, the climb costs $9000\\;\\text{J} \\approx 2$ food Calories. Climbing stairs is cheap in Calories and expensive in perceived effort — passages exploit that contrast in their discussion paragraphs.
-
-**Passage strategy:** label every energy number as *mechanical out* or *metabolic in* before computing anything. Most wrong answer choices come from dividing the right numbers in the wrong direction (yielding an efficiency of $500\\%$) or from using the stair path length instead of the vertical height.`
+**(e) Passage strategy.** Dividing metabolic by mechanical power gives $2250/450 = 500\\%$, an impossible efficiency that flags the inverted ratio. The stair length overstates the work: gravity counts only the $3\\;\\text{m}$ vertical rise. Label each number *mechanical out* or *metabolic in* first.`
     },
     {
       id: 'wke4-quiz1',
@@ -69,31 +71,36 @@ Right at the textbook value for muscle — a passage will often make you extract
             question: `A $50\\;\\text{kg}$ subject climbs $4\\;\\text{m}$ of stairs in $10\\;\\text{s}$ ($g = 10\\;\\text{m/s}^2$). Her useful power output is:`,
             options: [`$2000\\;\\text{W}$`, `$200\\;\\text{W}$`, `$20\\;\\text{W}$`, `$500\\;\\text{W}$`],
             correctAnswer: 1,
-            explanation: `$P = mgh/t = (50)(10)(4)/10 = 2000/10 = 200$ W. Forgetting to divide by time gives $2000$; only the vertical height counts, not the stair path.`
+            yield: 'HIGH',
+            explanation: `$P = mgh/t = (50)(10)(4)/10 = 2000/10 = 200$ W. Forgetting to divide by time gives $2000$ W; using the mass instead of the weight (dropping $g$) gives $20$ W; dividing by the height instead of the time gives $500$ W.`
           },
           {
             question: `Muscle operates at about $20\\%$ efficiency. To deliver $100\\;\\text{J}$ of mechanical work, the metabolic energy consumed is about:`,
             options: [`$20\\;\\text{J}$`, `$120\\;\\text{J}$`, `$500\\;\\text{J}$`, `$2000\\;\\text{J}$`],
             correctAnswer: 2,
-            explanation: `Input $=$ output/efficiency $= 100/0.2 = 500$ J. Multiplying by $0.2$ (giving $20$ J) runs the efficiency backwards — inputs must exceed outputs.`
+            yield: 'MEDIUM',
+            explanation: `Input $=$ output/efficiency $= 100/0.2 = 500$ J. Multiplying by $0.2$ (giving $20$ J) runs the efficiency backwards — inputs must exceed outputs. $120$ J just adds $20\\%$ to the output, and $2000$ J treats $20\\%$ as the number $20$ ($100 \\times 20$).`
           },
           {
             question: `For a block sliding down a frictionless but curving ramp, energy conservation is preferred over kinematics chiefly because:`,
             options: [`Gravity's work depends only on the height change, not the path shape`, `Energy methods also give the normal force at each point`, `Acceleration is constant along the curve`, `Kinematics cannot handle vertical motion`],
             correctAnswer: 0,
-            explanation: `Gravity is conservative: $W = mgh$ regardless of the winding route, so $v = \\sqrt{2gh}$ drops out instantly. Kinematics fails here precisely because acceleration is NOT constant on a curve — and energy methods never reveal individual forces.`
+            yield: 'MEDIUM',
+            explanation: `Gravity is conservative: $W = mgh$ regardless of the winding route, so $v = \\sqrt{2gh}$ drops out instantly. Kinematics fails here precisely because acceleration is NOT constant on a curve — and energy methods never reveal individual forces such as the normal force. Kinematics handles vertical motion perfectly well (free fall); its limit is a changing acceleration.`
           },
           {
             question: `A car's brakes apply the same force regardless of speed. If the car's speed doubles, its stopping distance:`,
-            options: [`Stays the same`, `Doubles`, `Increases by $\\sqrt{2}$`, `Quadruples`],
+            options: [`Stays the same`, `Doubles, since $d \\propto v$`, `Increases by $\\sqrt{2}$`, `Quadruples`],
             correctAnswer: 3,
-            explanation: `Stopping distance $d = KE/F \\propto v^2$: doubling $v$ quadruples $d$. (Stopping TIME only doubles, since $t = p/F \\propto v$ — the distance/time, energy/momentum pairing.)`
+            yield: 'HIGH',
+            explanation: `Stopping distance $d = KE/F \\propto v^2$: doubling $v$ quadruples $d$. It is the stopping TIME that only doubles, since $t = p/F \\propto v$ — the distance/time, energy/momentum pairing.`
           },
           {
-            question: `A crate is lowered $2\\;\\text{m}$ at constant velocity by a rope. The work done on the crate by the rope's tension is:`,
-            options: [`Positive`, `Negative`, `Zero`, `Equal to $+2mg$`],
+            question: `A $10\\;\\text{kg}$ crate is lowered $2\\;\\text{m}$ at constant velocity ($g = 10\\;\\text{m/s}^2$). The work done by the rope is:`,
+            options: [`$+200\\;\\text{J}$`, `$-200\\;\\text{J}$`, `$0\\;\\text{J}$`, `$-20\\;\\text{J}$`],
             correctAnswer: 1,
-            explanation: `Tension pulls up while the displacement points down: $W = Td\\cos 180^\\circ < 0$. At constant velocity $T = mg$, so the rope does $-2mg$ joules while gravity does $+2mg$ — net zero, matching $\\Delta KE = 0$.`
+            yield: 'HIGH',
+            explanation: `At constant velocity the tension equals the weight, $T = mg = 100$ N, and it pulls up while the crate moves down: $W = Td\\cos 180^\\circ = -(100)(2) = -200$ J. $+200$ J is gravity's work, not the rope's; $0$ J is the NET work (rope plus gravity, matching $\\Delta KE = 0$); $-20$ J uses the $10$ kg mass as if it were the force.`
           }
         ]
       }
@@ -103,12 +110,21 @@ Right at the textbook value for muscle — a passage will often make you extract
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Choose energy methods for curved paths, missing time, and "how much was lost" audits; choose force methods for instantaneous forces and accelerations
-- Stair-climb experiments: useful power $= mgh/t$; metabolic power $\\approx 5\\times$ larger at $20\\%$ muscle efficiency
-- $1$ food Calorie $\\approx 4200\\;\\text{J}$ — mechanical work is startlingly cheap in Calories
-- Same braking force: stopping distance scales with $v^2$ (energy), stopping time with $v$ (momentum)
-- Label numbers as mechanical-out vs. metabolic-in before dividing — efficiency above $100\\%$ signals an inverted ratio
-- Use vertical height, never path length, for gravitational energy`
+- **When to use energy.** Curved paths, missing time and "how much was lost?" audits call for energy methods.
+- **When to use forces.** A force, a normal force or an acceleration at one instant needs Newton's laws, not energy.
+- **Stair-climb power.** Useful power is $mgh/t$; at $20\\%$ efficiency muscle burns $5\\times$ that, and $1$ Calorie $\\approx 4200\\;\\text{J}$.
+- **Distance vs. time.** At a fixed braking force, stopping distance scales with $v^2$ (energy), stopping time with $v$ (momentum).
+
+**Common traps**
+
+- **Stair length for height.** Gravitational energy uses the vertical rise, never the length of the stairs or path.
+- **Inverted efficiency.** Label numbers mechanical-out or metabolic-in first; an efficiency above $100\\%$ means an upside-down ratio.
+- **Doubling distance with speed.** Doubling the speed quadruples the stopping distance; only the stopping time doubles.
+- **Lowering as positive work.** A rope lowering a crate pulls up while the crate moves down, so the rope's work is negative.
+
+<!-- yield:low -->
+- Low-yield extras: the cycle-ergometer flywheel method of measuring useful power.
+<!-- /yield -->`
     }
   ]
 };
