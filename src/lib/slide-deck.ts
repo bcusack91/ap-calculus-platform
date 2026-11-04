@@ -220,6 +220,8 @@ export function takeawayGridSlides(title: string, blocks: string[]): ContentSlid
       groups[groups.length - 1].items.push(line)
       continue
     }
+    // "Next up" / "Where this fits" navigation lines belong to the lesson, not the deck.
+    if (/^\**(Next up|Where this fits)\b/i.test(line)) continue
     rest.push(line)
   }
   if (groups[0].items.length === 0) return null
@@ -391,7 +393,7 @@ export function sameSlideUnit(prevTitle: string, nextTitle: string): boolean {
  * never divided, so the polls placed after a beat come after the whole
  * example, never in the middle of it.
  */
-export function segmentContent<T extends { title: string }>(content: T[], size: number): T[][] {
+export function segmentContent<T extends { title: string }>(content: T[], size: number, cutBefore?: (unitFirst: T, prevLast: T) => boolean): T[][] {
   const units: T[][] = []
   for (const slide of content) {
     const last = units[units.length - 1]
@@ -401,6 +403,13 @@ export function segmentContent<T extends { title: string }>(content: T[], size: 
   const segments: T[][] = []
   let current: T[] = []
   for (const unit of units) {
+    // A beat never crosses a lesson-part boundary or runs into a part's
+    // recap: the poll placed after a beat must sit inside its own part and
+    // before the Key Takeaways that state its answer (reviews, 2026-11-04).
+    if (current.length && cutBefore?.(unit[0], current[current.length - 1])) {
+      segments.push(current)
+      current = []
+    }
     current.push(...unit)
     if (current.length >= size) {
       segments.push(current)
@@ -409,11 +418,14 @@ export function segmentContent<T extends { title: string }>(content: T[], size: 
   }
   if (current.length) segments.push(current)
   // Never leave a lonely 1-slide beat at the end — fold it into the previous.
-  if (segments.length >= 2 && segments[segments.length - 1].length === 1) {
+  if (segments.length >= 2 && segments[segments.length - 1].length === 1 && !cutBefore?.(segments[segments.length - 1][0], segments[segments.length - 2].slice(-1)[0])) {
     segments[segments.length - 2].push(...segments.pop()!)
   }
   return segments
 }
+
+/** A slide that opens a part's recap (its Key Takeaways grid, or the traps grid that follows). */
+export const isRecapSlide = (title: string): boolean => /^(Key Takeaways|Common Traps)\b/i.test(slideUnitKey(title))
 
 const SLUG_NOISE = new Set(['mcat', 'sat', 'act', 'psat', 'ap', 'prep'])
 const slugTerms = (slug: string) => slug.split('-').filter((t) => t && !SLUG_NOISE.has(t))
@@ -690,7 +702,11 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   const pollPart = new Map<PollSlide, number>()
   const slidePart = new Map<Slide, number>()
   try {
-    const pool = await generateExitQuiz(topicSlug, MAX_POLL_CANDIDATES)
+    // Seeded by the slug: regenerating a deck draws the same poll candidates,
+    // so a reviewed deck is the deck that gets stored.
+    let seed = 0x811c9dc5
+    for (let i = 0; i < topicSlug.length; i++) seed = Math.imul(seed ^ topicSlug.charCodeAt(i), 0x01000193)
+    const pool = await generateExitQuiz(topicSlug, MAX_POLL_CANDIDATES, undefined, seed >>> 0)
     const seen = new Set<string>()
     for (const q of onTopicFirst(pool, topicSlug, MAX_POLLS)) {
       const raw = q as unknown as Record<string, unknown>
@@ -864,7 +880,14 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   content = applyDeckFigures(content, figures)
 
   // ---- Segment the content into teaching beats of ~3 slides (whole units) ----
-  const segments: ContentSlide[][] = segmentContent(content, SEGMENT_SIZE)
+  const segments: ContentSlide[][] = segmentContent(content, SEGMENT_SIZE, (next, prev) => {
+    const a = slidePart.get(prev), b = slidePart.get(next)
+    if (a !== undefined && b !== undefined && a !== b) return true
+    return isRecapSlide(next.title) && !isRecapSlide(prev.title)
+  })
+  // Recap beats take no polls: a check belongs before the takeaways that
+  // answer it, so a poll matched here moves to the part's last teaching beat.
+  const recapSeg = segments.map((seg) => isRecapSlide(seg[0].title))
 
   // ---- Place worked examples after the segment whose concepts they apply ----
   const segTerms = segments.map((seg) => {
@@ -940,11 +963,12 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     for (const [p, n] of counts) if (best === undefined || n > counts.get(best)!) best = p
     return best
   })
+  const teachTerms = segTerms.map((t, i) => (recapSeg[i] ? new Set<string>() : t))
   const placePoll = (p: PollSlide, terms: Set<string>): number => {
     const part = pollPart.get(p)
-    const own = part === undefined ? [] : segPart.flatMap((sp, i) => (sp === part ? [i] : []))
-    if (own.length === 0) return bestSegment(terms, segTerms)
-    const local = bestSegment(terms, own.map((i) => segTerms[i]))
+    const own = part === undefined ? [] : segPart.flatMap((sp, i) => (sp === part && !recapSeg[i] ? [i] : []))
+    if (own.length === 0) return bestSegment(terms, teachTerms)
+    const local = bestSegment(terms, own.map((i) => teachTerms[i]))
     return local >= 0 ? own[local] : own[own.length - 1]
   }
   for (const p of polls as PollSlide[]) {

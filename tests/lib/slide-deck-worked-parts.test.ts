@@ -84,7 +84,8 @@ describe('worked-example sections in lesson markdown', () => {
 describe('takeawayGridSlides', () => {
   const box = (t: string) => `- **${t}.** One short sentence about ${t}.`
   it('turns boxed takeaways and traps into grids of at most four, and keeps other lines', () => {
-    const blocks = [box('A'), box('B'), box('C'), box('D'), box('E'), '**Common traps**', box('T1'), box('T2'), '**Next up:** the next lesson.']
+    // A "Next up" navigation line belongs to the lesson and is dropped from the deck; other lines stay.
+    const blocks = [box('A'), box('B'), box('C'), box('D'), box('E'), '**Common traps**', box('T1'), box('T2'), '**Next up:** the next lesson.', 'A closing note.']
     const slides = takeawayGridSlides('Key Takeaways', blocks)!
     expect(slides.map((s) => [s.title, s.blocks.length, s.layout])).toEqual([
       ['Key Takeaways', 3, 'grid'],
