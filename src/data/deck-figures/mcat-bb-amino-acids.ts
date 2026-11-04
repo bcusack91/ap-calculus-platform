@@ -476,7 +476,7 @@ ${iefPanel}
 export const mcatAminoAcidsFigures: DeckFigurePlacement[] = [
   {
     at: 'Anatomy of an Amino Acid',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: anatomySvg,
       alt:
@@ -590,8 +590,7 @@ export const mcatAminoAcidsFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- **Affinity:** specific ligand, antibody or Ni²⁺ column for a His-tag; elute with free ligand or imidazole',
-      '- **Native PAGE** keeps size + charge + shape (complexes intact); **2D gel** = IEF first, then SDS-PAGE',
-      '- **Salting out** (ammonium sulfate) separates by solubility; **dialysis** removes small solutes through a membrane cutoff',
+      '- **Native PAGE** keeps size + charge + shape, so complexes stay intact',
     ],
   },
 ]

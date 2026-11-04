@@ -59,10 +59,10 @@ Global aphasia = both regions. Left-dominant in nearly all right-handers, most l
       type: 'text' as const,
       content: `### Worked Example — An Aphasia-Localization Passage, Fully Read
 
-**Problem 1.** After strokes, Patient 1 speaks in slow, strained fragments ("...son... visit... Tuesday"), follows three-step spoken commands, grows frustrated, and has a weak right arm. Patient 2 speaks rapid, melodic sentences with invented words ("the flibbers were altogether on the granting"), fails simple commands, and seems untroubled.
+**Problem 1.** After strokes, Patient 1 speaks in slow, strained fragments ("...son... visit... Tuesday"), follows three-step commands, is frustrated, and has a weak right arm. Patient 2 speaks rapid, melodic sentences full of invented words ("the flibbers were on the granting"), fails simple commands, and seems untroubled.
 
 - **(a)** Scored on fluency and comprehension, which aphasia does Patient 1 have?
-- **(b)** Scored the same way, which aphasia does Patient 2 have?
+- **(b)** And Patient 2?
 - **(c)** Why does Patient 1 have a weak right arm when Patient 2 does not?
 - **(d)** Why is one patient frustrated and the other untroubled?
 - **(e)** Could Patient 2's speech instead be a psychotic thought disorder?

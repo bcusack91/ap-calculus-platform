@@ -461,7 +461,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     question: `Which energy store sustains ATP production over days without food?`,
     options: [`Muscle glycogen`, `Liver glycogen`, `Creatine phosphate`, `Fat`],
     correctAnswer: 3,
-    explanation: `Fat buffers energy over days, glycogen over minutes, and creatine phosphate over seconds. Muscle and liver glycogen are depleted far too quickly to cover days of fasting. Creatine phosphate only bridges the first seconds of a sudden ATP demand.`,
+    explanation: `Fat buffers energy over days, glycogen over minutes to hours, and creatine phosphate over seconds. Muscle and liver glycogen are depleted far too quickly to cover days of fasting. Creatine phosphate only bridges the first seconds of a sudden ATP demand.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
     part: 4,

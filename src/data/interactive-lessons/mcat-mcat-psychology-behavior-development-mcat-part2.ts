@@ -42,8 +42,7 @@ Thomas & Chess: **easy**, **difficult**, and **slow-to-warm-up** profiles, visib
 - **Authoritative** (high/high): firm limits, warmth, explanation → best average outcomes (competence, self-regulation)
 - **Authoritarian** (high demand, low response): obedience-focused, punitive → anxiety, lower autonomy
 - **Permissive** (low demand, high response): warm, few limits → impulse-control problems
-- **Neglectful/uninvolved** (low/low): worst outcomes
-Outcomes vary somewhat by culture and are correlational — the same caution as above.
+- **Neglectful/uninvolved** (low/low): worst outcomes. All of these outcomes vary somewhat by culture and are correlational — the same caution as above.
 
 ### Vygotsky vs. Piaget (the guaranteed contrast)
 

@@ -59,7 +59,7 @@ Here $h$ is the depth below the surface and $g \\approx 10\\;\\text{m/s}^2$.
 - **Linear in depth.** Doubling the depth doubles $\\rho g h$, but not the total $P$, because $P_0$ does not double.
 - **Rule of thumb.** In water, $\\rho g h = (1000)(10)(10) = 10^5\\;\\text{Pa}$ for every $10\\;\\text{m}$: about one extra atmosphere per 10 m of depth.
 
-**Gauge vs. absolute pressure.** **Absolute pressure** is the total $P$. **Gauge pressure** is the amount above atmospheric pressure: $P_{\\text{gauge}} = P - P_{\\text{atm}}$, which for an open liquid is just $\\rho g h$. Tire gauges, blood-pressure cuffs and almost every medical reading report gauge pressure. A gauge pressure can be negative: the pressure in the thin fluid layer between the lungs and the chest wall is normally about $-4\\;\\text{mmHg}$, meaning 4 mmHg below atmospheric.
+**Gauge vs. absolute pressure.** **Absolute pressure** is the total $P$. **Gauge pressure** is the amount above atmospheric: $P_{\\text{gauge}} = P - P_{\\text{atm}}$, which for an open liquid is just $\\rho g h$. Tire gauges and blood-pressure cuffs report GAUGE pressure, and it can be negative: the thin fluid layer between the lungs and the chest wall sits at about $-4\\;\\text{mmHg}$, 4 mmHg below atmospheric.
 
 | Unit | Equivalent |
 |---|---|
@@ -112,7 +112,11 @@ A millimetre of mercury (mmHg) is literally the pressure under a 1 mm column of 
       type: 'text' as const,
       content: `### Barometers, Manometers and Blood Pressure
 
-**Barometer (measures atmospheric pressure).** Fill a long tube with mercury, close it, and turn it upside down in a dish of mercury. The column falls until the pressure at the bottom of the column, $\\rho_{\\text{Hg}} g h$, matches the atmosphere pushing on the dish; the space above the mercury is nearly a vacuum, so the reading is absolute. At sea level $h = 760\\;\\text{mm}$, the origin of "760 mmHg". A water barometer would need a column 13.6 times taller, about $10.3\\;\\text{m}$, which is why mercury is used. At high altitude the air above is thinner and the column is shorter.
+**Barometer (measures atmospheric pressure).** Fill a long tube with mercury, close it, and turn it upside down in a dish of mercury. The column falls until the pressure at the bottom of the column, $\\rho_{\\text{Hg}} g h$, matches the atmosphere pushing on the dish.
+
+- The space above the mercury is nearly a vacuum, so the reading is ABSOLUTE. At sea level $h = 760\\;\\text{mm}$, the origin of "760 mmHg".
+- A water barometer would need a column 13.6 times taller, about $10.3\\;\\text{m}$, which is why mercury is used.
+- At high altitude the air above is thinner and the column is shorter.
 
 **Open-tube manometer (measures gauge pressure).** A U-shaped tube of liquid has one arm connected to the gas or vessel and the other arm open to the air. The liquid is pushed DOWN on the higher-pressure side, and the height difference $\\Delta h$ between the two surfaces gives $P - P_{\\text{atm}} = \\rho g \\Delta h$. Because the open arm already carries atmospheric pressure, the reading is a gauge pressure.
 
@@ -121,8 +125,7 @@ A millimetre of mercury (mmHg) is literally the pressure under a 1 mm column of 
 - In a standing adult, arteries in the feet sit about $1.2\\;\\text{m}$ below the heart, so (taking blood's density as about $1000\\;\\text{kg/m}^3$) their pressure is higher by roughly $\\rho g h = (1000)(10)(1.2) = 1.2 \\times 10^4\\;\\text{Pa} \\approx 90\\;\\text{mmHg}$.
 - Arteries in the head, above the heart, have LOWER pressure than at heart level, for the same reason.
 - An IV bag works by hydrostatics: hung above the arm, the column of fluid in the line makes the pressure at the needle higher than the pressure in the vein, so fluid flows in.
-
-How pressure falls along the circulation as blood moves (because of resistance, not gravity) is in the *Fluids in Motion* lesson, and the physiology is in the *Cardiovascular System* lesson.
+- Pressure also falls ALONG the circulation as blood flows, but that is resistance, not gravity: see the *Fluids in Motion* lesson.
 
 ### Pascal's Principle
 
@@ -166,8 +169,7 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
 - **(a)** With the line clamped and the fluid at rest, what is the gauge pressure at the needle?
 - **(b)** What is that pressure in mmHg?
 - **(c)** Pressure in a peripheral vein is only about 10 mmHg (gauge). Which way does fluid flow when the clamp opens?
-- **(d)** Does a wider or fuller bag at the same height change the pressure at the needle?
-- **(e)** What happens if the bag is lowered to $0.5\\;\\text{m}$, or dropped below the arm?
+- **(d)** Does a wider or fuller bag at the same height change the needle pressure? What if the bag is lowered to $0.5\\;\\text{m}$, or below the arm?
 
 **(a) Gauge pressure at the needle.** $\\rho g h = (1000)(10)(1.0) = 1.0 \\times 10^4\\;\\text{Pa}$.
 
@@ -175,9 +177,7 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
 
 **(c) Compare.** The needle pressure, about 75 mmHg from (b), is far above the vein's 10 mmHg, so when the clamp opens, saline flows into the vein.
 
-**(d) What matters and what doesn't.** No. Only the HEIGHT of the fluid surface above the needle counts, so a wider or fuller bag at the same height gives the same pressure.
-
-**(e) Moving the bag.** Lower the bag to $0.5\\;\\text{m}$ and the pressure halves to about 38 mmHg, still above venous pressure, so saline still flows in, more slowly. Drop the bag below the arm and the pressure at the needle falls below venous pressure, so blood backs up into the line.`
+**(d) Only the height counts.** No: only the HEIGHT of the fluid surface above the needle enters $\\rho g h$, so a wider or fuller bag changes nothing. At $0.5\\;\\text{m}$ the pressure halves to about 38 mmHg, still above venous pressure, so saline flows in more slowly. Below the arm, the needle pressure drops under venous pressure and blood backs up into the line.`
     },
     {
       id: 'fl1-quiz2',

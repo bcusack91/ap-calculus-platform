@@ -13,17 +13,17 @@ Vertical transfer (parent to daughter) is clonal. **Horizontal** transfer moves 
 
 ### Transformation: Naked DNA
 
-- **Competence** is a regulated physiological state, often switched on at high cell density or under stress, in which surface proteins bind environmental DNA released by lysed neighbors. One strand is imported while the other is degraded, and the imported strand replaces the matching resident sequence by **homologous recombination**. A linear chromosomal fragment that fails to recombine is lost.
+**Griffith** mixed heat-killed smooth (S, encapsulated, lethal) pneumococci with live rough (R, unencapsulated, harmless) cells. Neither alone killed mice, but the mixture did, and live S cells were recovered: a heritable "transforming principle" had passed from dead cells to live ones.
+
+**Avery, MacLeod and McCarty** asked what that principle was by destroying one candidate at a time in the S-cell extract. Protease: transformation persists. RNase: persists. **DNase: abolished.** The logic is subtractive: if activity survives removal of a molecule, that molecule is not required, so the transforming principle is DNA.
+
+- **Competence** is a regulated physiological state, often switched on at high cell density or under stress, in which the cell binds DNA released by lysed neighbors. One strand is imported while the other is degraded, and the imported strand replaces the matching resident sequence by **homologous recombination**. A linear chromosomal fragment that fails to recombine is lost.
 - Some species, pneumococcus among them, are naturally competent. Others, including lab E. coli, must be made competent artificially.
 - **Co-transformation:** two markers can enter one cell on a single imported fragment only if they lie close together, so co-transformation frequency falls off quickly with distance.
 
 <!-- yield:low -->
 - Artificial competence: calcium chloride plus a brief heat shock, or electroporation (electric pulses that open transient pores).
 <!-- /yield -->
-
-**Griffith** mixed heat-killed smooth (S, encapsulated, lethal) pneumococci with live rough (R, unencapsulated, harmless) cells. Neither alone killed mice, but the mixture did, and live S cells were recovered: a heritable "transforming principle" had passed from dead cells to live ones.
-
-**Avery, MacLeod and McCarty** asked what that principle was by destroying one candidate at a time in the S-cell extract. Protease: transformation persists. RNase: persists. **DNase: abolished.** The logic is subtractive: if activity survives removal of a molecule, that molecule is not required, so the transforming principle is DNA.
 
 ### Transduction: DNA in a Phage Coat
 
@@ -45,11 +45,12 @@ Lysogenic conversion, where the phage's OWN genes (such as toxin genes) change t
 - Mechanics: a relaxase nicks F at oriT, and the strand is transferred by rolling-circle replication.
 <!-- /yield -->
 
-- **Hfr (high frequency of recombination).** F integrates into the chromosome by homologous recombination between insertion sequences present on both F and the chromosome. Different integration sites and orientations give different Hfr strains. Transfer still starts at oriT, inside F, so chromosomal genes follow in map order and the rest of F would arrive only after the entire chromosome, about 100 minutes. Mating pairs nearly always break first, so the recipient gains donor genes (which must recombine) but stays **F$^-$**.
+- **Hfr (high frequency of recombination).** F integrates into the chromosome by homologous recombination between insertion sequences present on both F and the chromosome. Different integration sites and orientations give different Hfr strains.
+- **Why Hfr recipients stay F$^-$.** Transfer still starts at oriT, inside F, so chromosomal genes follow in map order and the rest of F would arrive only after the entire chromosome, about 100 minutes. Mating pairs nearly always break first, so the recipient gains donor genes (which must recombine) but stays **F$^-$**.
 - **Gradient of transfer:** because pairs break apart at random times, genes near oriT appear in more recombinants than distal genes, a second, frequency-based way to order genes.
 
 - **Interrupted mating.** Hfr and F$^-$ cells are mixed, samples are blended at intervals to break the pairs, and recombinants are scored. The minute at which each donor marker first appears ranks the genes by distance from oriT, so the E. coli map is calibrated in **minutes** (100 for the whole chromosome). Different Hfr strains give circularly permuted orders that overlay into one **circular** map.
-- **F′.** If an integrated F excises imprecisely it carries adjacent chromosomal genes. Transferring this F′ makes the recipient a **merodiploid**, with one chromosomal and one F′ copy of those genes, and an F′ donor itself. Merodiploids are how lac operon cis/trans logic was worked out (covered with the lac operon).
+- **F′.** If an integrated F excises imprecisely it carries adjacent chromosomal genes. Transferring this F′ makes the recipient a **merodiploid**, with one chromosomal and one F′ copy of those genes, and an F′ donor itself. Merodiploids are how lac operon cis/trans logic was worked out (covered in the next lesson).
 - **R plasmids** combine several resistance genes with transfer genes, often with a broad host range, so one mating can make a sensitive cell a multidrug-resistant donor, even across species. That is why horizontal transfer outpaces mutation: mutation makes resistance rarely and in one lineage, while a plasmid delivers a finished resistance gene to many recipients at once.
 
 ### Telling the Three Apart

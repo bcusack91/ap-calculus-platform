@@ -54,7 +54,7 @@ The defining genetic fact is **haploidy**: one copy of each gene. The MCAT build
 | Frameshift | Insertion or deletion not a multiple of 3 | Garbled downstream sequence, usually an early stop, so a smaller band |
 | Promoter | Altered transcription signal | Normal size, less or no protein |
 
-A **reversion**, a second mutation that restores function, is rare but easy to score, and it powers the Ames test below. Insertions by transposons (mobile DNA elements, covered with transposable elements) are a major natural mutagen.
+A **reversion**, a second mutation that restores function, is rare but easy to score, and it powers the Ames test below. Insertions by transposons (mobile DNA elements, covered in the next lesson) are a major natural mutagen.
 
 ### Auxotrophs, Prototrophs, Selection and Screening
 
@@ -65,20 +65,24 @@ A **reversion**, a second mutation that restores function, is rare but easy to s
 
 ### Do Mutations Come Before Selection? Two Proofs
 
-**The fluctuation test.** Many small parallel cultures are grown WITHOUT phage, then each is plated onto phage. If the phage INDUCED resistance, every culture would give about the same count. Instead the counts fluctuated wildly: most cultures had zero or a few resistant cells, and a few had "jackpots" of hundreds, because a mutation early in a culture's growth leaves a large resistant clone. The control, repeated samples from ONE large culture, gave uniform counts, so the spread is biological rather than sampling error. Conclusion: mutations arise **at random, before** exposure.
+**The fluctuation test.** Many small parallel cultures are grown WITHOUT phage, then each is plated onto phage. If the phage INDUCED resistance, every culture would give about the same count. Instead the counts fluctuated wildly: most cultures had zero or a few resistant cells, and a few had "jackpots" of hundreds, because a mutation early in a culture's growth leaves a large resistant clone.
+
+The control, repeated samples from ONE large culture, gave uniform counts, so the spread is biological rather than sampling error. Conclusion: mutations arise **at random, before** exposure.
 
 <!-- yield:low -->
 - The fluctuation test is the Luria-Delbrück experiment (1943), done with phage resistance in E. coli.
 <!-- /yield -->
 
-**Lederberg replica plating.** Colonies on a nonselective **master plate** are pressed onto sterile velvet and stamped, in register, onto plates containing the drug or phage. Resistant colonies appear at the **same positions** on every replica. Picking cells from those positions on the never-exposed master plate yields resistant cells, so selection revealed variants that already existed. Stamping onto minimal medium finds auxotrophs the same way: they are the colonies present on complete medium but missing on minimal.`
+**Lederberg replica plating.** Colonies on a nonselective **master plate** are pressed onto sterile velvet and stamped, in register, onto plates containing the drug or phage. Resistant colonies appear at the **same positions** on every replica. Picking cells from those positions on the never-exposed master plate yields resistant cells, so selection revealed variants that already existed.
+
+Stamping onto minimal medium finds auxotrophs the same way: they are the colonies present on complete medium but missing on minimal.`
     },
     {
       id: 'mg1-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — Reading Selection Experiments
 
-**Problem 1.** A food additive must be screened for mutagenicity with the Ames test: a his$^-$ Salmonella tester strain plated on histidine-free medium.
+**Problem 1.** A food additive must be screened for mutagenicity with the Ames test: a his$^-$ Salmonella tester strain plated on histidine-free medium. Which plates does the experiment need?
 
 - **(a)** Which plate sets the baseline that every other count is judged against?
 - **(b)** Which plates detect a direct mutagen, and which a compound that is mutagenic only after metabolism?

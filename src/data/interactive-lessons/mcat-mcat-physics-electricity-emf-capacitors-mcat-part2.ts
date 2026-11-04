@@ -113,12 +113,9 @@ Charging a capacitor takes work, because each new bit of charge is pushed onto a
 
 $$U = \\frac{1}{2}QV = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C}$$
 
-**Why the $\\frac{1}{2}$?** The voltage rises steadily from $0$ to $V$ as the charge builds, so on average each coulomb is loaded at $V/2$. (On a graph of $V$ against $Q$, the energy is the triangle's area, $\\frac{1}{2}QV$.)
+**Why the $\\frac{1}{2}$?** The voltage climbs from $0$ to $V$ as the charge builds, so on average each coulomb is loaded at $V/2$: on a graph of $V$ against $Q$, the energy is the triangle's area, $\\frac{1}{2}QV$.
 
-**Choose the form for what is held constant:**
-
-- **Battery connected → $V$ fixed** → use $U = \\frac{1}{2}CV^2$, so $U \\propto C$.
-- **Battery disconnected (isolated) → $Q$ fixed** → use $U = Q^2/2C$, so $U \\propto 1/C$.
+**Choose the form for what is held constant.** Battery connected → $V$ fixed → use $U = \\frac{1}{2}CV^2$, so $U \\propto C$. Battery disconnected (isolated) → $Q$ fixed → use $U = Q^2/2C$, so $U \\propto 1/C$.
 
 | Insert a dielectric $\\kappa$ | Battery connected ($V$ fixed) | Disconnected ($Q$ fixed) |
 |---|---|---|

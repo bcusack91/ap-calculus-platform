@@ -18,8 +18,7 @@ export const mcatPsychSensPercPart3Data = {
 | **Ruffini endings** | Skin stretch (slow-adapting) |
 | **Free nerve endings** | Pain (nociceptors) and temperature (thermoreceptors) |
 
-- Signals ascend to the **somatosensory cortex (parietal lobe)**, mapped as a distorted homunculus — cortical area tracks receptor *density* (fingers, lips), not body-part size.
-- **Two-point threshold**: minimum separation felt as two touches; smallest where receptor density is highest.
+- Signals ascend to the **somatosensory cortex (parietal lobe)**, mapped as a distorted homunculus — cortical area tracks receptor *density* (fingers, lips), not body-part size. The **two-point threshold** (minimum separation felt as two touches) is smallest where receptor density is highest.
 
 ### Gate Control Theory of Pain (Melzack & Wall)
 

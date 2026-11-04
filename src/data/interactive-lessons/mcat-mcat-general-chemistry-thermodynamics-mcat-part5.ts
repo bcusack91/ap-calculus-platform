@@ -121,12 +121,11 @@ export const mcatThermoPart5Data = {
 **Part 5:** Integrated MCAT practice.
 
 ### Most Tested MCAT Thermodynamics Concepts
-1. $\\Delta G = 0$ at equilibrium or phase transition temperature
+1. $\\Delta G = 0$ at equilibrium and at a phase transition, where $T_{\\text{transition}} = \\Delta H/\\Delta S$
 2. $\\Delta G°, K, E°_{\\text{cell}}$ are all related: $-nFE° = \\Delta G° = -RT\\ln K$
 3. Spontaneous at all T: when $\\Delta H < 0$ and $\\Delta S > 0$
 4. Heating curve plateaus — never confuse with temperature changes
-5. Phase transition: $T_{\\text{transition}} = \\Delta H/\\Delta S$
-6. Colligative properties depend on number of particles, not identity
+5. Colligative properties depend on number of particles, not identity
 
 ### Key Takeaways — Part 5
 

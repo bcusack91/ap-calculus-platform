@@ -16,20 +16,20 @@ When a sound source and a listener move toward each other, the listener hears a 
 
 $$f' = f\\,\\frac{v \\pm v_o}{v \\mp v_s}$$
 
-Here $f$ is the emitted frequency, $f'$ the frequency heard, $v$ the speed of sound in the medium, $v_o$ the observer's speed and $v_s$ the source's speed, both measured relative to the air (or other medium). Use speeds as positive numbers and let the signs carry the direction. The two signs are chosen independently: observer toward or away, source toward or away.
+$f$ is the emitted frequency, $f'$ the frequency heard and $v$ the speed of sound; $v_o$ and $v_s$ are the observer's and source's speeds relative to the air, entered as positive numbers. The two signs are independent, and the ritual is **approach raises**: pick each so that motion TOWARD the other party raises $f'$.
 
-**The sign ritual: approach raises.** Choose each sign so that motion TOWARD the other party raises $f'$:
-
-- Observer moving toward the source: $+v_o$ in the numerator (bigger top). Moving away: $-v_o$.
-- Source moving toward the observer: $-v_s$ in the denominator (smaller bottom). Moving away: $+v_s$.
+- Observer moving toward the source: $+v_o$ on top (bigger top); moving away: $-v_o$.
+- Source moving toward the observer: $-v_s$ below (smaller bottom); moving away: $+v_s$.
 - Anyone standing still contributes zero.
 
-**Why it happens.** A moving SOURCE chases its own wavefronts, bunching them up ahead (shorter $\\lambda$) and spreading them out behind. Since the air still carries them at $v$, the bunched waves arrive more often: $f = v/\\lambda$ rises. A moving OBSERVER leaves the wavelength untouched but runs into wavefronts more often. Either way, the speed of the sound in the air does not change.
+**Why it happens.** A moving SOURCE chases its own wavefronts, bunching them ahead (shorter $\\lambda$) and spreading them behind; the air still carries them at $v$, so $f = v/\\lambda$ rises ahead. A moving OBSERVER leaves $\\lambda$ untouched but meets wavefronts more often. The speed of sound never changes.
 
-- Only motion along the line joining source and listener counts. Sound emitted when a passing car is exactly beside you carries no shift, because at that instant its motion is sideways.
-- **Shortcut for slow motion**: when the relative approach speed $u$ is much smaller than $v$, the fractional shift is $\\Delta f/f \\approx u/v$.
+- Only motion along the line joining source and listener counts; motion straight across that line gives no shift at that instant.
+- **Slow-motion shortcut**: for a relative approach speed $u \\ll v$, the fractional shift is $\\Delta f/f \\approx u/v$.
 
-**Reflection from a moving object gives a double shift.** Bounce sound off a moving target and two Doppler shifts happen in sequence: the target first RECEIVES the sound as a moving observer, then RE-EMITS it as a moving source. For a target moving at speed $u$ (much slower than sound), the echo's shift is about twice the one-way shift, the shift a stationary listener would hear from a source moving at $u$:
+### Echoes Off a Moving Target: The Double Shift
+
+Bounce sound off a moving target and two Doppler shifts happen in sequence: the target first RECEIVES the sound as a moving observer, then RE-EMITS it as a moving source. For a target moving at speed $u$ (much slower than sound), the echo's shift is about twice the one-way shift:
 
 $$\\Delta f \\approx \\frac{2fu}{v}$$
 
@@ -110,9 +110,12 @@ Typical choices (approximate; no need to memorize the numbers):
 | deep: liver, kidney, fetus | 2 to 5 MHz | penetration matters most |
 | shallow: thyroid, carotid artery, tendons | 10 to 15 MHz | fine detail, and depth is small |
 
-**Why echoes happen, and why gel is needed.** How strongly a boundary reflects depends on the mismatch in **acoustic impedance**, $Z = \\rho v$, the product of a tissue's density and its speed of sound. Soft tissues differ only slightly, so they return weak echoes that build up the image. Tissue and bone differ more, so bone reflects strongly and casts an acoustic shadow behind it; gallstones do the same. Tissue and air differ enormously, so almost all the sound is reflected at an air gap. That is why gel is spread between probe and skin (to push out the air), and why gas-filled lungs and bowel block the view.
+**Why echoes happen.** How strongly a boundary reflects depends on the mismatch in **acoustic impedance**, $Z = \\rho v$, the product of a tissue's density and its speed of sound.
 
-Ultrasound uses no ionizing radiation, which is why it is the imaging method of choice in pregnancy.
+- Neighbouring soft tissues differ only slightly, so they return the weak echoes that build up the image.
+- Tissue and bone differ more: bone reflects strongly and casts an acoustic shadow behind it, as do gallstones.
+- Tissue and air differ enormously, so an air gap reflects almost all the sound: gas-filled lungs and bowel block the view, and even a thin film of air under the probe would.
+- Ultrasound uses no ionizing radiation, which is why it is the imaging method of choice in pregnancy.
 
 <!-- yield:low -->
 - The fraction of intensity reflected at a boundary is $\\left(\\frac{Z_2 - Z_1}{Z_2 + Z_1}\\right)^2$.
@@ -120,9 +123,13 @@ Ultrasound uses no ionizing radiation, which is why it is the imaging method of 
 
 ### Doppler Ultrasound and Blood Flow
 
-**Doppler ultrasound** measures blood velocity from the double shift of echoes off moving red blood cells. Blood flowing toward the probe shifts the echo up, flowing away shifts it down, and the size of the shift is proportional to the speed. Only the velocity component along the beam counts: at beam-to-flow angle $\\theta$, $\\Delta f = 2fu\\cos\\theta/v$. A perpendicular beam gives zero shift, so the probe is tilted along the vessel; in a ratio of two shifts taken at the same angle, $\\theta$ cancels. The shifts are typically a few kilohertz, which is audible: Doppler machines play them as the familiar whooshing pulse.
+**Doppler ultrasound** measures blood velocity from the double shift of echoes off moving red blood cells.
 
-**Grading a stenosis.** A **stenosis** is a narrowing of a vessel's **lumen**, the open channel the blood flows through. Continuity gives $A_1u_1 = A_2u_2$ ($u$ = blood speed; the *Fluids in Motion* lesson writes it as $v$), so blood speeds up where the lumen narrows, and the Doppler shift is proportional to that speed. A stenosis therefore shows up as a local jump in the shift, and the shift ratio gives the area ratio (Problem 3 below works the numbers).
+- Blood flowing toward the probe shifts the echo up, flowing away shifts it down, and the size of the shift is proportional to the speed.
+- Only the velocity component along the beam counts: at beam-to-flow angle $\\theta$, $\\Delta f = 2fu\\cos\\theta/v$. A perpendicular beam gives zero shift, so the probe is tilted along the vessel; in a ratio of two shifts taken at the same angle, $\\theta$ cancels.
+- The shifts are typically a few kilohertz, which is audible: Doppler machines play them as the familiar whooshing pulse.
+
+**Grading a stenosis.** A **stenosis** is a narrowing of a vessel's **lumen**, the open channel the blood flows through. Continuity gives $A_1u_1 = A_2u_2$ ($u$ = blood speed; the *Fluids in Motion* lesson writes it as $v$), so blood speeds up where the lumen narrows, and the Doppler shift is proportional to that speed. A stenosis therefore shows up as a local jump in the shift, and the shift ratio gives the area ratio.
 
 <!-- yield:low -->
 - Colour Doppler displays flow toward the probe in red and away in blue (remembered as "BART": blue away, red toward).

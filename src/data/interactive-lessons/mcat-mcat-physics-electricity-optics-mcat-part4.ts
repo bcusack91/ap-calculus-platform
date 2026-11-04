@@ -37,12 +37,17 @@ Extras: reflection off a higher-$n$ layer adds a half-wavelength phase flip, whi
 
 ### Polarization — the Transverse Fingerprint
 
-Only TRANSVERSE waves can be polarized (their oscillation has a sideways direction to filter). Polarizers pass one plane of oscillation. Unpolarized light keeps half its intensity, $I_0/2$, through one polarizer; polarized light meeting a polarizer at angle $\\theta$ passes $I = I_0\\cos^2\\theta$ (Malus's law), so two polarizers crossed at $90^\\circ$ pass nothing. (In circular polarization the field direction rotates as the wave travels, still transverse.) Sound — longitudinal — can never be polarized. Optically active molecules (chiral sugars, amino acids) rotate the plane of polarized light: the bridge to the *Stereochemistry* lesson.
+Only TRANSVERSE waves can be polarized (their oscillation has a sideways direction to filter): light can be, and sound — longitudinal — never can. A polarizer passes one plane of oscillation.
+
+- Unpolarized light keeps half its intensity, $I_0/2$, through one polarizer.
+- Polarized light meeting a polarizer at angle $\\theta$ passes $I = I_0\\cos^2\\theta$ (Malus's law), so two polarizers crossed at $90^\\circ$ pass nothing.
+
+Optically active molecules (chiral sugars, amino acids) rotate the plane of polarized light: the bridge to the *Stereochemistry* lesson. (In circular polarization the field direction rotates as the wave travels — still transverse.)
 
 ### Passage Strategy — the Optics Playbook
 
 1. **Choose the model first.** Image locations and magnification: ray model, lens/mirror equation. Fringes, resolution limits, iridescence: wave model.
-2. **Multi-lens systems** (microscope, telescope, corrective lens + eye): march left to right — the image of lens 1 is the OBJECT of lens 2. Total magnification multiplies: $m = m_1 m_2$.
+2. **Multi-lens systems** (microscope, telescope, corrective lens + eye): march left to right — the image of the first lens is the OBJECT of the second, and the total magnification multiplies: $m = m_1 m_2$.
 3. **Estimate with clean fractions.** Optics arithmetic is reciprocals of small integers; get common denominators, never decimals.`
     },
     {

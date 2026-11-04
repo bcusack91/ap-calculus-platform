@@ -26,9 +26,9 @@ These never flip. What flips between cell types (Part 2 of this lesson) is the S
 
 ### Anatomy of a Galvanic (Voltaic) Cell
 
-A galvanic cell harvests a SPONTANEOUS redox reaction as electrical energy — chemical energy out as current. Classic build (the Daniell cell): a zinc strip in $\\text{Zn}^{2+}$ solution, a copper strip in $\\text{Cu}^{2+}$ solution, wire between the metals, salt bridge between the solutions.
+A galvanic cell harvests a SPONTANEOUS redox reaction as electrical energy. Classic build (the Daniell cell): a zinc strip in $\\text{Zn}^{2+}$ solution, a copper strip in $\\text{Cu}^{2+}$ solution, wire between the metals, salt bridge between the solutions.
 
-- Zinc is easier to oxidize: $\\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^-$ at the anode; the zinc electrode slowly DISSOLVES.
+- Zinc is easier to oxidize: $\\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^-$ at the anode; the zinc electrode DISSOLVES.
 - Electrons travel through the WIRE from anode to cathode.
 - At the cathode: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$; copper PLATES onto the electrode and the blue $\\text{Cu}^{2+}$ solution fades.
 - In a galvanic cell the anode is labeled $(-)$ and the cathode $(+)$: electrons pour OUT of the anode terminal.
@@ -44,13 +44,10 @@ Ions complete the circuit in solution; electrons never swim.
 
 ### Standard Cell Potential
 
-Every half-reaction has a standard REDUCTION potential $E^\\circ$; more positive means more eager to be reduced. The half-cell with the higher reduction potential runs as the cathode:
-
+Every half-reaction has a standard REDUCTION potential $E^\\circ$; more positive means more eager to be reduced. The half-cell with the higher reduction potential runs as the cathode, and both values come straight from the reduction-potential table, no sign gymnastics:
 $E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}$
 
-(both taken from the reduction-potential table, no sign gymnastics). A spontaneous (galvanic) cell has $E^\\circ_{cell} > 0$, which corresponds to $\\Delta G^\\circ < 0$ via $\\Delta G^\\circ = -nFE^\\circ_{cell}$, where $n$ is the moles of electrons transferred and $F \\approx 96{,}500\\;\\text{C/mol}$ is the Faraday constant. Since $\\Delta G^\\circ = -RT\\ln K$, $E^\\circ_{cell} > 0$ also means $K > 1$.
-
-**Never multiply $E^\\circ$ by stoichiometric coefficients** — potential is an intensive property, energy per unit charge.`
+A spontaneous (galvanic) cell has $E^\\circ_{cell} > 0$, which corresponds to $\\Delta G^\\circ < 0$ via $\\Delta G^\\circ = -nFE^\\circ_{cell}$, where $n$ is the moles of electrons transferred and $F \\approx 96{,}500\\;\\text{C/mol}$ is the Faraday constant. Since $\\Delta G^\\circ = -RT\\ln K$, $E^\\circ_{cell} > 0$ also means $K > 1$. **Never multiply $E^\\circ$ by stoichiometric coefficients**: potential is an intensive property, energy per unit charge, so only $\\Delta G^\\circ$ scales with $n$.`
     },
     {
       id: 'echem1-worked',

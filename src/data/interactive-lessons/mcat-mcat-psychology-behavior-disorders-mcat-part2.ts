@@ -17,15 +17,15 @@ Diagnosis requires **≥ 5 symptoms for ≥ 2 weeks**, including at least one of
 
 Plus: appetite/weight change, insomnia or hypersomnia, psychomotor agitation/retardation, fatigue, worthlessness or inappropriate guilt, impaired concentration, recurrent thoughts of death. **Persistent depressive disorder (dysthymia)**: milder but chronic — depressed mood more days than not for **≥ 2 years**. Seasonal pattern responds to light therapy.
 
-**Biological correlates** (correlates, not proven single causes):
-- **Monoamine hypothesis**: reduced serotonin/norepinephrine signaling; supported by antidepressant pharmacology, but the weeks-long therapeutic lag despite immediate synaptic effects shows it is incomplete (current work emphasizes downstream neuroplasticity)
+- **Monoamine hypothesis** (a biological correlate, not a proven single cause): reduced serotonin/norepinephrine signaling; supported by antidepressant pharmacology, but the weeks-long therapeutic lag despite immediate synaptic effects shows it is incomplete (current work emphasizes downstream neuroplasticity)
 
 <!-- yield:low -->
 - The best-studied neuroplasticity signal is brain-derived neurotrophic factor (BDNF), which chronic antidepressant treatment raises.
 <!-- /yield -->
 
-- **HPA axis** hyperactivity (elevated cortisol); reduced **hippocampal** volume in chronic illness
-- Suicide risk assessment is part of any depression vignette: prior attempts, plan and means, hopelessness, substance use, social isolation — asking about suicide does NOT increase risk
+- **HPA axis** hyperactivity (elevated cortisol) and reduced **hippocampal** volume in chronic illness — again correlates, not causes
+
+**Suicide risk assessment** is part of any depression vignette: prior attempts, plan and means, hopelessness, substance use, social isolation — asking about suicide does NOT increase risk.
 
 ### Bipolar Disorders (defined by the ELEVATED pole)
 

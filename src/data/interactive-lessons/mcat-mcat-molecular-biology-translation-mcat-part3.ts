@@ -11,14 +11,14 @@ export const mcatTranslationPart3Data = {
 ### Mutation Taxonomy — Predict the Protein First
 
 | Mutation | DNA change | Protein consequence |
-|----------|-----------|---------------------|
-| Silent | Codon changes, same amino acid (usually position 3) | None (usually) |
-| Missense (conservative) | One amino acid becomes a chemically similar one | Often mild |
-| Missense (nonconservative) | Chemically different substitution | Variable — sickle cell (Glu to Val, charged to hydrophobic) is the archetype |
-| Nonsense | Codon becomes UAA/UAG/UGA | Truncated protein; the transcript itself is often degraded |
-| Frameshift | Insertion/deletion not divisible by 3 | Garbled sequence downstream + usually a premature stop |
-| In-frame indel | Insertion/deletion of 3n bases | Adds/removes whole residues (CFTR deltaF508) |
-| Splice-site | Intron boundary destroyed | Intron retention/exon skipping — behaves like frameshift or indel |
+|---|---|---|
+| Silent | Same amino acid (usually base 3) | None, usually |
+| Missense, conservative | Chemically similar substitute | Often mild |
+| Missense, nonconservative | Chemically different substitute | Variable; sickle cell Glu to Val (charged to hydrophobic) |
+| Nonsense | Codon becomes UAA/UAG/UGA | Truncated protein; transcript often degraded |
+| Frameshift | Indel not divisible by 3 | Garbled downstream + usually a premature stop |
+| In-frame indel | Indel of 3n bases | Whole residues added/removed (CFTR deltaF508) |
+| Splice-site | Intron boundary destroyed | Intron retention or exon skipping; acts like either |
 
 <!-- yield:low -->
 - The surveillance pathway that destroys premature-stop transcripts is **nonsense-mediated decay**.
@@ -32,7 +32,7 @@ export const mcatTranslationPart3Data = {
 - **Chaperones** (heat shock proteins, chaperonins) do not add information — they prevent aggregation and give slow folders a protected chamber. Induced by heat/stress.
 - Misfolding diseases: aggregates (amyloid), **prions** (misfolded PrP TEMPLATES the misfolding of normal PrP — protein-only inheritance of shape), and loss-of-function via degradation (deltaF508 CFTR folds imperfectly and is destroyed by quality control even though it could conduct chloride).
 
-### Post-Translational Modifications — The Protein Isn't Done at the Stop Codon
+### Post-Translational Modifications (The Protein Isn't Done at the Stop Codon)
 
 | Modification | Chemistry | Function example |
 |--------------|-----------|------------------|

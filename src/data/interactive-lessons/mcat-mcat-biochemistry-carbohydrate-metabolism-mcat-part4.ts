@@ -12,7 +12,7 @@ export const mcatCarbMetabPart4Data = {
 
 | Feature | Insulin (fed) | Glucagon (fasting) |
 |---------|---------------|--------------------|
-| Source | Pancreatic beta cells | Pancreatic alpha cells |
+| Source | Beta cells | Alpha cells |
 | Receptor type | Receptor tyrosine kinase | GPCR (G$_s$ → cAMP → PKA) |
 | Main targets | Liver, muscle, adipose | LIVER (muscle lacks glucagon receptors) |
 | Glycolysis (liver) | ON (F2,6-BP up; glucokinase induced) | OFF |

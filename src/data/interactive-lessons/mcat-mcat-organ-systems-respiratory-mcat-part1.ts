@@ -23,13 +23,16 @@ export const mcatRespSubPart1Data = {
 At constant temperature, $P_1 V_1 = P_2 V_2$ — changing thoracic **volume** changes alveolar **pressure**, and air flows down the pressure gradient.
 
 **Inspiration (active):**
-1. Diaphragm contracts (flattens downward) and external intercostals lift the ribs → thoracic volume ↑.
-2. Alveolar pressure drops below atmospheric → air flows **in**.
+
+- The diaphragm contracts (flattens downward) and the external intercostals lift the ribs.
+- Thoracic volume ↑ → alveolar pressure drops below atmospheric.
+- Air flows **in** down the gradient.
 
 **Expiration (passive at rest):**
-1. Muscles relax; elastic recoil of lungs and chest wall shrinks thoracic volume.
-2. Alveolar pressure rises above atmospheric → air flows **out**.
-3. Forced expiration recruits abdominal muscles and internal intercostals (active).
+
+- Muscles relax; elastic recoil of lungs and chest wall shrinks thoracic volume.
+- Alveolar pressure rises above atmospheric → air flows **out**.
+- Forced expiration recruits the abdominal muscles and internal intercostals (active).
 
 ### The Pleural Seal — Why Lungs Follow the Chest Wall
 

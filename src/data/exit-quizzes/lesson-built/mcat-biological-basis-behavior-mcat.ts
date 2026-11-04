@@ -62,7 +62,7 @@ export const EXIT_POOL: LessonExitItem[] = [
       `Cl- leak channels suddenly open wide`,
     ],
     correctAnswer: 2,
-    explanation: `Voltage-gated K+ channels that opened for repolarization close slowly, so K+ keeps leaving the cell and the membrane overshoots below rest. Na+ reopening would depolarize the membrane rather than hyperpolarize it. The pump does not pause to create the undershoot, and the lesson attributes the hyperpolarization to K+ channels, not to a sudden Cl- current.`,
+    explanation: `Voltage-gated K+ channels that opened for repolarization close slowly, so K+ keeps leaving the cell and the membrane overshoots below rest. Na+ reopening would depolarize the membrane rather than hyperpolarize it. The pump does not pause to create the undershoot, and the hyperpolarization is a lingering K+ current, not a sudden Cl- current.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 1,
@@ -406,10 +406,10 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 4,
   },
   {
-    question: `In Selye's General Adaptation Syndrome, the stage in which prolonged stress has depleted the body's resources and vulnerability to disease is greatest is:`,
+    question: `After two years of caring for a dying relative, a man who had coped well for months now catches one infection after another and can no longer rally for new demands. In Selye's General Adaptation Syndrome, he has entered the stage of:`,
     options: [`alarm`, `resistance`, `exhaustion`, `recovery`],
     correctAnswer: 2,
-    explanation: `Selye's sequence runs alarm, then resistance, then exhaustion, and exhaustion is the stage where depleted resources leave the body most vulnerable to disease. Alarm is the initial mobilization, and resistance is the period of sustained coping before resources run out. Recovery is not one of Selye's three stages.`,
+    explanation: `Selye's sequence runs alarm, then resistance, then exhaustion; repeated illness and a stress response that can no longer be mounted mean his resources are depleted, the exhaustion stage. Alarm is the initial mobilization in the first moments of a stressor, and resistance is the period of sustained coping he has already passed through. Recovery is not one of Selye's three stages.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
     part: 4,
@@ -477,7 +477,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 5,
   },
   {
-    question: `Which research design best separates the effects of genes from the effects of a shared family environment?`,
+    question: `A researcher wants to know whether a child's risk of alcohol-use disorder tracks the parents who supplied the child's genes or the parents who raised the child. The design that answers this most directly is:`,
     options: [
       `comparing risk across relatives of varying closeness`,
       `surveying one family's members across generations`,

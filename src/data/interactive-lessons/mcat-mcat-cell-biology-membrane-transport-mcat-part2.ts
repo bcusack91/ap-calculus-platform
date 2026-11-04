@@ -35,7 +35,7 @@ $$v = \\frac{V_{max}[S]}{K_m + [S]}$$
 
 ### Osmosis and Tonicity
 
-**Osmosis** = passive movement of water across a semipermeable membrane toward the compartment with higher total solute (osmolarity). Water moves through the bilayer slowly and through **aquaporins** rapidly.
+**Osmosis** is the passive movement of water toward the compartment with more solute — slowly through the bilayer, rapidly through **aquaporins**.
 
 | Solution (relative to cell) | Water moves... | Animal cell result |
 |-----------------------------|---------------|--------------------|
@@ -43,13 +43,13 @@ $$v = \\frac{V_{max}[S]}{K_m + [S]}$$
 | Isotonic | No net movement | Normal |
 | Hypotonic | Into cell | Swelling → lysis |
 
-- **Tonicity counts only impermeant solutes.** Urea crosses membranes, so a urea solution that is iso-osmotic is functionally **hypotonic** — cells still swell
-- Osmotic pressure (a colligative property): $\\Pi = iMRT$, where $i$ is the van't Hoff factor (NaCl → $i \\approx 2$; glucose → $i = 1$)
+- **Tonicity counts only impermeant solutes.** Urea permeates, so an iso-osmotic urea solution is functionally **hypotonic** — cells still swell
+- Osmotic pressure is colligative: $\\Pi = iMRT$, where $i$ is the van't Hoff factor (NaCl → $i \\approx 2$; glucose → $i = 1$)
 
 ### Equilibrium vs. Steady State
 
 - Passive transport runs until the **electrochemical gradient** is dissipated (for ions, both concentration AND membrane voltage matter)
-- A charged solute can be at equilibrium with unequal concentrations if the membrane potential balances the chemical gradient — the reason K$^+$ stays concentrated inside cells near the resting potential`
+- A charged solute can be at equilibrium with unequal concentrations if the membrane potential balances the chemical gradient — so a steep ratio alone does not mean an ion is out of equilibrium`
     },
     {
       id: 'mt2-worked',

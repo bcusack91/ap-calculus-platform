@@ -10,12 +10,10 @@ export const mcatSensoryPart3Data = {
 
 ### The Sound Pathway, In Order
 
-Pinna → auditory canal → **tympanic membrane** (eardrum) → ossicles (**malleus → incus → stapes**) → **oval window** → cochlear fluid (perilymph) → **basilar membrane** vibrates → **hair cells** of the organ of Corti → stereocilia shear against the **tectorial membrane** → mechanically gated channels open → **K+ influx depolarizes** the hair cell → neurotransmitter onto **spiral ganglion** neurons → **cranial nerve VIII** (vestibulocochlear).
+Pinna → auditory canal → **tympanic membrane** (eardrum) → ossicles (**malleus → incus → stapes**) → **oval window** → perilymph → **basilar membrane** vibrates → **hair cells** of the organ of Corti → stereocilia shear against the **tectorial membrane** → **K+ influx depolarizes** the hair cell → **spiral ganglion** neurons → **cranial nerve VIII** (vestibulocochlear).
 
-Two details examiners exploit:
-
-- Hair cells depolarize by **K+ INFLUX** — the endolymph bathing the stereocilia is uniquely potassium-rich, so opening mechanically gated channels lets K+ rush IN (backwards from the usual neuronal story)
-- The **round window** bulges outward as the oval window is pushed in — incompressible fluid needs a pressure-relief valve
+- Hair cells depolarize by **K+ INFLUX**: the endolymph around the stereocilia is uniquely K+-rich, so K+ rushes IN when the mechanically gated channels open, the reverse of the usual neuronal story
+- The **round window** bulges outward as the oval window is pushed in: incompressible fluid needs a pressure-relief valve
 
 ### Middle-Ear Impedance Matching
 

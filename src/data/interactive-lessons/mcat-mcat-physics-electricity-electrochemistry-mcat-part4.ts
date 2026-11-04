@@ -10,9 +10,9 @@ export const electrochemistryMcatPart4: LessonData = {
 
 **Part 4 of 4 — MCAT Integration: Sign Conventions, Cell Diagrams & Passage Strategy**
 
-Electrochemistry passages hand you a table of reduction potentials and a cell sketch, then probe whether your sign conventions survive contact. The playbook:
-
 ### Strategy 1 — The Master Sign Table (Memorize Once)
+
+Electrochemistry passages hand you a table of reduction potentials and a cell sketch, then probe whether your sign conventions survive contact. The playbook starts with the signs:
 
 | | Galvanic | Electrolytic |
 |---|---------|--------------|

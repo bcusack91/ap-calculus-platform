@@ -88,11 +88,19 @@ This section mixes the lesson's topics the way an MCAT passage does. Each questi
 
 **Part 3:** Integrated MCAT practice combining all above topics.
 
-### Most Common MCAT Pitfalls
-1. Forgetting to convert °C → K before using gas laws
-2. Forgetting van 't Hoff $i$ in colligative property calculations
-3. Forgetting to subtract water vapor pressure from the total pressure for gases collected over water
-4. Forgetting to divide moles of electrons by the electrons each ion gains or loses in Faraday's law (2 for $\\text{Cu}^{2+}$, 3 for $\\text{Al}^{3+}$)
+## Key Takeaways — Part 3
+
+- **Moles are the hub.** $n = MV$ for solutions, $n = PV/RT$ for gases and mol $e^- = It/F$ for electrolysis all feed the same balanced-equation mole ratio.
+- **Count particles, not formulas.** Colligative effects scale with $i \\times m$ (or $i \\times M$ for $\\Pi$): $\\text{CaCl}_2$ counts three times, glucose once.
+- **Kelvin and litres first.** Every gas-law temperature is in kelvin and every $n = MV$ volume is in litres before any arithmetic.
+- **Precipitates need $Q > K_{sp}$.** The solubility rules say what usually happens; when concentrations are given, the numbers decide.
+
+**Common traps**
+
+- **°C in gas laws.** 27°C is 300 K, not 27; using the Celsius value shrinks $nRT$ about elevenfold.
+- **Forgetting $i$.** 1.0 m NaCl raises the boiling point by $2K_b$, not $K_b$; $\\text{Al}_2(\\text{SO}_4)_3$ counts five particles.
+- **Wet gas at full pressure.** A gas collected over water is at $P_{\\text{atm}} - P_{\\text{H}_2\\text{O}}$; subtract the vapor pressure before $PV = nRT$.
+- **Electrons are not atoms.** Divide mol $e^-$ by the electrons each ion needs: 2 for $\\text{Cu}^{2+}$, 3 for $\\text{Al}^{3+}$, 1 for $\\text{Ag}^+$.
 
 **Next up:** the *Thermodynamics* lesson — enthalpy and Hess's law, entropy, Gibbs free energy, and phase changes.
 `

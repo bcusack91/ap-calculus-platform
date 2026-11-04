@@ -598,8 +598,8 @@ export const mcatLipidMetabolismFigures: DeckFigurePlacement[] = [
       caption: 'Palmitate: seven cuts, eight acetyl-CoA, and a ledger whose only debit is the one-time activation cost — 106 ATP net.',
     },
     blocks: [
-      '- C₁₆: **7 turns** (n/2 − 1) → **8 acetyl-CoA, 7 NADH, 7 FADH₂** → 80 + 17.5 + 10.5 = 108',
-      '- Subtract the **2-ATP activation** (ATP → AMP + PPᵢ) → **106 ATP**; 108 and 104 are the classic wrong answers',
+      '- The rule: **turns = n/2 − 1, acetyl-CoA = n/2** — C₁₆ is seven cuts, eight acetyl-CoA',
+      '- The ledger has one debit, the **2-ATP activation**; 108 (forgot it) and 104 (charged it twice) are the classic wrong answers',
     ],
   },
   {

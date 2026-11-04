@@ -54,7 +54,7 @@ Left shift (higher affinity, harder unloading): the opposites, plus **fetal hemo
 
 | Form | Share | Mechanism |
 |------|-------|-----------|
-| **Bicarbonate** | ~70% | In RBCs, carbonic anhydrase: CO2 + H2O → H2CO3 → H$^+$ + HCO3$^-$; HCO3$^-$ exits in exchange for Cl$^-$ (**chloride shift**); Hb buffers the H$^+$ |
+| **Bicarbonate** | ~70% | RBC carbonic anhydrase makes H$^+$ + HCO3$^-$; HCO3$^-$ exits in exchange for Cl$^-$ (**chloride shift**); Hb buffers the H$^+$ |
 | Carbamino-Hb | ~20% | CO2 binds Hb's globin amino groups (not the heme) |
 | Dissolved | ~7–10% | Henry's law |
 

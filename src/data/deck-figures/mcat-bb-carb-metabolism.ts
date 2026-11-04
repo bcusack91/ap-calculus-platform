@@ -505,8 +505,8 @@ export const mcatCarbMetabolismFigures: DeckFigurePlacement[] = [
       caption: 'Glycolysis: two ATP invested, four ATP and two NADH earned across the doubled payoff row; red arrows mark the three irreversible, regulated steps.',
     },
     blocks: [
-      '- **Investment** (2 ATP in) then **payoff** (4 ATP + 2 NADH out, because both triose halves run) → net **2 ATP + 2 NADH** per glucose',
-      '- Cytosol, no O₂ required; GAPDH is the lone oxidation, PGK and pyruvate kinase the substrate-level phosphorylations',
+      '- Follow the red arrows: hexokinase, PFK-1, pyruvate kinase — the three irreversible steps, where all the regulation sits',
+      '- The payoff row runs twice (TPI turns DHAP into G3P): GAPDH is the lone oxidation, PGK and pyruvate kinase the substrate-level phosphorylations',
     ],
   },
   {
@@ -542,7 +542,7 @@ export const mcatCarbMetabolismFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Why a Separate Pathway?',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: bypassSvg,
       alt:
@@ -550,13 +550,14 @@ export const mcatCarbMetabolismFigures: DeckFigurePlacement[] = [
       caption: 'Gluconeogenesis is not glycolysis in reverse: the three irreversible steps are bypassed by four dedicated enzymes (red), the other six steps are shared.',
     },
     blocks: [
-      '- Three irreversible glycolytic steps → **four** bypass enzymes: pyruvate carboxylase + PEPCK, F1,6-bisphosphatase, glucose-6-phosphatase',
-      '- Liver (and kidney cortex) only — muscle lacks G6Pase, so muscle glycogen can never export glucose',
+      '- Not glycolysis in reverse: three irreversible steps → **four** bypass enzymes; liver (and kidney cortex) only — muscle lacks G6Pase',
+      '- **Pyruvate carboxylase** (mitochondrial; biotin + ATP; needs acetyl-CoA) → OAA leaves the matrix as **malate** → **PEPCK** (GTP, releases CO₂) → PEP',
+      '- **F1,6-bisphosphatase** (rate-limiting; AMP and F2,6-BP ⊣) and **glucose-6-phosphatase** (ER lumen) finish the job',
     ],
   },
   {
-    at: 'The Substrates',
-    mode: 'lead',
+    at: 'Worked Examples — Gluconeogenic Reasoning',
+    mode: 'after',
     figure: {
       svg: coriSvg,
       alt:
@@ -564,8 +565,8 @@ export const mcatCarbMetabolismFigures: DeckFigurePlacement[] = [
       caption: 'The Cori cycle: anaerobic tissues export lactate, the liver spends 6 ATP-equivalents to turn it back into glucose — the energy bill moves to the liver.',
     },
     blocks: [
-      '- Lactate (Cori cycle) and alanine (glucose–alanine cycle) carry carbon from muscle to liver; glycerol enters as DHAP; odd-chain fats arrive as propionyl-CoA → succinyl-CoA',
-      '- **Never acetyl-CoA:** PDH is irreversible and the TCA cycle loses 2 CO₂ per turn, so even-chain fat gives no net glucose',
+      '- The loop in one picture: muscle banks 2 ATP, the liver pays 6 (4 ATP + 2 GTP) — an energy **transfer** to the oxygenated tissue, not an energy source',
+      '- The glucose–alanine cycle is the same loop with alanine as the carrier, so muscle nitrogen rides along to the liver',
     ],
   },
   {
@@ -615,7 +616,7 @@ export const mcatCarbMetabolismFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Beta-Cell Glucose Sensing (A Favorite Passage)',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: betaCellSvg,
       alt:
@@ -624,7 +625,8 @@ export const mcatCarbMetabolismFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- GLUT2 → glucokinase → ATP/ADP ↑ → **K$_{ATP}$ closes** → depolarization → **Ca²⁺ in** → insulin exocytosis',
-      '- Both sensor components are high-$K_m$ so they never saturate; **sulfonylureas** close K$_{ATP}$ directly',
+      '- Both sensor components are high-$K_m$ (glucokinase also escapes G6P inhibition), so the signal never saturates',
+      '- **Sulfonylureas** (type 2 diabetes drugs) close K$_{ATP}$ directly → insulin release even without a glucose signal',
     ],
   },
 ]

@@ -25,17 +25,15 @@ The **DSM-5** is the classification standard: **categorical** (diagnosis met or 
 | **Generalized anxiety disorder** | Excessive, *uncontrollable* worry about MANY domains, more days than not, **≥ 6 months**, with somatic tension/sleep/concentration symptoms | Breadth + duration + uncontrollability separate it from normal worry |
 | **Specific phobia** | Intense fear of a particular object/situation; immediate response; avoidance | Person usually recognizes the fear as excessive |
 | **Social anxiety disorder** | Fear of scrutiny and negative evaluation in social/performance situations | Fear of embarrassment specifically |
-| **Panic disorder** | Recurrent *unexpected* **panic attacks** (surge peaking in minutes: palpitations, dyspnea, derealization, fear of dying) PLUS ≥ 1 month of worry about attacks or maladaptive behavior change | The attack is an event; the DISORDER is the fear-of-the-fear cycle |
+| **Panic disorder** | Recurrent *unexpected* **panic attacks** (surge peaking in minutes: palpitations, dyspnea, derealization, fear of dying) PLUS ≥ 1 month of worry about attacks or maladaptive behavior change | The attack is an event; the DISORDER is the fear-of-the-fear cycle. Attacks mimic cardiac emergencies — passages love the ER vignette with a normal workup |
 | **Agoraphobia** | Fear/avoidance of situations where escape/help might be unavailable (crowds, transit, open/enclosed spaces) | Often, but not necessarily, follows panic attacks |
-
-Panic attacks mimic cardiac emergencies — passages love the ER vignette with normal workup.
 
 ### Obsessive-Compulsive & Related
 
 - **Obsessions**: intrusive, unwanted, anxiety-producing thoughts/urges/images the person tries to suppress — recognized as products of their own mind
 - **Compulsions**: repetitive behaviors or mental acts performed to neutralize obsession-driven anxiety or by rigid rules
 - The maintaining engine is **negative reinforcement** (learning lesson tie-in): the ritual briefly removes anxiety, strengthening the ritual — which is why exposure WITH response prevention is the behavioral treatment
-- Related: body dysmorphic disorder, hoarding disorder
+- Related disorders run the same loop with different content: **body dysmorphic disorder** (preoccupation with a perceived flaw, mirror-checking) and **hoarding disorder** (distress at discarding)
 
 ### Trauma & Stressor-Related
 

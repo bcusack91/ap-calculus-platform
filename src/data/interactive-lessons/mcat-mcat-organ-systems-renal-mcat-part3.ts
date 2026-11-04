@@ -21,11 +21,11 @@ The **vasa recta** are countercurrent **exchangers** (passive, hairpin capillari
 
 ### ADH — Deciding How Much Water Comes Home
 
-- Hypothalamic osmoreceptors sense plasma osmolarity; posterior pituitary releases **ADH (vasopressin)** when osmolarity rises (or volume falls severely).
-- ADH → **V2 receptors** on collecting-duct principal cells → cAMP → **aquaporin-2** channels inserted into the apical membrane.
-- With ADH: water exits into the salty medulla → small volume of concentrated urine (up to ~1200 mOsm/L, matching the gradient's ceiling).
-- Without ADH: the duct stays water-tight; the dilute fluid leaving the ascending limb is excreted — large volumes of dilute urine.
-- **Diabetes insipidus:** central (no ADH made) vs. **nephrogenic** (kidney doesn't respond). Distinguish with exogenous ADH: central corrects, nephrogenic doesn't. Both produce dilute polyuria WITHOUT glucose — unlike diabetes mellitus.
+- Hypothalamic osmoreceptors trigger posterior-pituitary **ADH (vasopressin)** release when osmolarity rises (or volume falls severely).
+- ADH → **V2 receptors** on collecting-duct principal cells → cAMP → **aquaporin-2** inserted into the apical membrane.
+- With ADH: water exits into the salty medulla → scant, concentrated urine (up to ~1200 mOsm/L, the gradient's ceiling).
+- Without ADH: the duct stays water-tight and the dilute fluid from the ascending limb is excreted as copious dilute urine.
+- **Diabetes insipidus:** central (no ADH) vs. **nephrogenic** (kidney unresponsive); exogenous ADH corrects only central DI. Both give dilute, glucose-free polyuria, unlike diabetes mellitus.
 
 ### RAAS — Defending Volume and Pressure
 

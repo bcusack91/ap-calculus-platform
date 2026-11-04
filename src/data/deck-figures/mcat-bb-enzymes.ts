@@ -475,7 +475,7 @@ export const mcatEnzymesFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Physiological Contrast: Hexokinase vs. Glucokinase',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: hexoSvg,
       alt:
@@ -505,7 +505,7 @@ export const mcatEnzymesFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Lineweaver-Burk Signatures',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: lbSignaturesSvg,
       alt:
@@ -513,12 +513,15 @@ export const mcatEnzymesFigures: DeckFigurePlacement[] = [
       caption: 'Lineweaver–Burk signatures: the intercept the inhibitor leaves alone names the parameter it did not change (illustrative).',
     },
     blocks: [
-      '- Competitive lines meet on the y-axis, noncompetitive on the x-axis, uncompetitive run parallel — the intercept that stays put is the parameter that did not change',
+      '- **Competitive:** lines meet on the **y-axis** (same $1/V_{max}$)',
+      '- **Noncompetitive:** lines meet on the **x-axis** (same $-1/K_m$)',
+      '- **Uncompetitive:** **parallel** lines (same slope $K_m/V_{max}$; both parameters fall by one factor)',
+      '- The intercept that stays put names the parameter the inhibitor did not change',
     ],
   },
   {
     at: 'Allosteric Enzymes Break Michaelis-Menten',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: allostericSvg,
       alt:
@@ -526,8 +529,9 @@ export const mcatEnzymesFigures: DeckFigurePlacement[] = [
       caption: 'Cooperativity makes the curve sigmoidal; heterotropic activators shift it left (R), inhibitors right (T) — the same logic as hemoglobin (illustrative).',
     },
     blocks: [
-      '- Cooperative binding (T → R) makes the curve sigmoidal: near $K_{0.5}$ a small change in $[S]$ swings the rate — a switch, not a dimmer',
-      '- Heterotropic activators shift the curve left (toward R); inhibitors shift it right (toward T) — hemoglobin’s 2,3-BPG, H⁺ and CO₂ are T-state stabilizers',
+      '- Multi-subunit enzymes: binding at one site raises affinity at the others (T → R), so the curve is sigmoidal with a $K_{0.5}$, not a $K_m$',
+      '- Near $K_{0.5}$ a small change in $[S]$ swings the rate — a switch, not a dimmer',
+      '- **Homotropic** effector = the substrate itself; **heterotropic** activators shift the curve left (R), inhibitors right (T) — hemoglobin’s 2,3-BPG, H⁺ and CO₂ are T-state stabilizers',
     ],
   },
   {
@@ -547,7 +551,7 @@ export const mcatEnzymesFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Feedback Inhibition',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: feedbackSvg,
       alt:

@@ -373,15 +373,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `Doppler ultrasound shows blood accelerating from $1\\;\\text{m/s}$ to $3\\;\\text{m/s}$ as it passes through a short, narrowed heart valve. Using Bernoulli's equation, about how much lower is the pressure in the jet? (Blood density $1000\\;\\text{kg/m}^3$, $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$)`,
+    question: `A catheter measures the pressure in the jet through a short, narrowed heart valve as $4000\\;\\text{Pa}$ lower than the pressure just upstream, where blood moves at $1\\;\\text{m/s}$. Using Bernoulli's equation, about how fast is the blood in the jet? (Blood density $1000\\;\\text{kg/m}^3$)`,
     options: [
-      `About $30\\;\\text{mmHg}$`,
-      `About $34\\;\\text{mmHg}$`,
-      `About $60\\;\\text{mmHg}$`,
-      `About $15\\;\\text{mmHg}$`,
+      `About $3\\;\\text{m/s}$`,
+      `About $2.8\\;\\text{m/s}$`,
+      `About $3.8\\;\\text{m/s}$`,
+      `About $9\\;\\text{m/s}$`,
     ],
     correctAnswer: 0,
-    explanation: `$\\Delta P = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = \\tfrac{1}{2}(1000)(9 - 1) = 4000\\;\\text{Pa}$, and $4000/133 \\approx 30\\;\\text{mmHg}$. 34 mmHg uses only $\\tfrac{1}{2}\\rho v_2^2$ and ignores the upstream speed, and 60 mmHg drops the factor of one-half. 15 mmHg squares the difference in speeds, $(3 - 1)^2 = 4$, instead of taking the difference of the squares.`,
+    explanation: `$\\Delta P = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2)$, so $v_2^2 = v_1^2 + 2\\Delta P/\\rho = 1 + 8 = 9$ and $v_2 = 3\\;\\text{m/s}$. About 2.8 m/s is $\\sqrt{2\\Delta P/\\rho} = \\sqrt{8}$, which forgets the upstream speed, and about 3.8 m/s then adds that upstream speed to it instead of adding the squares. 9 m/s stops at $v_2^2$ and forgets the square root.`,
     difficulty: 'hard',
     yield: 'HIGH',
     part: 2,
@@ -499,7 +499,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `Bernoulli's equation applies only to a fluid treated as non-viscous. Why is that assumption needed?`,
+    question: `Bernoulli's equation, $P + \\tfrac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}$ along a streamline, holds only for a fluid treated as non-viscous. Why is that assumption needed?`,
     options: [
       `Viscosity changes the fluid's density as it flows along the pipe`,
       `Viscous friction turns mechanical energy into heat, so it is not conserved`,

@@ -612,8 +612,8 @@ export const mcatOpticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: "Snell's Law",
-    mode: 'lead',
+    at: "Worked Example — Snell's Law into Glass",
+    mode: 'after',
     figure: {
       svg: snellSvg,
       alt:
@@ -621,8 +621,8 @@ export const mcatOpticsFigures: DeckFigurePlacement[] = [
       caption: 'Snell’s law through a parallel-sided glass block with the lesson’s numbers: 30° in air becomes 19° in glass (toward the normal) and 30° again on exit, the ray displaced but parallel.',
     },
     blocks: [
-      '- $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$: into a denser medium the ray bends **toward** the normal; out again, away',
-      '- Air → glass at 30°: $\\sin\\theta_2 = 0.5/1.5 \\Rightarrow \\theta_2 \\approx 19°$; a parallel exit face restores 30°, shifted sideways',
+      '- The solution drawn: into glass the ray bends **toward** the normal ($30° \\to 19°$); out through the parallel face, away again ($19° \\to 30°$)',
+      '- It leaves parallel to its original line, shifted sideways — every angle measured from the normal',
     ],
   },
   {
@@ -668,14 +668,18 @@ export const mcatOpticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Convex Mirror — One Regime',
-    mode: 'beside',
+    at: 'Worked Example — Convex Mirror Sanity Check',
+    mode: 'after',
     figure: {
       svg: convexSvg,
       alt:
         'Ray diagram for a convex mirror with the worked example’s numbers, d₀ = 20 cm and f = −20 cm. The mirror bulges toward the object; F and C sit behind it. An upright object stands 20 cm in front. Two blue rays from its tip reflect and spread apart: the parallel ray reflects as if coming from F, the ray aimed at F reflects parallel. Their dashed back-extensions meet behind the mirror at an upright dashed red image half the object’s height, 10 cm behind the glass: d_i = −10 cm, m = +½ — virtual, upright, reduced, the only image a convex mirror can make.',
       caption: 'The convex-mirror sanity check drawn to scale: d₀ = 20 cm, f = −20 cm gives d_i = −10 cm and m = +½ — virtual, upright, reduced, as every convex-mirror image is.',
     },
+    blocks: [
+      '- The solution drawn: the parallel ray reflects as if from $F$ behind the glass, the ray aimed at $F$ reflects parallel',
+      '- Their back-extensions meet $10$ cm behind the mirror at half height: virtual, upright, reduced — the only image a convex mirror makes',
+    ],
   },
   {
     at: 'Lens Types',
@@ -692,8 +696,8 @@ export const mcatOpticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Thin-Lens Equation',
-    mode: 'lead',
+    at: 'Worked Example — Projector Geometry',
+    mode: 'after',
     figure: {
       svg: thinLensSvg,
       alt:
@@ -701,8 +705,8 @@ export const mcatOpticsFigures: DeckFigurePlacement[] = [
       caption: 'The thin-lens regimes drawn from 1/f = 1/d₀ + 1/d_i: camera (beyond 2F), projector (15 cm from a 10 cm lens → real image at 30 cm, m = −2) and magnifier (5 cm → virtual image at −10 cm, m = +2).',
     },
     blocks: [
-      '- Same equation as mirrors, $\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$, $m = -\\frac{d_i}{d_o}$; a lens’s real image is on the FAR side',
-      '- Beyond $2f$ camera · $f$ to $2f$ projector · inside $f$ magnifier (virtual, upright) · diverging: always virtual, upright, reduced',
+      '- The same lens in all three regimes, the middle and right panels drawn with the numbers just solved: projector ($d_o = 15$ cm → real, doubled) and magnifier ($d_o = 5$ cm → virtual, doubled)',
+      '- Principal rays: parallel → far $F$; through the centre → undeviated; through the near $F$ → parallel',
     ],
   },
   {
@@ -715,8 +719,8 @@ export const mcatOpticsFigures: DeckFigurePlacement[] = [
       caption: 'Young’s double slit (schematic, not to scale): the two paths to a screen point differ by d sinθ, so bright fringes sit where d sinθ = mλ and dark ones half a wavelength off.',
     },
     blocks: [
-      '- Path difference $d\\sin\\theta = m\\lambda$ → bright; $(m + \\tfrac{1}{2})\\lambda$ → dark; the lesson’s slits: $\\lambda = (2\\,\\mu\\text{m})(0.25) = 500$ nm',
-      '- Longer $\\lambda$ or smaller $d$ spreads the fringes; thin-film colours are the same interference set by film thickness',
+      '- Two paths to one screen point differ by $d\\sin\\theta$: a whole number of wavelengths ($m\\lambda$) → bright; a half-integer ($(m + \\tfrac{1}{2})\\lambda$) → dark',
+      '- Longer $\\lambda$ or smaller $d$ spreads the fringes apart',
     ],
   },
 ]

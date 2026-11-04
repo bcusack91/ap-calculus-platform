@@ -2,7 +2,7 @@
  * Exit-quiz pool for the MCAT Immunology lesson, written from the lesson itself
  * and tagged by exam-yield tier (see ../lesson-built.ts). Default items are
  * answerable from the lesson's default view; LOW items test only its low-yield
- * boxes (C3a/C5a, CD40/CD40L, AIDS opportunists).
+ * boxes (C3a/C5a, CD40/CD40L, which chains carry a D segment, AIDS opportunists).
  */
 import { makeLessonExitQuiz, type LessonExitItem } from '../lesson-built'
 
@@ -93,15 +93,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `A person meets a bacterial strain for the first time, before any specific antibody exists. Complement can still be activated on the bacterial surface through:`,
+    question: `A patient born unable to make any antibody still deposits C3b on bacteria during infections. Which pathway accounts for this?`,
     options: [
-      `The classical pathway, using pre-made IgG`,
+      `The classical pathway, triggered by maternal IgG`,
       `The classical pathway, triggered by IgM`,
-      `The alternative pathway, with no antibody`,
-      `Neither pathway, until antibody is made`,
+      `The alternative pathway, from the microbial surface`,
+      `None; C3b deposition needs bound antibody`,
     ],
     correctAnswer: 2,
-    explanation: `The alternative pathway fires spontaneously on microbial surfaces without antibody, so it works on first exposure and is purely innate. The classical pathway is triggered by antibody bound to antigen, whether IgM or IgG, and no specific antibody exists yet. Saying neither pathway works ignores the alternative pathway entirely.`,
+    explanation: `The alternative pathway fires spontaneously on microbial surfaces with no antibody at all, so a patient with no antibody still cleaves C3 and coats bacteria with C3b. The classical pathway needs antibody bound to antigen, which this patient cannot make (maternal IgG fades within months of birth, and he makes no IgM). Saying C3b deposition needs bound antibody ignores the alternative pathway entirely.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
     part: 1,
@@ -121,15 +121,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `Several days into a bacterial skin infection, pus has collected at the site. The pus consists largely of:`,
+    question: `Hours into a viral infection, uninfected cells next to the infected ones begin degrading RNA and slowing protein synthesis, before any antibody or T cell has arrived. The signal that caused this was:`,
     options: [
-      `Plasma cells that have secreted IgM`,
-      `Dead neutrophils and tissue debris`,
-      `NK cells that have released perforin`,
-      `Eosinophils and spent mast-cell granules`,
+      `Histamine released by nearby mast cells`,
+      `Interferon released by the infected cells`,
+      `Complement C3b deposited on their membranes`,
+      `Perforin delivered by patrolling NK cells`,
     ],
     correctAnswer: 1,
-    explanation: `Neutrophils are the most abundant leukocyte and the first responders; they phagocytose microbes and die at the site, and their remains plus debris form pus. Plasma cells secrete antibody mainly from lymphoid tissue, NK cells target host cells lacking MHC I, and eosinophils and mast cells are associated with parasites and allergy rather than pus.`,
+    explanation: `Interferons are cytokines released by virus-infected cells that warn neighboring cells to degrade RNA and dampen protein synthesis, an antiviral state that slows viral spread before adaptive immunity arrives. Histamine from mast cells dilates and leaks vessels rather than altering RNA, C3b tags microbes for phagocytes, and perforin from NK cells kills a target cell outright instead of putting its neighbors on guard.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
     part: 1,
@@ -263,7 +263,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     correctAnswer: 2,
     explanation: `D segments are present in antibody heavy chains and in TCR beta and delta chains, while light chains and TCR alpha use only V and J. The heavy, beta, and delta chains therefore all include a D segment, making the light chain the only VJ-only option listed.`,
     difficulty: 'hard',
-    yield: 'MEDIUM',
+    yield: 'LOW',
     part: 2,
   },
   {
@@ -573,15 +573,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 4,
   },
   {
-    question: `An Rh-negative mother has two Rh-positive babies and receives no treatment. Hemolytic disease of the newborn typically affects the second baby but not the first because:`,
+    question: `An Rh-negative woman who was sensitized at an earlier delivery and never received RhoGAM is now carrying an Rh-NEGATIVE fetus. The most likely outcome for this fetus is:`,
     options: [
-      `The first fetus makes its own protective anti-Rh IgG`,
-      `Her anti-Rh IgM crosses and shields the first fetus`,
-      `She is usually sensitized at the first delivery`,
-      `First-born fetuses do not express the Rh antigen`,
+      `Hemolysis, since her anti-Rh IgG crosses the placenta regardless`,
+      `Hemolysis, since the fetus inherits her anti-Rh antibodies`,
+      `No hemolysis, since the fetal red cells carry no Rh antigen`,
+      `No hemolysis, since anti-Rh antibody is IgM and cannot cross`,
     ],
     correctAnswer: 2,
-    explanation: `Sensitization typically occurs at delivery, when fetal red cells enter her circulation; her anti-Rh IgG then crosses the placenta in the next Rh-positive pregnancy and hemolyzes fetal cells, a type II reaction. The first fetus does not make protective anti-Rh. IgM cannot cross the placenta at all, and during the first pregnancy she has no anti-Rh antibody of any class yet. An Rh-positive fetus carries the antigen whether or not it is first-born.`,
+    explanation: `Hemolytic disease needs two things: maternal anti-Rh IgG that crosses the placenta AND fetal red cells carrying the Rh antigen for it to bind. Her IgG does cross, but an Rh-negative fetus has no Rh antigen on its red cells, so the antibody finds nothing to attack and no hemolysis follows. Crossing "regardless" of the fetal antigen misses that the antibody needs its target, and a fetus does not inherit antibodies through its genes. The anti-Rh that matters is IgG, not IgM, so "cannot cross" is the wrong reason for the right outcome.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 4,

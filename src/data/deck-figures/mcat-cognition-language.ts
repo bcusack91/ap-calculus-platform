@@ -428,7 +428,7 @@ export const mcatCognitionLanguageFigures: DeckFigurePlacement[] = [
         'Line graph of reaction time in milliseconds against the number of items in the display, from 4 to 16. The serial, controlled search line (red) rises steadily, from about 450 ms at two items to about 950 ms at sixteen. The parallel, automatic search line (blue) is flat at about 400 ms: the target pops out regardless of set size. A dashed grey arrow labelled practice points from the rising line down to the flat one.',
       caption: 'Reaction time by set size (illustrative): a slope means serial search; a flat line means parallel, automatic processing.',
     },
-    blocks: ['- A slope that flattens with practice is how a passage *measures* automaticity; Stroop intrusions are the other tell'],
+    blocks: ['- Read the axes before the conclusions: the **slope** of RT against set size is the evidence, not the height of the line'],
   },
   {
     at: 'The Judgment Heuristics',
@@ -442,7 +442,6 @@ export const mcatCognitionLanguageFigures: DeckFigurePlacement[] = [
       '- **Representativeness** → base-rate neglect, conjunction fallacy ("feminist bank teller")',
       '- **Availability** → vivid, recent, heavily reported risks feel common',
       '- **Anchoring** → the first number drags the final estimate toward it',
-      '- Framing: risk-averse for gains ("90% survive"), risk-seeking for losses ("10% die")',
     ],
   },
   {
@@ -490,9 +489,9 @@ export const mcatCognitionLanguageFigures: DeckFigurePlacement[] = [
         "A schematic left hemisphere seen from the side, front to the left. Broca's area (blue box) sits in the frontal lobe near motor cortex and is labelled production. Wernicke's area (red box) sits in the superior temporal lobe behind the lateral fissure and is labelled comprehension. A two-headed arrow labelled arcuate fasciculus, repetition, arcs between them. Damage: Broca's gives nonfluent speech, Wernicke's fluent but empty speech, and arcuate damage impairs repetition only.",
     },
     blocks: [
-      "- **Broca's area** (left frontal, near motor cortex): speech production",
-      "- **Wernicke's area** (left superior temporal): language comprehension",
-      '- **Arcuate fasciculus**: the tract linking the two, used for repetition',
+      "- **Broca's area** (left frontal, near motor cortex): production — damage gives nonfluent, effortful speech with comprehension intact; aware and frustrated",
+      "- **Wernicke's area** (left superior temporal): comprehension — damage gives fluent but empty speech with neologisms, poor comprehension; often unaware",
+      '- **Arcuate fasciculus** links the two: cut it and only repetition fails (**conduction aphasia**)',
       '- Global aphasia = both regions; language is left-dominant in nearly all right-handers',
     ],
   },

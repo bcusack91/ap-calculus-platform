@@ -26,6 +26,8 @@ export const mcatSocioCulturePart1Data = {
 | **Taboo** | Unthinkable, revolting | Incest, cannibalism | Revulsion, expulsion, criminalization |
 | **Law** | Illegal (formalized norm) | Theft | State-administered punishment |
 
+### Sanctions — How Norms Are Enforced
+
 **Sanctions** enforce norms: positive (rewards) or negative (punishments), formal (administered by institutions — diplomas, fines) or informal (administered by anyone — smiles, gossip). A police ticket is a formal negative sanction; an eye-roll is an informal negative one.
 
 ### Language — Culture's Operating System

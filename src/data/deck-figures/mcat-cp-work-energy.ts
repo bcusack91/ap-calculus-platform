@@ -466,13 +466,11 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
     blocks: [
       '$W = Fd\\cos\\theta$ — a **scalar** in joules (1 J = 1 N·m); only the force component **along** the displacement counts',
       'Along the motion: $+Fd$ · opposing it (friction): $-Fd$ · perpendicular to it: **zero**',
-      '"No work" traps: a tray carried **horizontally**, the **normal** force, the **centripetal** force (so speed stays constant)',
-      'Holding a weight still: $d = 0$ → zero mechanical work, whatever your muscles say',
     ],
   },
   {
     at: 'Kinetic Energy and the Work-Energy Theorem',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: wetSvg,
       alt:
@@ -485,8 +483,9 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
     ],
   },
   {
+    // After the part slides: the ledger prints the example's own answers (400, −100, 300 J, 10 m/s).
     at: 'Worked Example — Pulling a Sled',
-    mode: 'lead',
+    mode: 'after',
     figure: {
       svg: sledSvg,
       alt:
@@ -500,7 +499,7 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Stored Energy',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: storedSvg,
       alt:
@@ -510,6 +509,7 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
     blocks: [
       '**Gravitational** $U_g = mgh$ — from any reference height you choose; only **changes** in $U_g$ matter',
       '**Elastic** $U_s = \\tfrac{1}{2}kx^2$ ($x$ from natural length): double the compression → **4×** the energy',
+      '**Work is the area** under a force–displacement graph: a spring\'s force climbs $0 \\to kx$, so the triangle $\\tfrac{1}{2}(x)(kx)$ is the energy it stores',
     ],
   },
   {
@@ -529,7 +529,7 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Conservation of Mechanical Energy',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: consSvg,
       alt:
@@ -539,11 +539,12 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
     blocks: [
       'Only conservative forces: $KE_0 + U_0 = KE_f + U_f$ — any drop or slide through $h$ gives $v = \\sqrt{2gh}$',
       'With friction add $E_{lost}$: **total** energy is always conserved; **mechanical** energy only if frictionless',
+      'Consequences: mass cancels; doubling the height multiplies $v$ by $\\sqrt{2}$, not 2; drop, pendulum or frictionless ramp through the same $h$ land at the same speed',
     ],
   },
   {
     at: 'Power: The Rate of Doing Work',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: powerSvg,
       alt:
@@ -552,12 +553,13 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '$P = W/t = \\Delta E/t$, and $P = Fv$ for a force pushing at speed $v$ — watts are joules **per second**',
-      'A rating says how **fast** energy converts, not how much; cruising at constant $v$ still needs $P = F_{drag}v$',
+      'A rating says how **fast** energy converts, not how much: a weak motor lifts any load given enough time; cruising at constant $v$ still needs $P = F_{drag}v$',
     ],
   },
   {
-    at: 'Simple Machines: Trading Force for Distance',
-    mode: 'replace-table',
+    // After the ramp worked example: the picture is drawn with that example's 800 N / 200 N / 1200 J.
+    at: 'Worked Example — Why the Ramp Helps',
+    mode: 'after',
     figure: {
       svg: machinesSvg,
       alt:
@@ -573,7 +575,7 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Scaling Arguments Answer Whole Question Sets',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: scalingSvg,
       alt:
@@ -583,6 +585,7 @@ export const mcatWorkEnergyFigures: DeckFigurePlacement[] = [
     blocks: [
       'Double $v$: stopping **distance** ×4 ($d = KE/F \\propto v^2$), stopping **time** only ×2 ($t = p/F \\propto v$)',
       'Double the mass at the same speed: $KE$ and $p$ both double — distance and time both double',
+      'The classic discrimination: **distance pairs with energy**, **time pairs with momentum** (impulse)',
     ],
   },
 ]

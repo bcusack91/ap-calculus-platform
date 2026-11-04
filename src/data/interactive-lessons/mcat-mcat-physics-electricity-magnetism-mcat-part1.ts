@@ -14,7 +14,7 @@ export const magnetismMcatPart1: LessonData = {
 
 ### The Magnetic Field
 
-The magnetic field $\\vec{B}$ is measured in **tesla**: $1\\;\\text{T} = 1\\;\\text{N}/(\\text{A}\\cdot\\text{m})$. A tesla is huge — everyday fields are quoted in **gauss** ($1\\;\\text{G} = 10^{-4}\\;\\text{T}$). Earth's field is about $0.5\\;\\text{G}$; a clinical MRI magnet is $1.5$ to $3\\;\\text{T}$, tens of thousands of times stronger.
+All magnetism traces back to moving charge — currents in wires, or electron motion inside atoms. The magnetic field $\\vec{B}$ is measured in **tesla**: $1\\;\\text{T} = 1\\;\\text{N}/(\\text{A}\\cdot\\text{m})$. A tesla is huge — everyday fields are quoted in **gauss** ($1\\;\\text{G} = 10^{-4}\\;\\text{T}$). Earth's field is about $0.5\\;\\text{G}$; a clinical MRI magnet is $1.5$ to $3\\;\\text{T}$, tens of thousands of times stronger.
 
 ### No Magnetic Monopoles
 
@@ -22,11 +22,9 @@ Cut a bar magnet in half and you get two smaller magnets, never an isolated nort
 
 ### Moving Charge Makes Magnetic Field
 
-All magnetism traces back to moving charge — currents in wires, or electron motion inside atoms.
-
 **Long straight wire** carrying current $I$, at distance $r$:
 
-$B = \\frac{\\mu_0 I}{2\\pi r}$
+$$B = \\frac{\\mu_0 I}{2\\pi r}$$
 
 with $\\mu_0 = 4\\pi \\times 10^{-7}\\;\\text{T}\\cdot\\text{m/A}$, so the handy lump is $\\frac{\\mu_0}{2\\pi} = 2 \\times 10^{-7}$ in SI units.
 

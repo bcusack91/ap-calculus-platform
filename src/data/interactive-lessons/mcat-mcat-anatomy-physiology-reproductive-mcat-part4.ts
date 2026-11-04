@@ -26,8 +26,6 @@ Reproductive passages rarely ask you to recite the axis — they perturb it and 
 
 ### Reading Hormone Graphs
 
-Given traces of LH, FSH, estrogen, progesterone across a cycle:
-
 - The **LH spike** is the landmark: ovulation is ~day of the spike; the estrogen **peak precedes** it
 - **Progesterone elevated** → you are in the luteal phase (only the corpus luteum makes much progesterone)
 - **Both estrogen and progesterone low + FSH creeping up** → menstruation/early follicular

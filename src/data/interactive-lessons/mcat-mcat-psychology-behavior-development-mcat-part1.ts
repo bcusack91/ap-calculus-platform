@@ -32,15 +32,14 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
 
 ### The Critiques (where modern items live)
 
-- **Underestimation**: violation-of-expectation looking-time studies show infants register object permanence months before Piaget's manual-search criterion — search tasks demand motor planning the infant lacks, not just the concept
-- **Continuity vs. stages**: abilities emerge gradually and unevenly across domains (conservation of number before volume), straining the idea of unified stage shifts
+- **Underestimation**: looking-time studies show object permanence months before Piaget's manual-search criterion, which also needs motor planning the infant lacks
+- **Continuity vs. stages**: abilities emerge gradually and unevenly across domains (mass is conserved years before volume), straining the idea of unified stages
+- **Culture and schooling** shift timing; formal operations depend on domain experience
+- Still, the SEQUENCE replicates broadly; the MCAT tests Piaget as framework and as target
 
 <!-- yield:low -->
 - Piaget's own term for this within-stage unevenness is **horizontal decalage**.
-<!-- /yield -->
-
-- **Culture and schooling** shift stage timing, and formal operations depend heavily on domain experience
-- Still, the SEQUENCE replicates broadly — the MCAT tests Piaget both as framework and as target of these critiques`
+<!-- /yield -->`
     },
     {
       id: 'dev1-worked',

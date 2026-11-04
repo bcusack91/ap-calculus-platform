@@ -15,6 +15,9 @@ export const mcatPsychDisordersPart4Data = {
 | **Biological/biomedical** | Neurotransmitter, structural, genetic dysfunction | Medication, brain stimulation |
 | **Behavioral** | Learned associations and reinforcement histories | Unlearning: exposure, conditioning-based methods |
 | **Cognitive** | Distorted appraisals and maladaptive automatic thoughts | Restructuring thoughts (with behavior experiments = CBT) |
+
+| Framework | Disorder is... | Treatment follows as... |
+|-----------|----------------|------------------------|
 | **Psychodynamic** | Unconscious conflict | Insight-oriented therapy |
 | **Humanistic** | Blocked growth, conditions of worth | Client-centered, unconditional positive regard |
 | **Sociocultural** | Social context, stressors, stigma, inequities | System- and community-level intervention |
@@ -84,7 +87,7 @@ export const mcatPsychDisordersPart4Data = {
 
 **(b) Never, in either direction.** Aspirin relieving headaches does not prove headaches are aspirin-deficiency diseases, and CBT working does not prove depression is "just thoughts." The editorial commits this category error twice.
 
-**(c) Etiological designs.** Etiology claims need etiological designs (Part 4 of the development lesson), not outcome trials.
+**(c) Etiological designs.** Etiology claims need etiological designs — twin, adoption, and longitudinal studies — not outcome trials.
 
 **Problem 4.** Expect three follow-up items on the same trial's design.
 

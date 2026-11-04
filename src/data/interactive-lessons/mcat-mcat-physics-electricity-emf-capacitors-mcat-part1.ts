@@ -10,7 +10,7 @@ export const emfCapacitorsMcatPart1: LessonData = {
 
 **Part 1 of 2 — EMF, Internal Resistance & Meters**
 
-**Where this fits.** The *Circuits Part 1: Current & Resistance* and *Circuits Part 2: Kirchhoff's Rules & Power* lessons gave you the rules for steady current ($V = IR$, series and parallel resistors, Kirchhoff's rules, network reduction and power), with every battery a perfect, fixed voltage. This lesson makes the battery real (EMF, internal resistance, meters), then adds the element that stores charge instead of passing it: the capacitor, with its dielectrics and stored energy. Next, the *Circuits Part 4: Capacitor Networks & Bioelectricity* lesson wires capacitors into networks and RC circuits and finds them in neurons and defibrillators.
+**Where this fits.** *Circuits Parts 1 and 2* gave you the rules for steady current ($V = IR$, series and parallel resistors, Kirchhoff's rules, power) with every battery a perfect, fixed voltage. This lesson makes the battery real (EMF, internal resistance, meters), then adds the element that stores charge instead of passing it: the capacitor, with its dielectrics and stored energy. *Circuits Part 4* wires capacitors into networks and RC circuits and finds them in neurons and defibrillators.
 
 ### What EMF Means
 
@@ -30,12 +30,10 @@ Because $r$ sits in series with the external load $R$, the same current flows th
 
 $$I = \\frac{\\varepsilon}{R + r}$$
 
-Read the cases:
-
 - **Open circuit** ($I = 0$): nothing flows, nothing is lost inside, so $V_{\\text{term}} = \\varepsilon$. This is why an ideal voltmeter across an unloaded battery reads the EMF.
-- **Under load**: the terminal voltage **sags** below $\\varepsilon$ by $Ir$. More current means more sag. Headlights dim while a car's starter motor cranks because the starter draws hundreds of amps through the battery's internal resistance.
-- **Short circuit** ($R = 0$): the current reaches its maximum, $I_{\\max} = \\varepsilon / r$, and $V_{\\text{term}} = 0$. All of the battery's power is wasted as heat inside it, which is why a shorted battery gets hot.
-- **Being charged**: a charger forces current backward into the positive terminal. Now the internal drop adds instead of subtracts: $V_{\\text{term}} = \\varepsilon + Ir$. A charger must supply MORE than the battery's EMF.
+- **Under load**: the terminal voltage **sags** below $\\varepsilon$ by $Ir$; more current, more sag. Headlights dim while a car's starter cranks because the starter draws hundreds of amps through $r$.
+- **Short circuit** ($R = 0$): the current peaks at $I_{\\max} = \\varepsilon / r$ and $V_{\\text{term}} = 0$. All of the battery's power is wasted as heat inside it.
+- **Being charged**: a charger forces current backward into the positive terminal, so the internal drop adds: $V_{\\text{term}} = \\varepsilon + Ir$. A charger must supply MORE than the EMF.
 
 Energy bookkeeping: the chemistry supplies power $\\varepsilon I$; the internal resistance wastes $I^2 r$; the load receives $I^2 R = V_{\\text{term}} I$.
 
@@ -89,7 +87,7 @@ An aging battery often still shows its full EMF on a voltmeter, because the test
 
 Rule of thumb: series for more voltage, parallel for more current capacity at the same voltage.
 
-**Capacity:** a battery's rating in milliamp-hours (mAh) is a quantity of CHARGE, because $Q = It$. A $2000\\;\\text{mAh}$ cell can deliver $2.0\\;\\text{A}$ for one hour: $Q = (2.0\\;\\text{A})(3600\\;\\text{s}) = 7200\\;\\text{C}$. The energy it holds is roughly $QV$: at $3.7\\;\\text{V}$, about $2.7 \\times 10^4\\;\\text{J}$.
+**Capacity:** a battery's rating in milliamp-hours (mAh) is a quantity of CHARGE, because $Q = It$. A $1000\\;\\text{mAh}$ cell can deliver $1.0\\;\\text{A}$ for one hour: $Q = (1.0\\;\\text{A})(3600\\;\\text{s}) = 3600\\;\\text{C}$. The energy it holds is roughly $QV$: at $3.7\\;\\text{V}$, about $1.3 \\times 10^4\\;\\text{J}$.
 
 ### Meters
 
@@ -98,10 +96,10 @@ Rule of thumb: series for more voltage, parallel for more current capacity at th
 
 What goes wrong when they are swapped:
 
-- **Ammeter wired in parallel** across an element: its near-zero resistance is a short circuit. Almost all the current detours through the meter, the element goes dark (nearly $0\\;\\text{V}$ across it), and the large current can blow the meter's fuse.
-- **Voltmeter wired in series**: its enormous resistance chokes the current to nearly zero. Every other element goes dark, and the voltmeter reads nearly the full EMF, because almost the entire voltage drop now occurs across the meter itself.
+- **Ammeter wired in parallel** across an element: its near-zero resistance is a short circuit. Almost all the current detours through the meter, the element goes dark (nearly $0\\;\\text{V}$ across it), and the surge can blow the meter's fuse.
+- **Voltmeter wired in series**: its enormous resistance chokes the current to nearly zero. Every other element goes dark, and the meter reads nearly the full EMF, because almost the whole drop is now across the meter itself.
 
-Real meters are not ideal. A real voltmeter's finite resistance, in parallel with the element, slightly lowers the combined resistance, so it reads a little low; a real ammeter adds a little series resistance, which also lowers the current it is trying to measure.
+Real meters are not ideal: a voltmeter's finite resistance in parallel slightly lowers the combined resistance, so it reads a little low; an ammeter's small series resistance slightly lowers the current it is measuring.
 
 
 <!-- yield:low -->
@@ -112,7 +110,9 @@ Real meters are not ideal. A real voltmeter's finite resistance, in parallel wit
 
 ### Where EMF Comes From
 
-A battery is one or more **galvanic cells**. The cell's EMF is the cell potential from electrochemistry ($E^\\circ_{\\text{cell}}$ under standard conditions), set by the redox reaction through $\\Delta G = -nFE$ (where $n$ is the number of moles of electrons transferred and $F$ is Faraday's constant, the charge on one mole of electrons), and the battery's positive terminal is the cathode. The Electrochemistry topic covers that chemistry; here we treat the result as a circuit element.`
+A battery is one or more **galvanic cells**. The cell's EMF is the cell potential from electrochemistry ($E^\\circ_{\\text{cell}}$ under standard conditions), set by the redox reaction through $\\Delta G = -nFE$, where $n$ is the moles of electrons transferred and $F$ is Faraday's constant (the charge on one mole of electrons).
+
+The battery's positive terminal is the **cathode**. The Electrochemistry topic covers that chemistry; here we treat the result as a circuit element.`
     },
     {
       id: 'ec1-worked',

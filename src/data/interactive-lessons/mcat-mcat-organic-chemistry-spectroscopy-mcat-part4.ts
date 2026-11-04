@@ -12,11 +12,11 @@ Real MCAT questions rarely hand you one clean spectrum. They combine fragments o
 
 ### The Five-Step Elucidation Algorithm
 
-1. **Molecular formula first.** From MS ($M^{+}$) or the passage. Compute degrees of unsaturation: $\\text{DoU} = (2C + 2 + N - H - X)/2$ (oxygen is ignored). DoU = 4 or more suggests a benzene ring.
-2. **IR for functional groups.** Carbonyl? Broad O-H? N-H spikes? Nitrile? This partitions the formula into fragments.
-3. **$^1H$ NMR for the carbon skeleton.** Scale integrations to the formula, assign signature patterns (ethyl, isopropyl, para-aromatic), and use shifts to place fragments next to O, N, or C=O.
-4. **$^{13}C$ / symmetry check.** Signal count vs carbon count catches symmetric candidates.
-5. **Assemble and verify.** Every atom of the formula, every degree of unsaturation, and every spectral feature must be accounted for. One contradiction kills a candidate.
+- **1. Molecular formula first.** From MS ($M^{+}$) or the passage; compute $\\text{DoU} = (2C + 2 + N - H - X)/2$ (oxygen ignored). DoU ≥ 4 suggests a benzene ring.
+- **2. IR for functional groups.** Carbonyl? Broad O-H? N-H spikes? Nitrile? Partition the formula into fragments.
+- **3. $^1H$ NMR for the carbon skeleton.** Scale integrations to the formula, spot signature patterns (ethyl, isopropyl, para-aromatic); shifts place fragments next to O, N or C=O.
+- **4. $^{13}C$ / symmetry check.** Signal count vs carbon count flags symmetry.
+- **5. Assemble and verify.** Every atom, degree of unsaturation and spectral feature must be accounted for; one contradiction kills a candidate.
 
 ### Confirming a Reaction Happened
 
@@ -25,10 +25,10 @@ Passages love "which spectral change confirms the product?" Answer with the band
 | Transformation | Watch for |
 |----------------|-----------|
 | Alcohol → ketone (oxidation) | Broad 3350 disappears; strong ~1715 appears |
-| Aldehyde → carboxylic acid | 2720/2850 pair gone; O-H smear 2500-3300 appears; 1H signal at 9-10 replaced by 10-12 |
+| Aldehyde → carboxylic acid | 2720/2850 pair gone; O-H smear 2500-3300 appears; 1H 9-10 → 10-12 |
 | Ketone → alcohol (reduction, e.g. NaBH4) | 1715 disappears; broad O-H appears; new H-C-O signal 3.5-4.5 |
-| Ester hydrolysis | 1740 shifts to ~1710 with acid O-H; alkoxy 1H signals move upfield |
-| Amide/peptide bond formation | C=O shifts down from ~1710-1740 to 1630-1690; the acid O-H smear vanishes |
+| Ester hydrolysis | 1740 → ~1710 with acid O-H; alkoxy 1H signals move upfield |
+| Amide/peptide bond formation | C=O drops from ~1710-1740 to 1630-1690; the acid O-H smear vanishes |
 
 ### Ranking Techniques for a Given Ambiguity
 

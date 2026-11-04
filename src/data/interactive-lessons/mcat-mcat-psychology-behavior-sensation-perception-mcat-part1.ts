@@ -16,8 +16,6 @@ export const mcatPsychSensPercPart1Data = {
 
 ### Psychophysics: Quantifying the Stimulus–Experience Link
 
-Psychophysics — founded by **Gustav Fechner** (building on **Ernst Weber**) — measures how physical intensity maps onto subjective experience.
-
 | Concept | Definition |
 |---------|-----------|
 | **Absolute threshold** | Minimum stimulus intensity detected **50% of the time** |
@@ -30,7 +28,7 @@ Psychophysics — founded by **Gustav Fechner** (building on **Ernst Weber**) �
 - **Stevens' Power Law**: $S = k I^n$ — handles modalities Fechner's law fits poorly (e.g., the sensation of electric shock grows *faster* than intensity, $n > 1$).
 <!-- /yield -->
 
-**Why Weber's Law matters:** a 1-lb change is obvious when lifting 5 lbs but invisible when lifting 100 lbs. Detectability depends on the *ratio*, not the absolute difference.
+Psychophysics — founded by **Gustav Fechner** (building on **Ernst Weber**) — measures how physical intensity maps onto subjective experience. **Why Weber's Law matters:** a 1-lb change is obvious when lifting 5 lbs but invisible when lifting 100 lbs. Detectability depends on the *ratio*, not the absolute difference.
 
 ### Signal Detection Theory (SDT)
 
@@ -50,7 +48,7 @@ Classical thresholds treat detection as purely sensory. SDT recognizes that dete
 
 ### Sensory Adaptation (a receptor-level change)
 
-- **Sensory adaptation**: receptors respond less to a *constant, unchanging* stimulus over time (you stop feeling your watch). It is a peripheral, receptor-level change.
+- **Sensory adaptation**: receptors respond less to a *constant, unchanging* stimulus over time (a cold pool stops feeling cold after a minute). It is a peripheral, receptor-level change.
 - Distinguish it from **habituation**, a *learned*, central decrease in response to a repeated stimulus — habituation shows **dishabituation** (response recovery when a novel stimulus intervenes), adaptation does not depend on learning.
 - Pain adapts poorly — a protective design feature.
 

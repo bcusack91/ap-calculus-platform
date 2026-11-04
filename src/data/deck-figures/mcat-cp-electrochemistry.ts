@@ -360,7 +360,7 @@ ${T(725, 168, 15, 'the drive is entropic: equalize [Cu²⁺]')}
 <g class="fig-accent">${T(725, 205, 15, 'reduction on the CONCENTRATED side')}</g>
 <g class="fig-accent-2">${T(725, 230, 15, 'oxidation on the DILUTE side')}</g>
 ${T(725, 275, 16, 'E = (0.0592 / n) log(conc / dilute)')}
-${T(725, 303, 17, '= 0.0296 × log 100 = 0.059 V', 'start', '700')}
+${T(725, 303, 17, '= 0.059 V for a hundredfold ratio', 'start', '700')}
 <g class="fig-muted">${T(725, 330, 15, '≈ 59/n mV per decade (30 mV for n = 2)')}</g>
 ${T(725, 375, 16, 'runs until equal, then E = 0')}
 <g class="fig-muted">${T(725, 415, 15, 'neuron: the K⁺ gradient ≈ −90 mV')}</g>
@@ -447,12 +447,12 @@ export const mcatElectrochemistryFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- **AN OX / RED CAT**: oxidation at the anode ($-$, dissolves), reduction at the cathode ($+$, plates); electrons take the wire',
-      '- Salt bridge: anions → anode beaker, cations → cathode beaker; $E^\\circ_{cell} = 0.34 - (-0.76) = 1.10$ V',
+      '- Salt bridge: anions → anode beaker, cations → cathode beaker; ions close the loop in solution, electrons never swim',
     ],
   },
   {
-    at: 'Standard Cell Potential',
-    mode: 'lead',
+    at: 'Worked Example — Predicting Whether a Reaction Goes',
+    mode: 'after',
     figure: {
       svg: potentialSvg,
       alt:
@@ -495,8 +495,8 @@ export const mcatElectrochemistryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: "Faraday's Laws",
-    mode: 'lead',
+    at: 'Worked Example — Copper Electroplating',
+    mode: 'after',
     figure: {
       svg: faradaySvg,
       alt:
@@ -509,8 +509,8 @@ export const mcatElectrochemistryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Off-Standard Conditions',
-    mode: 'lead',
+    at: 'Worked Example — Reading a Dying Battery',
+    mode: 'after',
     figure: {
       svg: nernstSvg,
       alt:
@@ -523,22 +523,22 @@ export const mcatElectrochemistryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Concentration Cells',
-    mode: 'lead',
+    at: 'Worked Example — A Copper Concentration Cell',
+    mode: 'after',
     figure: {
       svg: concentrationSvg,
       alt:
-        'Two copper electrodes in Cu²⁺ solutions of different strength: the left beaker is faintly blue, 0.010 M Cu²⁺ (dilute), and its copper is the anode (−, red): Cu → Cu²⁺ + 2e⁻ tops the dilute side up. The right beaker is deep blue, 1.0 M Cu²⁺ (concentrated), and its copper is the cathode (+, blue): Cu²⁺ + 2e⁻ → Cu uses up the excess. Electrons cross the wire from the dilute side to the concentrated side; a salt bridge carries anions toward the anode beaker and cations toward the cathode beaker. Right column: same metal, same ion, only the concentration differs; E° = 0 because the half-cells are identical and the drive is entropic — equalize [Cu²⁺]; reduction on the concentrated side, oxidation on the dilute side; E = (0.0592/n) log(conc/dilute) = 0.0296 × log 100 = 0.059 V, about 59/n mV per decade (30 mV for n = 2); the cell runs until the concentrations are equal, then E = 0; a neuron’s K⁺ gradient gives about −90 mV the same way.',
+        'Two copper electrodes in Cu²⁺ solutions of different strength: the left beaker is faintly blue, 0.010 M Cu²⁺ (dilute), and its copper is the anode (−, red): Cu → Cu²⁺ + 2e⁻ tops the dilute side up. The right beaker is deep blue, 1.0 M Cu²⁺ (concentrated), and its copper is the cathode (+, blue): Cu²⁺ + 2e⁻ → Cu uses up the excess. Electrons cross the wire from the dilute side to the concentrated side; a salt bridge carries anions toward the anode beaker and cations toward the cathode beaker. Right column: same metal, same ion, only the concentration differs; E° = 0 because the half-cells are identical and the drive is entropic — equalize [Cu²⁺]; reduction on the concentrated side, oxidation on the dilute side; E = (0.0592/n) log(conc/dilute) = 0.059 V for a hundredfold ratio, about 59/n mV per decade (30 mV for n = 2); the cell runs until the concentrations are equal, then E = 0; a neuron’s K⁺ gradient gives about −90 mV the same way.',
       caption: 'The copper concentration cell: identical half-cells (E° = 0) driven only by the concentration difference — reduction on the concentrated side, 0.059 V for a hundredfold ratio with n = 2.',
     },
     blocks: [
       '- Identical half-cells → $E^\\circ = 0$; reduction in the **concentrated** beaker, oxidation in the dilute one, until they match',
-      '- $E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$: $0.010$ vs $1.0$ M, $n = 2$ → $0.059$ V (≈ 59/n mV per decade, 30 mV for $n = 2$)',
+      '- $E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$: a hundredfold ratio with $n = 2$ → $0.059$ V (≈ 59/n mV per decade, 30 mV for $n = 2$)',
     ],
   },
   {
     at: 'Strategy 2 — Read Cell Diagram Notation',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: notationSvg,
       alt:
@@ -551,8 +551,8 @@ export const mcatElectrochemistryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Strategy 3 — Work the Potential Table',
-    mode: 'lead',
+    at: 'Worked Example — Interrogating a Potential Table',
+    mode: 'after',
     figure: {
       svg: ladderSvg,
       alt:

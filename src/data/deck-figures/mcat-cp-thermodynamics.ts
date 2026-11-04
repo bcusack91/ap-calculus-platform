@@ -327,9 +327,9 @@ ${T(600, 70, 19, 'know one, and you know the other two', 'start', '700')}
 ${T(600, 166, 15, 'ΔG° = 0  ⇄  K = 1  ⇄  E° = 0 : equilibrium')}
 ${T(600, 215, 16, 'E° = +1.20 V, n = 2:', 'start', '700')}
 ${T(600, 242, 16, 'ΔG° = −2 × 96,500 × 1.20 = −231.6 kJ')}
-${T(600, 290, 16, 'ΔG° = −17.1 kJ at 298 K:', 'start', '700')}
-${T(600, 317, 16, 'ln K = 17,100 / (8.314 × 298) = 6.90')}
-${T(600, 343, 16, 'K = exp(6.90) ≈ 1000  (products favoured)')}
+${T(600, 290, 16, 'ΔG° = −28.5 kJ at 298 K:', 'start', '700')}
+${T(600, 317, 16, 'ln K = 28,500 / (8.314 × 298) = 11.5')}
+${T(600, 343, 16, 'K = exp(11.5) ≈ 100,000  (products favoured)')}
 </svg>`
 
 /* 6 — The six phase changes as a triangle: toward gas = endothermic (blue), toward solid = exothermic (red) (replace-table, 560×440) */
@@ -534,8 +534,8 @@ export const mcatThermodynamicsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: triangleSvg,
       alt:
-        'A triangle with three circles: ΔG° (standard free-energy change) at the top, K (equilibrium constant) at the lower left and E°cell (standard cell potential) at the lower right, joined by double-headed arrows labelled ΔG° = −RT ln K (left side), ΔG° = −nFE°cell (right side) and ln K = nFE°cell / RT (bottom). All three carry the same verdict on spontaneity. Right column: know one and you know the other two. ΔG° < 0, K > 1, E° > 0: spontaneous. ΔG° > 0, K < 1, E° < 0: not as written. ΔG° = 0, K = 1, E° = 0: equilibrium. Worked numbers: E° = +1.20 V with n = 2 gives ΔG° = −2 × 96,500 × 1.20 = −231.6 kJ; ΔG° = −17.1 kJ at 298 K gives ln K = 17,100 / (8.314 × 298) = 6.90, so K = exp(6.90) ≈ 1000, products favoured. R = 8.314 J/mol·K, F ≈ 96,500 C/mol, T in kelvin; a big negative ΔG° means a huge K and a reaction that runs to completion.',
-      caption: 'ΔG°, K and E°cell are one fact in three units: ΔG° = −RT ln K = −nFE°cell, with the lesson’s worked numbers (+1.20 V, n = 2 → −231.6 kJ; −17.1 kJ → K ≈ 1000).',
+        'A triangle with three circles: ΔG° (standard free-energy change) at the top, K (equilibrium constant) at the lower left and E°cell (standard cell potential) at the lower right, joined by double-headed arrows labelled ΔG° = −RT ln K (left side), ΔG° = −nFE°cell (right side) and ln K = nFE°cell / RT (bottom). All three carry the same verdict on spontaneity. Right column: know one and you know the other two. ΔG° < 0, K > 1, E° > 0: spontaneous. ΔG° > 0, K < 1, E° < 0: not as written. ΔG° = 0, K = 1, E° = 0: equilibrium. Worked numbers: E° = +1.20 V with n = 2 gives ΔG° = −2 × 96,500 × 1.20 = −231.6 kJ; ΔG° = −28.5 kJ at 298 K gives ln K = 28,500 / (8.314 × 298) = 11.5, so K = exp(11.5) ≈ 100,000, products favoured. R = 8.314 J/mol·K, F ≈ 96,500 C/mol, T in kelvin; a big negative ΔG° means a huge K and a reaction that runs to completion.',
+      caption: 'ΔG°, K and E°cell are one fact in three units: ΔG° = −RT ln K = −nFE°cell, with two illustrative conversions (+1.20 V, n = 2 → −231.6 kJ; −28.5 kJ → K ≈ 100,000).',
     },
     blocks: [
       '- $\\Delta G° = -RT\\ln K = -nFE°_{\\text{cell}}$ — know one, find the other two',

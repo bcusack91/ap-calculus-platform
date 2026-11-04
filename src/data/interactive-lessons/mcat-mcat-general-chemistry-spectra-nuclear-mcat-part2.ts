@@ -18,15 +18,13 @@ Nuclear chemistry is a distinct but related MCAT topic. You need to recognize de
 | Beta-minus decay | $\\beta^-$ | $0$ | $+1$ | Electron + antineutrino |
 | Beta-plus (positron) | $\\beta^+$ | $0$ | $-1$ | Positron + neutrino |
 | Gamma | $\\gamma$ | $0$ | $0$ | High-energy photon |
-| Electron capture | EC | $0$ | $-1$ | Neutrino (an inner electron is absorbed; outer electrons drop into the vacancy and emit X-rays) |
+| Electron capture | EC | $0$ | $-1$ | Neutrino; outer electrons then fill the inner vacancy and emit X-rays |
 
 where $A$ = mass number (protons + neutrons), $Z$ = atomic number (protons).
 
-**Alpha decay example:**
-$$^{238}_{92}\\text{U} \\to {}^{234}_{90}\\text{Th} + {}^4_2\\text{He}$$
+**Alpha decay example:** $^{238}_{92}\\text{U} \\to {}^{234}_{90}\\text{Th} + {}^4_2\\text{He}$ — $A$ drops by 4 and $Z$ by 2.
 
-**Beta-minus decay example:** A neutron converts to a proton.
-$$^{14}_{6}\\text{C} \\to {}^{14}_{7}\\text{N} + {}^0_{-1}e + \\bar{\\nu}$$
+**Beta-minus decay example:** a neutron converts to a proton, $^{14}_{6}\\text{C} \\to {}^{14}_{7}\\text{N} + {}^0_{-1}e + \\bar{\\nu}$ — $A$ is unchanged and $Z$ rises by 1.
 
 ## Conservation Laws in Nuclear Reactions
 

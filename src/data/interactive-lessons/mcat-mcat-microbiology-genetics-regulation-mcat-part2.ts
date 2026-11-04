@@ -21,12 +21,15 @@ A temperate phage can integrate its genome into the host chromosome as a **proph
 
 ### Hershey-Chase: DNA Is the Genetic Material of Phage
 
-T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cysteine; DNA contains no sulfur), or with **$^{32}$P**, which labels DNA (its phosphate backbone; protein contains almost no phosphorus). After infection, a blender sheared the attached phage coats off the cells, and centrifugation pelleted the cells while the empty coats stayed in the supernatant. **$^{32}$P went into the cells and turned up in progeny phage; $^{35}$S stayed outside.** The material that enters and is inherited is DNA. It is the phage counterpart of the Avery, MacLeod and McCarty experiment, in which only DNase destroyed the pneumococcal "transforming principle".
+T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cysteine; DNA contains no sulfur), or with **$^{32}$P**, which labels DNA (its phosphate backbone; protein contains almost no phosphorus). After infection, a blender sheared the attached phage coats off the cells, and centrifugation pelleted the cells while the empty coats stayed in the supernatant.
+
+**$^{32}$P went into the cells and turned up in progeny phage; $^{35}$S stayed outside.** The material that enters and is inherited is DNA. It is the phage counterpart of the Avery, MacLeod and McCarty experiment, in which only DNase destroyed the pneumococcal "transforming principle".
 
 ### Mapping and Counting Genes in Phage
 
 - **Phage crosses:** infect cells with two mutants at once (high multiplicity). The genomes recombine inside the cell, and recombinant frequency rises with the distance between the mutations, which gives fine-scale maps of mutation sites inside one gene.
-- **Complementation test:** put two recessive mutants in one cell (co-infection, or a merodiploid in bacteria). If the phenotype is **wild type**, they **complement**: each genome supplies the product the other lacks, so the mutations are in **different genes**. If the phenotype is mutant, they fail to complement and are almost certainly in the **same gene**. The test works only for recessive mutations: a dominant mutation gives the mutant phenotype even beside a working copy. Its control is the **cis** arrangement (both mutations on one genome, a wild-type copy on the other), which must look wild type.
+- **Complementation test:** put two recessive mutants in one cell (co-infection, or a merodiploid in bacteria). If the phenotype is **wild type**, they **complement**: each genome supplies the product the other lacks, so the mutations are in **different genes**. If the phenotype is mutant, they fail to complement and are almost certainly in the **same gene**.
+- **Recessive only, with a cis control:** a dominant mutation gives the mutant phenotype even beside a working copy, so the test works only for recessive mutations. Its control is the **cis** arrangement (both mutations on one genome, a wild-type copy on the other), which must look wild type.
 - **Complementation groups:** every mutation that fails to complement the others joins one group, and each group is one gene. Counting groups counts the genes the screen has hit.
 
 | | Complementation | Recombination |
@@ -45,7 +48,8 @@ T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cyst
 
 RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and retroviruses with **reverse transcriptase**. Most of these enzymes **lack 3′→5′ proofreading** (coronaviruses are a rare exception), so their error rates run thousands of times or more above cellular DNA replication, which is proofread and then mismatch-repaired. DNA viruses use proofreading DNA polymerases and are far more stable.
 
-- An infected patient carries a swarm of related variants (a quasispecies), so drug-resistant variants exist **before** treatment. This is the fluctuation-test logic: in bacterial cultures, resistance mutations arise at random during growth, before the selecting agent arrives, rather than in response to it. Combination therapy, as for HIV, is the answer: a variant resistant to all drugs at once is far rarer, because independent resistance mutations multiply (1 in $10^4$ for one drug × 1 in $10^5$ for another ≈ 1 in $10^9$ for both).
+- An infected patient carries a swarm of related variants (a quasispecies), so drug-resistant variants exist **before** treatment. This is the fluctuation-test logic: resistance mutations arise at random during growth, before the selecting agent arrives, rather than in response to it.
+- **Combination therapy**, as for HIV, is the answer: a variant resistant to all drugs at once is far rarer, because independent resistance mutations multiply (1 in $10^4$ for one drug × 1 in $10^5$ for another ≈ 1 in $10^9$ for both).
 - In surface proteins, the same error rate drives **antigenic drift**.
 
 <!-- yield:low -->
@@ -54,10 +58,10 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
 
 ### Recombination and Reassortment
 
-- **Recombination:** when two strains infect one cell, the polymerase can switch templates and produce a hybrid genome. Retroviruses package two RNA copies, so reverse transcriptase can switch between them.
-- **Reassortment:** influenza's genome is **8 separate RNA segments**. A cell infected by two strains can package segments from both parents into one virion.
-- **Antigenic drift** = gradual point mutations in the surface proteins hemagglutinin (HA) and neuraminidase (NA), so last year's antibodies bind less well: seasonal epidemics and annual vaccine updates.
-- **Antigenic shift** = reassortment brings in a new HA or NA segment, for example from an avian strain, with pigs as a classic mixing vessel. The population has no immunity: pandemic risk. Only segmented viruses can shift.
+- **Recombination:** two strains in one cell let the polymerase switch templates and produce a hybrid genome; retroviruses package two RNA copies, so reverse transcriptase can switch between them.
+- **Reassortment:** influenza's genome is **8 separate RNA segments**; a cell infected by two strains can package segments from both parents into one virion.
+- **Antigenic drift** = point mutations accumulating in hemagglutinin (HA) and neuraminidase (NA), so last year's antibodies bind less well: seasonal epidemics, annual vaccine updates.
+- **Antigenic shift** = reassortment brings in a whole new HA or NA segment, often from an avian strain. The population has no immunity: pandemic risk. Only segmented viruses can shift.
 
 ### Integration: Which Mechanism Moved the Gene?
 

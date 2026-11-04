@@ -16,7 +16,9 @@ export const mcatSocioInteractionOrgsPart2Data = {
 | **Prejudice** | Affective (attitude) | Evaluative feeling — usually negative — toward people BECAUSE of group membership |
 | **Discrimination** | Behavioral (action) | Differential TREATMENT based on group membership |
 
-They dissociate, and the dissociations are the questions: a landlord who privately harbors prejudice but rents to everyone (prejudice without discrimination); a hiring algorithm that never "feels" anything yet filters out one group's zip codes (discrimination without prejudice). Merton's classic grid — all four combinations of prejudiced/unprejudiced with discriminator/non-discriminator — exists precisely because attitude and behavior track situations, incentives, and laws, not just each other.
+They dissociate, and the dissociations are the questions: a landlord who privately harbors prejudice but rents to everyone (prejudice without discrimination); a hiring algorithm that never "feels" anything yet filters out one group's zip codes (discrimination without prejudice).
+
+Merton's classic grid — all four combinations of prejudiced/unprejudiced with discriminator/non-discriminator — exists precisely because attitude and behavior track situations, incentives, and laws, not just each other.
 
 ### Individual vs. Institutional Discrimination
 

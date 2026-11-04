@@ -10,11 +10,11 @@ export const mcatEnergyMechanismsPart3Data = {
 
 ## High-Yield Checklist
 
-- ✅ **Arrhenius:** $k = Ae^{-E_a/RT}$; higher $T$ or lower $E_a$ → larger $k$
-- ✅ **Catalyst:** lowers $E_a$; increases $k$; does not change $\\Delta H$ or $K_{eq}$
-- ✅ **RDS:** slowest step; determines overall rate law
-- ✅ **Intermediates** cancel from overall equation; **catalysts** regenerate
-- ✅ **Enzyme kinetics:** $V_{\\text{max}}$, $K_m$, competitive vs noncompetitive inhibition
+- **Arrhenius:** $k = Ae^{-E_a/RT}$; higher $T$ or lower $E_a$ → larger $k$
+- **Catalyst:** lowers $E_a$; increases $k$; does not change $\\Delta H$ or $K_{eq}$
+- **RDS:** slowest step; determines overall rate law
+- **Intermediates** cancel from overall equation; **catalysts** regenerate
+- **Enzyme kinetics:** $V_{\\text{max}}$, $K_m$, competitive vs noncompetitive inhibition
 `
     },
     {
@@ -84,23 +84,27 @@ export const mcatEnergyMechanismsPart3Data = {
     {
       id: 'kin5-summary',
       type: 'text' as const,
-      content: `## Energy, Catalysis & Mechanisms — Complete Topic Summary
+      content: `## Key Takeaways — Part 3
+
+- **Barriers set the speed.** $k = Ae^{-E_a/RT}$; a catalyst lowers $E_a$ without moving $\\Delta H$ or $K$.
+- **The slow step rules.** The RDS sets the rate law; intermediates cancel and catalysts are regenerated.
+- **Read the Arrhenius plot.** $\\ln k$ vs $1/T$ is a line of slope $-E_a/R$: steeper means a larger $E_a$; parallel lines differ only in $A$.
+- **Michaelis-Menten.** $v = V_{\\text{max}}[\\text{S}]/(K_m + [\\text{S}])$: at $[\\text{S}] = K_m$ the rate is $V_{\\text{max}}/2$; far above $K_m$ it is zero order in substrate.
+
+**Common traps**
+
+- **Catalysts changing $K$.** A catalyst speeds both directions equally; $\\Delta H$ and $K$ stay the same.
+- **Misreading $K_m$.** $K_m$ is the [S] that gives $V_{\\text{max}}/2$; a lower $K_m$ means higher affinity.
+- **Kinetic product as the stable one.** The kinetic product has the lower barrier; the thermodynamic product has the lower energy. They need not be the same species.
+- **Third order means a three-body step.** A rate law like $k[\\text{NO}]^2[\\text{Br}_2]$ usually comes from a fast pre-equilibrium plus a slow bimolecular step, not one termolecular collision.
+
+## Energy, Catalysis & Mechanisms — Complete Topic Summary
 
 **Part 1:** Activation energy, Arrhenius equation, collision theory, temperature effect on $k$, transition state vs. intermediate.
 
 **Part 2:** Elementary steps, rate-determining step, substituting intermediates into rate law, catalysis types (homo/hetero/enzymatic), Michaelis-Menten kinetics, inhibitor types.
 
 **Part 3:** Integrated MCAT practice.
-
-## Key Takeaways — Part 3
-
-- **Barriers set the speed.** $k = Ae^{-E_a/RT}$; a catalyst lowers $E_a$ without moving $\\Delta H$ or $K$.
-- **The slow step rules.** The RDS sets the rate law; intermediates cancel and catalysts are regenerated.
-
-**Common traps**
-
-- **Catalysts changing $K$.** A catalyst speeds both directions equally; $\\Delta H$ and $K$ stay the same.
-- **Misreading $K_m$.** $K_m$ is the [S] that gives $V_{\\text{max}}/2$; a lower $K_m$ means higher affinity.
 
 **Next up:** the *Acids, Bases & Buffers* lesson — pH and pOH, strong and weak acids, $K_a$ and $K_b$, the Henderson-Hasselbalch equation and physiological buffers.
 `

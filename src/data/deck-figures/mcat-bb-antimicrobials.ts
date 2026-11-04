@@ -444,8 +444,10 @@ export const mcatAntimicrobialsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
+    // The figure and its lines carry the section on the slides (the text
+    // page repeated them as a 680-char wall; review 2026-11-04).
     at: 'Vocabulary the MCAT Expects',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: vocabSvg,
       alt:
@@ -455,6 +457,7 @@ export const mcatAntimicrobialsFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Bacteriostatic** halts growth (immune system finishes) vs **bactericidal** kills — matters most when neutropenic',
       '- **MIC** = lowest conc. with no visible growth; **MBC** = lowest that kills; bigger disk-diffusion zone = more susceptible',
+      '- **Broad-spectrum** drugs hit many species — and clear normal flora (risk: C. difficile overgrowth)',
     ],
   },
   {
@@ -483,7 +486,6 @@ export const mcatAntimicrobialsFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Aminoglycosides** bind 30S irreversibly → **misreading** → junk membrane protein → **cidal**; need O₂ uptake (no anaerobes)',
       '- **Tetracyclines** block the **A site** → no aminoacyl-tRNA delivery → static',
-      '- 70S vs 80S is the handle — but mitochondrial ribosomes are **70S-like** (hearing loss); aminoglycoside + β-lactam = synergy',
     ],
   },
   {
@@ -498,7 +500,6 @@ export const mcatAntimicrobialsFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Chloramphenicol** → peptidyl transferase (23S rRNA ribozyme) · **macrolides** → exit tunnel / translocation',
       '- **Clindamycin** overlaps the macrolide site · **linezolid** → initiation complex; all four are **static**',
-      '- One **23S rRNA methylation** erases the site → resistance to macrolides AND clindamycin (target alteration)',
     ],
   },
   {

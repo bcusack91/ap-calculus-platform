@@ -12,15 +12,13 @@ export const kirchhoffPowerMcatPart2: LessonData = {
 
 ### What Changes When the Circuit Changes
 
-Part 1 of this lesson collapsed networks that stay put. Now predict how a network responds when something changes. Reason in a fixed order: the change, then $R_{eq}$, then the total current, then the voltage across any fixed series resistor, then whatever voltage is left for the parallel part.
+Part 1 of this lesson collapsed networks that stay put. Now predict how a network responds when something changes. Reason in a fixed order: the change, then $R_{eq}$, then the total current, then the voltage across any fixed series resistor, then whatever voltage is left for the parallel part. Bulbs, later in this part, follow exactly the same logic: a brighter bulb is simply one dissipating more power.
 
 - **Add a branch in parallel:** $R_{eq}$ falls and the total current rises. If the bank sits directly across an ideal source, the existing branches are unaffected. If a series resistor sits in front of the bank, the larger total current drops MORE voltage across that resistor, leaving LESS for the bank, so the existing branch currents FALL.
 - **Remove (open) a branch:** the reverse. $R_{eq}$ rises, the total current falls, the series resistor drops less voltage, and the remaining branches get MORE voltage and more current.
 - **Short one branch of a parallel bank:** that zero-resistance branch shorts the WHOLE bank, because every branch shares the same two nodes; all of them now have $0\\;\\text{V}$ across them and carry no current.
 - **Short a resistor:** its voltage and current drop to zero, $R_{eq}$ falls, and everything left in series with it carries more current.
 - **Add a resistor in series:** $R_{eq}$ rises and the current through every element in that path falls.
-
-Bulbs, later in this part, follow exactly the same logic: a brighter bulb is simply one dissipating more power.
 
 ### Electrical Power
 
@@ -32,7 +30,8 @@ measured in watts: $1\\;\\text{W} = 1\\;\\text{J/s} = 1\\;\\text{V} \\cdot \\tex
 
 - **Same current** (elements in series): use $P = I^2R$. The LARGER resistance dissipates more power.
 - **Same voltage** (parallel branches, anything plugged into an outlet): use $P = V^2/R$. The SMALLER resistance dissipates more power.
-- The same physical resistor obeys both forms. The apparent paradox, "does more resistance mean more power or less?", disappears once you ask which quantity is fixed.
+
+**One resistor, both forms.** The same physical resistor obeys both forms. The apparent paradox, "does more resistance mean more power or less?", disappears once you ask which quantity is fixed.
 
 **Proportional reasoning.** At fixed $R$, doubling the current quadruples the heating ($P \\propto I^2$). At fixed $V$, halving $R$ DOUBLES the power, because the current doubles too; plugging into $I^2R$ while wrongly holding $I$ fixed would predict that power halves.
 
@@ -95,7 +94,7 @@ $$1\\;\\text{kWh} = (1000\\;\\text{W})(3600\\;\\text{s}) = 3.6 \\times 10^6\\;\\
       type: 'text' as const,
       content: `### Bulb Brightness in Series and Parallel
 
-Brightness tracks the POWER a bulb dissipates. Unless told otherwise, treat bulbs as ohmic resistors (an MCAT simplification; real filaments are non-ohmic, as the *Circuits Part 1: Current & Resistance* lesson noted). For identical bulbs of resistance $R$ on an ideal source $V$, call one bulb's power alone $P_0 = V^2/R$:
+Brightness tracks the POWER a bulb dissipates. Unless told otherwise, treat bulbs as ohmic resistors (an MCAT simplification; real filaments are non-ohmic). For identical bulbs of resistance $R$ on an ideal source $V$, call one bulb's power alone $P_0 = V^2/R$:
 
 | Arrangement | Voltage per bulb | Power per bulb | Total power |
 |---|---|---|---|
@@ -120,11 +119,11 @@ A burned-out bulb is an open circuit.
 
 ### Electricity and the Body
 
-**Current, not voltage, does the harm.** What disrupts nerve and heart tissue, and heats it, is the current through it, $I = V/R_{body}$. Voltage matters only because it drives that current. Most of the body's resistance is in dry skin; the interior is salty, ionic fluid and conducts well (the *Circuits Part 1: Current & Resistance* lesson).
+**Current, not voltage, does the harm.** What disrupts nerve and heart tissue is the current through it, $I = V/R_{body}$; voltage matters only because it drives that current. Most of the body's resistance is in dry skin; the salty, ionic interior conducts well.
 
-- Dry skin gives a body path on the order of $10^5\\;\\Omega$; wet or broken skin drops it to the order of $10^3\\;\\Omega$. At the same voltage, wet skin can pass about $100$ times the current.
+- Dry skin gives a body path on the order of $10^5\\;\\Omega$; wet or broken skin drops it to about $10^3\\;\\Omega$, so at the same voltage wet skin passes about $100$ times the current.
 - The path matters: hand-to-hand or hand-to-foot current crosses the chest and can disrupt the heart's rhythm.
-- A static spark can be thousands of volts yet harmless, because it delivers very little charge; a modest voltage across wet skin can be lethal.
+- A static spark of thousands of volts is harmless because it delivers very little charge; a modest voltage across wet skin can be lethal.
 
 <!-- yield:low -->
 - Approximate body-current thresholds: about $1\\;\\text{mA}$ is perceptible, roughly $10$ to $20\\;\\text{mA}$ prevents letting go, and about $100\\;\\text{mA}$ across the chest can trigger ventricular fibrillation. The values vary with path, duration and frequency, and passages supply them.
@@ -132,14 +131,12 @@ A burned-out bulb is an open circuit.
 
 ### MCAT Integration — Rank Without Computing
 
-Passage questions reward ratios over arithmetic:
+Passage questions reward ratios over arithmetic; most "which element dissipates the most power" questions fall to steps 1 and 2 in ten seconds:
 
 1. **Find what is held constant** for each element: current in series, voltage in parallel.
 2. **Pick the power form** containing that constant and compare with the remaining variable.
 3. **Multiply factor changes.** If $V$ triples and $R$ doubles, $P = V^2/R$ changes by $3^2/2 = 9/2$.
-4. **Sanity-check the extremes.** A short ($R \\to 0$) across a fixed voltage draws enormous power; an open branch ($R \\to \\infty$) draws none.
-
-Most "which element dissipates the most power" questions fall to steps 1 and 2 in ten seconds.`
+4. **Sanity-check the extremes.** A short ($R \\to 0$) across a fixed voltage draws enormous power; an open branch ($R \\to \\infty$) draws none.`
     },
     {
       id: 'dc4-worked',

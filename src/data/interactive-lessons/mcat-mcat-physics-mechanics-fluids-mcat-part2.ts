@@ -26,10 +26,9 @@ $$F_B = \\rho_{\\text{fluid}} \\, V_{\\text{sub}} \\, g$$
 
 where $V_{\\text{sub}}$ is the submerged volume of the object, which is the volume of fluid pushed aside.
 
-- It uses the FLUID's density, not the object's.
+- It uses the FLUID's density, not the object's: equal submerged volumes in the same fluid feel equal buoyant forces, whether the object is lead or cork.
 - Only the submerged volume counts.
 - For a fully submerged object it does **not depend on depth**: a liquid is incompressible, so the top-to-bottom pressure difference is the same at any depth.
-- It does not depend on what the object is made of. Equal submerged volumes in the same fluid feel equal buoyant forces, whether the object is lead or cork.
 
 **Float, hover or sink?** Compare the object's **average density** (its total mass divided by its total volume, including any air inside) with the fluid's density.
 
@@ -49,11 +48,7 @@ $$\\frac{V_{\\text{sub}}}{V} = \\frac{\\rho_{\\text{object}}}{\\rho_{\\text{flui
 
 In water, the fraction submerged equals the object's specific gravity. Keep the two cases apart: a FLOATING object displaces its own WEIGHT of fluid; a fully SUBMERGED object displaces its own VOLUME of fluid.
 
-**Apparent weight.** An object hung from a scale while fully submerged reads lighter by the buoyant force:
-
-$$W_{\\text{apparent}} = W - F_B$$
-
-This is why patients recovering muscle strength often exercise in a pool: the water supports part of their weight.`
+**Apparent weight.** An object hung from a scale while fully submerged reads lighter by the buoyant force: $W_{\\text{apparent}} = W - F_B$. This is why patients recovering muscle strength often exercise in a pool: the water supports part of their weight.`
     },
     {
       id: 'fl2-quiz1',
@@ -244,9 +239,7 @@ The submerged fraction IS the specific gravity: 0.6.
 **Low-yield extras**
 
 - the normal urine specific-gravity range; the law of Laplace formula $\\Delta P = 2\\gamma/r$; Jurin's law for capillary rise
-<!-- /yield -->
-
-**Next up:** the *Fluids in Motion* lesson, which sets the fluid flowing: continuity, Bernoulli, viscosity, Poiseuille's law and blood flow.`
+<!-- /yield -->`
     }
   ]
 }

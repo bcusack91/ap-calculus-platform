@@ -12,9 +12,9 @@ Assigning configuration is an algorithm. Run the same steps every time and these
 
 ### Cahn-Ingold-Prelog (CIP) Priority Rules
 
-1. **Higher atomic number wins** at the first atom: I > Br > Cl > S > F > O > N > C > H
-2. **Tie? Move outward** to the next set of attached atoms and compare at the **first point of difference**, comparing highest-vs-highest first
-3. **Multiple bonds are duplicated**: C=O counts as C bonded to (O, O); a nitrile carbon counts as (N, N, N)
+- **1. Higher atomic number wins** at the first atom: I > Br > Cl > S > F > O > N > C > H
+- **2. Tie? Move outward** to the next set of attached atoms and compare at the **first point of difference**, comparing highest-vs-highest first
+- **3. Multiple bonds are duplicated**: C=O counts as C bonded to (O, O); a nitrile carbon counts as (N, N, N)
 
 Worked comparisons:
 - $-CH_2OH$ vs $-CH_3$: first atoms tie (C vs C); attached sets (O,H,H) vs (H,H,H) → CH2OH wins
@@ -23,21 +23,20 @@ Worked comparisons:
 
 ### Assigning R/S
 
-1. Rank the four groups 1 (highest) → 4 (lowest)
-2. Point group 4 (usually H) AWAY from you
-3. Trace 1 → 2 → 3: clockwise = **R** (rectus), counterclockwise = **S** (sinister)
+- **1. Rank** the four groups 1 (highest) → 4 (lowest)
+- **2. Point group 4** (usually H) AWAY from you
+- **3. Trace 1 → 2 → 3**: clockwise = **R** (rectus), counterclockwise = **S** (sinister)
 
 **The trick you will actually use:** if the lowest-priority group points TOWARD you (as drawn), assign the rotation and then **reverse** the answer.
 
 ### Fischer Projections
 
-Conventions: **horizontal bonds point toward you** (wedges); **vertical bonds point away** (dashes). The carbon chain runs vertically, most oxidized carbon on top.
+Conventions: **horizontal bonds point toward you** (wedges); **vertical bonds point away** (dashes). The carbon chain runs vertically, most oxidized carbon on top. Manipulation rules (high yield):
 
-Manipulation rules (high yield):
 - **Swap any two groups** → inverts that center (one swap = enantiomer at that center; two swaps = back to the original)
 - **Rotate the whole projection 180° in the plane** (or hold one group fixed and rotate the other three) → same molecule
 - **Rotate 90°** → inverts the configuration (illegal move — it silently swaps toward/away)
-- Reading R/S directly: if the lowest-priority group is on a **vertical** bond (pointing away), the traced rotation is the true answer; if it is on a **horizontal** bond (pointing toward you), **reverse** what you trace
+- **Reading R/S**: group 4 on a **vertical** bond (away) → the traced rotation is the answer; on a **horizontal** bond (toward you) → **reverse** what you trace
 
 ### E/Z Alkene Nomenclature
 

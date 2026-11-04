@@ -10,15 +10,13 @@ export const mcatTranscriptionPart4Data = {
 
 ### The Question Behind Every Technique
 
-Transcription passages hand you data from a small toolkit. Know what QUESTION each answers:
-
 | Technique | Question it answers | Readout |
-|-----------|--------------------|---------|
-| Northern blot | How much of a specific RNA, and what size? | Bands: intensity = amount, position = length (splicing variants!) |
-| RT-qPCR | How much of a specific transcript, precisely? | Amplification cycles: fewer cycles to threshold = more starting mRNA |
-| Reporter assay | Does this DNA element drive/regulate transcription? | Luciferase or GFP output from the element fused to a reporter gene |
-| ChIP (chromatin immunoprecipitation) | Is protein X bound to DNA site Y in living cells? | Antibody pulls down the protein with its crosslinked DNA; PCR asks which sequences came along |
-| EMSA (gel shift) | Does protein X bind DNA sequence Y in a tube? | Bound probe migrates slower — the band "shifts" up |
+|---|---|---|
+| Northern blot | How much of a specific RNA, and what size? | Band intensity = amount, position = length (splice variants) |
+| RT-qPCR | How much of a transcript, precisely? | Fewer cycles to threshold = more starting mRNA |
+| Reporter assay | Does this DNA element drive transcription? | Luciferase or GFP output from the element fused to a reporter |
+| ChIP (chromatin immunoprecipitation) | Is protein X on DNA site Y in living cells? | Pulls down X with its crosslinked DNA; PCR asks which sites came along |
+| EMSA (gel shift) | Does protein X bind sequence Y in a tube? | Bound probe runs slower: the band shifts up |
 
 **Hormone response elements.** Steroid hormone receptors are nuclear receptors that bind DNA as dimers, so their hormone response elements (HREs) are palindromes: two matching half-sites, one for each partner.
 

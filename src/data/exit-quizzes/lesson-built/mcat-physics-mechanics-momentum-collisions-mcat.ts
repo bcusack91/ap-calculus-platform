@@ -407,15 +407,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 3,
   },
   {
-    question: `A ballistic pendulum problem has two stages: the bullet embedding, then the block swinging up. Which conservation law applies to each stage?`,
+    question: `A pendulum bob is pulled aside and released. At the bottom of its swing it strikes a block resting on a frictionless table and sticks to it. Which conservation law applies to each stage?`,
     options: [
-      `Kinetic energy during the impact; mechanical energy during the swing`,
-      `Momentum during the impact; momentum during the swing`,
-      `Kinetic energy during the impact; momentum during the swing`,
-      `Momentum during the impact; mechanical energy during the swing`,
+      `Momentum during the swing; momentum across the impact`,
+      `Momentum during the swing; mechanical energy across the impact`,
+      `Mechanical energy during the swing; kinetic energy across the impact`,
+      `Mechanical energy during the swing; momentum across the impact`,
     ],
     correctAnswer: 3,
-    explanation: `The embedding is perfectly inelastic, so momentum is the only quantity conserved across it; the swing has no collision, only gravity, so mechanical energy is conserved. Kinetic energy is destroyed wholesale during the impact, which rules out the impact-energy pairings. Momentum is not conserved during the swing, because gravity and string tension act on the block the whole time.`,
+    explanation: `The swing has no collision, only gravity and a string tension that does no work, so mechanical energy is conserved and sets the bob's speed at the bottom; the sticking impact is perfectly inelastic, so momentum is the only quantity conserved across it, whichever stage comes first. Momentum is not conserved during the swing, because gravity and the string act on the bob the whole time. Kinetic energy is destroyed when the bob sticks, which rules out energy across the impact.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 3,
@@ -505,7 +505,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 3,
   },
   {
-    question: `A puck moving due east strikes a puck at rest on frictionless ice, and afterward the first puck moves off toward the northeast. The second puck's velocity must include:`,
+    question: `A puck moving due east strikes an identical puck at rest on frictionless ice, and afterward the first puck moves off toward the northeast. The second puck's velocity must include:`,
     options: [
       `A northward component equal to the first puck's`,
       `No north-south component, since the incoming puck had none`,

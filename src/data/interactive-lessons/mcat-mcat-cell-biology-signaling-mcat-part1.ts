@@ -80,8 +80,7 @@ Ligand-receptor binding obeys the same math as enzyme kinetics:
 $$[LR] = \\frac{[R]_{total}[L]}{K_d + [L]}$$
 
 - $K_d$ = ligand concentration at which half the receptors are occupied; **lower $K_d$ = higher affinity**
-- A **competitive antagonist** shifts the dose-response curve right (more agonist needed) without lowering the maximal response
-- A **noncompetitive antagonist** (or receptor loss) lowers the maximal response
+- A **competitive antagonist** shifts the dose-response curve right (more agonist needed) without lowering the maximal response; a **noncompetitive antagonist** (or receptor loss) lowers the maximal response
 - **Agonist** = binds and activates; **antagonist** = binds and blocks; **partial agonist** = activates submaximally even at full occupancy
 
 ### Nitric Oxide — The Gas That Breaks the Rules

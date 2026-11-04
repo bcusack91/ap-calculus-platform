@@ -43,6 +43,8 @@ Cytokine receptors (erythropoietin, growth hormone, interferons) have **no kinas
 2. **STAT** proteins dock via SH2 domains, get phosphorylated, **dimerize**, and translocate to the nucleus as ready-made transcription factors
 3. Only two protein tiers between membrane and DNA — fast transcriptional responses, less amplification hardware
 
+### The Four Outputs Side by Side
+
 | Pathway | Key intermediates | Primary outcome |
 |---------|-------------------|-----------------|
 | Ras-MAPK | Grb2, SOS, Ras, Raf/MEK/ERK | Proliferation (immediate-early genes, cyclin D) |

@@ -27,12 +27,10 @@ Capacitors combine by rules that are the exact REVERSE of the resistor rules fro
 
 **Why parallel capacitors add.** Side by side, every capacitor sees the same voltage, and the charges simply pile up: $Q = C_1V + C_2V$, so $C_{\\text{eq}} = C_1 + C_2$. Two plates side by side act like one bigger plate.
 
-**Why series capacitors share charge.** In a series chain, the inner plates of neighboring capacitors are joined to each other and to nothing else, so that isolated piece of metal stays neutral overall. If $+Q$ appears on one inner plate, $-Q$ must appear on its partner. Every capacitor in series carries the same $Q$, and the voltages add: $V = Q/C_1 + Q/C_2$, which gives the reciprocal rule. Stacking gaps in series acts like one wider gap, so capacitance falls.
+**Why series capacitors share charge.** The inner plates of neighboring capacitors are joined to each other and to nothing else, so that isolated metal stays neutral: $+Q$ on one inner plate forces $-Q$ on its partner. Every series capacitor carries the same $Q$, the voltages add ($V = Q/C_1 + Q/C_2$), and the reciprocal rule follows. Stacked gaps act like one wider gap, so capacitance falls.
 
-**Shortcuts** (the same algebra as resistors, applied to the opposite arrangement):
-
-- Two in series: $C_{\\text{eq}} = \\dfrac{C_1 C_2}{C_1 + C_2}$ ("product over sum")
-- $N$ identical capacitors: $C/N$ in series, $NC$ in parallel
+- **Shortcut, two in series:** $C_{\\text{eq}} = \\dfrac{C_1 C_2}{C_1 + C_2}$ ("product over sum", the resistor algebra applied to the opposite arrangement)
+- **Shortcut, $N$ identical capacitors:** $C/N$ in series, $NC$ in parallel
 
 ### Worked Example — Series Capacitors Share Charge, Not Voltage
 
@@ -96,9 +94,7 @@ A capacitor in a DC circuit has two simple snapshots, and MCAT questions almost 
 
 **At steady state (long after, fully charged):** the capacitor's voltage has risen until it balances whatever drives its branch, so **no current flows through it. It acts like an open branch (a cut wire).**
 
-The bridge between them: **a capacitor's voltage cannot change instantly**, because charge takes time to flow onto the plates. Current, by contrast, can jump the moment a switch moves.
-
-**Steady-state recipe:**
+The bridge between them: **a capacitor's voltage cannot change instantly**, because charge takes time to flow onto the plates. Current, by contrast, can jump the moment a switch moves. **Steady-state recipe:**
 
 1. Delete every capacitor branch (treat it as open).
 2. Solve the remaining resistor network with the tools from the *Circuits Part 2: Kirchhoff's Rules & Power* lesson.

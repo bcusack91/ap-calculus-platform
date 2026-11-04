@@ -198,7 +198,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `In the same circuit model, which part of the neuron plays the role of the batteries?`,
+    question: `In the RC-circuit model of a neuron's membrane, which part of the cell plays the role of the batteries?`,
     options: [
       `The ion concentration gradients across the membrane`,
       `The hydrophobic core of the lipid bilayer`,
@@ -338,10 +338,10 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `A defibrillator's $50\\;\\mu\\text{F}$ capacitor is charged to $2000\\;\\text{V}$. How much energy does it store?`,
-    options: [`$200\\;\\text{J}$`, `$0.10\\;\\text{J}$`, `$100\\;\\text{J}$`, `$0.050\\;\\text{J}$`],
+    question: `A camera flash's $400\\;\\mu\\text{F}$ capacitor is charged to $300\\;\\text{V}$. How much energy does it store?`,
+    options: [`$36\\;\\text{J}$`, `$0.12\\;\\text{J}$`, `$18\\;\\text{J}$`, `$0.060\\;\\text{J}$`],
     correctAnswer: 2,
-    explanation: `$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(5.0 \\times 10^{-5})(4.0 \\times 10^{6}) = 100\\;\\text{J}$. Dropping the $\\frac{1}{2}$ gives $200\\;\\text{J}$, and the small values come from forgetting to square the voltage: $0.10$ is $CV$, the charge in coulombs, and $0.050$ is $\\frac{1}{2}CV$.`,
+    explanation: `$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(4.0 \\times 10^{-4})(9.0 \\times 10^{4}) = 18\\;\\text{J}$. Dropping the $\\frac{1}{2}$ gives $36\\;\\text{J}$, and the small values come from forgetting to square the voltage: $0.12$ is $CV$, the charge in coulombs, and $0.060$ is $\\frac{1}{2}CV$.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 2,
@@ -439,7 +439,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `A $20\\;\\mu\\text{F}$ capacitor charged to $100\\;\\text{V}$ is connected across a $10\\;\\text{k}\\Omega$ resistor at $t = 0$. What is the current through the resistor at first, and about what is it at $t = 0.20\\;\\text{s}$?`,
+    question: `A $20\\;\\mu\\text{F}$ capacitor charged to $100\\;\\text{V}$ is connected across a $10\\;\\text{k}\\Omega$ resistor at $t = 0$ and discharges through it. What is the discharge current at first, and about what is it at $t = 0.20\\;\\text{s}$?`,
     options: [
       `$10\\;\\text{mA}$ at first, and about $6.3\\;\\text{mA}$ at $0.20\\;\\text{s}$`,
       `$0$ at first, rising to about $6.3\\;\\text{mA}$ at $0.20\\;\\text{s}$`,

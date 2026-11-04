@@ -504,7 +504,7 @@ export const mcatForcesFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Static** $f_s \\le \\mu_s N$ matches the push up to a ceiling; **kinetic** $f_k = \\mu_k N$ is fixed while sliding',
       '- $\\mu_s > \\mu_k$: harder to *start* than to *keep* sliding — the drop on the graph',
-      '- Both scale with the **normal force** $N$, not the weight; kinetic ignores speed and contact area',
+      '- Both scale with the **normal force** $N$, not the weight — press down and friction grows, lift and it shrinks',
       '- Only at the verge of slipping does $f_s = \\mu_s N$ — writing the maximum too early is the classic error',
     ],
   },

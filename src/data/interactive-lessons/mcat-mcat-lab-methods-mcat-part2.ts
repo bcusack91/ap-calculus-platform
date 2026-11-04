@@ -18,8 +18,8 @@ where $q$ = net charge, $E$ = field strength, and $f$ = frictional drag (rises w
 
 | Method | What is varied | Separates by | Key reagent |
 |--------|----------------|--------------|-------------|
-| **SDS-PAGE** | Proteins coated with SDS (uniform − charge) | **Size only** | SDS + heat (denature) |
-| **Reducing vs. non-reducing SDS-PAGE** | With or without a disulfide reducer | Reducing: each chain separately; non-reducing: disulfide-linked chains together | β-mercaptoethanol or DTT |
+| **SDS-PAGE** | SDS-coated proteins (uniform − charge) | **Size only** | SDS + heat (denature) |
+| **SDS-PAGE ± reducer** | With or without a disulfide reducer | Reduced: each chain alone; non-reduced: disulfide-linked chains together | β-mercaptoethanol or DTT |
 | **Native PAGE** | No denaturant | Size, shape, AND charge | — |
 | **Agarose gel** | DNA/RNA (uniformly − backbone) | **Size only** | Ethidium bromide stain |
 | **Isoelectric focusing (IEF)** | pH gradient | **pI** (stop where net charge = 0) | Ampholytes |

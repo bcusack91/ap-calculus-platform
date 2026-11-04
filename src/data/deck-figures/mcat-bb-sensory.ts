@@ -470,7 +470,7 @@ export const mcatSensoryFigures: DeckFigurePlacement[] = [
     blocks: [
       '- Slow (tonic) = **Merkel** + **Ruffini**; rapid (phasic) = **Meissner** + **Pacinian**',
       '- Superficial = Merkel + Meissner; deep = Ruffini + Pacinian',
-      '- Pacinian: deep, rapid, high-frequency vibration — the 250 Hz detector',
+      '- Pacinian: deep, rapid, high-frequency vibration',
       '- Free nerve endings: pain and temperature in every layer, mostly slow',
     ],
   },
@@ -528,9 +528,8 @@ export const mcatSensoryFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- Same transducer (hair cells), different mechanical attachment',
-      '- **Canals**: rotation — endolymph lags, cupula bends; the signal fades at constant speed',
+      '- **Canals**: rotation — endolymph lags, cupula bends',
       '- **Utricle / saccule**: linear acceleration + head tilt — otoliths shear the hair cells',
-      '- Utricle ≈ horizontal (car speeding up), saccule ≈ vertical (elevator)',
     ],
   },
   {

@@ -28,6 +28,9 @@ Everything below about $1500\\ \\text{cm}^{-1}$ is the **fingerprint region** �
 | C-H (sp2) | 3000-3100 | Just ABOVE 3000 |
 | C-H (aldehyde) | ~2720 and ~2850 | Two weak bands — the aldehyde fingerprint |
 | C-H (terminal alkyne) | ~3300 | Sharp (contrast with broad O-H) |
+
+| Bond / group | Frequency ($\\text{cm}^{-1}$) | Appearance |
+|--------------|-------------------------------|------------|
 | $C{\\equiv}N$ | ~2250 | Sharp, medium |
 | $C{\\equiv}C$ | 2100-2260 | Weak; **absent** in symmetric internal alkynes |
 | C=O | 1700-1750 | **Strong, sharp** — the most reliable band in IR |
@@ -50,10 +53,10 @@ Everything below about $1500\\ \\text{cm}^{-1}$ is the **fingerprint region** �
 
 ### The Interpretation Algorithm
 
-1. Strong band near 1700? → carbonyl present; use its exact position + companions (broad O-H → acid; C-O stretch → ester; N-H → amide; 2720 → aldehyde)
-2. Broad 3200-3550? → alcohol O-H (or N-H if spiked and less broad)
-3. ~2250? → nitrile (or alkyne slightly lower and weaker)
-4. Nothing but C-H? → hydrocarbon or ether (check 1000-1300 for C-O)`
+- **1. Strong band near 1700?** → carbonyl present; use its exact position + companions (broad O-H → acid; C-O stretch → ester; N-H → amide; 2720 → aldehyde)
+- **2. Broad 3200-3550?** → alcohol O-H (or N-H if spiked and less broad)
+- **3. ~2250?** → nitrile (or alkyne slightly lower and weaker)
+- **4. Nothing but C-H?** → hydrocarbon or ether (check 1000-1300 for C-O)`
     },
     {
       id: 'spect1-quiz1',

@@ -376,21 +376,21 @@ const ledgerSvg = `${SVG_OPEN} viewBox="0 0 560 440">
 <text x="356" y="195" font-size="15" font-weight="700" text-anchor="middle" fill="currentColor">6 NADH</text>
 <rect x="412" y="174" width="100" height="32" rx="16" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
 <text x="462" y="195" font-size="15" font-weight="700" text-anchor="middle" fill="currentColor">2 FADH₂</text>
-<text x="32" y="260" font-size="16" font-weight="700" fill="currentColor">oxidative phosphorylation: NADH × 2.5 · FADH₂ × 1.5</text>
-<text x="32" y="286" font-size="16" fill="currentColor">8 matrix NADH → 20</text>
-<text x="300" y="286" font-size="16" fill="currentColor">2 FADH₂ → 3</text>
-<text x="32" y="310" font-size="16" fill="currentColor">2 cytosolic NADH → 5 (malate–aspartate) or 3 (glycerol-3-P)</text>
-<text x="32" y="334" font-size="16" fill="currentColor">direct: 2 ATP + 2 GTP → 4</text>
+<text x="32" y="260" font-size="16" font-weight="700" fill="currentColor">oxidative phosphorylation cashes the carriers in</text>
+<text x="32" y="286" font-size="16" fill="currentColor">matrix NADH → Complex I: × 2.5 each</text>
+<text x="32" y="310" font-size="16" fill="currentColor">FADH₂ → CoQ (skips Complex I): × 1.5 each</text>
+<text x="32" y="334" font-size="16" fill="currentColor">cytosolic NADH → the shuttle decides: × 2.5 (malate–aspartate) or × 1.5 (glycerol-3-P)</text>
 <g class="fig-accent">
 <rect x="20" y="352" width="310" height="48" rx="10" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="3"/>
-<text x="175" y="383" font-size="20" font-weight="700" text-anchor="middle" fill="currentColor">≈ 30–32 ATP per glucose</text>
+<text x="175" y="372" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">total = direct + Σ carriers × rate</text>
+<text x="175" y="392" font-size="14" text-anchor="middle" fill="currentColor">add it up in the worked example</text>
 </g>
 <g class="fig-accent-2">
 <rect x="350" y="352" width="190" height="48" rx="10" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2.5"/>
 <text x="445" y="372" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">anaerobic: 2 ATP</text>
-<text x="445" y="392" font-size="14" text-anchor="middle" fill="currentColor">about 15× less</text>
+<text x="445" y="392" font-size="14" text-anchor="middle" fill="currentColor">glycolysis only, no carriers cashed</text>
 </g>
-<g class="fig-muted"><text x="280" y="426" font-size="14" text-anchor="middle" fill="currentColor">the range = which shuttle carries the cytosolic NADH in</text></g>
+<g class="fig-muted"><text x="280" y="426" font-size="14" text-anchor="middle" fill="currentColor">the only variable row = which shuttle carries the cytosolic NADH in</text></g>
 </svg>`
 
 /* 9 — An oxygen-electrode trace of isolated mitochondria (after, 1000×460) */
@@ -459,8 +459,8 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
       caption: 'Energy coupling as free-energy steps: an uphill reaction becomes downhill when it shares an intermediate with ATP hydrolysis, because the ΔG°′ values add (levels illustrative, numbers from the lesson).',
     },
     blocks: [
-      '- Coupled reactions share a **common intermediate** (glutamyl-phosphate), so their free energies **add**',
-      '- +14 + (−30.5) = **−16 kJ/mol** → spontaneous; it is chemistry, not "heat from ATP"',
+      '- Read the panels: uphill alone, downhill with ATP — the shared **glutamyl-phosphate** intermediate makes two steps one reaction',
+      '- Free energies of coupled steps **add**; there is no "heat from ATP" pushing the reaction',
     ],
   },
   {
@@ -473,8 +473,8 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
       caption: 'The PDH gateway: one irreversible oxidative decarboxylation, switched off by its own products through PDH kinase and back on by PDH phosphatase.',
     },
     blocks: [
-      '- Five cofactors ("Tender Loving Care For Nancy"): **TPP** (B1), **lipoic acid**, **CoA** (B5), **FAD** (B2), **NAD⁺** (B3)',
-      '- Phosphorylated = **off**; dephosphorylated = **on** — and the step is **irreversible**',
+      '- 3C pyruvate → 2C acetyl-CoA: the lost carbon leaves as CO₂, its electrons leave as NADH',
+      '- Phosphorylated = **off**; dephosphorylated = **on** — and the step is **irreversible**: no way back to glucose',
     ],
   },
   {
@@ -487,13 +487,13 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
       caption: 'One turn of the cycle: two carbons in as acetyl-CoA, two out as CO₂, and the energy leaves as 3 NADH, 1 FADH₂ and 1 GTP. Red marks the three regulated steps.',
     },
     blocks: [
-      '- **Per turn:** 3 NADH, 1 FADH₂, 1 GTP, 2 CO₂ — the two CO₂ carbons come from oxaloacetate, not the new acetyl group',
-      '- Control points: citrate synthase, **isocitrate DH (rate-limiting)**, α-KG DH — all slowed by NADH / ATP, IDH sped up by ADP',
+      '- 2C (acetyl-CoA) + 4C (oxaloacetate) → 6C citrate; a turn\'s two CO₂ carry oxaloacetate carbons, not the new acetyl group',
+      '- Control points (red): citrate synthase, **isocitrate DH (rate-limiting)**, α-KG DH — all slowed by NADH / ATP, IDH sped up by ADP',
     ],
   },
   {
     at: 'The Chain: Four Complexes, Two Mobile Carriers',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: etcSvg,
       alt:
@@ -501,8 +501,10 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
       caption: 'The electron transport chain and chemiosmosis: electrons fall from NADH and FADH₂ to O₂ while Complexes I, III and IV pump H⁺ out; the H⁺ falling back through ATP synthase makes ATP.',
     },
     blocks: [
-      '- Electrons: NADH → **I** → Q; FADH₂ → **II** → Q; Q → **III** → cyt c → **IV** → O₂. Pumps: I, III, IV (not II)',
-      '- Proton-motive force = ΔpH + Δψ; H⁺ returning through **ATP synthase** (Fₒ rotor, F₁ heads) makes ATP → NADH ≈ 2.5, FADH₂ ≈ 1.5',
+      '- Path: NADH → **I** → Q; FADH₂ → **II** → Q; Q → **III** → cyt c → **IV** → O₂ — always toward more positive E°′',
+      '- Mobile carriers: **CoQ** (lipid-soluble, inside the membrane) and **cytochrome c** (peripheral protein, outer face)',
+      '- Pumps: I (~4 H⁺), III (~4), IV (~2), **not II** → NADH ≈ 2.5 ATP, FADH₂ ≈ 1.5',
+      '- ΔG°′ = −nFΔE°′: NADH (−0.32 V) → O₂ (+0.82 V) releases ≈ 220 kJ/mol per NADH',
     ],
   },
   {
@@ -517,8 +519,7 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Rotenone** (I): NADH backs up, FADH₂ electrons still reach O₂ · **Antimycin A** (III), **cyanide / CO / azide** (IV): all flow stops',
       '- **Oligomycin** (ATP synthase): gradient maxes out, so pumping and O₂ use stop *secondarily*',
-      '- **DNP, aspirin overdose, UCP1** (uncouplers): gradient lost as heat — O₂ use **up**, ATP **down**, temperature **up**',
-      '- Memory hook: inhibitors stop O₂ consumption; uncouplers accelerate it',
+      '- **DNP, aspirin overdose, UCP1** (uncouplers): the gradient leaks back as heat',
     ],
   },
   {
@@ -531,8 +532,8 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
       caption: 'The two shuttles for glycolytic NADH: the malate-aspartate route keeps the NADH level (2.5 ATP), the glycerol-3-phosphate route drops to the FADH₂ level (1.5 ATP).',
     },
     blocks: [
-      '- **Malate–aspartate** (heart, liver): electrons arrive as matrix NADH → Complex I → ~2.5 ATP each',
-      '- **Glycerol-3-P** (muscle, brain): electrons arrive as FADH₂ → CoQ → ~1.5 ATP each — faster, less efficient; hence **30 vs 32 ATP per glucose**',
+      '- NADH itself never crosses the inner membrane — only its electrons do, riding on malate or on glycerol-3-P',
+      '- One question sets the yield: do the electrons reach **Complex I** (NADH level) or skip to **CoQ** (FADH₂ level)?',
     ],
   },
   {
@@ -541,13 +542,13 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: ledgerSvg,
       alt:
-        'A ledger with three stage rows and their outputs. Glycolysis (cytosol): 2 ATP direct and 2 cytosolic NADH. PDH times two pyruvate (matrix): no direct ATP, 2 NADH. TCA times two turns (matrix): 2 GTP direct, 6 NADH and 2 FADH₂. Below, oxidative phosphorylation cashes them in at 2.5 ATP per NADH and 1.5 per FADH₂: 8 matrix NADH give 20, 2 FADH₂ give 3, the 2 cytosolic NADH give 5 via the malate-aspartate shuttle or 3 via glycerol-3-phosphate, plus 4 direct. Total about 30 to 32 ATP per glucose, against 2 ATP for anaerobic glycolysis, about 15 times less. The range comes from which shuttle carries the cytosolic NADH in.',
-      caption: 'The aerobic ATP ledger for one glucose: four ATP made directly, the rest from ten NADH and two FADH₂ at the chain.',
+        'A ledger with three stage rows and their outputs. Glycolysis (cytosol): 2 ATP direct and 2 cytosolic NADH. PDH times two pyruvate (matrix): no direct ATP, 2 NADH. TCA times two turns (matrix): 2 GTP direct, 6 NADH and 2 FADH₂. Below, the exchange rates oxidative phosphorylation pays: matrix NADH enters Complex I at 2.5 ATP each; FADH₂ enters at CoQ, skipping Complex I, at 1.5 each; cytosolic NADH is paid at whichever rate its shuttle earns, 2.5 via malate-aspartate or 1.5 via glycerol-3-phosphate. A highlighted box reads total = direct + sum of carriers × rate, to be added up in the worked example; a second box: anaerobic glycolysis alone gives 2 ATP, with no carriers cashed. Footer: the only variable row is which shuttle carries the cytosolic NADH in.',
+      caption: 'The aerobic ledger for one glucose: what each stage puts on the books (direct ATP/GTP, NADH, FADH₂) and the rate the chain pays for each carrier; the worked example adds it up.',
     },
     blocks: [
       '- Carriers are cashed in by oxidative phosphorylation: **~2.5 ATP per NADH**, **~1.5 per FADH₂**',
-      '- Only the 2 **cytosolic** NADH vary: malate–aspartate (2.5 each) vs glycerol-3-P (1.5 each) → **32 vs 30**',
-      '- Anaerobic glycolysis alone: **2 ATP** — about **15×** less, the gap behind oxygen debt and the Warburg effect',
+      '- Only the 2 **cytosolic** NADH are paid at a rate that depends on the cell: malate–aspartate (NADH level) vs glycerol-3-P (FADH₂ level)',
+      '- Anaerobic glycolysis alone: **2 ATP**, no carriers cashed — the gap behind oxygen debt and the Warburg effect',
     ],
   },
   {
@@ -560,7 +561,7 @@ export const mcatBioenergeticsFigures: DeckFigurePlacement[] = [
       caption: 'An oxygen-electrode trace (illustrative): the slope is the respiration rate. ADP speeds it, oligomycin stops it, an uncoupler sets it free.',
     },
     blocks: [
-      '- Read the **slope**: steeper = faster O₂ consumption. ADP-stimulated rate is "state 3", the slow rate after ADP runs out is "state 4"',
+      '- Read the **slope**: steeper = faster O₂ consumption; the rate jumps with ADP and sags again once the ADP is used up',
       '- Oligomycin then DNP is the classic proof of **chemiosmotic coupling**: respiration returns, ATP does not',
     ],
   },

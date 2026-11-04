@@ -31,11 +31,9 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 
 ### Isoelectric Point (pI)
 
-The pI is the pH at which the molecule's **net charge is zero**. For a simple amino acid:
+The pI is the pH at which the molecule's **net charge is zero**. For a simple amino acid, average the two pKa values that **flank the neutral (zwitterionic) species**:
 
 $$pI = \\frac{pK_{a1} + pK_{a2}}{2}$$
-
-...where the two pKa values are those **flanking the neutral (zwitterionic) species**:
 
 - **Neutral side chain** (e.g., Gly, Ala): average the two backbone pKa values. $pI = (2.3 + 9.6)/2 \\approx 6$.
 - **Acidic** (Asp, Glu): average the **two lowest** pKa values (the two carboxyls). pI ~3.

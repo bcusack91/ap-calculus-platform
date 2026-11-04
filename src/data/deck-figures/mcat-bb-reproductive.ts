@@ -221,7 +221,7 @@ ${BOX(855, 124, 112, 64, ['Penis'], 16, '700')}
 <line x1="470" y1="300" x2="498" y2="196" stroke="currentColor" stroke-width="3" marker-end="url(#arr-rep-7up-r)"/>
 <rect x="580" y="300" width="210" height="92" rx="12" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="2.5"/>
 <text x="685" y="328" font-size="18" font-weight="700" text-anchor="middle" fill="currentColor">Prostate</text>
-<text x="685" y="352" font-size="15" text-anchor="middle" fill="currentColor">thin milky, slightly acidic</text>
+<text x="685" y="352" font-size="15" text-anchor="middle" fill="currentColor">thin, milky fluid</text>
 <text x="685" y="374" font-size="15" text-anchor="middle" fill="currentColor">citrate · PSA liquefies semen</text>
 <line x1="720" y1="300" x2="752" y2="196" stroke="currentColor" stroke-width="3" marker-end="url(#arr-rep-7up-r)"/>
 <rect x="810" y="300" width="180" height="92" rx="12" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="2.5"/>
@@ -583,12 +583,12 @@ export const mcatReproductiveFigures: DeckFigurePlacement[] = [
     figure: {
       svg: sevenUpSvg,
       alt:
-        'Seven boxes in a row under the letters S E V E N U P: Seminiferous tubules (sperm made here) → Epididymis (maturation, storage, sperm gain motility) → Vas deferens (transport) → Ejaculatory duct → (Nothing, a mnemonic filler) → Urethra (shared with urine) → Penis. Three red gland boxes below feed into the route downstream of the vas: seminal vesicles (most of the volume, fructose as fuel, alkaline buffer, prostaglandins) join at the ejaculatory duct; the prostate (thin milky, slightly acidic fluid; citrate; PSA liquefies semen) and the bulbourethral glands (pre-ejaculatory mucus that lubricates the urethra) join at the urethra. Note: semen is mostly glandular fluid, not sperm.',
+        'Seven boxes in a row under the letters S E V E N U P: Seminiferous tubules (sperm made here) → Epididymis (maturation, storage, sperm gain motility) → Vas deferens (transport) → Ejaculatory duct → (Nothing, a mnemonic filler) → Urethra (shared with urine) → Penis. Three red gland boxes below feed into the route downstream of the vas: seminal vesicles (most of the volume, fructose as fuel, alkaline buffer, prostaglandins) join at the ejaculatory duct; the prostate (thin, milky fluid; citrate; PSA liquefies semen) and the bulbourethral glands (pre-ejaculatory mucus that lubricates the urethra) join at the urethra. Note: semen is mostly glandular fluid, not sperm.',
       caption: 'SEVEN UP as a route: sperm mature in the epididymis, and the glands add fluid, fuel and buffer downstream of the vas deferens.',
     },
     blocks: [
       '- **Epididymis** = maturation, storage, motility; **seminal vesicles** = volume, fructose, alkaline buffer',
-      '- Prostate: milky, PSA, slightly acidic; bulbourethral: mucus — semen is mostly glandular fluid',
+      '- Prostate: milky fluid, citrate, PSA; bulbourethral: mucus — semen is mostly glandular fluid',
     ],
   },
   {

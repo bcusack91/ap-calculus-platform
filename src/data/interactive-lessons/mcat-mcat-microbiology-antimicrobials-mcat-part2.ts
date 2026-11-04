@@ -45,7 +45,7 @@ Bacteria translate on **70S ribosomes (30S + 50S subunits)**; eukaryotic cytosol
 - Peptide bond formation is catalyzed by **rRNA, not protein** — the ribosome is a ribozyme. Chloramphenicol inhibits an RNA active site.
 - Aminoglycosides are the odd class out: protein-synthesis inhibitors are generally static, but **misreading** actively poisons the cell with junk protein → cidal.
 - Aminoglycoside + beta-lactam is classically **synergistic**: wall damage lets the aminoglycoside flood in.
-- Macrolide resistance can come from **methylation of the 23S rRNA**, which removes the binding site — one methyl group, total resistance. Clindamycin binds an overlapping 50S site, so the same methylation confers cross-resistance to macrolides AND clindamycin.
+- Macrolide resistance can come from **methylation of the 23S rRNA**, which removes the binding site — one methyl group, total resistance; clindamycin binds an overlapping 50S site, so it is cross-resistant too.
 
 <!-- yield:low -->
 - The methylase gene is **erm**, and the macrolide + clindamycin cross-resistance is called the MLS$_B$ phenotype.

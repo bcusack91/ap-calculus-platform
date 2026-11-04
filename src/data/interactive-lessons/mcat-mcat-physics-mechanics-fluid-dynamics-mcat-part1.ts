@@ -12,13 +12,11 @@ export const fluidsInMotionMcatPart1: LessonData = {
 
 **Where this fits.** The previous lesson, *Fluids at Rest*, covered density, pressure, buoyancy and surface tension. This lesson sets the fluid moving: continuity and Bernoulli for ideal flow, then viscosity, Poiseuille's law and blood flow. The next lesson, *Waves & Interference*, turns from fluids to oscillations and waves.
 
-Throughout this part we assume an **ideal fluid**, which has three properties:
+Throughout this part we assume an **ideal fluid**, with three properties (Part 2 drops "non-viscous" to handle real blood flow):
 
 - **incompressible**: its density stays constant;
-- **non-viscous**: no internal friction, so no mechanical energy is lost to heat;
+- **non-viscous**: no internal friction between layers of fluid;
 - **laminar** (and steady): it flows in smooth layers that do not mix, with the pattern unchanging in time.
-
-Part 2 of this lesson drops the "non-viscous" assumption to handle real blood flow.
 
 ### Flow Rate
 
@@ -41,7 +39,7 @@ $$A_1 v_1 = A_2 v_2$$
 
 - **Narrower means faster:** $v \\propto 1/A$.
 - **Circular pipes:** $A = \\pi r^2$, so $v \\propto 1/r^2$. Halve the radius (or the diameter) and the area falls to one-quarter, so the speed rises fourfold.
-- **Branching:** when a pipe splits, the branch flows add up to the parent flow: $A_0 v_0 = A_1 v_1 + A_2 v_2 + \\dots$ The speed in identical branches is set by their TOTAL area. If the branches together have more area than the parent, the fluid slows down, even though each branch is narrower. The capillary worked example later in this part applies this to the circulation.
+- **Branching:** when a pipe splits, the branch flows add up to the parent flow: $A_0 v_0 = A_1 v_1 + A_2 v_2 + \\dots$ The speed in identical branches is set by their TOTAL area. If the branches together have more area than the parent, the fluid slows down, even though each branch is narrower.
 - Continuity links geometry to speed only. It says nothing about pressure; that is Bernoulli's job.
 - Gases are compressible, so for them the conserved quantity is $\\rho A v$. On the MCAT, liquids and blood are treated as incompressible.
 
@@ -125,7 +123,9 @@ Here $h$ is HEIGHT above a chosen reference level, so pressure falls as the flui
 - **Why it feels backwards.** Fast fluid hits hard when something STOPS it, but the pressure it exerts on the walls alongside it is lower. In fact, the fluid speeds up into a narrowing BECAUSE the pressure behind it is higher: the pressure difference is what accelerates it.
 - **The standard chain:** area down, so speed up (continuity), so pressure down (Bernoulli).
 
-**Venturi effect and the Venturi meter.** Pressure drops in a constriction. A **Venturi meter** is a horizontal pipe with a narrow throat; vertical tubes open to the air above the wide section and the throat show the pressure difference as a difference in liquid heights ($\\Delta P = \\rho g \\Delta h$, from the *Fluids at Rest* lesson). From $\\Delta P$ and the two areas, the flow speed can be calculated. The same effect lets an atomizer or aspirator pull liquid up a tube: a fast air stream across the tube's top lowers the pressure there.
+**Venturi effect and the Venturi meter.** Pressure drops in a constriction. A **Venturi meter** is a horizontal pipe with a narrow throat; open vertical tubes above the wide section and the throat show the pressure difference as a difference in liquid heights ($\\Delta P = \\rho g \\Delta h$, from the *Fluids at Rest* lesson). From $\\Delta P$ and the two areas, the flow speed follows.
+
+The same effect lets an atomizer or aspirator pull liquid up a tube: a fast air stream across the tube's top lowers the pressure there.
 
 **Torricelli's theorem.** Liquid leaks from a small hole a depth $h$ below the open surface of a wide tank. The surface and the jet are both at atmospheric pressure, and the surface barely moves, so Bernoulli reduces to
 
@@ -135,7 +135,7 @@ the speed of an object dropped from height $h$: each parcel cashes in the potent
 
 **Pitot tube.** A **pitot tube** points straight into a flow. Fluid entering its open tip is brought to rest there, so the pressure at the tip (the **stagnation pressure**) is $P + \\tfrac{1}{2}\\rho v^2$, where $P$ is the ordinary (static) pressure of the moving fluid. Measuring both gives $\\Delta P = \\tfrac{1}{2}\\rho v^2$, so $v = \\sqrt{2\\Delta P/\\rho}$.
 
-**Lift.** A wing is shaped and tilted so that air flows faster over its top than beneath it. Faster flow on top means lower pressure on top, and the pressure difference times the wing's area is an upward force. The same reasoning explains roofs lifted off in a hurricane.
+**Lift.** A wing is shaped and tilted so that air flows faster over its top than beneath it. Faster flow on top means lower pressure on top, and the pressure difference times the wing's area is an upward force.
 
 <!-- yield:low -->
 - Aircraft airspeed indicators are pitot-static probes, and hospital "Venturi masks" use the Venturi effect to draw in room air and deliver a fixed oxygen concentration.

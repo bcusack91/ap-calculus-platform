@@ -103,11 +103,23 @@ This final part uses integrated questions that combine quantum numbers, electron
 
 - **Quantum numbers and ions.** Check $\\ell \\leq n-1$ and $|m_\\ell| \\leq \\ell$, fill by Aufbau and Hund, and remove highest-$n$ electrons first.
 - **Trends from $Z_{\\text{eff}}$.** Radius grows down-left, IE and EN up-right; an isoelectronic series shrinks as $Z$ rises.
+- **Paramagnetic means any unpaired electron.** Write the ion's configuration, apply Hund, count singles: $\\text{Fe}^{3+}$ ($3d^5$) has five, $\\text{Zn}^{2+}$ ($3d^{10}$) none.
+- **Isotopes and atomic weight.** Same $Z$, different neutron count; the table's atomic weight is the abundance-weighted average, nearest the most common isotope.
 
 **Common traps**
 
 - **Smooth IE trends.** $\\text{IE}_1$ is higher for Mg than Al and for P than S, and distractors bank on a smooth trend.
 - **Counting after the jump.** The group is the number of electrons removed BEFORE the big IE jump, not after it.
+- **$\\text{Cu}^+$ as paramagnetic.** Copper is $[\\text{Ar}]\\, 3d^{10}\\, 4s^1$ and loses that lone $4s$ electron, leaving $3d^{10}$ with every electron paired.
+- **EA from the EN trend.** F is the most electronegative element, but Cl has the most negative electron affinity: fluorine's crowded $2p$ repels the added electron.
+
+## Atomic Structure & Periodic Trends — Complete Topic Summary
+
+**Part 1:** Quantum numbers, the three filling rules, electron configurations of atoms and ions, Cr/Cu exceptions, magnetism, isotopes and atomic weight.
+
+**Part 2:** $Z_{\\text{eff}}$ and the trends in radius, ionization energy, electronegativity and electron affinity; families of elements.
+
+**Part 3:** Integrated MCAT practice.
 
 **Next up:** the *Atomic Spectra & Nuclear Chemistry* lesson — emission spectra and the Bohr model, the photoelectric effect and photoelectron spectroscopy, then radioactive decay and half-life.
 `

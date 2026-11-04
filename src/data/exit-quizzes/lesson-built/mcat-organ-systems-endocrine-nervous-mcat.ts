@@ -116,7 +116,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `Which of the following is an example of positive feedback in the endocrine system?`,
+    question: `Which of the following endocrine events, like oxytocin release during labor, amplifies the change that triggered it instead of opposing it?`,
     options: [
       `Rising T4 lowering TSH secretion from the pituitary`,
       `Rising cortisol suppressing CRH from the hypothalamus`,
@@ -130,15 +130,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `Cells are pretreated with a drug that blocks translation, then exposed to either epinephrine or aldosterone. Which response is still observed?`,
+    question: `Cells are pretreated with a drug that blocks adenylyl cyclase, then exposed to either glucagon or aldosterone. Which response is still observed?`,
     options: [
-      `Epinephrine-triggered activation of existing enzymes within a minute`,
       `Aldosterone-triggered rise in new transport proteins over hours`,
-      `Both responses, since neither hormone requires new proteins`,
-      `Neither response, since both hormones act through transcription`,
+      `Glucagon-triggered activation of existing enzymes within a minute`,
+      `Both responses, since neither hormone signals through cAMP`,
+      `Neither response, since both hormones signal through cAMP`,
     ],
     correctAnswer: 0,
-    explanation: `Epinephrine works through surface receptors and second messengers that modify proteins already in the cell, so it survives a translation block. Aldosterone is a steroid whose nuclear receptor changes transcription, and its effect needs newly made proteins, so it is lost. Epinephrine does not act through transcription, and aldosterone does require new proteins, so neither the both nor the neither answer holds.`,
+    explanation: `Aldosterone is a steroid that crosses the membrane, binds a nuclear receptor and changes transcription, so its slow rise in new transport proteins needs no cAMP and survives the block. Glucagon acts through a Gs-coupled receptor, adenylyl cyclase and cAMP, so blocking the enzyme silences its fast response. Glucagon does depend on cAMP and aldosterone does not, so neither the both nor the neither answer holds.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
     part: 1,

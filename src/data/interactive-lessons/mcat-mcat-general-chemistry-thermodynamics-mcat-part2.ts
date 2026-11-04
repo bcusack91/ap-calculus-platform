@@ -21,20 +21,14 @@ $$\\Delta S = S_{\\text{products}} - S_{\\text{reactants}}$$
 
 ## Predicting the Sign of $\\Delta S$
 
-**$\\Delta S > 0$ (entropy increases) when:**
+Count the moles of gas first; then look at phase, temperature and volume.
 
-1. Gases are produced from solids/liquids ($\\Delta n_{\\text{gas}} > 0$)
-2. A solid dissolves to form aqueous ions
-3. Temperature increases (for any substance)
-4. A substance vaporizes or melts
-5. Mixing occurs
-6. Gas occupies larger volume
-
-**$\\Delta S < 0$ (entropy decreases) when:**
-
-1. Gases are consumed ($\\Delta n_{\\text{gas}} < 0$, e.g., 3 mol gas → 1 mol gas)
-2. A substance crystallizes/freezes
-3. Complex molecules form from simpler ones (polymerization)
+| $\\Delta S > 0$ (entropy increases) | $\\Delta S < 0$ (entropy decreases) |
+|---|---|
+| Gas is produced ($\\Delta n_{\\text{gas}} > 0$) | Gas is consumed ($\\Delta n_{\\text{gas}} < 0$, e.g. 3 mol gas → 1 mol gas) |
+| A solid melts, a liquid vaporizes, a solid dissolves to aqueous ions | A liquid freezes, a gas condenses, a solute crystallizes |
+| Temperature rises (any substance) | Complex molecules form from simpler ones (polymerization) |
+| Substances mix; a gas expands into a larger volume | A gas is compressed into a smaller volume |
 
 ## Laws of Thermodynamics
 

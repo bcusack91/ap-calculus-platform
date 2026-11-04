@@ -94,9 +94,7 @@ One ubiquitin ligase thus triggers both chromosome separation and the end of mit
 - Fuse an M-phase cell with any interphase cell → the interphase nucleus **condenses its chromosomes prematurely** — mitotic cytoplasm dominates
 - Fuse a G$_2$ cell with an S-phase cell → the G$_2$ nucleus does **not** re-replicate — replicated DNA is licensed only once (see below)
 
-**MPF and frog eggs:**
-- Injecting cytoplasm from a mature (M-phase) frog egg into an immature oocyte drives it into M — the activity was named **maturation-promoting factor (MPF)**
-- MPF = cyclin B-CDK1; sea urchin experiments showed cyclin protein rising each cycle and crashing at each anaphase — the first protein ever seen to oscillate with the cycle
+**MPF and frog eggs:** injecting cytoplasm from a mature (M-phase) frog egg into an immature oocyte drives it into M — the activity was named **maturation-promoting factor (MPF)**. MPF = cyclin B-CDK1; sea urchin experiments showed cyclin protein rising each cycle and crashing at each anaphase — the first protein ever seen to oscillate with the cycle.
 
 <!-- yield:low -->
 - The researchers: Rao and Johnson (cell fusion), Masui (MPF in frog oocytes), Nurse (CDK genes in yeast), Hunt (cyclins in sea urchin embryos).

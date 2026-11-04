@@ -8,9 +8,9 @@ export const mcatBioBasisBehaviorPart4Data = {
 
 **Part 4 of 5 — Endocrine System & Behavior + Stress (HPA Axis)**
 
-Hormones modulate behavior more slowly and diffusely than neurotransmitters, but with longer-lasting effects.
-
 ### Nervous vs. Endocrine Signaling
+
+Hormones modulate behavior more slowly and diffusely than neurotransmitters, but with longer-lasting effects.
 
 | Feature | Nervous | Endocrine |
 |---------|---------|-----------|

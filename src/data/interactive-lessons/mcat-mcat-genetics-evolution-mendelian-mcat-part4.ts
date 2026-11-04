@@ -10,18 +10,16 @@ export const mcatMendelianPart4Data = {
 
 ### The MCAT's Favorite Genetics Passage
 
-A typical passage gives you a cross, an expected Mendelian ratio, and data that DON'T fit. Your job is to name the modifier. Memorize this diagnostic table:
-
-| Observed deviation | Likely explanation |
-|--------------------|--------------------|
-| $2:1$ instead of $3:1$ in a monohybrid cross | **Recessive lethal**: homozygous dominant (or homozygous mutant) class dies (e.g., mouse yellow-coat $A^Y$) |
-| $9:3:4$ instead of $9:3:3:1$ | **Recessive epistasis**: aa at one locus masks the other gene |
-| $9:7$ | **Duplicate recessive (complementary genes)**: recessive homozygosity at either locus blocks the pathway |
-| $12:3:1$ | **Dominant epistasis**: a dominant allele at one locus masks the other gene |
-| Three phenotypes ($1:2:1$) from a monohybrid cross | **Incomplete dominance** (blended intermediate) or **codominance** (both expressed) |
-| Fewer affected individuals than predicted | **Incomplete penetrance** — genotype present, phenotype not always expressed |
-| Same genotype, variable severity | **Variable expressivity** |
-| Trait ratio differs between sons and daughters | **X-linkage** |
+| The passage's data that DON'T fit | Name the modifier |
+|---|---|
+| $2:1$, not $3:1$ (monohybrid) | **Recessive lethal**: a homozygous class dies (mouse yellow $A^Y$) |
+| $9:3:4$ | **Recessive epistasis**: aa masks the other gene |
+| $9:7$ | **Duplicate recessive (complementary)**: aa or bb blocks the pathway |
+| $12:3:1$ | **Dominant epistasis**: $A\\_$ masks the other gene |
+| $1:2:1$ phenotypes (monohybrid) | **Incomplete dominance** (blend) or **codominance** (both shown) |
+| Fewer affected than predicted | **Incomplete penetrance**: genotype present, phenotype sometimes absent |
+| Same genotype, varying severity | **Variable expressivity** |
+| Sons ≠ daughters | **X-linkage** |
 
 ### Incomplete Dominance vs. Codominance
 
@@ -33,9 +31,8 @@ A typical passage gives you a cross, an expected Mendelian ratio, and data that 
 
 The MCAT will not make you look up critical values, but you must reason with the statistic:
 
-$\\chi^2 = \\sum \\frac{(O - E)^2}{E}$
+$\\chi^2 = \\sum \\frac{(O - E)^2}{E}$, where $O$ = observed count and $E$ = expected count under the Mendelian hypothesis
 
-- $O$ = observed count, $E$ = expected count under the Mendelian hypothesis
 - Degrees of freedom = (number of phenotype classes) $- 1$
 - Large $\\chi^2$ (p below 0.05) → reject the hypothesized ratio; small $\\chi^2$ → data are consistent with it
 - Rejecting $9:3:3:1$ does NOT tell you the correct model — it invites a follow-up hypothesis (linkage? epistasis? lethality?)

@@ -379,7 +379,7 @@ ${T(150, 240, 14, 'left', 'middle')}
 ${T(700, 250, 18, 'LEFT shift = holds O₂ tighter', 'start', '700')}
 </g>
 ${T(320, 300, 16, 'at tissue P<tspan dy="4" font-size="12">O₂</tspan><tspan dy="-4"> = 40 mmHg:</tspan>')}
-${T(320, 344, 16, '→ 15% more O₂ released')}
+${T(320, 344, 16, '→ the gap is O₂ handed to the tissue')}
 ${T(700, 124, 17, '↑ P<tspan dy="4" font-size="12">CO₂</tspan><tspan dy="-4">, ↑ H⁺ (↓ pH): the Bohr effect</tspan>')}
 ${T(700, 148, 17, '↑ temperature')}
 ${T(700, 172, 17, '↑ 2,3-BPG (altitude, anemia)')}
@@ -389,8 +389,8 @@ ${T(700, 302, 17, 'fetal Hb (binds 2,3-BPG poorly)')}
 ${T(700, 326, 17, 'CO (and it also steals heme sites)')}
 <g class="fig-muted">${T(700, 352, 15, 'P₅₀ falls — harder to unload')}</g>
 <g class="fig-muted">
-${T(700, 392, 15, 'loading barely suffers: the lung')}
-${T(700, 412, 15, 'plateau is flat at P<tspan dy="4" font-size="11">O₂</tspan><tspan dy="-4"> ≈ 100</tspan>')}
+${T(700, 392, 15, 'P₅₀ = the P<tspan dy="4" font-size="11">O₂</tspan><tspan dy="-4"> at 50% saturation;</tspan>')}
+${T(700, 412, 15, 'a shift is read as a change in P₅₀')}
 </g>
 </svg>`
 
@@ -506,8 +506,8 @@ export const mcatRespiratoryFigures: DeckFigurePlacement[] = [
       caption: 'Conducting zone (dead space, no exchange) above the dashed line; respiratory zone (alveoli, gas exchange) below it — schematic.',
     },
     blocks: [
-      '- **Conducting zone** (nose → pharynx → larynx → trachea → bronchi → terminal bronchioles): warms, humidifies, filters — **no gas exchange**; anatomic dead space ~150 mL',
-      '- **Respiratory zone** (respiratory bronchioles → alveolar ducts → ~300 million alveoli): gas exchange across the alveolar–capillary membrane',
+      '- **Conducting zone** (nose → terminal bronchioles): warms, humidifies, filters — **no gas exchange**; anatomic dead space ~150 mL',
+      '- **Respiratory zone** (respiratory bronchioles → alveoli): gas exchange across the alveolar–capillary membrane',
       '- Defenses: nasal hairs, the **mucociliary escalator** (goblet-cell mucus swept up by cilia), alveolar **macrophages**',
       '- Alveolar wall = **type I** pneumocytes, one cell thick; **type II** pneumocytes secrete **surfactant**',
     ],
@@ -552,7 +552,6 @@ export const mcatRespiratoryFigures: DeckFigurePlacement[] = [
     blocks: [
       '- Four primitive **volumes**: TV 500, IRV ~3000, ERV ~1200, RV ~1200 mL — RV keeps alveoli open and can **never** be exhaled',
       '- **Capacities are sums**: VC = IRV + TV + ERV (~4700); FRC = ERV + RV (~2400); TLC = VC + RV (~5900 mL)',
-      '- **Spirometry cannot measure RV** — nor FRC or TLC, which contain it',
     ],
   },
   {
@@ -568,7 +567,6 @@ export const mcatRespiratoryFigures: DeckFigurePlacement[] = [
       '- **Dalton:** $P_x = F_x \\times P_{total}$; **Henry:** dissolved gas ∝ its partial pressure',
       '- Gases diffuse **down partial-pressure gradients** — never "toward where they are needed"',
       '- Alveolar $P_{O_2}$ (~100) is below atmospheric (~160): inspired air is **humidified** and mixes with CO2-rich residual gas',
-      '- At the alveolus O2 enters blood and CO2 leaves; at the tissues both gradients **reverse** (venous ~40 / ~46 mmHg)',
     ],
   },
   {
@@ -591,8 +589,8 @@ export const mcatRespiratoryFigures: DeckFigurePlacement[] = [
     figure: {
       svg: bohrSvg,
       alt:
-        'Three saturation curves against P_O₂: the normal Hb curve in the text colour, a red right-shifted curve and a blue left-shifted curve. A dashed vertical line at tissue P_O₂ = 40 mmHg crosses them: the normal curve reads 75%, the right-shifted curve 60% (both labelled on the axis) and the left-shifted curve higher still. Note: at tissue P_O₂ = 40, 60% vs 75% saturation → 15% more O₂ released. Small arrows show the shift directions. Right panel, red: RIGHT shift = easier unloading — ↑ P_CO₂ and ↑ H⁺ (↓ pH, the Bohr effect), ↑ temperature, ↑ 2,3-BPG (altitude, anemia); signatures of active tissue, P₅₀ rises. Blue: LEFT shift = holds O₂ tighter — ↓ CO₂, ↓ H⁺, ↓ temperature, ↓ 2,3-BPG, fetal Hb (binds 2,3-BPG poorly), CO (which also steals heme sites); P₅₀ falls. Footnote: loading barely suffers because the lung plateau is flat at P_O₂ ≈ 100.',
-      caption: 'The Bohr effect (illustrative curves, worked-example numbers): a right shift raises P₅₀ and unloads more O₂ at the same tissue P_O₂ — 60% instead of 75% at 40 mmHg.',
+        'Three saturation curves against P_O₂: the normal Hb curve in the text colour, a red right-shifted curve and a blue left-shifted curve. A dashed vertical line at tissue P_O₂ = 40 mmHg crosses them: the normal curve reads 75%, the right-shifted curve 60% (both labelled on the axis) and the left-shifted curve higher still. Note: at tissue P_O₂ = 40, 60% vs 75% saturation; the gap between the two readings is O₂ handed to the tissue. Small arrows show the shift directions. Right panel, red: RIGHT shift = easier unloading — ↑ P_CO₂ and ↑ H⁺ (↓ pH, the Bohr effect), ↑ temperature, ↑ 2,3-BPG (altitude, anemia); signatures of active tissue, P₅₀ rises. Blue: LEFT shift = holds O₂ tighter — ↓ CO₂, ↓ H⁺, ↓ temperature, ↓ 2,3-BPG, fetal Hb (binds 2,3-BPG poorly), CO (which also steals heme sites); P₅₀ falls. Footnote: P₅₀ is the P_O₂ at 50% saturation, and a shift is read as a change in P₅₀.',
+      caption: 'The Bohr effect (illustrative curves): a right shift raises P₅₀ and leaves less O₂ on Hb at the same tissue P_O₂ — 60% instead of 75% at 40 mmHg — so more is unloaded.',
     },
     blocks: [
       '- **Right shift** (↑$P_{50}$): ↑CO2, ↑H⁺, ↑temperature, ↑2,3-BPG — the signatures of active tissue',

@@ -22,7 +22,8 @@ $$\\text{ion-ion} > \\text{ion-dipole} > \\text{H-bond} > \\text{dipole-dipole} 
 
 Boiling separates molecules from each other, so stronger intermolecular attraction = higher bp:
 
-- Carboxylic acids top their weight class (H-bonded **dimers** — effectively two H-bonds per pair). The exception is 1°/2° amides, which boil even higher (acetamide 221 °C vs acetic acid 118 °C): N-H donors plus a C=O made strongly polar by N lone-pair resonance
+- Carboxylic acids top their weight class (H-bonded **dimers** — effectively two H-bonds per pair)
+- The exception: 1°/2° amides boil even higher (acetamide 221 °C vs acetic acid 118 °C) — N-H donors plus a C=O made strongly polar by N lone-pair resonance
 - Alcohols are next (self H-bonding); O-H beats N-H (oxygen is more electronegative → stronger H-bond), so alcohols outboil amines
 - Aldehydes/ketones/esters: dipole-dipole only among themselves — mid-range
 - Ethers and alkanes at the bottom; ethers boil close to alkanes of similar mass (diethyl ether 35 °C, n-pentane 36 °C)
@@ -40,7 +41,7 @@ Reference ladder at comparable molecular weight: **acid > alcohol > amine ≈ ke
 
 ### Melting Points (one extra rule)
 
-Melting also rewards **crystal packing**: symmetric molecules pack well and melt high (para isomers melt above ortho/meta; trans fatty acids pack and melt higher than cis-kinked ones — the membrane-fluidity story).`
+Melting also rewards **crystal packing**: symmetric molecules pack well and melt high. Para isomers melt above their ortho and meta isomers (p-xylene 13 °C vs o-xylene −25 °C, with identical forces available), and trans fatty acids pack and melt higher than cis-kinked ones — the membrane-fluidity story.`
     },
     {
       id: 'fgrp2-worked-examples',

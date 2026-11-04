@@ -26,8 +26,7 @@ Location: the **seminiferous tubules** of the testes, which sit in the scrotum b
 4. **Four spermatids** (n, 1c) — haploid but round and immature
 5. **Spermiogenesis**: spermatids remodel into **spermatozoa** (no further division)
 
-Support cells:
-- **Sertoli cells** (inside tubules): nurse developing sperm, form the blood-testis barrier, respond to FSH, secrete inhibin
+- **Sertoli cells** (support cells inside the tubules): nurse developing sperm, form the blood-testis barrier, respond to FSH, secrete inhibin
 - **Leydig cells** (interstitium, between tubules): respond to LH and synthesize **testosterone**
 
 ### Oogenesis (discontinuous, front-loaded, asymmetric)

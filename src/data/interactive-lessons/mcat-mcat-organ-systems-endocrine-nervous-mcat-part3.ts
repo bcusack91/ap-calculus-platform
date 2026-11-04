@@ -39,17 +39,16 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
 
 ### Adrenal Gland — Two Organs in One Capsule
 
-- **Cortex** (steroids, zones from outside in — "salt, sugar, sex"):
+- **Cortex** (steroids, zones from outside in — "salt, sugar, sex"): aldosterone, cortisol, weak androgens.
   - **Aldosterone** (mineralocorticoid): Na$^+$ retention, K$^+$/H$^+$ excretion — controlled by RAAS, not ACTH.
-  - **Cortisol** (glucocorticoid, via CRH → ACTH): gluconeogenesis, protein/fat mobilization, vascular tone permissiveness, **immune suppression** (why it's a drug); the long-term stress hormone with a morning-peaked circadian rhythm.
-  - Weak androgens.
+  - **Cortisol** (glucocorticoid, CRH → ACTH): gluconeogenesis, protein/fat mobilization, permissive for vascular tone, **immune suppression** (why it is a drug); morning-peaked circadian rhythm.
 
 <!-- yield:low -->
   - The main adrenal androgen is DHEA.
 <!-- /yield -->
 
 - **Medulla** (modified sympathetic ganglion): **epinephrine** — the short-term stress broadcast.
-- **Stress response, two waves:** seconds = sympathetic + epinephrine (HR, glucose, blood to muscle); minutes-to-days = HPA axis + cortisol (sustained fuel mobilization at the cost of immunity, healing, memory circuits).
+- **Two waves of stress:** seconds = sympathetic + epinephrine (HR, glucose, blood to muscle); minutes-to-days = HPA axis + cortisol (fuel mobilization at the cost of immunity and healing).
 
 ### Growth Hormone & Prolactin (the Direct-Acting Duo)
 

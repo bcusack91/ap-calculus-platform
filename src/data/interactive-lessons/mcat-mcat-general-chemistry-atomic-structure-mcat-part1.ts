@@ -33,7 +33,7 @@ Every electron in an atom is described by a unique set of four quantum numbers:
 
 2. **Pauli Exclusion Principle:** No two electrons in the same atom can have the same set of all four quantum numbers. Each orbital holds at most **2 electrons with opposite spins**.
 
-3. **Hund's Rule:** Within a subshell, place one electron in each orbital before pairing. All singly-occupied orbitals have the **same spin** (this maximizes the **multiplicity**, $2S + 1$ for total spin $S$, which grows with the number of parallel unpaired spins).
+3. **Hund's Rule:** Within a subshell, place one electron in each orbital before pairing. All singly-occupied orbitals have the **same spin**, which maximizes the number of parallel unpaired spins (the **multiplicity**).
 
 ### Worked Example — Counting Orbitals and Electrons in a Shell
 

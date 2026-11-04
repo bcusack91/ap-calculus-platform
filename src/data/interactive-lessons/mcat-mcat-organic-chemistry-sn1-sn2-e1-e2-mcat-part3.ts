@@ -30,7 +30,7 @@ Memory hook: **protic protects the cation** (SN1); **aprotic activates the anion
 | Mechanism | Outcome at the reacting carbon |
 |-----------|-------------------------------|
 | SN2 | **Inversion** of configuration (Walden inversion) — R becomes S if priorities are unchanged |
-| SN1 | **Racemization** (attack on both faces of the planar cation), often with a slight excess of inversion due to the leaving group briefly blocking one face (ion pairing) |
+| SN1 | **Racemization** (attack on both faces of the planar cation), often with a slight excess of inversion (ion pairing) |
 | E2 | **Stereospecific**: the alkene geometry is fixed by the anti-periplanar requirement |
 | E1 | Zaitsev alkene, trans (E) favored; no anti-periplanar constraint |
 

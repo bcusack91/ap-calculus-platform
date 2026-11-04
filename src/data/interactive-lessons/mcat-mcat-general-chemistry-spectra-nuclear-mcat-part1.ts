@@ -16,7 +16,7 @@ These topics appear frequently in MCAT passages because they connect quantum mec
 
 Bohr proposed that electrons orbit the nucleus only at specific, quantized energy levels.
 
-### Energy of Level $n$ in Hydrogen:
+### Energy of Level $n$ in Hydrogen
 
 $$E_n = -\\frac{13.6\\text{ eV}}{n^2} = -\\frac{2.18 \\times 10^{-18}\\text{ J}}{n^2}$$
 
@@ -26,7 +26,7 @@ Negative sign: electron is bound to the nucleus (energy $= 0$ at $n = \\infty$, 
 
 **Excited state:** $n > 1$; higher energy (less negative).
 
-### Energy of a Photon Emitted During a Transition:
+### Energy of a Photon Emitted During a Transition
 
 $$\\Delta E = E_{\\text{final}} - E_{\\text{initial}} = -13.6\\left(\\frac{1}{n_f^2} - \\frac{1}{n_i^2}\\right)\\text{ eV}$$
 

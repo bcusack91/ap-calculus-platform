@@ -124,14 +124,13 @@ Three quantities, but each is controlled by something different. This is the sin
 - **The medium sets the speed.** On a string, $v = \\sqrt{F_T/\\mu}$, where $F_T$ is the tension and $\\mu$ is the linear mass density (mass per length, in kg/m). A tighter string carries waves faster; a heavier string carries them slower. For sound, the speed depends on the medium's stiffness against compression (its **bulk modulus** $B$, the pressure needed to squeeze it by a given fraction of its volume) and its density: $v = \\sqrt{B/\\rho}$.
 - **The source sets the frequency.** A tuning fork, a vocal fold or an ultrasound crystal vibrates at its own rate, and the wave inherits that rate.
 - **Wavelength is the result**: $\\lambda = v/f$.
+- **Energy grows as amplitude squared**: triple the amplitude and the wave carries nine times the power.
 
 **Sound is fastest in solids, then liquids, then gases.** Solids are denser, which on its own would slow sound, but they are enormously stiffer, and stiffness wins. Typical values: air about $343\\;\\text{m/s}$ at room temperature (often rounded to $340$), water about $1500\\;\\text{m/s}$, soft tissue about $1540\\;\\text{m/s}$, bone roughly $3000$ to $4000\\;\\text{m/s}$, steel about $5000\\;\\text{m/s}$ or more. In a gas, warmer means faster.
 
 **Frequency never changes at a boundary.** When a wave crosses into a new medium, every crest that arrives at the boundary launches exactly one crest on the far side, so crests leave at the rate they arrive. Speed changes, so wavelength changes in proportion: sound passing from air into water speeds up about $4.4$ times, and its wavelength stretches $4.4$ times.
 
 **Changing the source in the same medium changes only the wavelength.** Double a speaker's frequency and the sound still travels at $343\\;\\text{m/s}$; its wavelength halves. Thinking "higher pitch travels faster" is the classic error.
-
-Finally, the energy a wave carries grows with the **square of its amplitude**: triple the amplitude and the wave carries nine times the power.
 
 <!-- yield:low -->
 - Exact figure: the speed of sound in air rises by about $0.6\\;\\text{m/s}$ for each degree Celsius of warming.

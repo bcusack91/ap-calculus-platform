@@ -36,7 +36,7 @@ $F_{in} d_{in} = F_{out} d_{out} \\quad \\text{(ideal)} \\qquad MA = \\frac{F_{o
 | Lever | effort arm / load arm |
 | Pulley system | number of rope strands supporting the load |
 
-A ramp $6\\;\\text{m}$ long rising $1.5\\;\\text{m}$ has $MA = 4$: one quarter the force, four times the distance, same work. Real machines add friction, so the actual force needed always exceeds the ideal.`
+A ramp $5\\;\\text{m}$ long rising $1\\;\\text{m}$ has $MA = 5$: one fifth the force, five times the distance, same work. Real machines add friction, so the actual force needed always exceeds the ideal.`
     },
     {
       id: 'wke3-worked',

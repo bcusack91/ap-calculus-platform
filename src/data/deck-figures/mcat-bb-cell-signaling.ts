@@ -686,7 +686,7 @@ export const mcatCellSignalingFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Amplification in Numbers',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: ampSvg,
       alt:

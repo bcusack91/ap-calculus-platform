@@ -12,8 +12,8 @@ export const mcatMskPart4Data = {
 
 After death, ATP production stops. Two consequences combine:
 
-1. Without SERCA activity, calcium leaks from the SR into the cytosol → tropomyosin moves aside → cross-bridges form
-2. Without new ATP, myosin heads **cannot DETACH** from actin (remember: ATP BINDING is what releases the head)
+- **No SERCA activity:** calcium leaks from the SR into the cytosol → tropomyosin moves aside → cross-bridges form
+- **No new ATP:** myosin heads **cannot DETACH** from actin (remember: ATP BINDING is what releases the head)
 
 Result: muscles lock stiff for 1-3 days, until enzymatic degradation of the machinery. Rigor mortis is a pure test of the "ATP binding releases" fact — a corpse is rigid not because it contracts, but because its cross-bridges cannot let go.
 
@@ -21,10 +21,10 @@ Result: muscles lock stiff for 1-3 days, until enzymatic degradation of the mach
 
 | Condition | Lesion | Presentation logic |
 |-----------|--------|--------------------|
-| Myasthenia gravis | AUTOANTIBODIES against nicotinic ACh receptors (type II hypersensitivity) | Weakness that WORSENS with use — repeated firing depletes ACh while fewer receptors remain to catch it; classically droopy eyelids, improves with acetylcholinesterase inhibitors |
-| Botulinum toxin | Blocks ACh RELEASE from the motor neuron | FLACCID paralysis — no signal reaches the muscle at all |
-| Tetanus toxin | Blocks release of INHIBITORY neurotransmitters (glycine/GABA) in the spinal cord | SPASTIC paralysis — motor neurons fire unchecked (lockjaw); note the contrast: botulinum silences, tetanus disinhibits |
-| Curare / nicotinic blockers | Competitively block the nicotinic receptor | Flaccid paralysis; overcome by raising ACh (acetylcholinesterase inhibitors) |
+| Myasthenia gravis | AUTOANTIBODIES against nicotinic ACh receptors (type II hypersensitivity) | Weakness that WORSENS with use (fewer receptors to catch the ACh); droopy eyelids; improves with AChE inhibitors |
+| Botulinum toxin | Blocks ACh RELEASE from the motor neuron | FLACCID paralysis — no signal reaches the muscle (silences) |
+| Tetanus toxin | Blocks release of INHIBITORY transmitters (glycine/GABA) in the spinal cord | SPASTIC paralysis — motor neurons fire unchecked, lockjaw (disinhibits) |
+| Curare / nicotinic blockers | Competitively block the nicotinic receptor | Flaccid paralysis; overcome by raising ACh (AChE inhibitors) |
 
 ### Deeper Muscle Pathology (concept level)
 

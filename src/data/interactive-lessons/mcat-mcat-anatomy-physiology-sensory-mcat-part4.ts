@@ -161,7 +161,7 @@ Taste cells are modified epithelial cells (not neurons) in taste buds; all five 
 **Common traps**
 
 - **Hearing aids for dead hair cells.** Amplification needs working hair cells; a cochlear implant bypasses them but needs an intact CN VIII.
-- **A regional tongue map.**All five tastes are detected across the whole tongue, and taste, unlike smell, relays through the thalamus.
+- **A regional tongue map.** All five tastes are detected across the whole tongue, and taste, unlike smell, relays through the thalamus.
 - **Many receptors per neuron.** Each olfactory neuron expresses ONE receptor type; an odor is coded by the combination across neurons.
 - **Gate control as distraction.** Rubbing works through spinal inhibitory interneurons, not cortical attention or transmitter depletion.
 

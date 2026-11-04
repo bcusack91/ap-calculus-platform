@@ -16,15 +16,11 @@ A **buffer** is a solution that resists changes in pH when small amounts of stro
 
 ## How Buffers Work
 
-When you add strong acid $(H^{+})$ to a buffer:
+Add strong acid, and the conjugate base consumes the $\\text{H}^+$ — the pH barely changes:
 $$\\text{H}^+ + \\text{A}^- \\to \\text{HA}$$
 
-The added $H^{+}$ is consumed by the conjugate base — pH barely changes.
-
-When you add strong base $(OH^{-})$ to a buffer:
+Add strong base, and the weak acid consumes the $\\text{OH}^-$ — again the pH barely changes:
 $$\\text{OH}^- + \\text{HA} \\to \\text{A}^- + \\text{H}_2\\text{O}$$
-
-The added $OH^{-}$ is consumed by the weak acid — pH barely changes.
 
 ### Worked Example — Adding Strong Acid to a Buffer
 
@@ -61,13 +57,9 @@ $$\\text{pH} = 4.74 + \\log\\frac{0.08}{0.12} = 4.74 + (\\log 2 - \\log 3) = 4.7
 
 **Buffer capacity** is the amount of acid or base the buffer can absorb before pH changes significantly.
 
-Buffer capacity is **highest** when:
-1. Concentrations of weak acid and conjugate base are large (more moles to react with added $H^{+}/OH^{-}$)
-2. The ratio $[\\text{A}^-]/[\\text{HA}]$ is close to 1 (i.e., pH ≈ $pK_{a}$)
+Capacity is **highest** when the concentrations of weak acid and conjugate base are large (more moles to react with added $\\text{H}^+$ or $\\text{OH}^-$) and when their ratio $[\\text{A}^-]/[\\text{HA}]$ is close to 1 (pH ≈ $\\text{p}K_a$).
 
-A buffer becomes **ineffective** when:
-- The ratio $[\\text{A}^-]/[\\text{HA}]$ exceeds 10:1 or drops below 1:10
-- This corresponds to the **buffer range: $pK_{a}$ ± 1**
+A buffer becomes **ineffective** once $[\\text{A}^-]/[\\text{HA}]$ exceeds 10:1 or drops below 1:10 — the edges of the **buffer range, $\\text{p}K_a$ ± 1**.
 
 ## Choosing a Buffer for a Target pH
 
@@ -87,15 +79,11 @@ The most important buffer in human physiology:
 
 $$\\text{CO}_2(\\text{aq}) + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$
 
-Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $P_{\\text{CO}_2} = 40\\text{ mmHg}$
+Normal blood: $\\text{pH} = 7.40$, $[\\text{HCO}_3^-] = 24\\text{ mM}$, $P_{\\text{CO}_2} = 40\\text{ mmHg}$. Counting all dissolved $\\text{CO}_2$, the effective $\\text{p}K_a$ is 6.1, so pH 7.40 needs a 20:1 ratio of $\\text{HCO}_3^-$ to $\\text{CO}_2$. That is far outside $\\text{p}K_a \\pm 1$, yet the buffer still works because the lungs keep removing $\\text{CO}_2$ (an open system).
 
-Counting all dissolved $\\text{CO}_2$, the effective $\\text{p}K_a$ is 6.1, so pH 7.40 needs a 20:1 ratio of $\\text{HCO}_3^-$ to $\\text{CO}_2$. That is far outside $\\text{p}K_a \\pm 1$, yet the buffer still works because the lungs keep removing $\\text{CO}_2$ (an open system).
+**Breathing sets $\\text{CO}_2$:** hyperventilation → ↓$\\text{CO}_2$ → ↑pH (respiratory alkalosis); hypoventilation → ↑$\\text{CO}_2$ → ↓pH (respiratory acidosis).
 
-**Breathing and blood pH:** Changing breathing rate alters $\\text{CO}_2$ levels:
-- Hyperventilation → ↓$\\text{CO}_2$ → ↑pH (alkalosis)
-- Hypoventilation → ↑$\\text{CO}_2$ → ↓pH (acidosis)
-
-**Metabolic disturbances:** Change $[\\text{HCO}_3^-]$ directly.
+**Metabolic disturbances** change $[\\text{HCO}_3^-]$ directly; the other organ compensates.
 
 | Condition | pH | $\\text{CO}_2$/$\\text{HCO}_3^-$ | Compensation |
 |-----------|----|-----------------------------|-------------|

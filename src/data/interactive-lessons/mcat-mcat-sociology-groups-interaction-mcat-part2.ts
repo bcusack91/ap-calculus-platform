@@ -13,11 +13,21 @@ export const mcatSocioGroupsPart2Data = {
 - **Normative social influence**: conforming to be LIKED/accepted — you know the group is wrong and comply anyway (public compliance, private disagreement).
 - **Informational social influence**: conforming because you believe the group KNOWS better — in ambiguous situations others become your data (private acceptance, genuine belief change).
 
-The classic line-judgment experiments (Asch) demonstrate the normative kind at full strength: with an UNAMBIGUOUS perceptual task, a substantial fraction of subjects publicly agreed with a unanimous wrong majority. The tested moderators: conformity rises with group size (up to a plateau at about 3-4 confederates), unanimity is critical — a single dissenter, even an incorrect one, collapses conformity — and private (written) responding nearly eliminates it, proving the influence was normative.
+The classic line-judgment experiments (Asch) demonstrate the normative kind at full strength: with an UNAMBIGUOUS perceptual task, a substantial fraction of subjects publicly agreed with a unanimous wrong majority. The tested moderators:
+
+- Conformity rises with group size, up to a plateau at about 3-4 confederates.
+- Unanimity is critical: a single dissenter, even an incorrect one, collapses conformity.
+- Private (written) responding nearly eliminates it, proving the influence was normative.
 
 ### Obedience — Authority as the Variable
 
-The shock-learner experiments (Milgram) shifted the question from peer pressure to hierarchy: a majority of ordinary subjects delivered what they believed were dangerous shocks when a legitimate-seeming experimenter accepted responsibility and insisted. Obedience FELL when the authority's legitimacy or proximity decreased (orders by phone, no lab coat, rundown office), when the victim's suffering became closer/more visible, and when defiant peers modeled refusal. The sociological reading: obedience is a property of the SITUATION'S authority structure far more than of individual character — subjects entered an "agentic state," treating themselves as instruments of another's will.
+The shock-learner experiments (Milgram) shifted the question from peer pressure to hierarchy: a majority of ordinary subjects delivered what they believed were dangerous shocks when a legitimate-seeming experimenter accepted responsibility and insisted. Obedience FELL when:
+
+- the authority's legitimacy or proximity decreased (orders by phone, no lab coat, rundown office);
+- the victim's suffering became closer or more visible;
+- defiant peers modeled refusal.
+
+The sociological reading: obedience is a property of the SITUATION'S authority structure far more than of individual character — subjects entered an "agentic state," treating themselves as instruments of another's will.
 
 ### Compliance Without Authority — the Foot in the Door
 

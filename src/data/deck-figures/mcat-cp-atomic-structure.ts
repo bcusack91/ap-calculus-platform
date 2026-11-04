@@ -416,8 +416,8 @@ export const mcatAtomicStructureFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Writing Electron Configurations',
-    mode: 'lead',
+    at: 'Worked Example — Iron and Its Ions',
+    mode: 'after',
     figure: {
       svg: ironSvg,
       alt:
@@ -431,7 +431,7 @@ export const mcatAtomicStructureFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Exceptions to Aufbau',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: exceptionsSvg,
       alt:
@@ -495,7 +495,7 @@ export const mcatAtomicStructureFigures: DeckFigurePlacement[] = [
       caption: 'Sodium’s PES spectrum: four peaks for four subshells, heights 1 : 6 : 2 : 2, valence 3s at low binding energy and core 1s at the high end (axis schematic).',
     },
     blocks: [
-      '- One peak per subshell, height ∝ electrons: Na $1 : 6 : 2 : 2$ for $3s, 2p, 2s, 1s$ — sum $= 11 = Z$',
+      '- One peak per occupied subshell, height ∝ its electrons; the heights add up to $Z$, so a spectrum identifies the element',
       '- Lowest BE = valence (easiest out), highest BE = $1s$ core; $KE = h\\nu - BE$ — check the axis direction',
     ],
   },
@@ -512,7 +512,7 @@ export const mcatAtomicStructureFigures: DeckFigurePlacement[] = [
       '- $N = N_0\\left(\\tfrac{1}{2}\\right)^{t/t_{1/2}}$; $\\lambda = \\ln 2 / t_{1/2}$ — count half-lives, don’t integrate',
       '- 1 → 50 %, 2 → 25 %, 3 → 12.5 %, 4 → 6.25 % of the **original**',
       '- ¹³¹I, $t_{1/2} = 8$ d: 32 d = 4 half-lives → $40/16 = 2.5$ g',
-      '- Backwards: 12.5 % left = 3 half-lives (¹⁴C: $3 \\times 5{,}730 = 17{,}190$ y)',
+      '- Backwards: read the fraction, then count — 1/32 left means 5 half-lives have passed',
     ],
   },
 ]

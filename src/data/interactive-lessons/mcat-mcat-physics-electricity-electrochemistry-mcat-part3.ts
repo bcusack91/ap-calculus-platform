@@ -13,7 +13,6 @@ export const electrochemistryMcatPart3: LessonData = {
 ### Off-Standard Conditions: the Nernst Equation
 
 Standard potentials assume $1\\;\\text{M}$ everything. Real cells drift as they run. At $25^\\circ\\text{C}$:
-
 $E = E^\\circ - \\frac{0.0592}{n}\\log Q$
 
 where $Q$ is the reaction quotient (products over reactants; solid electrodes are left out of $Q$) and $n$ the electrons transferred. Qualitative readings the MCAT actually tests:

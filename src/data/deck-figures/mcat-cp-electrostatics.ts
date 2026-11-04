@@ -451,8 +451,8 @@ export const mcatElectrostaticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'The Membrane as a Parallel-Plate Capacitor',
-    mode: 'lead',
+    at: 'Worked Example — Field Inside a Membrane',
+    mode: 'after',
     figure: {
       svg: membraneSvg,
       alt:

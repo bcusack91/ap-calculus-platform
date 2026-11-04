@@ -23,8 +23,8 @@ Memory hook: the products multiply to eight — MHC I $\\times$ CD8, MHC II $\\t
 
 T-cell precursors leave the bone marrow and mature in the **thymus**, where two filters create **central tolerance**:
 
-1. **Positive selection**: thymocytes whose receptors can bind self-MHC at all survive; useless receptors die by neglect. (Must be able to READ the MHC bookshelf.)
-2. **Negative selection**: thymocytes that bind self-peptide/self-MHC TOO strongly are deleted. (Must not ATTACK the library's own books.)
+- **Positive selection**: thymocytes whose receptors can bind self-MHC at all survive; useless receptors die by neglect. (Must be able to READ the MHC bookshelf.)
+- **Negative selection**: thymocytes that bind self-peptide/self-MHC TOO strongly are deleted. (Must not ATTACK the library's own books.)
 
 The survivors are self-MHC-restricted but self-tolerant. Failure of negative selection is a root cause of autoimmunity (Part 4).
 
@@ -58,9 +58,13 @@ Death is by tidy apoptosis, not lysis-and-spill: the infected cell dismantles it
 
 ### Clonal Selection & Receptor Diversity
 
-**Clonal selection**: the repertoire of lymphocytes, each with ONE unique receptor specificity, exists BEFORE antigen arrives. Antigen merely selects the matching clones, which then undergo **clonal expansion** into effector cells and memory cells.
+**Clonal selection**: the lymphocyte repertoire, each cell with ONE unique receptor specificity, exists BEFORE antigen arrives. Antigen merely selects the matching clones, which undergo **clonal expansion** into effector and memory cells.
 
-Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte development, one Variable, one Diversity (present in antibody heavy chains and TCR beta and delta chains; light chains and TCR alpha have none), and one Joining gene segment are randomly cut-and-pasted together (**somatic recombination**), and imprecise joining adds or removes nucleotides at the junctions (**junctional diversity**). Combinatorial choice, junctional randomness, and heavy-light pairing generate billions of specificities from a modest genome — no instruction from the antigen needed.`
+Why does the repertoire pre-exist? **V(D)J recombination**: as each lymphocyte develops, one Variable, one Diversity and one Joining gene segment are randomly cut and pasted together (**somatic recombination**), and imprecise joining adds or removes nucleotides at the seams (**junctional diversity**). Segment choice, junctional randomness and heavy-light pairing yield billions of specificities from a modest genome — with no instruction from antigen.
+
+<!-- yield:low -->
+- D segments exist only in antibody heavy chains and in TCR beta and delta chains; light chains and TCR alpha are joined from V and J segments alone.
+<!-- /yield -->`
     },
     {
       id: 'imm2-worked',
@@ -130,7 +134,7 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
             options: [`B and T cells mature, but every one carries the same receptor`, `No mature B or T cells, though innate defenses still work`, `Normal lymphocytes that rearrange their receptors after infection`, `Lymphocytes that build their receptors using antigen as a template`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `BCRs and TCRs are assembled only by V(D)J recombination, and developing lymphocytes that never display a working receptor die (in the thymus, by neglect during positive selection). With no B or T cells there is no adaptive immunity at all, a SCID-like state, while germline-encoded innate defenses such as TLRs, complement and NK cells are untouched. Without cutting and joining there is no receptor at all, so not even one shared receptor can be made. Recombination happens during development, before any infection, and antigen never serves as a template for receptor shape.`
+            explanation: `BCRs and TCRs are assembled only by V(D)J recombination, and developing lymphocytes that never display a working receptor die during development. With no B or T cells there is no adaptive immunity at all, a SCID-like state, while germline-encoded innate defenses such as TLRs, complement and NK cells are untouched. Without cutting and joining there is no receptor at all, so not even one shared receptor can be made. Recombination happens during development, before any infection, and antigen never serves as a template for receptor shape.`
           }
         ]
       }
@@ -156,6 +160,7 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
 **Low-yield extras**
 
 - The helper-T contact signal is CD40L binding CD40 on the B cell.
+- Only antibody heavy chains and TCR beta and delta chains use a D segment; light chains and TCR alpha are V–J only.
 <!-- /yield -->`
     }
   ]

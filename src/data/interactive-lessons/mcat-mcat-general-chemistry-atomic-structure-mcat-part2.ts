@@ -36,25 +36,15 @@ Energy required to remove one electron from a gaseous atom: $\\text{X}(g) \\to \
 
 **Trend:** ↓ down a group, ↑ across a period — opposite of atomic radius.
 
-**Successive ionization energies:** Each successive IE is larger (removing from a more positive ion). A **large jump** between $\\text{IE}_n$ and $\\text{IE}_{n+1}$ means you crossed into a core shell.
+**Successive ionization energies:** Each successive IE is larger (removing from a more positive ion). A **large jump** between $\\text{IE}_n$ and $\\text{IE}_{n+1}$ means you crossed into a core shell; that is how the MCAT asks you to identify an element's group from a table of successive IEs.
 
-**Example — Sodium ($Z=11$, config $[\\text{Ne}]\\, 3s^1$):**
-- $\\text{IE}_1 \\approx 496$ kJ/mol (remove $3s^1$, easy)
-- $\\text{IE}_2 \\approx 4{,}562$ kJ/mol (must break into the filled Ne core → huge jump)
+**Example — Sodium ($[\\text{Ne}]\\, 3s^1$):** $\\text{IE}_1 \\approx 496$ kJ/mol (remove $3s^1$, easy) but $\\text{IE}_2 \\approx 4{,}562$ kJ/mol (must break into the filled Ne core → huge jump).
 
-This is how the MCAT can ask you to identify an element's group from a table of successive IEs.
-
-**Exceptions to the across-period IE trend:**
-- **Group IIA → Group IIIA:** $\\text{IE}$ drops slightly (e.g., $\\text{Mg} > \\text{Al}$) because Al removes a $3p$ electron, which is shielded by the $3s$ pair.
-- **Group VA → Group VIA:** $\\text{IE}$ drops slightly (e.g., $\\text{P} > \\text{S}$) because S has a paired $3p$ electron with extra repulsion, making it easier to remove.
+**Exceptions to the across-period IE trend:** Group IIA → IIIA dips slightly ($\\text{Mg} > \\text{Al}$), because Al removes a $3p$ electron that the $3s$ pair shields; Group VA → VIA dips slightly ($\\text{P} > \\text{S}$), because S removes a paired $3p$ electron whose extra repulsion makes it easier to lose.
 
 ## Electronegativity
 
-Tendency to attract bonding electrons. Measured by the Pauling scale.
-
-**Trend:** Increases across a period, decreases down a group.  
-**Most electronegative:** F (3.98)  
-**Least electronegative:** Cs/Fr
+Tendency to attract bonding electrons, measured on the Pauling scale. **Trend:** increases across a period, decreases down a group, so F (3.98) is the most electronegative element and Cs/Fr the least.
 
 **Electronegativity difference** predicts bond type:
 - $\\Delta EN < 0.5$: nonpolar covalent
@@ -67,20 +57,21 @@ Energy change when a gaseous atom gains one electron: $\\text{X}(g) + e^- \\to \
 
 Generally becomes more negative (more exothermic) across a period and up a group.
 
-**Exceptions:** 
-- Group IIA (filled $s$ subshell) and Group VA (half-filled $p$ subshell) have EAs less negative than their neighbours' (near zero or positive for Group IIA and for nitrogen) — extra stability makes electron gain less favorable.
-- Noble gases have positive EA (no tendency to gain electrons).
-- **Chlorine, not fluorine,** has the most negative EA ($-349$ vs. $-328$ kJ/mol): fluorine's small $2p$ subshell is so crowded that an added electron meets extra repulsion. Fluorine is still the most electronegative.
+**Exceptions:** Group IIA (filled $s$ subshell) and Group VA (half-filled $p$ subshell) have EAs less negative than their neighbours' (near zero or positive for Group IIA and for nitrogen), because that extra stability makes electron gain less favorable; noble gases, with a full shell, have positive EA.
+
+**Chlorine, not fluorine,** has the most negative EA ($-349$ vs. $-328$ kJ/mol): fluorine's small $2p$ subshell is so crowded that an added electron meets extra repulsion. Fluorine is still the most electronegative.
 
 ## Families and Classes of Elements
 
+A family shares a valence configuration, and so a pattern of behavior:
+
 | Family | Location | Valence configuration | Typical behavior |
 |---|---|---|---|
-| Alkali metals | Group IA (not H) | $ns^1$ | very reactive; form $+1$ ions; react with water |
-| Alkaline earth metals | Group IIA | $ns^2$ | reactive; form $+2$ ions |
-| Halogens | Group VIIA | $ns^2\\, np^5$ | very reactive nonmetals; form $-1$ ions; diatomic ($\\text{F}_2$, $\\text{Cl}_2$) |
+| Alkali metals | Group IA (not H) | $ns^1$ | form $+1$ ions; react with water |
+| Alkaline earth metals | Group IIA | $ns^2$ | form $+2$ ions |
+| Halogens | Group VIIA | $ns^2\\, np^5$ | diatomic nonmetals; form $-1$ ions |
 | Noble gases | Group VIIIA | $ns^2\\, np^6$ (He: $1s^2$) | full valence shell; nearly inert |
-| Transition metals | $d$ block | $(n-1)d$ filling | several oxidation states; often colored, paramagnetic ions |
+| Transition metals | $d$ block | $(n-1)d$ filling | several oxidation states; colored, paramagnetic ions |
 
 - **Metals** (left and center) have low IE and electronegativity: they lose electrons to form cations, conduct heat and electricity, and are malleable and ductile.
 - **Nonmetals** (upper right) have high IE and electronegativity: they gain or share electrons, and are poor conductors.
@@ -142,10 +133,10 @@ Generally becomes more negative (more exothermic) across a period and up a group
 | Property | Across Period (→) | Down Group (↓) | Reason |
 |----------|------------------|----------------|--------|
 | Atomic radius | Decreases | Increases | $Z_{\\text{eff}}$ vs. more shells |
-| 1st Ionization Energy | Increases* | Decreases | Harder to remove $e^{-}$ from higher $Z_{\\text{eff}}$; farther $e^{-}$ easier to remove |
+| 1st Ionization Energy | Increases* | Decreases | Higher $Z_{\\text{eff}}$ holds $e^{-}$ tighter; a farther $e^{-}$ leaves more easily |
 | Electronegativity | Increases | Decreases | Same logic as IE |
-| Electron Affinity | More negative* | Less negative | Higher $Z_{\\text{eff}}$ attracts added $e^{-}$ more |
-| Metallic character | Decreases | Increases | Inversely related to IE |
+| Electron Affinity | More negative* | Less negative | Higher $Z_{\\text{eff}}$ attracts an added $e^{-}$ |
+| Metallic character | Decreases | Increases | Inverse of IE |
 
 *With minor exceptions as discussed above.
 

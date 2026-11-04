@@ -52,9 +52,9 @@ A **motor unit** = one motor neuron + every fiber it innervates. Fine-control mu
 | Striated? | Yes | Yes | NO |
 | Nuclei | Many, peripheral | 1-2, central | One, central |
 | Control | Voluntary (somatic) | Involuntary (autonomic modulates) | Involuntary (autonomic, hormones, stretch) |
-| Cell junctions | None between fibers | **Intercalated discs with gap junctions** — a functional syncytium | Gap junctions (single-unit type) |
-| Ca trigger source | SR only (DHP-ryanodine mechanical link) | Extracellular Ca entry triggers SR release (calcium-induced calcium release) | Mostly extracellular; Ca acts via calmodulin (no troponin) |
-| Pacemaker? | No — needs a neuron | YES — self-depolarizing pacemaker cells (SA node) | Some spontaneous (slow waves in gut) |
+| Cell junctions | None between fibers | **Intercalated discs with gap junctions** (functional syncytium) | Gap junctions (single-unit type) |
+| Ca trigger source | SR only (DHP-ryanodine link) | Ca entry from outside triggers SR release (calcium-induced calcium release) | Mostly extracellular; via calmodulin (no troponin) |
+| Pacemaker? | No — needs a neuron | YES (SA node) | Some (gut slow waves) |
 
 Cardiac muscle's long action-potential plateau (Ca influx) also enforces a long refractory period, so the heart CANNOT be tetanized — it must relax to refill.
 

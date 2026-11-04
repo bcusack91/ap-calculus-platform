@@ -12,20 +12,25 @@ export const mcatVirusesPart3Data = {
 
 Host ribosomes only translate mRNA. Every genome type is a different distance from mRNA, and that distance dictates what the virion must CARRY versus what it can borrow:
 
-| Genome | Route to mRNA | Must the virion pack a polymerase? | Replication site |
+| DNA genome | Route to mRNA | Pack a polymerase? | Replication site |
 |--------|----------------|-------------------------------------|------------------|
-| dsDNA (herpes, adeno) | Host RNA pol transcribes it | No | **Nucleus** (uses host machinery) |
+| dsDNA (herpes, adeno) | Host RNA pol transcribes it | No | **Nucleus** (host machinery) |
 | ssDNA (parvo) | Host pol makes it dsDNA first | No | Nucleus |
-| (+) ssRNA (polio, corona) | Genome IS mRNA — translated immediately | **No** — naked genome is infectious | Cytoplasm |
-| (−) ssRNA (influenza, rabies, measles) | Must be transcribed by **RdRp** | **Yes** — carries RNA-dependent RNA polymerase | Cytoplasm (influenza: nucleus) |
+
+| RNA genome | Route to mRNA | Pack a polymerase? | Replication site |
+|--------|----------------|-------------------------------------|------------------|
+| (+) ssRNA (polio, corona) | Genome IS mRNA — translated at once | **No** — naked genome is infectious | Cytoplasm |
+| (−) ssRNA (influenza, rabies, measles) | Must be transcribed by **RdRp** | **Yes** — carries RdRp | Cytoplasm (influenza: nucleus) |
 | dsRNA (rota) | (−) strand transcribed by packaged RdRp | **Yes** | Cytoplasm |
-| Retrovirus (+) ssRNA (HIV) | RNA → DNA → integrate → host RNA pol | **Yes** — reverse transcriptase (+ integrase) | Both: RT in cytoplasm, integration/transcription in nucleus |
+| Retrovirus (+) ssRNA (HIV) | RNA → DNA → integrate → host RNA pol | **Yes** — RT (+ integrase) | RT in cytoplasm, integration in nucleus |
 
 Two corollaries worth deriving, not memorizing: purified (+)RNA genomes alone can launch an infection (ribosomes accept them directly); purified (−)RNA or dsRNA genomes CANNOT (the required RdRp was in the discarded virion). And host cells have NO RNA-dependent RNA polymerase — virtually every RNA virus except retroviruses must encode one.
 
 ### The Retrovirus Exception to the Central Dogma
 
-HIV carries two (+)RNA copies plus **reverse transcriptase (RT)**: RNA → dsDNA, which **integrase** inserts into the host genome as a **provirus** — permanent, replicated with every cell division (the molecular reason HIV cannot be cured by suppressing replication alone; compare lysogeny). Host RNA polymerase II then transcribes progeny genomes and mRNA; **protease** matures the budding particle. Each enzyme is a drug target: RT inhibitors (nucleoside chain terminators like AZT), integrase inhibitors, protease inhibitors. RT is **error-prone with no proofreading** → HIV's ferocious mutation rate → combination therapy (HAART) is mandatory: a single drug fails because resistant mutants already exist in the viral population before treatment begins.
+HIV carries two (+)RNA copies plus **reverse transcriptase (RT)**: RNA → dsDNA, which **integrase** inserts into the host genome as a **provirus** — permanent, replicated with every cell division (the molecular reason HIV cannot be cured by suppressing replication alone; compare lysogeny).
+
+Host RNA polymerase II then transcribes progeny genomes and mRNA; **protease** matures the budding particle. Each enzyme is a drug target: RT inhibitors (nucleoside chain terminators like AZT), integrase inhibitors, protease inhibitors. RT is **error-prone with no proofreading** → HIV's ferocious mutation rate → combination therapy (HAART) is mandatory: a single drug fails because resistant mutants already exist in the viral population before treatment begins.
 
 <!-- yield:low -->
 - That pre-existing-mutant argument is the Luria-Delbruck logic: resistance mutations arise at random, and the drug only selects them.

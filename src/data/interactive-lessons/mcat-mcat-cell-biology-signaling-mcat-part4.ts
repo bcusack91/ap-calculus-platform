@@ -87,14 +87,14 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
       type: 'text' as const,
       content: `### The MCAT Signaling Passage Toolkit
 
-| Observation in a passage | Likely interpretation |
-|--------------------------|----------------------|
-| Response persists after ligand washout | Termination defect (GTPase-dead G protein, phosphatase loss, PDE inhibition) |
-| Nonhydrolyzable GTP analog (GTP-gamma-S) mimics hormone | A G protein lies between receptor and response |
-| Response to hormone lost, response to cAMP analog intact | Lesion is upstream of PKA (receptor, G protein, or cyclase) |
-| Phospho-ERK high with no growth factor | Constitutive activity upstream (Ras/Raf mutation, RTK amplification) |
-| Second stimulus soon after the first gives a smaller response | Desensitization (GRK/arrestin) or messenger depletion |
-| Response blocked by transcription inhibitor | The measured endpoint requires the nuclear (gene-expression) arm |
+| Passage observation | Likely interpretation |
+|---|---|
+| Response persists after ligand washout | Termination defect (GTPase-dead G protein, lost phosphatase or PDE) |
+| GTP-gamma-S (nonhydrolyzable) mimics the hormone | A G protein lies between receptor and response |
+| Hormone response lost, cAMP-analog response intact | Lesion upstream of PKA (receptor, G protein or cyclase) |
+| Phospho-ERK high without growth factor | Constitutive upstream activity (Ras/Raf mutant, RTK amplification) |
+| A second stimulus soon after responds less | Desensitization (GRK/arrestin) or messenger depletion |
+| Response blocked by a transcription inhibitor | The endpoint needs the gene-expression arm |
 
 ### Choosing the Right Control
 

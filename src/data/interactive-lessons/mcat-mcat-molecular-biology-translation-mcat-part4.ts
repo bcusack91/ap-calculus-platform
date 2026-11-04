@@ -10,17 +10,17 @@ export const mcatTranslationPart4Data = {
 
 ### Regulating Translation Itself
 
-Transcription sets the menu; translational control sets the serving speed — faster (seconds-minutes) and reversible.
+Transcription sets the menu; translational control sets the serving speed: fast (seconds to minutes) and reversible.
 
-1. **Global control by initiation-factor phosphorylation**: stress (unfolded proteins, viral infection, starvation) activates kinases that phosphorylate the **initiation factor that delivers initiator tRNA**, throttling initiation — bulk translation drops while select stress mRNAs continue.
+1. **Global control by initiation-factor phosphorylation**: stress (unfolded proteins, viral infection, starvation) activates kinases that phosphorylate the **initiation factor that delivers initiator tRNA**: bulk translation falls, select stress mRNAs continue.
 
 <!-- yield:low -->
 - That factor is **eIF2**; the kinase network is called the integrated stress response, and the virus-sensing kinase is PKR (activated by double-stranded RNA).
 <!-- /yield -->
 
-2. **mRNA-specific control — the iron story (a classic example)**: **iron regulatory protein (IRP)** binds **iron response elements** (IREs, hairpins) when iron is LOW:
-   - **Ferritin** mRNA (iron storage): IRE in the **5' UTR** — bound IRP blocks ribosome scanning → LESS ferritin when iron is low (no iron to store). High iron pulls IRP off → ferritin made.
-   - **Transferrin receptor** mRNA (iron import): IREs in the **3' UTR** — bound IRP protects the mRNA from degradation → MORE receptor when iron is low (import more!). High iron releases IRP → mRNA degraded.
+2. **mRNA-specific control — the iron story**: **iron regulatory protein (IRP)** binds **iron response elements** (IREs, hairpins) only when iron is LOW:
+   - **Ferritin** mRNA (iron storage): IRE in the **5' UTR**: bound IRP blocks scanning → LESS ferritin when iron is low; high iron pulls IRP off → ferritin made.
+   - **Transferrin receptor** mRNA (iron import): IREs in the **3' UTR** — bound IRP protects the mRNA from degradation → MORE receptor when iron is low. High iron releases IRP → mRNA degraded.
    - Same protein, opposite outcomes, decided purely by WHERE the element sits: 5' UTR occupancy blocks initiation; 3' UTR occupancy controls stability.
 3. **miRNA/RNAi**: small RNAs guide silencing complexes to complementary mRNA 3' UTRs — translational repression or cleavage. (Exploited experimentally as knockdown — biotechnology lesson.)
 4. **mRNA half-life, poly-A tail length**: additional dials — regulation does not end at the promoter.
@@ -32,14 +32,14 @@ Transcription sets the menu; translational control sets the serving speed — fa
 ### The Toxin & Antibiotic Gallery (Ribosome Edition)
 
 | Agent | Target | Mechanism |
-|-------|--------|-----------|
+|---|---|---|
 | Tetracyclines | Bacterial 30S | Block A-site tRNA entry |
 | Aminoglycosides | Bacterial 30S | Misreading + initiation block (bactericidal) |
 | Chloramphenicol | Bacterial 50S | Inhibits peptidyl transferase |
-| Macrolides (erythromycin) | Bacterial 50S | Plug the exit tunnel — chain cannot elongate past a few residues |
-| Diphtheria toxin | Human eEF2 (translocation factor) | ADP-ribosylation halts translocation (enzymatic — one molecule suffices) |
-| Ricin | Human 60S rRNA | Depurinates one adenine of 28S rRNA — catalytically inactivates the subunit |
-| Puromycin | All ribosomes | Aminoacyl-tRNA mimic; accepts the chain, then releases it — premature termination |
+| Macrolides (erythromycin) | Bacterial 50S | Plug the exit tunnel after a few residues |
+| Diphtheria toxin | Human eEF2 (translocation factor) | ADP-ribosylation halts translocation; enzymatic, one molecule suffices |
+| Ricin | Human 60S rRNA | Depurinates one adenine of 28S rRNA; catalytic |
+| Puromycin | All ribosomes | Aminoacyl-tRNA mimic: accepts the chain, then releases it |
 
 <!-- yield:low -->
 - Diphtheria toxin's mechanistic twin: **Pseudomonas exotoxin A** also ADP-ribosylates human eEF2.

@@ -365,10 +365,10 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `20.0 mL of 0.30 M weak acid HA is titrated to equivalence with 0.30 M NaOH. What is $[\\text{A}^-]$ at the equivalence point?`,
-    options: [`0.15 M`, `0.30 M`, `0.60 M`, `0.075 M`],
+    question: `20.0 mL of 0.30 M weak acid HA is titrated to equivalence with 0.60 M NaOH. What is $[\\text{A}^-]$ at the equivalence point?`,
+    options: [`0.20 M`, `0.30 M`, `0.15 M`, `0.60 M`],
     correctAnswer: 0,
-    explanation: `The 6.0 mmol of HA becomes 6.0 mmol of $\\text{A}^-$, now spread through 20.0 + 20.0 = 40.0 mL, so $[\\text{A}^-] = 0.15$ M: the volume doubled and the concentration halved. The value 0.30 M forgets the added titrant volume, 0.60 M adds the two concentrations, and 0.075 M halves the concentration twice.`,
+    explanation: `The 6.0 mmol of HA needs 6.0 mmol of $\\text{OH}^-$, which is only $6.0/0.60 = 10.0$ mL of the more concentrated base, so the 6.0 mmol of $\\text{A}^-$ sits in 20.0 + 10.0 = 30.0 mL: $[\\text{A}^-] = 0.20$ M. The value 0.15 M assumes the titrant volume matches the acid's, which holds only when the two concentrations are equal; 0.30 M forgets the added titrant volume altogether, and 0.60 M is the base's own concentration.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 1,

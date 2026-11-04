@@ -12,13 +12,13 @@ export const mcatCardioSubPart1Data = {
 
 | Circuit | Path | Blood carried |
 |---------|------|---------------|
-| **Pulmonary** | RA → RV → pulmonary arteries → lungs → pulmonary veins → LA | Pulmonary arteries carry **deoxygenated** blood; pulmonary veins carry **oxygenated** blood |
+| **Pulmonary** | RA → RV → pulmonary arteries → lungs → pulmonary veins → LA | Arteries **deoxygenated**; veins **oxygenated** |
 | **Systemic** | LA → LV → aorta → body → venae cavae → RA | Aorta oxygenated; venae cavae deoxygenated |
 
-The two circuits are in **series**: every liter the right heart pumps must be pumped by the left heart. The organs within the systemic circuit, by contrast, are arranged in **parallel** off the aorta.
+The two circuits are in **series** (what the right heart pumps, the left heart must pump too); the organs of the systemic circuit sit in **parallel** off the aorta.
 
-- The **left ventricle** has the thickest wall — it generates systemic pressure (~120 mmHg peak) versus the right ventricle's ~25 mmHg pulmonary peak.
-- "Arteries carry blood away from the heart" is defined by **direction, not oxygenation** — the pulmonary artery is the classic exception trap.
+- The **left ventricle** has the thickest wall: ~120 mmHg peak versus the right ventricle's ~25 mmHg.
+- "Artery" means **away from the heart** — direction, not oxygenation; the pulmonary artery is the classic trap.
 
 ### Valves and Heart Sounds
 
@@ -43,7 +43,7 @@ The two circuits are in **series**: every liter the right heart pumps must be pu
 
 Key volumes: **end-diastolic volume (EDV)** ≈ 120 mL, **end-systolic volume (ESV)** ≈ 50 mL, so
 
-$$SV = EDV - ESV \\approx 70 \\text{ mL}, \\qquad EF = \\frac{SV}{EDV} \\approx 55\\text{-}60\\%$$
+$$SV = EDV - ESV \\approx 70 \\text{ mL}, \\qquad EF = \\frac{SV}{EDV} \\approx 58\\% \\ (\\text{normal} \\approx 55\\text{–}70\\%)$$
 
 ### The Conduction System
 

@@ -47,7 +47,7 @@ $$R = \\frac{8 \\eta L}{\\pi r^4}$$
 | Series | $R_{tot} = R_1 + R_2 + \\dots$ | Resistances add; pressure drops sequentially |
 | Parallel | $\\frac{1}{R_{tot}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots$ | Total resistance is LESS than any single branch |
 
-Because systemic organs sit in parallel, **losing a parallel bed (e.g., amputation, vasoconstriction of one organ) raises TPR**, while opening more beds (exercise, pregnancy) lowers it.
+Because systemic organs sit in parallel, **closing off a parallel bed (vasoconstriction of one organ) raises TPR**, while opening more beds (exercising muscle) lowers it.
 
 ### Continuity: Velocity vs. Total Cross-Sectional Area
 

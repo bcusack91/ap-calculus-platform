@@ -97,10 +97,7 @@ Example: 5% mitotic cells with a 20-hour cycle → M lasts about $0.05 \\times 2
 
 **Pattern 1: Order two drugs.** Cells treated with drug A arrest at 2C; drug B arrests at 4C with condensed chromosomes. Given sequentially, A-then-release-then-B synchronizes cells in M; B-then-release-then-A synchronizes at G$_1$/S. Arrest points tell you where in the cycle each drug's target acts, and release order becomes a scheduling tool.
 
-**Pattern 2: Checkpoint status as a diagnostic.** Irradiate two cell lines; measure mitotic index over time.
-- Line 1: mitotic index falls (cells arrest in G$_2$) → checkpoints intact
-- Line 2: mitotic index unchanged, cells enter mitosis with broken chromosomes → checkpoint-deficient (loss of the damage-sensing kinases or p53)
-- A drug that inhibits the damage-sensing kinases converts line 1 into line 2 — "checkpoint override"
+**Pattern 2: Checkpoint status as a diagnostic.** Irradiate two cell lines and measure the mitotic index over time. Line 1: the index falls (cells arrest in G$_2$) → checkpoints intact. Line 2: the index is unchanged and cells enter mitosis with broken chromosomes → checkpoint-deficient (loss of the damage-sensing kinases or p53). A drug that inhibits the damage-sensing kinases converts line 1 into line 2 — "checkpoint override".
 
 <!-- yield:low -->
 - The classic override drug is caffeine, which inhibits ATM/ATR at high doses in vitro.

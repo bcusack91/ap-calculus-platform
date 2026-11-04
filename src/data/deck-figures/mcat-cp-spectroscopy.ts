@@ -394,20 +394,21 @@ ${T(918, 136, 14, '11 C=C', 'middle')}
 </g>
 </svg>`
 
-/* 7 — Mass spectrometry: three schematic m/z windows with the lesson's numbers (lead, 1000×460). Baseline y = 330, 100 % = 200 px. */
+/* 7 — Mass spectrometry: three schematic m/z windows (lead, 1000×460). Baseline y = 330, 100 % = 200 px.
+   The halide panels use ethyl halides on purpose: the worked example's unknowns are the C₄H₉ halides (92/94, 136/138), so the figure must not show those. */
 const msPanel = (x0: number, x1: number, m0: number, m1: number, ticks: number[]) => {
   const X = (m: number) => x0 + ((m - m0) * (x1 - x0)) / (m1 - m0)
   const axes = `${LINE(x0, 330, x1, 330, 2.5)}${LINE(x0, 330, x0, 110, 2)}${ticks.map((m) => `${LINE(X(m), 330, X(m), 337, 2)}${T(X(m), 355, 14, String(m), 'middle')}`).join('')}${T((x0 + x1) / 2, 380, 15, 'm/z', 'middle')}`
   return { X, axes }
 }
 const msA = msPanel(60, 310, 50, 80, [50, 60, 70, 80])
-const msB = msPanel(380, 630, 86, 98, [86, 90, 94, 98])
-const msC = msPanel(700, 950, 130, 142, [130, 134, 138, 142])
+const msB = msPanel(380, 630, 58, 70, [58, 62, 66, 70])
+const msC = msPanel(700, 950, 102, 114, [102, 106, 110, 114])
 const msSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <defs>${ARROW('arr-spec-ms')}</defs>
 ${T(185, 44, 18, 'an alcohol, C₄H₁₀O', 'middle', '700')}
-${T(505, 44, 18, 'C₄H₉Cl', 'middle', '700')}
-${T(825, 44, 18, 'C₄H₉Br', 'middle', '700')}
+${T(505, 44, 18, 'chloroethane, C₂H₅Cl', 'middle', '700')}
+${T(825, 44, 18, 'bromoethane, C₂H₅Br', 'middle', '700')}
 <g class="fig-muted">
 ${T(52, 136, 13, '100', 'end')}
 ${LINE(54, 130, 60, 130, 2)}
@@ -426,19 +427,19 @@ ${T(msA.X(74), 272, 14, 'weak', 'middle')}
 ${T(msA.X(66), 182, 15, '−18 (H₂O)', 'middle', '700')}
 </g>
 ${T(185, 412, 16, 'M⁺ hides; M − 18 is the tell', 'middle', '700')}
-${STICK(msB.X(92), 330, 200, 5)}
-${T(msB.X(92), 120, 15, 'M⁺ 92', 'middle', '700')}
+${STICK(msB.X(64), 330, 200, 5)}
+${T(msB.X(64), 120, 15, 'M⁺ 64', 'middle', '700')}
 <g class="fig-accent">
-${STICK(msB.X(94), 330, 67, 5)}
-${T(msB.X(94) + 8, 256, 15, 'M+2 94', 'start', '700')}
+${STICK(msB.X(66), 330, 67, 5)}
+${T(msB.X(66) + 8, 256, 15, 'M+2 66', 'start', '700')}
 ${T(msB.X(94) + 8, 274, 14, '≈ ⅓ of M')}
 </g>
 ${T(505, 412, 16, '3 : 1 → one Cl (³⁵Cl / ³⁷Cl)', 'middle', '700')}
-${STICK(msC.X(136), 330, 200, 5)}
-${T(msC.X(136) - 6, 120, 15, 'M⁺ 136', 'end', '700')}
+${STICK(msC.X(108), 330, 200, 5)}
+${T(msC.X(108) - 6, 120, 15, 'M⁺ 108', 'end', '700')}
 <g class="fig-accent">
-${STICK(msC.X(138), 330, 196, 5)}
-${T(msC.X(138) + 8, 124, 15, 'M+2 138', 'start', '700')}
+${STICK(msC.X(110), 330, 196, 5)}
+${T(msC.X(110) + 8, 124, 15, 'M+2 110', 'start', '700')}
 ${T(msC.X(138) + 8, 142, 14, '≈ M')}
 </g>
 ${T(825, 412, 16, '1 : 1 → one Br (⁷⁹Br / ⁸¹Br)', 'middle', '700')}
@@ -561,8 +562,8 @@ export const mcatSpectroscopyFigures: DeckFigurePlacement[] = [
       caption: 'The C=O ladder: acyl chloride ~1800 at the top, amide 1630–1690 at the bottom; conjugation pulls a band down, ring strain pushes it up (schematic, not a real spectrum).',
     },
     blocks: [
-      '- Acyl chloride ~1800 > anhydride (two bands) > ester 1735–1750 > aldehyde 1720–1740',
-      '- > ketone ~1715 ≈ acid ~1710 (+ broad O–H) > amide 1630–1690 (+ N–H if 1° or 2°)',
+      '- Top to bottom: acyl chloride ~1800 · anhydride (two bands) · ester 1735–1750 · aldehyde 1720–1740 · ketone ~1715',
+      '- Acid ~1710 (+ broad O–H); amide 1630–1690 (+ N–H if 1° or 2°) sits lowest because the N lone pair donates',
       '- **Conjugation lowers** C=O by ~20–30: acetophenone ~1685 vs acetone ~1715',
       '- **Ring strain raises** it: small-ring ketones and lactones absorb higher',
     ],
@@ -605,7 +606,7 @@ export const mcatSpectroscopyFigures: DeckFigurePlacement[] = [
       caption: 'Mirror-image positions are one environment: acetone gives 1 signal, para-xylene 2 (and 3 carbon signals for 8 carbons), 2-propanol 3 against 1-propanol’s 4.',
     },
     blocks: [
-      '- Symmetry-equivalent H’s give ONE signal — fewer signals than you expect is a symmetry clue',
+      '- Count environments before counting H’s: a mirror plane merges the positions it maps onto each other',
       '- Same logic in ¹³C: para-xylene, C₈H₁₀, shows only 3 carbon signals (21, 129, 135 ppm)',
     ],
   },
@@ -629,8 +630,8 @@ export const mcatSpectroscopyFigures: DeckFigurePlacement[] = [
     figure: {
       svg: msSvg,
       alt:
-        'Three schematic mass-spectrum windows, peak height = relative abundance, tallest peak = base peak (100%). Left, an alcohol C₄H₁₀O: a tall base peak at m/z 56 and a weak molecular ion M⁺ at 74; a red curved arrow from 74 to 56 is labelled −18 (H₂O); footer, M⁺ hides, M − 18 is the tell. Middle, C₄H₉Cl: M⁺ at 92 and a blue M+2 peak at 94 about one-third as tall — 3 : 1, one chlorine (³⁵Cl / ³⁷Cl). Right, C₄H₉Br: M⁺ at 136 and an M+2 peak at 138 almost exactly as tall — 1 : 1, one bromine (⁷⁹Br / ⁸¹Br).',
-      caption: 'The lesson’s three spectra: an alcohol losing water (74 → 56), chlorine’s 3 : 1 M / M+2 pair (92 / 94), bromine’s 1 : 1 pair (136 / 138) (schematic, not a real spectrum).',
+        'Three schematic mass-spectrum windows, peak height = relative abundance, tallest peak = base peak (100%). Left, an alcohol C₄H₁₀O: a tall base peak at m/z 56 and a weak molecular ion M⁺ at 74; a red curved arrow from 74 to 56 is labelled −18 (H₂O); footer, M⁺ hides, M − 18 is the tell. Middle, chloroethane C₂H₅Cl: M⁺ at 64 and a blue M+2 peak at 66 about one-third as tall — 3 : 1, one chlorine (³⁵Cl / ³⁷Cl). Right, bromoethane C₂H₅Br: M⁺ at 108 and an M+2 peak at 110 almost exactly as tall — 1 : 1, one bromine (⁷⁹Br / ⁸¹Br).',
+      caption: 'Three schematic spectra: an alcohol losing water (74 → 56), chlorine’s 3 : 1 M / M+2 pair (chloroethane, 64 / 66), bromine’s 1 : 1 pair (bromoethane, 108 / 110) (schematic, not real spectra).',
     },
     blocks: [
       '- M⁺ = molecular weight; an odd M⁺ means an odd number of N (nitrogen rule)',

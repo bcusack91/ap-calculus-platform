@@ -148,7 +148,7 @@ Every antimicrobial vignette reduces to three questions: (1) What is the drug's 
 
 - **Four resistance strategies.** Destroy (beta-lactamase), alter target (PBP2a), keep out (porins), pump out (efflux).
 - **Clavulanate.** A suicide inhibitor of beta-lactamase, it lets amoxicillin survive to reach its PBP targets.
-- **Horizontal transfer.** Conjugation, transduction and transformation move genes between cells; transposons shuttle them onto plasmids; R plasmids carry several at once.
+- **Horizontal transfer.** Conjugation, transduction and transformation move genes between cells; transposons stack them onto R plasmids.
 - **The integration habit.** Ask the drug's target and path, which of the four strategies, and vertical or horizontal origin.
 
 **Common traps**

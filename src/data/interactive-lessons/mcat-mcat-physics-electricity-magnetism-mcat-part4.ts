@@ -12,13 +12,13 @@ export const magnetismMcatPart4: LessonData = {
 
 ### Magnetic Flux
 
-$\\Phi = BA\\cos\\theta$
+$$\\Phi = BA\\cos\\theta$$
 
 in webers ($1\\;\\text{Wb} = 1\\;\\text{T}\\cdot\\text{m}^2$), where $\\theta$ is the angle between $\\vec{B}$ and the NORMAL to the loop's area. Flux is maximal when the field threads straight through the loop and ZERO when the field lies in the loop's plane.
 
 ### Faraday's Law — Changing Flux Makes EMF
 
-$|\\varepsilon| = N\\frac{\\Delta\\Phi}{\\Delta t}$
+$$|\\varepsilon| = N\\frac{\\Delta\\Phi}{\\Delta t}$$
 
 An EMF (the energy per charge a source supplies, from the *Circuits Part 3: EMF & Capacitance* lesson) appears in a loop of $N$ turns whenever the flux through it CHANGES; a steady flux, however enormous, induces nothing. Three knobs, straight from $\\Phi = BA\\cos\\theta$:
 

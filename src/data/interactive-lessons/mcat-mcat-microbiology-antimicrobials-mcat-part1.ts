@@ -33,15 +33,19 @@ An antibiotic must poison the microbe while sparing the host. Every drug class e
 
 ### Beta-Lactams: Suicide Substrates for Transpeptidase
 
-Penicillins, cephalosporins, carbapenems, and monobactams share the strained **beta-lactam ring**, a structural mimic of the **D-Ala-D-Ala** terminus of peptidoglycan precursors. **Transpeptidases (penicillin-binding proteins, PBPs)** attack the ring and become covalently, irreversibly acylated — cross-linking stops. The cell keeps synthesizing wall material and keeps running its autolysins, so osmotic pressure bursts the weakened wall: **lysis**. Consequences worth reasoning through:
+Penicillins, cephalosporins, carbapenems, and monobactams share the strained **beta-lactam ring**, a structural mimic of the **D-Ala-D-Ala** terminus of peptidoglycan precursors.
 
-- Bactericidal, but only against **actively growing** cells building wall
-- Useless against organisms without peptidoglycan: *Mycoplasma* (no wall at all) and intracellular organisms during their wall-less phases
-- Gram-negatives are intrinsically tougher targets: the drug must first pass **porins** in the outer membrane
+- **Transpeptidases (penicillin-binding proteins, PBPs)** attack the ring and are covalently, irreversibly acylated — cross-linking stops.
+- Wall synthesis and the autolysins keep running, so osmotic pressure bursts the weakened wall: **lysis**.
+- Bactericidal, but only against **actively growing** cells building wall.
+- No peptidoglycan, no target: *Mycoplasma* and wall-less intracellular phases. Gram-negatives are tougher: the drug must first pass **porins** in the outer membrane.
 
 ### Vancomycin: Cap the Substrate Instead
 
-Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself**, sterically blocking both transglycosylation and transpeptidation. Because it acts on the substrate, beta-lactamases cannot touch it — it is the classic drug for **MRSA**. Too bulky to cross the gram-negative outer membrane, it is essentially a **gram-positive-only** drug. Resistance (VRE) arises when enterococci swap the terminus to **D-Ala-D-lactate**, deleting a key hydrogen bond and collapsing binding affinity ~1000-fold.`
+- Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself**, sterically blocking both transglycosylation and transpeptidation.
+- Acting on the substrate, not the enzyme, it is untouched by beta-lactamases — the classic drug for **MRSA**.
+- Too bulky to cross the gram-negative outer membrane, it is essentially a **gram-positive-only** drug.
+- **VRE:** enterococci swap the terminus to **D-Ala-D-lactate**, deleting a key hydrogen bond and collapsing binding affinity ~1000-fold.`
     },
     {
       id: 'abx1-worked-examples',

@@ -33,7 +33,7 @@ $$n_a M_a V_a = n_b M_b V_b$$
 ### Weak Acid + Strong Base
 
 - **Initially:** pH is higher than for a strong acid of the same concentration (the weak acid only partially dissociates)
-- **Buffer region:** HA and $\\text{A}^-$ coexist, so the Henderson–Hasselbalch equation gives the pH: $\\text{pH} = \\text{p}K_a + \\log([\\text{A}^-]/[\\text{HA}])$. pH ≈ $pK_{a}$ when halfway to equivalence ("half-equivalence point")
+- **Buffer region:** HA and $\\text{A}^-$ coexist, so the Henderson–Hasselbalch equation gives the pH: $\\text{pH} = \\text{p}K_a + \\log([\\text{A}^-]/[\\text{HA}])$
 - **At half-equivalence:** $[\\text{HA}] = [\\text{A}^-]$ → pH = $pK_{a}$ ← **MCAT key fact**
 - **At equivalence:** pH > 7 (conjugate base hydrolyzes: $\\text{A}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HA} + \\text{OH}^-$)
 - **After equivalence:** pH from excess strong base

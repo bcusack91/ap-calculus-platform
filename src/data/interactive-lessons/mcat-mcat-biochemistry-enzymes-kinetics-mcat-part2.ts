@@ -47,9 +47,7 @@ Taking reciprocals linearizes the hyperbola:
 
 $$\\frac{1}{v_0} = \\frac{K_m}{V_{max}}\\cdot\\frac{1}{[S]} + \\frac{1}{V_{max}}$$
 
-- **y-intercept** $= 1/V_{max}$ (higher intercept = LOWER $V_{max}$)
-- **x-intercept** $= -1/K_m$ (closer to zero = LARGER $K_m$)
-- **slope** $= K_m/V_{max}$
+- **y-intercept** $= 1/V_{max}$ (higher intercept = LOWER $V_{max}$); **x-intercept** $= -1/K_m$ (closer to zero = LARGER $K_m$); **slope** $= K_m/V_{max}$
 
 The MCAT loves asking you to compare two lines and infer what changed. Anchor yourself on the intercepts, not the slopes.
 

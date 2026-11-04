@@ -440,9 +440,8 @@ export const mcatEndocrineNervousFigures: DeckFigurePlacement[] = [
       caption: 'Chemistry predicts behaviour: a hormone that cannot cross the membrane acts fast through a surface receptor; one that can acts slowly through the genome.',
     },
     blocks: [
-      '- **Peptides** (insulin, glucagon, ADH, every anterior-pituitary hormone): water-soluble → **surface receptor** → second messengers; fast, amplified, stored in vesicles',
-      '- **Steroids** (cortisol, aldosterone, sex steroids): from cholesterol, cross the membrane → **nuclear receptor** → transcription; slow, lasting; made on demand, carried on proteins',
-      '- **Amines** split: epinephrine behaves like a peptide, **thyroid hormone like a steroid** (nuclear receptor, days)',
+      '- **Peptides** (insulin, glucagon, ADH, anterior-pituitary hormones): water-soluble → **surface receptor** → second messengers; fast; stored in vesicles',
+      '- **Steroids** (cortisol, aldosterone, sex steroids): from cholesterol → **nuclear receptor** → transcription; slow, lasting; made on demand, carrier-bound',
       '- Only the **free** fraction of a carrier-bound hormone is active or sensed by feedback',
     ],
   },
@@ -501,7 +500,6 @@ export const mcatEndocrineNervousFigures: DeckFigurePlacement[] = [
       '- **Somatic**: one neuron, ACh on **nicotinic** receptors, skeletal muscle — voluntary movement and reflex arcs',
       '- **Sympathetic**: short pre- / long post-ganglionic; final transmitter **norepinephrine** (α/β) — fight or flight',
       '- **Parasympathetic**: long pre- / short post-ganglionic; final transmitter **ACh on muscarinic** receptors — rest and digest',
-      '- Exceptions: **sweat glands** (sympathetic, ACh/muscarinic) and the **adrenal medulla** (a ganglion that secretes epinephrine into blood)',
     ],
   },
   {
@@ -517,7 +515,6 @@ export const mcatEndocrineNervousFigures: DeckFigurePlacement[] = [
       '- **Insulin** (β cells, fed): tyrosine-kinase receptor → **GLUT4** into muscle and fat; glycogen, fat and protein **synthesis** — the storage hormone',
       '- **Glucagon** (α cells, fasting): GPCR → cAMP → liver **glycogenolysis + gluconeogenesis**, lipolysis — the mobilisation hormone',
       '- **Liver and brain** take up glucose without insulin — hypoglycemia is a neural emergency',
-      '- Type 1 = no insulin (β-cell destruction, DKA); type 2 = **resistance**, insulin initially high; four counter-regulators vs one insulin',
     ],
   },
   {

@@ -10,7 +10,9 @@ export const mcatSocioCulturePart3Data = {
 
 ### Deviance Is Relative — That IS the Theory
 
-**Deviance** is any violation of a group's norms — from elevator etiquette to homicide. Three relativities organize every exam question: deviance varies by CULTURE, by SITUATION (killing in war vs. peace), and by WHO does the act and who is watching. Nothing is deviant in itself; deviance is a relationship between an act and an audience's norms. **Crime** is the subset of deviance a state formally outlaws.
+**Deviance** is any violation of a group's norms — from elevator etiquette to homicide.
+
+Three relativities organize every exam question: deviance varies by CULTURE, by SITUATION (killing in war vs. peace), and by WHO does the act and who is watching. Nothing is deviant in itself; deviance is a relationship between an act and an audience's norms. **Crime** is the subset of deviance a state formally outlaws.
 
 ### Durkheim's Provocation — Deviance Is Functional
 

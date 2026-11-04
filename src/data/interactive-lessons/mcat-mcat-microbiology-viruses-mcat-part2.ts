@@ -10,7 +10,9 @@ export const mcatVirusesPart2Data = {
 
 ### The Phage Body Plan
 
-**Bacteriophages** — viruses of bacteria — include the iconic tailed phages (T4, lambda): an icosahedral head packed with dsDNA, a contractile or non-contractile tail, and **tail fibers** that recognize receptors on the bacterial surface (LPS, pili, teichoic acids). Injection is distinctive: the tail contracts like a syringe and drives the DNA through the envelope — **the capsid stays outside**. Hershey and Chase exploited exactly this: $^{32}$P-labeled DNA entered cells, $^{35}$S-labeled protein did not, proving DNA is the genetic material.
+**Bacteriophages** — viruses of bacteria — include the iconic tailed phages (T4, lambda): an icosahedral head packed with dsDNA, a contractile or non-contractile tail, and **tail fibers** that recognize receptors on the bacterial surface (LPS, pili, teichoic acids). Injection is distinctive: the tail contracts like a syringe and drives the DNA through the envelope — **the capsid stays outside**.
+
+Hershey and Chase exploited exactly this: $^{32}$P-labeled DNA entered cells, $^{35}$S-labeled protein did not, proving DNA is the genetic material.
 
 ### The Lytic Cycle (Virulent Phages, e.g., T4)
 
@@ -36,7 +38,9 @@ A temperate phage has a choice. Instead of replicating, its genome can integrate
 
 ### Why Lysogeny Matters Medically
 
-**Lysogenic conversion:** prophage genes change the host's phenotype. Diphtheria toxin, cholera toxin, and the Shiga toxins of enterohemorrhagic E. coli are all encoded by prophages (as are some botulinum toxin types) — the bacterium is only pathogenic while 'infected.' And **specialized transduction** is a lysogeny error: an imprecisely excising prophage carries flanking host genes to its next host (vs **generalized transduction**, a lytic packaging error that can move any gene — see the Bacteria lesson).
+**Lysogenic conversion:** prophage genes change the host's phenotype. Diphtheria toxin, cholera toxin, and the Shiga toxins of enterohemorrhagic E. coli are all encoded by prophages (as are some botulinum toxin types) — the bacterium is only pathogenic while 'infected.'
+
+**Specialized transduction** is a lysogeny error: an imprecisely excising prophage carries flanking host genes to its next host (vs **generalized transduction**, a lytic packaging error that can move any gene — see the Bacteria lesson).
 
 ### Phages as Tools
 

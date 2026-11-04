@@ -428,8 +428,8 @@ ${T(792, 98, 20, `v ± ${SUB('v', 'obs', 20)}`, 'middle', '700')}
 ${T(792, 132, 20, `v ∓ ${SUB('v', 'src', 20)}`, 'middle', '700')}
 <g class="fig-accent-2">${T(810, 182, 16, `choose the signs so APPROACH raises ${SUB('f', 'obs', 16)}`, 'middle', '700')}</g>
 <g class="fig-muted">${T(810, 206, 14, 'top signs for approach, bottom signs for recession', 'middle')}</g>
-${T(810, 258, 15, 'siren 600 Hz approaching at 34 m/s, v = 340 m/s', 'middle')}
-${T(810, 286, 17, SUB('f', 'obs', 17, ' = 600 · 340 / (340 − 34) ≈ 667 Hz'), 'middle', '700')}
+${T(810, 258, 15, 'approach: bigger top or smaller bottom → higher pitch', 'middle')}
+${T(810, 286, 17, 'recede: smaller top or bigger bottom → lower pitch', 'middle', '700')}
 ${T(810, 344, 15, 'moving SOURCE: physically compresses λ ahead', 'middle')}
 ${T(810, 368, 14, 'moving OBSERVER: meets fronts more often, λ unchanged', 'middle')}
 <g class="fig-muted">${T(810, 420, 14, 'ultrasound reads blood speed from exactly this shift', 'middle')}</g>
@@ -451,8 +451,10 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: "Pascal's Principle",
-    mode: 'lead',
+    // After the worked example, not before it: the drawing carries the
+    // example's answers (100 N → 1000 N, 0.5 m → 0.05 m, 50 J) (review, 2026-11-04).
+    at: 'Worked Example — Hydraulic Lift',
+    mode: 'after',
     figure: {
       svg: pascalSvg,
       alt:
@@ -465,8 +467,10 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: "Archimedes' Principle",
-    mode: 'lead',
+    // After the worked example, not before it: the drawing labels the 60 %
+    // block's SG and its 75 % depth in oil, the example's answers (review, 2026-11-04).
+    at: 'Worked Example — The Block That Floats 60% Submerged',
+    mode: 'after',
     figure: {
       svg: archimedesSvg,
       alt:
@@ -493,8 +497,8 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Bernoulli: Energy Conservation',
-    mode: 'lead',
+    at: 'Worked Example — A Venturi Meter',
+    mode: 'after',
     figure: {
       svg: bernoulliSvg,
       alt:
@@ -502,8 +506,8 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
       caption: "Bernoulli: where the fluid is fast its pressure is low (Venturi standpipes, worked-example numbers); Torricelli's jet leaves at the free-fall speed √(2gh) — schematic.",
     },
     blocks: [
-      '- $P + \\tfrac12\\rho v^2 + \\rho g h$ = constant for ideal flow (incompressible, nonviscous, laminar)',
-      '- Fast ⇒ **low** pressure; Torricelli: a hole a depth $h$ down leaks at $v = \\sqrt{2gh}$',
+      '- The solution drawn: $1 \\to 5$ m/s in the throat (continuity), so the standpipe over the throat stands $12$ kPa, or $1.2$ m, lower (Bernoulli)',
+      '- Right: Torricelli — a hole a depth $h$ below the surface leaks at $v = \\sqrt{2gh}$, the free-fall speed ($h = 5$ m gives $10$ m/s)',
     ],
   },
   {
@@ -544,8 +548,8 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
       caption: 'Standing-wave harmonics: both-ends-alike systems carry every harmonic (nv/2L); a pipe closed at one end carries odd harmonics only (nv/4L) — schematic.',
     },
     blocks: [
-      '- Overlapping waves add: in phase constructive, out of phase destructive',
-      '- Standing wave = fixed **nodes** (no motion) and **antinodes** (maximum)',
+      '- Standing wave = fixed **nodes** (no motion) and **antinodes** (maximum); adjacent nodes $\\lambda/2$ apart, node to antinode $\\lambda/4$',
+      '- The $n$th harmonic on a string shows $n$ loops and $n + 1$ nodes (count both fixed ends)',
       '- Both ends alike: $f_n = nv/2L$, all $n$; closed at one end: $f_n = nv/4L$, **odd** $n$ only',
       '- Same $L$: the closed pipe sounds an octave LOWER ($\\lambda_1 = 4L$ vs $2L$), no even harmonics',
     ],
@@ -556,8 +560,8 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
     figure: {
       svg: dopplerSvg,
       alt:
-        'Left: a red source dot moving right with a velocity arrow v_src, surrounded by four blue circular wavefronts emitted from four earlier positions (grey dots): the fronts are bunched ahead of the source and spread out behind it. A listener ahead (right) is labelled f higher, λ shorter; a listener behind (left) f lower, λ longer. Right: f_obs = f_src · (v ± v_obs)/(v ∓ v_src); choose the signs so approach raises f_obs (top signs for approach, bottom for recession). Worked example: siren 600 Hz approaching at 34 m/s with v = 340 m/s gives f_obs = 600 · 340/(340 − 34) ≈ 667 Hz. A moving source physically compresses λ ahead; a moving observer meets fronts more often with λ unchanged; ultrasound reads blood speed from exactly this shift.',
-      caption: 'The Doppler effect for a moving source: compressed wavefronts ahead raise the heard frequency, stretched fronts behind lower it — schematic, worked-example numbers.',
+        'Left: a red source dot moving right with a velocity arrow v_src, surrounded by four blue circular wavefronts emitted from four earlier positions (grey dots): the fronts are bunched ahead of the source and spread out behind it. A listener ahead (right) is labelled f higher, λ shorter; a listener behind (left) f lower, λ longer. Right: f_obs = f_src · (v ± v_obs)/(v ∓ v_src); choose the signs so approach raises f_obs (top signs for approach, bottom for recession): approach means a bigger top or a smaller bottom, so a higher pitch; recession the reverse. A moving source physically compresses λ ahead; a moving observer meets fronts more often with λ unchanged; ultrasound reads blood speed from exactly this shift.',
+      caption: 'The Doppler effect for a moving source: compressed wavefronts ahead raise the heard frequency, stretched fronts behind lower it — schematic.',
     },
     blocks: [
       '- $f_{obs} = f_{src}\\,\\dfrac{v \\pm v_{obs}}{v \\mp v_{src}}$ — pick each sign so **approach raises** $f_{obs}$',

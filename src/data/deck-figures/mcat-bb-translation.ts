@@ -455,8 +455,12 @@ ${TX(280, 420, 11, 'so aminoglycosides can cause hearing loss (cochlear hair cel
 
 export const mcatTranslationFigures: DeckFigurePlacement[] = [
   {
-    at: 'Properties of the Code',
-    mode: 'lead',
+    // Anchored AFTER the worked example (not as the section lead): the picture
+    // is drawn on the worked problem's own message and shows its whole solution
+    // (frame at the AUG, Met-Ala-Trp-stop, indel effects), so it recaps rather
+    // than spoils. Final review, 2026-11-04.
+    at: 'Worked Example — Decoding and Breaking a Message',
+    mode: 'after',
     figure: {
       svg: codeSvg,
       alt:
@@ -508,7 +512,6 @@ export const mcatTranslationFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Prokaryote:** Shine–Dalgarno pairs **16S rRNA** → internal starts (polycistronic); **fMet**; coupled to transcription',
       '- **Eukaryote:** cap binding, 40S **scans** to the first AUG (monocistronic); **Met**; only after processing + export',
-      '- **Both:** small subunit + initiator tRNA find AUG FIRST, large subunit joins LAST, initiator lands in **P**',
     ],
   },
   {
@@ -522,7 +525,7 @@ export const mcatTranslationFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- **A** accepts (EF·GTP delivery, pairing = proofreading), **P** holds the chain, **E** exits; rRNA makes the bond',
-      '- **Translocation** (EF·GTP) moves one codon 3′-ward; **2 ATP + 2 GTP ≈ 4** high-energy bonds per residue',
+      '- **Translocation** (EF·GTP) ratchets one codon 3′-ward: tRNAs shift A→P→E and the E-site tRNA leaves',
     ],
   },
   {

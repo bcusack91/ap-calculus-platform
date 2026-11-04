@@ -8,7 +8,7 @@ export const mcatSpectroscopyAssaysPart1Data = {
 
 **Part 1 of 3 — Centrifugation (Separating by Density & Size)**
 
-**Where this fits.** The *Lab Methods: Separations & Electrophoresis* lesson separated molecules by polarity, charge and size on columns and gels. This lesson adds the other bench techniques: centrifugation for particles and organelles, spectroscopy and Beer's law for measuring what you isolated, and the blots, PCR and ELISA that detect specific molecules.
+**Where this fits.** The *Lab Methods: Separations & Electrophoresis* lesson sorted molecules on columns and gels. This lesson adds centrifugation for particles and organelles, spectroscopy and Beer's law for measuring what you isolated, and the blots, PCR and ELISA that detect specific molecules.
 
 Centrifugation spins samples to generate a force that drives denser/larger particles outward (to the bottom = pellet). The rest stays in the **supernatant**.
 

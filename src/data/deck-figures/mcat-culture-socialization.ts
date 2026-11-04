@@ -392,7 +392,7 @@ export const mcatCultureSocializationFigures: DeckFigurePlacement[] = [
       alt:
         'Two panels. Left, material culture: the physical objects a group makes and uses — tools, clothing, architecture, technology; "you can touch it". Right, nonmaterial culture: the intangibles a group shares — language, beliefs, values, norms, rituals; "you can only learn it". Below, one marriage joins both halves: the wedding ring is material, what the ring means is nonmaterial. Footer: both halves are learned from other people — transmitted socially, not genetically.',
     },
-    blocks: ['- Classify the ITEM: the ring is material, the meaning of marriage is nonmaterial'],
+    blocks: ['- The exam question is a classification: sort by what the ITEM is (object vs. idea), not by how much it matters to the group'],
   },
   {
     at: 'The Normative Ladder',
@@ -402,7 +402,7 @@ export const mcatCultureSocializationFigures: DeckFigurePlacement[] = [
       alt:
         'A staircase of four steps rising left to right, graded by how harshly a violation is punished. Folkway: feels rude or odd (facing backwards in an elevator), sanction stares and mild disapproval. More: feels immoral (cheating on an exam, adultery), sanction condemnation and ostracism. Taboo: feels unthinkable (incest, cannibalism), sanction revulsion and expulsion. Law, drawn in a different colour as a formalized norm written down and enforced by the state: illegal (theft), sanction state-administered punishment. An axis under the steps runs from informal sanctions (stares, gossip) to formal sanctions (fines, prison). Footer: norms are graded by the reaction to a violation, not by the topic of the rule.',
     },
-    blocks: ['- Read the SANCTION to grade the norm: durable moral exclusion = a more, even with no law involved'],
+    blocks: ['- Grade a norm by the REACTION its violation draws, not by its topic; law is the only step that is formalized'],
   },
   {
     at: 'Cultures Within and Against',

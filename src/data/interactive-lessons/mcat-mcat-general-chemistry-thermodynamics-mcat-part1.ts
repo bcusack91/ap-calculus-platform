@@ -25,11 +25,7 @@ $$\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}$$
 | Negative ($\\Delta H < 0$) | Exothermic | Releases heat to surroundings |
 | Positive ($\\Delta H > 0$) | Endothermic | Absorbs heat from surroundings |
 
-**Calorimetry at constant pressure:**
-
-$$q = mc\\Delta T$$
-
-where $m$ = mass (g), $c$ = specific heat (J/g·°C), $\\Delta T = T_{\\text{final}} - T_{\\text{initial}}$.
+**Calorimetry at constant pressure:** $q = mc\\Delta T$, where $m$ = mass (g), $c$ = specific heat (J/g·°C), $\\Delta T = T_{\\text{final}} - T_{\\text{initial}}$.
 
 For the **reaction:** $\\Delta H_{\\text{rxn}} = -q_{\\text{solution}}$ (the sign flip — if the solution warms, the reaction is exothermic)
 
@@ -63,8 +59,8 @@ Enthalpy is a **state function** — $\\Delta H$ depends only on initial and fin
 **Method:** Reactions can be added/subtracted like algebraic equations to obtain a target reaction.
 
 **Rules for manipulating reactions:**
-1. If a reaction is **reversed**, flip the sign of $\\Delta H$
-2. If a reaction is **multiplied** by a factor, multiply $\\Delta H$ by the same factor
+- **Reverse** a reaction → flip the sign of $\\Delta H$
+- **Multiply** a reaction by a factor → multiply $\\Delta H$ by the same factor
 
 ### Worked Example — Hess's Law: Carbon Monoxide From Two Combustions
 

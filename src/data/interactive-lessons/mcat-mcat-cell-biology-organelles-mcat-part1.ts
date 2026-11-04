@@ -16,21 +16,20 @@ Eukaryotic organelles create **dedicated chemical environments**: the lysosome r
 
 | Organelle | Membranes | Core functions | High-yield details |
 |-----------|-----------|----------------|--------------------|
-| Nucleus | 2 (envelope continuous with ER) | DNA storage, replication, transcription, splicing | Nuclear pores gate traffic; nucleolus = rRNA synthesis + ribosome assembly (not membrane-bound) |
-| Rough ER | 1 | Synthesis of secreted, membrane, and lysosomal proteins; N-glycosylation begins | "Rough" = bound ribosomes; abundant in plasma cells, pancreatic acinar cells |
-| Smooth ER | 1 | Lipid/steroid synthesis, detoxification (cytochrome P450), Ca$^{2+}$ storage | Abundant in hepatocytes, adrenal cortex, gonads; SR = muscle's Ca$^{2+}$ tank |
-| Golgi | 1 (stacked cisternae) | Modifies, sorts, ships (cis face receives from ER, trans face ships) | O-glycosylation; mannose-6-phosphate tagging of lysosomal enzymes |
-| Lysosome | 1 | Acid hydrolases digest macromolecules; autophagy endpoint | V-type H$^+$ ATPase keeps pH ~4.5-5; enzymes work poorly if they leak out |
+| Nucleus | 2 (continuous with ER) | DNA replication, transcription, splicing | Pores gate traffic; nucleolus (no membrane) makes rRNA and ribosomes |
+| Rough ER | 1 | Secreted, membrane and lysosomal proteins; N-glycosylation begins | Bound ribosomes; plasma cells, pancreatic acinar cells |
+| Smooth ER | 1 | Lipid/steroid synthesis, P450 detox, Ca$^{2+}$ storage | Hepatocytes, adrenal cortex, gonads; SR = muscle's Ca$^{2+}$ tank |
+| Golgi | 1 (stacked cisternae) | Modifies, sorts, ships: cis receives, trans ships | O-glycosylation; M6P tag on lysosomal enzymes |
+| Lysosome | 1 | Acid hydrolases digest macromolecules; autophagy endpoint | V-type H$^+$ ATPase holds pH ~4.5-5; leaked enzymes barely work |
 | Peroxisome | 1 | Beta-oxidation of **very-long-chain** fatty acids; H$_2$O$_2$ metabolism | Catalase: 2 H$_2$O$_2$ → 2 H$_2$O + O$_2$; plasmalogen synthesis |
-| Mitochondrion | 2 | ATP by oxidative phosphorylation; TCA cycle (matrix); apoptosis trigger | Own circular DNA + 70S-like ribosomes; maternal inheritance |
-| Ribosome | 0 | Translation | Free = cytosolic proteins; ER-bound = secretory pathway (same ribosome pool!) |
-| Cytoskeleton | 0 | Shape, transport, division | Microfilaments (actin), intermediate filaments, microtubules |
+| Mitochondrion | 2 | Oxidative phosphorylation; TCA cycle (matrix); apoptosis trigger | Own circular DNA, 70S-like ribosomes; maternal inheritance |
+| Ribosome | 0 | Translation | Free = cytosolic proteins; ER-bound = secretory pathway (one shared pool) |
 
-> **Not membrane-bound**: ribosomes, nucleolus, centrioles, proteasomes. A passage calling the nucleolus an organelle "compartment" is testing exactly this.
+> **Not membrane-bound**: ribosomes, nucleolus, centrioles, proteasomes, the cytoskeleton. A passage calling the nucleolus an organelle "compartment" is testing exactly this.
 
 ### Cell Fractionation — Taking the Cell Apart
 
-1. **Homogenize** cells gently (osmotic or mechanical) → a slurry of organelles
+1. **Homogenize** cells gently → a slurry of organelles
 2. **Differential centrifugation** — spin at increasing speeds; bigger/denser things pellet first:
 
 | Spin | Pellet contains |
@@ -40,8 +39,8 @@ Eukaryotic organelles create **dedicated chemical environments**: the lysosome r
 | High (~100,000 g) | "Microsomes" (ER fragments), small vesicles |
 | Very high, long | Ribosomes, large complexes |
 
-3. **Density-gradient (equilibrium) centrifugation** separates the mixed medium-speed pellet by buoyant density
-4. **Marker enzymes** identify fractions: catalase = peroxisome; acid phosphatase = lysosome; succinate dehydrogenase/cytochrome oxidase = mitochondria
+- **Density-gradient centrifugation** then separates the mixed medium-speed pellet by buoyant density
+- **Marker enzymes** name fractions: catalase = peroxisome; acid phosphatase = lysosome; succinate dehydrogenase = mitochondria
 
 <!-- yield:low -->
 - More marker enzymes: glucose-6-phosphatase = ER; lactate dehydrogenase = cytosol.

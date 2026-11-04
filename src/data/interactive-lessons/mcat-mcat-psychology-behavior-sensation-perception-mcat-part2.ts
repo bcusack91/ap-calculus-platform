@@ -25,7 +25,7 @@ Light path: cornea (most refraction) → pupil (iris controls size) → lens (**
 
 1. Light isomerizes **11-cis-retinal → all-trans-retinal**, activating the opsin.
 2. Activated pigment stimulates **transducin** (a G protein) → phosphodiesterase → **cGMP falls**.
-3. cGMP-gated Na⁺ channels **close** → the photoreceptor **hyperpolarizes** → **less glutamate** released.
+3. **cGMP-gated Na⁺ channels close** → the photoreceptor **hyperpolarizes** → **less glutamate** released.
 
 **Trap:** photoreceptors are depolarized in the *dark* ("dark current") and hyperpolarize in the *light* — the reverse of a typical receptor.
 
@@ -49,7 +49,9 @@ Photoreceptors → **bipolar cells** → **ganglion cells** (axons form the opti
 
 ### Hearing: Structure and Transduction
 
-Sound path: pinna → auditory canal → **tympanic membrane** → ossicles (**malleus → incus → stapes**, amplifying pressure) → **oval window** → cochlear fluid → **basilar membrane** → **hair cells** (in the organ of Corti) bend against the tectorial membrane → **K⁺ influx** depolarizes the hair cell → neurotransmitter onto auditory nerve (CN VIII) → brainstem → **medial geniculate nucleus (MGN)** of the thalamus → **primary auditory cortex (A1)**, temporal lobe.
+Sound path: pinna → auditory canal → **tympanic membrane** → ossicles (**malleus → incus → stapes**, amplifying pressure) → **oval window** → cochlear fluid → **basilar membrane** → **hair cells** (in the organ of Corti) bend against the tectorial membrane.
+
+Transduction and relay: bending opens channels → **K⁺ influx** depolarizes the hair cell → neurotransmitter onto the auditory nerve (CN VIII) → brainstem → **medial geniculate nucleus (MGN)** of the thalamus → **primary auditory cortex (A1)**, temporal lobe.
 
 **Trap:** hair-cell depolarization is by **K⁺ influx** (the endolymph is unusually K⁺-rich) — an exception to the "Na⁺ depolarizes" rule.
 

@@ -16,6 +16,8 @@ Kinematics described motion; dynamics explains it. Every dynamics question on th
 2. **Second law:** $F_{net} = ma$. Acceleration is proportional to net force and inversely proportional to mass, and points in the direction of the **net force** (not necessarily the motion).
 3. **Third law:** if A pushes on B, B pushes back on A with equal magnitude and opposite direction. The two forces act on **different objects**, so they never cancel each other in one object's free-body diagram.
 
+The net force is a vector. Opposite forces subtract; when the net force has both an $x$ and a $y$ part, combine them like the sides of a right triangle: $F_{net} = \\sqrt{F_x^2 + F_y^2}$ (a $3$–$4$–$5$ pattern is common, e.g. $6\\;\\text{N}$ and $8\\;\\text{N}$ give $10\\;\\text{N}$).
+
 ### Mass vs. Weight (Classic Discrimination)
 
 | Quantity | What it is | Units | Changes with location? |
@@ -35,8 +37,6 @@ Draw ONE object, then every force **acting on it** (never forces it exerts on ot
 - **Friction** $f$, along the surface, opposing sliding (Part 2 of this lesson)
 
 Equilibrium ($a = 0$) means forces balance in **each** direction separately: $\\Sigma F_x = 0$ and $\\Sigma F_y = 0$. Constant velocity is equilibrium too — the first law again.
-
-When the net force has both an $x$ and a $y$ part, combine them like the sides of a right triangle: $F_{net} = \\sqrt{F_x^2 + F_y^2}$ (a $3$–$4$–$5$ pattern is common, e.g. $6\\;\\text{N}$ and $8\\;\\text{N}$ give $10\\;\\text{N}$).
 
 **MCAT habit:** always ask "what object am I analyzing, and what forces act ON it?" Most wrong answers come from mixing forces on different objects or from inventing a leftover "force of motion" that does not exist.`
     },

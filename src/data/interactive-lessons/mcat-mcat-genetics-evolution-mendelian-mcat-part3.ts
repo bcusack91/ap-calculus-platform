@@ -11,12 +11,12 @@ export const mcatMendelianPart3Data = {
 ### The Five Patterns and Their Fingerprints
 
 | Pattern | Fingerprint | Classic examples |
-|---------|-------------|------------------|
-| Autosomal dominant | Every generation; affected child has an affected parent; both sexes equally | Huntington disease, Marfan syndrome, familial hypercholesterolemia |
-| Autosomal recessive | Skips generations; unaffected carrier parents; consanguinity raises risk | Cystic fibrosis, PKU, sickle cell disease, Tay-Sachs |
+|---|---|---|
+| Autosomal dominant | Every generation; affected child has an affected parent; both sexes | Huntington, Marfan |
+| Autosomal recessive | Skips generations; unaffected carrier parents; consanguinity raises risk | Cystic fibrosis, PKU, sickle cell, Tay-Sachs |
 | X-linked recessive | Mostly males; NO father-to-son transmission; carrier mothers | Hemophilia A/B, Duchenne MD, color blindness, G6PD deficiency |
-| X-linked dominant | Affected father → ALL daughters, NO sons; affected in every generation | Rare — identify by the pattern, not by name |
-| Mitochondrial | Affected mother → ALL children; affected father → NONE | Mitochondrial myopathies (defects in oxidative phosphorylation) |
+| X-linked dominant | Affected father → ALL daughters, NO sons; every generation | Rare — know the pattern, not names |
+| Mitochondrial | Affected mother → ALL children; affected father → NONE | Mitochondrial myopathies |
 
 <!-- yield:low -->
 - Named examples: X-linked hypophosphatemic rickets (X-linked dominant); LHON (Leber hereditary optic neuropathy) and MELAS (mitochondrial).

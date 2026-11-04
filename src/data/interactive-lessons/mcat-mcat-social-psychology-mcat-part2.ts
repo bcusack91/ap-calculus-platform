@@ -8,6 +8,8 @@ export const mcatSocialPsychPart2Data = {
 
 **Part 2 of 5 — Attribution Theory (Explaining Behavior)**
 
+### Attribution — Internal or External Cause?
+
 **Attribution** is the process of inferring the causes of behavior — either **dispositional** (internal: personality, traits) or **situational** (external: circumstances).
 
 ### Kelley's Covariation Model

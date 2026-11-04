@@ -10,7 +10,7 @@ export const mcatPsychCogLangPart1Data = {
 
 ### The Information-Processing Frame
 
-Cognition treats the mind as a limited-capacity processor: input → attention filters → working memory operations → long-term storage → output. Every phenomenon in this lesson is about where the bottleneck sits and what slips past it.
+Cognition treats the mind as a limited-capacity processor: input → attention filters → working memory operations → long-term storage → output. Information can be lost at every hand-off: unattended input at the filter, unrehearsed material from working memory, and stored material that cannot be retrieved.
 
 ### Selective Attention — One Channel at a Time
 

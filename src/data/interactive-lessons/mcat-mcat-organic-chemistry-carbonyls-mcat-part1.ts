@@ -26,7 +26,8 @@ Aldehydes are **more reactive** than ketones toward addition, for two reasons:
 ### The Addition Catalog
 
 - **Water** → hydrate (gem-diol). Usually unfavorable; significant only for very reactive carbonyls (formaldehyde is >99% hydrated in water)
-- **One alcohol** (acid catalyst) → **hemiacetal** (OH + OR on the same carbon); a **second alcohol** → **acetal** (two OR groups) plus water. Acetals are stable to base but hydrolyze in aqueous acid — they serve as carbonyl **protecting groups**, and sugar ring forms are intramolecular hemiacetals
+- **One alcohol** (acid catalyst) → **hemiacetal** (OH + OR on the same carbon); a **second alcohol** → **acetal** (two OR groups) plus water
+- Acetals are stable to base but hydrolyze in aqueous acid — they serve as carbonyl **protecting groups**; sugar ring forms are intramolecular hemiacetals
 - **Primary amine** → carbinolamine → loses water → **imine** (Schiff base, C=N); fastest near pH 4.5-5 (enough acid to protonate the leaving OH, not so much that the amine is fully protonated)
 - **Secondary amine** → no N-H left after addition, so elimination goes toward the alpha carbon → **enamine** (N-C=C)
 - **Cyanide** → **cyanohydrin** (OH + CN)

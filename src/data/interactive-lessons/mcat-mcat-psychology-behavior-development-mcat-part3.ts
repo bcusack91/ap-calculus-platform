@@ -39,19 +39,15 @@ Either verdict ("steal" or "don't steal") can be argued at ANY stage — items t
 
 ### Adolescence: Identity Work
 
-- **Marcia's identity statuses** (two axes: exploration × commitment):
-  - **Diffusion** — no exploration, no commitment
-  - **Foreclosure** — commitment WITHOUT exploration (adopting parents' plan wholesale)
-  - **Moratorium** — active exploration, commitment pending
-  - **Achievement** — commitment following genuine exploration
+- **Marcia's identity statuses** (two axes: exploration × commitment): **diffusion** — no exploration, no commitment; **foreclosure** — commitment WITHOUT exploration (adopting parents' plan wholesale); **moratorium** — active exploration, commitment pending; **achievement** — commitment following genuine exploration
 - **Adolescent egocentrism** (Elkind): **imaginary audience** (everyone is watching me) and **personal fable** (my experience is unique; risks don't apply to me — the invulnerability belief behind risk-taking, compounded by still-maturing prefrontal control against an earlier-maturing reward system)
 
 ### Adulthood & Aging (the positive-picture findings)
 
-- **Socioemotional selectivity** (Carstensen): as perceived time horizons shrink, motivation shifts from information-seeking to emotionally meaningful ties — networks get smaller *and more satisfying* by choice, not by social failure
-- The **positivity effect**: older adults preferentially attend to and remember positive material
-- Cognitive aging recap (from the cognition lesson): fluid abilities and recall decline; crystallized knowledge and recognition hold — normal aging is NOT dementia
-- Erikson's final crises (generativity, then integrity) frame midlife mentoring and late-life life review`
+- **Socioemotional selectivity** (Carstensen): as time horizons shrink, motivation shifts from information-seeking to emotionally meaningful ties; networks get smaller *and more satisfying* by choice
+- **Positivity effect**: older adults preferentially attend to and remember positive material
+- Fluid abilities and recall decline with age; crystallized knowledge and recognition hold. Normal aging is NOT dementia
+- Erikson's last crises (generativity, then integrity) frame midlife mentoring and late-life review`
     },
     {
       id: 'dev3-worked',

@@ -504,7 +504,7 @@ export const mcatHealthDisparitiesFigures: DeckFigurePlacement[] = [
         'Left: five determinant boxes — income and wealth (nutrition, housing, a buffer for emergencies), education (health literacy, jobs, a sense of control), occupation (hazards, autonomy versus demand, stable pay), neighborhood (food access, pollution, violence, clinics) and social connection (support and care; isolation rivals smoking) — with arrows converging on a circle labelled health; all five sit upstream of behaviour and biology. Right, fundamental cause theory: flexible resources (money, knowledge, power, connections) are redeployed against each era\'s threat — cholera, cigarettes, the newest screening test. Two illustrative mini bar charts across low to high SES: for an untreatable disease the bars are equal (no gradient); for a preventable or treatable disease they fall steeply (steep gradient). Footer: disparities are largest where medicine can act.',
       caption: 'The mini charts are illustrative, not data.',
     },
-    blocks: ['- Fundamental cause fingerprint: steep gradients where disease is treatable, flat ones where medicine is helpless'],
+    blocks: ['- Left: five determinants, all upstream of behaviour and biology. Right: the fundamental-cause fingerprint, a gradient only where medicine can act'],
   },
   {
     at: 'Stress Biology',
@@ -585,9 +585,9 @@ export const mcatHealthDisparitiesFigures: DeckFigurePlacement[] = [
     figure: {
       svg: capstoneSvg,
       alt:
-        'A bar chart of per cent screened before (physician referral) and after (automatic opt-out mailer) from the lesson\'s capstone passage: top income quartile 70 to 82, bottom quartile 42 to 69 — the gap narrows from 28 to 13 points because a default needs no personal resources, so the disadvantaged gain most.',
+        'A bar chart of per cent screened before (physician referral) and after (automatic opt-out mailer) from the lesson\'s capstone passage: top income quartile 70 to 82, bottom quartile 42 to 69 — the gap narrows from 28 to 13 points.',
       caption: 'The lesson\'s hypothetical capstone-passage numbers, not real data.',
     },
-    blocks: ['- Defaults remove the resource-dependent step, so the bottom quartile gains most (+27 vs. +12 points)'],
+    blocks: ['- The same residents under two system designs: compare each quartile\'s before-and-after bars, then work Problem 1'],
   },
 ]

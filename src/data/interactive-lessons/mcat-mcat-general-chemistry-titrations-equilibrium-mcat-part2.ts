@@ -14,10 +14,9 @@ For a reaction: $a\\text{A} + b\\text{B} \\rightleftharpoons c\\text{C} + d\\tex
 
 $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 
-**Rules:**
-- Pure solids and liquids: NOT included in $K$ expression
-- Only gases and aqueous species are included
-- $K > 1$: products favored; $K < 1$: reactants favored
+**Rules:** only gases and aqueous species appear in the expression; pure solids and liquids are NOT included.
+
+$K > 1$: products favored at equilibrium; $K < 1$: reactants favored.
 
 ## $K_p$ vs $K_c$
 
@@ -64,10 +63,7 @@ For $\\text{CaF}_2(s) \\rightleftharpoons \\text{Ca}^{2+} + 2\\text{F}^-$:
 
 $$K_{sp} = [\\text{Ca}^{2+}][\\text{F}^-]^2$$
 
-**Molar solubility:** If $s$ = moles dissolved per liter, then for $\\text{CaF}_2$:
-$[\\text{Ca}^{2+}] = s$ and $[\\text{F}^-] = 2s$
-
-$$K_{sp} = (s)(2s)^2 = 4s^3$$
+**Molar solubility:** if $s$ = moles dissolved per liter, then for $\\text{CaF}_2$ $[\\text{Ca}^{2+}] = s$ and $[\\text{F}^-] = 2s$, so $K_{sp} = (s)(2s)^2 = 4s^3$.
 
 ### Common Ion Effect
 
@@ -229,7 +225,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
 1. Half-equivalence point: pH = pKa (titrations)
 2. Le Chatelier shifts vs. K changes (only T changes K)
 3. Common ion effect reduces solubility
-4. pH > 7 at equivalence for weak acid + strong base titration
+4. Weak acid + strong base: pH > 7 at equivalence (the conjugate base hydrolyzes)
 5. Ksp → molar solubility (account for stoichiometric coefficients)
 `
     }

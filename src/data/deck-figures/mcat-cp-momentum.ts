@@ -447,8 +447,9 @@ ${T(640, 376, 15, 'shell', 'start', '700')}
 
 export const mcatMomentumFigures: DeckFigurePlacement[] = [
   {
-    at: 'Impulse: How Momentum Changes',
-    mode: 'lead',
+    // After the bat worked example: the picture is drawn with that example's 2100 N, 21 N and 10.5 kg·m/s.
+    at: 'Worked Example — Bat Meets Ball',
+    mode: 'after',
     figure: {
       svg: impulseSvg,
       alt:
@@ -462,7 +463,7 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Sign Care: Reversals Count Double',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: reversalSvg,
       alt:
@@ -471,7 +472,7 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- Set a sign convention first: in at $+mv$, out at $-mv$ gives $|\\Delta p| = 2mv$, not $0$',
-      '- Reversal problems: the speeds **add** in $\\Delta v$ (bat on ball: $30 - (-40) = 70$ m/s)',
+      '- Reversal problems: the speeds **add** in $\\Delta v$ (in at $10$, back out at $6$: $\\Delta v = 16$ m/s, not $4$)',
     ],
   },
   {
@@ -487,12 +488,12 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
       '- **Elastic:** momentum AND kinetic energy conserved — objects bounce apart, no deformation or heat',
       '- **Inelastic:** momentum conserved, some KE lost — they bounce apart, but slower',
       '- **Perfectly inelastic:** they **stick**, one final velocity — the maximum KE loss momentum allows',
-      '- Truly elastic is rare (gas molecules; billiard balls ≈); crashes, tackles, embedded bullets stick',
+      '- "Perfectly inelastic" does NOT mean all KE vanishes: the stuck pair still moves, because momentum demands it',
     ],
   },
   {
     at: 'One Special Case Worth Memorizing',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: swapSvg,
       alt:
@@ -519,8 +520,9 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Explosions: Collisions Run Backward',
-    mode: 'lead',
+    // After the recoil worked example: the picture carries that example's numbers.
+    at: 'Worked Example — Rifle Recoil',
+    mode: 'after',
     figure: {
       svg: recoilSvg,
       alt:
@@ -533,8 +535,9 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'The Ballistic Pendulum: Two Regimes, Two Laws',
-    mode: 'lead',
+    // After the pendulum worked example: the picture derives that example's 2 m/s, 200 m/s and 400 J → 4 J.
+    at: 'Worked Example — Ballistic Pendulum',
+    mode: 'after',
     figure: {
       svg: pendulumSvg,
       alt:
@@ -547,8 +550,9 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Two Dimensions: Conserve Each Component',
-    mode: 'lead',
+    // After the 2-D worked example (part 4): the picture is that example's full solution.
+    at: 'Worked Example — A 2-D Perfectly Inelastic Crash',
+    mode: 'after',
     figure: {
       svg: twoDSvg,
       alt:
@@ -561,8 +565,9 @@ export const mcatMomentumFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Center of Mass: The System',
-    mode: 'lead',
+    // After the skater worked example: the picture gives its 4 m / 6 m answers.
+    at: 'Worked Example — Center of Mass Bookkeeping',
+    mode: 'after',
     figure: {
       svg: cmSvg,
       alt:

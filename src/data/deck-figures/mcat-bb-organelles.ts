@@ -577,7 +577,6 @@ export const mcatOrganellesFigures: DeckFigurePlacement[] = [
       '- **Actin** 7 nm (polar, ATP): contraction, crawling, microvilli — motor **myosin**',
       '- **Intermediate** 10 nm (nonpolar): tensile strength, nuclear lamina, desmosomes — cell-type markers',
       '- **Microtubules** 25 nm (polar, GTP): highways, spindle, 9+2 cilia — **kinesin** (+, out) / **dynein** (−, in)',
-      '- **Kartagener:** dynein arm defect → sinusitis, infertility, situs inversus',
     ],
   },
   {

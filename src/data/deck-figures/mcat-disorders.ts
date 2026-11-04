@@ -387,7 +387,7 @@ export const mcatDisordersFigures: DeckFigurePlacement[] = [
       '- Cued fear (phobia, social, agoraphobia) vs uncued attacks (panic) vs diffuse worry (GAD)',
       '- Panic DISORDER = unexpected attacks **plus** ≥ 1 month of worry or behaviour change',
       '- GAD = breadth + duration (≥ 6 months) + uncontrollability',
-      '- Rule out the cardiac and thyroid mimics first',
+      '- Rule out the cardiac and thyroid mimics first — passages love the ER vignette with a normal workup',
     ],
   },
   {

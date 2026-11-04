@@ -10,8 +10,6 @@ export const mcatPsychLearnMemPart1Data = {
 
 ### The Core Vocabulary (get the labels mechanical)
 
-Classical (Pavlovian, respondent) conditioning pairs a neutral stimulus with one that already triggers a reflexive response:
-
 | Term | Definition | Pavlov's lab |
 |------|-----------|--------------|
 | **Unconditioned stimulus (US)** | Triggers a response *without* learning | Meat powder |
@@ -19,7 +17,7 @@ Classical (Pavlovian, respondent) conditioning pairs a neutral stimulus with one
 | **Conditioned stimulus (CS)** | Formerly neutral; triggers the response *after* pairing | Bell |
 | **Conditioned response (CR)** | Learned response to the CS alone | Salivation to bell |
 
-**Labeling algorithm:** find the stimulus that would work on day one with no training — that is the US, and its response is the UR. Whatever *predicts* the US and comes to evoke the response on its own is the CS. The CR and UR are usually similar, but the CR is often weaker.
+**Labeling algorithm.** Classical (Pavlovian, respondent) conditioning pairs a neutral stimulus with one that already triggers a reflexive response. To label a vignette, find the stimulus that would work on day one with no training — that is the US, and its response is the UR. Whatever *predicts* the US and comes to evoke the response on its own is the CS. The CR and UR are usually similar, but the CR is often weaker.
 
 ### Timing & Contingency
 

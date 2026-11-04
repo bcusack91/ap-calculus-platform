@@ -177,7 +177,7 @@ ${DOT(120, 360, 7)}
 ${DOT(720, 120, 7)}
 ${T(108, 126, 17, '12', 'end')}
 ${T(108, 366, 17, '0', 'end')}
-${T(138, 350, 17, 'v₀ = 0 — "from rest"', 'start', '700')}
+${T(130, 392, 17, 'v₀ = 0 — "from rest"', 'start', '700')}
 ${T(720, 390, 17, 't = 6 s', 'middle')}
 ${T(736, 114, 16, 'v = 12 m/s')}
 <g class="fig-accent">
@@ -246,7 +246,7 @@ ${T(900, 340, 15, '⇒ v = 0', 'middle')}
 ${BOX(830, 360, 42, 32, 6, 2.5)}
 ${BOX(928, 360, 42, 32, 6, 2.5, 0.12)}
 ${T(949, 428, 14, 'stopped', 'middle')}
-<g class="fig-muted">${T(760, 452, 15, '"in free fall" ⇒ a = g ≈ 10 m/s² downward for every object, at every instant', 'middle')}</g>
+<g class="fig-muted">${T(720, 452, 15, '"in free fall" ⇒ a = g ≈ 10 m/s² downward — every object, every instant', 'middle')}</g>
 </svg>`
 
 /* 5 — Projectile motion: velocity decomposed at five points on the parabola (lead, 1000×460) */

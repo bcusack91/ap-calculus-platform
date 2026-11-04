@@ -10,8 +10,6 @@ export const electrostaticsMcatPart2: LessonData = {
 
 **Part 2 of 4 — The Quantitative Toolkit**
 
-Every electrostatics calculation on the MCAT comes from a short list of formulas. Learn which quantity each one produces and how it scales with $r$.
-
 ### The Core Four (Point Charge $Q$, Distance $r$)
 
 | Formula | Gives | Scaling | Type |

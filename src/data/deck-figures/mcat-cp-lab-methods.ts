@@ -497,8 +497,10 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Retention Factor',
-    mode: 'lead',
+    // After the worked problems, not leading the Rf section: the plate IS
+    // Problem 1 with its answers written beside it (review, 2026-11-04).
+    at: 'Worked Examples — Chromatography & Extraction',
+    mode: 'after',
     figure: {
       svg: tlcSvg,
       alt:
@@ -506,13 +508,15 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
       caption: 'The lesson’s TLC example measured on the plate: 3.0 cm over a 7.5 cm front gives Rf 0.40, the more polar of the two spots.',
     },
     blocks: [
-      '- $R_f = 3.0/7.5 = 0.40$ vs $R_f = 0.80$: on polar silica, the lower $R_f$ is the **more polar** compound',
+      '- Problem 1 on the plate: $R_f = 3.0/7.5 = 0.40$ vs $0.80$ — on polar silica the lower $R_f$ is the **more polar** compound',
       '- Stuck at the baseline ($R_f \\approx 0$)? Too polar for the solvent — a more polar mobile phase raises it',
     ],
   },
   {
-    at: 'Key Variants',
-    mode: 'lead',
+    // After the worked problems (it is the lesson's Problem 3 drawn out), so
+    // IEF, pI and SDS-PAGE are taught before the gel that combines them.
+    at: 'Worked Examples — Electrophoresis',
+    mode: 'after',
     figure: {
       svg: gel2dSvg,
       alt:
@@ -520,7 +524,7 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
       caption: 'A 2D gel separates on pI across and size down, so a phosphorylated isoform shows up as a same-height spot shifted toward low pH (positions illustrative).',
     },
     blocks: [
-      '- 2D gel = IEF (by **pI**) then SDS-PAGE (by **size**): same height = same MW, different column = different pI',
+      '- 2D gel = IEF (by **pI**) across, then SDS-PAGE (by **size**) down: same height = same MW, different column = different pI',
       '- Phosphorylation adds − charge → lower pI → a same-size spot shifted to the acidic side',
     ],
   },
@@ -534,8 +538,8 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
       caption: 'Isoelectric focusing: from either side a protein is charged toward its pI and stops there, so pI 5.0 focuses into one sharp band at pH 5.0 (charge curve illustrative).',
     },
     blocks: [
-      '- pH > pI → net − → anode (+); pH < pI → net + → cathode (−); pH = pI → net 0, stops',
-      '- In IEF every protein runs until the local pH equals its pI — and is pushed back if it drifts past',
+      '- IEF: a stable pH gradient (ampholytes) between the electrodes; a protein runs from either side until the local pH = its pI',
+      '- Drift past the pI → recharged → pushed back, so each protein focuses into one sharp band',
     ],
   },
   {
@@ -548,8 +552,8 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
       caption: 'The lesson’s rotor (r = 8 cm): 10,000 RPM gives 8,944 g, and because RCF grows with RPM², doubling the speed quadruples the force.',
     },
     blocks: [
-      '- $v \\propto (\\rho_p - \\rho_m)\\,r_p^2\\,\\omega^2$: larger/denser sinks faster; stops at $\\rho_p = \\rho_m$',
-      '- RCF $= 1.118\\times10^{-5}\\,r\\,(\\text{RPM})^2$: 8 cm at 10,000 RPM ≈ 8,944 g; double RPM → 4× force',
+      '- RCF $= 1.118\\times10^{-5}\\,r\\,(\\text{RPM})^2$: 8 cm at 10,000 RPM ≈ 8,944 g; double the RPM → 4× the force',
+      '- Quote the force in × g, not RPM: the same RPM on a rotor of another radius gives a different force',
     ],
   },
   {
@@ -568,8 +572,10 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Beer–Lambert Law',
-    mode: 'lead',
+    // After the worked problems: the calibration line IS Problem 2 with its
+    // slope, ε and unknown written on it (review, 2026-11-04).
+    at: 'Worked Examples — Spectroscopy',
+    mode: 'after',
     figure: {
       svg: beerSvg,
       alt:
@@ -577,8 +583,8 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
       caption: 'Beer–Lambert as a cuvette and a calibration line: the lesson’s standards give a slope of 0.05 per µM, so an unknown at A = 0.25 is 5 µM.',
     },
     blocks: [
-      '- $A = \\varepsilon l c$: absorbance is **linear** in concentration and path length (valid up to $A \\approx 1$)',
-      '- Standard curve: slope $= \\varepsilon l = 0.05$ µM⁻¹, so $A = 0.25$ → $c = 0.25/0.05 = 5$ µM',
+      '- Problem 2 on the graph: the standards fall on a line of slope $\\varepsilon l = 0.05$ µM⁻¹, so $A = 0.25$ reads off as $5$ µM',
+      '- $A = \\varepsilon l c$ is **linear** only up to $A \\approx 1$: above that, dilute and remeasure',
     ],
   },
   {
@@ -591,13 +597,15 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
       caption: 'Absorbance is a log scale: each unit of A cuts the transmitted light tenfold, so A = 2 lets only 1% through.',
     },
     blocks: [
-      '- $A = -\\log_{10} T$, so $T = 10^{-A}$: T = 1 → A = 0, T = 0.1 → A = 1, T = 0.01 → A = 2',
-      '- Each unit of absorbance = a **10×** drop in transmitted light',
+      '- Absorbance is a **log** scale: each unit of $A$ cuts the transmitted light tenfold, so $A = 2$ lets only 1% through',
+      '- $A$ rises in step with $c$ (Beer–Lambert); $T$ does not — never read transmittance as linear in concentration',
     ],
   },
   {
+    // The section is two bullets the figure already states, so the figure
+    // slide replaces the text slide (the lesson keeps the text).
     at: 'Biochemistry Hooks',
-    mode: 'lead',
+    mode: 'replace',
     figure: {
       svg: hooksSvg,
       alt:

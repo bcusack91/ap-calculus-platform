@@ -579,7 +579,7 @@ export const mcatNaturalSelectionFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Worked Example — Reading a Cladogram',
+    at: 'Reading Evolutionary Trees',
     mode: 'after',
     figure: {
       svg: treesSvg,

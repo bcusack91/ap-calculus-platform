@@ -10,9 +10,9 @@ export const electrostaticsMcatPart4: LessonData = {
 
 **Part 4 of 4 — MCAT Integration**
 
-MCAT electrostatics questions rarely test one formula in isolation. They combine energy conservation, scaling, and sign logic — often wrapped in a biological or lab passage. Here is the playbook.
-
 ### Strategy 1 — Energy Conservation Beats Kinematics
+
+MCAT electrostatics questions rarely test one formula in isolation. They combine energy conservation, scaling, and sign logic — often wrapped in a biological or lab passage. The playbook starts with energy.
 
 A charge accelerated from rest through a potential difference $\\Delta V$ gains kinetic energy
 
@@ -22,7 +22,7 @@ no matter the path, the field geometry, or the distance. If the question gives y
 
 - The natural unit here is the **electron-volt**: $1\\;\\text{eV} = 1.6 \\times 10^{-19}\\;\\text{J}$, the energy one elementary charge $e$ gains crossing $1\\;\\text{V}$.
 
-### Strategy 2 — Superposition: Fields Add as Vectors, Potentials as Numbers
+### Strategy 2 — Superposition: Vectors vs. Numbers
 
 - Midway between two EQUAL positive charges: fields cancel ($E = 0$) but potentials ADD ($V = 2kQ/r$, definitely not zero), where $r$ is the distance from each charge to the midpoint, half the separation.
 - Midway between a $+Q$ and a $-Q$: potentials cancel ($V = 0$) but the fields point the SAME way (from $+$ toward $-$) and add.

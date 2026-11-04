@@ -26,7 +26,9 @@ The population-genetic signature to memorize: **directional moves the mean; stab
 
 ### Balancing Selection: Keeping Both Alleles
 
-**Heterozygote advantage (overdominance)** maintains a stable polymorphism because the fittest genotype, Aa, cannot breed true — every generation of $Aa \\times Aa$ matings regenerates both homozygotes. Classic case: **sickle cell**. Where malaria is endemic, HbA/HbS heterozygotes resist severe malaria, outreproducing both HbA/HbA (malaria-susceptible) and HbS/HbS (sickle cell disease). Selection therefore holds HbS at high frequency in malaria regions and lets it decay where malaria is absent — allele frequency maps mirror malaria maps.
+**Heterozygote advantage (overdominance)** maintains a stable polymorphism because the fittest genotype, Aa, cannot breed true — every generation of $Aa \\times Aa$ matings regenerates both homozygotes.
+
+Classic case: **sickle cell**. Where malaria is endemic, HbA/HbS heterozygotes resist severe malaria, outreproducing both HbA/HbA (malaria-susceptible) and HbS/HbS (sickle cell disease). Selection therefore holds HbS at high frequency in malaria regions and lets it decay where malaria is absent — allele frequency maps mirror malaria maps.
 
 **Heterozygote disadvantage (underdominance)** is unstable: whichever allele is rarer spends more of its time in low-fitness heterozygotes, so it is driven out. The population tips toward fixing whichever allele starts on the favored side of an unstable equilibrium (the more common allele when the two homozygotes are equally fit).
 

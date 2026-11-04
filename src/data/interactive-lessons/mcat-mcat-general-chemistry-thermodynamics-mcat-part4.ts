@@ -27,19 +27,12 @@ $$\\Delta G = \\Delta H - T\\Delta S = 0 \\Rightarrow T_{\\text{transition}} = \
 
 ## Heating Curves
 
-A **heating curve** shows temperature vs. heat added for a substance.
+A **heating curve** shows temperature vs. heat added for a substance. Its two kinds of segment:
 
-**Key features:**
-1. **Slanted region:** Temperature rises; $q = mc\\Delta T$; specific heat governs slope
-2. **Flat region (plateau):** Phase change at constant T; $q = n\\Delta H_{\\text{fus}}$ or $q = n\\Delta H_{\\text{vap}}$
-3. Steeper slope = lower specific heat; gentle slope = higher specific heat
+- **Slanted region:** temperature rises; $q = mc\\Delta T$, and the specific heat sets the slope — steeper slope = lower specific heat, gentle slope = higher specific heat
+- **Flat region (plateau):** phase change at constant $T$; $q = n\\Delta H_{\\text{fus}}$ or $q = n\\Delta H_{\\text{vap}}$
 
-**Specific heats to know (MCAT):**
-- Water (liquid): $4.18$ J/g·°C (highest of common substances)
-- Steam: $2.01$ J/g·°C
-- Ice: $2.09$ J/g·°C
-- $\\Delta H_{\\text{fus}}$(water) = $6.01$ kJ/mol
-- $\\Delta H_{\\text{vap}}$(water) = $40.7$ kJ/mol
+**Water's numbers to know (MCAT):** liquid water $c = 4.18$ J/g·°C (the highest of common substances), ice $2.09$ and steam $2.01$ J/g·°C; $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol and $\\Delta H_{\\text{vap}} = 40.7$ kJ/mol.
 
 ### Worked Example — Ice at −10°C to Steam at 110°C
 

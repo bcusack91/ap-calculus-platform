@@ -16,9 +16,9 @@ Goffman analyzed everyday interaction with theater's vocabulary. People perform 
 
 - **Impression management**: the continuous work of controlling how others define you — dress, setting, tone, props (the framed diploma, the white coat).
 - **Front stage**: where the performance runs and the audience watches; behavior conforms to the role's script (the server's cheerful table manner).
-- **Back stage**: audience excluded; the performer drops the script, rehearses, and repairs (the kitchen, where the same server vents). Back stage is defined RELATIVE to an audience — the kitchen is front stage for impressing the head chef.
-- Teams perform together and keep each other's secrets; a **performance disruption** (the doctor visibly panicking) threatens the shared definition of the situation, and audiences often TACTFULLY help repair it — because everyone's definition of reality is at stake.
-- **Face-work**: maintaining one's own and others' claimed social value; embarrassment is the emotion of a failed performance.
+- **Back stage**: audience excluded; the performer drops the script, rehearses, and repairs (the kitchen, where the server vents). Defined RELATIVE to an audience: the kitchen is front stage for the head chef.
+- Teams perform together and keep each other's secrets; a **performance disruption** (the doctor visibly panicking) threatens the shared definition, so audiences TACTFULLY help repair it.
+- **Face-work**: maintaining one's own and others' claimed social value; embarrassment marks a failed performance.
 
 ### Emotion as Managed Labor
 
@@ -56,7 +56,7 @@ The design goal is predictability and efficiency; authority is rational-legal (o
 
 - **Trained incapacity / goal displacement**: rules become ends in themselves ("red tape"); officials enforce procedure even when it defeats the mission.
 - **The iron cage** (Weber): rationalization traps modern life in efficiency logic, draining meaning.
-- **McDonaldization** (Ritzer's update): efficiency, calculability, predictability, and control through automation spreading from fast food to education and medicine — with irrational consequences (dehumanization) as the fifth act.
+- **McDonaldization** (Ritzer's update): efficiency, calculability, predictability, and control through automation spreading from fast food to education and medicine, with dehumanization as the irrational result.
 - **Iron law of oligarchy** (Michels): even democratic organizations drift toward rule by a small leadership elite, because day-to-day control requires delegation and expertise concentrates.
 
 ### Interaction Meets Organization

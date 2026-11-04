@@ -556,10 +556,10 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 5,
   },
   {
-    question: `Self-censorship, pressure on dissenters, and an illusion of unanimity are symptoms of:`,
+    question: `A close-knit planning committee that takes no outside advice keeps individual doubts private, leans on the one member who objects, and concludes that "everyone agrees." These behaviors are symptoms of:`,
     options: [`Group polarization`, `Pluralistic ignorance`, `Groupthink`, `Social loafing`],
     correctAnswer: 2,
-    explanation: `These are classic symptoms of groupthink, in which a desire for harmony overrides realistic appraisal. Group polarization is the amplification of a group's initial leaning through discussion, and social loafing is reduced effort on a pooled task. Pluralistic ignorance is each bystander misreading others' calm as a sign that nothing is wrong.`,
+    explanation: `Self-censorship, pressure on dissenters, and an illusion of unanimity in a cohesive, insulated group are classic symptoms of groupthink, in which a desire for harmony overrides realistic appraisal. Group polarization is the amplification of a group's initial leaning through discussion, and social loafing is reduced effort on a pooled task. Pluralistic ignorance is each bystander misreading others' calm as a sign that nothing is wrong.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
     part: 5,

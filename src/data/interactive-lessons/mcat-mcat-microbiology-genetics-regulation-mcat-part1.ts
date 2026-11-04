@@ -13,7 +13,7 @@ export const mcatMicrobialGeneticsRegulationPart1Data = {
 
 ### Transposable Elements ("Jumping Genes")
 
-Transposons are DNA segments that move from one site to another **within** a cell: chromosome to plasmid, plasmid to plasmid, or to a new chromosomal site. Plasmids move genes BETWEEN cells; transposons move them between DNA molecules inside one cell. Stacked together, the two spread resistance.
+Transposons are DNA segments that move from one site to another **within** a cell: chromosome to plasmid, plasmid to plasmid, or to a new chromosomal site. Stacked with plasmids, which move genes BETWEEN cells, they spread resistance.
 
 - **Insertion sequence (IS):** the simplest element, a transposase gene flanked by short **inverted repeats** that the transposase recognizes as the element's ends.
 - **Composite transposon:** cargo genes, often antibiotic resistance, flanked by two IS elements. The flanking IS elements supply transposase and ends, so the whole block hops as one unit.
@@ -30,12 +30,14 @@ Transposons are DNA segments that move from one site to another **within** a cel
 
 1. **Insertional inactivation:** landing in a coding sequence knocks the gene out. Transposons are a natural mutagen, and labs use them for insertional mutagenesis, since the resistance marker makes every insertion selectable.
 2. **Polar effects:** an insertion in an upstream gene of an operon can silence the downstream genes of the same polycistronic transcript, though those genes are intact.
-3. **Mobilization:** a resistance gene can move from the chromosome onto a conjugative plasmid, then leave the cell by conjugation (direct transfer to a recipient through a pilus bridge).
-4. **Rearrangement:** recombination between two copies of an IS element can delete, invert or fuse DNA, and IS homology is how the F plasmid integrates into the chromosome to form an Hfr (high-frequency-of-recombination) donor, which transfers chromosomal genes by conjugation.
+3. **Mobilization:** a resistance gene can move from the chromosome onto a conjugative plasmid, then leave the cell by conjugation.
+4. **Rearrangement:** recombination between two copies of an IS element can delete, invert or fuse DNA, and IS homology is how the F plasmid integrates into the chromosome to form an Hfr donor.
 
 ### Restriction-Modification: Innate Defense
 
-A **restriction endonuclease** cuts DNA at a short recognition sequence, often a palindrome (EcoRI cuts GAATTC). Its partner **methyltransferase** methylates the same sequence in the host's own DNA, and the enzyme cuts only **unmethylated** sites. Incoming phage DNA, unmethylated, is cut and degraded; the chromosome is spared. A rare phage genome that is methylated before it is cut escapes, and its progeny, now modified, infect that strain efficiently until they meet a strain with a different system. The system recognizes any DNA carrying the site and keeps no memory of past infections: it is innate. Its enzymes became the cutting tools of molecular cloning.
+A **restriction endonuclease** cuts DNA at a short recognition sequence, often a palindrome (EcoRI cuts GAATTC). Its partner **methyltransferase** methylates the same sequence in the host's own DNA, and the enzyme cuts only **unmethylated** sites. Incoming phage DNA, unmethylated, is cut and degraded; the chromosome is spared.
+
+A rare phage genome that is methylated before it is cut escapes, and its progeny, now modified, infect that strain efficiently until they meet a strain with a different system. The system recognizes any DNA carrying the site and keeps no memory of past infections: it is innate. Its enzymes became the cutting tools of molecular cloning.
 
 ### CRISPR-Cas: Adaptive Immunity in a Single Cell
 
@@ -70,9 +72,9 @@ An **operon** is a set of genes transcribed from one promoter into one polycistr
 | Genotype | Without lactose | Conclusion |
 |----------|-----------------|------------|
 | lacI$^-$ | Constitutive | No repressor |
-| lacI$^-$ / F′ lacI$^+$ | Inducible (normal) | The repressor diffuses and acts in **trans**; lacI$^-$ is recessive |
-| lacO$^c$ (operator cannot bind repressor) | Constitutive | The site is broken, so repressor is present but has nowhere to bind |
-| lacO$^c$ lacZ$^+$ / F′ lacO$^+$ lacZ$^-$ | Constitutive | O$^c$ is **cis**-dominant: it controls only the genes on its own DNA |
+| lacI$^-$ / F′ lacI$^+$ | Inducible (normal) | Repressor diffuses and acts in **trans**; lacI$^-$ is recessive |
+| lacO$^c$ (operator cannot bind repressor) | Constitutive | Repressor is present but has nowhere to bind |
+| lacO$^c$ lacZ$^+$ / F′ lacO$^+$ lacZ$^-$ | Constitutive | O$^c$ is **cis**-dominant: it controls only its own DNA |
 | lacO$^c$ lacZ$^-$ / F′ lacO$^+$ lacZ$^+$ | Inducible | The constitutive operator drives only a dead lacZ |
 
 A cell that cannot make cAMP (no adenylyl cyclase) expresses lac poorly even with lactose and no glucose; adding cAMP rescues it, while a CAP-deficient mutant is not rescued.

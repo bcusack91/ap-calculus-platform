@@ -562,12 +562,12 @@ const circuitsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: kirchhoffSvg,
       alt:
-        'Left: two blue currents I₁ and I₂ flow into a node and one red current I₃ flows out — junction rule I₁ + I₂ = I₃, charge is conserved so none piles up at a node, whatever the number of wires. Right: the lesson’s series circuit, a 24 V battery driving 2 Ω, 4 Ω and 6 Ω resistors around one loop with I = 2 A; the drops −4 V, −8 V and −12 V are written in red beside each resistor and a grey arrow says walk the loop; +24 − 4 − 8 − 12 = 0 — energy is conserved, every volt supplied is dropped, and the biggest resistance takes the biggest share.',
+        'Left: two blue currents I₁ and I₂ flow into a node and one red current I₃ flows out — junction rule I₁ + I₂ = I₃, charge is conserved so none piles up at a node, whatever the number of wires. Right: a series circuit, a 24 V battery driving 2 Ω, 4 Ω and 6 Ω resistors around one loop with I = 2 A; the drops −4 V, −8 V and −12 V are written in red beside each resistor and a grey arrow says walk the loop; +24 − 4 − 8 − 12 = 0 — energy is conserved, every volt supplied is dropped, and the biggest resistance takes the biggest share.',
       caption: 'Kirchhoff’s rules are conservation laws: charge at a junction (in = out), energy around a loop (gains = drops) — the 24 V example.',
     },
     blocks: [
       '- **Junction rule:** current in = current out at every node (charge is conserved)',
-      '- **Loop rule:** around any closed loop the gains equal the drops — $24 = 4 + 8 + 12$ V in the series example',
+      '- **Loop rule:** around any closed loop the gains equal the drops — $24 = 4 + 8 + 12$ V in the loop drawn here',
     ],
   },
   {

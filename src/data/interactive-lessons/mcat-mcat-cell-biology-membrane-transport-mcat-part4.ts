@@ -91,7 +91,7 @@ The LDL receptor story is the canonical MCAT passage:
 
 | Experimental manipulation | What it tests / expected result |
 |---------------------------|--------------------------------|
-| Incubate cells at 4°C | Blocks all vesicular transport and membrane fluidity-dependent processes; surface binding still occurs |
+| Incubate cells at 4°C | Stops vesicle budding and other fluidity-dependent steps; surface binding still occurs |
 | ATP depletion (2-deoxyglucose + oligomycin) | Kills primary/secondary active transport and endocytosis; passive diffusion unaffected |
 | Ouabain | Inhibits Na$^+$/K$^+$ ATPase → collapses all Na$^+$-coupled transport over time |
 | Nonhydrolyzable GTP analog | Freezes dynamin and other GTPases → vesicles stall as coated pits |

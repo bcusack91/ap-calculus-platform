@@ -8,8 +8,6 @@ export const mcatAminoAcidsPart4Data = {
 
 **Part 4 of 4 — Protein Purification, Analysis & MCAT Integration**
 
-The MCAT tests proteins mostly through **experimental passages**. You must know what each technique separates by, and how to read its output.
-
 ### Separation Techniques
 
 | Technique | Separates by | Details the MCAT tests |

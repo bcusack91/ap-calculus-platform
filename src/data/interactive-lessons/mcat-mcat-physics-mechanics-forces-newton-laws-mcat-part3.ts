@@ -10,9 +10,11 @@ export const mcatMechForcesPart3Data = {
 
 ### Tension
 
-An ideal (massless) rope transmits the same tension everywhere along its length, and pulleys merely redirect it. Tension pulls **away** from the object along the rope — ropes can pull, never push.
+An ideal (massless) rope carries the same tension everywhere along its length; pulleys only redirect it. Tension pulls **away** from the object along the rope — ropes pull, never push.
 
-When a rope accelerates its load, tension is no longer just the weight: for a bucket hauled upward with acceleration $a$, $T - mg = ma$, so $T = m(g + a)$. Two masses hung over one ideal pulley (an Atwood machine) share a single tension and the same acceleration magnitude, $a = \\frac{(m_1 - m_2)g}{m_1 + m_2}$.
+**Accelerating load:** tension is no longer just the weight. A bucket hauled upward with acceleration $a$ has $T - mg = ma$, so $T = m(g + a)$.
+
+**Atwood machine:** two masses over one ideal pulley share one tension and one acceleration magnitude, $a = \\frac{(m_1 - m_2)g}{m_1 + m_2}$.
 
 ### Apparent Weight (Elevators)
 
@@ -37,26 +39,20 @@ An object moving in a circle at constant speed still accelerates, because its ve
 
 $a_c = \\frac{v^2}{r} \\qquad F_c = \\frac{mv^2}{r}$
 
-Centripetal force is not a new force — it is the **net inward force**, always supplied by real forces:
-
-- Car on a flat curve: **static** friction (the tires grip, they do not slide)
-- Ball on a string: tension
-- Moon around Earth: gravity
-- Bottom of a vertical loop: $N - mg$ points up toward the center, so $N = mg + mv^2/r$ — you feel heavy
+Centripetal force is not a new force — it is the **net inward force**, always supplied by real forces: **static** friction for a car on a flat curve (gripping tires do not slide), tension for a ball on a string, gravity for the Moon. At the bottom of a vertical loop $N - mg$ points up toward the center, so $N = mg + mv^2/r$: you feel heavy.
 
 There is no outward "centrifugal force" acting on the object; the outward fling you feel is your inertia trying to continue in a straight line.
 
 ### Newton's Law of Gravitation
 
-Gravity, the force that holds the Moon in its orbit, acts between any two masses:
+Gravity acts between any two masses. Near Earth's surface it is simply the weight $mg$; for an orbiting moon or satellite it supplies the centripetal force:
 
 $F = \\frac{Gm_1m_2}{r^2}$
 
 where $r$ is the center-to-center distance and $G$ is the universal gravitational constant (a passage supplies its value when needed). What the MCAT tests is the scaling:
 
 - **Inverse square in distance.** Double $r$ and the force falls to $\\frac{1}{4}$; triple it and the force falls to $\\frac{1}{9}$.
-- **Linear in each mass.** Double either mass and the force doubles; double both and it quadruples.
-- **Two familiar faces.** Near Earth's surface this force is simply the weight $mg$; for an orbiting moon or satellite it supplies the centripetal force.`
+- **Linear in each mass.** Double either mass and the force doubles; double both and it quadruples.`
     },
     {
       id: 'frc3-worked',

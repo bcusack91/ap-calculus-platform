@@ -190,7 +190,7 @@ Current needs a complete conducting loop, a **closed circuit**. Open a switch an
             options: [`No current in the lamp; 0 V across the open switch`, `No current in the lamp; 9 V across the lamp itself`, `A tiny current; the 9 V is shared by lamp and switch`, `No current anywhere; 9 V across the open switch`],
             correctAnswer: 3,
             yield: 'MEDIUM',
-            explanation: `An open loop carries no current anywhere, so the lamp's drop is $V = IR = 0$. The loop rule still requires the drops to add to $9\\;\\text{V}$, so the whole battery voltage sits across the gap in the switch. Saying the gap has 0 V confuses "no current" with "no voltage".`
+            explanation: `An open loop carries no current anywhere, so the lamp's drop is $V = IR = 0$. The drops around the loop must still add to $9\\;\\text{V}$, so the whole battery voltage sits across the gap in the switch. Saying the gap has 0 V confuses "no current" with "no voltage".`
           },
           {
             question: `Two identical lamps are wired in series to a battery. A student claims the second lamp must be dimmer because the first lamp uses up some of the current. Which statement corrects the student?`,

@@ -26,14 +26,14 @@ $$3\\ \\text{Na}^+_{in} + 2\\ \\text{K}^+_{out} + \\text{ATP} \\to 3\\ \\text{Na
 - Inhibited by **ouabain** and **digoxin** (cardiac glycosides) from the extracellular side
 - Maintains the Na$^+$ gradient that powers secondary transport, osmotic balance (preventing cell swelling), and the resting membrane potential
 
-**Other primary pumps:**
+### Other Primary Pumps
 
 | Pump | Job |
 |------|-----|
 | Ca$^{2+}$ ATPase (PMCA, SERCA) | Keeps cytosolic Ca$^{2+}$ ~100 nM (pumps out of cell or into ER/SR) |
 | H$^+$/K$^+$ ATPase | Acidifies the stomach lumen (target of proton pump inhibitors like omeprazole) |
 | V-type H$^+$ ATPase | Acidifies lysosomes and endosomes |
-| ABC transporters | ATP-binding cassette family; includes multidrug-resistance pumps (export chemotherapy drugs from cancer cells) and **CFTR** (an ATP-gated Cl$^-$ channel — the exception that conducts rather than pumps) |
+| ABC transporters | ATP-binding cassette family: multidrug-resistance pumps (export chemotherapy drugs from cancer cells) and **CFTR**, an ATP-gated Cl$^-$ channel that conducts rather than pumps |
 
 <!-- yield:low -->
 - The best-known multidrug-resistance pump is MDR1, also called P-glycoprotein

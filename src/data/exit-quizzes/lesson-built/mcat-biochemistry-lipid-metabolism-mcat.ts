@@ -88,7 +88,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `Free cholesterol that HDL picks up from peripheral cells is moved into the particle's core for the trip back to the liver by:`,
+    question: `A patient's HDL particles stay small and disc-shaped, carrying free cholesterol only on their surface and never building a lipid core. The activity most likely missing is:`,
     options: [
       `Hydrolysis by lipoprotein lipase, activated by apoC-II`,
       `Esterification by LCAT, activated by apoA-I`,
@@ -96,7 +96,7 @@ export const EXIT_POOL: LessonExitItem[] = [
       `Phosphorylation by PKA, triggered by fasting hormones`,
     ],
     correctAnswer: 1,
-    explanation: `LCAT, activated by HDL's apoA-I, esterifies cholesterol so the now very hydrophobic ester packs into the particle core during reverse cholesterol transport. Lipoprotein lipase hydrolyzes triglyceride in chylomicrons and VLDL and does not handle cholesterol. The LDL receptor internalizes LDL into cells, and PKA phosphorylation regulates hormone-sensitive lipase, not HDL cargo.`,
+    explanation: `Free cholesterol sits at the particle surface; only after LCAT, activated by HDL's apoA-I, esterifies it does the very hydrophobic ester sink into the core and let the particle mature. Lipoprotein lipase hydrolyzes triglyceride in chylomicrons and VLDL and does not handle cholesterol. The LDL receptor internalizes LDL into cells, and PKA phosphorylation regulates hormone-sensitive lipase, not HDL cargo.`,
     difficulty: 'medium',
     yield: 'MEDIUM',
     part: 1,
@@ -439,7 +439,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     correctAnswer: 3,
     explanation: `Nitroprusside reacts with acetoacetate (and weakly acetone) but not beta-hydroxybutyrate, and the high NADH/NAD+ ratio of ethanol metabolism pushes most of the ketone pool to beta-hydroxybutyrate. Detecting beta-hydroxybutyrate gets the reagent's specificity backwards. Acetyl-CoA is not what the strip measures, and ethanol does not destroy acetone.`,
     difficulty: 'medium',
-    yield: 'MEDIUM',
+    yield: 'LOW',
     part: 3,
   },
 
@@ -515,7 +515,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 4,
   },
   {
-    question: `HMG-CoA reductase, the rate-limiting enzyme of cholesterol synthesis, converts HMG-CoA into:`,
+    question: `A hepatocyte is treated with a competitive inhibitor of HMG-CoA reductase. The reaction being blocked normally converts HMG-CoA into:`,
     options: [
       `Squalene, consuming 2 NADPH`,
       `Mevalonate, consuming 2 NADPH`,
@@ -529,15 +529,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 4,
   },
   {
-    question: `When ER cholesterol in a hepatocyte falls, the transcription factor SREBP is released to the nucleus, where it:`,
+    question: `A hepatocyte carries a mutant SREBP that can never leave the ER. When its ER cholesterol falls, the cell will fail to:`,
     options: [
-      `Represses the HMG-CoA reductase and LDL-receptor genes`,
-      `Activates the HMG-CoA reductase gene, represses the LDL-receptor gene`,
-      `Phosphorylates HMG-CoA reductase to switch it off`,
-      `Activates the HMG-CoA reductase and LDL-receptor genes`,
+      `Repress both the HMG-CoA reductase and LDL-receptor genes`,
+      `Activate the HMG-CoA reductase gene while repressing the LDL receptor`,
+      `Phosphorylate HMG-CoA reductase and switch it off`,
+      `Activate both the HMG-CoA reductase and LDL-receptor genes`,
     ],
     correctAnswer: 3,
-    explanation: `Low ER cholesterol frees SREBP to turn on both HMG-CoA reductase and LDL-receptor transcription, so the cell makes more cholesterol and imports more LDL. Repressing either gene would worsen the shortage. SREBP is a transcription factor, not a kinase; AMPK is what phosphorylates the reductase off.`,
+    explanation: `Low ER cholesterol normally frees SREBP to travel to the nucleus and turn on both HMG-CoA reductase and LDL-receptor transcription; an SREBP stuck in the ER cannot deliver that signal, so the cell neither makes more cholesterol nor imports more LDL. Repressing either gene would worsen the shortage, which is not what SREBP does. SREBP is a transcription factor, not a kinase; AMPK is what phosphorylates the reductase off.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 4,

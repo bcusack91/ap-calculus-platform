@@ -20,7 +20,7 @@ export const mcatPsychLearnMemPart2Data = {
 | **Behavior increases** (reinforcement) | Positive reinforcement (treat for sitting) | Negative reinforcement (aspirin removes headache; seatbelt silences alarm) |
 | **Behavior decreases** (punishment) | Positive punishment (extra chores added) | Negative punishment (phone taken away) |
 
-- "Positive/negative" mean **add/remove**, never good/bad; "reinforcement/punishment" are defined by whether the behavior *actually* increases or decreases
+- Classify by **effect, not by feel**: a scolding that *increases* calling-out is positive reinforcement (attention was added); a seatbelt chime that stops when you buckle is negative reinforcement, not punishment
 - **Escape** learning terminates an ongoing aversive stimulus; **avoidance** learning prevents it entirely (a warning cue signals the response window) — both are negative reinforcement
 - **Primary reinforcers** satisfy biological needs (food, warmth); **secondary (conditioned) reinforcers** gain value by association (money, tokens, grades); **token economies** apply this clinically
 

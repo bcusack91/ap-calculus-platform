@@ -10,13 +10,13 @@ export const mcatNatSelPart4Data = {
 
 ### The Lines of Evidence (and what each uniquely shows)
 
-| Evidence | What it demonstrates | Flagship examples |
-|----------|----------------------|-------------------|
-| Fossil record | Change over time; transitional forms | Fish-to-tetrapod intermediates, whale ancestors with hind limbs |
-| Comparative anatomy | Common descent via homology | Vertebrate forelimb; VESTIGIAL structures (whale pelvis, human appendix, cave-fish eyes) — remnants that make sense only as inherited leftovers |
-| Molecular homology | Universal ancestry; divergence proportional to relatedness | Shared genetic code; cytochrome c and rRNA sequence similarity tracking anatomy-based trees |
-| Biogeography | Descent with modification shaped by geography | Island species resembling the nearest mainland species, not similar-habitat species elsewhere |
-| Direct observation | Selection operating in real time | Antibiotic and pesticide resistance, Galápagos finch beak shifts |
+| Evidence | Shows | Examples |
+|---|---|---|
+| Fossil record | Change over time; transitional forms | Fish-to-tetrapod forms, legged whale ancestors |
+| Comparative anatomy | Common descent (homology) | Vertebrate forelimb; VESTIGIAL leftovers (whale pelvis, human appendix, cave-fish eyes) that only inheritance explains |
+| Molecular homology | Universal ancestry; divergence tracks relatedness | Shared genetic code; cytochrome c and rRNA similarity tracks anatomy trees |
+| Biogeography | Descent shaped by geography | Island species resemble the nearest mainland, not similar habitats elsewhere |
+| Direct observation | Selection in real time | Antibiotic/pesticide resistance, finch beak shifts |
 
 <!-- yield:low -->
 - Named transitional fossils: Tiktaalik (a fish with limb-like fins and a neck, intermediate between fish and tetrapods) and Ambulocetus (a legged, amphibious whale ancestor).
@@ -24,9 +24,9 @@ export const mcatNatSelPart4Data = {
 
 ### Three Datasets the MCAT Recycles
 
-**1. Antibiotic resistance and the Lederberg replica-plating logic.** The key question: do resistance mutations arise IN RESPONSE to the antibiotic, or do they pre-exist? Replica plating answers it: colonies grown WITHOUT antibiotic are stamped onto antibiotic plates, and resistant colonies appear at the SAME positions on every replica. Since the antibiotic never touched the master plate, the resistance mutations must have arisen randomly BEFORE exposure — the drug selects pre-existing variants; it does not induce them. Any passage where a stressor "creates" adaptive mutations on demand is describing the wrong (Lamarckian) model.
+**1. Antibiotic resistance and Lederberg replica plating.** Do resistance mutations arise IN RESPONSE to the antibiotic, or do they pre-exist? Colonies grown WITHOUT antibiotic are stamped onto antibiotic plates, and resistant colonies appear at the SAME positions on every replica. The master plate never met the drug, so the mutations arose randomly BEFORE exposure: antibiotics select pre-existing variants, they do not induce them. A stressor that "creates" adaptive mutations on demand is the wrong (Lamarckian) model.
 
-**2. The Grants' finches.** On Daphne Major, the 1977 drought left mostly large, hard seeds. Ground finches with deeper beaks survived at higher rates; because beak depth is strongly heritable (offspring resemble parents), the NEXT generation's mean beak depth was measurably larger. All three ingredients were documented in the wild: variation, heritability, differential survival → directional evolutionary response within a few generations. Wet years with abundant small seeds later pushed the mean partway back — selection tracks the current environment, with no fixed direction.
+**2. The Grants' finches.** On Daphne Major, the 1977 drought left mostly large, hard seeds. Finches with deeper beaks survived at higher rates, and because beak depth is heritable (offspring resemble parents) the NEXT generation's mean beak depth was measurably larger: variation, heritability and differential survival, all documented in the wild. Later wet years with abundant small seeds pushed the mean partway back; selection tracks the current environment, with no fixed direction.
 
 **3. Peppered moths.** Dark morph frequency rose with industrial soot (birds ate conspicuous light moths on darkened trunks) and fell again after clean-air legislation — a reversible, environment-linked directional shift, replicated across regions.
 
@@ -34,9 +34,9 @@ export const mcatNatSelPart4Data = {
 
 To claim a trait is **heritable and selected**, an experiment needs:
 
-- **Heritability check**: offspring-parent resemblance measured in a COMMON environment (common-garden or cross-fostering design), so family resemblance cannot be blamed on shared environment or diet.
+- **Heritability check**: offspring-parent resemblance in a COMMON environment (common garden or cross-fostering), so resemblance cannot be blamed on shared environment or diet.
 - **Selection check**: fitness (survival AND reproduction) measured as a function of the trait, with a control population not exposed to the selective agent.
-- **Replication**: multiple independent populations. Here is the selection-versus-drift discriminator in data (Part 2 of Population Genetics covers the drift side in depth): replicated, CONSISTENT directional shifts — in large and small populations alike — indicate selection; scattered shifts in both directions, worse in small populations, indicate drift.
+- **Replication**: multiple independent populations, the selection-versus-drift discriminator: replicated, CONSISTENT directional shifts in large and small populations alike mean selection; scattered shifts in both directions, worst in small populations, mean drift.
 
 ### Molecular Clocks (concept level)
 

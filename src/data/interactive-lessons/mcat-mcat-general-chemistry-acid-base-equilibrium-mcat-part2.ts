@@ -75,7 +75,7 @@ $$\\text{pH} = 4.74 + \\log\\frac{0.200}{0.100} = 4.74 + \\log 2 = 4.74 + 0.30 =
 
 ## Polyprotic Acids
 
-Polyprotic acids lose protons in steps; each step has a smaller $K_a$:
+Polyprotic acids lose protons in steps, and each step has a smaller $K_a$. For a pH calculation only $K_{a1}$ matters in practice; the later dissociations are negligible.
 
 $$K_{a1} \\gg K_{a2} \\gg K_{a3}$$
 
@@ -83,8 +83,6 @@ $$K_{a1} \\gg K_{a2} \\gg K_{a3}$$
 
 $$\\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^- \\quad K_{a1} = 4.3 \\times 10^{-7}$$
 $$\\text{HCO}_3^- \\rightleftharpoons \\text{H}^+ + \\text{CO}_3^{2-} \\quad K_{a2} = 4.7 \\times 10^{-11}$$
-
-For pH calculation, only $K_{a1}$ matters in practice (subsequent dissociations are negligible).
 
 ## Amphiprotic Species
 

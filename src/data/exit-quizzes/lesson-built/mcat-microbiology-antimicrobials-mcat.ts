@@ -523,7 +523,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 4,
   },
   {
-    question: `Suppose antibiotic exposure itself induced resistance mutations at a fixed rate. Then resistance would arise only on contact with the drug, so every plated cell would face the same small chance of mutating and no culture could carry resistant lineages from earlier generations. Under this hypothesis, what would parallel cultures of equal size show when each is plated on the drug?`,
+    question: `Suppose antibiotic exposure itself induced resistance mutations, at a fixed small rate per cell and only on contact with the drug. Under this hypothesis, what would many parallel cultures of equal size show when each is plated on the drug?`,
     options: [
       `A few cultures with huge counts and most with few`,
       `Similar resistant colony counts in every culture`,

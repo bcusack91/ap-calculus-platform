@@ -12,15 +12,15 @@ import { makeLessonExitQuiz, type LessonExitItem } from '../lesson-built'
 export const EXIT_POOL: LessonExitItem[] = [
   // ───────────────────────── Part 1 — default ─────────────────────────
   {
-    question: `How many orbitals does the $n = 4$ shell contain, and how many electrons can it hold?`,
+    question: `An electron has $n = 4$ and $m_\\ell = +2$. In which subshells could it be?`,
     options: [
-      `16 orbitals; 32 electrons`,
-      `4 orbitals; 8 electrons`,
-      `9 orbitals; 18 electrons`,
-      `16 orbitals; 16 electrons`,
+      `$4d$ or $4f$`,
+      `$4p$, $4d$ or $4f$`,
+      `$4f$ only`,
+      `$4s$, $4p$, $4d$ or $4f$`,
     ],
     correctAnswer: 0,
-    explanation: `For $n = 4$, $\\ell$ runs from 0 to 3, giving $1 + 3 + 5 + 7 = 16$ orbitals ($n^2$), and two electrons per orbital gives 32 ($2n^2$). Four orbitals counts one per subshell instead of $2\\ell + 1$, and 9 orbitals with 18 electrons is the $n = 3$ shell. Sixteen electrons forgets that Pauli allows two electrons in each orbital.`,
+    explanation: `$m_\\ell$ runs from $-\\ell$ to $+\\ell$, so a value of $+2$ needs $\\ell \\geq 2$: the $d$ subshell ($\\ell = 2$) or the $f$ subshell ($\\ell = 3$), both of which exist in $n = 4$ because $\\ell$ may reach $n - 1 = 3$. A $p$ subshell ($\\ell = 1$) only offers $m_\\ell$ of $-1$, $0$ and $+1$, and $4s$ has $m_\\ell = 0$ alone, so neither answer that includes them fits. Restricting the electron to $4f$ forgets that $4d$ also has an $m_\\ell = +2$ orbital.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 1,

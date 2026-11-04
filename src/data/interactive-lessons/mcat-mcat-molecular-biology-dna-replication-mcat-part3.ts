@@ -42,8 +42,7 @@ Replication is extraordinarily accurate because it stacks three filters:
 | Mismatch repair | Replication errors missed by proofreading | Strand-discriminating excision post-fork | Lynch syndrome (hereditary colon cancer) |
 | Nonhomologous end joining (NHEJ) | Double-strand breaks, any cell-cycle phase | Direct ligation of ends — error-prone (small indels) | — |
 | Homologous recombination (HR) | Double-strand breaks in S/G2 | Uses the sister chromatid as a faithful template | **BRCA1/2** — HR-deficient tumors |
-
-> Checkpoint tie-in: damage detected in G1/S or G2/M halts the cycle via p53 until repair completes — the bridge to the cell-cycle lesson.`
+| Checkpoint tie-in | Any damage sensed at G1/S or G2/M | p53 halts the cycle until repair completes; the bridge to the cell-cycle lesson | — |`
     },
     {
       id: 'dnar3-worked',

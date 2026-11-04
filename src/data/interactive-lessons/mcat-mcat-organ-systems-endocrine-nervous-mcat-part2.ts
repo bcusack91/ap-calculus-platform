@@ -10,14 +10,14 @@ export const mcatEndoNervSubPart2Data = {
 
 ### The Resting Membrane Potential (~ −70 mV)
 
-Two ingredients make the inside of a neuron negative at rest:
+Two ingredients make a resting neuron negative inside:
 
-1. **Concentration gradients** maintained by the **Na$^+$/K$^+$-ATPase** (3 Na$^+$ out, 2 K$^+$ in, per ATP): high K$^+$ inside, high Na$^+$ outside.
-2. **Selective permeability:** at rest the membrane leaks mostly **K$^+$** (leak channels). K$^+$ exits down its gradient until the growing negative interior pulls it back — equilibrium near the K$^+$ Nernst potential (~ −90 mV); slight Na$^+$ leak drags the resting value up to ~ −70 mV.
+- **Concentration gradients** maintained by the **Na$^+$/K$^+$-ATPase** (3 Na$^+$ out, 2 K$^+$ in, per ATP): high K$^+$ inside, high Na$^+$ outside.
+- **Selective permeability:** at rest the membrane leaks mostly **K$^+$**. K$^+$ exits down its gradient until the negative interior pulls it back — equilibrium near $E_K$ (~ −90 mV); a slight Na$^+$ leak drags rest up to ~ −70 mV.
 
-$$E_{ion} = \\frac{61}{z} \\log_{10} \\frac{[ion]_{out}}{[ion]_{in}} \\text{ (mV, at body temperature)}$$
+$$E_{ion} = \\frac{61}{z} \\log_{10} \\frac{[ion]_{out}}{[ion]_{in}} \\text{ (mV at 37°C)}$$
 
-**Rule:** the membrane potential moves TOWARD the equilibrium potential of whichever ion it is currently most permeable to. Every phase of the action potential is this rule in action.
+**Rule:** the membrane potential moves TOWARD the equilibrium potential of the ion it is most permeable to right now. Every phase of the action potential is this rule in action.
 
 ### The Action Potential — A Fixed Sequence
 
@@ -50,10 +50,10 @@ At the **neuromuscular junction**, ACh on nicotinic receptors always excites mus
 |---------|---------|-------------|-----------------|
 | Pathway | 1 neuron to skeletal muscle | 2 neurons (short pre-, long post-ganglionic) | 2 neurons (long pre-, short post-ganglionic) |
 | Preganglionic NT | — | ACh (nicotinic) | ACh (nicotinic) |
-| Final NT / receptor | ACh (nicotinic) | **Norepinephrine** (adrenergic α/β)* | **ACh (muscarinic)** |
+| Final NT / receptor | ACh (nicotinic) | **Norepinephrine** (adrenergic α/β; see exceptions) | **ACh (muscarinic)** |
 | Headline | Voluntary movement, reflex arcs | Fight-or-flight: ↑HR, bronchodilation, pupil dilation, glycogenolysis, blood to muscle | Rest-and-digest: ↓HR, ↑GI activity, pupil constriction |
 
-*Exceptions: sweat glands (sympathetic but ACh/muscarinic) and the **adrenal medulla** — a modified sympathetic ganglion whose chromaffin cells dump epinephrine into BLOOD (a hormone: broadcast, slower, longer-lasting than nerve NE).
+**Exceptions:** sweat glands (sympathetic but ACh/muscarinic) and the **adrenal medulla** — a modified sympathetic ganglion whose chromaffin cells dump epinephrine into BLOOD (a hormone: broadcast, slower, longer-lasting than nerve NE).
 
 - **Reflex arc:** receptor → afferent (dorsal root) → integration (spinal cord; monosynaptic for knee-jerk, interneurons otherwise) → efferent (ventral root) → effector. Reflexes fire before the brain knows.
 - Most organs receive **dual antagonistic innervation**; resting organ tone is a blend (e.g., vagal dominance at the SA node).`

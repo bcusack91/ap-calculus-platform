@@ -384,8 +384,8 @@ export const mcatBiologicalBasisFigures: DeckFigurePlacement[] = [
       caption: 'A schematic neuron: input at the dendrites, the go/no-go decision at the axon hillock, output down the myelinated axon to the terminals.',
     },
     blocks: [
-      '- Input arrives at the dendrites; the **axon hillock** sums it and fires an AP if threshold (≈ −55 mV) is reached',
-      '- Myelin (oligodendrocytes in CNS, Schwann cells in PNS) → fast **saltatory conduction**',
+      '- One decision point: everything before the **axon hillock** is graded and summed; everything after it is all-or-none',
+      '- Myelin is insulation — the spike is regenerated only at the **nodes of Ranvier**, so it jumps node to node',
     ],
   },
   {
@@ -415,7 +415,7 @@ export const mcatBiologicalBasisFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- Electrical along the axon, chemical across the cleft, electrical again on the other side',
-      '- $Ca^{2+}$ influx is the trigger for exocytosis; **reuptake**, **enzymatic degradation** or **diffusion** end the signal',
+      '- Every step is a drug target: release, the receptor, reuptake or the degrading enzyme — where the synapse can be nudged',
     ],
   },
   {

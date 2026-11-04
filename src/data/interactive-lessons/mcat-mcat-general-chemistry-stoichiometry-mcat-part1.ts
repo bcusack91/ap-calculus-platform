@@ -40,17 +40,9 @@ so at STP a gas's density is $M/22.4$ g/L (for $\\text{O}_2$, $32.0/22.4 = 1.43$
 
 Add the atomic masses of all atoms in the formula.
 
-**Example — $\\text{H}_2\\text{SO}_4$ (sulfuric acid):**
-- $2 \\times \\text{H} = 2 \\times 1.0 = 2.0$
-- $1 \\times \\text{S} = 1 \\times 32.1 = 32.1$
-- $4 \\times \\text{O} = 4 \\times 16.0 = 64.0$
-- Molar mass $= 2.0 + 32.1 + 64.0 = \\mathbf{98.1\\text{ g/mol}}$
+**Example — $\\text{H}_2\\text{SO}_4$ (sulfuric acid):** $2(1.0) + 32.1 + 4(16.0) = 2.0 + 32.1 + 64.0 = \\mathbf{98.1\\text{ g/mol}}$.
 
-**Example — $\\text{Ca}_3(\\text{PO}_4)_2$ (calcium phosphate):**
-- $3 \\times \\text{Ca} = 3 \\times 40.1 = 120.3$
-- $2 \\times \\text{P} = 2 \\times 31.0 = 62.0$
-- $8 \\times \\text{O} = 8 \\times 16.0 = 128.0$
-- Molar mass $= 310.3\\text{ g/mol}$
+**Example — $\\text{Ca}_3(\\text{PO}_4)_2$ (calcium phosphate):** a subscript outside parentheses multiplies everything inside, so there are 2 P and 8 O: $3(40.1) + 2(31.0) + 8(16.0) = 120.3 + 62.0 + 128.0 = \\mathbf{310.3\\text{ g/mol}}$.
 
 ## Percent Composition
 
@@ -64,11 +56,9 @@ $$\\frac{16.0}{18.0} \\times 100 = 88.9\\%$$
 - **Empirical formula:** Simplest whole-number ratio of atoms.
 - **Molecular formula:** Actual number of atoms; always a whole-number multiple of the empirical formula.
 
-**Workflow to find empirical formula from % composition:**
-1. Assume 100 g sample → grams = percentages.
-2. Divide each by atomic mass to get moles.
-3. Divide all by the smallest mole value.
-4. Round to integers (multiply if needed to clear fractions).
+**Workflow, % composition → empirical formula:** assume a 100 g sample (grams = percentages) → divide each by its atomic mass (moles) → divide all by the smallest → round to integers, multiplying through if a fraction remains ($1 : 1.5$ becomes $2 : 3$).
+
+**Combustion analysis** supplies the same data for an unknown hydrocarbon: every C leaves as $\\text{CO}_2$ and every H as $\\text{H}_2\\text{O}$, so mol C $=$ mol $\\text{CO}_2$ collected and mol H $= 2 \\times$ mol $\\text{H}_2\\text{O}$; any oxygen in the compound is found by mass difference.
 
 ### Worked Example — From % Composition to Molecular Formula
 

@@ -21,18 +21,15 @@ Part 1 of this lesson assumed a fluid with no internal friction. Real fluids, bl
 - **Viscosity costs energy.** Friction between layers turns mechanical energy into heat, so pressure falls steadily along even a uniform, horizontal tube. Bernoulli's equation cannot predict that drop, because it assumes no energy is lost. A pressure difference is needed just to keep a viscous fluid moving at constant speed.
 - **Velocity profile.** In smooth flow through a tube, the fluid touching the wall is at rest and the fluid at the centre moves fastest, giving a bullet-shaped (parabolic) profile. The "speed" in $Q = Av$ is the average across the tube.
 
-**Laminar vs. turbulent flow**
-
 | | Laminar | Turbulent |
 |---|---|---|
 | Pattern | smooth layers that do not mix | chaotic swirls (eddies) |
 | Energy loss | lower; flow is proportional to the pressure difference | higher; much more pressure is needed for the same flow |
 | Sound | silent | noisy |
 
-- Turbulence becomes more likely with **higher speed**, **larger diameter**, **higher density** and **lower viscosity**. These four factors combine into one dimensionless number, the **Reynolds number** $Re = \\rho v D/\\eta$, where $D$ is the tube diameter: the larger $Re$, the more likely turbulence, and flow turns turbulent above a critical value.
+- Turbulence becomes more likely with **higher speed**, **larger diameter**, **higher density** and **lower viscosity**. These four factors combine into one dimensionless number, the **Reynolds number** $Re = \\rho v D/\\eta$, where $D$ is the tube diameter: the larger $Re$, the more likely turbulence, and flow turns turbulent above a critical value. Once it does, neither Bernoulli's equation nor Poiseuille's law holds.
 - Blood flow is mostly laminar. Turbulence appears where blood moves fast: past a narrowed valve or vessel, in the aorta during heavy exercise, and in severe anemia (thin blood plus a high cardiac output). It is heard with a stethoscope as a **murmur** over the heart or a **bruit** (a whooshing sound) over an artery.
 - A blood-pressure cuff uses this. When the cuff pressure lies between systolic and diastolic pressure, the squeezed artery snaps open briefly with each beat and the jet is turbulent, making tapping sounds. As the cuff deflates, the sounds begin when cuff pressure falls to systolic and disappear when it falls below diastolic, when flow becomes smooth again.
-- Neither Bernoulli's equation nor Poiseuille's law holds for turbulent flow.
 
 <!-- yield:low -->
 - In a straight tube, flow usually turns turbulent above $Re \\approx 2000$. The cuff sounds are called Korotkoff sounds.
@@ -129,7 +126,7 @@ A **stenosis** is an abnormal narrowing of a vessel or valve. Three laws answer 
 | How much flow gets through for a given driving pressure? | Poiseuille | less: $R \\propto 1/r^4$ |
 
 - **Continuity** applies whenever the flow is known or assumed unchanged, as in a mild stenosis where the body maintains flow.
-- **Bernoulli** fits a SHORT narrowing, where the speed changes quickly and friction in the brief segment is small. It explains the pressure dip in the jet. Downstream, the jet breaks into turbulence, which causes the bruit and wastes energy, so the pressure does not fully recover.
+- **Bernoulli** fits a SHORT narrowing, where the speed changes quickly and friction in the brief segment is small. It explains the pressure dip in the jet. Downstream, the jet breaks into turbulence, which causes the bruit.
 - **Poiseuille** fits a LONG narrowing, or any question about whether flow can be maintained at a fixed driving pressure. A severe or long stenosis raises resistance steeply, and flow falls.
 - **The reverse case: an aneurysm** (an abnormal widening of an artery). Continuity says blood slows in the wider segment; Bernoulli says slower blood means higher pressure on the wall there; that pressure stretches the wall further, a vicious cycle that lets an aneurysm keep growing.
 - They do not contradict each other. Continuity assumes $Q$ stays fixed; Poiseuille tells you what it costs (a larger $\\Delta P$) to keep $Q$ fixed, or how far $Q$ falls if $\\Delta P$ cannot rise.
@@ -221,9 +218,7 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 **Low-yield extras**
 
 - the critical Reynolds number (about 2000); the Korotkoff name; airway resistance peaking in the medium bronchi; the Fåhræus–Lindqvist effect.
-<!-- /yield -->
-
-**Next up:** the *Waves & Interference* lesson, which covers oscillations, simple harmonic motion, wave basics, interference and standing waves, including $v = f\\lambda$.`
+<!-- /yield -->`
     }
   ]
 }

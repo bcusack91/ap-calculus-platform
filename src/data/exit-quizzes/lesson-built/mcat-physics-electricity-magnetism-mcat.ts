@@ -575,7 +575,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     question: `A strong magnet dropped through a closed copper coil falls noticeably more slowly while passing through it. The best explanation is that:`,
     options: [
       `Copper is ferromagnetic and attracts the magnet toward the wire`,
-      `Currents induced in the coil oppose the change in flux, dragging on the magnet`,
+      `Induced currents in the coil oppose the changing flux and drag on it`,
       `The coil's steady magnetic flux exerts a constant braking force`,
       `The magnet induces a net charge on the coil that attracts it`,
     ],

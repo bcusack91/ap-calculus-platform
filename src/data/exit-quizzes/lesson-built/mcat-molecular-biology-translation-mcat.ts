@@ -434,16 +434,16 @@ export const EXIT_POOL: LessonExitItem[] = [
 
   // ───────────────────────── Part 4 — default ─────────────────────────
   {
-    question: `Cells are moved from iron-poor to iron-rich medium. Ferritin protein rises within hours while ferritin mRNA stays constant. The mechanism is that:`,
+    question: `A cell line expresses a mutant iron regulatory protein that can no longer bind iron, so it stays in its RNA-binding form whatever the iron level. Grown in iron-rich medium and compared with normal cells, these cells make:`,
     options: [
-      `IRP leaves the 5' UTR element, freeing ribosome scanning`,
-      `IRP binds the 5' UTR element, recruiting ribosomes to the mRNA`,
-      `IRP leaves the 3' UTR elements, so the mRNA becomes more stable`,
-      `Iron speeds transcription from the ferritin gene's promoter`,
+      `Less ferritin and more transferrin receptor`,
+      `More ferritin and less transferrin receptor`,
+      `More ferritin and more transferrin receptor`,
+      `Less ferritin and less transferrin receptor`,
     ],
     correctAnswer: 0,
-    explanation: `IRP binds the IRE in ferritin's 5' UTR only when iron is low, blocking ribosome scanning; high iron pulls IRP off, so the existing mRNA is translated. IRP bound at a 5' UTR element represses rather than recruits ribosomes. Ferritin's IRE sits in the 5' UTR, and stability control through 3' UTR elements is the transferrin receptor's mechanism; the constant mRNA also rules out a transcriptional change.`,
-    difficulty: 'medium',
+    explanation: `An IRP that cannot sense iron behaves as if iron were always low: it stays on ferritin's 5' UTR IRE, blocking ribosome scanning, so less ferritin is made, and it stays on the transferrin receptor's 3' UTR IREs, shielding that mRNA from decay, so more receptor is made. More ferritin with less receptor is the normal iron-rich response, which these cells can no longer mount. Because the same bound protein lowers one product and raises the other, both cannot move in the same direction.`,
+    difficulty: 'hard',
     yield: 'MEDIUM',
     part: 4,
   },

@@ -8,6 +8,8 @@ export const mcatSocialPsychPart4Data = {
 
 **Part 4 of 5 — Prejudice, Stereotypes & Discrimination**
 
+### Stereotype, Prejudice & Discrimination — Three Components
+
 Distinguish the three carefully — a classic MCAT trap:
 
 | Term | Component | Definition |

@@ -66,7 +66,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `In carbonic anhydrase, a bound Zn2+ ion stabilizes negative charge that develops during the reaction. This is an example of:`,
+    question: `During phosphoryl transfer by a kinase, a bound Mg2+ ion neutralizes the negative charges on ATP's phosphate groups and stabilizes the charge that develops in the transition state. This is an example of:`,
     options: [
       `Covalent catalysis`,
       `Proximity and orientation effects`,
@@ -74,7 +74,7 @@ export const EXIT_POOL: LessonExitItem[] = [
       `General acid-base catalysis by His`,
     ],
     correctAnswer: 2,
-    explanation: `Metal cations act as electrostatic catalysts by stabilizing developing negative charge, and the Zn2+ of carbonic anhydrase is the textbook case. Covalent catalysis requires a transient enzyme-substrate bond, as in the serine proteases. Proximity and orientation describe holding substrates together in the right geometry, and acid-base catalysis is proton transfer by residues such as histidine rather than charge stabilization by a metal.`,
+    explanation: `Metal cations act as electrostatic catalysts by shielding or stabilizing negative charge, the same role Zn2+ plays in carbonic anhydrase. Covalent catalysis requires a transient enzyme-substrate bond, as in the serine proteases. Proximity and orientation describe holding substrates together in the right geometry, and acid-base catalysis is proton transfer by residues such as histidine rather than charge stabilization by a metal.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
     part: 1,

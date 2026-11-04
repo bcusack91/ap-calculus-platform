@@ -14,9 +14,8 @@ Before any immune cell acts, **physical and chemical barriers** exclude most pat
 
 - **Skin**: keratinized epithelium, dry and slightly acidic; sweat and sebum inhibit growth
 - **Mucus** in respiratory and GI tracts traps microbes; the mucociliary escalator sweeps them out
-- **Lysozyme** (tears, saliva, mucus) cleaves bacterial peptidoglycan cell walls
+- **Lysozyme** (tears, saliva, mucus) cleaves bacterial peptidoglycan; **defensins** from epithelial cells punch holes in microbial membranes
 - **Stomach acid** (pH ~2) destroys most swallowed microbes
-- **Defensins**: antimicrobial peptides secreted by epithelial cells that punch holes in microbial membranes
 
 ### Innate vs. Adaptive — The Framing Table
 
@@ -32,8 +31,8 @@ Before any immune cell acts, **physical and chemical barriers** exclude most pat
 
 - **Neutrophils**: most abundant leukocyte; first responders that phagocytose and die at the site (pus)
 - **Macrophages**: tissue-resident phagocytes (from monocytes); engulf pathogens, release cytokines, present antigen
-- **Dendritic cells**: the **innate→adaptive bridge** — they sample antigen in tissue, migrate to lymph nodes, and present it to naive T cells (the premier antigen-presenting cell)
-- **NK cells**: lymphocyte-lineage but innate; kill host cells that **LACK MHC I** ("missing self" — virus-infected and tumor cells often downregulate MHC I to hide from T cells, and NK cells exploit exactly that)
+- **Dendritic cells**: the **innate→adaptive bridge** and premier antigen-presenting cell — they sample antigen in tissue, migrate to lymph nodes and present it to naive T cells
+- **NK cells**: lymphocyte-lineage but innate; kill host cells that **LACK MHC I** ("missing self") — the very trick virus-infected and tumor cells use to hide from T cells
 - **Eosinophils** (parasites, allergy), **basophils** and **mast cells** (histamine release, allergy and inflammation)
 
 ### Pattern Recognition: PRRs and PAMPs

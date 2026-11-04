@@ -37,7 +37,7 @@ Irreversible inhibitors covalently modify the enzyme (or bind so tightly they ne
 - **Organophosphates** (nerve agents, some pesticides) phosphorylate the active-site serine of acetylcholinesterase.
 - **Penicillin** covalently traps the bacterial transpeptidase — a "suicide substrate" (mechanism-based inhibitor) that the enzyme itself activates.
 
-Kinetically, irreversible inhibition lowers $V_{max}$ over time because functional $[E]$ falls; it is distinguished experimentally by **dilution or dialysis** — reversible inhibition washes out, covalent inhibition does not.
+Functional $[E]$ falls, so $V_{max}$ falls over time. The test is **dilution or dialysis**: reversible inhibition washes out, covalent inhibition does not.
 
 ### A Note on In-Vivo Relevance
 

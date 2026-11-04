@@ -14,7 +14,7 @@ export const magnetismMcatPart2: LessonData = {
 
 A charge $q$ moving with speed $v$ in a field $B$ feels
 
-$F = qvB\\sin\\theta$
+$$F = qvB\\sin\\theta$$
 
 where $\\theta$ is the angle between $\\vec{v}$ and $\\vec{B}$. Read the three switches this builds in:
 
@@ -42,7 +42,7 @@ A magnetic field can steer a charge but never speed it up or slow it down. Only 
 
 A charge moving perpendicular to a uniform $\\vec{B}$ is steered in a circle: the magnetic force IS the centripetal force.
 
-$qvB = \\frac{mv^2}{r} \\quad\\Rightarrow\\quad r = \\frac{mv}{qB}$
+$$qvB = \\frac{mv^2}{r} \\quad\\Rightarrow\\quad r = \\frac{mv}{qB}$$
 
 - Faster or heavier particles sweep LARGER circles; stronger fields or bigger charges force TIGHTER ones.
 - The period $T = \\frac{2\\pi m}{qB}$ is independent of speed — fast particles just travel bigger circles in the same time.

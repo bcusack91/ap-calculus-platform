@@ -12,7 +12,8 @@ export const mcatSocioCulturePart4Data = {
 
 The categories people carry as identities are cultural products transmitted through socialization:
 
-- **Gender socialization**: from birth, agents (family, school, peers, media) differentially reward gender-typed behavior; children learn gender as a ROLE with scripts, then police it in peers. Distinguish **sex** (biological classification) from **gender** (the social role and identity built on it) — and note that what counts as masculine/feminine varies across cultures, the standard evidence for social construction.
+- **Gender socialization**: from birth, agents (family, school, peers, media) differentially reward gender-typed behavior; children learn gender as a ROLE with scripts, then police it in peers.
+- **Sex vs. gender**: **sex** is the biological classification; **gender** is the social role and identity built on it. What counts as masculine/feminine varies across cultures — the standard evidence for social construction.
 - **Racial and ethnic socialization**: **race** is a socially constructed classification treated as biological; **ethnicity** is shared culture and ancestry claimed by a group. Racial categories vary across societies and eras (the same person classified differently in different countries) — the construction argument in one line. Racial socialization includes preparing children for bias.
 - **Identity work is lifelong**: adult conversions, migrations, and professional training (the hidden curriculum of medical school itself) all re-socialize identity.
 

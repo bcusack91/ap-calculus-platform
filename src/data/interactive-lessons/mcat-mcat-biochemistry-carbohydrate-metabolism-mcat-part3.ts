@@ -41,7 +41,9 @@ About 90% of released residues are G1P; ~10% (branch points) are free glucose.
 - Ca$^{2+}$ acts through calmodulin, which is built into phosphorylase kinase as one of its subunits.
 <!-- /yield -->
 
-**Glycogen storage diseases to recognize:** von Gierke (G6Pase — severe fasting hypoglycemia + hepatomegaly), Cori (debrancher — abnormal short-branched glycogen), McArdle (muscle phosphorylase — exercise cramps, no rise in blood lactate on exercise), Pompe (lysosomal acid $\\alpha$-glucosidase — cardiomegaly).
+### Glycogen Storage Diseases to Recognize
+
+Four to know: von Gierke (G6Pase — severe fasting hypoglycemia + hepatomegaly), Cori (debrancher — abnormal short-branched glycogen), McArdle (muscle phosphorylase — exercise cramps, no rise in blood lactate on exercise), Pompe (lysosomal acid $\\alpha$-glucosidase — cardiomegaly).
 
 ### The Pentose Phosphate Pathway (HMP Shunt)
 

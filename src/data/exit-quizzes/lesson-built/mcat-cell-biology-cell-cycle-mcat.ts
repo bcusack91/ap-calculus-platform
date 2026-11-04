@@ -81,7 +81,7 @@ export const EXIT_POOL: LessonExitItem[] = [
       `X and Y are both vinca alkaloids`,
     ],
     correctAnswer: 1,
-    explanation: `Vinca alkaloids (like colchicine) prevent tubulin polymerization so no spindle forms, while taxanes such as paclitaxel hyper-stabilize microtubules so the spindle cannot remodel. Reversing the pairing swaps those mechanisms. The two classes act in opposite ways, so neither class describes both drugs, even though both end in spindle checkpoint arrest.`,
+    explanation: `Vinca alkaloids (and colchicine) prevent tubulin polymerization so no spindle forms, while taxanes such as paclitaxel hyper-stabilize microtubules so the spindle cannot remodel. Reversing the pairing swaps those mechanisms. The two classes act in opposite ways, so neither class describes both drugs, even though both end in spindle checkpoint arrest.`,
     difficulty: 'easy',
     yield: 'HIGH',
     part: 1,

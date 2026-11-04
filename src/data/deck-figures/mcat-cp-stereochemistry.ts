@@ -586,8 +586,8 @@ export const mcatStereochemistryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Enantiomeric Excess (ee)',
-    mode: 'lead',
+    at: 'Worked Examples — Optical Activity & Reactions',
+    mode: 'after',
     figure: {
       svg: eeSvg,
       alt:

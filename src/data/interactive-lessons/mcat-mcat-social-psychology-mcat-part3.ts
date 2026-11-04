@@ -8,6 +8,8 @@ export const mcatSocialPsychPart3Data = {
 
 **Part 3 of 5 — Conformity, Compliance & Obedience**
 
+### Three Sources of Social Influence
+
 These three are distinguished by the SOURCE of social influence.
 
 | Concept | Source of influence | Classic study |

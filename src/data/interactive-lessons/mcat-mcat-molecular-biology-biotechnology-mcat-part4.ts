@@ -10,12 +10,15 @@ export const mcatBiotechnologyPart4Data = {
 
 ### The Protein-Side Toolkit
 
-| Technique | Question answered | Key mechanism |
+| Antibody assay | Question answered | Key mechanism |
 |-----------|-------------------|---------------|
-| **ELISA** | How much of protein/antigen X is in this fluid? | Capture antibody + enzyme-linked detection antibody; color intensity ~ amount (pregnancy tests, HIV screening) |
-| **Western blot** | Is protein X present, and at what size? | SDS-PAGE + antibody probe (classically, HIV confirmation after an ELISA screen) |
+| **ELISA** | How much of protein X is in this fluid? | Capture antibody + enzyme-linked detection antibody; color ~ amount (pregnancy tests, HIV screening) |
+| **Western blot** | Is protein X present, and at what size? | SDS-PAGE + antibody probe (HIV confirmation after an ELISA screen) |
 | **Immunofluorescence** | WHERE is protein X in the cell/tissue? | Fluorescent antibody + microscopy |
 | **Flow cytometry (FACS)** | How many cells carry surface marker X? Sort them? | Fluorescent antibodies read cell-by-cell in a stream (CD4 counts) |
+
+| Partners and identity | Question answered | Key mechanism |
+|-----------|-------------------|---------------|
 | **Co-immunoprecipitation** | Does protein X physically associate with Y in cells? | Antibody to X pulls down X plus its partners; blot for Y |
 | **Mass spectrometry** | What proteins/modifications are in this sample? | Mass-to-charge fingerprinting of peptides |
 

@@ -16,8 +16,8 @@ This part builds on the *Early Embryology: Fertilization to Germ Layers* lesson:
 
 | Level | Can become | Examples |
 |-------|-----------|----------|
-| Totipotent | EVERYTHING — embryo AND extraembryonic tissue (trophoblast, the blastocyst's outer layer, which forms the placenta) | Zygote; the earliest blastomeres (cells of the first divisions) |
-| Pluripotent | Any cell of the embryo proper (all three germ layers) but **NOT trophoblast** | Inner cell mass (the blastocyst's inner cluster, which forms the embryo); embryonic stem (ES) cells |
+| Totipotent | EVERYTHING — embryo AND extraembryonic tissue (trophoblast, the blastocyst's outer layer → placenta) | Zygote; the earliest blastomeres |
+| Pluripotent | Any cell of the embryo proper (all three germ layers) but **NOT trophoblast** | Inner cell mass (the blastocyst's inner cluster); embryonic stem (ES) cells |
 | Multipotent | A related family of cell types | Adult stem cells (hematopoietic stem cell → all blood lineages, nothing else) |
 
 **iPSCs** (induced pluripotent stem cells): adult somatic cells reprogrammed with transcription factors back to a pluripotent state — evidence that differentiation changes gene EXPRESSION, not gene content. The pluripotent/totipotent boundary is a favorite trap: ES cells cannot make placenta, so they are pluripotent, not totipotent.
@@ -31,7 +31,9 @@ Order: specification (reversible bias; a specified tissue follows its fate when 
 
 ### Induction: Cells Telling Neighbors What to Become
 
-**Induction** is one tissue directing the developmental fate of an adjacent tissue, usually via secreted **paracrine** signals. Two classic examples: the **notochord** (a midline rod of mesoderm) induces the overlying ectoderm to form the neural plate, the start of the nervous system; the **optic vesicle** (an outgrowth of the brain) induces the overlying surface ectoderm to form the lens of the eye. The signal-sender is the **inducer**; the receiver must be **competent** (have the receptors) to respond.
+**Induction** is one tissue directing the developmental fate of an adjacent tissue, usually via secreted **paracrine** signals. The signal-sender is the **inducer**; the receiver must be **competent** (have the receptors) to respond.
+
+Two classic examples: the **notochord** (a midline rod of mesoderm) induces the overlying ectoderm to form the neural plate, the start of the nervous system; the **optic vesicle** (an outgrowth of the brain) induces the overlying surface ectoderm to form the lens of the eye.
 
 ### The Organizer — Logic of a Legendary Experiment
 
@@ -46,7 +48,9 @@ A **gastrula** is an embryo undergoing gastrulation, the stage when cells move i
 
 ### Morphogens: Concentration Encodes Fate
 
-A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)**, secreted by the notochord and the ventral floor plate of the neural tube (the embryo's precursor of the brain and spinal cord), patterns the tube's ventral side (Shh also patterns the limb); **BMPs** from the overlying surface ectoderm pattern its dorsal side. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
+A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
+
+Name-level examples: **Sonic hedgehog (Shh)**, secreted by the notochord and the ventral floor plate of the neural tube (the embryo's precursor of the brain and spinal cord), patterns the tube's ventral side (Shh also patterns the limb); **BMPs** from the overlying surface ectoderm pattern its dorsal side.
 
 <!-- yield:low -->
 - This threshold picture is nicknamed the **"French flag" model**: one gradient read as three stripes.
@@ -56,10 +60,10 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
 
 | Design | Move | Can conclude | Cannot conclude |
 |--------|------|--------------|-----------------|
-| Transplantation | Move tissue to a new location | Whether the tissue is DETERMINED (keeps original fate) or still plastic (adopts host fate); whether it INDUCES neighbors | Molecular identity of the signal |
-| Ablation | Destroy/remove a tissue | Whether the tissue is NECESSARY for a structure to form | Whether it is sufficient; what it would do elsewhere |
-| Lineage tracing | Label one cell; map its labeled descendants | What a cell ACTUALLY gives rise to in normal development (its fate) | What it COULD have become (its potency) |
-| Knockout/knockdown | Remove one gene's function | Whether that GENE is necessary | Where/when the protein acts, without further work |
+| Transplantation | Move tissue to a new site | Whether it is DETERMINED (keeps its fate) or still plastic (adopts the host fate); whether it INDUCES neighbors | Molecular identity of the signal |
+| Ablation | Remove a tissue | Whether it is NECESSARY for a structure to form | Whether it is sufficient; what it would do elsewhere |
+| Lineage tracing | Label one cell; map its descendants | What a cell ACTUALLY becomes in normal development (its fate) | What it COULD have become (its potency) |
+| Knockout/knockdown | Remove one gene's function | Whether that GENE is necessary | Where/when the protein acts |
 
 **Fate ≠ potency**: lineage tracing reveals fate; only a challenge (transplant to a new environment) reveals potency.
 

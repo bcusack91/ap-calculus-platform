@@ -178,7 +178,7 @@ The MCAT rarely asks "SN1 or SN2?" naked. It hides the decision inside:
 
 - **SN2 on 3°, SN1 on methyl.** A 3° carbon blocks backside attack, and a methyl or plain 1° carbon cannot form a cation.
 - **Methoxide on 2° as clean SN2.** A small strong base on a secondary halide gives mostly E2 (Zaitsev), with SN2 minor.
-- **Two inversions as one.** HBr then thiolate inverts twice (net retention); tosylate then SN2 inverts exactly once.
+- **Two inversions as one.** HBr then thiolate inverts twice (net retention) or racemizes via a cation; tosylate then SN2 inverts exactly once.
 - **Strong base to substitute.** On benzylic or tertiary substrates strong bases eliminate; weakly basic solvolysis substitutes.
 
 <!-- yield:low -->

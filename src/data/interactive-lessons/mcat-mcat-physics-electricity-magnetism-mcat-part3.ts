@@ -14,7 +14,7 @@ export const magnetismMcatPart3: LessonData = {
 
 A wire is a stream of moving charges, so a field pushes on it:
 
-$F = BIL\\sin\\theta$
+$$F = BIL\\sin\\theta$$
 
 where $L$ is the length of wire in the field and $\\theta$ the angle between the current direction and $\\vec{B}$.
 
@@ -38,7 +38,7 @@ Each wire sits in the other's circular field:
 
 Cross an electric field and a magnetic field at right angles, both perpendicular to a charged particle's velocity, arranged so the electric force ($qE$) and magnetic force ($qvB$) oppose each other. They balance only at one speed:
 
-$qE = qvB \\quad\\Rightarrow\\quad v = \\frac{E}{B}$
+$$qE = qvB \\quad\\Rightarrow\\quad v = \\frac{E}{B}$$
 
 The combined force $\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$ is the **Lorentz force**; the selector is the special case where its two parts cancel.
 
@@ -49,12 +49,10 @@ The combined force $\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$ is the **
 
 After the selector fixes $v$, the beam enters a region with only a magnetic field and bends in a circle:
 
-$r = \\frac{mv}{qB}$
+$$r = \\frac{mv}{qB}$$
 
-With $v$, $q$, and $B$ known, the radius reads out the MASS:
+With $v$, $q$, and $B$ known, the radius reads out the MASS: heavier ions sweep a larger radius (harder to turn), and higher charge a smaller one (stronger force).
 
-- Heavier ions → larger radius (harder to turn).
-- Higher charge → smaller radius (stronger force).
 - Strictly, the machine separates ions by mass-to-charge ratio $m/q$ — an ion twice as heavy with twice the charge lands on the same spot as the lighter, singly charged one. MCAT passages exploit exactly this ambiguity.`
     },
     {

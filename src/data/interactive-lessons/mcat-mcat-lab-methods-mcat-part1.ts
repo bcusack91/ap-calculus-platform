@@ -20,6 +20,11 @@ $$\\text{Retention (time spent on the column)} \\;\\propto\\; \\frac{\\text{affi
 | **Column** | Silica packing / eluent | Polarity | Preparative scale |
 | **Gas (GC)** | Liquid-coated column / inert gas | Volatility + polarity | Volatile, thermally stable analytes |
 | **HPLC** | Solid particles / pressurized liquid | Polarity | High resolution |
+
+### Chromatography for Proteins
+
+| Type | Stationary / Mobile | Separates by | Note |
+|------|---------------------|--------------|------|
 | **Size-exclusion** | Porous beads / buffer | **Size** | LARGE elutes FIRST |
 | **Ion-exchange** | Charged resin / buffer | Charge | Eluted by salt/pH gradient |
 | **Affinity** | Ligand-bound resin / buffer | Specific binding | Highest specificity |
@@ -68,10 +73,10 @@ $$R_f = \\frac{\\text{distance traveled by spot}}{\\text{distance traveled by so
       type: 'text' as const,
       content: `### Extraction — Partitioning Between Immiscible Solvents
 
-- **Liquid–liquid extraction** shakes a mixture with two immiscible solvents, usually water and an organic solvent. Each solute partitions toward the layer it dissolves in better ("like dissolves like").
-- **Which layer is on top?** The less dense one. Diethyl ether is less dense than water, so it floats on top; dichloromethane (DCM) is denser, so it sinks below the water.
-- **Several small extractions beat one large one** of the same total volume, because each fresh portion removes the same fraction of what is left.
-- A **brine** (saturated NaCl) wash pulls dissolved water out of the organic layer, and an anhydrous drying agent such as $\\text{MgSO}_4$ removes the last traces.
+- **Liquid–liquid extraction** shakes a mixture with two immiscible solvents, usually water and an organic solvent; each solute moves into the layer it dissolves in better ("like dissolves like").
+- **Which layer is on top?** The less dense one: diethyl ether floats on water; dichloromethane (DCM) sinks below it.
+- **Several small extractions beat one large one** of the same total volume: each fresh portion removes the same fraction of what is left.
+- **Drying the organic layer:** a **brine** (saturated NaCl) wash pulls out dissolved water; anhydrous $\\text{MgSO}_4$ removes the last traces.
 
 ### Acid–Base Extraction
 
@@ -193,7 +198,7 @@ The more volatile (lower-bp) component distills first.
       content: `### Key Takeaways — Part 1
 
 - **Match method to property.** Polarity: TLC, column, HPLC; volatility: GC; size: size-exclusion; charge: ion-exchange; binding: affinity.
-- **Retention factor.** $R_f$ = spot distance ÷ solvent-front distance, always 0 to 1; on polar silica, more polar means lower $R_f$ (acid > alcohol > ketone > ether > hydrocarbon).
+- **Retention factor.** $R_f$ = spot distance ÷ front distance (0 to 1); on polar silica the more polar compound has the lower $R_f$.
 - **Acid–base extraction.** Make it a salt to move it into water: HCl takes amines, $\\text{NaHCO}_3$ carboxylic acids, NaOH phenols too.
 - **Distillation and melting point.** Simple distillation needs a bp gap over ~25 °C; an impure solid melts lower and over a broader range.
 

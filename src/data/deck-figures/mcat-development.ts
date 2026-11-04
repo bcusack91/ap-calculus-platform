@@ -367,7 +367,7 @@ export const mcatDevelopmentFigures: DeckFigurePlacement[] = [
         'Decision tree. The caregiver leaves and then returns; the child’s behaviour at the reunion branches into four styles. Secure (blue): upset, then soothed fast, greets warmly; earlier explored freely. Avoidant: ignores or avoids the returning parent; earlier explored but aloof. Ambivalent: inconsolable, clings yet angrily resists; earlier clung and did not play. Disorganized (red): frozen, dazed, contradictory approach-avoid behaviour; associated with maltreating care. Footer: crying at the separation classifies nothing; the reunion does.',
     },
     blocks: [
-      '- **Secure** is the majority and tracks sensitive, responsive caregiving',
+      '- **Secure** is the majority; crying at the separation classifies nothing, the **reunion** does',
       '- Ambivalent = seeks contact **and** fights it; avoidant = acts as if nothing happened',
       '- Disorganized is the one with no coherent strategy — linked to frightening care',
     ],
@@ -385,7 +385,7 @@ export const mcatDevelopmentFigures: DeckFigurePlacement[] = [
   },
   {
     at: "Erikson's Eight Psychosocial Crises",
-    mode: 'replace-table',
+    mode: 'replace',
     figure: {
       svg: eriksonSvg,
       alt:
@@ -417,8 +417,7 @@ export const mcatDevelopmentFigures: DeckFigurePlacement[] = [
         'Three schematic designs. Twin study: in one home, an MZ pair sharing 100% of segregating genes and a DZ pair sharing about 50%; if the MZ pair is far more alike than the DZ pair, the difference points to genes. Adoption study: biological parents contribute genes and adoptive parents contribute the home to an adoptee; resembling the biological parents points to genes, resembling the adoptive parents points to the shared home. MZ twins reared apart: the same genes in two different houses; being alike anyway points to genes.',
     },
     blocks: [
-      '- **Concordance** = both members of a pair show the trait',
-      '- Caveats: MZ twins are treated more alike; adoptive homes are range-restricted; prenatal environment is shared by both twin types',
+      '- Each design pulls genes and home apart differently: ask which pair shares **what** before reading its numbers',
     ],
   },
   {

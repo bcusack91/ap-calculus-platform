@@ -339,7 +339,6 @@ export const mcatLearningMemoryFigures: DeckFigurePlacement[] = [
     blocks: [
       '- "Positive / negative" = **add / remove**, never good / bad',
       '- Reinforcement / punishment = the behavior **actually** goes up / down',
-      '- Escape and avoidance are both negative reinforcement',
     ],
   },
   {

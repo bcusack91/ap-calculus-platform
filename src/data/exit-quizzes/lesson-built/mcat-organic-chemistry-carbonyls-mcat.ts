@@ -300,7 +300,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `Penicillin acylates the bacterial enzyme that builds the cell wall far more readily than an ordinary amide would react. Its beta-lactam is unusually reactive because:`,
+    question: `Penicillin's four-membered lactam ring acylates a serine in a bacterial enzyme under conditions where an open-chain amide would not react at all. The ring is unusually reactive because:`,
     options: [
       `Ring strain weakens its amide resonance`,
       `The lactam nitrogen carries a full positive charge`,

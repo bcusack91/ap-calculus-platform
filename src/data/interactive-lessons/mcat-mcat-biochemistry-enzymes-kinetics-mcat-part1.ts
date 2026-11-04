@@ -16,13 +16,7 @@ Enzymes are biological catalysts (mostly proteins; some catalytic RNAs — riboz
 - **Speeds up** both forward and reverse reactions equally
 - Is **regenerated unchanged** after each cycle
 
-A catalyst does **NOT** change:
-
-- $\\Delta G$ of the reaction (thermodynamics untouched)
-- $K_{eq}$ or the final equilibrium position
-- Whether a reaction is spontaneous
-
-The rate boost comes from the Arrhenius relationship: rate $\\propto e^{-E_a/RT}$, so even a modest drop in $E_a$ multiplies the rate enormously.
+A catalyst does **NOT** change $\\Delta G$ of the reaction, $K_{eq}$ (the final equilibrium position) or whether the reaction is spontaneous — thermodynamics is untouched. The rate boost comes from the Arrhenius relationship: rate $\\propto e^{-E_a/RT}$, so even a modest drop in $E_a$ multiplies the rate enormously.
 
 ### Binding Models
 

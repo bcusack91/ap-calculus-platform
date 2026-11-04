@@ -43,7 +43,7 @@ export const mcatCellOrganellesPart3Data = {
 
 Substrates arrive by three routes: **endocytosis** (extracellular material), **phagocytosis** (particles; the phagosome fuses with lysosomes), and **autophagy** (a double membrane engulfs worn organelles → autophagosome → fuses with lysosome). Starvation strongly induces autophagy (recycling amino acids; mTOR inhibition is the trigger).
 
-**Storage diseases** — a missing hydrolase means its substrate accumulates:
+### Storage Diseases — Lose the Hydrolase, Keep the Substrate
 
 | Disease | Deficient enzyme | Accumulates |
 |---------|------------------|-------------|

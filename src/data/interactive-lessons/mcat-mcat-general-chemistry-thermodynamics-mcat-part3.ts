@@ -61,14 +61,7 @@ where $R = 8.314$ J/mol·K, $T$ in Kelvin.
 
 ## Relationship to Cell Potential ($E°_{\\text{cell}}$)
 
-For electrochemical reactions:
-
-$$\\Delta G° = -nFE°_{\\text{cell}}$$
-
-where:
-- $n$ = moles of electrons transferred
-- $F = 96{,}485$ C/mol (Faraday constant)
-- $E°_{\\text{cell}}$ measured in volts (V)
+For electrochemical reactions, $\\Delta G° = -nFE°_{\\text{cell}}$, where $n$ = moles of electrons transferred, $F = 96{,}485$ C/mol (the Faraday constant) and $E°_{\\text{cell}}$ is in volts (V).
 
 **Connection between $\\Delta G°$, $K$, and $E°_{\\text{cell}}$:**
 

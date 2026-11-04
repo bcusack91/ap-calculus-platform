@@ -43,8 +43,9 @@ Count the carbons attached to the carbon bearing the leaving group:
 - **Tertiary (3°)**: three attached carbons, e.g., $(CH_3)_3C{-}Br$
 
 **Why it matters twice:**
-1. **Sterics**: backside attack (SN2) needs an open carbon → methyl > 1° > 2° >> 3° (3° essentially never does SN2)
-2. **Carbocation stability**: ionization (SN1/E1) needs a stable cation → 3° > 2° >> 1° (1° essentially never does SN1/E1, absent resonance)
+
+- **Sterics**: backside attack (SN2) needs an open carbon → methyl > 1° > 2° >> 3° (3° essentially never does SN2)
+- **Carbocation stability**: ionization (SN1/E1) needs a stable cation → 3° > 2° >> 1° (1° essentially never does SN1/E1, absent resonance)
 
 Carbocation stability comes from **hyperconjugation and induction** by alkyl groups; allylic and benzylic cations get extra **resonance** stabilization.
 
@@ -86,7 +87,7 @@ On the MCAT, an alcohol + strong acid (HBr, $H_2SO_4$) passage is a signal that 
 
 **(b) The tosylate.** Converting the alcohol to a tosylate replaces OH with OTs. The tosylate anion is resonance-stabilized (charge spread over three oxygens of the sulfonate), so it is an excellent leaving group.
 
-**(c) SN2 by iodide.** Iodide performs SN2 at C1 → 1-iodobutane; C1 is not a stereocenter here. At one, the two steps give one net inversion: (R)-2-butanol → tosylate (configuration retained, the C-O bond untouched) → $I^-$ SN2 → (S)-2-iodobutane.
+**(c) SN2 by iodide.** Iodide performs SN2 at C1 → 1-iodobutane; C1 is not a stereocenter here. At a stereocenter, the two steps give one net inversion: (R)-2-butanol → tosylate (configuration retained, the C-O bond untouched) → $I^-$ SN2 → (S)-2-iodobutane.
 
 **Problem 3.** For R-Br + NaCN, tripling [NaCN] triples the rate, and tripling [R-Br] also triples the rate. The product is a nitrile.
 

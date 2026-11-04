@@ -10,7 +10,11 @@ export const mcatVirusesPart1Data = {
 
 ### What a Virus Is (and Is Not)
 
-A **virion** is genetic material in a protein box: a DNA **or** RNA genome (never both) inside a **capsid** built from repeating protein subunits (**capsomeres**), sometimes wrapped in a host-derived lipid **envelope** studded with viral glycoproteins. Viruses are **obligate intracellular parasites**: no ribosomes, no ATP-generating metabolism, no ability to replicate outside a cell. They fail most definitions of life — no growth, no homeostasis, no independent reproduction — yet they evolve by mutation and selection. Size scale: ~20-300 nm, generally below light-microscope resolution and small enough to pass bacteria-retaining filters (their original discovery signature).
+A **virion** is genetic material in a protein box: a DNA **or** RNA genome (never both) inside a **capsid** built from repeating protein subunits (**capsomeres**), sometimes wrapped in a host-derived lipid **envelope** studded with viral glycoproteins.
+
+Viruses are **obligate intracellular parasites**: no ribosomes, no ATP-generating metabolism, no ability to replicate outside a cell. They fail most definitions of life — no growth, no homeostasis, no independent reproduction — yet they evolve by mutation and selection.
+
+Size scale: ~20-300 nm, generally below light-microscope resolution and small enough to pass bacteria-retaining filters (their original discovery signature).
 
 ### Genome Diversity — the Widest in Biology
 
@@ -19,7 +23,9 @@ Viral genomes may be DNA or RNA; single- or double-stranded; linear, circular, o
 - **Positive (+) sense RNA** = readable directly as mRNA.
 - **Negative (−) sense RNA** = complement of mRNA; must be transcribed before translation (details in Part 3).
 
-**Enveloped vs naked** predicts real behavior: envelopes (acquired by budding through host membranes) are damaged by detergents, drying, and stomach acid — enveloped viruses favor direct contact/respiratory transmission. **Naked capsids are tougher**: fecal-oral routes, surfaces, and GI survival belong to naked viruses.
+**Enveloped vs naked** predicts real behavior: envelopes (acquired by budding through host membranes) are damaged by detergents, drying, and stomach acid — enveloped viruses favor direct contact/respiratory transmission.
+
+**Naked capsids are tougher**: fecal-oral routes, surfaces, and GI survival belong to naked viruses.
 
 ### The Six-Step Infectious Cycle
 
@@ -32,7 +38,9 @@ Viral genomes may be DNA or RNA; single- or double-stranded; linear, circular, o
 
 ### Quantifying Infection
 
-The **plaque assay** counts infectious units: virus dilutions on a cell monolayer produce clear zones (plaques), each founded by ONE infectious virion — reported as plaque-forming units (PFU). The **one-step growth curve** shows an **eclipse period** (after uncoating, NO intact virions exist inside the cell — infectivity vanishes before it multiplies) followed by a **burst** of progeny per cell. The eclipse is conceptual gold: a virus is information, not a dividing cell; it disassembles to reproduce.`
+The **plaque assay** counts infectious units: virus dilutions on a cell monolayer produce clear zones (plaques), each founded by ONE infectious virion — reported as plaque-forming units (PFU).
+
+The **one-step growth curve** shows an **eclipse period** (after uncoating, NO intact virions exist inside the cell — infectivity vanishes before it multiplies) followed by a **burst** of progeny per cell. The eclipse is conceptual gold: a virus is information, not a dividing cell; it disassembles to reproduce.`
     },
     {
       id: 'vir1-worked-examples',

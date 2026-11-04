@@ -4,7 +4,8 @@ import type { DeckFigurePlacement } from './index'
  * Transcription & RNA Processing (MCAT B/B) — figures for the in-class deck. Authored 2026-10-28.
  *
  * Every drawing is ours, drawn from the concept: a transcription bubble whose
- * letters ARE the strands (the lesson's own 3'-TACGGATCT-5' example), two
+ * letters ARE the strands (a nine-base example of its own, deliberately NOT
+ * the worked problem's 3'-TACGGATCT-5', which the class solves later), two
  * polymerases side by side, a gene drawn as a map with a numbered axis, the
  * three processing steps as three rows inside a nucleus, splicing as
  * landmarks → lariat → joined exons, alternative splicing with the blots it
@@ -54,8 +55,8 @@ const bubbleSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <path d="M668 130 C686 130, 690 180, 720 180 L940 180" fill="none" stroke="currentColor" stroke-width="3"/>
 <path d="M60 200 L300 200 C330 200, 332 260, 350 260" fill="none" stroke="currentColor" stroke-width="3"/>
 <path d="M668 260 C686 260, 690 200, 720 200 L940 200" fill="none" stroke="currentColor" stroke-width="3"/>
-${LETTERS('ATGCCTAGA', 137)}
-${LETTERS('TACGGATCT', 267)}
+${LETTERS('ATGGTCAAG', 137)}
+${LETTERS('TACCAGTTC', 267)}
 <text x="46" y="186" font-size="17" font-weight="700" text-anchor="end" fill="currentColor">5′</text>
 <text x="46" y="207" font-size="17" font-weight="700" text-anchor="end" fill="currentColor">3′</text>
 <text x="954" y="186" font-size="17" font-weight="700" fill="currentColor">3′</text>
@@ -72,7 +73,7 @@ ${LETTERS('TACGGATCT', 267)}
 <text x="600" y="90" font-size="18" font-weight="700" text-anchor="middle" fill="currentColor">RNA polymerase</text>
 <text x="600" y="311" font-size="14" text-anchor="middle" fill="currentColor">reads the template 3′→5′</text>
 <line x1="330" y1="237" x2="665" y2="237" stroke="currentColor" stroke-width="3.5"/>
-${LETTERS('AUGCCUAGA', 230)}
+${LETTERS('AUGGUCAAG', 230)}
 <text x="318" y="236" font-size="16" font-weight="700" text-anchor="end" fill="currentColor">5′</text>
 <text x="676" y="236" font-size="16" font-weight="700" fill="currentColor">3′</text>
 ${bubXs.map((x) => `<line x1="${x}" y1="242" x2="${x}" y2="251" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>`).join('')}
@@ -510,8 +511,8 @@ export const mcatTranscriptionFigures: DeckFigurePlacement[] = [
     figure: {
       svg: bubbleSvg,
       alt:
-        'A DNA duplex drawn as two lines that open into a bubble in the middle. The top strand is the coding (sense) strand, 5 prime at the left and 3 prime at the right; inside the bubble its letters read A T G C C T A G A. The bottom strand is the template (antisense) strand, 3 prime at the left; its letters read T A C G G A T C T. A dashed blue RNA polymerase sits over the right half of the bubble. Inside the bubble a blue RNA strand is paired to the template by short dashed ticks; it reads 5 prime A U G C C U A G A 3 prime, with every U in red. The RNA therefore matches the coding strand letter for letter with U in place of T. A blue arrow shows the polymerase moving right as the RNA 3 prime end grows; the polymerase reads the template 3 prime to 5 prime, and the DNA re-anneals behind the enzyme. Notes: mRNA equals the coding strand with U for T and the reverse complement of the template; the template strand is defined per gene, not per chromosome, so a neighbouring gene may use the other strand; genes are written out as their coding strand. Bottom line: label the given strand TEMPLATE or CODING before touching a single base.',
-      caption: 'The lesson’s own example: template 3′-TACGGATCT-5′ gives mRNA 5′-AUGCCUAGA-3′, the coding strand with U for T.',
+        'A DNA duplex drawn as two lines that open into a bubble in the middle. The top strand is the coding (sense) strand, 5 prime at the left and 3 prime at the right; inside the bubble its letters read A T G G T C A A G. The bottom strand is the template (antisense) strand, 3 prime at the left; its letters read T A C C A G T T C. A dashed blue RNA polymerase sits over the right half of the bubble. Inside the bubble a blue RNA strand is paired to the template by short dashed ticks; it reads 5 prime A U G G U C A A G 3 prime, with every U in red. The RNA therefore matches the coding strand letter for letter with U in place of T. A blue arrow shows the polymerase moving right as the RNA 3 prime end grows; the polymerase reads the template 3 prime to 5 prime, and the DNA re-anneals behind the enzyme. Notes: mRNA equals the coding strand with U for T and the reverse complement of the template; the template strand is defined per gene, not per chromosome, so a neighbouring gene may use the other strand; genes are written out as their coding strand. Bottom line: label the given strand TEMPLATE or CODING before touching a single base.',
+      caption: 'Template 3′-TACCAGTTC-5′ gives mRNA 5′-AUGGUCAAG-3′, the coding strand with U for T; the worked example hands you a different sequence to do yourself.',
     },
     blocks: [
       '- **Template** is read 3′→5′; RNA grows 5′→3′ and matches the **coding** strand with **U for T**',
@@ -600,10 +601,9 @@ export const mcatTranscriptionFigures: DeckFigurePlacement[] = [
       caption: 'The lac operon is an AND gate: the repressor must be off (lactose) and cAMP–CAP must be on (no glucose).',
     },
     blocks: [
-      '- **Operon** = one promoter → ONE polycistronic mRNA; **lac** is inducible (catabolic), **trp** repressible (anabolic)',
-      '- **Negative control:** LacI on the operator until **allolactose** pulls it off',
-      '- **Positive control:** low glucose → cAMP → **CAP** recruits polymerase; glucose present = barely on even with lactose',
-      '- **trp:** tryptophan is a **corepressor** that arms its repressor — the product shuts its own synthesis',
+      '- **Operon:** one promoter → ONE polycistronic mRNA; **lac** inducible (catabolic), **trp** repressible (anabolic)',
+      '- **lac:** allolactose pulls **LacI** off the operator AND low glucose → cAMP–**CAP** recruits polymerase',
+      '- **trp:** tryptophan is a **corepressor** — the end product arms the repressor',
     ],
   },
   {

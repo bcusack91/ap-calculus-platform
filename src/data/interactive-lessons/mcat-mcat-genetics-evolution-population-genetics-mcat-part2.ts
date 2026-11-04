@@ -10,12 +10,12 @@ export const mcatPopGenPart2Data = {
 
 ### Genetic Drift: Chance, Not Fitness
 
-**Genetic drift** is random fluctuation in allele frequencies from generation to generation due to sampling error in which gametes happen to form the next generation. Key properties:
+**Genetic drift** is random generation-to-generation change in allele frequencies, caused by sampling error in which gametes happen to form the next generation. Key properties:
 
 - Strength scales **inversely with population size**: dramatic in small populations, negligible in huge ones
 - Direction is **random** — drift is not adaptive and can fix harmful alleles or eliminate beneficial ones
-- Given enough time, drift drives every allele to **fixation** (frequency 1) or **loss** (frequency 0); a neutral allele's probability of eventual fixation equals its current frequency
-- Drift always **reduces genetic variation** (heterozygosity) within a population, while making isolated populations **diverge** from each other
+- Given time, drift drives every allele to **fixation** (frequency 1) or **loss** (frequency 0); a neutral allele's chance of eventual fixation equals its current frequency
+- Drift always **reduces heterozygosity** within a population while making isolated populations **diverge** from each other
 
 ### Two Named Drift Scenarios
 
@@ -48,7 +48,7 @@ The **effective population size** $N_e$ is the size of an idealized population t
       type: 'text' as const,
       content: `### Worked Example — Reading a Drift Experiment
 
-**Problem 1.** A researcher founds 100 fly populations of 20 (10 males, 10 females) and 100 of 500, all at 0.5 for a neutral allele $bw^{75}$. After 19 generations the small populations have scattered widely, and many are already fixed (1) or lost (0); the large ones stay near 0.5.
+**Problem 1.** A researcher founds 100 fly populations of 20 and 100 of 500, all at frequency 0.5 for a neutral allele $bw^{75}$. After 19 generations the small populations have scattered widely, many already fixed (1) or lost (0); the large ones stay near 0.5.
 
 - **(a)** Why do the small populations scatter while the large ones stay near 0.5?
 - **(b)** Why does a population that reaches 0 or 1 stay there?

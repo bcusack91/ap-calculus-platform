@@ -54,9 +54,9 @@ Transfusion logic: match the DONOR's cell antigens against the RECIPIENT's antib
 
 ### Lab Techniques as Passage Tools
 
-- **ELISA**: antibody-based detection in a plate. DIRECT concept: an enzyme-linked antibody binds the target antigen; substrate → color, intensity proportional to amount. INDIRECT concept: the plate presents antigen and the test asks whether the PATIENT'S serum contains antibodies against it (e.g., HIV screening); a labeled anti-human secondary antibody reports the binding.
+- **ELISA**: antibody-based detection in a plate. DIRECT: an enzyme-linked antibody binds the target antigen; substrate → color in proportion to the amount. INDIRECT: antigen coats the plate and the question is whether the PATIENT'S serum holds antibodies against it (e.g., HIV screening); a labeled anti-human secondary antibody reports the binding.
 - **Western blot**: proteins separated by size (gel electrophoresis), transferred to a membrane, then probed with specific antibody — identity plus approximate size.
-- **Flow cytometry**: cells stream single-file past a laser; fluorescent antibodies against surface markers (e.g., anti-CD4) count cell subsets — this is how clinical CD4 counts are done.`
+- **Flow cytometry**: cells stream single-file past a laser; fluorescent antibodies against surface markers (e.g., anti-CD4) count cell subsets — how clinical CD4 counts are done.`
     },
     {
       id: 'imm4-worked',

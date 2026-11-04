@@ -21,6 +21,9 @@ Functional groups are the vocabulary of every organic and biochemistry passage. 
 | Amide | -CONR2 | -amide | carbamoyl- |
 | Nitrile | $-C{\\equiv}N$ | -nitrile | cyano- |
 | Aldehyde | -CHO | -al | oxo- |
+
+| Group | Structure | Suffix | Prefix (when outranked) |
+|-------|-----------|--------|--------------------------|
 | Ketone | R-CO-R | -one | oxo- |
 | Alcohol | -OH | -ol | hydroxy- |
 | Amine | $-NR_2$ | -amine | amino- |

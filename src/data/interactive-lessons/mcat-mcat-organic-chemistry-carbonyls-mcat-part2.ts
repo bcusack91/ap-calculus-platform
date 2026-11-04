@@ -24,10 +24,10 @@ Two synchronized explanations:
 
 | Reaction | Reagents | Product |
 |----------|----------|---------|
-| Fischer esterification | acid + ROH, cat. $H_2SO_4$, heat | ester + water (equilibrium; drive with excess ROH or water removal) |
+| Fischer esterification | acid + ROH, cat. $H_2SO_4$, heat | ester + water (equilibrium: drive with excess ROH or remove water) |
 | Ester hydrolysis (acid) | $H_3O^+$ | acid + ROH (reversible) |
-| Saponification | $NaOH$ (aq) | carboxylate + ROH; acid workup gives RCOOH (**irreversible** — the carboxylate is resonance-stabilized and unreactive) |
-| Amide formation | acyl chloride or anhydride + amine | amide (direct acid + amine mostly just makes the ammonium salt at room temp) |
+| Saponification | $NaOH$ (aq) | carboxylate + ROH (**irreversible**: the carboxylate is unreactive); acid workup gives RCOOH |
+| Amide formation | acyl chloride or anhydride + amine | amide (acid + amine alone just gives the ammonium salt) |
 | Transesterification | ester + different ROH, acid or base cat. | new ester |
 
 ### Amides: the Special Case

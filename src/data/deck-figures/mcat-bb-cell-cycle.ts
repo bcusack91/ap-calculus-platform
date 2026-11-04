@@ -530,8 +530,8 @@ export const mcatCellCycleFigures: DeckFigurePlacement[] = [
       caption: 'Reading a flow-cytometry DNA histogram: which peak grows tells you where a drug acts (illustrative).',
     },
     blocks: [
-      '- **2C peak** = G$_1$ (and G$_0$) · **4C peak** = G$_2$ + M · **between** = S; condensed chromosomes separate M from G$_2$',
-      '- M-arrest grows 4C; a replication-initiation block grows 2C; stalled forks pile between — **EdU/BrdU** marks S directly',
+      '- Read a histogram in two moves: **which peak grew** says where the block is; **condensed chromosomes** say whether a 4C cell is in M or still in G$_2$',
+      '- The histogram is a snapshot of where the population sits; an **EdU/BrdU pulse** asks a different question — who is replicating right now',
     ],
   },
   {

@@ -14,11 +14,11 @@ The plasma membrane is a **phospholipid bilayer** with embedded proteins — a t
 
 | Component | Role | Key Facts |
 |-----------|------|-----------|
-| Phospholipids | Structural bilayer | Amphipathic: polar head (out), fatty acid tails (in) |
-| Cholesterol | Fluidity buffer | At body temp: stiffens membrane; at low temp: prevents tight packing (keeps it fluid) |
-| Integral proteins | Transport, receptors | Span the bilayer; hydrophobic transmembrane domains (often alpha-helices) |
-| Peripheral proteins | Signaling, support | Attached to surface or to integral proteins; removable without disrupting bilayer |
-| Glycolipids/glycoproteins | Cell recognition | Carbohydrates face the extracellular side only |
+| Phospholipids | Structural bilayer | Amphipathic: polar heads out, fatty acid tails in |
+| Cholesterol | Fluidity buffer | Stiffens at body temperature; keeps the cold membrane fluid |
+| Integral proteins | Transport, receptors | Span the bilayer via hydrophobic alpha-helices |
+| Peripheral proteins | Signaling, support | Sit on the surface; removable without disrupting it |
+| Glycolipids/glycoproteins | Cell recognition | Sugars face the extracellular side only |
 
 - **Lateral diffusion** (within one leaflet) is fast and common
 - **Transverse diffusion ("flip-flop")** between leaflets is rare and slow — it requires a polar head to cross the hydrophobic core; enzymes called **flippases** catalyze it
@@ -96,7 +96,7 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
 - Fast, complete recovery → freely diffusing (mobile) molecules
 - Slow or incomplete recovery → molecules anchored to the cytoskeleton or confined to domains
 
-- Fusing a mouse cell with a human cell, each with differently labeled surface proteins, showed the proteins intermix within ~40 minutes — direct evidence of lateral mobility (mixing slows at low temperature)
+- Fusing a mouse cell with a human cell, each with differently labeled surface proteins, showed the proteins intermix within ~40 minutes — direct evidence of lateral mobility
 
 <!-- yield:low -->
 - This is the Frye-Edidin experiment
@@ -183,7 +183,7 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
 **Common traps**
 
 - **Small means permeable.** Charge beats size: even H$^+$, the smallest ion, cannot cross the hydrophobic core unaided.
-- **Affinity places the receptor.** Steroids bind intracellular receptors because a high partition coefficient lets them cross.
+- **Receptor location is arbitrary.** Steroids reach intracellular receptors because a high partition coefficient lets them cross; peptides cannot.
 - **Cholesterol only stiffens.** It stiffens at body temperature but prevents tight packing in the cold, buffering both ways.
 - **Partial recovery means damage.** Bleaching does not harm the membrane; a plateau below full recovery marks an immobile fraction.
 

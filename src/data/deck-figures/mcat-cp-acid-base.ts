@@ -507,7 +507,7 @@ export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
       caption: 'The pH ruler is logarithmic: one unit is a tenfold change in [H⁺], acidic to the left of 7 and basic to the right, with pOH running the other way so the two always add to 14.',
     },
     blocks: [
-      '- $\\text{pH} = -\\log[\\text{H}^+]$: one unit = **tenfold** in $[\\text{H}^+]$; pH 2 has 10⁹ times the H⁺ of pH 11',
+      '- $\\text{pH} = -\\log[\\text{H}^+]$: one unit = **tenfold** in $[\\text{H}^+]$, so the ruler spans 14 powers of ten',
       '- $\\text{pH} + \\text{pOH} = 14$ because $K_w = [\\text{H}^+][\\text{OH}^-] = 10^{-14}$ at 25 °C (neutral = 7)',
     ],
   },
@@ -563,7 +563,7 @@ export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
       caption: 'Strong acid + strong base (50.0 mL of 0.100 M HCl with 0.100 M NaOH, computed): a long flat run in excess acid, a near-vertical jump through pH 7.00 at 50.0 mL, then excess base.',
     },
     blocks: [
-      '- $M_aV_a = M_bV_b$ → equivalence at 50.0 mL, pH **7.00** (NaCl does not hydrolyze); the jump spans pH ~3 → ~11',
+      '- $M_aV_a = M_bV_b$ → equivalence at 50.0 mL, pH **7.00** (NaCl does not hydrolyze); the jump runs from about pH 4 to 10',
       '- Before: pH from leftover H⁺; after: pH from excess OH⁻ (via pOH). No buffer shelf, no half-equivalence rule',
     ],
   },

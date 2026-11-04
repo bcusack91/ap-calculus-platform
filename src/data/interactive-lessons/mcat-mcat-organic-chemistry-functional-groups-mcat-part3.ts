@@ -8,12 +8,12 @@ export const mcatOchemFunctionalGroupsPart3Data = {
 
 **Part 3 of 4 — Acidity, Basicity & Electronic Effects**
 
-Every acidity/basicity comparison on the MCAT is decided the same way: **the more stable the conjugate base, the stronger the acid**. Four stabilizing effects, in rough order of power:
+**The more stable the conjugate base, the stronger the acid.** Four stabilizing effects, in rough order of power:
 
-1. **Element** (which atom holds the charge): across a row, more electronegative = more stable ($CH_4 < NH_3 < H_2O < HF$); down a column, LARGER wins ($H_2O < H_2S$; HF < HCl < HBr < HI) because charge spreads over a bigger orbital
+1. **Element**: across a row, more electronegative = more stable ($CH_4 < NH_3 < H_2O < HF$); down a column, LARGER wins ($H_2O < H_2S$; HF < HCl < HBr < HI) — charge spreads over a bigger orbital
 2. **Resonance**: delocalized charge is stabilized charge — when both charges sit on the same element (two O-acids), resonance usually decides
 3. **Induction**: nearby electronegative atoms pull charge through sigma bonds; falls off sharply with distance
-4. **Hybridization/orbital**: more s-character holds electrons closer (sp C-H of alkynes, pKa ~25, is acidic for a hydrocarbon)
+4. **Hybridization**: more s-character holds electrons closer (a terminal alkyne's sp C-H, pKa ~25, is acidic for a hydrocarbon)
 
 ### The pKa Ladder to Memorize
 
@@ -45,9 +45,9 @@ Why acid > phenol > alcohol: **carboxylic acid** beats **phenol** beats **alcoho
 Base strength tracks **lone pair availability**:
 
 - **Amide nitrogen is NOT basic** — the lone pair is delocalized into the C=O
-- **Aniline** is a weak base (~million-fold weaker than alkylamines): the lone pair leaks into the ring
-- **Alkylamines** are the strong organic bases (conjugate acid pKa 10-11)
-- **Pyridine**: sp2 lone pair in the plane, NOT part of the aromatic pi system → basic (conj. acid pKa 5.2). **Pyrrole**: the lone pair IS the aromatic sextet → protonation destroys aromaticity → essentially non-basic. This pair explains histidine (imidazole has one pyridine-like N, pKa ~6 — the physiological buffer nitrogen) and the DNA bases
+- **Alkylamines** are the strong organic bases (conjugate acid pKa 10-11); **aniline** is ~a million-fold weaker because its lone pair leaks into the ring
+- **Pyridine**: sp2 lone pair in the plane, NOT part of the aromatic pi system → basic (conj. acid pKa 5.2). **Pyrrole**: the lone pair IS the aromatic sextet → protonation destroys aromaticity → essentially non-basic
+- This pair explains histidine (imidazole has one pyridine-like N, pKa ~6 — the physiological buffer nitrogen) and the DNA bases
 
 ### Henderson-Hasselbalch in One Line
 

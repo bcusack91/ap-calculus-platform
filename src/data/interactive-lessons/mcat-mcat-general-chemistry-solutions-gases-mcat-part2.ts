@@ -50,14 +50,9 @@ $$V = \\frac{nRT}{P} = \\frac{0.100 \\times 0.0821 \\times 300}{1.00} = \\mathbf
 
 $$P_{\\text{total}} = P_A + P_B + P_C + \\cdots$$
 
-Each gas in a mixture exerts its partial pressure independently.
+Each gas in a mixture exerts its partial pressure independently, and each contributes in proportion to its mole fraction: $P_A = \\chi_A \\times P_{\\text{total}}$.
 
-$$P_A = \\chi_A \\times P_{\\text{total}}$$
-
-where $\\chi_A$ = mole fraction of gas A.
-
-**MCAT application — Gas collected over water:**  
-When collecting a gas by water displacement: $P_{\\text{gas}} = P_{\\text{atm}} - P_{\\text{H}_2\\text{O (vapor)}}$
+**MCAT application — gas collected over water:** the tube holds the gas plus water vapor, so $P_{\\text{gas}} = P_{\\text{atm}} - P_{\\text{H}_2\\text{O (vapor)}}$.
 
 ## Faraday's Law: Electrochemical Stoichiometry
 
@@ -137,11 +132,7 @@ $$\\frac{\\text{rate}_A}{\\text{rate}_B} = \\sqrt{\\frac{M_B}{M_A}}$$
 
 Lighter gases effuse faster. **MCAT application:** Compare rates of diffusion/effusion for two gases at the same T and P.
 
-**Example:** Which effuses faster — $\\text{H}_2$ or $\\text{O}_2$? By what factor?
-
-$$\\frac{\\text{rate}_{\\text{H}_2}}{\\text{rate}_{\\text{O}_2}} = \\sqrt{\\frac{32}{2}} = \\sqrt{16} = 4$$
-
-$\\text{H}_2$ effuses **4 times faster** than $\\text{O}_2$.
+**Example:** Which effuses faster — $\\text{H}_2$ or $\\text{O}_2$, and by what factor? $\\text{rate}_{\\text{H}_2}/\\text{rate}_{\\text{O}_2} = \\sqrt{32/2} = \\sqrt{16} = 4$, so $\\text{H}_2$ effuses **4 times faster** than $\\text{O}_2$.
 
 ## Real Gases vs. Ideal Gases
 

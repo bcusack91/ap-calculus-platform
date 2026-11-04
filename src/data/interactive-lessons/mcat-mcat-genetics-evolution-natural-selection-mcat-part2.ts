@@ -33,13 +33,13 @@ A second route is runaway (Fisherian) selection: the female preference and the m
 
 ### Altruism, Kin Selection & Hamilton's Rule
 
-Behavior that lowers the actor's own reproduction while raising a recipient's (alarm calling, helping at the nest, sterile worker castes) looks paradoxical — until genes are counted through RELATIVES. Your relatives carry your alleles with predictable probabilities (the **coefficient of relatedness** r): offspring and full siblings $r = 0.5$; half-siblings, grandchildren, aunts/uncles-to-nieces/nephews $r = 0.25$; first cousins $r = 0.125$.
+Behavior that lowers the actor's own reproduction while raising a recipient's (alarm calling, helping at the nest, sterile worker castes) looks paradoxical — until genes are counted through RELATIVES. Relatives carry your alleles with predictable probabilities (the **coefficient of relatedness** r): offspring and full siblings $r = 0.5$; half-siblings, grandchildren, nieces and nephews $r = 0.25$; first cousins $r = 0.125$.
 
 **Inclusive fitness** = own reproduction (direct) + effects on relatives' reproduction, weighted by r (indirect). **Kin selection** favors an altruistic act when **Hamilton's rule** holds:
 
-$rB > C$
+$rB > C$, where B is the benefit to the recipient and C the cost to the actor, both in offspring-equivalents.
 
-where B is the benefit to the recipient and C the cost to the actor, both in offspring-equivalents. Predictions that data confirm: alarm calls in Belding's ground squirrels are given overwhelmingly by females living near kin; help flows preferentially to closer relatives; sterile insect workers raise siblings rather than offspring.
+Predictions that data confirm: alarm calls in Belding's ground squirrels are given overwhelmingly by females living near kin; help flows preferentially to closer relatives; sterile insect workers raise siblings rather than offspring.
 
 ### The Group-Selection Caveat
 
@@ -50,11 +50,11 @@ where B is the benefit to the recipient and C the cost to the actor, both in off
       type: 'text' as const,
       content: `### Worked Example — Reading the Mode of Selection From a Distribution
 
-**Problem.** In a lake fish population, adult body length is heritable and roughly bell-shaped: mean $20\\;\\text{cm}$, range $12$ to $28\\;\\text{cm}$. Consider three ways fishing could remove fish before they breed.
+**Problem.** In a lake fish population, adult body length is heritable and roughly bell-shaped: mean $20\\;\\text{cm}$, range $12$ to $28\\;\\text{cm}$. Three fishing rules each remove fish before they breed.
 
-- **(a)** A new net catches every fish longer than $24\\;\\text{cm}$. Which mode of selection is this, and what happens to the mean?
-- **(b)** Suppose instead that fish shorter than $15\\;\\text{cm}$ and fish longer than $25\\;\\text{cm}$ are both removed. Which mode, and what happens to the mean and the variance?
-- **(c)** Suppose instead that only fish between $17$ and $23\\;\\text{cm}$ are caught. Which mode, and what happens to the variance and the shape of the distribution?
+- **(a)** A net takes every fish longer than $24\\;\\text{cm}$. Which mode of selection, and what happens to the mean?
+- **(b)** Fish shorter than $15\\;\\text{cm}$ and longer than $25\\;\\text{cm}$ are both removed. Which mode, and what happens to the mean and the variance?
+- **(c)** Only fish between $17$ and $23\\;\\text{cm}$ are taken. Which mode, and what happens to the variance and the shape of the distribution?
 
 **(a) Directional.** Only one extreme (the largest fish) is removed, so the shorter end is favored. The next generation's mean shifts below $20\\;\\text{cm}$, toward the favored extreme.
 

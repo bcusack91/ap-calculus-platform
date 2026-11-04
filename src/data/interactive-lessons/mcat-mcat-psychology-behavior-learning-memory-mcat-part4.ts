@@ -44,9 +44,7 @@ export const mcatPsychLearnMemPart4Data = {
 1. Is the response reflexive and triggered by a *predictive stimulus*? → classical conditioning (label US/UR/CS/CR)
 2. Is a voluntary behavior changing with its *consequences*? → operant (identify add/remove × increase/decrease, then the schedule)
 3. Did behavior change after mere *observation* of a model? → social/observational learning
-4. Is performance improving or failing on a *memory test*? → name the stage (encoding/storage/retrieval), the store, and the interference direction
-
-Most passages mix two of these; assign each dependent measure separately.`
+4. Is performance improving or failing on a *memory test*? → name the stage (encoding/storage/retrieval), the store, and the interference direction. Most passages mix two of these; assign each dependent measure separately.`
     },
     {
       id: 'lmem4-worked',

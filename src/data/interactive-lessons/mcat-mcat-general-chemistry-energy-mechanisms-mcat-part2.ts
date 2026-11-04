@@ -39,11 +39,10 @@ The **slowest elementary step** controls the overall rate. The rate law for the 
 
 ## Where Kinetics Meets Equilibrium
 
-- At equilibrium the forward and reverse rates are EQUAL. Both reactions keep running, but the concentrations stop changing.
+- At equilibrium the forward and reverse rates are EQUAL: both reactions keep running, but the concentrations stop changing.
 - For an elementary step $\\text{A} + \\text{B} \\rightleftharpoons \\text{C}$: $k_f[\\text{A}][\\text{B}] = k_r[\\text{C}]$, so $K = \\dfrac{[\\text{C}]}{[\\text{A}][\\text{B}]} = \\dfrac{k_f}{k_r}$.
 - A catalyst raises $k_f$ and $k_r$ by the same factor, so $K$ is unchanged; equilibrium is simply reached sooner.
-- Temperature changes $k_f$ and $k_r$ by DIFFERENT factors, because the two directions have different barriers, so $K$ itself moves with temperature.
-- Equilibrium constants, $Q$ vs $K$ and Le Châtelier's principle are taught in the *Titrations, Equilibrium & Solubility* lesson, Part 2.
+- Temperature changes $k_f$ and $k_r$ by DIFFERENT factors, because the two directions have different barriers, so $K$ itself moves with temperature. ($Q$ vs $K$ and Le Châtelier: *Titrations, Equilibrium & Solubility*, Part 2.)
 
 ## Worked Example — Testing a Mechanism
 
@@ -99,8 +98,7 @@ Catalyst and reactants are in **different phases**.
 Enzymes are protein catalysts:
 - **Active site** binds substrate (lock-and-key or induced-fit model)
 - **Michaelis-Menten kinetics:** $v = V_{\\text{max}}[\\text{S}]/(K_m + [\\text{S}])$
-- $K_m$ = substrate concentration at which rate = $V_{\\text{max}}/2$
-- Lower $K_m$ → higher affinity for substrate
+- $K_m$ = substrate concentration at which rate = $V_{\\text{max}}/2$; a lower $K_m$ means higher affinity for the substrate
 - At very high $[\\text{S}]$: rate = $V_{\\text{max}}$, zero order in substrate (the rate is independent of $[\\text{S}]$) because all active sites are saturated
 
 ## Effect of Inhibitors on Enzyme Kinetics

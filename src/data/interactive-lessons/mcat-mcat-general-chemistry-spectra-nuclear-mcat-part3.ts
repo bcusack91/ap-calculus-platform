@@ -12,10 +12,10 @@ This final part uses integrated questions that combine hydrogen spectra, photoel
 
 ## Quick-Reference Summary
 
-### Bohr Model (Hydrogen)
+**Bohr model (hydrogen):**
 $$E_n = -\\frac{13.6\\text{ eV}}{n^2}$$
 
-### Half-Life Formula
+**Half-life:**
 $$N = N_0 \\left(\\frac{1}{2}\\right)^{n_{\\text{half-lives}}}$$
 `
     },

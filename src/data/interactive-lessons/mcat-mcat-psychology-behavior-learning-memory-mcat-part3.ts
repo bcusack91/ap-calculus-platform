@@ -36,7 +36,8 @@ export const mcatPsychLearnMemPart3Data = {
   - **Procedural** skills (typing, mirror tracing): basal ganglia, cerebellum
   - **Priming**: prior exposure speeds processing without awareness
   - Conditioned associations (Parts 1-2) are also implicit
-- **Patient H.M.** (bilateral medial temporal/hippocampal resection): dense **anterograde amnesia** for new explicit memories, yet improved daily at mirror tracing while denying ever having done it — the dissociation cornerstone. The hippocampus **consolidates** new explicit memories into cortex; **long-term potentiation (LTP)** — persistent strengthening of synapses after high-frequency stimulation — is the leading cellular mechanism.
+- **Patient H.M.** (bilateral medial temporal/hippocampal resection): dense **anterograde amnesia** for new explicit memories, yet improved daily at mirror tracing while denying ever having done it — the dissociation cornerstone
+- The hippocampus **consolidates** new explicit memories into cortex; **long-term potentiation (LTP)** — persistent strengthening of synapses after high-frequency stimulation — is the leading cellular mechanism
 
 ### Retrieval — Getting Information Out
 

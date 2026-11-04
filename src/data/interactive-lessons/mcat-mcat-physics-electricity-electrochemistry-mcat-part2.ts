@@ -36,16 +36,13 @@ The power supply must provide at least $|E_{cell}|$ volts to force the reaction.
 
 ### Faraday's Laws — Counting Electrons Like Moles
 
-Charge and chemical change are locked together by the **Faraday constant**:
-
-$F = 96{,}485\\;\\text{C/mol}\\;e^- \\approx 96{,}500$
+Charge and chemical change are locked together by the **Faraday constant**, $F = 96{,}485\\;\\text{C/mol}\\;e^- \\approx 96{,}500$.
 
 The working chain for every quantitative electrolysis problem:
 
 $\\text{moles of } e^- = \\frac{It}{F}$
 
 then use the half-reaction's stoichiometry: depositing one mole of $\\text{M}^{n+}$ as metal takes $n$ moles of electrons. So
-
 $\\text{mass deposited} = \\frac{It}{F} \\times \\frac{M_{molar}}{n}$
 
 Same charge deposits HALF as many moles of a $2+$ ion as of a $1+$ ion — the charge on the ion is the exchange rate.`

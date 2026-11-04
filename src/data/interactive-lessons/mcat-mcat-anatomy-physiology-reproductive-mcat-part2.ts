@@ -17,7 +17,7 @@ Semen is mostly glandular fluid, not sperm — the seminal vesicles and prostate
 | Gland | Contribution |
 |-------|--------------|
 | Seminal vesicles | Most of the volume; **fructose** (sperm fuel), prostaglandins, and the **alkaline** fluid that buffers the acidic vagina |
-| Prostate | Thin, milky fluid rich in citrate and enzymes (e.g., PSA) that liquefy semen; slightly acidic |
+| Prostate | Thin, milky fluid rich in citrate and enzymes (e.g., PSA) that liquefy semen |
 | Bulbourethral (Cowper's) glands | Pre-ejaculatory mucus that clears and lubricates the urethra |
 
 <!-- yield:low -->

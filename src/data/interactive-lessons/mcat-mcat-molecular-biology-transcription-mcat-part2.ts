@@ -12,13 +12,13 @@ export const mcatTranscriptionPart2Data = {
 
 The primary transcript (pre-mRNA, hnRNA) is processed co-transcriptionally inside the nucleus; only the finished product leaves through nuclear pores.
 
-1. **5' cap**: a **7-methylguanosine** added backwards — via an unusual **5'-to-5' triphosphate linkage** — almost as soon as the transcript emerges. Jobs: protects against 5' exonucleases, and is the docking site for translation initiation (ribosome scanning starts here).
+1. **5' cap**: a **7-methylguanosine** added backwards, via an unusual **5'-to-5' triphosphate linkage**, as soon as the transcript emerges. Jobs: shields the 5' end from exonucleases and docks the ribosome (scanning starts here).
 
 <!-- yield:low -->
 - The cap-binding initiation factor is **eIF4E**.
 <!-- /yield -->
 
-2. **3' poly-A tail**: after the transcript is cleaved, **poly-A polymerase** adds ~200 adenosines **without any template**. Jobs: stability (tail length is a decay timer), export, and translation efficiency.
+2. **3' poly-A tail**: after cleavage, **poly-A polymerase** adds ~200 adenosines **with no template**. Jobs: stability (tail length is a decay timer), export, translation efficiency.
 
 <!-- yield:low -->
 - Cleavage is signalled by the sequence AAUAAA, ~10-30 nt upstream of the cut. Histone mRNAs are the famous exception: they have no tail.

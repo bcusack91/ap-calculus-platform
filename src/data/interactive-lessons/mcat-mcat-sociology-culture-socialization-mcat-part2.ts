@@ -10,7 +10,9 @@ export const mcatSocioCulturePart2Data = {
 
 ### The Claim Beneath Everything
 
-**Socialization** is the lifelong process by which people internalize their culture's norms, values, and roles — and, more radically, by which the SELF itself is assembled. Case studies of extreme isolation ("feral" and severely neglected children who never develop normal language or reciprocal interaction) are sociology's standing evidence that human nature requires social nurture: the capacities feel innate but do not develop without interaction.
+**Socialization** is the lifelong process by which people internalize their culture's norms, values, and roles — and, more radically, by which the SELF itself is assembled.
+
+Case studies of extreme isolation ("feral" and severely neglected children who never develop normal language or reciprocal interaction) are sociology's standing evidence that human nature requires social nurture: the capacities feel innate but do not develop without interaction.
 
 ### The Agents, in Order of Appearance
 
@@ -24,7 +26,9 @@ export const mcatSocioCulturePart2Data = {
 
 ### Cooley — The Looking-Glass Self
 
-The self-concept is built from three imaginative steps: (1) we imagine how we APPEAR to others, (2) we imagine their JUDGMENT of that appearance, (3) we develop feelings (pride, shame) and a self from that imagined judgment. Two exam-critical details: the process runs on our IMAGINATION of others' judgments — which can be wrong and still shape the self (connect to the Thomas theorem) — and it never stops; the self stays socially reflective for life.
+The self-concept is built from three imaginative steps: (1) we imagine how we APPEAR to others, (2) we imagine their JUDGMENT of that appearance, (3) we develop feelings (pride, shame) and a self from that imagined judgment.
+
+Two exam-critical details: the process runs on our IMAGINATION of others' judgments — which can be wrong and still shape the self (connect to the Thomas theorem) — and it never stops; the self stays socially reflective for life.
 
 ### Mead — Taking the Role of the Other
 

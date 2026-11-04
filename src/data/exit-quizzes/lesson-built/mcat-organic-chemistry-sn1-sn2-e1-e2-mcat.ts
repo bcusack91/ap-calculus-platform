@@ -376,7 +376,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 3,
   },
   {
-    question: `Polar protic solvents speed up SN1 reactions mainly because they:`,
+    question: `The SN1 solvolysis of tert-butyl bromide runs much faster in water than in acetone, although both solvents are polar. Water speeds the reaction mainly because it can:`,
     options: [
       `Leave the nucleophile unsolvated and highly reactive`,
       `Hold the substrate in place for backside attack`,
@@ -384,7 +384,7 @@ export const EXIT_POOL: LessonExitItem[] = [
       `Stabilize the cation and the leaving anion`,
     ],
     correctAnswer: 3,
-    explanation: `The slow SN1 step separates charge, and a polar protic solvent stabilizes both products of that step: the carbocation and the departing anion, which it hydrogen-bonds. Leaving the nucleophile unsolvated is what aprotic solvents do, and it matters for SN2, not for a rate that does not depend on the nucleophile. Backside attack and beta-H removal are features of SN2 and E2.`,
+    explanation: `Water is polar protic. The slow SN1 step separates charge, and a protic solvent stabilizes both products of that step: the carbocation and the departing anion, which it hydrogen-bonds. Acetone is polar aprotic: leaving the nucleophile unsolvated is what aprotic solvents do, and it matters for SN2, not for a rate that does not depend on the nucleophile. Backside attack and beta-H removal are features of SN2 and E2.`,
     difficulty: 'easy',
     yield: 'ULTRA_HIGH',
     part: 3,

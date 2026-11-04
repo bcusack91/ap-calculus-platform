@@ -8,7 +8,7 @@ export const mcatOrganogenesisPart1Data = {
 
 **Part 1 of 2 — Organogenesis, Extraembryonic Membranes & Fetal Circulation**
 
-**Where this fits.** The *Early Embryology: Fertilization to Germ Layers* lesson took the embryo from fertilization through implantation, gastrulation (the formation of the three germ layers: ectoderm, mesoderm and endoderm) and the neural tube. This lesson follows the embryo into organogenesis: the membranes and placenta that support it, how fetal blood bypasses the lungs and liver, and then the potency, induction and signaling experiments that explain how cells choose their fates.
+**Where this fits.** The *Early Embryology: Fertilization to Germ Layers* lesson took the embryo from fertilization through gastrulation (the three germ layers) and the neural tube. This lesson follows it into organogenesis: the membranes and placenta that support it, how fetal blood bypasses the lungs and liver, then the potency, induction and signaling experiments that explain how cells choose their fates.
 
 ### The Four Extraembryonic Membranes
 

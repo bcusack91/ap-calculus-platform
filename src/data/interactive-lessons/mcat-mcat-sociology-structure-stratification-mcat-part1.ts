@@ -25,7 +25,7 @@ Every sociological theory operates at a characteristic scale. **Macro** theories
 - **Manifest function**: the intended, recognized consequence of a structure (schools transmit knowledge).
 - **Latent function**: the unintended, unrecognized consequence (schools provide childcare and matchmaking).
 - **Latent dysfunction**: an unintended consequence that DISRUPTS stability (schools reproduce inequality via tracking).
-- Functionalists explain persistence: if an institution endures, ask what it does for the system — even deviance gets a function (Durkheim: it clarifies moral boundaries and builds solidarity).
+- If an institution endures, ask what it does for the system — even deviance gets a function (Durkheim: it clarifies moral boundaries and builds solidarity).
 
 ### Conflict Theory's Core Move
 
@@ -128,7 +128,7 @@ Passages rarely name the paradigm. They describe a researcher's CLAIM, and you i
 - **Altitude first.** Functionalism and conflict theory are macro; symbolic interactionism and exchange theory are micro.
 - **Functionalism's tools.** It explains persistence by function: manifest is intended, latent is unintended, dysfunctions disrupt.
 - **Conflict asks who benefits.** It re-reads every "stabilizing" institution for whom it serves; official rationales become ideology.
-- **Interactionism runs on meaning.** Thomas theorem: situations defined as real are real in their consequences; social constructionism: natural-feeling categories are built.
+- **Interactionism runs on meaning.** Thomas theorem: a definition acted on is real in its consequences; constructionism: natural-feeling categories are built.
 
 **Common traps**
 

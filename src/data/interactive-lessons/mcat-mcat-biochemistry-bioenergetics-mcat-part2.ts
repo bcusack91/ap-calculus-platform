@@ -22,9 +22,7 @@ Oxidation = losing electrons (often losing H, gaining O); reduction = gaining el
 
 ### Pyruvate Dehydrogenase (PDH): The Gateway
 
-In the mitochondrial matrix, the PDH complex performs **oxidative decarboxylation**:
-
-Pyruvate + CoA + NAD$^+$ → acetyl-CoA + CO$_2$ + NADH
+In the mitochondrial matrix, the PDH complex performs **oxidative decarboxylation**: pyruvate + CoA + NAD$^+$ → acetyl-CoA + CO$_2$ + NADH.
 
 Five cofactors ("Tender Loving Care For Nancy"): **T**PP (thiamine/B1), **L**ipoic acid, **C**oA (pantothenate/B5), **F**AD (B2), **N**AD$^+$ (B3). Regulation:
 

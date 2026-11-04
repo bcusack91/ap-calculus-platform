@@ -352,15 +352,15 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `A student's synthesis gives only a 62% yield. Which factor could NOT explain the missing product?`,
+    question: `A student's synthesis gives only a 62% yield. Which observation could NOT explain the missing product?`,
     options: [
       `Some product stayed stuck to the filter paper`,
       `A side reaction turned some reactant into a byproduct`,
       `The reaction was stopped before it went to completion`,
-      `Extra excess reagent was added at the start`,
+      `The limiting reagent was consumed completely`,
     ],
     correctAnswer: 3,
-    explanation: `Excess reagent is simply left over: it does not change the theoretical yield, which the limiting reagent sets, and it does not destroy any product. Product lost during isolation, side reactions and incomplete reaction are exactly the causes that keep an actual yield below 100%.`,
+    explanation: `Complete consumption of the limiting reagent is exactly what the theoretical yield assumes, so it accounts for none of the shortfall; a 100% conversion of the limiting reagent with no losses would give a 100% yield. Product lost during isolation, a side reaction diverting reactant, and a reaction stopped short of completion are the three causes that keep an actual yield below the theoretical one.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 2,

@@ -361,7 +361,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 3,
   },
   {
-    question: `Oxygen moves from capillary blood into the surrounding tissue mainly by:`,
+    question: `At a point along a capillary where hydrostatic and oncotic forces exactly balance, so there is no net fluid movement, oxygen still leaves the blood for the tissue. It does so mainly by:`,
     options: [
       `Bulk filtration driven by capillary hydrostatic pressure`,
       `Diffusion down its gradient straight through cell membranes`,
@@ -403,7 +403,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 3,
   },
   {
-    question: `Volume overload stretches a patient's atria. The hormone released in response acts mainly to:`,
+    question: `A patient receives 2 L of intravenous saline over an hour, raising right atrial pressure. The hormone the heart itself releases in response acts mainly to:`,
     options: [
       `Promote renal Na+ and water excretion`,
       `Promote renal Na+ and water reabsorption`,

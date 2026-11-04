@@ -674,8 +674,7 @@ export const mcatVirusesFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- **Viroid:** naked circular RNA, no coat, encodes nothing — host RNA polymerase copies it (plant disease)',
-      '- **Prion:** misfolded PROTEIN only — PrP-Sc templates PrP-C α-helix → β-sheet; UV/nuclease/protease-resistant',
-      '- **Prion diseases:** CJD, kuru, BSE — no genome to mutate, no immune response, inheritance of SHAPE',
+      '- **Prion:** misfolded PROTEIN only, no genome — PrP-Sc templates PrP-C α-helix → β-sheet (CJD, kuru, BSE)',
       '- **Satellite (HDV):** lacks essential genes — needs helper HBV’s surface antigen; HBV vaccine prevents it too',
     ],
   },

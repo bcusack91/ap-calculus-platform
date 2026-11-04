@@ -96,11 +96,7 @@ A drug that arrests cells in mitosis grows the 4C peak; one that blocks replicat
 - **Polar (interpolar) microtubules**: overlap at the midzone; motor proteins slide them apart, pushing poles away (anaphase B)
 - **Astral microtubules**: anchor poles to the cell cortex and position the spindle — which determines the cleavage plane
 
-Microtubule drugs both stop mitosis but oppositely:
-- **Vinca alkaloids / colchicine**: prevent polymerization → no spindle
-- **Taxanes (paclitaxel)**: hyper-stabilize microtubules → spindle cannot remodel
-
-Both leave kinetochores without proper tension → spindle checkpoint arrest → often apoptosis. Rapidly dividing normal tissues (marrow, gut, hair follicles) share the toxicity.
+**Microtubule drugs stop mitosis in opposite ways:** vinca alkaloids and colchicine prevent polymerization (no spindle forms); taxanes such as paclitaxel hyper-stabilize microtubules (the spindle cannot remodel). Both leave kinetochores without proper tension → spindle checkpoint arrest → often apoptosis. Rapidly dividing normal tissues (marrow, gut, hair follicles) share the toxicity.
 
 ### Karyokinesis Without Cytokinesis
 

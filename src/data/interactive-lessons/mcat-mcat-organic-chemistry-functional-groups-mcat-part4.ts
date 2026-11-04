@@ -23,7 +23,8 @@ Notice the pattern: every polymerization is a **condensation** (lose water; an O
 
 ### Group Chemistry → Biological Property
 
-- **Phosphates**: a phosphate monoester (phosphoserine, a nucleotide's terminal phosphate) ionizes twice (pKa ~1-2 and ~6-7); each phosphodiester in DNA keeps one acidic OH (pKa ~1-2), so the backbone carries one negative charge per nucleotide → binds $Mg^{2+}$ and histone lysines/arginines (ammonium/guanidinium cations)
+- **Phosphates**: a phosphate monoester (phosphoserine, a nucleotide's terminal phosphate) ionizes twice (pKa ~1-2 and ~6-7)
+- Each phosphodiester in DNA keeps one acidic OH (pKa ~1-2), so the backbone carries one negative charge per nucleotide → binds $Mg^{2+}$ and histone lysines/arginines (ammonium/guanidinium cations)
 - **Thiols** (Cys): soft nucleophiles; pairs oxidize to **disulfides** (the only common covalent side-chain crosslink; reduced by DTT/2-mercaptoethanol in lab passages)
 - **Hydroxyls** (Ser/Thr/Tyr): nucleophiles AND phosphorylation sites — kinases build phosphoesters, phosphatases hydrolyze them
 - **Imidazole** (His): pKa ~6, the proton shuttle (Part 3 of this lesson)
@@ -40,8 +41,7 @@ Notice the pattern: every polymerization is a **condensation** (lose water; an O
 
 ### Passage Strategy: the Group-Scan Method
 
-When a passage introduces an unfamiliar molecule (a drug, toxin, metabolite):
-1. **Scan and label** every functional group in the structure
+1. **Scan and label** every functional group of the unfamiliar molecule (a drug, toxin, metabolite)
 2. **Ionization state** at pH 7.4 (acids anionic, amines cationic)
 3. **Electrophiles vs nucleophiles**: carbonyls, Michael acceptors, alkyl halides = electrophilic; thiols, amines, alkoxides = nucleophilic
 4. **Hydrolyzable linkages** (ester > amide; acetal in acid) — predicts metabolism and prodrug activation

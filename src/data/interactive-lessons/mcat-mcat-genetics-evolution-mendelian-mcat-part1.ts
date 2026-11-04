@@ -10,8 +10,8 @@ export const mcatMendelianPart1Data = {
 
 ### The Two Laws
 
-1. **Law of Segregation**: A diploid individual carries two alleles for each gene; these separate during gamete formation so each gamete receives exactly one. Physical basis: separation of **homologous chromosomes in anaphase I** of meiosis.
-2. **Law of Independent Assortment**: Alleles of genes on **different chromosomes** (or far apart on the same chromosome) are distributed to gametes independently. Physical basis: **random orientation of homologous pairs at metaphase I**.
+- **Law of Segregation**: A diploid individual carries two alleles for each gene; these separate during gamete formation so each gamete receives exactly one. Physical basis: separation of **homologous chromosomes in anaphase I** of meiosis.
+- **Law of Independent Assortment**: Alleles of genes on **different chromosomes** (or far apart on the same chromosome) are distributed to gametes independently. Physical basis: **random orientation of homologous pairs at metaphase I**.
 
 ### Vocabulary You Must Not Confuse
 
@@ -31,11 +31,9 @@ export const mcatMendelianPart1Data = {
 
 **Dihybrid** (AaBb $\\times$ AaBb): phenotypes $9\\ A\\_B\\_ : 3\\ A\\_bb : 3\\ aaB\\_ : 1\\ aabb$ — but ONLY if the genes assort independently and both show complete dominance.
 
-**Test cross**: unknown dominant $\\times$ homozygous recessive (aa).
+**Test cross**: unknown dominant $\\times$ homozygous recessive (aa). It works because the recessive parent contributes only recessive alleles, so offspring phenotypes read out the tested parent's gametes directly.
 - All dominant offspring → tested parent AA
 - $1:1$ dominant : recessive → tested parent Aa
-
-A test cross works because the recessive parent contributes only recessive alleles, so offspring phenotypes read out the tested parent's gametes directly.
 
 ### The Probability Toolkit (faster than Punnett squares)
 

@@ -44,11 +44,11 @@ Sign conventions (mirrors): $d_o > 0$ for a real object in front.
 | Between $C$ and $F$ ($f < d_o < 2f$) | real, inverted, ENLARGED, beyond $C$ |
 | Inside $F$ ($d_o < f$) | virtual, upright, ENLARGED (makeup / shaving mirror) |
 
-At exactly $d_o = 2f$: real, inverted, same size at $2f$. At $d_o = f$: no image (rays exit parallel — the searchlight configuration).
+At exactly $d_o = 2f$: real, inverted, same size at $2f$. At $d_o = f$: no image at all — where does principal ray 2 go?
 
 ### Convex Mirror — One Regime
 
-Wherever the object stands, a convex mirror ALWAYS forms a **virtual, upright, reduced** image behind the mirror, never a magnified one. The shrunken image buys a wide field of view: store-security mirrors and the passenger-side mirror ("objects are closer than they appear").`
+Wherever the object stands, a convex mirror ALWAYS forms a **virtual, upright, reduced** image behind the mirror, never a magnified one — hence the passenger-side mirror's warning that "objects are closer than they appear".`
     },
     {
       id: 'opt2-worked',

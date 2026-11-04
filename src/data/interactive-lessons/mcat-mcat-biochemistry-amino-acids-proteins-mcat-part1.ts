@@ -28,10 +28,10 @@ All 20 standard amino acids are **L-stereoisomers** with **(S) absolute configur
 
 ### The Special Cases the MCAT Loves
 
-- **Glycine (G):** side chain = H. Smallest, most flexible, achiral. Fits in tight turns; every third residue of collagen is Gly.
-- **Proline (P):** side chain cyclizes back onto the backbone nitrogen (a secondary amine — technically an imino acid). Rigid; introduces kinks; **helix breaker**.
-- **Cysteine (C):** thiol ($-SH$) side chain; two cysteines oxidize to form a covalent **disulfide bond** (cystine).
-- **Histidine (H):** imidazole side chain with pKa about 6 — the only side chain that titrates near physiological pH, making it a superb acid-base catalyst in active sites (e.g., serine proteases, carbonic anhydrase).
+- **Glycine (G):** side chain = H. Smallest, most flexible, achiral; fits tight turns; every third residue of collagen is Gly.
+- **Proline (P):** side chain cyclizes back onto the backbone nitrogen (a secondary amine, an imino acid). Rigid; introduces kinks; **helix breaker**.
+- **Cysteine (C):** thiol ($-SH$) side chain; two cysteines oxidize to a covalent **disulfide bond** (cystine).
+- **Histidine (H):** imidazole side chain with pKa about 6 — the one side chain that titrates near physiological pH, so it is the classic active-site acid-base catalyst.
 - **Methionine (M):** thioether sulfur (no disulfides!); as N-formylmethionine (bacteria) or Met (eukaryotes) it initiates translation.
 
 ### Hydrophobicity Predicts Location

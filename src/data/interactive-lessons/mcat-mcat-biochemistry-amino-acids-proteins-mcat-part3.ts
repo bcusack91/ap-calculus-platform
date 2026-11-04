@@ -27,7 +27,9 @@ Peptide bonds form by **condensation (dehydration)** between one residue's carbo
 
 ### What Actually Drives Folding: The Hydrophobic Effect
 
-Burying nonpolar side chains releases ordered water molecules from around them, **increasing the entropy of the solvent**. This entropy gain is the dominant thermodynamic driver of folding — more important than any individual H-bond. Folding is spontaneous for many small proteins (Anfinsen's ribonuclease experiment: sequence alone encodes the native fold), but large proteins in the crowded cell often need **chaperones** (e.g., heat shock proteins) to prevent aggregation, not to dictate the fold.
+Burying nonpolar side chains releases ordered water molecules from around them, **increasing the entropy of the solvent**. This entropy gain is the dominant thermodynamic driver of folding — more important than any individual H-bond.
+
+Folding is spontaneous for many small proteins (Anfinsen's ribonuclease experiment: sequence alone encodes the native fold), but large proteins in the crowded cell often need **chaperones** (e.g., heat shock proteins) to prevent aggregation, not to dictate the fold.
 
 ### Secondary Structure Details
 

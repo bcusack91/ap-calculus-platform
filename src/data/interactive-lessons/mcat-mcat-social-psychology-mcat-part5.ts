@@ -33,7 +33,7 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
 | Concept | Idea |
 |---------|------|
 | **Altruism** | Helping at a cost to oneself with no expected reward |
-| **Kin selection / inclusive fitness** | Favor genetic relatives (Hamilton's rule) |
+| **Kin selection / inclusive fitness** | Favor genetic relatives when relatedness × benefit > cost (Hamilton's rule) |
 | **Reciprocal altruism** | Help expecting future return |
 | **Empathy–altruism hypothesis** | Empathy can drive genuinely selfless helping |
 | **Social exchange theory** | Helping follows cost–benefit calculation |
@@ -89,7 +89,7 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
 
 **(b) Relatedness.** Siblings share about 50% of their genes; first cousins about 12.5%.
 
-**(c) Siblings vs. cousins.** More cousins. With their higher relatedness, fewer siblings are needed for the inequality to hold: if each saved relative gains as much as the actor loses, it takes more than 2 siblings but more than 8 cousins.
+**(c) Siblings vs. cousins.** More cousins. With their higher relatedness, fewer siblings are needed for the inequality to hold: if each saved relative gains as much as the actor loses, the sacrifice pays off only for more than 2 siblings, versus more than 8 cousins.
 
 **(d) Inclusive fitness.** It reframes altruism as propagating shared genes. Reciprocal altruism instead expects a future return, and empathy-driven helping is a third explanation.`
     },
@@ -126,7 +126,7 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
     {
       id: 'sp5-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 5 (and Suite Review)
+      content: `### Key Takeaways — Part 5
 
 - **Others present.** Social facilitation lifts simple tasks and impairs complex ones; loafing cuts effort on anonymous pooled work.
 - **Group decisions.** Polarization amplifies the initial leaning; groupthink trades appraisal for harmony, and a devil's advocate counters it.

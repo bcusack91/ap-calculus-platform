@@ -50,10 +50,10 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
 
 ### Reading Evolutionary Trees
 
-- **Divergent evolution** produces **homologous** structures: same ancestral origin, possibly different functions (human arm, whale flipper, bat wing — one forelimb skeleton).
-- **Convergent evolution** produces **analogous** structures: similar function, independent origins (bird vs. insect wings; shark vs. dolphin body form). Similarity from convergence (or reversal) is **homoplasy** — it misleads tree-building if mistaken for homology.
-- A **cladogram**'s nodes are common ancestors; a **monophyletic group (clade)** is an ancestor plus ALL of its descendants; **sister taxa** share an immediate common ancestor.
-- **Branch order, not left-right position or "ladder height," carries the information.** No living taxon is "more evolved" than another — all tips have had equal time since the root.
+- **Divergent evolution** produces **homologous** structures: same ancestral origin, possibly different functions (human arm, whale flipper, bat wing).
+- **Convergent evolution** produces **analogous** structures: similar function, independent origins (bird vs. insect wings). Convergent similarity is **homoplasy**; mistaken for homology, it misleads tree-building.
+- On a **cladogram**, nodes are common ancestors; a **clade (monophyletic group)** is an ancestor plus ALL its descendants; **sister taxa** share the nearest node.
+- **Branch order carries the information, not left-right position or "ladder height."** No living taxon is "more evolved": all tips have had equal time since the root.
 
 ### Tempo
 
@@ -68,13 +68,13 @@ Punctuated equilibrium was proposed by Niles Eldredge and Stephen Jay Gould (197
       type: 'text' as const,
       content: `### Worked Example — Classifying Reproductive Barriers
 
-**Problem.** Two cricket populations diverged within one meadow without ever being geographically separated. Females ignore the other population's courtship song; forced crosses rarely fertilize eggs; the few hybrids that hatch are fertile, but their offspring are feeble.
+**Problem.** Two cricket populations diverged within one meadow, never geographically separated. Females ignore the other population's courtship song; forced crosses rarely fertilize eggs; the few hybrids that hatch are fertile, but their offspring are feeble.
 
-- **(a)** Which barrier is the ignored courtship song, and is it prezygotic or postzygotic?
-- **(b)** Which barrier is the failed fertilization, and on which side of the zygote does it act?
+- **(a)** Which barrier is the ignored song, and is it prezygotic or postzygotic?
+- **(b)** Which barrier is the failed fertilization, and which side of the zygote does it act on?
 - **(c)** Which barrier explains the feeble offspring of fertile hybrids?
 - **(d)** Which geographic mode of speciation is this, and by what route?
-- **(e)** If hybrids fare poorly, which kind of barrier should selection strengthen, and why?
+- **(e)** Since hybrids fare poorly, which kind of barrier should selection strengthen, and why?
 
 **(a) Behavioral isolation.** Courtship signals that are not recognized prevent mating, so no zygote forms: a prezygotic barrier.
 

@@ -96,7 +96,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `As a work team grows from 5 members to 50, which pattern of change do sociological accounts of group size predict?`,
+    question: `A hospital's 5-person quality team is merged into a 50-person department-wide committee. Which pair of changes would sociological accounts of group size predict?`,
     options: [
       `Intimacy and individual accountability both rise steadily`,
       `Stability rises while the group's total capacity falls`,
@@ -256,7 +256,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `A hospital board with a forceful chair keeps approving her proposals unanimously, though several members privately doubt them. Which change would most directly counter this pattern?`,
+    question: `A school district's budget council, led by a superintendent who opens each meeting with his own plan, has passed every plan unanimously for two years, though several members admit afterward that they had doubts. Which change would most directly counter this pattern?`,
     options: [
       `Adding more like-minded members to speed consensus`,
       `Having the chair announce her preference earlier`,
@@ -264,21 +264,21 @@ export const EXIT_POOL: LessonExitItem[] = [
       `Holding meetings in private to build cohesion`,
     ],
     correctAnswer: 2,
-    explanation: `Privately doubted proposals approved unanimously under a directive leader is groupthink, and its remedies are a devil's advocate, outside opinions, and a leader who withholds her preference. Adding like-minded members or building cohesion in insulated meetings strengthens the conditions that produce groupthink. A chair who states her view early is one of its causes, not a cure.`,
+    explanation: `Privately doubted plans approved unanimously under a directive leader is groupthink, and its remedies are a devil's advocate, outside opinions, and a leader who withholds his preference. Adding like-minded members or building cohesion in insulated meetings strengthens the conditions that produce groupthink. A leader who states his view early is one of its causes, not a cure.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 2,
   },
   {
-    question: `Physicians who each mildly favor aggressive treatment discuss a case together and end up endorsing far more aggressive treatment than any of them first proposed. Which process contributes to this shift?`,
+    question: `Physicians who each mildly favor aggressive treatment discuss a case; midway, one says, "If anything, I'd go further than that," offering no new evidence, and the group ends up endorsing far more aggressive treatment than any member first proposed. The remark illustrates which mechanism of the shift?`,
     options: [
-      `Hearing new arguments that support their shared side`,
-      `Suppressing members who privately opposed the group`,
-      `Pooling effort so that no one's input is identifiable`,
-      `Obeying the most senior physician's explicit orders`,
+      `Normative one-upping of the group's valued position`,
+      `Informational exposure to new arguments for one side`,
+      `Suppression of private dissent to protect unanimity`,
+      `Diffusion of effort across a pooled group product`,
     ],
     correctAnswer: 0,
-    explanation: `A shared lean that becomes more extreme after discussion is group polarization, driven partly by hearing new arguments for the side everyone already favors and partly by one-upping the valued position. The physicians all leaned the same way, so there was no dissent to suppress, which is what groupthink would require. Pooled, unidentifiable effort explains loafing, and nobody issued orders.`,
+    explanation: `Group polarization runs on two mechanisms: hearing new arguments for the shared side (informational) and members outdoing one another in loyalty to the valued position (normative). "I'd go further" adds no argument; it signals commitment, which is the normative route. The physicians all leaned the same way, so there was no dissent to suppress, which is what groupthink would require, and pooled, unidentifiable effort explains loafing rather than a shift in opinion.`,
     difficulty: 'medium',
     yield: 'HIGH',
     part: 2,
@@ -512,7 +512,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 2,
   },
   {
-    question: `Users posting under anonymous accounts join a fast-moving pile-on, sending a stranger abusive messages they say they would never send under their own names. This behavior is best explained by:`,
+    question: `Commenters on a late-night livestream, hidden behind untraceable usernames, flood a stranger's chat with insults they say they would never use under their real names. This behavior is best explained by:`,
     options: [
       `Deindividuation, as anonymity weakens self-monitoring`,
       `Social facilitation, as an audience improves performance`,
@@ -520,7 +520,7 @@ export const EXIT_POOL: LessonExitItem[] = [
       `Obedience, as users follow a legitimate authority's orders`,
     ],
     correctAnswer: 0,
-    explanation: `Anonymity, arousal, and diffused responsibility can suspend self-awareness and internal standards, and online pile-ons show that deindividuation can occur without a physical crowd. Social facilitation concerns how an audience affects task performance, not the loosening of moral restraint. The users are not seeking accurate information or following any authority's commands.`,
+    explanation: `Anonymity, arousal, and diffused responsibility can suspend self-awareness and internal standards, and an untraceable online crowd shows that deindividuation can occur without a physical one. Social facilitation concerns how an audience affects task performance, not the loosening of moral restraint. The commenters are not seeking accurate information or following any authority's commands.`,
     difficulty: 'easy',
     yield: 'MEDIUM',
     part: 2,

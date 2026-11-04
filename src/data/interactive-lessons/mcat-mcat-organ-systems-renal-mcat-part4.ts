@@ -10,20 +10,19 @@ export const mcatRenalSubPart4Data = {
 
 ### Diuretics — Pharmacology as Applied Transport Physiology
 
-Every diuretic is a question about one nephron segment. Predict its effects from the transport map:
-
-| Drug class | Blocks | Segment | Predictable consequences |
-|-----------|--------|---------|--------------------------|
-| Osmotic (mannitol) | Nothing — adds unreabsorbable solute | Whole nephron | Water held in lumen everywhere (glucose in diabetes acts identically) |
-| Carbonic-anhydrase inhibitor | HCO3$^-$ reclamation | PCT | Mild diuresis + bicarbonate loss → metabolic acidosis |
-| **Loop diuretic** | Na$^+$-K$^+$-2Cl$^-$ cotransporter | Ascending limb | Most powerful; **destroys the medullary gradient** (kills concentrating ability); K$^+$ wasting |
+| Class | Blocks | Segment | Consequences |
+|-------|--------|---------|--------------|
+| Osmotic (mannitol) | Adds unreabsorbable solute | Whole nephron | Water held in the lumen (glucose in diabetes acts the same) |
+| Carbonic-anhydrase inhibitor | HCO3$^-$ reclamation | PCT | Mild; HCO3$^-$ loss → metabolic acidosis |
+| **Loop diuretic** | Na$^+$-K$^+$-2Cl$^-$ cotransporter | Ascending limb | Strongest; **erases the medullary gradient**; K$^+$ wasting |
 | Thiazide | NaCl cotransporter | DCT | Moderate; spares the gradient; K$^+$ wasting |
-| K$^+$-sparing (aldosterone antagonists / Na-channel blockers) | Principal-cell Na$^+$ entry | Collecting duct | Weak alone; prevents the K$^+$ loss the others cause |
+| K$^+$-sparing (aldosterone antagonists, Na$^+$-channel blockers) | Principal-cell Na$^+$ entry | Collecting duct | Weak; spares K$^+$ |
 
 <!-- yield:low -->
 - Thiazides also INCREASE Ca$^{2+}$ reabsorption in the DCT (the opposite of loop diuretics, which lose Ca$^{2+}$).
 <!-- /yield -->
 
+- **Method:** every diuretic is a question about one nephron segment — find it on the map, block its transporter, then predict the effects from the transport table.
 - **Downstream logic:** any drug that dumps extra Na$^+$ into the collecting duct increases Na$^+$/K$^+$ exchange there → hypokalemia (loops, thiazides). Blocking that exchange spares K$^+$.
 - **Gradient logic:** only agents acting on the ascending limb erase the countercurrent multiplier itself.
 
@@ -44,10 +43,10 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
 
 ### Passage-Skill Checklist
 
-- **Always compute filtered load first** ($GFR \\times P_X$), then compare with excretion ($U_X \\times V$) — the difference names reabsorption or secretion.
+- **Compute filtered load first** ($GFR \\times P_X$), then compare with excretion ($U_X \\times V$): the difference names reabsorption or secretion.
 - **Clearance benchmarks:** 0 (glucose) < urea < inulin/creatinine (=GFR) < PAH (=RPF). Position any mystery molecule on this ladder.
-- **Hormone questions:** classify as osmolarity problem (ADH axis) vs. volume problem (RAAS/ANP axis); many traps swap them.
-- **Knockout/inhibitor experiments:** find the segment, apply the transport table, propagate downstream (delivery to later segments changes THEIR behavior).
+- **Hormone questions:** osmolarity problem (ADH axis) or volume problem (RAAS/ANP axis)? Many traps swap them.
+- **Knockout/inhibitor experiments:** find the segment, apply the transport table, propagate downstream (later segments see a different delivery).
 - **The two-hormone diabetes discrimination:** mellitus = osmotic diuresis with glucosuria; insipidus = pure water diuresis, dilute urine, no glucose.`
     },
     {

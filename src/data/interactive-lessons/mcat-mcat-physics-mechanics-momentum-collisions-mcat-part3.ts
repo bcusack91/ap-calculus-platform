@@ -20,8 +20,8 @@ The lighter fragment always moves faster, in inverse proportion to its mass. Kin
 
 A bullet embeds in a hanging block, which then swings upward. This is a classic two-stage problem because it forces you to switch tools mid-problem:
 
-1. **The collision (bullet embeds):** perfectly inelastic. Use **momentum conservation only** — kinetic energy is destroyed wholesale here.
-2. **The swing (block rises):** no collision anymore, just gravity acting on a moving pendulum. Use **energy conservation**: $\\tfrac{1}{2}(M+m)v'^2 = (M+m)gh$.
+- **Stage 1, the collision (bullet embeds):** perfectly inelastic. Use **momentum conservation only** — kinetic energy is destroyed wholesale here.
+- **Stage 2, the swing (block rises):** no collision anymore, just gravity acting on a moving pendulum. Use **energy conservation**: $\\tfrac{1}{2}(M+m)v'^2 = (M+m)gh$.
 
 The trap — equating the bullet's initial KE to the final potential energy $(M+m)gh$ — skips the collision's enormous energy loss and wildly overestimates the height (or underestimates the bullet speed). Draw a mental fence at the moment of impact: momentum crosses the fence, kinetic energy does not.
 

@@ -34,9 +34,8 @@ Accumulated p53 transcribes a triage program:
 
 ### Apoptosis — Ordered Self-Destruction
 
-Apoptosis is ATP-dependent, non-inflammatory, and executed by **caspases** (cysteine proteases cleaving after aspartate, made as inactive zymogens):
+Apoptosis is ATP-dependent, non-inflammatory, and executed by **caspases** (cysteine proteases cleaving after aspartate, made as inactive zymogens). The **intrinsic (mitochondrial) pathway** is the cell-cycle-relevant one:
 
-**Intrinsic (mitochondrial) pathway** — the cell-cycle-relevant one:
 1. Stress/damage shifts the balance of **Bcl-2 family** proteins: pro-apoptotic **BAX/BAK** overcome anti-apoptotic **Bcl-2**
 2. BAX/BAK permeabilize the outer mitochondrial membrane → **cytochrome c** escapes to the cytosol
 3. Cytochrome c assembles the **apoptosome**, activating initiator **caspase-9**

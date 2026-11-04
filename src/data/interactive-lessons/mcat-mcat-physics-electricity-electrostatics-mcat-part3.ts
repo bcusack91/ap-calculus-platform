@@ -10,8 +10,6 @@ export const electrostaticsMcatPart3: LessonData = {
 
 **Part 3 of 4 — Membranes & Electrophoresis**
 
-Electrostatics is the MCAT's favorite bridge between physics and biology. Two applications dominate: the cell membrane as a charged parallel-plate system, and gel electrophoresis.
-
 ### The Membrane as a Parallel-Plate Capacitor
 
 The lipid bilayer is an insulator about $5$–$10\\;\\text{nm}$ thick, with conducting salt solutions on both sides. At rest, the inside of a neuron sits about $-70\\;\\text{mV}$ relative to the outside.
@@ -23,7 +21,11 @@ The lipid bilayer is an insulator about $5$–$10\\;\\text{nm}$ thick, with cond
 
 ### Depolarization in Field Language
 
-When sodium channels open, $\\text{Na}^+$ flows inward — DOWN its electrical gradient (positive charge attracted to the negative interior) and down its concentration gradient. The membrane potential rises toward zero and beyond: **depolarization**. Restoring $-70\\;\\text{mV}$ (repolarization) is driven mainly by $\\text{K}^+$ flowing OUT through voltage-gated channels, down its own gradient. Over the longer run, the $\\text{Na}^+/\\text{K}^+$ pump spends ATP doing work against the gradients to restore the ion concentrations.
+The action potential, read as charges in a field:
+
+- **Depolarization.** When sodium channels open, $\\text{Na}^+$ flows inward — DOWN its electrical gradient (positive charge attracted to the negative interior) and down its concentration gradient. The membrane potential rises toward zero and beyond.
+- **Repolarization.** Restoring $-70\\;\\text{mV}$ is driven mainly by $\\text{K}^+$ flowing OUT through voltage-gated channels, down its own gradient.
+- **Recovery.** Over the longer run, the $\\text{Na}^+/\\text{K}^+$ pump spends ATP doing work against the gradients to restore the ion concentrations.
 
 ### Gel Electrophoresis
 

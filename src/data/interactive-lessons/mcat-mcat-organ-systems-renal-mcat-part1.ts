@@ -14,9 +14,7 @@ Far more than "making urine": regulation of **volume and blood pressure**, **osm
 
 ### The Nephron — One Tube, Regional Specialists
 
-~1 million nephrons per kidney. Order matters; every subsequent lesson hangs on this map:
-
-$$\\text{Glomerulus/Bowman's capsule} \\to \\text{PCT} \\to \\text{descending limb} \\to \\text{ascending limb} \\to \\text{DCT} \\to \\text{collecting duct}$$
+~1 million nephrons per kidney, each one tube with regional specialists. Order matters; everything that follows hangs on this map:
 
 | Region | Location | Headline job |
 |--------|----------|--------------|
@@ -27,7 +25,7 @@ $$\\text{Glomerulus/Bowman's capsule} \\to \\text{PCT} \\to \\text{descending li
 | Collecting duct | Cortex → deep medulla | Hormone-controlled water and Na$^+$/K$^+$ final decisions |
 
 - **Juxtamedullary nephrons** (long loops, deep into the medulla) build the concentration gradient; cortical nephrons (most of them) have short loops.
-- Unique double capillary bed — a **portal system**: afferent arteriole → **glomerulus** (capillary bed 1) → **efferent arteriole** → peritubular capillaries/**vasa recta** (capillary bed 2). Two arterioles bracketing the glomerulus is what makes its pressure adjustable.
+- A double capillary bed — a **portal system**: afferent arteriole → **glomerulus** → **efferent arteriole** → peritubular capillaries/**vasa recta**. Two arterioles bracketing the glomerulus is what makes its pressure adjustable.
 
 ### Filtration — A Starling Problem at High Pressure
 

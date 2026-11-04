@@ -332,13 +332,13 @@ ${T(332, ladY(125) + 5, 15, 'pain ≈ 120–130 (about 1 W/m²)')}
 <g class="fig-muted"><line x1="590" y1="30" x2="590" y2="440" stroke="currentColor" stroke-width="1.5"/></g>
 ${T(790, 66, 26, 'β = 10 log (I / I₀)', 'middle', '700')}
 ${T(790, 96, 16, `${SUB('I', '0', 16, ' = 10⁻¹² W/m² defines 0 dB')}`, 'middle')}
-${[['× 10', '+10 dB'], ['× 100', '+20 dB'], ['× 1000', '+30 dB'], ['× 2', '≈ +3 dB'], ['× ¼ (2× distance)', '≈ −6 dB']]
+${[['× 10', '+10 dB'], ['× 100', '+20 dB'], ['× 2', '≈ +3 dB'], ['× ¼ (2× distance)', '≈ −6 dB']]
   .map(([r, d], k) => `${T(770, 146 + 30 * k, 17, `I ${r}`, 'end')}${T(786, 146 + 30 * k, 17, '→', 'middle')}<g class="fig-accent-2">${T(802, 146 + 30 * k, 17, d, 'start', '700')}</g>`)
   .join('')}
 <g class="fig-muted">${T(790, 294, 14, 'log 2 ≈ 0.3, so a factor of 2 is about 3 dB', 'middle')}</g>
 ${T(790, 334, 17, 'Never add decibels', 'middle', '700')}
 ${T(790, 360, 16, 'two 70 dB sources ≈ 73 dB, not 140', 'middle')}
-${T(790, 386, 16, '40 → 70 dB is × 1000, not × 70/40', 'middle')}
+${T(790, 386, 16, '50 → 70 dB is × 100, not × 70/50', 'middle')}
 <g class="fig-muted">${T(790, 426, 14, 'turn every ×10 into 10 dB and every ×2 into 3 dB', 'middle')}</g>
 </svg>`
 
@@ -372,7 +372,7 @@ ${DIM(84, 102, 84, 294, 'arr-ws-us-g', 2)}
 ${T(74, 204, 18, 'd', 'end', '700')}
 ${T(230, 368, 26, 'd = vt / 2', 'middle', '700')}
 ${T(230, 396, 15, 'v ≈ 1540 m/s in soft tissue; t = round-trip time', 'middle')}
-<g class="fig-accent-2">${T(230, 424, 15, 'echo after 130 µs: vt ≈ 0.20 m → d ≈ 10 cm', 'middle', '700')}</g>
+<g class="fig-accent-2">${T(230, 424, 15, 'echo after 100 µs: vt ≈ 0.15 m → d ≈ 7.7 cm', 'middle', '700')}</g>
 <g class="fig-muted"><line x1="460" y1="30" x2="460" y2="440" stroke="currentColor" stroke-width="1.5"/></g>
 ${T(730, 34, 19, 'Higher frequency: finer detail, less depth', 'middle', '700')}
 ${RECT(650, 52, 60, 34, 2.5, 0.2, 5)}${RECT(850, 52, 60, 34, 2.5, 0.2, 5)}
@@ -381,7 +381,7 @@ ${RECT(650, 52, 60, 34, 2.5, 0.2, 5)}${RECT(850, 52, 60, 34, 2.5, 0.2, 5)}
 <line x1="480" y1="${UV_TOP + 60}" x2="980" y2="${UV_TOP + 60}" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 5"/>
 <line x1="480" y1="${UV_TOP + 300}" x2="980" y2="${UV_TOP + 300}" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 5"/>
 ${T(484, UV_TOP + 52, 14, 'carotid ≈ 2 cm')}
-${T(484, UV_TOP + 292, 14, 'liver ≈ 10 cm')}
+${T(484, UV_TOP + 292, 14, 'liver, fetus: deep')}
 </g>
 <g class="fig-accent"><path d="${vwave(680, UV_TOP, UV_TOP + 300, 26, 40, 260)}" fill="none" stroke="currentColor" stroke-width="2.5"/></g>
 <g class="fig-accent-2"><path d="${vwave(880, UV_TOP, UV_TOP + 300, 26, 10, 60)}" fill="none" stroke="currentColor" stroke-width="2"/></g>
@@ -468,8 +468,9 @@ export const mcatWavesSoundExtraFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Beats',
-    mode: 'lead',
+    // After the tuning worked example: the picture carries that example's 437 / 443 Hz answers.
+    at: 'Worked Example — Tuning by Beats',
+    mode: 'after',
     figure: {
       svg: beatsSvg,
       alt:
@@ -501,7 +502,7 @@ export const mcatWavesSoundExtraFigures: DeckFigurePlacement[] = [
     figure: {
       svg: decibelSvg,
       alt:
-        'A vertical ladder with a rung every 10 dB from 0 to 130 dB. Left of each rung is its intensity, from 10⁻¹² W/m² at 0 dB up to 1 W/m² at 120 dB and 10¹ at 130 dB; right of each rung is its level in dB. Red curved arrows on the left show that one rung, +10 dB (30 to 40), is ×10 intensity and two rungs, +20 dB (60 to 80), are ×100. Landmarks beside the ladder: 0 dB = threshold of hearing, I₀; whisper ≈ 30; conversation ≈ 60; heavy traffic ≈ 80; bracketed ranges for a siren up close ≈ 110–120 and pain ≈ 120–130 (about 1 W/m²); landmarks approximate. Right: β = 10 log(I/I₀), with I₀ = 10⁻¹² W/m² defining 0 dB. Rules: I ×10 → +10 dB; ×100 → +20 dB; ×1000 → +30 dB; ×2 → ≈ +3 dB (log 2 ≈ 0.3); ×¼ (distance doubled) → ≈ −6 dB. Never add decibels: two 70 dB sources ≈ 73 dB, not 140; 40 → 70 dB is ×1000, not ×70/40. Turn every ×10 into 10 dB and every ×2 into 3 dB.',
+        'A vertical ladder with a rung every 10 dB from 0 to 130 dB. Left of each rung is its intensity, from 10⁻¹² W/m² at 0 dB up to 1 W/m² at 120 dB and 10¹ at 130 dB; right of each rung is its level in dB. Red curved arrows on the left show that one rung, +10 dB (30 to 40), is ×10 intensity and two rungs, +20 dB (60 to 80), are ×100. Landmarks beside the ladder: 0 dB = threshold of hearing, I₀; whisper ≈ 30; conversation ≈ 60; heavy traffic ≈ 80; bracketed ranges for a siren up close ≈ 110–120 and pain ≈ 120–130 (about 1 W/m²); landmarks approximate. Right: β = 10 log(I/I₀), with I₀ = 10⁻¹² W/m² defining 0 dB. Rules: I ×10 → +10 dB; ×100 → +20 dB; ×2 → ≈ +3 dB (log 2 ≈ 0.3); ×¼ (distance doubled) → ≈ −6 dB. Never add decibels: two 70 dB sources ≈ 73 dB, not 140; 50 → 70 dB is ×100, not ×70/50. Turn every ×10 into 10 dB and every ×2 into 3 dB.',
       caption: 'The decibel ladder: every +10 dB rung multiplies the intensity by 10, starting from 0 dB at 10⁻¹² W/m²; landmark levels are approximate.',
     },
     blocks: [
@@ -515,8 +516,8 @@ export const mcatWavesSoundExtraFigures: DeckFigurePlacement[] = [
     figure: {
       svg: usSvg,
       alt:
-        'Left: a probe (piezoelectric crystal) on a thin layer of gel on the skin. A red arrow carries the pulse down to a tissue boundary and a blue arrow carries the echo back up; a grey dimension arrow marks the depth d from the skin to the boundary. Below: d = vt/2, with v ≈ 1540 m/s in soft tissue and t the round-trip time; example: an echo after 130 µs gives vt ≈ 0.20 m, so d ≈ 10 cm. Right, titled higher frequency: finer detail, less depth: two probes on the skin send waves downward, with dashed depth lines at about 2 cm (carotid) and 10 cm (liver); a side note says tissue absorbs high frequencies more strongly. The 3 MHz beam (blue) has a long wavelength and fades slowly, still visible at the liver line: λ ≈ 0.51 mm, reaches the liver. The 12 MHz beam (red) has a much shorter wavelength but dies out within a few centimetres: λ ≈ 0.13 mm, sees the carotid wall.',
-      caption: 'Ultrasound: echo time gives depth by d = vt/2, and higher frequency buys finer resolution at the cost of penetration — schematic, worked-example numbers.',
+        'Left: a probe (piezoelectric crystal) on a thin layer of gel on the skin. A red arrow carries the pulse down to a tissue boundary and a blue arrow carries the echo back up; a grey dimension arrow marks the depth d from the skin to the boundary. Below: d = vt/2, with v ≈ 1540 m/s in soft tissue and t the round-trip time; example: an echo after 100 µs gives vt ≈ 0.15 m, so d ≈ 7.7 cm. Right, titled higher frequency: finer detail, less depth: two probes on the skin send waves downward, with dashed depth lines at about 2 cm (carotid) and deeper down (liver, fetus); a side note says tissue absorbs high frequencies more strongly. The 3 MHz beam (blue) has a long wavelength and fades slowly, still visible at the liver line: λ ≈ 0.51 mm, reaches the liver. The 12 MHz beam (red) has a much shorter wavelength but dies out within a few centimetres: λ ≈ 0.13 mm, sees the carotid wall.',
+      caption: 'Ultrasound: echo time gives depth by d = vt/2, and higher frequency buys finer resolution at the cost of penetration — schematic.',
     },
     blocks: [
       '- $d = vt/2$ with $v \\approx 1540$ m/s: the pulse goes there **and back**',

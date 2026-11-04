@@ -30,7 +30,11 @@ Elongation (ER/mitochondria) and desaturation (ER; humans cannot desaturate beyo
 
 Cytosolic acetyl-CoA → acetoacetyl-CoA → HMG-CoA → **(HMG-CoA reductase + 2 NADPH)** → **mevalonate** → ... → squalene → cholesterol.
 
-**HMG-CoA reductase** (smooth ER) is the rate-limiting enzyme: inhibited competitively by **statins**, repressed transcriptionally by cholesterol itself, phosphorylated OFF by AMPK, activated by insulin. Cholesterol's fates: membranes, **bile acids** (the major disposal route), steroid hormones, vitamin D. When LDL delivers cholesterol to a cell, the cell downregulates both HMG-CoA reductase AND LDL-receptor synthesis — the feedback loop statin therapy exploits (less internal synthesis → more LDL receptors → lower plasma LDL).
+**HMG-CoA reductase** (smooth ER) is the rate-limiting enzyme: inhibited competitively by **statins**, repressed transcriptionally by cholesterol itself, phosphorylated OFF by AMPK, activated by insulin.
+
+Cholesterol's fates: membranes, **bile acids** (the major disposal route), steroid hormones, vitamin D.
+
+When LDL delivers cholesterol to a cell, the cell downregulates both HMG-CoA reductase AND LDL-receptor synthesis — it neither makes nor imports what it already has. Statin therapy runs this loop in reverse: less internal synthesis → more LDL receptors → lower plasma LDL.
 
 The cholesterol sensor is the ER transcription factor **SREBP**: when ER cholesterol falls, SREBP is released to the nucleus and turns on both the HMG-CoA reductase and LDL-receptor genes.
 

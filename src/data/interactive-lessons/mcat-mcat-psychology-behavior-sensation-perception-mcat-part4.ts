@@ -10,11 +10,11 @@ export const mcatPsychSensPercPart4Data = {
 
 ### Bottom-Up Meets Top-Down: The Full Circuit
 
-Parts 1–3 built the pipeline: stimulus → receptor transduction → thalamic relay (except smell) → primary cortex → association cortex. Part 4 is about how the MCAT tests the *interaction* between that data-driven stream and the brain's expectations:
+The pipeline so far: stimulus → transduction → thalamus (except smell) → primary cortex → association cortex. Part 4 is how the MCAT tests the *interaction* of that data-driven stream with expectations:
 
 - **Perceptual set**: expectations prime one interpretation of an ambiguous input (the same figure reads as "13" in a number series and "B" in a letter series)
-- **Context effects**: identical gray patches look different in different surrounds — the brain reports its *inference* about the object, not the raw receptor output (this is lightness constancy doing its job)
 - **Priming and motivation** act on interpretation and on the *response criterion* — recall from Part 1 that expectations move β, not $d'$
+- **Context effects**: identical gray patches look different in different surrounds — the brain reports its *inference* about the object, not the raw receptor output (this is lightness constancy doing its job)
 
 ### The Two Cortical Visual Streams
 

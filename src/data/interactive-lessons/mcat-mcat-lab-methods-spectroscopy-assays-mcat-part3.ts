@@ -12,11 +12,11 @@ This part covers the detection/amplification methods that follow separations, pl
 
 ### Nucleic Acid & Protein Detection (Know the Blots)
 
-| Technique | Target | Detection | Mnemonic |
-|-----------|--------|-----------|----------|
-| **Southern blot** | DNA | Labeled DNA probe | SNoW DRoP |
-| **Northern blot** | RNA | Labeled probe | — |
-| **Western blot** | Protein | Antibody | — |
+| Technique | Target | Detection | Note |
+|-----------|--------|-----------|------|
+| **Southern blot** | DNA | Labeled DNA probe | S = DNA |
+| **Northern blot** | RNA | Labeled probe | N = RNA |
+| **Western blot** | Protein | Antibody | W = Protein |
 | **PCR** | DNA (amplify) | — | Exponential copies |
 | **ELISA** | Antigen/antibody | Enzyme-linked color | Quantitative |
 
@@ -24,9 +24,7 @@ This part covers the detection/amplification methods that follow separations, pl
 
 ### PCR Logic
 
-$$\\text{Copies} = N_0 \\times 2^{n}$$
-
-after $n$ cycles (ideal doubling). Steps per cycle:
+Copies after $n$ cycles of ideal doubling: $\\text{Copies} = N_0 \\times 2^{n}$. Steps per cycle:
 1. **Denature** (~95 °C): separate strands.
 2. **Anneal** (~50–65 °C): primers bind.
 3. **Extend** (~72 °C): heat-stable Taq polymerase synthesizes.
@@ -41,7 +39,7 @@ after $n$ cycles (ideal doubling). Steps per cycle:
 
 ### Method-Selection Cheat Sheet
 
-SDS-PAGE (a gel that sorts proteins by size) and affinity chromatography (a column that binds one tagged molecule) come from the *Lab Methods: Separations & Electrophoresis* lesson.
+SDS-PAGE (sorts proteins by size) and affinity chromatography (binds one tagged molecule) are from the *Lab Methods: Separations & Electrophoresis* lesson.
 
 | Goal | Best method |
 |------|-------------|

@@ -10,16 +10,16 @@ export const mcatCellOrganellesPart2Data = {
 
 ### Every Protein Carries a Zip Code
 
-Translation always **starts** on free cytosolic ribosomes. The protein's own sequence then decides its destination:
+Translation always **starts** on free cytosolic ribosomes; the protein's own sequence then decides its destination:
 
 | Signal | Destination | Import style |
 |--------|-------------|--------------|
-| N-terminal **signal sequence** (hydrophobic) | ER → secretory pathway | **Co-translational** (while being made) |
+| N-terminal hydrophobic **signal sequence** | ER → secretory pathway | **Co-translational** (while being made) |
 | No signal | Cytosol (default) | — |
-| **NLS** (nuclear localization signal, basic residues) | Nucleus | Through nuclear pores, FOLDED, via importins; Ran-GTP powers directionality |
-| N-terminal amphipathic **presequence** | Mitochondrial matrix | **Post-translational**, UNFOLDED, through TOM/TIM channels; chaperones required |
-| C-terminal targeting tripeptide | Peroxisome | Post-translational, can import folded proteins |
-| **Mannose-6-phosphate** (added sugar tag, not a sequence) | Lysosome | Sorted at the trans-Golgi |
+| **NLS** (nuclear localization signal, basic residues) | Nucleus | Through nuclear pores, FOLDED, via importins; Ran-GTP directs |
+| N-terminal amphipathic **presequence** | Mitochondrial matrix | **Post-translational**, UNFOLDED, via TOM/TIM channels; needs chaperones |
+| C-terminal targeting tripeptide | Peroxisome | Post-translational; folded proteins allowed |
+| **Mannose-6-phosphate** (a sugar tag, not a sequence) | Lysosome | Sorted at the trans-Golgi |
 
 <!-- yield:low -->
 - The classic peroxisomal tripeptide is **SKL** (Ser-Lys-Leu).
@@ -111,11 +111,11 @@ Loss of the phosphotransferase that creates M6P → hydrolases are **secreted in
 
 | Tool | Effect | Use |
 |------|--------|-----|
-| Protease protection | Added protease digests only exposed (cytosolic-facing) domains of vesicle preparations | Maps topology: protected = luminal |
-| Microsome +/- during in vitro translation | Signal cleavage and glycosylation occur only with membranes present | Reconstitutes co-translational import |
-| Glycan processing | ER-type (high-mannose) N-glycans are remodeled in the medial Golgi | A protein's glycan form tells how far along the pathway it got |
-| Blocking N-glycosylation | Protein runs lighter on SDS-PAGE; may misfold → UPR | Tests whether N-glycans are needed for folding or function |
-| Blocking ER → Golgi transport | Secreted cargo piles up inside the cell with ER-type glycans | Places a protein's journey before or after the Golgi |
+| Protease protection | Added protease digests only cytosol-facing domains of intact vesicles | Protected = luminal |
+| Microsomes +/− during in vitro translation | Signal cleavage and glycosylation need membranes present | Reconstitutes ER import |
+| Glycan processing | ER-type (high-mannose) N-glycans are remodeled in the medial Golgi | Glycan form = how far it got |
+| Blocking N-glycosylation | Protein runs lighter on SDS-PAGE; may misfold → UPR | Are N-glycans needed to fold? |
+| Blocking ER → Golgi transport | Cargo piles up in the cell with ER-type glycans | Before or after the Golgi? |
 
 <!-- yield:low -->
 - Named drug and enzyme probes: **tunicamycin** is the drug that blocks N-glycosylation; **brefeldin A** collapses the Golgi into the ER, blocking ER → Golgi transport; **Endo H** cleaves only high-mannose (pre-medial-Golgi) N-glycans, so Endo H resistance means the protein reached the medial Golgi — a molecular odometer.

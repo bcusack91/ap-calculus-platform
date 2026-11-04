@@ -12,19 +12,15 @@ export const dcCircuitsMcatPart2: LessonData = {
 
 ### Resistance and Ohm's Law
 
-**Resistance** $R$ measures how strongly an element opposes current. It is the ratio of the voltage across the element to the current through it, measured in ohms ($1\\;\\Omega = 1\\;\\text{V/A}$):
-
 $$V = IR$$
 
-Its reciprocal is the **conductance**, $G = 1/R$, measured in siemens ($1\\;\\text{S} = 1\\;\\Omega^{-1}$): the more conductance, the more current per volt.
-
-Read Ohm's law three ways, depending on what the circuit holds fixed:
+**Resistance** $R$ measures how strongly an element opposes current: the ratio of the voltage across it to the current through it, in ohms ($1\\;\\Omega = 1\\;\\text{V/A}$). Its reciprocal, the **conductance** $G = 1/R$ in siemens ($1\\;\\text{S} = 1\\;\\Omega^{-1}$), is the current per volt. Read Ohm's law three ways, depending on what the circuit holds fixed:
 
 - **Fixed $R$:** current is proportional to voltage. Double $V$, double $I$.
 - **Fixed $V$** (an outlet, or a branch wired straight across a battery): $I \\propto 1/R$. Halve the resistance, double the current.
 - **Fixed $I$** (elements in one series path): $V \\propto R$. The bigger resistor takes the bigger share of the voltage.
 
-**What sets $R$: material and geometry.**
+### Resistivity and Wire Geometry
 
 $$R = \\rho\\frac{L}{A}$$
 
@@ -91,11 +87,6 @@ An **ohmic** element keeps the same $R$ whatever the voltage. Its graph of $I$ a
       type: 'text' as const,
       content: `### Series vs. Parallel Resistors
 
-Identify the arrangement by current paths and shared connection points (nodes), never by how the figure is drawn:
-
-- **Series:** elements sit one after another on a single path, with no junction between them. They carry the SAME current.
-- **Parallel:** elements each connect the SAME two nodes. They have the SAME voltage across them.
-
 | | Series | Parallel |
 |---|---|---|
 | Same for every element | current $I$ | voltage $V$ |
@@ -105,6 +96,8 @@ Identify the arrangement by current paths and shared connection points (nodes), 
 | Biggest share goes to | largest $R$ (most voltage) | smallest $R$ (most current) |
 | One element breaks open | current stops everywhere | the other branches carry on |
 
+**Spot the arrangement by current paths and nodes, never by how the figure is drawn.** Series elements sit one after another on a single path with no junction between them, so they carry the SAME current. Parallel elements each connect the SAME two nodes, so they have the SAME voltage across them.
+
 **Why the rules look the way they do.** Series resistors are like added LENGTH, so resistances add. Parallel resistors are like added cross-sectional AREA, so it is the conductances ($G = 1/R$) that add.
 
 **Shortcuts worth memorizing:**
@@ -113,6 +106,8 @@ Identify the arrangement by current paths and shared connection points (nodes), 
 - **$n$ identical resistors:** $nR$ in series, $R/n$ in parallel.
 - **Bounds:** a parallel $R_{eq}$ is always SMALLER than the smallest branch (every new path lets more current through); a series $R_{eq}$ is always LARGER than the largest element.
 - **Lopsided pairs:** a huge resistor in parallel with a small one barely changes the small one's value; the small path dominates.
+
+### Short Circuits and Open Branches
 
 **Short circuits.** A wire of negligible resistance connected across an element holds both of its ends at the same potential. Then $V = 0$ across the element and $I = V/R = 0$ through it: the element is bypassed and drops out of the circuit, and all the current takes the wire. Shorting a source directly makes $R_{eq}$ nearly zero, which drives a dangerously large current and heats the wiring.
 
@@ -142,14 +137,14 @@ Identify the arrangement by current paths and shared connection points (nodes), 
 
 - **(a)** What is the equivalent resistance?
 - **(b)** What current flows in each branch?
-- **(c)** Does the junction rule agree with the total current from $R_{eq}$?
+- **(c)** Does the sum of the branch currents agree with the total current from $R_{eq}$?
 - **(d)** How does the ratio of the branch currents compare with the ratio of the resistances?
 
 **(a) Product over sum.** $R_{eq} = \\dfrac{(4)(12)}{4 + 12} = \\dfrac{48}{16} = 3\\;\\Omega$, below $4\\;\\Omega$ as it must be.
 
 **(b) Branch currents.** Each branch sees the full $12\\;\\text{V}$: $I_4 = 12/4 = 3\\;\\text{A}$ and $I_{12} = 12/12 = 1\\;\\text{A}$.
 
-**(c) Junction check.** From (b), $3 + 1 = 4\\;\\text{A}$; from (a), $V/R_{eq} = 12/3 = 4\\;\\text{A}$. They agree.
+**(c) Current check.** From (b), $3 + 1 = 4\\;\\text{A}$; from (a), $V/R_{eq} = 12/3 = 4\\;\\text{A}$. They agree.
 
 **(d) Inverse ratio.** The currents are in the ratio $3 : 1$, the INVERSE of the resistance ratio $1 : 3$.
 

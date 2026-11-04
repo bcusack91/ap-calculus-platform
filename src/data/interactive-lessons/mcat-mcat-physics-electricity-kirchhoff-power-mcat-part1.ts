@@ -14,7 +14,7 @@ export const kirchhoffPowerMcatPart1: LessonData = {
 
 ### Kirchhoff's Rules
 
-Every circuit calculation rests on two conservation laws.
+Every circuit calculation rests on two conservation laws. Most MCAT circuits are single loops or networks that collapse into one, so expect to apply the rules as reasoning tools, not to solve systems of equations.
 
 **Junction rule (conservation of charge).** At any node, the total current flowing in equals the total current flowing out:
 
@@ -40,25 +40,23 @@ A charge that travels around a loop and returns to its starting point is back at
 
 **Two sources in one loop.** Sources that push the same way add; sources that oppose subtract. The net source voltage drives the current through the total resistance. For example, a $12\\;\\text{V}$ and a $3\\;\\text{V}$ battery opposing each other across $3\\;\\Omega$: $+12 - 3 - 3I = 0$, so $I = 3\\;\\text{A}$.
 
-Most MCAT circuits are single loops or networks that collapse into one. Expect to apply the two rules as reasoning tools, not to solve systems of equations.
-
 <!-- yield:low -->
 - When sources sit in more than one branch, the network does not collapse: write one junction equation and enough loop equations, then solve them simultaneously. This is rarely required on the MCAT.
 <!-- /yield -->
 
 ### Worked Example — A Single Loop, Walked
 
-**Problem.** A $24\\;\\text{V}$ ideal battery drives $2\\;\\Omega$, $4\\;\\Omega$ and $6\\;\\Omega$ resistors in series. Walk the loop in the direction of the current.
+**Problem.** A $30\\;\\text{V}$ ideal battery drives $3\\;\\Omega$, $5\\;\\Omega$ and $7\\;\\Omega$ resistors in series. Walk the loop in the direction of the current.
 
 - **(a)** What equation does the loop rule give, and what current does it predict?
 - **(b)** What is the voltage drop across each resistor?
 - **(c)** With the battery's negative terminal grounded, what is the potential after each element of the loop?
 
-**(a) Loop equation.** Walking with the current: $+24 - 2I - 4I - 6I = 0$, so $I = 2\\;\\text{A}$.
+**(a) Loop equation.** Walking with the current: $+30 - 3I - 5I - 7I = 0$, so $I = 2\\;\\text{A}$.
 
-**(b) Drops.** With $I = 2\\;\\text{A}$ from (a), the drops are $4\\;\\text{V}$, $8\\;\\text{V}$ and $12\\;\\text{V}$, and they add back to $24\\;\\text{V}$.
+**(b) Drops.** With $I = 2\\;\\text{A}$ from (a), the drops are $6\\;\\text{V}$, $10\\;\\text{V}$ and $14\\;\\text{V}$, and they add back to $30\\;\\text{V}$.
 
-**(c) Potentials.** $24\\;\\text{V}$ just past the positive terminal, $20\\;\\text{V}$ after the $2\\;\\Omega$ resistor, $12\\;\\text{V}$ after the $4\\;\\Omega$, and $0\\;\\text{V}$ after the $6\\;\\Omega$, right back at ground. The loop closes.`
+**(c) Potentials.** $30\\;\\text{V}$ just past the positive terminal, $24\\;\\text{V}$ after the $3\\;\\Omega$ resistor, $14\\;\\text{V}$ after the $5\\;\\Omega$, and $0\\;\\text{V}$ after the $7\\;\\Omega$, right back at ground. The loop closes.`
     },
     {
       id: 'dc3-quiz1',

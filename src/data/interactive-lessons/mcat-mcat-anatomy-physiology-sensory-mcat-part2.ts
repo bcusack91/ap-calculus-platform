@@ -15,9 +15,7 @@ Light traverses: cornea → aqueous humor → pupil (iris aperture) → lens →
 - The **cornea** provides MOST of the eye's refractive power (largest refractive index step: air → tissue)
 - The **lens** provides the adjustable fine focus. **Accommodation**: for NEAR objects, the ciliary muscle CONTRACTS, slackening the suspensory ligaments (zonules), letting the elastic lens become rounder and more powerful. For distant objects the muscle relaxes, the zonules pull taut, and the lens flattens.
 
-**Refractive errors:**
-
-- **Myopia** (nearsightedness): eye too long or optics too strong → image focuses IN FRONT of the retina → corrected with a **diverging (concave)** lens
+- Refractive errors — **myopia** (nearsightedness): eye too long or optics too strong → image focuses IN FRONT of the retina → corrected with a **diverging (concave)** lens
 - **Hyperopia** (farsightedness): eye too short → focal point behind the retina → corrected with a **converging (convex)** lens
 - Presbyopia: age-stiffened lens loses accommodation (reading glasses = converging)
 
@@ -93,7 +91,7 @@ Central pathway: optic nerve → **optic chiasm**, where **NASAL retinal fibers 
 
 **(b) Not at this level.** Both knockouts freeze the cascade with channels open and prevent the light-evoked hyperpolarization, so the recordings look identical. A downstream block silences the pathway as effectively as losing the photopigment.
 
-**(c) Probe the middle of the cascade.** Supply PDE in a biochemical assay and ask whether light-activated rhodopsin can still turn it on: it can in the PDE knockout, not in the transducin knockout. This step-through-the-cascade logic is exactly how the MCAT tests phototransduction.`
+**(c) Probe the middle of the cascade.** Supply PDE in a biochemical assay and ask whether light-activated rhodopsin, acting through transducin, can still turn it on: it can in the PDE knockout, not in the transducin knockout. This step-through-the-cascade logic is exactly how the MCAT tests phototransduction.`
     },
     {
       id: 'sen2-quiz1',

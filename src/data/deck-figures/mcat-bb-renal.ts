@@ -562,8 +562,6 @@ export const mcatRenalFigures: DeckFigurePlacement[] = [
     blocks: [
       '- **Afferent** constriction → less blood in → $P_{glom}$ ↓, GFR ↓; afferent dilation → both ↑',
       '- **Efferent** constriction (moderate) dams blood in the tuft → $P_{glom}$ ↑, GFR ↑; efferent dilation → both ↓',
-      '- **Autoregulation** holds GFR steady: myogenic response + **tubuloglomerular feedback** (macula densa senses NaCl → afferent tone)',
-      '- High NaCl delivery → afferent constriction trims GFR; low delivery → afferent dilation and renin release',
     ],
   },
   {

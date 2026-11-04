@@ -14,7 +14,7 @@ Health tracks social position. Not as a rich-vs-poor binary, but as a **social g
 
 ### Social Determinants of Health — The Causal Inventory
 
-The **social determinants of health** are the conditions in which people are born, live, work, and age:
+The **social determinants of health** are the conditions in which people are born, live, work, and age — five of them, each with its own pathway into the body:
 
 | Determinant | Health pathway |
 |-------------|----------------|
@@ -24,7 +24,9 @@ The **social determinants of health** are the conditions in which people are bor
 | Neighborhood | Food access (food deserts), walkability, pollution and toxin exposure, violence, clinic proximity |
 | Social connection | Networks deliver support, norms, and care; isolation predicts mortality at magnitudes rivaling smoking |
 
-**Fundamental cause theory** explains a puzzle: specific diseases and risk factors change across history, yet the SES-health association persists. Because SES embodies flexible resources — money, knowledge, power, beneficial connections — advantaged groups redeploy those resources against WHATEVER the current health threat is (from cholera to cigarettes to novel screening technology). Prediction: disparities are LARGEST for diseases we know how to prevent or treat, and smallest where medicine is helpless — a signature the exam loves to test with data.
+**Fundamental cause theory** explains a puzzle: specific diseases and risk factors change across history, yet the SES-health association persists. Because SES embodies flexible resources — money, knowledge, power, beneficial connections — advantaged groups redeploy those resources against WHATEVER the current health threat is (from cholera to cigarettes to novel screening technology).
+
+Prediction: disparities are LARGEST for diseases we know how to prevent or treat, and smallest where medicine is helpless — a signature the exam loves to test with data.
 
 <!-- yield:low -->
 - Fundamental cause theory was proposed by the sociologists Bruce Link and Jo Phelan.

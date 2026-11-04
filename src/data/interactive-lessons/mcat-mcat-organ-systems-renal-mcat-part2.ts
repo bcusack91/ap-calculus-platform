@@ -12,11 +12,11 @@ export const mcatRenalSubPart2Data = {
 
 | Segment | Water permeable? | Key transport | Hormone control |
 |---------|------------------|---------------|-----------------|
-| **PCT** | Yes (follows solute) | ~65–70% of Na$^+$ and water; **100% of glucose and amino acids** (Na$^+$-cotransport); HCO3$^-$ reclamation; secretes H$^+$, organic acids/bases (drugs, PAH) | None (bulk workhorse) |
-| **Descending limb** | Yes — water ONLY | Water exits into salty medulla → filtrate concentrates | None |
-| **Ascending limb** | **No** | Na$^+$-K$^+$-2Cl$^-$ cotransporter pumps salt out → filtrate dilutes ("diluting segment") | None |
-| **DCT** | Low | NaCl reabsorption; Ca$^{2+}$ reabsorption | PTH (↑Ca$^{2+}$ reabsorption) |
-| **Collecting duct** | Only with ADH | Principal cells: Na$^+$ in / K$^+$ out (aldosterone); aquaporins (ADH). Intercalated cells: H$^+$/HCO3$^-$ | Aldosterone, ADH |
+| **PCT** | Yes | ~65–70% of Na$^+$ and water; **all glucose and amino acids** (Na$^+$-cotransport); HCO3$^-$ reclaimed; secretes H$^+$, drugs, PAH | None |
+| **Descending limb** | Yes — water ONLY | Water exits → filtrate concentrates | None |
+| **Ascending limb** | **No** | Na$^+$-K$^+$-2Cl$^-$ pumps salt out → diluting segment | None |
+| **DCT** | Low | NaCl and Ca$^{2+}$ reabsorption | PTH (↑Ca$^{2+}$ reabsorption) |
+| **Collecting duct** | Only with ADH | Principal cells: Na$^+$ in, K$^+$ out (aldosterone), aquaporins (ADH); intercalated cells: H$^+$/HCO3$^-$ | Aldosterone, ADH |
 
 - The engine behind nearly all reabsorption is the basolateral **Na$^+$/K$^+$-ATPase**: it keeps intracellular Na$^+$ low, so apical Na$^+$ entry is downhill and can drag glucose/amino acids (secondary active transport, **SGLT**) — water follows osmotically.
 - The descending/ascending asymmetry (water-only vs. salt-only) is the anatomical trick behind the countercurrent multiplier (Part 3).
@@ -38,16 +38,13 @@ $$C_X = \\frac{U_X \\times V}{P_X}$$
 
 | Substance | Handling | Clearance means |
 |-----------|----------|-----------------|
-| **Inulin** | Filtered only — no reabsorption, no secretion | $C_{inulin} = GFR$ (gold standard) |
+| **Inulin** | Filtered only (no reabsorption, no secretion) | $C_{inulin} = GFR$ (gold standard) |
 | **Creatinine** | Filtered, slightly secreted | ≈ GFR (clinical stand-in; slight overestimate) |
-| **PAH** | Filtered AND avidly secreted — virtually all removed in one pass | $C_{PAH} \\approx$ **renal plasma flow** |
+| **PAH** | Filtered and avidly secreted (nearly all removed in one pass) | $C_{PAH} \\approx$ **renal plasma flow** |
 | Glucose (normal) | Filtered, fully reabsorbed | $C = 0$ |
 | Urea | Filtered, ~half reabsorbed | $0 < C < GFR$ |
 
-**The comparison rule:** for any freely filtered substance,
-- $C_X < C_{inulin}$ → net **reabsorption**
-- $C_X > C_{inulin}$ → net **secretion**
-- $C_X = C_{inulin}$ → neither (or exactly balanced)
+**The comparison rule** for any freely filtered substance: $C_X < C_{inulin}$ → net **reabsorption**; $C_X > C_{inulin}$ → net **secretion**; equal → neither (or balanced).
 
 ### Why Creatinine Tracks GFR Inversely
 

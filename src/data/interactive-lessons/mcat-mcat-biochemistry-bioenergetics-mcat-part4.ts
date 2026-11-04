@@ -16,12 +16,7 @@ export const mcatBioenergeticsPart4Data = {
 | PDH (x2 pyruvate) | Matrix | 0 | 2 NADH |
 | TCA cycle (x2 turns) | Matrix | 2 GTP | 6 NADH + 2 FADH$_2$ |
 
-Oxidative phosphorylation converts carriers at ~2.5 ATP/NADH and ~1.5 ATP/FADH$_2$:
-
-- 8 matrix NADH × 2.5 = 20
-- 2 FADH$_2$ × 1.5 = 3
-- 2 cytosolic NADH × 2.5 (malate-aspartate) or × 1.5 (glycerol-3-P) = 5 or 3
-- Plus 4 direct (2 ATP + 2 GTP)
+Oxidative phosphorylation converts carriers at ~2.5 ATP/NADH and ~1.5 ATP/FADH$_2$: 8 matrix NADH × 2.5 = 20; 2 FADH$_2$ × 1.5 = 3; 2 cytosolic NADH × 2.5 (malate-aspartate) or × 1.5 (glycerol-3-P) = 5 or 3; plus 4 direct (2 ATP + 2 GTP).
 
 **Total ~30-32 ATP per glucose.** Anaerobic glycolysis alone: **2 ATP** — a 15-fold difference that explains why oxygen debt, fast-twitch fatigue, and the Warburg effect all matter.
 
@@ -29,7 +24,7 @@ Oxidative phosphorylation converts carriers at ~2.5 ATP/NADH and ~1.5 ATP/FADH$_
 
 - **High AMP** (via adenylate kinase: 2 ADP $\\rightleftharpoons$ ATP + AMP) is the cell's low-fuel alarm; it activates **AMPK**, which switches ON catabolism (glycolysis, fatty acid oxidation) and OFF biosynthesis.
 - **ATP/citrate/NADH high** = fed, energy-rich signals that inhibit PFK-1, isocitrate DH, PDH.
-- Creatine phosphate buffers ATP over seconds; glycogen over minutes; fat over days.
+- Creatine phosphate buffers ATP over seconds; glycogen over minutes to hours; fat over days.
 
 ### Fed vs. Fasting Energy Flow (Preview of Metabolic Integration)
 

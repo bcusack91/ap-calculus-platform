@@ -8,6 +8,8 @@ export const mcatSocialPsychPart1Data = {
 
 **Part 1 of 5 — Attitudes & Cognitive Dissonance**
 
+### Attitudes — The ABC Model
+
 An **attitude** is a learned evaluation (favorable/unfavorable) of a person, object, or idea, with three components (the **ABC model**):
 
 | Component | Meaning | Example |

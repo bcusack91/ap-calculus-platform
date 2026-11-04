@@ -471,7 +471,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `A battery feeds a series resistor and then a parallel pair. After collapsing the network and finding the total current, what is the correct next step toward the two branch currents?`,
+    question: `A battery feeds a series resistor and then a parallel pair. You collapse the network inside-out to one equivalent resistance and find the total current. What is the correct next step toward the two branch currents?`,
     options: [
       `Subtract the series drop, then use Ohm's law on each branch`,
       `Split the total current equally between the two branches`,

@@ -737,8 +737,8 @@ export const mcatImmunologyFigures: DeckFigurePlacement[] = [
       caption: 'Primary vs secondary response (illustrative): a slow IgM-first primary, then a fast, high, lasting IgG secondary — the logic of vaccination.',
     },
     blocks: [
-      '- Primary: 1–2 week lag, modest peak, **IgM first**; secondary: days, far higher, **high-affinity IgG**',
-      '- Vaccination pays the slow primary response against a harmless preparation',
+      '- Between the two exposures the titer falls, but **memory B cells persist** — that is what the second exposure finds',
+      '- Read the curve: a fast, far higher, long-lasting IgG rise with little new IgM is the fingerprint of a secondary response',
     ],
   },
   {

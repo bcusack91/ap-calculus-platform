@@ -10,13 +10,13 @@ export const mcatPsychDisordersPart3Data = {
 
 ### Personality Disorders (enduring, inflexible, pervasive patterns from early adulthood)
 
-Personality disorders are **ego-syntonic** (experienced as "just how I am") — a key contrast with the ego-dystonic distress of anxiety disorders — and are grouped in three clusters:
+Personality disorders are enduring, inflexible patterns, present from early adulthood and stable across situations. They are **ego-syntonic** (experienced as "just how I am") — a key contrast with the ego-dystonic distress of anxiety disorders — and are grouped in three clusters:
 
-| Cluster | Theme | Disorders (discriminating core) |
-|---------|-------|---------------------------------|
-| **A — odd/eccentric** | Social detachment, suspicion | **Paranoid** (pervasive distrust); **schizoid** (genuine indifference to relationships, flat); **schizotypal** (eccentric beliefs, magical thinking, perceptual oddities — schizophrenia-spectrum but no frank psychosis) |
-| **B — dramatic/erratic** | Emotion dysregulation, self-focus | **Antisocial** (violation of others' rights, deceit, lack of remorse; ≥ 18 with conduct disorder history before 15); **borderline** (unstable relationships/self-image/affect, abandonment terror, **splitting** — all-good/all-bad, self-harm risk); **histrionic** (attention-seeking emotionality); **narcissistic** (grandiosity, need for admiration, fragile self-esteem beneath) |
-| **C — anxious/fearful** | Anxiety-driven rigidity | **Avoidant** (desires closeness but fears rejection — contrast schizoid's indifference); **dependent** (submissive clinging, cannot decide alone); **obsessive-compulsive personality disorder (OCPD)** (perfectionism and control as a worldview) |
+- **Cluster A — odd/eccentric** (social detachment, suspicion): **paranoid** (pervasive distrust); **schizoid** (genuine indifference to relationships, flat); **schizotypal** (eccentric beliefs, magical thinking, perceptual oddities — schizophrenia-spectrum but no frank psychosis)
+
+- **Cluster B — dramatic/erratic** (emotion dysregulation, self-focus): **antisocial** (violation of others' rights, deceit, lack of remorse; ≥ 18 with conduct disorder history before 15); **borderline** (unstable relationships/self-image/affect, abandonment terror, **splitting** — all-good/all-bad, self-harm risk); **histrionic** (attention-seeking emotionality); **narcissistic** (grandiosity, need for admiration, fragile self-esteem beneath)
+
+- **Cluster C — anxious/fearful** (anxiety-driven rigidity): **avoidant** (desires closeness but fears rejection — contrast schizoid's indifference); **dependent** (submissive clinging, cannot decide alone); **obsessive-compulsive personality disorder (OCPD)** (perfectionism and control as a worldview)
 
 **OCD vs. OCPD** — a guaranteed item: OCD has intrusive obsessions and anxiety-driven rituals the person finds alien (ego-dystonic); OCPD is a lifelong, ego-syntonic perfectionism with NO true obsessions or compulsions — the person endorses the standards, others suffer them.
 

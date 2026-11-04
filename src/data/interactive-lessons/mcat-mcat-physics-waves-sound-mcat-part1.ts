@@ -14,7 +14,7 @@ export const soundDopplerMcatPart1: LessonData = {
 
 ### How Sound Is Made
 
-Every sound starts with something vibrating: vocal folds, a speaker cone, a tuning fork's prongs, a guitar string's body. As the vibrating surface pushes outward it crowds the air in front of it into a **compression** (pressure and density slightly above normal); as it pulls back it leaves a **rarefaction** (slightly below normal). These alternating zones travel outward as a longitudinal pressure wave. The air molecules themselves only jiggle back and forth about their resting positions.
+Every sound starts with something vibrating: vocal folds, a speaker cone, a tuning fork's prongs. As the surface pushes outward it crowds the air ahead of it into a **compression** (pressure slightly above normal); as it pulls back it leaves a **rarefaction** (slightly below). These zones travel outward as a longitudinal pressure wave, while each air molecule only jiggles back and forth about its resting position.
 
 - Sound needs a medium. In a vacuum there is nothing to compress, so no sound travels, although light still crosses it.
 - Its speed is set by the medium (the *Waves & Interference* lesson): about $343\\;\\text{m/s}$ in room-temperature air, faster in warmer air, faster still in liquids, and fastest in solids.
@@ -31,7 +31,9 @@ Most wave errors come from changing the wrong variable. Before writing a formula
 | Standing wave on a given string or pipe | $\\lambda_n$ (set by $L$) | $f_n = v/\\lambda_n$, so $f$ follows $v$ |
 | Tighten a string, or warm the air in a pipe | $\\lambda_n$ | $v$ rises, so the resonant frequencies rise |
 
-The last row explains a passage favourite: a wind instrument goes sharp as it warms up, because its pipe fixes the resonant wavelengths while warmer air carries sound faster. Helium is the related case. The vocal folds vibrate at about the same rate, but the vocal tract's resonant frequencies rise because sound travels faster in helium, so the voice's quality (its timbre, the blend of harmonics covered later in this part) shifts toward its higher harmonics (the *Waves & Interference* lesson).
+The last row is a passage favourite: whenever a length fixes the wavelength, the frequency must follow the speed of sound.
+
+- Helium voice: the vocal folds vibrate at about the same rate, but sound travels faster in helium, so the vocal tract's resonances rise and the voice's timbre (its blend of harmonics, covered later in this part) shifts toward the higher harmonics.
 
 ### Intensity and the Inverse-Square Law
 
@@ -66,7 +68,7 @@ Rules that follow:
 
 - **Never add decibels directly.** Two identical $70\\;\\text{dB}$ sources double the intensity, giving about $73\\;\\text{dB}$, not $140$. Ten identical sources give ten times the intensity: $+10\\;\\text{dB}$.
 - **Unequal sources: the louder one dominates.** A $60\\;\\text{dB}$ and a $50\\;\\text{dB}$ source together make only about $60.4\\;\\text{dB}$, because the quieter one adds just a tenth more intensity.
-- **A level difference is a ratio, never a fraction of the levels.** From $40$ to $70\\;\\text{dB}$ is $\\times 1000$, not $\\times 70/40$.
+- **A level difference is a ratio, never a fraction of the levels.** From $50$ to $70\\;\\text{dB}$ is $\\times 100$, not $\\times 70/50$.
 - Sounds fainter than $I_0$ have negative levels: $10^{-13}\\;\\text{W/m}^2$ is $-10\\;\\text{dB}$.
 
 Rough landmarks (approximate; no need to memorize): a whisper about $30\\;\\text{dB}$, conversation about $60\\;\\text{dB}$, heavy traffic about $80\\;\\text{dB}$, a siren up close $110$ to $120\\;\\text{dB}$, the threshold of pain about $120$ to $130\\;\\text{dB}$.
@@ -158,10 +160,10 @@ Shortcut: count the powers of ten above $10^{-12}$ and multiply by 10.
       type: 'text' as const,
       content: `### Attenuation: Sound Fades for Two Reasons
 
-The inverse-square law describes only geometric spreading: the same power covering a larger area. A real medium also **absorbs** sound, converting its energy into heat, so intensity falls even faster than $1/r^2$. This damping of a travelling wave is called **attenuation**.
+The inverse-square law describes only geometric spreading: the same power covering a larger area. A real medium also **absorbs** sound, converting its energy into heat, so intensity falls even faster than $1/r^2$. This extra loss is **attenuation**.
 
-- **Higher frequencies are absorbed more strongly.** That is why distant thunder is a low rumble while nearby thunder cracks, and why music through a wall loses its treble and keeps its bass.
-- Soft tissue absorbs ultrasound heavily, and more so at higher frequencies. That trade-off decides which ultrasound frequency a clinician chooses (Part 2 of this lesson).
+- **Higher frequencies are absorbed more strongly.** That is why distant thunder is a low rumble while nearby thunder cracks, and why music through a wall keeps its bass and loses its treble.
+- Soft tissue absorbs ultrasound heavily, more so at higher frequencies; that trade-off decides which probe frequency a clinician chooses (Part 2).
 - Reflection and scattering at boundaries also remove energy from the forward beam.
 
 <!-- yield:low -->
@@ -180,9 +182,9 @@ The physics maps onto perception:
 
 A violin and a flute playing the same note share the same fundamental frequency, so they have the same pitch. They sound different because each adds a different blend of **overtones**, the harmonics above the fundamental (the *Waves & Interference* lesson).
 
-- **Human hearing spans about $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$.** The upper limit falls with age and noise exposure, so high frequencies are lost first. Sensitivity peaks around $2$ to $5\\;\\text{kHz}$, helped by the ear canal's resonance.
-- **Infrasound** lies below $20\\;\\text{Hz}$ (elephant and whale calls, earthquakes). **Ultrasound** lies above $20\\;\\text{kHz}$: bats and dolphins use it to echolocate, and medical imaging uses 1 to 20 MHz.
-- **Where pitch is decoded:** different places along the cochlea's basilar membrane vibrate best at different frequencies, high frequencies near its base and low frequencies near its apex. The anatomy is covered in the *Sensory Systems* lesson.
+- **Human hearing spans about $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$.** The upper limit falls with age and noise exposure, so high frequencies are lost first. Sensitivity peaks near $2$ to $5\\;\\text{kHz}$.
+- **Infrasound** lies below $20\\;\\text{Hz}$ (elephant calls, earthquakes). **Ultrasound** lies above $20\\;\\text{kHz}$: bats and dolphins echolocate with it, and medical imaging uses 1 to 20 MHz.
+- **Where pitch is decoded:** each place along the cochlea's basilar membrane vibrates best at one frequency, high near the base and low near the apex (the *Sensory Systems* lesson).
 - Amplitude changes loudness, not pitch: strike a tuning fork harder and it gets louder at the same frequency.`
     },
     {
@@ -228,7 +230,7 @@ A violin and a flute playing the same note share the same fundamental frequency,
       content: `### Key Takeaways
 
 - **Inverse-square law.** A point source gives $I = P/(4\\pi r^2)$, so doubling the distance cuts the intensity to $1/4$.
-- **The decibel scale.** $\\beta = 10\\log(I/I_0)$, $I_0 = 10^{-12}\\;\\text{W/m}^2$; each $+10\\;\\text{dB}$ is $\\times 10$ intensity, $+3\\;\\text{dB}$ about $\\times 2$.
+- **The decibel scale.** $\\beta = 10\\log(I/I_0)$ with $I_0 = 10^{-12}\\;\\text{W/m}^2$; $+10\\;\\text{dB}$ is $\\times 10$ intensity, $+3\\;\\text{dB}$ about $\\times 2$.
 - **Attenuation.** Absorption adds to spreading and is stronger at higher frequencies, so distant sounds lose their treble.
 - **Pitch, loudness, timbre.** Pitch follows frequency, loudness intensity, timbre the harmonic mix; hearing spans $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$.
 

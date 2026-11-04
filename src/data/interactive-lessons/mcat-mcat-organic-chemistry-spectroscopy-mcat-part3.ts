@@ -26,19 +26,22 @@ Two workhorse facts: a peak beyond ~190 means **aldehyde or ketone** (acid-deriv
 
 ### UV-Vis: Conjugation Detector
 
-UV-Vis absorption promotes pi electrons to antibonding orbitals ($\\pi \\rightarrow \\pi^*$); a carbonyl also shows a weak, longer-wavelength $n \\rightarrow \\pi^*$ band, from an oxygen lone-pair electron. The key trend: **more conjugation → smaller HOMO-LUMO gap → longer wavelength absorbed** ($E = hc/\\lambda$). Isolated double bonds absorb below ~200 nm (invisible on the instrument); extended conjugation walks the absorption into the near-UV and, eventually, the visible (beta-carotene's 11 conjugated C=C absorb blue light, so it looks orange). Biochemistry hooks: proteins absorb at **280 nm** (aromatic Trp/Tyr), nucleic acids at **260 nm**, and NADH absorbs at **340 nm** while $NAD^+$ does not — the standard way to follow redox enzyme kinetics.
+UV-Vis absorption promotes pi electrons to antibonding orbitals ($\\pi \\rightarrow \\pi^*$); a carbonyl also shows a weak, longer-wavelength $n \\rightarrow \\pi^*$ band, from an oxygen lone-pair electron.
+
+- **The key trend:** more conjugation → smaller HOMO-LUMO gap → longer wavelength absorbed ($E = hc/\\lambda$)
+- Isolated double bonds absorb below ~200 nm (invisible on the instrument); extended conjugation walks the absorption into the near-UV and, eventually, the visible (beta-carotene's 11 conjugated C=C absorb blue light, so it looks orange)
+- **Biochemistry hooks:** proteins absorb at **280 nm** (aromatic Trp/Tyr), nucleic acids at **260 nm**, and NADH absorbs at **340 nm** while $NAD^+$ does not — the standard way to follow redox enzyme kinetics
 
 **Beer–Lambert law:** $A = \\epsilon l c$. Absorbance equals the molar absorptivity $\\epsilon$ (in $\\text{M}^{-1}\\text{cm}^{-1}$) times the path length $l$ (usually 1 cm) times the concentration $c$. Because $A$ is linear in $c$, a change in absorbance measures a change in concentration.
 
 ### Mass Spectrometry: Weighing the Pieces
 
-The sample is ionized (losing one electron gives the **molecular ion** $M^{+}$, a radical cation), fragments, and ions are sorted by **mass-to-charge ratio** ($m/z$).
+Ionization (loss of one electron) gives the **molecular ion** $M^{+}$, a radical cation, which fragments; ions are sorted by **mass-to-charge ratio** ($m/z$). $M^{+}$ gives the **molecular weight**; the tallest peak is the **base peak** (most stable ion, 100%).
 
-- $M^{+}$ gives the **molecular weight**; the tallest peak is the **base peak** (most stable ion, set to 100%)
-- **M+2 isotope flags**: Cl gives M+2 about **one-third** of M (ratio 3:1, from $^{35}Cl/^{37}Cl$); Br gives M+2 roughly **equal** to M (1:1)
+- **M+2 isotope flags**: Cl gives M+2 about **one-third** of M (3:1, $^{35}Cl/^{37}Cl$); Br gives M+2 roughly **equal** to M (1:1)
 - **Nitrogen rule**: an odd $M^{+}$ mass means an odd number of nitrogens
-- Fragments form the **most stable cations**: benzylic/allylic and tertiary carbocations, and acylium ions ($RCO^{+}$, e.g. $m/z = 43$ for $CH_3CO^{+}$)
-- Common neutral losses: M-15 (methyl), M-18 (water, typical of alcohols), M-29 (CHO or ethyl)
+- Fragments form the **most stable cations**: benzylic/allylic and tertiary carbocations, and acylium ions ($RCO^{+}$, $m/z = 43$ for $CH_3CO^{+}$)
+- **Neutral losses**: M-15 (methyl), M-18 (water: alcohols), M-29 (CHO or ethyl)
 
 ### Which Tool for Which Question?
 
@@ -112,9 +115,9 @@ The sample is ionized (losing one electron gives the **molecular ion** $M^{+}$, 
 
 **(c) Flat trace.** No change means no NADH turnover: the enzyme is inhibited or denatured, or a substrate is missing.
 
-**(d) Beer's law.** $A = \\epsilon l c$ is linear in concentration, so the absorbance change tracks the reaction: $\\Delta c/\\Delta t = 0.31/(6.2 \\times 10^3 \\times 1) = 5.0 \\times 10^{-5}\\;\\text{M/min}$, i.e. $50\\;\\mu\\text{M}$ per minute.
+**(d) Beer's law.** $A = \\epsilon l c$ is linear in $c$, so with $l = 1$ cm: $\\Delta c/\\Delta t = \\Delta A/(\\epsilon l) = 0.31/(6.2 \\times 10^3) = 5.0 \\times 10^{-5}\\;\\text{M/min}$, i.e. $50\\;\\mu\\text{M}$ per minute.
 
-**MCAT Strategy:** Any passage pairing a dehydrogenase with a spectrophotometer is a 340 nm question. Link the SIGN of the absorbance change to the reaction direction before touching the answer choices.
+**MCAT Strategy:** A dehydrogenase plus a spectrophotometer is a 340 nm question. Fix the SIGN of the absorbance change to the reaction direction before reading the choices.
 
 **Problem 2.** Unknown A: $M^{+}$ = 92, with an M+2 peak at 94 about 33% as tall. Unknown B: $M^{+}$ = 136, with an M+2 peak at 138 about 98% as tall.
 

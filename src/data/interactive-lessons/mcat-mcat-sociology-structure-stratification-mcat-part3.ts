@@ -44,7 +44,9 @@ export const mcatSocioStratPart3Data = {
 
 ### Spatial Inequality
 
-Place is a stratification variable: **residential segregation** concentrates poverty and advantage into different neighborhoods; concentrated-poverty neighborhoods bundle weak schools, environmental hazards, thin job networks, and distance from services (suburbanization pulled employment away from urban cores). **Environmental injustice** — hazardous land uses sited disproportionately near poor and minority communities — links spatial inequality directly to health, setting up the health-disparities lesson.
+Place is a stratification variable: **residential segregation** concentrates poverty and advantage into different neighborhoods; concentrated-poverty neighborhoods bundle weak schools, environmental hazards, thin job networks, and distance from services (suburbanization pulled employment away from urban cores).
+
+**Environmental injustice** — hazardous land uses sited disproportionately near poor and minority communities — links spatial inequality directly to health, setting up the health-disparities lesson.
 
 ### Global Stratification
 

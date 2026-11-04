@@ -10,7 +10,9 @@ export const mcatBacteriaPart4Data = {
 
 ### From Colonization to Disease
 
-Infection proceeds through recognizable stages, each with a molecular tool: **adhesion** (pili, adhesins binding host receptors) → **colonization/invasion** (invasins, degradative enzymes that break down host tissue) → **immune evasion** (capsule, IgA proteases, antigenic variation, intracellular hiding) → **damage** (toxins, or the host's own inflammation). Not all colonists cause disease: **normal flora** occupy niches, compete for nutrients, and even prime immunity — broad-spectrum antibiotics that clear them open the door to opportunists (C. difficile colitis, Candida overgrowth).
+Infection proceeds through recognizable stages, each with a molecular tool: **adhesion** (pili, adhesins binding host receptors) → **colonization/invasion** (invasins, degradative enzymes that break down host tissue) → **immune evasion** (capsule, IgA proteases, antigenic variation, intracellular hiding) → **damage** (toxins, or the host's own inflammation).
+
+Not all colonists cause disease: **normal flora** occupy niches, compete for nutrients, and even prime immunity. Clearing them with broad-spectrum antibiotics opens the door to opportunists — Clostridioides difficile colitis, Candida overgrowth.
 
 <!-- yield:low -->
 Named spreading enzymes: hyaluronidase and collagenase digest connective-tissue matrix.
@@ -23,8 +25,7 @@ Named spreading enzymes: hyaluronidase and collagenase digest connective-tissue 
 | Chemistry | Secreted **protein** | **LPS (lipid A)** — structural outer-membrane component |
 | Source | Gram-positive AND gram-negative | Gram-negative only |
 | Released | Actively secreted by living cells | Mainly on cell LYSIS (including antibiotic-induced) |
-| Potency | Extreme (nanogram lethal doses possible) | Weaker, but massive release → septic shock |
-| Heat | Usually labile | Stable (boiling does not destroy it) |
+| Potency and heat | Extreme (nanogram lethal doses possible); usually heat-labile | Weaker, but massive release → septic shock; heat-stable (boiling does not destroy it) |
 | Immunology | Highly antigenic; **toxoid vaccines** (formalin-inactivated toxin: tetanus, diphtheria) | Poorly antigenic; no toxoid possible |
 | Genes | Often on plasmids or prophages | Chromosomal (LPS synthesis) |
 
