@@ -26,7 +26,7 @@ $$K_p = K_c (RT)^{\\Delta n}$$
 
 where $\\Delta n = \\text{moles gaseous products} - \\text{moles gaseous reactants}$.
 
-At constant temperature, $K_p = K_c$ when $\\Delta n = 0$.
+$K_p = K_c$ whenever $\\Delta n = 0$, at any temperature.
 
 ## Reaction Quotient Q
 
@@ -52,7 +52,7 @@ If a system at equilibrium is disturbed, it shifts to **partially counteract** t
 | Add inert gas (constant V) | No shift | No |
 | Add catalyst | No shift (faster equilibrium) | No |
 
-**Key distinction:** Adding or removing species, changing pressure all shift equilibrium but do **not** change $K$. Only temperature changes $K$.
+**Key distinction:** Adding or removing species and changing pressure shift the position of equilibrium but do **not** change $K$. Only temperature changes $K$.
 
 ## Solubility Product ($K_{sp}$)
 
@@ -78,6 +78,35 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
 - If $Q_{sp} > K_{sp}$: **precipitation occurs** (solution is supersaturated)
 - If $Q_{sp} < K_{sp}$: no precipitate (solution is unsaturated)
 - If $Q_{sp} = K_{sp}$: saturated, at equilibrium
+
+### Worked Example — Q, Le Chatelier and Molar Solubility
+
+**Problem 1.** The reaction $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\text{NO}_2(g)$ is endothermic, with $K_c = 5.0 \\times 10^{-3}$. A flask holds $0.20$ M $\\text{N}_2\\text{O}_4$ and $0.020$ M $\\text{NO}_2$.
+
+- **(a)** What is $Q$?
+- **(b)** Which way does the reaction shift to reach equilibrium?
+- **(c)** Once at equilibrium, which way does compressing the flask shift it, and does $K$ change?
+- **(d)** Which way does heating shift it, and does $K$ change?
+
+**(a) Reaction quotient.** $Q = \\dfrac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]} = \\dfrac{(0.020)^2}{0.20} = \\dfrac{4.0 \\times 10^{-4}}{0.20} = 2.0 \\times 10^{-3}$.
+
+**(b) Direction.** With $Q = 2.0 \\times 10^{-3}$ from (a) below $K = 5.0 \\times 10^{-3}$, there are too few products: the reaction shifts **right**, making $\\text{NO}_2$.
+
+**(c) Compression.** The left side has 1 mole of gas and the right side 2, so compression shifts the equilibrium **left**, toward fewer gas moles. $K$ is unchanged.
+
+**(d) Heating.** The forward reaction is endothermic, so heat acts like a reactant: the equilibrium shifts **right** and $K$ **increases**. Temperature is the only change here that alters $K$.
+
+**Problem 2.** $\\text{CaF}_2$ has $K_{sp} = 4.0 \\times 10^{-11}$, where $K_{sp} = [\\text{Ca}^{2+}][\\text{F}^-]^2$.
+
+- **(a)** What is its molar solubility $s$ in pure water?
+- **(b)** What is $s$ in $0.10$ M NaF, and how does it compare?
+- **(c)** Would $1.0 \\times 10^{-3}$ M $\\text{Ca}^{2+}$ in this $0.10$ M NaF form a precipitate?
+
+**(a) In pure water.** $[\\text{Ca}^{2+}] = s$ and $[\\text{F}^-] = 2s$, so $K_{sp} = (s)(2s)^2 = 4s^3 = 4.0 \\times 10^{-11}$. Then $s^3 = 1.0 \\times 10^{-11} = 10 \\times 10^{-12}$, so $s = \\sqrt[3]{10} \\times 10^{-4} \\approx 2.2 \\times 10^{-4}$ M.
+
+**(b) Common ion.** $[\\text{F}^-] \\approx 0.10$ M, since the $2s$ from $\\text{CaF}_2$ is tiny. So $s = (4.0 \\times 10^{-11})/(0.10)^2 = 4.0 \\times 10^{-9}$ M, against $2.2 \\times 10^{-4}$ M from (a): the common ion cuts solubility about 50,000-fold.
+
+**(c) Precipitation test.** $Q_{sp} = (1.0 \\times 10^{-3})(0.10)^2 = 1.0 \\times 10^{-5}$, far above $K_{sp} = 4.0 \\times 10^{-11}$, so $\\text{CaF}_2$ precipitates.
 `
     },
     {
@@ -91,11 +120,12 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
             options: [
               `$Q = 1.0$; shifts right`,
               `$Q = 1.0$; shifts left`,
-              `$Q = 0.33$; shifts right`,
-              `$Q = 0.33$; shifts left`
+              `$Q = 16.7$; shifts right`,
+              `$Q = 16.7$; shifts left`
             ],
             correctAnswer: 1,
-            explanation: `$Q = [\\text{NH}_3]^2/([\\text{N}_2][\\text{H}_2]^3) = (1.0)^2/((1.0)(1.0)^3) = 1.0$. Since $Q(1.0) > K_c(0.060)$, the reaction shifts **left** (toward reactants) to decrease [$NH_{3}$] and increase [$N_{2}$] and [$H_{2}$].`
+            yield: 'HIGH',
+            explanation: `$Q = [\\text{NH}_3]^2/([\\text{N}_2][\\text{H}_2]^3) = (1.0)^2/((1.0)(1.0)^3) = 1.0$. Since $Q(1.0) > K_c(0.060)$, the reaction shifts **left** (toward reactants) to decrease [$NH_{3}$] and increase [$N_{2}$] and [$H_{2}$]. The value 16.7 is $1/K_c$, a slip that computes the reverse reaction's constant instead of $Q$; and with $Q > K$ the shift can never be right.`
           },
           {
             question: `The reaction $\\text{A} \\rightleftharpoons 2\\text{B}$ is endothermic. What happens to $K$ when temperature increases?`,
@@ -106,6 +136,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
               `$K$ decreases, then increases`
             ],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Temperature changes are the only factor that changes $K$. For an **endothermic** reaction, heat is a "reactant." Increasing temperature shifts equilibrium **right** (toward products), so $K$ **increases**.`
           },
           {
@@ -117,6 +148,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
               `$3.6 \\times 10^{-5}$ M`
             ],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `$\\text{AgCl} \\rightleftharpoons \\text{Ag}^+ + \\text{Cl}^-$. Let $s$ = molar solubility: $K_{sp} = s \\cdot s = s^2$. $s = \\sqrt{1.8 \\times 10^{-10}} = \\mathbf{1.3 \\times 10^{-5}}\\text{ M}$.`
           },
           {
@@ -124,10 +156,11 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
             options: [
               `More AgCl dissolves (common ion increases solubility)`,
               `No change — NaCl is not involved in the AgCl equilibrium`,
-              `AgCl precipitation increases (common ion $Cl^{-}$ reduces solubility)`,
+              `More AgCl precipitates ($Cl^{-}$ is a common ion)`,
               `The solution becomes unsaturated`
             ],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Adding NaCl introduces $\\text{Cl}^-$ (common ion). This increases $[\\text{Cl}^-]$, causing $Q > K_{sp}$, and equilibrium shifts left — **more AgCl precipitates out**, decreasing solubility. This is the **common ion effect**.`
           },
           {
@@ -139,29 +172,32 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
               `Right — because the reaction is exothermic`
             ],
             correctAnswer: 1,
-            explanation: `$\\Delta n = 2 - (2+1) = -1$: products side has fewer gas moles. Increasing pressure shifts equilibrium toward the side with **fewer moles of gas** → shifts **right** toward $\\text{SO}_3$.`
+            yield: 'HIGH',
+            explanation: `$\\Delta n = 2 - (2+1) = -1$: products side has fewer gas moles. Increasing pressure shifts equilibrium toward the side with **fewer moles of gas** → shifts **right** toward $\\text{SO}_3$. "Left" reverses the rule, pressure does shift any reaction with $\\Delta n \\neq 0$, and the exothermic reason is wrong because heat is not changing here.`
           },
           {
-            question: `Which change does NOT affect the value of $K$ for a reaction at constant temperature?`,
+            question: `Which change does NOT affect the value of $K$ for a reaction?`,
             options: [
-              `Adding a catalyst to the reaction mixture`,
+              `Adding a catalyst to the reaction`,
               `Doubling every coefficient in the equation`,
-              `Halving every coefficient in the equation`,
+              `Heating the reaction mixture by 20 °C`,
               `Writing the equation in the reverse direction`
             ],
             correctAnswer: 0,
-            explanation: `A catalyst speeds up both forward and reverse reactions equally, reaching equilibrium faster — but $K$ **does not change**. Rewriting the equation does change $K$ even at constant temperature: doubling every coefficient squares $K$, halving them takes its square root, and reversing the equation gives $1/K$. Adding reactants, products, or changing pressure shift the position of equilibrium but not $K$.`
+            yield: 'MEDIUM',
+            explanation: `A catalyst speeds up both forward and reverse reactions equally, reaching equilibrium faster — but $K$ **does not change**. Heating changes $K$, because temperature is the one condition that does. Rewriting the equation also changes $K$: doubling every coefficient squares $K$, and reversing the equation gives $1/K$. Adding reactants, products, or changing pressure shift the position of equilibrium but not $K$.`
           },
           {
             question: `$K_{sp}$ of $\\text{Ca}_3(\\text{PO}_4)_2 = 2.1 \\times 10^{-33}$. The dissolution is $\\text{Ca}_3(\\text{PO}_4)_2 \\rightleftharpoons 3\\text{Ca}^{2+} + 2\\text{PO}_4^{3-}$. If $s$ is the molar solubility, which expression equals $K_{sp}$?`,
             options: [
-              `$s^2$`,
+              `$72s^5$`,
               `$5s^5$`,
               `$108s^5$`,
               `$36s^5$`
             ],
             correctAnswer: 2,
-            explanation: `$[\\text{Ca}^{2+}] = 3s$, $[\\text{PO}_4^{3-}] = 2s$. $K_{sp} = (3s)^3(2s)^2 = 27s^3 \\cdot 4s^2 = \\mathbf{108s^5}$.`
+            yield: 'MEDIUM',
+            explanation: `$[\\text{Ca}^{2+}] = 3s$, $[\\text{PO}_4^{3-}] = 2s$. $K_{sp} = (3s)^3(2s)^2 = 27s^3 \\cdot 4s^2 = \\mathbf{108s^5}$. Swapping the exponents, $(3s)^2(2s)^3$, gives $72s^5$; $5s^5$ just counts the five ions and drops the coefficients; $36s^5$ squares the 3 instead of cubing it.`
           }
         ]
       }
@@ -169,7 +205,21 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
     {
       id: 'ab5-summary',
       type: 'text' as const,
-      content: `## Acid-Base & Equilibrium — Complete Topic Summary
+      content: `## Key Takeaways — Part 5
+
+- **Compression favours fewer gas moles.** Squeezing a gas mixture shifts it toward the side with fewer moles of gas.
+- **Q moves toward K.** $Q < K$ shifts right and $Q > K$ left; for a salt, $Q_{sp} > K_{sp}$ means a precipitate forms.
+- **Only temperature changes K.** Concentration and pressure move the position; heating favors the endothermic side.
+- **Ksp follows stoichiometry.** Raise each ion to its coefficient: $\\text{CaF}_2$ gives $K_{sp} = (s)(2s)^2 = 4s^3$.
+
+**Common traps**
+
+- **Catalysts shift equilibrium.** A catalyst speeds both directions equally; neither the position nor $K$ changes.
+- **Inert gas shifts equilibrium.** Adding an inert gas at constant volume changes no partial pressure, so nothing shifts.
+- **Common ion, more dissolving.** A shared ion pushes dissolution LEFT, so the salt becomes LESS soluble.
+- **Kp always equals Kc.** Only when $\\Delta n = 0$; otherwise $K_p = K_c(RT)^{\\Delta n}$.
+
+## Acid-Base & Equilibrium — Complete Topic Summary
 
 **Part 1:** pH, pOH, Kw, strong vs weak acids/bases, pH calculation methods.
 

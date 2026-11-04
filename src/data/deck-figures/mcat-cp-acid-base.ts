@@ -170,7 +170,7 @@ ${T(555, 436, 15, '≈ 1 of 75 split → [H⁺] = 1.3 × 10⁻³ M → pH 2.87',
 ${T(735, 70, 20, 'strong: 100 % dissociated', 'start', '700')}
 ${T(735, 100, 17, '[H⁺] = C exactly → pH = −log C')}
 <g class="fig-accent-2">${T(735, 128, 17, '0.010 M HCl = 10⁻² M → pH 2', 'start', '700')}</g>
-<g class="fig-muted">${T(735, 152, 14, 'the 7: HCl, HBr, HI, HNO₃,')}${T(735, 170, 14, 'H₂SO₄, HClO₄, HClO₃')}</g>
+<g class="fig-muted">${T(735, 152, 14, 'the 6: HCl, HBr, HI, HNO₃,')}${T(735, 170, 14, 'H₂SO₄, HClO₄ (+ HClO₃)')}</g>
 ${T(735, 212, 20, 'weak: only a few % split', 'start', '700')}
 ${T(735, 240, 17, '[H⁺] ≈ √(Ka · C)  (5 % rule)')}
 ${T(735, 266, 16, '√(1.8×10⁻⁵ × 0.100) = 1.34 × 10⁻³ M')}
@@ -378,7 +378,7 @@ const IX = (ph: number) => 40 + 34 * ph
 const INDICATORS: Array<{ name: string; lo: number; hi: number; colours: string }> = [
   { name: 'methyl orange', lo: 3.1, hi: 4.4, colours: 'red → yellow' },
   { name: 'bromothymol blue', lo: 6.0, hi: 7.6, colours: 'yellow → blue' },
-  { name: 'litmus', lo: 6.0, hi: 8.0, colours: 'red → blue' },
+  { name: 'litmus', lo: 4.5, hi: 8.3, colours: 'red → blue' },
   { name: 'phenolphthalein', lo: 8.2, hi: 10.0, colours: 'colourless → pink' },
 ]
 const indicatorsSvg = `${SVG_OPEN} viewBox="0 0 560 440">
@@ -406,7 +406,7 @@ ${T(IX(WA.eq) + 4, 354, 12, `weak acid + NaOH: ${WA.eq.toFixed(2)}`, 'start', '7
 </g>
 ${T(280, 392, 14, 'choose a range that CONTAINS the equivalence pH', 'middle', '700')}
 <g class="fig-muted">
-${T(280, 412, 12, 'phenolphthalein catches both; methyl orange would', 'middle')}
+${T(280, 412, 12, 'phenolphthalein catches both, and any common indicator works for strong acid + strong base because the jump spans about pH 4–10; methyl orange would', 'middle')}
 ${T(280, 428, 12, 'change colour long before the weak-acid equivalence', 'middle')}
 </g>
 </svg>`
@@ -498,8 +498,8 @@ ${T(326, 366, 11, 'reactant', 'middle')}
 
 export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
   {
-    at: 'The pH Scale',
-    mode: 'lead',
+    at: 'Worked Example — Weak Acid and Conjugate Base pH',
+    mode: 'after',
     figure: {
       svg: phScaleSvg,
       alt:
@@ -512,22 +512,22 @@ export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Strong Acids and Bases — 100% Dissociation',
-    mode: 'lead',
+    at: 'Worked Example — Weak Acid and Conjugate Base pH',
+    mode: 'after',
     figure: {
       svg: strongWeakSvg,
       alt:
-        'Two beakers as particle pictures. Left, 0.010 M HCl (strong): ten red H⁺ circles and ten grey Cl⁻ circles, no intact HCl — 10 of 10 split, so [H⁺] = 0.010 M and pH 2. Right, 0.100 M acetic acid (weak): a dense grid of about 75 grey intact HA molecules with a single one split into a red H⁺ and a blue A⁻ — about 1 of 75 split, [H⁺] = 1.3 × 10⁻³ M, pH 2.87. Right column: strong means 100 % dissociated, [H⁺] = C exactly so pH = −log C, 0.010 M HCl = 10⁻² M → pH 2; the seven strong acids HCl HBr HI HNO₃ H₂SO₄ HClO₄ HClO₃. Weak means a few percent, Ka decides: [H⁺] ≈ √(Ka·C) by the 5 % rule, √(1.8 × 10⁻⁵ × 0.100) = 1.34 × 10⁻³ M → pH = 3 − log 1.34 ≈ 2.87. Ten times more acid yet less H⁺: strength (Ka) and concentration (C) are different dials. Strong base: [OH⁻] = C → pOH → pH = 14 − pOH.',
+        'Two beakers as particle pictures. Left, 0.010 M HCl (strong): ten red H⁺ circles and ten grey Cl⁻ circles, no intact HCl — 10 of 10 split, so [H⁺] = 0.010 M and pH 2. Right, 0.100 M acetic acid (weak): a dense grid of about 75 grey intact HA molecules with a single one split into a red H⁺ and a blue A⁻ — about 1 of 75 split, [H⁺] = 1.3 × 10⁻³ M, pH 2.87. Right column: strong means 100 % dissociated, [H⁺] = C exactly so pH = −log C, 0.010 M HCl = 10⁻² M → pH 2; the six strong acids HCl HBr HI HNO₃ H₂SO₄ HClO₄, with HClO₃ often added. Weak means a few percent, Ka decides: [H⁺] ≈ √(Ka·C) by the 5 % rule, √(1.8 × 10⁻⁵ × 0.100) = 1.34 × 10⁻³ M → pH = 3 − log 1.34 ≈ 2.87. Ten times more acid yet less H⁺: strength (Ka) and concentration (C) are different dials. Strong base: [OH⁻] = C → pOH → pH = 14 − pOH.',
       caption: 'Strength is not concentration: 0.010 M HCl is fully split (pH 2) while 0.100 M acetic acid, ten times more concentrated, keeps about 99 % of its molecules intact (pH 2.87).',
     },
     blocks: [
-      '- Strong (the 7 acids, Group 1 and heavy Group 2 hydroxides): 100 % split, so $[\\text{H}^+]$ or $[\\text{OH}^-]$ = $C$',
+      '- Strong acids and hydroxides: 100 % split, so $[\\text{H}^+] = C$ and $[\\text{OH}^-] = C$ ($2C$ for Group 2 hydroxides)',
       '- Weak: only a few % split — $[\\text{H}^+] \\approx \\sqrt{K_a C}$; strength ($K_a$) and concentration ($C$) are different dials',
     ],
   },
   {
-    at: 'Percent Dissociation',
-    mode: 'lead',
+    at: 'Worked Example — Percent Dissociation on Dilution',
+    mode: 'after',
     figure: {
       svg: percentDissSvg,
       alt:
@@ -540,8 +540,8 @@ export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Henderson-Hasselbalch Equation',
-    mode: 'lead',
+    at: 'Worked Example — Henderson-Hasselbalch Buffer pH',
+    mode: 'after',
     figure: {
       svg: hhSvg,
       alt:
@@ -568,8 +568,8 @@ export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Weak Acid + Strong Base',
-    mode: 'lead',
+    at: 'Worked Example — Titrating Acetic Acid with NaOH',
+    mode: 'after',
     figure: {
       svg: weakStrongSvg,
       alt:
@@ -582,17 +582,17 @@ export const mcatAcidBaseFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Acid-Base Indicators',
-    mode: 'replace-table',
+    at: 'Worked Example — Titrating Acetic Acid with NaOH',
+    mode: 'after',
     figure: {
       svg: indicatorsSvg,
       alt:
-        `A pH ruler from 0 to 14 with four indicator transition ranges drawn as bars beneath it: methyl orange 3.1–4.4 (red → yellow), bromothymol blue 6.0–7.6 (yellow → blue), litmus 6.0–8.0 (red → blue), phenolphthalein 8.2–10.0 (colourless → pink). Two dashed vertical lines cross the bars: red at pH 7.00, the strong acid + strong base equivalence point, and blue at pH ${WA.eq.toFixed(2)}, the weak acid + NaOH equivalence point. Rule: choose a range that contains the equivalence pH — phenolphthalein catches both; methyl orange would change colour long before the weak-acid equivalence.`,
+        `A pH ruler from 0 to 14 with four indicator transition ranges drawn as bars beneath it: methyl orange 3.1–4.4 (red → yellow), bromothymol blue 6.0–7.6 (yellow → blue), litmus 4.5–8.3 (red → blue), phenolphthalein 8.2–10.0 (colourless → pink). Two dashed vertical lines cross the bars: red at pH 7.00, the strong acid + strong base equivalence point, and blue at pH ${WA.eq.toFixed(2)}, the weak acid + NaOH equivalence point. Rule: choose a range that contains the equivalence pH — phenolphthalein catches both, and any common indicator works for strong acid + strong base because the jump spans about pH 4–10; methyl orange would change colour long before the weak-acid equivalence.`,
       caption: `Indicator ranges on the pH ruler: an indicator (a weak acid HIn) changes colour over about its pKa ± 1, so pick one whose range contains the equivalence pH — 7.00 for strong/strong, ${WA.eq.toFixed(2)} for the acetic acid titration.`,
     },
     blocks: [
       '- An indicator is a weak acid: $\\text{HIn} \\rightleftharpoons \\text{H}^+ + \\text{In}^-$, two colours, switch at pH ≈ p$K_a$ ± 1',
-      '- Pick the range that **contains the equivalence pH**: strong/strong (7) → almost any',
+      '- Pick the range that **contains the equivalence pH**: strong/strong (7) → any common one (the jump spans ~pH 4–10)',
       '- Weak acid + NaOH (equivalence > 7) → phenolphthalein (8.2–10.0), never methyl orange',
       '- Endpoint (colour change) ≈ equivalence point only when the indicator is chosen this way',
     ],

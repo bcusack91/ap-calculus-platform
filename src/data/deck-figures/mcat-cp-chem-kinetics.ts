@@ -485,8 +485,10 @@ export const mcatChemKineticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Determining Order from Experimental Data',
-    mode: 'replace-table',
+    // Behind the worked example, not on the teaching slide: the picture shows
+    // the problem's answers (m, n, k), so it must follow the try-it overview.
+    at: 'Worked Example — Method of Initial Rates',
+    mode: 'after',
     figure: {
       svg: orderSvg,
       alt:
@@ -494,10 +496,8 @@ export const mcatChemKineticsFigures: DeckFigurePlacement[] = [
       caption: 'The initial-rate table as bars: change one concentration at a time and read the order off how the rate bar responds — ×2 for ×2 means first order in A, ×3 for ×3 means first order in B.',
     },
     blocks: [
-      '- Change ONE concentration at a time: $\\frac{\\text{rate}_2}{\\text{rate}_1} = ([A]_2/[A]_1)^m$',
       '- Exp 1 → 2: [A] ×2, rate ×2 → $m = 1$; Exp 1 → 3: [B] ×3, rate ×3 → $n = 1$',
-      '- rate $= k[A][B]$ (2nd order); $k = 2.0 \\times 10^{-4}/(0.10)(0.10) = 2.0 \\times 10^{-2}$ M⁻¹s⁻¹',
-      '- Orders come from data, never from the balanced equation (unless elementary)',
+      '- rate $= k[A][B]$, $k = 2.0 \\times 10^{-2}$ M⁻¹s⁻¹ — orders come from data, not coefficients',
     ],
   },
   {
@@ -530,8 +530,9 @@ export const mcatChemKineticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Half-Life Applications',
-    mode: 'lead',
+    // Behind the worked example: the staircase shows Problem 1's answers.
+    at: 'Worked Example — Counting Half-Lives',
+    mode: 'after',
     figure: {
       svg: halfLifeSvg,
       alt:
@@ -586,8 +587,9 @@ export const mcatChemKineticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Rate-Determining Step',
-    mode: 'lead',
+    // Behind the worked example: the diagram shows Problem 1's answers.
+    at: 'Worked Example — Testing a Mechanism',
+    mode: 'after',
     figure: {
       svg: rdsSvg,
       alt:

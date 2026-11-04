@@ -12,7 +12,7 @@ import type { DeckFigurePlacement } from './index'
  * no textbook, prep-company, AAMC or database spectrum was copied or traced.
  * Every spectrum is SCHEMATIC: peaks sit at the positions the lesson states
  * (band table, C=O table, δ table, ethyl acetate 4.1 q / 2.0 s / 1.3 t,
- * para-xylene ¹³C 21 / 126 / 137, MS 74 → 56, 92 / 94 at ~⅓, 136 / 138 at
+ * para-xylene ¹³C 21 / 129 / 135, MS 74 → 56, 92 / 94 at ~⅓, 136 / 138 at
  * ~1:1) and every caption says "schematic, not a real spectrum".
  *
  * Molecules drawn as line structures (each checked for valence): acetone,
@@ -324,7 +324,7 @@ ${T(488, 112, 18, 'a', 'middle', '700')}${T(488, 306, 18, 'a', 'middle', '700')}
 <g class="fig-accent-2">${ringLetter(1)}${ringLetter(2)}${ringLetter(4)}${ringLetter(5)}</g>
 ${T(470, 340, 19, '¹H: 2 signals', 'middle', '700')}
 ${T(470, 366, 16, 'a = 6H (2 CH₃) · b = 4H (ring)', 'middle')}
-${T(470, 396, 16, '¹³C: 3 signals for 8 C (21, 126, 137)', 'middle')}
+${T(470, 396, 16, '¹³C: 3 signals for 8 C (21, 129, 135)', 'middle')}
 ${BOND(668, 230, 711, 205)}${BOND(711, 205, 754, 230)}${BOND(754, 230, 790, 209)}
 ${T(808, 210, 20, 'OH', 'middle', '700')}
 <g class="fig-accent">${T(660, 256, 18, 'a', 'middle', '700')}</g>
@@ -601,12 +601,12 @@ export const mcatSpectroscopyFigures: DeckFigurePlacement[] = [
     figure: {
       svg: symmetrySvg,
       alt:
-        'Four line structures with letters marking sets of equivalent hydrogens and dashed lines for mirror planes. Acetone (a C=O flanked by two CH₃): both methyls are a, so ¹H shows 1 signal, a 6H singlet. Para-xylene (a benzene ring with CH₃ groups at opposite corners, two mirror planes): both methyls are a and all four ring H’s are b, so ¹H shows 2 signals (6H and 4H) and ¹³C shows 3 signals for 8 carbons (21, 126, 137). 1-Propanol (a three-carbon chain ending in OH): no mirror, four environments a, b, c, d — 4 signals. 2-Propanol (OH on the middle carbon): the two methyls are both a, with b for the CH and c for OH — 3 signals, a 6H doublet plus a 1H septet. Footer: fewer signals means symmetry.',
+        'Four line structures with letters marking sets of equivalent hydrogens and dashed lines for mirror planes. Acetone (a C=O flanked by two CH₃): both methyls are a, so ¹H shows 1 signal, a 6H singlet. Para-xylene (a benzene ring with CH₃ groups at opposite corners, two mirror planes): both methyls are a and all four ring H’s are b, so ¹H shows 2 signals (6H and 4H) and ¹³C shows 3 signals for 8 carbons (21, 129, 135). 1-Propanol (a three-carbon chain ending in OH): no mirror, four environments a, b, c, d — 4 signals. 2-Propanol (OH on the middle carbon): the two methyls are both a, with b for the CH and c for OH — 3 signals, a 6H doublet plus a 1H septet. Footer: fewer signals means symmetry.',
       caption: 'Mirror-image positions are one environment: acetone gives 1 signal, para-xylene 2 (and 3 carbon signals for 8 carbons), 2-propanol 3 against 1-propanol’s 4.',
     },
     blocks: [
       '- Symmetry-equivalent H’s give ONE signal — fewer signals than you expect is a symmetry clue',
-      '- Same logic in ¹³C: para-xylene, C₈H₁₀, shows only 3 carbon signals (21, 126, 137 ppm)',
+      '- Same logic in ¹³C: para-xylene, C₈H₁₀, shows only 3 carbon signals (21, 129, 135 ppm)',
     ],
   },
   {

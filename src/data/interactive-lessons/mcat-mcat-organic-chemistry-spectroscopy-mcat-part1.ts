@@ -8,12 +8,14 @@ export const mcatOchemSpectroPart1Data = {
 
 **Part 1 of 4 — IR Spectroscopy: Reading the Bands**
 
-IR spectroscopy measures **bond vibrations** (stretching and bending). A vibration absorbs IR only if it changes the molecule's **dipole moment**. Two physical rules organize every frequency:
+IR spectroscopy measures **bond vibrations** (stretching and bending). A vibration absorbs IR only if it changes the molecule's **dipole moment**. Positions are given as **wavenumbers** in $\\text{cm}^{-1}$: the wavenumber is $1/\\lambda$, so it is proportional to frequency and to energy, and a higher wavenumber means a higher-energy vibration. Two physical rules organize every frequency:
 
 - **Stiffer bonds vibrate faster**: triple > double > single bond frequencies
 - **Lighter atoms vibrate faster**: X-H stretches sit highest of all
 
-Everything below about $1500\\ \\text{cm}^{-1}$ is the **fingerprint region** — a complex pattern used to match spectra, not to identify individual groups. Work only in the diagnostic region above it.
+Everything below about $1500\\ \\text{cm}^{-1}$ is the **fingerprint region** — a complex pattern used to match spectra, not to identify individual groups. Work in the diagnostic region above it, except for the strong C-O stretch (1000-1300), which confirms esters, ethers and alcohols.
+
+**Degrees of unsaturation** (rings + π bonds) come straight from a molecular formula: $\\text{DoU} = (2C + 2 + N - H - X)/2$, where X counts halogens and oxygen is ignored. Each ring or double bond uses one; a triple bond uses two; a benzene ring uses four.
 
 ### The Band Table (memorize these)
 
@@ -63,105 +65,123 @@ Everything below about $1500\\ \\text{cm}^{-1}$ is the **fingerprint region** �
             question: `An IR spectrum shows a very broad absorption from 2500-3300 $\\text{cm}^{-1}$ overlapping the C-H stretches, plus a strong band at 1710 $\\text{cm}^{-1}$. The compound is most likely:`,
             options: [`An aliphatic alcohol`, `A carboxylic acid`, `A methyl ester`, `A primary amine`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `The combination is diagnostic: strongly hydrogen-bonded (dimeric) O-H gives the extremely broad 2500-3300 smear, and the C=O appears near 1710. An alcohol's O-H is broad but sits higher (3200-3550) and has no C=O; an ester has C=O but no O-H.`
           },
           {
             question: `Both an aldehyde and a ketone show strong absorption near 1715-1730 $\\text{cm}^{-1}$. The feature that identifies the aldehyde is:`,
             options: [`A broad O-H band at 3200-3550 $\\text{cm}^{-1}$`, `A sharp nitrile band near 2250 $\\text{cm}^{-1}$`, `Two N-H spikes at 3350 and 3450 $\\text{cm}^{-1}$`, `Weak C-H bands near 2720 and 2850 $\\text{cm}^{-1}$`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The aldehydic C-H stretch produces two characteristic weak bands (~2720 and ~2850), the lower one clear of other absorptions. Ketones have no C-H on the carbonyl carbon. A broad 3200-3550 band = alcohol O-H; a sharp 2250 band = nitrile; paired N-H spikes = primary amine/amide. None of these distinguishes an aldehyde from a ketone.`
           },
           {
             question: `A spectrum shows two sharp spikes of similar intensity at 3350 and 3420 $\\text{cm}^{-1}$ and no carbonyl band. This indicates:`,
             options: [`A primary amine`, `A secondary amine`, `A carboxylic acid`, `An aliphatic alcohol`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A primary amine's two N-H bonds give symmetric and asymmetric stretches — two spikes. A secondary amine (one N-H) gives a single band; an alcohol O-H is one broad rounded band; an acid would include a C=O.`
           },
           {
-            question: `A compound shows a strong band at 1740 $\\text{cm}^{-1}$ and another strong band near 1200 $\\text{cm}^{-1}$, with no absorption above 3100 $\\text{cm}^{-1}$ other than C-H. It is most consistent with:`,
+            question: `A compound shows a strong band at 1740 $\\text{cm}^{-1}$ and another strong band near 1200 $\\text{cm}^{-1}$, with no O-H or N-H band above 3000 $\\text{cm}^{-1}$. It is most consistent with:`,
             options: [`A saturated ketone`, `An aliphatic carboxylic acid`, `A saturated ester`, `An N,N-dialkyl amide`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Esters combine a C=O at the high end (1735-1750) with a strong C-O stretch (1000-1300). A ketone lacks the strong C-O band; an acid would show the broad O-H; an amide's C=O sits much lower (1630-1690).`
           },
           {
             question: `2-Butyne shows essentially no absorption in the 2100-2260 $\\text{cm}^{-1}$ region even though it contains a triple bond, because:`,
             options: [`Triple bonds do not absorb IR radiation`, `The symmetric stretch causes no dipole change`, `The band is hidden under the C=O stretch`, `The triple bond is too strong to vibrate`],
             correctAnswer: 1,
-            explanation: `IR absorption requires a changing dipole. In a symmetric internal alkyne (CH3-C≡C-CH3) the stretch is symmetric about the bond's center, so the dipole change is essentially zero and the band vanishes. Terminal alkynes DO show C≡C plus the sharp ≡C-H at 3300.`
+            yield: 'MEDIUM',
+            explanation: `IR absorption requires a changing dipole. In a symmetric internal alkyne (CH3-C≡C-CH3) the stretch is symmetric about the bond's center, so the dipole change is essentially zero and the band vanishes. Terminal alkynes DO show C≡C plus the sharp ≡C-H at 3300, so triple bonds can absorb IR. 2-Butyne has no C=O to hide the band (and a C=O sits near 1700, far from 2100-2260), and a strong bond vibrates FASTER, at a higher wavenumber, rather than not at all.`
           }
         ]
       }
-    },
-    {
-      id: 'spect1-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 1
-
-- IR needs a dipole change; stiffer bonds and lighter atoms absorb at higher wavenumbers; below 1500 = fingerprint, don't interpret
-- Anchor bands: broad O-H 3200-3550 (acid version smears 2500-3300), N-H spikes (1° two, 2° one), sp3 C-H below 3000 vs sp2 above, nitrile 2250, C=O ~1700-1750 strong
-- Carbonyl ladder: acyl chloride 1800 > anhydride (two bands) > ester 1740 > aldehyde ~1725 > ketone 1715 ≈ acid 1710 > amide 1650-1690
-- Conjugation lowers C=O ~20-30 $\\text{cm}^{-1}$; ring strain raises it; aldehyde flag = weak 2720/2850 doublet
-- Symmetric bonds (internal alkynes) can be IR-invisible`
     },
     {
       id: 'spect1-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — IR Interpretation
 
-<details>
-<summary><b>Example 1: Identify an unknown C4H8O</b></summary>
+**Problem 1.** An unknown C4H8O shows sp3 C-H at 2900, a strong, sharp band at 1715, no bands above 3000 and nothing at 2720.
 
-**Question:** A compound C4H8O shows: sp3 C-H at 2900, strong sharp 1715, no bands above 3000, nothing at 2720. Identify it.
+- **(a)** How many degrees of unsaturation does C4H8O have?
+- **(b)** What accounts for that degree of unsaturation?
+- **(c)** Which compound classes do the missing bands rule out?
+- **(d)** What is the compound?
 
-**Solution:**
-1. Degrees of unsaturation: $(2 \\times 4 + 2 - 8)/2 = 1$ → one ring OR one double bond
-2. Strong 1715 → C=O accounts for the one degree of unsaturation
-3. No broad O-H → not an alcohol/acid; no 2720/2850 pair → not an aldehyde
-4. A C4 carbonyl that is not an aldehyde: **2-butanone** (butanal would show the aldehyde C-H doublet)
+**(a) Degrees of unsaturation.** $(2 \\times 4 + 2 - 8)/2 = 1$: one ring OR one double bond.
 
-**MCAT Strategy:** Always spend the degrees of unsaturation first — if C=O uses the only degree, there is no ring and no alkene, which collapses the candidate list fast.
-</details>
+**(b) The 1715 band.** A strong, sharp band at 1715 is a C=O, and it uses the one degree of unsaturation from (a): there is no ring and no C=C.
 
-<details>
-<summary><b>Example 2: Alcohol vs carboxylic acid O-H</b></summary>
+**(c) Missing bands.** No broad O-H above 3000 rules out an alcohol or an acid; no 2720/2850 pair rules out an aldehyde.
 
-**Question:** Two unknowns both show broad O-H stretches. Spectrum A: broad band centered near 3350, no carbonyl. Spectrum B: extremely broad absorption from 2500-3300 riding over the C-H peaks, strong 1705. Assign them.
+**(d) The compound.** A C4 carbonyl that is not an aldehyde: **2-butanone** (butanal would show the 2720/2850 pair).
 
-**Solution:**
-1. A: broad, rounded, 3200-3550, no C=O → **alcohol**
-2. B: the O-H of a carboxylic acid is broadened dramatically by strong hydrogen-bonded **dimer** formation, dragging it down across the C-H region; paired with C=O near 1710 → **carboxylic acid**
-3. The dimer's paired hydrogen bonds are why acid O-H looks so different from alcohol O-H
+**MCAT Strategy:** Spend the degrees of unsaturation first. If the C=O uses the only one, there is no ring and no alkene, and the candidate list collapses fast.
 
-**MCAT Strategy:** Breadth + position of O-H tells you the class before you even look at the carbonyl region. Acid = the only group whose O-H swallows the C-H stretches.
-</details>
+**Problem 2.** Two unknowns both show broad O-H stretches. Spectrum A: a broad band centered near 3350 and no carbonyl. Spectrum B: an extremely broad absorption from 2500-3300 riding over the C-H peaks, plus a strong band at 1705.
 
-<details>
-<summary><b>Example 3: Amide vs amine + ketone</b></summary>
+- **(a)** What class of compound is A?
+- **(b)** What class of compound is B?
+- **(c)** Why does B's O-H band look so different from A's?
 
-**Question:** How do you distinguish propanamide from a mixture of a primary amine and a ketone using IR positions alone?
+**(a) Unknown A.** A broad, rounded band within 3200-3550 and no C=O: an **alcohol**.
 
-**Solution:**
-1. Both show N-H stretches (~3300-3500) and a C=O
-2. The KEY is the carbonyl position: an amide C=O is unusually LOW (1630-1690) because the nitrogen lone pair donates into the carbonyl (resonance → partial single bond)
-3. A simple ketone sits near 1715 — outside the amide range
-4. C=O at 1660 + N-H spikes → **amide**; C=O at 1715 + separate N-H → amine plus ketone
+**(b) Unknown B.** An O-H smear across 2500-3300 paired with a C=O at 1705: a **carboxylic acid**.
 
-**MCAT Strategy:** The amide's low C=O frequency is the same resonance fact that makes peptide bonds planar and unreactive — one piece of physics, three exam contexts.
-</details>
+**(c) Why B differs.** Carboxylic acids form strongly hydrogen-bonded **dimers**. The dimer's paired hydrogen bonds broaden the acid O-H dramatically and drag it down across the C-H region.
 
-<details>
-<summary><b>Example 4: Predict the spectrum before you see it</b></summary>
+**MCAT Strategy:** The breadth and position of the O-H tell you the class before you even look at the carbonyl region. An acid is the only group whose O-H swallows the C-H stretches.
 
-**Question:** List the diagnostic IR bands expected for methyl salicylate (an aromatic ring bearing an ester and a phenol O-H).
+**Problem 3.** You must tell propanamide apart from a mixture of a primary amine and a ketone, using IR band positions alone.
 
-**Solution:**
-1. Phenolic O-H: broad, 3200-3550 (intramolecular H-bonding to the ester carbonyl broadens/lowers it)
-2. sp2 aromatic C-H just above 3000; sp3 C-H (the OCH3) just below 3000
-3. Ester C=O near 1700-1735 (lowered from a normal ester by conjugation with the ring)
-4. Strong C-O stretches 1100-1300; aromatic C=C ~1600
+- **(a)** Which bands do the two samples share?
+- **(b)** Where does each sample's C=O absorb, and why is the amide's so low?
+- **(c)** Both show two N-H spikes; one has C=O at 1660, the other at 1715. Which is which?
 
-**MCAT Strategy:** Passage questions often run this in reverse — "which band confirms the product?" Answer with the band that CHANGES in the reaction (e.g., ester C=O appears, phenol O-H persists).
-</details>`
+**(a) Shared bands.** Both show N-H stretches (~3300-3500) and a C=O.
+
+**(b) Carbonyl position.** An amide C=O is unusually LOW (1630-1690) because the nitrogen lone pair donates into the carbonyl, giving it partial single-bond character by resonance. A simple ketone sits near 1715, outside the amide range.
+
+**(c) Assignment.** The N-H spikes cannot tell them apart, so the C=O decides: 1660 → **amide**; 1715 → amine plus ketone.
+
+**MCAT Strategy:** The amide's low C=O frequency is the same resonance fact that makes peptide bonds planar and unreactive: one piece of physics, three exam contexts.
+
+**Problem 4.** Predict the diagnostic IR bands of methyl salicylate: a benzene ring bearing a methyl ester ($-CO_2CH_3$) and, on the neighboring carbon, a phenol O-H.
+
+- **(a)** What O-H band do you expect?
+- **(b)** Which C-H stretches appear, and on which side of 3000?
+- **(c)** Where does the ester C=O absorb, compared with a normal ester?
+- **(d)** Which other strong bands complete the prediction?
+
+**(a) Phenol O-H.** Broad, near 3200 (the low end of the O-H range); intramolecular hydrogen bonding to the neighboring ester carbonyl broadens and lowers it.
+
+**(b) C-H stretches.** Aromatic sp2 C-H just above 3000; sp3 C-H of the $OCH_3$ just below 3000.
+
+**(c) Ester C=O.** Near 1680, well below a normal ester's 1735-1750: conjugation with the ring and the hydrogen bond from the phenol O-H both weaken the C=O.
+
+**(d) The rest.** Strong C-O stretches at 1100-1300 and an aromatic C=C near 1600.
+
+**MCAT Strategy:** Passages often run this in reverse: "which band confirms the product?" Answer with the band that CHANGES. Making methyl salicylate from salicylic acid, the acid's 2500-3300 smear disappears while the phenol O-H persists.`
+    },
+    {
+      id: 'spect1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 1
+
+- **IR needs a dipole change.** Only vibrations that change the dipole absorb, so a symmetric internal C≡C can be invisible.
+- **Stiff bonds, light atoms.** Frequency rises from single to double to triple bonds, and X-H stretches sit highest of all.
+- **Anchor bands.** Broad O-H 3200-3550, acid O-H 2500-3300, N-H 3300-3500, nitrile 2250; sp3 C-H below 3000, sp2 above.
+- **The carbonyl ladder.** Strong C=O: acyl chloride ~1800 > ester ~1740 > ketone ~1715 > amide 1630-1690; conjugation lowers it.
+
+**Common traps**
+
+- **Every broad band an alcohol.** An acid's O-H smears 2500-3300 over the C-H stretches and comes with a C=O near 1710.
+- **Missing the aldehyde.** Aldehyde and ketone C=O bands overlap; only the weak C-H pair at 2720 and 2850 marks the aldehyde.
+- **One N-H spike as primary.** A primary amine or amide shows two N-H spikes; a single spike means a secondary N-H.
+- **Reading the fingerprint.** Below 1500, match whole spectra; only the strong C-O stretch (1000-1300) confirms a group there.`
     }
   ]
 };

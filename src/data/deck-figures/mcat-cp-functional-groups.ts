@@ -452,7 +452,7 @@ ${carboxylate(400, 150, 'Cl₃C', TELL)}
 <g class="fig-accent-2"><defs>${ARROW('arr-fg-sub-red')}</defs>${ARR(450, 200, 345, 200, 'arr-fg-sub-red', 3)}${T(398, 224, 15, 'Cl pulls density through σ bonds', 'middle')}</g>
 ${T(400, 256, 20, 'trichloroacetic acid', 'middle', '700')}
 ${G(TELL, T(400, 282, 20, 'pKa 0.7', 'middle', '700'))}
-${G('fig-muted', T(270, 310, 16, 'trifluoroacetic acid: pKa 0.2 (~30,000× acetic)', 'middle'))}
+${G('fig-muted', T(270, 310, 16, 'trifluoroacetic acid: pKa 0.2 (~40,000× acetic)', 'middle'))}
 ${G('fig-muted', BOX(20, 326, 500, 112, 14, 2))}
 ${G(HI, T(40, 360, 18, 'withdrawing (Cl, F, NO₂): stabilize A⁻ → more acidic', 'start', '700'))}
 ${T(40, 390, 18, 'donating (alkyl, OCH₃ by resonance) → less acidic')}
@@ -623,7 +623,7 @@ export const mcatFunctionalGroupsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: substSvg,
       alt:
-        'Left: two carboxylate conjugate bases drawn side by side. Acetate, H₃C–C(=O)O⁻, labelled acetic acid pKa 4.8. Trichloroacetate, Cl₃C–C(=O)O⁻, with a red arrow showing chlorine pulling electron density through the sigma bonds, labelled trichloroacetic acid pKa 0.7. Note: trifluoroacetic acid pKa 0.2, about 30,000 times more acidic than acetic acid. Box: withdrawing groups (Cl, F, NO₂) stabilize A⁻ and make the acid more acidic; donating groups (alkyl, OCH₃ by resonance) make it less acidic; the effect shrinks fast with distance. Right, "two dials: how many, how close": four condensed formulas stacked from most to least acidic — CH₃CH₂CCl₂COOH (2,2-dichloro, two Cl at C2), CH₃CH₂CHClCOOH (2-chloro, one Cl at C2), ClCH₂CH₂CH₂COOH (4-chloro, one Cl far away), CH₃CH₂CH₂COOH (butanoic acid, no Cl), with an arrow labelled more acidic pointing up.',
+        'Left: two carboxylate conjugate bases drawn side by side. Acetate, H₃C–C(=O)O⁻, labelled acetic acid pKa 4.8. Trichloroacetate, Cl₃C–C(=O)O⁻, with a red arrow showing chlorine pulling electron density through the sigma bonds, labelled trichloroacetic acid pKa 0.7. Note: trifluoroacetic acid pKa 0.2, about 40,000 times more acidic than acetic acid. Box: withdrawing groups (Cl, F, NO₂) stabilize A⁻ and make the acid more acidic; donating groups (alkyl, OCH₃ by resonance) make it less acidic; the effect shrinks fast with distance. Right, "two dials: how many, how close": four condensed formulas stacked from most to least acidic — CH₃CH₂CCl₂COOH (2,2-dichloro, two Cl at C2), CH₃CH₂CHClCOOH (2-chloro, one Cl at C2), ClCH₂CH₂CH₂COOH (4-chloro, one Cl far away), CH₃CH₂CH₂COOH (butanoic acid, no Cl), with an arrow labelled more acidic pointing up.',
       caption: 'Electron-withdrawing groups spread the conjugate base’s charge and lower the pKa — more of them, and closer, means a stronger acid.',
     },
     blocks: [

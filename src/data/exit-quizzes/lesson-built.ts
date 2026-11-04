@@ -132,6 +132,17 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-physics-electricity-electrostatics-mcat',
   'mcat-physics-electricity-electrochemistry-mcat',
   'mcat-physics-electricity-optics-mcat',
+  'mcat-organic-chemistry-carbonyls-mcat',
+  'mcat-organic-chemistry-functional-groups-mcat',
+  'mcat-lab-methods-mcat',
+  'mcat-general-chemistry-atomic-structure-mcat',
+  'mcat-general-chemistry-acid-base-equilibrium-mcat',
+  'mcat-organic-chemistry-sn1-sn2-e1-e2-mcat',
+  'mcat-organic-chemistry-spectroscopy-mcat',
+  'mcat-general-chemistry-thermodynamics-mcat',
+  'mcat-general-chemistry-kinetics-mcat',
+  'mcat-general-chemistry-stoichiometry-mcat',
+  'mcat-organic-chemistry-stereochemistry-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

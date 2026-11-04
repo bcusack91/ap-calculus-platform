@@ -26,7 +26,7 @@ Two synchronized explanations:
 |----------|----------|---------|
 | Fischer esterification | acid + ROH, cat. $H_2SO_4$, heat | ester + water (equilibrium; drive with excess ROH or water removal) |
 | Ester hydrolysis (acid) | $H_3O^+$ | acid + ROH (reversible) |
-| Saponification | $NaOH$, then workup | carboxylate + ROH (**irreversible** — the carboxylate is resonance-stabilized and unreactive) |
+| Saponification | $NaOH$ (aq) | carboxylate + ROH; acid workup gives RCOOH (**irreversible** — the carboxylate is resonance-stabilized and unreactive) |
 | Amide formation | acyl chloride or anhydride + amine | amide (direct acid + amine mostly just makes the ammonium salt at room temp) |
 | Transesterification | ester + different ROH, acid or base cat. | new ester |
 
@@ -39,7 +39,9 @@ The nitrogen lone pair delocalizes into the carbonyl, giving the C-N bond ~40% d
 
 ### Steric and Electronic Modifiers
 
-Within a class, bulky groups near the carbonyl slow substitution (the tetrahedral intermediate is crowded), and electron-withdrawing substituents speed it (more electrophilic carbon). Thioesters (like **acetyl-CoA**) sit between anhydrides and esters: sulfur's 3p orbital overlaps poorly with the C=O pi system, so there is little resonance stabilization to sacrifice — hydrolysis is unusually exergonic, which is why biology uses thioesters as acyl-transfer currency.`
+Within a class, bulky groups near the carbonyl slow substitution (the tetrahedral intermediate is crowded), and electron-withdrawing substituents speed it (more electrophilic carbon). Thioesters (like **acetyl-CoA**) sit between anhydrides and esters: sulfur's 3p orbital overlaps poorly with the C=O pi system, so there is little resonance stabilization to sacrifice — hydrolysis is unusually exergonic, which is why biology uses thioesters as acyl-transfer currency.
+
+**Cyclic derivatives.** A **lactone** is a cyclic ester and a **lactam** a cyclic amide; both react like their open-chain relatives. The exception is ring strain: the four-membered **beta-lactam** of penicillin is strained, and its bent geometry weakens the amide resonance, so it acylates (and inactivates) the bacterial enzyme that builds the cell wall far more readily than an ordinary amide could.`
     },
     {
       id: 'cnyl2-quiz1',
@@ -49,105 +51,114 @@ Within a class, bulky groups near the carbonyl slow substitution (the tetrahedra
         questions: [
           {
             question: `Rank the following toward nucleophilic acyl substitution, most to least reactive:`,
-            options: [`Amide > ester > anhydride > acyl chloride`, `Acyl chloride > anhydride > ester > amide`, `Anhydride > amide > acyl chloride > ester`, `Ester > acyl chloride > amide > anhydride`],
+            options: [`Acyl chloride > ester > anhydride > amide`, `Acyl chloride > anhydride > ester > amide`, `Anhydride > amide > acyl chloride > ester`, `Ester > acyl chloride > amide > anhydride`],
             correctAnswer: 1,
-            explanation: `The ladder follows leaving-group ability (Cl- best, NH2- worst) and inverse resonance stabilization (N donates most, Cl least): acyl chloride > anhydride > ester > amide. Every acyl-substitution prediction on the MCAT starts from this order.`
+            yield: 'ULTRA_HIGH',
+            explanation: `The ladder follows leaving-group ability (Cl- best, NH2- worst) and inverse resonance stabilization (N donates most, Cl least): acyl chloride > anhydride > ester > amide. Putting the ester above the anhydride forgets that a carboxylate leaves far better than an alkoxide; the other orders place the amide or the ester too high. Every acyl-substitution prediction on the MCAT starts from this order.`
           },
           {
             question: `Saponification of an ester with NaOH is irreversible because:`,
             options: [`Hydroxide is a catalyst and is regenerated`, `The alcohol product evaporates from solution`, `Deprotonation gives a carboxylate that resists attack`, `The tetrahedral intermediate is aromatic and stable`],
             correctAnswer: 2,
-            explanation: `After hydroxide substitutes at the ester, the carboxylic acid formed is instantly deprotonated by the basic medium. The carboxylate's delocalized negative charge makes its carbon a very poor electrophile — the reaction cannot run backward. Note that hydroxide is CONSUMED (stoichiometric), not catalytic.`
+            yield: 'HIGH',
+            explanation: `After hydroxide substitutes at the ester, the carboxylic acid formed is instantly deprotonated by the basic medium. The carboxylate's delocalized negative charge makes its carbon a very poor electrophile — the reaction cannot run backward. Note that hydroxide is CONSUMED (stoichiometric), not catalytic. The alcohol stays in solution (irreversibility does not depend on removing it), and the tetrahedral intermediate is a short-lived sp3 species, nowhere near aromatic.`
           },
           {
             question: `Which conversion requires "going uphill" on the reactivity ladder and therefore needs an activating reagent?`,
-            options: [`Acyl chloride → secondary amide`, `Acid anhydride → methyl ester`, `Ester → carboxylic acid`, `Carboxylic acid → acyl chloride`],
+            options: [`Acyl chloride → secondary amide`, `Acid anhydride → methyl ester`, `Ester → acid and alcohol`, `RCOOH → acyl chloride`],
             correctAnswer: 3,
-            explanation: `Acid to acyl chloride climbs from mid-ladder to the top, so it needs SOCl2 (or PCl3/PCl5) to convert the poor OH leaving group into a good one. The other three all descend the ladder and proceed directly with the appropriate nucleophile.`
+            yield: 'HIGH',
+            explanation: `Carboxylic acid to acyl chloride climbs from mid-ladder to the top, so it needs SOCl2 (or PCl3/PCl5) to convert the poor OH leaving group into a good one. The other three run downhill or level (ester hydrolysis needs only acid or base catalysis) and proceed directly with the appropriate nucleophile.`
           },
           {
             question: `Acetyl-CoA transfers its acetyl group far more readily than an ordinary oxygen ester would because the thioester:`,
             options: [`Loses less resonance stabilization on nucleophilic attack`, `Contains an unusually strong C=O bond`, `Has a positively charged sulfur that activates the carbonyl`, `Is stabilized by strong sulfur lone-pair donation`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `An oxygen ester is resonance-stabilized (O lone pair into C=O) and gives that stabilization up during attack. Sulfur, one row down, overlaps poorly, so the thioester starts higher in energy — hydrolysis and acyl transfer are more exergonic. This is the design principle behind CoA chemistry in metabolism.`
           },
           {
             question: `Mixing acetic acid directly with methylamine at room temperature mostly yields:`,
-            options: [`N-methylacetamide immediately`, `An imine (Schiff base)`, `An ammonium carboxylate salt`, `No reaction at all at room temperature`],
+            options: [`N-methylacetamide immediately`, `An imine (Schiff base) and water`, `An ammonium carboxylate salt`, `No reaction at all at room temperature`],
             correctAnswer: 2,
-            explanation: `Proton transfer is far faster than acyl substitution: the amine deprotonates the acid, giving methylammonium acetate. The carboxylate is unreactive and the protonated amine is non-nucleophilic, so amide formation stalls (it needs strong heating, a coupling reagent, or an activated derivative like an acyl chloride).`
+            yield: 'MEDIUM',
+            explanation: `Proton transfer is far faster than acyl substitution: the amine deprotonates the acid, giving methylammonium acetate. The carboxylate is unreactive and the protonated amine is non-nucleophilic, so amide formation stalls (it needs strong heating, a coupling reagent, or an activated derivative like an acyl chloride). The amide does not form "immediately", an imine needs an aldehyde or ketone partner rather than an acid, and "no reaction" overlooks the fast acid-base step.`
           }
         ]
       }
-    },
-    {
-      id: 'cnyl2-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 2
-
-- Mechanism: add nucleophile → tetrahedral intermediate → expel leaving group, C=O reforms
-- Ladder: acyl chloride > anhydride > (thioester) > ester ≈ acid > amide > carboxylate; downhill is direct, uphill needs activation ($SOCl_2$)
-- Saponification is irreversible (carboxylate endpoint) and consumes stoichiometric base; Fischer esterification is an acid-catalyzed equilibrium
-- Amide resonance: planar C-N, nitrogen non-basic, least reactive — the physics of the peptide bond
-- Thioesters (acetyl-CoA) are poorly resonance-stabilized → high acyl-transfer potential; acid + amine gives a salt, not an amide, without activation`
     },
     {
       id: 'cnyl2-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — Acyl Substitution
 
-<details>
-<summary><b>Example 1: Route planning with the ladder</b></summary>
+**Problem 1.** A synthesis must turn benzoic acid into N-methylbenzamide in the standard two steps.
 
-**Question:** Propose the standard two-step route from benzoic acid to N-methylbenzamide, and explain why one step cannot be skipped.
+- **(a)** What is the first step, and what is its job?
+- **(b)** What is the second step, and why use excess amine?
+- **(c)** Why can't the first step be skipped?
 
-**Solution:**
-1. Step 1: benzoic acid + $SOCl_2$ → benzoyl chloride (activation: OH → Cl)
-2. Step 2: benzoyl chloride + excess $CH_3NH_2$ → N-methylbenzamide (downhill, fast; the second equivalent of amine mops up the HCl)
-3. Skipping step 1 fails because acid + amine merely forms the ammonium carboxylate salt — proton transfer beats substitution
+**(a) Activation.** Benzoic acid + $SOCl_2$ → benzoyl chloride: the poor OH leaving group becomes Cl, climbing the ladder. When a passage inserts $SOCl_2$, that is its only job; expect an amine, alcohol or carboxylate next.
 
-**MCAT Strategy:** When a synthesis passage inserts SOCl2, its only job is climbing the ladder. Expect an amine, alcohol, or carboxylate to follow in the next step.
-</details>
+**(b) Amide formation.** Benzoyl chloride + excess $CH_3NH_2$ → N-methylbenzamide, downhill and fast. The second equivalent of amine mops up the HCl.
 
-<details>
-<summary><b>Example 2: Acid vs base hydrolysis of an ester</b></summary>
+**(c) No shortcut.** Acid + amine merely forms the ammonium carboxylate salt: proton transfer beats substitution, and the carboxylate is a dead end.
 
-**Question:** Ethyl benzoate is hydrolyzed (a) in aqueous HCl and (b) in aqueous NaOH. Compare mechanisms, reversibility, and the fate of the acyl oxygen products.
+**Problem 2.** Ethyl benzoate is hydrolyzed in aqueous HCl in one flask and in aqueous NaOH in another.
 
-**Solution:**
-1. (a) Acid: protonation activates the C=O, water attacks, ethanol leaves after proton shuffling → benzoic acid + EtOH. Every step reversible — an equilibrium (excess water drives it forward)
-2. (b) Base: hydroxide attacks directly, ethoxide is expelled, and the product acid is deprotonated → benzoate + EtOH. **Irreversible**
-3. Product difference: (a) neutral benzoic acid; (b) sodium benzoate until acidic workup
+- **(a)** How does the acid-catalyzed hydrolysis run, and is it reversible?
+- **(b)** How does the hydrolysis in base run, and is it reversible?
+- **(c)** What does each flask hold before workup, and which gives complete conversion?
 
-**MCAT Strategy:** "Which conditions give complete conversion?" — always the basic ones, because the carboxylate is a thermodynamic sink.
-</details>
+**(a) Acid.** Protonation activates the C=O, water attacks, and ethanol leaves after proton shuffling → benzoic acid + EtOH. Every step is reversible: an equilibrium that excess water drives forward.
 
-<details>
-<summary><b>Example 3: Why proteases exist</b></summary>
+**(b) Base.** Hydroxide attacks directly, ethoxide is expelled, and the product acid is deprotonated → benzoate + EtOH. **Irreversible.**
 
-**Question:** A peptide bond hydrolyzes with a half-life of centuries in neutral water, yet chymotrypsin cleaves it in milliseconds. Identify the structural reason for the slowness and two catalytic strategies the enzyme uses.
+**(c) Products.** The acid flask holds neutral benzoic acid; the base flask holds sodium benzoate until acidic workup. "Which conditions give complete conversion?" Always the basic ones, because the carboxylate is a thermodynamic sink.
 
-**Solution:**
-1. Slowness: amide resonance — nitrogen's lone pair delocalizes into C=O, deactivating the carbon and making the leaving group an amide anion (terrible LG)
-2. Strategy 1: the enzyme's serine, activated by the His/Asp charge relay, is a far better nucleophile than water, and forms a covalent acyl-enzyme intermediate
-3. Strategy 2: the oxyanion hole hydrogen-bonds the tetrahedral intermediate's alkoxide, stabilizing the transition state; general acid catalysis protonates the amine as it leaves
-4. Chemistry is unchanged — addition-elimination through a tetrahedral intermediate — just catalyzed at every hard step
+**Problem 3.** A peptide bond hydrolyzes with a half-life of centuries in neutral water, yet chymotrypsin cleaves it in milliseconds.
 
-**MCAT Strategy:** Enzyme-mechanism passages describing serine proteases are acyl substitution in disguise. Map "acyl-enzyme intermediate" to "the enzyme made an ester with the substrate."
-</details>
+- **(a)** What structural feature makes the uncatalyzed reaction so slow?
+- **(b)** How does the enzyme get a better nucleophile than water?
+- **(c)** How does it stabilize the tetrahedral intermediate and help the leaving group go?
+- **(d)** Has the underlying chemistry changed?
 
-<details>
-<summary><b>Example 4: Predicting relative hydrolysis rates</b></summary>
+**(a) Amide resonance.** Nitrogen's lone pair delocalizes into C=O, deactivating the carbon, and the leaving group would be an amide anion (a terrible LG).
 
-**Question:** Rank the aqueous hydrolysis rates: acetamide, acetic anhydride, methyl acetate, acetyl chloride.
+**(b) A better nucleophile.** The enzyme's serine, activated by the His/Asp charge relay, is a far better nucleophile than water. It forms a covalent acyl-enzyme intermediate: the enzyme has made an ester with the substrate.
 
-**Solution:**
-1. Apply the ladder directly: acetyl chloride > acetic anhydride > methyl acetate > acetamide
-2. Physical anchors: acyl chlorides fume and react violently with water; anhydrides hydrolyze in minutes; esters need acid/base catalysis and heat; amides need reflux in strong acid or base
-3. Cross-check with leaving groups: $Cl^-$ > acetate > methoxide > $NH_2^-$
+**(c) Intermediate and leaving group.** The oxyanion hole hydrogen-bonds the tetrahedral intermediate's alkoxide, stabilizing the transition state; general acid catalysis protonates the amine as it leaves.
 
-**MCAT Strategy:** If two derivatives seem close, compare their leaving groups as bases — the weaker base leaves faster, full stop.
-</details>`
+**(d) Same chemistry.** No. It is still addition-elimination through a tetrahedral intermediate, just catalyzed at every hard step. Serine-protease passages are acyl substitution in disguise.
+
+**Problem 4.** Rank the aqueous hydrolysis rates of acetamide, acetic anhydride, methyl acetate and acetyl chloride.
+
+- **(a)** What order does the ladder predict?
+- **(b)** Do the physical observations fit that order?
+- **(c)** Do the leaving groups agree?
+
+**(a) The ladder.** acetyl chloride > acetic anhydride > methyl acetate > acetamide.
+
+**(b) Physical anchors.** Yes: acyl chlorides fume and react violently with water; anhydrides hydrolyze in minutes; esters need acid/base catalysis and heat; amides need reflux in strong acid or base.
+
+**(c) Leaving groups.** Yes: $Cl^-$ > acetate > methoxide > $NH_2^-$. If two derivatives seem close, compare their leaving groups as bases: the weaker base leaves faster.`
+    },
+    {
+      id: 'cnyl2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+
+- **Addition, then elimination.** The nucleophile adds to give a tetrahedral intermediate, which expels the leaving group as C=O reforms.
+- **The reactivity ladder.** Acyl chloride > anhydride > thioester > ester ≈ acid > amide > carboxylate; downhill steps go directly.
+- **Esterification vs saponification.** Fischer esterification is an acid-catalyzed equilibrium; saponification is irreversible.
+- **Amide resonance.** The C–N bond is planar and partly double, so amide nitrogen is non-basic and amides react least.
+
+**Common traps**
+
+- **Climbing without activation.** Going uphill (acid → acyl chloride) needs an activator such as $SOCl_2$; downhill steps need none.
+- **Catalytic hydroxide.** Saponification consumes a full equivalent of base, and the carboxylate product cannot react back.
+- **Acid plus amine makes amide.** At room temperature they just form an ammonium carboxylate salt; an amide needs activation.
+- **Thioesters as stable esters.** Sulfur donates poorly into C=O, so thioesters such as acetyl-CoA are high-energy acyl donors.`
     }
   ]
 };

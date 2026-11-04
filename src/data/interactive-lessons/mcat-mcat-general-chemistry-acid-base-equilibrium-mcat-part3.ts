@@ -26,6 +26,37 @@ $$\\text{OH}^- + \\text{HA} \\to \\text{A}^- + \\text{H}_2\\text{O}$$
 
 The added $OH^{-}$ is consumed by the weak acid — pH barely changes.
 
+### Worked Example — Adding Strong Acid to a Buffer
+
+**Problem 1.** One litre of buffer holds $0.10$ mol acetic acid and $0.10$ mol sodium acetate ($\\text{p}K_a = 4.74$). Then $0.020$ mol HCl is added.
+
+- **(a)** What is the pH before the HCl is added?
+- **(b)** How many moles of HA and $\\text{A}^-$ are present after the HCl reacts?
+- **(c)** What is the new pH?
+- **(d)** What would the same HCl do to one litre of pure water?
+
+**(a) Starting pH.** HA and $\\text{A}^-$ are present in equal amounts, so $\\text{pH} = \\text{p}K_a = 4.74$.
+
+**(b) Neutralization.** The added $\\text{H}^+$ reacts completely with acetate, $\\text{H}^+ + \\text{A}^- \\to \\text{HA}$: $\\text{A}^-$ falls to $0.08$ mol and HA rises to $0.12$ mol.
+
+**(c) New pH.** With $0.08$ mol $\\text{A}^-$ and $0.12$ mol HA from (b), the volume cancels in the ratio:
+
+$$\\text{pH} = 4.74 + \\log\\frac{0.08}{0.12} = 4.74 + (\\log 2 - \\log 3) = 4.74 - 0.18 = 4.56$$
+
+**(d) Without the buffer.** In water $[\\text{H}^+] = 0.020$ M, so $\\text{pH} = 2 - \\log 2 = 1.70$: a drop of more than 5 units from pH 7, against 0.18 units for the buffer.
+
+**Problem 2.** The same $0.020$ mol HCl is added instead to one litre of a weaker buffer: $0.010$ mol acetic acid and $0.010$ mol sodium acetate ($\\text{p}K_a = 4.74$).
+
+- **(a)** How much $\\text{A}^-$ is there to absorb the added $\\text{H}^+$?
+- **(b)** What is left in solution after the reaction?
+- **(c)** What is the pH, and what does this show about buffer capacity?
+
+**(a) Not enough base.** Only $0.010$ mol $\\text{A}^-$ is present, half the $0.020$ mol $\\text{H}^+$ added.
+
+**(b) Leftovers.** All $0.010$ mol $\\text{A}^-$ becomes HA (now $0.020$ mol in total), and $0.010$ mol $\\text{H}^+$ remains unneutralized.
+
+**(c) Capacity exceeded.** The excess strong acid sets the pH: $[\\text{H}^+] = 0.010$ M, so pH ≈ 2. The ratio was the same 1:1 as in Problem 1, but ten times less buffer ran out; capacity depends on amount.
+
 ## Buffer Capacity
 
 **Buffer capacity** is the amount of acid or base the buffer can absorb before pH changes significantly.
@@ -58,7 +89,9 @@ $$\\text{CO}_2(\\text{aq}) + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_
 
 Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $P_{\\text{CO}_2} = 40\\text{ mmHg}$
 
-**Respiratory compensation:** Changing breathing rate alters $\\text{CO}_2$ levels:
+Counting all dissolved $\\text{CO}_2$, the effective $\\text{p}K_a$ is 6.1, so pH 7.40 needs a 20:1 ratio of $\\text{HCO}_3^-$ to $\\text{CO}_2$. That is far outside $\\text{p}K_a \\pm 1$, yet the buffer still works because the lungs keep removing $\\text{CO}_2$ (an open system).
+
+**Breathing and blood pH:** Changing breathing rate alters $\\text{CO}_2$ levels:
 - Hyperventilation → ↓$\\text{CO}_2$ → ↑pH (alkalosis)
 - Hypoventilation → ↑$\\text{CO}_2$ → ↓pH (acidosis)
 
@@ -83,11 +116,12 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
             options: [
               `[HA] decreases, [$A^{-}$] increases`,
               `[HA] increases, [$A^{-}$] decreases`,
-              `Both decrease`,
-              `Neither changes — the buffer neutralizes it completely`
+              `Both [HA] and [$A^{-}$] decrease`,
+              `Both [HA] and [$A^{-}$] increase`
             ],
             correctAnswer: 0,
-            explanation: `$\\text{OH}^- + \\text{HA} \\to \\text{A}^- + \\text{H}_2\\text{O}$. Adding NaOH converts weak acid to conjugate base: $[\\text{HA}]$ **decreases** and $[\\text{A}^-]$ **increases**. The new ratio = 0.19/0.21, and pH = 4.74 + log(0.21/0.19) ≈ 4.78 — barely changed.`
+            yield: 'HIGH',
+            explanation: `$\\text{OH}^- + \\text{HA} \\to \\text{A}^- + \\text{H}_2\\text{O}$. Adding NaOH converts weak acid to conjugate base: $[\\text{HA}]$ **decreases** and $[\\text{A}^-]$ **increases**, by the same amount. The new ratio = 0.21/0.19, and pH = 4.74 + log(0.21/0.19) ≈ 4.78 — barely changed. The buffer does not make the base vanish; it turns one component into the other.`
           },
           {
             question: `Which buffer is best suited to maintain pH = 9.0?`,
@@ -98,6 +132,7 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
               `Carbonic acid / bicarbonate ($\\text{p}K_{a1} = 6.37$)`
             ],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Choose a buffer with $\\text{p}K_a$ close to target pH. $\\text{p}K_a = 9.25$ (ammonium/ammonia) is closest to pH 9.0. The buffer is effective in the range 9.25 ± 1 = 8.25–10.25.`
           },
           {
@@ -109,29 +144,32 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
               `Respiratory alkalosis`
             ],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Elevated pH (alkalosis) with low $\\text{PCO}_2$ and normal $[\\text{HCO}_3^-]$ indicates the cause is respiratory: decreased $\\text{CO}_2$ (excess breathing) → **respiratory alkalosis**. If it were metabolic, $[\\text{HCO}_3^-]$ would be elevated.`
           },
           {
             question: `What is buffer capacity MOST dependent on?`,
             options: [
-              `The $pK_{a}$ of the weak acid alone`,
+              `The $pK_{a}$ of the weak acid, whatever its concentration`,
               `The absolute concentrations of the weak acid and conjugate base`,
-              `The temperature of the solution`,
+              `The temperature, which sets the acid's $K_a$`,
               `The volume of the solution`
             ],
             correctAnswer: 1,
-            explanation: `Buffer capacity depends on how many moles of acid and base are available to react. Higher **absolute concentrations** of HA and $A^{-}$ = more capacity. $pK_{a}$ governs the pH at which the buffer is optimal, but capacity (moles that can be absorbed) comes from concentration.`
+            yield: 'MEDIUM',
+            explanation: `Buffer capacity depends on how many moles of acid and base are available to react. Higher **absolute concentrations** of HA and $A^{-}$ = more capacity. $pK_{a}$ governs the pH at which the buffer is optimal, but capacity (moles that can be absorbed) comes from concentration. Temperature shifts $K_a$ slightly but not how much acid or base is on hand, and volume does not set capacity, which is measured per litre.`
           },
           {
-            question: `A buffer is prepared with 0.10 M acetic acid and 0.10 M sodium acetate ($\\text{p}K_a = 4.74$). After adding excess NaOH, all the acetic acid is consumed. The solution now contains only 0.10 M acetate. What happens to the buffering?`,
+            question: `A buffer is prepared with 0.10 M acetic acid and 0.10 M sodium acetate ($\\text{p}K_a = 4.74$). Enough NaOH is added to convert exactly all the acetic acid. The solution now contains only acetate (about 0.20 M). What happens to the buffering?`,
             options: [
               `Buffering is maximized because pure acetate has high $K_b$`,
-              `Buffering is lost because there is no weak acid left to neutralize additional $OH^{-}$`,
-              `Buffering continues at a higher pH`,
-              `The pH drops sharply because acetate is basic`
+              `Buffering is lost: no HA is left to absorb more $OH^{-}$`,
+              `Buffering continues, now centred one unit above the $\\text{p}K_a$`,
+              `The pH falls back to $\\text{p}K_a$ as acetate re-forms acetic acid`
             ],
             correctAnswer: 1,
-            explanation: `Buffers require both a weak acid and conjugate base. If all HA is consumed, there is no weak acid to absorb additional $OH^{-}$. Any more base added will cause a sharp pH increase — the buffer is **exhausted**.`
+            yield: 'MEDIUM',
+            explanation: `Buffers require both a weak acid and conjugate base. If all HA is consumed, there is no weak acid to absorb additional $OH^{-}$. Any more base added will cause a sharp pH increase — the buffer is **exhausted**. Acetate alone is a weak base with a small $K_b$, not a buffer, so no buffering is centred anywhere; and it does not turn back into acetic acid because no acid is present to protonate it.`
           }
         ]
       }
@@ -141,12 +179,17 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
       type: 'text' as const,
       content: `## Key Takeaways — Part 3
 
-- Buffers resist pH change by consuming added $H^{+}$ $(via A^{-})$ or $OH^{-}$ (via HA)
-- HH equation: $\\text{pH} = \\text{p}K_a + \\log([\\text{A}^-]/[\\text{HA}])$
-- Best buffering: $\\text{pH} \\approx \\text{p}K_a$; effective range: $\\text{p}K_a \\pm 1$
-- Buffer capacity increases with higher concentrations of buffer components
-- Bicarbonate buffer controls blood pH 7.35-7.45; lungs control $\\text{CO}_2$, kidneys control $\\text{HCO}_3^-$
-- Respiratory acidosis/alkalosis: problem with breathing; metabolic: problem with $[\\text{HCO}_3^-]$
+- **Each half neutralizes one.** $\\text{A}^-$ consumes added $\\text{H}^+$ and HA consumes added $\\text{OH}^-$, so pH barely moves.
+- **Pick pKa near the target.** Choose the pair whose $\\text{p}K_a$ is closest to the target pH; it works within ±1.
+- **Capacity comes from amount.** Higher concentrations of HA and $\\text{A}^-$ absorb more acid or base before the pH swings.
+- **Blood: lungs and kidneys.** Bicarbonate holds blood at pH 7.35–7.45; lungs set $\\text{CO}_2$, kidneys set $\\text{HCO}_3^-$.
+
+**Common traps**
+
+- **Capacity from pKa.** The $\\text{p}K_a$ sets WHERE a buffer works; how much it absorbs depends on concentration.
+- **A buffer fixes the pH.** The pH still shifts a little, and once one component is used up, buffering stops.
+- **Hyperventilation as acidosis.** Fast breathing blows off $\\text{CO}_2$ and RAISES pH: respiratory alkalosis.
+- **Mixing up the two causes.** A primary $\\text{CO}_2$ change is respiratory; a primary $\\text{HCO}_3^-$ change is metabolic.
 `
     }
   ]

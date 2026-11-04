@@ -346,7 +346,7 @@ ${T(500, 92, 14, 'low ρ')}
 ${T(500, 304, 14, 'high ρ')}
 ${T(130, 358, 15, 'uniform medium', 'middle')}
 ${T(130, 380, 15, 'size (then density)', 'middle', '700')}
-${T(410, 358, 15, 'CsCl or sucrose', 'middle')}
+${T(410, 358, 15, 'steep CsCl (isopycnic)', 'middle')}
 ${T(410, 380, 15, 'density ONLY', 'middle', '700')}
 ${T(130, 414, 14, 'pellets at stepwise higher speed', 'middle')}
 ${T(410, 414, 14, 'each bands where ρ = ρ(medium)', 'middle')}
@@ -558,12 +558,12 @@ export const mcatLabMethodsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: twoTechSvg,
       alt:
-        'Two centrifuge tubes side by side. Left, Differential: a uniform medium with a blue pellet at the bottom and the supernatant above; it separates by size (then density) in a uniform medium, giving pellets at stepwise higher speed. Right, Density gradient: the tube is shaded from light (low density) at the top to dark (high density) at the bottom — CsCl or sucrose — and three thin bands sit at different heights; it separates by density only, each particle banding where its density equals the medium’s.',
+        'Two centrifuge tubes side by side. Left, Differential: a uniform medium with a blue pellet at the bottom and the supernatant above; it separates by size (then density) in a uniform medium, giving pellets at stepwise higher speed. Right, Density gradient: the tube is shaded from light (low density) at the top to dark (high density) at the bottom — a steep CsCl gradient (isopycnic; a shallow sucrose gradient is instead rate-zonal, by size and shape) — and three thin bands sit at different heights; it separates by density only, each particle banding where its density equals the medium’s.',
       caption: 'Differential spins pellet the biggest particles first in a uniform medium; a density gradient bands each particle at its own buoyant density, whatever its size.',
     },
     blocks: [
       '- **Differential:** no gradient; spin, keep the supernatant, spin faster → sequential pellets',
-      '- **Density-gradient (isopycnic):** CsCl or sucrose; each particle bands at its own buoyant density',
+      '- **Isopycnic (steep CsCl):** each particle bands at its own buoyant density; a shallow sucrose gradient is **rate-zonal** (size and shape, S value)',
       '- Isopycnic separation is by **density only** — size does not decide where a band sits',
     ],
   },

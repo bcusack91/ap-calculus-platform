@@ -500,8 +500,8 @@ export const mcatAtomicStructureFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Half-Life',
-    mode: 'replace-table',
+    at: 'Worked Example — An Iodine-131 Countdown',
+    mode: 'after',
     figure: {
       svg: halfLifeSvg,
       alt:

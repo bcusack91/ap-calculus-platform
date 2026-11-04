@@ -37,7 +37,10 @@ A molecule with exactly one chirality center is always chiral. With more than on
 ### Counting Stereoisomers
 
 - Maximum number of stereoisomers $= 2^n$ where $n$ = number of stereocenters (plus double bonds capable of E/Z)
+- A double bond counts only when EACH alkene carbon carries two different groups; a terminal $=CH_2$ adds nothing
 - The count DROPS below $2^n$ when a **meso compound** exists
+
+R/S and E/Z name the two configurations; Part 2 of this lesson shows how to assign them.
 
 ### Meso Compounds
 
@@ -46,6 +49,15 @@ A meso compound contains stereocenters but is **achiral** because it has an **in
 Classic example: (2R,3S)-2,3-dibromobutane. The (R,S) form is superimposable on its own mirror image. So 2,3-dibromobutane has only **three** stereoisomers: (R,R), (S,S) — an enantiomeric pair — and the meso (R,S) form, which is a diastereomer of both.
 
 Meso requirement: the two stereocenters must carry the **same set of substituents** so a mirror plane can bisect the molecule.
+
+### Conformations and Ring Isomers
+
+Conformers are the same compound in different rotational shapes: they interconvert at room temperature and cannot be separated.
+
+- **Newman projections of butane** (looking down C2–C3): **anti** (methyls 180° apart) is lowest in energy; **gauche** (60°) is slightly higher from methyl–methyl crowding; **eclipsed** forms are highest, with methyls eclipsed (0°) the least stable of all.
+- **Cyclohexane chairs**: each carbon has one axial and one equatorial position, and a ring flip swaps them. Bulky groups prefer **equatorial**, where they avoid 1,3-diaxial crowding.
+- **cis/trans rings**: two ring substituents on the same face are cis, on opposite faces trans. A ring flip never turns cis into trans, so cis/trans ring isomers are configurational **diastereomers**.
+- cis-1,2-Dimethylcyclohexane is **meso** (achiral, with an internal mirror plane); trans-1,2-dimethylcyclohexane is chiral and exists as a pair of enantiomers.
 
 ### Property Rules (memorize cold)
 
@@ -58,6 +70,65 @@ Meso requirement: the two stereocenters must carry the **same set of substituent
 Enantiomers behave identically in every achiral environment. They differ only toward plane-polarized light and toward other chiral things (enzymes, receptors, chiral reagents).`
     },
     {
+      id: 'stereo1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Isomers & Chirality
+
+**Problem 1.** Classify each pair as constitutional isomers, enantiomers, diastereomers or conformers. Check connectivity FIRST.
+
+- **(a)** How are glucose and fructose related?
+- **(b)** How are (R)-2-butanol and (S)-2-butanol related?
+- **(c)** How are D-glucose and D-mannose, which differ only at C2, related?
+- **(d)** How are anti-butane and gauche-butane related?
+
+**(a) Glucose and fructose.** Both are C6H12O6, but glucose is an aldehyde and fructose a ketone — different connectivity → **constitutional isomers**. Trap answers call them "stereoisomers"; the carbonyl sits in a different position.
+
+**(b) The 2-butanols.** A single stereocenter with opposite configurations → nonsuperimposable mirror images → **enantiomers**.
+
+**(c) Glucose and mannose.** Several stereocenters, differing at only one → not mirror images → **diastereomers** (specifically epimers).
+
+**(d) Anti and gauche butane.** They interconvert by rotation about the C2-C3 sigma bond → **conformers**, the same compound.
+
+**Problem 2.** 2,3-Dichlorobutane, CH3-CHCl-CHCl-CH3, has two stereocenters, C2 and C3.
+
+- **(a)** Can this compound have a meso form?
+- **(b)** Which stereoisomer is achiral?
+- **(c)** How is that achiral isomer related to the (2R,3R) isomer?
+- **(d)** Can the two be separated by ordinary physical means?
+
+**(a) Matching sets.** Yes. Both stereocenters carry the same set: H, Cl, CH3 and CHClCH3, so a mirror plane can bisect the molecule.
+
+**(b) The meso form.** The (2R,3S) isomer has an internal mirror plane between C2 and C3 → achiral → **meso**.
+
+**(c) Relationship.** Same connectivity, so stereoisomers, but NOT mirror images: the mirror image of (R,R) is always (S,S). The meso form and (2R,3R) are **diastereomers**.
+
+**(d) Separation.** Yes. As diastereomers from (c), the meso form and (R,R) have different melting points and can be separated by ordinary physical means.
+
+**Problem 3.** 3-Bromo-2-butanol is CH3-CH(OH)-CH(Br)-CH3.
+
+- **(a)** Which carbons are stereocenters?
+- **(b)** Can the molecule have a meso form?
+- **(c)** How many stereoisomers exist?
+
+**(a) Find the stereocenters.** C2 bears H, OH, CH3 and CH(Br)CH3 — four different groups → stereocenter. C3 bears H, Br, CH3 and CH(OH)CH3 — four different groups → stereocenter.
+
+**(b) Meso check.** No. C2's substituent set (OH-based) differs from C3's (Br-based), so no internal mirror plane is possible. A meso form needs the two stereocenters substituted identically.
+
+**(c) Count.** With two stereocenters from (a) and no meso form from (b): $2^2 = 4$ stereoisomers, two pairs of enantiomers. Different substituents (here OH vs Br) give the full $2^n$ count.
+
+**Problem 4.** 4-Methyl-2-hexene is CH3-CH=CH-CH(CH3)-CH2-CH3.
+
+- **(a)** Can the C2=C3 double bond show E/Z isomerism?
+- **(b)** Is C4 a stereocenter?
+- **(c)** How many stereoisomers exist?
+
+**(a) The double bond.** Yes. Each alkene carbon carries two different groups (CH3/H and chain/H), so E/Z counts as a stereochemical unit. A double bond with two identical groups on one carbon (a terminal =CH2) would contribute nothing.
+
+**(b) C4.** Yes. C4 bears H, CH3, ethyl and the propenyl chain — four different groups → stereocenter.
+
+**(c) Count.** Two independent stereochemical units from (a) and (b) → $2^2 = 4$ stereoisomers: (E,R), (E,S), (Z,R), (Z,S). Count E/Z-capable double bonds along with sp3 stereocenters.`
+    },
+    {
       id: 'stereo1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Isomers & Chirality: Core Concepts** 🎯`,
@@ -67,36 +138,42 @@ Enantiomers behave identically in every achiral environment. They differ only to
             question: `A molecule has 3 stereocenters and no internal symmetry. The maximum number of stereoisomers is:`,
             options: [`3`, `6`, `8`, `9`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Maximum stereoisomers $= 2^n = 2^3 = 8$. The count only drops below $2^n$ when internal symmetry creates a meso form, which the question excludes.`
           },
           {
             question: `Two pure enantiomers of the same compound will differ in which property?`,
             options: [`Boiling point`, `Sign of optical rotation`, `Solubility in water`, `Melting point`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Enantiomers have identical physical properties in any achiral environment — same mp, bp, solubility, density. They differ only in the SIGN of optical rotation (equal magnitude, opposite direction) and in interactions with other chiral entities.`
           },
           {
             question: `cis-2-Butene and trans-2-butene are best classified as:`,
             options: [`Constitutional isomers`, `Enantiomers`, `Diastereomers`, `Conformers`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `They have the same connectivity (stereoisomers) but are NOT mirror images of each other — that makes them diastereomers. Geometric (cis/trans) isomers are always diastereomers. They cannot interconvert by rotation because the pi bond blocks it.`
           },
           {
             question: `meso-Tartaric acid contains two stereocenters yet is optically inactive because:`,
             options: [`The two stereocenters rotate light in the same direction`, `It has an internal mirror plane, so it is its own mirror image`, `It rapidly interconverts with its enantiomer at room temperature`, `It is a 50:50 mixture of the (R,R) and (S,S) forms`],
             correctAnswer: 1,
-            explanation: `A meso compound is achiral despite having stereocenters: an internal mirror plane means the molecule IS its own mirror image. The rotations of the two halves cancel internally. It is a single compound, not a 50:50 mixture of (R,R) and (S,S) — that would be racemic tartaric acid.`
+            yield: 'HIGH',
+            explanation: `A meso compound is achiral despite having stereocenters: an internal mirror plane means the molecule IS its own mirror image, so it cannot rotate plane-polarized light. If both centers rotated light the same way, the effects would add, not cancel. Stereocenters do not interconvert at room temperature without breaking bonds, and meso-tartaric acid is a single compound, not a 50:50 mixture of (R,R) and (S,S) — that would be racemic tartaric acid.`
           },
           {
             question: `Which molecule contains a chirality center?`,
             options: [`2-bromopropane`, `2-bromobutane`, `1-bromobutane`, `2-bromo-2-methylpropane`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `In 2-bromobutane, C2 bears four different groups: H, Br, methyl, and ethyl. 2-Bromopropane has two identical methyls on C2; 1-bromobutane's C1 has two H atoms; 2-bromo-2-methylpropane's C2 has three identical methyls.`
           },
           {
             question: `How many distinct stereoisomers exist for 2,3-dibromobutane?`,
             options: [`2`, `3`, `4`, `8`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Two stereocenters suggest $2^2 = 4$, but both centers carry the same substituent set (H, Br, CH3, and the rest of the chain), so the (R,S) form is meso — identical to (S,R). Total: (R,R), (S,S), and meso = 3 stereoisomers.`
           }
         ]
@@ -107,73 +184,17 @@ Enantiomers behave identically in every achiral environment. They differ only to
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Classify in order: same formula? same connectivity? mirror images? — constitutional isomers → stereoisomers → enantiomers vs diastereomers
-- Chirality center = carbon with four DIFFERENT attached groups (compare whole groups, not first atoms)
-- Maximum stereoisomers $= 2^n$; a meso form (internal mirror plane, matching stereocenters) reduces the count
-- Enantiomers: identical physical properties, opposite optical rotation; diastereomers differ in everything
-- cis/trans (E/Z) alkene pairs are diastereomers; conformers are the same compound`
-    },
-    {
-      id: 'stereo1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Isomers & Chirality
+- **Classify in order.** Same connectivity? Only rotation apart? Mirror images? That sorts constitutional, conformer, enantiomer, diastereomer.
+- **Chirality center.** A carbon bearing four different whole groups; one such center always makes a molecule chiral.
+- **Count with $2^n$.** Up to $2^n$ stereoisomers for $n$ stereocenters and E/Z double bonds; a meso form lowers the count.
+- **Enantiomers vs diastereomers.** Enantiomers share every physical property but rotate light oppositely; diastereomers differ.
 
-<details>
-<summary><b>Example 1: Find every stereocenter</b></summary>
+**Common traps**
 
-**Question:** How many stereocenters are in 3-bromo-2-butanol, and how many stereoisomers exist?
-
-**Solution:**
-1. Number the chain: CH3-CH(OH)-CH(Br)-CH3
-2. C2 bears H, OH, CH3, and CH(Br)CH3 — four different groups → stereocenter
-3. C3 bears H, Br, CH3, and CH(OH)CH3 — four different groups → stereocenter
-4. Meso check: C2's substituent set (OH-based) differs from C3's (Br-based), so NO internal mirror plane is possible
-5. Stereoisomers: $2^2 = 4$ — two pairs of enantiomers
-
-**MCAT Strategy:** A meso form requires the two stereocenters to be substituted identically. Different substituents (here OH vs Br) = full $2^n$ count.
-</details>
-
-<details>
-<summary><b>Example 2: Identify the meso compound</b></summary>
-
-**Question:** Which stereoisomer of 2,3-dichlorobutane is achiral, and what is its relationship to the (2R,3R) isomer?
-
-**Solution:**
-1. Both stereocenters carry the same set: H, Cl, CH3, CHClCH3 — meso is possible
-2. The (2R,3S) isomer has an internal mirror plane between C2 and C3 → achiral → **meso**
-3. Relationship to (2R,3R): same connectivity, stereoisomers, NOT mirror images (mirror of R,R is S,S) → **diastereomers**
-4. Consequence: meso and (R,R) have different melting points and can be separated by ordinary physical means
-
-**MCAT Strategy:** "R,S vs R,R" with identical substituent sets = meso vs chiral = diastereomers. The mirror image of (R,R) is always (S,S).
-</details>
-
-<details>
-<summary><b>Example 3: Classify the relationship</b></summary>
-
-**Question:** Classify each pair: (a) glucose and fructose; (b) (R)-2-butanol and (S)-2-butanol; (c) D-glucose and D-mannose (differ only at C2); (d) anti-butane and gauche-butane.
-
-**Solution:**
-1. (a) Both C6H12O6, but glucose is an aldehyde and fructose a ketone — different connectivity → **constitutional isomers**
-2. (b) Single stereocenter, opposite configurations → nonsuperimposable mirror images → **enantiomers**
-3. (c) Several stereocenters, differing at only one → not mirror images → **diastereomers** (specifically epimers)
-4. (d) Interconvert by rotation about the C2-C3 sigma bond → **conformers** (same compound)
-
-**MCAT Strategy:** Check connectivity FIRST. Many trap answers call glucose/fructose "stereoisomers" — the carbonyl is in a different position, so they are constitutional isomers.
-</details>
-
-<details>
-<summary><b>Example 4: Stereoisomer count with a double bond</b></summary>
-
-**Question:** How many stereoisomers exist for 4-methyl-2-hexene?
-
-**Solution:**
-1. CH3-CH=CH-CH(CH3)-CH2-CH3
-2. The C2=C3 double bond has two different groups on each carbon (CH3/H and chain/H) → E/Z isomerism counts as a stereochemical unit
-3. C4 bears H, CH3, ethyl, and the propenyl chain — four different → stereocenter
-4. Two independent stereochemical units → $2^2 = 4$ stereoisomers: (E,R), (E,S), (Z,R), (Z,S)
-
-**MCAT Strategy:** Count E/Z-capable double bonds along with sp3 stereocenters. A double bond with two identical groups on either carbon (e.g., a terminal =CH2) contributes nothing.
-</details>`
+- **Comparing first atoms only.** Compare whole groups: 2-bromopropane's C2 carries two identical methyls, so it is no stereocenter.
+- **Forgetting the double bond in the count.** A C=C with two different groups on each carbon is a stereo unit: 4-methyl-2-hexene has 4 stereoisomers, not 2.
+- **Meso as racemic.** A meso compound is ONE achiral compound; a racemate is a 50:50 mix of two chiral enantiomers.
+- **The mirror of (R,R).** The mirror image of (R,R) is (S,S); an (R,S) form is a diastereomer of both.`
     }
   ]
 };

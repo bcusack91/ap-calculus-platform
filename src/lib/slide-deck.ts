@@ -53,6 +53,8 @@ const MAX_DECK_POLLS = 16
  * for self-study.
  */
 export const MAX_DECK_PROBLEMS_PER_PART = 2
+/** Share of a poll's terms drawn from one worked problem above which the poll counts as that problem's twin. */
+const POLL_TWIN_OVERLAP = 0.6
 /** A part's remaining worked-problem allowance; `dropped` collects sections left off the slides. */
 export type WorkedBudget = { problems: number; dropped: string[] }
 /** Pool questions considered per deck; the best-matching MAX_POLLS are used. */
@@ -803,6 +805,27 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   const deckCommon = new Set(
     [...new Set(segTerms.flatMap((t) => [...t]))].filter((term) => segTerms.filter((t) => t.has(term)).length > Math.max(1, segTerms.length / 2)),
   )
+  // A poll that restates a worked problem the class just solved is not a
+  // check — and polls rank by overlap, so that twin is exactly the one that
+  // lands right after the problem (reviews, 2026-11-04). Drop polls whose
+  // terms mostly come from one worked problem on the slides, while enough
+  // other questions remain to fill the budget.
+  const problemTerms = new Map<string, Set<string>>()
+  for (const s of content) {
+    if (!/^Worked Examples?\b/i.test(s.title)) continue
+    const key = s.title.replace(/\s*\(cont\.\)\s*$/i, '').replace(/\s*·\s*Part \([a-z]\)$/i, '').replace(/\s*\([a-z]\)$/i, '')
+    const set = problemTerms.get(key) ?? new Set<string>()
+    for (const t of termsOf(slideText(s))) set.add(t)
+    problemTerms.set(key, set)
+  }
+  const restatesProblem = (p: PollSlide) => {
+    const terms = [...termsOf(`${p.question} ${p.options.join(' ')}`)].filter((t) => !deckCommon.has(t))
+    if (terms.length < 4) return false
+    return [...problemTerms.values()].some((set) => terms.filter((t) => set.has(t)).length / terms.length >= POLL_TWIN_OVERLAP)
+  }
+  const twins = new Set((polls as PollSlide[]).filter(restatesProblem))
+  if (process.env.DECK_DEBUG) console.error(`[deck] ${topicSlug}: ${twins.size} of ${polls.length} poll candidates restate a worked problem`, [...twins].map((p) => p.question.slice(0, 70)))
+  if (twins.size && polls.length - twins.size >= limits.maxPolls) polls = polls.filter((p) => !twins.has(p as PollSlide))
   const pollsBySeg = new Map<number, { poll: PollSlide; score: number }[]>()
   const reviewPolls: PollSlide[] = []
   for (const p of polls as PollSlide[]) {

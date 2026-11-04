@@ -19,6 +19,7 @@ where $q$ = net charge, $E$ = field strength, and $f$ = frictional drag (rises w
 | Method | What is varied | Separates by | Key reagent |
 |--------|----------------|--------------|-------------|
 | **SDS-PAGE** | Proteins coated with SDS (uniform − charge) | **Size only** | SDS + heat (denature) |
+| **Reducing vs. non-reducing SDS-PAGE** | With or without a disulfide reducer | Reducing: each chain separately; non-reducing: disulfide-linked chains together | β-mercaptoethanol or DTT |
 | **Native PAGE** | No denaturant | Size, shape, AND charge | — |
 | **Agarose gel** | DNA/RNA (uniformly − backbone) | **Size only** | Ethidium bromide stain |
 | **Isoelectric focusing (IEF)** | pH gradient | **pI** (stop where net charge = 0) | Ampholytes |
@@ -46,18 +47,21 @@ $$\\text{At pH} = \\text{pI}, \\quad \\text{net charge} = 0 \\Rightarrow \\text{
             question: `SDS-PAGE separates proteins essentially by size alone because SDS:`,
             options: [`Coats proteins in negative charge proportional to length`, `Cleaves each protein into fragments of equal length`, `Binds only the positively charged residues of each protein`, `Keeps each protein folded so shape sets its mobility`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `SDS is an anionic detergent that denatures proteins and binds along the polypeptide in roughly constant ratio, giving every protein a similar charge-to-mass ratio and masking its native charge. It does not cut the chain, and because it unfolds proteins, native shape no longer matters. With charge effectively normalized, the gel sieves by SIZE only — smaller proteins migrate farther.`
           },
           {
             question: `A protein with pI = 5.0 is placed in a gel buffered at pH 8.0. In an electric field it will:`,
-            options: [`Carry a net negative charge and migrate toward the anode (+)`, `Carry a net positive charge and migrate toward the cathode (−)`, `Carry no net charge and remain at the well`, `Carry a net negative charge and move toward the cathode (−)`],
+            options: [`Carry a net negative charge and migrate toward the anode (+)`, `Carry a net positive charge and migrate toward the cathode (−)`, `Carry a net positive charge and migrate toward the anode (+)`, `Carry a net negative charge and migrate toward the cathode (−)`],
             correctAnswer: 0,
-            explanation: `When buffer pH (8.0) is ABOVE the pI (5.0), the protein is deprotonated overall → net negative → it migrates toward the positive electrode (anode). Negative species always move toward the positive electrode, never the cathode. If pH were below pI it would be net positive and move to the cathode; only at pH = pI would it carry no net charge.`
+            yield: 'HIGH',
+            explanation: `When buffer pH (8.0) is ABOVE the pI (5.0), the protein is deprotonated overall → net negative → it migrates toward the positive electrode (anode). Opposite charges attract, so a negative species never runs to the cathode and a positive one never runs to the anode. If pH were below pI it would be net positive and move to the cathode; only at pH = pI would it carry no net charge.`
           },
           {
             question: `In isoelectric focusing, each protein migrates until it reaches the point in the pH gradient where:`,
-            options: [`pH equals its pI and its net charge is zero`, `pH equals its pKa and it is half protonated`, `the gel pores become too small for it to pass`, `pH is lowest and its charge is most positive`],
+            options: [`pH equals its pI and its net charge is zero`, `pH equals a side chain's pKa and that group is half protonated`, `the gel pores become too small for it to pass`, `pH is lowest and its charge is most positive`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `IEF runs proteins through a stable pH gradient. A protein keeps moving as long as it is charged; once it reaches the pH equal to its pI, its net charge is zero, the electric force vanishes, and it focuses into a sharp band. This separates proteins by pI with very high resolution. A single side chain's pKa is not the stopping point, IEF gels are not size-sieving, and at the most acidic end a protein would be strongly positive and still moving.`
           }
         ]
@@ -68,54 +72,58 @@ $$\\text{At pH} = \\text{pI}, \\quad \\text{net charge} = 0 \\Rightarrow \\text{
       type: 'text' as const,
       content: `### Worked Examples — Electrophoresis
 
-<details>
-<summary><b>Example 1: Read an SDS-PAGE gel for molecular weight</b></summary>
+**Problem 1.** An SDS-PAGE ladder shows bands at 75, 50, 37 and 25 kDa from top to bottom. An unknown protein runs slightly below the 37 kDa marker.
 
-**Question:** On an SDS-PAGE gel, a ladder shows bands at 75, 50, 37, and 25 kDa from top to bottom. An unknown protein runs slightly below the 37 kDa marker. Estimate its mass and explain the logic.
+- **(a)** Does a band lower on the gel belong to a larger or a smaller protein?
+- **(b)** Between which markers does the unknown fall, and what is its approximate mass?
+- **(c)** Why can the ladder calibrate the estimate?
 
-**Solution:**
-1. In SDS-PAGE, SMALLER proteins migrate FARTHER (lower on the gel). ✓
-2. The unknown sits between 37 and 25 kDa, closer to 37 → roughly **~33 kDa.** ✓
-3. Migration distance varies linearly with log(MW), so the ladder calibrates the estimate.
+**(a) Lower = smaller.** In SDS-PAGE, SMALLER proteins migrate FARTHER, so a band lower on the gel traveled farther and is smaller. "Lower on the gel = larger" is the classic trap.
 
-**MCAT trap:** "Lower on the gel = larger" is WRONG. Lower = traveled farther = smaller.
-</details>
+**(b) Estimate.** The unknown sits between the 37 and 25 kDa markers, closer to 37, so its mass is roughly **~33 kDa.**
 
-<details>
-<summary><b>Example 2: Predict migration direction from pI and pH</b></summary>
+**(c) Calibration.** Migration distance varies linearly with log(MW), so the ladder's known bands define the line the unknown is read against.
 
-**Question:** Three proteins (pI = 4, 7, 9) are loaded into native gels buffered at pH 7. Predict each protein's migration.
+**Problem 2.** Three proteins with pI = 4, 7 and 9 are loaded into native gels buffered at pH 7 (wells in the center of the gel).
 
-**Solution:**
-- pI 4 (pH 7 > pI): net negative → migrates to **anode (+).** ✓
-- pI 7 (pH 7 = pI): net charge ≈ 0 → essentially **does not migrate.** ✓
-- pI 9 (pH 7 < pI): net positive → migrates to **cathode (−).** ✓
+- **(a)** Which way does the pI 4 protein migrate?
+- **(b)** What does the pI 7 protein do?
+- **(c)** Which way does the pI 9 protein migrate?
 
-**Key rule:** Compare buffer pH to pI. Above pI → negative → anode. Below pI → positive → cathode.
-</details>
+**(a) pI 4.** pH 7 > pI, so the protein is net negative and migrates to the **anode (+).**
 
-<details>
-<summary><b>Example 3: Interpret a 2D gel result</b></summary>
+**(b) pI 7.** pH 7 = pI, so its net charge is ≈ 0 and it essentially **does not migrate.**
 
-**Question:** A researcher runs a 2D gel (IEF horizontally, SDS-PAGE vertically). Two spots have the same vertical position but different horizontal positions. What does this tell you?
+**(c) pI 9.** pH 7 < pI, so the protein is net positive and migrates to the **cathode (−).** The rule in every case: compare buffer pH to pI. Above pI → negative → anode; below pI → positive → cathode.
 
-**Solution:**
-1. Same VERTICAL position (SDS-PAGE dimension) → same molecular weight/size. ✓
-2. Different HORIZONTAL position (IEF dimension) → different pI. ✓
-3. Conclusion: the two species are the same size but differ in charge — consistent with **post-translational modifications** (e.g., phosphorylation adds negative charge, lowering pI) producing protein isoforms.
+**Problem 3.** A researcher runs a 2D gel (IEF horizontally, SDS-PAGE vertically). Two spots have the same vertical position but different horizontal positions.
 
-**Why 2D matters:** It resolves proteins that co-migrate in a single dimension by separating on two independent properties.
-</details>`
+- **(a)** What does the shared vertical position tell you?
+- **(b)** What does the different horizontal position tell you?
+- **(c)** What could produce such a pair of spots?
+
+**(a) Same size.** The vertical dimension is SDS-PAGE, so the two species have the same molecular weight.
+
+**(b) Different pI.** The horizontal dimension is IEF, so the two species have different isoelectric points, that is, different charge.
+
+**(c) Isoforms.** Same size but different charge fits a **post-translational modification**: phosphorylation adds negative charge and lowers the pI, giving a protein isoform. That is why 2D gels matter: they split proteins that co-migrate in one dimension.`
     },
     {
       id: 'lm2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Migration ∝ charge × field / friction; smaller molecules travel farther through the gel.
-- SDS-PAGE: size only (SDS normalizes charge). Agarose: DNA by size. Native PAGE: size + shape + charge.
-- IEF separates by pI; molecule stops where pH = pI (net charge 0).
-- pH > pI → net negative → anode (+); pH < pI → net positive → cathode (−).`
+- **Migration ∝ qE/f.** More charge or a stronger field speeds a molecule; larger size or a denser gel slows it.
+- **SDS-PAGE sorts by size.** SDS unfolds proteins and coats them in negative charge, so the gel sieves by size alone.
+- **pH vs. pI sets direction.** pH > pI: net negative, to the anode (+); pH < pI: net positive, to the cathode (−).
+- **IEF and 2D gels.** IEF stops each protein where pH = pI; a 2D gel adds SDS-PAGE to separate by pI and size.
+
+**Common traps**
+
+- **Lower band = larger.** A band lower on the gel traveled farther, so it is the SMALLER molecule.
+- **Negative to the cathode.** DNA and SDS-coated proteins are net negative and always run to the positive anode.
+- **Native gel = size only.** Without SDS, a native gel separates by size, shape and charge together.
+- **Same height, same protein.** Two 2D spots at one height share a size but differ in pI, as a phosphorylated isoform does.`
     }
   ]
 };

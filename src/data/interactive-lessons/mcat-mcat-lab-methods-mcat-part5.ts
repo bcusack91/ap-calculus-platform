@@ -29,9 +29,9 @@ $$\\text{Copies} = N_0 \\times 2^{n}$$
 after $n$ cycles (ideal doubling). Steps per cycle:
 1. **Denature** (~95 °C): separate strands.
 2. **Anneal** (~50–65 °C): primers bind.
-3. **Extend** (~72 °C): Taq polymerase synthesizes.
+3. **Extend** (~72 °C): heat-stable Taq polymerase synthesizes.
 
-**qPCR** quantifies in real time; reverse-transcription (RT-PCR) starts from RNA (via cDNA).
+**qPCR** quantifies in real time; reverse-transcription (RT-PCR) starts from RNA (via complementary DNA, cDNA).
 
 ### ELISA & Antibody Specificity
 
@@ -59,20 +59,23 @@ after $n$ cycles (ideal doubling). Steps per cycle:
         questions: [
           {
             question: `A researcher wants to detect a SPECIFIC protein in a tissue lysate. The appropriate technique is:`,
-            options: [`Western blot, probed with a specific antibody`, `Southern blot, probed with a labeled DNA strand`, `Northern blot, probed with a labeled nucleic acid`, `PCR, amplified with gene-specific primers`],
+            options: [`Western blot, probed with an antibody against it`, `Southern blot, probed with a labeled DNA strand`, `Northern blot, probed with a labeled nucleic acid`, `PCR, amplifying its coding gene with flanking primers`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Western blot detects PROTEINS: proteins are separated by SDS-PAGE, transferred to a membrane, and probed with a specific antibody. Southern = DNA, Northern = RNA, PCR amplifies DNA — none detect a protein directly (SNoW DRoP).`
           },
           {
             question: `Starting from 1000 copies of a target, how many copies exist after 5 ideal PCR cycles?`,
             options: [`32,000`, `10,000`, `16,000`, `64,000`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `PCR ideally doubles each cycle: copies = $N_0 \\times 2^n = 1000 \\times 2^5 = 1000 \\times 32 = 32{,}000$. Stopping one doubling short gives 16,000 and adding an extra one gives 64,000, while 10,000 multiplies by $2 \\times 5$ instead of $2^5$. The exponential factor $2^n$ is why PCR can amplify a tiny starting sample into a detectable amount in a few dozen cycles.`
           },
           {
             question: `In a sandwich ELISA, the measured color intensity (absorbance) is proportional to:`,
             options: [`The amount of antigen captured by the two antibodies`, `The molecular weight of the antigen being detected`, `The number of unbound detection antibodies washed away`, `The amount of capture antibody coated on the well`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `In a sandwich ELISA, a capture antibody binds antigen, and an enzyme-linked detection antibody generates color via its substrate. More antigen → more bound detection antibody → more enzyme → more color, and absorbance (Beer's law) scales with antigen concentration, allowing quantitation. Unbound detection antibody is washed away and contributes no color, capture antibody is supplied in excess, and antigen size does not set the signal.`
           }
         ]
@@ -83,51 +86,55 @@ after $n$ cycles (ideal doubling). Steps per cycle:
       type: 'text' as const,
       content: `### Worked Examples — Molecular Assays
 
-<details>
-<summary><b>Example 1: Choose the right method for a research goal</b></summary>
+**Problem 1.** A lab wants to know whether a gene is being TRANSCRIBED (made into mRNA) in a tumor sample, and to measure how much.
 
-**Question:** A lab wants to know whether a gene is being TRANSCRIBED (made into mRNA) in a tumor sample, and to measure how much. Which method, and why not a Western blot?
+- **(a)** Which molecule must the assay measure?
+- **(b)** Which method measures it quantitatively?
+- **(c)** Why would a Western blot not answer the question?
 
-**Solution:**
-1. Transcription produces mRNA → measure RNA → **RT-qPCR** (reverse-transcribe mRNA to cDNA, then quantitative PCR). A Northern blot also detects RNA but qPCR quantifies it precisely. ✓
-2. A Western blot measures PROTEIN, not mRNA — a gene could be transcribed but the protein degraded, so Western answers a different question.
+**(a) The molecule.** Transcription produces mRNA, so the assay must measure RNA. Map the molecule of interest (DNA / RNA / protein) to the assay before anything else.
 
-**MCAT skill:** Map the molecule of interest (DNA / RNA / protein) to the assay before anything else.
-</details>
+**(b) RT-qPCR.** Reverse-transcribe the mRNA to complementary DNA (cDNA), then run quantitative PCR. A Northern blot also detects RNA, but qPCR quantifies it precisely.
 
-<details>
-<summary><b>Example 2: Reason about PCR cycle number</b></summary>
+**(c) Not a Western.** A Western blot measures PROTEIN, not mRNA. A gene could be transcribed while its protein is degraded, so a Western answers a different question.
 
-**Question:** How many cycles are needed to amplify a single template molecule to over one million copies (assume ideal doubling)?
+**Problem 2.** A single template molecule is to be amplified to over one million copies, assuming ideal doubling every cycle.
 
-**Solution:**
-$$2^n > 10^6 \\Rightarrow n > \\log_2(10^6) = \\frac{6}{\\log_{10}2} \\approx \\frac{6}{0.301} \\approx 20$$
-So **about 20 cycles** exceed one million copies ($2^{20} \\approx 1.05 \\times 10^6$). ✓
+- **(a)** What inequality must the cycle number $n$ satisfy?
+- **(b)** About how many cycles is that?
+- **(c)** Will a real reaction reach the ideal copy number?
 
-**Note:** Real PCR plateaus as reagents deplete and efficiency drops below 2×, so practical yields fall short of the ideal — a common experimental caveat.
-</details>
+**(a) The inequality.** Starting from one copy, $n$ cycles give $2^n$ copies, so $2^n > 10^6$.
 
-<details>
-<summary><b>Example 3: Interpret an ELISA standard curve</b></summary>
+**(b) Cycles.** $n > \\log_2(10^6) = \\dfrac{6}{\\log_{10}2} \\approx \\dfrac{6}{0.301} \\approx 20$, so **about 20 cycles** exceed one million copies ($2^{20} \\approx 1.05 \\times 10^6$).
 
-**Question:** A sandwich ELISA gives absorbances of 0.2, 0.4, 0.6 for antigen standards of 10, 20, 30 ng/mL. A patient sample reads 0.5. Estimate the antigen concentration.
+**(c) Real PCR.** No: real PCR plateaus as reagents deplete and efficiency drops below 2× per cycle, so practical yields fall short of the ideal.
 
-**Solution:**
-1. The standards are linear: 0.02 absorbance units per ng/mL (0.2/10). ✓
-2. Patient: $c = 0.5 / 0.02 = 25$ ng/mL. ✓
+**Problem 3.** A sandwich ELISA gives absorbances of 0.2, 0.4 and 0.6 for antigen standards of 10, 20 and 30 ng/mL. A patient sample reads 0.5.
 
-**Connection:** This mirrors the Beer's-law standard curve from Part 4 — ELISA converts antigen amount into a colorimetric signal read by a spectrophotometer.
-</details>`
+- **(a)** What is the slope of the standard curve?
+- **(b)** What is the antigen concentration in the patient sample?
+
+**(a) Slope.** The standards are linear: 0.02 absorbance units per ng/mL (0.2/10).
+
+**(b) Patient.** With the slope of 0.02 from (a): $c = 0.5 / 0.02 = 25$ ng/mL. This mirrors the Beer's-law standard curve in Part 4 of this lesson (Beer's law): ELISA turns antigen amount into a colored signal read by a spectrophotometer.`
     },
     {
       id: 'lm5-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 5 (and Suite Review)
+      content: `### Key Takeaways — Part 5 (and Lesson Review)
 
-- Blots: Southern = DNA, Northern = RNA, Western = protein (SNoW DRoP); ELISA = antibody-based quantitation.
-- PCR amplifies DNA exponentially: copies = $N_{0}$ × $2^{n}$; steps = denature/anneal/extend; RT-PCR starts from RNA.
-- Match the molecule to the method: MW → SDS-PAGE; specific protein → Western/ELISA; amplify DNA → PCR; mRNA level → RT-qPCR; concentration → UV-Vis.
-- Detection assays (ELISA, UV-Vis) report concentration via signal proportional to amount (Beer's law).`
+- **SNoW DRoP.** Southern blots detect DNA, Northern blots RNA, and Western blots protein.
+- **PCR doubles each cycle.** Copies $= N_{0} \\times 2^{n}$ after $n$ denature, anneal and extend cycles; RT-PCR starts from RNA.
+- **Match molecule to method.** MW: SDS-PAGE; protein: Western or ELISA; DNA: PCR; mRNA level: RT-qPCR; concentration: UV-Vis.
+- **Signal tracks amount.** ELISA and UV-Vis read concentration off a standard curve, because signal is proportional to amount.
+
+**Common traps**
+
+- **Western for transcription.** mRNA is measured by RT-qPCR or a Northern blot; a Western blot measures protein.
+- **Linear PCR growth.** Five cycles multiply the copies by $2^5 = 32$, not by $2 \\times 5 = 10$.
+- **Ideal yield in real PCR.** Real reactions plateau as reagents run out, so they fall short of $2^{n}$.
+- **Unbound antibody adds color.** Unbound detection antibody is washed away; only antibody bound to antigen gives signal.`
     }
   ]
 };

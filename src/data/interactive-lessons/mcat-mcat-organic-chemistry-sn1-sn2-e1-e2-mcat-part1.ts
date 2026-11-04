@@ -14,10 +14,10 @@ Every substitution/elimination question on the MCAT reduces to one decision: whi
 
 | Role | What it does | Examples |
 |------|--------------|----------|
-| Substrate | Carbon skeleton bearing the leaving group | CH3Br (methyl), (CH3)3CBr (tertiary) |
-| Leaving group (LG) | Departs with the bonding electron pair | Br, I, OTs, water (after protonation) |
-| Nucleophile (Nu) | Attacks an electrophilic **carbon** | HO, CH3O, CN, I |
-| Base | Removes a **proton** (usually a beta-H) | HO, CH3O, (CH3)3CO |
+| Substrate | Carbon skeleton bearing the leaving group | $CH_3Br$ (methyl), $(CH_3)_3CBr$ (tertiary) |
+| Leaving group (LG) | Departs with the bonding electron pair | $Br^-$, $I^-$, tosylate ($TsO^-$), water (after protonation) |
+| Nucleophile (Nu) | Attacks an electrophilic **carbon** | $HO^-$, $CH_3O^-$, $CN^-$, $I^-$ |
+| Base | Removes a **proton** (usually a beta-H) | $HO^-$, $CH_3O^-$, $(CH_3)_3CO^-$ |
 
 Note that the same species (e.g., hydroxide) can act as nucleophile OR base — the mechanism that wins tells you which role it played.
 
@@ -25,10 +25,10 @@ Note that the same species (e.g., hydroxide) can act as nucleophile OR base — 
 
 | Mechanism | Steps | Rate law | Key intermediate |
 |-----------|-------|----------|------------------|
-| SN2 | 1 (concerted) | $rate = k[RX][Nu]$ | None — single transition state |
-| SN1 | 2 | $rate = k[RX]$ | Carbocation |
-| E2 | 1 (concerted) | $rate = k[RX][base]$ | None — single transition state |
-| E1 | 2 | $rate = k[RX]$ | Carbocation |
+| SN2 | 1 (concerted) | $\\text{rate} = k[\\text{RX}][\\text{Nu}]$ | None — single transition state |
+| SN1 | 2 | $\\text{rate} = k[\\text{RX}]$ | Carbocation |
+| E2 | 1 (concerted) | $\\text{rate} = k[\\text{RX}][\\text{base}]$ | None — single transition state |
+| E1 | 2 | $\\text{rate} = k[\\text{RX}]$ | Carbocation |
 
 - The "2" means **bimolecular**: two species in the rate-determining step.
 - The "1" means **unimolecular**: only the substrate appears in the rate law, because the slow step is the substrate ionizing on its own.
@@ -37,10 +37,10 @@ Note that the same species (e.g., hydroxide) can act as nucleophile OR base — 
 
 Count the carbons attached to the carbon bearing the leaving group:
 
-- **Methyl**: CH3-LG (zero attached carbons)
-- **Primary (1°)**: one attached carbon, e.g., CH3CH2-Br
-- **Secondary (2°)**: two attached carbons, e.g., (CH3)2CH-Br
-- **Tertiary (3°)**: three attached carbons, e.g., (CH3)3C-Br
+- **Methyl**: $CH_3{-}\\text{LG}$ (zero attached carbons)
+- **Primary (1°)**: one attached carbon, e.g., $CH_3CH_2{-}Br$
+- **Secondary (2°)**: two attached carbons, e.g., $(CH_3)_2CH{-}Br$
+- **Tertiary (3°)**: three attached carbons, e.g., $(CH_3)_3C{-}Br$
 
 **Why it matters twice:**
 1. **Sterics**: backside attack (SN2) needs an open carbon → methyl > 1° > 2° >> 3° (3° essentially never does SN2)
@@ -57,7 +57,60 @@ $I^- > Br^- > Cl^- >> F^-$
 - Tosylate (OTs) and mesylate (OMs) are excellent leaving groups — resonance-stabilized sulfonate anions.
 - **Hydroxide is a terrible leaving group.** Alcohols only substitute after the OH is protonated (leaves as neutral water) or converted to a tosylate.
 
-On the MCAT, an alcohol + strong acid (HBr, H2SO4) passage is a signal that the OH has been converted into a viable leaving group.`
+On the MCAT, an alcohol + strong acid (HBr, $H_2SO_4$) passage is a signal that the OH has been converted into a viable leaving group.`
+    },
+    {
+      id: 'sn1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Core Concepts
+
+**Problem 1.** Four alkyl bromides are compared in SN2 reactions: 2-bromo-2-methylpropane, bromomethane, 2-bromopropane and 1-bromopropane.
+
+- **(a)** What is the substrate class of each bromide?
+- **(b)** What feature of the substrate controls the SN2 rate?
+- **(c)** What is the SN2 reactivity order, fastest first?
+
+**(a) Classify.** 2-Bromo-2-methylpropane, $(CH_3)_3CBr$, is tertiary; bromomethane, $CH_3Br$, is methyl; 2-bromopropane, $(CH_3)_2CHBr$, is secondary; 1-bromopropane, $CH_3CH_2CH_2Br$, is primary.
+
+**(b) What controls the rate.** SN2 needs backside attack on the carbon bearing Br, so the less steric bulk around that carbon, the faster the reaction.
+
+**(c) Ranking.** From the classes in (a): **bromomethane > 1-bromopropane > 2-bromopropane >> 2-bromo-2-methylpropane**, which is essentially unreactive by SN2. Name the substrate class FIRST: it alone eliminates half the answer choices in mechanism questions.
+
+**Problem 2.** 1-Butanol does not react with NaI in acetone, but 1-butyl tosylate reacts rapidly to give 1-iodobutane.
+
+- **(a)** Why does 1-butanol fail to react?
+- **(b)** What makes the tosylate a good leaving group?
+- **(c)** How does iodide react, and what would happen at a stereocenter?
+
+**(a) No leaving group.** Substitution on 1-butanol would require $HO^-$ to leave — a strong base and a terrible leaving group. No reaction.
+
+**(b) The tosylate.** Converting the alcohol to a tosylate replaces OH with OTs. The tosylate anion is resonance-stabilized (charge spread over three oxygens of the sulfonate), so it is an excellent leaving group.
+
+**(c) SN2 by iodide.** Iodide performs SN2 at C1 → 1-iodobutane; C1 is not a stereocenter here. At one, the two steps give one net inversion: (R)-2-butanol → tosylate (configuration retained, the C-O bond untouched) → $I^-$ SN2 → (S)-2-iodobutane.
+
+**Problem 3.** For R-Br + NaCN, tripling [NaCN] triples the rate, and tripling [R-Br] also triples the rate. The product is a nitrile.
+
+- **(a)** What rate law do the data give?
+- **(b)** Which mechanism is operating?
+- **(c)** What does the transition state look like?
+
+**(a) Rate law.** The rate depends on BOTH species, so the reaction is bimolecular: $\\text{rate} = k[\\text{RBr}][CN^-]$.
+
+**(b) Mechanism.** Second order plus a substitution product (the nitrile) means **SN2**. Kinetics sorts the family (first order overall = SN1/E1, second order overall = SN2/E2); the product, substitution or alkene, finishes the call.
+
+**(c) Transition state.** Cyanide attacks from the back side: the C-CN bond is partly formed while the C-Br bond is partly broken, with five groups around carbon in a trigonal bipyramidal arrangement. Bond making and bond breaking happen in ONE concerted step.
+
+**Problem 4.** Benzyl bromide ($C_6H_5CH_2Br$) undergoes solvolysis in warm methanol much faster than 1-bromobutane, although both are primary.
+
+- **(a)** By what kind of mechanism does solvolysis in a weakly nucleophilic solvent proceed?
+- **(b)** Why does 1-bromobutane barely react?
+- **(c)** Why does benzyl bromide react so much faster?
+
+**(a) Ionization.** With only a weak nucleophile (the solvent) present, solvolysis proceeds by ionization: an SN1-type mechanism.
+
+**(b) No stable cation.** Ordinary primary cations are too unstable to form, so 1-bromobutane barely reacts.
+
+**(c) Benzylic resonance.** Benzyl bromide ionizes to a **benzylic cation**, its positive charge delocalized into the ring (shared over the ortho and para positions). Stabilized cation → faster ionization → faster solvolysis. When a "primary" substrate reacts by SN1, look for allylic or benzylic resonance.`
     },
     {
       id: 'sn1-quiz1',
@@ -69,36 +122,42 @@ On the MCAT, an alcohol + strong acid (HBr, H2SO4) passage is a signal that the 
             question: `Doubling the concentration of nucleophile has no effect on the rate of a substitution reaction. The mechanism is most likely:`,
             options: [`SN2`, `SN1`, `E2`, `Cannot be determined from rate data`],
             correctAnswer: 1,
-            explanation: `SN1 rate law is $rate = k[RX]$ — the slow step is ionization of the substrate, so the nucleophile concentration does not appear. In SN2, rate depends on both substrate and nucleophile.`
+            yield: 'HIGH',
+            explanation: `SN1 rate law is $\\text{rate} = k[\\text{RX}]$ — the slow step is ionization of the substrate, so the nucleophile concentration does not appear. In SN2, rate depends on both substrate and nucleophile. E2 is also second order (substrate and base) and gives an alkene, not a substitution product. The rate data are not ambiguous: zero order in nucleophile is exactly the signature of a unimolecular, carbocation pathway.`
           },
           {
             question: `Which substrate is essentially incapable of undergoing SN2?`,
-            options: [`CH3Br`, `CH3CH2Br`, `(CH3)2CHBr`, `(CH3)3CBr`],
+            options: [`$CH_3Br$`, `$CH_3CH_2Br$`, `$(CH_3)_2CHBr$`, `$(CH_3)_3CBr$`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Tertiary substrates are too sterically hindered for backside attack. SN2 reactivity: methyl > 1° > 2° >> 3°. The tertiary substrate instead favors SN1/E1 (stable carbocation) or E2 with strong base.`
           },
           {
             question: `Which is the best leaving group?`,
             options: [`$F^-$`, `$HO^-$`, `$I^-$`, `$H_2N^-$`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Good leaving groups are weak bases. Iodide is a very weak base (conjugate of the strong acid HI), so it leaves readily. Hydroxide, amide, and fluoride are all much stronger bases and poor leaving groups.`
           },
           {
             question: `A benzylic carbocation is unusually stable compared to an ordinary primary carbocation because of:`,
             options: [`Resonance delocalization into the ring`, `Stronger C-H bonds`, `Aromaticity of the cation itself`, `Hydrogen bonding with the solvent`],
             correctAnswer: 0,
-            explanation: `Benzylic (and allylic) cations delocalize the positive charge by resonance into the adjacent pi system. This is why benzylic/allylic substrates can undergo SN1 even when they are formally primary.`
+            yield: 'HIGH',
+            explanation: `Benzylic (and allylic) cations delocalize the positive charge by resonance into the adjacent pi system. This is why benzylic/allylic substrates can undergo SN1 even when they are formally primary. C-H bond strength has nothing to do with cation stability; the ring is aromatic, but the cation is not an aromatic ion itself, it borrows the ring's pi system; and solvent hydrogen bonding would stabilize any cation, so it cannot explain the benzylic advantage.`
           },
           {
             question: `Why does an alcohol fail to undergo substitution with NaBr alone, but react when HBr is used?`,
-            options: [`Protonated $-OH$ leaves as neutral water`, `HBr is a stronger nucleophile than $Br^-$`, `NaBr cannot dissolve in alcohols`, `HBr deprotonates the alcohol, activating it toward attack`],
+            options: [`Protonated $-OH$ leaves as neutral water`, `HBr is a stronger nucleophile than $Br^-$`, `NaBr cannot dissolve in alcohols, so no bromide is present`, `HBr deprotonates the alcohol, activating it toward attack`],
             correctAnswer: 0,
-            explanation: `$HO^-$ is a poor leaving group — far too strong a base to leave. Protonation by HBr converts -OH into $-OH_2^+$, which departs as neutral water — one of the most common MCAT setups for substitution on alcohols.`
+            yield: 'HIGH',
+            explanation: `$HO^-$ is a poor leaving group — far too strong a base to leave. Protonation by HBr converts -OH into $-OH_2^+$, which departs as neutral water — one of the most common MCAT setups for substitution on alcohols. Solubility is not the issue: dissolved bromide still cannot displace hydroxide. The nucleophile is $Br^-$ in both cases (neutral HBr is not a better nucleophile), and HBr protonates the alcohol rather than deprotonating it.`
           },
           {
             question: `In a reaction where methoxide ($CH_3O^-$) removes a beta-hydrogen from an alkyl halide, methoxide is functioning as a:`,
             options: [`Nucleophile`, `Base`, `Leaving group`, `Catalyst`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Attacking carbon = nucleophile; removing a proton = base. Beta-H removal with loss of the leaving group is elimination, so methoxide is acting as a base (E2 pathway).`
           }
         ]
@@ -109,71 +168,17 @@ On the MCAT, an alcohol + strong acid (HBr, H2SO4) passage is a signal that the 
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- "2" = bimolecular (substrate AND Nu/base in the rate law); "1" = unimolecular (substrate only)
-- SN2 sterics: methyl > 1° > 2° >> 3°. SN1/E1 carbocation stability: 3° > 2° >> 1°
-- Good leaving group = weak base: $I^- > Br^- > Cl^- >> F^-$; tosylate/mesylate excellent; OH must be protonated or tosylated first
-- Allylic/benzylic substrates gain resonance-stabilized cations — they break the "no primary SN1" rule
-- Same reagent can be Nu (attacks C) or base (takes beta-H) — the observed product tells you which`
-    },
-    {
-      id: 'sn1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Core Concepts
+- **Molecularity in the name.** "2" puts substrate AND nucleophile or base in the rate law; "1" puts the substrate alone.
+- **Substrate class cuts both ways.** SN2 runs methyl > 1° > 2° >> 3°; carbocation routes run 3° > 2° >> 1°.
+- **Leaving group = weak base.** $I^- > Br^- > Cl^- >> F^-$, and tosylate and mesylate are excellent leaving groups.
+- **Carbocation stability.** Alkyl groups steady a cation by hyperconjugation and induction; allylic and benzylic add resonance.
 
-<details>
-<summary><b>Example 1: Classify the substrate and predict feasibility</b></summary>
+**Common traps**
 
-**Question:** Rank these substrates by SN2 reactivity: (a) 2-bromo-2-methylpropane, (b) bromomethane, (c) 2-bromopropane, (d) 1-bromopropane.
-
-**Solution:**
-1. Classify each: (a) $(CH_3)_3CBr$ = tertiary; (b) $CH_3Br$ = methyl; (c) $(CH_3)_2CHBr$ = secondary; (d) $CH_3CH_2CH_2Br$ = primary
-2. SN2 requires backside attack → less steric bulk = faster
-3. **Ranking: b > d > c >> a** (tertiary essentially unreactive by SN2)
-
-**MCAT Strategy:** Draw or name the substrate FIRST. Substrate class alone eliminates half the answer choices in mechanism questions.
-</details>
-
-<details>
-<summary><b>Example 2: Use the rate law to identify the mechanism</b></summary>
-
-**Question:** For R-Br + NaCN, tripling [NaCN] triples the rate, and tripling [R-Br] also triples the rate. What is the mechanism, and what does the transition state look like?
-
-**Solution:**
-1. Rate depends on BOTH species → bimolecular → $rate = k[RBr][CN^-]$
-2. Substitution product (nitrile) forms → **SN2**
-3. Transition state: cyanide attacking from the back side, C-CN bond partially formed, C-Br bond partially broken, five groups around carbon in a trigonal bipyramidal arrangement
-4. Both bond-making and bond-breaking occur in ONE concerted step
-
-**MCAT Strategy:** Kinetics data is the single most reliable identifier. First order overall = SN1/E1 family; second order overall = SN2/E2 family. Then use the product (substitution vs alkene) to finish.
-</details>
-
-<details>
-<summary><b>Example 3: Spot the disguised leaving group</b></summary>
-
-**Question:** 1-Butanol does not react with NaI in acetone, but 1-butyl tosylate reacts rapidly to give 1-iodobutane. Why?
-
-**Solution:**
-1. In 1-butanol, substitution would require $HO^-$ to leave — a strong base, terrible leaving group. No reaction.
-2. Converting the alcohol to a tosylate replaces OH with OTs
-3. The tosylate anion is resonance-stabilized (charge spread over three oxygens of the sulfonate) → excellent leaving group
-4. Iodide then performs SN2 on the primary carbon → 1-iodobutane
-
-**MCAT Strategy:** Tosylation "activates" alcohols with retention at carbon (the C-O bond isn't touched during tosylation); the subsequent SN2 inverts. Track stereochemistry across BOTH steps in passage questions.
-</details>
-
-<details>
-<summary><b>Example 4: Resonance rescues a primary substrate</b></summary>
-
-**Question:** Benzyl bromide ($C_6H_5CH_2Br$) undergoes solvolysis in warm methanol much faster than 1-bromobutane. Explain.
-
-**Solution:**
-1. Solvolysis in a weakly nucleophilic solvent proceeds by ionization (SN1-type)
-2. Ordinary primary cations are too unstable to form — 1-bromobutane barely reacts
-3. Benzyl bromide ionizes to a **benzylic cation**, delocalized into the ring by resonance (positive charge shared over the ortho and para positions)
-4. Stabilized cation → faster ionization → faster solvolysis
-
-**MCAT Strategy:** When a "primary" substrate reacts by SN1, look for allylic or benzylic resonance. This exception is a favorite MCAT discriminator.
-</details>`
+- **SN2 on a tertiary carbon.** A 3° carbon is too crowded for backside attack; it reacts by SN1/E1, or E2 with a strong base.
+- **Hydroxide as a leaving group.** OH never leaves as $HO^-$; protonate it to water or convert it to a tosylate first.
+- **Nucleophile or base by name.** One reagent can attack carbon or take a beta-H; the product, not the name, says which it did.
+- **"Primary never ionizes."** Benzylic and allylic primary substrates do ionize, because resonance stabilizes the cation.`
     }
   ]
 };

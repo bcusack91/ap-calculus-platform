@@ -92,7 +92,7 @@ ${T(500, 322, 19, '1 mol = 6.022 × 10²³ particles = M grams = 22.4 L of ideal
 ${T(500, 356, 16, 'M = sum of atomic masses: H₂SO₄ = 2(1.0) + 32.1 + 4(16.0) = 98.1 g/mol', 'middle')}
 <g class="fig-muted">
 ${T(500, 390, 15, 'STP on the MCAT = 0 °C and 1 atm; the 22.4 L step works for GASES only', 'middle')}
-${T(500, 420, 15, '1 amu = 1 g/mol — the mole is the bridge from the atomic scale to the lab scale', 'middle')}
+${T(500, 420, 15, 'X amu per particle ↔ X g per mole — the mole bridges atomic and lab scales', 'middle')}
 </g>
 </svg>`
 
@@ -193,7 +193,7 @@ ${ARR(230, 254, 230, 294, 'arr-st-lim-b', 3)}
 ${ARR(380, 254, 380, 294, 'arr-st-lim-b', 3)}
 ${T(30, 335, 15, 'AlCl₃  0.133 mol', 'start', '700')}
 ${unitRow(330, [[190, 230], [340, 380]], 'AlCl₃', true)}
-${T(470, 335, 14, '= 17.7 g', 'start', '700')}
+${T(470, 335, 14, '= 17.8 g', 'start', '700')}
 </g>
 <g class="fig-muted">
 ${T(220, 283, 12, 'run 1', 'end')}
@@ -212,7 +212,7 @@ ${T(560, 262, 17, 'smaller result = limiting reagent', 'start', '700')}
 <g class="fig-accent">
 ${T(560, 300, 16, 'product from the LIMITING reagent only:', 'start', '700')}
 ${T(560, 324, 16, '0.200 mol Cl₂ × 2/3 = 0.133 mol AlCl₃')}
-${T(560, 348, 16, '0.133 × 133.3 = 17.7 g AlCl₃')}
+${T(560, 348, 16, '0.1333 × 133.3 = 17.8 g AlCl₃')}
 </g>
 <g class="fig-muted">
 ${T(560, 392, 14, 'equal moles ≠ equal supply: the coefficients set the recipe')}
@@ -413,7 +413,7 @@ export const mcatStoichiometryFigures: DeckFigurePlacement[] = [
     figure: {
       svg: hubSvg,
       alt:
-        'A hub diagram with a blue box labelled moles (n), every route passes here, in the centre. Left box: grams, mass on the balance; arrows between it and moles read ÷ M (grams to moles) and × M (g/mol) (moles to grams). Right box: particles — atoms, molecules, ions; arrows read × 6.022 × 10²³ (moles to particles) and ÷ 6.022 × 10²³ (particles to moles). Top box: litres of gas, ideal gas at STP only; arrows read × 22.4 L/mol (moles to litres) and ÷ 22.4 (litres to moles). Below: 1 mol = 6.022 × 10²³ particles = M grams = 22.4 L of ideal gas at STP; M is the sum of atomic masses, H₂SO₄ = 2(1.0) + 32.1 + 4(16.0) = 98.1 g/mol; STP on the MCAT is 0 °C and 1 atm and the 22.4 L step works for gases only; 1 amu = 1 g/mol, the mole is the bridge from the atomic scale to the lab scale.',
+        'A hub diagram with a blue box labelled moles (n), every route passes here, in the centre. Left box: grams, mass on the balance; arrows between it and moles read ÷ M (grams to moles) and × M (g/mol) (moles to grams). Right box: particles — atoms, molecules, ions; arrows read × 6.022 × 10²³ (moles to particles) and ÷ 6.022 × 10²³ (particles to moles). Top box: litres of gas, ideal gas at STP only; arrows read × 22.4 L/mol (moles to litres) and ÷ 22.4 (litres to moles). Below: 1 mol = 6.022 × 10²³ particles = M grams = 22.4 L of ideal gas at STP; M is the sum of atomic masses, H₂SO₄ = 2(1.0) + 32.1 + 4(16.0) = 98.1 g/mol; STP on the MCAT is 0 °C and 1 atm and the 22.4 L step works for gases only; a particle of X amu has a molar mass of X g/mol, the mole is the bridge from the atomic scale to the lab scale.',
       caption: 'The mole is the hub: grams, particles and litres of gas at STP each convert to moles by one factor (M, 6.022 × 10²³, 22.4 L/mol), and any other conversion goes through the hub.',
     },
     blocks: [
@@ -437,7 +437,7 @@ export const mcatStoichiometryFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Worked Example: Multi-Step Mole Calculation',
-    mode: 'lead',
+    mode: 'after',
     figure: {
       svg: roadmapSvg,
       alt:
@@ -450,17 +450,17 @@ export const mcatStoichiometryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'How to Find the Limiting Reagent',
-    mode: 'lead',
+    at: 'Worked Example — Finding the Limiting Reagent',
+    mode: 'after',
     figure: {
       svg: limitingSvg,
       alt:
-        'Left: 2Al + 3Cl₂ → 2AlCl₃ with 5.40 g Al and 14.2 g Cl₂, drawn as circles where each circle is 0.0333 mol and one run of the equation is 2 Al + 3 Cl₂ → 2 AlCl₃. Row Al, 0.200 mol: six circles boxed in three pairs; the third pair is dashed and labelled 0.0667 mol Al left over. Row Cl₂, 0.200 mol (red): six circles boxed in two triples, labelled runs out. Blue arrows from each Cl₂ triple (run 1, run 2) down to row AlCl₃, 0.133 mol: four circles in two pairs, = 17.7 g. Only 2 runs fit the Cl₂ supply → Cl₂ is the limiting reagent; 2 runs × 2 AlCl₃ = 4 circles = 0.133 mol; one Al pair never reacts (excess). Right: the test is moles ÷ coefficient. Al: 5.40 ÷ 27.0 = 0.200 mol, 0.200 ÷ 2 = 0.100 runs. Cl₂ (red): 14.2 ÷ 70.9 = 0.200 mol, 0.200 ÷ 3 = 0.0667 runs ← smaller. Smaller result = limiting reagent. Product from the limiting reagent only (blue): 0.200 mol Cl₂ × 2/3 = 0.133 mol AlCl₃; 0.133 × 133.3 = 17.7 g AlCl₃. Notes: equal moles ≠ equal supply, the coefficients set the recipe; with 21.3 g Cl₂ (0.300 mol) both ratios are 0.100 — exact stoichiometric ratio, nothing left over.',
+        'Left: 2Al + 3Cl₂ → 2AlCl₃ with 5.40 g Al and 14.2 g Cl₂, drawn as circles where each circle is 0.0333 mol and one run of the equation is 2 Al + 3 Cl₂ → 2 AlCl₃. Row Al, 0.200 mol: six circles boxed in three pairs; the third pair is dashed and labelled 0.0667 mol Al left over. Row Cl₂, 0.200 mol (red): six circles boxed in two triples, labelled runs out. Blue arrows from each Cl₂ triple (run 1, run 2) down to row AlCl₃, 0.133 mol: four circles in two pairs, = 17.8 g. Only 2 runs fit the Cl₂ supply → Cl₂ is the limiting reagent; 2 runs × 2 AlCl₃ = 4 circles = 0.133 mol; one Al pair never reacts (excess). Right: the test is moles ÷ coefficient. Al: 5.40 ÷ 27.0 = 0.200 mol, 0.200 ÷ 2 = 0.100 runs. Cl₂ (red): 14.2 ÷ 70.9 = 0.200 mol, 0.200 ÷ 3 = 0.0667 runs ← smaller. Smaller result = limiting reagent. Product from the limiting reagent only (blue): 0.200 mol Cl₂ × 2/3 = 0.133 mol AlCl₃; 0.133 × 133.3 = 17.8 g AlCl₃. Notes: equal moles ≠ equal supply, the coefficients set the recipe; with 21.3 g Cl₂ (0.300 mol) both ratios are 0.100 — exact stoichiometric ratio, nothing left over.',
       caption: 'The limiting reagent as a particle picture: 0.200 mol of each reactant, but the recipe needs 3 Cl₂ per 2 Al, so Cl₂ is used up after two runs and a pair of Al circles is left over — moles ÷ coefficient makes the same call.',
     },
     blocks: [
       '- Convert to moles, then **divide by the coefficient**; the smaller result is the limiting reagent: Al $0.200/2 = 0.100$, Cl₂ $0.200/3 = 0.0667$ → Cl₂',
-      '- Product comes from the limiting reagent only: $0.200 \\times \\tfrac{2}{3} = 0.133$ mol AlCl₃ $= 17.7$ g; $0.0667$ mol Al stays unreacted',
+      '- Product comes from the limiting reagent only: $0.200 \\times \\tfrac{2}{3} = 0.1333$ mol AlCl₃ $= 17.8$ g; $0.0667$ mol Al stays unreacted',
     ],
   },
   {
@@ -508,8 +508,8 @@ export const mcatStoichiometryFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Net Ionic Equations',
-    mode: 'lead',
+    at: 'Worked Example — Precipitating Silver Chloride',
+    mode: 'after',
     figure: {
       svg: netIonicSvg,
       alt:

@@ -558,8 +558,8 @@ export const mcatThermodynamicsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Heating Curves',
-    mode: 'lead',
+    at: 'Worked Example — Ice at −10°C to Steam',
+    mode: 'after',
     figure: {
       svg: heatingSvg,
       alt:
