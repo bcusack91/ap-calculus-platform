@@ -63,17 +63,41 @@ Transfusion logic: match the DONOR's cell antigens against the RECIPIENT's antib
       type: 'text' as const,
       content: `### Worked Example — An Rh Pregnancy with ELISA Data
 
-**Passage-style problem.** A woman with blood type O, Rh-negative has her first child (type A, Rh-positive) with an uneventful delivery. During her second pregnancy (fetus again Rh-positive), an indirect ELISA is run on her serum against Rh(D) antigen coated on the plate, using an enzyme-linked anti-human-IgG secondary antibody. Her absorbance readings are 8-fold above the negative control and rise over the trimester. The second newborn is jaundiced and anemic.
+**Problem 1.** A woman with blood type O, Rh-negative has her first child (type A, Rh-positive) after an uneventful delivery. Her second fetus is also Rh-positive, and that newborn is jaundiced and anemic.
 
-**Question 1 — Why was the FIRST Rh+ baby unharmed?** Sensitization typically occurs at delivery, when fetal red cells enter maternal circulation. During that first pregnancy the mother had no anti-Rh antibodies yet; her primary response began only after exposure at birth — too late to affect that child.
+- **(a)** Why was the FIRST Rh+ baby unharmed?
+- **(b)** Which class of maternal anti-Rh antibody reaches the second fetus, and why can it?
+- **(c)** What does that antibody do to the fetal red cells, and which hypersensitivity type is this?
+- **(d)** Why is the newborn anemic and jaundiced?
 
-**Question 2 — What does the ELISA result mean, mechanistically?** Plate-bound Rh antigen captured maternal anti-Rh antibodies; the anti-IgG secondary bound those and generated signal. So the mother now has class-switched anti-Rh IgG (memory from the first delivery). Rising titers indicate an ongoing secondary response — likely boosted by small fetomaternal bleeds.
+**(a) The first child.** Sensitization typically occurs at delivery, when fetal red cells enter her circulation; she had no anti-Rh antibody before then, so her primary response came too late to harm that child. (Her anti-A can clear type A fetal cells first, which partly protects against Rh sensitization, though not fully, as here.)
 
-**Question 3 — Why is the SECOND baby affected, and why does the antibody class matter?** Her anti-Rh antibodies are IgG — the only isotype transported across the placenta. They bind fetal Rh+ red cells, marking them for destruction (type II hypersensitivity): hemolysis → anemia; hemoglobin breakdown → bilirubin → jaundice. Had her response remained IgM-only, the pentamer could not cross and the fetus would be spared.
+**(b) The antibody class.** Her anti-Rh antibodies are IgG, the only isotype transported across the placenta. Had her response remained IgM-only, the pentamer could not cross and the fetus would be spared.
 
-**Question 4 — Her anti-A antibodies (she is type O) are mostly IgM. Predict their effect on this type A fetus.** Minimal — IgM does not cross the placenta (type O mothers make a little IgG anti-A, so mild ABO disease can occur). This contrast (ABO IgM largely harmless in pregnancy vs. anti-Rh IgG dangerous) is exactly the kind of isotype logic MCAT passages reward.
+**(c) The mechanism.** The IgG binds fetal Rh+ red cells and marks them for destruction: antibody against a cell-surface antigen, a type II hypersensitivity.
 
-**Question 5 — How does RhoGAM prevent all of this?** Anti-Rh antibody given around delivery binds and clears fetal Rh+ cells from maternal blood BEFORE her B cells are activated — passive immunity used to prevent a primary response, so no memory forms.`
+**(d) The signs.** Hemolysis causes the anemia; hemoglobin breakdown yields bilirubin, which causes the jaundice.
+
+**Problem 2.** During her second pregnancy, an indirect ELISA is run on her serum: Rh(D) antigen coats the plate, and the secondary is an enzyme-linked anti-human-IgG antibody. Her absorbance is 8-fold above the negative control and rises over the trimester.
+
+- **(a)** What did the plate capture from her serum, and what produced the signal?
+- **(b)** What does a signal from an anti-IgG secondary reveal about her immune history?
+- **(c)** What do the rising readings over the trimester indicate?
+
+**(a) The capture.** Plate-bound Rh antigen captured her anti-Rh antibodies; the enzyme-linked anti-IgG secondary bound those and generated the color signal.
+
+**(b) Class-switched memory.** The secondary detects IgG, so she now has class-switched anti-Rh IgG: memory from the first delivery.
+
+**(c) Rising titers.** An ongoing secondary response, likely boosted by small fetomaternal bleeds.
+
+**Problem 3.** The same type O mother also carries anti-A antibodies, mostly IgM, and her second fetus is type A.
+
+- **(a)** Predict the effect of her mostly-IgM anti-A on this type A fetus.
+- **(b)** Could any of her anti-A still reach the fetus? Explain.
+
+**(a) Mostly harmless.** Minimal: IgM is a pentamer and does not cross the placenta.
+
+**(b) The small IgG fraction.** Yes, a little. Type O mothers make a little IgG anti-A, which can cross, so mild ABO disease can occur. This contrast (ABO IgM largely harmless in pregnancy vs. anti-Rh IgG dangerous) is exactly the kind of isotype logic MCAT passages reward.`
     },
     {
       id: 'imm4-quiz1',
@@ -124,14 +148,22 @@ Transfusion logic: match the DONOR's cell antigens against the RECIPIENT's antib
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Hypersensitivity: I = IgE/mast cells, immediate (anaphylaxis); II = antibody vs. cell-surface antigen (Rh disease, transfusion reactions); III = immune-complex deposition (lupus nephritis, serum sickness); IV = T-cell mediated and DELAYED (TB test, poison ivy)
-- Autoimmunity = failed self-tolerance (type 1 diabetes, MS, lupus); immunodeficiency = failed defense — HIV kills CD4+ helpers and collapses both adaptive arms; SCID = no functional B or T cells
-- ABO: your plasma carries IgM against the antigens your cells lack; O = universal RBC donor (no antigens), AB = universal recipient (no antibodies)
-- Rh disease: sensitized Rh- mother makes anti-Rh IgG, which crosses the placenta and hemolyzes the next Rh+ fetus's cells (type II); RhoGAM prevents sensitization with passive antibody
-- Lab toolkit: ELISA = antibody-based detection (indirect format finds the PATIENT'S antibodies); Western blot = size-separated proteins probed by antibody; flow cytometry = fluorescent-antibody cell counting (clinical CD4 counts)
+- **Four hypersensitivities.** I: IgE, immediate; II: antibody to cell-surface antigen; III: immune complexes; IV: T cells, delayed.
+- **Tolerance vs. defense.** Autoimmunity is failed self-tolerance; HIV kills CD4+ helpers and collapses both adaptive arms.
+- **ABO transfusion logic.** Plasma holds antibody to the antigens your cells lack: O is the universal donor, AB the universal recipient.
+- **Rh disease and RhoGAM.** A sensitized Rh- mother's anti-Rh IgG crosses the placenta; RhoGAM prevents the sensitization.
+
+**Common traps**
+
+- **Every delay means type IV.** Type IV's 2–3 days is T-cell recruitment; serum sickness's 1–2 weeks is time to make antibody (type III).
+- **Type O plasma is empty.** O cells lack ABO antigens, but O plasma is rich in anti-A and anti-B.
+- **First Rh+ baby at risk.** Sensitization usually happens at the first delivery, so it is the NEXT Rh+ fetus that is attacked.
+- **Indirect ELISA finds virus.** The indirect format detects the patient's ANTIBODIES to plated antigen; flow cytometry counts cells.
 
 <!-- yield:low -->
-- Low-yield extras: Pneumocystis pneumonia and Candida thrush are the classic AIDS opportunists
+**Low-yield extras**
+
+- Pneumocystis pneumonia and Candida thrush are the classic AIDS opportunists.
 <!-- /yield -->`
     }
   ]

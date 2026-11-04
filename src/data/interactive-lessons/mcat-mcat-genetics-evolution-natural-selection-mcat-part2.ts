@@ -46,31 +46,45 @@ where B is the benefit to the recipient and C the cost to the actor, both in off
 "For the good of the species" is almost never the right explanation. A self-sacrificing allele that benefits the group is undermined from within by cheaters who accept benefits without paying costs — individual-level selection is usually the stronger force. Apparent group-beneficial behavior on the MCAT should be re-explained via kin selection ($rB > C$) or reciprocity, not species-level benefit.`
     },
     {
+      id: 'ns2-worked-modes',
+      type: 'text' as const,
+      content: `### Worked Example — Reading the Mode of Selection From a Distribution
+
+**Problem.** In a lake fish population, adult body length is heritable and roughly bell-shaped: mean $20\\;\\text{cm}$, range $12$ to $28\\;\\text{cm}$. Consider three ways fishing could remove fish before they breed.
+
+- **(a)** A new net catches every fish longer than $24\\;\\text{cm}$. Which mode of selection is this, and what happens to the mean?
+- **(b)** Suppose instead that fish shorter than $15\\;\\text{cm}$ and fish longer than $25\\;\\text{cm}$ are both removed. Which mode, and what happens to the mean and the variance?
+- **(c)** Suppose instead that only fish between $17$ and $23\\;\\text{cm}$ are caught. Which mode, and what happens to the variance and the shape of the distribution?
+
+**(a) Directional.** Only one extreme (the largest fish) is removed, so the shorter end is favored. The next generation's mean shifts below $20\\;\\text{cm}$, toward the favored extreme.
+
+**(b) Stabilizing.** Both extremes are removed and the intermediate is favored. The mean stays near $20\\;\\text{cm}$ while the variance shrinks.
+
+**(c) Disruptive.** The intermediates are removed and both extremes are favored. The variance grows, and the distribution can become bimodal, with peaks of short and long fish, even if the mean stays near $20\\;\\text{cm}$.`
+    },
+    {
       id: 'ns2-worked',
       type: 'text' as const,
       content: `### Worked Example — Applying Hamilton's Rule to an Alarm Call
 
-**Problem.** A ground squirrel spots a hawk. Giving an alarm call raises her own chance of being taken, at an expected cost of $C = 1$ offspring-equivalent. Staying silent lets the hawk take a nearby juvenile. Evaluate whether calling is favored by kin selection when the juvenile at risk is (a) her full sibling, whose survival is worth $B = 3$ offspring-equivalents, and (b) her first cousin, same benefit.
+**Problem 1.** A ground squirrel spots a hawk. An alarm call raises her own risk of being taken, at an expected cost of $C = 1$ offspring-equivalent; staying silent lets the hawk take a nearby juvenile whose survival is worth $B = 3$ offspring-equivalents.
 
-**Setup.** Hamilton's rule: calling is favored when $rB > C$.
+- **(a)** Is calling favored by kin selection if the juvenile is her full sibling?
+- **(b)** Is calling favored if the juvenile is her first cousin?
+- **(c)** What is the break-even benefit $B$ for a first cousin?
+- **(d)** How many full siblings, and how many first cousins, must one self-sacrifice save to break even?
 
-**(a) Full sibling, r = 0.5.**
-$rB = 0.5 \\times 3 = 1.5 > 1 = C$
+**(a) Full sibling, $r = 0.5$.** Hamilton's rule favors calling when $rB > C$: here $rB = 0.5 \\times 3 = 1.5 > 1 = C$. Calling is favored: she loses 1 offspring-equivalent directly but recovers 1.5 through the sibling's survival, so her inclusive fitness rises by 0.5.
 
-Calling is favored: the actor loses 1 offspring-equivalent directly but recovers 1.5 through the sibling's survival — her inclusive fitness rises by 0.5.
+**(b) First cousin, $r = 0.125$.** $rB = 0.125 \\times 3 = 0.375 < 1 = C$. Calling is NOT favored; the indirect gain cannot cover the cost.
 
-**(b) First cousin, r = 0.125.**
-$rB = 0.125 \\times 3 = 0.375 < 1 = C$
+**(c) Break-even benefit.** Calling breaks even when $rB = C$, so $B = C/r = 1/0.125 = 8$ offspring-equivalents; only a benefit above 8 would make calling pay for a cousin.
 
-Calling is NOT favored; the indirect gain cannot cover the cost. For a cousin, the benefit would need to exceed $C/r = 1/0.125 = 8$ offspring-equivalents before calling paid.
-
-**Interpretation.** This is the quantitative core of the famous quip about laying down one's life "for two brothers or eight cousins": with $B$ measured in lives-worth-of-offspring, $2 \\times 0.5 = 1$ and $8 \\times 0.125 = 1$ just balance the cost of one self.
+**(d) Two brothers or eight cousins.** With $B$ measured in lives-worth-of-offspring, $2 \\times 0.5 = 1$ and $8 \\times 0.125 = 1$: two full siblings or eight first cousins just balance the cost of one self. This is the quantitative core of the famous quip about laying down one's life "for two brothers or eight cousins".
 
 <!-- yield:low -->
 The quip is the geneticist J.B.S. Haldane's.
-<!-- /yield -->
-
-**Data connection.** In Belding's ground squirrels, alarm calling is concentrated in females — the philopatric sex that lives surrounded by mothers, sisters, and daughters — while males, who disperse away from kin, rarely call. That sex difference is exactly what kin selection predicts and what a "predator-confusion benefits everyone equally" account does not.`
+<!-- /yield -->`
     },
     {
       id: 'ns2-quiz1',
@@ -121,15 +135,22 @@ The quip is the geneticist J.B.S. Haldane's.
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Directional selection shifts the mean (finch beaks, peppered moths, antibiotic resistance); stabilizing trims variance (birth weight); disruptive inflates variance and can produce bimodality (seedcrackers)
-- Disruptive selection + assortative mating is the population-level on-ramp to sympatric speciation
-- Sexual selection: intersexual = mate choice (ornaments), intrasexual = same-sex competition (weapons, size); both produce sexual dimorphism
-- Costly ornaments persist because fitness includes mating success; ornaments can be honest indicators of condition
-- Kin selection: relatedness r discounts benefits to relatives; altruism favored when $rB > C$; inclusive fitness = direct + indirect components
-- Relatedness ladder: offspring/full sib 0.5, half-sib/grandchild/niece 0.25, first cousin 0.125; "good of the species" explanations lose to cheater invasion — reframe via kin selection or reciprocity
+- **Three modes.** Directional shifts the mean, stabilizing trims variance, disruptive inflates variance and can split the distribution.
+- **Two kinds of sexual selection.** Mate choice (intersexual) builds ornaments; same-sex competition (intrasexual) builds weapons and size.
+- **Hamilton's rule.** Altruism is favored when $rB > C$; inclusive fitness = direct + indirect (r-weighted) reproduction.
+- **Relatedness ladder.** r = 0.5 for offspring and full sibs, 0.25 for half-sibs and grandchildren, 0.125 for first cousins.
+
+**Common traps**
+
+- **Ornaments as survival aids.** Costly ornaments persist because fitness includes mating success, not because they help survival.
+- **For the good of the species.** Group-benefit altruism is undermined by cheaters; explain it by kin selection or reciprocity instead.
+- **Comparing C with r.** Hamilton's rule weighs the cost against rB, the benefit discounted by relatedness, never against r alone.
+- **Disruptive means no change.** Favoring both extremes removes the intermediates, so variance grows even when the mean holds.
 
 <!-- yield:low -->
-- Low-yield extras: runaway (Fisherian) selection, in which a genetically correlated preference and ornament amplify each other, is a second route to elaborate ornaments; the "two brothers or eight cousins" quip is J.B.S. Haldane's
+**Low-yield extras**
+
+- Runaway (Fisherian) selection, in which a genetically correlated preference and ornament amplify each other, is a second route to elaborate ornaments; the "two brothers or eight cousins" quip is J.B.S. Haldane's
 <!-- /yield -->`
     }
   ]

@@ -54,6 +54,50 @@ Key conceptual point for the exam: antibiotics do NOT cause the mutations. Resis
 Every antimicrobial vignette reduces to three questions: (1) What is the drug's target and path to it? (2) Which of the four resistance strategies does the data show? (3) Did the gene move vertically or horizontally? Answer those and the passage answers itself.`
     },
     {
+      id: 'abx4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Resistance Forensics
+
+**Problem 1.** A resistant isolate accumulates the drug to the same intracellular level as susceptible strains, and the drug is chemically intact after incubation. The target enzyme purified from the mutant has a 500-fold higher Ki for the drug.
+
+- **(a)** Which resistance strategies does the normal accumulation rule out?
+- **(b)** Which strategy does the intact drug rule out?
+- **(c)** Which strategy remains, and how would you confirm it?
+
+**(a) Accumulation.** Normal intracellular drug rules out **exclusion** and **efflux**.
+
+**(b) Intact drug.** The drug was not chemically changed, which rules out **enzymatic destruction**.
+
+**(c) The target.** With exclusion, efflux and destruction ruled out, the 500-fold Ki shift localizes resistance to the TARGET, an altered binding site; sequencing the target gene should reveal the substitution. Measure drug in, drug intact and target affinity: each strategy breaks exactly one measurement.
+
+**Problem 2.** A culture exposed to a cidal drug shows biphasic killing: 99.9 percent die in 4 hours, then a plateau of survivors persists for days. Survivors regrown WITHOUT drug and re-exposed show the identical biphasic curve.
+
+- **(a)** What would re-exposure show if the survivors were resistant mutants?
+- **(b)** What, then, are the survivors?
+- **(c)** Which experiment in this setup separates heritable resistance from a non-heritable survival state?
+
+**(a) If they were mutants.** Regrowth would yield a population that survives uniformly on re-exposure. It does not: the curve repeats.
+
+**(b) Persisters.** Identical re-exposure kinetics mean the survivors were phenotypic **persisters**, dormant cells that happened to be non-growing during exposure. They regenerate the same small dormant fraction each generation; genetics are unchanged.
+
+**(c) The re-challenge.** Re-exposing regrown survivors is the discriminator: heritable survival = resistance; a reproducible small surviving fraction = persistence.
+
+**Problem 3.** A vancomycin-resistance operon first characterized in Enterococcus appears in a clinical S. aureus isolate that also carries a conjugative plasmid.
+
+- **(a)** Why do sites where both organisms grow together matter?
+- **(b)** By what route could the operon move from Enterococcus to S. aureus?
+- **(c)** Which resistance strategy does the operon confer, and why is the new host worrying?
+- **(d)** What selection pressures set the stage?
+
+**(a) Proximity.** Enterococci and staphylococci co-colonize skin and wounds, putting donor and recipient side by side.
+
+**(b) The route.** The operon rides a **transposon**; during co-infection it can hop onto a conjugative plasmid in Enterococcus, which then transfers to S. aureus by **conjugation**.
+
+**(c) The result.** VRSA: **target alteration** (D-Ala-D-lactate) now in a far more virulent host species.
+
+**(d) Selection.** Heavy vancomycin use (selecting VRE) plus MRSA prevalence set the stage; gene flow follows opportunity. Trace the chain: mobile element → vehicle → mechanism → the selection pressure that fixes it.`
+    },
+    {
       id: 'abx4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Resistance & Integration** 🎯`,
@@ -102,62 +146,23 @@ Every antimicrobial vignette reduces to three questions: (1) What is the drug's 
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Four resistance strategies: destroy (beta-lactamase), alter target (PBP2a, 23S methylation, RNA polymerase mutation, D-Ala-D-lactate), exclude (porins), efflux (pumps)
-- Clavulanate = suicide inhibitor of beta-lactamase; MRSA escaped via a NEW target, not a better lactamase
-- Drugs select pre-existing mutants; they do not induce mutations (fluctuation test)
-- Horizontal spread: conjugation (R plasmids = one-step multidrug resistance, cross-species), transduction, transformation, transposons
-- Biofilms and persisters = phenotypic TOLERANCE (no genetic change) — remove the device
-- Vignette algorithm: target & path → which of four strategies → vertical or horizontal origin
+- **Four resistance strategies.** Destroy (beta-lactamase), alter target (PBP2a), keep out (porins), pump out (efflux).
+- **Clavulanate.** A suicide inhibitor of beta-lactamase, it lets amoxicillin survive to reach its PBP targets.
+- **Horizontal transfer.** Conjugation, transduction and transformation move genes between cells; transposons shuttle them onto plasmids; R plasmids carry several at once.
+- **The integration habit.** Ask the drug's target and path, which of the four strategies, and vertical or horizontal origin.
+
+**Common traps**
+
+- **MRSA as a better lactamase.** MRSA escaped with a new target, PBP2a, so clavulanate cannot rescue amoxicillin against it.
+- **Drugs cause mutations.** Resistant variants pre-exist and the drug only selects; fluctuation-test jackpots prove it.
+- **Tolerance read as resistance.** Biofilm and persister survivors retest susceptible: phenotypic tolerance, no genetic change.
+- **Four mutations at once.** One-step resistance to four unrelated classes points to an R plasmid, not four point mutations.
 
 <!-- yield:low -->
-- Low-yield extras: resistance gene names (mecA for PBP2a, erm, rpoB, tet); integrons capture and stack resistance cassettes; the fluctuation test is the Luria-Delbruck experiment
+**Low-yield extras**
+
+- Resistance gene names (mecA for PBP2a, erm, rpoB, tet); integrons capture and stack resistance cassettes; the fluctuation test is the Luria-Delbruck experiment
 <!-- /yield -->`
-    },
-    {
-      id: 'abx4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Resistance Forensics
-
-<details>
-<summary><b>Example 1: Classify the mechanism from kinetic data</b></summary>
-
-**Question:** A resistant isolate shows: intracellular drug concentration equal to susceptible strains; drug chemically intact after incubation; drug target enzyme purified from the mutant has a 500-fold higher Ki for the drug. Which resistance strategy is this?
-
-**Solution:**
-1. Normal accumulation rules out exclusion and efflux.
-2. Intact drug rules out enzymatic destruction.
-3. The 500-fold Ki shift localizes resistance to the TARGET: an altered binding site (strategy 2).
-4. Sequencing the target gene should reveal the substitution.
-
-**MCAT Strategy:** The four strategies are experimentally separable: measure drug in, drug intact, and target affinity — each strategy breaks exactly one measurement.
-</details>
-
-<details>
-<summary><b>Example 2: Distinguish resistance from persistence</b></summary>
-
-**Question:** A culture exposed to a cidal drug shows biphasic killing: 99.9 percent die in 4 hours, then a plateau of survivors persists for days. Survivors regrown WITHOUT drug and re-exposed show the identical biphasic curve. Interpret.
-
-**Solution:**
-1. If the plateau were resistant mutants, regrowth would yield a population that survives uniformly on re-exposure. It does not.
-2. Identical re-exposure kinetics mean survivors were phenotypic **persisters** — dormant cells that happened to be non-growing during exposure.
-3. Persisters regenerate the same small dormant fraction each generation; genetics are unchanged.
-
-**MCAT Strategy:** The re-challenge experiment is the discriminator: heritable = resistance; reproducible small fraction = persistence.
-</details>
-
-<details>
-<summary><b>Example 3: Trace a resistance gene across species</b></summary>
-
-**Question:** A vancomycin-resistance operon first characterized in Enterococcus appears in a clinical S. aureus isolate that also carries a conjugative plasmid. Propose the transfer route and why co-infection sites matter.
-
-**Solution:**
-1. Enterococci and staphylococci co-colonize skin and wounds, providing physical proximity.
-2. The resistance operon rides a transposon; during co-infection it can hop onto a conjugative plasmid in Enterococcus, which then transfers to S. aureus by conjugation.
-3. Result: VRSA — target alteration (D-Ala-D-lactate) now in a far more virulent host species.
-4. Ecologically, heavy vancomycin use (selecting VRE) plus MRSA prevalence set the stage; gene flow follows opportunity.
-
-**MCAT Strategy:** Horizontal transfer questions want the chain: mobile element → vehicle (plasmid/phage/naked DNA) → mechanism (conjugation/transduction/transformation) → selection pressure that fixes it.
-</details>`
     }
   ]
 };

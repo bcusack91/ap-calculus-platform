@@ -67,17 +67,30 @@ The primary transcript (pre-mRNA, hnRNA) is processed co-transcriptionally insid
       type: 'text' as const,
       content: `### Worked Example — A Splicing Mutation Passage
 
-**Passage-style problem.** A patient with severe anemia has normal beta-globin promoter and coding sequences, but sequencing reveals a G-to-A change at the first base of intron 1. Northern blot of reticulocyte RNA shows: healthy control — one sharp mRNA band; patient — a faint band of normal size plus a prominent LARGER band. A western blot shows drastically reduced beta-globin protein.
+**Problem 1.** A patient with severe anemia has normal beta-globin promoter and coding sequences, but sequencing reveals a G-to-A change at the first base of intron 1.
 
-**Question 1 — Why does this single intronic base matter when introns are discarded anyway?** The first two intron bases are the invariant **GU donor site** the U1 snRNP recognizes. G-to-A destroys it: the spliceosome cannot initiate splicing of intron 1 at the correct position. "Introns don't matter" is true of their middles, not their boundaries — boundaries are functional sequence.
+- **(a)** Why does this single intronic base matter when introns are discarded anyway?
+- **(b)** What would the same G-to-A change do at the LAST base of the intron?
 
-**Question 2 — Interpret the larger northern band.** RNA larger than normal mRNA from the same gene means **intron retention** (or use of a cryptic splice site adding partial intron). The retained intron adds length AND, almost inevitably, premature stop codons or a frameshift — hence protein loss on the western even though the gene is still being transcribed. Transcription is fine; PROCESSING is broken: the northern/western combination localizes the lesion between synthesis and translation.
+**(a) The donor site.** The first two intron bases are the invariant **GU donor site** the U1 snRNP recognizes. G-to-A destroys it: the spliceosome cannot initiate splicing of intron 1 at the correct position. "Introns don't matter" is true of their middles, not their boundaries; boundaries are functional sequence.
 
+**(b) The acceptor site.** The acceptor AG would become AA, also destroyed, with the same class of outcome (skipped acceptor, cryptic 3' site or exon skipping). Donor GU and acceptor AG are equally mutable Achilles heels; the branch-point A completes the trio of vulnerable positions.
+
+**Problem 2.** In the same patient, a northern blot of reticulocyte RNA shows one sharp mRNA band in a healthy control, but a faint band of normal size plus a prominent LARGER band in the patient. A western blot shows drastically reduced beta-globin protein.
+
+- **(a)** What does the larger northern band mean?
+- **(b)** Why is protein lost if the gene is still transcribed, and where is the lesion?
 <!-- yield:low -->
-**Question 3 — Why does a faint normal-size band persist?** Not from this allele: the G at the first intron position is invariant, so changing it abolishes correct splicing (a beta-zero allele). The faint normal band comes from the patient's other beta-globin allele, a milder mutation that still allows some correct splicing (a beta-plus allele). This is beta-thalassemia's clinical spectrum: severity tracks how much correct splicing survives.
+- **(c)** Why does a faint normal-size band persist?
 <!-- /yield -->
 
-**Question 4 — Predict the effect of the same G-to-A change at the LAST base of the intron.** The acceptor AG would become AA — also destroyed, same class of outcome (skipped acceptor, cryptic 3' site or exon skipping). Donor GU and acceptor AG are equally mutable Achilles heels; the branch-point A completes the trio of vulnerable positions.`
+**(a) The larger band.** RNA larger than normal mRNA from the same gene means **intron retention** (or use of a cryptic splice site adding partial intron).
+
+**(b) Localizing the lesion.** The retained intron adds length AND, almost inevitably, premature stop codons or a frameshift, hence the protein loss on the western. Transcription is fine; PROCESSING is broken: the northern/western combination localizes the lesion between synthesis and translation.
+
+<!-- yield:low -->
+**(c) The faint normal band.** Not from this allele: the G at the first intron position is invariant, so changing it abolishes correct splicing (a beta-zero allele). The faint band comes from the patient's other beta-globin allele, a milder mutation that still allows some correct splicing (a beta-plus allele). Severity tracks how much correct splicing survives.
+<!-- /yield -->`
     },
     {
       id: 'txn2-quiz1',
@@ -128,15 +141,22 @@ The primary transcript (pre-mRNA, hnRNA) is processed co-transcriptionally insid
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Processing trio, all nuclear and co-transcriptional: 7-methylguanosine cap (5'-to-5' triphosphate linkage; exonuclease shield + translation-initiation docking), poly-A tail (untemplated ~200 A; stability timer), splicing (introns out, exons joined)
-- Spliceosome: snRNPs (snRNA + protein); invariant GU donor, branch-point A, AG acceptor; the intron leaves as a lariat
-- RNA can catalyze: self-splicing introns, the spliceosome core, and rRNA peptidyl transferase are ribozymes
-- Alternative splicing multiplies the proteome — same DNA, tissue-specific isoforms differing by whole exons
-- Splice pathology: boundary mutations cause intron retention, exon skipping, or cryptic-site use (beta-thalassemia)
-- Blot logic: larger-than-normal mRNA + reduced protein = processing defect downstream of transcription, upstream of translation — localize lesions by which measurement first deviates
+- **Three nuclear edits.** A 7-methylguanosine cap, an untemplated poly-A tail and splicing finish the mRNA before export.
+- **Cap and tail protect.** The 5'-to-5' cap blocks exonucleases and docks ribosomes; the tail sets stability and export.
+- **Splice-site landmarks.** snRNPs read GU, branch A and AG and excise a lariat; the spliceosome core is a ribozyme.
+- **Alternative splicing multiplies proteins.** Tissue-specific exon choice turns one gene into several mRNAs and isoforms.
+
+**Common traps**
+
+- **Introns don't matter.** Intron boundaries are functional: a GU or AG mutation causes retention, exon skipping or cryptic sites.
+- **A templated poly-A tail.** The gene holds no run of T's: poly-A polymerase adds the tail with no template.
+- **Larger mRNA, transcription defect.** A larger band plus less protein means processing failed, between synthesis and translation.
+- **Isoforms need different DNA.** Identical DNA gives tissue-specific isoforms through alternative splicing, not mutation.
 
 <!-- yield:low -->
-- Low-yield extras: the snRNPs are U1, U2, U4/U6 and U5; splicing is two transesterifications, closing the lariat with a 2'-5' bond only RNA's 2'-OH can make; eIF4E binds the cap; AAUAAA signals cleavage; histone mRNAs lack a tail; ApoB is RNA editing (a created stop), not splicing; nonsense-mediated decay removes premature-stop transcripts; anti-snRNP (anti-Smith) antibodies mark lupus; a deep intronic mutation matters when it CREATES splice signals (a pseudo-exon)
+**Low-yield extras**
+
+- The snRNPs are U1, U2, U4/U6 and U5; splicing is two transesterifications, closing the lariat with a 2'-5' bond only RNA's 2'-OH can make; eIF4E binds the cap; AAUAAA signals cleavage; histone mRNAs lack a tail; ApoB is RNA editing (a created stop), not splicing; nonsense-mediated decay removes premature-stop transcripts; anti-snRNP (anti-Smith) antibodies mark lupus; a deep intronic mutation matters when it CREATES splice signals (a pseudo-exon)
 <!-- /yield -->`
     }
   ]

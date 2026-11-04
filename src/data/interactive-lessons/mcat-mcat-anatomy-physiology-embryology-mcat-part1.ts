@@ -24,7 +24,7 @@ Fertilization by more than one sperm produces a nonviable triploid zygote, so th
 | Fast block | Seconds | **Depolarization** of the oocyte membrane (ion influx) repels additional sperm | Transient |
 | Slow block | Minutes | **Cortical reaction**: Ca²⁺ wave triggers cortical granule exocytosis; enzymes harden the zona pellucida into the **fertilization envelope** | Permanent |
 
-Sperm–egg fusion also triggers the oocyte to complete **meiosis II** (it had been arrested in metaphase II); only then do the two pronuclei combine their chromosomes on the first spindle, forming the diploid **zygote**.
+The sperm-triggered Ca²⁺ wave is also the **egg-activation signal**: it releases the oocyte from its metaphase II arrest so it completes **meiosis II**; only then do the two pronuclei combine their chromosomes on the first spindle, forming the diploid **zygote**.
 
 ### Cleavage: Division Without Growth
 
@@ -55,17 +55,29 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
       type: 'text' as const,
       content: `### Worked Example — Reading a Fertilization Experiment
 
-**Passage-style problem.** Researchers incubate mouse oocytes with sperm under three conditions and score the percentage of eggs that are fertilized by exactly one sperm (monospermic), by multiple sperm (polyspermic), or not at all.
+**Problem 1.** In Condition A, mouse oocytes are mixed with sperm taken straight from the epididymis: almost no eggs are fertilized. In Condition B, sperm first incubated for several hours in oviduct-like fluid fertilize untreated oocytes normally.
 
-- **Condition A**: sperm taken directly from the epididymis, never exposed to female-tract fluid → almost no fertilization at all.
-- **Condition B**: capacitated sperm + oocytes pretreated with a drug that blocks Ca²⁺ release from the endoplasmic reticulum → fertilization occurs, but the polyspermy rate is dramatically elevated and eggs arrest early.
-- **Condition C**: capacitated sperm + untreated oocytes → high monospermic fertilization.
+- **(a)** Which preparatory step have the Condition A sperm missed?
+- **(b)** Which event at the zona pellucida therefore fails?
+- **(c)** Is the defect in the sperm or in the egg, and how does Condition B show it?
 
-**Question 1 — Why does Condition A fail?** The sperm were never **capacitated**. Without the membrane changes acquired in the female tract, sperm cannot undergo a productive acrosome reaction at the zona pellucida, so they cannot penetrate. The defect is in the SPERM's readiness, not the egg.
+**(a) The missing step.** Capacitation: biochemical maturation (membrane changes, hyperactivated motility) that happens normally in the female tract (in a dish, in capacitating medium). The Condition A sperm never had that exposure.
 
-**Question 2 — Which block is broken in Condition B, and why is polyspermy the result?** The drug prevents the intracellular **Ca²⁺ wave**, which is the trigger for the **cortical reaction** (the slow block). Without cortical granule exocytosis, the zona pellucida never hardens into a fertilization envelope. The fast electrical block still fires, but it is transient — so late-arriving sperm get in. This dissociation (fast block intact, slow block broken) is exactly how the MCAT tests whether you know the two blocks are separate mechanisms.
+**(b) The zona step.** Without capacitation, sperm cannot undergo a productive acrosome reaction at the zona pellucida, so no enzymes digest a path through it and no sperm reaches the oocyte membrane.
 
-**Question 3 — Predict the ploidy problem.** Polyspermic eggs receive extra paternal chromosome sets (e.g., triploid, 3n = 69 in humans). Extra centrosomes also produce multipolar spindles, so cleavage divisions missegregate chromosomes and the embryo arrests — which is why the eggs in Condition B fail to develop even though "fertilization" occurred.`
+**(c) Sperm or egg?** The sperm. Untreated oocytes are fertilized normally once the sperm have been incubated (Condition B), so the eggs are competent; only the sperm's readiness differs.
+
+**Problem 2.** In Condition C, sperm prepared as in Condition B are added to oocytes pretreated with a drug that blocks Ca²⁺ release from the endoplasmic reticulum. Fertilization occurs, but polyspermy rises sharply and the eggs arrest early.
+
+- **(a)** Which block to polyspermy depends on the Ca²⁺ the drug withholds?
+- **(b)** Does the other block still work? How do extra sperm get in?
+- **(c)** Why do these eggs fail to develop even though fertilization occurred?
+
+**(a) The block that needs Ca²⁺.** The slow block. The Ca²⁺ wave triggers the cortical reaction: cortical granules exocytose enzymes that harden the zona into the fertilization envelope. With no wave, the envelope never forms.
+
+**(b) The fast block.** It still fires, because membrane depolarization does not need the Ca²⁺ wave. But it is transient, so sperm arriving after it fades get in. Fast block intact, slow block broken: the MCAT's test that the two blocks are separate mechanisms.
+
+**(c) Why development stops.** Each extra sperm adds a paternal chromosome set, so the zygote is triploid or worse (3n = 69 in a human) and nonviable. The Ca²⁺ wave is also how sperm fusion activates the egg to finish meiosis II, so blocking it stalls development too.`
     },
     {
       id: 'emb1-quiz1',
@@ -74,11 +86,11 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
       exercise: {
         questions: [
           {
-            question: `The slow block to polyspermy is best described as:`,
-            options: [`Depolarization of the oocyte membrane upon sperm binding`, `Completion of meiosis II by the fertilized oocyte`, `A calcium-triggered cortical reaction hardening the zona pellucida`, `Digestion of the zona pellucida by enzymes from the acrosome`],
+            question: `Early in pregnancy, a woman takes a drug that blocks the receptor through which hCG acts on the corpus luteum. What is the most likely result?`,
+            options: [`The blastocyst can no longer hatch from the zona pellucida`, `Cleavage halts because the blastomeres stop dividing`, `Progesterone falls as the corpus luteum regresses; the lining sheds`, `The pituitary releases an LH surge and a second egg ovulates`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `The slow block is the cortical reaction: a Ca²⁺ wave causes cortical granules to exocytose enzymes that crosslink and harden the zona into an impenetrable fertilization envelope. Depolarization is the FAST block (transient, seconds). Completing meiosis II is triggered by fertilization but does not exclude sperm, and acrosomal digestion is how sperm get IN, not how they are kept out.`
+            explanation: `Trophoblast hCG is what rescues the corpus luteum after implantation. Block its receptor and the corpus luteum regresses as it would in a non-pregnant cycle, progesterone falls, and the endometrium the embryo is implanted in breaks down. Hatching from the zona and cleavage both happen before implantation and do not depend on hCG. Blocking hCG's receptor does not by itself produce a new LH surge: the result is loss of luteal progesterone, not a second ovulation.`
           },
           {
             question: `Which statement about cleavage-stage divisions is correct?`,
@@ -116,15 +128,22 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Fertilization happens in the AMPULLA of the fallopian tube; sperm need capacitation first, then the acrosome reaction to cross the zona pellucida
-- Two blocks to polyspermy: fast = membrane depolarization (transient); slow = Ca²⁺-triggered cortical reaction → hardened fertilization envelope (permanent)
-- Cleavage = rapid mitosis with NO growth: blastomeres shrink, N:C ratio rises; indeterminate cleavage (uncommitted blastomeres) enables monozygotic twinning
-- Morula (solid) → blastocyst (hollow): trophoblast → chorion/fetal placenta + hCG; inner cell mass → embryo proper
-- Implantation into the endometrium about one week after fertilization; trophoblast hCG rescues the corpus luteum → progesterone maintained
-- Twinning timing rule: the later a monozygotic split, the more membranes shared (separate everything → shared chorion → shared chorion and amnion)
+- **Ampulla, after capacitation.** Fertilization happens in the ampulla; sperm must capacitate, then undergo the acrosome reaction.
+- **Two polyspermy blocks.** Fast block = transient depolarization; slow block = Ca²⁺-triggered cortical reaction, a permanent envelope.
+- **Cleavage without growth.** Rapid mitoses shrink blastomeres and raise the N:C ratio; indeterminate cleavage allows identical twins.
+- **Two blastocyst lineages.** Trophoblast invades the endometrium (~1 week), forms placenta and makes hCG for the corpus luteum; ICM: embryo.
+
+**Common traps**
+
+- **Fertilizing in the uterus.** Fertilization happens in the ampulla of the fallopian tube; the uterus is where the blastocyst implants.
+- **Fast block as permanent.** Depolarization is transient; only the Ca²⁺-driven cortical reaction keeps extra sperm out for good.
+- **Swapping the lineages.** The trophoblast builds chorion and placenta; the inner cell mass builds the embryo, amnion and yolk sac.
+- **Early split, shared membranes.** The LATER a monozygotic split, the more membranes the twins share; an early split shares none.
 
 <!-- yield:low -->
-- Low-yield extras: exact day counts after fertilization — morula ~day 3-4, blastocyst ~day 5, hatching ~day 5-6, implantation ~days 6-10
+**Low-yield extras**
+
+- Exact day counts after fertilization: morula ~day 3-4, blastocyst ~day 5, hatching ~day 5-6, implantation ~days 6-10.
 <!-- /yield -->`
     }
   ]

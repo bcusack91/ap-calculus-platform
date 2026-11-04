@@ -71,19 +71,29 @@ Central pathway: optic nerve → **optic chiasm**, where **NASAL retinal fibers 
       type: 'text' as const,
       content: `### Worked Example — Tracing the Cascade Through a Knockout
 
-**Passage-style problem.** A mouse line carries a null mutation in the gene encoding the retinal cGMP phosphodiesterase (PDE) of rods. Electroretinograms are recorded in darkness and during light flashes; intracellular electrodes measure rod membrane potential and synaptic glutamate release.
+**Problem 1.** A mouse line carries a null mutation in the gene for the rods' cGMP phosphodiesterase (PDE). Electrodes record rod membrane potential and glutamate release in darkness and during light flashes.
 
-**Question 1 — Predict the rod's membrane potential in darkness.**
-Normal, i.e., depolarized (~-40 mV). The dark current depends on high cGMP holding cation channels open; without PDE, cGMP is if anything higher than normal, so the channels are open and glutamate release is maximal — darkness looks normal at this level.
+- **(a)** What is the rod's membrane potential in darkness?
+- **(b)** How does the rod respond to a light flash?
+- **(c)** The mouse avoids bright light and discriminates colors. Why?
 
-**Question 2 — Predict the response to a light flash.**
-Absent. Photon capture and transducin activation still occur, but the cascade dead-ends: no PDE means cGMP is never hydrolyzed, channels never close, the rod never hyperpolarizes, and glutamate release never drops. The mouse's rods are blind even though rhodopsin is intact — a downstream block silences the pathway just as effectively as losing the photopigment.
+**(a) In darkness.** Depolarized (~-40 mV), as in a normal rod. The dark current depends on high cGMP holding cation channels open; without PDE, cGMP is if anything higher than normal, so the channels stay open and glutamate release is maximal.
 
-**Question 3 — The mouse still avoids bright light and can discriminate colors. Why?**
-Cones use their OWN opsins, transducin, and PDE isoforms; a rod-specific PDE knockout spares cone phototransduction. Behavior in bright (photopic) conditions survives; only dim-light (scotopic) vision is lost — the phenotype of night blindness.
+**(b) In light.** No response. Photon capture and transducin activation still occur, but with no PDE, cGMP is never hydrolyzed: channels never close, the rod never hyperpolarizes, and glutamate release never drops. The rods are blind although rhodopsin is intact.
 
-**Question 4 — A second mouse lacks rod transducin instead. How do the phenotypes compare?**
-Functionally identical at this level of analysis: both knockouts freeze the cascade with channels open and prevent the light-evoked hyperpolarization. Distinguishing them requires probing the cascade between rhodopsin and PDE (e.g., checking whether activated rhodopsin can still turn on PDE in a biochemical assay). This step-through-the-cascade logic is exactly how the MCAT tests phototransduction.`
+**(c) Cones are spared.** Cones use their OWN opsins, transducin and PDE isoforms, so a rod-specific knockout spares them. Bright-light (photopic) vision survives; only dim-light (scotopic) vision is lost, the phenotype of night blindness.
+
+**Problem 2.** A second mouse line has normal rod PDE but lacks rod transducin. The same recordings are made in darkness and during light flashes.
+
+- **(a)** How does this rod respond to a light flash?
+- **(b)** Could these recordings tell this mouse from the PDE knockout?
+- **(c)** What biochemical test would show where each line's cascade is broken?
+
+**(a) In light.** No response. Activated rhodopsin has no transducin to pass the signal to, so PDE is never switched on, cGMP stays high, and the channels stay open.
+
+**(b) Not at this level.** Both knockouts freeze the cascade with channels open and prevent the light-evoked hyperpolarization, so the recordings look identical. A downstream block silences the pathway as effectively as losing the photopigment.
+
+**(c) Probe the middle of the cascade.** Supply PDE in a biochemical assay and ask whether light-activated rhodopsin can still turn it on: it can in the PDE knockout, not in the transducin knockout. This step-through-the-cascade logic is exactly how the MCAT tests phototransduction.`
     },
     {
       id: 'sen2-quiz1',
@@ -92,11 +102,11 @@ Functionally identical at this level of analysis: both knockouts freeze the casc
       exercise: {
         questions: [
           {
-            question: `In complete darkness, a rod photoreceptor is:`,
-            options: [`Hyperpolarized, with cGMP-gated channels closed`, `Depolarized, with cGMP-gated channels held open`, `At rest at -70 mV, like a typical neuron`, `Firing action potentials at a steady rate`],
+            question: `A drug locks the rods' cGMP-gated channels in the open state. In bright light, a treated rod is:`,
+            options: [`Hyperpolarized, with glutamate release reduced`, `Depolarized, with glutamate release continuing`, `At rest at -70 mV, releasing no glutamate`, `Firing action potentials at a steady rate`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `The dark current is the trap: high cGMP keeps cation channels open in darkness, so the rod sits depolarized (~-40 mV) and constantly releases glutamate. LIGHT closes the channels and hyperpolarizes the cell. Photoreceptors are also graded-potential cells — they never fire action potentials (only ganglion cells do in the retina).`
+            explanation: `Light hyperpolarizes a rod only by lowering cGMP so that the channels close. With the channels locked open, the cascade still runs and cGMP still falls, but the dark current keeps flowing: the rod stays depolarized (~-40 mV) and keeps releasing glutamate, signalling "dark". Hyperpolarization with reduced release is the normal light response, which needs the channels to close. Sitting at -70 mV with no release would also require shut cation channels. Photoreceptors are graded-potential cells and never fire action potentials (only ganglion cells do in the retina).`
           },
           {
             question: `Place the phototransduction steps in correct order after a photon is absorbed: (1) PDE activated, (2) cGMP-gated channels close, (3) retinal isomerizes and rhodopsin activates transducin, (4) cGMP concentration falls.`,
@@ -134,15 +144,22 @@ Functionally identical at this level of analysis: both knockouts freeze the casc
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Cornea = most refractive power; lens = adjustable focus (ciliary contraction → rounder lens for near); myopia → diverging lens, hyperopia → converging
-- Rods: dim light, no color, high convergence, periphery; cones: acuity and color, packed in the fovea
-- Dark current: in darkness cGMP holds channels OPEN → depolarized rod releasing glutamate; light → rhodopsin → transducin → PDE → cGMP falls → channels close → HYPERPOLARIZATION and less glutamate
-- Vertical circuit: photoreceptor → bipolar → ganglion (only ganglion cells spike; their axons = optic nerve); horizontal and amacrine cells process laterally
-- Chiasm: nasal fibers cross → left visual field maps to right cortex; pathway continues LGN (thalamus) → V1
-- Dark adaptation is slow (rhodopsin regeneration, ~20-30 min); light adaptation is fast (bleaching, switch to cones)
+- **Cornea and lens.** The cornea does most of the refracting; ciliary contraction rounds the lens for near focus.
+- **Rods vs. cones.** Rods: dim light, no color, high convergence, periphery. Cones: color and acuity, packed in the fovea.
+- **The dark current.** Darkness: cGMP holds channels open. Light: transducin → PDE → cGMP falls → hyperpolarization.
+- **Retina to cortex.** Only ganglion cells spike; nasal fibers cross, so each visual field reaches the opposite cortex via the LGN.
+
+**Common traps**
+
+- **Light depolarizing photoreceptors.** Light hyperpolarizes rods and CUTS glutamate release; darkness is the depolarized state.
+- **Converging lenses for myopia.** Myopia needs a diverging lens; converging lenses correct hyperopia and presbyopia.
+- **Fast dark adaptation.** Dark adaptation is slow (~20-30 min, rhodopsin regenerates); light adaptation is fast.
+- **Chiasm lesion, one eye blind.** Cutting the crossing nasal fibers blinds both temporal fields; one whole eye needs an optic nerve lesion.
 
 <!-- yield:low -->
-- Low-yield extras: about 120 million rods vs. 6 million cones; ON-bipolar cells depolarize in light (glutamate inhibits them), OFF-bipolar cells do the opposite
+**Low-yield extras**
+
+- About 120 million rods vs. 6 million cones; ON-bipolar cells depolarize in light (glutamate inhibits them), OFF-bipolar cells do the opposite
 <!-- /yield -->`
     }
   ]

@@ -51,22 +51,58 @@ Order of assembly (both systems): small subunit + initiator tRNA find the start 
       type: 'text' as const,
       content: `### Worked Example — Locating a Block in the Elongation Cycle
 
-**Passage-style problem.** Four in vitro translation reactions use identical mRNA and components except one inhibitor each. Products are analyzed for peptide length; ribosome-bound tRNAs are probed.
+Each problem is one in vitro translation reaction: identical mRNA and components, plus one inhibitor. Products are analyzed for peptide length, and ribosome-bound tRNAs are probed.
 
-- **Reaction 1**: only dipeptides form; ribosomes stall with peptidyl-tRNA in the A site and a deacylated (empty) tRNA still in the P site — the ribosome never moves to the next codon.
-- **Reaction 2**: initiation complexes assemble on the start codon, but no first peptide bond ever forms; the A site never accepts aminoacyl-tRNA.
-- **Reaction 3**: when a compound resembling the 3' end of an aminoacyl-tRNA is added, short peptides of random lengths are released from ribosomes as free peptides — full-length protein never appears.
-- **Reaction 4**: on eukaryotic ribosomes only, elongation halts; analysis shows eEF2, the eukaryotic translocation factor, carries an ADP-ribose group.
+**Problem 1.** Only dipeptides form. Ribosomes stall with peptidyl-tRNA in the A site and a deacylated (empty) tRNA still in the P site.
 
-**Question 1 — Assign Reaction 1.** Peptide bond formed (dipeptide exists) but no movement: **translocation** (the GTP-driven translocation factor) is blocked. The stuck geometry — grown chain still in the A site — is the fingerprint, because transfer happens before movement.
+- **(a)** Did a peptide bond form?
+- **(b)** Which step of the elongation cycle is blocked?
+- **(c)** Why is the chain's position on the ribosome the fingerprint?
 
-**Question 2 — Assign Reaction 2.** Initiation is fine; the failure is **A-site delivery** (a defective delivery factor, or a drug that blocks the A site). No delivery, no substrate for peptidyl transferase, no first bond. Distinguish this from a peptidyl-transferase inhibitor: there, the A site LOADS but the bond never forms.
+**(a) Bond formed.** Yes. A dipeptide exists, so the aminoacyl-tRNA was delivered and peptidyl transfer worked.
 
-Real drugs for each block: tetracycline keeps aminoacyl-tRNA out of the A site; chloramphenicol inhibits peptidyl transferase.
+**(b) The block.** The bond formed but the tRNAs never shifted A→P, so **translocation** (the GTP-driven translocation factor) is blocked.
 
-**Question 3 — Assign Reaction 3 and name the principle.** Premature release at random positions = forced early **termination**: the compound (puromycin behaves this way) enters the A site as an aminoacyl-tRNA look-alike, accepts the growing chain in a normal peptidyl transfer, and then falls off the ribosome carrying it. Random-length free peptides are the tell; a translocation block gives stuck ribosomes, not released chains.
+**(c) Fingerprint.** Transfer happens before movement, so a translocation block leaves the grown chain stuck in the A site, with the emptied tRNA still in the P site.
 
-**Question 4 — Reaction 4 is diphtheria toxin. Explain the species specificity and the catastrophic potency.** Diphtheria toxin ADP-ribosylates **eEF2** — the eukaryotic translocation factor; the bacterial counterpart lacks the specially modified residue the toxin attacks, so bacterial ribosomes are spared. One toxin molecule is an ENZYME: it modifies thousands of eEF2 copies, shutting down all translation in the cell — why single molecules kill cells.
+**Problem 2.** Initiation complexes assemble on the start codon, but no first peptide bond ever forms; probing finds only the initiator tRNA, in the P site.
+
+- **(a)** Which step fails?
+- **(b)** Why does no first peptide bond form?
+- **(c)** How would a peptidyl-transferase inhibitor look different?
+- **(d)** Name a real drug that causes this block, and one that blocks peptidyl transferase.
+
+**(a) The failed step.** Initiation is fine; the failure is **A-site delivery** (a defective delivery factor, or a drug that blocks the A site).
+
+**(b) No substrate.** No delivery means no substrate for peptidyl transferase, so no first bond.
+
+**(c) The contrast.** With a peptidyl-transferase inhibitor, the A site LOADS but the bond never forms.
+
+**(d) Real drugs.** Tetracycline keeps aminoacyl-tRNA out of the A site; chloramphenicol inhibits peptidyl transferase.
+
+**Problem 3.** When a compound resembling the 3' end of an aminoacyl-tRNA is added, short peptides of random lengths are released from ribosomes as free peptides; full-length protein never appears.
+
+- **(a)** Which stage of translation is being forced early?
+- **(b)** How does the compound release the chain?
+- **(c)** How do these products differ from a translocation block's?
+
+**(a) Forced termination.** Premature release at random positions = forced early **termination**.
+
+**(b) Mechanism.** The compound (puromycin behaves this way) enters the A site as an aminoacyl-tRNA look-alike, accepts the growing chain in a normal peptidyl transfer, and then falls off the ribosome carrying it.
+
+**(c) The tell.** Random-length free peptides are the tell; a translocation block gives stuck ribosomes, not released chains.
+
+**Problem 4.** On eukaryotic ribosomes only, elongation halts; analysis shows eEF2, the eukaryotic translocation factor, carries an ADP-ribose group. The inhibitor is diphtheria toxin.
+
+- **(a)** What would the stalled ribosomes look like? (Compare Problem 1.)
+- **(b)** Why are bacterial ribosomes spared?
+- **(c)** Why can a single toxin molecule kill a cell?
+
+**(a) Stalled ribosomes.** Diphtheria toxin ADP-ribosylates **eEF2**, the eukaryotic translocation factor, so translocation halts: as in Problem 1, ribosomes stall with the grown chain in the A site and an empty tRNA in the P site.
+
+**(b) Species specificity.** The bacterial counterpart lacks the specially modified residue the toxin attacks, so bacterial ribosomes are spared.
+
+**(c) Potency.** One toxin molecule is an ENZYME: it modifies thousands of eEF2 copies, shutting down all translation in the cell.
 
 <!-- yield:low -->
 Further detail: NAD$^+$ is the ADP-ribose donor; the modified residue is diphthamide (a modified histidine); the vaccine targets the toxin, not the bacterium (toxoid); Pseudomonas exotoxin A shares the identical mechanism.
@@ -121,16 +157,22 @@ Further detail: NAD$^+$ is the ADP-ribose donor; the modified residue is diphtha
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Ribosomes: 70S (30S + 50S) prokaryotic vs 80S (40S + 60S) eukaryotic; S values do not add; peptidyl transferase is rRNA — the ribosome is a ribozyme
-- Sites: A accepts, P holds the chain, E exits; initiator tRNA (fMet in bacteria) is the only tRNA to enter the P site directly, riding in with the SMALL subunit before the large one joins
-- Start finding: Shine-Dalgarno pairs 16S rRNA (internal starts, polycistronic OK) vs cap-binding + scanning to the first AUG (monocistronic)
-- Elongation loop: an elongation factor delivers to A (GTP; pairing check), rRNA forms the bond (pre-paid by the charging ester), a second factor translocates (GTP); ~4 high-energy bonds per residue
-- Termination: release factors are tRNA-shaped proteins that make the ribosome hydrolyze the chain onto water; subunits recycle
-- Polysomes: many ribosomes, one mRNA; 5'-most ribosome initiated last; bacteria couple transcription and translation because there is no nuclear envelope
-- Inhibitor fingerprints: stuck chain in A site = translocation block; loaded A site, no bond = peptidyl transferase block (chloramphenicol); empty A site = delivery block (tetracycline); random released peptides = puromycin-type forced termination; ADP-ribosylated eEF2 = diphtheria toxin (catalytic, single-molecule lethal)
+- **Ribosome basics.** 70S = 30S + 50S, 80S = 40S + 60S (S values do not add); A accepts, P holds the chain, E exits.
+- **Finding the start.** Shine-Dalgarno pairs 16S rRNA; eukaryotes scan from the cap to the first AUG; bacteria translate while transcribing.
+- **Elongation loop.** Deliver to A (GTP), bond P to A, translocate (GTP): about 4 high-energy bonds per residue.
+- **Termination.** Release factors are tRNA-shaped proteins that make the ribosome hydrolyze the chain onto water.
+
+**Common traps**
+
+- **Initiator via the A site.** The initiator tRNA (fMet in bacteria) enters the P site directly, with the small subunit.
+- **GTP pays for the bond.** The charging ester prepays the peptide bond; elongation GTP buys accuracy and movement.
+- **Newest ribosome at 3'.** Ribosomes load at the 5' start and move 3'-ward, so the 5'-most ribosome started last.
+- **Mixing up block fingerprints.** Chain stuck in A = translocation; empty A = delivery (tetracycline); loaded A, no bond = peptidyl transferase (chloramphenicol).
 
 <!-- yield:low -->
-- Low-yield extras: eIF4E binds the cap and Kozak context marks the preferred AUG; the elongation factors are EF-Tu/eEF1 (delivery) and EF-G/eEF2 (translocation); diphtheria toxin uses NAD$^+$ to modify diphthamide, is countered by a toxoid vaccine, and shares its mechanism with Pseudomonas exotoxin A
+**Low-yield extras**
+
+- eIF4E binds the cap and Kozak context marks the preferred AUG; the elongation factors are EF-Tu/eEF1 (delivery) and EF-G/eEF2 (translocation); diphtheria toxin uses NAD$^+$ to modify diphthamide, is countered by a toxoid vaccine, and shares its mechanism with Pseudomonas exotoxin A
 <!-- /yield -->`
     }
   ]

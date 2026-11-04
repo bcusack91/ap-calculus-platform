@@ -29,7 +29,7 @@ Transposons are DNA segments that move from one site to another **within** a cel
 1. **Insertional inactivation:** landing in a coding sequence knocks the gene out. Transposons are a natural mutagen, and labs use them for insertional mutagenesis, since the resistance marker makes every insertion selectable.
 2. **Polar effects:** an insertion in an upstream gene of an operon can silence the downstream genes of the same polycistronic transcript, though those genes are intact.
 3. **Mobilization:** a resistance gene can move from the chromosome onto a conjugative plasmid, then leave the cell by conjugation.
-4. **Rearrangement:** recombination between two copies of an IS element can delete, invert or fuse DNA, and IS homology is how F integrates to form an Hfr (Part 2).
+4. **Rearrangement:** recombination between two copies of an IS element can delete, invert or fuse DNA, and IS homology is how the F plasmid integrates into the chromosome to form an Hfr (high-frequency-of-recombination) donor, which transfers chromosomal genes by conjugation.
 
 ### Restriction-Modification: Innate Defense
 
@@ -63,7 +63,7 @@ An **operon** is a set of genes transcribed from one promoter into one polycistr
 | **Glucose present** | OFF (repressor bound) | Low (repressor off, but little CAP-cAMP) |
 | **Glucose absent** | OFF (repressor still bound) | **HIGH** (repressor off + CAP-cAMP on) |
 
-**Mutant logic** (merodiploids from Part 2 test which elements act in cis and which in trans):
+**Mutant logic.** A **merodiploid** (partial diploid) carries an **F′** plasmid, an F fertility plasmid that picked up a stretch of chromosome, so it has two copies of those genes. Merodiploids test which elements act in cis and which in trans:
 
 | Genotype | Without lactose | Conclusion |
 |----------|-----------------|------------|
@@ -88,6 +88,56 @@ A cell that cannot make cAMP (no adenylyl cyclase) expresses lac poorly even wit
 > Catabolic operons are inducible (the substrate turns them ON); anabolic operons are repressible (the product turns them OFF).`
     },
     {
+      id: 'mg3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Mobile DNA and Regulation
+
+**Problem 1.** A plasmid that cannot replicate in E. coli carries a transposon with a kanamycin-resistance gene. Cells are plated on kanamycin, and survivors are replica-plated onto minimal medium. One mutant has lost three enzymes of one pathway.
+
+- **(a)** What do the kanamycin plates select?
+- **(b)** What do the minimal plates find?
+- **(c)** How does the resistance gene help once a mutant is found?
+- **(d)** Why could one mutant lose three enzymes at once?
+
+**(a) Insertions.** The plasmid cannot replicate, so a cell stays kanamycin-resistant only if the transposon hopped into its chromosome. The kanamycin plates select for insertions.
+
+**(b) Auxotrophs.** Replica plating stamps every colony, in the same positions, onto minimal medium (salts plus a carbon source). Colonies that grow on the master but fail on minimal are auxotrophs: they need a nutrient supplied because the insertion knocked out a biosynthetic gene.
+
+**(c) A built-in tag.** The resistance gene now tags the mutated gene, so it can be mapped or cloned by selecting for kanamycin resistance.
+
+**(d) A polar effect.** If the insertion hit the first gene of an operon, it can also silence the downstream genes, so one insertion can cost a whole pathway. Transposon = mutagen + built-in selectable tag.
+
+**Problem 2.** Predict the β-galactosidase level with no lactose, then with lactose (no glucose), for each strain below; every gene not named as mutant is wild type.
+
+- **(a)** lacI$^-$ / F′ lacI$^+$: what are the two levels?
+- **(b)** lacO$^c$ lacZ$^-$ / F′ lacO$^+$ lacZ$^+$: what are the two levels?
+- **(c)** A strain that cannot make cAMP: what are the two levels, and what rescues it?
+- **(d)** What single rule predicts every merodiploid?
+
+**(a) Repressor in trans.** The F′ makes repressor that diffuses to both operators (trans), so expression is normal and inducible: off, then on.
+
+**(b) Operator in cis.** The constitutive operator controls only its own, dead lacZ. The working lacZ$^+$ sits behind a normal operator, so expression is inducible: off, then on.
+
+**(c) No cAMP.** Lactose releases the repressor, but without cAMP there is no CAP activation: off, then low. Adding cAMP to the medium restores high induction.
+
+**(d) Cis or trans.** Proteins (repressor, CAP) act in trans; DNA sites (operator, promoter) act in cis. Locate each mutation: is it in a gene for a diffusible product, or in a site on the DNA? That answer alone predicts the merodiploid.
+
+**Problem 3.** A phage stock grown on strain X forms many plaques on X but very few on Y. Phage picked from one of those rare plaques on Y now forms many plaques on Y but few on X.
+
+- **(a)** What difference between X and Y explains the first result?
+- **(b)** How do the rare phage escape on Y?
+- **(c)** Why do the escapees now grow on Y but poorly on X?
+- **(d)** Did the phage's sequence change?
+
+**(a) Different R-M systems.** X and Y carry different restriction-modification systems. Phage grown on X carry X's methylation pattern, so X's enzyme spares them while Y's enzyme cuts most of them.
+
+**(b) Methylated in time.** Rare genomes are methylated by Y before they are cut, and they escape.
+
+**(c) A new mark.** Progeny from that escape carry Y's methylation, not X's, so they now grow well on Y and are restricted by X.
+
+**(d) Modification, not mutation.** No: its protection is a methylation mark set by the last host it grew in. A change that flips back after one passage through a different host is modification; a mutation would persist on every host.`
+    },
+    {
       id: 'mg3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Transposons, Defense & Operons** 🎯`,
@@ -98,14 +148,14 @@ A cell that cannot make cAMP (no adenylyl cyclase) expresses lac poorly even wit
             options: [`A prophage carrying a lysogenic toxin gene`, `A composite transposon whose cargo is a resistance gene`, `An integrated F plasmid that created an Hfr strain`, `A captured CRISPR spacer from a resistance plasmid`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `A resistance gene flanked by two copies of an insertion sequence is the structure of a composite transposon, and its insertion knocks out the gene it lands in. A prophage brings phage genes, not a resistance block between IS copies; an integrated F gives an Hfr without kanamycin resistance; CRISPR spacers are short fragments that encode no resistance.`
+            explanation: `A resistance gene flanked by two copies of an insertion sequence is the structure of a composite transposon, and its insertion knocks out the gene it lands in. A prophage brings phage genes, not a resistance block between IS copies; an F plasmid integrated into the chromosome makes an Hfr donor and carries no kanamycin resistance; CRISPR spacers are short fragments that encode no resistance.`
           },
           {
-            question: `A transposon inserts into the first gene of a three-gene operon. The cell loses the products of all three genes, although the second and third genes are intact. This is best explained by:`,
-            options: [`Deletion of the second and third genes by the transposase`, `Repressor binding to the transposon's inverted repeats`, `A polar effect on downstream genes of the transcript`, `Recombination moving the operon onto a plasmid`],
+            question: `In an operon of genes 1, 2 and 3 (transcribed in that order), a transposon insertion in gene 1 eliminates all three enzymes, while an insertion in gene 3 eliminates only enzyme 3. Sequencing shows the uninterrupted genes are intact in both mutants. The difference is best explained by:`,
+            options: [`Deletion of genes 2 and 3 by the first transposase`, `Repressor binding to the first insertion's inverted repeats`, `A polar effect on genes downstream of the insertion`, `Recombination moving genes 1 and 2 onto a plasmid`],
             correctAnswer: 2,
             yield: 'MEDIUM',
-            explanation: `All three genes share one polycistronic transcript, so an insertion near its start can block expression of everything downstream: a polar effect. The stem says the downstream genes are intact, which rules out deletion, and neither repressor binding to the element's ends nor a move to a plasmid would silence intact genes this way.`
+            explanation: `All three genes share one polycistronic transcript, so an insertion silences what lies downstream of it but nothing upstream: in gene 1 it costs all three enzymes, in gene 3 only the last. Sequencing shows the other genes intact, which rules out deletion; repressor binding to the element's ends would not give this position-dependent pattern, and moving genes onto a plasmid would not silence intact genes.`
           },
           {
             question: `A phage grown in strain A infects strain B, and its DNA is cut, while B's own chromosome, which contains the same recognition sequences, stays intact. B's chromosome is protected because:`,
@@ -150,66 +200,23 @@ A cell that cannot make cAMP (no adenylyl cyclase) expresses lac poorly even wit
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Transposons move DNA between molecules inside a cell; plasmids move it between cells
-- IS element = transposase + inverted repeats; composite transposon = cargo (often resistance) between two IS elements
-- Cut-and-paste leaves the donor site empty; replicative leaves a copy behind
-- Insertion consequences: gene knockout (natural and lab mutagen), polar effects on downstream operon genes, mobilizing resistance onto plasmids, rearrangements (and F integration → Hfr)
-- Restriction-modification = innate: the methyltransferase marks host sites, the endonuclease cuts unmethylated foreign DNA (EcoRI: GAATTC)
-- CRISPR-Cas = adaptive: spacers from past invaders → guide RNAs → Cas cuts matching DNA; heritable, sequence-specific
-- lac = inducible (allolactose releases repressor) + positive control (CAP-cAMP when glucose is low): HIGH only with lactose present and glucose absent
-- Merodiploids: lacI$^-$ is recessive (the repressor acts in trans); lacO$^c$ is cis-dominant
-- trp = repressible: tryptophan is the corepressor that activates the repressor
+- **Mobile DNA.** Transposons move DNA within one cell; composite ones carry cargo, often resistance, between two IS elements.
+- **Innate vs. adaptive defense.** Restriction enzymes cut unmethylated copies of their recognition sequence; CRISPR guides Cas to one remembered invader.
+- **Insertion consequences.** Knockout, a polar effect on downstream genes, and mobilization of resistance onto plasmids.
+- **Cis and trans.** Repressor proteins act in trans, so lacI$^-$ is recessive; operators act in cis, so lacO$^c$ is cis-dominant.
+
+**Common traps**
+
+- **Methylation marks for attack.** Methylation protects the host's own sites; the restriction enzyme cuts only unmethylated DNA.
+- **Glucose raises cAMP.** Glucose lowers cAMP, so CAP-cAMP activates lac only when glucose is absent.
+- **O$^c$ acting in trans.** An operator controls only the genes on its own DNA, so O$^c$ beside a dead lacZ gives no constitutive enzyme.
+- **Tryptophan as an inducer.** Tryptophan binds and activates the trp repressor as a corepressor; it does not release it.
 
 <!-- yield:low -->
-- Low-yield extras: target-site duplications flank inserted elements; replicative transposition via a cointegrate and resolvase; Tn10; integrons; McClintock's maize discovery; the PAM motif; the lacI$^s$ super-repressor; trp attenuation
+**Low-yield extras**
+
+Target-site duplications flank inserted elements; replicative transposition via a cointegrate and resolvase; Tn10; integrons; McClintock's maize discovery; the PAM motif; the lacI$^s$ super-repressor; trp attenuation.
 <!-- /yield -->`
-    },
-    {
-      id: 'mg3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Mobile DNA and Regulation
-
-<details>
-<summary><b>Example 1: A transposon mutagenesis screen</b></summary>
-
-**Question:** A plasmid that cannot replicate in E. coli carries a transposon with a kanamycin-resistance gene. After it is introduced, cells are plated on kanamycin, and the survivors are replica-plated onto minimal medium. What do the kanamycin plates select, what do the minimal plates find, and why can one insertion knock out three enzymes?
-
-**Solution:**
-1. The plasmid cannot replicate, so a cell stays kanamycin-resistant only if the transposon hopped into its chromosome. The kanamycin plates select for insertions.
-2. Insertions land at many sites. Colonies that fail on minimal medium (Part 1 replica logic) carry an insertion in a biosynthetic gene: auxotrophs.
-3. The resistance gene now tags the mutated gene, so it can be mapped or cloned by selecting for kanamycin resistance.
-4. If the insertion hit the first gene of an operon, a polar effect can also silence the downstream genes, so one insertion can cost a whole pathway.
-
-**MCAT Strategy:** Transposon = mutagen + built-in selectable tag. A multi-gene loss from one insertion points to an operon and a polar effect.
-</details>
-
-<details>
-<summary><b>Example 2: Phage plating depends on its last host</b></summary>
-
-**Question:** A phage stock grown on strain X forms many plaques on X but very few on Y. Phage picked from one of those rare plaques on Y now forms many plaques on Y but few on X. Explain.
-
-**Solution:**
-1. Strains X and Y carry different restriction-modification systems.
-2. Phage grown on X carry X's methylation pattern, so X's enzyme spares them while Y's enzyme cuts most of them. Rare genomes are methylated by Y before they are cut, and they escape.
-3. Progeny from that escape carry Y's methylation, not X's, so they now grow well on Y and are restricted by X.
-4. The phage's sequence never changed: its protection is a methylation mark set by the last host it grew in, not a mutation.
-
-**MCAT Strategy:** A change that flips back after one passage through a different host is modification, not mutation. A mutation would persist on every host.
-</details>
-
-<details>
-<summary><b>Example 3: Predict lac expression from genotype</b></summary>
-
-**Question:** Predict β-galactosidase levels with no lactose and with lactose (no glucose) for: (a) lacI$^-$ / F′ lacI$^+$; (b) lacO$^c$ lacZ$^-$ / F′ lacO$^+$ lacZ$^+$; (c) a strain that cannot make cAMP.
-
-**Solution:**
-1. (a) The F′ makes repressor that diffuses to both operators (trans), so expression is normal and inducible: off, then on.
-2. (b) The constitutive operator controls only its own, dead lacZ. The working lacZ$^+$ sits behind a normal operator, so expression is inducible: off, then on.
-3. (c) The repressor is released by lactose, but without cAMP there is no CAP activation: off, then low. Adding cAMP to the medium restores high induction.
-4. Rule for every merodiploid: proteins (repressor, CAP) act in trans; DNA sites (operator, promoter) act in cis.
-
-**MCAT Strategy:** Locate each mutation: is it a gene for a diffusible product, or a site on the DNA? That answer alone predicts the merodiploid.
-</details>`
     }
   ]
 };

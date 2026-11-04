@@ -44,6 +44,47 @@ Penicillins, cephalosporins, carbapenems, and monobactams share the strained **b
 Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself**, sterically blocking both transglycosylation and transpeptidation. Because it acts on the substrate, beta-lactamases cannot touch it — it is the classic drug for **MRSA**. Too bulky to cross the gram-negative outer membrane, it is essentially a **gram-positive-only** drug. Resistance (VRE) arises when enterococci swap the terminus to **D-Ala-D-lactate**, deleting a key hydrogen bond and collapsing binding affinity ~1000-fold.`
     },
     {
+      id: 'abx1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Mechanism Reasoning
+
+**Problem 1.** Two-fold dilutions of drug X (128 down to 1 micrograms/mL) receive equal bacterial inocula. Tubes at 8 and above stay clear. Subcultured onto drug-free agar, the 8, 16 and 32 tubes regrow heavily; the 64 and 128 tubes do not.
+
+- **(a)** What is the MIC of drug X?
+- **(b)** What is its MBC?
+- **(c)** At these concentrations, is drug X acting as a bactericidal or a bacteriostatic agent?
+
+**(a) MIC.** The MIC is the lowest concentration with no visible growth: **8 micrograms/mL**, since the 4 tube is cloudy.
+
+**(b) MBC.** The MBC is the lowest concentration from which organisms cannot be revived on drug-free agar: **64 micrograms/mL**, since the 8, 16 and 32 tubes regrew.
+
+**(c) Static or cidal.** The MBC (64) is eightfold the MIC (8), three tubes apart and above the usual cutoff ratio of about 4, so drug X is essentially **bacteriostatic**: it inhibited but did not kill at 8, 16 and 32. Clear tube = inhibition; no regrowth on fresh medium = killing.
+
+**Problem 2.** A clinician combines penicillin with tetracycline (a bacteriostatic protein-synthesis inhibitor) against a susceptible organism.
+
+- **(a)** What does penicillin's killing depend on?
+- **(b)** What does tetracycline do to that requirement?
+- **(c)** Is the combination synergistic, additive or antagonistic?
+
+**(a) Penicillin's requirement.** Penicillin's killing depends on cells actively building wall during growth.
+
+**(b) Tetracycline's effect.** Tetracycline halts protein synthesis and therefore growth, so growth-arrested cells stop making peptidoglycan.
+
+**(c) The interaction.** Penicillin loses its window, so the combination is **antagonistic**, not additive. Any time a static drug freezes growth, expect it to blunt a cidal drug whose mechanism requires active division.
+
+**Problem 3.** Vancomycin's target, D-Ala-D-Ala, is present in E. coli peptidoglycan, yet the drug fails completely against E. coli.
+
+- **(a)** Where does E. coli's peptidoglycan sit, and what must a drug cross to reach it?
+- **(b)** Can vancomycin get across that barrier?
+- **(c)** Which kind of failure is this: target absent, target altered, or target unreachable?
+
+**(a) The barrier.** The peptidoglycan sits in the periplasm, behind an **outer membrane** whose porins admit only small hydrophilic molecules (roughly < 600 Da).
+
+**(b) The drug's size.** Vancomycin is a rigid glycopeptide near 1450 Da, so it cannot traverse porins to reach its target.
+
+**(c) Failure mode.** Target **unreachable**: the ~1450 Da drug cannot pass ~600 Da porins, though the target itself is perfectly conserved, so resistance is a matter of ACCESS. Compare target absent (Mycoplasma vs beta-lactams) and target altered (VRE).`
+    },
+    {
       id: 'abx1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Selective Toxicity & Wall Inhibitors** 🎯`,
@@ -92,60 +133,23 @@ Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself*
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Selective toxicity = target what bacteria have and humans lack: wall, 70S ribosome, folate synthesis, gyrase, bacterial RNA pol
-- Bactericidal (kill) vs bacteriostatic (halt; immune system finishes) — the difference matters most in immunocompromised hosts
-- MIC = lowest concentration preventing growth; broad spectrum = collateral damage to flora (C. diff risk)
-- Beta-lactams mimic D-Ala-D-Ala and irreversibly acylate transpeptidases (PBPs); lysis requires ACTIVE growth
-- Vancomycin binds the D-Ala-D-Ala substrate itself; gram-positive only; VRE = D-Ala-D-lactate swap
-- No wall (Mycoplasma) = intrinsic resistance to all wall-targeting drugs
+- **Selective toxicity.** Drugs hit what bacteria have and humans lack or make differently: wall, 70S ribosome, folate synthesis, gyrase, bacterial RNA pol.
+- **Static needs immunity.** Bacteriostatic drugs only halt growth, so immunocompromised hosts need bactericidal drugs.
+- **MIC vs MBC.** The MIC is the lowest concentration with no visible growth; the MBC is the lowest concentration that kills.
+- **Two ways to stop cross-links.** Beta-lactams irreversibly acylate the PBPs; vancomycin caps their D-Ala-D-Ala substrate.
+
+**Common traps**
+
+- **Beta-lactams on idle cells.** They kill only cells building new wall, so a static partner like tetracycline blunts them.
+- **Wall drugs for Mycoplasma.** With no peptidoglycan there is no target, so beta-lactams and vancomycin both fail.
+- **Vancomycin for gram-negatives.** The target is present, but the bulky drug cannot cross the outer membrane.
+- **VRE as a lactamase.** VRE swaps D-Ala-D-Ala for D-Ala-D-lactate; vancomycin has no beta-lactam ring to cut.
 
 <!-- yield:low -->
-- Low-yield extras: the standardized disk-diffusion test is the Kirby-Bauer method
+**Low-yield extras**
+
+- The standardized disk-diffusion test is the Kirby-Bauer method.
 <!-- /yield -->`
-    },
-    {
-      id: 'abx1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Mechanism Reasoning
-
-<details>
-<summary><b>Example 1: Predict an antagonistic drug combination</b></summary>
-
-**Question:** A clinician combines penicillin with tetracycline (a bacteriostatic protein-synthesis inhibitor) against a susceptible organism. Predict the interaction.
-
-**Solution:**
-1. Penicillin's killing depends on cells actively building wall during growth.
-2. Tetracycline halts protein synthesis and therefore growth.
-3. Growth-arrested cells stop making peptidoglycan, so penicillin loses its window — the combination is **antagonistic**, not additive.
-
-**MCAT Strategy:** Any time a static drug freezes growth, expect it to blunt a cidal drug whose mechanism requires active division.
-</details>
-
-<details>
-<summary><b>Example 2: Interpret an MIC experiment</b></summary>
-
-**Question:** Serial two-fold dilutions of drug X (32 down to 0.25 micrograms/mL) are inoculated with equal bacterial suspensions. Tubes at 4 and above stay clear; subculturing the clear 4, 8, and 16 tubes onto drug-free agar yields heavy growth, while the 32 tube yields none. Give the MIC and MBC.
-
-**Solution:**
-1. MIC = lowest concentration with no visible growth = **4 micrograms/mL**.
-2. MBC = lowest concentration from which organisms cannot be revived = **32 micrograms/mL**.
-3. MBC far above MIC (here eightfold, three tubes apart; a ratio above about 4 is the usual cutoff) indicates the drug is essentially bacteriostatic at achievable doses — it inhibited but did not kill at 4, 8, and 16.
-
-**MCAT Strategy:** Clear tube = inhibition; failure to regrow on fresh medium = killing. The MIC/MBC gap operationally defines static vs cidal.
-</details>
-
-<details>
-<summary><b>Example 3: Why gram-negative rods survive vancomycin</b></summary>
-
-**Question:** Vancomycin's target, D-Ala-D-Ala, is present in E. coli peptidoglycan, yet the drug fails completely against it. Reconcile.
-
-**Solution:**
-1. E. coli's peptidoglycan sits in the periplasm, behind an **outer membrane** whose porins admit only small hydrophilic molecules (roughly < 600 Da).
-2. Vancomycin is a rigid glycopeptide near 1450 Da — it cannot traverse porins to reach its target.
-3. Resistance can thus be a matter of ACCESS, with the target itself perfectly conserved.
-
-**MCAT Strategy:** Always separate three failure modes: target absent (Mycoplasma vs beta-lactams), target altered (VRE), or target unreachable (gram-negative outer membrane vs vancomycin).
-</details>`
     }
   ]
 };

@@ -63,15 +63,26 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
       type: 'text' as const,
       content: `### Worked Example — Strand Bookkeeping Under Pressure
 
-**Passage-style problem.** A gene's template strand contains the sequence 3'-TACGGATCT-5' spanning the transcription start region.
+**Problem 1.** A gene's template strand contains the sequence 3'-TACGGATCT-5' spanning the transcription start region.
 
-**Question 1 — Write the mRNA.** Pair each template base with its RNA complement, building 5' to 3' as polymerase does: T pairs A, A pairs U, C pairs G, G pairs C, G pairs C, A pairs U, T pairs A, C pairs G, T pairs A. Result: **5'-AUGCCUAGA-3'**. Note it begins with AUG — a start codon, which is how the exam signals you oriented correctly.
+- **(a)** What mRNA does RNA polymerase make from this template?
+- **(b)** What is the sequence of the coding strand?
 
-**Question 2 — Write the coding strand.** Same sequence as the mRNA with T for U: 5'-ATGCCTAGA-3'. No pairing arithmetic needed — this shortcut (coding strand = mRNA with T) saves time and errors. Conversely, if a passage GIVES you "the gene sequence," it is giving the coding strand, and you can read codons straight off it.
+**(a) Write the mRNA.** Pair each template base with its RNA complement, building 5' to 3' as polymerase does: T pairs A, A pairs U, C pairs G, G pairs C, G pairs C, A pairs U, T pairs A, C pairs G, T pairs A. Result: **5'-AUGCCUAGA-3'**. It begins with AUG, a start codon, which is how the exam signals you oriented correctly.
 
-**Question 3 — A point mutation changes the template strand's third base (C, reading from its 3' end) to A. What happens to the mRNA?** The third mRNA base was G (paired to that C); now it pairs with template A, becoming U. The mRNA's first codon changes from AUG to AUU — the start codon is destroyed. Translation initiation fails at this site entirely (scanning may find a downstream AUG, yielding a truncated or garbage protein). A one-base change with catastrophic effect — position matters more than count.
+**(b) Write the coding strand.** Same sequence as the mRNA from (a) with T for U: **5'-ATGCCTAGA-3'**. No pairing arithmetic is needed. Conversely, if a passage GIVES you "the gene sequence," it is giving the coding strand, and you can read codons straight off it.
 
-**Question 4 — The trap to anticipate.** If the question had instead said the CODING strand's third base (G) changed to T, the mRNA would change identically at that position, G to U (coding strand mirrors mRNA) — no complementation step. Misapplying the complement to the coding strand is the single most common error on strand questions. Always annotate the given strand as template or coding BEFORE touching the bases.`
+**Problem 2.** In the same gene (template 3'-TACGGATCT-5', mRNA 5'-AUGCCUAGA-3'), a point mutation changes the template strand's third base (C, reading from its 3' end) to A.
+
+- **(a)** Which mRNA base changes, and to what?
+- **(b)** What happens to the first codon, and to translation?
+- **(c)** If instead the CODING strand's third base (G) changed to T, how would the mRNA change?
+
+**(a) The changed base.** The third mRNA base was G (paired to that C); now it pairs with template A, becoming U.
+
+**(b) The start codon.** The first codon changes from AUG to AUU, so the start codon is destroyed. Translation initiation fails at this site entirely (scanning may find a downstream AUG, yielding a truncated or garbage protein). A one-base change with catastrophic effect: position matters more than count.
+
+**(c) The trap to anticipate.** The mRNA would change identically at that position, G to U, because the coding strand mirrors the mRNA: no complementation step. Misapplying the complement to the coding strand is the most common error on strand questions, so label the given strand as template or coding BEFORE touching the bases.`
     },
     {
       id: 'txn1-quiz1',
@@ -122,16 +133,22 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Template strand: read 3' to 5' by polymerase; coding strand: equals mRNA with T for U — label the given strand before any base arithmetic, and remember templates are per gene, not per chromosome
-- RNA polymerase: 5' to 3' synthesis, no primer (starts de novo), minimal proofreading — acceptable because transcripts are disposable
-- Prokaryotes: one polymerase + a sigma factor that finds the promoter
-- Eukaryotes: Pol I = rRNA (nucleolus), Pol II = mRNA (TATA box + general transcription factors), Pol III = tRNA and 5S
-- Promoters are upstream, untranscribed, cis-acting: mutations change amount, not protein sequence, and affect only the adjacent gene
-- Inhibitor toolkit: alpha-amanitin (euk Pol II), rifampin (bacterial RNA pol — selective toxicity)
-- After a transcription block, each protein decays on its mRNA's half-life — expect kinetics questions built on that lag
+- **Label the strand first.** Polymerase reads the template 3' to 5'; the mRNA matches the coding strand with U for T.
+- **RNA polymerase starts de novo.** It builds 5' to 3' with no primer and little proofreading; transcripts are disposable.
+- **Promoters place the polymerase.** Sigma (bacteria) or general transcription factors at the TATA box bind upstream of +1.
+- **Three polymerases, two inhibitors.** Pol I rRNA, Pol II mRNA, Pol III tRNA; amanitin blocks Pol II, rifampin bacterial RNA pol.
+
+**Common traps**
+
+- **Complementing the coding strand.** The coding strand already matches the mRNA: swap T for U, never pair its bases.
+- **One template per chromosome.** The template is defined per gene; neighboring genes can read opposite strands.
+- **Promoter mutations alter the protein.** A promoter is untranscribed and cis-acting: it changes only how much of its gene is made.
+- **Proteins vanish at once.** New synthesis continues until the mRNA decays; the protein then falls at its own half-life.
 
 <!-- yield:low -->
-- Low-yield extras: sigma reads the -10 (TATAAT) and -35 elements, and alternative sigmas redirect whole gene programs; termination is by hairpin or rho in bacteria, and by poly-A cleavage for Pol II; TBP (in TFIID) binds the TATA box and the factors assemble a preinitiation complex; actinomycin D intercalates and blocks all transcription
+**Low-yield extras**
+
+- Sigma reads the -10 (TATAAT) and -35 elements, and alternative sigmas redirect whole gene programs; termination is by hairpin or rho in bacteria, and by poly-A cleavage for Pol II; TBP (in TFIID) binds the TATA box and the factors assemble a preinitiation complex; actinomycin D intercalates and blocks all transcription
 <!-- /yield -->`
     }
   ]

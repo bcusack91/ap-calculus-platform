@@ -65,19 +65,50 @@ Every sense follows the same logic: **stimulus energy → receptor potential (gr
       type: 'text' as const,
       content: `### Worked Example — Decoding a Receptor from Its Recording
 
-**Passage-style problem.** An electrode records from three afferent fibers (A, B, C) innervating the skin of a fingertip while a probe applies a constant 5-second indentation.
+**Problem 1.** A probe holds a constant 5-second indentation on a fingertip. Fiber A bursts at probe contact, falls silent during the hold, and bursts again at removal; a 250 Hz vibrating probe drives it continuously. Its field is large and its ending deep.
 
-- Fiber A: a burst of action potentials at probe contact, silence during the hold, a second burst at probe removal. A vibrating probe (250 Hz) drives it continuously. Its receptive field is large and its ending is deep in the dermis.
-- Fiber B: fires throughout the entire 5-second hold at a rate that rises with indentation depth. Small, sharply bounded receptive field, superficial ending.
-- Fiber C: silent during the indentation, but fires vigorously when the probe is heated to 47 degrees C.
+- **(a)** Is Fiber A rapidly or slowly adapting?
+- **(b)** Which receptor is it?
+- **(c)** Why does it follow a vibration but not the steady hold?
 
-**Fiber A** is **rapidly adapting** (onset/offset bursts, sustained response only to vibration), deep, with a large field — a **Pacinian corpuscle**. Its lamellated capsule mechanically filters sustained pressure, transmitting only changing stimuli; that is WHY it is the high-frequency vibration specialist.
+**(a) Adaptation.** Rapidly adapting. It fires only at the onset and offset of the indentation, so it reports change, not sustained pressure.
 
-**Fiber B** is **slowly adapting** with fine spatial resolution — a **Merkel disc** afferent. Its firing rate encodes sustained indentation depth (frequency coding of intensity), and its small superficial field supports texture and two-point discrimination.
+**(b) Identity.** Rapid adaptation, a deep ending in the dermis and a large receptive field mark a **Pacinian corpuscle**.
 
-**Fiber C** ignores innocuous touch but responds at tissue-damaging temperature — a **nociceptor** (free nerve ending). Note the adequate-stimulus logic: the probe pressed on all three endings, but each fiber reports only the energy form it transduces at low threshold.
+**(c) The capsule.** Its lamellated capsule mechanically filters out sustained pressure and transmits only changing stimuli. A vibration is continuous change, which is WHY it is the high-frequency vibration specialist.
 
-**Extension.** If the fingertip's two-point threshold is 2 mm and the forearm's is 40 mm, the difference reflects receptive field size and innervation density — plus a proportionally larger cortical territory for the fingertip (cortical magnification), not different receptor TYPES.`
+**Problem 2.** During the same 5-second fingertip indentation, Fiber B fires throughout the hold at a rate that rises with indentation depth. Its receptive field is small and sharply bounded, and its ending is superficial.
+
+- **(a)** Is Fiber B rapidly or slowly adapting?
+- **(b)** Which receptor is it?
+- **(c)** What does its small, superficial field let the fingertip do?
+
+**(a) Adaptation.** Slowly adapting: it keeps firing for the entire hold.
+
+**(b) Identity.** Slow adaptation with a superficial ending and fine spatial resolution marks a **Merkel disc** afferent.
+
+**(c) Fine detail.** A small, superficial receptive field supports texture perception and fine two-point discrimination.
+
+**Problem 3.** Fiber C, recorded during the same fingertip indentation, stays silent while the probe presses, but fires vigorously when the probe is heated to 47 degrees C.
+
+- **(a)** What kind of receptor is Fiber C?
+- **(b)** The probe pressed on Fiber C's ending too. Why did it not respond?
+
+**(a) Identity.** It ignores innocuous touch but responds at a tissue-damaging temperature: a **nociceptor** (free nerve ending).
+
+**(b) Adequate stimulus.** Each fiber reports only the energy form it transduces at low threshold. The probe pressed on all three endings, but pressure is not Fiber C's adequate stimulus.
+
+**Problem 4.** A subject's two-point threshold is 2 mm on the fingertip and 40 mm on the forearm.
+
+- **(a)** What property of the skin's receptors explains the difference?
+- **(b)** What central factor adds to it?
+- **(c)** Does the fingertip owe its acuity to different receptor types?
+
+**(a) Fields and density.** Fingertip receptors have small receptive fields and dense innervation; forearm fields are large and sparse.
+
+**(b) Cortical magnification.** The fingertip also claims a proportionally larger territory of somatosensory cortex.
+
+**(c) No.** The difference reflects receptive field size, innervation density and cortical territory, not different receptor types.`
     },
     {
       id: 'sen1-quiz1',
@@ -93,11 +124,11 @@ Every sense follows the same logic: **stimulus energy → receptor potential (gr
             explanation: `The brain interprets any activity in the auditory pathway as sound, regardless of what actually triggered it — quality is assigned by the line, not the stimulus. This is exactly why cochlear implants work. Weber's law concerns discriminating intensities; adaptation concerns responses fading; frequency coding concerns how strong a stimulus feels.`
           },
           {
-            question: `Which receptor is best suited to detecting high-frequency vibration, and why?`,
-            options: [`Merkel disc, because it adapts slowly and sits superficially`, `Free nerve ending, because it is unencapsulated`, `Pacinian corpuscle, because it adapts rapidly`, `Ruffini ending, because it responds to skin stretch`],
+            question: `In an experiment, the lamellated capsule of a Pacinian corpuscle is removed. The bare nerve ending now fires throughout a steady press instead of only at its onset and offset. The best explanation is that:`,
+            options: [`The capsule supplied the ion channels that open on pressure`, `Removing the capsule injured the axon, so it fires spontaneously`, `The capsule is the filter that makes it adapt rapidly`, `Stripped of its capsule, the ending has become a nociceptor`],
             correctAnswer: 2,
             yield: 'MEDIUM',
-            explanation: `A rapidly adapting receptor fires at stimulus change; a vibration is continuous change, so the Pacinian corpuscle fires on every cycle. Its lamellated capsule filters out sustained pressure. Slowly adapting Merkel discs encode sustained indentation and texture, Ruffini endings encode stretch, and free nerve endings serve pain and temperature.`
+            explanation: `The lamellated capsule mechanically filters out sustained pressure and passes only changes to the ending inside. Without it, a steady press keeps deforming the ending, so the fiber fires for as long as the press lasts: its rapid adaptation came from the capsule, not the nerve. The pressure-gated channels sit in the nerve ending itself, which is why the bare ending still responds at all. Spontaneous injury firing would not start and stop with the press. The ending still reports pressure, its adequate stimulus, so it has not become a pain receptor.`
           },
           {
             question: `A subject can just detect the difference between 100 g and 105 g weights. By Weber's law, the smallest increase she should detect on a 400 g baseline is about:`,
@@ -128,14 +159,22 @@ Every sense follows the same logic: **stimulus energy → receptor potential (gr
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Transduction: stimulus energy → graded receptor potential → action potentials; perceived quality comes from the labeled line, not the stimulus
-- Tonic/slowly adapting receptors encode sustained stimuli (Merkel, Ruffini, spindles, nociceptors); phasic/rapidly adapting encode change (Meissner, Pacinian)
-- Intensity is coded by firing FREQUENCY and receptor recruitment — never by action potential size
-- Small receptive fields + dense innervation = fine two-point discrimination (fingertips); spindles sense stretch (parallel), Golgi tendon organs sense tension (series)
-- Weber's law $\\Delta I / I = k$: the detectable change is a constant fraction of the baseline
+- **Labeled lines.** A stimulus becomes a graded receptor potential, then spikes; perceived quality comes from WHICH pathway fires.
+- **Tonic vs. phasic.** Tonic (Merkel, Ruffini, spindles, nociceptors) report sustained stimuli; phasic (Meissner, Pacinian) report change.
+- **Intensity and location.** Stronger stimuli raise firing frequency and recruitment; small, dense receptive fields localize finely.
+- **Weber's law.** $\\Delta I / I = k$: the just noticeable difference is a constant fraction of the baseline.
+
+**Common traps**
+
+- **Bigger action potentials.** Action potentials are all-or-none; intensity raises firing frequency and recruitment, never spike size.
+- **Swapping spindles and GTOs.** Spindles lie in parallel and sense stretch; Golgi tendon organs lie in series and sense tension.
+- **A fixed JND.** The detectable change scales with the baseline: 5 g on 100 g means about 20 g on 400 g.
+- **Pain adapting away.** Nociceptors are tonic, not phasic; persistent pain keeps reporting ongoing tissue damage.
 
 <!-- yield:low -->
-- Low-yield extras: thermoreceptors use TRP-family channels (TRPV1 opens with painful heat and capsaicin)
+**Low-yield extras**
+
+- Thermoreceptors use TRP-family channels (TRPV1 opens with painful heat and capsaicin)
 <!-- /yield -->`
     }
   ]

@@ -41,19 +41,51 @@ export const mcatTranslationPart1Data = {
       type: 'text' as const,
       content: `### Worked Example — Decoding and Breaking a Message
 
-**Passage-style problem.** A short mRNA reads: 5'-GCAUGGCUUGGUGA...-3'. (Codon reference: AUG = Met, GCU = Ala, UGG = Trp, UGA = stop, GCA = Ala, UGC = Cys.)
+**Problem 1.** A short mRNA reads 5'-GCAUGGCUUGGUGA...-3'. (Codon reference: AUG = Met, GCU = Ala, UGG = Trp, UGA = stop, GCA = Ala, UGC = Cys.)
 
-**Question 1 — Find the reading frame and translate.** Scan for the first AUG: it starts at nucleotide 3. Read triplets from there: AUG (Met) - GCU (Ala) - UGG (Trp) - UGA (stop). Peptide: **Met-Ala-Trp**, then release. The two 5' bases (GC) are untranslated leader — bases before the start codon never appear in protein. Counting from base 1 instead of the AUG is the designed error.
+- **(a)** At which nucleotide does the reading frame begin?
+- **(b)** What peptide does the message encode?
+- **(c)** A single C is inserted immediately after the start codon. Which codons now follow it?
+- **(d)** Does the original stop codon still end the protein?
+- **(e)** How would inserting three bases at the same spot differ?
 
-**Question 2 — A mutation inserts a single C immediately after the AUG. Translate again.** New message after the start: AUG - CGC - UUG - GUG - A... The frame is shifted; every downstream codon changes (Arg-Leu-Val...), and the original UGA stop is no longer in frame — translation continues until a new in-frame stop appears. Frameshift = new sequence AND usually new length. Contrast inserting THREE bases: one amino acid added, frame preserved.
+**(a) Start codon.** Scan for the first AUG: it starts at nucleotide 3. The two 5' bases (GC) are untranslated leader — bases before the start codon never appear in protein. Counting from base 1 instead of the AUG is the designed error.
 
-**Question 3 — The tRNA reading UGG (Trp) has what anticodon, and could it also read UGA?** Written antiparallel, the anticodon is 3'-ACC-5' (conventionally written 5'-CCA-3' — always state orientation). UGA differs at the third codon position (G to A); wobble tolerates some third-position mismatches, but a normal tryptophan tRNA does not read UGA — UGA is a stop recognized by release factors.
+**(b) Peptide.** Reading triplets from the AUG at nucleotide 3: AUG (Met) - GCU (Ala) - UGG (Trp) - UGA (stop). Peptide: **Met-Ala-Trp**, then release.
+
+**(c) Shifted frame.** New message after the start: AUG - CGC - UUG - GUG - A... Every downstream codon changes (Arg-Leu-Val...).
+
+**(d) Lost stop.** No. The original UGA is no longer in frame, so translation continues until a new in-frame stop appears. Frameshift = new sequence AND usually new length.
+
+**(e) Three bases.** One amino acid is added and the frame is preserved, so the codons after the insertion read exactly as before, unless the new triplet is a stop.
+
+**Problem 2.** In the same message, the codon after GCU is UGG (Trp), and the codon after that is UGA.
+
+- **(a)** What is the anticodon of the tRNA that reads UGG?
+- **(b)** At which codon position do UGG and UGA differ?
+- **(c)** Can a normal tryptophan tRNA also read UGA?
+
+**(a) Anticodon.** Complement, then reverse: written antiparallel, the anticodon is 3'-ACC-5', conventionally written 5'-CCA-3'. Always state the orientation.
+
+**(b) Position.** They differ at the third codon position (G to A), the wobble position.
+
+**(c) Wobble's limit.** No. Wobble tolerates some third-position mismatches, but a normal tryptophan tRNA does not read UGA — UGA is a stop codon, recognized by release factors (in the standard code; mitochondria read UGA as Trp).
 
 <!-- yield:low -->
 However, a MUTANT tRNA with an altered anticodon can suppress stop codons (nonsense suppressors), inserting an amino acid at UGA and producing read-through protein — a classic passage twist.
 <!-- /yield -->
 
-**Question 4 — Why did the exam give you both GCU and GCA as Ala?** To make degeneracy concrete: a GCU-to-GCA change at codon 2 would be silent (third-position wobble), while GCU-to-GAU would not. Track WHICH position mutated before predicting the effect.`
+**Problem 3.** The codon reference lists both GCU and GCA as Ala; codon 2 of the message is GCU.
+
+- **(a)** Would a GCU-to-GCA change at codon 2 alter the protein?
+- **(b)** Would a GCU-to-GAU change at codon 2 alter it?
+- **(c)** What must you track before predicting a point mutation's effect?
+
+**(a) Third position.** No. The change hits the third base, and GCA also codes Ala, so the mutation is silent (third-position wobble). Listing both Ala codons makes degeneracy concrete.
+
+**(b) Second position.** Yes. The change hits the second base, and GAU (Asp) is not an alanine codon, so the amino acid changes.
+
+**(c) The position.** Track WHICH position mutated before predicting the effect: third-position changes are often silent, first- and second-position changes usually are not.`
     },
     {
       id: 'tln1-quiz1',
@@ -62,11 +94,11 @@ However, a MUTANT tRNA with an altered anticodon can suppress stop codons (nonse
       exercise: {
         questions: [
           {
-            question: `A point mutation changes a codon's third base, yet the protein is completely unchanged. The property of the genetic code responsible is:`,
-            options: [`Universality of the code`, `Degeneracy of the code`, `Unambiguity of the code`, `Nonoverlapping reading frames`],
+            question: `A researcher claims that an organism's genetic code violates UNAMBIGUITY. Which observation would support that claim?`,
+            options: [`Six different codons all specify the amino acid leucine`, `The codon CUG is read as both serine and leucine`, `UGA codes tryptophan in its mitochondria, not stop`, `Inserting one base garbles every downstream codon`],
             correctAnswer: 1,
             yield: 'ULTRA_HIGH',
-            explanation: `Multiple codons per amino acid (degeneracy) is organized so synonyms usually share their first two bases and differ at position 3, where wobble pairing lets one tRNA serve several codons. Third-position changes are therefore frequently silent. Unambiguity is the reverse guarantee (one codon, one meaning), universality says the dictionary is shared across organisms, and nonoverlap concerns how frames are read — each property maps to its own question type; keep the definitions crisp.`
+            explanation: `Unambiguity means one codon never means two amino acids, so a single codon read as both serine and leucine is the violation. Six codons for leucine is degeneracy (many codons, one meaning), which the code allows. UGA read as tryptophan in mitochondria is a departure from universality, not ambiguity: within that system UGA still has a single meaning. A one-base insertion garbling everything downstream is the expected result of a nonoverlapping, comma-free code read in triplets.`
           },
           {
             question: `In the classic Chapeville experiment, cysteine already attached to tRNA-Cys was chemically converted to alanine. In translation, this alanine was inserted at cysteine codons. The conclusion is that:`,
@@ -104,15 +136,22 @@ However, a MUTANT tRNA with an altered anticodon can suppress stop codons (nonse
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Code properties as question types: triplet, degenerate (synonyms differ at position 3 — silent mutations), unambiguous, nonoverlapping/comma-free (indels not divisible by 3 = frameshift), nearly universal (mitochondria deviate)
-- AUG starts and sets the frame; UAA/UAG/UGA stop via release factors, not tRNAs; translation begins at the first AUG, not the first base
-- tRNA: anticodon pairs the codon antiparallel (complement THEN reverse); amino acid rides the 3' CCA end on a high-energy ester bond that later pays for the peptide bond
-- Wobble at the third position: one tRNA reads a codon family (far fewer tRNAs than 61 codons); wobble never makes protein ambiguous
-- Synthetases are the code's guardians: one per amino acid, two-step charging costing 2 ATP equivalents, editing sites reject near-miss substrates
-- Chapeville: the ribosome checks only codon-anticodon pairing — mischarged tRNA delivers the wrong amino acid unchallenged
+- **Code properties.** Triplet, degenerate at base 3, unambiguous, nonoverlapping and nearly universal; indels not in 3s shift the frame.
+- **tRNA's two ends.** The anticodon pairs the codon antiparallel; the 3' CCA end holds the amino acid on a high-energy ester.
+- **Wobble saves tRNAs.** Loose third-position pairing lets one tRNA read several synonyms, so far fewer than 61 tRNAs are needed.
+- **Synthetases guard the code.** One per amino acid, 2 ATP equivalents per charge, and editing sites that reject near-miss amino acids.
+
+**Common traps**
+
+- **Counting from base 1.** Translation starts at the first AUG; bases before it are leader and never appear in protein.
+- **Unreversed anticodon.** Complement the codon, then reverse: codon 5'-ACG-3' pairs anticodon 5'-CGU-3', not 5'-UGC-3'.
+- **Stops read by tRNAs.** No tRNA reads UAA, UAG or UGA; release factors recognize stop codons.
+- **Ribosome checks the cargo.** It checks only codon-anticodon pairing, so a mischarged tRNA delivers the wrong amino acid (Chapeville).
 
 <!-- yield:low -->
-- Low-yield extras: inosine at the wobble position pairs with U, C or A, letting ~40 tRNA species read all 61 sense codons; mutant (nonsense-suppressor) tRNAs with altered anticodons can read stop codons and cause read-through
+**Low-yield extras**
+
+- Inosine at the wobble position pairs with U, C or A, letting ~40 tRNA species read all 61 sense codons; mutant (nonsense-suppressor) tRNAs with altered anticodons can read stop codons and cause read-through
 <!-- /yield -->`
     }
   ]

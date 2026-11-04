@@ -536,8 +536,8 @@ export const mcatNaturalSelectionFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Altruism, Kin Selection',
-    mode: 'lead',
+    at: 'Worked Example — Applying Hamilton',
+    mode: 'after',
     figure: {
       svg: hamiltonSvg,
       alt:
@@ -579,8 +579,8 @@ export const mcatNaturalSelectionFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Reading Evolutionary Trees',
-    mode: 'lead',
+    at: 'Worked Example — Reading a Cladogram',
+    mode: 'after',
     figure: {
       svg: treesSvg,
       alt:

@@ -20,6 +20,8 @@ Transcription passages hand you data from a small toolkit. Know what QUESTION ea
 | ChIP (chromatin immunoprecipitation) | Is protein X bound to DNA site Y in living cells? | Antibody pulls down the protein with its crosslinked DNA; PCR asks which sequences came along |
 | EMSA (gel shift) | Does protein X bind DNA sequence Y in a tube? | Bound probe migrates slower — the band "shifts" up |
 
+**Hormone response elements.** Steroid hormone receptors are nuclear receptors that bind DNA as dimers, so their hormone response elements (HREs) are palindromes: two matching half-sites, one for each partner.
+
 **Steady state is a balance**: an mRNA's level (northern/qPCR) = synthesis MINUS decay. A rise in mRNA alone does not prove the gene is transcribed faster — the mRNA could simply be decaying more slowly.
 
 <!-- yield:low -->
@@ -50,26 +52,54 @@ Fuse candidate DNA fragments to luciferase; measure light:
       type: 'text' as const,
       content: `### Worked Example — A Hormone-Response Passage, Assembled
 
-**Passage-style problem.** A steroid hormone induces gene G in liver cells. Researchers gather three results:
+**Problem 1.** A steroid hormone induces gene G. Fig 1 (RT-qPCR): G mRNA rises 20-fold in 60 min. Fig 2 (anti-receptor ChIP): the receptor is recovered with DNA 3 kb upstream of G only when hormone is present, and never at a control locus. Fig 3: that fragment makes luciferase hormone-responsive unless a 15 bp palindrome in it is deleted.
 
-- **Fig 1 (RT-qPCR)**: G mRNA rises 20-fold within 60 minutes of hormone.
-- **Fig 2 (ChIP with anti-receptor antibody)**: hormone treatment causes the receptor to be recovered with a DNA region 3 kb upstream of G; no recovery without hormone, and none at a control locus.
-- **Fig 3 (reporter)**: the 3 kb-upstream fragment fused to luciferase confers hormone responsiveness; deleting a 15 bp palindrome within it abolishes the response.
+- **(a)** What does Fig 1 establish, and what can it not say?
+- **(b)** What does Fig 2 add that Fig 1 cannot?
+- **(c)** What does Fig 3 show that the ChIP cannot?
+- **(d)** What does the palindromic shape of the deleted element suggest about how the receptor binds DNA?
 
-**Question 1 — What does each figure contribute that the others cannot?** Fig 1: the transcript accumulates (but cannot say why). Fig 2: the receptor is physically at the upstream site in vivo, hormone-dependently. Fig 3: that site is FUNCTIONAL — it converts hormone into transcription, and the 15 bp palindrome is the responsible element (a hormone response element; palindromic because the receptor binds as a dimer). Amount, occupancy, function — three claims, three techniques.
+**(a) Amount.** The G transcript accumulates, but RT-qPCR measures a steady-state level, so it cannot say why: faster synthesis or slower decay.
+
+**(b) Occupancy.** The receptor is physically at the upstream site in living cells, and only when hormone is present. Recovery at G but never at the control locus shows the binding is site-specific.
+
+**(c) Function.** That site is FUNCTIONAL: it converts hormone into transcription, and the 15 bp palindrome is the responsible element, a hormone response element (HRE). Amount (Fig 1), occupancy (Fig 2), function (Fig 3): three claims, three techniques.
+
+**(d) A dimer.** A palindrome is two matching half-sites, one for each partner: the receptor binds the HRE as a dimer.
+
+**Problem 2.** The receptor binds the 15 bp palindromic HRE as a dimer. Researchers then study a receptor mutant that binds hormone but cannot dimerize.
+
+- **(a)** What happens to ChIP recovery, the reporter response and G induction?
+- **(b)** Can wild-type receptor restore them?
+- **(c)** What if instead the HRE were deleted from the genome?
+
+**(a) Everything downstream is lost.** ChIP recovery is lost (weak or no binding to the palindromic HRE), the reporter response is lost, and G induction is lost.
+
+**(b) Trans rescue.** Yes. The mutant is trans-acting, so supplying wild-type receptor restores everything.
+
+**(c) No cis rescue.** Deleting the HRE in the genome is cis: no amount of good receptor rescues gene G, though other hormone targets respond normally. The template generalizes: every regulation passage is a few of these claims (amount, occupancy, function) in some order, so name which claim a figure makes before answering anything about it.
 
 <!-- yield:low -->
 Two more results, for students going deeper:
 
-- **Fig 4 (nuclear run-on)**: transcription of G increases 20-fold with hormone — matching the mRNA rise. This adds MECHANISM: run-on isolates the synthesis term, so the mRNA rose because synthesis increased, not because decay slowed.
-- **Fig 5 (RT-qPCR with cycloheximide)**: the rise in G mRNA persists when cycloheximide (a translation inhibitor) is present.
+**Problem 3.** Fig 4 (nuclear run-on): transcription of G increases 20-fold with hormone, matching the mRNA rise.
 
-**Primary or secondary response gene?** Primary. Cycloheximide blocks synthesis of NEW protein; since induction survives it (Fig 5), everything required (the receptor) pre-existed. Secondary response genes — needing a freshly made transcription factor — would be silenced by cycloheximide. One drug cleanly cuts the cascade in two.
-<!-- /yield -->
+- **(a)** Which term of the steady-state balance does run-on measure?
+- **(b)** Why did G mRNA rise?
 
-**Question 2 — Predict: receptor mutant that binds hormone but cannot dimerize.** ChIP recovery lost (weak/no binding to the palindromic HRE), reporter response lost, G induction lost — but the mutant is trans-acting, so supplying wild-type receptor restores everything. Conversely, deleting the HRE in the genome is cis: no amount of good receptor rescues gene G, though other hormone targets respond normally.
+**(a) Synthesis only.** Run-on labels only the RNAs being actively transcribed, so it isolates the synthesis term.
 
-**The template generalizes**: every regulation passage is a few of these claims (amount, occupancy, function) in some order. Name which claim a figure makes before answering anything about it.`
+**(b) Mechanism.** The mRNA rose because synthesis increased, not because decay slowed.
+
+**Problem 4.** Fig 5 (RT-qPCR with cycloheximide): the rise in G mRNA persists when cycloheximide (a translation inhibitor) is present.
+
+- **(a)** What does cycloheximide block?
+- **(b)** Is G a primary or a secondary response gene?
+
+**(a) New protein.** Cycloheximide blocks synthesis of NEW protein.
+
+**(b) Primary.** Since induction survives cycloheximide, everything required (the receptor) pre-existed. Secondary response genes, needing a freshly made transcription factor, would be silenced by cycloheximide. One drug cleanly cuts the cascade in two.
+<!-- /yield -->`
     },
     {
       id: 'txn4-quiz1',
@@ -120,15 +150,22 @@ Two more results, for students going deeper:
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Map technique to claim: northern/RT-qPCR = how much RNA (steady state); reporter = element function; ChIP = in-vivo occupancy; EMSA = in-vitro binding
-- Steady state = synthesis minus decay: a rise in mRNA alone does not prove faster transcription
-- Reporter deletion logic: activity down = removed activator/core element; activity up = removed silencer; distance/orientation independence = enhancer
-- Binding is three separate claims — CAN bind (EMSA), IS bound (ChIP), MATTERS (reporter) — never let one stand in for another
-- Controls name artifacts: no-antibody ChIP (nonspecific pulldown), control locus (site specificity), empty vector (baseline), cold competitor (binding specificity)
-- Cis lesions (deleted response elements) cannot be rescued in trans; factor mutations can — the rescue experiment assigns the level of every defect
+- **Map technique to claim.** Northern or RT-qPCR = RNA amount; ChIP = in-vivo occupancy; EMSA = in-vitro binding; reporter = function.
+- **Steady state is a balance.** mRNA level is synthesis minus decay, so a rise alone does not prove faster transcription.
+- **Read deletions by direction.** Reporter activity down means an activator or core element went; up means a silencer went.
+- **Rescue assigns the level.** Factor mutations are rescued in trans by a good copy; deleted cis elements cannot be.
+
+**Common traps**
+
+- **Binding taken as function.** EMSA shows a protein CAN bind in a tube; only ChIP shows it IS bound, and a reporter that it MATTERS.
+- **An mRNA rise read as activation.** A higher steady-state level can come from slower decay; synthesis must be measured separately.
+- **Skipping the background control.** ChIP enrichment counts only above a nonspecific-antibody sample; more antibody proves nothing.
+- **A movable element called a promoter.** An element that still works moved 2 kb away or flipped is an enhancer.
 
 <!-- yield:low -->
-- Low-yield extras: nuclear run-on measures synthesis rate directly — mRNA up with flat run-on means stabilization, not activation; cycloheximide splits cascades: induction that survives it = primary response (pre-existing factors), induction it blocks = secondary response (needs a newly made protein, often the primary gene's product)
+**Low-yield extras**
+
+- Nuclear run-on measures synthesis rate directly — mRNA up with flat run-on means stabilization, not activation; cycloheximide splits cascades: induction that survives it = primary response (pre-existing factors), induction it blocks = secondary response (needs a newly made protein, often the primary gene's product)
 <!-- /yield -->`
     }
   ]

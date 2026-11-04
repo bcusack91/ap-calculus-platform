@@ -116,6 +116,26 @@ A single intestinal enterocyte uses nearly every transport mode at once:
 > When a passage gives you a polarized epithelium, immediately sketch which transporter sits on which membrane — the answer usually falls out of the geometry.`
     },
     {
+      id: 'mt4-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Following LDL Through the Cell
+
+**Problem.** Normal fibroblasts take up fluorescent LDL at 37°C. Parallel dishes are either depleted of ATP or treated with a drug that blocks the endosomal V-type H$^+$ ATPase.
+
+- **(a)** Where does the LDL go in untreated cells?
+- **(b)** Where does the LDL end up in ATP-depleted cells?
+- **(c)** Where does the LDL stall when the V-type H$^+$ ATPase is blocked?
+- **(d)** If that pump stays blocked for hours, what happens to LDL binding at the cell surface?
+
+**(a) To the lysosome.** LDL binds receptors in clathrin-coated pits, dynamin pinches the pits off, the vesicles fuse with early endosomes, acidification releases LDL from its receptor, the receptors recycle, and the LDL reaches lysosomes, where cholesteryl esters become free cholesterol.
+
+**(b) Bound at the surface.** Binding is a simple association, but vesicular transport is always active, so without ATP the LDL stays on its receptors at the surface and is not internalized.
+
+**(c) In early endosomes, still on its receptor.** The LDL is internalized, but without acidification it never lets go of its receptor, so it is not delivered to lysosomes.
+
+**(d) Binding falls.** Receptors still holding their LDL cannot recycle to the surface. As internalization continues, the number of surface receptors drops, so less new LDL can bind.`
+    },
+    {
       id: 'mt4-quiz2',
       type: 'multiple-choice' as const,
       content: `**MCAT Integration** 🎯`,
@@ -143,16 +163,22 @@ A single intestinal enterocyte uses nearly every transport mode at once:
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Bulk transport is always active: phagocytosis (particles), pinocytosis (fluid), receptor-mediated endocytosis (specific, clathrin), exocytosis (constitutive or Ca$^{2+}$-regulated)
-- LDL pathway: coated pit → dynamin scission → endosome acidification releases cargo → receptor recycles, cargo to lysosome; FH mutations can break binding OR internalization separately
-- SNARE pairing (v- + t-SNARE) drives fusion; a Ca$^{2+}$ sensor triggers regulated release; botulinum/tetanus toxins cleave SNAREs
-- Vesicle lumen ≡ extracellular space: topology never flips through the secretory/endocytic pathways
-- Experiment signatures: 4°C blocks internalization but not binding; ATP depletion kills active + vesicular transport; a nonhydrolyzable GTP analog stalls vesicles at the pit
-- Polarized epithelia: apical vs. basolateral transporter placement (SGLT1/GLUT2/Na$^+$-K$^+$ pump) explains directional absorption
-- Endocytosis and exocytosis are balanced to conserve membrane surface area
+- **Bulk transport is active.** Phagocytosis, pinocytosis, receptor-mediated endocytosis and exocytosis all need ATP or GTP.
+- **The LDL pathway.** Coated pit, dynamin scission, acidified endosome frees LDL; receptors recycle, LDL goes to lysosomes.
+- **SNAREs drive fusion.** v- and t-SNAREs zipper membranes, Ca$^{2+}$ triggers regulated release, and botulinum and tetanus cleave SNAREs.
+- **Epithelial geometry.** Apical SGLT1 and basolateral GLUT2 plus the Na$^+$/K$^+$ pump make absorption one-way.
+
+**Common traps**
+
+- **Fusion flips topology.** The vesicle lumen equals the outside: an ER-luminal domain ends up extracellular after exocytosis.
+- **Binding means uptake.** FH receptors with a defective tail bind LDL but cannot cluster in coated pits to internalize it.
+- **Cold blocks binding.** At 4°C ligands still bind their receptors; only vesicle budding and internalization stop.
+- **Botulinum blocks receptors.** It acts presynaptically, cleaving SNAREs so acetylcholine is never released.
 
 <!-- yield:low -->
-- Low-yield extras: Brown and Goldstein worked out the LDL pathway; named SNAREs are synaptobrevin (v), syntaxin and SNAP-25 (t); synaptotagmin is the Ca$^{2+}$ sensor; hypertonic sucrose or K$^+$ depletion disrupts clathrin; GLUT5 is the apical fructose carrier
+**Low-yield extras**
+
+- Brown and Goldstein worked out the LDL pathway; named SNAREs are synaptobrevin (v), syntaxin and SNAP-25 (t); synaptotagmin is the Ca$^{2+}$ sensor; hypertonic sucrose or K$^+$ depletion disrupts clathrin; GLUT5 is the apical fructose carrier
 <!-- /yield -->`
     }
   ]

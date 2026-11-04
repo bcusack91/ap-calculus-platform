@@ -59,6 +59,53 @@ At the **neuromuscular junction**, ACh on nicotinic receptors always excites mus
 - Most organs receive **dual antagonistic innervation**; resting organ tone is a blend (e.g., vagal dominance at the SA node).`
     },
     {
+      id: 'endn2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Membranes to Circuits
+
+**Problem 1.** A lab error doubles the extracellular K$^+$ concentration bathing a neuron.
+
+- **(a)** How does $E_K$ change?
+- **(b)** What happens to the resting membrane potential?
+- **(c)** Is the cell initially more or less excitable?
+- **(d)** What happens to its excitability if the high K$^+$ persists?
+
+**(a) Nernst.** $E_K = 61 \\log_{10}([K]_{out}/[K]_{in})$: raising $[K]_{out}$ makes the ratio less extreme, so $E_K$ becomes less negative.
+
+**(b) Resting potential.** The resting membrane is mostly K$^+$-permeable, so it **depolarizes** toward the new, less negative $E_K$ from (a).
+
+**(c) Early excitability.** The cell now sits closer to threshold, so it is initially hyperexcitable.
+
+**(d) Sustained depolarization.** Lasting depolarization inactivates Na$^+$ channels, ultimately making the cell UNexcitable. This biphasic logic is why potassium disturbances cause both arrhythmias and cardiac arrest.
+
+**Problem 2.** In a resting subject, vagal tone dominates the SA node. Predict heart rate after each of three drugs.
+
+- **(a)** What does atropine, a muscarinic blocker, do to heart rate?
+- **(b)** What does propranolol, a beta blocker, do to heart rate?
+- **(c)** What does a nicotinic ganglionic blocker such as hexamethonium do to heart rate?
+- **(d)** What general rule predicts any blocker's effect on an organ?
+
+**(a) Atropine.** It removes the dominant vagal brake, so HR **rises** toward the SA node's intrinsic ~100 bpm.
+
+**(b) Propranolol.** It removes the sympathetic accelerator, which is minor at rest, so HR **falls slightly**.
+
+**(c) Ganglionic blocker.** Silencing BOTH divisions equals removing the LARGER influence. At rest that is vagal, so HR **rises** toward the intrinsic rate.
+
+**(d) Method.** Identify which division dominates the organ at baseline; the response to any blocker is "subtract that input."
+
+**Problem 3.** In a demyelinating disease, a motor axon's conduction velocity drops from 60 m/s to 10 m/s, though the axon itself is intact and the muscle responds to direct stimulation.
+
+- **(a)** How does myelin normally make conduction fast?
+- **(b)** What does losing myelin do to conduction?
+- **(c)** Where is the deficit, and which diseases show this pattern in the CNS and PNS?
+
+**(a) Saltatory conduction.** Myelin lets current flow passively and rapidly between nodes of Ranvier, regenerating the spike only at nodes.
+
+**(b) Losing myelin.** It forces continuous regeneration along leaky membrane, which is slow, and current may dissipate below threshold between former nodes (conduction block).
+
+**(c) The insulation.** Axon and synapse are healthy; the deficit is purely in the cable's insulation. That is the pattern of multiple sclerosis (CNS oligodendrocytes) or Guillain-Barré (PNS Schwann cells).`
+    },
+    {
       id: 'endn2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Neurons & Synapses** 🎯`,
@@ -89,57 +136,26 @@ At the **neuromuscular junction**, ACh on nicotinic receptors always excites mus
       }
     },
     {
-      id: 'endn2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Membranes to Circuits
-
-<details>
-<summary><b>Example 1: Predict the effect of high extracellular potassium</b></summary>
-
-**Question:** A lab error doubles the extracellular K$^+$ concentration bathing a neuron. Predict the resting potential and initial excitability.
-
-**Solution:**
-1. $E_K = 61 \\log_{10}([K]_{out}/[K]_{in})$: raising $[K]_{out}$ makes the ratio less extreme → $E_K$ less negative.
-2. The resting membrane, being mostly K$^+$-permeable, **depolarizes** toward the new $E_K$.
-3. Initially the cell sits closer to threshold (hyperexcitable) — but sustained depolarization inactivates Na$^+$ channels, ultimately making the cell UNexcitable. ✓ (This biphasic logic is why potassium disturbances cause both arrhythmias and cardiac arrest.)
-</details>
-
-<details>
-<summary><b>Example 2: Localize the lesion from conduction data</b></summary>
-
-**Question:** In a demyelinating disease, a motor axon's conduction velocity drops from 60 m/s to 10 m/s, though the axon itself is intact and the muscle responds to direct stimulation. Explain the slowing.
-
-**Solution:**
-1. Myelin lets current flow passively and rapidly between nodes of Ranvier, regenerating the spike only at nodes (saltatory conduction).
-2. Losing myelin forces continuous regeneration along leaky membrane — slow, and current may dissipate below threshold between former nodes (conduction block).
-3. Axon and synapse are healthy: the deficit is purely in the cable's insulation — the pattern of multiple sclerosis (CNS oligodendrocytes) or Guillain-Barré (PNS Schwann cells). ✓
-</details>
-
-<details>
-<summary><b>Example 3: Autonomic pharmacology grid</b></summary>
-
-**Question:** Predict heart rate after each drug: (a) atropine (muscarinic blocker), (b) propranolol (beta blocker), (c) a nicotinic ganglionic blocker — in a resting subject whose vagal tone dominates the SA node.
-
-**Solution:**
-1. (a) Atropine removes the dominant vagal brake → HR **rises** toward the SA node's intrinsic ~100 bpm.
-2. (b) Propranolol removes sympathetic accelerator, minor at rest → HR **falls slightly**.
-3. (c) Ganglionic blockade silences BOTH divisions → the net effect equals removing the LARGER influence: at rest that's vagal → HR **rises** toward intrinsic rate. ✓
-
-**Method:** identify which division dominates the organ at baseline; the response to any blocker is "subtract that input."
-</details>`
-    },
-    {
       id: 'endn2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Resting potential ≈ −70 mV: Na⁺/K⁺-ATPase builds gradients; K⁺ leak dominates, holding the membrane near $E_K$. Potential always moves toward the equilibrium potential of the most permeable ion.
-- Action potential: Na⁺ in (rise, positive feedback) → Na⁺ inactivation + delayed K⁺ out (fall) → hyperpolarization. All-or-none; intensity = frequency; refractory periods enforce one-way travel; myelin + nodes = saltatory speed.
-- Synapse: Ca²⁺-triggered vesicle release; EPSPs/IPSPs are graded and summed (temporal + spatial) at the axon hillock; termination by reuptake, AChE, or diffusion.
-- Autonomic wiring: all ganglia = ACh/nicotinic; sympathetic endings = NE (adrenal medulla broadcasts epinephrine hormonally); parasympathetic endings = ACh/muscarinic; most organs get antagonistic dual input — know which side dominates at rest.
+- **Resting potential.** The Na⁺/K⁺-ATPase builds gradients; K⁺ leak holds rest near −70 mV, as potential moves toward the most permeable ion's $E$.
+- **Action potential.** Na⁺ rushes in on the rise; Na⁺ inactivation plus delayed K⁺ efflux bring the fall, then hyperpolarization.
+- **Synaptic summation.** Ca²⁺ entry releases transmitter; graded EPSPs and IPSPs sum at the axon hillock, which fires at threshold.
+- **Autonomic wiring.** Every ganglion uses ACh on nicotinic receptors; sympathetic endings release NE, parasympathetic ACh on muscarinic.
+
+**Common traps**
+
+- **Grading spike size.** The action potential is all-or-none; stimulus intensity is coded by firing frequency, not amplitude.
+- **Forgetting Na⁺ inactivation.** Repolarization needs Na⁺ channels to inactivate, not just K⁺ channels to open; it sets the refractory period.
+- **Every sympathetic ending is NE.** Sweat glands use ACh on muscarinic receptors, and the adrenal medulla secretes epinephrine into blood.
+- **Ignoring resting dominance.** A blocker removes one division's input, so its effect depends on which side dominates at rest.
 
 <!-- yield:low -->
-- Low-yield extras: the Na⁺-channel inactivation gate is pictured as a "ball-and-chain" plug
+**Low-yield extras**
+
+- The Na⁺-channel inactivation gate is pictured as a "ball-and-chain" plug.
 <!-- /yield -->`
     }
   ]

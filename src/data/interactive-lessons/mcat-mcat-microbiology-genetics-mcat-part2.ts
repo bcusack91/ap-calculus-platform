@@ -49,7 +49,7 @@ Lysogenic conversion, where the phage's OWN genes (such as toxin genes) change t
 - **Gradient of transfer:** because pairs break apart at random times, genes near oriT appear in more recombinants than distal genes, a second, frequency-based way to order genes.
 
 - **Interrupted mating.** Hfr and F$^-$ cells are mixed, samples are blended at intervals to break the pairs, and recombinants are scored. The minute at which each donor marker first appears ranks the genes by distance from oriT, so the E. coli map is calibrated in **minutes** (100 for the whole chromosome). Different Hfr strains give circularly permuted orders that overlay into one **circular** map.
-- **F′.** If an integrated F excises imprecisely it carries adjacent chromosomal genes. Transferring this F′ makes the recipient a **merodiploid**, with one chromosomal and one F′ copy of those genes, and an F′ donor itself. Merodiploids are how lac operon cis/trans logic was worked out (Part 3).
+- **F′.** If an integrated F excises imprecisely it carries adjacent chromosomal genes. Transferring this F′ makes the recipient a **merodiploid**, with one chromosomal and one F′ copy of those genes, and an F′ donor itself. Merodiploids are how lac operon cis/trans logic was worked out (covered with the lac operon).
 - **R plasmids** combine several resistance genes with transfer genes, often with a broad host range, so one mating can make a sensitive cell a multidrug-resistant donor, even across species. That is why horizontal transfer outpaces mutation: mutation makes resistance rarely and in one lineage, while a plasmid delivers a finished resistance gene to many recipients at once.
 
 ### Telling the Three Apart
@@ -60,6 +60,56 @@ Lysogenic conversion, where the phage's OWN genes (such as toxin genes) change t
 | Filter (U-tube) that blocks cells but passes DNA and phage | Persists | Persists | **Abolished** |
 | Cell-free filtrate of the donor culture | Works, and DNase-sensitive | Works, and DNase-resistant | **No transfer** |
 | What the experiment needs | Competent recipient | Phage that infects the recipient | Donor with F or another conjugative plasmid |`
+    },
+    {
+      id: 'mg2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Transfer and Mapping Experiments
+
+**Problem 1.** Strain A transfers a resistance gene to strain B in mixed culture. DNase in the medium has no effect; a U-tube filter separating A and B has no effect; a recipient lacking the surface receptor of a phage that A carries receives nothing.
+
+- **(a)** What does the DNase result rule out?
+- **(b)** What does the filter result rule out?
+- **(c)** What does the receptor-mutant result point to?
+- **(d)** What further data would tell you which form of this mechanism it is?
+
+**(a) Not transformation.** Naked DNA would be destroyed by DNase, so no DNase effect rules out transformation.
+
+**(b) Not conjugation.** Conjugation needs cell contact, so transfer across the filter rules it out.
+
+**(c) Transduction.** Losing transfer when the recipient cannot bind the phage ties transfer to phage infection: transduction.
+
+**(d) Generalized or specialized.** Ask which genes move: any marker, at low frequency (generalized), or only the genes beside the prophage site (specialized). Run every transfer passage through the same three questions: Does DNase stop it? Does a filter stop it? Does it need a phage?
+
+**Problem 2.** An Hfr strain (streptomycin-sensitive, prototroph) is mated with an F$^-$ strain (streptomycin-resistant, auxotrophic for a, b, c and d). Blended samples go on streptomycin plates lacking one nutrient. Markers first appear at a 5, b 12, c 20, d 32 min.
+
+- **(a)** What two jobs do the selective plates do?
+- **(b)** What gene order and spacings does this Hfr strain give?
+- **(c)** A second Hfr strain transfers c (3 min), then b (11 min), then a (18 min). What spacings does it give?
+- **(d)** Where is the second strain's origin, and what do the two strains show together?
+
+**(a) Two jobs.** Streptomycin kills the donors (counterselection), and the missing nutrient lets only recombinants grow.
+
+**(b) Strain 1.** The order is a, b, c, d, with spacings a-b 7, b-c 8 and c-d 12 minutes. Subtract entry times to get distances.
+
+**(c) Strain 2.** c-b 8 minutes and b-a 7 minutes: the same spacings, run the other way from a different start.
+
+**(d) One map.** Strain 2's origin sits 3 minutes from c on the c-d side, pointing toward c. Different origins and directions, identical distances: one map, entered from different points, and enough Hfr strains close the circle. Never read an absolute minute as a gene's fixed "address" unless you know where that Hfr's origin sits.
+
+**Problem 3.** After an Hfr × F$^-$ mating, recipients carry donor genes, yet nearly all are still F$^-$ and none carries a donor plasmid.
+
+- **(a)** Where does transfer start, and where does the rest of F sit?
+- **(b)** Why do the recipients stay F$^-$?
+- **(c)** What must happen for the donor genes to be kept?
+- **(d)** How does an F$^+$ × F$^-$ mating differ?
+
+**(a) Inside F.** Transfer starts at oriT inside the integrated F, so only part of F leads; the rest is at the far end, behind the entire chromosome (about 100 minutes).
+
+**(b) Pairs break first.** Mating pairs break long before that, so the complete F almost never arrives and the recipient stays F$^-$.
+
+**(c) Recombination.** What does arrive is a linear chromosomal fragment with no origin of replication. It persists only if homologous recombination swaps it into the recipient chromosome.
+
+**(d) The F$^+$ contrast.** In F$^+$ × F$^-$ the whole plasmid crosses and recircularizes, so the recipient becomes F$^+$ but gains no chromosomal genes. F$^+$ donors transfer the plasmid and not the chromosome; Hfr donors transfer the chromosome and not the plasmid.`
     },
     {
       id: 'mg2-quiz1',
@@ -117,64 +167,23 @@ Lysogenic conversion, where the phage's OWN genes (such as toxin genes) change t
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Horizontal transfer makes bacterial ancestry a network, not a tree
-- Transformation: competent cells import one strand of naked DNA and recombine it in; high co-transformation = close markers; Griffith found the transforming principle, Avery-MacLeod-McCarty showed only DNase abolished it
-- Generalized transduction = lytic headful mispackaging, any gene, recipient survives; co-transduction frequency = closeness; specialized = imprecise prophage excision, flanking genes only
-- F$^+$ × F$^-$: single strand from oriT, both become F$^+$, chromosome rarely moves; Hfr = F integrated via insertion-sequence homology, genes enter in map order, recipient stays F$^-$
-- Interrupted mating: entry minutes = map distance (100-minute E. coli map); different Hfr strains overlay into a circle; genes near oriT also appear in more recombinants (gradient of transfer)
-- F′ = imprecisely excised F with chromosomal genes → merodiploid recipient; R plasmids move multidrug resistance in one step, across species
-- Discriminators: DNase kills only transformation; a cell-blocking filter kills only conjugation; a cell-free filtrate transfers by phage (or by DNA if DNase-sensitive)
+- **Transformation.** Competent cells take up naked DNA and recombine it in; Avery's DNase result showed the agent is DNA.
+- **Transduction.** Generalized moves any gene by headful mispackaging; specialized moves only genes flanking the prophage.
+- **Conjugation and Hfr.** F$^+$ makes F$^+$ recipients; an Hfr sends chromosome from oriT in map order, so entry minutes map genes.
+- **Telling them apart.** DNase stops only transformation, a filter only conjugation; transduction survives both (DNase-resistant, crosses filters).
+
+**Common traps**
+
+- **High co-transduction means co-expression.** It means both genes fit in one headful, so they are physically close.
+- **Hfr recipients turn F$^+$.** The pair breaks before the rest of F arrives, so Hfr recipients stay F$^-$.
+- **Minutes as fixed addresses.** Subtract entry times; a gene's entry minute depends on where that Hfr's origin sits.
+- **F′ recipient stays haploid.** It becomes a merodiploid for that region and an F′ donor.
 
 <!-- yield:low -->
-- Low-yield extras: artificial competence by calcium chloride plus heat shock or electroporation; lambda's gal/bio neighbors and the P1/P22 generalized transducers; relaxase and rolling-circle transfer
+**Low-yield extras**
+
+Artificial competence by calcium chloride plus heat shock or electroporation; lambda's gal/bio neighbors and the P1/P22 generalized transducers; relaxase and rolling-circle transfer.
 <!-- /yield -->`
-    },
-    {
-      id: 'mg2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Transfer and Mapping Experiments
-
-<details>
-<summary><b>Example 1: Turn interrupted-mating minutes into a map</b></summary>
-
-**Question:** An Hfr strain (streptomycin-sensitive, prototroph) is mated with an F$^-$ strain (streptomycin-resistant, auxotrophic for markers a, b, c and d). Samples are blended at intervals and plated on streptomycin medium lacking the relevant nutrient. Markers first appear at: a 5 min, b 12 min, c 20 min, d 32 min. A second Hfr strain transfers c first (3 min), then b (11 min), then a (18 min). Build the map.
-
-**Solution:**
-1. The plates do two jobs: streptomycin kills the donors (counterselection), and the missing nutrient lets only recombinants grow.
-2. Strain 1 gives the order a, b, c, d with spacings a-b 7, b-c 8, c-d 12 minutes.
-3. Strain 2 runs the other way from a different start: c-b 8 minutes and b-a 7 minutes, the same spacings. Its origin sits 3 minutes from c on the c-d side, pointing toward c.
-4. Different origins and directions, identical distances: one map, entered from different points. Data from enough Hfr strains close the circle.
-
-**MCAT Strategy:** Subtract entry times to get distances; never read the absolute minute as a gene's fixed "address" unless you know where that Hfr's origin sits.
-</details>
-
-<details>
-<summary><b>Example 2: Why the Hfr recipient stays F$^-$, and why the genes must recombine</b></summary>
-
-**Question:** After an Hfr × F$^-$ mating, recipients have donor genes, yet nearly all are still F$^-$ and none carries a donor plasmid. Explain both observations.
-
-**Solution:**
-1. Transfer starts at oriT inside the integrated F, so only part of F leads; the rest is at the far end, behind the entire chromosome (about 100 minutes).
-2. Mating pairs break long before that, so the complete F almost never arrives and the recipient stays F$^-$.
-3. What does arrive is a linear chromosomal fragment with no origin of replication. It persists only if homologous recombination swaps it into the recipient chromosome.
-4. Contrast: in F$^+$ × F$^-$ the whole plasmid crosses and recircularizes, so the recipient becomes F$^+$ but gains no chromosomal genes.
-
-**MCAT Strategy:** F$^+$ donors transfer the plasmid and not the chromosome; Hfr donors transfer the chromosome and not the plasmid.
-</details>
-
-<details>
-<summary><b>Example 3: Identify the mechanism from three controls</b></summary>
-
-**Question:** Strain A transfers a resistance gene to strain B in mixed culture. Results: (i) DNase in the medium has no effect; (ii) a U-tube filter separating A and B has no effect; (iii) a recipient mutant lacking the surface receptor of a phage that A carries receives nothing. Name the mechanism.
-
-**Solution:**
-1. No DNase effect rules out transformation.
-2. Transfer across the filter rules out conjugation, which needs contact.
-3. Losing transfer when the recipient cannot bind the phage ties transfer to phage infection: transduction.
-4. To decide generalized or specialized, ask which genes move: any marker, at low frequency (generalized), or only the genes beside the prophage site (specialized).
-
-**MCAT Strategy:** Run every transfer passage through the same three questions: Does DNase stop it? Does a filter stop it? Does it need a phage?
-</details>`
     }
   ]
 };

@@ -64,19 +64,41 @@ Passive immunity is immediate but temporary — transferred antibodies degrade o
       type: 'text' as const,
       content: `### Worked Example — Reading Titer Curves After Vaccination
 
-**Passage-style problem.** Researchers vaccinate volunteers with a novel protein antigen on day 0 and give a booster on day 60. Serum antibody titers specific to the antigen are measured weekly, distinguishing IgM from IgG. Results:
+**Problem 1.** Volunteers are vaccinated with a novel protein antigen on day 0, and specific IgM and IgG are measured weekly. Days 0-7 show no specific antibody. From days 10-21, IgM rises first and peaks near day 14; IgG rises later to a modest peak.
 
-- Days 0-7: no detectable specific antibody
-- Days 10-21: IgM rises first, peaks near day 14, then declines; IgG rises later to a modest peak
-- Days 60-67 (after the booster): IgG climbs within ~3-4 days to a level roughly 10-fold higher than the first peak and stays elevated for months; IgM rises only slightly
+- **(a)** Why is there no specific antibody for the first week?
+- **(b)** Why does IgM appear before IgG?
+- **(c)** Do the later IgG molecules bind the same epitope as the early IgM?
 
-**Question 1 — Why the 10-day silence after the first dose?** The volunteers' B-cell repertoires contained only rare clones matching this antigen. Clonal selection, T-dependent activation, and expansion into plasma cells take days — the primary-response lag.
+**(a) The primary lag.** The volunteers' B-cell repertoires contained only rare clones matching this antigen. Clonal selection, T-dependent activation and expansion into plasma cells take days.
 
-**Question 2 — Why is IgM first, then IgG?** Naive B cells secrete IgM by default. As helper-T cytokines drive class switching, the SAME variable regions are joined to gamma constant regions, so IgG specific for the antigen appears later. The specificity never changes — only the Fc effector stem.
+**(b) IgM first.** Naive B cells secrete IgM by default. Helper-T cytokines then drive class switching, joining the SAME variable regions to gamma constant regions, so antigen-specific IgG appears later.
 
-**Question 3 — Explain the booster response's speed, magnitude, and class.** Memory B cells generated during the primary response are more numerous than the original naive clones, already class-switched, and carry affinity-matured receptors. Hence the response is faster (days, not weeks), larger (about 10-fold), and predominantly high-affinity IgG — the fingerprint of a secondary response.
+**(c) Specificity.** Yes. Class switching swaps only the heavy-chain constant region and keeps the variable region, so the epitope is the same (somatic hypermutation only fine-tunes affinity).
 
-**Question 4 — A volunteer instead receives pre-formed antibody against the antigen on day 0 and is tested on day 120. Predict the titer.** Near zero. Passive antibody transfer provides immediate protection but decays with the IgG half-life (weeks) and generates NO memory cells, because the recipient's own B cells were never activated.`
+**Problem 2.** The volunteers from Problem 1 get a booster on day 60. Within about 3-4 days their IgG climbs to roughly 10-fold the first peak and stays elevated for months; IgM rises only slightly.
+
+- **(a)** Which cells respond to the booster, and how do they differ from the naive clones that met the first dose?
+- **(b)** Why is the response so much faster and larger?
+- **(c)** Why is it mostly IgG rather than IgM?
+
+**(a) Memory B cells.** The primary response left memory B cells that are more numerous than the original naive clones, already class-switched, and carrying affinity-matured receptors.
+
+**(b) Faster and larger.** It is a short expansion from a much larger starting pool: antibody appears within days, not weeks, and peaks about 10-fold higher.
+
+**(c) High-affinity IgG.** The memory cells switched to IgG and were affinity-matured during the primary response, so the booster yields mostly high-affinity IgG: the fingerprint of a secondary response.
+
+**Problem 3.** A different volunteer receives no vaccine. Instead he is given pre-formed IgG against the same antigen on day 0, and his specific titer is tested on day 120.
+
+- **(a)** Is he protected right after the injection?
+- **(b)** What will his specific titer be on day 120?
+- **(c)** Has he formed memory cells against the antigen?
+
+**(a) Immediate protection.** Yes. Passive antibody transfer protects at once, with no lag.
+
+**(b) Day 120.** Near zero. The transferred antibody decays with the IgG half-life of weeks.
+
+**(c) No memory.** No. His own B cells were never activated, so passive transfer generates NO memory cells.`
     },
     {
       id: 'imm3-quiz1',
@@ -99,11 +121,11 @@ Passive immunity is immediate but temporary — transferred antibodies degrade o
             explanation: `IgG is the ONLY isotype that crosses the placenta, giving the infant temporary natural passive immunity. IgM is a large pentamer that cannot cross, ruling out maternal IgM. The newborn has had no antigen exposure, so neither a secondary response nor active immunity is possible — and passive protection will fade over months as maternal IgG degrades.`
           },
           {
-            question: `During class switching, a B cell that switches from IgM to IgG production:`,
-            options: [`Changes its antigen specificity to bind new epitopes`, `Retains the same variable region and specificity`, `Replaces its light chains with additional heavy chains`, `Loses the ability to secrete antibody entirely`],
+            question: `A B-cell clone secreting IgM against a flu surface epitope class-switches to IgA. What does the new IgA bind, and where does it mainly act?`,
+            options: [`A new epitope picked during the switch, at mucosal surfaces`, `The same flu epitope, mainly at mucosal surfaces`, `The same flu epitope, mainly on mast cells as an allergy trigger`, `A new epitope picked during the switch, mainly in the serum`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Class switching swaps only the heavy-chain CONSTANT region; the variable region — and therefore specificity — is retained, so the same epitope is now attacked with IgG effector functions. Specificity changes would defeat the purpose; that is altered only in AFFINITY by somatic hypermutation, which fine-tunes rather than retargets. Light chains are never replaced by heavy chains, and switched cells secrete robustly.`
+            explanation: `Class switching swaps only the heavy-chain constant region, so the variable region and its flu epitope are kept; the new IgA constant region is what sends the antibody to mucosal surfaces such as the airway, saliva and gut. Both "new epitope" options are wrong because specificity never changes in a switch (somatic hypermutation only fine-tunes affinity), and the serum is dominated by IgG, not IgA. Arming mast cells is the role of IgE, not IgA.`
           },
           {
             question: `Antibodies contribute to pathogen clearance by all of the following EXCEPT:`,
@@ -113,11 +135,11 @@ Passive immunity is immediate but temporary — transferred antibodies degrade o
             explanation: `Antibodies never kill directly — they neutralize, opsonize, agglutinate, and trigger complement, leaving destruction to phagocytes and the MAC. Perforin is the weapon of cytotoxic T cells and NK cells, not a property of immunoglobulins. The other three options are the classic antibody effector functions.`
           },
           {
-            question: `Compared with the primary response to an antigen, the secondary response is characterized by:`,
-            options: [`A longer lag phase but higher peak titer`, `Predominantly IgM production at higher levels`, `Identical kinetics but different specificity`, `A shorter lag and higher titer of mostly IgG`],
+            question: `Serum antibody from an immunized volunteer is tested weekly for how tightly it binds the antigen. Over several weeks of the response, average binding strength steadily rises. What best explains this?`,
+            options: [`Class switching swaps in variable regions that bind more tightly`, `The antigen acts as a template that reshapes existing antibodies`, `IgM pentamers split into monomers that each bind more tightly`, `Mutated B-cell clones that bind more tightly outcompete the rest`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `Memory cells are abundant, pre-switched, and affinity-matured, so re-exposure yields antibody within days, at much higher titer, dominated by high-affinity IgG. The lag SHORTENS, not lengthens. IgM dominance is the primary-response signature, and specificity is preserved — the same epitopes are recognized, just better and faster.`
+            explanation: `This is affinity maturation: in germinal centers, activated B cells undergo somatic hypermutation of their variable-region genes, and clones whose receptors bind the antigen more tightly outcompete the rest, so average affinity climbs. Class switching changes the constant region and keeps the variable region, so it cannot raise affinity. Antigen never serves as a template for antibody shape, and IgM pentamers are not split into higher-affinity monomers; secreted IgM stays a pentamer.`
           }
         ]
       }
@@ -127,12 +149,17 @@ Passive immunity is immediate but temporary — transferred antibodies degrade o
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Antibody = 2 heavy + 2 light chains joined by disulfide bonds; Fab variable tips bind the epitope, the Fc constant stem sets class and effector function
-- Isotypes: IgM first responder (pentamer), IgG serum workhorse (crosses placenta), IgA mucosal dimer, IgE mast cells/allergy/parasites, IgD naive B-cell receptor
-- Antibodies tag, never kill: neutralization, opsonization, agglutination, classical complement activation
-- Class switching swaps the constant region (keeps specificity); affinity maturation via somatic hypermutation raises binding strength in germinal centers
-- Primary response: long lag, IgM-first, modest; secondary: fast, huge, high-affinity IgG — the basis of vaccination
-- Active immunity (infection, vaccination) builds memory; passive (maternal IgG/IgA, antivenom) is immediate but temporary with no memory; herd immunity protects the unvaccinated by breaking transmission`
+- **Antibody architecture.** Two heavy and two light chains; variable Fab tips bind the epitope, the constant Fc stem sets the class.
+- **Five isotypes.** IgM first (pentamer), IgG crosses the placenta, IgA guards mucosa, IgE arms mast cells, IgD marks naive B cells.
+- **Switching vs. maturation.** Class switching swaps the constant region and keeps specificity; somatic hypermutation raises affinity.
+- **Primary vs. secondary.** First exposure: long lag, IgM first, modest peak; re-exposure: days, far higher, high-affinity IgG.
+
+**Common traps**
+
+- **Antibodies that kill.** Antibodies neutralize, opsonize, agglutinate and trigger complement; perforin belongs to T and NK cells.
+- **Switching changes the target.** Class switching keeps the variable region, so the same epitope is bound with new effector functions.
+- **Maternal IgM in the newborn.** Only IgG crosses the placenta; the large IgM pentamer cannot.
+- **Passive immunity remembers.** Transferred antibody protects at once but fades over weeks and leaves no memory cells.`
     }
   ]
 };

@@ -62,16 +62,38 @@ Note the trap: a secondary oocyte is **haploid** even though each chromosome sti
       type: 'text' as const,
       content: `### Worked Example — Counting Cells and Chromatids in a Fertility Passage
 
-**Passage-style problem.** A researcher biopsies a seminiferous tubule and a fetal ovary. In the tubule she identifies a cell that has completed meiosis I but not meiosis II. In the ovary (from a fetus at 7 months gestation) she examines the most mature germ cells present. Human somatic cells have 46 chromosomes.
+**Problem 1.** A researcher biopsies a seminiferous tubule and finds a cell that has completed meiosis I but not meiosis II. Human somatic cells have 46 chromosomes.
 
-**Question 1 — Identify each cell, with chromosome and chromatid counts.**
-The testicular cell is a **secondary spermatocyte**: haploid, so **23 chromosomes**, each still composed of two sister chromatids → **46 chromatids** (n, 2c). The fetal ovarian cells are **primary oocytes arrested in prophase I**: mitotic proliferation of oogonia ends before birth, and every oocyte has already replicated its DNA → **46 chromosomes, 92 chromatids** (2n, 4c).
+- **(a)** What type of cell is this?
+- **(b)** How many chromosomes and chromatids does it contain?
+- **(c)** How many spermatids will it produce, and how many sperm does one primary spermatocyte yield?
 
-**Question 2 — How many functional gametes will each lineage yield?**
-The secondary spermatocyte completes meiosis II to give **2 spermatids** (its sibling gives the other 2, so one primary spermatocyte yields 4 sperm). The primary oocyte, if it is ever ovulated and fertilized, yields exactly **1 ovum**; the polar bodies receive half the chromosomes but almost no cytoplasm and degenerate.
+**(a) Cell type.** Meiosis I is finished and meiosis II is not, so this is a **secondary spermatocyte**.
 
-**Question 3 — The passage notes that men treated with drugs that raise scrotal temperature show reduced sperm counts. Why?**
-Spermatogenesis is temperature-sensitive and requires the scrotum's 2-4 degrees C below core temperature; warming impairs the meiotic and spermiogenic steps. Testosterone production by Leydig cells is far less temperature-sensitive, so such patients typically keep normal secondary sex characteristics — a classic dissociation the MCAT likes.`
+**(b) Counts.** Meiosis I separated the homologs, so the cell is haploid: **23 chromosomes**, each still composed of two sister chromatids → **46 chromatids** (n, 2c).
+
+**(c) Yield.** Meiosis II splits it into **2 spermatids**. Its sibling secondary spermatocyte gives the other 2, so one primary spermatocyte yields **4 sperm**.
+
+**Problem 2.** The researcher also examines the most mature germ cells present in the ovary of a fetus at 7 months gestation. Human somatic cells have 46 chromosomes.
+
+- **(a)** What are these cells, and at what stage are they arrested?
+- **(b)** How many chromosomes and chromatids does each one contain?
+- **(c)** If one is ever ovulated and fertilized, how many functional gametes will it yield?
+
+**(a) Cell type.** By 7 months the most mature germ cells have entered meiosis I and stalled there: these are **primary oocytes arrested in prophase I**.
+
+**(b) Counts.** Every primary oocyte has already replicated its DNA but has not yet separated its homologs: **46 chromosomes, 92 chromatids** (2n, 4c).
+
+**(c) Yield.** Exactly **1 ovum**. The polar bodies receive half the chromosomes but almost no cytoplasm, and they degenerate.
+
+**Problem 3.** Men treated with drugs that raise scrotal temperature show reduced sperm counts.
+
+- **(a)** Why does warming the scrotum lower the sperm count?
+- **(b)** What happens to these men's secondary sex characteristics, and why?
+
+**(a) Temperature-sensitive steps.** Spermatogenesis requires the scrotum's 2-4 degrees C below core temperature; warming impairs the meiotic and spermiogenic steps.
+
+**(b) Androgens spared.** Testosterone production by Leydig cells is far less temperature-sensitive, so these men typically keep normal secondary sex characteristics — a classic dissociation the MCAT likes.`
     },
     {
       id: 'rep1-quiz1',
@@ -87,11 +109,11 @@ Spermatogenesis is temperature-sensitive and requires the scrotum's 2-4 degrees 
             explanation: `Primary oocytes arrest in prophase I from fetal life; the LH surge drives completion of meiosis I, and the resulting secondary oocyte arrests in METAPHASE II. It stays there until fertilization triggers completion of meiosis II. Prophase I is the pre-ovulation arrest; anaphase I would mean meiosis I is still under way, and telophase II would mean meiosis II has nearly finished, which happens only after fertilization.`
           },
           {
-            question: `A cell in the seminiferous tubule is haploid but each of its chromosomes consists of two sister chromatids. This cell is a:`,
-            options: [`Secondary spermatocyte`, `Type B spermatogonium`, `Primary spermatocyte`, `Round spermatid`],
+            question: `In a species whose somatic cells have 2n = 8 chromosomes, which describes the DNA of a secondary spermatocyte?`,
+            options: [`4 chromosomes, each with two sister chromatids`, `8 chromosomes, each with two sister chromatids`, `4 chromosomes, each a single chromatid`, `8 chromosomes, each a single chromatid`],
             correctAnswer: 0,
             yield: 'HIGH',
-            explanation: `Meiosis I separates homologs, halving ploidy while leaving sister chromatids attached — that describes a secondary spermatocyte (n, 2c). A type B spermatogonium (the mitotic cell committed to meiosis) is still 2n2c, a primary spermatocyte is 2n4c, and a round spermatid is n1c after chromatids separate in meiosis II.`
+            explanation: `Meiosis I separates homologs, halving ploidy while leaving sister chromatids attached, so a secondary spermatocyte holds n = 4 chromosomes of two chromatids each, 8 chromatids in all (n, 2c). Eight chromosomes of two chromatids each is the primary spermatocyte (2n, 4c) before meiosis I. Four single-chromatid chromosomes is a spermatid, after meiosis II splits the sisters (n, 1c). Eight single-chromatid chromosomes is an unreplicated diploid cell such as a spermatogonium (2n, 2c).`
           },
           {
             question: `Which cell type directly synthesizes testosterone in response to LH?`,
@@ -101,11 +123,11 @@ Spermatogenesis is temperature-sensitive and requires the scrotum's 2-4 degrees 
             explanation: `Leydig (interstitial) cells carry LH receptors and make testosterone. Sertoli cells are the FSH targets that nurture sperm and secrete inhibin — swapping the two is the most common error. The pituitary makes LH itself, and spermatogonia are the stem cells being supported, not endocrine cells.`
           },
           {
-            question: `One primary oocyte that is ovulated and fertilized ultimately gives rise to how many functional gametes, and why?`,
-            options: [`Four, because meiosis yields four haploid products`, `One, because both divisions have unequal cytokinesis`, `Two, because each meiotic division yields one egg`, `One, because the other three products are diploid`],
+            question: `In oogenesis, each meiotic division gives one daughter cell almost all of the cytoplasm. What is the main consequence of this asymmetry?`,
+            options: [`Each polar body stays diploid and is later reabsorbed`, `One well-stocked ovum, with polar bodies that degenerate`, `Two functional eggs, one from each meiotic division`, `Four unequal eggs, all of which can be fertilized`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Both meiotic divisions in oogenesis are grossly asymmetric: the polar bodies receive chromosomes but almost no cytoplasm and degenerate, concentrating nutrients in one ovum. The "four products" logic applies to spermatogenesis, and neither division yields a separate egg — each sheds a polar body. The polar bodies are haploid, not diploid — they are discarded for cytoplasm, not ploidy.`
+            explanation: `Unequal cytokinesis concentrates the cytoplasm, and its nutrients, in a single ovum; the polar bodies receive a haploid set of chromosomes but almost no cytoplasm and degenerate. The polar bodies are haploid, not diploid — they are discarded for lack of cytoplasm, not for their ploidy. Neither division yields a second egg, since each sheds a polar body, and "four gametes" is the spermatogenesis count misapplied to the oocyte.`
           },
           {
             question: `The midpiece of a mature spermatozoon is densely packed with mitochondria. The most direct functional reason is:`,
@@ -122,14 +144,22 @@ Spermatogenesis is temperature-sensitive and requires the scrotum's 2-4 degrees 
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Spermatogenesis: continuous from puberty, about two months per cycle, 4 sperm per primary spermatocyte, in seminiferous tubules at below-core temperature
-- Sertoli cells (FSH target) nurse sperm and secrete inhibin; Leydig cells (LH target) make testosterone
-- Oogenesis arrests TWICE: prophase I from fetal life until ovulation, then metaphase II until fertilization — meiosis II finishes only if a sperm arrives
-- Unequal cytokinesis → 1 ovum + polar bodies; bookkeeping: primary cells are 2n4c, secondary cells n2c, final gametes n1c
-- Sperm design: acrosome (enzymes) on the head, mitochondria in the midpiece, flagellar tail
+- **Spermatogenesis.** Continuous from puberty in the seminiferous tubules, below core temperature; 4 sperm per primary spermatocyte.
+- **Sertoli vs. Leydig.** Sertoli cells (FSH target) nurse sperm and secrete inhibin; Leydig cells (LH target) make testosterone.
+- **Two oocyte arrests.** Prophase I from fetal life until ovulation, then metaphase II until a sperm triggers meiosis II.
+- **Chromatid bookkeeping.** Primary cells are 2n4c, secondary cells n2c, final gametes n1c.
+
+**Common traps**
+
+- **Haploid means one chromatid.** A secondary spermatocyte or oocyte is haploid yet still n2c; meiosis I is what halves ploidy.
+- **Four eggs per oocyte.** Unequal cytokinesis gives one ovum plus polar bodies; only spermatogenesis yields four gametes.
+- **Enzymes in the midpiece.** Penetration enzymes sit in the acrosome on the head; midpiece mitochondria power the flagellum.
+- **Heat lowers testosterone.** Scrotal warming impairs sperm production, but Leydig testosterone and virilization are spared.
 
 <!-- yield:low -->
-- Low-yield extras: one spermatogenic cycle takes about 64 days
+**Low-yield extras**
+
+- One spermatogenic cycle takes about 64 days.
 <!-- /yield -->`
     }
   ]

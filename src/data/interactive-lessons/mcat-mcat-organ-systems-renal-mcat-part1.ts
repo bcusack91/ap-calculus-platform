@@ -57,6 +57,51 @@ $$\\text{Excretion} = \\text{Filtration} - \\text{Reabsorption} + \\text{Secreti
 Every renal question is one of these four words. Reabsorption = tubule → blood; secretion = blood → tubule (a second chance to eliminate what filtration missed).`
     },
     {
+      id: 'ren1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Filtration Logic
+
+**Problem 1.** Blood pressure surges during exercise, and glomerular pressure rises with it. The kidney keeps GFR from surging.
+
+- **(a)** What does the first rise in GFR do to NaCl delivery to the distal nephron?
+- **(b)** Which structure senses that change, and what does it signal?
+- **(c)** How does GFR return to baseline, and which other mechanism helps?
+- **(d)** What are the sensor, the effector and the defended variable of this loop?
+
+**(a) More NaCl delivered.** Higher arterial pressure raises glomerular pressure, so GFR transiently rises and more NaCl reaches the distal nephron.
+
+**(b) Sensor and signal.** The **macula densa** senses the increased NaCl delivery and signals the **afferent arteriole to constrict** (a local paracrine signal).
+
+**(c) Back to baseline.** Inflow falls, glomerular pressure normalizes and GFR returns toward baseline. The myogenic stretch response of the afferent wall acts in the same direction, faster.
+
+**(d) Classify the loop.** Sensor = macula densa; effector = afferent arteriole; defended variable = GFR, with NaCl delivery as its proxy. It is a textbook negative-feedback loop.
+
+**Problem 2.** Plasma glucose is 90 mg/dL (0.9 mg/mL) and GFR is 125 mL/min.
+
+- **(a)** How much glucose is filtered per minute?
+- **(b)** How much glucose appears in normal urine?
+- **(c)** What would raise urine glucose above zero?
+
+**(a) Filtered load.** $GFR \\times P_{glucose} = 125 \\times 0.9 = 112.5 \\approx 113$ mg/min.
+
+**(b) Excretion.** Normal urine contains essentially **zero** glucose: the PCT reabsorbs the entire filtered load (Part 2 covers the transporters and their maximum). Excretion = filtration − reabsorption + secretion = 113 − 113 + 0 = 0 mg/min.
+
+**(c) The foreshadow.** A plasma glucose high enough that the filtered load exceeds the PCT's reabsorptive capacity: the excess spills into the urine, the glucosuria of diabetes mellitus.
+
+**Problem 3.** In a volume-depleted patient, prostaglandins dilate the afferent arteriole and angiotensin II preferentially constricts the efferent arteriole. The patient starts an NSAID (blocks prostaglandin synthesis) and an ACE inhibitor (blocks Ang II).
+
+- **(a)** Which arteriole does each drug affect, and in which direction?
+- **(b)** What happens to glomerular pressure and GFR with both drugs together?
+
+**(a) Mapping the drugs.** Volume depletion already lowers glomerular pressure, so both hormones are props holding GFR up. The NSAID removes prostaglandin dilation, so the afferent narrows and inflow falls; the ACE inhibitor removes Ang II constriction, so the efferent relaxes and the dam opens.
+
+**(b) GFR.** With both supports gone, glomerular pressure and **GFR fall sharply**, a risk of acute kidney injury. The method: map every drug or hormone onto WHICH arteriole it acts on, then read GFR off the two-arteriole table.
+
+<!-- yield:low -->
+- The macula densa's paracrine signal to the afferent arteriole is adenosine (derived from released ATP).
+<!-- /yield -->`
+    },
+    {
       id: 'ren1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Nephron & Filtration** 🎯`,
@@ -87,67 +132,26 @@ Every renal question is one of these four words. Reabsorption = tubule → blood
       }
     },
     {
-      id: 'ren1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Filtration Logic
-
-<details>
-<summary><b>Example 1: NSAIDs, angiotensin II, and the two arterioles</b></summary>
-
-**Question:** In volume-depleted patients, prostaglandins dilate the afferent arteriole while angiotensin II preferentially constricts the efferent arteriole. Predict what happens to GFR if such a patient takes an NSAID (blocks prostaglandin synthesis) plus an ACE inhibitor (blocks angiotensin II production).
-
-**Solution:**
-1. Volume depletion already lowers glomerular pressure; the two hormones are props holding GFR up: afferent dilation lets blood in, efferent constriction dams it back.
-2. NSAID → afferent prop removed → inflow falls. ACE inhibitor → efferent prop removed → the dam opens.
-3. Both supports gone → glomerular pressure and **GFR fall sharply** (acute kidney injury risk). ✓
-
-**Skill:** map every drug/hormone onto WHICH arteriole it acts on, then read GFR off the two-arteriole table.
-</details>
-
-<details>
-<summary><b>Example 2: Filtered load arithmetic</b></summary>
-
-**Question:** Plasma glucose is 90 mg/dL (0.9 mg/mL) and GFR is 125 mL/min. How much glucose is filtered per minute, and how much appears in normal urine?
-
-**Solution:**
-1. Filtered load = $GFR \\times P_{glucose} = 125 \\times 0.9 \\approx 113$ mg/min.
-2. Normal urine contains essentially **zero** glucose — the PCT reabsorbs the entire filtered load (Part 2 covers the transporters and their maximum).
-3. So excretion = filtration − reabsorption + secretion = 113 − 113 + 0 = 0 mg/min. ✓
-
-**Foreshadow:** when plasma glucose is high enough that filtered load exceeds reabsorptive capacity, glucose spills — diabetes mellitus.
-</details>
-
-<details>
-<summary><b>Example 3: Tubuloglomerular feedback as negative feedback</b></summary>
-
-**Question:** Blood pressure surges during exercise. Trace how the kidney keeps GFR from surging with it.
-
-**Solution:**
-1. Higher arterial pressure → higher glomerular pressure → GFR transiently rises → more NaCl reaches the distal nephron.
-2. The **macula densa** senses the increased NaCl delivery and signals the **afferent arteriole to constrict** (a local paracrine signal).
-3. Inflow falls, glomerular pressure normalizes, GFR returns toward baseline. The myogenic stretch response of the afferent wall acts in the same direction, faster. ✓
-
-**Classify:** sensor = macula densa; effector = afferent arteriole; variable defended = GFR (NaCl delivery as its proxy) — a textbook negative-feedback loop.
-</details>
-
-<!-- yield:low -->
-- The macula densa's paracrine signal to the afferent arteriole is adenosine (derived from released ATP).
-<!-- /yield -->`
-    },
-    {
       id: 'ren1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Kidney = volume, osmolarity, electrolytes, pH, nitrogen waste + EPO, renin, vitamin D activation.
-- Nephron order: glomerulus → PCT → descending → ascending → DCT → collecting duct; juxtamedullary nephrons (long loops + vasa recta) build the medullary gradient.
-- Portal circulation: afferent arteriole → glomerulus → efferent arteriole → peritubular capillaries — two adjustable resistors bracket the filter.
-- Filtration barrier (fenestrae, anionic basement membrane, podocytes) sieves by size AND charge; filtrate = protein-free plasma; GFR ≈ 125 mL/min (180 L/day), ~20% filtration fraction.
-- Constrict afferent → ↓GFR; constrict efferent → ↑GFR. Autoregulation = myogenic response + macula-densa tubuloglomerular feedback.
-- Excretion = filtration − reabsorption + secretion — the master ledger for everything that follows.
+- **Nephron order.** Glomerulus → PCT → descending → ascending limb → DCT → collecting duct; long loops build the gradient.
+- **Size-and-charge filter.** The barrier holds back cells and albumin; filtrate is protein-free plasma at ~125 mL/min.
+- **Two arterioles set GFR.** Constricting the afferent lowers GFR; constricting the efferent raises it; autoregulation tunes the afferent.
+- **The master ledger.** Excretion = filtration − reabsorption + secretion; every renal question is one of those four words.
+
+**Common traps**
+
+- **Efferent constriction lowers GFR.** Moderate efferent constriction dams blood in the glomerulus, so pressure and GFR rise.
+- **Glucose removed at the filter.** Filtrate carries glucose at plasma concentration; the PCT reclaims it later.
+- **Vasa recta as the connector.** The efferent arteriole links the two capillary beds; the vasa recta belong to the second bed.
+- **A size-only filter.** Albumin is held back by size AND charge; the anionic basement membrane repels it too.
 
 <!-- yield:low -->
-- Low-yield extras: the tubuloglomerular-feedback mediator from the macula densa is adenosine (from released ATP).
+**Low-yield extras**
+
+- The tubuloglomerular-feedback mediator from the macula densa is adenosine (from released ATP).
 <!-- /yield -->`
     }
   ]

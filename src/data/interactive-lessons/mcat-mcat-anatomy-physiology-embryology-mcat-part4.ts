@@ -14,8 +14,8 @@ export const mcatEmbryoPart4Data = {
 
 | Level | Can become | Examples |
 |-------|-----------|----------|
-| Totipotent | EVERYTHING — embryo AND extraembryonic tissue (trophoblast/placenta) | Zygote; the earliest blastomeres |
-| Pluripotent | Any cell of the embryo proper (all three germ layers) but **NOT trophoblast** | Inner cell mass; embryonic stem (ES) cells |
+| Totipotent | EVERYTHING — embryo AND extraembryonic tissue (trophoblast, the blastocyst's outer layer, which forms the placenta) | Zygote; the earliest blastomeres (cells of the first divisions) |
+| Pluripotent | Any cell of the embryo proper (all three germ layers) but **NOT trophoblast** | Inner cell mass (the blastocyst's inner cluster, which forms the embryo); embryonic stem (ES) cells |
 | Multipotent | A related family of cell types | Adult stem cells (hematopoietic stem cell → all blood lineages, nothing else) |
 
 **iPSCs** (induced pluripotent stem cells): adult somatic cells reprogrammed with transcription factors back to a pluripotent state — evidence that differentiation changes gene EXPRESSION, not gene content. The pluripotent/totipotent boundary is a favorite trap: ES cells cannot make placenta, so they are pluripotent, not totipotent.
@@ -25,15 +25,15 @@ export const mcatEmbryoPart4Data = {
 - **Determination**: the cell COMMITS to a fate. It is invisible — the cell still looks generic — and it precedes differentiation. Test for it experimentally: transplant the cell somewhere new; a determined cell develops according to its ORIGINAL fate regardless of surroundings.
 - **Differentiation**: the committed cell actually BUILDS the specialized phenotype — new proteins, new morphology (a myoblast making actin/myosin and fusing into a myotube).
 
-Order: specification (reversible bias) → determination (commitment) → differentiation (observable specialization).
+Order: specification (reversible bias; a specified tissue follows its fate when cultured alone, but a conflicting environment can still change it) → determination (commitment) → differentiation (observable specialization).
 
 ### Induction: Cells Telling Neighbors What to Become
 
-**Induction** is one tissue directing the developmental fate of an adjacent tissue, usually via secreted **paracrine** signals. Examples already met: the notochord inducing neural plate; the optic vesicle inducing the lens. The signal-sender is the **inducer**; the receiver must be **competent** (have the receptors) to respond.
+**Induction** is one tissue directing the developmental fate of an adjacent tissue, usually via secreted **paracrine** signals. Two classic examples: the **notochord** (a midline rod of mesoderm) induces the overlying ectoderm to form the neural plate, the start of the nervous system; the **optic vesicle** (an outgrowth of the brain) induces the overlying surface ectoderm to form the lens of the eye. The signal-sender is the **inducer**; the receiver must be **competent** (have the receptors) to respond.
 
 ### The Organizer — Logic of a Legendary Experiment
 
-Transplant the **dorsal lip of the blastopore** from a donor newt gastrula onto the OPPOSITE (ventral) side of a host embryo. Result: a **second, nearly complete body axis** — a conjoined twin — forms at the graft site. The decisive observation: the second axis is built mostly from **HOST cells**.
+A **gastrula** is an embryo undergoing gastrulation, the stage when cells move inward to form the three germ layers (ectoderm, mesoderm, endoderm). In amphibians they move in through the **blastopore**, an opening on the embryo's surface. Transplant the **dorsal lip of the blastopore** (its upper edge) from a donor newt gastrula onto the OPPOSITE (ventral) side of a host embryo. Result: a **second, nearly complete body axis** — a conjoined twin — forms at the graft site. The decisive observation: the second axis is built mostly from **HOST cells**.
 
 - If the graft had simply developed into its own fated structures, the second axis would be donor-derived — that would show only self-differentiation.
 - Because HOST cells were **recruited** and re-directed into neural tube and other axial structures, the graft must have been SIGNALING its neighbors: proof of **induction**. The dorsal lip was named the **organizer**.
@@ -44,7 +44,7 @@ Transplant the **dorsal lip of the blastopore** from a donor newt gastrula onto 
 
 ### Morphogens: Concentration Encodes Fate
 
-A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)** patterning the neural tube ventrally and the limb; **BMPs** patterning dorsally. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
+A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)**, secreted by the notochord and the neural tube's ventral floor plate, patterns the tube's ventral side (Shh also patterns the limb); **BMPs** from the overlying surface ectoderm pattern its dorsal side. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
 
 <!-- yield:low -->
 - This threshold picture is nicknamed the **"French flag" model**: one gradient read as three stripes.
@@ -63,7 +63,7 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
 
 ### Regulative vs. Mosaic Development — Closing the Loop
 
-- **Regulative** development (indeterminate cleavage, e.g., mammals): early cells can compensate — remove a blastomere and the rest regulate to form a whole embryo; split the embryo and get **monozygotic twins**. Fates are assigned largely by SIGNALING (conditional specification).
+- **Regulative** development (indeterminate cleavage, in which early blastomeres are not yet committed, e.g., mammals): early cells can compensate — remove a blastomere and the rest regulate to form a whole embryo; split the embryo and get **monozygotic twins**. Fates are assigned largely by SIGNALING (conditional specification).
 - **Mosaic** development (determinate cleavage, e.g., tunicates): fates are fixed early by localized cytoplasmic determinants; remove a blastomere and its structures are simply MISSING. No twinning by splitting.`
     },
     {
@@ -71,22 +71,29 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
       type: 'text' as const,
       content: `### Worked Example — Interpreting a Transplantation Table
 
-**Passage-style problem.** In an amphibian, region X of the early gastrula normally becomes epidermis, and region Y normally becomes neural tissue. Researchers perform reciprocal transplants at two stages and record the graft's ultimate fate:
+**Problem 1.** In an amphibian gastrula, region X normally becomes epidermis and region Y neural tissue. Grafted into Y territory, X from an EARLY gastrula becomes neural tissue (Experiment 1); X from a LATE gastrula becomes epidermis (Experiment 2).
 
-| Experiment | Donor tissue (stage) | Host site | Graft becomes |
-|-----------|---------------------|-----------|---------------|
-| 1 | X, EARLY gastrula | Y territory | Neural tissue |
-| 2 | X, LATE gastrula | Y territory | Epidermis |
-| 3 | Y, LATE gastrula | X territory | Neural tissue |
-| 4 | X, late gastrula, cultured ALONE in neutral medium | — | Epidermis |
+- **(a)** Was region X determined at the early stage?
+- **(b)** Was region X determined at the late stage?
+- **(c)** What changed X between the two stages, and what most likely caused it?
 
-**Question 1 — Was region X determined at the early stage?** No. In Experiment 1, early X adopted the fate of its new surroundings (neural), so its fate was still conditional — the host environment re-specified it. A determined tissue ignores its surroundings.
+**(a) Early X.** No. In Experiment 1, early X adopted the fate of its new surroundings (neural), so its fate was still conditional: the host environment re-specified it. A determined tissue ignores its surroundings.
 
-**Question 2 — What changed by the late stage?** In Experiment 2, late X kept making epidermis even inside neural territory, and in Experiment 4 it made epidermis with no neighbors at all. Between early and late gastrula, X became **determined**: its fate is now autonomous (cell-intrinsic), not dependent on external signals.
+**(b) Late X.** Yes. In Experiment 2, late X kept making epidermis even inside neural territory, so its fate no longer depended on where it sat.
 
-**Question 3 — What does Experiment 3 add?** Late Y also ignores its new location — it is determined too. Determination happened tissue-wide during gastrulation, consistent with inductive signals (from structures like the organizer and notochord) acting DURING gastrulation and committing cells by its end.
+**(c) What changed.** Signals exchanged during gastrulation. Neural inducers from the organizer and notochord, acting near Y, re-specified early X in Experiment 1; ectoderm outside their reach is fixed as epidermis by the end of gastrulation.
 
-**Question 4 — Which experiment distinguishes induced from autonomous behavior most cleanly?** Experiment 4: culturing the tissue in ISOLATION removes all inducers. If a tissue executes a fate alone, that fate is autonomous (determination already occurred). If it stalls or defaults to something else, ongoing signals were still required. This isolate-it control is the standard MCAT move for separating "committed" from "still listening."`
+**Problem 2.** In the same embryos (X normally epidermis, Y normally neural), Y from a LATE gastrula grafted into X territory still becomes neural tissue (Experiment 3). Late-gastrula X cultured ALONE in neutral medium becomes epidermis (Experiment 4).
+
+- **(a)** What does Experiment 3 show about region Y?
+- **(b)** What does Experiment 4 add to Experiment 2?
+- **(c)** What would it mean if an isolated tissue stalled or switched to another fate?
+
+**(a) Region Y.** Late Y also ignores its new location, so it is determined too. Determination happened tissue-wide during gastrulation, not in X alone.
+
+**(b) What isolation adds.** Isolation removes every inducer, so it asks whether X's fate needs any outside signal at all. The graft (Experiment 2) asked the stronger question: does the fate resist conflicting signals? Late X passes both.
+
+**(c) The other outcome.** The tissue would be not yet even specified: it still needed outside signals. Isolation tests specification; only a conflicting graft tests determination.`
     },
     {
       id: 'emb4-quiz1',
@@ -137,16 +144,22 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Potency narrows: totipotent (zygote/early blastomeres — can make trophoblast) → pluripotent (ICM/ES cells — three germ layers only) → multipotent (adult stem cells); iPSCs = somatic cells reprogrammed to pluripotency
-- Determination = invisible commitment, tested by transplantation; differentiation = the visible build-out; determination always comes first
-- Induction = one tissue directing a competent neighbor's fate via paracrine signals (notochord → neural plate; optic vesicle → lens)
-- Organizer graft: dorsal-lip graft creates a second axis made of HOST cells → the organizer INDUCES; a donor-only axis would have meant mere self-differentiation
-- Morphogens encode multiple fates in one gradient via concentration thresholds (Shh, BMP at name level)
-- Toolbox: transplant → commitment/induction; ablation → necessity; lineage tracing → fate (never potency); knockout → gene necessity
-- Regulative development (indeterminate cleavage, mammals) permits compensation and monozygotic twinning; mosaic development (determinate cleavage) loses whatever a removed blastomere would have made
+- **Potency only narrows.** Totipotent cells also make trophoblast; pluripotent ICM/ES cells make all three germ layers; multipotent, one family.
+- **Determination, then differentiation.** Commitment is invisible and tested by transplant; differentiation is the visible build-out that follows.
+- **Induction needs a competent responder.** A signal redirects only neighbors able to respond; the organizer's host-built second axis proves induction.
+- **Morphogens set fate by dose.** One gradient read at several concentration thresholds specifies several fates (Shh, BMP).
+
+**Common traps**
+
+- **ES cells as totipotent.** ES cells cannot make trophoblast (placenta), so they are pluripotent, not totipotent.
+- **Lineage tracing shows potency.** Tracing reveals only a cell's normal fate; potency needs a challenge, such as a transplant.
+- **Ablation proves sufficiency.** Removing a tissue shows it is necessary for a structure, never that it is sufficient.
+- **Mosaic embryos compensating.** Mosaic embryos lose a removed blastomere's structures; regulative ones compensate and can twin.
 
 <!-- yield:low -->
-- Low-yield extras: the organizer experiment's eponym (Spemann-Mangold, 1924; the "Spemann organizer"); the "French flag" nickname for threshold-based morphogen patterning
+**Low-yield extras**
+
+- The organizer experiment's eponym (Spemann-Mangold, 1924; the "Spemann organizer"); the "French flag" nickname for threshold-based morphogen patterning.
 <!-- /yield -->`
     }
   ]

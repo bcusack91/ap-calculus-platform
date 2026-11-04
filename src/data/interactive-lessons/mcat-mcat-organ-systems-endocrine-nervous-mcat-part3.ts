@@ -57,6 +57,53 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
 - **Prolactin:** milk **production** (oxytocin handles ejection); unusual control — hypothalamic **dopamine tonically inhibits** it, so cutting the pituitary stalk RAISES prolactin while every other anterior hormone falls.`
     },
     {
+      id: 'endn3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Systems Under Load
+
+**Problem 1.** An untreated type 1 diabetic has a blood glucose of 500 mg/dL, yet is losing weight and producing ketones.
+
+- **(a)** Why do muscle and fat cells starve while glucose stays high in the blood?
+- **(b)** What does unopposed glucagon do in the liver?
+- **(c)** How does the patient's breathing change, and why?
+- **(d)** Why is the patient losing weight?
+
+**(a) No GLUT4.** Without insulin, muscle and fat cannot insert GLUT4, so glucose stays in blood and the cells run a fasting program despite hyperglycemia.
+
+**(b) Unopposed glucagon.** The liver adds MORE glucose (gluconeogenesis) and shunts liberated fatty acids to **ketone bodies**, producing ketoacidosis, a metabolic acidosis.
+
+**(c) Kussmaul breathing.** The ketoacidosis from (b) drives deep, rapid breaths that blow off CO$_2$ to partially compensate.
+
+**(d) Weight loss.** Fat and muscle are being catabolized, and glucose above the renal $T_m$ spills into urine, wasting calories and water. One hormone's absence links four organ systems, the MCAT's favorite kind of question.
+
+**Problem 2.** A pituitary tumor destroys the TSH-secreting cells.
+
+- **(a)** What happens to TSH and T4?
+- **(b)** What happens to hypothalamic TRH?
+- **(c)** Does a goiter form?
+- **(d)** How do these labs differ from those of primary hypothyroidism?
+
+**(a) TSH and T4.** TSH falls because its source is destroyed, so the understimulated thyroid makes less hormone: **T4 low**.
+
+**(b) TRH.** Low T4 removes feedback at the hypothalamus, so **TRH is high**, but the pituitary cannot answer.
+
+**(c) Gland size.** With TSH low there is no trophic drive, so the gland **shrinks**; no goiter forms.
+
+**(d) The secondary signature.** In a SECONDARY (central) disorder the final hormone and its pituitary tropic hormone are low TOGETHER. Primary hypothyroidism shows low T4 with HIGH TSH.
+
+**Problem 3.** Rats exposed to a sudden stressor show a faster heart rate within seconds and a rise in blood glucose in two phases: immediate and sustained (hours).
+
+- **(a)** What produces the immediate phase?
+- **(b)** What produces the sustained phase?
+- **(c)** Which phase does blocking ACTH abolish, and which does ganglionic blockade abolish?
+
+**(a) Seconds.** Sympathetic nerves plus adrenal **medulla** epinephrine: beta-1 cardiac acceleration and instant glycogenolysis (GPCR/cAMP speed).
+
+**(b) Hours.** CRH → ACTH → adrenal **cortex** cortisol: transcription-level induction of gluconeogenic enzymes (steroid/nuclear-receptor speed).
+
+**(c) Double dissociation.** Blocking ACTH abolishes only the sustained phase; ganglionic blockade abolishes only the immediate one. Passages love this clean double dissociation.`
+    },
+    {
       id: 'endn3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Hormone Systems** 🎯`,
@@ -87,59 +134,26 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
       }
     },
     {
-      id: 'endn3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Systems Under Load
-
-<details>
-<summary><b>Example 1: Type 1 diabetes as "starvation amid plenty"</b></summary>
-
-**Question:** An untreated type 1 diabetic has glucose of 500 mg/dL yet is losing weight and producing ketones. Reconcile.
-
-**Solution:**
-1. No insulin → muscle and fat cannot insert GLUT4 → glucose stays in blood; cells run a fasting program despite hyperglycemia.
-2. Unopposed glucagon: liver adds MORE glucose (gluconeogenesis) and shunts liberated fatty acids to **ketone bodies** → ketoacidosis (metabolic acidosis → Kussmaul breathing: deep, rapid breaths that blow off CO$_2$ to partially compensate).
-3. Weight loss: fat and muscle are being catabolized, and glucose above the renal $T_m$ spills into urine, wasting calories and water (renal lesson). ✓
-
-**Integration note:** one hormone's absence links four organ systems — the MCAT's favorite kind of question.
-</details>
-
-<details>
-<summary><b>Example 2: Predict labs in secondary hypothyroidism</b></summary>
-
-**Question:** A pituitary tumor destroys TSH-secreting cells. Predict T4, TSH, TRH, and whether a goiter forms.
-
-**Solution:**
-1. TSH falls (source destroyed) → thyroid understimulated → **T4 low**.
-2. Low T4 removes feedback at the hypothalamus → **TRH high** (but the pituitary cannot answer).
-3. TSH is low → no trophic drive → the gland **shrinks**; no goiter. ✓
-4. Signature of a SECONDARY (central) disorder: final hormone and its pituitary tropic hormone are low TOGETHER. Compare primary hypothyroidism: low T4 with HIGH TSH and possible goiter.
-</details>
-
-<details>
-<summary><b>Example 3: The two-wave stress response, experimentally</b></summary>
-
-**Question:** Rats exposed to a sudden stressor show elevated heart rate within seconds and elevated blood glucose in two phases — immediate and sustained (hours). Attribute each phase.
-
-**Solution:**
-1. Seconds: sympathetic nerves + adrenal **medulla** epinephrine — beta-1 cardiac acceleration and instant glycogenolysis (GPCR/cAMP speed).
-2. Hours: CRH → ACTH → adrenal **cortex** cortisol — transcription-level induction of gluconeogenic enzymes (steroid/nuclear-receptor speed).
-3. Blocking ACTH abolishes only the sustained phase; ganglionic blockade abolishes only the immediate one — a clean double dissociation passages love. ✓
-</details>`
-    },
-    {
       id: 'endn3-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Insulin stores (RTK, GLUT4); glucagon + epinephrine + cortisol + GH mobilize. Brain is insulin-independent. Type 1 = no insulin; Type 2 = resistance; unopposed mobilization → ketoacidosis.
-- Thyroid: TRH → TSH → T4/T3 (nuclear receptors) sets metabolic rate and enables CNS development; iodine deficiency → low T4, high TSH, goiter. Feedback explains gland size.
-- Calcium: PTH (bone resorption, renal reabsorption, vitamin D activation) defends low Ca²⁺; calcitonin is a minor brake. No PTH → hypocalcemic tetany.
-- Adrenal: cortex = aldosterone (RAAS-run), cortisol (HPA, long-term stress, immunosuppression), androgens; medulla = epinephrine (seconds). Stress = two waves, two mechanisms, two timescales.
-- GH acts via IGF-1 (gigantism vs. acromegaly by growth-plate status); prolactin is dopamine-inhibited — stalk section raises it uniquely.
+- **Insulin versus four.** Insulin stores via GLUT4; glucagon, epinephrine, cortisol, GH mobilize. Type 1: no insulin (DKA); type 2: resistance.
+- **Thyroid sets the pace.** T3/T4 act on nuclear receptors to raise metabolic rate and are essential for CNS development.
+- **PTH defends calcium.** PTH raises plasma Ca²⁺ through bone resorption, renal reabsorption and vitamin D activation.
+- **Adrenal: two organs.** The cortex makes aldosterone (RAAS) and cortisol (HPA); the medulla releases epinephrine in seconds.
+
+**Common traps**
+
+- **Brain needs insulin.** The brain and liver take up glucose without insulin, which is why hypoglycemia is a neural emergency.
+- **Every hypothyroid gland shrinking.** In primary (e.g. iodine-deficient) hypothyroidism TSH climbs and the gland enlarges into a goiter; central causes shrink it.
+- **Overrating calcitonin.** Calcitonin is a minor brake in adults; losing the parathyroids is what causes hypocalcemic tetany.
+- **Stalk section lowers prolactin.** Dopamine tonically inhibits prolactin, so cutting the stalk raises it while other anterior hormones fall.
 
 <!-- yield:low -->
-- Low-yield extras: the main adrenal androgen is DHEA
+**Low-yield extras**
+
+- The main adrenal androgen is DHEA.
 <!-- /yield -->`
     }
   ]

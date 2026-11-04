@@ -52,6 +52,26 @@ $$v = \\frac{V_{max}[S]}{K_m + [S]}$$
 - A charged solute can be at equilibrium with unequal concentrations if the membrane potential balances the chemical gradient — the reason K$^+$ stays concentrated inside cells near the resting potential`
     },
     {
+      id: 'mt2-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Predicting Water Movement from Tonicity
+
+**Problem.** Red blood cells (cytosol about 300 mOsm) go into three beakers: 150 mM NaCl; 150 mM NaCl + 100 mM urea; and 100 mM NaCl + 200 mM urea. The membrane is impermeable to NaCl but permeable to urea.
+
+- **(a)** What is the osmolarity of each solution?
+- **(b)** What happens to the cells in 150 mM NaCl?
+- **(c)** What happens to the cells in 150 mM NaCl + 100 mM urea?
+- **(d)** What happens to the cells in 100 mM NaCl + 200 mM urea?
+
+**(a) Count particles.** NaCl gives two particles ($i \\approx 2$) and urea one ($i = 1$): 150 mM NaCl ≈ 300 mOsm, 150 mM NaCl + 100 mM urea ≈ 400 mOsm, and 100 mM NaCl + 200 mM urea ≈ 400 mOsm.
+
+**(b) Isotonic.** About 300 mOsm of impermeant solute matches the cytosol, so there is no net water movement and the cells keep their normal shape.
+
+**(c) Hyperosmotic yet isotonic.** Urea crosses the membrane and equilibrates, so only the 300 mOsm from NaCl counts toward tonicity. Once the urea equilibrates the solution is isotonic, and the cells show no lasting change in volume.
+
+**(d) Hyperosmotic yet hypotonic.** Only the 200 mOsm from NaCl is impermeant, less than the cytosol's 300 mOsm, so water moves in and the cells swell and can lyse. Osmolarity alone (400 mOsm) would wrongly predict shrinking.`
+    },
+    {
       id: 'mt2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Passive Transport** 🎯`,
@@ -141,16 +161,22 @@ These gradients (built by pumps — Part 3) are potential energy: they power sec
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Passive transport moves solutes down electrochemical gradients without ATP: simple diffusion, channels, carriers
-- Carriers saturate (Michaelis-Menten-like kinetics) and show competitive inhibition; simple diffusion is linear and non-saturable
-- GLUT1 = basal uptake; GLUT4 = insulin-triggered vesicle insertion (muscle/adipose); GLUT2 = high-$K_m$ glucose sensor (liver, beta cells)
-- Osmosis: water toward higher impermeant-solute concentration; tonicity ≠ osmolarity (permeant solutes like urea don't count)
-- $\\Pi = iMRT$: count particles (NaCl ≈ 2, glucose = 1)
-- Aquaporin-2 insertion is ADH-regulated — the basis of diabetes insipidus reasoning
-- Ion gradients (high Na$^+$ out, high K$^+$ in, very low intracellular Ca$^{2+}$) are stored energy for transport and signaling
+- **Passive transport, three modes.** Simple diffusion, channels and carriers all move solutes down gradients with no ATP.
+- **Carriers saturate.** Carrier flux plateaus at $V_{max}$ and analogs compete; simple diffusion stays linear.
+- **Tonicity counts impermeant solutes.** Water moves toward more impermeant solute; $\\Pi = iMRT$ counts particles (NaCl ≈ 2).
+- **Hormones add transporters.** Insulin inserts GLUT4 and ADH inserts aquaporin-2, raising capacity by adding copies.
+
+**Common traps**
+
+- **Iso-osmotic means isotonic.** Urea permeates, so an iso-osmotic urea solution is functionally hypotonic and cells swell.
+- **Bigger solutes, more pressure.** Osmotic pressure is colligative: 150 mM NaCl ≈ 300 mM glucose, since NaCl gives two particles.
+- **Insulin makes GLUT4 active.** GLUT4 stays a passive carrier; insulin only inserts more copies from intracellular vesicles.
+- **Unequal means not at equilibrium.** An ion can sit at equilibrium with unequal concentrations if the voltage balances it.
 
 <!-- yield:low -->
-- Low-yield extras: turnover numbers — channels about $10^6$-$10^8$ ions/s, carriers about $10^2$-$10^4$ molecules/s
+**Low-yield extras**
+
+- Turnover numbers — channels about $10^6$-$10^8$ ions/s, carriers about $10^2$-$10^4$ molecules/s
 <!-- /yield -->`
     }
   ]

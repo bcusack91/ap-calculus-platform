@@ -122,6 +122,26 @@ Temperature-sensitive **cdc** (cell division cycle) yeast mutants arrest at a *u
 <!-- /yield -->`
     },
     {
+      id: 'cc2-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Predicting a Checkpoint Mutant
+
+**Problem.** A cell line carries a mutant Cdc25 that still removes CDK1's inhibitory phosphates but can no longer be inhibited by the damage-activated checkpoint kinases. Separate cultures are irradiated in G$_1$ or in G$_2$.
+
+- **(a)** Do the G$_1$-irradiated cells still arrest, and through which pathway?
+- **(b)** In the cells irradiated in G$_2$, does cyclin B still accumulate?
+- **(c)** Do the G$_2$-irradiated cells hold at the G$_2$/M border or enter mitosis, and why?
+- **(d)** What does the pair of results show about the two damage checkpoints?
+
+**(a) G$_1$ damage.** Yes. The G$_1$ arrest does not run through Cdc25: damage stabilizes p53, which induces p21, and p21 inhibits the G$_1$/S CDKs, so Rb stays hypophosphorylated and E2F stays silent.
+
+**(b) Cyclin B.** Yes. Cyclin levels are set by synthesis and ubiquitin-mediated destruction, and the mutation touches neither; it changes only the control of CDK1's inhibitory phosphates.
+
+**(c) G$_2$ damage.** With cyclin B present (b), they enter mitosis. Checkpoint kinases normally block mitosis by inhibiting Cdc25. This Cdc25 ignores them and keeps removing CDK1's inhibitory phosphates, so cyclin B-CDK1 (MPF) switches on with the damage unrepaired.
+
+**(d) Separate gates.** The G$_1$/S arrest runs through p53 and p21, the G$_2$/M arrest through Cdc25, so one mutation can break the second gate while sparing the first.`
+    },
+    {
       id: 'cc2-quiz2',
       type: 'multiple-choice' as const,
       content: `**Checkpoint Machinery** 🎯`,
@@ -149,16 +169,22 @@ Temperature-sensitive **cdc** (cell division cycle) yeast mutants arrest at a *u
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- CDK levels constant, cyclin levels oscillate; cyclin binding (plus phosphatase Cdc25 removing inhibitory phosphates) switches kinase activity on; ubiquitin-proteasome destruction of cyclins makes transitions irreversible
-- Pairs to know: cyclin D-CDK4/6 (G$_1$, growth-factor input), cyclin E-CDK2 (restriction point), cyclin A-CDK2 (S), cyclin B-CDK1 = MPF (M)
-- Restriction point = Rb-E2F: Rb phosphorylation releases E2F → S-phase genes; positive feedback makes commitment all-or-none; virtually all cancers break this brake
-- CDK inhibitors enforce arrest: p21 (p53-induced, G$_1$ damage arrest), p16 (blocks CDK4/6); G$_2$/M arrest works by inhibiting Cdc25
-- APC/C at anaphase: degrades securin (freeing separase to cut cohesin) and cyclin B (ending mitosis)
-- Spindle checkpoint: one unattached kinetochore inhibits APC/C — the anti-aneuploidy gate
-- Licensing (helicase loading only at low CDK) explains once-per-cycle replication and the fusion-experiment results; cdc mutants map genes by uniform arrest stage
+- **Cyclins set the clock.** CDKs stay constant while cyclins D, E, A, B oscillate; proteasomal cyclin destruction makes each transition one-way.
+- **Rb-E2F is the brake.** Phosphorylated Rb releases E2F to transcribe S-phase genes; feedback makes commitment all-or-none.
+- **Inhibitors enforce arrest.** p53-induced p21 blocks the G$_1$/S CDKs; p16 blocks CDK4/6; G$_2$/M arrest shuts off Cdc25.
+- **APC/C ends mitosis.** Once every kinetochore is attached, APC/C destroys securin (separase cuts cohesin) and cyclin B.
+
+**Common traps**
+
+- **Rising CDK levels.** CDK protein stays constant; activity tracks cyclin binding plus Cdc25 removing inhibitory phosphates.
+- **Mitogens needed throughout.** Past the restriction point, the cycle runs to completion even without growth factors.
+- **Re-replicating a G$_2$ nucleus.** Activators cannot re-fire spent origins; licensing happens only at low CDK activity, in G$_1$.
+- **Most kinetochores suffice.** A single unattached kinetochore keeps APC/C off and holds the whole cell before anaphase.
 
 <!-- yield:low -->
-- Low-yield extras: ATM/ATR are the damage-sensing kinases and Chk1/Chk2 their effectors; p16 = INK4a; the spindle-checkpoint wait signal comes from Mad/Bub proteins; ORC, Cdc6 and Cdt1 load the MCM helicase at licensing; the discoverers (Rao and Johnson, Masui, Nurse, Hunt, Hartwell)
+**Low-yield extras**
+
+- ATM/ATR are the damage-sensing kinases and Chk1/Chk2 their effectors; p16 = INK4a; the spindle-checkpoint wait signal comes from Mad/Bub proteins; ORC, Cdc6 and Cdt1 load the MCM helicase at licensing; the discoverers (Rao and Johnson, Masui, Nurse, Hunt, Hartwell)
 <!-- /yield -->`
     }
   ]

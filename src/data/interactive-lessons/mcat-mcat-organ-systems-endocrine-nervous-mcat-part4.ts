@@ -66,16 +66,47 @@ A cell with no receptor is deaf to a hormone no matter the plasma level — rece
 | 3 | Low | High | (not performed) |
 | 4 | High | High | Not suppressed |
 
-**Step 1 — pair the hormones before touching the third column.**
-- Patient 1 and 4: cortisol and ACTH BOTH high → the drive is coming from ACTH (secondary hyperfunction — pituitary source or ectopic ACTH).
-- Patient 2: high cortisol with SUPPRESSED ACTH → the pituitary is behaving (feedback intact there); the cortisol source ignores ACTH → primary adrenal autonomy (adrenal tumor) or exogenous glucocorticoid.
-- Patient 3: low cortisol, high ACTH → pituitary is shouting at a gland that cannot answer → primary adrenal failure.
+**Problem 1.** Patients 1 and 4 both have high cortisol and high ACTH. After high-dose dexamethasone, Patient 1's cortisol is suppressed and Patient 4's is not.
 
-**Step 2 — use dexamethasone to separate the two "both high" patients.** A pituitary ACTH tumor usually RETAINS partial feedback sensitivity — high-dose dexamethasone suppresses it (Patient 1). An ECTOPIC ACTH source (e.g., a lung tumor secreting ACTH) has no hypothalamic-pituitary machinery to inhibit — no suppression (Patient 4). Patient 2's non-suppression is expected: her ACTH is already floored; the adrenal source never listened to ACTH in the first place.
+- **(a)** What does the cortisol–ACTH pair say about where the drive comes from?
+- **(b)** Which patient's source still obeys feedback, and what kind of source is it?
+- **(c)** What kind of source fits the patient whose cortisol is not suppressed?
+- **(d)** Are these two patients' adrenal cortices enlarged or shrunken?
 
-**Step 3 — anticipate the anatomy question.** Which patients have ENLARGED adrenal cortices? Patients 1 and 4 — chronic ACTH is trophic. If Patient 2 has a one-sided adrenal tumor, the OTHER adrenal ATROPHIES (its ACTH support is suppressed), a favorite trap: high cortisol with a shrunken gland on one side.
+**(a) Pair the hormones first.** Cortisol and ACTH are BOTH high, so the drive is coming from ACTH: secondary hyperfunction, from a pituitary source or ectopic ACTH. An intact pituitary would have suppressed ACTH.
 
-**The transferable strategy:** in any endocrine data table, (1) pair final + tropic hormone to localize, (2) treat suppression/stimulation rows as feedback probes, (3) predict gland size from chronic tropic exposure. The hormone names change; this algorithm does not.`
+**(b) Patient 1.** A pituitary ACTH tumor usually RETAINS partial feedback sensitivity, so high-dose dexamethasone suppresses it.
+
+**(c) Patient 4.** An ECTOPIC ACTH source (e.g., a lung tumor secreting ACTH) has no hypothalamic-pituitary machinery to inhibit, so there is no suppression.
+
+**(d) Gland size.** Both have ENLARGED adrenal cortices, because chronic ACTH is trophic.
+
+**Problem 2.** Patient 2 has high cortisol with low ACTH, and her cortisol is not suppressed by dexamethasone.
+
+- **(a)** Is feedback working at her pituitary?
+- **(b)** Where could her cortisol be coming from?
+- **(c)** Why is her failure to suppress expected?
+- **(d)** What happens to each adrenal gland under each source you named in (b)?
+
+**(a) The pituitary.** Yes. High cortisol with SUPPRESSED ACTH means the pituitary is behaving: feedback is intact there.
+
+**(b) The source.** It ignores ACTH: primary adrenal autonomy (an adrenal tumor) or exogenous cortisol (hydrocortisone).
+
+**(c) Non-suppression.** Her ACTH is already floored, and the source never listened to ACTH in the first place, so dexamethasone has nothing left to turn off.
+
+**(d) The adrenals.** A one-sided tumor enlarges its own side, while the OTHER adrenal ATROPHIES because its ACTH support is suppressed: a favorite trap, high cortisol with a shrunken gland on one side. Exogenous cortisol leaves no ACTH for either gland, so both atrophy.
+
+**Problem 3.** Patient 3 has low cortisol with high ACTH; no dexamethasone test was performed.
+
+- **(a)** Where is the lesion, and what is the disorder called?
+- **(b)** Which kind of test, stimulation or suppression, fits her disorder, and what result would you expect?
+- **(c)** What three steps read any endocrine data table like this one?
+
+**(a) Primary adrenal failure.** The pituitary is shouting at a gland that cannot answer, so the lesion is the adrenal itself: primary hypofunction.
+
+**(b) A stimulation test.** Suppression tests probe suspected HYPERfunction; hers is a hypofunction. Given ACTH, her failing adrenal should not raise cortisol, confirming the gland as the lesion.
+
+**(c) The transferable strategy.** (1) Pair final + tropic hormone to localize, (2) treat suppression/stimulation rows as feedback probes, (3) predict gland size from chronic tropic exposure. The hormone names change; this algorithm does not.`
     },
     {
       id: 'endn4-quiz1',
@@ -126,14 +157,22 @@ A cell with no receptor is deaf to a hormone no matter the plasma level — rece
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Neuroendocrine fusion points: posterior pituitary (hypothalamic axons secrete ADH/oxytocin), adrenal medulla (one preganglionic synapse, then a hormone), anterior pituitary (portal releasing hormones impose neural rhythms)
-- Localize lesions by PAIRING final and tropic hormones: opposite directions = intact pituitary, problem at the gland (primary); same direction = problem at the pituitary level or ectopic/exogenous source
-- Stimulation tests probe suspected HYPOfunction (does the gland answer its tropic hormone?); suppression tests probe HYPERfunction (does the axis obey feedback?); autonomous tissue ignores feedback
-- Exogenous hormone mimics primary hyperfunction but ATROPHIES the native gland — low tropic hormone plus a shrunken gland is the signature
-- Nervous system = fast, wired, brief; endocrine = slower, broadcast, sustained; receptor expression is the endocrine version of anatomical specificity — and every passage table yields to the pair-then-probe algorithm
+- **Neuroendocrine fusion points.** Posterior pituitary axons, the adrenal medulla and portal releasing hormones are where nerves drive hormones.
+- **Pair final and tropic.** Opposite directions mean the gland (primary); the same direction means the pituitary or an ectopic tropic source.
+- **Tests probe feedback.** Pair, then probe, then predict gland size: stimulation tests hypofunction; autonomous tissue fails a suppression test.
+- **Nervous vs. endocrine.** Nerves are fast, wired and brief; hormones are slower, broadcast and sustained, aimed by receptor expression.
+
+**Common traps**
+
+- **Reversing the pairs.** High hormone with high tropic hormone is tropic-driven; high hormone with low tropic hormone is autonomous.
+- **Missing exogenous hormone.** It mimics primary hyperfunction but atrophies the native gland: low tropic hormone plus a shrunken gland.
+- **Low LH as the tell.** A testosterone user and a Leydig-cell tumor both suppress LH; only the user has both testes atrophied.
+- **Every ACTH tumor ignores dexamethasone.** A pituitary ACTH tumor usually still suppresses at high dose; an ectopic ACTH source does not.
 
 <!-- yield:low -->
-- Low-yield extras: the oxytocin labor loop is called the Ferguson reflex
+**Low-yield extras**
+
+- The oxytocin labor loop is called the Ferguson reflex.
 <!-- /yield -->`
     }
   ]

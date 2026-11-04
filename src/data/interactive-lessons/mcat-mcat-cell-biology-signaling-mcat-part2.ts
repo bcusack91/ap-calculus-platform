@@ -114,6 +114,26 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
 - Light = channel closing: the rare pathway where the stimulus lowers a second messenger; amplification is enormous (1 photon → hundreds of thousands of cGMP hydrolyzed)`
     },
     {
+      id: 'sig2-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Tracing a Glucagon Signal
+
+**Problem 1.** Glucagon makes hepatocytes break down glycogen. It is given to three batches of cells: one with caffeine, one with an adenylyl cyclase inhibitor, and one expressing a PKA whose regulatory subunits cannot bind cAMP.
+
+- **(a)** Which two glycogen enzymes does the kinase regulate, in which directions, and why does that avoid a futile cycle?
+- **(b)** How does caffeine change the response to glucagon?
+- **(c)** In the cyclase-inhibited batch, does the G protein still bind GTP, and is glycogen broken down?
+- **(d)** In the PKA-mutant batch, what happens to cAMP and to glycogen breakdown?
+
+**(a) One kinase, two switches.** PKA activates glycogen phosphorylase kinase, switching glycogen breakdown on, and inactivates glycogen synthase, switching synthesis off. Because one kinase flips both switches in the same metabolic direction, the cell never builds and breaks glycogen at once.
+
+**(b) Caffeine.** The response is larger and longer. Caffeine is a nonselective PDE inhibitor, so the cAMP that adenylyl cyclase makes is hydrolyzed to AMP more slowly and PKA stays active longer.
+
+**(c) Cyclase blocked.** The glucagon receptor is coupled to Gs, and G-alpha-s still exchanges GDP for GTP and leaves beta-gamma, because those steps lie upstream of the block. But no cAMP is made, PKA stays inactive and glycogen is not broken down.
+
+**(d) PKA mutant.** cAMP rises normally, since every step through adenylyl cyclase works. But cAMP cannot free PKA's catalytic subunits, so PKA stays off and glycogen is not broken down: a high messenger with no response places the lesion downstream of cAMP — here, at PKA.`
+    },
+    {
       id: 'sig2-quiz2',
       type: 'multiple-choice' as const,
       content: `**Second Messengers** 🎯`,
@@ -141,16 +161,22 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- G protein cycle: receptor = GEF (GDP → GTP exchange turns G-alpha ON); intrinsic GTPase turns it OFF — activity duration is a hydrolysis timer
-- Gs → adenylyl cyclase up → cAMP → PKA; Gi → cyclase down (+ beta-gamma opens K$^+$ channels, e.g., M2 slowing the heart); Gq → PLC → IP$_3$ (ER Ca$^{2+}$ release) + DAG (PKC)
-- PKA coordinates programs by phosphorylating many substrates with opposite effects (phosphorylase ON, glycogen synthase OFF) — no futile cycles
-- Ca$^{2+}$ is a second messenger released, not synthesized; ~10,000-fold gradient makes small fluxes loud; calmodulin decodes it (CaM kinases, MLCK)
-- Messenger removal is a drug target: PDE inhibitors (caffeine, sildenafil) prolong cyclic-nucleotide signals
-- Vision inverts the logic: light lowers cGMP → channels close → hyperpolarization
-- Amplification occurs only at catalytic steps; a locked-on G-alpha (GTPase-dead, cholera toxin) means a signal that outlives its ligand
+- **The G protein is a timer.** The receptor acts as a GEF, swapping GDP for GTP to turn G-alpha on; its own GTPase turns it off.
+- **Three G-alpha families.** Gs raises cAMP; Gi lowers it and its beta-gamma opens K$^+$ channels; Gq activates PLC (IP$_3$ + DAG).
+- **One kinase, one program.** PKA turns glycogen phosphorylase kinase on and glycogen synthase off, so no futile cycle runs.
+- **Messengers rise and are cleared.** IP$_3$ releases ER Ca$^{2+}$ for calmodulin to decode; PDE inhibitors prolong cAMP and cGMP.
+
+**Common traps**
+
+- **GTP hydrolysis as the ON step.** Hydrolysis is the OFF step, so a GTPase-dead G-alpha stays active after the ligand is gone.
+- **Every step amplifies.** Only catalytic tiers multiply the signal; stoichiometric (1:1) steps do not.
+- **Light raising cGMP in rods.** Light activates a PDE, cGMP falls, cation channels close and the rod hyperpolarizes.
+- **Ca$^{2+}$ as a synthesized messenger.** Ca$^{2+}$ enters the cytosol through opened channels; pumps and exchangers then clear it.
 
 <!-- yield:low -->
-- Low-yield extras: CaMKII (learning/memory, a Ca$^{2+}$-frequency decoder), calcineurin and its blockers cyclosporine/tacrolimus, oscillatory Ca$^{2+}$ coding, and synaptotagmin as the Ca$^{2+}$ sensor for vesicle fusion
+**Low-yield extras**
+
+- CaMKII (learning/memory, a Ca$^{2+}$-frequency decoder), calcineurin and its blockers cyclosporine/tacrolimus, oscillatory Ca$^{2+}$ coding, and synaptotagmin as the Ca$^{2+}$ sensor for vesicle fusion
 <!-- /yield -->`
     }
   ]

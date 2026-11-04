@@ -46,6 +46,57 @@ Most viral RdRps also lack proofreading (coronaviruses are a rare exception): mu
 Enveloped animal viruses bud through a host membrane pre-studded with viral glycoproteins — plasma membrane (HIV, flu) or internal membranes (herpesviruses first bud through the nuclear envelope). Some DNA viruses establish **latency** without integration: herpesviruses persist as circular episomes in neurons, reactivating under stress — same strategic idea as lysogeny, different molecular bookkeeping (episome vs provirus vs prophage).`
     },
     {
+      id: 'vir3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Strategy Deduction
+
+**Problem 1.** Virus X is tested with three probes: (1) a drug that blocks DNA-templated transcription leaves its replication unaffected; (2) its purified genome is NOT infectious; (3) its virions contain a polymerase.
+
+- **(a)** Which genome classes does probe 1 rule out?
+- **(b)** Which class does probe 2 rule out?
+- **(c)** What must the genome be, given probe 3?
+- **(d)** What single further test finishes the classification?
+
+**(a) Probe 1.** No DNA step anywhere, which rules out DNA viruses AND retroviruses (whose proviral transcription needs a DNA template).
+
+**(b) Probe 2.** A genome that is not infectious on its own is not (+) ssRNA.
+
+**(c) Probe 3.** A packaged polymerase confirms an RdRp-carrying RNA virus: **(−) ssRNA or dsRNA**.
+
+**(d) Splitting the pair.** Treat the genome with an RNase that cuts single-stranded RNA: dsRNA resists it, ssRNA is destroyed. These three classic probes (DNA-transcription blocker, naked-genome infectivity, virion polymerase) bin every genome class.
+
+<!-- yield:low -->
+- The classic DNA-templated transcription inhibitor used in this test is actinomycin D.
+<!-- /yield -->
+
+**Problem 2.** Four drugs act during a single round of HIV infection: a protease inhibitor, a CCR5 antagonist, an integrase inhibitor and a nucleoside RT inhibitor (NRTI).
+
+- **(a)** Which drug acts first, and at what step?
+- **(b)** Where does the NRTI act?
+- **(c)** What does the integrase inhibitor prevent, and why is that step decisive for the cell?
+- **(d)** What does the protease inhibitor block, and what does the cell still make?
+
+**(a) CCR5 antagonist.** It blocks co-receptor binding at ENTRY (steps 1-2), before anything else happens.
+
+**(b) NRTI.** It chain-terminates viral DNA synthesis in the cytoplasm (within step 4, synthesis: reverse transcription).
+
+**(c) Integrase inhibitor.** It prevents proviral insertion (within step 4: integration). Integration is the point of no return: after it, the cell is a permanent reservoir.
+
+**(d) Protease inhibitor.** It blocks maturation of budding particles (steps 5-6); the cell still releases virions, but they are non-infectious. "Reversibility" questions are really asking whether integration has happened yet.
+
+**Problem 3.** Two influenza strains co-infect one cell. The patient has antibodies against strain A's HA; strain B's HA is novel. Some progeny permanently encode B's HA with A's other seven segments.
+
+- **(a)** Is this drift, shift or phenotypic mixing?
+- **(b)** Which feature of the progeny rules out each alternative?
+- **(c)** Why does this require influenza's genome structure?
+
+**(a) Shift.** Whole SEGMENTS were exchanged and the change is heritable: **reassortment = antigenic shift**. A hybrid now carries a surface protein the population has never seen, giving it pandemic potential.
+
+**(b) Ruling out the others.** A whole HA gene was swapped at once, not changed by gradual point mutation, so it is not drift. The progeny ENCODE B's HA permanently; phenotypic mixing only wraps a genome in the other strain's proteins, and one generation later the coat matches the genes again.
+
+**(c) Segments.** Reassortment swaps whole genome pieces, so it needs a segmented genome like influenza's 8 RNA segments; non-segmented viruses can only drift. Ask: heritable or cosmetic? Gradual or wholesale?`
+    },
+    {
       id: 'vir3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Replication Strategies** 🎯`,
@@ -66,11 +117,11 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
             explanation: `Integrase writes the viral genome permanently into host chromosomes; resting memory T cells carry this provirus for decades, invisible to drugs that only block NEW infection events. Cell division faithfully copies the provirus like any other gene through normal cellular DNA replication — the same persistence logic as a prophage.`
           },
           {
-            question: `A novel virus replicates entirely in the cytoplasm and its virions contain an RNA-dependent RNA polymerase. Its genome CANNOT be:`,
-            options: [`(+) single-stranded RNA`, `Double-stranded RNA`, `(−) single-stranded RNA`, `Segmented (−) RNA`],
-            correctAnswer: 0,
+            question: `A newly isolated virus has a genome that resists an RNase that cuts only single-stranded RNA, and its virions carry an RNA-dependent RNA polymerase. Its genome is most likely:`,
+            options: [`(+) single-stranded RNA`, `Double-stranded RNA`, `(−) single-stranded RNA`, `Double-stranded DNA`],
+            correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `A (+) RNA virus has no need to package a polymerase — its genome is translated on arrival, producing RdRp fresh. Packaged RdRp is the signature of genomes that ribosomes cannot read: (−) RNA and dsRNA (whose + strand is locked in the duplex). Watch for this 'what must the particle carry' inversion.`
+            explanation: `Packaged RdRp marks a genome that ribosomes cannot read on arrival: (−) RNA or dsRNA, whose + strand is locked in the duplex. Resistance to a single-strand-specific RNase then picks dsRNA. A (+) single-stranded genome would be cut by that RNase and needs no packaged polymerase, since it is translated on arrival. A (−) single-stranded genome would carry RdRp but would also be cut. A dsDNA genome is untouched by any RNase, but DNA viruses use the host's RNA polymerase and pack no RdRp.`
           },
           {
             question: `Nucleoside analogs like AZT selectively inhibit HIV because, once phosphorylated, they are incorporated by reverse transcriptase and terminate the DNA chain. Selectivity over host DNA synthesis arises because:`,
@@ -94,66 +145,23 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Organize by the route to mRNA: dsDNA borrows host pol (nucleus); (+)RNA IS mRNA (naked genome infectious); (−)RNA and dsRNA must PACK RdRp; retroviruses pack RT
-- Host cells have no RdRp — RNA viruses bring or immediately build their own
-- HIV: RT → dsDNA → integrase → provirus (permanent reservoir) → host RNA pol II; RT, integrase, protease = the drug targets
-- No proofreading in RdRp/RT → quasispecies, antigenic drift, mandatory combination therapy
-- Segmented genomes reassort in co-infected cells → antigenic shift (pandemics)
-- Persistence bookkeeping: prophage (phage, integrated), provirus (HIV, integrated), episome (herpes, not integrated)
+- **Route to mRNA.** dsDNA uses host polymerase; (+) RNA is mRNA itself; (−) RNA and dsRNA must pack RdRp, which hosts lack.
+- **HIV's path.** RT copies RNA to DNA and integrase inserts a permanent provirus; RT, integrase and protease are drug targets.
+- **No proofreading.** Error-prone RdRp and RT drive quasispecies and antigenic drift, and make combination therapy mandatory.
+- **Persistence modes.** Prophage (phage) and provirus (HIV) are integrated; the herpes episome persists without integrating.
+
+**Common traps**
+
+- **Polymerase in a (+) RNA virion.** A (+) RNA genome is translated on arrival; a packaged RdRp signals a (−) RNA or dsRNA genome.
+- **Shift by point mutation.** Gradual point mutations are drift; shift is whole-segment reassortment in a co-infected cell.
+- **Single-drug HIV therapy.** Resistant mutants already exist before treatment, so one drug fails; combination therapy is required.
+- **Herpes latency as integration.** Herpesviruses persist as nonintegrated episomes in the nucleus, unlike a provirus or prophage.
 
 <!-- yield:low -->
-- Low-yield extras: the pre-existing-resistant-mutant argument is the Luria-Delbruck logic; error catastrophe caps RNA genome size; actinomycin D is the classic DNA-templated transcription blocker used to rule out DNA steps
+**Low-yield extras**
+
+- The pre-existing-resistant-mutant argument is the Luria-Delbruck logic; error catastrophe caps RNA genome size; actinomycin D is the classic DNA-templated transcription blocker used to rule out DNA steps
 <!-- /yield -->`
-    },
-    {
-      id: 'vir3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Strategy Deduction
-
-<details>
-<summary><b>Example 1: Deduce the genome from three experiments</b></summary>
-
-**Question:** Virus X: (a) replication is unaffected by a drug that blocks DNA-templated transcription; (b) its purified genome is NOT infectious; (c) virions contain a polymerase. Classify the genome.
-
-**Solution:**
-1. (a) No DNA step anywhere → rules out DNA viruses AND retroviruses (whose proviral transcription needs DNA templates).
-2. (b) Not infectious alone → not (+) ssRNA.
-3. (c) Packaged polymerase confirms it: **(−) ssRNA or dsRNA** — an RdRp-carrying RNA virus.
-4. To split the final pair: check whether the genome is RNase-resistant when double-stranded (dsRNA) or sensitive (ss).
-
-**MCAT Strategy:** The three classic probes — sensitivity to a DNA-templated transcription blocker, naked-genome infectivity, virion polymerase — uniquely bin every genome class. Practice the flowchart.
-</details>
-
-<!-- yield:low -->
-- The classic DNA-templated transcription inhibitor used in this test is actinomycin D.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 2: Predict phenotypic mixing vs reassortment</b></summary>
-
-**Question:** Two influenza strains co-infect one cell: strain A contributes an HA the patient has antibodies against; strain B's HA is novel. Some progeny permanently encode B's HA with A's other seven segments. Is this drift, shift, or phenotypic mixing?
-
-**Solution:**
-1. Whole SEGMENTS were exchanged and the change is heritable → **reassortment = antigenic shift**. A hybrid genotype now carries a surface protein the population has never seen: pandemic potential.
-2. Drift would be gradual point mutations in HA, not a wholesale swap.
-3. Phenotypic mixing is the transient case: a progeny genome wrapped in the OTHER strain's proteins without genetic change — one generation later, the coat matches the genes again.
-
-**MCAT Strategy:** Ask two questions: is the change heritable (genome) or cosmetic (coat)? Gradual (drift) or wholesale (shift)? Segmented genomes are the prerequisite for shift.
-</details>
-
-<details>
-<summary><b>Example 3: Order the HIV drug targets along the life cycle</b></summary>
-
-**Question:** Arrange where these act in a single round of HIV infection: protease inhibitor, CCR5 antagonist, integrase inhibitor, nucleoside RT inhibitor — and state which steps are irreversible for that cell.
-
-**Solution:**
-1. **CCR5 antagonist** — blocks co-receptor binding at ENTRY (step 1-2).
-2. **NRTI** — chain-terminates reverse transcription in the cytoplasm (step 4a).
-3. **Integrase inhibitor** — prevents proviral insertion (step 4b). Integration is the point of no return: after it, the cell is a permanent reservoir.
-4. **Protease inhibitor** — blocks maturation of budding particles (step 5-6); the cell still produces virions, but they are non-infectious.
-
-**MCAT Strategy:** Anchor each drug to the numbered life-cycle step; 'reversibility' questions are really asking whether integration has occurred yet.
-</details>`
     }
   ]
 };

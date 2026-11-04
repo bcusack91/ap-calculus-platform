@@ -126,6 +126,26 @@ The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I pr
 <!-- /yield -->`
     },
     {
+      id: 'cc4-worked',
+      type: 'text' as const,
+      content: `### Worked Example — A Full Phase Census
+
+**Problem.** An asynchronous culture in which every cell is cycling has a 25-hour cycle. Flow cytometry puts 52% of cells in the 2C peak, 32% between the peaks and 16% in the 4C peak; 4% of cells show condensed chromosomes.
+
+- **(a)** How long does S phase last?
+- **(b)** How long does G$_1$ last?
+- **(c)** How is the 4C time split between G$_2$ and M?
+- **(d)** In a BrdU pulse-chase, when should labeled mitotic figures first appear?
+
+**(a) S phase.** Cells between the peaks are replicating, and the fraction of cells in a phase equals the fraction of the cycle it takes: $0.32 \\times 25 = 8$ hours.
+
+**(b) G$_1$.** With every cell cycling there are no G$_0$ cells, so the 2C peak is all G$_1$: $0.52 \\times 25 = 13$ hours.
+
+**(c) G$_2$ and M.** The 4C peak holds G$_2$ plus M: $0.16 \\times 25 = 4$ hours. The 4% mitotic index gives M $= 0.04 \\times 25 = 1$ hour, leaving 3 hours for G$_2$. Check: $13 + 8 + 3 + 1 = 25$ hours.
+
+**(d) Pulse-chase.** The time for labeled cells to reach mitosis is the length of G$_2$, so labeled mitotic figures should first appear about 3 hours after the pulse.`
+    },
+    {
       id: 'cc4-quiz2',
       type: 'multiple-choice' as const,
       content: `**MCAT Integration** 🎯`,
@@ -153,16 +173,22 @@ The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I pr
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Phase census tools: flow cytometry (DNA content), EdU/BrdU pulse (S), mitotic index (M); pulse-chase lag to labeled mitoses = G$_2$ length
-- Synchronization: double thymidine (G$_1$/S), spindle-poison shake-off (M), serum starvation (G$_0$) — the last doubles as the restriction-point assay (all-or-none serum commitment)
-- Drug arrest profiles: hydroxyurea/DNA polymerase inhibitors ~2C (S entry), topo II poisons 4C (G$_2$ damage), spindle poisons 4C condensed (M), CDK4/6 inhibitors 2C only with intact Rb
-- Cycle arithmetic: fraction in phase = phase time / cycle time; population doubling requires the growth fraction, not just cycle speed
-- Checkpoint diagnostics: damage should drop the mitotic index; entering M with broken DNA = checkpoint loss (or a drug overriding the checkpoint)
-- HPV E6 = p53 degradation, E7 = Rb inactivation — a virus that installs both classic cancer lesions
-- Meiosis reuses the machinery: MI separates homologs (reductional, centromeric cohesin protected); MII separates chromatids like mitosis
+- **Phase census tools.** Flow cytometry reads DNA content, an EdU/BrdU pulse marks S, and the mitotic index counts M.
+- **Synchronization methods.** Double thymidine parks cells at G$_1$/S, spindle poisons give M, serum starvation gives G$_0$.
+- **Fraction equals time.** In a steady asynchronous culture, the fraction of cells in a phase = phase time / cycle time.
+- **Drug arrest profiles.** Hydroxyurea stalls cells near 2C, topo II poisons hold them at 4C in G$_2$, spindle poisons in M.
+
+**Common traps**
+
+- **Pulse-chase lag as S length.** The lag before labeled mitoses first appear measures G$_2$, not S or the whole cycle.
+- **Cycle time as doubling time.** A tumor doubles more slowly than its cells cycle when its growth fraction is well below 1.
+- **Swapping E6 and E7.** HPV E6 degrades p53, while E7 binds and inactivates Rb.
+- **Meiosis I splitting chromatids.** Meiosis I separates homologs (2n → n); sister chromatids part only in meiosis II.
 
 <!-- yield:low -->
-- Low-yield extras: phospho-histone H3 staining marks mitotic cells; thymidine blocks act through ribonucleotide reductase; named drugs aphidicolin, etoposide, nocodazole and palbociclib; caffeine as the ATM/ATR checkpoint-override drug; shugoshin protects centromeric cohesin in meiosis I
+**Low-yield extras**
+
+- Phospho-histone H3 staining marks mitotic cells; thymidine blocks act through ribonucleotide reductase; named drugs aphidicolin, etoposide, nocodazole and palbociclib; caffeine as the ATM/ATR checkpoint-override drug; shugoshin protects centromeric cohesin in meiosis I
 <!-- /yield -->`
     }
   ]

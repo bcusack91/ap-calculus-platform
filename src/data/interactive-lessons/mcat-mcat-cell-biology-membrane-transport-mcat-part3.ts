@@ -117,6 +117,26 @@ $$\\Delta G = RT \\ln \\frac{[S]_{in}}{[S]_{out}} + zF\\Delta V$$
 Cholera toxin locks Gs "on" → cAMP soars → CFTR is **hyperactivated** → massive Cl$^-$ and water secretion into the gut → secretory diarrhea. Treated with oral rehydration solution because SGLT1 (a separate, unaffected pathway) can still pull Na$^+$, glucose, and water back in.`
     },
     {
+      id: 'mt3-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Uphill or Downhill at the Enterocyte
+
+**Problem.** In an intestinal enterocyte, glucose is more concentrated in the cytosol than in the gut lumen, Na$^+$ is far more concentrated in the lumen than in the cytosol, and the cell interior is electrically negative.
+
+- **(a)** What is the sign of $\\Delta G$ for moving glucose into the cell?
+- **(b)** Is Na$^+$ entry uphill or downhill?
+- **(c)** Which transporter couples the two, and what kind of transport is it?
+- **(d)** The Na$^+$ that entered is pumped back out across the basolateral membrane. What is the sign of $\\Delta G$ for that step, and what pays for it?
+
+**(a) Glucose goes uphill.** With $[S]_{in} > [S]_{out}$, the ratio in $\\Delta G = RT \\ln ([S]_{in}/[S]_{out})$ exceeds 1, so $\\Delta G > 0$. Glucose entry needs an energy source.
+
+**(b) Doubly downhill.** The chemical term is negative because $[\\text{Na}^+]_{in} < [\\text{Na}^+]_{out}$, and $zF\\Delta V$ is negative because $z = +1$ and the interior is negative. Both terms favor entry.
+
+**(c) SGLT1, a symporter.** SGLT1 carries 2 Na$^+$ downhill with each glucose it moves uphill from the lumen. It hydrolyzes no ATP itself, so this is secondary active transport.
+
+**(d) Doubly uphill, paid by ATP.** Exporting Na$^+$ reverses (b): it runs against the concentration gradient and against the negative interior, so $\\Delta G > 0$. The Na$^+$/K$^+$ ATPase pays with ATP hydrolysis, which is why glucose uptake is still ultimately ATP-dependent.`
+    },
+    {
       id: 'mt3-quiz2',
       type: 'multiple-choice' as const,
       content: `**Transport Energetics & Disease** 🎯`,
@@ -144,16 +164,22 @@ Cholera toxin locks Gs "on" → cAMP soars → CFTR is **hyperactivated** → ma
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Primary active transport hydrolyzes ATP directly; Na$^+$/K$^+$ ATPase: 3 Na$^+$ out / 2 K$^+$ in per ATP, electrogenic, ouabain/digoxin-inhibited
-- Other pumps: SERCA/PMCA (Ca$^{2+}$), gastric H$^+$/K$^+$ ATPase (PPI target), V-type H$^+$ (lysosomes), ABC family (multidrug-resistance pumps, CFTR)
-- Secondary active transport spends the Na$^+$ gradient: symport (SGLT1: 2 Na$^+$ + glucose) or antiport (Na$^+$/Ca$^{2+}$ exchanger: 3 Na$^+$ : 1 Ca$^{2+}$)
-- Poisoning the Na$^+$/K$^+$ pump collapses ALL Na$^+$-coupled transport — expect this experimental logic
-- Digoxin chain: pump blocked → Na$^+$ up → NCX slows → Ca$^{2+}$ up → stronger contraction
-- Ion transport energetics include both chemical and electrical terms; higher coupling stoichiometry → steeper achievable gradients
-- CFTR: ATP-gated Cl$^-$ channel; CF = too little secretion (thick mucus, salty sweat); cholera = too much (watery diarrhea, treated via SGLT1-based oral rehydration)
+- **The Na$^+$/K$^+$ ATPase.** 3 Na$^+$ out and 2 K$^+$ in per ATP; electrogenic, and blocked by ouabain and digoxin.
+- **Secondary active transport.** Symporters and antiporters spend the Na$^+$ gradient; the transporter hydrolyzes no ATP itself.
+- **Ion energetics.** $\\Delta G$ adds chemical and electrical terms; Na$^+$ entry is doubly downhill.
+- **CFTR and disease.** CFTR is an ATP-gated Cl$^-$ channel: too little in CF (thick mucus), overactive in cholera (diarrhea).
+
+**Common traps**
+
+- **Symporters outlast the pump.** Poisoning the Na$^+$/K$^+$ ATPase collapses the Na$^+$ gradient and stops SGLT1 too.
+- **The pump sets resting potential.** It adds only a few mV; K$^+$ leak channels do most of the work.
+- **Digoxin stimulates the pump.** Digoxin inhibits the pump; higher Na$^+$ slows Ca$^{2+}$ export, so contraction strengthens.
+- **CFTR is a pump.** CFTR is an ABC-family protein that conducts Cl$^-$ as a channel rather than pumping it.
 
 <!-- yield:low -->
-- Low-yield extras: the Na$^+$/K$^+$ pump is a P-type ATPase (phosphorylated intermediate); the classic multidrug-resistance pump is MDR1/P-glycoprotein
+**Low-yield extras**
+
+- The Na$^+$/K$^+$ pump is a P-type ATPase (phosphorylated intermediate); the classic multidrug-resistance pump is MDR1/P-glycoprotein
 <!-- /yield -->`
     }
   ]

@@ -65,15 +65,32 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
       type: 'text' as const,
       content: `### Worked Example — A Splinter, Hour by Hour
 
-**Passage-style problem.** A student gets a wooden splinter contaminated with soil bacteria in her finger. Within hours the site is red, warm, swollen, and tender. By day 2 a small amount of pus has formed. She has never encountered this bacterial strain before, yet the infection is cleared by day 4 without antibiotics.
+**Problem 1.** A student gets a wooden splinter carrying soil bacteria in her finger. Within hours the site is red, warm, swollen and tender. By day 2 a small amount of pus has formed.
 
-**Question 1 — Why redness, heat, and swelling within hours?** Damaged tissue and resident mast cells release histamine. Local arterioles dilate (more warm blood → redness and heat) and capillaries become leaky (plasma leaks out → swelling). This is the stereotyped innate inflammatory response — no recognition of the specific strain is required.
+- **(a)** Had she taken an antihistamine at the start, which of the early signs would be blunted, and why?
+- **(b)** Suppose instead her neutrophils could not adhere to endothelium. Where would they end up?
+- **(c)** What is the pus made of?
+- **(d)** With that adhesion defect, would pus still form at the site?
 
-**Question 2 — How do neutrophils "know" where to go?** Bacterial products and complement fragments form a chemical gradient. Circulating neutrophils tether to activated endothelium, exit the vessel by diapedesis, and crawl up the gradient by chemotaxis. The pus at day 2 is largely dead neutrophils and debris.
+**(a) An antihistamine.** Redness, heat and swelling. Damaged tissue and mast cells release histamine, which dilates arterioles (more warm blood: redness, heat) and makes capillaries leaky (plasma leaks out: swelling). No strain-specific recognition is involved.
 
-**Question 3 — The strain is new to her immune system. How can it be cleared in 4 days when adaptive responses take a week or more?** Innate recognition does not need prior exposure: TLRs on macrophages and neutrophils bind conserved PAMPs (e.g., LPS on Gram-negative walls), and the alternative complement pathway opsonizes the bacteria spontaneously. Phagocytosis of C3b-coated bacteria clears the small inoculum before an adaptive response is even necessary.
+**(b) An adhesion defect.** They would stay in the blood. A neutrophil must first tether to activated endothelium, then exit by diapedesis and crawl up the chemical gradient (chemotaxis); without adhesion it flows past the site.
 
-**Question 4 — Meanwhile, what are dendritic cells doing?** Sampling bacterial antigen at the wound, then migrating through lymphatics to the draining lymph node to present peptides to naive T cells. Even though innate immunity wins this round, the adaptive system is being briefed — that hand-off is the dendritic cell's defining job.`
+**(c) Pus.** Largely dead neutrophils and debris: neutrophils phagocytose the bacteria and die at the site.
+
+**(d) No pus.** Little or none. With the neutrophils unable to leave the blood, few reach the site to fight and die there.
+
+**Problem 2.** The splinter infection from Problem 1 clears by day 4 without antibiotics. The strain is new to her immune system, and a first adaptive response takes a week or more.
+
+- **(a)** How do her innate cells recognize a strain they have never met?
+- **(b)** What tags the bacteria for phagocytes before any antibody exists?
+- **(c)** Meanwhile, what are dendritic cells at the wound doing?
+
+**(a) Pattern recognition.** Innate recognition needs no prior exposure: TLRs on macrophages and neutrophils bind conserved PAMPs shared by whole microbial classes, such as LPS on Gram-negative walls.
+
+**(b) Complement without antibody.** The alternative complement pathway fires spontaneously on the bacterial surface and coats it with C3b. Phagocytes engulf the C3b-coated bacteria and clear the small inoculum before an adaptive response is even necessary.
+
+**(c) Dendritic cells.** They sample bacterial antigen at the wound, then migrate through lymphatics to the draining lymph node to present peptides to naive T cells. Innate immunity wins this round, but the adaptive system is being briefed: that hand-off is the dendritic cell's defining job.`
     },
     {
       id: 'imm1-quiz1',
@@ -89,11 +106,11 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
             explanation: `NK cells kill host cells that LACK MHC I ("missing self") — precisely the evasion strategy described. Neutrophils phagocytose extracellular microbes, not host cells; B cells make antibody rather than killing cells directly; eosinophils target parasites. This complementarity (T cells need MHC I present, NK cells attack when it is absent) leaves viruses no easy escape.`
           },
           {
-            question: `Toll-like receptors allow a macrophage to respond to a bacterial species it has never encountered because TLRs:`,
-            options: [`Are randomly rearranged during development to cover all possible antigens`, `Bind antibodies already attached to the bacterium`, `Recognize conserved patterns shared by broad microbial classes`, `Detect the absence of MHC I on the bacterial surface`],
+            question: `Macrophages from a mouse that lacks the Toll-like receptor for LPS are exposed to a Gram-negative strain that no mouse has met before. Compared with normal macrophages, their early response will most likely be:`,
+            options: [`Normal, since antibodies to the strain take over the receptor's role`, `Unchanged, since TLRs act only after a prior exposure`, `Weaker, since they miss a conserved pattern on the strain`, `Stronger, since missing MHC I on the bacteria triggers them`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `PRRs like TLRs are germline-encoded and bind conserved PAMPs (LPS, flagellin, dsRNA) common to whole microbial classes — pattern-based, not pathogen-specific. Random rearrangement describes B/T-cell receptors, the adaptive strategy. Antibody-dependent recognition would require prior adaptive response, and MHC I surveillance is the NK-cell mechanism for HOST cells, not bacteria.`
+            explanation: `LPS is a conserved PAMP on all Gram-negative walls, and the TLR that reads it is germline-encoded, so normal macrophages respond to a never-seen strain on first contact. Without that receptor this pattern goes unread and the early response is blunted (other PRRs still detect other patterns, such as flagellin). TLRs need no prior exposure, so "only after a prior exposure" is backwards. No antibodies exist yet against a strain never met, so none can take over. Detecting missing MHC I is how NK cells check HOST cells; bacteria have no MHC at all.`
           },
           {
             question: `Which set correctly lists the three major effector outcomes of complement activation?`,
@@ -124,15 +141,22 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Barriers first: skin, mucus, lysozyme, stomach acid, defensins exclude most pathogens before any cell responds
-- Innate = fast, pattern-based (PRRs like TLRs binding PAMPs), germline-encoded, no memory; adaptive = slow first time, epitope-specific, with memory
-- Dendritic cells are the innate→adaptive bridge: capture antigen in tissue, present it to naive T cells in lymph nodes
-- NK cells kill host cells LACKING MHC I ("missing self") — the counter to viral MHC downregulation
-- Complement: opsonization (C3b), MAC lysis, anaphylatoxins; classical = antibody-triggered, alternative = spontaneous on microbial surfaces
-- Inflammation sequence: histamine → vasodilation and permeability → adhesion → diapedesis → chemotaxis; fever and interferons buy time against pathogens system-wide
+- **Innate reads patterns.** After the barriers, germline TLRs bind conserved PAMPs within hours, with no prior exposure or memory.
+- **Bridge and missing self.** Dendritic cells bring antigen to naive T cells in lymph nodes; NK cells kill cells lacking MHC I.
+- **Complement's three outcomes.** C3b opsonizes, the MAC lyses, anaphylatoxins inflame; the alternative route needs no antibody.
+- **Inflammation in order.** Histamine dilates and leaks vessels; neutrophils adhere, cross by diapedesis, then follow chemotaxis.
+
+**Common traps**
+
+- **Nonspecific means random.** Innate receptors are fixed and germline-encoded, yet they recognize broad microbial classes by pattern.
+- **NK cells needing MHC I.** NK cells attack when MHC I is ABSENT; it is cytotoxic T cells that need MHC I present.
+- **Chemotaxis before exit.** A neutrophil must adhere and cross the vessel wall by diapedesis before it follows the gradient.
+- **Interferons as killers.** Interferons put neighboring cells into an antiviral state; they do not lyse the cell that released them.
 
 <!-- yield:low -->
-- Low-yield extras: C3a and C5a are the anaphylatoxins (C5a is also a neutrophil chemoattractant)
+**Low-yield extras**
+
+- C3a and C5a are the anaphylatoxins (C5a is also a neutrophil chemoattractant).
 <!-- /yield -->`
     }
   ]

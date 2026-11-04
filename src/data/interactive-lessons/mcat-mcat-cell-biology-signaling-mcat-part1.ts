@@ -101,6 +101,26 @@ $$[LR] = \\frac{[R]_{total}[L]}{K_d + [L]}$$
 | Submaximal plateau for a full-occupancy ligand | Partial agonist |`
     },
     {
+      id: 'sig1-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Two Drugs, One NO Pathway
+
+**Problem 1.** Arterial smooth muscle strips are tested with the endothelium intact (making NO) or scraped away (making none). Strips receive an NO donor (nitroglycerin), a PDE5 inhibitor (sildenafil), or both.
+
+- **(a)** How does NO made by the endothelium reach and act on the smooth muscle, with no membrane receptor to bind?
+- **(b)** Does the NO donor relax the strips that lack endothelium?
+- **(c)** Does sildenafil alone relax each set of strips?
+- **(d)** In the strips without endothelium, how do both drugs together compare with either drug alone?
+
+**(a) Route and target.** Endothelial NO synthase makes NO from arginine. As a small nonpolar gas, NO diffuses across the bilayer into the smooth muscle and binds soluble guanylyl cyclase inside the cell, which makes cGMP and relaxes the muscle.
+
+**(b) NO donor.** Yes. Nitroglycerin supplies NO directly, so the missing endothelium does not matter: soluble guanylyl cyclase is activated, cGMP rises and the strips relax.
+
+**(c) Sildenafil alone.** It relaxes the intact strips, where endothelial NO keeps cGMP being made, by slowing cGMP breakdown by PDE5. Strips without endothelium barely respond: with no NO, little cGMP is made, so there is almost nothing to spare.
+
+**(d) Both drugs.** Relaxation is larger and longer than with either drug alone. The donor drives cGMP synthesis while sildenafil blocks its degradation, so cGMP climbs higher: two drugs acting at two nodes of the same pathway.`
+    },
+    {
       id: 'sig1-quiz2',
       type: 'multiple-choice' as const,
       content: `**Receptors & Dose-Response** 🎯`,
@@ -114,11 +134,11 @@ $$[LR] = \\frac{[R]_{total}[L]}{K_d + [L]}$$
             explanation: `A competitive antagonist occupies the same site reversibly, so sufficient agonist can outcompete it: potency falls (right shift) but efficacy (max response) is preserved. Noncompetitive or irreversible blockers reduce the achievable maximum because no agonist concentration can reclaim the disabled receptors.`
           },
           {
-            question: `Sildenafil enhances NO-mediated vasodilation by inhibiting phosphodiesterase-5. Its direct biochemical effect is to:`,
-            options: [`Increase NO synthesis from arginine by endothelial NO synthase`, `Activate soluble guanylyl cyclase in place of NO itself`, `Slow cGMP breakdown, prolonging smooth muscle relaxation`, `Block cGMP production by soluble guanylyl cyclase`],
+            question: `Vascular smooth muscle strips are treated with an inhibitor of soluble guanylyl cyclase. Relaxation by nitroglycerin is abolished, but relaxation by atrial natriuretic peptide (ANP) is preserved. The best explanation is that:`,
+            options: [`ANP triggers extra NO release from the endothelial cells`, `ANP blocks PDE5 so that cGMP breakdown slows down`, `ANP's receptor is itself a membrane guanylyl cyclase`, `ANP binds a nuclear receptor and turns on new genes`],
             correctAnswer: 2,
             yield: 'MEDIUM',
-            explanation: `Second-messenger levels reflect a synthesis/degradation balance. NO stimulates soluble guanylyl cyclase (synthesis of cGMP); PDE5 hydrolyzes cGMP (degradation). Inhibiting PDE5 raises cGMP only where NO is already being produced — the drug amplifies an existing signal rather than creating one. Degradation-side drug targets are a recurring MCAT theme.`
+            explanation: `Soluble guanylyl cyclase is NO's target, so blocking it stops nitroglycerin, an NO donor. ANP still works because its surface receptor is a different enzyme, a membrane guanylyl cyclase that makes cGMP itself. Extra endothelial NO would act on the same blocked soluble enzyme. Slowing PDE5 spares cGMP but cannot create it, and with the soluble cyclase blocked little cGMP is being made. A nuclear-receptor route fits lipophilic ligands acting over hours, not a peptide that binds a surface receptor.`
           }
         ]
       }
@@ -128,13 +148,17 @@ $$[LR] = \\frac{[R]_{total}[L]}{K_d + [L]}$$
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Signaling ranges: endocrine (blood), paracrine (local), autocrine (self), juxtacrine (contact), synaptic
-- Hydrophilic ligands → surface receptors + second messengers (fast); lipophilic ligands (steroids, thyroid hormone) → intracellular receptors → transcription (slow)
-- Four surface receptor classes: ligand-gated channels (ms), GPCRs (s), RTKs (min), JAK-STAT/cytokine receptors
-- Response identity lives in the target cell: one ligand, different receptors/subtypes, different outcomes
-- Binding math mirrors enzymes: $K_d$ = half-occupancy concentration; competitive antagonist = right shift, max preserved; noncompetitive = max lowered
-- Amplification: each catalytic tier multiplies the signal — one hormone molecule can mobilize millions of product molecules
-- NO: gas, no membrane receptor, activates soluble guanylyl cyclase → cGMP → vasodilation (nitroglycerin adds NO; sildenafil spares cGMP)`
+- **Ligand chemistry picks the receptor.** Hydrophilic ligands bind surface receptors (fast); lipophilic ones bind nuclear receptors (hours).
+- **Receptor class sets the speed.** Ligand-gated channels act in milliseconds, GPCRs in seconds, RTKs and JAK-linked receptors in minutes.
+- **The target cell decides.** One ligand acts through different receptor subtypes: epinephrine relaxes via beta-2 but constricts via alpha-1.
+- **NO acts at two drug nodes.** NO activates soluble guanylyl cyclase to make cGMP; nitroglycerin adds NO and sildenafil spares cGMP.
+
+**Common traps**
+
+- **Thyroid hormone as a surface ligand.** It is made from tyrosine but is lipophilic and uses a nuclear receptor, like the steroids.
+- **Lower $K_d$ as weaker binding.** $K_d$ is the half-occupancy concentration, so a lower $K_d$ means higher affinity.
+- **Every right shift as lost efficacy.** A competitive antagonist only lowers potency; excess agonist still reaches the full maximum.
+- **Full occupancy as full response.** A partial agonist occupies every receptor yet activates them only submaximally.`
     }
   ]
 };

@@ -52,6 +52,50 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
 - Rare **positive feedback** exceptions are famous: LH surge at ovulation (estrogen switches sign) and oxytocin in labor.`
     },
     {
+      id: 'endn1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Signaling Logic
+
+**Problem 1.** Hormone A raises its target enzyme's ACTIVITY within one minute of injection; hormone B raises the AMOUNT of the same enzyme, peaking after twelve hours.
+
+- **(a)** Which hormone class fits hormone A, and how does it act so quickly?
+- **(b)** Which hormone class fits hormone B, and why is its effect slow but lasting?
+- **(c)** How would a protein-synthesis inhibitor affect each hormone's response?
+
+**(a) Hormone A.** Changing activity within a minute means modifying proteins already present (phosphorylation via kinase cascades), the signature of a **peptide/surface-receptor** hormone. Fast on, fast off.
+
+**(b) Hormone B.** Raising enzyme quantity requires transcription and translation: a **steroid or thyroid** hormone with a nuclear receptor. Slow on, long-lasting.
+
+**(c) The discriminator.** Blocking translation abolishes B's effect but spares A's, because A needs no new protein. It is a favorite experimental discriminator.
+
+**Problem 2.** A patient takes prednisone, an exogenous glucocorticoid, every day for several months.
+
+- **(a)** What happens to CRH and ACTH secretion?
+- **(b)** What happens to the adrenal cortex over the following weeks?
+- **(c)** Why must the drug be tapered rather than stopped abruptly?
+- **(d)** How does this patient differ from one with a cortisol-secreting tumor of the adrenal itself?
+
+**(a) Long-loop feedback.** The hypothalamus and pituitary read exogenous cortisol exactly like the real thing, so **long-loop negative feedback suppresses CRH and ACTH**.
+
+**(b) The gland.** With ACTH suppressed, the cortex loses its trophic (growth-supporting) signal and **atrophies** over weeks.
+
+**(c) Tapering.** Stopped abruptly, the shrunken gland cannot respond to stress until the axis reawakens, so steroids must be tapered.
+
+**(d) Exogenous vs. tumor.** Both show high glucocorticoid activity with suppressed CRH/ACTH. The giveaway is the gland: exogenous hormone atrophies it, while a hormone-secreting tumor of the gland is enlarged or nodular.
+
+**Problem 3.** One hormone molecule activates 10 adenylyl cyclases, and each makes 100 cAMP. Assume each cAMP activates one PKA, each PKA activates 10 downstream enzymes, and each enzyme converts 1000 substrate molecules.
+
+- **(a)** How many PKA activations follow one binding event?
+- **(b)** How many downstream enzymes are activated?
+- **(c)** Roughly how many product molecules does one hormone molecule yield, and what does that explain?
+
+**(a) cAMP and PKA.** $10 \\times 100 = 1000$ cAMP, so about 1000 PKA activations.
+
+**(b) Downstream enzymes.** With about 1000 PKA from (a): $1000 \\times 10 = 10^4$ downstream enzymes.
+
+**(c) Product.** $10^4 \\times 1000 = 10^7$ substrate conversions: seven orders of magnitude from one binding event. That is why hormone concentrations are measured in picomolar-to-nanomolar and why cascades, not single steps, are the rule.`
+    },
+    {
       id: 'endn1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Signaling & Axes** 🎯`,
@@ -82,57 +126,26 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
       }
     },
     {
-      id: 'endn1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Signaling Logic
-
-<details>
-<summary><b>Example 1: Predict speed and durability from chemistry</b></summary>
-
-**Question:** Hormone A is injected and raises its target enzyme's ACTIVITY within one minute; hormone B raises the AMOUNT of the enzyme, peaking after twelve hours. Classify each hormone and justify.
-
-**Solution:**
-1. A modifies existing proteins (phosphorylation via kinase cascades) — the signature of a **peptide/surface-receptor** hormone. Fast on, fast off.
-2. B increases enzyme quantity — that requires transcription and translation: a **steroid or thyroid** hormone with a nuclear receptor. Slow on, long-lasting.
-3. Corollary: protein-synthesis inhibitors (e.g., blocking translation) abolish B's effect but spare A's — a favorite experimental discriminator. ✓
-</details>
-
-<details>
-<summary><b>Example 2: Amplification arithmetic</b></summary>
-
-**Question:** One glucagon molecule activates 10 adenylyl cyclases; each makes 100 cAMP; each PKA activated goes on to activate 10 downstream enzymes, each converting 1000 substrate molecules. Roughly how many product molecules per hormone?
-
-**Solution:**
-1. $10 \\times 100 = 1000$ cAMP → ~1000 PKA activations.
-2. $1000 \\times 10 = 10^4$ downstream enzymes; $10^4 \\times 1000 = 10^7$ substrate conversions. ✓
-3. Seven orders of magnitude from one binding event — why hormone concentrations are measured in picomolar-to-nanomolar and why cascades, not single steps, are the rule.
-</details>
-
-<details>
-<summary><b>Example 3: Diagnose the loop from a feedback diagram</b></summary>
-
-**Question:** A passage shows: chronic exogenous cortisol (prednisone therapy) → what happens to CRH, ACTH, and the adrenal cortex?
-
-**Solution:**
-1. Exogenous cortisol is read by the hypothalamus and pituitary exactly like the real thing → **long-loop negative feedback suppresses CRH and ACTH**.
-2. Without ACTH (a trophic — growth-supporting — signal), the adrenal cortex **atrophies** over weeks.
-3. This is why abrupt withdrawal is dangerous: the shrunken gland cannot respond to stress until the axis reawakens; steroids must be tapered. ✓
-
-**Pattern:** exogenous hormone = high final hormone + suppressed upstream tiers + atrophied gland — contrast with a hormone-secreting tumor of the gland itself (same labs, but the gland is enlarged/nodular).
-</details>`
-    },
-    {
       id: 'endn1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Nervous = fast/wired/brief; endocrine = slow/broadcast/durable; the hypothalamus bridges them.
-- Peptides: surface receptors, second messengers (cAMP, IP3/DAG, RTK), fast, stored in vesicles. Steroids: cholesterol-derived, carrier-bound, nuclear receptors, transcription, slow and lasting. Tyrosine derivatives split: epinephrine acts peptide-like, thyroid hormone steroid-like.
-- Posterior pituitary releases hypothalamus-made ADH/oxytocin; anterior pituitary (portal-controlled) makes FLAT PEG — FSH, LH, ACTH, TSH tropic; prolactin, endorphins, GH direct.
-- Three-tier axes with long-loop negative feedback set hormone levels; exogenous hormone suppresses the whole axis and atrophies the gland; LH surge and oxytocin are the positive-feedback exceptions.
+- **Two control systems.** Nerves are fast, wired and brief; hormones are slow, broadcast and durable; the hypothalamus links them.
+- **Chemistry predicts behavior.** Peptides act fast through surface receptors and second messengers; steroids act slowly via nuclear receptors.
+- **Two pituitary lobes.** The posterior releases hypothalamus-made ADH and oxytocin; the portal-run anterior makes FLAT PEG.
+- **Long-loop feedback.** The final hormone inhibits both upper tiers; exogenous hormone suppresses the axis and atrophies the gland.
+
+**Common traps**
+
+- **Treating all amines alike.** Epinephrine acts like a peptide (surface GPCR), but thyroid hormone acts like a steroid (nuclear receptor).
+- **Counting total hormone.** Only the free, unbound fraction of a carrier-bound hormone acts on cells and is sensed by feedback.
+- **Posterior lobe as a gland.** It makes no hormone; ADH and oxytocin are made in hypothalamic cell bodies and only released there.
+- **Feedback is always negative.** The LH surge at ovulation and oxytocin in labor are the famous positive-feedback loops.
 
 <!-- yield:low -->
-- Low-yield extras: vascular V1 receptors are Gq-coupled (vasoconstriction)
+**Low-yield extras**
+
+- Vascular V1 receptors are Gq-coupled (vasoconstriction).
 <!-- /yield -->`
     }
   ]

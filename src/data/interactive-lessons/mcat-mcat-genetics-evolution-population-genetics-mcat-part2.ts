@@ -48,16 +48,37 @@ The **effective population size** $N_e$ is the size of an idealized population t
       type: 'text' as const,
       content: `### Worked Example — Reading a Drift Experiment
 
-**Passage-style problem.** A researcher establishes 100 replicate fly populations, each with exactly 10 males and 10 females, all starting at frequency 0.5 for a neutral eye-color allele $bw^{75}$. A parallel set of 100 populations is founded with 500 flies each. After 19 generations:
+**Problem 1.** A researcher founds 100 fly populations of 20 (10 males, 10 females) and 100 of 500, all at 0.5 for a neutral allele $bw^{75}$. After 19 generations the small populations have scattered widely, and many are already fixed (1) or lost (0); the large ones stay near 0.5.
 
-- Small populations: many are FIXED for $bw^{75}$ (frequency 1) or have LOST it (frequency 0); few remain near 0.5. The distribution of frequencies is U-shaped.
-- Large populations: nearly all remain close to 0.5.
+- **(a)** Why do the small populations scatter while the large ones stay near 0.5?
+- **(b)** Why does a population that reaches 0 or 1 stay there?
+- **(c)** What fraction of the small populations should ultimately fix $bw^{75}$?
+- **(d)** What is happening to heterozygosity within each small population?
+- **(e)** What happens to the spread across populations, and how would selection look instead?
 
-**Question 1 — Why the U-shape only in small populations?** With 20 breeding flies, each generation is a small random sample of gametes, so frequencies take large random steps — this is drift. Once a population hits 0 or 1, it stays (no mutation in the experiment): fixation and loss are absorbing states. Large populations take tiny steps and stay near the start.
+**(a) Drift and size.** With 20 breeding flies, each generation is a small random sample of gametes, so allele frequencies take large random steps: genetic drift. A sample of 500 flies is a far better copy of the parent gene pool, so those populations take tiny steps.
 
-**Question 2 — What fraction of small populations should ultimately fix $bw^{75}$?** For a neutral allele, the probability of eventual fixation equals its starting frequency: $0.5$. So about half the small populations fix it and half lose it — matching the roughly symmetric U.
+**(b) Absorbing states.** Once a population hits 0 or 1, it stays: there is no mutation in the experiment, so a lost allele cannot return and a fixed one has no rival. Fixation and loss are absorbing states.
 
-**Question 3 — What happens to variation?** WITHIN each small population, heterozygosity collapses toward zero (drift removes variation). ACROSS populations, variance in allele frequency grows (populations diverge). This within/between contrast is the fingerprint that distinguishes drift from selection in MCAT data: selection would push replicate populations in the SAME direction; drift scatters them in both.`
+**(c) Fixation probability.** For a neutral allele, the probability of eventual fixation equals its starting frequency, $0.5$, so in time about half the small populations fix it and half lose it. Had it started at 0.1, only about 10 of 100 would fix.
+
+**(d) Within: variation falls.** WITHIN each small population, heterozygosity falls generation after generation, heading toward zero, because drift removes variation.
+
+**(e) Between: populations diverge.** ACROSS populations, the variance in allele frequency grows as each drifts its own way. Selection would instead push the replicates in the SAME direction; this contrast is how MCAT data separate drift from selection.
+
+### Worked Example — Gene Flow Toward a Donor Population
+
+**Problem 2.** A resident population has $p = 0.40$. Each generation, 20% of its breeders are migrants from a large neighbouring population with $p = 0.90$.
+
+- **(a)** What is the resident $p$ after one generation?
+- **(b)** What is it after a second generation?
+- **(c)** How does the gap to the donor change each generation, and what does that show?
+
+**(a) One generation.** $p' = (1 - m)\\,p_{\\text{resident}} + m\\,p_{\\text{migrant}} = (0.8)(0.40) + (0.2)(0.90) = 0.32 + 0.18 = 0.50$
+
+**(b) Two generations.** Starting from $p = 0.50$ from (a): $p'' = (0.8)(0.50) + (0.2)(0.90) = 0.40 + 0.18 = 0.58$
+
+**(c) The gap shrinks.** The gap to the donor goes $0.50 \\to 0.40 \\to 0.32$, shrinking by a factor of $1 - m = 0.8$ each generation. Gene flow homogenizes: the resident's frequency closes in on the donor's.`
     },
     {
       id: 'pg2-quiz1',
@@ -108,15 +129,22 @@ The **effective population size** $N_e$ is the size of an idealized population t
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Drift = random sampling error in allele transmission; strong in small populations, directionless, non-adaptive
-- Neutral allele's fixation probability = its current frequency; drift ends in fixation or loss and erodes heterozygosity within populations while scattering frequencies between them
-- Bottleneck = random survivors after a crash; founder effect = small emigrant sample — both are drift, and they explain lost diversity (elephant seals) and disease-allele hotspots (Amish)
-- Gene flow homogenizes populations: $p' = (1-m)p_{\\text{resident}} + m\\,p_{\\text{migrant}}$
-- Mutation creates variation but is too slow to shift frequencies alone
-- Drift vs. selection in data: scattered, size-dependent changes = drift; consistent directional, size-independent changes = selection
+- **Drift is sampling error.** Random allele-frequency change, strong in small populations, directionless and non-adaptive.
+- **Fixation or loss.** Drift ends in fixation or loss, eroding heterozygosity within populations and scattering them apart.
+- **Bottleneck vs. founder effect.** Both are drift: random survivors of a crash (elephant seals) or a small emigrant group (Amish).
+- **Gene flow homogenizes.** $p' = (1-m)p_{\\text{resident}} + m\\,p_{\\text{migrant}}$ pulls populations toward each other.
+
+**Common traps**
+
+- **Drift as adaptation.** Drift is random: it can fix harmful alleles or lose beneficial ones, so it is not selection.
+- **Even odds of fixation.** A neutral allele fixes with probability equal to its frequency: 0.2 at 0.2, and 0.5 only at 0.5.
+- **Drift data read as selection.** Drift scatters replicates both ways and weakens with size; selection shifts them all one way.
+- **Mutation as a fast force.** Mutation supplies every new allele but is far too slow to shift allele frequencies on its own.
 
 <!-- yield:low -->
-- Low-yield extras: effective population size $N_e$ is the size of an idealized population that drifts as much as the real one; unequal sex ratios, offspring-number variance, and past bottlenecks push it far below the census count
+**Low-yield extras**
+
+- Effective population size $N_e$ is the size of an idealized population that drifts as much as the real one; unequal sex ratios, offspring-number variance, and past bottlenecks push it far below the census count
 <!-- /yield -->`
     }
   ]

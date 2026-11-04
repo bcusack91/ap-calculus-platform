@@ -48,19 +48,54 @@ Ask, in order:
       type: 'text' as const,
       content: `### Worked Example — Building a Diagnostic and Testing a Mechanism
 
-**Passage-style problem.** A biotech team studies a suspected autoimmune disease in which patients may make antibodies against their own insulin receptor, blocking insulin binding and causing severe insulin-resistant hyperglycemia.
+**Problem 1.** In a suspected autoimmune disease, patients may make antibodies against their own insulin receptor, blocking insulin binding and causing severe insulin-resistant hyperglycemia. A team designs a screen for these antibodies in patient serum.
 
-**Question 1 — Design the screening assay for anti-receptor antibodies in patient serum.** ELISA: coat plates with purified insulin receptor (the antigen), add patient serum (any anti-receptor antibodies bind), wash, detect with an enzyme-linked anti-HUMAN-IgG secondary antibody, add substrate, read color. Note the inversion of the usual format — here the ANTIBODY is the analyte, so the plate presents antigen. Controls: healthy sera (background), plates coated with an irrelevant protein (specificity).
+- **(a)** What should coat the ELISA plate, and why?
+- **(b)** How are bound patient antibodies detected?
+- **(c)** Which controls does the assay need?
 
-**Question 2 — ELISA-positive patients could carry antibodies that merely bind the receptor without blocking insulin. What experiment distinguishes binding from blocking?** A competition/function assay: incubate cultured cells bearing insulin receptors with labeled insulin plus or minus patient antibodies — blocking antibodies reduce insulin binding (or downstream: reduce insulin-stimulated receptor phosphorylation on a western). Binding is not function — the EMSA-vs-reporter lesson in immunological clothing.
+**(a) Coat with antigen.** Purified insulin receptor (the antigen); patient serum is added and any anti-receptor antibodies bind. Note the inversion of the usual format — here the ANTIBODY is the analyte, so the plate presents antigen.
 
-**Question 3 — One patient is hypoglycemic instead. Propose the mechanism and the confirming result.** An antibody can be an AGONIST: by crosslinking receptors it may mimic insulin and activate signaling. Prediction: patient antibody alone (no insulin) triggers receptor autophosphorylation and glucose uptake in cultured cells. Same target, opposite functional sign — receptor antibodies split into blockers (this passage's disease) and activators (the Graves disease TSH-receptor precedent the MCAT expects you to recall).
+**(b) Detection.** Wash, then add an enzyme-linked anti-HUMAN-IgG secondary antibody, add substrate, and read the color.
+
+**(c) Controls.** Healthy sera (background) and plates coated with an irrelevant protein (specificity).
+
+**Problem 2.** ELISA-positive patients could carry antibodies that merely bind the receptor without blocking insulin.
+
+- **(a)** What experiment distinguishes binding from blocking?
+- **(b)** What downstream readout could show the same thing?
+
+**(a) Competition assay.** Incubate cultured cells bearing insulin receptors with labeled insulin, plus or minus patient antibodies — blocking antibodies reduce insulin binding.
+
+**(b) Signaling readout.** Blocking antibodies reduce insulin-stimulated receptor phosphorylation on a western. Binding is not function — the EMSA-vs-reporter lesson in immunological clothing.
+
+**Problem 3.** One antibody-positive patient is hypoglycemic instead of hyperglycemic.
+
+- **(a)** What could this patient's antibody be doing to the receptor?
+- **(b)** What result in cultured cells would confirm it?
+- **(c)** Which classic disease shows the same pattern with a different receptor?
+
+**(a) An agonist antibody.** An antibody can be an AGONIST: by crosslinking receptors it may mimic insulin and activate signaling.
+
+**(b) Confirming result.** Patient antibody alone (no insulin) triggers receptor autophosphorylation and glucose uptake in cultured cells.
+
+**(c) Graves disease.** Stimulating antibodies against the TSH receptor. Same target, opposite functional sign — receptor antibodies split into blockers (this passage's disease) and activators (the Graves precedent the MCAT expects you to recall).
 
 <!-- yield:low -->
 The blocking anti-insulin-receptor disease is a real, rare syndrome: type B insulin resistance.
 <!-- /yield -->
 
-**Question 4 — The team suspects the pathogenic antibodies arose against a viral protein resembling the receptor (molecular mimicry). What sequence-level evidence would support this, and what technique gathers it?** Sequence the viral proteome (or search databases) for a peptide with high identity to the receptor's extracellular epitope; then show patient antibodies bind BOTH peptides (ELISA against each) and that pre-absorbing serum with viral peptide removes anti-receptor reactivity. Cross-reactivity plus absorption is the standard two-step mimicry argument — technique choice, controls, and immunology reasoning in one arc, which is precisely what an MCAT discrete-passage hybrid looks like.`
+**Problem 4.** The team suspects the pathogenic antibodies arose against a viral protein resembling the receptor (molecular mimicry).
+
+- **(a)** What sequence-level evidence would support mimicry, and how is it gathered?
+- **(b)** What binding result would strengthen the case?
+- **(c)** What absorption experiment completes the argument?
+
+**(a) Sequence similarity.** Sequence the viral proteome (or search databases) for a peptide with high identity to the receptor's extracellular epitope.
+
+**(b) Cross-reactivity.** Patient antibodies bind BOTH peptides (ELISA against each).
+
+**(c) Absorption.** Pre-absorbing serum with the viral peptide removes anti-receptor reactivity. Cross-reactivity plus absorption is the standard two-step mimicry argument — technique choice, controls, and immunology reasoning in one arc.`
     },
     {
       id: 'biot4-quiz1',
@@ -111,16 +146,22 @@ The blocking anti-insulin-receptor disease is a real, rare syndrome: type B insu
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Antibody assay formats map to questions: ELISA = how much (fluids; screen), western = present + size (confirm), immunofluorescence = where, flow/FACS = per-cell counting AND live sorting, co-IP = physical association, two-hybrid = interaction screening
-- Screen sensitive, confirm specific (HIV ELISA then western) — the universal diagnostic architecture
-- Decision tree: molecule (DNA/RNA/protein), then property (amount/size/location/interaction/function), then claim level (in vitro binding, in-cell occupancy, organismal requirement)
-- Co-IP shows association, never catalysis or directness; function needs activity assays; requirement needs knockout + rescue
-- Stem cell ladder: totipotent > pluripotent (ESC, iPSC) > multipotent; iPSC reprogramming and SCNT prove differentiation is epigenetic over an intact genome; SCNT clones carry the EGG's mitochondrial DNA
-- Discordant data are mechanisms in disguise: mRNA up + protein flat = translational control or turnover — chase it with polysome profiles and pulse-chase
-- Before answering any figure question: name the technique, its one supportable claim, and the control that legitimizes it
+- **Antibody assay formats.** ELISA = how much, western = what size, immunofluorescence = where, flow cytometry = per-cell counts and sorting.
+- **Screen, then confirm.** A sensitive screen comes first, then a more specific confirmation (classically, HIV ELISA then western blot).
+- **The decision tree.** Ask what molecule, then what property, then what claim level: in vitro binding, in-cell occupancy, or requirement.
+- **Differentiation is epigenetic.** iPSC reprogramming and SCNT cloning show cell identity sits in epigenetic states on an intact genome.
+
+**Common traps**
+
+- **Co-IP as catalysis.** Co-precipitation shows two proteins associate, not that one modifies the other or that they touch directly.
+- **Discordant data as error.** mRNA up with protein flat points to translational control or protein turnover, not a failed assay.
+- **The clone's mitochondria.** An SCNT clone's nuclear genome matches the donor, but its mitochondrial DNA comes from the egg.
+- **Pluripotent as totipotent.** ESCs and iPSCs make any embryonic lineage but not placenta; only the zygote is totipotent.
 
 <!-- yield:low -->
-- Low-yield extras: the blocking anti-insulin-receptor syndrome is type B insulin resistance
+**Low-yield extras**
+
+- The blocking anti-insulin-receptor syndrome is type B insulin resistance.
 <!-- /yield -->`
     }
   ]

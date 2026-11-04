@@ -62,25 +62,32 @@ Almost every H-W problem is solved in the same order:
       type: 'text' as const,
       content: `### Worked Example — From Phenotype Counts to Carrier Frequency
 
-**Problem.** In a population of 10,000 people in Hardy-Weinberg equilibrium, 36 have an autosomal recessive condition. How many people are expected to be carriers?
+**Problem 1.** In a population of 10,000 people in Hardy-Weinberg equilibrium, 36 have an autosomal recessive condition.
 
-**Step 1 — Recessive phenotype gives $q^2$.**
-$q^2 = \\frac{36}{10000} = 0.0036$
+- **(a)** What is $q^2$?
+- **(b)** What are $q$ and $p$?
+- **(c)** How many people are expected to be carriers?
+- **(d)** How close does the fast estimate $2pq \\approx 2q$ come?
 
-**Step 2 — Take the square root.**
-$q = \\sqrt{0.0036} = 0.06$
+**(a) Recessive phenotype gives $q^2$.** The affected class is the one pure genotype: $q^2 = \\frac{36}{10000} = 0.0036$.
 
-**Step 3 — Find $p$.**
-$p = 1 - 0.06 = 0.94$
+**(b) Square root, then subtract.** With $q^2 = 0.0036$ from (a): $q = \\sqrt{0.0036} = 0.06$, so $p = 1 - 0.06 = 0.94$.
 
-**Step 4 — Carrier frequency and count.**
-$2pq = 2(0.94)(0.06) = 0.1128$
+**(c) Carrier frequency and count.** With $p = 0.94$ and $q = 0.06$ from (b): $2pq = 2(0.94)(0.06) = 0.1128$, so carriers $= 0.1128 \\times 10000 = 1128$ people.
 
-Carriers $= 0.1128 \\times 10000 = 1128$ people.
+**(d) Fast MCAT approximation.** With $q = 0.06$ from (b), $q$ is small and $p \\approx 1$, so $2pq \\approx 2q = 0.12$, about 1200 carriers. The exact 1128 is close; on a timed exam, $2q$ gets you to the right answer choice.
 
-**Fast MCAT approximation.** When $q$ is small, $p \\approx 1$, so $2pq \\approx 2q = 0.12$ → about 1200 carriers. Notice the exact answer (1128) is close; on a timed exam, $2q$ gets you to the right answer choice.
+**Problem 2.** A question instead says that 84% of a Hardy-Weinberg population shows the dominant phenotype.
 
-**Reverse-direction check.** If a question instead gives you "84% of the population shows the dominant phenotype," then the recessive phenotype is $16\\%$: $q^2 = 0.16$, $q = 0.4$, $p = 0.6$ — never take $\\sqrt{0.84}$.`
+- **(a)** What fraction shows the recessive phenotype, and what is $q^2$?
+- **(b)** What are $q$ and $p$?
+- **(c)** Why is $\\sqrt{0.84}$ the wrong first step?
+
+**(a) Subtract from 1.** The recessive phenotype is $100\\% - 84\\% = 16\\%$, so $q^2 = 0.16$.
+
+**(b) Square root, then subtract.** With $q^2 = 0.16$ from (a): $q = 0.4$ and $p = 0.6$.
+
+**(c) The dominant class is mixed.** The 84% lumps $AA$ ($p^2$) with $Aa$ ($2pq$), so it is not the square of any allele frequency. Never take $\\sqrt{0.84}$; start from the recessive class.`
     },
     {
       id: 'pg1-quiz1',
@@ -131,11 +138,17 @@ Carriers $= 0.1128 \\times 10000 = 1128$ people.
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- $p + q = 1$; genotypes at equilibrium: $p^2 + 2pq + q^2 = 1$
-- Allele counting: $p = (2n_{AA} + n_{Aa})/2N$ — homozygotes count twice
-- Five H-W conditions: no mutation, no selection, random mating, no migration, infinite (very large) population
-- Solving recipe: recessive phenotype $= q^2$ → $q$ → $p$ → whatever is asked; NEVER square-root the dominant phenotype frequency
-- Rare alleles hide in heterozygotes: carriers $\\approx 2q$ dwarf the $q^2$ affected class; $2pq$ peaks at 0.5 when $p = q = 0.5$`
+- **The H-W equation.** $p + q = 1$, and at equilibrium the genotypes are $p^2 + 2pq + q^2 = 1$.
+- **Five H-W conditions.** No mutation, no selection, random mating, no gene flow and a very large population.
+- **The solving recipe.** Recessive phenotype $= q^2$, then $q = \\sqrt{q^2}$, $p = 1 - q$, then whatever is asked.
+- **Rare alleles hide in carriers.** Carriers $2pq \\approx 2q$ dwarf the $q^2$ affected; $2pq$ peaks at 0.5 when $p = q = 0.5$.
+
+**Common traps**
+
+- **Rooting the dominant phenotype.** It lumps $p^2$ with $2pq$; subtract it from 1 first, then square-root $q^2$.
+- **Counting homozygotes once.** Each homozygote carries two copies: $p = (2n_{AA} + n_{Aa})/2N$.
+- **Genotype as allele frequency.** 50 aa out of 200 is a genotype frequency (0.25); $q$ comes from counting $a$ copies.
+- **Allele as carrier frequency.** Affected 1 in 2,500 gives $q = 1/50$, but carriers are $2pq \\approx 2q = 1/25$.`
     }
   ]
 };

@@ -5,14 +5,14 @@ import type { DeckFigurePlacement } from './index'
  *
  * Every drawing is ours, drawn from the concept: one bacterial cell with the
  * six drug targets pinned and the human counterpart beside each, two growth
- * curves plus the lesson's own MIC/MBC dilution series, the β-lactam vs
+ * curves plus an example MIC/MBC dilution series, the β-lactam vs
  * vancomycin pair at the D-Ala-D-Ala terminus, the 30S decoding site and the
  * 50S elongation cycle with drugs pinned to steps (the ribosome-schematic
  * gallery lives in the Translation deck and is not repeated here), the folate
  * pathway with its two sequential blocks, three nucleic-acid "machines", the
  * selectivity-margin ladder, four resistance-strategy panels and the
  * selection + horizontal-transfer picture. No textbook, prep-company or AAMC
- * figure was copied. Numbers drawn are only the lesson's own (70S = 30S + 50S,
+ * figure was copied. Numbers drawn are only standard values (70S = 30S + 50S,
  * 80S = 40S + 60S, MIC 4 / MBC 32 µg/mL from its worked example, ~1000-fold
  * VRE affinity loss, 99.9 % killed in 4 h). Molecules are labelled boxes and
  * discs — no structural formulas.
@@ -449,8 +449,8 @@ export const mcatAntimicrobialsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: vocabSvg,
       alt:
-        "Left: illustrative growth curves of live bacteria over time with a dashed line where drug is added. Without drug the count keeps rising; a bacteriostatic drug (blue) flattens the curve, growth halted but the cells alive, so phagocytes must finish the job and the approach fails if the patient is neutropenic; a bactericidal drug (red) makes the count fall. Static examples: tetracyclines, macrolides, sulfonamides. Cidal examples: β-lactams, vancomycin, aminoglycosides, fluoroquinolones. Right: the lesson's two-fold dilution series, eight tubes from 32 down to 0.25 µg/mL; tubes at 4 and above are clear, those below are turbid, so the MIC is 4. Subculturing the clear tubes onto drug-free agar regrows heavy colonies from 16, 8 and 4 but nothing from 32, so the MBC is 32; MBC far above MIC (8×) means the drug is essentially bacteriostatic. Definitions: MIC is the lowest concentration with no visible growth, MBC the lowest that kills. Bottom right: a disk-diffusion plate — a drug disk on a bacterial lawn with a clear zone of inhibition around it; a larger zone means a more susceptible organism.",
-      caption: 'Static halts, cidal kills (curves illustrative); MIC reads the clear tube, MBC reads what fails to regrow — the lesson’s own 4 vs 32 µg/mL series.',
+        "Left: illustrative growth curves of live bacteria over time with a dashed line where drug is added. Without drug the count keeps rising; a bacteriostatic drug (blue) flattens the curve, growth halted but the cells alive, so phagocytes must finish the job and the approach fails if the patient is neutropenic; a bactericidal drug (red) makes the count fall. Static examples: tetracyclines, macrolides, sulfonamides. Cidal examples: β-lactams, vancomycin, aminoglycosides, fluoroquinolones. Right: an example two-fold dilution series, eight tubes from 32 down to 0.25 µg/mL; tubes at 4 and above are clear, those below are turbid, so the MIC is 4. Subculturing the clear tubes onto drug-free agar regrows heavy colonies from 16, 8 and 4 but nothing from 32, so the MBC is 32; MBC far above MIC (8×) means the drug is essentially bacteriostatic. Definitions: MIC is the lowest concentration with no visible growth, MBC the lowest that kills. Bottom right: a disk-diffusion plate — a drug disk on a bacterial lawn with a clear zone of inhibition around it; a larger zone means a more susceptible organism.",
+      caption: 'Static halts, cidal kills (curves illustrative); MIC reads the clear tube, MBC reads what fails to regrow — an example 4 vs 32 µg/mL series.',
     },
     blocks: [
       '- **Bacteriostatic** halts growth (immune system finishes) vs **bactericidal** kills — matters most when neutropenic',
@@ -512,7 +512,7 @@ export const mcatAntimicrobialsFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- **Sulfonamides** = PABA analogs (enzyme humans lack) · **trimethoprim** inhibits bacterial DHFR (affinity, by degree)',
-      '- **TMP-SMX** blocks two sequential steps → synergy, one mutation can’t escape; rescue by thymidine + purines, not PABA',
+      '- **TMP-SMX** blocks two sequential steps → synergy, one mutation can’t escape; rescue by end products locates the block',
     ],
   },
   {

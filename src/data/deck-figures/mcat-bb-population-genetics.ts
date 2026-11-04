@@ -291,7 +291,7 @@ const driftPanel = (x0: number, title: string, N: number, seed: number, note: st
 <text x="${x0 + DRIFT_W / 2}" y="${f(sy(0) + 46)}" font-size="15" text-anchor="middle" fill="currentColor">${note.replace('{fixed}', String(fixed))}</text>`
 }
 const driftSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-${driftPanel(70, '20 flies per generation (2N = 40 alleles)', 20, 20261028, '{fixed} of 30 replicates already fixed (1) or lost (0): a U-shape')}
+${driftPanel(70, '20 flies per generation (2N = 40 alleles)', 20, 20261028, '{fixed} of 30 replicates already fixed (1) or lost (0): spreading to the edges')}
 ${driftPanel(560, '500 flies per generation (2N = 1,000)', 500, 7, 'every replicate still near 0.5: tiny random steps')}
 <text x="500" y="420" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">30 neutral-allele replicates each, all starting at 0.5 — direction is random, step size shrinks with N, 0 and 1 are absorbing</text>
 <g class="fig-muted"><text x="500" y="446" font-size="15" text-anchor="middle" fill="currentColor">illustrative random-walk simulation · P(eventual fixation) = starting frequency, so about half of the small replicates fix and half lose</text></g>
@@ -577,7 +577,7 @@ export const mcatPopulationGeneticsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: driftSvg,
       alt:
-        'Two panels of allele-frequency trajectories over 19 generations, each with 30 replicate populations of a neutral allele starting at frequency 0.5 (illustrative random-walk simulation). Left, 20 flies per generation (2N = 40 alleles): the blue lines fan out widely in both directions; many hit frequency 1 (fixation) or 0 (loss), marked with red dots, and the grey end-of-run histogram at generation 19 is U-shaped, with most replicates at the two extremes. Right, 500 flies per generation (2N = 1,000): every line stays close to 0.5 and the histogram is a single central bar. Footer: direction is random, step size shrinks with N, 0 and 1 are absorbing states, and the probability of eventual fixation equals the starting frequency, so about half of the small replicates fix the allele and half lose it.',
+        'Two panels of allele-frequency trajectories over 19 generations, each with 30 replicate populations of a neutral allele starting at frequency 0.5 (illustrative random-walk simulation). Left, 20 flies per generation (2N = 40 alleles): the blue lines fan out widely in both directions; many hit frequency 1 (fixation) or 0 (loss), marked with red dots, and the grey end-of-run histogram at generation 19 is widely spread, with many replicates already at the two extremes. Right, 500 flies per generation (2N = 1,000): every line stays close to 0.5 and the histogram is a single central bar. Footer: direction is random, step size shrinks with N, 0 and 1 are absorbing states, and the probability of eventual fixation equals the starting frequency, so about half of the small replicates fix the allele and half lose it.',
       caption: 'Drift is sampling error: 30 small populations scatter to fixation or loss while 30 large ones hug 0.5 (illustrative simulation, 19 generations).',
     },
     blocks: [

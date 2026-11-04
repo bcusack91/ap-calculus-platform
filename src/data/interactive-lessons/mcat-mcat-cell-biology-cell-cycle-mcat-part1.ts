@@ -109,6 +109,26 @@ Both leave kinetochores without proper tension → spindle checkpoint arrest →
 - In plants, a cell plate (vesicle-built new wall) replaces the contractile ring — a favorite comparison question`
     },
     {
+      id: 'cc1-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Counting Through One Mitosis
+
+**Problem.** A cultured animal cell line has a diploid number of 2n = 8. One cell is followed from G$_1$ through a complete mitosis, and a sample of the culture is stained with a quantitative DNA dye and run on a flow cytometer.
+
+- **(a)** How many chromosomes and chromatids does the G$_1$ cell hold, and how much DNA?
+- **(b)** How have those three numbers changed by metaphase?
+- **(c)** How many chromosomes does the cell hold just after cohesin is cleaved, and what does each daughter receive?
+- **(d)** Where does the metaphase cell fall on the DNA-content histogram, and what extra observation would confirm it is in mitosis?
+
+**(a) G$_1$.** 8 chromosomes, each a single chromatid, so 8 chromatids and 2C DNA.
+
+**(b) Metaphase.** S phase copied every chromosome without adding any: still 8 chromosomes, now 16 sister chromatids joined by cohesin, and 4C DNA. Chromosome number (n) held; DNA content (C) doubled.
+
+**(c) Anaphase.** Cleaving cohesin turns the 16 chromatids into 16 chromosomes, transiently twice the diploid number. Each daughter receives 8 single-chromatid chromosomes and 2C DNA, matching the starting G$_1$ cell.
+
+**(d) Flow cytometry.** The metaphase cell sits in the 4C peak alongside G$_2$ cells, so DNA content alone cannot separate them. Its condensed chromosomes can: they are what the mitotic index counts.`
+    },
+    {
       id: 'cc1-quiz2',
       type: 'multiple-choice' as const,
       content: `**Spindle & Cycle Measurement** 🎯`,
@@ -136,16 +156,22 @@ Both leave kinetochores without proper tension → spindle checkpoint arrest →
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Cycle order: G$_1$ → S → G$_2$ → M; interphase is ~90% of the time; G$_0$ = quiescent exit (neurons/cardiac permanent; hepatocytes facultative)
-- Track n vs. C separately: S phase doubles DNA (2C → 4C) but not chromosome number; chromatids count as chromosomes only after anaphase separation
-- Mitosis: condense (prophase) → envelope down/kinetochores capture (prometaphase) → align (metaphase) → cohesin cleaved, chromatids part (anaphase) → envelopes re-form (telophase) → actin ring pinches (cytokinesis)
-- Three checkpoints: restriction point (G$_1$/S, growth-factor dependent), G$_2$/M (DNA integrity), spindle checkpoint (attachment/tension)
-- Flow cytometry reads phase by DNA content (2C vs. 4C vs. between); EdU/BrdU pulse marks S phase directly
-- Spindle poisons work oppositely (destabilize vs. hyper-stabilize) but both trigger checkpoint arrest — hence shared chemotherapy logic and toxicity
-- Karyokinesis and cytokinesis are separable: endomitosis (megakaryocytes) and binucleate hepatocytes are normal outcomes
+- **Phase order.** G$_1$ → S → G$_2$ → M; mitosis: condense → envelope down/capture → align → cohesin cut → re-form, then cytokinesis.
+- **Track n and C separately.** S phase doubles DNA (2C → 4C) but not chromosome number; anaphase is when the count changes.
+- **Reading the histogram.** 2C = G$_1$/G$_0$, 4C = G$_2$/M, between = S; an EdU/BrdU pulse marks S-phase cells directly.
+- **Spindle poisons converge.** Colchicine blocks assembly and taxanes freeze microtubules; both leave the spindle checkpoint on.
+
+**Common traps**
+
+- **Counting chromatids as chromosomes.** A G$_2$ human cell still has 46 chromosomes; chromatids count only once cohesin is cleaved.
+- **Calling every 4C cell mitotic.** The 4C peak holds G$_2$ and M cells; only condensed chromosomes mark mitosis.
+- **G$_0$ as inactive.** G$_0$ cells are metabolically active, just not dividing; permanent G$_0$ tissue heals by scarring.
+- **Mitosis equals cytokinesis.** Cytokinesis is a separate actin-ring step; blocking it leaves binucleate or polyploid cells.
 
 <!-- yield:low -->
-- Low-yield extras: condensin complexes drive prophase chromosome condensation
+**Low-yield extras**
+
+- Condensin complexes drive prophase chromosome condensation.
 <!-- /yield -->`
     }
   ]

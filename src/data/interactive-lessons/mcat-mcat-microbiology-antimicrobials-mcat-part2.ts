@@ -52,6 +52,50 @@ Bacteria translate on **70S ribosomes (30S + 50S subunits)**; eukaryotic cytosol
 <!-- /yield -->`
     },
     {
+      id: 'abx2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Translation Pharmacology
+
+**Problem 1.** In a bacterial in vitro translation system, drug A freezes ribosomes on mRNA as heavy polysomes; drug B makes ribosomes run off as free 70S, releasing truncated peptides. One is chloramphenicol; the other is puromycin, an aminoacyl-tRNA mimic.
+
+- **(a)** How should a drug that blocks peptide-bond formation affect ribosomes on mRNA?
+- **(b)** What happens to the growing chain when puromycin enters the A site?
+- **(c)** Which drug is A, and which is B?
+
+**(a) A bond blocker.** Blocking bond formation makes ribosomes STALL in place, still clamped to mRNA, so polysomes are preserved.
+
+**(b) Puromycin.** Resembling a charged tRNA, puromycin receives the growing chain, then falls off with it: premature release and ribosome run-off.
+
+**(c) Matching.** Chloramphenicol, the bond blocker, is **drug A**; puromycin, the chain releaser, is **drug B**. Polysome profiles separate "stall" inhibitors, which preserve polysomes, from "release" inhibitors, which collapse them.
+
+**Problem 2.** A college student has "walking pneumonia" from Mycoplasma pneumoniae. Amoxicillin fails.
+
+- **(a)** Why does amoxicillin fail?
+- **(b)** What does the organism still have that a drug can target?
+- **(c)** Which drug class succeeds?
+
+**(a) Why amoxicillin fails.** Amoxicillin is a beta-lactam, and Mycoplasma has no peptidoglycan: the target is absent (the Part 1 principle).
+
+**(b) A remaining target.** The organism still translates on 70S ribosomes, so protein-synthesis inhibitors can work.
+
+**(c) The right class.** A **macrolide** (azithromycin) or a tetracycline is standard. Wall-less and intracellular organisms shift therapy from wall drugs to ribosome or nucleic-acid drugs: match the drug's required target to the organism's parts list first.
+
+**Problem 3.** One elongation cycle has three steps: DELIVER (aminoacyl-tRNA enters the A site), BOND (peptidyl transferase forms the peptide bond) and MOVE (the ribosome translocates as the chain threads the exit tunnel).
+
+- **(a)** Which step does tetracycline block?
+- **(b)** Which step does chloramphenicol block?
+- **(c)** Which step does erythromycin block?
+- **(d)** A drug blocks assembly of the 70S initiation complex. Is it acting before or within the cycle, and which known drug does it resemble?
+
+**(a) Tetracycline.** It blocks **Deliver**: sitting in the 30S A site, it keeps aminoacyl-tRNA from entering.
+
+**(b) Chloramphenicol.** It blocks **Bond**: it inhibits peptidyl transferase, the 23S rRNA that forms the peptide bond.
+
+**(c) Erythromycin.** It blocks **Move**: plugging the exit tunnel, it stops the ribosome from translocating.
+
+**(d) An initiation blocker.** It acts BEFORE the cycle, stopping initiation-complex assembly at the 50S subunit, like **linezolid**. Learn the cycle, not the drug list, and a new drug maps onto it at once.`
+    },
+    {
       id: 'abx2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Ribosome-Targeting Antibiotics** 🎯`,
@@ -100,59 +144,23 @@ Bacteria translate on **70S ribosomes (30S + 50S subunits)**; eukaryotic cytosol
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- 70S vs 80S = the selectivity handle; the exception is 70S-like mitochondrial ribosomes (aminoglycoside hearing loss)
-- 30S: aminoglycosides (irreversible, misreading, CIDAL, need O$_2$ uptake) and tetracyclines (A-site block, static)
-- 50S: chloramphenicol (peptidyl transferase — an rRNA ribozyme), macrolides (exit tunnel/translocation), clindamycin, linezolid (initiation)
-- Aminoglycoside + beta-lactam = synergy (wall holes boost uptake); aminoglycosides fail vs anaerobes
-- Methylation of 23S rRNA removes the macrolide binding site = target-alteration resistance, with cross-resistance to clindamycin
+- **70S vs 80S.** Bacterial 70S ribosomes are the handle, but 70S-like mitochondrial ribosomes explain toxicities like hearing loss.
+- **30S drugs.** Aminoglycosides bind irreversibly and cause misreading; tetracyclines block the A site and only halt growth.
+- **50S drugs.** Chloramphenicol blocks peptidyl transferase, macrolides the exit tunnel, linezolid the initiation complex.
+- **Aminoglycoside synergy.** A beta-lactam's wall damage lets an aminoglycoside flood in, so the pair is synergistic.
+
+**Common traps**
+
+- **Every ribosome drug is static.** Aminoglycosides are cidal: misreading makes junk proteins that poison the membrane.
+- **Aminoglycosides for anaerobes.** Their uptake needs oxygen-dependent transport, so anaerobes are intrinsically resistant.
+- **Protein makes the peptide bond.** Peptidyl transferase is 23S rRNA, a ribozyme; chloramphenicol blocks an RNA active site.
+- **Methylation hits macrolides only.** Clindamycin binds an overlapping 50S site, so 23S methylation defeats it as well.
 
 <!-- yield:low -->
-- Low-yield extras: chloramphenicol's marrow suppression is another mitochondrial-ribosome effect; tetracyclines chelate divalent cations and stain teeth/bone; clindamycin's clinical niche (anaerobes above the diaphragm, C. diff risk) and linezolid's (MRSA/VRE reserve); the 23S methylase gene is erm, and the cross-resistance is the MLS$_B$ phenotype
+**Low-yield extras**
+
+- Chloramphenicol's marrow suppression is another mitochondrial-ribosome effect; tetracyclines chelate divalent cations and stain teeth/bone; clindamycin's clinical niche (anaerobes above the diaphragm, C. diff risk) and linezolid's (MRSA/VRE reserve); the 23S methylase gene is erm, and the cross-resistance is the MLS$_B$ phenotype
 <!-- /yield -->`
-    },
-    {
-      id: 'abx2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Translation Pharmacology
-
-<details>
-<summary><b>Example 1: Map drug effects onto the elongation cycle</b></summary>
-
-**Question:** Place tetracycline, chloramphenicol, and erythromycin at their exact steps in one elongation cycle (deliver, bond, move).
-
-**Solution:**
-1. **Deliver:** aminoacyl-tRNA enters the A site — blocked by **tetracycline**.
-2. **Bond:** peptidyl transferase (23S rRNA) forms the peptide bond — blocked by **chloramphenicol**.
-3. **Move:** the ribosome translocates and the chain threads the exit tunnel — blocked by **erythromycin**.
-
-**MCAT Strategy:** Learn the cycle, not the drug list — a passage describing a novel inhibitor of translocation should map instantly onto macrolide-like behavior.
-</details>
-
-<details>
-<summary><b>Example 2: Design the polysome experiment</b></summary>
-
-**Question:** In a bacterial in vitro translation system, drug A freezes ribosomes on mRNA as heavy polysomes; drug B causes ribosomes to run off and accumulate as free 70S with truncated peptides released. Match A and B to chloramphenicol vs puromycin (an aminoacyl-tRNA mimic that accepts the chain and dissociates).
-
-**Solution:**
-1. Chloramphenicol blocks bond formation, so ribosomes STALL in place, still clamped to mRNA: **drug A** (polysomes preserved).
-2. Puromycin resembles a charged tRNA, receives the growing chain, then falls off — premature release and ribosome run-off: **drug B**.
-3. Polysome profiles thus distinguish "stall" inhibitors from "release" inhibitors.
-
-**MCAT Strategy:** Experimental passages test whether you can translate a mechanism into a measurable pattern; stalling preserves polysomes, release collapses them.
-</details>
-
-<details>
-<summary><b>Example 3: Choose the drug for an atypical pneumonia</b></summary>
-
-**Question:** A college student has "walking pneumonia" from Mycoplasma pneumoniae. Amoxicillin fails. Why, and what class succeeds?
-
-**Solution:**
-1. Amoxicillin is a beta-lactam; Mycoplasma has no peptidoglycan — the target is absent (Part 1 principle).
-2. The organism still translates on 70S ribosomes, so protein-synthesis inhibitors work: a **macrolide** (azithromycin) or tetracycline is standard.
-3. General rule: wall-less and intracellular organisms shift therapy from wall drugs to ribosome or nucleic-acid drugs.
-
-**MCAT Strategy:** Match the drug's required target to the organism's parts list before considering anything else.
-</details>`
     }
   ]
 };

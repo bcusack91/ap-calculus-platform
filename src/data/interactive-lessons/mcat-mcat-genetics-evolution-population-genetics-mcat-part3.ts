@@ -49,26 +49,50 @@ Selection can only "see" a recessive allele in aa homozygotes. When $q$ is small
       type: 'text' as const,
       content: `### Worked Example — One Generation of Selection Against aa
 
-**Problem.** A large, randomly mating insect population has $p = 0.6$, $q = 0.4$. A new pesticide kills half of all aa individuals before reproduction ($w_{AA} = w_{Aa} = 1$, $w_{aa} = 0.5$, so $s = 0.5$). What is $q$ in the next generation?
+**Problem 1.** A large, randomly mating insect population has $p = 0.6$, $q = 0.4$. A new pesticide kills half of all aa individuals before reproduction ($w_{AA} = w_{Aa} = 1$, $w_{aa} = 0.5$, so $s = 0.5$).
 
-**Step 1 — Genotypes at birth (H-W).**
-$p^2 = 0.36, \\qquad 2pq = 0.48, \\qquad q^2 = 0.16$
+- **(a)** What are the genotype frequencies at birth?
+- **(b)** What is the mean fitness $\\bar{w}$?
+- **(c)** What is $q$ in the next generation?
 
-**Step 2 — Weight each genotype by fitness and find mean fitness.**
-$\\bar{w} = (0.36)(1) + (0.48)(1) + (0.16)(0.5) = 0.36 + 0.48 + 0.08 = 0.92$
+**(a) Genotypes at birth (H-W).** $p^2 = 0.36, \\qquad 2pq = 0.48, \\qquad q^2 = 0.16$
 
-**Step 3 — New frequency of a.** Each surviving Aa contributes one a allele of its two; each surviving aa contributes two of two:
-$q' = \\frac{\\tfrac{1}{2}(0.48)(1) + (0.16)(0.5)}{\\bar{w}} = \\frac{0.24 + 0.08}{0.92} = \\frac{0.32}{0.92} \\approx 0.348$
+**(b) Weight each genotype by fitness.** With the frequencies from (a): $\\bar{w} = (0.36)(1) + (0.48)(1) + (0.16)(0.5) = 0.36 + 0.48 + 0.08 = 0.92$
 
-So one generation of strong selection moves $q$ from 0.40 only to about 0.35.
+**(c) New frequency of a.** Each surviving Aa contributes one a allele of its two; each surviving aa contributes two of two. With $\\bar{w} = 0.92$ from (b):
 
-**Step 4 — Contrast with a RARE recessive.** Now suppose aa is lethal ($s = 1$) and $q = 0.01$. Selection can remove only the aa class, $q^2 = 0.0001$ of the population, while about $2q = 0.02$ of the population carries the allele unseen. The share of all a copies sitting in aa individuals is $2q^2 / 2q = q$ — just 1% — so even a lethal removes only about 1% of the allele's copies per generation: $q$ falls from 0.0100 to about 0.0099. Rare recessives are nearly immortal in the gene pool.
+$$q' = \\frac{\\tfrac{1}{2}(0.48)(1) + (0.16)(0.5)}{\\bar{w}} = \\frac{0.24 + 0.08}{0.92} = \\frac{0.32}{0.92} \\approx 0.348$$
+
+One generation of strong selection moves $q$ from 0.40 only to about 0.35.
+
+**Problem 2.** Now suppose aa is lethal ($s = 1$) and $q = 0.005$.
+
+- **(a)** What fraction of the population is affected, and what fraction carries the allele unseen?
+- **(b)** What share of all a copies sits in aa individuals?
+- **(c)** How far does $q$ fall in one generation?
+
+**(a) Affected vs. carriers.** Selection can remove only the aa class, $q^2 = 0.000025$ of the population, while $2pq = 2(0.995)(0.005) \\approx 0.00995$ carries the allele unseen: about 400 carriers per affected person.
+
+**(b) Exposed copies.** The share of all a copies sitting in aa individuals is $2q^2 / 2q = q$, just 0.5%.
+
+**(c) One generation.** Even a lethal removes only about 0.5% of the allele's copies per generation: $q$ falls from 0.00500 to about 0.00498. Rare recessives are nearly immortal in the gene pool.
 
 <!-- yield:low -->
-The general recursion for a recessive lethal is $q' = q/(1 + q)$, which gives $q_t = q_0/(1 + t\\,q_0)$ after $t$ generations: halving a rare lethal's frequency takes about $1/q_0$ generations (about 100 generations at $q_0 = 0.01$).
+The general recursion for a recessive lethal is $q' = q/(1 + q)$ (here $0.005/1.005 \\approx 0.00498$), which gives $q_t = q_0/(1 + t\\,q_0)$ after $t$ generations: halving a rare lethal's frequency takes about $1/q_0$ generations (about 200 generations at $q_0 = 0.005$).
 <!-- /yield -->
 
-**Balanced-polymorphism check.** In a malaria zone, suppose $w_{AS} = 1$, $w_{AA} = 0.85$ (malaria deaths), $w_{SS} = 0.2$ (sickle cell disease). Both homozygotes lose to the heterozygote, so neither allele can be eliminated: at equilibrium the S allele settles where the two homozygote penalties balance — high enough that S can reach frequencies near 0.1 to 0.2 despite being lethal when homozygous.`
+**Problem 3.** In a malaria zone, suppose $w_{AS} = 1$, $w_{AA} = 0.85$ (malaria deaths), $w_{SS} = 0.2$ (sickle cell disease).
+
+- **(a)** Why can neither allele be eliminated?
+- **(b)** Where does the S allele settle?
+
+**(a) Heterozygote advantage.** Whichever allele becomes rare sits almost entirely in the fittest genotype, AS, so selection pushes it back up; $AS \\times AS$ matings also keep regenerating both homozygotes.
+
+**(b) The balance point.** The homozygote penalties are $s_{AA} = 1 - 0.85 = 0.15$ and $s_{SS} = 1 - 0.2 = 0.80$. S settles where they balance, near 0.1 to 0.2, despite SS being severely harmful.
+
+<!-- yield:low -->
+The equilibrium is $\\hat{q}_S = s_{AA}/(s_{AA} + s_{SS}) = 0.15/(0.15 + 0.80) \\approx 0.16$.
+<!-- /yield -->`
     },
     {
       id: 'pg3-quiz1',
@@ -119,15 +143,22 @@ The general recursion for a recessive lethal is $q' = q/(1 + q)$, which gives $q
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Relative fitness $w$ is scaled to the best genotype; selection coefficient $s = 1 - w$
-- Directional selection shifts the mean; stabilizing shrinks variance; disruptive inflates variance (bimodality)
-- Heterozygote advantage (sickle cell in malaria zones) is a stable balanced polymorphism; heterozygote disadvantage is unstable and fixes whichever allele starts on the favored side (the more common one when homozygotes are equally fit)
-- Negative frequency-dependent selection favors rare types and preserves polymorphism
-- Inbreeding raises homozygosity and lowers heterozygosity without changing allele frequencies; inbreeding depression comes from exposed deleterious recessives
-- Selection against a rare recessive is inefficient because the allele hides in heterozygotes ($2pq$ dwarfs $q^2$); a lethal at frequency $q$ removes only about the fraction $q$ of its copies per generation
+- **Relative fitness.** $w$ is scaled to the best genotype ($w = 1$), and the selection coefficient is $s = 1 - w$.
+- **Three selection modes.** Directional shifts the mean; stabilizing shrinks the variance; disruptive inflates it toward bimodality.
+- **Balancing selection.** Heterozygote advantage (sickle cell where malaria is endemic) and rare-type advantage keep both alleles.
+- **Rare recessives resist selection.** Hidden in carriers ($2pq \\gg q^2$), a rare lethal loses only about the fraction $q$ of its copies per generation.
+
+**Common traps**
+
+- **Fitness vs. selection coefficient.** aa leaving 60 offspring per 100 has $w = 0.6$ but $s = 0.4$; do not swap them.
+- **Inbreeding changing allele frequencies.** It turns heterozygotes into homozygotes; $q$ moves only if selection then acts on the exposed recessives.
+- **Underdominance as balancing.** Heterozygote disadvantage is unstable: it fixes one allele (usually the more common one) rather than preserving both.
+- **HbS kept by mutation or drift.** Mutation is far too slow and drift weak in large populations; heterozygote advantage holds HbS.
 
 <!-- yield:low -->
-- Low-yield extras: the inbreeding coefficient $F$ (probability two alleles are identical by descent) lowers heterozygosity to $2pq(1-F)$; a recessive lethal follows $q' = q/(1+q)$, so halving a rare lethal takes about $1/q_0$ generations
+**Low-yield extras**
+
+- The inbreeding coefficient $F$ (probability two alleles are identical by descent) lowers heterozygosity to $2pq(1-F)$; a recessive lethal follows $q' = q/(1+q)$, so halving a rare lethal takes about $1/q_0$ generations
 <!-- /yield -->`
     }
   ]

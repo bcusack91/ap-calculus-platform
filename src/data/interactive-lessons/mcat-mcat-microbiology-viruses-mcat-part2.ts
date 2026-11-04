@@ -43,6 +43,51 @@ A temperate phage has a choice. Instead of replicating, its genome can integrate
 Plaque assays, transduction-based gene mapping, phage display, and modern **phage therapy** against multidrug-resistant bacteria all rest on this biology. CRISPR-Cas immunity is the bacterial counterattack: captured phage sequence fragments (spacers) guide Cas nucleases to destroy re-invading phage DNA — an adaptive immune system in a single cell.`
     },
     {
+      id: 'vir2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Phage Genetics
+
+**Problem 1.** On a lawn of E. coli, wild-type lambda forms turbid (cloudy) plaques, while a mutant lambda forms perfectly clear plaques.
+
+- **(a)** Why are wild-type plaques turbid?
+- **(b)** What do clear plaques reveal about the mutant, and which gene is the likely lesion?
+- **(c)** Would the mutant form plaques on a lawn of wild-type lambda lysogens?
+
+**(a) Turbid plaques.** Within a wild-type plaque, some infected cells choose LYSOGENY, survive (immune to superinfection) and keep growing; a haze of live lysogens clouds the cleared zone.
+
+**(b) Clear plaques.** NO survivors means the mutant cannot establish lysogeny. The classic lesion is a defective repressor gene: the phage still grows lytically but never forms stable lysogens.
+
+**(c) On lysogens.** No. The lysogens' resident repressor binds the incoming mutant's normal operators and silences its lytic genes (superinfection immunity), so no plaques form. Plaque morphology reads out the lysis-lysogeny circuit: turbidity = lysogens = functional repressor.
+
+<!-- yield:low -->
+- The lambda repressor gene is named cI; clear-plaque mutants are cI-minus.
+<!-- /yield -->
+
+**Problem 2.** Lambda integrates between the E. coli gal and bio genes. A rare transducing lysate moves gal+ or bio+ into recipients, but never trp+, which lies far away.
+
+- **(a)** Why can only gal or bio be carried?
+- **(b)** Why is the transducing particle usually defective?
+- **(c)** How would generalized transduction by phage P1 differ?
+
+**(a) Neighbors only.** Specialized transduction requires IMPRECISE prophage excision: the loop-out accidentally captures DNA next to the attachment site, so only gal or bio can be included; trp is never adjacent.
+
+**(b) Defective particle.** The particle traded away some of its own phage genes to carry the host DNA.
+
+**(c) P1 contrast.** P1 mispackages random chromosome fragments during LYTIC growth, so any locus, including trp, moves at roughly comparable low frequency. Ask where the phage DNA sits when the error happens: integrated (specialized, neighbors only) or never integrated (generalized, anything).
+
+**Problem 3.** A patient's multidrug-resistant Pseudomonas isolate is lysed by phage 12 from a phage library. A week into therapy, resistant colonies emerge whose surfaces lack the type IV pilus.
+
+- **(a)** Why are the new colonies resistant?
+- **(b)** What countermeasure makes resistance unlikely?
+- **(c)** What did the bacterium give up by becoming resistant?
+
+**(a) Receptor loss.** Phage 12 evidently uses the type IV pilus as its receptor; losing the pilus removes the attachment site (the phage version of "keep the drug out").
+
+**(b) A cocktail.** Use a phage COCKTAIL targeting several distinct receptors; losing all of them at once is improbable. Cocktails mirror combination therapy.
+
+**(c) The trade-off.** Pili are adhesins, so phage resistance here made the pathogen less able to adhere to host tissue. Phage-host coevolution mirrors antibiotic-resistance logic: receptor alteration, restriction, CRISPR.`
+    },
+    {
       id: 'vir2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Phage Cycles & Lysogeny** 🎯`,
@@ -91,64 +136,23 @@ Plaque assays, transduction-based gene mapping, phage display, and modern **phag
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Tailed phage = DNA-packed head + syringe tail; DNA injected, capsid stays out (Hershey-Chase: 32P in, 35S out)
-- Lytic (virulent, T4): early genes hijack and copy, late genes build and lyse — burst of progeny
-- Lysogenic (temperate, lambda): integrase inserts prophage; repressor silences lytic genes + grants superinfection immunity
-- Induction: DNA damage → repressor destroyed → excision → lysis; starvation + high phage density favor lysogeny instead
-- Lysogenic conversion arms bacteria with phage-encoded toxins (diphtheria, cholera, Shiga)
-- Sloppy prophage excision = specialized transduction; lytic mispackaging = generalized; CRISPR = bacterial adaptive defense
+- **Injection and lysis.** Tailed phages inject DNA and leave the capsid outside (Hershey-Chase); virulent T4 then copies and lyses.
+- **Lysogeny.** Temperate lambda integrates as a prophage; its repressor silences lytic genes and blocks superinfection.
+- **Lysogenic conversion.** Prophage genes can arm bacteria with toxins, such as the diphtheria, cholera and Shiga toxins.
+- **CRISPR defense.** Bacteria store phage spacer sequences that guide Cas nucleases to destroy re-invading phage DNA.
+
+**Common traps**
+
+- **UV favoring lysogeny.** DNA damage destroys the repressor and induces lysis; starvation and a high phage-to-bacterium ratio favor lysogeny.
+- **Mixing up transduction.** Excision errors (specialized) move only genes beside the prophage; lytic mispackaging (generalized) moves any gene.
+- **Immunity as receptor loss.** Superinfection immunity is the resident repressor silencing incoming same-type phage DNA, not a lost receptor.
+- **Clear plaques as lysogens.** Turbid plaques hold surviving lysogens; clear plaques mean the phage cannot establish lysogeny at all.
 
 <!-- yield:low -->
-- Low-yield extras: T4 bursts ~100-200 progeny in ~25 minutes; the SOS sensor RecA triggers repressor self-cleavage during induction; the lambda repressor gene is cI (clear-plaque mutants are cI-minus)
+**Low-yield extras**
+
+- T4 bursts ~100-200 progeny in ~25 minutes; the SOS sensor RecA triggers repressor self-cleavage during induction; the lambda repressor gene is cI (clear-plaque mutants are cI-minus)
 <!-- /yield -->`
-    },
-    {
-      id: 'vir2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Phage Genetics
-
-<details>
-<summary><b>Example 1: Turbid vs clear plaques</b></summary>
-
-**Question:** Wild-type lambda forms turbid (cloudy) plaques; a mutant forms perfectly clear plaques. Propose the mutation and explain the plaque morphologies.
-
-**Solution:**
-1. Within a wild-type plaque, some infected cells choose LYSOGENY, survive (immune to superinfection), and keep growing — a haze of live lysogens clouds the cleared zone: turbid.
-2. Clear plaques mean NO survivors — the mutant cannot establish lysogeny. The classic lesion is a defective repressor gene.
-3. Corollary: a repressor-defective phage can still grow lytically (plaques form) but can never form stable lysogens.
-
-**MCAT Strategy:** Plaque morphology is a phenotype readout of the lysis-lysogeny circuit; turbidity = lysogens = functional repressor.
-</details>
-
-<!-- yield:low -->
-- The lambda repressor gene is named cI; clear-plaque mutants are cI-minus.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 2: Which genes can a specialized transducer carry?</b></summary>
-
-**Question:** Lambda integrates between the E. coli gal and bio genes. A rare transducing lysate moves gal+ or bio+ into recipients, but never trp+ (located far away). Explain, and contrast with phage P1 generalized transduction.
-
-**Solution:**
-1. Specialized transduction requires IMPRECISE prophage excision: the loop-out accidentally captures DNA adjacent to the attachment site — only gal or bio can be included; trp is never adjacent.
-2. The resulting particle is usually defective (it left phage genes behind in trade).
-3. P1 (generalized) mispackages random chromosome fragments during LYTIC growth: any locus, including trp, moves at roughly comparable low frequency.
-
-**MCAT Strategy:** Ask where the phage DNA sits when the error happens: integrated (specialized → neighbors only) vs never integrated (generalized → anything).
-</details>
-
-<details>
-<summary><b>Example 3: Design a phage-therapy susceptibility test</b></summary>
-
-**Question:** A patient's multidrug-resistant Pseudomonas isolate is tested against a phage library. Phage 12 lyses it today; a week into therapy, resistant bacterial colonies emerge whose surfaces lack the type IV pilus. Explain the resistance and one countermeasure.
-
-**Solution:**
-1. Phage 12 evidently uses the type IV pilus as its receptor; losing the pilus removes the attachment site — resistance by receptor loss (the phage version of 'keep the drug out').
-2. Countermeasure: a phage COCKTAIL targeting several distinct receptors — simultaneous loss of all is improbable; bonus if receptor loss costs the bacterium virulence (pili are adhesins).
-3. Note the evolutionary trade: phage resistance here made the pathogen less able to adhere to host tissue.
-
-**MCAT Strategy:** Phage-host coevolution mirrors antibiotic resistance logic — receptor alteration, restriction, CRISPR — and cocktails mirror combination therapy.
-</details>`
     }
   ]
 };

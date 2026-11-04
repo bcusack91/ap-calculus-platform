@@ -51,6 +51,57 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
 - **The two-hormone diabetes discrimination:** mellitus = osmotic diuresis with glucosuria; insipidus = pure water diuresis, dilute urine, no glucose.`
     },
     {
+      id: 'ren4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — MCAT-Style Passages
+
+**Problem 1.** Substance Q is freely filtered. Plasma Q = 0.1 mg/mL, urine Q = 12 mg/mL, urine flow = 1.5 mL/min, and the simultaneous inulin clearance is 120 mL/min.
+
+- **(a)** What is the clearance of Q?
+- **(b)** Is Q net reabsorbed or net secreted?
+- **(c)** What is the net tubular transport of Q, in mg/min?
+- **(d)** What kind of molecule is handled this way, and what would a clearance near renal plasma flow mean?
+
+**(a) Clearance.** $C_Q = \\dfrac{12 \\times 1.5}{0.1} = \\dfrac{18}{0.1} = 180$ mL/min.
+
+**(b) Verdict.** With $C_Q = 180$ mL/min from (a), above GFR (the 120 mL/min inulin clearance), Q undergoes **net secretion**.
+
+**(c) Net transport.** Filtered load $= 120 \\times 0.1 = 12$ mg/min; excreted $= 12 \\times 1.5 = 18$ mg/min; so $18 - 12 = 6$ mg/min is secreted, matching the verdict in (b).
+
+**(d) Identity.** Q behaves like an organic acid or base handled by PCT secretory pumps (PAH-like). If $C_Q$ approached renal plasma flow (~600 mL/min), extraction would be nearly complete.
+
+**Problem 2.** A patient's LEFT renal artery is severely narrowed. An ACE inhibitor makes the left kidney's GFR plummet, while the right kidney's GFR barely changes.
+
+- **(a)** How does the left kidney maintain its GFR before the drug?
+- **(b)** Why does the ACE inhibitor collapse GFR on the stenotic side?
+- **(c)** Why is the right kidney barely affected?
+
+**(a) The efferent crutch.** Behind the stenosis, perfusion pressure is chronically low; the left kidney holds its GFR only by Ang II-driven **efferent arteriolar constriction**, damming pressure inside the glomerulus.
+
+**(b) The dam opens.** The ACE inhibitor removes Ang II, so the efferent arteriole relaxes and glomerular pressure and GFR collapse on the stenotic side.
+
+**(c) The normal side.** The right kidney has normal perfusion, does not depend on the efferent crutch, and mildly benefits from lower systemic resistance. The same molecule (Ang II) is a systemic vasoconstrictor AND a local GFR defender: passages love effects that differ by vascular bed.
+
+**Problem 3.** A passage plots filtered, reabsorbed and excreted glucose (mg/min) against plasma glucose concentration (mg/dL).
+
+- **(a)** What happens below the threshold of ~200 mg/dL plasma?
+- **(b)** What happens just above the threshold?
+- **(c)** What happens once the filtered load passes $T_m$ (~375 mg/min)?
+- **(d)** How can you check that the three curves are consistent?
+
+**(a) Below threshold.** Reabsorption equals filtration, so excretion is 0.
+
+**(b) Just above threshold.** Glucose begins to spill into the urine; full saturation comes a bit later because nephrons saturate at different loads.
+
+**(c) Past $T_m$.** The carriers are saturated, so reabsorption is flat and excretion rises parallel to the filtered-load line.
+
+**(d) Ledger check.** At every x-value, excretion = filtration − reabsorption: the curves must obey the master ledger.
+
+<!-- yield:low -->
+- **Splay:** the curves bend gradually between threshold and $T_m$ rather than at a sharp corner, because nephrons are heterogeneous (some saturate early) and carrier affinity is finite — glucose starts spilling slightly BEFORE the average $T_m$ is reached.
+<!-- /yield -->`
+    },
+    {
       id: 'ren4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Renal Integration** 🎯`,
@@ -81,64 +132,26 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
       }
     },
     {
-      id: 'ren4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — MCAT-Style Passages
-
-<details>
-<summary><b>Example 1: Full clearance workup of a mystery molecule</b></summary>
-
-**Question:** Substance Q: plasma 0.1 mg/mL, urine 12 mg/mL, urine flow 1.5 mL/min, simultaneous inulin clearance 120 mL/min. Freely filtered. Characterize Q's renal handling.
-
-**Solution:**
-1. $C_Q = \\frac{12 \\times 1.5}{0.1} = \\frac{18}{0.1} = 180$ mL/min.
-2. $C_Q (180) > GFR (120)$ → **net secretion**.
-3. Quantify: filtered load $= 120 \\times 0.1 = 12$ mg/min; excreted $= 12 \\times 1.5 = 18$ mg/min; secreted $= 18 - 12 = 6$ mg/min. ✓
-4. Q behaves like an organic acid/base handled by PCT secretory pumps (PAH-like). If $C_Q$ approached renal plasma flow (~600 mL/min), extraction would be nearly complete.
-</details>
-
-<details>
-<summary><b>Example 2: The glucose titration curve</b></summary>
-
-**Question:** A passage plots filtered, reabsorbed, and excreted glucose versus plasma concentration. Explain the "threshold" and the "$T_m$ plateau."
-
-**Solution:**
-1. Below threshold (~200 mg/dL plasma): reabsorption = filtration; excretion = 0.
-2. Glucose begins to spill just above threshold; full saturation comes a bit later because nephrons saturate at different loads. Once the filtered load passes $T_m$ (~375 mg/min): carriers saturated; reabsorption is flat, so excretion rises in parallel with filtration (slope = GFR). ✓
-
-**Graph skill:** on such plots, excretion = filtration − reabsorption at every x-value; check the curves obey the master ledger.
-</details>
-
-<!-- yield:low -->
-- **Splay:** the curves bend gradually between threshold and $T_m$ rather than at a sharp corner, because nephrons are heterogeneous (some saturate early) and carrier affinity is finite — glucose starts spilling slightly BEFORE the average $T_m$ is reached.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 3: ACE-inhibitor experiment with renal-artery stenosis</b></summary>
-
-**Question:** In a patient whose LEFT renal artery is severely narrowed, an ACE inhibitor causes the left kidney's GFR to plummet while the right kidney's GFR barely changes. Explain.
-
-**Solution:**
-1. Behind the stenosis, perfusion pressure is chronically low; the left kidney maintains its GFR only by Ang II-driven **efferent arteriolar constriction** (damming pressure inside the glomerulus).
-2. The ACE inhibitor removes Ang II → the efferent dam opens → glomerular pressure and GFR collapse on the stenotic side.
-3. The right kidney has normal perfusion, doesn't depend on the efferent crutch, and mildly benefits from lower systemic resistance. ✓
-
-**Integration:** the same molecule (Ang II) is a systemic vasoconstrictor AND a local GFR-defender — passage questions love effects that differ by vascular bed.
-</details>`
-    },
-    {
       id: 'ren4-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Diuretics map one-to-one onto segments: mannitol (osmotic, everywhere), CA inhibitors (PCT, acidosis), loops (ascending limb — strongest, erase the gradient), thiazides (DCT, moderate, gradient intact), K⁺-sparing (collecting duct).
-- Extra Na⁺ delivered to principal cells = K⁺ wasted; block the exchange = K⁺ spared.
-- Pre-renal failure looks like a healthy kidney hoarding salt and water (concentrated, Na⁺-poor urine); intrinsic damage wastes salt and leaks protein/cells; post-renal = obstruction.
-- Nephrotic = barrier leak → albuminuria → oncotic edema; nephritic = inflammation → hematuria, hypertension, falling GFR.
-- Passage method: filtered load first; place clearances on the 0 → urea → GFR → RPF ladder; classify hormone problems as osmolarity (ADH) vs. volume (RAAS); propagate any blocked transporter downstream.
+- **Diuretics map to segments.** Mannitol: everywhere; CA inhibitors: PCT; loops: ascending limb; thiazides: DCT; K⁺-sparing: collecting duct.
+- **Loops erase the gradient.** Blocking the ascending limb's Na⁺-K⁺-2Cl⁻ gives the strongest diuresis and kills concentrating ability.
+- **Pre-renal looks healthy.** Hypoperfused kidneys hoard salt and water (concentrated, Na⁺-poor urine); intrinsic damage wastes salt.
+- **Filtered load first.** Compare $GFR \\times P_X$ with $U_X V$, then place the clearance on the 0 → urea → GFR → RPF ladder.
+
+**Common traps**
+
+- **All diuretics waste K⁺.** Loops and thiazides do, by flooding principal cells with Na⁺; aldosterone antagonists and Na⁺-channel blockers spare K⁺.
+- **ADH blamed for loop dilution.** Loops leave V2 receptors and aquaporins alone; urine stays dilute because the gradient is gone.
+- **Nephrotic and nephritic swapped.** Nephrotic means albuminuria and oncotic edema; nephritic means hematuria, hypertension, falling GFR.
+- **Osmolarity and volume swapped.** ADH-axis problems are about osmolarity; RAAS/ANP problems are about volume.
 
 <!-- yield:low -->
-- Low-yield extras: thiazides increase DCT Ca²⁺ reabsorption (loops lose Ca²⁺); the glucose titration curve's "splay" — a gradual bend before $T_m$ from nephron heterogeneity and finite carrier affinity.
+**Low-yield extras**
+
+- Thiazides increase DCT Ca²⁺ reabsorption (loops lose Ca²⁺); the glucose titration curve's "splay" — a gradual bend before $T_m$ from nephron heterogeneity and finite carrier affinity.
 <!-- /yield -->`
     }
   ]

@@ -129,6 +129,26 @@ Why stack three kinases (Raf → MEK → ERK) instead of one?
 > Epistasis logic: a constitutively active MEK rescues signaling in Ras-inhibited cells (MEK is downstream), but a constitutively active receptor does not rescue MEK inhibition.`
     },
     {
+      id: 'sig3-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Mapping Two Growth-Factor Mutants
+
+**Problem 1.** Fibroblasts respond to PDGF through an RTK. Line 1 expresses a Grb2 whose SH2 domain cannot bind phosphotyrosine. Line 2 expresses a GTPase-dead Ras.
+
+- **(a)** In line 1, does PDGF still cause receptor trans-autophosphorylation?
+- **(b)** In line 1, what happens to Ras and to phospho-ERK after PDGF is added?
+- **(c)** In line 1, does the PI3K-Akt branch still respond to PDGF?
+- **(d)** In line 2, is phospho-ERK high without PDGF, and does a MEK inhibitor lower it?
+
+**(a) Receptor step.** Yes. Dimerization and trans-autophosphorylation happen before any adaptor docks, so the receptor's phosphotyrosines form normally; the defect lies downstream of them.
+
+**(b) Ras branch.** Ras stays GDP-bound and phospho-ERK does not rise. Grb2 cannot read the phosphotyrosines, so it never brings SOS, the GEF, to Ras; Raf, MEK and ERK stay off and cyclin D is not induced.
+
+**(c) Akt branch.** Yes. PI3K's regulatory subunit docks on the phosphotyrosines through its own SH2 domain, so PIP$_3$ is made and Akt is activated. Only the Ras-MAPK branch is lost.
+
+**(d) Line 2.** Phospho-ERK is high without PDGF: Ras locked in its GTP form drives Raf → MEK → ERK with no upstream input (sufficiency). A MEK inhibitor does lower it, because MEK lies downstream of Ras; an active mutant bypasses only the blocks upstream of it.`
+    },
+    {
       id: 'sig3-quiz2',
       type: 'multiple-choice' as const,
       content: `**Pathway Dissection** 🎯`,
@@ -156,16 +176,22 @@ Why stack three kinases (Raf → MEK → ERK) instead of one?
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- RTK activation: ligand → dimerization → trans-autophosphorylation → phosphotyrosine docking sites for SH2-domain proteins
-- Ras-MAPK: Grb2 (adaptor) → SOS (GEF) → Ras-GTP → Raf → MEK → ERK → nucleus → proliferation genes; Ras uses the same GTP on/off timer as G-alpha
-- PI3K makes PIP$_3$ (membrane docking site) → Akt → survival, mTOR growth signaling, GLUT4 translocation; PTEN erases PIP$_3$ and is a major tumor suppressor
-- JAK-STAT: receptor has no kinase; JAKs phosphorylate, STATs dimerize and go straight to DNA (cytokines, EPO, interferons)
-- Insulin signals on two timescales: acute Akt effects (GLUT4, glycogen synthase, cAMP lowering) and slower MAPK-driven transcription
-- Adaptors and scaffolds signal by proximity, not catalysis; cascades add amplification and switch-like behavior
-- Experimental logic: constitutively active mutant = sufficiency (and bypasses upstream blocks); dominant-negative = necessity; epistasis orders the pathway
+- **RTK activation sequence.** Ligand → dimerization → trans-autophosphorylation → phosphotyrosines dock SH2-domain proteins.
+- **Ras-MAPK drives proliferation.** Grb2 brings SOS to load Ras with GTP; Raf → MEK → ERK then induces cyclin D.
+- **PI3K-Akt drives survival.** PI3K makes PIP$_3$ to recruit Akt (survival, mTOR, GLUT4); PTEN erases PIP$_3$.
+- **JAK-STAT is the shortcut.** Cytokine receptors borrow JAKs; phosphorylated STATs dimerize and act directly on genes.
+
+**Common traps**
+
+- **Grb2 as an enzyme.** Grb2 is an adaptor with no catalytic activity; it signals by bringing SOS close to Ras.
+- **PIP$_3$ as a soluble messenger.** PIP$_3$ stays in the membrane as a docking site; IP$_3$ is the soluble one.
+- **A kinase in every receptor.** EPO and interferon receptors have no kinase domain; associated JAKs do the phosphorylating.
+- **Mixing sufficiency and necessity.** An active mutant shows sufficiency and a dominant-negative shows necessity; epistasis orders the steps.
 
 <!-- yield:low -->
-- Low-yield extras: Akt activates glycogen synthase by inhibiting GSK-3; the parallel MAPK cascades are ERK, JNK and p38; the lab's GTPase-dead Ras is G12V
+**Low-yield extras**
+
+- Akt activates glycogen synthase by inhibiting GSK-3; the parallel MAPK cascades are ERK, JNK and p38; the lab's GTPase-dead Ras is G12V
 <!-- /yield -->`
     }
   ]

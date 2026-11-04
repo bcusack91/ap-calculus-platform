@@ -57,21 +57,38 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
       type: 'text' as const,
       content: `### Worked Example — Localizing a Lesion in the Axis
 
-**Passage-style problem.** Three adult male patients present with low sperm counts. Serum hormone panels show:
+**Problem 1.** Patient A, an adult man with a low sperm count, has low LH, low FSH and low testosterone. When synthetic GnRH is injected, his pituitary responds normally.
 
-| Patient | GnRH response test | LH | FSH | Testosterone |
-|---------|--------------------|----|-----|--------------|
-| A | Normal pituitary response | Low | Low | Low |
-| B | — | High | High | Low |
-| C | — | Normal | High | Normal |
+- **(a)** What does the normal response to injected GnRH tell you?
+- **(b)** Where is the lesion, and what is this pattern called?
 
-**Patient A** has low gonadotropins AND low testosterone, yet his pituitary responds normally when synthetic GnRH is injected. The lesion is **hypothalamic** (deficient endogenous GnRH pulses). Everything downstream is quiet only because nothing upstream is signaling — secondary (central) hypogonadism.
+**(a) The pituitary works.** Given GnRH, his gonadotrophs release LH and FSH normally, so the pituitary is not the problem. Everything downstream is quiet only because nothing upstream is signaling.
 
-**Patient B** has LOW testosterone despite HIGH LH and FSH. The pituitary is working overtime; the testes are not answering. This is **primary testicular failure**: with little testosterone and little inhibin, negative feedback is lost and both gonadotropins rise. High LH/FSH with low end-organ hormone always points to the gland itself.
+**(b) Hypothalamic lesion.** The lesion is **hypothalamic**: deficient endogenous GnRH pulses. Low gonadotropins with low testosterone from an upstream cause is secondary (central) hypogonadism.
 
-**Patient C** has normal LH and testosterone (so Leydig cells are fine) but **isolated high FSH**. FSH's selective brake is **inhibin from Sertoli cells** — so a Sertoli-cell/seminiferous-tubule problem (impaired spermatogenesis, low inhibin) explains an isolated FSH rise with preserved virilization.
+**Problem 2.** Patient B, an adult man with a low sperm count, has HIGH LH, HIGH FSH and LOW testosterone.
 
-**The transferable rule.** Read the axis like a circuit: hormone levels downstream of a lesion fall, while upstream regulators rise if (and only if) their negative-feedback signal is the one that disappeared. Identifying WHICH feedback signal is missing (testosterone vs. inhibin) localizes the lesion to Leydig vs. Sertoli compartments.`
+- **(a)** Is the pituitary or the testis failing?
+- **(b)** Why are both gonadotropins high?
+- **(c)** What general rule localizes a lesion from a hormone panel?
+
+**(a) The testis.** The pituitary is working overtime; the testes are not answering. This is **primary testicular failure**.
+
+**(b) Lost feedback.** With little testosterone and little inhibin, negative feedback is lost and both gonadotropins rise. High LH/FSH with low end-organ hormone always points to the gland itself.
+
+**(c) The transferable rule.** Read the axis like a circuit: hormones downstream of a lesion fall, while upstream regulators rise if (and only if) their negative-feedback signal is the one that disappeared. Which signal is missing (testosterone vs. inhibin) separates Leydig from Sertoli lesions (e.g., isolated high FSH with normal testosterone = Sertoli/tubule lesion).
+
+**Problem 3.** Patient C, an adult man with a low sperm count, has normal LH, normal testosterone and an isolated HIGH FSH.
+
+- **(a)** Which testicular cells are working normally?
+- **(b)** Which feedback signal is missing, and which cells make it?
+- **(c)** What lesion explains the panel?
+
+**(a) Leydig cells are fine.** Normal LH and normal testosterone show that the LH → Leydig limb, and virilization, are intact.
+
+**(b) Missing inhibin.** FSH's selective brake is **inhibin from Sertoli cells**. With testosterone normal, inhibin is the signal that disappeared.
+
+**(c) Sertoli/tubule lesion.** A Sertoli-cell/seminiferous-tubule problem (impaired spermatogenesis, low inhibin) explains an isolated FSH rise with preserved virilization.`
     },
     {
       id: 'rep2-quiz1',
@@ -122,15 +139,22 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- SEVEN UP for the male path; seminal vesicles = fructose, most of the volume, and the alkaline buffer; prostate = milky, enzyme-rich fluid; bulbourethral = lubricating mucus
-- Female: fimbriae capture the oocyte; fertilization in the tube's ampulla; endometrium is shed, myometrium contracts
-- GnRH must be PULSATILE; LH → Leydig/theca (steroid side), FSH → Sertoli/granulosa (gamete-support side)
-- Two-cell model: theca androgens (LH) + granulosa aromatase (FSH) = estrogen
-- Sex steroids feed back on GnRH/LH; inhibin selectively suppresses FSH — use which-hormone-is-high to localize axis lesions
-- SRY on the Y chromosome initiates testis development; without it, the ovarian pathway is the default
+- **SEVEN UP.** The male sperm path; sperm mature in the epididymis, and seminal vesicles add most of the semen volume.
+- **Pulsatile GnRH.** Only pulsed GnRH drives LH (Leydig/theca, steroids) and FSH (Sertoli/granulosa); continuous GnRH shuts the axis down.
+- **Two-cell model.** Theca cells make androgens under LH; granulosa aromatase, induced by FSH, turns them into estrogen.
+- **Feedback localizes lesions.** High LH/FSH with low end-organ hormone means the gonad failed; low everything points upstream.
+
+**Common traps**
+
+- **Fertilizing in the uterus.** Fertilization occurs in the ampulla of the tube; the uterus is where the blastocyst implants.
+- **Fructose from the prostate.** Fructose and the alkaline buffer come from the seminal vesicles; the prostate adds milky fluid.
+- **Inhibin brakes LH.** Inhibin selectively suppresses FSH; sex steroids feed back mainly on GnRH and LH.
+- **Other Y genes make testes.** Without SRY the gonad takes the ovarian pathway, whatever the rest of the Y chromosome carries.
 
 <!-- yield:low -->
-- Low-yield extras: the seminal vesicles supply about 60% of semen volume
+**Low-yield extras**
+
+- The seminal vesicles supply about 60% of semen volume.
 <!-- /yield -->`
     }
   ]

@@ -48,26 +48,41 @@ Attenuation adds a second, translation-coupled brake on the trp operon.
       type: 'text' as const,
       content: `### Worked Example — Merodiploid Operon Genetics
 
-**Passage-style problem.** E. coli strains carry the chromosomal lac region plus an F' plasmid with a second lac copy. Beta-galactosidase (LacZ) activity is measured with and without inducer (glucose absent throughout). Genotype notation: I = lacI (repressor), O = operator, Z = lacZ; superscript + is wild type, minus is loss of function, O$^c$ is an operator that cannot bind repressor.
+Each E. coli strain has the chromosomal lac region plus an F' plasmid copy; LacZ activity is measured with and without inducer, no glucose. I = lacI (repressor), O = operator, Z = lacZ; + is wild type, minus is loss of function, O$^c$ is an operator that cannot bind repressor.
 
-**Strain 1**: I$^+$ O$^c$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. Result: enzyme made WITHOUT inducer (constitutive).
+**Problem 1.** Strain 1 is I$^+$ O$^c$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. It makes enzyme even WITHOUT inducer (constitutive).
 
-**Analysis.** Ask of each Z$^+$ gene: what controls MY operator? The functional Z$^+$ sits downstream of O$^c$, which cannot bind any repressor — from either lacI copy, because repressor acts in trans but the operator only protects its own DNA (cis). So Z$^+$ is always on. The plasmid's normal operator dutifully represses... a dead Z$^-$. Constitutive expression confirmed: **O$^c$ is cis-dominant**.
+- **(a)** Which Z gene is functional, and which operator controls it?
+- **(b)** Why can't repressor from either lacI copy shut that gene off?
+- **(c)** What does the plasmid's normal operator accomplish, and what does the strain show about O$^c$?
 
-**Strain 2**: I$^-$ O$^+$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. Result: inducible (normal regulation).
+**(a) The working gene.** Ask of each Z$^+$ gene: what controls MY operator? The only functional Z$^+$ is on the chromosome, downstream of O$^c$.
 
-**Analysis.** The chromosome makes no repressor, but the plasmid's I$^+$ produces diffusible repressor that finds and binds the chromosomal O$^+$, restoring control of Z$^+$. **I$^+$ is trans-dominant over I$^-$** — the defining demonstration that repressor is a diffusible product.
+**(b) Cis protection.** O$^c$ cannot bind any repressor, from either lacI copy: repressor acts in trans, but an operator only protects its own DNA (cis). So Z$^+$ is always on.
+
+**(c) The verdict.** The plasmid's normal operator dutifully represses... a dead Z$^-$. Constitutive expression confirmed: **O$^c$ is cis-dominant**.
+
+**Problem 2.** Strain 2 is I$^-$ O$^+$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. Its enzyme is inducible (normal regulation).
+
+- **(a)** The chromosome makes no repressor. How is the chromosomal Z$^+$ still controlled?
+- **(b)** What does this strain show about I$^+$ and I$^-$?
+- **(c)** What algorithm solves any merodiploid strain?
+
+**(a) Repressor in trans.** The plasmid's I$^+$ produces diffusible repressor that finds and binds the chromosomal O$^+$, restoring control of Z$^+$.
+
+**(b) The verdict.** **I$^+$ is trans-dominant over I$^-$**: the defining demonstration that repressor is a diffusible product.
+
+**(c) The algorithm.** (1) Inventory every functional Z; (2) examine only the operator physically attached to it; (3) let all repressor genes contribute one shared repressor pool; (4) remember O$^c$ = cis-constitutive, I$^-$ = trans-recessive.
 
 <!-- yield:low -->
-**Strain 3**: I$^s$ (super-repressor that cannot bind allolactose) O$^+$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. Result: NO enzyme even WITH inducer.
+**Problem 3.** Strain 3 is I$^s$ (super-repressor that cannot bind allolactose) O$^+$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. It makes NO enzyme even WITH inducer.
 
-**Analysis.** I$^s$ repressor binds operators normally but ignores the inducer — it never lets go. Because it diffuses, it clamps every O$^+$ in the cell, and wild-type repressor cannot displace it (an empty operator is instantly rebound). **I$^s$ is trans-dominant negative** — uninducible.
-<!-- /yield -->
+- **(a)** How does the I$^s$ repressor behave at the operators?
+- **(b)** Why can't wild-type repressor rescue the strain, and how is I$^s$ classified?
 
-**The algorithm**: (1) inventory every functional Z; (2) examine only the operator physically attached to it; (3) let all repressor genes contribute one shared repressor pool; (4) remember O$^c$ = cis-constitutive, I$^-$ = trans-recessive.
+**(a) A repressor that never lets go.** I$^s$ repressor binds operators normally but ignores the inducer. Because it diffuses, it clamps every O$^+$ in the cell.
 
-<!-- yield:low -->
-And I$^s$, the super-repressor, = trans-dominant uninducible.
+**(b) The verdict.** Wild-type repressor cannot displace it (an empty operator is instantly rebound). **I$^s$ is trans-dominant negative**: the super-repressor is uninducible, and adds a fifth rule to the algorithm.
 <!-- /yield -->`
     },
     {
@@ -119,16 +134,22 @@ And I$^s$, the super-repressor, = trans-dominant uninducible.
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Operon = one promoter, polycistronic mRNA, coordinated pathway control; catabolic operons are inducible (lac), anabolic are repressible (trp)
-- lac needs BOTH: repressor off (allolactose) AND cAMP-CAP on (low glucose); glucose present = catabolite repression regardless of lactose
-- trp: tryptophan is a corepressor that arms its repressor — end product silences its own synthesis
-- Cis vs trans by connectivity, not distance: operators/promoters/enhancers serve their own molecule (O-c is cis-dominant constitutive); repressors/activators diffuse (I-plus rescues I-minus in trans)
-- Merodiploid algorithm: for each functional structural gene, consult only ITS operator; pool all repressors
-- Eukaryotes: enhancers act far away via looping (still cis); histone acetylation opens chromatin (HAT up, HDAC down); CpG methylation silences stably
-- Epigenetics = heritable expression states without sequence change: maintenance methylation copies marks at replication (X-inactivation, imprinting)
+- **Inducible vs. repressible.** One promoter drives a polycistronic mRNA; catabolic lac is inducible, anabolic trp repressible.
+- **lac is an AND gate.** Full output needs allolactose to remove the repressor AND low glucose so cAMP-CAP recruits polymerase.
+- **Cis vs. trans by connectivity.** O$^c$ stays on despite good repressor (cis); a plasmid I$^+$ rescues I$^-$ (trans); consult only each Z's own operator.
+- **Chromatin sets access.** HATs open chromatin, HDACs close it; CpG methylation silences heritably (X-inactivation, imprinting).
+
+**Common traps**
+
+- **Distance means trans.** An enhancer 40 kb away still acts in cis, by looping; only diffusible proteins act in trans.
+- **Lactose alone switches lac on.** With glucose high, cAMP stays low and CAP is inactive, so transcription stays minimal.
+- **Tryptophan pulls the repressor off.** Tryptophan is a corepressor: it arms the trp repressor to bind the operator.
+- **Rescuing an operator in trans.** O$^c$ keeps its own operon on; a normal operator on a plasmid cannot fix it.
 
 <!-- yield:low -->
-- Low-yield extras: the I-s super-repressor is trans-dominant and uninducible; attenuation is trp's second, translation-coupled brake
+**Low-yield extras**
+
+- The I$^s$ super-repressor is trans-dominant and uninducible; attenuation is trp's second, translation-coupled brake
 <!-- /yield -->`
     }
   ]

@@ -50,19 +50,50 @@ Each cycle, three temperature steps:
       type: 'text' as const,
       content: `### Worked Example — A Cloning Experiment That Fails Informatively
 
-**Passage-style problem.** A student clones a human liver enzyme's coding sequence into a plasmid carrying ampicillin resistance and lacZ-based blue-white screening, transforms E. coli, and plates on ampicillin + X-gal.
+**Problem 1.** A student clones a human liver enzyme's coding sequence into a plasmid with ampicillin resistance and lacZ blue-white screening, transforms E. coli, and plates on ampicillin + X-gal. 200 colonies grow: 150 blue, 50 white.
 
-- **Observation 1**: 200 colonies grow; 150 blue, 50 white.
-- **Observation 2**: white colonies contain plasmid with insert (confirmed by restriction digest), but the enzyme is inactive, and western blot shows a protein LARGER than the mature human enzyme.
-- **Observation 3**: repeating the project with a construct made from liver mRNA yields active enzyme of correct size — but only when expressed in yeast, not in E. coli, where the protein is correct in backbone size yet still inactive.
+- **(a)** What do all 200 colonies have in common, and which step guarantees it?
+- **(b)** What do the 150 blue colonies carry?
+- **(c)** What do the 50 white colonies carry?
 
-**Question 1 — Interpret the blue vs white colonies.** All 200 took up SOME plasmid (ampicillin selection). Blue = lacZ intact = vector re-ligated on itself without insert (the dominant product when ligation conditions favor self-closure); white = lacZ interrupted = insert present. Selection eliminates non-transformants; screening distinguishes insert from empty vector — two different steps answering two different questions.
+**(a) Every colony has plasmid.** All 200 took up SOME plasmid: ampicillin selection killed every cell that did not.
 
-**Question 2 — Why is the first insert's protein too large and dead? (It was amplified from GENOMIC DNA.)** Genomic DNA contains introns. E. coli has no spliceosome, so introns are transcribed AND translated (until a frameshift or premature stop intervenes) — an oversized, garbled protein. The fix in Observation 3: start from mRNA, reverse-transcribe to cDNA (splicing already done by the human cell), then clone.
+**(b) Blue colonies.** Blue = lacZ intact = vector re-ligated on itself without insert (the dominant product when ligation conditions favor self-closure).
 
-**Question 3 — Why does the cDNA product work in yeast but not E. coli?** Correct backbone size in E. coli means the coding is fine — the missing ingredient is **post-translational**: the liver enzyme evidently needs eukaryotic machinery (N-glycosylation in the ER, disulfide formation, chaperone-assisted folding). Yeast, a eukaryote, supplies it. Host choice is a real experimental variable: bacteria for cheap simple proteins, eukaryotic systems for modified ones.
+**(c) White colonies.** White = lacZ interrupted = insert present. Selection eliminates non-transformants; screening distinguishes insert from empty vector — two different steps answering two different questions.
 
-**Question 4 — The student's primers amplified the coding sequence but the yeast strain secretes none of the enzyme into the medium. What sequence must be added to the construct?** A **signal peptide** coding sequence at the 5' end of the ORF — without an ER-targeting signal, the protein stays cytosolic (Organelles Part 2 crossover). Constructs are modular: promoter, signal, ORF, tag — each function needs its module.`
+**Problem 2.** The white colonies' plasmids carry the insert (confirmed by restriction digest), which was amplified from human GENOMIC DNA. The enzyme is inactive, and a western blot shows a protein LARGER than the mature human enzyme.
+
+- **(a)** What does genomic DNA contain that mature mRNA does not?
+- **(b)** Why does E. coli make an oversized, inactive protein from this insert?
+- **(c)** What should the student clone instead, and how is it made?
+
+**(a) Introns.** Genomic DNA still contains the introns that the human cell's spliceosome removes from the mature mRNA.
+
+**(b) No splicing in bacteria.** E. coli has no spliceosome, so the introns are transcribed AND translated (until a frameshift or premature stop intervenes) — an oversized, garbled protein.
+
+**(c) Clone cDNA.** Start from liver mRNA and reverse-transcribe it to cDNA (splicing already done by the human cell), then clone that intron-free copy.
+
+**Problem 3.** Remade from liver mRNA, the construct yields active enzyme of the correct size in yeast. In E. coli, the same construct gives a protein of the correct backbone size that is still inactive.
+
+- **(a)** What does the correct backbone size in E. coli rule out?
+- **(b)** What is E. coli missing that yeast supplies?
+- **(c)** How should a researcher choose the expression host?
+
+**(a) The coding is fine.** Correct backbone size means the coding sequence is right — no intron or reading-frame problem remains.
+
+**(b) Post-translational machinery.** The missing ingredient is **post-translational**: the liver enzyme evidently needs eukaryotic machinery (N-glycosylation in the ER, disulfide formation, chaperone-assisted folding). Yeast, a eukaryote, supplies it.
+
+**(c) Host choice.** Host choice is a real experimental variable: bacteria for cheap simple proteins, eukaryotic systems for modified ones.
+
+**Problem 4.** A second construct is amplified with primers that start at the mature protein's first codon, omitting the native signal sequence. In yeast, none of the enzyme reaches the medium.
+
+- **(a)** Where does the enzyme stay, and why?
+- **(b)** What sequence must be added to the construct, and at which end of the ORF?
+
+**(a) Stuck in the cytosol.** With no ER-targeting signal, the protein is made on free ribosomes, so it stays in the cytosol (and is never glycosylated) — Organelles Part 2 crossover.
+
+**(b) Add a signal peptide.** A **signal peptide** coding sequence at the 5' end of the ORF. Constructs are modular: promoter, signal, ORF, tag — each function needs its module.`
     },
     {
       id: 'biot1-quiz1',
@@ -78,18 +109,18 @@ Each cycle, three temperature steps:
             explanation: `A circle has no free ends: the first cut linearizes (still one piece), and each additional cut adds one fragment — so n cuts give n fragments for circular DNA, versus n+1 for linear DNA. Three sites, three fragments. Gel questions build on this: if a "three-site" plasmid digest shows four bands, suspect a fourth site or partial digestion. Draw the circle and cut it; never answer fragment-counting from memory alone.`
           },
           {
-            question: `To produce functional human insulin in E. coli, researchers clone cDNA rather than the genomic insulin gene because:`,
-            options: [`cDNA includes stronger bacterial promoters`, `Genomic DNA is too chemically unstable to clone`, `cDNA lacks introns, which bacteria cannot splice out`, `cDNA is double-stranded but genomic DNA is not`],
+            question: `A researcher aligns a human gene's cDNA with the same gene's genomic sequence. Several long stretches present in the genomic copy are missing from the cDNA because:`,
+            options: [`cDNA was copied by a lower-fidelity polymerase`, `Genomic DNA was damaged during its extraction`, `cDNA comes from mRNA, after introns were spliced out`, `cDNA loses repeated regions during cloning`],
             correctAnswer: 2,
             yield: 'ULTRA_HIGH',
-            explanation: `The eukaryotic gene is interrupted by introns that only a spliceosome can remove; E. coli would faithfully transcribe and translate the introns into nonsense. Reverse transcriptase run on mature mRNA (primed off the poly-A tail with oligo-dT) captures the post-splicing sequence — exactly the protein-coding information, nothing else. This single fact — cDNA = snapshot of the mature transcript — also explains why comparing cDNA to genomic DNA reveals where the introns were.`
+            explanation: `Reverse transcriptase copies MATURE mRNA, after the spliceosome has already removed the introns, so cDNA carries only the exons while the genomic copy keeps every intron — aligning the two maps the introns exactly. The same fact is why bacteria are given cDNA, not the genomic gene, to make a human protein such as insulin: E. coli has no spliceosome and would translate the introns into nonsense. Polymerase errors change single bases rather than deleting long stretches, and extraction damage would not remove the same segments reproducibly.`
           },
           {
-            question: `In blue-white screening, colonies containing the desired recombinant plasmid appear white because:`,
-            options: [`The antibiotic-resistance gene produces a white pigment`, `White colonies failed to take up any plasmid`, `X-gal stains the insert DNA directly`, `The insert disrupts lacZ, so X-gal is not cleaved`],
+            question: `After a blue-white cloning experiment, a student plates the transformed cells on ampicillin but forgets to add X-gal. The colonies that grow will be:`,
+            options: [`All blue, since lacZ is still expressed in empty vectors`, `Absent, since the cells need X-gal in order to grow`, `Blue and white in the usual 3:1 ratio`, `All white, since nothing makes the blue product`],
             correctAnswer: 3,
             yield: 'MEDIUM',
-            explanation: `The multiple cloning site sits INSIDE lacZ by design: ligating an insert there breaks the beta-galactosidase reading frame, and no functional enzyme means no blue X-gal cleavage product — white signals success. Blue colonies carry re-circularized empty vector with lacZ intact. Cells with no plasmid at all never appear: ampicillin killed them (blaming failed plasmid uptake confuses the screen with the selection — keep those two steps distinct, as exam questions deliberately blur them).`
+            explanation: `The blue color is the product of beta-galactosidase cleaving X-gal. With no X-gal on the plate, even empty-vector colonies with intact lacZ have nothing to turn blue, so every colony is white and the screen is lost. Growth is unaffected: ampicillin, not X-gal, is the selection, so plasmid-bearing cells still form colonies. On a proper plate, white means the insert disrupted lacZ and blue means empty vector — keep the selection (antibiotic) and the screen (X-gal) as two distinct steps, as exam questions deliberately blur them.`
           },
           {
             question: `PCR uses Taq polymerase rather than ordinary E. coli DNA polymerase because Taq:`,
@@ -113,16 +144,22 @@ Each cycle, three temperature steps:
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Restriction enzymes cut palindromes; sticky ends anneal any same-enzyme fragments; ligase seals; count fragments as n (circular) vs n+1 (linear)
-- Cloning pipeline: cut vector + insert with the same enzyme, ligate, transform, SELECT with antibiotic (who has plasmid), SCREEN blue-white (who has insert — white = interrupted lacZ = success)
-- Vector anatomy: origin of replication, selectable marker, multiple cloning site; constructs are modular (promoter, signal peptide, ORF, tag)
-- Express human proteins from cDNA (reverse-transcribed mRNA, intron-free) because bacteria cannot splice; move to yeast/mammalian hosts when glycosylation or complex folding is required
-- PCR: denature ~95 C, anneal primers ~55 C, extend ~72 C with thermostable Taq; heat replaces helicase, supplied primers replace primase; no proofreading in Taq
-- Amplification = initial times 2 to the n; 2^10 is about 10^3 — estimate, do not compute
-- qPCR quantifies (earlier threshold = more starting template); RT-PCR reaches back to mRNA via reverse transcriptase
+- **Sticky-end cloning.** Same-enzyme sticky ends anneal and ligase seals them; n sites cut a circle into n pieces, a line into n+1.
+- **Select, then screen.** The antibiotic selects cells with plasmid; blue-white screens for the insert (white = lacZ interrupted).
+- **Clone cDNA for bacteria.** Bacteria cannot splice, so express intron-free cDNA; use yeast or mammalian hosts for modified proteins.
+- **PCR doubles each cycle.** Denature ~95 C, anneal ~55 C, extend ~72 C with heat-stable Taq; copies = start times $2^n$.
+
+**Common traps**
+
+- **Selection as screening.** The antibiotic only removes plasmid-free cells; the blue-white screen finds the insert, and white is success.
+- **PCR needing helicase or primase.** Heat separates the strands and synthetic primers replace primase; Taq also cannot proofread.
+- **Linear amplification.** PCR multiplies by 2 each cycle: 10 copies after 10 cycles is about 10,000, not 110.
+- **A late Ct as more template.** An earlier threshold cycle means MORE starting template, not less.
 
 <!-- yield:low -->
-- Low-yield extras: bacteria are made competent for transformation by heat shock or electroporation
+**Low-yield extras**
+
+- Bacteria are made competent for transformation by heat shock or electroporation.
 <!-- /yield -->`
     }
   ]

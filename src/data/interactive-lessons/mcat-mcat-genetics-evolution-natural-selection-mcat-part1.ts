@@ -60,15 +60,26 @@ Fitness components compete for the same energy budget: bright coloration attract
       type: 'text' as const,
       content: `### Worked Example — Guppy Coloration as a Fitness Trade-Off
 
-**Passage-style problem.** In Trinidadian streams, male guppies vary heritably in the brightness of their orange spots. Field surveys show: in pools ABOVE waterfalls (no large predators), males are brightly colored; in pools BELOW waterfalls (with predatory pike cichlids), males are drab. A researcher transplants 200 guppies from a high-predation pool to a previously guppy-free, predator-free pool. Within about 15 generations, average male brightness increases significantly.
+**Problem 1.** Trinidadian male guppies vary heritably in orange-spot brightness: bright above waterfalls (no large predators), drab below them (predatory pike cichlids). A researcher moves 200 guppies from a high-predation pool to a guppy-free, predator-free pool.
 
-**Question 1 — Why does brightness increase after the transplant?** Brightness is under opposing selection from two fitness components: females preferentially mate with brighter males (mating success), while predators preferentially eat them (survival). Removing predators removes the survival cost, so net selection becomes directional FOR brightness. The response across generations confirms the trait is heritable.
+- **(a)** Which two fitness components act on male brightness, and in which directions?
+- **(b)** Within about 15 generations, average male brightness in the new pool rises significantly. Why?
 
-**Question 2 — Did individual transplanted males become brighter?** No. Individuals do not evolve; the DISTRIBUTION shifted because bright males left disproportionately many offspring each generation. Any single fish's genotype was fixed at fertilization.
+**(a) Opposing pressures.** Females preferentially mate with brighter males, so mating success favors brightness. Predators preferentially eat brighter males, so survival favors drabness. Brightness is under opposing selection from these two fitness components.
 
-**Question 3 — Did the guppies brighten "because they no longer needed camouflage"?** No — that phrasing implies foresight. Bright variants already existed (standing heritable variation); the new environment merely changed which variants reproduced most. If no bright alleles had been present, no amount of "need" would have produced them; the population would have waited on mutation.
+**(b) The survival cost is gone.** Removing predators removes the survival cost, so net selection becomes directional FOR brightness. The response across generations confirms the trait is heritable.
 
-**Question 4 — What result would falsify the heritability requirement?** If offspring brightness showed no resemblance to father brightness (e.g., brightness tracked diet alone), the generation-to-generation increase could not be evolutionary; brightness would be an acquired, environmentally induced phenotype, invisible to selection.`
+**Problem 2.** After the transplant, average male brightness in the predator-free pool rose significantly within about 15 generations.
+
+- **(a)** Did individual transplanted males become brighter?
+- **(b)** Did the guppies brighten "because they no longer needed camouflage"?
+- **(c)** What result would falsify the heritability requirement?
+
+**(a) Populations, not individuals.** No. Individuals do not evolve; the DISTRIBUTION shifted because bright males left disproportionately many offspring each generation. Any single fish's genotype was fixed at fertilization.
+
+**(b) No foresight.** No. Bright variants already existed (standing heritable variation); the new environment merely changed which variants reproduced most. If no bright alleles had been present, no amount of "need" would have produced them; the population would have waited on mutation.
+
+**(c) No father-son resemblance.** If offspring brightness showed no resemblance to father brightness (e.g., brightness tracked diet alone), the increase could not be evolutionary: brightness would be an acquired, environmentally induced phenotype, invisible to selection.`
     },
     {
       id: 'ns1-quiz1',
@@ -119,15 +130,22 @@ Fitness components compete for the same energy budget: bright coloration attract
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Selection follows necessarily from heritable variation plus differential reproductive success; remove either ingredient and the trait cannot evolve
-- Fitness = relative reproductive success; survival and vigor are only means to that end
-- Selection screens phenotypes; evolution is a change in population allele frequencies — individuals never evolve, and acquired traits are not inherited
-- Adaptation = heritable trait that spread because it raised fitness in that environment
-- No foresight, no need-driven change, no perfection: selection can only sort existing variation under trade-off constraints
-- Mutation is the sole source of new alleles; recombination, independent assortment, and random fertilization multiply combinations
+- **Three conditions.** Variation, heritability and differential reproductive success together force the trait distribution to shift.
+- **Fitness is offspring.** Fitness is relative reproductive success; an adaptation is a heritable trait that spread by raising it.
+- **Phenotypes vs. populations.** Selection screens individual phenotypes; evolution is a change in population allele frequencies.
+- **Mutation makes new alleles.** Only mutation creates new alleles; recombination, assortment and fertilization reshuffle them.
+
+**Common traps**
+
+- **Evolving out of need.** Selection has no foresight; it can only sort variation that already exists in the population.
+- **Inheriting acquired traits.** Stretched necks, muscles and tans are not transmitted; only heritable variants respond to selection.
+- **Individuals evolving.** A genotype is fixed at fertilization; an individual can acclimate, but only populations evolve.
+- **Expecting perfection.** Trade-offs and limited variation yield traits better than the alternatives present, not optimal designs.
 
 <!-- yield:low -->
-- Low-yield extras: exaptation = a trait co-opted for a new role after evolving for another (feathers for insulation and display before flight; middle-ear bones from reptilian jaw bones), which answers "what good is half a wing?"
+**Low-yield extras**
+
+- Exaptation = a trait co-opted for a new role after evolving for another (feathers for insulation and display before flight; middle-ear bones from reptilian jaw bones), which answers "what good is half a wing?"
 <!-- /yield -->`
     }
   ]

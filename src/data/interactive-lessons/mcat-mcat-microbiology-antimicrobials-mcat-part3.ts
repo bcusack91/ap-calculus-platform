@@ -46,6 +46,50 @@ Bacteria must SYNTHESIZE tetrahydrofolate (THF), the one-carbon carrier required
 Antifungals show the identical design principle with a different handle: fungal membranes use **ergosterol** where ours use cholesterol. Azoles block ergosterol synthesis; amphotericin B binds ergosterol and punches pores. Narrow chemical differences → usable selectivity, but much less margin than antibacterials (fungi are eukaryotes) — which is why antifungals are systematically more toxic.`
     },
     {
+      id: 'abx3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Pathway Pharmacology
+
+**Problem 1.** Bacterial growth inhibited by drug Z is fully rescued by adding thymidine plus purines to the medium, but not by adding excess PABA.
+
+- **(a)** What does rescue by thymidine plus purines tell you about drug Z?
+- **(b)** What does the failure of PABA to rescue tell you?
+- **(c)** Which enzyme does drug Z inhibit?
+
+**(a) Rescue by end products.** Thymidine and purines are the END PRODUCTS whose synthesis requires THF; supplying them bypasses any folate-pathway block, so Z is a **folate antagonist**.
+
+**(b) No rescue by PABA.** Excess PABA would outcompete a sulfonamide, a competitive PABA analog. No rescue means the block lies DOWNSTREAM of the PABA-using step.
+
+**(c) The target.** A folate block downstream of the PABA step points to **dihydrofolate reductase**: Z acts like trimethoprim. Whatever restores growth lies downstream of the block; whatever fails to rescue is upstream or irrelevant.
+
+**Problem 2.** A gram-negative isolate loses a major porin protein. Consider three drugs: a small hydrophilic beta-lactam, polymyxin and trimethoprim.
+
+- **(a)** How does porin loss change susceptibility to the beta-lactam?
+- **(b)** How does it change susceptibility to polymyxin?
+- **(c)** How does it change susceptibility to trimethoprim?
+- **(d)** What kind of resistance mechanism is porin loss?
+
+**(a) The beta-lactam.** Beta-lactams reach the periplasm through porins, so porin loss reduces entry and **resistance rises**.
+
+**(b) Polymyxin.** Polymyxin attacks LPS on the outer surface directly and needs no porin, so it is **unaffected**.
+
+**(c) Trimethoprim.** It is small and lipophilic enough that porin loss has a **modest** effect, though reduced uptake can contribute low-level resistance.
+
+**(d) A permeability mechanism.** Porin mutations shift many drugs a little rather than one drug a lot. For each drug, ask what path it takes to its target: in permeability mutants, resistance follows the path, not the target.
+
+**Problem 3.** Amphotericin B (an antifungal) and penicillin both exploit selective toxicity, yet amphotericin B is far more toxic to the host.
+
+- **(a)** Does penicillin's target have a human counterpart?
+- **(b)** How does amphotericin B harm human cells?
+- **(c)** What rule ranks drugs by host safety?
+
+**(a) Penicillin.** Its target, the peptidoglycan transpeptidase, has NO human counterpart, so selectivity is absolute in principle.
+
+**(b) Amphotericin B.** It binds ergosterol, but cholesterol is chemically similar; partial binding to cholesterol-containing human membranes (notably renal cells) causes pores and nephrotoxicity.
+
+**(c) The rule.** Toxicity scales inversely with the chemical distance between microbial and host targets: absent target > different enzyme family > similar molecule. Bacteria (prokaryotes) offer big distances; fungi (fellow eukaryotes) offer small ones.`
+    },
+    {
       id: 'abx3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Folate, Nucleic Acid & Membrane Drugs** 🎯`,
@@ -94,61 +138,23 @@ Antifungals show the identical design principle with a different handle: fungal 
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Folate: sulfonamides = PABA mimics (enzyme humans lack); trimethoprim = bacterial DHFR (affinity difference); TMP-SMX = sequential synergy
-- Fluoroquinolones trap gyrase/topo IV mid-cleavage → double-strand breaks → cidal
-- Rifampin blocks bacterial RNA-pol initiation; one point mutation in its target = resistance → always combination therapy
-- Metronidazole = prodrug activated only by anaerobic reduction
-- Polymyxins attack membranes — effective but toxic (membranes are universal chemistry)
-- Antifungal parallel: ergosterol vs cholesterol = the fungal selectivity handle, with a thinner safety margin
+- **Sulfonamides.** As PABA analogs they block dihydropteroate synthase, an enzyme humans lack entirely.
+- **TMP-SMX synergy.** Trimethoprim inhibits bacterial DHFR; with a sulfonamide it blocks two sequential steps.
+- **DNA and RNA machines.** Fluoroquinolones trap gyrase mid-cut, leaving lethal breaks; rifampin blocks RNA-pol initiation.
+- **Membrane drugs are toxic.** Polymyxins disrupt gram-negative membranes, but membrane chemistry is shared, so they are a last resort.
+
+**Common traps**
+
+- **Selectivity always by absence.** Trimethoprim relies on an affinity difference; of the folate pair, only sulfonamides hit an enzyme humans lack.
+- **Rifampin alone.** Point mutants in its target pre-exist and are selected within weeks, so rifampin is always combined.
+- **Metronidazole for aerobes.** It is a prodrug that only anaerobes reduce; aerobes and human cells never activate it.
+- **Antifungals as safe as antibacterials.** Fungi are eukaryotes, so ergosterol vs cholesterol leaves a thin safety margin.
 
 <!-- yield:low -->
-- Low-yield extras: rifampin binds the beta subunit (gene rpoB) and turns secretions orange; metronidazole is activated by ferredoxin/flavodoxin electron donors; daptomycin depolarizes gram-positive membranes and is inactivated by lung surfactant
+**Low-yield extras**
+
+- Rifampin binds the beta subunit (gene rpoB) and turns secretions orange; metronidazole is activated by ferredoxin/flavodoxin electron donors; daptomycin depolarizes gram-positive membranes and is inactivated by lung surfactant
 <!-- /yield -->`
-    },
-    {
-      id: 'abx3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Pathway Pharmacology
-
-<details>
-<summary><b>Example 1: Rescue experiments identify the blocked step</b></summary>
-
-**Question:** Bacterial growth inhibited by drug Z is fully rescued by adding thymidine plus purines to the medium, but not by adding PABA. Which pathway does Z block, and where relative to PABA?
-
-**Solution:**
-1. Thymidine + purines are the END PRODUCTS whose synthesis requires THF; supplying them bypasses any folate-pathway block. Z is a folate antagonist.
-2. Excess PABA would outcompete a sulfonamide (a competitive PABA analog). No rescue by PABA means the block is DOWNSTREAM of the PABA-using step — consistent with a DHFR inhibitor like trimethoprim.
-3. Conclusion: Z inhibits dihydrofolate reductase.
-
-**MCAT Strategy:** Metabolite-rescue logic: whatever restores growth lies downstream of the block; whatever fails to rescue is upstream or irrelevant.
-</details>
-
-<details>
-<summary><b>Example 2: Predict cross-resistance patterns</b></summary>
-
-**Question:** A gram-negative isolate loses a major porin protein. Predict its susceptibility changes to (a) a small hydrophilic beta-lactam, (b) polymyxin, (c) trimethoprim.
-
-**Solution:**
-1. (a) Beta-lactams reach the periplasm through porins; porin loss reduces entry → resistance rises.
-2. (b) Polymyxin attacks LPS on the outer surface directly — no porin needed → unaffected.
-3. (c) Trimethoprim is small and lipophilic enough that porin loss has modest effect, though reduced uptake can contribute low-level resistance.
-4. Porin mutations are a general PERMEABILITY mechanism — they shift many drugs a little rather than one drug a lot.
-
-**MCAT Strategy:** For each drug, ask what path it takes to its target; resistance follows the path, not the target, in permeability mutants.
-</details>
-
-<details>
-<summary><b>Example 3: Why amphotericin B is more toxic than penicillin</b></summary>
-
-**Question:** Both amphotericin B (antifungal) and penicillin exploit selective toxicity. Explain the large difference in host toxicity from first principles.
-
-**Solution:**
-1. Penicillin's target (peptidoglycan transpeptidase) has NO human counterpart — selectivity is absolute in principle.
-2. Amphotericin binds ergosterol, but cholesterol is chemically similar; partial binding to cholesterol-containing human membranes (notably renal cells) causes pores and nephrotoxicity.
-3. Rule: toxicity scales inversely with the chemical distance between microbial and host targets. Bacteria (prokaryotes) offer big distances; fungi (fellow eukaryotes) offer small ones.
-
-**MCAT Strategy:** When ranking drug safety, compare target divergence: absent target > different enzyme family > similar molecule.
-</details>`
     }
   ]
 };

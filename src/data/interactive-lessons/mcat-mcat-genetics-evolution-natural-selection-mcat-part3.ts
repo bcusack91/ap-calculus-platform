@@ -64,21 +64,50 @@ Punctuated equilibrium was proposed by Niles Eldredge and Stephen Jay Gould (197
 <!-- /yield -->`
     },
     {
+      id: 'ns3-worked-barriers',
+      type: 'text' as const,
+      content: `### Worked Example — Classifying Reproductive Barriers
+
+**Problem.** Two cricket populations diverged within one meadow without ever being geographically separated. Females ignore the other population's courtship song; forced crosses rarely fertilize eggs; the few hybrids that hatch are fertile, but their offspring are feeble.
+
+- **(a)** Which barrier is the ignored courtship song, and is it prezygotic or postzygotic?
+- **(b)** Which barrier is the failed fertilization, and on which side of the zygote does it act?
+- **(c)** Which barrier explains the feeble offspring of fertile hybrids?
+- **(d)** Which geographic mode of speciation is this, and by what route?
+- **(e)** If hybrids fare poorly, which kind of barrier should selection strengthen, and why?
+
+**(a) Behavioral isolation.** Courtship signals that are not recognized prevent mating, so no zygote forms: a prezygotic barrier.
+
+**(b) Gametic isolation.** Sperm that cannot fertilize the egg also act before any zygote exists, so this barrier is prezygotic too.
+
+**(c) Hybrid breakdown.** First-generation hybrids are fertile, but their offspring are feeble or sterile: a postzygotic barrier.
+
+**(d) Sympatric.** The populations diverged with no geographic separation. The animal route the lesson describes is disruptive selection plus assortative mating, with like mating with like.
+
+**(e) Prezygotic barriers.** Habitat, temporal, behavioral, mechanical and gametic barriers are "cheaper": no gametes are wasted on doomed offspring, so selection strengthens them where hybrids fare poorly (reinforcement).`
+    },
+    {
       id: 'ns3-worked',
       type: 'text' as const,
       content: `### Worked Example — Reading a Cladogram Without Getting Fooled
 
-**Passage-style problem.** A cladogram of four taxa has this branching structure: the deepest node splits taxon D from the rest; the next node splits taxon C from the pair (A, B); the shallowest node splits A from B. Character data: all four taxa share trait 1; C, A, and B share trait 2; A and B alone share trait 3; B alone shows trait 4.
+**Problem.** A four-taxon cladogram: the deepest node splits D from the rest, the next splits C from the pair (A, B), and the shallowest splits A from B. All four share trait 1; C, A and B share trait 2; A and B alone share trait 3; B alone shows trait 4.
 
-**Question 1 — Which taxa are sister taxa?** A and B: they share an immediate common ancestor (the shallowest node) that neither shares with C or D. C is the sister taxon of the CLADE (A + B), not of A alone.
+- **(a)** Which taxa are sister taxa?
+- **(b)** Is the group (C, A, B) monophyletic? Is the group (D, C)?
+- **(c)** Where on the tree did trait 3 arise, and where did trait 4?
+- **(d)** A student calls B the "most evolved" taxon because it has the most derived traits and sits at the end of the tree. Is that right?
+- **(e)** Trait 2 is later found in taxon D, but analysis shows it arose independently there. What is trait 2 in D, and why does it matter?
 
-**Question 2 — Is the group (C, A, B) monophyletic? Is (D, C)?** (C, A, B) is monophyletic — it contains their common ancestor at the second node and all of that ancestor's descendants. (D, C) is NOT: the most recent common ancestor of D and C is the root, and a group containing the root's descendants must include A and B too. Leaving descendants out makes a group paraphyletic or polyphyletic, not a clade.
+**(a) A and B.** They share an immediate common ancestor (the shallowest node) that neither shares with C or D. C is the sister taxon of the CLADE (A + B), not of A alone.
 
-**Question 3 — Where did trait 3 arise?** On the branch leading to the (A, B) ancestor — after the split from C, before A and B diverged. Trait 4 arose on B's own terminal branch.
+**(b) Yes, then no.** (C, A, B) holds their common ancestor at the second node and every taxon descended from it, so it is a clade. (D, C) is NOT: their most recent common ancestor is the root, so the group must include A and B too. Leaving descendants out makes a group paraphyletic or polyphyletic.
 
-**Question 4 — A student concludes that "B is the most evolved taxon because it has the most derived traits and sits at the end of the tree."** Both reasons fail. Every tip has experienced the same amount of time since the root, and each lineage has been evolving throughout — D's terminal branch is the LONGEST-running independent lineage, yet that does not make D "more evolved" either. Trait counts reflect which characters were chosen for the table, and left-right order on a cladogram is typographically arbitrary: rotating any node (drawing B before A) depicts the identical evolutionary history.
+**(c) Trait origins.** Trait 3 arose on the branch leading to the (A, B) ancestor: after the split from C, before A and B diverged. Trait 4 arose on B's own terminal branch.
 
-**Question 5 — Suppose trait 2 were later found in taxon D but analysis shows it arose independently there.** Then trait 2 in D is homoplasy (convergence): similarity NOT inherited from a common ancestor. Counting it as homology would wrongly pull D inside the (C, A, B) clade.`
+**(d) No.** Every tip has had the same time since the root, and D's terminal branch is the LONGEST-running independent lineage. Trait counts reflect which characters were scored, and left-right order is arbitrary: rotating any node (drawing B before A) depicts the identical history.
+
+**(e) Homoplasy.** Trait 2 in D is homoplasy (convergence): similarity NOT inherited from a common ancestor. Counting it as homology would wrongly pull D inside the (C, A, B) clade.`
     },
     {
       id: 'ns3-quiz1',
@@ -129,16 +158,22 @@ Punctuated equilibrium was proposed by Niles Eldredge and Stephen Jay Gould (197
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Biological species concept = interbreeding + reproductive isolation; breaks down for asexual taxa, fossils, and hybridizing species
-- Prezygotic barriers (habitat, temporal, behavioral, mechanical, gametic) block zygote formation; postzygotic barriers (inviability, sterility — the mule — and breakdown) waste it
-- Allopatric speciation: geographic split, then divergence; sympatric speciation: polyploidy (instant, plant-heavy) or disruptive selection with assortative mating
-- Adaptive radiation: one colonist lineage → many niche specialists (Darwin's finches, honeycreepers)
-- Divergence → homology (same origin, different function); convergence → analogy/homoplasy (same function, different origin)
-- Cladograms: nodes = common ancestors, clade = ancestor + ALL descendants, sister taxa share the immediate node; branch rotation is free, and no tip is "more evolved"
-- Punctuated equilibrium = long stasis + geologically rapid change at speciation; still standard mechanisms, different tempo
+- **Pre- vs. postzygotic.** Prezygotic barriers (habitat, temporal, behavioral, mechanical, gametic) block the zygote; postzygotic ones waste it.
+- **Allopatric vs. sympatric.** Allopatric needs a geographic split; sympatric runs on polyploidy or disruptive selection plus assortative mating.
+- **Homology vs. analogy.** Divergence gives homologous structures; convergence gives analogous ones (similar function, independent origins).
+- **Reading a cladogram.** Nodes are common ancestors, a clade is an ancestor plus ALL its descendants, and sister taxa share the nearest node.
+
+**Common traps**
+
+- **Reading tip position.** Left-right order is arbitrary and no living tip is "more evolved"; only branch order carries information.
+- **Counting homoplasy as homology.** Convergent similarity is not inherited from a common ancestor and pulls taxa into false clades.
+- **The mule as inviable.** The mule lives but cannot reproduce, so its barrier is hybrid sterility, not hybrid inviability.
+- **One species concept for all.** The biological species concept cannot classify asexual organisms or fossils and strains for hybridizers.
 
 <!-- yield:low -->
-- Low-yield extras: the mule's 63 chromosomes (horse 64, donkey 62); punctuated equilibrium's proposers, Eldredge and Gould
+**Low-yield extras**
+
+- The mule's 63 chromosomes (horse 64, donkey 62); punctuated equilibrium's proposers, Eldredge and Gould
 <!-- /yield -->`
     }
   ]

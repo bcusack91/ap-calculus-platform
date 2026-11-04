@@ -33,7 +33,7 @@ After implantation, the inner cell mass organizes into a **bilaminar disc** (epi
 
 ### Neurulation: Notochord → Neural Tube
 
-The **notochord** — a mesodermal rod along the midline — releases inductive signals that instruct the overlying ectoderm to become the **neural plate** (this is a textbook case of **induction**, developed further in Part 4). The plate's edges rise as neural folds and fuse into the **neural tube**, which becomes the **CNS**: brain and spinal cord.
+The **notochord** — a mesodermal rod along the midline — releases inductive signals that instruct the overlying ectoderm to become the **neural plate** (this is a textbook case of **induction**: one tissue directing the fate of its neighbor). The plate's edges rise as neural folds and fuse into the **neural tube**, which becomes the **CNS**: brain and spinal cord.
 
 - Failure of neural tube closure → **neural tube defects** (spina bifida if caudal, anencephaly if cranial). Maternal **folate (folic acid)** taken before and during early pregnancy sharply reduces the risk — a favorite discrete question.
 
@@ -49,7 +49,7 @@ As the neural tube closes, cells at the crest of the folds — the **neural cres
 
 - **Peripheral nervous system**: sensory (dorsal root) ganglia, autonomic ganglia, Schwann cells
 - **Melanocytes** (skin pigment cells)
-- **Adrenal medulla chromaffin cells** (the reason the medulla is ectodermal — it is essentially a modified sympathetic ganglion)
+- **Adrenal medulla chromaffin cells**
 - **Facial bones and cartilage** (the one "skeletal" exception to mesoderm)
 
 If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell in skin, ganglion near the gut) with an ectodermal origin, think neural crest.`
@@ -59,15 +59,38 @@ If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell i
       type: 'text' as const,
       content: `### Worked Example — Tracing a Lineage Through the Layers
 
-**Passage-style problem.** A patient has a pheochromocytoma — a catecholamine-secreting tumor of the adrenal medulla. A second patient has an adrenocortical carcinoma, a tumor of the cortisol-producing outer adrenal gland. A student claims both tumors "arise from the same embryonic tissue because they are in the same organ."
+**Problem 1.** One patient has a pheochromocytoma, a catecholamine-secreting tumor of the adrenal medulla; another has an adrenocortical carcinoma, a tumor of the cortisol-making adrenal cortex. A student says both share one embryonic origin.
 
-**Step 1 — Break the organ into its lineages.** The adrenal gland is a composite organ. Its **cortex** (steroid-producing: cortisol, aldosterone, androgens) develops from intermediate **mesoderm**, the same general territory that yields kidneys and gonads — which is why the cortex sits beside the kidney, and why the cortex and the gonads are both steroid-making tissues. Its **medulla** (catecholamine-producing: epinephrine, norepinephrine) is colonized by migrating **neural crest** cells, which differentiate into chromaffin cells — functionally, postganglionic sympathetic neurons that lost their axons and secrete straight into blood.
+- **(a)** Which germ layer gives rise to the adrenal cortex?
+- **(b)** Which cells colonize the adrenal medulla, and from which layer do they come?
+- **(c)** Is the student's claim correct?
+- **(d)** What does each region's physiology suggest about where it came from?
+- **(e)** What rule does this suggest for a tissue you have not memorized?
 
-**Step 2 — Evaluate the claim.** The student is wrong. The two tumors arise from different germ layers: adrenocortical carcinoma is mesodermal in origin; pheochromocytoma is ectodermal (neural crest). Shared location does not imply shared lineage.
+**(a) The cortex.** Intermediate mesoderm, the same territory that yields the kidneys and gonads. That is why the steroid-making cortex (cortisol, aldosterone, androgens) sits beside the kidney and shares steroid chemistry with the gonads.
 
-**Step 3 — Use physiology as the cross-check.** The medulla behaves like the sympathetic nervous system (preganglionic sympathetic fibers synapse directly on chromaffin cells using acetylcholine) — nervous-system behavior signals nervous-system (ectodermal) origin. The cortex makes steroids, like the mesodermal gonads — consistent with a mesodermal origin.
+**(b) The medulla.** Migrating neural crest cells, which are ectodermal. They become chromaffin cells: in effect, postganglionic sympathetic neurons without axons that secrete epinephrine and norepinephrine straight into blood.
 
-**MCAT payoff.** When a question gives you a tissue you have not memorized, ask: does it act like nerve/skin/sense organ (ectoderm), like muscle/blood/skeleton/urogenital (mesoderm), or like a gut-tube lining or gut-derived gland (endoderm)? Function usually betrays origin.`
+**(c) The claim.** No. The adrenal gland is a composite organ: adrenocortical carcinoma is mesodermal in origin, pheochromocytoma ectodermal (neural crest). Shared location does not imply shared lineage.
+
+**(d) Function as a check.** The medulla acts like the sympathetic nervous system (preganglionic fibers synapse directly on chromaffin cells, using acetylcholine), fitting an ectodermal origin. The cortex makes steroids, like the mesodermal gonads.
+
+**(e) The general rule.** Ask what the tissue acts like: nerve, skin or sense organ (ectoderm); muscle, blood, skeleton or urogenital organ (mesoderm); gut-tube lining or gut-derived gland (endoderm). Function usually betrays origin.
+
+**Problem 2.** A newborn has an open defect over the lower back that exposes part of the spinal cord. Her mother learned she was pregnant at week 6 and began prenatal vitamins then.
+
+- **(a)** Which embryonic structure failed to close normally?
+- **(b)** From which germ layer does that structure come, and what induced it?
+- **(c)** What is this defect called, and what is its cranial counterpart?
+- **(d)** What maternal step would have cut the risk?
+
+**(a) The structure.** The neural tube, which becomes the brain and spinal cord (the CNS). Its caudal end did not close, leaving the cord open.
+
+**(b) Origin and induction.** Ectoderm. Signals from the notochord, a midline mesodermal rod, induce the overlying ectoderm to form the neural plate, whose folds rise and fuse into the tube.
+
+**(c) Naming the defect.** Spina bifida, a failure of closure at the caudal end. Failure at the cranial end is anencephaly.
+
+**(d) Prevention.** Maternal folate (folic acid) sharply reduces the risk of neural tube defects, but the tube closes by about day 28, before most women know they are pregnant. Folate begun at week 6 is too late; it must start before conception.`
     },
     {
       id: 'emb2-quiz1',
@@ -76,11 +99,11 @@ If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell i
       exercise: {
         questions: [
           {
-            question: `A tumor derived from adrenal medulla chromaffin cells traces back to which embryonic origin?`,
-            options: [`Neural crest (ectoderm)`, `Intermediate mesoderm`, `Gut tube (endoderm)`, `Notochord (mesoderm)`],
+            question: `A full-thickness skin biopsy contains the epidermis, the dermis beneath it, and the small blood vessels running through the dermis. Which origins, in that order, are correct?`,
+            options: [`Surface ectoderm, mesoderm, mesoderm`, `Ectoderm, ectoderm, endoderm`, `Mesoderm, mesoderm, neural crest`, `Endoderm, mesoderm, ectoderm`],
             correctAnswer: 0,
             yield: 'HIGH',
-            explanation: `The adrenal medulla is populated by migrating neural crest cells, making it ectodermal — it is essentially a modified sympathetic ganglion. Intermediate mesoderm is the origin of the adrenal CORTEX (the trap: one organ, two germ layers). The gland has no endodermal component, and the notochord is a midline signaling rod that contributes no adrenal tissue.`
+            explanation: `Skin is a two-layer organ: the epidermis (with hair and nails) is surface ectoderm, and the dermis is mesoderm, as are all blood vessels. "Ectoderm, ectoderm, endoderm" lumps the dermis with the epidermis above it and gives the vessels an endodermal origin, though endoderm only lines the gut and airway tubes. "Mesoderm, mesoderm, neural crest" makes the epidermis mesodermal and the vessels neural crest. "Endoderm, mesoderm, ectoderm" gives skin an endodermal layer and the vessels an ectodermal one.`
           },
           {
             question: `The lens of the eye develops from:`,
@@ -118,15 +141,22 @@ If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell i
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Gastrulation: epiblast cells ingress through the primitive streak — first wave → endoderm, second wave → mesoderm, surface remainder → ectoderm (bilaminar → trilaminar disc)
-- Ectoderm = "attracto-": epidermis/hair/nails, lens, inner ear, all nervous tissue, adrenal MEDULLA; Mesoderm = "means": musculoskeletal, heart/blood/vessels, kidneys/gonads, dermis, adrenal CORTEX; Endoderm = linings of GI/respiratory tracts + liver, pancreas, thyroid, bladder lining
-- Trap pairs: adrenal medulla (ectoderm) vs cortex (mesoderm); lens = surface ectoderm while retina = neuroectoderm; pancreas/liver = endoderm; endoderm lines tubes, mesoderm wraps them
-- Notochord (mesoderm) induces neural plate → neural tube → CNS; incomplete closure → spina bifida/anencephaly, risk cut by maternal folate
-- Neural crest ("fourth germ layer") = migratory ectoderm → PNS ganglia and Schwann cells, melanocytes, adrenal medulla chromaffin cells, facial bones and cartilage
-- Neural tube patterning: notochord Shh induces the floor plate and ventral motor neurons; surface-ectoderm BMPs induce the roof plate and dorsal sensory cell types
+- **Gastrulation makes three layers.** Epiblast cells ingress through the primitive streak: first endoderm, then mesoderm; the rest is ectoderm.
+- **The germ-layer table.** Ectoderm: skin, lens, nervous system; mesoderm: muscle, bone, blood, kidneys, gonads; endoderm: gut and airway linings.
+- **Notochord induces the neural tube.** The induced neural plate folds into the tube (CNS); failed closure causes spina bifida, cut by folate.
+- **Neural crest migrates.** This ectodermal "fourth germ layer" makes PNS ganglia, Schwann cells, melanocytes, adrenal medulla and facial bones.
+
+**Common traps**
+
+- **One organ, one layer.** The adrenal medulla is ectoderm (neural crest), but the adrenal cortex is mesoderm.
+- **Lens from the brain.** The retina is neuroectoderm, but the lens comes from surface ectoderm induced by the optic vesicle.
+- **Liver and pancreas as mesoderm.** Both bud from the gut tube, so they are endoderm; endoderm lines tubes, mesoderm wraps them.
+- **Notochord patterns the dorsal tube.** Notochord Shh sets the ventral floor plate and motor neurons; dorsal fates come from ectoderm BMPs.
 
 <!-- yield:low -->
-- Low-yield extras: the notochord's remnant is the nucleus pulposus
+**Low-yield extras**
+
+- The notochord's remnant is the nucleus pulposus.
 <!-- /yield -->`
     }
   ]

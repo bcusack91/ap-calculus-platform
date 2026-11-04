@@ -71,21 +71,39 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
       type: 'text' as const,
       content: `### Worked Example — Following One Red Blood Cell Through the Fetus
 
-**Passage-style problem.** Trace an oxygenated red blood cell from the placenta to the fetal brain, naming each shunt used, then predict what happens to a fetus with a pharmacologically LOCKED-OPEN ductus arteriosus after birth.
+**Problem 1.** An oxygenated red blood cell leaves the placenta and travels to the fetal brain. Trace its route, naming each shunt it uses.
 
-**Step 1 — Placenta to heart.** The cell leaves the placenta in the **umbilical vein** (the oxygenated vessel, despite being a vein). At the liver, most flow diverts through the **ductus venosus** into the inferior vena cava, skipping hepatic capillaries so the well-oxygenated blood is not slowed or consumed by the liver.
+- **(a)** In which vessel does it leave the placenta?
+- **(b)** How does it get past the liver?
+- **(c)** Which route takes it from the right atrium to the brain?
+- **(d)** Where does fetal blood that does enter the right ventricle go?
 
-**Step 2 — Through the heart, skipping the lungs.** Entering the **right atrium**, much of the IVC stream is directed across the **foramen ovale** into the **left atrium** — bypassing the right ventricle and the high-resistance pulmonary circuit entirely. From the left atrium: left ventricle → aorta → carotid arteries → brain. Note the design logic: the freshest blood is preferentially shunted to the systemic (especially cerebral and coronary) circulation.
+**(a) Leaving the placenta.** The umbilical vein: the oxygenated vessel, despite being a vein, because vessel names follow direction relative to the fetal heart.
 
-**Step 3 — The parallel path.** Blood that does enter the right ventricle is pumped into the pulmonary artery, but high pulmonary resistance pushes most of it through the **ductus arteriosus** into the aorta — a second lung bypass, joining the aorta downstream of the head vessels.
+**(b) Past the liver.** Most flow diverts through the ductus venosus into the inferior vena cava, skipping hepatic capillaries so the well-oxygenated blood is not slowed or consumed by the liver.
 
-**Step 4 — Prediction for a patent ductus arteriosus (PDA) after birth.** After the first breath, pulmonary resistance falls and aortic pressure exceeds pulmonary pressure — so flow through an open ductus REVERSES: now aorta → pulmonary artery (left-to-right shunt). Oxygenated blood recirculates through the lungs, volume-overloading the pulmonary circuit; the classic pharmacology link is that prostaglandins keep the ductus open, so a **prostaglandin synthesis inhibitor (an NSAID)** promotes closure, while prostaglandin infusion keeps it open when a heart defect makes the ductus temporarily life-saving.
+**(c) Through the heart.** Much of the IVC stream crosses the foramen ovale into the left atrium, bypassing the right ventricle and the high-resistance lungs; then left ventricle → aorta → carotid arteries → brain. The freshest blood is steered to the brain and heart.
+
+**(d) The parallel path.** Into the pulmonary artery, but high pulmonary resistance pushes most of it through the ductus arteriosus into the aorta: a second lung bypass, joining the aorta downstream of the head vessels.
+
+**Problem 2.** After birth, a newborn's ductus arteriosus (fetal flow: pulmonary artery → aorta) fails to close (a patent ductus arteriosus, PDA). The first breath has already inflated the lungs and lowered pulmonary resistance.
+
+- **(a)** Which way does blood now flow through the ductus?
+- **(b)** What does this do to the pulmonary circuit?
+- **(c)** Which drug class promotes closure, and why does it work?
+- **(d)** When would a clinician want to keep the ductus open, and how?
+
+**(a) Direction.** Aortic pressure now exceeds pulmonary pressure, so flow REVERSES from the fetal pattern: aorta → pulmonary artery, a left-to-right shunt.
+
+**(b) Effect on the lungs.** Oxygenated blood recirculates through the lungs, volume-overloading the pulmonary circuit.
+
+**(c) Closing it.** Prostaglandins keep the ductus open, so a prostaglandin synthesis inhibitor (an NSAID) promotes closure.
 
 <!-- yield:low -->
 - The NSAID classically used to close a PDA is **indomethacin**.
 <!-- /yield -->
 
-**MCAT payoff.** Every shunt question reduces to: what does it bypass, which pressures drive the flow, and what reverses at birth.`
+**(d) Keeping it open.** When a heart defect makes the ductus temporarily life-saving (in pulmonary atresia, for example, the lungs receive blood only through the ductus), prostaglandin infusion holds it open. Every shunt question reduces to: what does it bypass, which pressures drive the flow, and what reverses at birth.`
     },
     {
       id: 'emb3-quiz1',
@@ -94,18 +112,18 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
       exercise: {
         questions: [
           {
-            question: `Which fetal vessel carries the MOST oxygenated blood?`,
-            options: [`The umbilical arteries`, `The pulmonary veins`, `The one umbilical vein`, `The descending aorta`],
+            question: `A newborn whose mother had measles years earlier is protected against measles for several months, though the baby was never vaccinated or infected. What best explains this?`,
+            options: [`The fetus made anti-measles antibodies in utero`, `Maternal and fetal blood mixed in the placenta`, `Maternal IgG antibodies crossed the placenta`, `The amnion secreted antibodies into its fluid`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `The umbilical VEIN carries freshly oxygenated blood from the placenta to the fetus — the naming trap, since veins usually carry deoxygenated blood. The two umbilical ARTERIES carry deoxygenated blood back to the placenta. Fetal pulmonary veins return blood from nonfunctional, fluid-filled lungs, and the descending aorta carries mixed blood diluted by the ductus arteriosus inflow.`
+            explanation: `IgG is the only antibody class that crosses the placenta, so the mother's anti-measles IgG gives the newborn passive immunity that fades over months as the borrowed antibodies are broken down. The fetus was never exposed to measles, so it had no reason to make its own antibodies. Maternal and fetal blood never mix: fetal capillaries sit inside villi bathed in maternal blood, always separated by cell layers. The amnion is a fluid-filled cushion, not an antibody source.`
           },
           {
-            question: `The foramen ovale allows fetal blood to bypass the lungs by shunting blood:`,
-            options: [`From the pulmonary artery directly into the aorta`, `From the right atrium into the left atrium`, `From the umbilical vein into the inferior vena cava`, `From the left ventricle into the right ventricle`],
+            question: `Before birth, blood flows through the foramen ovale from the right atrium into the left. Which condition drives this flow?`,
+            options: [`Left atrial pressure exceeds right, drawing blood across`, `Right atrial pressure exceeds left atrial pressure`, `The ductus arteriosus pumps blood back into the atria`, `Fetal lungs return extra blood to the left atrium`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `The foramen ovale is a flap between the atria: right atrium → left atrium, skipping the right ventricle and pulmonary circuit. Pulmonary artery → aorta is the DUCTUS ARTERIOSUS, and umbilical vein → IVC is the DUCTUS VENOSUS (liver bypass) — the three shunts are distinguished precisely by these routes. No fetal shunt connects the ventricles.`
+            explanation: `Blood moves from higher to lower pressure. The right atrium receives all systemic venous return plus the placental stream, while the high-resistance, fluid-filled lungs send little blood back to the left atrium, so right atrial pressure is higher and pushes the flap open toward the left. Higher LEFT pressure is the post-birth state that shuts the flap. The ductus arteriosus is a passive vessel carrying pulmonary artery blood to the aorta, not into the atria. The fetal lungs return LESS blood, not more, which is exactly why left atrial pressure stays low.`
           },
           {
             question: `At birth, the foramen ovale closes primarily because:`,
@@ -136,17 +154,22 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Membranes: amnion = cushion; chorion = fetal placenta + hCG; yolk sac = FIRST blood cells and primordial germ cells; allantois → umbilical vessels
-- Placenta: diffusion exchange with NO mixing of maternal and fetal blood; endocrine (hCG then progesterone/estrogen); maternal IgG crosses for passive immunity
-- Umbilical VEIN = oxygenated, toward the fetus; TWO umbilical arteries = deoxygenated, back to the placenta
-- Shunts: ductus venosus bypasses the liver; foramen ovale (RA → LA) bypasses the right ventricle and lungs; ductus arteriosus (pulmonary artery → aorta) bypasses the lungs
-- Birth: pressure reversal closes the foramen ovale; rising O₂ + falling prostaglandins close the ductus arteriosus
-- HbF binds 2,3-BPG poorly → higher O₂ affinity (left-shifted curve) → pulls O₂ from maternal HbA
-- Teratogen window: organogenesis weeks 3-8 (thalidomide, alcohol, rubella); apoptosis normally sculpts anatomy (digit separation)
-- A patent ductus after birth shunts left to right (aorta → pulmonary artery); prostaglandin inhibitors (NSAIDs) close it, prostaglandin infusion holds it open
+- **Each membrane has a job.** Amnion cushions; chorion forms the fetal placenta and makes hCG; yolk sac makes the first blood and germ cells.
+- **Placenta exchanges, never mixes.** Villi exchange without blood mixing; hCG first, then placental progesterone/estrogen; IgG crosses.
+- **Three shunts, three bypasses.** Ductus venosus skips the liver; foramen ovale (RA → LA) and ductus arteriosus (PA → aorta) skip the lungs.
+- **Teratogens strike weeks 3-8.** Organogenesis is the window for structural defects (thalidomide, alcohol, rubella); earlier is all-or-none.
+
+**Common traps**
+
+- **Umbilical arteries as oxygenated.** Names follow the fetal heart: the single umbilical vein is oxygenated; the two arteries are not.
+- **Oxygen closes the foramen ovale.** A pressure reversal (left atrium above right) shuts its flap; rising O₂ and falling prostaglandins close the ductus.
+- **HbF binding 2,3-BPG tightly.** HbF binds 2,3-BPG poorly, so its curve is left-shifted and it pulls O₂ from maternal blood.
+- **A PDA shunting right to left.** After birth an open ductus shunts left to right (aorta → pulmonary artery); NSAIDs help close it.
 
 <!-- yield:low -->
-- Low-yield extras: shunt remnants (fossa ovalis, ligamentum arteriosum, ligamentum venosum); indomethacin as the NSAID used to close a PDA; failed digit apoptosis = syndactyly
+**Low-yield extras**
+
+- Shunt remnants (fossa ovalis, ligamentum arteriosum, ligamentum venosum); indomethacin as the NSAID used to close a PDA; failed digit apoptosis = syndactyly.
 <!-- /yield -->`
     }
   ]

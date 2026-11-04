@@ -114,6 +114,26 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
 - Signaling ↔ endocrine: every hormone in the endocrine chapters uses one of these four receptor classes; classify the ligand's chemistry first and the mechanism follows`
     },
     {
+      id: 'sig4-worked',
+      type: 'text' as const,
+      content: `### Worked Example — A Signal That Will Not Switch Off
+
+**Problem 1.** Intestinal cells raise cAMP when a Gs-coupled hormone is added, and cAMP returns to baseline minutes after the hormone is washed out. A second batch is pretreated with cholera toxin before the hormone is added.
+
+- **(a)** In untreated cells, which two OFF steps return cAMP to baseline after washout?
+- **(b)** In toxin-treated cells, what happens to cAMP after washout, and why?
+- **(c)** In toxin-treated cells, would a receptor antagonist lower cAMP?
+- **(d)** In toxin-treated cells, would an adenylyl cyclase inhibitor lower cAMP?
+
+**(a) Normal shutdown.** G-alpha-s hydrolyzes its GTP with its intrinsic GTPase, so adenylyl cyclase stops; phosphodiesterases then hydrolyze the cAMP already made.
+
+**(b) Toxin.** cAMP stays high. Cholera toxin ADP-ribosylates G-alpha-s and blocks its GTPase, so G-alpha-s stays ON and keeps stimulating adenylyl cyclase. A response that outlasts its ligand marks a termination defect; in the gut, the cAMP hyperactivates CFTR and causes secretory diarrhea.
+
+**(c) Receptor antagonist.** No. The lesion sits at G-alpha-s, downstream of the receptor. The locked G protein no longer needs receptor input, so blocking the receptor cannot switch it off.
+
+**(d) Cyclase inhibitor.** Yes. Adenylyl cyclase lies downstream of the locked G-alpha-s, so blocking it stops cAMP synthesis, and the phosphodiesterases, which still work, clear the cAMP already made.`
+    },
+    {
       id: 'sig4-quiz2',
       type: 'multiple-choice' as const,
       content: `**MCAT Integration** 🎯`,
@@ -141,16 +161,22 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Termination machinery is specific and essential: GTPase (+ GAP acceleration), phosphatases, PDEs, Ca$^{2+}$ pumps, and receptor desensitization
-- GPCR shutdown ladder: GRK phosphorylates occupied receptors → beta-arrestin uncouples → internalization → lysosomal downregulation; explains drug tolerance
-- Cholera locks Gs ON (GTPase blocked); pertussis locks Gi OFF (coupling blocked) — different lesions, both raise cAMP
-- Oncogene logic: gain-of-function (oncogenic Ras, HER2 amplification, BCR-ABL) needs one allele; tumor-suppressor logic: loss-of-function (PTEN, NF1) needs both
-- GEF loss = cannot turn on; GAP loss = cannot turn off — keep the on/off steps straight
-- GTP-gamma-S mimicking hormone places a G protein in the pathway; membrane-permeant cAMP or DAG analogs activate pathways mid-stream for epistasis mapping
-- Inhibitor panels order a pathway: a driver lesion is downstream of every inhibitor that fails and at or upstream of every inhibitor that works
+- **Every ON has an OFF.** GTPases (sped by GAPs), phosphatases, PDEs and Ca$^{2+}$ pumps each reverse one specific ON step.
+- **The desensitization ladder.** GRK marks occupied receptors, beta-arrestin uncouples and internalizes them, lysosomes downregulate them.
+- **Two toxins, one cAMP rise.** Cholera locks Gs ON by blocking its GTPase; pertussis locks Gi OFF by blocking its coupling.
+- **Oncogenes vs. tumor suppressors.** Gain-of-function (Ras, HER2, BCR-ABL) needs one allele; loss-of-function (PTEN, NF1) needs both.
+
+**Common traps**
+
+- **GEF loss vs. GAP loss.** Losing a GEF means the switch cannot turn on; losing a GAP means it cannot turn off.
+- **Downregulation as fast.** Rapid desensitization takes seconds to minutes; downregulation takes hours and lowers total receptor number.
+- **Persistence as extra ligand.** A response that outlasts ligand washout points to a termination defect, not more hormone.
+- **Reading inhibitor panels backwards.** A driver lesion lies downstream of every inhibitor that fails and at or upstream of every one that works.
 
 <!-- yield:low -->
-- Low-yield extras: RGS proteins (GAPs for G-alpha); Ras codon 12; dibutyryl-cAMP and phorbol esters, the persistent non-metabolized DAG mimics that act as tumor promoters
+**Low-yield extras**
+
+- RGS proteins (GAPs for G-alpha); Ras codon 12; dibutyryl-cAMP and phorbol esters, the persistent non-metabolized DAG mimics that act as tumor promoters
 <!-- /yield -->`
     }
   ]

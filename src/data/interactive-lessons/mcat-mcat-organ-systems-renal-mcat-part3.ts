@@ -29,7 +29,7 @@ The **vasa recta** are countercurrent **exchangers** (passive, hairpin capillari
 
 ### RAAS — Defending Volume and Pressure
 
-$$\\text{Renin} \\to \\text{Angiotensinogen} \\Rightarrow \\text{Ang I} \\xrightarrow{ACE \\text{ (lungs)}} \\text{Ang II}$$
+$$\\text{Angiotensinogen} \\xrightarrow{\\text{renin}} \\text{Ang I} \\xrightarrow{\\text{ACE (lungs)}} \\text{Ang II}$$
 
 - **Renin** is released by juxtaglomerular cells when: (1) renal perfusion pressure falls, (2) the macula densa senses low NaCl delivery, (3) sympathetic nerves fire (beta-1).
 - Renin cleaves liver-made angiotensinogen to Ang I; **ACE** (pulmonary endothelium) converts Ang I to **angiotensin II**, which:
@@ -47,6 +47,53 @@ The lungs adjust CO2 in minutes; the kidneys adjust HCO3$^-$ over days but can f
 - **Generate new** HCO3$^-$ while exporting acid: secreted H$^+$ is trapped in urine as titratable acid (phosphate) and **ammonium (NH4$^+$)** — the adaptable, high-capacity route in chronic acidosis.
 - In alkalosis: intercalated cells flip roles, secreting HCO3$^-$ instead.
 - Compensation pairings: metabolic disorders → respiratory compensation (fast); respiratory disorders → renal compensation (slow but powerful).`
+    },
+    {
+      id: 'ren3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Volume, Osmolarity & pH
+
+**Problem 1.** A patient loses 15% of blood volume.
+
+- **(a)** Which signals make the juxtaglomerular (JG) cells release renin?
+- **(b)** What does angiotensin II then do?
+- **(c)** Which two downstream hormones reclaim salt and water, and what does each reclaim?
+- **(d)** What urine does the kidney produce?
+
+**(a) Renin triggers.** Renal perfusion falls, sympathetic nerves fire and distal NaCl delivery drops, so **JG cells release renin**: all three triggers act at once.
+
+**(b) Angiotensin II.** Renin → Ang I → (ACE, lungs) → **Ang II**, which drives systemic vasoconstriction, efferent-arteriolar constriction (GFR defended), thirst, and aldosterone and ADH release.
+
+**(c) Two hormones.** Aldosterone reclaims Na$^+$, and water follows; ADH (also driven by baroreceptor input) reclaims pure water and concentrates the urine.
+
+**(d) The urine.** **Scant, concentrated and low in sodium**: the kidney's signature of volume defense.
+
+**Problem 2.** A patient with severe COPD chronically retains CO2 ($P_{CO_2}$ = 60 mmHg) yet has a near-normal pH.
+
+- **(a)** What disturbance does the CO2 retention cause, and why can't the lungs fix it?
+- **(b)** What do the kidneys do over the following days?
+- **(c)** How does that restore pH, and what pattern do the lab values show?
+
+**(a) The disturbance.** Chronic high CO2 means high H$^+$: a respiratory acidosis that the lungs, being the problem, cannot fix.
+
+**(b) Renal response.** Over days the kidneys ramp up H$^+$ secretion, trapping it as NH4$^+$ and titratable acid, and **generate new HCO3$^-$**, raising plasma bicarbonate well above normal.
+
+**(c) Compensation.** The elevated HCO3$^-$ offsets the elevated CO2, returning the ratio (and pH) toward normal: compensated respiratory acidosis. Both "abnormal" values moving in the SAME direction is the signature of chronic compensation, not two diseases.
+
+**Problem 3.** Seawater is ~1100 mOsm/L, mostly NaCl. Maximal human urine osmolarity is ~1200 mOsm/L.
+
+- **(a)** What sets the ceiling on urine concentration?
+- **(b)** How much of that ceiling is available for salt?
+- **(c)** How much urine does excreting the salt in 1 L of seawater take?
+- **(d)** Why does drinking seawater dehydrate a person?
+
+**(a) The ceiling.** Urine can be concentrated only as high as the deepest medullary interstitium, ~1200 mOsm/L: a hard limit set by the countercurrent gradient, not by how much ADH is present.
+
+**(b) Room for salt.** Urea and other wastes must still be excreted and fill a large share of that 1200 (urea supplies up to about half of the deep-medullary osmolarity), so only ~600–700 mOsm/L of urine can be NaCl.
+
+**(c) Urine needed.** Clearing the ~1100 mOsm of salt in 1 L of seawater takes $1100/700 \\approx 1.6$ to $1100/600 \\approx 1.8$ L of urine.
+
+**(d) Net balance.** With 1.6–1.8 L of urine from (c) needed per litre drunk, each drink costs more water than it delivers, so the deficit is drawn from body water.`
     },
     {
       id: 'ren3-quiz1',
@@ -79,57 +126,21 @@ The lungs adjust CO2 in minutes; the kidneys adjust HCO3$^-$ over days but can f
       }
     },
     {
-      id: 'ren3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Volume, Osmolarity & pH
-
-<details>
-<summary><b>Example 1: Hemorrhage — the full RAAS cascade</b></summary>
-
-**Question:** After losing 15% of blood volume, trace the renal hormonal response and its effect on urine.
-
-**Solution:**
-1. Renal perfusion falls + sympathetic activation + low distal NaCl → **JG cells release renin** (all three triggers at once).
-2. Renin → Ang I → (ACE, lungs) → **Ang II**: systemic vasoconstriction, efferent-arteriolar constriction (GFR defended), thirst, aldosterone, ADH.
-3. Aldosterone reclaims Na$^+$ (+ water); ADH (also from baroreceptor input) reclaims pure water and concentrates urine.
-4. Urine output: **scant and concentrated, low in sodium** — the kidney's signature of volume defense. ✓
-</details>
-
-<details>
-<summary><b>Example 2: Seawater vs. fresh water — an osmolarity ceiling problem</b></summary>
-
-**Question:** Why does drinking seawater (~1100 mOsm/L, mostly NaCl) dehydrate a human, given maximal urine osmolarity of ~1200 mOsm/L?
-
-**Solution:**
-1. The kidney can concentrate urine only as high as the deepest medullary interstitium — ~1200 mOsm/L.
-2. Not all of that 1200 is available for salt: urea and other wastes must still be excreted and fill a large share of it (urea supplies up to about half of the deep-medullary osmolarity). If only ~600–700 mOsm/L of urine can be NaCl, clearing the ~1100 mOsm of salt in 1 L of seawater takes about 1.6–1.8 L of urine.
-3. Net water balance is negative — each drink costs more water than it delivers, drawing on body water. ✓
-
-**Concept tested:** urine concentration has a hard ceiling set by the countercurrent gradient, not by ADH enthusiasm.
-</details>
-
-<details>
-<summary><b>Example 3: Chronic respiratory acidosis — renal compensation</b></summary>
-
-**Question:** A patient with severe COPD chronically retains CO2 ($P_{CO_2}$ = 60 mmHg) yet has near-normal pH. What did the kidneys do?
-
-**Solution:**
-1. Chronic high CO2 → high H$^+$ (respiratory acidosis) that the lungs, being the problem, cannot fix.
-2. Over days, the kidneys ramp up H$^+$ secretion — trapping it as NH4$^+$ and titratable acid — and **generate new HCO3$^-$**, raising plasma bicarbonate well above normal.
-3. The elevated HCO3$^-$ offsets the elevated CO2, returning the ratio (and pH) toward normal: compensated respiratory acidosis — high CO2 AND high bicarbonate together. ✓
-
-**Data-reading skill:** both "abnormal" values moving in the SAME direction is the signature of chronic compensation, not two diseases.
-</details>`
-    },
-    {
       id: 'ren3-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Countercurrent multiplication (salt-only ascending limb + water-only descending limb + opposing flow) builds the 300→1200 mOsm medullary gradient; urea recycling deepens it; vasa recta exchange passively without washout.
-- ADH (posterior pituitary, V2 → aquaporin-2) reclaims pure water → concentrated urine; defends OSMOLARITY. Central vs. nephrogenic DI split by response to exogenous ADH.
-- RAAS: renin (low pressure, low distal NaCl, sympathetic) → Ang II (vasoconstriction, efferent constriction, thirst) → aldosterone (Na⁺ in, K⁺/H⁺ out); defends VOLUME. ANP opposes it.
-- Kidneys correct pH slowly but completely: reclaim filtered HCO3⁻, mint new HCO3⁻ via NH4⁺ and titratable acid; chronic respiratory disorders show matching bicarbonate shifts.`
+- **Countercurrent multiplier.** A salt-only ascending and water-only descending limb build a 300→1200 mOsm/L medulla.
+- **ADH defends osmolarity.** Via V2 receptors it inserts aquaporin-2 in the collecting duct, reclaiming pure water.
+- **RAAS defends volume.** Renin (low pressure, low distal NaCl, β1) → Ang II → aldosterone: Na⁺ and water in, K⁺ and H⁺ out.
+- **Kidneys fix pH slowly.** Over days they reclaim filtered HCO3⁻ and make new HCO3⁻ via NH4⁺ and titratable acid.
+
+**Common traps**
+
+- **Vasa recta as multipliers.** The vasa recta are passive exchangers; active NaCl transport is the ascending limb's job.
+- **Central and nephrogenic DI swapped.** If injected ADH concentrates the urine, the DI is central; nephrogenic DI ignores it.
+- **Aldosterone raising potassium.** Aldosterone excess wastes K⁺ (hypokalemia) and expands volume with little osmolarity change.
+- **Compensation read as two diseases.** High CO2 with high HCO3⁻ in chronic lung disease is renal compensation, not a second disorder.`
     }
   ]
 };

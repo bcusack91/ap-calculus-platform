@@ -66,6 +66,50 @@ $$CO_2 + H_2O \\rightleftharpoons H_2CO_3 \\rightleftharpoons H^+ + HCO_3^-$$
 - Everything reverses in the lungs: HCO3$^-$ re-enters RBCs, recombines with H$^+$, and carbonic anhydrase regenerates CO2 for exhalation.`
     },
     {
+      id: 'rsp2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Curves & Transport
+
+**Problem 1.** A passage shows Hb saturation curves at pH 7.2 and pH 7.4. At a tissue $P_{O_2}$ of 40 mmHg, the pH 7.2 curve reads 60% saturation versus 75% at pH 7.4.
+
+- **(a)** Which way has the lower pH shifted the curve, and what does that mean for Hb's affinity?
+- **(b)** How much extra O2 is released to the tissue?
+- **(c)** Why is this shift useful physiologically?
+- **(d)** Does this shift hurt O2 loading in the lungs?
+
+**(a) Right shift.** Lower pH shifts the curve **right** (Bohr effect): at the same $P_{O_2}$, Hb holds LESS O2, so its affinity is lower.
+
+**(b) Extra unloading.** Saturation dropping from 75% to 60% means an extra 15 percentage points of Hb's O2 capacity is **released** to the tissue.
+
+**(c) Delivery matches demand.** Acidic microenvironments are exactly where metabolism is fastest (CO2 and lactic acid production), so the shift automatically delivers more O2 where demand is highest.
+
+**(d) Barely.** Loading happens on the flat plateau ($P_{O_2}$ ≈ 100), so a right shift lowers arterial saturation only slightly; blowing off CO2 in the lungs also raises pH and partly undoes the shift.
+
+**Problem 2.** A patient's hemoglobin falls from 15 to 7.5 g/dL (severe anemia), but arterial saturation stays 98%. Use $O_2 \\text{ content} = 1.34 \\times [Hb] \\times S_{a}$ (ignore dissolved gas).
+
+- **(a)** What is the normal O2 content?
+- **(b)** What is the anemic O2 content?
+- **(c)** Why is the patient hypoxic at 98% saturation, and how does the body compensate?
+
+**(a) Normal content.** $1.34 \\times 15 \\times 0.98 \\approx 19.7$ mL O2/dL.
+
+**(b) Anemic content.** $1.34 \\times 7.5 \\times 0.98 \\approx 9.8$ mL O2/dL — **half the content of (a) at the same saturation**.
+
+**(c) Seats, not percentages.** Saturation is a percentage of AVAILABLE seats; anemia removes seats. Delivery = cardiac output × content, so the heart compensates with tachycardia, and 2,3-BPG rises to right-shift the curve. Passage skill: saturation, partial pressure and content are three different axes — identify which one a figure plots.
+
+**Problem 3.** A CO2 molecule is produced in exercising muscle and is eventually exhaled.
+
+- **(a)** How does it get from the muscle into a red blood cell?
+- **(b)** What happens to it inside the red blood cell?
+- **(c)** What happens in the pulmonary capillaries?
+
+**(a) Diffusion.** CO2 diffuses muscle → interstitium → plasma → **into an RBC**, all down partial-pressure gradients.
+
+**(b) Conversion to bicarbonate.** Carbonic anhydrase: CO2 + H2O → H2CO3 → H$^+$ + HCO3$^-$. HCO3$^-$ swaps out for Cl$^-$ (chloride shift); deoxy-Hb buffers the H$^+$ (Haldane).
+
+**(c) Reversal in the lungs.** Everything reverses: HCO3$^-$ re-enters, joins H$^+$, and carbonic anhydrase regenerates CO2, which diffuses into the alveolus ($P_{CO_2}$ 46 → 40) and is exhaled.`
+    },
+    {
       id: 'rsp2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Gas Exchange & Transport** 🎯`,
@@ -96,57 +140,21 @@ $$CO_2 + H_2O \\rightleftharpoons H_2CO_3 \\rightleftharpoons H^+ + HCO_3^-$$
       }
     },
     {
-      id: 'rsp2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Curves & Transport
-
-<details>
-<summary><b>Example 1: Read a dissociation-curve experiment</b></summary>
-
-**Question:** A passage shows Hb saturation curves at pH 7.2 and pH 7.4. At a tissue $P_{O_2}$ of 40 mmHg, the pH 7.2 curve reads 60% saturation versus 75% at pH 7.4. What does this mean physiologically?
-
-**Solution:**
-1. Lower pH → curve shifted **right** (Bohr effect): at the same $P_{O_2}$, Hb holds LESS O2.
-2. Saturation dropping from 75% to 60% means an extra 15% of carried O2 is **released** to the tissue.
-3. Acidic microenvironments are exactly where metabolism is fastest (CO2 and lactic acid production) — the shift automatically delivers more O2 where demand is highest. ✓
-
-**Trap:** a right shift is "bad" for loading only in the lungs — and the plateau is so flat there that loading barely suffers.
-</details>
-
-<details>
-<summary><b>Example 2: Trace one CO2 molecule from muscle to exhaled air</b></summary>
-
-**Question:** Follow a CO2 molecule produced in exercising muscle until it is exhaled, naming each conversion.
-
-**Solution:**
-1. CO2 diffuses muscle → interstitium → plasma → **into an RBC** (all down pressure gradients).
-2. Carbonic anhydrase: CO2 + H2O → H2CO3 → H$^+$ + HCO3$^-$. HCO3$^-$ swaps out for Cl$^-$ (chloride shift); deoxy-Hb buffers the H$^+$ (Haldane).
-3. In pulmonary capillaries everything reverses: HCO3$^-$ re-enters, joins H$^+$, carbonic anhydrase regenerates CO2 → diffuses into the alveolus ($P_{CO_2}$ 46 → 40) → exhaled. ✓
-</details>
-
-<details>
-<summary><b>Example 3: Quantify oxygen content vs. saturation</b></summary>
-
-**Question:** A patient's hemoglobin falls from 15 to 7.5 g/dL (severe anemia), but arterial saturation remains 98%. Explain why the patient is still hypoxic, using $O_2 \\text{ content} = 1.34 \\times [Hb] \\times S_{a}$ (ignoring dissolved gas).
-
-**Solution:**
-1. Normal: $1.34 \\times 15 \\times 0.98 \\approx 19.7$ mL O2/dL.
-2. Anemic: $1.34 \\times 7.5 \\times 0.98 \\approx 9.9$ mL O2/dL — **half the content at perfect saturation**.
-3. Saturation is a percentage of AVAILABLE seats; anemia removes seats. Delivery = CO x content, so the heart compensates with tachycardia, and 2,3-BPG rises to right-shift the curve. ✓
-
-**Passage skill:** saturation, partial pressure, and content are three different axes — identify which one the figure actually plots before answering.
-</details>`
-    },
-    {
       id: 'rsp2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Gases move down partial-pressure gradients (Dalton + Henry); memorize the anchor values: alveolar 100/40, venous 40/46 mmHg for O2/CO2.
-- Diffusion rate ∝ area × gradient / thickness — emphysema kills area, fibrosis/edema add thickness; CO2 diffuses ~20× faster than O2.
-- Hb: sigmoidal (cooperativity, T→R); myoglobin: hyperbolic, higher affinity. Right shift (↑CO2, ↑H⁺, ↑temp, ↑2,3-BPG) = easier unloading; HbF and CO shift left.
-- CO poisoning: normal arterial $P_{O_2}$, low content, impaired unloading.
-- CO2 travels ~70% as bicarbonate (carbonic anhydrase + chloride shift), ~20% carbamino, ~7-10% dissolved; Haldane effect couples O2 loading to CO2 release.`
+- **Gradients drive gas.** Gases diffuse down partial pressures; anchors: alveolar 100/40, venous 40/46 mmHg for O2/CO2.
+- **Fick diffusion.** Rate ∝ area × gradient / thickness; emphysema cuts area, fibrosis thickens; CO2 diffuses ~20× faster.
+- **Curve shifts.** Right shift (↑CO2, ↑H⁺, ↑temp, ↑2,3-BPG) eases unloading; HbF and carbon monoxide shift left.
+- **CO2 as bicarbonate.** ~70% as HCO3⁻ (carbonic anhydrase, chloride shift), ~20% carbamino; Haldane: deoxy-Hb carries more CO2.
+
+**Common traps**
+
+- **Myoglobin as sigmoidal.** Single-subunit myoglobin is hyperbolic with HIGHER affinity; only cooperative Hb is sigmoidal.
+- **Normal $P_{O_2}$ means safe.** In CO poisoning arterial $P_{O_2}$ (dissolved O2) is normal while content and unloading fall.
+- **Carbamino on heme.** CO2 binds globin amino groups, not the heme iron, so it does not compete with O2 for heme.
+- **Saturation as content.** Anemia leaves saturation at 98% but cuts O2 content in proportion to Hb; check which axis a figure plots.`
     }
   ]
 };

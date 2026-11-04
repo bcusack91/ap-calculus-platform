@@ -588,8 +588,8 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: replicaSvg,
       alt:
-        'Replica plating, Worked Example 2. Left: a master plate on complete medium with eight colonies; colony 7 is blue. A velvet pad copies the plate onto four replica plates, each with a registration mark at the top, so every colony lands in the same position. On minimal medium and on minimal plus histidine, colony 7 is missing (a dashed red ring marks its empty spot); on minimal plus leucine and on complete medium it grows (blue). All other colonies grow on every plate. Conclusion: missing on minimal but present on complete means colony 7 is an auxotroph; leucine alone rescues it, so it is leu⁻, and it is picked from the same spot on the never-exposed master plate.',
-      caption: 'Replica plating as a screen (the lesson’s Worked Example 2): an auxotroph is the colony that is present on complete medium and missing on minimal.',
+        'Replica plating, the lesson’s Problem 3.Left: a master plate on complete medium with eight colonies; colony 7 is blue. A velvet pad copies the plate onto four replica plates, each with a registration mark at the top, so every colony lands in the same position. On minimal medium and on minimal plus histidine, colony 7 is missing (a dashed red ring marks its empty spot); on minimal plus leucine and on complete medium it grows (blue). All other colonies grow on every plate. Conclusion: missing on minimal but present on complete means colony 7 is an auxotroph; leucine alone rescues it, so it is leu⁻, and it is picked from the same spot on the never-exposed master plate.',
+      caption: 'Replica plating as a screen (the lesson’s Problem 3): an auxotroph is the colony that is present on complete medium and missing on minimal.',
     },
     blocks: [
       '- Absent on minimal, rescued by one added nutrient → that nutrient names the auxotroph',
@@ -597,13 +597,13 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Do Mutations Come Before Selection?',
-    mode: 'lead',
+    at: 'Worked Examples — Reading Selection Experiments',
+    mode: 'after',
     figure: {
       svg: fluctuationSvg,
       alt:
         'Two bar charts on the same scale of resistant colonies (0 to 60). Left, Set 1, ten separate small cultures grown without phage and then plated on phage: 0, 0, 1, 0, 64, 0, 2, 0, 0, 9 colonies; the 64 bar is red and labelled jackpot, an early mutant left a big clone; dashed mean line at 7.6. Right, Set 2, ten samples of one culture (the control for plating noise): 11, 9, 12, 8, 10, 11, 9, 10, 12, 8; dashed mean line at 10. The means are similar, but the spread is huge across independent cultures and small within one culture, so the resistance arose before the phage was added.',
-      caption: 'The fluctuation test with the lesson’s Worked Example 1 counts: the tell is the variance, not the mean.',
+      caption: 'The fluctuation test with the counts from Problem 2: the tell is the variance, not the mean.',
     },
     blocks: [
       '- Induced by phage → every culture ≈ the same count; random **before** exposure → jackpots',
@@ -639,8 +639,8 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Conjugation: DNA Through a Bridge',
-    mode: 'lead',
+    at: 'Worked Examples — Transfer and Mapping Experiments',
+    mode: 'after',
     figure: {
       svg: conjugationSvg,
       alt:
@@ -693,8 +693,8 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Operons: Regulation You Can Map with Mutants',
-    mode: 'lead',
+    at: 'Worked Examples — Mobile DNA and Regulation',
+    mode: 'after',
     figure: {
       svg: lacSvg,
       alt:
@@ -720,12 +720,12 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Mapping and Counting Genes in Phage',
-    mode: 'lead',
+    at: 'Worked Examples — Experiment Reading',
+    mode: 'after',
     figure: {
       svg: complementationSvg,
       alt:
-        'Left, the complementation test, each case two phage genomes in one cell with gene 1 and gene 2 boxes and red crosses for recessive mutations. Trans, mutations in different genes (one in gene 1 of the first genome, one in gene 2 of the second): wild type, they complement, so two genes. Trans, both mutations in gene 1, one per genome: mutant, they fail, so same gene. Cis control, both mutations on one genome beside a fully wild-type genome: wild type, the control passes. Complementation shares products and changes no genome. Right, Worked Example 1: a five-by-five grid of mutants 1 to 5 with the diagonal greyed; every pair shows a blue plus (complement) except pairs 1 and 3 and pairs 2 and 4, which show a red minus (fail). Groups: {1, 3}, {2, 4} and {5}, so three genes; a mutant that complements all others stands alone.',
+        'Left, the complementation test, each case two phage genomes in one cell with gene 1 and gene 2 boxes and red crosses for recessive mutations. Trans, mutations in different genes (one in gene 1 of the first genome, one in gene 2 of the second): wild type, they complement, so two genes. Trans, both mutations in gene 1, one per genome: mutant, they fail, so same gene. Cis control, both mutations on one genome beside a fully wild-type genome: wild type, the control passes. Complementation shares products and changes no genome. Right, the five mutants of the lesson’s Problem 2: a five-by-five grid of mutants 1 to 5 with the diagonal greyed; every pair shows a blue plus (complement) except pairs 1 and 3 and pairs 2 and 4, which show a red minus (fail). Groups: {1, 3}, {2, 4} and {5}, so three genes; a mutant that complements all others stands alone.',
       caption: 'Complementation counts genes: failure to complement = same gene. The grid is the lesson’s five-mutant worked example.',
     },
     blocks: [
@@ -739,7 +739,7 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
     figure: {
       svg: driftShiftSvg,
       alt:
-        'Three influenza isolates from Worked Example 3, each drawn as a row of eight separate RNA segments, with the HA and NA segments labelled. Isolate A, year 1: the starting strain. Isolate B, year 2: identical except for seven blue dots scattered in the HA segment, the 7 point changes of antigenic drift; some immunity still works, so a typical season and an updated vaccine. Isolate C, year 3: its HA segment is red, a bird strain’s whole HA segment, while the other seven segments match B; this is antigenic shift by reassortment, with little population immunity and pandemic risk. Footer: only a segmented genome can reassort and shift.',
+        'Three influenza isolates from Problem 3 of the worked examples, each drawn as a row of eight separate RNA segments, with the HA and NA segments labelled. Isolate A, year 1: the starting strain. Isolate B, year 2: identical except for seven blue dots scattered in the HA segment, the 7 point changes of antigenic drift; some immunity still works, so a typical season and an updated vaccine. Isolate C, year 3: its HA segment is red, a bird strain’s whole HA segment, while the other seven segments match B; this is antigenic shift by reassortment, with little population immunity and pandemic risk. Footer: only a segmented genome can reassort and shift.',
       caption: 'Drift = point changes accumulating in HA or NA; shift = a whole new HA or NA segment by reassortment (the lesson’s isolates A, B and C).',
     },
     blocks: [

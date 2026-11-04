@@ -51,22 +51,31 @@ Neutral mutations accumulate at a roughly constant average rate, so the number o
       type: 'text' as const,
       content: `### Worked Example — Interpreting a Resistance-Evolution Experiment
 
-**Passage-style problem.** Researchers establish 6 replicate E. coli populations from a single antibiotic-sensitive colony. Populations 1-3 grow with a sublethal dose of streptomycin; populations 4-6 grow without antibiotic. Resistant cells per $10^6$ cells are counted at generation 0 and generation 200:
+**Problem 1.** Six large replicate E. coli populations start from one antibiotic-sensitive colony. Populations 1-3 grow with a sublethal dose of streptomycin; 4-6 grow without antibiotic. Resistant cells per $10^6$ cells:
 
 | Population | Condition | Gen 0 | Gen 200 |
 |------------|-----------|-------|---------|
 | 1-3 (mean) | Streptomycin | About 1 | 940,000 |
 | 4-6 (mean) | No antibiotic | About 1 | 2 |
 
-A replica-plating test on a SEPARATE, never-exposed culture finds resistant colonies at matching positions across replica antibiotic plates.
+- **(a)** Do these data show that streptomycin caused the resistance mutations?
+- **(b)** What did the drug change in populations 1-3?
+- **(c)** Is the rise in populations 1-3 selection or drift?
 
-**Question 1 — Do these data show the antibiotic caused resistance mutations?** No. Populations 4-6 show that resistant mutants exist at low frequency (about $1$ to $2$ per $10^6$) even with no drug — mutation maintains them regardless of exposure. The replica-plating result clinches the timing: position-matched resistant colonies descend from mutants that arose on the master plate BEFORE any antibiotic contact. The drug's role in populations 1-3 was to change the FITNESS of pre-existing variants: $w_{\\text{resistant}} \\gg w_{\\text{sensitive}}$ under treatment, driving the resistant fraction from about $10^{-6}$ to about $0.94$.
+**(a) No.** Resistant mutants were present at generation 0, and populations 4-6 keep them at low frequency (about $1$ to $2$ per $10^6$) with no drug at all: mutation maintains them regardless of exposure.
 
-**Question 2 — Why does the resistant fraction stay near 1 per million in populations 4-6?** Without the drug, resistance typically carries a small fitness COST (resistant ribosomes work slightly worse), so selection weakly removes resistant cells while mutation keeps resupplying them — a mutation-selection balance, not an absence of mutation.
+**(b) Fitness, not mutation.** The drug changed the FITNESS of pre-existing variants: $w_{\\text{resistant}} \\gg w_{\\text{sensitive}}$ under treatment, driving the resistant fraction from about $10^{-6}$ to about $0.94$.
 
-**Question 3 — Which single result, if observed instead, would have supported induced (directed) mutation?** Resistant colonies appearing at RANDOM, non-matching positions across replica plates only after antibiotic exposure, together with a resistant fraction in unexposed populations of exactly zero at all times. Matching positions are the fingerprint of pre-exposure mutational events propagated by cell division.
+**(c) Selection.** All three independent replicates shifted massively in the SAME direction, in large populations. Consistent, directional, size-independent change is the signature of selection, not drift.
 
-**Question 4 — Is the rise in populations 1-3 selection or drift?** All three independent replicates shifted massively in the SAME direction, in large populations — consistent, directional, size-independent change is the signature of selection, not drift.`
+**Problem 2.** In the same experiment, resistant cells per $10^6$ rose from about 1 to 940,000 with streptomycin (populations 1-3) but only from about 1 to 2 without it (populations 4-6).
+
+- **(a)** Why does the resistant fraction stay near 1 per million without the drug?
+- **(b)** If streptomycin is removed from populations 1-3 for 200 more generations, what happens to the resistant fraction?
+
+**(a) Mutation-selection balance.** Without the drug, resistance typically carries a small fitness COST (resistant ribosomes work slightly worse), so selection weakly removes resistant cells while mutation keeps resupplying them: a balance, not an absence of mutation.
+
+**(b) A slow decline.** Without the drug, the small fitness cost from (a) makes resistant cells slightly less fit than sensitive ones, so selection now gradually favors sensitive cells and the resistant fraction falls slowly. Because the cost is small, the decline is far slower than the rise under treatment.`
     },
     {
       id: 'ns4-quiz1',
@@ -117,16 +126,22 @@ A replica-plating test on a SEPARATE, never-exposed culture finds resistant colo
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Evidence stack: fossils (transitional forms), comparative anatomy (homologous + vestigial structures), molecular homology, biogeography, and direct real-time observation
-- Replica plating: resistance mutations pre-exist exposure (position-matched colonies from an unexposed master plate); antibiotics select, they do not instruct
-- Grants' finches: documented variation + heritability + differential survival → measurable beak-depth evolution in the wild; direction reverses when the environment does
-- Peppered moths: reversible, environment-linked directional selection replicated across regions
-- Demonstrating adaptation experimentally requires a common-garden heritability check, fitness measured against the trait with controls, and replication
-- Selection vs. drift in data: consistent, size-independent, replicated directional shifts = selection; scattered, size-dependent shifts = drift
-- Molecular clocks: neutral divergence grows roughly linearly with time; calibrate with fossils, beware gene- and lineage-specific rate differences
+- **Evidence stack.** Fossils, homologous and vestigial anatomy, molecular homology, biogeography and direct observation all show descent.
+- **Replica plating.** Position-matched resistant colonies from an unexposed master plate show the mutations came before the drug.
+- **Grants' finches.** Variation, heritability and drought survival gave deeper beaks in the next generation; wet years pushed back.
+- **Molecular clocks.** Neutral differences grow roughly linearly with time since divergence; fossil-dated splits calibrate them.
+
+**Common traps**
+
+- **Drugs creating mutations.** Antibiotics select pre-existing resistant variants; a stressor that induces adaptive mutations is Lamarckian.
+- **Survival as proof of evolution.** Differential survival shows selection; only offspring resemblance in a common environment shows heritability.
+- **Drift mistaken for selection.** Consistent, replicated, size-independent shifts mean selection; scattered ones, worst in small populations, mean drift.
+- **One clock rate.** Rates differ among genes and lineages, and selection-constrained sites do not tick neutrally.
 
 <!-- yield:low -->
-- Low-yield extras: named transitional fossils (Tiktaalik, fish to tetrapod; Ambulocetus, legged whale ancestor); molecular-clock rate extremes (histones slow, fibrinopeptides fast)
+**Low-yield extras**
+
+- Named transitional fossils (Tiktaalik, fish to tetrapod; Ambulocetus, legged whale ancestor); molecular-clock rate extremes (histones slow, fibrinopeptides fast)
 <!-- /yield -->`
     }
   ]

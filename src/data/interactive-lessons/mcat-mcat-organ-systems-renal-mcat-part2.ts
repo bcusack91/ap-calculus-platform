@@ -54,6 +54,47 @@ $$C_X = \\frac{U_X \\times V}{P_X}$$
 Creatinine is produced by muscle at a constant rate and (approximately) only leaves via filtration. At steady state, production = excretion = $GFR \\times P_{cr}$, so **halving GFR doubles plasma creatinine**. A rising plasma creatinine is the standard clinical flag of falling GFR.`
     },
     {
+      id: 'ren2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Clearance Calculations
+
+**Problem 1.** During an inulin infusion, urine inulin = 30 mg/mL, urine flow = 2 mL/min and plasma inulin = 0.5 mg/mL.
+
+- **(a)** What is the inulin clearance?
+- **(b)** Why does that clearance equal GFR?
+- **(c)** What units does a clearance carry?
+
+**(a) Clearance.** $C_{inulin} = \\dfrac{U \\times V}{P} = \\dfrac{30 \\times 2}{0.5} = \\dfrac{60}{0.5} = 120$ mL/min.
+
+**(b) Why it is GFR.** Inulin is filtered but neither reabsorbed nor secreted, so everything excreted (60 mg/min) arrived by filtration: 120 mL of plasma is filtered per minute. GFR = 120 mL/min (normal).
+
+**(c) Units check.** mg/mL × mL/min ÷ mg/mL → mL/min. Clearance is a VOLUME of plasma per time, not an amount of substance.
+
+**Problem 2.** A healthy donor gives one kidney, halving nephron number; muscle creatinine production is unchanged. Weeks later, plasma creatinine has risen only ~30–40%, not 100%.
+
+- **(a)** Why does plasma creatinine rise at all?
+- **(b)** Why is the rise smaller than the predicted doubling?
+- **(c)** What does this say about plasma creatinine as a marker of GFR?
+
+**(a) Why it rises.** At steady state excretion must equal production, and excretion ≈ $GFR \\times P_{cr}$. If GFR halves, $P_{cr}$ must roughly double to restore excretion.
+
+**(b) Why less than double.** The remaining nephrons **hyperfiltrate** (afferent dilation, glomerular hypertrophy), recovering GFR to ~70–75% of the original, so $P_{cr}$ settles at about 1.3–1.4 times baseline, well below double.
+
+**(c) The lesson.** Plasma creatinine reflects GFR at steady state, inversely, and the kidney has functional reserve that blunts the arithmetic.
+
+**Problem 3.** Drug Z is freely filtered and not protein-bound. Plasma Z = 0.3 mg/mL, GFR = 120 mL/min, and urinary excretion of Z is 24 mg/min.
+
+- **(a)** What is the filtered load of Z?
+- **(b)** Is Z reabsorbed or secreted, and how much per minute?
+- **(c)** Does the clearance of Z give the same verdict?
+
+**(a) Filtered load.** $GFR \\times P = 120 \\times 0.3 = 36$ mg/min. Compute the filtered load FIRST in any renal passage.
+
+**(b) Net reabsorption.** With 36 mg/min filtered from (a) but only 24 mg/min excreted, Z undergoes **net reabsorption** of $36 - 24 = 12$ mg/min.
+
+**(c) Clearance check.** $C_Z = 24/0.3 = 80$ mL/min, below GFR (120 mL/min): net reabsorption again. Filtration–excretion mismatches are the whole game.`
+    },
+    {
       id: 'ren2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Transport & Clearance** 🎯`,
@@ -84,56 +125,21 @@ Creatinine is produced by muscle at a constant rate and (approximately) only lea
       }
     },
     {
-      id: 'ren2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Clearance Calculations
-
-<details>
-<summary><b>Example 1: Compute GFR from inulin data</b></summary>
-
-**Question:** During an inulin infusion: urine inulin = 30 mg/mL, urine flow = 2 mL/min, plasma inulin = 0.5 mg/mL. Find GFR.
-
-**Solution:**
-1. $C_{inulin} = \\frac{U \\times V}{P} = \\frac{30 \\times 2}{0.5} = \\frac{60}{0.5} = 120$ mL/min. ✓
-2. Because inulin is filtered but neither reabsorbed nor secreted, everything excreted (60 mg/min) must have arrived by filtration — so 120 mL of plasma-worth of inulin is filtered per minute: GFR = 120 mL/min (normal).
-
-**Units check:** mg/mL × mL/min ÷ mg/mL → mL/min. Clearance is a VOLUME per time, not an amount.
-</details>
-
-<details>
-<summary><b>Example 2: Reabsorbed or secreted? Run the ledger</b></summary>
-
-**Question:** For drug Z (freely filtered, not protein-bound): plasma = 0.2 mg/mL, GFR = 125 mL/min, urinary excretion measured at 15 mg/min. Is Z reabsorbed or secreted, and how much?
-
-**Solution:**
-1. Filtered load = $GFR \\times P = 125 \\times 0.2 = 25$ mg/min.
-2. Excretion (15) < filtration (25) → **net reabsorption** of $25 - 15 = 10$ mg/min. ✓
-3. Equivalent check: $C_Z = 15/0.2 = 75$ mL/min < GFR — same verdict from the clearance side.
-
-**Skill:** filtration−excretion mismatches are the whole game; compute the filtered load FIRST in any renal passage.
-</details>
-
-<details>
-<summary><b>Example 3: Steady-state creatinine after kidney donation</b></summary>
-
-**Question:** A healthy donor gives one kidney, halving nephron number. Weeks later, plasma creatinine has risen only ~30–40%, not 100%. Explain both the rise and why it is smaller than predicted.
-
-**Solution:**
-1. Creatinine production (muscle) is unchanged; at steady state excretion must equal production, and excretion ≈ $GFR \\times P_{cr}$. If GFR halves, $P_{cr}$ must roughly double to restore excretion.
-2. But the remaining kidney's nephrons **hyperfiltrate** (afferent dilation, glomerular hypertrophy), recovering GFR to ~70–75% of original — so $P_{cr}$ settles well below the doubled value. ✓
-3. Lesson: plasma creatinine reflects GFR at steady state, and the kidney has functional reserve that blunts the arithmetic.
-</details>`
-    },
-    {
       id: 'ren2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- PCT does the bulk work: ~2/3 of Na⁺/water, all glucose and amino acids (Na⁺-driven SGLT, powered by basolateral Na⁺/K⁺-ATPase), plus secretion of H⁺ and organic acids/bases.
-- Loop asymmetry: descending = water only (concentrates); ascending = salt only, water-tight (dilutes filtrate, salts the medulla).
-- Carriers saturate: past threshold, glucose spills ($T_m$ ≈ 375 mg/min) and acts as an osmotic diuretic — the physiology of diabetic polyuria.
-- $C_X = U_X V / P_X$. Inulin clearance = GFR; creatinine ≈ GFR; PAH clearance ≈ renal plasma flow.
-- $C_X$ below GFR → net reabsorption; above → net secretion. Plasma creatinine rises as GFR falls (steady-state inverse).`
+- **PCT does the bulk work.** It reclaims ~2/3 of Na⁺ and water and all glucose and amino acids, and secretes H⁺, drugs and PAH.
+- **Loop asymmetry.** The descending limb loses only water; the water-tight ascending limb pumps out salt and dilutes the filtrate.
+- **Carriers saturate.** Past the ~200 mg/dL threshold glucose spills ($T_m$ ≈ 375 mg/min) and acts as an osmotic diuretic.
+- **Clearance benchmarks.** $C_X = U_X V / P_X$: inulin = GFR, creatinine ≈ GFR, PAH ≈ renal plasma flow, glucose = 0.
+
+**Common traps**
+
+- **Clearance as an amount.** Clearance is a volume of plasma cleared per minute (mL/min), not the mg of substance excreted.
+- **Above GFR means reabsorption.** Reversed: clearance above GFR means net secretion; below GFR means net reabsorption.
+- **Creatinine moving with GFR.** They move inversely: at steady state, halving GFR doubles plasma creatinine.
+- **Diabetic polyuria blamed on ADH.** Unreabsorbed glucose holds water in the tubule; ADH and its receptors still work.`
     }
   ]
 };

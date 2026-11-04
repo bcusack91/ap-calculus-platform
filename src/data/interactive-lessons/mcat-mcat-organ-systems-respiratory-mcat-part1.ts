@@ -72,6 +72,47 @@ $$\\dot{V}_A = (TV - V_{dead}) \\times f$$
 Rapid shallow breathing wastes a larger fraction of each breath on dead space: 250 mL × 24 breaths moves 6 L/min total but only $(250-150)\\times 24 = 2.4$ L/min reaches alveoli, versus $(500-150)\\times 12 = 4.2$ L/min at normal depth — same total ventilation, very different gas exchange.`
     },
     {
+      id: 'rsp1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Mechanics & Volumes
+
+**Problem 1.** Patient A breathes 400 mL × 20 breaths/min; Patient B breathes 800 mL × 10 breaths/min. Dead space is 150 mL in both.
+
+- **(a)** What is each patient's total ventilation?
+- **(b)** What is each patient's alveolar ventilation?
+- **(c)** Which pattern exchanges more gas, why, and what does that predict for panting?
+
+**(a) Total ventilation.** A = 400 × 20 = 8.0 L/min; B = 800 × 10 = 8.0 L/min — identical.
+
+**(b) Alveolar ventilation.** With $\\dot{V}_A = (TV - V_{dead}) \\times f$: A = (400 − 150) × 20 = **5.0 L/min**; B = (800 − 150) × 10 = **6.5 L/min**.
+
+**(c) The dead-space tax.** B exchanges more gas (5.0 vs 6.5 L/min from (b)): the totals from (a) are equal, but B pays the fixed 150 mL dead-space "tax" fewer times per minute. That is why panting (very shallow, very fast) exchanges little gas — a favorite experimental-passage manipulation.
+
+**Problem 2.** Two connected alveoli have radii $r$ and $2r$ with EQUAL surface tension $T$.
+
+- **(a)** Which alveolus has the higher collapsing pressure, and by how much?
+- **(b)** Which way does air flow between them?
+- **(c)** How does surfactant prevent this?
+
+**(a) Laplace.** $P = 2T/r$: the small alveolus has TWICE the collapsing pressure of the large one.
+
+**(b) Direction of flow.** The small alveolus has the higher pressure (a), so air flows from it to the large one: the small alveolus **empties into the large one** and collapses.
+
+**(c) Surfactant's fix.** Surfactant's concentration rises as an alveolus shrinks (same molecules, less area), so it lowers $T$ MORE in small alveoli — equalizing the pressures and stabilizing both.
+
+**Problem 3.** A subject's lung volumes are TV = 500 mL, IRV = 2900 mL, ERV = 1100 mL and RV = 1200 mL.
+
+- **(a)** What is the vital capacity (VC)?
+- **(b)** What is the functional residual capacity (FRC)?
+- **(c)** What is the total lung capacity (TLC), and what pattern links all three?
+
+**(a) Vital capacity.** $VC = IRV + TV + ERV = 2900 + 500 + 1100 = 4500$ mL
+
+**(b) Functional residual capacity.** $FRC = ERV + RV = 1100 + 1200 = 2300$ mL
+
+**(c) Total lung capacity.** With VC from (a): $TLC = VC + RV = 4500 + 1200 = 5700$ mL. Pattern: every "capacity" is a sum of two or more non-overlapping "volumes"; only the four volumes are primitive.`
+    },
+    {
       id: 'rsp1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Ventilation Mechanics** 🎯`,
@@ -102,60 +143,26 @@ Rapid shallow breathing wastes a larger fraction of each breath on dead space: 2
       }
     },
     {
-      id: 'rsp1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Mechanics & Volumes
-
-<details>
-<summary><b>Example 1: Alveolar ventilation arithmetic</b></summary>
-
-**Question:** Patient A breathes 400 mL × 20 breaths/min; Patient B breathes 800 mL × 10 breaths/min. Dead space is 150 mL in both. Compare total and alveolar ventilation.
-
-**Solution:**
-1. Total ventilation: A = 400 × 20 = 8.0 L/min; B = 800 × 10 = 8.0 L/min — identical.
-2. Alveolar: A = (400 − 150) × 20 = **5.0 L/min**; B = (800 − 150) × 10 = **6.5 L/min**. ✓
-3. Deep slow breathing wins because the fixed dead-space "tax" is paid fewer times per minute.
-
-**MCAT note:** this is why panting (very shallow, very fast) exchanges little gas — a favorite experimental-passage manipulation.
-</details>
-
-<details>
-<summary><b>Example 2: Laplace and the two-bubble problem</b></summary>
-
-**Question:** Two connected alveoli have radii $r$ and $2r$ with EQUAL surface tension $T$. Which way does air flow, and how does surfactant fix this?
-
-**Solution:**
-1. $P = 2T/r$: the small alveolus has TWICE the collapsing pressure of the large one.
-2. Air flows from high to low pressure → the small alveolus **empties into the large one** and collapses.
-3. Surfactant's concentration rises as an alveolus shrinks (same molecules, less area), so it lowers $T$ MORE in small alveoli — equalizing pressures and stabilizing both. ✓
-</details>
-
-<details>
-<summary><b>Example 3: Compute capacities from volumes</b></summary>
-
-**Question:** Given TV = 500 mL, IRV = 2900 mL, ERV = 1100 mL, RV = 1200 mL, find VC, FRC, and TLC.
-
-**Solution:**
-1. $VC = IRV + TV + ERV = 2900 + 500 + 1100 = 4500$ mL ✓
-2. $FRC = ERV + RV = 1100 + 1200 = 2300$ mL ✓
-3. $TLC = VC + RV = 4500 + 1200 = 5700$ mL ✓
-
-**Pattern:** every "capacity" is a sum of two or more non-overlapping "volumes"; only the four volumes are primitive.
-</details>`
-    },
-    {
       id: 'rsp1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Conducting zone = dead space (~150 mL), no exchange; respiratory zone = alveoli; type II pneumocytes make surfactant.
-- Breathing is Boyle's law: muscles change thoracic volume → alveolar pressure → passive airflow. Quiet expiration is passive elastic recoil.
-- Negative intrapleural pressure couples lung to chest wall; pneumothorax breaks the seal and recoil collapses the lung.
-- Laplace ($P = 2T/r$) predicts small-alveolus collapse; surfactant lowers surface tension preferentially in small alveoli.
-- Alveolar ventilation $= (TV - V_{dead}) \\times f$; deep slow breathing beats rapid shallow breathing. Spirometry cannot measure RV, FRC, or TLC.
+- **Breathing is Boyle's law.** Muscles change thoracic volume, alveolar pressure follows, and air flows; quiet expiration is recoil.
+- **The pleural seal.** Negative intrapleural pressure couples lung to chest wall; a pneumothorax breaks it and the lung collapses.
+- **Surfactant vs. Laplace.** $P = 2T/r$ favors small-alveolus collapse; surfactant from type II cells lowers tension most in small alveoli.
+- **Alveolar ventilation counts.** The conducting zone is ~150 mL of dead space, so $\\dot{V}_A = (TV - V_{dead}) \\times f$.
+
+**Common traps**
+
+- **Muscles pushing air in.** Inspiratory muscles raise thoracic volume so alveolar pressure FALLS; air then flows in passively.
+- **Air pressure crushing the lung.** In a pneumothorax the lung collapses from its own recoil once pleural pressure reaches atmospheric.
+- **Total ventilation as exchange.** Equal minute ventilation can hide very different alveolar ventilation; deep slow breaths win.
+- **Spirometry measuring RV.** Residual volume can never be exhaled, so spirometry cannot measure RV, FRC or TLC.
 
 <!-- yield:low -->
-- Low-yield extras: the main surfactant phospholipid is dipalmitoylphosphatidylcholine (DPPC).
+**Low-yield extras**
+
+- The main surfactant phospholipid is dipalmitoylphosphatidylcholine (DPPC).
 <!-- /yield -->`
     }
   ]

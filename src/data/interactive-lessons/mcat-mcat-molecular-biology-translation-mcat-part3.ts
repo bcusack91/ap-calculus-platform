@@ -51,22 +51,55 @@ export const mcatTranslationPart3Data = {
       type: 'text' as const,
       content: `### Worked Example — From Gel Bands to Mutation Mechanism
 
-**Passage-style problem.** A secreted enzyme (mature form: 55 kDa) is studied in four patient cell lines. Western blots of cell LYSATE and MEDIUM (secreted fraction) show:
+A secreted enzyme (mature form: 55 kDa) is studied in several patient cell lines. Western blots of cell LYSATE and MEDIUM (secreted fraction) are compared; each problem is one line, starting with the easy anchor.
 
-- **Line A**: lysate 55 kDa (weak), medium empty; mRNA level normal; adding a proteasome inhibitor makes a 55 kDa band accumulate strongly in the lysate.
-- **Line B**: lysate 30 kDa band, medium empty; mRNA slightly reduced.
-- **Line C**: lysate and medium both show 55 kDa at normal levels, but the secreted enzyme is catalytically dead.
-- **Line D**: lysate 57 kDa, medium empty; the extra mass is removed by an enzyme that cleaves signal peptides.
+**Problem 1.** Line 1 (mature enzyme 55 kDa): the lysate shows a 30 kDa band and the medium is empty; mRNA is slightly reduced.
 
-**Question 1 — Line B first (the easy anchor).** A shortened protein with somewhat reduced mRNA is the signature of a **nonsense or frameshift mutation** mid-gene: translation stops early (30 kDa truncation), and the modest mRNA drop fits too — transcripts carrying a premature stop are partly degraded. The truncated protein also fails quality control for secretion.
+- **(a)** What kind of mutation does the 30 kDa band suggest?
+- **(b)** Why is the mRNA level slightly reduced?
+- **(c)** Why is nothing secreted?
 
-**Question 2 — Line A: full-length protein, normal mRNA, rescued by proteasome inhibition.** Size is right, synthesis is right — the protein is being DEGRADED. A missense mutation causing **misfolding** lets ER quality control ubiquitinate the protein for proteasomal destruction. This is the deltaF508-CFTR pattern: a functional-if-it-could-fold protein lost to surveillance. The proteasome-inhibitor rescue is the deciding experiment.
+**(a) Truncation.** A shortened protein is the signature of a **nonsense or frameshift mutation** mid-gene: translation stops early, giving the 30 kDa truncation.
 
-**Question 3 — Line C: normal size, normal secretion, dead enzyme.** Everything about synthesis, folding (enough to pass QC), and trafficking is intact — the lesion must sit in the **active site**: a missense substitution of a catalytic residue. Function and structure are separable claims; a protein can traffic perfectly and do nothing.
+**(b) mRNA drop.** Transcripts carrying a premature stop are partly degraded, so the modest mRNA drop fits too.
 
-**Question 4 — Line D: 2 kDa TOO BIG and stuck inside.** The mature size assumes the **signal peptide** was cleaved during ER import. An uncleaved signal (mutated cleavage site) leaves the protein 1-3 kDa heavy and tethered/mislocalized, blocking secretion. Alternatively a wholly cytosolic 57 kDa form would suggest failed ER TARGETING — the passage's cleavage-enzyme result pins it to the cleavage step instead.
+**(c) No secretion.** The truncated protein also fails quality control for secretion.
 
-**The method**: order the checkpoints — transcribed? translated full-length? folded/stable? localized? catalytically active? — and let each line's ONE anomalous readout name the failed checkpoint.`
+**Problem 2.** Line 2 (mature enzyme 55 kDa): the lysate shows a weak 55 kDa band and the medium is empty; mRNA is normal. Adding a proteasome inhibitor makes a 55 kDa band accumulate strongly in the lysate.
+
+- **(a)** Are transcription and translation intact?
+- **(b)** What is happening to the protein, and which result shows it?
+- **(c)** What kind of mutation produces this pattern?
+
+**(a) Synthesis.** Yes. The size is right and the mRNA is normal, so synthesis is right.
+
+**(b) Degradation.** The protein is being DEGRADED. The proteasome-inhibitor rescue is the deciding experiment.
+
+**(c) Misfolding.** A mutation causing **misfolding** (often a missense change) lets ER quality control ubiquitinate the protein for proteasomal destruction. This is the deltaF508-CFTR pattern (there an in-frame deletion): a functional-if-it-could-fold protein lost to surveillance.
+
+**Problem 3.** Line 3: the lysate and medium both show the 55 kDa enzyme at normal levels, but the secreted enzyme is catalytically dead.
+
+- **(a)** Which steps from synthesis to secretion are intact?
+- **(b)** Where must the lesion sit?
+
+**(a) Intact steps.** Everything about synthesis, folding (enough to pass QC), and trafficking is intact.
+
+**(b) Active site.** The lesion must sit in the **active site**: a missense substitution of a catalytic residue. Function and structure are separable claims; a protein can traffic perfectly and do nothing.
+
+**Problem 4.** Line 4 (mature enzyme 55 kDa): the lysate shows 57 kDa and the medium is empty; the extra mass is removed by an enzyme that cleaves signal peptides.
+
+- **(a)** What is the extra 2 kDa?
+- **(b)** Why is the protein not secreted?
+- **(c)** Could failed ER targeting give the same band?
+- **(d)** What checkpoint order sorts all four lines?
+
+**(a) Extra mass.** The mature size assumes the **signal peptide** was cleaved during ER import. Here it is still attached (for example, a mutated cleavage site), leaving the protein 1-3 kDa heavy.
+
+**(b) Stuck inside.** The retained signal leaves the protein tethered/mislocalized, blocking secretion.
+
+**(c) Targeting.** Yes. A protein never imported into the ER also keeps its signal, so the band alone cannot decide. Locating the 57 kDa form (ER vs cytosol) separates failed cleavage from failed ER TARGETING.
+
+**(d) The method.** Order the checkpoints — transcribed? translated full-length? folded/stable? localized? catalytically active? — and let each line's ONE anomalous readout name the failed checkpoint.`
     },
     {
       id: 'tln3-quiz1',
@@ -117,16 +150,22 @@ export const mcatTranslationPart3Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Mutation taxonomy predicts protein outcome: silent (position 3), missense (conservative vs NONconservative — argue from side-chain chemistry; sickle Glu to Val), nonsense (truncation, often with a degraded transcript), frameshift (garbled + premature stop), in-frame indel (deltaF508), splice-site (masquerades as either)
-- Location matters as much as type: early stops are severe, near-end stops can be mild
-- Anfinsen: sequence encodes structure (native state = energy minimum); chaperones prevent aggregation and assist kinetics without adding information
-- Folding failures: degradation of fixable proteins (deltaF508 CFTR, ubiquitinated and sent to the proteasome — proteasome-inhibitor rescue is the fingerprint), aggregation/amyloid, prions (conformational templating — shape replicates without nucleic acid)
-- PTM toolkit: phosphorylation = reversible switch; cleavage = irreversible switch (zymogens, insulin); N-glycosylation starts in the ER, O-linked in Golgi; ubiquitin = proteasome address label; lipid anchors = membrane attachment
-- Disposal division: proteasome for selected, tagged, cytosolic/nuclear individuals (cyclins); lysosome for bulk and vesicle-delivered cargo
-- Diagnostic method: run the checkpoints (full-length? stable? localized? active?) and let the single anomalous readout name the lesion
+- **Predict the protein.** Each mutation type has a typical outcome, and location matters: early stops are severe, near-end ones mild.
+- **Sequence encodes the fold.** Anfinsen's ribonuclease refolded alone; chaperones prevent aggregation but add no information.
+- **PTM switches.** Phosphorylation is a reversible switch; proteolytic cleavage (zymogens, insulin) is an irreversible one.
+- **Checkpoint method.** Full-length? stable? localized? active? The one anomalous readout names the lesion.
+
+**Common traps**
+
+- **Missense without chemistry.** Justify "nonconservative" by side chains: sickle Glu to Val swaps charged for hydrophobic.
+- **Normal size, no defect.** A full-length protein can still misfold and be destroyed by the proteasome; inhibitor rescue reveals it.
+- **Lysosome for cyclins.** Selected, ubiquitin-tagged proteins go to the 26S proteasome; lysosomes take bulk and vesicle cargo.
+- **Prions need a genome.** Prions carry no nucleic acid; misfolded PrP templates normal PrP into the misfolded shape.
 
 <!-- yield:low -->
-- Low-yield extras: premature-stop transcripts are destroyed by nonsense-mediated decay; the export-and-destroy route for misfolded ER proteins is called ERAD (ER-associated degradation)
+**Low-yield extras**
+
+- Premature-stop transcripts are destroyed by nonsense-mediated decay; the export-and-destroy route for misfolded ER proteins is called ERAD (ER-associated degradation)
 <!-- /yield -->`
     }
   ]

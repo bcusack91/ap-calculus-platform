@@ -61,19 +61,41 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
       type: 'text' as const,
       content: `### Worked Example — Localizing a Lesion Along the Auditory Chain
 
-**Passage-style problem.** Three patients report hearing difficulty. Testing measures (i) air-conduction thresholds via headphones, (ii) bone-conduction thresholds via a vibrator on the mastoid bone (which shakes the skull and cochlear fluid directly), and (iii) audiograms by frequency.
+**Problem 1.** A patient's air-conduction thresholds (headphones) are poor but bone-conduction thresholds (a vibrator on the mastoid bone) are NORMAL, at all frequencies equally. Imaging shows the stapes fixed by abnormal bone growth (otosclerosis).
 
-- Patient 1: air conduction poor, bone conduction NORMAL, all frequencies affected equally. Imaging shows the stapes fixed by abnormal bone growth (otosclerosis).
-- Patient 2: air AND bone conduction equally poor, with loss concentrated above 4000 Hz. Long career operating jackhammers.
-- Patient 3: near-normal pure-tone audiogram, but poor understanding of speech presented to the left ear; MRI shows a tumor on the left vestibulocochlear nerve.
+- **(a)** What does normal bone conduction say about the cochlea?
+- **(b)** Is the loss conductive or sensorineural?
+- **(c)** Why does a fixed stapes weaken airborne sound so much?
+- **(d)** Would a hearing aid help?
 
-**Patient 1 — conductive loss.** Bone conduction bypasses the outer and middle ear and stimulates the cochlea directly; when it outperforms air conduction, the cochlea is fine and the MECHANICAL pathway is the problem. Fixed ossicles cannot perform impedance matching, so airborne sound reflects off the cochlear fluid. A hearing AID (amplifying sound) or surgery helps, because the sensory machinery is intact.
+**(a) The cochlea works.** A mastoid vibrator shakes the skull and cochlear fluid directly, bypassing the outer and middle ear. Normal bone thresholds mean the cochlea and nerve are fine.
 
-**Patient 2 — sensorineural loss with a tonotopic signature.** Equal air/bone deficits mean the cochlea itself fails. High-frequency loss localizes damage to hair cells at the **BASE** of the basilar membrane — the stiff, narrow region that resonates at high frequencies and bears the brunt of noise trauma. Amplification helps less; a cochlear implant (Part 4) can bypass dead hair cells.
+**(b) Conductive.** When bone conduction outperforms air conduction, the MECHANICAL pathway through the outer and middle ear is the problem.
 
-**Patient 3 — retrocochlear (nerve) lesion.** Transduction is normal but transmission along CN VIII is degraded — speech comprehension suffers out of proportion to pure-tone thresholds. This also threatens BALANCE: CN VIII carries vestibular afferents too, so vertigo and unsteadiness are expected companions.
+**(c) No impedance matching.** Fixed ossicles cannot perform impedance matching, so airborne sound reflects off the cochlear fluid instead of entering it.
 
-**The rule:** bone-vs-air separates conductive from sensorineural; the frequency pattern maps the damage onto the basilar membrane via tonotopy.`
+**(d) Yes.** A hearing AID (amplifying sound) or surgery helps, because the sensory machinery is intact.
+
+**Problem 2.** After a long career operating jackhammers, a patient has air- AND bone-conduction thresholds that are equally poor, with the loss concentrated above 4000 Hz.
+
+- **(a)** Is the loss conductive or sensorineural?
+- **(b)** Where along the basilar membrane is the damage?
+- **(c)** Would amplification or a cochlear implant serve better if those hair cells are dead?
+
+**(a) Sensorineural.** Equal air and bone deficits mean bypassing the middle ear gains nothing: the cochlea itself fails.
+
+**(b) The base.** High-frequency loss localizes damage to hair cells at the **BASE** of the basilar membrane, the stiff, narrow region that resonates at high frequencies and bears the brunt of noise trauma.
+
+**(c) The implant.** Amplification cannot drive dead hair cells; a cochlear implant (Part 4) bypasses them. Across these cases, bone-vs-air separates conductive from sensorineural loss, and the frequency pattern maps damage onto the basilar membrane via tonotopy.
+
+**Problem 3.** A patient has a near-normal pure-tone audiogram but understands speech presented to the left ear poorly. MRI shows a tumor on the left vestibulocochlear nerve.
+
+- **(a)** Is transduction or transmission failing?
+- **(b)** What other symptom should you expect, and why?
+
+**(a) Transmission.** This is a retrocochlear (nerve) lesion: transduction is normal but transmission along CN VIII is degraded, so speech comprehension suffers out of proportion to pure-tone thresholds.
+
+**(b) Balance problems.** CN VIII carries vestibular afferents too, so vertigo and unsteadiness are expected companions.`
     },
     {
       id: 'sen3-quiz1',
@@ -110,11 +132,11 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
             explanation: `The canals work by endolymph INERTIA: fluid lags during acceleration, deflecting the cupula. At constant velocity the fluid reaches the head's speed and the signal fades; deceleration then makes the still-moving fluid push the cupula the OTHER way — a false reversed-rotation signal. Otoliths belong to the utricle/saccule (linear acceleration), and they do not dissolve.`
           },
           {
-            question: `A patient hears a tuning fork better when it is pressed against the mastoid bone than when held next to the ear canal. This pattern indicates:`,
-            options: [`Sensorineural loss from hair cell damage`, `A unilateral lesion of the auditory cortex`, `Conductive hearing loss in the outer or middle ear`, `Normal hearing, since bone conduction always wins`],
+            question: `A patient hears a tuning fork poorly both when it is held next to the ear canal and when it is pressed against the mastoid bone, though still better by air than by bone. This pattern indicates:`,
+            options: [`Conductive loss from fixation of the ossicles`, `A unilateral lesion of the auditory cortex`, `Sensorineural loss from cochlear hair cell damage`, `Normal hearing, since air conduction always wins`],
             correctAnswer: 2,
             yield: 'MEDIUM',
-            explanation: `Bone conduction vibrates the skull and stimulates the cochlea directly, bypassing the eardrum and ossicles. Bone beating air means the cochlea is functional but the mechanical (conductive) route through the outer/middle ear is blocked. In sensorineural loss BOTH routes are poor. In normal ears air conduction is the more efficient route, so the claim that bone conduction always wins is backwards.`
+            explanation: `Bone conduction vibrates the skull and stimulates the cochlea directly, bypassing the eardrum and ossicles. When BOTH routes are poor, bypassing the middle ear gains nothing, so the cochlea (or CN VIII) is failing: sensorineural loss, with air keeping its normal advantage over bone. Fixed ossicles (a conductive loss) would leave bone conduction normal and better than air. A one-sided auditory cortex lesion leaves tuning-fork thresholds near normal, because each ear's input reaches both hemispheres. Air beating bone is the normal pattern, but normal hearing would not make both routes poor, and air does not always win: in conductive loss bone does.`
           }
         ]
       }
@@ -124,14 +146,22 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Pathway: eardrum → malleus/incus/stapes → oval window → cochlear fluid → basilar membrane → hair cells shear against the tectorial membrane → K+ INFLUX (K+-rich endolymph) → spiral ganglion → CN VIII; round window relieves pressure
-- Middle ear = impedance matcher: large eardrum onto small oval window plus ossicular leverage
-- Tonotopy: base = stiff/narrow = high frequency; apex = wide/floppy = low frequency (place theory); loudness = amplitude; MGN → temporal cortex
-- Semicircular canals (cupula) = rotational ACCELERATION in three orthogonal planes; utricle/saccule (otoliths) = linear acceleration and head tilt
-- Conductive loss: mechanical path fails, bone conduction preserved; sensorineural loss: hair cells/CN VIII fail, both routes poor, noise damage hits high frequencies first
+- **The sound pathway.** Eardrum → ossicles → oval window → basilar membrane → hair cells → CN VIII → MGN → temporal cortex.
+- **Impedance matching.** A large eardrum driving a small oval window, plus ossicle leverage, raises pressure into fluid.
+- **Tonotopy.** The stiff, narrow base resonates at high frequencies; the wide, floppy apex at low ones.
+- **Canals vs. otoliths.** Semicircular canals sense rotational acceleration; utricle and saccule sense linear acceleration and tilt.
+
+**Common traps**
+
+- **K+ leaving hair cells.** Hair cells depolarize by K+ INFLUX from potassium-rich endolymph, not by K+ efflux or Na+ entry.
+- **Round window as the entry.** The stapes drives the oval window; the round window only bulges outward to relieve pressure.
+- **Canals sensing steady spin.** Canals report changes in rotation; at constant velocity the endolymph catches up and the signal fades.
+- **Bone conduction always wins.** Normal ears hear better by air; bone beating air means conductive loss, both poor means sensorineural.
 
 <!-- yield:low -->
-- Low-yield extras: the eardrum is about 17-20 times the oval window's area; the brainstem relays between the cochlear nuclei and the MGN are the superior olive (sound localization) and the inferior colliculus
+**Low-yield extras**
+
+- The eardrum is about 17-20 times the oval window's area; the brainstem relays between the cochlear nuclei and the MGN are the superior olive (sound localization) and the inferior colliculus
 <!-- /yield -->`
     }
   ]

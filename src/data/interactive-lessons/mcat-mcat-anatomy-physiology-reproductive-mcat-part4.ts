@@ -43,15 +43,23 @@ Given traces of LH, FSH, estrogen, progesterone across a cycle:
       type: 'text' as const,
       content: `### Worked Example — A Drug Perturbation Passage
 
-**Passage-style problem.** Researchers test compound X in healthy women with regular cycles. Daily hormone sampling shows that treated subjects have: estrogen rising normally through days 1-12, reaching typical pre-ovulatory peak levels; NO mid-cycle LH spike; progesterone remaining at baseline through day 28; menstrual bleeding at ~day 30. Untreated controls show the normal pattern.
+**Problem.** Women with regular cycles take compound X. Estrogen rises normally to typical pre-ovulatory peak levels by day 12, but NO mid-cycle LH spike follows; progesterone stays at baseline through day 28, and bleeding starts ~day 30. Controls are normal.
 
-**Step 1 — Locate the block.** Estrogen rises normally, so FSH-driven follicular development and granulosa aromatase are intact — the ovary and the FSH limb work. The missing event is the **LH surge** despite adequate sustained estrogen. Compound X must block the positive-feedback limb: a plausible mechanism is antagonism of estrogen receptors in the hypothalamus/pituitary surge circuitry, or direct suppression of pituitary LH release (e.g., GnRH antagonism at surge time).
+- **(a)** Which parts of the axis are still working?
+- **(b)** Which limb does compound X block, and by what plausible mechanism?
+- **(c)** Why does progesterone stay at baseline?
+- **(d)** What causes the bleeding, and does it prove ovulation occurred?
+- **(e)** Could compound X be a continuous GnRH agonist?
 
-**Step 2 — Propagate downstream.** No surge → **no ovulation** → no corpus luteum → **no progesterone rise** — exactly the flat progesterone trace observed. The luteal-phase data are a CONSEQUENCE, not a second drug effect.
+**(a) Intact limbs.** Estrogen rises normally, so FSH-driven follicular development and granulosa aromatase are intact: the ovary and the FSH limb work.
 
-**Step 3 — Explain the bleeding.** Without progesterone, the estrogen-primed endometrium eventually breaks down when the follicle's estrogen output wanes — estrogen-withdrawal-type bleeding. Menstruation does not prove ovulation occurred; only a progesterone rise (or a detected LH surge) does.
+**(b) The positive-feedback limb.** The **LH surge** is missing despite adequate sustained estrogen. Plausible mechanisms: antagonism of estrogen receptors in the hypothalamic/pituitary surge circuitry, or direct suppression of pituitary LH release (e.g., GnRH antagonism at surge time).
 
-**Step 4 — Distinguish from continuous GnRH agonist.** A continuous agonist would have suppressed the WHOLE axis: estrogen would stay low from the start because LH/FSH support of the follicle disappears. The normal estrogen rise here excludes that mechanism — always use the earliest abnormal (or normal) trace to localize the lesion.`
+**(c) A consequence, not a second effect.** No surge → **no ovulation** → no corpus luteum → **no progesterone rise**, exactly the flat trace observed. The luteal-phase data are a CONSEQUENCE, not a second drug effect.
+
+**(d) Estrogen withdrawal.** Without progesterone, the estrogen-primed endometrium breaks down when the follicle's estrogen output wanes. Bleeding does not prove ovulation occurred; only a progesterone rise (or a detected LH surge) does.
+
+**(e) No.** A continuous agonist would suppress the WHOLE axis: after a brief flare, estrogen would stay low because LH/FSH support of the follicle disappears. The normal estrogen rise excludes it; always use the earliest abnormal (or normal) trace to localize the lesion.`
     },
     {
       id: 'rep4-quiz1',
@@ -102,12 +110,17 @@ Given traces of LH, FSH, estrogen, progesterone across a cycle:
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Solve perturbation questions by locating the intervention on the axis, then propagating feedback changes downstream
-- Combined contraception = steady negative feedback → no estrogen flip → no LH surge → no ovulation
-- Continuous GnRH agonist = receptor downregulation = axis shutdown (pulsatility is mandatory); anabolic steroids = high systemic but LOW intratesticular androgen → atrophy
-- Menopause and primary gonadal failure share a signature: low end-organ steroid with HIGH FSH/LH (lost negative feedback)
-- Graph reading: LH spike marks ovulation, estrogen peaks just before it, high progesterone = luteal phase, bleeding alone does not prove ovulation
-- Garnish: ectopic pregnancy (tubal implantation, sluggish hCG rise), Rh incompatibility (maternal IgG in later pregnancies)`
+- **Predict the perturbation.** Locate the intervention on the axis, ask which feedback signals change, then propagate downstream.
+- **Combined contraception.** Steady negative feedback means no estrogen flip, so no LH surge and no ovulation.
+- **Lost brakes raise FSH.** Menopause and primary gonadal failure: low end-organ steroid with HIGH FSH and LH.
+- **Reading hormone graphs.** The LH spike marks ovulation, estrogen peaks just before it, and high progesterone means luteal phase.
+
+**Common traps**
+
+- **High testosterone, healthy testes.** Exogenous androgens suppress LH/FSH, so intratesticular testosterone falls and testes atrophy.
+- **Agonist means stimulation.** Continuous GnRH downregulates pituitary receptors and shuts the axis down; only pulses stimulate it.
+- **Bleeding proves ovulation.** Only a progesterone rise or a detected LH surge does; estrogen withdrawal also causes bleeding.
+- **Positive test, uterine pregnancy.** An ectopic (usually tubal) pregnancy also makes hCG, but it rises more slowly than expected.`
     }
   ]
 };

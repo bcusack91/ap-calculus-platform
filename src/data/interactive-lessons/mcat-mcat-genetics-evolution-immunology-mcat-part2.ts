@@ -67,15 +67,29 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
       type: 'text' as const,
       content: `### Worked Example — Tracing One Virus Through the Adaptive System
 
-**Passage-style problem.** A respiratory virus infects airway epithelial cells. A dendritic cell in the airway engulfs debris from a dying infected cell and also becomes directly infected itself. It migrates to a draining lymph node.
+**Problem 1.** A respiratory virus infects airway epithelial cells. An airway dendritic cell engulfs debris from a dying infected cell, is itself infected, and migrates to a draining lymph node.
 
-**Question 1 — Which MHC molecules on the dendritic cell display viral peptide, and to which T cells?** Both. Peptides from ENGULFED debris are exogenous → processed into the MHC II pathway → presented to CD4+ helper T cells. Peptides from viral proteins synthesized in the dendritic cell's OWN cytosol (it is infected) are endogenous → MHC I → presented to CD8+ T cells. One APC can thus launch both arms.
+- **(a)** Which MHC class displays peptides from the engulfed debris, and to which T cells?
+- **(b)** Which MHC class displays peptides from viral proteins made in the dendritic cell's own cytosol, and to which T cells?
+- **(c)** An infected epithelial cell is not an APC. Can T cells still recognize it, and through which MHC class?
 
-**Question 2 — An epithelial cell in the airway is infected but is not an APC. Can it be recognized?** Yes. ALL nucleated cells express MHC I, so the epithelial cell displays endogenous viral peptides on MHC I and becomes a target for the CD8+ cytotoxic T cells primed in the node. It cannot present on MHC II — that is reserved for professional APCs.
+**(a) Engulfed debris.** Peptides from engulfed debris are EXOGENOUS, so they are processed into the MHC II pathway and presented to CD4+ helper T cells.
 
-**Question 3 — How do antibodies enter the picture?** A B cell whose randomly generated BCR happens to bind a viral surface protein internalizes it and presents fragments on MHC II. A primed CD4+ helper T cell recognizing the same antigen provides contact signals and cytokines (T-dependent activation). The B cell clone expands into plasma cells secreting antibody that neutralizes free virions — note the division of labor: antibody handles EXTRACELLULAR virus, CD8+ cells handle cells already infected.
+**(b) The cell's own viral proteins.** Viral proteins synthesized in the dendritic cell's OWN cytosol are ENDOGENOUS, so their peptides go onto MHC I and are presented to CD8+ T cells. One APC can thus launch both arms.
 
-**Question 4 — The student's roommate asks how a receptor for a brand-new virus could already exist. Answer?** V(D)J recombination generated an enormous pre-formed repertoire during lymphocyte development; the virus did not instruct receptor design, it merely SELECTED pre-existing clones (clonal selection). The days-long lag of a primary response is the time needed for those rare clones to expand.`
+**(c) A non-APC.** Yes. ALL nucleated cells express MHC I, so the epithelial cell displays endogenous viral peptides on MHC I and becomes a target for the CD8+ cytotoxic T cells primed in the node. It cannot present on MHC II, which is reserved for professional APCs.
+
+**Problem 2.** In the same infection, one B cell's BCR happens to bind a surface protein of this brand-new virus. The B cell internalizes the protein and presents its fragments on MHC II.
+
+- **(a)** What must the B cell receive before its clone becomes antibody-secreting plasma cells, and from which cell?
+- **(b)** Which part of the infection does the antibody handle, and which part is left to CD8+ cells?
+- **(c)** Why does a primary response take days, if a matching clone already existed?
+
+**(a) T-dependent activation.** A primed CD4+ helper T cell that recognizes the same antigen provides contact signals and cytokines. The B cell clone then expands into plasma cells that secrete antibody.
+
+**(b) Division of labor.** Antibody neutralizes free, EXTRACELLULAR virions; CD8+ cells handle cells that are already infected.
+
+**(c) The lag.** V(D)J recombination built the repertoire during development, so the virus only SELECTED a pre-existing clone (clonal selection). But that clone is rare, a handful of cells; the days-long lag is the time it needs to expand into enough effector and plasma cells.`
     },
     {
       id: 'imm2-quiz1',
@@ -112,11 +126,11 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
             explanation: `Repetitive polysaccharides cross-link many BCRs and activate B cells without T help, but the missing helper-T contact and cytokine signals mean little class switching or affinity maturation — mostly IgM and poor memory. Stronger memory with IgG class switching describes the T-DEPENDENT outcome. Antibody is still made (so not "no antibody response"), and polysaccharide antigens do not redirect the response to CD8+ cells.`
           },
           {
-            question: `Which statement best explains why the immune system can respond to antigens that have never existed before in nature?`,
-            options: [`Antigens serve as templates that instruct lymphocytes to fold matching receptors`, `Random V(D)J recombination creates a diverse repertoire before exposure`, `Each lymphocyte expresses thousands of different receptor specificities simultaneously`, `Toll-like receptors mutate rapidly upon infection to fit the new antigen`],
+            question: `A mutant mouse lacks the enzymes that cut and join V, D and J gene segments during lymphocyte development. Which outcome is expected?`,
+            options: [`B and T cells mature, but every one carries the same receptor`, `No mature B or T cells, though innate defenses still work`, `Normal lymphocytes that rearrange their receptors after infection`, `Lymphocytes that build their receptors using antigen as a template`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Somatic recombination of V, (D), and J segments plus imprecise junctions builds billions of specificities BEFORE any exposure; antigen then selects and expands the rare matching clones (clonal selection). The "instructional" template model is historically famous but wrong. Each lymphocyte carries essentially ONE specificity, and TLRs are fixed germline pattern receptors that do not mutate to fit antigens.`
+            explanation: `BCRs and TCRs are assembled only by V(D)J recombination, and developing lymphocytes that never display a working receptor die (in the thymus, by neglect during positive selection). With no B or T cells there is no adaptive immunity at all, a SCID-like state, while germline-encoded innate defenses such as TLRs, complement and NK cells are untouched. Without cutting and joining there is no receptor at all, so not even one shared receptor can be made. Recombination happens during development, before any infection, and antigen never serves as a template for receptor shape.`
           }
         ]
       }
@@ -126,14 +140,22 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- MHC I: all nucleated cells, ENDOGENOUS peptides, presents to CD8+ cytotoxic T cells; MHC II: professional APCs, EXOGENOUS peptides, presents to CD4+ helper T cells (1 x 8 and 2 x 4)
-- Thymic education: positive selection keeps receptors that read self-MHC; negative selection deletes those that bind self too strongly (central tolerance)
-- CD4+ helpers conduct via cytokines — Th1 boosts cell-mediated responses, Th2 boosts antibody/humoral responses; CD8+ cells kill via perforin/granzyme and Fas, causing apoptosis
-- B cells: T-dependent activation (BCR + MHC II presentation + helper-T contact signals and cytokines) gives class switching and memory; T-independent polysaccharide antigens give mostly IgM, weak memory
-- Clonal selection: the receptor repertoire pre-exists antigen thanks to V(D)J somatic recombination and junctional diversity; antigen selects and expands the matching clones
+- **MHC I vs. MHC II.** MHC I shows endogenous peptide to CD8+ cells; MHC II, on professional APCs, shows exogenous peptide to CD4+.
+- **Thymic education.** Positive selection keeps T cells that read self-MHC; negative selection deletes strongly self-reactive ones.
+- **Helpers and killers.** CD4+ helpers direct both arms by cytokines; CD8+ cells trigger apoptosis in targets (perforin/granzymes, Fas).
+- **Pre-formed repertoire.** V(D)J recombination builds receptors before any exposure; antigen selects and expands matching clones.
+
+**Common traps**
+
+- **Scrambled MHC pairings.** MHC I pairs with CD8 and MHC II with CD4 (1 × 8 = 2 × 4 = 8); phagocytosed peptide goes on MHC II, so it reaches CD4+ helpers.
+- **Mixing up the two filters.** Not binding self-MHC means death by neglect in positive selection; negative selection deletes strong binders.
+- **Polysaccharides like proteins.** T-independent polysaccharide antigens give mostly IgM and weak memory, not class-switched IgG.
+- **Antigen as a template.** Antigen does not shape receptors; it selects clones that already exist, each with ONE specificity.
 
 <!-- yield:low -->
-- Low-yield extras: the helper-T contact signal is CD40L binding CD40 on the B cell
+**Low-yield extras**
+
+- The helper-T contact signal is CD40L binding CD40 on the B cell.
 <!-- /yield -->`
     }
   ]

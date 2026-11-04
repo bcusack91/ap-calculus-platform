@@ -134,6 +134,26 @@ Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — par
 - **Synthetic lethality**: PARP inhibitors kill BRCA-mutant cells because losing BOTH single-strand repair (drug) and homologous recombination (mutation) is lethal, while normal cells retain one route`
     },
     {
+      id: 'cc3-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Reading a Tumor's Lesions
+
+**Problem.** Sequencing a colon tumor finds one activated RAS allele beside a normal copy, and loss-of-function mutations in both TP53 alleles. The tumor cells are then treated with a DNA-damaging drug.
+
+- **(a)** Classify each lesion, and explain why one shows a single mutant allele and the other two.
+- **(b)** Would adding back one normal RAS copy, or one wild-type TP53 copy, restore control?
+- **(c)** Will the drug-treated cells arrest in G$_1$ to repair the damage?
+- **(d)** Will the drug kill these cells by apoptosis as well as it kills normal cells?
+
+**(a) Two gene classes.** Activated RAS is an oncogene: a gain of function, a stuck accelerator, so one hyperactive allele is enough. TP53 is a tumor suppressor: a loss of function, a cut brake, so both alleles must go (two hits).
+
+**(b) Add-back.** A normal RAS copy would not help: the hyperactive allele acts dominantly whatever the normal copy does. One wild-type TP53 copy would restore the brake, because tumor-suppressor loss is recessive at the cell level.
+
+**(c) Arrest.** No. Damage normally stabilizes p53, which transcribes p21 to inhibit CDKs and pause the cycle for repair. With no working p53, p21 is not induced, so the cells pass into S phase carrying the damage; only the p53-independent G$_2$/M gate is left.
+
+**(d) Apoptosis.** No. Irreparable damage normally makes p53 transcribe BAX, tipping the Bcl-2 balance toward cytochrome c release. That route is lost, so damaged cells survive. Losing arrest, repair and death at once is why TP53 is the most commonly mutated cancer gene.`
+    },
+    {
       id: 'cc3-quiz2',
       type: 'multiple-choice' as const,
       content: `**Cancer Logic** 🎯`,
@@ -161,16 +181,22 @@ Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — par
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- p53 is regulated by degradation: MDM2 (an E3 ubiquitin ligase) destroys it continuously; damage signaling stabilizes it → p21 (arrest), repair genes, or BAX (apoptosis); mutated in >50% of cancers; Li-Fraumeni = inherited first hit
-- Intrinsic apoptosis: Bcl-2 family balance → BAX/BAK pores → cytochrome c → apoptosome → caspase-9 → caspases-3/7; extrinsic: death receptors → caspase-8
-- Apoptosis is tidy (shrinkage, laddering, PS exposure, no inflammation); necrosis is messy (swelling, lysis, inflammation)
-- Oncogenes = stuck accelerator, one allele, gain-of-function (RAS, MYC, HER2, Bcl-2); tumor suppressors = cut brakes, two hits, loss-of-function (RB, TP53, PTEN, BRCA)
-- Two-hit model: inherited first hit → early, multiple, bilateral tumors; sporadic → late, single
-- Transformation signatures: no contact inhibition, anchorage independence (soft agar), immortality via telomerase, reduced growth-factor need
-- Therapy logic: targeted drugs need their pathway node intact (CDK4/6 inhibitors need Rb); synthetic lethality (PARP + BRCA) kills only doubly-deficient cells
+- **p53 is set by degradation.** MDM2 destroys p53 continuously; damage stabilizes it to induce p21, repair genes or BAX.
+- **Intrinsic apoptosis.** BAX/BAK pores release cytochrome c → apoptosome → caspase-9 → caspases-3/7; death receptors use caspase-8.
+- **Oncogenes vs. suppressors.** Oncogenes gain function in one allele; tumor suppressors lose function in both (two hits).
+- **Transformation signatures.** Lost contact inhibition, soft-agar growth, telomerase immortality and less need for growth factors.
+
+**Common traps**
+
+- **p53 rising by transcription.** p53 accumulates by escaping MDM2 degradation, with no increase in TP53 mRNA.
+- **Apoptosis as necrosis.** Apoptosis shrinks the cell tidily with no inflammation; necrosis swells, lyses and inflames.
+- **Two hits, two genes.** Hereditary and sporadic retinoblastoma share one gene; inherited cases simply start one hit deep.
+- **Drug without its node.** CDK4/6 inhibitors fail in Rb-null tumors; a targeted drug needs its downstream node intact.
 
 <!-- yield:low -->
-- Low-yield extras: ATM/ATR are the damage kinases; PUMA is a second pro-apoptotic p53 target; Bcl-xL is another anti-apoptotic Bcl-2 member; Apaf-1 is the apoptosome adaptor; BRAF-mutant moles illustrate oncogene-induced senescence; the avascular tumor limit is ~1-2 mm; palbociclib is the prototype CDK4/6 inhibitor
+**Low-yield extras**
+
+- ATM/ATR are the damage kinases; PUMA is a second pro-apoptotic p53 target; Bcl-xL is another anti-apoptotic Bcl-2 member; Apaf-1 is the apoptosome adaptor; BRAF-mutant moles illustrate oncogene-induced senescence; the avascular tumor limit is ~1-2 mm; palbociclib is the prototype CDK4/6 inhibitor
 <!-- /yield -->`
     }
   ]

@@ -68,27 +68,37 @@ Passages love hybrid problems: get the CARRIER probability of an outside partner
       type: 'text' as const,
       content: `### Worked Example — X-Linked Color Blindness, Both Sexes
 
-**Problem.** In a large population, 8% of males are red-green color blind (X-linked recessive). Predict (a) the frequency of color-blind females, (b) the frequency of carrier females, (c) the male-to-female ratio of the condition, and (d) the probability that a random woman's first son is color blind.
+**Problem 1.** In a large population, 8% of males are red-green color blind (X-linked recessive).
 
-**(a) Males read out the allele frequency directly.**
-$q = 0.08, \\qquad p = 0.92$
+- **(a)** What fraction of females is color blind?
+- **(b)** What fraction of females are carriers?
+- **(c)** What is the male-to-female ratio of the condition?
+- **(d)** What is the probability that a random woman's first son is color blind?
+- **(e)** What did (a)–(d) assume, and how might a passage break it?
 
-Color-blind females need two copies:
-$q^2 = (0.08)^2 = 0.0064 = 0.64\\%$
+**(a) Males read out the allele frequency.** Hemizygous males give $q = 0.08$ directly, so $p = 0.92$. Color-blind females need two copies: $q^2 = (0.08)^2 = 0.0064 = 0.64\\%$.
 
-**(b) Carrier females.**
-$2pq = 2(0.92)(0.08) = 0.1472 \\approx 14.7\\%$
+**(b) Carrier females.** With $p = 0.92$ and $q = 0.08$ from (a): $2pq = 2(0.92)(0.08) = 0.1472 \\approx 14.7\\%$. Nearly 15% of women carry the allele, but only 0.64% express it.
 
-Note the asymmetry: nearly 15% of women carry the allele but only 0.64% express it.
+**(c) Sex ratio of the condition.** $\\frac{0.08}{0.0064} = \\frac{1}{q} = 12.5$: twelve to thirteen affected males for every affected female, the hallmark of X-linked recessive inheritance at the population level.
 
-**(c) Sex ratio of the condition.**
-$\\frac{0.08}{0.0064} = \\frac{1}{q} = 12.5$
+**(d) A random woman's son.** A son inherits one of his mother's two X chromosomes at random, so his chance of the allele equals its frequency among female X chromosomes: $q = 0.08$. Check: affected mothers $0.0064 \\times 1$ plus carriers $0.1472 \\times \\tfrac{1}{2}$ gives $0.0064 + 0.0736 = 0.08$.
 
-Twelve to thirteen affected males for every affected female — the hallmark of X-linked recessive inheritance at the population level.
+**(e) Assumption check.** The calculation assumed equal allele frequencies in the two sexes and mating at random with respect to color vision. A passage may break this on purpose (a founder population, assortative mating), then ask why the observed female frequency exceeds $q^2$.
 
-**(d) A random woman's son.** A son inherits one of his mother's two X chromosomes at random, so the chance his X carries the allele equals the allele frequency among female X chromosomes, which is $q = 0.08$. (Longer route that must agree: mothers are $q^2 = 0.0064$ affected, passing the allele with probability 1, plus $2pq = 0.1472$ carriers passing it with probability $\\tfrac{1}{2}$: $0.0064 + 0.0736 = 0.08$.) ✓
+### Worked Example — Pedigree Meets Population
 
-**Assumption check.** This calculation quietly assumed allele frequencies are equal in the two sexes and that mating is random with respect to color vision — exactly the kind of assumption a passage will violate on purpose, e.g., by describing a founder population or assortative mating, and then asking why the observed female frequency exceeds $q^2$.`
+**Problem 2.** An autosomal recessive disease affects 1 in 900 people. An unaffected woman whose brother is affected (both parents unaffected) has a child with an unrelated man from the general population.
+
+- **(a)** What is $q$, and what is the man's carrier risk?
+- **(b)** What is the woman's carrier risk?
+- **(c)** What is the chance their child is affected?
+
+**(a) The outsider: population data.** $q^2 = 1/900$, so $q = 1/30$. His carrier risk is $2pq \\approx 2q = 1/15$ (exactly $58/900 \\approx 0.064$).
+
+**(b) The relative: Mendel.** Her parents are obligate carriers ($Aa \\times Aa$). She is unaffected, so she is one of the three non-$aa$ outcomes, and two of those are $Aa$: carrier risk $2/3$.
+
+**(c) Multiply.** Both must be carriers, then the child must be $aa$: with $2/3$ from (b) and $1/15$ from (a), risk $= \\tfrac{2}{3} \\times \\tfrac{1}{15} \\times \\tfrac{1}{4} = \\tfrac{1}{90}$.`
     },
     {
       id: 'pg4-quiz1',
@@ -139,15 +149,22 @@ Twelve to thirteen affected males for every affected female — the hallmark of 
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- X-linked recessive: affected males $= q$ (hemizygosity reads out the allele frequency), affected females $= q^2$, carriers $= 2pq$; male:female ratio $= 1/q$
-- A random woman's son is affected with probability $q$ — the two-path calculation (affected mothers + half of carriers' sons) must collapse to $q$
-- ABO: $p + q + r = 1$; start from type O ($r^2$), the only single-genotype class; AB $= 2pq$
-- H-W fit test: expected counts from allele-counted frequencies; $\\chi^2 = \\sum (O-E)^2/E$; df $= 3 - 1 - 1 = 1$ for two alleles
-- Heterozygote deficit → inbreeding, assortative mating, or pooled subpopulations (hidden substructure); heterozygote excess → overdominance or negative assortative mating; shifting allele frequencies → selection, drift, or migration
-- Hybrid pedigree problems: population gives the outsider's carrier risk ($\\approx 2q$), Mendel gives the relative's (unaffected sib of affected $= 2/3$), multiply both by $\\tfrac{1}{4}$
+- **X-linked recessive.** Males $= q$, affected females $= q^2$, carriers $= 2pq$, ratio $= 1/q$; a random woman's son is affected with probability $q$.
+- **ABO with three alleles.** $p + q + r = 1$; start from type O ($r^2$), the only single-genotype class; AB $= 2pq$.
+- **Chi-square fit test.** Expected counts come from allele-counted frequencies; $\\chi^2 = \\sum (O-E)^2/E$, critical 3.84 at df $= 1$.
+- **Hybrid pedigree risk.** Outsider carrier $\\approx 2q$, unaffected sib of an affected child $= 2/3$; multiply both by $\\tfrac{1}{4}$.
+
+**Common traps**
+
+- **Squaring for males.** Hemizygous males show the allele frequency itself, $q$; only affected females need $q^2$.
+- **Two degrees of freedom.** Estimating $p$ from the same data costs one more: df $= 3 - 1 - 1 = 1$ for two alleles, not 2.
+- **Misreading H-W deviations.** Too few Aa means nonrandom mating or pooling, not overdominance (an excess); shifting $p$ means selection, drift or migration.
+- **One-third for the sib.** An unaffected sib of an affected child is a carrier with probability $2/3$; $1/3$ is the chance of AA.
 
 <!-- yield:low -->
-- Low-yield extras: the heterozygote deficit from pooling subpopulations is named the Wahlund effect
+**Low-yield extras**
+
+- The heterozygote deficit from pooling subpopulations is named the Wahlund effect
 <!-- /yield -->`
     }
   ]

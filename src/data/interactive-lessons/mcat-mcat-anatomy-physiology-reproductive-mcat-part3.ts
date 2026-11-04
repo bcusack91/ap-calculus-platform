@@ -55,19 +55,26 @@ Before the cortical reaction, many species use a **fast block**: sperm fusion op
       type: 'text' as const,
       content: `### Worked Example — Why a Pregnancy Test Works, and When It Lies
 
-**Passage-style problem.** A home pregnancy test uses monoclonal antibodies against the beta subunit of hCG. A woman with a regular 28-day cycle has intercourse on day 14 and tests on day 18 (about 4 days post-ovulation); the test is negative. She retests on day 30 (about 2 days after her missed period); the test is positive.
+**Problem 1.** A woman with a regular 28-day cycle has intercourse on day 14. A home test for hCG is negative on day 18 (about 4 days post-ovulation) and positive on day 30 (about 2 days after her missed period).
 
-**Question 1 — Why was the day-18 test negative even if she conceived?**
-At 4 days post-fertilization the conceptus is a morula/early blastocyst still free in the tube or uterine cavity — it has **not implanted**, and meaningful hCG secretion requires the trophoblast to contact maternal blood after implantation (days 6-10). Testing before implantation cannot detect a real pregnancy: a false negative of timing, not chemistry.
+- **(a)** Why was the day-18 test negative even if she conceived?
+- **(b)** Without a pregnancy, what would have happened around days 26-28?
+- **(c)** How does rising hCG prevent her period, and what does the missed period show?
 
-**Question 2 — Physiologically, what has the rising hCG accomplished by day 30?**
-Without pregnancy, luteolysis around day 26-28 would have crashed progesterone and triggered menstruation. hCG, acting through **LH receptors** on the corpus luteum (it is a structural LH analog sharing the alpha subunit — hence antibodies target beta), sustains luteal progesterone. Progesterone maintains the secretory endometrium and suppresses uterine contractions — the missed period IS the rescue, observed from outside.
+**(a) Not yet implanted.** At 4 days post-fertilization the conceptus is a morula/early blastocyst, still free in the tube or uterine cavity. Meaningful hCG secretion begins only after implantation (days 6-10), so this is a false negative of timing, not chemistry.
 
-**Question 3 — The passage notes the assay targets the beta subunit specifically. Why?**
-hCG, LH, FSH, and TSH share a common **alpha subunit**; only beta subunits are unique. An anti-alpha antibody would cross-react with the mid-cycle LH surge and produce false positives around ovulation.
+**(b) Luteolysis.** The corpus luteum would degenerate around days 26-28, crashing progesterone and triggering menstruation.
 
-**Question 4 — Predict hCG at week 30 of a healthy pregnancy.**
-Lower than the first-trimester peak: once the placenta assumes steroid synthesis (~end of first trimester), the corpus luteum is dispensable and hCG falls from its ~week-10 maximum to a moderate plateau.`
+**(c) The rescue.** Without hCG the corpus luteum would regress; hCG, a structural LH analog, acts through **LH receptors** on the corpus luteum and sustains its progesterone. Progesterone maintains the secretory endometrium and suppresses uterine contractions: the missed period IS the rescue, observed from outside.
+
+**Problem 2.** The home test's monoclonal antibodies bind the beta subunit of hCG, not its alpha subunit.
+
+- **(a)** Which other hormones share hCG's alpha subunit?
+- **(b)** Why does the assay target beta, and what would an anti-alpha antibody detect by mistake, and when?
+
+**(a) A shared alpha subunit.** hCG, LH, FSH, and TSH share a common **alpha subunit**; only their beta subunits are unique.
+
+**(b) Avoiding LH.** Only the beta subunit identifies hCG. An anti-alpha antibody would cross-react with the mid-cycle LH surge and produce false positives around ovulation.`
     },
     {
       id: 'rep3-quiz1',
@@ -90,18 +97,18 @@ Lower than the first-trimester peak: once the placenta assumes steroid synthesis
             explanation: `Calcium release drives cortical granule exocytosis, which modifies and hardens the zona pellucida — the slow block to polyspermy. Meiosis I finished before ovulation (fertilization completes meiosis II, not I). The acrosome reaction PRECEDES fusion, and implantation is days away and involves the blastocyst, not the zygote.`
           },
           {
-            question: `In a non-pregnant cycle, menstruation is most directly caused by:`,
-            options: [`Corpus luteum regression and falling progesterone`, `The mid-cycle LH surge and ovulation`, `Rising FSH recruiting the next follicle cohort`, `Peak estrogen levels eroding the functional endometrium`],
+            question: `On day 20 of a non-pregnant cycle, a woman takes a drug that blocks progesterone receptors in the endometrium. What is the most likely result within days?`,
+            options: [`The lining sheds early, as if the corpus luteum had regressed`, `hCG secretion rises and rescues the corpus luteum`, `The lining keeps thickening, since estrogen is still present`, `Menses is delayed, because the corpus luteum persists longer`],
             correctAnswer: 0,
             yield: 'ULTRA_HIGH',
-            explanation: `The secretory endometrium is maintained by luteal progesterone. When the corpus luteum degenerates (~14 days after ovulation, absent hCG), progesterone collapses and the functional layer is shed. The LH surge causes ovulation, not menses; rising FSH recruits the next cohort; estrogen builds the endometrium rather than destroying it.`
+            explanation: `The secretory endometrium is maintained by luteal progesterone; menstruation normally follows when the corpus luteum regresses and progesterone falls. Blocking the receptors removes that support just as luteolysis would, so the functional layer sheds early. Estrogen alone cannot keep a secretory lining in place, hCG comes only from an implanted trophoblast (absent in a non-pregnant cycle), and blocking progesterone's action in the uterus does nothing to prolong the corpus luteum.`
           },
           {
-            question: `hCG from the trophoblast prevents menstruation in early pregnancy by:`,
-            options: [`Directly stimulating the endometrium to proliferate and thicken`, `Suppressing FSH so that no new follicles are recruited`, `Acting on the corpus luteum to sustain its progesterone output`, `Stimulating the placenta to secrete progesterone during week 2`],
+            question: `A woman who is 5 weeks pregnant has her corpus luteum removed surgically and receives no progesterone. What is the most likely outcome?`,
+            options: [`The placenta already supplies enough progesterone, so nothing changes`, `Rising hCG maintains the endometrium directly, so nothing changes`, `Progesterone falls and the endometrium sheds, ending the pregnancy`, `Placental estrogen alone keeps the lining secretory`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `hCG is an LH analog: it rescues the corpus luteum, whose PROGESTERONE maintains the endometrium — hCG's effect on the lining is indirect. The placenta cannot supply steroids until it matures near the end of the first trimester, which is exactly why the rescue is needed. Gonadotropin suppression happens but is not what preserves the lining.`
+            explanation: `In early pregnancy hCG works only by rescuing the corpus luteum, whose PROGESTERONE maintains the endometrium. Remove the corpus luteum at 5 weeks and progesterone collapses, so the lining sheds and the pregnancy is lost. The placenta does not take over steroid synthesis until near the end of the first trimester, hCG has no direct effect on the lining, and estrogen without progesterone cannot keep the endometrium secretory.`
           },
           {
             question: `A nursing mother notices milk release when her infant cries, before any suckling occurs. The hormone responsible for this milk ejection is:`,
@@ -118,15 +125,22 @@ Lower than the first-trimester peak: once the placenta assumes steroid synthesis
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Follicular phase: FSH → follicle → rising estrogen; luteal phase: corpus luteum → progesterone; luteal length (~14 days) is the constant one
-- THE switch: moderate estrogen = negative feedback, sustained high estrogen = positive feedback → LH surge → ovulation ~day 14
-- Fertilization order: capacitation → acrosome reaction → fusion → (fast depolarization block, then) cortical reaction (slow polyspermy block) → completion of meiosis II
-- Blastocyst implants days 6-10; trophoblast hCG (an LH analog, unique beta subunit) rescues the corpus luteum — the basis of pregnancy tests
-- Placenta takes over steroid production by the end of the first trimester; hCG peaks ~week 10 then falls
-- Parturition = oxytocin positive feedback; lactation = prolactin makes milk, oxytocin ejects it
+- **Follicular vs. luteal.** FSH grows a follicle that makes rising estrogen; after ovulation the corpus luteum makes progesterone.
+- **The feedback switch.** Moderate estrogen is negative feedback; sustained high estrogen flips it positive → LH surge, ovulation.
+- **Fertilization order.** Capacitation → acrosome reaction → fusion → cortical reaction → the oocyte completes meiosis II.
+- **The hCG rescue.** Trophoblast hCG, an LH analog, sustains the corpus luteum until the placenta takes over by the end of the first trimester.
+
+**Common traps**
+
+- **Falling estrogen triggers the surge.** Only sustained HIGH estrogen flips feedback to positive; moderate estrogen suppresses LH.
+- **hCG builds the lining.** hCG acts on the corpus luteum; its progesterone, not hCG itself, maintains the endometrium.
+- **An early negative rules out pregnancy.** hCG is secreted only after implantation (days 6-10), so a very early test can miss it.
+- **Prolactin ejects milk.** Prolactin drives milk synthesis; oxytocin ejects milk and drives labor's positive-feedback contractions.
 
 <!-- yield:low -->
-- Low-yield extras: "sustained" high estrogen means roughly 36-48 hours above threshold
+**Low-yield extras**
+
+- "Sustained" high estrogen means roughly 36-48 hours above threshold.
 <!-- /yield -->`
     }
   ]

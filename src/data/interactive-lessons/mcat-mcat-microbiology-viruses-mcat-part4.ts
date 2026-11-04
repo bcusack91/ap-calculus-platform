@@ -37,6 +37,50 @@ Infected cells secrete **interferons**, warning neighbors to degrade RNA and slo
 Any virus question yields to four sorted facts: **(1)** genome class → route to mRNA → what the virion must carry; **(2)** enveloped or naked → transmission and stability; **(3)** persistence mode → prophage/provirus/episome → curability; **(4)** mutation engine → proofreading-free polymerase, segments or not → drift/shift/therapy strategy. Practice stating all four for HIV, influenza, herpes, and polio — those four organisms span the entire logical space.`
     },
     {
+      id: 'vir4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Integration Passages
+
+**Problem 1.** An infectious agent from brain tissue causes a slow spongiform disease. Two hypotheses compete: a prion, or a slow conventional virus.
+
+- **(a)** How should UV light and nucleases affect infectivity under each hypothesis?
+- **(b)** How should mice lacking PrP-C (PrP knockouts) respond under each hypothesis?
+- **(c)** What do the two results together imply?
+
+**(a) Radiation and nuclease attack.** UV and nucleases destroy nucleic acid function. Virus: infectivity falls sharply. Prion: infectivity is unchanged, the result actually observed for scrapie (an early anomaly).
+
+**(b) The knockout test.** Prion: knockout mice are COMPLETELY resistant and cannot propagate the agent (no substrate, no conversion). Virus: it would still replicate in them, since its properties track its own genome rather than the host's PrP gene.
+
+**(c) The conclusion.** The information is conformational, templated onto a host-encoded protein. The knockout-resistance result is the single most decisive fact; expect passages to present it and ask what it implies.
+
+**Problem 2.** Polio vs HIV. Apply the four-fact capstone sort (genome, envelope, persistence, evolution engine) to both viruses, deriving a clinical consequence of each fact for each virus.
+
+- **(a)** What genome class does each carry, and what follows?
+- **(b)** Is each enveloped, and what does that mean for transmission?
+- **(c)** How does each persist, and what does that mean for cure?
+- **(d)** What drives each one's evolution, and what follows for vaccines and therapy?
+
+**(a) Genome.** Both are (+)ssRNA. Polio's genome alone is infectious (lab safety). HIV is a retrovirus carrying RT and integrase, unique enzymes that are drug targets.
+
+**(b) Envelope.** Polio is naked: fecal-oral spread and surface stability mean sanitation matters. HIV is enveloped and fragile, so there is no casual-contact transmission.
+
+**(c) Persistence.** Polio has no persistence mechanism, so complete clearance is possible and eradication is feasible. HIV's integrated provirus reservoir is suppressible but not yet curable.
+
+**(d) Evolution engine.** Polio drifts only (no segments) and is antigenically stable enough for a fixed vaccine. HIV's hypermutable RT creates quasispecies, so combination therapy is required and no vaccine exists so far. Same nucleic acid class, almost opposite clinical realities.
+
+**Problem 3.** A (+)RNA respiratory virus enters cells when its spike protein binds a host receptor. Its nucleocapsid protein is highly abundant and strongly antigenic but sits inside the particle.
+
+- **(a)** What must an antibody do to protect against infection?
+- **(b)** Would antibodies against the nucleocapsid protein protect, and why?
+- **(c)** Which protein, and which region of it, belongs in a subunit vaccine?
+
+**(a) Neutralization.** Antibody protection against infection requires NEUTRALIZATION: physically blocking attachment or fusion.
+
+**(b) The nucleocapsid.** No. It is hidden inside the particle, so antibodies against it cannot prevent entry (they may still mark infection, and internal antigens matter for T-cell responses).
+
+**(c) The spike.** Only the SPIKE is exposed on the surface and mediates entry; ideally use its receptor-binding domain, where bound antibody most directly blocks attachment (Part 1's cycle logic). Abundance and antigenicity without accessibility protect nothing.`
+    },
+    {
       id: 'vir4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Evolution, Prions & Integration** 🎯`,
@@ -50,11 +94,11 @@ Any virus question yields to four sorted facts: **(1)** genome class → route t
             explanation: `Drift erodes immunity gradually — most people retain partial protection, so outbreaks stay seasonal. Shift swaps in a wholly novel HA (or NA) segment from another host lineage in one step via reassortment; essentially nobody has even partial immunity, and the virus sweeps globally. Segmentation is the structural prerequisite.`
           },
           {
-            question: `An infectious agent from brain tissue transmits disease after treatment with UV light, nucleases, and formaldehyde, but loses infectivity after harsh protein denaturation. The agent is most likely:`,
-            options: [`A retrovirus`, `A viroid`, `A prion`, `A DNA virus`],
+            question: `Brain homogenate from an animal with a spongiform encephalopathy is injected into normal mice and into mice lacking the PrP gene. Only the normal mice develop disease, and only their brains accumulate new infectious agent. This result best supports which conclusion?`,
+            options: [`Loss of normal PrP-C function is what causes the disease`, `The agent replicates its own nucleic acid in neurons`, `Propagation requires host-made PrP-C`, `Knockout-mouse proteases destroy the injected PrP-Sc`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `Resistance to UV and nucleases means no essential nucleic acid — that excludes every virus and viroid. Sensitivity to protein denaturation identifies the infectious moiety as protein: a prion, propagating by templated misfolding of PrP-C into protease-resistant PrP-Sc.`
+            explanation: `A prion has no genome; it propagates by templating the host's own PrP-C into PrP-Sc, so mice that make no PrP-C give it nothing to convert. If losing PrP-C function caused the disease, the knockout mice, which have no PrP-C at all, would be sick, yet they stay healthy. An agent copying its own nucleic acid would not depend on the host's PrP gene and should replicate in knockouts too. PrP-Sc is protease-resistant, so destruction by proteases cannot explain the resistance; the missing substrate does.`
           },
           {
             question: `Hepatitis D virus causes disease only in patients simultaneously or previously infected with hepatitis B, because HDV:`,
@@ -85,59 +129,23 @@ Any virus question yields to four sorted facts: **(1)** genome class → route t
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Drift = gradual point mutations (epidemics, annual vaccines); shift = segment reassortment, novel antigen (pandemics); shift needs a segmented genome
-- Vaccines: live attenuated (strong, replicates — avoid in immunocompromised), killed (safe, weaker), subunit (target the attachment protein), mRNA (deliver the message)
-- Viroid = naked noncoding circular RNA (plants); prion = protein-only conformational replicator (UV/nuclease-resistant, protease-resistant PrP-Sc); HDV = satellite needing HBV's HBsAg
-- Defense stack: interferon (warn), CTL via MHC I (kill infected), antibody (neutralize free), NK cells (missing self backup when viruses hide MHC I)
-- Capstone sort for any virus: genome → mRNA route; envelope → transmission; persistence mode → curability; polymerase fidelity + segments → evolution and therapy
+- **Drift vs shift.** Drift is gradual point mutation (epidemics, yearly vaccines); shift is segment reassortment (pandemics).
+- **Vaccine platforms.** Live attenuated: strong but replicates; killed: safe, weaker; subunit: attachment protein; mRNA: cells make antigen.
+- **Subviral agents.** Viroids are naked noncoding RNA; prions are misfolded protein only; HDV needs HBV's surface antigen.
+- **Defense stack.** Interferon warns, CTLs kill via MHC I, antibodies neutralize, and NK cells kill cells that hide MHC I.
+
+**Common traps**
+
+- **Shift without segments.** Non-segmented viruses can only drift and recombine; antigenic shift requires a segmented genome.
+- **Live vaccines for everyone.** An attenuated virus still replicates and can disseminate in a severely immunocompromised patient.
+- **Prions as tiny viruses.** With no nucleic acid, prions stay infectious after UV and nucleases; only harsh protein denaturation destroys infectivity.
+- **Abundant antigen, best vaccine.** An internal protein cannot neutralize, however antigenic; only exposed entry proteins block attachment.
 
 <!-- yield:low -->
-- Low-yield extras: viroid genomes are only ~250-400 nucleotides, and potato spindle tuber viroid is the classic example
+**Low-yield extras**
+
+- Viroid genomes are only ~250-400 nucleotides, and potato spindle tuber viroid is the classic example
 <!-- /yield -->`
-    },
-    {
-      id: 'vir4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Integration Passages
-
-<details>
-<summary><b>Example 1: Prove protein-only inheritance</b></summary>
-
-**Question:** Design the two key experiments that distinguish a prion from a slow conventional virus, and state the expected results for each hypothesis.
-
-**Solution:**
-1. **Radiation/nuclease attack:** UV and nucleases destroy nucleic acid function. Virus: infectivity falls sharply. Prion: infectivity unchanged (observed result for scrapie — an early anomaly).
-2. **Genetic specificity test:** infectious material's properties should track the HOST's PrP gene, not an agent genome. Mice lacking PrP-C entirely (PrP knockout) are COMPLETELY resistant and cannot propagate the agent — no substrate, no conversion. A virus would still replicate in knockout mice.
-3. Together: the information is conformational, templated onto a host-encoded protein.
-
-**MCAT Strategy:** The knockout-resistance result is the single most decisive fact; expect passages to present it and ask what it implies.
-</details>
-
-<details>
-<summary><b>Example 2: Choose the vaccine antigen rationally</b></summary>
-
-**Question:** A (+)RNA respiratory virus enters cells when its spike protein binds a host receptor; a nucleocapsid protein is highly abundant and strongly antigenic but internal. Which protein belongs in a subunit vaccine, and why do anti-nucleocapsid antibodies fail to protect?
-
-**Solution:**
-1. Antibody protection against infection requires NEUTRALIZATION — physically blocking attachment or fusion. Only the SPIKE is exposed on the virion surface and mediates entry.
-2. Anti-nucleocapsid antibodies bind a protein hidden inside the particle: they cannot prevent entry (they may still serve as an infection marker, and internal antigens matter for T-cell responses).
-3. Choose the spike; ideally its receptor-binding domain, the region where binding antibodies most directly block the attachment step (Part 1's cycle logic).
-
-**MCAT Strategy:** Map every proposed antigen onto the life-cycle step its antibody could physically interrupt; abundance and antigenicity without accessibility protect nothing.
-</details>
-
-<details>
-<summary><b>Example 3: Run the four-fact capstone on two viruses</b></summary>
-
-**Question:** Apply the capstone sort (genome, envelope, persistence, evolution engine) to polio and HIV, and derive one clinical consequence from each fact.
-
-**Solution:**
-1. **Polio:** (+)ssRNA, naked, no persistence mechanism, drift-only. Consequences: genome alone is infectious (lab safety); fecal-oral spread and surface stability (sanitation matters); complete clearance possible (eradication is feasible); antigenically stable enough for a fixed vaccine.
-2. **HIV:** (+)ssRNA retrovirus (RT + integrase), enveloped, provirus persistence, hypermutable RT. Consequences: unique enzymes = drug targets; fragile envelope = no casual-contact transmission; integrated reservoir = suppressible but not yet curable; quasispecies = combination therapy and no vaccine so far.
-3. Same nucleic acid class, almost opposite clinical realities — the downstream facts, not the genome label, carry the medicine.
-
-**MCAT Strategy:** This paired contrast is worth rehearsing verbatim; passages that seem novel are usually one of these four axes wearing a costume.
-</details>`
     }
   ]
 };

@@ -57,19 +57,51 @@ Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware d
       type: 'text' as const,
       content: `### Worked Example — Designing the Right Perturbation
 
-**Passage-style problem.** Gene Q is hypothesized to drive pathological cardiac hypertrophy in adult mice. Complication: Q-null embryos die at day 10 from failed heart tube formation.
+**Problem 1.** Gene Q is hypothesized to drive pathological cardiac hypertrophy in adult mice. Complication: Q-null embryos die at day 10 from failed heart tube formation.
 
-**Question 1 — Why is a conventional knockout the wrong tool, and what replaces it?** The gene has an EARLIER essential function: constitutive deletion kills the embryo before adult hypertrophy can be studied — the lethality masks the phenotype of interest. Solution: **conditional knockout** — flox Q, and supply Cre under a cardiomyocyte-specific promoter in a drug-inducible form (Cre stays inactive until the drug is given), so deletion happens only in heart muscle AND only when the adult mouse is dosed. Space and time are separate switches; the design needs both — a heart-specific promoter alone would still delete Q in the embryonic heart tube.
+- **(a)** Why can a conventional knockout not test Q's adult role?
+- **(b)** What kind of knockout replaces it, and how is it built?
+- **(c)** Would the line from (b) still delete Q in the embryonic heart, and how do you prevent that?
+
+**(a) Early lethality.** The gene has an EARLIER essential function: constitutive deletion kills the embryo before adult hypertrophy can be studied — the lethality masks the phenotype of interest.
+
+**(b) Conditional knockout.** Flox Q, and supply Cre under a cardiomyocyte-specific promoter, so Cre excises Q only in heart muscle.
+
+**(c) Add a time switch.** Yes: a heart-specific promoter alone would still delete Q in the embryonic heart tube. Use a drug-inducible Cre (inactive until the drug is given), so deletion happens only when the adult mouse is dosed. Space and time are separate switches; the design needs both.
 
 <!-- yield:low -->
 The standard inducible version is **CreER**: Cre fused to a modified estrogen-receptor domain, held outside the nucleus until tamoxifen frees it.
 <!-- /yield -->
 
-**Question 2 — The team also tries siRNA against Q in cultured cardiomyocytes and sees only a 60% mRNA reduction with no phenotype. A colleague concludes Q is not involved. Critique.** Knockdown is not knockout: 40% residual protein may exceed the functional threshold, especially for catalytic proteins where a little enzyme suffices. Absence of phenotype under PARTIAL loss cannot exclude the hypothesis — only complete (conditional) deletion, or a dominant-negative, tests requirement cleanly.
+**Problem 2.** The team also gives cultured cardiomyocytes siRNA against Q and sees only a 60% mRNA reduction, with no phenotype. A colleague concludes Q is not involved.
 
-**Question 3 — Conditional deletion in adult hearts prevents hypertrophy after pressure overload. What single further experiment most strengthens causality?** **Rescue**: re-express Q (knock-in or viral delivery) in the deleted hearts and show hypertrophy returns. Rescue excludes off-target Cre effects, floxing artifacts, and strain background — the perturbation-rescue pair is the causal gold standard, exactly parallel to reintroducing a cloned gene into a knockout line.
+- **(a)** How much Q expression remains, and could it be enough?
+- **(b)** Is the colleague's conclusion justified?
+- **(c)** Which approaches would test whether Q is required?
 
-**Question 4 — To ask whether Q acts in cardiomyocytes themselves versus cardiac fibroblasts, what feature of the Cre system is decisive?** Promoter choice: Cre driven by a cardiomyocyte promoter deletes Q only there; a fibroblast-promoter Cre line deletes it only in fibroblasts. If hypertrophy persists in the first and disappears in the second, Q acts in fibroblasts (cell-non-autonomous). Tissue-specific promoters convert a molecular tool into a cell-biology scalpel — and this promoter-defines-place logic is identical for GFP reporters and transgenes.`
+**(a) Residual expression.** About 40% of the mRNA remains, and the protein it makes may exceed the functional threshold, especially for catalytic proteins, where a little enzyme suffices.
+
+**(b) Not justified.** Knockdown is not knockout: absence of phenotype under PARTIAL loss cannot exclude the hypothesis.
+
+**(c) Complete loss.** Only complete (conditional) deletion, or a dominant-negative, tests requirement cleanly.
+
+**Problem 3.** Conditional deletion of Q in adult hearts prevents hypertrophy after pressure overload.
+
+- **(a)** What single further experiment most strengthens the causal claim?
+- **(b)** Which alternative explanations does that experiment exclude?
+
+**(a) Rescue.** Re-express Q (knock-in or viral delivery) in the deleted hearts and show hypertrophy returns.
+
+**(b) Artifacts excluded.** Rescue excludes off-target Cre effects, floxing artifacts, and strain background — the perturbation-rescue pair is the causal gold standard, exactly parallel to reintroducing a cloned gene into a knockout line.
+
+**Problem 4.** The team now asks whether Q acts in cardiomyocytes themselves or in cardiac fibroblasts, using two conditional knockout lines.
+
+- **(a)** What feature of the Cre system decides which cells lose Q?
+- **(b)** Hypertrophy still develops when Q is deleted in cardiomyocytes but is prevented when Q is deleted in fibroblasts. Where does Q act?
+
+**(a) Promoter choice.** Cre driven by a cardiomyocyte promoter deletes Q only there; a fibroblast-promoter Cre line deletes it only in fibroblasts.
+
+**(b) In fibroblasts.** Q acts in fibroblasts, affecting the heart muscle cell-non-autonomously. Tissue-specific promoters convert a molecular tool into a cell-biology scalpel — and this promoter-defines-place logic is identical for GFP reporters and transgenes.`
     },
     {
       id: 'biot3-quiz1',
@@ -92,11 +124,11 @@ The standard inducible version is **CreER**: Cre fused to a modified estrogen-re
             explanation: `Cas9 only cuts; the CELL repairs, and the repair pathway decides the product. NHEJ — templateless, active all cycle — glues ends with occasional indels (great for knockouts, useless for precision). HDR copies a provided donor template but essentially requires S/G2, when its machinery and (normally) a sister chromatid are available. This is the DNA-repair lesson operating as an engineering constraint: to control the edit, you must bias the pathway competition.`
           },
           {
-            question: `A gene is essential for embryonic development, but its function in adult liver is unknown. The most appropriate strategy is:`,
-            options: [`A liver-specific conditional (Cre-lox) knockout`, `A conventional whole-body germline knockout`, `Overexpressing the gene in all tissues`, `A transgenic mouse carrying a second copy of the gene`],
+            question: `Mice carrying a floxed gene X are crossed with mice that express Cre recombinase only in neurons. In offspring carrying both, gene X is deleted in:`,
+            options: [`Neurons only, where Cre is expressed`, `Every cell, since loxP sites are everywhere`, `Every cell except neurons`, `Only cells that inherit two copies of Cre`],
             correctAnswer: 0,
             yield: 'MEDIUM',
-            explanation: `Constitutive deletion never yields an adult: the embryonic requirement kills first, hiding all later functions — the standard motivation for conditional systems. Floxing the gene and restricting Cre expression by promoter (liver) and timing (drug-inducible Cre) deletes the gene only where and when you choose. The generalizable exam skill: when a phenotype of interest is downstream of an earlier lethality, look for the answer that separates deletion in SPACE and TIME from deletion per se.`
+            explanation: `Cre-lox splits the deletion into two parts: the loxP sites flank the gene in every cell, but excision needs Cre recombinase, so the gene is removed only in cells that express Cre — here, neurons. That is the point of conditional systems: when a gene is essential early in development, restricting Cre by promoter (place) and by drug-inducible Cre (time) deletes it only where and when you choose, so the embryo survives. Floxing alone changes nothing, and a single Cre allele is enough to excise.`
           },
           {
             question: `In early gene-therapy trials using retroviral vectors, some treated SCID patients later developed leukemia. The mechanistic basis of this adverse outcome was:`,
@@ -120,16 +152,22 @@ The standard inducible version is **CreER**: Cre fused to a modified estrogen-re
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Perturbation hierarchy: knockout = permanent DNA-level absence (requirement); knockdown (RNAi) = partial, reversible RNA-level reduction — residual protein can hide phenotypes; dominant negative poisons at the protein level
-- CRISPR: guide RNA base-pairing (not protein engineering) targets Cas9's cut; the cell's repair choice sets the outcome — NHEJ indels = knockout, HDR + template (S/G2, dividing cells) = precise knock-in
-- Conditional (Cre-lox) systems separate deletion in space (tissue-specific promoter) and time (drug-inducible Cre) — the answer whenever early lethality masks a later function
-- Promoter-GFP reports where a promoter fires; GFP-protein fusions report where the protein goes — match construct to claim
-- Rescue experiments (re-express the gene, phenotype reverts) are the causality gold standard against off-target effects
-- Gene therapy: integrating vectors (retro/lenti) = durable + insertional mutagenesis risk (proto-oncogene activation); AAV = safer, non-integrating, small capacity; ex vivo correction allows verification before reinfusion
-- Somatic editing stays with the patient; germline edits are heritable — the ethical boundary passages test
+- **Knockout vs. knockdown.** A knockout permanently removes the gene; RNAi knockdown is partial and reversible, so leftover protein can hide phenotypes.
+- **CRISPR: RNA aims, cell repairs.** A ~20-nt guide RNA aims Cas9's cut; NHEJ indels knock genes out, HDR with a template makes precise edits.
+- **Conditional Cre-lox.** A floxed gene plus tissue-specific, inducible Cre is deleted only where and when chosen, bypassing early lethality.
+- **Gene therapy vectors.** Integrating vectors risk insertional mutagenesis, AAV less so; somatic edits stay with the patient, germline edits are inherited.
+
+**Common traps**
+
+- **No phenotype, no role.** A partial knockdown with no phenotype cannot exclude a gene; only complete loss tests requirement.
+- **Cas9 writing the edit.** Cas9 only cuts; a precise edit needs HDR with a supplied template, active mainly in dividing cells.
+- **Promoter-GFP as localization.** Promoter-GFP maps where the promoter fires; only a GFP fusion shows where the protein goes.
+- **Knockout alone as proof.** A knockout phenotype proves causality only when re-expressing the gene rescues it.
 
 <!-- yield:low -->
-- Low-yield extras: CRISPR interference (dead Cas9 blocks transcription); the PAM motif beside every Cas9 target; zinc-finger nucleases and TALENs as the protein-engineered predecessors; tamoxifen-activated CreER; the LMO2 leukemias of the early retroviral SCID trials
+**Low-yield extras**
+
+- CRISPR interference (dead Cas9 blocks transcription); the PAM motif beside every Cas9 target; zinc-finger nucleases and TALENs as the protein-engineered predecessors; tamoxifen-activated CreER; the LMO2 leukemias of the early retroviral SCID trials
 <!-- /yield -->`
     }
   ]

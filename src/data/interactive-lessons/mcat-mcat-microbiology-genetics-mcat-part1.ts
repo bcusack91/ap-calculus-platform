@@ -54,7 +54,7 @@ The defining genetic fact is **haploidy**: one copy of each gene. The MCAT build
 | Frameshift | Insertion or deletion not a multiple of 3 | Garbled downstream sequence, usually an early stop, so a smaller band |
 | Promoter | Altered transcription signal | Normal size, less or no protein |
 
-A **reversion**, a second mutation that restores function, is rare but easy to score, and it powers the Ames test below. Insertions by transposons are a major natural mutagen (Part 3).
+A **reversion**, a second mutation that restores function, is rare but easy to score, and it powers the Ames test below. Insertions by transposons (mobile DNA elements, covered with transposable elements) are a major natural mutagen.
 
 ### Auxotrophs, Prototrophs, Selection and Screening
 
@@ -74,17 +74,67 @@ A **reversion**, a second mutation that restores function, is rare but easy to s
 **Lederberg replica plating.** Colonies on a nonselective **master plate** are pressed onto sterile velvet and stamped, in register, onto plates containing the drug or phage. Resistant colonies appear at the **same positions** on every replica. Picking cells from those positions on the never-exposed master plate yields resistant cells, so selection revealed variants that already existed. Stamping onto minimal medium finds auxotrophs the same way: they are the colonies present on complete medium but missing on minimal.`
     },
     {
+      id: 'mg1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Reading Selection Experiments
+
+**Problem 1.** A food additive must be screened for mutagenicity with the Ames test: a his$^-$ Salmonella tester strain plated on histidine-free medium.
+
+- **(a)** Which plate sets the baseline that every other count is judged against?
+- **(b)** Which plates detect a direct mutagen, and which a compound that is mutagenic only after metabolism?
+- **(c)** Which plate shows that the strain can revert under these conditions at all?
+- **(d)** What result counts as positive, and why is growth itself the readout?
+
+**(a) Background.** The tester strain with no additive gives the spontaneous revertant count. Every other count is judged against it.
+
+**(b) With and without liver extract.** The additive without liver extract detects a direct mutagen. The additive plus liver extract detects a compound that becomes mutagenic only after metabolism. An Ames passage almost always turns on the extract: positive only with it means a procarcinogen.
+
+**(c) Positive control.** A known mutagen shows that the strain can revert under these conditions.
+
+**(d) Reading the plates.** A dose-dependent rise in his$^+$ colonies above background is positive. Growth itself is the readout, because only revertants can grow without histidine.
+
+**Problem 2.** Set 1, ten separate small cultures plated on phage: 0, 0, 1, 0, 64, 0, 2, 0, 0, 9 resistant colonies. Set 2, ten samples from one big culture: 11, 9, 12, 8, 10, 11, 9, 10, 12, 8.
+
+- **(a)** How do the two sets compare in mean and in spread?
+- **(b)** What does Set 2, many samples from one culture, measure?
+- **(c)** What would Set 1 look like if the phage induced resistance on the plate, and what does its actual pattern show?
+- **(d)** What is the conclusion, and which statistic carries it?
+
+**(a) Mean and spread.** Both sets have a similar mean (about 8 and about 10), but Set 1's spread is enormous and Set 2's is small.
+
+**(b) The control.** Drawing many samples from ONE culture measures plating noise alone. That noise is small.
+
+**(c) Induction vs. jackpots.** If phage induced resistance on the plate, Set 1 would look like Set 2. Its jackpot (64), and to a lesser degree the 9, mean resistance arose earlier in some cultures than in others, during growth without phage.
+
+**(d) Conclusion.** Mutations are random, preexisting events, and the phage only selects them. The tell is variance, not the mean: big variance across independent cultures plus small variance within one culture means mutation came before selection.
+
+**Problem 3.** A mutagenized master plate on complete medium is replica-plated onto four plates: minimal, minimal + histidine, minimal + leucine, and complete. Colony 7 grows only on complete and on minimal + leucine.
+
+- **(a)** What kind of strain is colony 7?
+- **(b)** What does it require, and where is its defect?
+- **(c)** Where do you pick colony 7 from?
+- **(d)** Why must this search compare replicas instead of selecting directly?
+
+**(a) An auxotroph.** Missing on minimal but present on complete medium means colony 7 is an auxotroph.
+
+**(b) Leucine.** Growth is restored by leucine alone, so it is a leucine auxotroph (leu$^-$); the defect is in leucine biosynthesis.
+
+**(c) The master plate.** The master plate is the stock. Comparing replicas locates colony 7, and you pick it from the matching position on the master.
+
+**(d) Screening by elimination.** You cannot directly select for a cell that does NOT grow, so you compare replicas: absent on the selective replica, present on the master = the mutant you want. Then supplement one nutrient at a time to name it.`
+    },
+    {
       id: 'mg1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Genome, Mutation & Selection** 🎯`,
       exercise: {
         questions: [
           {
-            question: `A colony grows on complete medium and on minimal medium supplemented with leucine, but not on unsupplemented minimal medium. The strain is best described as:`,
-            options: [`A prototroph that grows only on enriched media`, `A leucine auxotroph with a defective biosynthesis gene`, `A revertant that has regained leucine synthesis`, `A mutant unable to import leucine from the medium`],
+            question: `A colony grows on complete medium and on minimal medium supplemented with both leucine and histidine. It does not grow on minimal medium plus leucine alone, on minimal plus histidine alone, or on unsupplemented minimal medium. The strain is best described as:`,
+            options: [`A prototroph that grows only on enriched media`, `A double auxotroph that cannot make leucine or histidine`, `A leucine auxotroph that needs only leucine supplied`, `A mutant unable to import leucine from the medium`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Growth only when leucine is supplied means the strain cannot make leucine itself: a leucine auxotroph. A prototroph would grow on plain minimal medium, and so would a revertant that regained leucine synthesis. A strain unable to import leucine could not be rescued by adding leucine to the plate.`
+            explanation: `Growth only when BOTH amino acids are supplied means the strain can make neither: a double auxotroph, with a defect in each biosynthetic pathway. A prototroph would grow on plain minimal medium. A strain that needed only leucine would grow on minimal plus leucine alone, which this one does not. A strain unable to import leucine could not be rescued by adding leucine to the plate, yet leucine plus histidine rescues this one.`
           },
           {
             question: `Twenty small parallel cultures, grown without phage, are each plated on phage. Most yield 0 to 3 resistant colonies, but two yield over 100. Ten samples from one large culture yield 28 to 35 colonies each. These results show that resistance mutations:`,
@@ -129,65 +179,23 @@ A **reversion**, a second mutation that restores function, is rare but easy to s
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- One circular chromosome in a nucleoid, one origin; haploid, so recessive mutations show at once and only merodiploids (F′) allow dominance and complementation tests
-- No meiosis in bacteria (crossing over in eukaryotes is in prophase I); bacterial recombination needs DNA from outside
-- Plasmids = extragenomic, self-replicating DNA: F (conjugation), R (resistance, often several genes plus transfer genes), virulence; copy number sets gene dosage; episome = plasmid that can integrate (F → Hfr)
-- Mutation readouts: silent (degenerate code, wobble base) and missense keep size; nonsense and frameshift truncate; promoter mutations lower the amount
-- Auxotroph = needs the end product supplied; prototroph = grows on minimal medium; selection kills or blocks the unwanted, screening only marks them (ampicillin selects, X-gal screens: white = insert)
-- Ames test = his$^-$ reversion on histidine-free plates, liver extract for metabolic activation
-- Fluctuation test (jackpots in parallel cultures, uniform counts from one culture) and replica plating (same positions, resistance recovered from the unexposed master) both prove mutations come BEFORE selection
+- **Haploid cell, extra plasmids.** One gene copy, so recessive mutations show; plasmids such as F and R replicate from their own origin.
+- **Mutation readouts.** Silent and missense keep protein size; nonsense and frameshift truncate it; promoter mutations lower the amount.
+- **Auxotrophs and the Ames test.** Auxotrophs need the end product supplied; the Ames test counts his$^+$ revertants, with liver extract added.
+- **Mutation before selection.** Fluctuation jackpots and same-position replica colonies show mutations arise before any exposure.
+
+**Common traps**
+
+- **Phage induces resistance.** Induction would give every parallel culture the same count; jackpots show the mutations arose earlier.
+- **Selection equals screening.** Ampicillin selects plasmid carriers (the rest die); X-gal only screens, and white colonies carry the insert.
+- **Missense shrinks the band.** Only a premature stop (nonsense, frameshift) truncates the protein; a missense change keeps full length.
+- **Ames without liver extract.** Many compounds turn mutagenic only after liver metabolism, so a negative without extract is not safe.
 
 <!-- yield:low -->
-- Low-yield extras: the E. coli chromosome is about 4.6 million base pairs; Col plasmids encode colicins; acridine dyes cure plasmids
+**Low-yield extras**
+
+The E. coli chromosome is about 4.6 million base pairs; Col plasmids encode colicins; acridine dyes cure plasmids.
 <!-- /yield -->`
-    },
-    {
-      id: 'mg1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Reading Selection Experiments
-
-<details>
-<summary><b>Example 1: Read a fluctuation table</b></summary>
-
-**Question:** Set 1, ten separate small cultures plated on phage: 0, 0, 1, 0, 64, 0, 2, 0, 0, 9 resistant colonies. Set 2, ten samples from one big culture: 11, 9, 12, 8, 10, 11, 9, 10, 12, 8. Which hypothesis does each set test, and what is the conclusion?
-
-**Solution:**
-1. Both sets have a similar mean (about 8 and about 10), but Set 1's spread is enormous and Set 2's is small.
-2. Set 2 is the control: drawing many samples from ONE culture measures plating noise alone. That noise is small.
-3. If phage induced resistance on the plate, Set 1 would look like Set 2. Its jackpot (64), and to a lesser degree the 9, mean resistance arose earlier in some cultures than others, during growth without phage.
-4. Conclusion: mutations are random, preexisting events, and the phage only selects them.
-
-**MCAT Strategy:** The tell is variance, not the mean. Big variance across independent cultures plus small variance within one culture means mutation came before selection.
-</details>
-
-<details>
-<summary><b>Example 2: Find an auxotroph and name its requirement</b></summary>
-
-**Question:** A mutagenized master plate on complete medium is replica-plated onto four plates: minimal, minimal + histidine, minimal + leucine, and complete. Colony 7 grows only on complete and on minimal + leucine. Identify it and explain why the master plate matters.
-
-**Solution:**
-1. Missing on minimal but present on complete medium means colony 7 is an auxotroph.
-2. Growth is restored by leucine alone, so it is a leucine auxotroph (leu$^-$); the defect is in leucine biosynthesis.
-3. The master plate is the stock: colony 7 cannot be recovered from a plate it never grew on, so you pick it from the matching position on the master.
-4. This is screening by elimination: you cannot directly select for a cell that does NOT grow, so you compare replicas.
-
-**MCAT Strategy:** Absent on the selective replica, present on the master = the mutant you want. Then supplement one nutrient at a time to name it.
-</details>
-
-<details>
-<summary><b>Example 3: Design an Ames test with its controls</b></summary>
-
-**Question:** A food additive must be screened for mutagenicity. List the plates you need and what each one rules out.
-
-**Solution:**
-1. His$^-$ tester strain, no additive: background spontaneous revertants. Every other count is judged against it.
-2. Additive without liver extract: detects a direct mutagen.
-3. Additive plus liver extract: detects a compound that becomes mutagenic only after metabolism.
-4. A known mutagen: positive control, showing the strain can revert under these conditions.
-5. Read the result as a dose-dependent rise in his$^+$ colonies above background. Growth itself is the readout, because only revertants can grow without histidine.
-
-**MCAT Strategy:** An Ames passage almost always turns on the liver extract. A compound that is positive only with the extract is a procarcinogen.
-</details>`
     }
   ]
 };

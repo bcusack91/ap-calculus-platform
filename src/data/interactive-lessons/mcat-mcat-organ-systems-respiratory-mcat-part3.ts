@@ -67,6 +67,50 @@ Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilat
 <!-- /yield -->`
     },
     {
+      id: 'rsp3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Control & Matching
+
+**Problem 1.** A diabetic patient presents with pH 7.25, low bicarbonate, $P_{CO_2}$ = 28 mmHg (normal 40) and deep, rapid breathing.
+
+- **(a)** Is the patient acidemic or alkalemic, and what is the primary disorder?
+- **(b)** What role does the low CO2 play?
+- **(c)** Is the pH fully corrected, and what would finish the job?
+
+**(a) Primary disorder.** pH 7.25 = acidemia. Low HCO3$^-$ points to a **metabolic acidosis** (ketoacids consume bicarbonate buffer).
+
+**(b) Respiratory compensation.** If low CO2 were the PRIMARY problem, pH would be HIGH (respiratory alkalosis). It isn't — so the low CO2 is **respiratory compensation**: chemoreceptors sense H$^+$ and drive Kussmaul hyperventilation.
+
+**(c) Partial only.** pH approaches but does not reach 7.4; definitive correction requires treating the ketoacidosis (and renal acid excretion). Rule of thumb: the abnormality that EXPLAINS the pH direction is primary; the other value moving the "wrong way" is compensation.
+
+**Problem 2.** A lobe filled with pneumonia exudate is perfused but unventilated. Supplemental 100% O2 barely raises the patient's arterial O2 content.
+
+- **(a)** What happens to blood passing through the shunted lobe?
+- **(b)** What does extra O2 do for blood leaving the healthy alveoli?
+- **(c)** Why does the mixed arterial blood stay low in O2?
+
+**(a) Shunted blood.** It never contacts alveolar gas, so its O2 content stays fixed at venous levels regardless of inspired O2.
+
+**(b) Already on the plateau.** Blood from HEALTHY alveoli is already ~98% saturated; extra O2 adds only a little dissolved gas (Henry's law), not bound O2.
+
+**(c) Mixing.** Near-saturated blood mixed with fixed venous shunt blood yields a low arterial content that O2 therapy cannot fix — the hallmark distinguishing shunt from other causes of hypoxemia.
+
+**Problem 3.** In an experiment, a subject breathes air containing 5% CO2 for two minutes.
+
+- **(a)** Which chemoreceptors respond?
+- **(b)** What happens to ventilation?
+- **(c)** What happens to arterial pH?
+- **(d)** How would breathing 10% O2 (hypoxia, normal CO2) differ?
+
+**(a) Mostly central.** Inspired CO2 raises alveolar and arterial $P_{CO_2}$ → CO2 crosses into the CSF → central chemoreceptors carry most of the response; the faster peripheral bodies add to it.
+
+**(b) Ventilation.** It rises steeply (CO2 is the most potent respiratory stimulus) but cannot fully clear CO2 that keeps arriving in inspired air.
+
+**(c) Arterial pH.** It falls slightly (respiratory acidosis) until the exposure ends.
+
+**(d) The hypoxia contrast.** Low O2 stimulates ONLY peripheral chemoreceptors, and only once $P_{O_2}$ nears ~60 mmHg; the resulting hyperventilation then LOWERS CO2, partially braking its own drive.`
+    },
+    {
       id: 'rsp3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Control & V/Q** 🎯`,
@@ -97,59 +141,29 @@ Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilat
       }
     },
     {
-      id: 'rsp3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Control & Matching
-
-<details>
-<summary><b>Example 1: Diagnose the acid-base disorder from data</b></summary>
-
-**Question:** A diabetic patient presents with pH 7.25, low bicarbonate, $P_{CO_2}$ = 28 mmHg (normal 40), and deep rapid breathing. Identify the primary disorder and the role of the low CO2.
-
-**Solution:**
-1. pH 7.25 = acidemia. Low HCO3$^-$ points to a **metabolic acidosis** (ketoacids consume bicarbonate buffer).
-2. If low CO2 were the PRIMARY problem, pH would be HIGH (respiratory alkalosis). It isn't — so the low CO2 is **respiratory compensation**: chemoreceptors sense H$^+$ and drive Kussmaul hyperventilation.
-3. Compensation is partial — pH approaches but does not reach 7.4; definitive correction requires treating the ketoacidosis (and renal acid excretion). ✓
-
-**Rule of thumb:** find the abnormality that EXPLAINS the pH direction; the other value moving the "wrong way" for its own disorder is compensation.
-</details>
-
-<details>
-<summary><b>Example 2: Why 100% oxygen fails in a shunt</b></summary>
-
-**Question:** A lobe filled with pneumonia exudate is perfused but unventilated. Supplemental 100% O2 barely raises the patient's arterial O2 content. Why?
-
-**Solution:**
-1. Shunted blood never contacts alveolar gas — its O2 content is fixed at venous levels regardless of inspired O2.
-2. Blood from HEALTHY alveoli is already on the flat plateau (~98% saturated); extra O2 adds only a little dissolved gas (Henry's law), not bound O2.
-3. Mixing near-saturated blood with fixed venous shunt blood yields low arterial content that O2 therapy cannot fix — the hallmark distinguishing shunt from other causes of hypoxemia. ✓
-</details>
-
-<details>
-<summary><b>Example 3: Predict the response to breathing 5% CO2</b></summary>
-
-**Question:** In an experiment, a subject breathes air containing 5% CO2 for two minutes. Predict ventilation, arterial pH, and which chemoreceptors respond.
-
-**Solution:**
-1. Inspired CO2 raises alveolar and arterial $P_{CO_2}$ → CO2 crosses into CSF → central chemoreceptors fire; peripheral bodies add to the response.
-2. Ventilation rises steeply (CO2 is the most potent respiratory stimulus) — but cannot fully clear CO2 that keeps arriving in inspired air.
-3. Arterial pH falls slightly (respiratory acidosis) until the exposure ends. ✓
-
-**Contrast:** breathing 10% O2 (hypoxia, normal CO2) stimulates ONLY peripheral chemoreceptors, and only once $P_{O_2}$ nears ~60 mmHg — the resulting hyperventilation then LOWERS CO2, partially braking its own drive.
-</details>`
-    },
-    {
       id: 'rsp3-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Medulla generates rhythm (phrenic nerve → diaphragm); CO2 (read as CSF H⁺ by central chemoreceptors) is the dominant drive; only peripheral carotid/aortic bodies sense low O2 (< ~60 mmHg).
-- Hypoventilation → respiratory acidosis; hyperventilation → respiratory alkalosis; ventilation compensates metabolic disorders (Kussmaul in DKA) but never overshoots.
-- V/Q ≈ 0.8 ideally; apex high V/Q, base low V/Q upright. Shunt = perfused/unventilated (O2-refractory hypoxemia); dead space = ventilated/unperfused (embolism).
-- Pulmonary vessels CONSTRICT in hypoxia (opposite of systemic) to self-correct V/Q; global hypoxia → pulmonary hypertension → right-heart strain.
+- **CO2 drives breathing.** The medulla sets the rhythm; central chemoreceptors read CO2 as CSF H⁺ and dominate resting drive.
+- **Only peripheral bodies sense O2.** Carotid and aortic bodies are the only hypoxemia sensors, responding strongly only below ~60 mmHg.
+- **Ventilation sets pH.** Hypoventilation causes respiratory acidosis, hyperventilation alkalosis; breathing compensates metabolic ones.
+- **V/Q matching.** Ideal ≈ 0.8; upright, the apex is high and the base low; shunt is V/Q → 0, dead space V/Q → ∞.
+
+**Common traps**
+
+- **100% O2 fixing a shunt.** Shunted blood never meets alveolar gas, so extra O2 barely helps; low-V/Q units do respond.
+- **Overshooting compensation.** Compensation moves pH toward normal but never past it; the primary disorder sets pH direction.
+- **Shunt vs. dead space.** An embolus (air, no blood) is dead space; pneumonia or a mucus plug (blood, no air) is a shunt.
+- **Pulmonary vessels dilating.** Pulmonary arterioles CONSTRICT in hypoxia, opposite to systemic ones; global hypoxia raises pulmonary pressure.
 
 <!-- yield:low -->
-- Low-yield extras: the dorsal and ventral respiratory groups (medullary rhythm generators); phrenic nerve roots C3–C5; carotid bodies on CN IX, aortic bodies on CN X; typical V/Q values of ~3 at the apex and ~0.6 at the base; the term cor pulmonale for lung-driven right-heart failure.
+**Low-yield extras**
+
+- The dorsal and ventral respiratory groups (medullary rhythm generators); phrenic nerve roots C3–C5.
+- Carotid bodies signal on CN IX, aortic bodies on CN X.
+- Typical upright V/Q values: ~3 at the apex and ~0.6 at the base.
+- Cor pulmonale is the term for lung-driven right-heart failure.
 <!-- /yield -->`
     }
   ]

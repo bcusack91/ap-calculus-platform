@@ -49,6 +49,50 @@ $$\\text{Key ratio:} \\quad FEV_1 / FVC$$
 - **Opposite-rules table:** pulmonary vessels constrict in hypoxia (systemic dilate); CO2 mostly travels as HCO3$^-$ (O2 mostly on Hb); central chemoreceptors ignore O2.`
     },
     {
+      id: 'rsp4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Integration Passages
+
+**Problem 1.** A passage reports a drug that selectively weakens the diaphragm by 50% in an awake subject. Predict the effects immediately after, before any compensation plateau.
+
+- **(a)** What happens to tidal volume?
+- **(b)** What happens to arterial CO2 and pH?
+- **(c)** How does respiratory rate respond, and how well does that rescue ventilation?
+- **(d)** Summarize TV, rate, $P_{CO_2}$ and pH together.
+
+**(a) Tidal volume.** A weaker inspiratory pump → **tidal volume falls**.
+
+**(b) CO2 and pH.** Alveolar ventilation $(TV - V_{dead}) \\times f$ falls disproportionately (dead space is fixed per breath) → CO2 accumulates: **respiratory acidosis** (↑$P_{CO_2}$, ↓pH).
+
+**(c) Rate.** Rising CO2 fires central chemoreceptors → **rate increases**, partially offsetting — but rapid shallow breathing pays the dead-space tax more often, limiting the rescue.
+
+**(d) Net pattern.** Low TV, high f, elevated CO2, depressed pH. Skill: always let the reflex respond, then ask whether the compensation is efficient given dead-space arithmetic.
+
+**Problem 2.** A figure plots O2 CONTENT (mL/dL) versus $P_{O_2}$ for two patients: one with 50% anemia and one with 50% carboxyhemoglobin. Both curves plateau at half-normal content.
+
+- **(a)** What does the anemia curve look like, and how is tissue unloading?
+- **(b)** What does the carbon monoxide curve look like, and how is tissue unloading?
+- **(c)** Which patient is worse off, and what two features should every such figure be graded on?
+
+**(a) Anemia.** Half the Hb, but each Hb behaves normally → a half-height curve with **normal shape and P50**; unloading at the tissues is proportionally normal, and 2,3-BPG helps further.
+
+**(b) Carbon monoxide.** Half the sites are occupied by CO AND the remaining sites are left-shifted → a half-height curve that also hugs its O2 longer (low P50); tissue unloading is doubly crippled.
+
+**(c) Same plateau, different delivery.** CO poisoning is worse than equivalent anemia because its remaining Hb holds O2 tighter (b). Skill: the plateau height reads capacity; the curve's position (P50) reads affinity. Grade figures on both.
+
+**Problem 3.** A passage describes a young nonsmoker with emphysema and a deficiency of alpha-1-antitrypsin, a protease inhibitor.
+
+- **(a)** What does losing alpha-1-antitrypsin do to the alveolar walls?
+- **(b)** How does that change compliance and diffusion?
+- **(c)** What spirometry pattern results?
+
+**(a) Elastase unchecked.** Alpha-1-antitrypsin normally inhibits neutrophil **elastase**; without it, elastase digests alveolar elastin unchecked (smoking accelerates this by recruiting neutrophils and oxidizing the inhibitor).
+
+**(b) Recoil and area lost.** Elastin loss → ↓ elastic recoil → ↑ compliance; alveolar walls break down and airspaces merge → ↓ diffusion area (Fick).
+
+**(c) Obstructive pattern.** Exhalation depends on recoil, so airflow out is slow and airways collapse: low $FEV_1/FVC$, air trapping (↑RV, ↑TLC).`
+    },
+    {
       id: 'rsp4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Respiratory Integration** 🎯`,
@@ -79,58 +123,21 @@ $$\\text{Key ratio:} \\quad FEV_1 / FVC$$
       }
     },
     {
-      id: 'rsp4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Integration Passages
-
-<details>
-<summary><b>Example 1: Alpha-1-antitrypsin deficiency, mechanistically</b></summary>
-
-**Question:** A passage describes a young nonsmoker with emphysema and a deficiency of alpha-1-antitrypsin, a protease inhibitor. Connect the molecular defect to the spirometry pattern.
-
-**Solution:**
-1. Alpha-1-antitrypsin normally inhibits neutrophil **elastase**; without it, elastase digests alveolar elastin unchecked (smoking accelerates this by recruiting neutrophils and oxidizing the inhibitor).
-2. Elastin loss → ↓ elastic recoil → ↑ compliance; alveolar walls coalesce → ↓ diffusion area (Fick).
-3. Exhalation depends on recoil, so airflow out is slow and airways collapse: **obstructive** pattern — low $FEV_1/FVC$, air trapping (↑RV, ↑TLC). ✓
-</details>
-
-<details>
-<summary><b>Example 2: Interpret a two-curve figure (anemia vs. CO)</b></summary>
-
-**Question:** A figure plots O2 CONTENT (mL/dL) versus $P_{O_2}$ for: (a) 50% anemia, and (b) 50% carboxyhemoglobin. Both plateau at half-normal content. How do the curves — and the patients — differ?
-
-**Solution:**
-1. Anemia: half the Hb, but each Hb behaves normally → half-height curve with **normal shape and P50**; unloading at tissues is proportionally normal, and 2,3-BPG helps further.
-2. CO: half the sites occupied by CO AND the remaining sites left-shifted → half-height curve that also hugs its O2 longer (low P50); tissue unloading is doubly crippled.
-3. Same content at the plateau, very different delivery — CO poisoning is worse than equivalent anemia. ✓
-
-**Skill:** the plateau height reads capacity; the curve's position (P50) reads affinity. Grade figures on both.
-</details>
-
-<details>
-<summary><b>Example 3: Predict four variables at once</b></summary>
-
-**Question:** A passage reports a drug that selectively paralyzes the diaphragm by 50% in an awake subject. Predict tidal volume, respiratory rate, arterial CO2, and pH immediately after, before any compensation plateau.
-
-**Solution:**
-1. Weaker inspiratory pump → **tidal volume falls**.
-2. Alveolar ventilation $(TV - V_{dead}) \\times f$ falls disproportionately (dead space is fixed per breath) → CO2 accumulates: **respiratory acidosis** (↑$P_{CO_2}$, ↓pH).
-3. Rising CO2 fires central chemoreceptors → **rate increases**, partially offsetting — but rapid shallow breathing pays the dead-space tax more often, limiting the rescue.
-4. Net: low TV, high f, elevated CO2, depressed pH. ✓
-
-**Skill:** always let the reflex respond, then ask whether the compensation is efficient given dead-space arithmetic.
-</details>`
-    },
-    {
       id: 'rsp4-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Altitude timeline: peripheral chemoreceptor hyperventilation + respiratory alkalosis (minutes) → renal HCO3⁻ dumping + ↑2,3-BPG (days) → EPO/hematocrit (weeks).
-- Exercise keeps arterial gases constant (feedforward ventilation); altitude does not — a favorite discrimination.
-- $FEV_1/FVC$ low = obstructive (asthma, bronchitis, emphysema; air trapping raises RV/TLC); normal-high ratio with small volumes = restrictive (fibrosis, weakness).
-- Emphysema = recoil/area loss (elastase vs. alpha-1-antitrypsin); fibrosis = stiffness + thick membrane.
-- Figure skills: plateau height = capacity, P50 = affinity; sort responses by timescale; propagate any perturbation through ventilation → diffusion → transport → V/Q.`
+- **Altitude timeline.** Minutes: peripheral-chemoreceptor hyperventilation and alkalosis; days: renal HCO3⁻ loss, ↑2,3-BPG; weeks: EPO.
+- **Exercise keeps gases normal.** In moderate exercise, feedforward ventilation tracks metabolism, so arterial O2 and CO2 stay near rest.
+- **Obstructive vs. restrictive.** Low $FEV_1/FVC$ with air trapping is obstructive; small volumes with a normal-high ratio is restrictive.
+- **Read figures on two axes.** Plateau height reads O2 capacity; the curve's position (P50) reads Hb affinity.
+
+**Common traps**
+
+- **Altitude like exercise.** Acute altitude lowers arterial O2 and CO2; moderate exercise leaves both essentially unchanged.
+- **Ventilation fixing altitude pH.** Hyperventilation persists; the kidneys move pH back toward normal over days by excreting bicarbonate.
+- **Fibrosis as obstructive.** Fibrotic lungs empty fast from strong recoil, so $FEV_1/FVC$ is normal or high, not low.
+- **CO equals anemia.** At equal content loss, CO also left-shifts the curve, so tissue unloading is far worse.`
     }
   ]
 };

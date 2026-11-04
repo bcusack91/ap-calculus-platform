@@ -49,15 +49,44 @@ Mnemonic: SNoW DRoP (Southern-DNA, Northern-RNA, Western-Protein). A blot = elec
       type: 'text' as const,
       content: `### Worked Example — One Family, Three Blots
 
-**Passage-style problem.** A recessive disease gene is studied in a family. The normal allele cut with enzyme X yields fragments of 3 kb + 2 kb on a Southern blot probed within the region; the disease allele has lost the internal X site, yielding a single 5 kb band. Both parents are unaffected; they have one affected child and one unaffected child.
+**Problem 1.** For an autosomal recessive disease gene, the normal allele cut with enzyme X gives 3 kb + 2 kb bands on a Southern blot probed within the region; the disease allele has lost the internal X site, giving one 5 kb band. Unaffected parents have one affected and one unaffected child.
 
-**Question 1 — Predict each family member's Southern pattern.** The affected child (two disease alleles): 5 kb only. Both parents must be carriers: 5 kb AND 3 kb AND 2 kb — all three bands (each parent has one normal allele contributing 3+2 and one mutant contributing 5). The unaffected sibling: either three bands (carrier, probability 2/3 among unaffected offspring) or two bands (3+2 only; homozygous normal, probability 1/3). Genotype-to-band-pattern translation plus Mendelian probability in one question — a classic MCAT fusion.
+- **(a)** What band pattern does the affected child show?
+- **(b)** What are the parents' genotypes, and what pattern does each show?
+- **(c)** What patterns could the unaffected sibling show, and how likely is each?
 
-**Question 2 — A northern blot of the affected child's tissue shows normal-size, normal-abundance mRNA. What does this add?** The mutation does not prevent transcription or grossly alter the transcript — consistent with the lost restriction site being a point mutation (missense) rather than a large deletion. The lesion's effect must appear at the protein level or beyond.
+**(a) Affected child.** Two disease alleles: the 5 kb band only.
 
-**Question 3 — A western blot shows the affected child's protein at normal size but reduced 10-fold in amount. Propose a mechanism.** Normal size argues against truncation; reduced quantity with normal mRNA points to post-translational loss — a missense change that destabilizes folding, with quality-control degradation removing most molecules (the deltaF508 logic from the translation lesson). A pulse-chase (normal pulse labeling, fast chase decay) would confirm accelerated turnover over reduced synthesis.
+**(b) Parents.** An affected child needs a disease allele from each parent, so both are carriers: 5 kb AND 3 kb AND 2 kb — all three bands (the normal allele contributes 3+2, the mutant contributes 5).
 
-**Question 4 — Sanger sequencing of the affected child's allele uses a primer just upstream of the suspected codon. The lane read (new strand, bottom to top) begins 5'-CACGTG...-3' where the normal read begins 5'-CACGAG...-3'. Name the DNA change.** Align the reads: position 5 shows A-to-T... careful — the read is the NEW strand; the template base changed from T (pairs A) to A (pairs T). Report it on the coding convention the passage uses, and only then translate to an amino acid change. The orientation discipline — read strand vs template vs coding — is where sequencing questions are won or lost.`
+**(c) Unaffected sibling.** With two carrier parents, either three bands (carrier, probability 2/3 among unaffected offspring) or two bands (3+2 only; homozygous normal, probability 1/3). Genotype-to-band-pattern translation plus Mendelian probability — a classic MCAT fusion.
+
+**Problem 2.** In the affected child's tissue, a northern blot shows normal-size, normal-abundance mRNA from this gene. A western blot shows the protein at normal size but at one-tenth the normal amount.
+
+- **(a)** What does the northern blot rule out?
+- **(b)** What does the normal protein size rule out?
+- **(c)** What mechanism fits normal mRNA but 10-fold less protein?
+- **(d)** Which experiment would confirm that mechanism?
+
+**(a) Not a transcription defect.** The mutation does not prevent transcription or grossly alter the transcript — consistent with the lost restriction site being a point mutation (missense) rather than a large deletion. The effect must appear at the protein level or beyond.
+
+**(b) Not truncation.** A normal-size protein argues against a premature stop.
+
+**(c) Post-translational loss.** A missense change that destabilizes folding, with quality-control degradation removing most molecules (the deltaF508 logic from the translation lesson).
+
+**(d) Pulse-chase.** Normal pulse labeling with fast decay during the chase would confirm accelerated turnover over reduced synthesis.
+
+**Problem 3.** Sanger sequencing of the affected child's allele uses a primer just upstream of the suspected codon. The read (new strand, bottom to top) begins 5'-CACGTG...-3'; the normal read begins 5'-CACGAG...-3'.
+
+- **(a)** At which position do the two reads differ, and how?
+- **(b)** What base change does that imply on the template strand?
+- **(c)** If the new strand matches the coding strand and the reading frame starts at its first base, what codon change results?
+
+**(a) Align the reads.** Position 5: A in the normal read, T in the patient's read.
+
+**(b) Template change.** The read is the NEW strand, complementary to the template: the template base changed from T (pairs with A) to A (pairs with T).
+
+**(c) Codon change.** CAC GAG becomes CAC GTG: CAC (His) is unchanged and GAG (Glu) becomes GTG (Val), a missense change. Report the DNA change in the passage's coding convention before translating — read strand vs template vs coding is where sequencing questions are won or lost.`
     },
     {
       id: 'biot2-quiz1',
@@ -87,11 +116,11 @@ Mnemonic: SNoW DRoP (Southern-DNA, Northern-RNA, Western-Protein). A blot = elec
             explanation: `Polymerization is a 3'-OH attacking the incoming dNTP's alpha-phosphate; remove that hydroxyl (di-deoxy: missing at both 2' AND 3') and the chain is a dead end. Because ddNTPs are a small minority, termination happens at random instances of each base, generating the nested fragment set whose lengths spell the sequence. The same logic — no usable 3'-OH — underlies the chain-terminating drugs acyclovir and AZT — one mechanism, three exam costumes. ddNTPs retain the triphosphate and base; those options test careless reading.`
           },
           {
-            question: `The sickle cell mutation destroys an MstII restriction site in the beta-globin gene. On a Southern blot of MstII-digested DNA probed at that locus, a heterozygous carrier shows:`,
-            options: [`Both the normal and the mutant band patterns`, `Only the single larger mutant fragment`, `Only the two smaller normal fragments`, `One intermediate-sized hybrid fragment`],
+            question: `A point mutation CREATES a new restriction site inside a 6 kb fragment, splitting it into 4 kb + 2 kb. On a Southern blot probed across the whole 6 kb region, a heterozygote shows:`,
+            options: [`Both the 6 kb band and the 4 kb and 2 kb bands`, `Only the single 6 kb normal fragment`, `Only the 4 kb and 2 kb mutant fragments`, `One intermediate-sized hybrid fragment`],
             correctAnswer: 0,
             yield: 'HIGH',
-            explanation: `Each allele reports independently: the normal chromosome still carries the internal MstII site (two fragments), while the mutant chromosome, lacking it, yields one fused larger fragment — a heterozygote therefore displays the union of both patterns. This RFLP logic is direct genotyping: homozygotes show one pattern or the other, carriers show both. Generalize it — ANY mutation that adds or removes a cut site is detectable by fragment-size change, no sequencing required.`
+            explanation: `Each allele reports independently: the normal chromosome lacks the new site and gives the uncut 6 kb fragment, while the mutant chromosome is cut into 4 kb and 2 kb — so a heterozygote displays the union of both patterns. This is the sickle-cell RFLP logic run the other way (there the mutation destroys a site, giving one larger fragment): whether a mutation adds or removes a cut site, homozygotes show one pattern and carriers show both. Fragments never fuse into an intermediate size, because each DNA molecule is either cut at the site or not.`
           },
           {
             question: `Compared with a microarray, RNA-seq (sequencing all cDNA from a sample) has the key advantage that it:`,
@@ -108,16 +137,22 @@ Mnemonic: SNoW DRoP (Southern-DNA, Northern-RNA, Western-Protein). A blot = elec
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Electrophoresis: uniform negative DNA pulled to the anode; the GEL separates by size (small runs far; migration distance falls roughly linearly as log(size) rises); SDS gives proteins the same uniform charge for SDS-PAGE
-- Chain terminators: ddNTPs, and nucleoside-analog drugs (AZT, acyclovir), lack a usable 3'-OH
-- SNoW DRoP: Southern = DNA (gene present, copy number, RFLP), northern = RNA (transcribed? transcript size/splicing), western = protein (made? size? amount?) — probes are DNA/RNA for the first two, antibodies for the third
-- RFLP: site destroyed = fewer, larger fragments; heterozygotes show BOTH allele patterns — genotyping from band patterns plus Mendelian probability
-- Sanger: ddNTPs lack the 3'-OH, terminating chains at random positions of one base; read the gel bottom-up = new strand 5' to 3'; the read is the template's complement — reverse-complement before reporting
-- NGS/RNA-seq: probe-free, massively parallel, finds novel transcripts and splice variants; microarrays are hybridization to known probes
-- Interpretation habits: extra bands = extra site or partial digest; DNA present but no RNA = regulation, not deletion; western shifts = PTM, cleavage, or glycosylation
+- **Gels sort by size.** DNA's uniform negative charge pulls it to the anode; the gel sieves, so small fragments run farthest.
+- **SNoW DRoP.** Southern = DNA, northern = RNA, western = protein; nucleic-acid probes for the first two, antibodies for the third.
+- **RFLP genotyping.** A lost cut site gives fewer, larger fragments; heterozygotes show both allele patterns.
+- **Sanger chain termination.** ddNTPs lack the 3'-OH; read the gel bottom-up to get the new strand 5' to 3'.
+
+**Common traps**
+
+- **Charge separating DNA.** Charge per base is constant for DNA; the gel matrix, not the charge, separates fragments by size.
+- **Southern for expression.** A Southern shows only that the gene is present; transcription needs a northern blot or RT-qPCR.
+- **Reporting the read as template.** The Sanger read is the template's complement; reverse-complement it before reporting the template.
+- **Discordant blots as error.** DNA present but no RNA means regulation, not deletion; a shifted western band can mean a PTM or cleavage.
 
 <!-- yield:low -->
-- Low-yield extras: the sickle mutation destroys an MstII site
+**Low-yield extras**
+
+- The sickle mutation destroys an MstII site.
 <!-- /yield -->`
     }
   ]

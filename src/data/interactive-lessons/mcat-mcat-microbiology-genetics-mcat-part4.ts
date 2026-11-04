@@ -13,7 +13,7 @@ export const mcatMicrobialGeneticsPart4Data = {
 
 ### Prophages and Induction
 
-A temperate phage can integrate its genome into the host chromosome as a **prophage**, which is copied passively with the chromosome. A phage **repressor** keeps the lytic genes off and makes the lysogen **immune** to superinfection by the same phage. **Induction:** DNA damage, such as UV light, leads to destruction of the repressor; the prophage excises, enters the lytic cycle, and the cell lyses. If excision is imprecise at that moment, host genes beside the insertion site ride along: specialized transduction (Part 2).
+A temperate phage can integrate its genome into the host chromosome as a **prophage**, which is copied passively with the chromosome. A phage **repressor** keeps the lytic genes off and makes the lysogen **immune** to superinfection by the same phage. **Induction:** DNA damage, such as UV light, leads to destruction of the repressor; the prophage excises, enters the lytic cycle, and the cell lyses. If excision is imprecise at that moment, host genes beside the insertion site ride along into the next cell the phage infects: specialized transduction.
 
 <!-- yield:low -->
 - The damage sensor is the host SOS response: activated RecA promotes self-cleavage of the phage repressor.
@@ -21,7 +21,7 @@ A temperate phage can integrate its genome into the host chromosome as a **proph
 
 ### Hershey-Chase: DNA Is the Genetic Material of Phage
 
-T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cysteine; DNA contains no sulfur), or with **$^{32}$P**, which labels DNA (its phosphate backbone; protein contains almost no phosphorus). After infection, a blender sheared the attached phage coats off the cells, and centrifugation pelleted the cells while the empty coats stayed in the supernatant. **$^{32}$P went into the cells and turned up in progeny phage; $^{35}$S stayed outside.** The material that enters and is inherited is DNA. It is the phage counterpart of the Avery experiment (Part 2).
+T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cysteine; DNA contains no sulfur), or with **$^{32}$P**, which labels DNA (its phosphate backbone; protein contains almost no phosphorus). After infection, a blender sheared the attached phage coats off the cells, and centrifugation pelleted the cells while the empty coats stayed in the supernatant. **$^{32}$P went into the cells and turned up in progeny phage; $^{35}$S stayed outside.** The material that enters and is inherited is DNA. It is the phage counterpart of the Avery, MacLeod and McCarty experiment, in which only DNase destroyed the pneumococcal "transforming principle".
 
 ### Mapping and Counting Genes in Phage
 
@@ -45,7 +45,7 @@ T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cyst
 
 RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and retroviruses with **reverse transcriptase**. Most of these enzymes **lack 3′→5′ proofreading** (coronaviruses are a rare exception), so their error rates run thousands of times or more above cellular DNA replication, which is proofread and then mismatch-repaired. DNA viruses use proofreading DNA polymerases and are far more stable.
 
-- An infected patient carries a swarm of related variants (a quasispecies), so drug-resistant variants exist **before** treatment, the fluctuation-test logic of Part 1. Combination therapy, as for HIV, is the answer: a variant resistant to all drugs at once is far rarer.
+- An infected patient carries a swarm of related variants (a quasispecies), so drug-resistant variants exist **before** treatment. This is the fluctuation-test logic: in bacterial cultures, resistance mutations arise at random during growth, before the selecting agent arrives, rather than in response to it. Combination therapy, as for HIV, is the answer: a variant resistant to all drugs at once is far rarer.
 - In surface proteins, the same error rate drives **antigenic drift**.
 
 <!-- yield:low -->
@@ -71,6 +71,67 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
 | New spacer in the CRISPR array; immunity to one phage only | CRISPR acquisition |
 | Virus gains whole segments from another strain | Reassortment (shift) |
 | Scattered point changes accumulate in HA or NA | Drift |`
+    },
+    {
+      id: 'mg4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Experiment Reading
+
+**Problem 1.** In one patient, a carbapenem-resistance gene first sits on a Klebsiella chromosome between two copies of an insertion sequence. Later the same block is on a large plasmid with pilus genes and two other resistance genes, in Klebsiella and then in E. coli.
+
+- **(a)** Which mechanism moved the block from the chromosome to the plasmid?
+- **(b)** Which mechanism carried it from Klebsiella into E. coli?
+- **(c)** What lab results would confirm the between-cell step?
+- **(d)** Why could treating with one of the other two drugs still enrich carbapenem resistance?
+
+**(a) Transposition.** A resistance gene between two copies of an insertion sequence is a composite transposon. It changed location inside one cell, chromosome → plasmid, which is transposition, a within-cell move.
+
+**(b) Conjugation.** The plasmid is an R plasmid: resistance genes plus transfer (pilus) genes, so it can cross species through a mating bridge. Independent mutation cannot explain an identical block in two species on one plasmid.
+
+**(c) The two controls.** Transfer would be unaffected by DNase, which rules out naked DNA, and blocked by a filter that keeps the cells apart, because conjugation needs contact.
+
+**(d) Co-selection.** Any one of the three drugs selects for the whole plasmid. Separate within-cell moves (transposition) from between-cell moves (conjugation, transduction, transformation): most resistance passages chain one of each.
+
+**Problem 2.** Five recessive mutants with the same phenotype are tested in all pairs. Wild type (complementation) appears for every pair EXCEPT 1 + 3 and 2 + 4.
+
+- **(a)** Which mutants must share a gene?
+- **(b)** Where does mutant 5 belong?
+- **(c)** How many genes are there?
+- **(d)** Can two mutants in one group ever give wild-type progeny, and what would that measure?
+
+**(a) Group the failures.** Failure to complement puts mutations in the same gene: 1 and 3 form one group, 2 and 4 another.
+
+**(b) On its own.** Mutant 5 complements every other mutant, so it is a third group by itself.
+
+**(c) Three genes.** Three complementation groups = three genes: {1, 3}, {2, 4} and {5}. Draw the grid, circle the failures, and group by them; mutants that complement everything stand alone.
+
+**(d) Rarely, by recombination.** Two mutants within one group can still give rare wild-type progeny by recombination; that tests the distance between sites, not gene identity.
+
+**Problem 3.** Isolate A (year 1) and isolate B (year 2) differ only by 7 amino acid changes scattered through HA. Isolate C (year 3) has an HA segment that matches a bird strain far better than any human strain; its other seven segments match isolate B.
+
+- **(a)** What kind of change separates A from B, and what season should follow?
+- **(b)** What kind of change separates B from C?
+- **(c)** What public-health risk does isolate C carry?
+- **(d)** Which kind of genome does each change require?
+
+**(a) Antigenic drift.** Scattered point changes in one surface protein = antigenic drift. Existing immunity still partly works, so expect a typical season and an updated vaccine.
+
+**(b) Antigenic shift.** A whole foreign HA segment on a human-strain background = reassortment = antigenic shift.
+
+**(c) Pandemic potential.** The population has little immunity to the new HA, so C carries pandemic potential.
+
+**(d) Segments for shift.** Any RNA virus can drift, but only a segmented genome allows the B → C step; an unsegmented RNA virus could only drift and recombine. Whole segments swapped = shift; small changes accumulating = drift.
+
+<!-- yield:low -->
+**Problem 4 (low-yield).** Two rII mutants are crossed on E. coli B, and the progeny are plated on E. coli K(λ), where only wild type grows. Wild-type plaques are 0.001 of the total progeny.
+
+- **(a)** Why does each crossover give only one visible recombinant?
+- **(b)** What is the map distance between the two mutations?
+
+**(a) One class seen.** Each crossover makes one wild-type and one double-mutant recombinant, and only wild type grows on K(λ).
+
+**(b) Double it.** Total recombinants are 2 × 0.001 = 0.002, or 0.2 map units.
+<!-- /yield -->`
     },
     {
       id: 'mg4-quiz1',
@@ -114,11 +175,11 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
             explanation: `A whole segment from another strain was swapped in, which is reassortment, the basis of antigenic shift. Drift is gradual point mutation, influenza does not integrate into the host genome, and its genome is segmented, so no single-molecule recombination was needed to combine the two parents.`
           },
           {
-            question: `A carbapenem-resistance gene appears in E. coli after co-culture with resistant Klebsiella. Transfer is unaffected by DNase, is blocked by a filter that keeps the cells apart, and the gene sits on a large plasmid with pilus genes. The gene moved between the cells by:`,
+            question: `In mixed culture, a tetracycline-resistance gene passes from Salmonella to Shigella. Transfer requires direct cell contact and is unaffected by DNase, and the new Shigella recipients can then pass the resistance on to a third strain. The gene moved between the cells by:`,
             options: [`Transformation by DNA released from lysed donor cells`, `Generalized transduction by a phage of the donor`, `Transposition out of the donor's chromosome`, `Conjugative transfer of a resistance plasmid`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `A contact requirement, DNase resistance and a plasmid that carries pilus genes together identify conjugation of an R plasmid, which can cross species. DNase would stop transformation, a phage would pass the filter, and transposition moves a gene within one cell, not between cells.`
+            explanation: `A contact requirement, DNase resistance and recipients that become donors themselves identify conjugation of an R plasmid, which carries transfer genes along with resistance and can cross species. DNase would stop transformation, a phage needs no cell contact, and transposition moves a gene within one cell, not between cells.`
           },
           {
             question: `A culture of lysogenic bacteria is exposed to UV light, and hours later most cells lyse, releasing phage. The UV triggered lysis because DNA damage:`,
@@ -135,67 +196,22 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Prophage = integrated temperate phage; its repressor keeps lytic genes off and blocks superinfection; DNA damage → repressor destroyed → induction (imprecise excision = specialized transduction)
-- Hershey-Chase: $^{32}$P (DNA) entered cells and reached progeny; $^{35}$S (protein) stayed outside → DNA is the genetic material
-- Complementation = wild type in nearly every co-infected cell → different genes; failure → same gene; complementation groups = genes; recessive mutations only, with the cis arrangement as the control
-- Recombination = rare, builds a heritable wild-type genome, works within one gene, frequency maps distance
-- RNA polymerases and reverse transcriptase lack proofreading → swarms of variants, preexisting drug resistance (combination therapy), antigenic drift
-- Influenza: 8 segments → reassortment → antigenic shift (new HA or NA, pandemic risk); drift = point mutations (annual vaccines)
-- Integration habit: DNase? contact? phage? within one cell? whole segments or point changes? Each clue names one mechanism
+- **Prophage and induction.** A phage repressor keeps the prophage silent; DNA damage leads to the repressor's destruction, and lysis.
+- **Hershey-Chase.** $^{32}$P (DNA) entered the cells and reached progeny; $^{35}$S (protein) stayed outside → DNA is the genetic material.
+- **Complementation vs. recombination.** Rescue in nearly every co-infected cell means different genes; rare heritable wild type is recombination.
+- **Drift vs. shift.** Unproofread RNA copying drives drift in HA and NA; a swapped whole segment is shift, with pandemic risk.
+
+**Common traps**
+
+- **Shared phenotype, shared gene.** Mutants with one phenotype can lie in different genes; only failure to complement groups them.
+- **Any virus can shift.** Only segmented genomes such as influenza's reassort; unsegmented viruses can only drift and recombine.
+- **Resistance waits for the drug.** Error-prone copying makes resistant variants before treatment, which is why combination therapy works.
+- **Complementation tests dominant mutants.** It works only for recessive mutations, with the cis arrangement as the control.
 
 <!-- yield:low -->
-- Low-yield extras: SOS/RecA-driven repressor cleavage; Benzer's rII system, the cistron, and doubling the wild-type recombinant frequency to get map distance; intragenic complementation; order-of-magnitude error rates
-<!-- /yield -->`
-    },
-    {
-      id: 'mg4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Experiment Reading
+**Low-yield extras**
 
-<details>
-<summary><b>Example 1: Sort five mutants into genes</b></summary>
-
-**Question:** Five recessive mutants with the same phenotype are tested in all pairs. Wild type (complementation) appears for every pair EXCEPT 1 + 3 and 2 + 4. How many genes are there, and which mutants share one?
-
-**Solution:**
-1. Failure to complement puts mutations in the same gene: 1 and 3 form one group, 2 and 4 another.
-2. Mutant 5 complements every other mutant, so it is a third group on its own.
-3. Three complementation groups = three genes: {1, 3}, {2, 4} and {5}.
-4. Two mutants within one group can still give rare wild-type progeny by recombination; that tests distance between sites, not gene identity.
-
-**MCAT Strategy:** Draw the grid, circle the failures, and group by them. Mutants that complement everything stand alone.
-</details>
-
-<details>
-<summary><b>Example 2: A resistance-spread scenario, step by step</b></summary>
-
-**Question:** In a hospital, carbapenem resistance first appears in one patient's Klebsiella, then in E. coli from the same patient. Sequencing shows (i) in an early Klebsiella isolate the resistance gene is on the chromosome, between two copies of an insertion sequence; (ii) in later Klebsiella and in the E. coli, the same IS-flanked block sits on a large plasmid that carries pilus genes; (iii) the plasmid also carries two other resistance genes. Which mechanism did each step use, and what follows clinically?
-
-**Solution:**
-1. Chromosome → plasmid inside one Klebsiella cell: an IS-flanked block that changed location is a composite transposon, so the step is transposition.
-2. Klebsiella → E. coli: a plasmid with transfer genes crossing species is conjugation of an R plasmid. A lab test would show transfer that resists DNase and is blocked by a filter.
-3. Clinically, any one of the three drugs now selects for the whole plasmid, so treating with an unrelated antibiotic can still enrich carbapenem resistance.
-4. Not mutation: the identical block in two species, on one plasmid, cannot be explained by independent mutation.
-
-**MCAT Strategy:** Separate within-cell moves (transposition) from between-cell moves (conjugation, transduction, transformation). Most resistance passages chain one of each.
-</details>
-
-<details>
-<summary><b>Example 3: Drift or shift from sequence data?</b></summary>
-
-**Question:** Isolate A (year 1) and isolate B (year 2) differ only by 7 amino acid changes scattered through HA. Isolate C (year 3) has an HA segment that matches a bird strain far better than any human strain, while its other seven segments match isolate B. Classify each change and predict the public-health effect.
-
-**Solution:**
-1. A → B: scattered point changes in one surface protein = antigenic drift. Existing immunity still partly works, so expect a typical season and an updated vaccine.
-2. B → C: a whole foreign HA segment on a human-strain background = reassortment = antigenic shift.
-3. Little population immunity to the new HA means pandemic potential.
-4. Only a segmented genome allows step 2; an unsegmented RNA virus could only drift and recombine.
-
-**MCAT Strategy:** Whole segments swapped = shift; small changes accumulating = drift.
-</details>
-
-<!-- yield:low -->
-**Low-yield worked example: fine-structure distance from a phage cross.** Two rII mutants are crossed on E. coli B, and the progeny are plated on E. coli K(λ), where only wild type grows. Wild-type plaques are 0.001 of the total progeny. Each crossover makes one wild-type and one double-mutant recombinant, and only wild type is seen, so total recombinants are 2 × 0.001 = 0.002, or 0.2 map units.
+SOS/RecA-driven repressor cleavage; Benzer's rII system, the cistron, and doubling the wild-type recombinant frequency to get map distance; intragenic complementation; order-of-magnitude error rates.
 <!-- /yield -->`
     }
   ]

@@ -128,17 +128,37 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
 <!-- /yield -->`
     },
     {
+      id: 'mt1-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Reading a FRAP Experiment
+
+**Problem.** A membrane protein is tagged with a fluorophore and a small spot is bleached with a laser. At 37°C, fluorescence in the spot recovers to 40% of its starting level and stays there. The experiment is then repeated with extra cholesterol in the membrane.
+
+- **(a)** Why does any fluorescence return to the bleached spot?
+- **(b)** What does the 60% that never returns tell you?
+- **(c)** At 10°C, how does the added cholesterol change the rate of recovery?
+- **(d)** At 37°C, how does the added cholesterol change the rate of recovery?
+
+**(a) Lateral diffusion.** The laser destroys the fluorescence in the spot, so any returning signal must come from unbleached tagged proteins diffusing in from the surrounding membrane. Recovery is direct evidence that the membrane is fluid.
+
+**(b) An immobile fraction.** Only 40% of the protein is mobile. The other 60% cannot diffuse back in, most likely because it is anchored to the cytoskeleton or confined to a domain.
+
+**(c) Faster in the cold.** At low temperature cholesterol prevents the tails from packing tightly, so the membrane stays more fluid than it would without it. The mobile protein diffuses back faster.
+
+**(d) Slower at body temperature.** At 37°C cholesterol stiffens the membrane, so lateral diffusion slows and the mobile protein takes longer to refill the spot. Cholesterol buffers fluidity in both directions.`
+    },
+    {
       id: 'mt1-quiz2',
       type: 'multiple-choice' as const,
       content: `**Fluidity Experiments** 🎯`,
       exercise: {
         questions: [
           {
-            question: `In a FRAP experiment, a membrane protein shows only 40% fluorescence recovery even after long times. The best interpretation is:`,
-            options: [`The laser physically destroyed the membrane in the bleached spot`, `Much of the protein is immobilized by the cytoskeleton`, `The protein was internalized by endocytosis meanwhile`, `The fluorophore spontaneously regenerated over time`],
+            question: `In FRAP experiments, protein A recovers to 95% of its starting fluorescence and protein B to only 40%. After a drug that disassembles the cortical cytoskeleton is added, B's plateau rises but A's does not change. The best interpretation is:`,
+            options: [`Protein A, not B, is anchored to the cytoskeleton`, `Much of protein B was tethered to the cytoskeleton`, `The drug made the whole bilayer far more fluid for both`, `The drug regenerated bleached fluorophores in B`],
             correctAnswer: 1,
             yield: 'MEDIUM',
-            explanation: `The mobile fraction (here 40%) diffuses back into the bleached spot; the immobile fraction (60%) cannot, most often because it is tethered to the cytoskeleton or trapped in a domain. Photobleaching is irreversible, so recovery must come from lateral diffusion of unbleached neighbors — the whole basis of the assay.`
+            explanation: `B's 40% plateau means 60% of B was immobile. Disassembling the cytoskeleton freed that tethered fraction, so B's plateau rose; A was already almost fully mobile, so it had nothing to release. If A were the anchored protein, the drug would have raised A's plateau instead. A general rise in bilayer fluidity would speed recovery of both proteins rather than lift only B's plateau, and photobleaching is irreversible, so recovery never comes from regenerated fluorophore.`
           },
           {
             question: `A cell line lacking flippase activity for phosphatidylserine would most likely:`,
@@ -155,16 +175,22 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Fluid mosaic model: amphipathic phospholipid bilayer + mobile proteins; lateral diffusion fast, flip-flop rare (flippase-catalyzed)
-- Permeability hierarchy: small nonpolar >> small uncharged polar >> large polar >> ions (charge is the strictest barrier)
-- High partition coefficient (lipophilic) → crosses bilayer → intracellular receptors (steroids); hydrophilic ligands need surface receptors
-- Fluidity increases with unsaturation, shorter tails, higher temperature; cholesterol buffers fluidity in both directions
-- FRAP: fluorescence recovery = lateral mobility; incomplete recovery = immobile (anchored) fraction
-- Membrane asymmetry is active and meaningful: PS on the outer leaflet is an apoptotic "eat me" signal
-- Carbohydrates (glycolipids/glycoproteins) always face the extracellular side
+- **Fluid mosaic membrane.** Lipids and many proteins diffuse laterally fast; flip-flop is rare; carbohydrates face outside only.
+- **Permeability hierarchy.** Small nonpolar > small uncharged polar > large polar > ions; charge is the strictest barrier.
+- **Fluidity and FRAP.** Unsaturation, shorter tails and heat raise fluidity; FRAP recovery shows lateral mobility.
+- **Asymmetry is maintained.** Flippases keep PS on the inner leaflet; PS on the outer leaflet is an apoptotic "eat me" signal.
+
+**Common traps**
+
+- **Small means permeable.** Charge beats size: even H$^+$, the smallest ion, cannot cross the hydrophobic core unaided.
+- **Affinity places the receptor.** Steroids bind intracellular receptors because a high partition coefficient lets them cross.
+- **Cholesterol only stiffens.** It stiffens at body temperature but prevents tight packing in the cold, buffering both ways.
+- **Partial recovery means damage.** Bleaching does not harm the membrane; a plateau below full recovery marks an immobile fraction.
 
 <!-- yield:low -->
-- Low-yield extras: the mouse-human cell fusion is the Frye-Edidin experiment; lipid anchors come as GPI (outer leaflet) or prenyl/palmitoyl groups (inner leaflet); spectrin-ankyrin is the red-cell tether; scramblases randomize the leaflets during apoptosis
+**Low-yield extras**
+
+- The mouse-human cell fusion is the Frye-Edidin experiment; lipid anchors come as GPI (outer leaflet) or prenyl/palmitoyl groups (inner leaflet); spectrin-ankyrin is the red-cell tether; scramblases randomize the leaflets during apoptosis
 <!-- /yield -->`
     }
   ]

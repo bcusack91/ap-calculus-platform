@@ -48,7 +48,7 @@ Taste cells are modified epithelial cells (not neurons) in taste buds; all five 
 
 ### The Passage Toolkit
 
-**1. Knockout logic.** Given a mutation, find the step in the transduction cascade and predict the deficit: no transducin → rods cannot respond to light (night blindness); no heat-gated nociceptor channel → blunted response to painful heat and capsaicin; no shared sweet/umami receptor subunit → loss of sweet and umami with bitter intact. Deficits are MODALITY-SPECIFIC when the broken protein is pathway-specific.
+**1. Knockout logic.** Given a mutation, find the step in the transduction cascade and predict the deficit: no transducin → rods cannot respond to light (night blindness); no taste-cell Na+ channel → salty taste lost, sweet and bitter intact; no hair-cell mechanically gated channel → hearing AND balance lost, because both organs use hair cells, with vision intact. Deficits are MODALITY-SPECIFIC when the broken protein is pathway-specific.
 
 **2. Psychophysics data.** Weber fraction tables: smaller $k = \\Delta I / I$ means finer discrimination. Expect questions comparing modalities or testing whether data actually obey Weber's law (check whether $\\Delta I / I$ stays constant across baselines).
 
@@ -65,23 +65,44 @@ Taste cells are modified epithelial cells (not neurons) in taste buds; all five 
       type: 'text' as const,
       content: `### Worked Example — A Knockout Passage Across Two Senses
 
-**Passage-style problem.** Researchers engineer three mouse lines and test each on (a) finding buried food by smell, (b) preference for sucrose solution vs. water, (c) avoidance of quinine (bitter) solution, and (d) withdrawal from a 50 degrees C hotplate.
+**Problem 1.** Mice lacking the G protein alpha subunit expressed only in olfactory receptor neurons are tested on finding buried food by smell, sucrose preference, quinine (bitter) avoidance, and withdrawal from a 50 degrees C hotplate.
 
-- Line 1 lacks the G protein alpha subunit expressed only in olfactory receptor neurons.
-- Line 2 lacks the receptor subunit shared by the sweet and umami GPCRs.
-- Line 3 lacks a heat- and capsaicin-gated cation channel in nociceptor endings.
+- **(a)** Can these mice find the buried food?
+- **(b)** Which of the other three tests are affected?
+
+**(a) Smell.** No. Odorant receptors are GPCRs; without their G protein, odorant binding cannot be transduced into a receptor potential, so the mice fail the buried-food test (anosmia).
+
+**(b) The other tests.** None. Sucrose preference, quinine avoidance and hotplate withdrawal are normal: taste uses different G proteins and cell types, and nociception is unrelated.
+**Problem 2.** Mice lacking the receptor subunit shared by the sweet and umami GPCRs are offered sucrose solution vs. water, a quinine (bitter) solution, and salty and sour solutions.
+
+- **(a)** Do they prefer sucrose over water?
+- **(b)** Do they still avoid quinine?
+- **(c)** Do they still detect salty and sour, and why?
+
+**(a) Sweet.** No. Sweet and umami detection collapse, so the mice treat sucrose like water.
+
+**(b) Bitter.** Yes. Bitter avoidance is INTACT because bitter receptors are a separate GPCR family.
+
+**(c) Salty and sour.** Yes. They use ion channels, not GPCRs at all. Losing two tastes while three persist is the signature of a shared-subunit knockout.
+
+**Problem 3.** Mice lacking a heat- and capsaicin-gated cation channel in nociceptor endings are placed on a 50 degrees C hotplate, given capsaicin, and tested for smell, taste and light touch.
+
+- **(a)** How do they respond to the hotplate?
+- **(b)** How do they respond to capsaicin?
+- **(c)** Are smell, taste and light touch affected?
+- **(d)** What general rule do all three mouse lines illustrate?
+
+**(a) Heat.** Withdrawal from the noxious heat is delayed or blunted.
+
+**(b) Capsaicin.** Indifference: capsaicin opens this channel rather than damaging tissue, so without the channel it has nothing to act on.
+
+**(c) Other senses.** No. Smell and taste are untouched, and light touch is normal because mechanoreceptors use different channels: "pain" and "touch" are separate labeled lines from the skin inward.
+
+**(d) The exam skill.** Map each protein to its cascade, its cell type and its pathway to the brain. A knockout produces deficits exactly as broad as the protein's expression, no broader, and every intact behavior is a control that localizes the lesion.
 
 <!-- yield:low -->
-- The real proteins: Line 1's missing subunit is Galpha-olf, Line 2's is T1R3, and Line 3's channel is TRPV1.
-<!-- /yield -->
-
-**Line 1 predictions.** Odorant receptors are GPCRs; without their G protein, binding cannot be transduced into a receptor potential. The mouse fails the buried-food test (anosmia). Tests (b), (c), (d) are normal: taste uses different G proteins and cell types, and nociception is unrelated. Note the anatomy detail a passage might probe: the missing signal would have traveled directly to the olfactory bulb WITHOUT a thalamic relay.
-
-**Line 2 predictions.** Sweet and umami detection collapse — the mouse treats sucrose like water (no preference). Bitter avoidance is INTACT because bitter receptors are a separate GPCR family, and salty/sour survive because they use ion channels, not GPCRs at all. This dissociation — losing two tastes while three persist — is the signature of a shared-subunit knockout.
-
-**Line 3 predictions.** Delayed or blunted withdrawal from noxious heat and indifference to capsaicin (which opens this channel rather than damaging tissue). Smell and taste are untouched. Light touch is also normal — mechanoreceptors use different channels, illustrating that "pain" and "touch" are separate labeled lines from the skin inward.
-
-**The exam skill.** Map each protein to (1) its cascade, (2) its cell type, (3) its pathway to the brain. A knockout produces deficits exactly as broad as the protein's expression — no broader — and every intact behavior is a control that localizes the lesion.`
+- The real proteins: Problem 1's missing subunit is Galpha-olf, Problem 2's is T1R3, and Problem 3's channel is TRPV1.
+<!-- /yield -->`
     },
     {
       id: 'sen4-quiz1',
@@ -132,14 +153,22 @@ Taste cells are modified epithelial cells (not neurons) in taste buds; all five 
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Olfaction: GPCRs, one receptor type per neuron, combinatorial coding, direct to the olfactory bulb — the ONLY sense bypassing the thalamus; close limbic ties explain odor-memory links
-- Gustation: sweet/umami/bitter = GPCRs; salty/sour = ion channels; taste cells are epithelial, the tongue map is a myth, and taste DOES relay through the thalamus
-- Pain: gate control (spinal touch-driven inhibition), descending endorphin modulation, referred pain from viscero-somatic convergence
-- Knockout passages: a deficit is exactly as broad as the broken protein's expression — intact behaviors localize the lesion
-- Cochlear implant = tonotopy + labeled lines applied (bypasses hair cells, needs CN VIII); hearing aid = amplification (needs hair cells); air-vs-bone tuning-fork logic separates conductive from sensorineural loss
+- **Olfaction skips the thalamus.** Olfactory neurons project to the bulb, then to olfactory and limbic cortex, with no thalamic relay.
+- **Two taste mechanisms.** Sweet, umami and bitter use GPCRs; salty and sour use ion channels.
+- **Pain modulation.** Touch damps pain at the spinal gate; visceral and somatic afferents converging on shared spinal neurons cause referred pain.
+- **Knockout logic.** A deficit is exactly as broad as the broken protein's expression; intact behaviors localize the lesion.
+
+**Common traps**
+
+- **Hearing aids for dead hair cells.** Amplification needs working hair cells; a cochlear implant bypasses them but needs an intact CN VIII.
+- **A regional tongue map.**All five tastes are detected across the whole tongue, and taste, unlike smell, relays through the thalamus.
+- **Many receptors per neuron.** Each olfactory neuron expresses ONE receptor type; an odor is coded by the combination across neurons.
+- **Gate control as distraction.** Rubbing works through spinal inhibitory interneurons, not cortical attention or transmitter depletion.
 
 <!-- yield:low -->
-- Low-yield extras: olfactory axons cross the cribriform plate; the vomeronasal organ detects pheromones in many animals (rudimentary in humans); taste receptor family names (T1R pairs sharing T1R3 for sweet/umami, T2R for bitter); the knockout proteins Galpha-olf and TRPV1; the Rinne and Weber test names and Weber-test lateralization (toward a conductive ear, away from a sensorineural one)
+**Low-yield extras**
+
+- Olfactory axons cross the cribriform plate; the vomeronasal organ detects pheromones in many animals (rudimentary in humans); taste receptor family names (T1R pairs sharing T1R3 for sweet/umami, T2R for bitter); the knockout proteins Galpha-olf and TRPV1; the Rinne and Weber test names and Weber-test lateralization (toward a conductive ear, away from a sensorineural one)
 <!-- /yield -->`
     }
   ]

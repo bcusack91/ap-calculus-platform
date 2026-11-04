@@ -62,21 +62,56 @@ Selectivity rule: antibiotics exploit the 70S vs 80S difference — but remember
       type: 'text' as const,
       content: `### Worked Example — The Iron Passage, End to End
 
-**Passage-style problem.** Researchers treat cultured cells with an iron chelator (desferrioxamine) or with excess iron, then measure ferritin protein, ferritin mRNA, transferrin receptor (TfR) protein, and TfR mRNA.
+Researchers treat cultured cells with an iron chelator (desferrioxamine) or with excess iron, then measure ferritin protein, ferritin mRNA, transferrin receptor (TfR) protein, and TfR mRNA.
 
-Results: chelator — ferritin protein DOWN with ferritin mRNA UNCHANGED; TfR protein UP with TfR mRNA UP. Excess iron — the mirror image (ferritin protein up, mRNA unchanged; TfR protein and mRNA down).
+**Problem 1.** With the chelator, ferritin protein goes DOWN while ferritin mRNA is UNCHANGED. Excess iron gives the mirror image: ferritin protein up, mRNA unchanged.
 
-**Question 1 — Ferritin protein falls without any mRNA change. Name the control level and mechanism.** Translational control: low iron leaves IRP iron-free and able to clamp the IRE hairpin in ferritin's 5' UTR, physically blocking 40S scanning. The transcript sits intact but unread — exactly why the mRNA measurement stays flat. Any answer invoking transcription contradicts the unchanged mRNA.
+- **(a)** At which level is ferritin being controlled?
+- **(b)** What does the iron sensor do when iron is low, and where on the mRNA?
+- **(c)** Why does the ferritin mRNA measurement stay flat?
 
-**Question 2 — TfR mRNA RISES with chelation, yet the passage states the TfR gene's transcription rate is constant. Reconcile.** Steady-state mRNA = synthesis minus decay (the transcription lesson's bathtub). Constant synthesis with rising level means slowed DECAY: IRP bound to the 3' UTR IREs shields TfR mRNA from nucleases. Same sensor, different element position, different mechanism — stability, not initiation.
+**(a) Control level.** Translation or protein turnover, not transcription: any answer invoking transcription contradicts the unchanged mRNA. The 5' UTR IRE in (b) makes it translation.
 
-**Question 3 — Predict the phenotype of a mutation deleting the IRE from ferritin's 5' UTR.** Constitutive, iron-blind ferritin translation — high ferritin even in iron deficiency. Deleting a repressor's binding SITE de-represses permanently and cannot be rescued by more IRP (cis vs trans, again).
+**(b) Mechanism.** Low iron leaves IRP iron-free and able to clamp the IRE hairpin in ferritin's 5' UTR, physically blocking 40S scanning.
+
+**(c) Flat mRNA.** The transcript sits intact but unread, so the amount of ferritin mRNA does not change.
+
+**Problem 2.** With the chelator, TfR protein and TfR mRNA both go UP, yet the TfR gene's transcription rate is constant.
+
+- **(a)** What sets an mRNA's steady-state level?
+- **(b)** With synthesis constant, what must have changed?
+- **(c)** How does IRP cause that change, and how does it differ from ferritin?
+
+**(a) The bathtub.** Steady-state mRNA = synthesis minus decay (the transcription lesson's bathtub).
+
+**(b) Slower decay.** Constant synthesis with a rising level means DECAY slowed.
+
+**(c) Position.** IRP bound to the 3' UTR IREs shields TfR mRNA from nucleases. Same sensor, different element position, different mechanism — stability, not initiation.
+
+**Problem 3.** A mutation deletes the IRE from ferritin's 5' UTR.
+
+- **(a)** How does ferritin translation respond to iron now?
+- **(b)** Can extra IRP restore the regulation?
+
+**(a) Iron-blind.** Constitutive, iron-blind ferritin translation — high ferritin even in iron deficiency.
+
+**(b) Cis vs trans.** No. Deleting a repressor's binding SITE de-represses permanently and cannot be rescued by more IRP (cis vs trans, again).
 
 <!-- yield:low -->
 This exact class of mutation (in the related L-ferritin IRE) causes hereditary hyperferritinemia-cataract syndrome.
 <!-- /yield -->
 
-**Question 4 — Why does the cell wire ferritin and TfR in opposite directions off one signal?** Physiology check: low iron means import more (TfR up) and stop warehousing (ferritin down); high iron means the reverse — storage protects against free iron's reactive-oxygen chemistry. Regulation questions ultimately resolve to teleology-backed-by-mechanism: state the mechanism, then confirm the direction makes physiological sense. If your predicted direction serves no purpose, re-check which UTR you assigned.`
+**Problem 4.** One signal, cellular iron, moves ferritin and TfR in opposite directions (low iron: ferritin down, TfR up).
+
+- **(a)** Why does low iron call for these directions?
+- **(b)** Why does high iron call for the reverse?
+- **(c)** How should physiology check a regulation answer?
+
+**(a) Low iron.** Low iron means import more (TfR up) and stop warehousing (ferritin down).
+
+**(b) High iron.** Storage protects against free iron's reactive-oxygen chemistry, so high iron means more ferritin and less TfR.
+
+**(c) The check.** Regulation questions resolve to teleology backed by mechanism: state the mechanism, then confirm the direction makes physiological sense. If your predicted direction serves no purpose, re-check which UTR you assigned.`
     },
     {
       id: 'tln4-quiz1',
@@ -92,11 +127,11 @@ This exact class of mutation (in the related L-ferritin IRE) causes hereditary h
             explanation: `Viruses are obligate parasites of host ribosomes, so the cell's scorched-earth defense (via a kinase activated by double-stranded RNA) is to disable its OWN initiation: phosphorylated eIF2 cannot be recycled to deliver initiator tRNA, and bulk protein synthesis stops — viral synthesis included. It is the same eIF2 lever cells pull during starvation and unfolded-protein stress: one global brake, many hands on it. Note the specificity trade-off: the cell sacrifices its own translation too.`
           },
           {
-            question: `When cellular iron is LOW, the iron regulatory protein (IRP) binds IREs on both ferritin and transferrin receptor mRNAs, yet ferritin production falls while TfR production rises. The opposite outcomes occur because:`,
-            options: [`IRE sits in ferritin's 5' UTR but TfR's 3' UTR`, `Two different IRPs exist with opposite activities`, `Ferritin mRNA is transcribed less when iron is low`, `TfR protein is protected from proteasomal degradation by IRP`],
+            question: `Researchers insert an iron response element (IRE) into the 5' UTR of a luciferase reporter mRNA expressed from a constant promoter. In cells grown in LOW iron, compared with high-iron cells, the reporter shows:`,
+            options: [`Less protein, with mRNA level unchanged`, `More protein, as IRP shields the mRNA from decay`, `Less protein and less mRNA, as transcription drops`, `No change, since luciferase itself binds no iron`],
             correctAnswer: 0,
             yield: 'MEDIUM',
-            explanation: `One sensor, one binding event, two mechanisms determined purely by geography: parked in the 5' UTR, IRP is a roadblock to scanning ribosomes; parked in the 3' UTR, it is a bodyguard against nucleases. The directions serve physiology — import more, store less, when iron is scarce. This is a classic example of position-dependent regulation; if you find yourself inventing extra proteins (like two IRPs with opposite activities) to explain opposite outcomes, look for a positional explanation first.`
+            explanation: `In low iron, IRP is free to bind IREs; parked in a 5' UTR it blocks scanning ribosomes, so less luciferase is made from an unchanged pool of mRNA — the ferritin pattern, transplanted onto a new gene. Shielding mRNA from decay is what IRP does at 3' UTR IREs (the TfR pattern), so predicting more protein assigns the wrong position. IRP acts on the mRNA, not the promoter, so transcription and mRNA level do not fall. The reporter's own chemistry is irrelevant: the element, not the encoded protein, confers iron control.`
           },
           {
             question: `A patient on long-term aminoglycoside therapy develops hearing loss attributed to mitochondrial dysfunction in cochlear hair cells. Aminoglycosides can injure mitochondria because:`,
@@ -127,16 +162,22 @@ This exact class of mutation (in the related L-ferritin IRE) causes hereditary h
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Translational control is fast and reversible: global brake = phosphorylation of the initiator-tRNA-delivering initiation factor (stress, viral infection); specific dials = UTR elements, miRNAs, poly-A length
-- The iron circuit is position logic: IRP on a 5' UTR IRE blocks initiation (ferritin, low iron = less storage); IRP on 3' UTR IREs blocks decay (TfR, low iron = more import); one sensor, opposite outcomes, physiologically coherent
-- Deleting a repressor's site = constitutive expression, unrescuable in trans
-- Ribosome pharmacology: 30S (tetracycline A-site block, aminoglycoside misreading) vs 50S (chloramphenicol peptidyl transferase, macrolide exit tunnel); human targets — eEF2 (diphtheria, ADP-ribosylation), 28S rRNA (ricin depurination), any ribosome (puromycin mimic)
-- Mitochondrial 70S-like ribosomes breach antibiotic selectivity (aminoglycoside hearing loss) — endosymbiosis with clinical consequences
-- Catalytic toxins beat stoichiometric ones: covalent, irreversible, processive — single-molecule lethality
-- Level-of-control algorithm: mRNA changed = transcription/stability; mRNA flat + protein changed = translation (polysome shift) or turnover (pulse-chase); protein flat + activity changed = PTM
+- **Translational control.** Fast and reversible: stress phosphorylates an initiation factor; UTR elements, miRNAs and poly-A tune mRNAs.
+- **Iron position logic.** IRP on ferritin's 5' UTR IRE blocks initiation, on TfR's 3' UTR IREs decay; a lost IRE can't be fixed in trans.
+- **Ribosome pharmacology.** Tetracyclines and aminoglycosides hit 30S, chloramphenicol and macrolides 50S; ricin hits human 28S rRNA.
+- **Level-of-control test.** mRNA changed = transcription/stability; mRNA flat, protein changed = translation (polysome shift) or turnover (pulse-chase).
+
+**Common traps**
+
+- **Blaming transcription.** Protein falling while its mRNA stays flat points to translation or turnover, never transcription.
+- **Inventing a second IRP.** One IRP gives opposite outcomes because of where its IRE sits; look for position first.
+- **Perfect 70S selectivity.** Mitochondrial ribosomes are 70S-like, so aminoglycosides can injure mitochondria (hearing loss).
+- **Toxins as one-to-one binders.** Ricin and diphtheria toxin are enzymes that modify many targets, so one molecule can kill.
 
 <!-- yield:low -->
-- Low-yield extras: the phosphorylated factor is eIF2 (integrated stress response; PKR senses viral dsRNA); uORFs are another 5' UTR dial; Pseudomonas exotoxin A is diphtheria toxin's mechanistic twin (ADP-ribosylates eEF2); chloramphenicol marrow suppression and linezolid toxicity are mitochondrial-ribosome effects; L-ferritin IRE mutations cause hereditary hyperferritinemia-cataract syndrome; free iron is dangerous because of Fenton chemistry (hydroxyl-radical generation)
+**Low-yield extras**
+
+- The phosphorylated factor is eIF2 (integrated stress response; PKR senses viral dsRNA); uORFs are another 5' UTR dial; Pseudomonas exotoxin A is diphtheria toxin's mechanistic twin (ADP-ribosylates eEF2); chloramphenicol marrow suppression and linezolid toxicity are mitochondrial-ribosome effects; L-ferritin IRE mutations cause hereditary hyperferritinemia-cataract syndrome; free iron is dangerous because of Fenton chemistry (hydroxyl-radical generation)
 <!-- /yield -->`
     }
   ]
