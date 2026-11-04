@@ -812,9 +812,11 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   )
   // A poll that restates a worked problem the class just solved is not a
   // check — and polls rank by overlap, so that twin is exactly the one that
-  // lands right after the problem (reviews, 2026-11-04). Drop polls whose
-  // terms mostly come from one worked problem on the slides, while enough
-  // other questions remain to fill the budget.
+  // lands right after the problem (reviews, 2026-11-04). Polls whose terms
+  // mostly come from one worked problem on the slides rank last in their beat
+  // and are used only when no other question can fill the budget. Dropping
+  // them outright cost chemistry decks up to a third of their polls, because
+  // shared vocabulary makes many of their questions score as twins.
   const problemTerms = new Map<string, Set<string>>()
   for (const s of content) {
     if (!/^Worked Examples?\b/i.test(s.title)) continue
@@ -837,7 +839,6 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     }
   }
   if (process.env.DECK_DEBUG) console.error(`[deck] ${topicSlug}: ${twins.size} of ${polls.length} poll candidates restate a worked problem`, [...twins].map((p) => p.question.slice(0, 70)))
-  if (twins.size && polls.length - twins.size >= limits.maxPolls) polls = polls.filter((p) => !twins.has(p as PollSlide))
   const pollsBySeg = new Map<number, { poll: PollSlide; score: number }[]>()
   const reviewPolls: PollSlide[] = []
   for (const p of polls as PollSlide[]) {
@@ -863,17 +864,23 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   const chosenBySeg = new Map<number, PollSlide[]>()
   let matchedChosen = 0
   const rankedBySeg = new Map(
-    [...pollsBySeg].map(([i, ms]) => [i, [...ms].sort((a, b) => b.score - a.score).map((m) => m.poll)] as const),
+    [...pollsBySeg].map(([i, ms]) => [
+      i,
+      [...ms].sort((a, b) => Number(twins.has(a.poll)) - Number(twins.has(b.poll)) || b.score - a.score).map((m) => m.poll),
+    ] as const),
   )
   const matchedBeats = [...rankedBySeg.keys()].sort((a, b) => a - b)
   const spread = matchedBeats.length > pollBudget && pollBudget > 1
     ? [...new Set(Array.from({ length: pollBudget }, (_, k) => matchedBeats[Math.round((k * (matchedBeats.length - 1)) / (pollBudget - 1))]))]
     : matchedBeats
-  for (const perBeat of [1, 2]) {
+  // Twins sort last, so the non-twin list is a prefix of each beat's ranking
+  // and `have` always indexes into it; the final pass lets twins fill gaps.
+  for (const [perBeat, allowTwins] of [[1, false], [2, false], [2, true]] as const) {
     for (const i of perBeat === 1 ? spread : matchedBeats) {
       if (pollBudget <= 0) break
       const have = chosenBySeg.get(i) ?? []
-      const take = (rankedBySeg.get(i) ?? []).slice(have.length, Math.min(perBeat, have.length + pollBudget))
+      const ranked = (rankedBySeg.get(i) ?? []).filter((p) => allowTwins || !twins.has(p))
+      const take = ranked.slice(have.length, Math.min(perBeat, have.length + pollBudget))
       if (take.length === 0) continue
       chosenBySeg.set(i, [...have, ...take])
       pollBudget -= take.length
