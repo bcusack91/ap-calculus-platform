@@ -1105,15 +1105,17 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     if (!list.includes(c.title)) list.push(c.title)
     headingsByPart.set(slidePart.get(c) ?? 0, list)
   }
-  const agendaTitles: string[] = []
+  // Shares are dealt round-robin so every part is represented, then the
+  // agenda is written in lesson order (Part 1's headings, then Part 2's…).
   const agendaParts = [...headingsByPart.keys()].sort((a, b) => a - b)
-  for (let round = 0, added = true; added && agendaTitles.length < 6; round++) {
+  const share = new Map(agendaParts.map((p) => [p, 0]))
+  for (let round = 0, total = 0, added = true; added && total < 6; round++) {
     added = false
     for (const p of agendaParts) {
-      const t = headingsByPart.get(p)![round]
-      if (t && agendaTitles.length < 6) { agendaTitles.push(t); added = true }
+      if (total < 6 && headingsByPart.get(p)![round]) { share.set(p, round + 1); total++; added = true }
     }
   }
+  const agendaTitles = agendaParts.flatMap((p) => headingsByPart.get(p)!.slice(0, share.get(p)))
   if (agendaTitles.length >= 2) {
     slides.push({
       kind: 'content',
