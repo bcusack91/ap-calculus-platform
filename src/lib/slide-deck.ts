@@ -511,10 +511,13 @@ export function applyDeckFigures<T extends Slide>(
       out.splice(idx, 1, lead, { ...target, title: `${base}${CONT}` })
     } else if (mode === 'after') {
       const after = { ...target, title: `${base}${CONT}`, blocks: p.blocks ?? [], figure: p.figure, layout: 'full' as const }
-      // Behind a worked example's part slides, not between its overview and
-      // part (a): the picture usually shows the whole solution.
+      // Behind the WHOLE section: a worked example's intro, overview and
+      // part slides (the picture usually shows the solution), or a plain
+      // section's continuation pages. It used to skip only suffixed part
+      // slides, so an example that opened with an intro slide got its
+      // answer figure between the intro and the overview (2026-11-04).
       let at = idx + 1
-      while (at < out.length && out[at].kind === 'content' && PART_SUFFIX.test((out[at] as ContentSlide).title.replace(/\s*\(cont\.\)\s*$/i, '')) && slideUnitKey((out[at] as ContentSlide).title) === base) at++
+      while (at < out.length && out[at].kind === 'content' && slideUnitKey((out[at] as ContentSlide).title) === base) at++
       out.splice(at, 0, after)
     } else if (mode === 'replace') {
       // The figure and its short lines ARE the section on the slides; the
@@ -986,14 +989,16 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // words (ties to the later beat), not the rarity-weighted match used across
   // a whole deck: a cascade poll was landing on the hormone-classes beat two
   // slides before the cascade was taught, because "hormone" was rarer there.
+  // … and among beats sharing a substantial part of its words, the LATEST
+  // one: an intro beat often names a concept that a later beat teaches, and
+  // a poll placed after the later beat can never come before its lesson.
   const mostOverlap = (terms: Set<string>, cands: number[]): number => {
-    let best = -1, bestN = 1
-    for (const i of cands) {
-      let n = 0
-      for (const t of terms) if (teachTerms[i].has(t)) n++
-      if (n >= bestN) { best = i; bestN = n }
-    }
-    return best
+    const counts = cands.map((i) => { let n = 0; for (const t of terms) if (teachTerms[i].has(t)) n++; return n })
+    const max = Math.max(0, ...counts)
+    if (max < 2) return -1
+    const floor = Math.max(2, Math.ceil(max * 0.6))
+    for (let k = cands.length - 1; k >= 0; k--) if (counts[k] >= floor) return cands[k]
+    return -1
   }
   const placePoll = (p: PollSlide, terms: Set<string>): number => {
     const part = pollPart.get(p)

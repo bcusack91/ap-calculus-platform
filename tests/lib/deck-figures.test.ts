@@ -46,13 +46,13 @@ describe('applyDeckFigures', () => {
     expect(pollsInsideUnits(deck)).toEqual([])
   })
 
-  it('after: the figure slide follows the matched slide as a continuation', () => {
+  it('after: the figure slide follows the whole matched section as a continuation', () => {
     const out = applyDeckFigures([c('Worked Example — Reading a Graph', ['passage']), c('Worked Example — Reading a Graph (cont.)', ['step 1'])], [
       { at: 'Worked Example — Reading', mode: 'after', figure: fig },
     ])
     expect(out.map((s) => s.title)).toEqual(['Worked Example — Reading a Graph', 'Worked Example — Reading a Graph (cont.)', 'Worked Example — Reading a Graph (cont.)'])
-    expect(out[1].figure).toBe(fig)
-    expect(out[2].blocks).toEqual(['step 1'])
+    expect(out[1].blocks).toEqual(['step 1'])
+    expect(out[2].figure).toBe(fig)
   })
 
   it('replace-table: the pipe table is dropped and the figure sits beside what remains', () => {
