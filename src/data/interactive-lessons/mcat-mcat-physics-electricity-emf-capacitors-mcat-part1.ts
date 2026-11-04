@@ -119,31 +119,39 @@ A battery is one or more **galvanic cells**. The cell's EMF is the cell potentia
       type: 'text' as const,
       content: `### Worked Example — Measuring a Battery's Internal Resistance
 
-A voltmeter connected across a battery reads $9.0\\;\\text{V}$ with nothing else attached. A $4.0\\;\\Omega$ resistor is then connected across the terminals, and the voltmeter now reads $8.0\\;\\text{V}$. Find the EMF, the current, the internal resistance, and where the power goes.
+**Problem 1.** A voltmeter across a battery reads $9.0\\;\\text{V}$ with nothing else attached. With a $4.0\\;\\Omega$ resistor connected across the terminals, the voltmeter reads $8.0\\;\\text{V}$.
 
-**Step 1 — EMF.** With no load, $I \\approx 0$ (an ideal voltmeter draws no current), so the reading IS the EMF: $\\varepsilon = 9.0\\;\\text{V}$.
+- **(a)** What is the battery's EMF?
+- **(b)** What current flows through the resistor?
+- **(c)** What is the battery's internal resistance?
+- **(d)** How much power does the chemistry supply, and where does it go?
 
-**Step 2 — Current.** With the resistor attached, the terminal voltage sits directly across the $4.0\\;\\Omega$ resistor:
+**(a) EMF.** With no load, $I \\approx 0$ (an ideal voltmeter draws no current), so the reading IS the EMF: $\\varepsilon = 9.0\\;\\text{V}$.
+
+**(b) Current.** With the resistor attached, the terminal voltage sits directly across the $4.0\\;\\Omega$ resistor:
 
 $$I = \\frac{V_{\\text{term}}}{R} = \\frac{8.0}{4.0} = 2.0\\;\\text{A}$$
 
-**Step 3 — Internal resistance.** The missing $1.0\\;\\text{V}$ was dropped inside the battery:
+**(c) Internal resistance.** With $I = 2.0\\;\\text{A}$ from (b), the missing $1.0\\;\\text{V}$ was dropped inside the battery:
 
 $$r = \\frac{\\varepsilon - V_{\\text{term}}}{I} = \\frac{9.0 - 8.0}{2.0} = 0.50\\;\\Omega$$
 
-Check with the loop: $I = \\varepsilon / (R + r) = 9.0 / 4.5 = 2.0\\;\\text{A}$. ✓
+Check with the loop: $I = \\varepsilon / (R + r) = 9.0 / 4.5 = 2.0\\;\\text{A}$. ✓ The pattern: the open-circuit reading gives $\\varepsilon$; any loaded reading plus the current gives $r$.
 
-**Step 4 — Power accounting.**
+**(d) Power accounting.** With $I = 2.0\\;\\text{A}$ and $r = 0.50\\;\\Omega$:
 
 - Supplied by the chemistry: $\\varepsilon I = (9.0)(2.0) = 18\\;\\text{W}$
 - Delivered to the resistor: $I^2 R = (4.0)(4.0) = 16\\;\\text{W}$
-- Wasted inside the battery: $I^2 r = (4.0)(0.50) = 2.0\\;\\text{W}$
+- Wasted inside the battery: $I^2 r = (4.0)(0.50) = 2.0\\;\\text{W}$, and $16 + 2 = 18\\;\\text{W}$: the books balance.
 
-$16 + 2 = 18\\;\\text{W}$: the books balance.
+**Problem 2.** The same battery ($\\varepsilon = 9.0\\;\\text{V}$, $r = 0.50\\;\\Omega$) is pushed to two extremes.
 
-**Step 5 — Two extremes.** Shorting the terminals would draw $I_{\\max} = \\varepsilon / r = 9.0 / 0.50 = 18\\;\\text{A}$, all of it heating the battery. Recharging at $2.0\\;\\text{A}$ would need a charger voltage of $\\varepsilon + Ir = 9.0 + 1.0 = 10\\;\\text{V}$.
+- **(a)** If a wire shorts its terminals, how much current flows?
+- **(b)** What charger voltage would recharge it at $2.0\\;\\text{A}$?
 
-**Pattern:** the open-circuit reading gives $\\varepsilon$; any loaded reading plus the current gives $r$.`
+**(a) Short circuit.** Shorting the terminals would draw $I_{\\max} = \\varepsilon / r = 9.0 / 0.50 = 18\\;\\text{A}$, all of it heating the battery.
+
+**(b) Charger voltage.** Charging current is forced backward through the battery, so the internal drop adds to the EMF: $\\varepsilon + Ir = 9.0 + 1.0 = 10\\;\\text{V}$.`
     },
     {
       id: 'ec1-quiz2',

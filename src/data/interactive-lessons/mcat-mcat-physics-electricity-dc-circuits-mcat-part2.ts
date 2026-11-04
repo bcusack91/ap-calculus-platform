@@ -121,25 +121,47 @@ Identify the arrangement by current paths and shared connection points (nodes), 
       type: 'text' as const,
       content: `### Worked Example — Series String, Parallel Bank, Identical Branches
 
-**A — Series string.** A $24\\;\\text{V}$ ideal battery drives three resistors in series: $2\\;\\Omega$, $4\\;\\Omega$ and $6\\;\\Omega$.
+**Problem 1.** A $24\\;\\text{V}$ ideal battery drives three resistors in series: $2\\;\\Omega$, $4\\;\\Omega$ and $6\\;\\Omega$.
 
-- Equivalent resistance: $R_{eq} = 2 + 4 + 6 = 12\\;\\Omega$
-- Current, the same everywhere: $I = 24/12 = 2.0\\;\\text{A}$
-- Voltage drops: $V_2 = (2.0)(2) = 4\\;\\text{V}$, $V_4 = 8\\;\\text{V}$, $V_6 = 12\\;\\text{V}$
-- Check: $4 + 8 + 12 = 24\\;\\text{V}$. The drops are in the ratio $1 : 2 : 3$, the same as the resistances.
+- **(a)** What is the equivalent resistance?
+- **(b)** What current flows through each resistor?
+- **(c)** What is the voltage drop across each resistor?
+- **(d)** Do the drops add back to the battery voltage, and how do they compare with the resistances?
 
-**B — Parallel bank.** A $12\\;\\text{V}$ ideal battery sits across a $4\\;\\Omega$ and a $12\\;\\Omega$ resistor in parallel.
+**(a) Equivalent resistance.** $R_{eq} = 2 + 4 + 6 = 12\\;\\Omega$
 
-- Product over sum: $R_{eq} = \\dfrac{(4)(12)}{4 + 12} = \\dfrac{48}{16} = 3\\;\\Omega$, below $4\\;\\Omega$ as it must be
-- Each branch sees the full $12\\;\\text{V}$: $I_4 = 12/4 = 3\\;\\text{A}$ and $I_{12} = 12/12 = 1\\;\\text{A}$
-- Junction check: $3 + 1 = 4\\;\\text{A}$, and $V/R_{eq} = 12/3 = 4\\;\\text{A}$
-- The currents are in the ratio $3 : 1$, the INVERSE of the resistance ratio $1 : 3$.
+**(b) Current.** With $R_{eq} = 12\\;\\Omega$ from (a): $I = 24/12 = 2.0\\;\\text{A}$, the same everywhere, because series elements share one path.
 
-**C — Identical branches.** Four identical $20\\;\\Omega$ heating elements are connected to a $10\\;\\text{V}$ source.
+**(c) Voltage drops.** With $I = 2.0\\;\\text{A}$ from (b): $V_2 = (2.0)(2) = 4\\;\\text{V}$, $V_4 = 8\\;\\text{V}$, $V_6 = 12\\;\\text{V}$
 
-- In parallel: $R_{eq} = 20/4 = 5\\;\\Omega$, so the source supplies $10/5 = 2\\;\\text{A}$, or $0.5\\;\\text{A}$ per element.
-- In series: $R_{eq} = 4 \\times 20 = 80\\;\\Omega$, so $I = 10/80 = 0.125\\;\\text{A}$.
-- The parallel bank draws $2/0.125 = 16$ times as much current, that is $n^2$ for $n = 4$: the resistance fell by $n$ in one arrangement and rose by $n$ in the other.`
+**(d) Check.** $4 + 8 + 12 = 24\\;\\text{V}$. The drops are in the ratio $1 : 2 : 3$, the same as the resistances.
+
+**Problem 2.** A $12\\;\\text{V}$ ideal battery sits across a $4\\;\\Omega$ and a $12\\;\\Omega$ resistor in parallel.
+
+- **(a)** What is the equivalent resistance?
+- **(b)** What current flows in each branch?
+- **(c)** Does the junction rule agree with the total current from $R_{eq}$?
+- **(d)** How does the ratio of the branch currents compare with the ratio of the resistances?
+
+**(a) Product over sum.** $R_{eq} = \\dfrac{(4)(12)}{4 + 12} = \\dfrac{48}{16} = 3\\;\\Omega$, below $4\\;\\Omega$ as it must be.
+
+**(b) Branch currents.** Each branch sees the full $12\\;\\text{V}$: $I_4 = 12/4 = 3\\;\\text{A}$ and $I_{12} = 12/12 = 1\\;\\text{A}$.
+
+**(c) Junction check.** From (b), $3 + 1 = 4\\;\\text{A}$; from (a), $V/R_{eq} = 12/3 = 4\\;\\text{A}$. They agree.
+
+**(d) Inverse ratio.** The currents are in the ratio $3 : 1$, the INVERSE of the resistance ratio $1 : 3$.
+
+**Problem 3.** Four identical $20\\;\\Omega$ heating elements are connected to a $10\\;\\text{V}$ source.
+
+- **(a)** Wired in parallel, how much current does the source supply, and how much flows through each element?
+- **(b)** Wired in series, how much current flows?
+- **(c)** How many times as much current does the parallel bank draw, and why that number?
+
+**(a) In parallel.** $R_{eq} = 20/4 = 5\\;\\Omega$, so the source supplies $10/5 = 2\\;\\text{A}$, or $0.5\\;\\text{A}$ per element.
+
+**(b) In series.** $R_{eq} = 4 \\times 20 = 80\\;\\Omega$, so $I = 10/80 = 0.125\\;\\text{A}$.
+
+**(c) The ratio.** With $2\\;\\text{A}$ from (a) and $0.125\\;\\text{A}$ from (b), the parallel bank draws $2/0.125 = 16$ times as much current, that is $n^2$ for $n = 4$: the resistance fell by $n$ in one arrangement and rose by $n$ in the other.`
     },
     {
       id: 'dc2-quiz2',

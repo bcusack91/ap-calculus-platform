@@ -141,29 +141,44 @@ The same logic works for moving the plates. Pull the plates of an ISOLATED capac
       type: 'text' as const,
       content: `### Worked Example — Dielectric with the Battery Disconnected
 
-A $2.0\\;\\mu\\text{F}$ air-filled capacitor is charged to $100\\;\\text{V}$ and then disconnected from the battery. A slab with $\\kappa = 4$ is slid in to fill the gap. Find the new charge, capacitance, voltage and stored energy.
+**Problem 1.** A $2.0\\;\\mu\\text{F}$ air-filled capacitor is charged to $100\\;\\text{V}$ and then disconnected from the battery. A slab with $\\kappa = 4$ is slid in to fill the gap.
 
-**Step 1 — What is fixed?** Disconnected, so the charge has nowhere to go: $Q$ is fixed.
+- **(a)** What charge is on the plates, and does it change when the slab goes in?
+- **(b)** What is the new capacitance?
+- **(c)** What is the new voltage?
+- **(d)** How much energy was stored before the slab went in?
+- **(e)** How much energy is stored after, and where did the difference go?
+
+**(a) Charge (fixed).** Disconnected, so the charge has nowhere to go: $Q$ is fixed.
 
 $$Q = CV = (2.0\\;\\mu\\text{F})(100\\;\\text{V}) = 200\\;\\mu\\text{C}$$
 
-**Step 2 — New capacitance.** $C_{\\text{new}} = \\kappa C = 4(2.0\\;\\mu\\text{F}) = 8.0\\;\\mu\\text{F}$.
+**(b) New capacitance.** $C_{\\text{new}} = \\kappa C = 4(2.0\\;\\mu\\text{F}) = 8.0\\;\\mu\\text{F}$.
 
-**Step 3 — New voltage.**
+**(c) New voltage.** With $Q = 200\\;\\mu\\text{C}$ from (a) and $C_{\\text{new}} = 8.0\\;\\mu\\text{F}$ from (b):
 
 $$V_{\\text{new}} = \\frac{Q}{C_{\\text{new}}} = \\frac{200\\;\\mu\\text{C}}{8.0\\;\\mu\\text{F}} = 25\\;\\text{V}$$
 
 The voltage fell by the factor $\\kappa$, and so did the field between the plates.
 
-**Step 4 — Energy before and after.**
+**(d) Energy before.**
 
 $$U_{\\text{before}} = \\frac{1}{2}CV^2 = \\frac{1}{2}(2.0 \\times 10^{-6})(100)^2 = 1.0 \\times 10^{-2}\\;\\text{J}$$
+
+**(e) Energy after.** With $C_{\\text{new}} = 8.0\\;\\mu\\text{F}$ and $V_{\\text{new}} = 25\\;\\text{V}$:
 
 $$U_{\\text{after}} = \\frac{1}{2}C_{\\text{new}}V_{\\text{new}}^2 = \\frac{1}{2}(8.0 \\times 10^{-6})(25)^2 = 2.5 \\times 10^{-3}\\;\\text{J}$$
 
 Energy fell by the factor $\\kappa = 4$. The ratio shortcut gets there in one line: $U = Q^2/2C$ with $Q$ fixed and $C \\times 4$, so $U \\div 4$. The missing energy went into the work the field did pulling the slab in.
 
-**Step 5 — Contrast: battery still connected.** Now $V$ stays $100\\;\\text{V}$, so $Q = (8.0\\;\\mu\\text{F})(100\\;\\text{V}) = 800\\;\\mu\\text{C}$ and $U = \\frac{1}{2}(8.0 \\times 10^{-6})(100)^2 = 4.0 \\times 10^{-2}\\;\\text{J}$, four times the original. Same slab, opposite energy change: everything hinges on whether $Q$ or $V$ is held constant.`
+**Problem 2.** Contrast: the same $2.0\\;\\mu\\text{F}$ capacitor gets the same $\\kappa = 4$ slab ($C_{\\text{new}} = 8.0\\;\\mu\\text{F}$), but this time the $100\\;\\text{V}$ battery stays connected.
+
+- **(a)** What charge is on the plates now?
+- **(b)** What energy is stored, compared with the original $1.0 \\times 10^{-2}\\;\\text{J}$?
+
+**(a) Charge.** Now $V$ stays $100\\;\\text{V}$, so $Q = (8.0\\;\\mu\\text{F})(100\\;\\text{V}) = 800\\;\\mu\\text{C}$: the battery adds charge.
+
+**(b) Energy.** $U = \\frac{1}{2}(8.0 \\times 10^{-6})(100)^2 = 4.0 \\times 10^{-2}\\;\\text{J}$, four times the original. Same slab, opposite energy change: everything hinges on whether $Q$ or $V$ is held constant.`
     },
     {
       id: 'ec2-quiz2',

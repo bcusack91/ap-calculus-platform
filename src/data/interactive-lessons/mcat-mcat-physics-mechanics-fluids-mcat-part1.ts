@@ -144,27 +144,40 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
       type: 'text' as const,
       content: `### Worked Example — Hydraulic Lift
 
-A mechanic pushes down with $100\\;\\text{N}$ on a piston of area $0.01\\;\\text{m}^2$. The output piston has area $0.1\\;\\text{m}^2$.
+**Problem.** A mechanic pushes down with $100\\;\\text{N}$ on a piston of area $0.01\\;\\text{m}^2$. The output piston has area $0.1\\;\\text{m}^2$.
 
-**Step 1 — Pressure created.** $P = \\dfrac{F_1}{A_1} = \\dfrac{100}{0.01} = 10^4\\;\\text{Pa}$
+- **(a)** What pressure does the mechanic create in the fluid?
+- **(b)** What force does the fluid exert on the large piston?
+- **(c)** How far must the mechanic's piston move to raise the load $0.05\\;\\text{m}$?
+- **(d)** How much work goes in, and how much comes out?
 
-**Step 2 — Force on the large piston.** The same pressure acts there: $F_2 = PA_2 = (10^4)(0.1) = 1000\\;\\text{N}$. A tenfold area ratio gives a tenfold force.
+**(a) Pressure created.** $P = \\dfrac{F_1}{A_1} = \\dfrac{100}{0.01} = 10^4\\;\\text{Pa}$
 
-**Step 3 — Distance.** To raise the load $0.05\\;\\text{m}$, the mechanic's piston must move $d_1 = d_2 \\dfrac{A_2}{A_1} = (0.05)(10) = 0.5\\;\\text{m}$.
+**(b) Force on the large piston.** The same $P = 10^4\\;\\text{Pa}$ from (a) acts there: $F_2 = PA_2 = (10^4)(0.1) = 1000\\;\\text{N}$. A tenfold area ratio gives a tenfold force.
 
-**Step 4 — Work check.** In: $(100)(0.5) = 50\\;\\text{J}$. Out: $(1000)(0.05) = 50\\;\\text{J}$. Force ×10, distance ÷10, work unchanged.
+**(c) Distance.** The fluid volume pushed out equals the volume pushed in, $A_1 d_1 = A_2 d_2$, so $d_1 = d_2 \\dfrac{A_2}{A_1} = (0.05)(10) = 0.5\\;\\text{m}$.
+
+**(d) Work check.** With $F_2 = 1000\\;\\text{N}$ from (b) and $d_1 = 0.5\\;\\text{m}$ from (c): in, $(100)(0.5) = 50\\;\\text{J}$; out, $(1000)(0.05) = 50\\;\\text{J}$. Force ×10, distance ÷10, work unchanged.
 
 ### Worked Example — Hanging an IV Bag
 
-A bag of saline ($\\rho \\approx 1000\\;\\text{kg/m}^3$) hangs so that the fluid surface in the bag is $1.0\\;\\text{m}$ above the needle in a patient's arm. Use $g = 10\\;\\text{m/s}^2$ and $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$.
+**Problem.** A bag of saline ($\\rho \\approx 1000\\;\\text{kg/m}^3$) hangs so that the fluid surface in the bag is $1.0\\;\\text{m}$ above the needle in a patient's arm. Use $g = 10\\;\\text{m/s}^2$ and $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$.
 
-**Step 1 — Gauge pressure at the needle** (line clamped, fluid at rest): $\\rho g h = (1000)(10)(1.0) = 1.0 \\times 10^4\\;\\text{Pa}$.
+- **(a)** With the line clamped and the fluid at rest, what is the gauge pressure at the needle?
+- **(b)** What is that pressure in mmHg?
+- **(c)** Pressure in a peripheral vein is only about 10 mmHg (gauge). Which way does fluid flow when the clamp opens?
+- **(d)** Does a wider or fuller bag at the same height change the pressure at the needle?
+- **(e)** What happens if the bag is lowered to $0.5\\;\\text{m}$, or dropped below the arm?
 
-**Step 2 — Convert.** $\\dfrac{10^4}{133} \\approx 75\\;\\text{mmHg}$.
+**(a) Gauge pressure at the needle.** $\\rho g h = (1000)(10)(1.0) = 1.0 \\times 10^4\\;\\text{Pa}$.
 
-**Step 3 — Compare.** Pressure in a peripheral vein is only about 10 mmHg (gauge), so when the clamp opens, saline flows into the vein.
+**(b) Convert.** $\\dfrac{10^4}{133} \\approx 75\\;\\text{mmHg}$.
 
-**Step 4 — What matters and what doesn't.** Only the HEIGHT of the fluid surface above the needle counts. A wider or fuller bag at the same height gives the same pressure. Lower the bag to $0.5\\;\\text{m}$ and the pressure halves to about 38 mmHg. Drop the bag below the arm and the pressure at the needle falls below venous pressure, so blood backs up into the line.`
+**(c) Compare.** The needle pressure, about 75 mmHg from (b), is far above the vein's 10 mmHg, so when the clamp opens, saline flows into the vein.
+
+**(d) What matters and what doesn't.** No. Only the HEIGHT of the fluid surface above the needle counts, so a wider or fuller bag at the same height gives the same pressure.
+
+**(e) Moving the bag.** Lower the bag to $0.5\\;\\text{m}$ and the pressure halves to about 38 mmHg, still above venous pressure, so saline still flows in, more slowly. Drop the bag below the arm and the pressure at the needle falls below venous pressure, so blood backs up into the line.`
     },
     {
       id: 'fl1-quiz2',

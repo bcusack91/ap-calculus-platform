@@ -174,6 +174,95 @@ function exampleRevealSlides(question: string, solution: string): ContentSlide[]
 
 type ContentSlide = Extract<Slide, { kind: 'content' }>
 
+const PROBLEM_BLOCK = /^\*\*Problem\b/i
+const QUESTION_BLOCK = /^[-*]\s+\*\*\(([a-z])\)\*\*/i
+const PART_BLOCK = /^\*\*\(([a-z])\)/i
+/** The " · Part (a)" / " · Problem 2" / " · Problem 2 (a)" suffix of a worked-example slide. */
+const PART_SUFFIX = /\s*·\s*(?:Part \([a-z]\)|Problem \d+(?: \([a-z]\))?)\s*$/i
+
+/**
+ * A lesson worked example written as a setup, lettered questions and one
+ * solution paragraph per letter —
+ *
+ *   **Problem 1.** A 9 V battery delivers 0.50 A for 1 minute.
+ *   - **(a)** How much charge passes through it?
+ *   - **(b)** How many electrons is that?
+ *   **(a) Charge moved.** ΔQ = IΔt = 30 C
+ *   **(b) Electrons.** N = 30 / 1.6 × 10⁻¹⁹ ≈ 1.9 × 10²⁰
+ *
+ * — becomes an overview slide (the setup and every question, so the class
+ * can try it first), then one slide per part: the setup again, that part's
+ * question, and its solution. Owner, 2026-11-04: four steps on one slide was
+ * overwhelming in an online class, and a problem must ask its question.
+ * Returns null when the section is not in this shape; it is then chunked
+ * like any other section.
+ */
+export function workedExampleSlides(title: string, blocks: string[], limits: DeckLimits): ContentSlide[] | null {
+  type Problem = { setup: string[]; questions: Map<string, string>; parts: { letter: string; blocks: string[] }[] }
+  const problems: Problem[] = []
+  const intro: string[] = []
+  let cur: Problem | null = null
+  const open = (setup: string[]) => {
+    cur = { setup, questions: new Map(), parts: [] }
+    problems.push(cur)
+    return cur
+  }
+  for (const b of blocks) {
+    if (PROBLEM_BLOCK.test(b)) { open([b]); continue }
+    const q = b.match(QUESTION_BLOCK)
+    if (q) {
+      // A problem without a "**Problem N.**" label: the lines before its
+      // first question are its setup.
+      const p = cur ?? open(intro.splice(0))
+      p.questions.set(q[1].toLowerCase(), b.replace(/^[-*]\s+/, ''))
+      continue
+    }
+    const part = b.match(PART_BLOCK)
+    if (part && cur) { (cur as Problem).parts.push({ letter: part[1].toLowerCase(), blocks: [b] }); continue }
+    if (!cur) { intro.push(b); continue }
+    const c: Problem = cur
+    if (c.parts.length) c.parts[c.parts.length - 1].blocks.push(b)
+    else c.setup.push(b)
+  }
+  if (problems.length === 0) return null
+  for (const p of problems) {
+    if (p.questions.size === 0 || p.parts.length === 0) return null
+    if (p.parts.some((part) => !p.questions.has(part.letter))) return null
+  }
+
+  const out: ContentSlide[] = []
+  const push = (t: string, b: string[]) => out.push({ kind: 'content', title: out.length === 0 ? title : t, blocks: b })
+  // A part slide that would not fit one screen continues on a second slide
+  // that repeats the question (never the setup — the first slide just showed it).
+  const pushFitting = (t: string, head: string[], question: string, body: string[]) => {
+    let chunk = [...head, question]
+    let chars = chunk.join('').length
+    let cont = false
+    for (const b of body) {
+      if (chunk.length > head.length + 1 && (chunk.length >= limits.maxBlocks + 1 || chars + b.length > limits.maxChars * 1.25)) {
+        push(cont ? `${t} (cont.)` : t, chunk)
+        cont = true
+        chunk = [question]
+        chars = question.length
+      }
+      chunk.push(b)
+      chars += b.length
+    }
+    push(cont ? `${t} (cont.)` : t, chunk)
+  }
+  if (intro.length) push(title, intro)
+  problems.forEach((p, i) => {
+    const label = problems.length > 1 ? `Problem ${i + 1}` : ''
+    const overviewTitle = label ? `${title} · ${label}` : title
+    push(overviewTitle, [...p.setup, ...p.questions.values(), '→ Try each part before the next slide.'])
+    for (const part of p.parts) {
+      const t = `${title} · ${label ? `${label} (${part.letter})` : `Part (${part.letter})`}`
+      pushFitting(t, p.setup, p.questions.get(part.letter)!, part.blocks)
+    }
+  })
+  return out
+}
+
 /**
  * The unit a content slide belongs to: its title without "(cont.)" / "(2 of
  * 3)" suffixes, with every worked-example slide ("Try It First", "Solution")
@@ -181,7 +270,9 @@ type ContentSlide = Extract<Slide, { kind: 'content' }>
  * piece, so a poll must never sit between them.
  */
 export function slideUnitKey(title: string): string {
-  const base = title.replace(/\s*\((?:cont\.|\d+ of \d+)\)\s*$/i, '').trim()
+  // A worked example's part slides ("… · Part (a)", "… · Problem 2 (b)") belong
+  // to the example, so their suffix goes too (after any "(cont.)").
+  const base = title.replace(/\s*\((?:cont\.|\d+ of \d+)\)\s*$/i, '').replace(PART_SUFFIX, '').trim()
   // Progressive-reveal steps get their own key so a reveal sequence is never
   // confused with a lesson section that happens to be titled "Worked Example".
   return /^Worked Example — (Try It First|Solution)$/.test(base) ? 'Worked Example (reveal)' : base
@@ -308,7 +399,11 @@ export function applyDeckFigures<T extends Slide>(
       out.splice(idx, 1, lead, { ...target, title: `${base}${CONT}` })
     } else if (mode === 'after') {
       const after = { ...target, title: `${base}${CONT}`, blocks: p.blocks ?? [], figure: p.figure, layout: 'full' as const }
-      out.splice(idx + 1, 0, after)
+      // Behind a worked example's part slides, not between its overview and
+      // part (a): the picture usually shows the whole solution.
+      let at = idx + 1
+      while (at < out.length && out[at].kind === 'content' && PART_SUFFIX.test((out[at] as ContentSlide).title.replace(/\s*\(cont\.\)\s*$/i, '')) && slideUnitKey((out[at] as ContentSlide).title) === base) at++
+      out.splice(at, 0, after)
     } else if (mode === 'replace-table') {
       const blocks = p.blocks ?? target.blocks.filter((b) => !isTableBlock(b))
       out[idx] = { ...target, blocks, figure: p.figure, layout: 'side' as const }
@@ -346,6 +441,14 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string, limits: Deck
   const flushSlide = () => {
     flushTable()
     flushParagraph()
+    if (/^Worked Example\b/i.test(currentTitle)) {
+      const parts = workedExampleSlides(currentTitle, blocks, limits)
+      if (parts) {
+        slides.push(...parts)
+        blocks = []
+        return
+      }
+    }
     // Chunk by block count AND character budget — a slide must fit one screen
     // (teacher ink overlays are position-locked; scrolling would break them).
     let chunk: string[] = []
@@ -522,8 +625,12 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     // itself is on the slides, the summary only repeats it (a second "Key
     // Takeaways" early in the deck). The agenda slide still previews the arc.
     const summary = lessonSlides.length >= SUMMARY_REDUNDANT_AT ? [] : content
-    limits = deckLimits(prose, partCount, summary.length + lessonSlides.length)
-    content = [...summary, ...lessonSlides].slice(0, limits.maxSlides)
+    // A worked example's part slides re-present a problem one question at a
+    // time; they never count against the budget, so they cannot push the end
+    // of the lesson off the deck.
+    const partSlides = lessonSlides.filter((s) => PART_SUFFIX.test(s.title.replace(/\s*\(cont\.\)\s*$/i, ''))).length
+    limits = deckLimits(prose, partCount, summary.length + lessonSlides.length - partSlides)
+    content = [...summary, ...lessonSlides].slice(0, limits.maxSlides + partSlides)
   }
 
   // Still thin after lesson mining: fall back to material every topic

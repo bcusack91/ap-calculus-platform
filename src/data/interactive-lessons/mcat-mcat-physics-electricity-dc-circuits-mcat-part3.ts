@@ -36,15 +36,27 @@ A charge that travels around a loop and returns to its starting point is back at
 | ideal source | $+$ terminal to $-$ terminal | $-V$ (a drop) |
 | ideal wire | either way | $0$ |
 
-**A single loop, walked.** A $24\\;\\text{V}$ ideal battery drives $2\\;\\Omega$, $4\\;\\Omega$ and $6\\;\\Omega$ resistors in series. Walking with the current: $+24 - 2I - 4I - 6I = 0$, so $I = 2\\;\\text{A}$. The drops are $4\\;\\text{V}$, $8\\;\\text{V}$ and $12\\;\\text{V}$, and they add back to $24\\;\\text{V}$. Now ground the battery's negative terminal and track potentials: $24\\;\\text{V}$ just past the positive terminal, $20\\;\\text{V}$ after the $2\\;\\Omega$ resistor, $12\\;\\text{V}$ after the $4\\;\\Omega$, and $0\\;\\text{V}$ after the $6\\;\\Omega$, right back at ground. The loop closes.
-
 **Two sources in one loop.** Sources that push the same way add; sources that oppose subtract. The net source voltage drives the current through the total resistance. For example, a $12\\;\\text{V}$ and a $3\\;\\text{V}$ battery opposing each other across $3\\;\\Omega$: $+12 - 3 - 3I = 0$, so $I = 3\\;\\text{A}$.
 
 Most MCAT circuits are single loops or networks that collapse into one. Expect to apply the two rules as reasoning tools, not to solve systems of equations.
 
 <!-- yield:low -->
 - When sources sit in more than one branch, the network does not collapse: write one junction equation and enough loop equations, then solve them simultaneously. This is rarely required on the MCAT.
-<!-- /yield -->`
+<!-- /yield -->
+
+### Worked Example — A Single Loop, Walked
+
+**Problem.** A $24\\;\\text{V}$ ideal battery drives $2\\;\\Omega$, $4\\;\\Omega$ and $6\\;\\Omega$ resistors in series. Walk the loop in the direction of the current.
+
+- **(a)** What equation does the loop rule give, and what current does it predict?
+- **(b)** What is the voltage drop across each resistor?
+- **(c)** With the battery's negative terminal grounded, what is the potential after each element of the loop?
+
+**(a) Loop equation.** Walking with the current: $+24 - 2I - 4I - 6I = 0$, so $I = 2\\;\\text{A}$.
+
+**(b) Drops.** With $I = 2\\;\\text{A}$ from (a), the drops are $4\\;\\text{V}$, $8\\;\\text{V}$ and $12\\;\\text{V}$, and they add back to $24\\;\\text{V}$.
+
+**(c) Potentials.** $24\\;\\text{V}$ just past the positive terminal, $20\\;\\text{V}$ after the $2\\;\\Omega$ resistor, $12\\;\\text{V}$ after the $4\\;\\Omega$, and $0\\;\\text{V}$ after the $6\\;\\Omega$, right back at ground. The loop closes.`
     },
     {
       id: 'dc3-quiz1',
@@ -116,25 +128,48 @@ Notice the OTHER resistor in the numerator: current favours the smaller resistan
       type: 'text' as const,
       content: `### Worked Example — A Two-Step Network
 
-A $12\\;\\text{V}$ ideal battery feeds a $2\\;\\Omega$ resistor in series with a parallel pair: $6\\;\\Omega$ and $3\\;\\Omega$.
+**Problem 1.** A $12\\;\\text{V}$ ideal battery feeds a $2\\;\\Omega$ resistor in series with a parallel pair: $6\\;\\Omega$ and $3\\;\\Omega$.
 
-**Step 1 — Collapse the parallel pair.**
+- **(a)** What is the resistance of the parallel pair?
+- **(b)** What is the total resistance, and what current leaves the battery?
+- **(c)** What voltage is left across the parallel pair?
+- **(d)** What current flows in each branch of the pair?
+- **(e)** Do the junction and loop rules check out?
 
-$R_{pair} = \\dfrac{(6)(3)}{6 + 3} = \\dfrac{18}{9} = 2\\;\\Omega$
+**(a) Collapse the parallel pair.** $R_{pair} = \\dfrac{(6)(3)}{6 + 3} = \\dfrac{18}{9} = 2\\;\\Omega$
 
-**Step 2 — Total resistance and current.**
+**(b) Total resistance and current.** With $R_{pair} = 2\\;\\Omega$ from (a):
 
-$R_{eq} = 2 + 2 = 4\\;\\Omega, \\quad I = \\dfrac{12}{4} = 3\\;\\text{A}$
+$$R_{eq} = 2 + 2 = 4\\;\\Omega, \\quad I = \\dfrac{12}{4} = 3\\;\\text{A}$$
 
-**Step 3 — Walk back out.** The series resistor drops $V = (3)(2) = 6\\;\\text{V}$, leaving $12 - 6 = 6\\;\\text{V}$ across the pair:
+**(c) Walk back out.** With $I = 3\\;\\text{A}$ from (b), the series resistor drops $V = (3)(2) = 6\\;\\text{V}$, leaving $12 - 6 = 6\\;\\text{V}$ across the pair.
 
-$I_6 = \\dfrac{6}{6} = 1\\;\\text{A}, \\quad I_3 = \\dfrac{6}{3} = 2\\;\\text{A}$
+**(d) Branch currents.** With $6\\;\\text{V}$ across the pair from (c):
 
-Junction check: $1 + 2 = 3\\;\\text{A}$. Loop check: $12 - 6 - 6 = 0$. The $3\\;\\Omega$ branch carries twice the current of the $6\\;\\Omega$ branch, inverse to resistance, exactly as the current divider predicts.
+$$I_6 = \\dfrac{6}{6} = 1\\;\\text{A}, \\quad I_3 = \\dfrac{6}{3} = 2\\;\\text{A}$$
 
-**Step 4 — What if the $6\\;\\Omega$ branch breaks open?** Now the $2\\;\\Omega$ and $3\\;\\Omega$ resistors are simply in series: $R_{eq} = 5\\;\\Omega$ and $I = 12/5 = 2.4\\;\\text{A}$. The $2\\;\\Omega$ resistor drops $4.8\\;\\text{V}$ and the $3\\;\\Omega$ resistor $7.2\\;\\text{V}$. The total current FELL (3 A to 2.4 A), yet the current in the surviving $3\\;\\Omega$ branch ROSE (2 A to 2.4 A), because the series resistor now takes less of the voltage.
+**(e) Checks.** Junction: $1 + 2 = 3\\;\\text{A}$. Loop: $12 - 6 - 6 = 0$. The $3\\;\\Omega$ branch carries twice the current of the $6\\;\\Omega$ branch, inverse to resistance, exactly as the current divider predicts.
 
-**Step 5 — What if instead the $2\\;\\Omega$ resistor is shorted?** It drops out, so $R_{eq} = 2\\;\\Omega$ and $I = 6\\;\\text{A}$. The pair now sees the full $12\\;\\text{V}$: $2\\;\\text{A}$ through the $6\\;\\Omega$ and $4\\;\\text{A}$ through the $3\\;\\Omega$, both doubled.`
+**Problem 2.** In the same circuit ($12\\;\\text{V}$, a $2\\;\\Omega$ resistor in series with $6\\;\\Omega$ parallel to $3\\;\\Omega$), the $6\\;\\Omega$ branch breaks open.
+
+- **(a)** What are the new total resistance and current?
+- **(b)** What voltage drops across each remaining resistor?
+- **(c)** How did the total current and the current in the $3\\;\\Omega$ branch change from Problem 1?
+
+**(a) New total.** Now the $2\\;\\Omega$ and $3\\;\\Omega$ resistors are simply in series: $R_{eq} = 5\\;\\Omega$ and $I = 12/5 = 2.4\\;\\text{A}$.
+
+**(b) New drops.** With $I = 2.4\\;\\text{A}$ from (a), the $2\\;\\Omega$ resistor drops $4.8\\;\\text{V}$ and the $3\\;\\Omega$ resistor $7.2\\;\\text{V}$.
+
+**(c) Compare.** The total current FELL (3 A to 2.4 A), yet the current in the surviving $3\\;\\Omega$ branch ROSE (2 A to 2.4 A), because the series resistor now takes less of the voltage.
+
+**Problem 3.** Back in the original circuit, the $2\\;\\Omega$ series resistor is shorted instead, while the $6\\;\\Omega$ and $3\\;\\Omega$ pair stays on the $12\\;\\text{V}$ battery.
+
+- **(a)** What are the new total resistance and current?
+- **(b)** What current flows in each branch now, compared with Problem 1?
+
+**(a) New total.** The shorted resistor drops out, so only the pair remains: $R_{eq} = 2\\;\\Omega$ and $I = 6\\;\\text{A}$.
+
+**(b) Branch currents.** The pair now sees the full $12\\;\\text{V}$: $2\\;\\text{A}$ through the $6\\;\\Omega$ and $4\\;\\text{A}$ through the $3\\;\\Omega$, both doubled.`
     },
     {
       id: 'dc3-quiz2',

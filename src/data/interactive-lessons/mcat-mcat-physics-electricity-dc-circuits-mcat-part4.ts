@@ -146,18 +146,32 @@ Most "which element dissipates the most power" questions fall to steps 1 and 2 i
       type: 'text' as const,
       content: `### Worked Example — Which Bulb Is Brighter, and How Big Is the Shock?
 
-**A — Rated bulbs in series.** A $60\\;\\text{W}$ bulb and a $100\\;\\text{W}$ bulb, both rated at $120\\;\\text{V}$, are wired in series across a $120\\;\\text{V}$ outlet. Which glows brighter?
+**Problem 1.** A $60\\;\\text{W}$ bulb and a $100\\;\\text{W}$ bulb, both rated at $120\\;\\text{V}$, are wired in series across a $120\\;\\text{V}$ outlet.
 
-- **Resistances from the ratings:** $R_{60} = \\dfrac{120^2}{60} = \\dfrac{14{,}400}{60} = 240\\;\\Omega$ and $R_{100} = \\dfrac{14{,}400}{100} = 144\\;\\Omega$.
-- **Series means the same current**, so $P = I^2R$ and $P \\propto R$: $\\dfrac{P_{60}}{P_{100}} = \\dfrac{240}{144} = \\dfrac{5}{3}$.
-- **Conclusion:** the 60 W bulb is brighter, the reverse of the normal parallel case. Both glow well below their ratings, because each gets less than $120\\;\\text{V}$.
+- **(a)** What is each bulb's resistance?
+- **(b)** What is the ratio of their powers in series?
+- **(c)** Which bulb glows brighter, and does either reach its rated power?
 
-**B — A shock through dry and wet skin.** A person grips a $120\\;\\text{V}$ conductor with one hand while touching a grounded pipe with the other.
+**(a) Resistances from the ratings.** $R_{60} = \\dfrac{120^2}{60} = \\dfrac{14{,}400}{60} = 240\\;\\Omega$ and $R_{100} = \\dfrac{14{,}400}{100} = 144\\;\\Omega$.
 
-- **Dry skin,** body path $1 \\times 10^5\\;\\Omega$: $I = \\dfrac{120}{10^5} = 1.2 \\times 10^{-3}\\;\\text{A} = 1.2\\;\\text{mA}$, a tingle.
-- **Wet skin,** body path $1 \\times 10^3\\;\\Omega$: $I = \\dfrac{120}{10^3} = 0.12\\;\\text{A} = 120\\;\\text{mA}$, a hundred times larger.
-- **Heating in the body:** $P = V^2/R$ gives $0.144\\;\\text{W}$ dry but $14.4\\;\\text{W}$ wet. Same voltage, $100$ times the current and $100$ times the power.
-- A passage that gives a fibrillation threshold near $0.1\\;\\text{A}$ would flag the wet case as potentially lethal: the voltage never changed, only the resistance.`
+**(b) Power ratio.** Series means the same current, so $P = I^2R$ and $P \\propto R$. With the resistances from (a): $\\dfrac{P_{60}}{P_{100}} = \\dfrac{240}{144} = \\dfrac{5}{3}$.
+
+**(c) Conclusion.** The 60 W bulb is brighter, the reverse of the normal parallel case. Both glow well below their ratings, because each gets less than $120\\;\\text{V}$.
+
+**Problem 2.** A person grips a $120\\;\\text{V}$ conductor with one hand while touching a grounded pipe with the other. The body path is $1 \\times 10^5\\;\\Omega$ with dry skin and $1 \\times 10^3\\;\\Omega$ with wet skin.
+
+- **(a)** How much current flows through dry skin?
+- **(b)** How much current flows through wet skin?
+- **(c)** How much power is dissipated in the body in each case?
+- **(d)** If a passage puts the fibrillation threshold near $0.1\\;\\text{A}$, which case is potentially lethal?
+
+**(a) Dry skin.** $I = \\dfrac{120}{10^5} = 1.2 \\times 10^{-3}\\;\\text{A} = 1.2\\;\\text{mA}$, a tingle.
+
+**(b) Wet skin.** $I = \\dfrac{120}{10^3} = 0.12\\;\\text{A} = 120\\;\\text{mA}$, a hundred times larger than the $1.2\\;\\text{mA}$ from (a).
+
+**(c) Heating in the body.** $P = V^2/R$ gives $0.144\\;\\text{W}$ dry but $14.4\\;\\text{W}$ wet. Same voltage, $100$ times the current and $100$ times the power.
+
+**(d) The danger.** The wet case: its $0.12\\;\\text{A}$ from (b) is above the threshold. The voltage never changed, only the resistance.`
     },
     {
       id: 'dc4-quiz2',

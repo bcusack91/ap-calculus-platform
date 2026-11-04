@@ -137,23 +137,33 @@ Current needs a complete conducting loop, a **closed circuit**. Open a switch an
 
 **Problem 1.** A $9\\;\\text{V}$ battery delivers a steady $0.50\\;\\text{A}$ to a small pump for $1$ minute.
 
-**Step 1 — Charge moved.** $\\Delta Q = I\\Delta t = (0.50\\;\\text{A})(60\\;\\text{s}) = 30\\;\\text{C}$
+- **(a)** How much charge passes through the pump?
+- **(b)** How many electrons is that?
+- **(c)** How much energy does the battery deliver to the pump?
+- **(d)** How much energy does each electron carry, and do the electrons account for the total?
 
-**Step 2 — Number of electrons.** $N = \\dfrac{30}{1.6 \\times 10^{-19}} \\approx 1.9 \\times 10^{20}$. (Estimate: $30/1.6 \\approx 19$.)
+**(a) Charge moved.** $\\Delta Q = I\\Delta t = (0.50\\;\\text{A})(60\\;\\text{s}) = 30\\;\\text{C}$
 
-**Step 3 — Energy delivered.** Each coulomb gains $9\\;\\text{J}$: $W = qV = (30)(9) = 270\\;\\text{J}$.
+**(b) Number of electrons.** With $\\Delta Q = 30\\;\\text{C}$ from (a): $N = \\dfrac{30}{1.6 \\times 10^{-19}} \\approx 1.9 \\times 10^{20}$. (Estimate: $30/1.6 \\approx 19$.)
 
-**Step 4 — Energy per electron.** $9\\;\\text{eV} = 9(1.6 \\times 10^{-19}) \\approx 1.4 \\times 10^{-18}\\;\\text{J}$. Check: $(1.9 \\times 10^{20})(1.4 \\times 10^{-18}) \\approx 270\\;\\text{J}$. The two routes agree.
+**(c) Energy delivered.** Each coulomb gains $9\\;\\text{J}$, so the $30\\;\\text{C}$ from (a) receive $W = qV = (30)(9) = 270\\;\\text{J}$.
 
-**Problem 2 — A single ion channel.** Recordings show one open potassium channel passing about $2\\;\\text{pA}$ ($2 \\times 10^{-12}\\;\\text{A}$). How many ions cross in $1\\;\\text{ms}$?
+**(d) Energy per electron.** $9\\;\\text{eV} = 9(1.6 \\times 10^{-19}) \\approx 1.4 \\times 10^{-18}\\;\\text{J}$. Check against (b) and (c): $(1.9 \\times 10^{20})(1.4 \\times 10^{-18}) \\approx 270\\;\\text{J}$. The two routes agree.
 
-**Step 1 — Charge.** $\\Delta Q = (2 \\times 10^{-12})(1 \\times 10^{-3}) = 2 \\times 10^{-15}\\;\\text{C}$
+**Problem 2.** Recordings show one open potassium channel passing about $2\\;\\text{pA}$ ($2 \\times 10^{-12}\\;\\text{A}$) for $1\\;\\text{ms}$.
 
-**Step 2 — Ions.** Each $\\text{K}^+$ carries $+e$: $N = \\dfrac{2 \\times 10^{-15}}{1.6 \\times 10^{-19}} \\approx 1.25 \\times 10^{4}$, about $12{,}500$ ions.
+- **(a)** How much charge crosses the membrane?
+- **(b)** How many $\\text{K}^+$ ions is that?
+- **(c)** How many ions would be needed if the same $2\\;\\text{pA}$ were carried by $\\text{Ca}^{2+}$ instead?
+- **(d)** Is $\\text{K}^+$ leaving the cell an inward or an outward current, and what about $\\text{Cl}^-$ entering it?
 
-**Step 3 — The divalent trap.** If the same $2\\;\\text{pA}$ were carried by $\\text{Ca}^{2+}$, each ion would carry $2e$, so only HALF as many ions (about $6{,}250$) would be needed. Always divide by the charge per carrier, not automatically by $e$.
+**(a) Charge.** $\\Delta Q = (2 \\times 10^{-12})(1 \\times 10^{-3}) = 2 \\times 10^{-15}\\;\\text{C}$
 
-**Step 4 — Direction.** $\\text{K}^+$ leaving the cell is an outward current. If $\\text{Cl}^-$ ions entered the cell instead, that would ALSO be an outward current, because negative charge moving in is equivalent to positive charge moving out.`
+**(b) Ions.** Each $\\text{K}^+$ carries $+e$, so with $\\Delta Q = 2 \\times 10^{-15}\\;\\text{C}$ from (a): $N = \\dfrac{2 \\times 10^{-15}}{1.6 \\times 10^{-19}} \\approx 1.25 \\times 10^{4}$, about $12{,}500$ ions.
+
+**(c) The divalent trap.** Each $\\text{Ca}^{2+}$ ion carries $2e$, so only HALF as many ions (about $6{,}250$) would carry the same charge. Always divide by the charge per carrier, not automatically by $e$.
+
+**(d) Direction.** $\\text{K}^+$ leaving the cell is an outward current. $\\text{Cl}^-$ ions entering the cell would ALSO be an outward current, because negative charge moving in is equivalent to positive charge moving out.`
     },
     {
       id: 'dc1-quiz2',

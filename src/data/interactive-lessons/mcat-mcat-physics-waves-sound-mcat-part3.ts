@@ -108,27 +108,48 @@ Rough landmarks (approximate; no need to memorize): a whisper about $30\\;\\text
       type: 'text' as const,
       content: `### Worked Example — Decibel Arithmetic Without a Calculator
 
-**Problem 1 — Comparing two levels.** A monitor alarm measures $40\\;\\text{dB}$ at a nurse's station and $70\\;\\text{dB}$ beside the patient. How much more intense is it beside the patient?
+**Problem 1 — Levels and intensities.** Use $\\beta = 10\\log(I/I_0)$ with $I_0 = 10^{-12}\\;\\text{W/m}^2$. Every factor of 10 in intensity is $10\\;\\text{dB}$.
 
-$\\Delta\\beta = 30\\;\\text{dB} \\Rightarrow \\dfrac{I_2}{I_1} = 10^{30/10} = 10^3 = 1000$
+- **(a)** A monitor alarm measures $40\\;\\text{dB}$ at a nurse's station and $70\\;\\text{dB}$ beside the patient. How much more intense is it beside the patient?
+- **(b)** A blender delivers $10^{-5}\\;\\text{W/m}^2$ to your ear. What is its sound level?
+- **(c)** A siren is rated at $90\\;\\text{dB}$. What intensity is that?
+
+**(a) A ratio from a difference.** $\\Delta\\beta = 30\\;\\text{dB} \\Rightarrow \\dfrac{I_2}{I_1} = 10^{30/10} = 10^3 = 1000$
 
 Thirty decibels is three factors of ten. Never treat the levels as a ratio ($70/40$): the scale is logarithmic.
 
-**Problem 2 — From intensity to level.** A blender delivers $10^{-5}\\;\\text{W/m}^2$ to your ear.
-
-$\\beta = 10\\log\\dfrac{10^{-5}}{10^{-12}} = 10\\log(10^{7}) = 10(7) = 70\\;\\text{dB}$
+**(b) From intensity to level.** $\\beta = 10\\log\\dfrac{10^{-5}}{10^{-12}} = 10\\log(10^{7}) = 10(7) = 70\\;\\text{dB}$
 
 Shortcut: count the powers of ten above $10^{-12}$ and multiply by 10.
 
-**Problem 3 — From level to intensity.** A siren is rated at $90\\;\\text{dB}$. Run the shortcut backward: $90\\;\\text{dB}$ is nine powers of ten above $I_0$, so $I = 10^{9} \\times 10^{-12} = 10^{-3}\\;\\text{W/m}^2$.
+**(c) From level to intensity.** Run the shortcut from (b) backward: $90\\;\\text{dB}$ is nine powers of ten above $I_0$, so $I = 10^{9} \\times 10^{-12} = 10^{-3}\\;\\text{W/m}^2$.
 
-**Problem 4 — Ratios that are not powers of ten.** A sound becomes five times as intense. Write $5 = 10/2$: that is $+10\\;\\text{dB}$ and then $-3\\;\\text{dB}$, so about $+7\\;\\text{dB}$. Four times as intense is $2 \\times 2$: about $+6\\;\\text{dB}$. Doubling the amplitude does exactly this, since intensity grows as amplitude squared: $\\times 4$ the intensity, about $+6\\;\\text{dB}$.
+**Problem 2 — Ratios that are not powers of ten.** A factor of 10 in intensity is $10\\;\\text{dB}$, and a factor of 2 is about $3\\;\\text{dB}$ (because $\\log 2 \\approx 0.3$).
 
-**Problem 5 — Several sources.** One infusion pump hums at $40\\;\\text{dB}$. Two identical pumps: intensity $\\times 2$, about $43\\;\\text{dB}$. Ten identical pumps: intensity $\\times 10$, $50\\;\\text{dB}$.
+- **(a)** A sound becomes five times as intense. About how much does its level rise?
+- **(b)** About how much does it rise if the sound becomes four times as intense?
+- **(c)** What happens to the level when the wave's amplitude doubles?
 
-**Problem 6 — Walking away from a point source.** A loudspeaker gives $90\\;\\text{dB}$ at $1\\;\\text{m}$. At $10\\;\\text{m}$ the intensity is $1/10^2 = 1/100$ as great, which is $-20\\;\\text{dB}$, so $70\\;\\text{dB}$. At $2\\;\\text{m}$ the intensity is $1/4$, about $-6\\;\\text{dB}$, so about $84\\;\\text{dB}$.
+**(a) Five times.** Write $5 = 10/2$: that is $+10\\;\\text{dB}$ and then $-3\\;\\text{dB}$, so about $+7\\;\\text{dB}$.
 
-The strategy in every case: convert the question into an INTENSITY RATIO, then turn each factor of 10 into $10\\;\\text{dB}$ and each factor of 2 into $3\\;\\text{dB}$.`
+**(b) Four times.** $4 = 2 \\times 2$: about $+3 + 3 = +6\\;\\text{dB}$.
+
+**(c) Double the amplitude.** Intensity grows as amplitude squared, so doubling the amplitude gives $\\times 4$ the intensity: about $+6\\;\\text{dB}$, as in (b).
+
+**Problem 3 — Several sources, and distance.** One infusion pump hums at $40\\;\\text{dB}$. A loudspeaker, treated as a point source, gives $90\\;\\text{dB}$ at $1\\;\\text{m}$.
+
+- **(a)** What level do two identical pumps make together?
+- **(b)** What level do ten identical pumps make?
+- **(c)** What level does the loudspeaker give at $10\\;\\text{m}$?
+- **(d)** What level does it give at $2\\;\\text{m}$?
+
+**(a) Two pumps.** Intensity $\\times 2$, about $43\\;\\text{dB}$ (never $80$).
+
+**(b) Ten pumps.** Intensity $\\times 10$, $50\\;\\text{dB}$.
+
+**(c) Ten times as far.** The intensity is $1/10^2 = 1/100$ as great, which is $-20\\;\\text{dB}$, so $70\\;\\text{dB}$.
+
+**(d) Twice as far.** The intensity is $1/4$, about $-6\\;\\text{dB}$, so about $84\\;\\text{dB}$. The strategy in every case: convert the question into an INTENSITY RATIO, then turn each factor of 10 into $10\\;\\text{dB}$ and each factor of 2 into $3\\;\\text{dB}$.`
     },
     {
       id: 'ws3-hearing',

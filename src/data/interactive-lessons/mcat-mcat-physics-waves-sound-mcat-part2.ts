@@ -41,7 +41,19 @@ $$f_{\\text{beat}} = |f_1 - f_2|$$
 
 The pitch you hear is the average of the two frequencies, and it pulses in loudness.
 
-**Tuning an instrument.** A tuner sounds a $440\\;\\text{Hz}$ tuning fork with a string and hears $3$ beats per second. The string is at either $437$ or $443\\;\\text{Hz}$; the beats alone cannot say which. So the tuner changes the string slightly and listens. Tightening raises a string's frequency. If tightening makes the beats SLOWER, the string was flat ($437\\;\\text{Hz}$) and is approaching $440$. If tightening makes them FASTER, it was sharp ($443\\;\\text{Hz}$). When the beats vanish, the frequencies match.`
+### Worked Example — Tuning by Beats
+
+**Problem.** A tuner sounds a $440\\;\\text{Hz}$ tuning fork together with a string and hears $3$ beats per second. Tightening a string raises its frequency.
+
+- **(a)** What frequency could the string have?
+- **(b)** She tightens the string slightly. What does it mean if the beats get SLOWER, and what if they get FASTER?
+- **(c)** How does she know when the string is in tune?
+
+**(a) Two candidates.** $f_{\\text{beat}} = |f_1 - f_2| = 3\\;\\text{Hz}$, so the string is at either $437$ or $443\\;\\text{Hz}$; the beats alone cannot say which.
+
+**(b) Change it and listen.** Tightening raises the string's frequency. If the beats slow down, the string is approaching $440$: it was flat ($437\\;\\text{Hz}$). If they speed up, it is moving away: it was sharp ($443\\;\\text{Hz}$).
+
+**(c) In tune.** When the beats vanish, the frequencies match.`
     },
     {
       id: 'ws2-quiz1',
@@ -129,25 +141,39 @@ The harmonics of an object are its **natural frequencies**. Push an object perio
 
 **Problem 1 — A closed organ pipe.** A pipe $0.85\\;\\text{m}$ long is closed at one end ($v = 340\\;\\text{m/s}$).
 
-**Step 1 — Fundamental.** A closed pipe holds a quarter-wavelength: $\\lambda_1 = 4L = 3.4\\;\\text{m}$, so $f_1 = v/4L = 340/3.4 = 100\\;\\text{Hz}$.
+- **(a)** What is its fundamental frequency?
+- **(b)** What are the next two resonances above it?
+- **(c)** What are the fundamental and the resonance series of an open pipe of the same length?
 
-**Step 2 — Next resonances.** Even harmonics are missing, so the next is the THIRD: $f_3 = 300\\;\\text{Hz}$, then $f_5 = 500\\;\\text{Hz}$.
+**(a) Fundamental.** A closed pipe holds a quarter-wavelength: $\\lambda_1 = 4L = 3.4\\;\\text{m}$, so $f_1 = v/4L = 340/3.4 = 100\\;\\text{Hz}$.
 
-**Step 3 — Compare an open pipe of the same length.** $f_1 = v/2L = 340/1.7 = 200\\;\\text{Hz}$, with the full series $200, 400, 600\\;\\text{Hz}$. Capping one end halves the fundamental and deletes every even harmonic.
+**(b) Next resonances.** Even harmonics are missing, so the next is the THIRD: $f_3 = 300\\;\\text{Hz}$, then $f_5 = 500\\;\\text{Hz}$.
 
-**Problem 2 — A guitar string.** A string $0.50\\;\\text{m}$ long carries waves at $200\\;\\text{m/s}$.
+**(c) Compare an open pipe.** $f_1 = v/2L = 340/1.7 = 200\\;\\text{Hz}$, with the full series $200, 400, 600\\;\\text{Hz}$. Against the closed pipe's $100, 300, 500\\;\\text{Hz}$: capping one end halves the fundamental and deletes every even harmonic.
 
-**Step 1 — Fundamental.** $\\lambda_1 = 2L = 1.0\\;\\text{m}$, so $f_1 = 200/1.0 = 200\\;\\text{Hz}$.
+**Problem 2 — A guitar string.** A string $0.50\\;\\text{m}$ long carries waves at $200\\;\\text{m/s}$. Sound travels at $340\\;\\text{m/s}$ in the surrounding air.
 
-**Step 2 — Third harmonic.** $f_3 = 600\\;\\text{Hz}$ and $\\lambda_3 = 2L/3 \\approx 0.33\\;\\text{m}$. The string shows three antinodes ("loops") and four nodes, counting both fixed ends.
+- **(a)** What is the string's fundamental frequency?
+- **(b)** What are the third harmonic's frequency and wavelength, and how many antinodes and nodes does it show?
+- **(c)** When the fundamental reaches your ear, what are its frequency and wavelength in the air?
 
-**Step 3 — The sound in the air.** The fundamental reaches your ear at $200\\;\\text{Hz}$, but its wavelength in air is $340/200 = 1.7\\;\\text{m}$, not the string's $1.0\\;\\text{m}$. Frequency carries over; wavelength does not.
+**(a) Fundamental.** $\\lambda_1 = 2L = 1.0\\;\\text{m}$, so $f_1 = 200/1.0 = 200\\;\\text{Hz}$.
+
+**(b) Third harmonic.** $f_3 = 600\\;\\text{Hz}$ and $\\lambda_3 = 2L/3 \\approx 0.33\\;\\text{m}$. The string shows three antinodes ("loops") and four nodes, counting both fixed ends.
+
+**(c) The sound in the air.** The fundamental reaches your ear at $200\\;\\text{Hz}$, but its wavelength in air is $340/200 = 1.7\\;\\text{m}$, not the string's $1.0\\;\\text{m}$. Frequency carries over; wavelength does not.
 
 **Problem 3 — Identify a mystery tube.** A tube's two consecutive resonances are $150\\;\\text{Hz}$ and $250\\;\\text{Hz}$.
 
-**Step 1 — The gap.** Consecutive resonances differ by $100\\;\\text{Hz}$.
+- **(a)** What is the gap between consecutive resonances?
+- **(b)** Could the tube be open at both ends?
+- **(c)** Could it be closed at one end, and if so, what is its fundamental?
 
-**Step 2 — Test each type.** If open, the gap equals $f_1 = 100\\;\\text{Hz}$, so every resonance would be a multiple of $100$; but $150$ is not. If closed, the gap is $2f_1$, so $f_1 = 50\\;\\text{Hz}$, and $150 = 3f_1$, $250 = 5f_1$. Both odd: the tube is closed at one end.`
+**(a) The gap.** Consecutive resonances differ by $250 - 150 = 100\\;\\text{Hz}$.
+
+**(b) Test an open tube.** If open, the $100\\;\\text{Hz}$ gap from (a) equals $f_1$, so every resonance would be a multiple of $100$; but $150$ is not. It is not open at both ends.
+
+**(c) Test a closed tube.** If closed, the gap is $2f_1$, so $f_1 = 50\\;\\text{Hz}$, and $150 = 3f_1$, $250 = 5f_1$. Both odd: the tube is closed at one end.`
     },
     {
       id: 'ws2-quiz2',

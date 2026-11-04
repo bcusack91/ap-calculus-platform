@@ -125,29 +125,45 @@ Capacitor passages reduce to one question: **what stays fixed?**
       type: 'text' as const,
       content: `### Worked Example — Defibrillator Energy and Power
 
-A defibrillator's $100\\;\\mu\\text{F}$ capacitor is charged to $2000\\;\\text{V}$ over $5.0\\;\\text{s}$, then discharged through a patient's chest, which acts as a $50\\;\\Omega$ resistor. Find the stored charge and energy, the charging power, the discharge time scale, and the delivery power.
+**Problem 1.** A defibrillator's $100\\;\\mu\\text{F}$ capacitor is charged to $2000\\;\\text{V}$ over $5.0\\;\\text{s}$.
 
-**Step 1 — Charge and energy.**
+- **(a)** How much charge does the capacitor store?
+- **(b)** How much energy does it store?
+- **(c)** What is the average power while it charges?
+
+**(a) Charge.**
 
 $$Q = CV = (1.0 \\times 10^{-4}\\;\\text{F})(2.0 \\times 10^{3}\\;\\text{V}) = 0.20\\;\\text{C}$$
 
+**(b) Energy.**
+
 $$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(1.0 \\times 10^{-4})(4.0 \\times 10^{6}) = 200\\;\\text{J}$$
 
-**Step 2 — Average charging power.** $P_{\\text{charge}} = 200\\;\\text{J} / 5.0\\;\\text{s} = 40\\;\\text{W}$, about as much as a household light bulb.
+**(c) Average charging power.** With $U = 200\\;\\text{J}$ from (b): $P_{\\text{charge}} = 200\\;\\text{J} / 5.0\\;\\text{s} = 40\\;\\text{W}$, about as much as a household light bulb.
 
-**Step 3 — Discharge time scale.**
+**Problem 2.** The charged capacitor ($100\\;\\mu\\text{F}$, $2000\\;\\text{V}$, $200\\;\\text{J}$ stored, charged at $40\\;\\text{W}$) is discharged through a patient's chest, which acts as a $50\\;\\Omega$ resistor.
+
+- **(a)** What is the discharge time constant?
+- **(b)** What are the peak current and the peak power?
+- **(c)** Why is nearly all of the energy delivered within about $10\\;\\text{ms}$?
+- **(d)** What is the average delivery power?
+- **(e)** How many times the charging power is that?
+
+**(a) Discharge time scale.**
 
 $$\\tau = RC = (50)(1.0 \\times 10^{-4}) = 5.0 \\times 10^{-3}\\;\\text{s} = 5.0\\;\\text{ms}$$
 
 So the capacitor is essentially empty after about $5\\tau = 25\\;\\text{ms}$, and most of the energy leaves in the first several milliseconds.
 
-**Step 4 — Peak current and power.** At the first instant the full $2000\\;\\text{V}$ is across the chest: $I_0 = V/R = 2000/50 = 40\\;\\text{A}$, and the peak power is $V^2/R = (4.0 \\times 10^{6})/50 = 8.0 \\times 10^{4}\\;\\text{W}$.
+**(b) Peak current and power.** At the first instant the full $2000\\;\\text{V}$ is across the chest: $I_0 = V/R = 2000/50 = 40\\;\\text{A}$, and the peak power is $V^2/R = (4.0 \\times 10^{6})/50 = 8.0 \\times 10^{4}\\;\\text{W}$.
 
-**Step 5 — Average delivery power.** Why "about $10\\;\\text{ms}$"? Stored energy goes as $Q^2$, so it drains twice as fast as the charge: after $2\\tau = 10\\;\\text{ms}$ the charge is down to $e^{-2} \\approx 0.14$ of its start, and the energy to $e^{-4} \\approx 0.02$, so about 98% has been delivered. Treating the $200\\;\\text{J}$ as delivered over about $10\\;\\text{ms}$:
+**(c) Why about 10 ms.** Stored energy goes as $Q^2$, so it drains twice as fast as the charge: after $2\\tau = 10\\;\\text{ms}$ the charge is down to $e^{-2} \\approx 0.14$ of its start, and the energy to $e^{-4} \\approx 0.02$, so about 98% has been delivered.
+
+**(d) Average delivery power.** Treating the $200\\;\\text{J}$ as delivered over about $10\\;\\text{ms}$, from (c):
 
 $$P_{\\text{deliver}} \\approx \\frac{200\\;\\text{J}}{1.0 \\times 10^{-2}\\;\\text{s}} = 2.0 \\times 10^{4}\\;\\text{W}$$
 
-**Step 6 — The ratio.** $P_{\\text{deliver}}/P_{\\text{charge}} = (2.0 \\times 10^{4})/40 = 500$, exactly the ratio of the times ($5.0\\;\\text{s}$ versus $10\\;\\text{ms}$). Same energy, five hundred times the power. To double the energy setting, the device would raise the voltage by $\\sqrt{2}$, not by 2.`
+**(e) The ratio.** $P_{\\text{deliver}}/P_{\\text{charge}} = (2.0 \\times 10^{4})/40 = 500$, exactly the ratio of the times ($5.0\\;\\text{s}$ versus $10\\;\\text{ms}$). Same energy, five hundred times the power. To double the energy setting, the device would raise the voltage by $\\sqrt{2}$, not by 2.`
     },
     {
       id: 'ec4-quiz2',

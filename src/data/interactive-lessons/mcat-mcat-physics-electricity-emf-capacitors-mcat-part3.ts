@@ -34,15 +34,17 @@ Capacitors combine by rules that are the exact REVERSE of the resistor rules fro
 
 ### Worked Example — Series Capacitors Share Charge, Not Voltage
 
-A $3.0\\;\\mu\\text{F}$ and a $6.0\\;\\mu\\text{F}$ capacitor are in series across a $12\\;\\text{V}$ battery.
+**Problem.** A $3.0\\;\\mu\\text{F}$ and a $6.0\\;\\mu\\text{F}$ capacitor are in series across a $12\\;\\text{V}$ battery.
 
-**Step 1 — Equivalent capacitance.** $C_{\\text{eq}} = \\frac{(3.0)(6.0)}{3.0 + 6.0} = 2.0\\;\\mu\\text{F}$, smaller than either one, as series capacitance must be.
+- **(a)** What is the equivalent capacitance?
+- **(b)** How much charge sits on each capacitor?
+- **(c)** What is the voltage across each capacitor?
 
-**Step 2 — Charge, the same on each.** $Q = C_{\\text{eq}}V = (2.0\\;\\mu\\text{F})(12\\;\\text{V}) = 24\\;\\mu\\text{C}$.
+**(a) Equivalent capacitance.** $C_{\\text{eq}} = \\frac{(3.0)(6.0)}{3.0 + 6.0} = 2.0\\;\\mu\\text{F}$, smaller than either one, as series capacitance must be.
 
-**Step 3 — Individual voltages.** $V_3 = 24/3.0 = 8.0\\;\\text{V}$ and $V_6 = 24/6.0 = 4.0\\;\\text{V}$. Check: $8.0 + 4.0 = 12\\;\\text{V}$. ✓
+**(b) Charge, the same on each.** With $C_{\\text{eq}} = 2.0\\;\\mu\\text{F}$ from (a): $Q = C_{\\text{eq}}V = (2.0\\;\\mu\\text{F})(12\\;\\text{V}) = 24\\;\\mu\\text{C}$ on each capacitor, because series capacitors share one charge.
 
-The SMALLER capacitor takes the LARGER share of the voltage, the mirror image of series resistors (where the larger resistor takes more).`
+**(c) Individual voltages.** With $Q = 24\\;\\mu\\text{C}$ from (b): $V_3 = 24/3.0 = 8.0\\;\\text{V}$ and $V_6 = 24/6.0 = 4.0\\;\\text{V}$. Check: $8.0 + 4.0 = 12\\;\\text{V}$. ✓ The SMALLER capacitor takes the LARGER share of the voltage, the mirror image of series resistors (where the larger resistor takes more).`
     },
     {
       id: 'ec3-quiz1',
@@ -131,31 +133,27 @@ Intuition for $\\tau = RC$: a bigger $R$ lets less current flow to deliver the c
       type: 'text' as const,
       content: `### Worked Example — Steady-State Voltage Across a Capacitor
 
-Build the circuit piece by piece:
+**Problem.** An ideal $12\\;\\text{V}$ battery, a switch, $R_1 = 2.0\\;\\Omega$ and $R_2 = 4.0\\;\\Omega$ form one series loop. A side branch across $R_2$ (so in PARALLEL with it) holds $R_3 = 4.0\\;\\Omega$ in series with an uncharged $5.0\\;\\mu\\text{F}$ capacitor.
 
-1. An ideal $12\\;\\text{V}$ battery and a switch.
-2. In series with the battery: $R_1 = 2.0\\;\\Omega$, then $R_2 = 4.0\\;\\Omega$. This makes one main loop.
-3. A side branch connected across $R_2$ (its two ends attach to the same two points as $R_2$'s ends), so the branch is in PARALLEL with $R_2$.
-4. Inside that branch, in series with each other: $R_3 = 4.0\\;\\Omega$ and an uncharged $5.0\\;\\mu\\text{F}$ capacitor.
+- **(a)** Just after the switch closes, what current leaves the battery?
+- **(b)** At that instant, how does the current split between $R_2$ and the capacitor branch?
+- **(c)** Long afterward (steady state), what current leaves the battery?
+- **(d)** At steady state, what is the voltage across the capacitor?
+- **(e)** What are the capacitor's final charge and stored energy?
 
-Find the battery current just after the switch closes, and the capacitor's charge and energy long afterward.
-
-**Part A — The instant the switch closes.** The empty capacitor acts like a wire, so the branch is just $R_3$, in parallel with $R_2$. Call that combination $R_{2\\|3}$ ($R_2$ in parallel with $R_3$):
+**(a) The instant the switch closes.** The empty capacitor acts like a wire, so the branch is just $R_3$, in parallel with $R_2$. Call that combination $R_{2\\|3}$ ($R_2$ in parallel with $R_3$):
 
 $$R_{2\\|3} = \\frac{(4.0)(4.0)}{4.0 + 4.0} = 2.0\\;\\Omega, \\qquad R_{\\text{total}} = 2.0 + 2.0 = 4.0\\;\\Omega$$
 
 $$I_0 = \\frac{12}{4.0} = 3.0\\;\\text{A}$$
 
-Because $R_2 = R_3$, the current splits equally: half of it ($1.5\\;\\text{A}$) rushes into the capacitor branch, and half goes through $R_2$.
+**(b) The split.** With $I_0 = 3.0\\;\\text{A}$ from (a): because $R_2 = R_3$, the current splits equally. Half of it ($1.5\\;\\text{A}$) rushes into the capacitor branch, and half ($1.5\\;\\text{A}$) goes through $R_2$.
 
-**Part B — Steady state.**
+**(c) Steady-state current.** Open the capacitor branch. Only $R_1$ and $R_2$ in series remain: $I = 12/(2.0 + 4.0) = 2.0\\;\\text{A}$. The battery current has fallen from $3.0\\;\\text{A}$ to $2.0\\;\\text{A}$ as the capacitor filled.
 
-1. Open the capacitor branch. Only $R_1$ and $R_2$ in series remain: $I = 12/(2.0 + 4.0) = 2.0\\;\\text{A}$.
-2. Voltage across $R_2$: $V_2 = (2.0)(4.0) = 8.0\\;\\text{V}$.
-3. The capacitor branch connects the same two points as $R_2$. No current flows in that branch, so $R_3$ drops nothing, and the capacitor sits at the full $8.0\\;\\text{V}$.
-4. $Q = CV_C = (5.0\\;\\mu\\text{F})(8.0\\;\\text{V}) = 40\\;\\mu\\text{C}$, and $U = \\frac{1}{2}(5.0 \\times 10^{-6})(8.0)^2 = 1.6 \\times 10^{-4}\\;\\text{J}$.
+**(d) Capacitor voltage.** With $I = 2.0\\;\\text{A}$ from (c), the voltage across $R_2$ is $V_2 = (2.0)(4.0) = 8.0\\;\\text{V}$. The capacitor branch connects the same two points as $R_2$. No current flows in that branch, so $R_3$ drops nothing, and the capacitor sits at the full $8.0\\;\\text{V}$. A common error is to subtract a drop across $R_3$; with zero current, there is none.
 
-**Takeaways:** the battery current falls from $3.0\\;\\text{A}$ to $2.0\\;\\text{A}$ as the capacitor fills. The series resistor $R_3$ shapes HOW FAST the capacitor charges, not the final voltage it reaches. A common error is to subtract a drop across $R_3$ at steady state; with zero current, there is none.`
+**(e) Charge and energy.** With $V_C = 8.0\\;\\text{V}$ from (d): $Q = CV_C = (5.0\\;\\mu\\text{F})(8.0\\;\\text{V}) = 40\\;\\mu\\text{C}$, and $U = \\frac{1}{2}(5.0 \\times 10^{-6})(8.0)^2 = 1.6 \\times 10^{-4}\\;\\text{J}$. The series resistor $R_3$ shapes HOW FAST the capacitor charges, not the final voltage it reaches.`
     },
     {
       id: 'ec3-quiz2',

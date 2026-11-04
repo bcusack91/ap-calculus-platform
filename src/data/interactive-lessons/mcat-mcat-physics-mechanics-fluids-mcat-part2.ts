@@ -141,31 +141,50 @@ The narrower the tube, the larger the rise (or fall). Capillary action draws a d
       type: 'text' as const,
       content: `### Worked Example — The Block That Floats 60% Submerged
 
-A block of wood floats in water with 60% of its volume submerged. Use $g = 10\\;\\text{m/s}^2$.
+**Problem 1.** A block of wood floats in water with 60% of its volume submerged.
 
-**Step 1 — Density from floating.** Floating means $F_B = W$:
+- **(a)** What are the block's density and specific gravity?
+- **(b)** What fraction of the block is submerged when it floats in oil ($SG = 0.8$)?
+- **(c)** In what fluids does the block sink instead of floating?
+
+**(a) Density from floating.** Floating means $F_B = W$:
 
 $$\\rho_{\\text{water}}(0.6V)g = \\rho_{\\text{wood}}Vg \\;\\Rightarrow\\; \\rho_{\\text{wood}} = 0.6\\,\\rho_{\\text{water}} = 600\\;\\text{kg/m}^3$$
 
 The submerged fraction IS the specific gravity: 0.6.
 
-**Step 2 — Move it to oil** ($SG = 0.8$). It must still displace its own weight, now of a less dense fluid, so it sinks deeper: fraction $= 0.6/0.8 = 0.75$, or 75% submerged.
+**(b) Move it to oil.** It must still displace its own weight, now of a less dense fluid, so it sinks deeper. With SG 0.6 from (a), the fraction is $0.6/0.8 = 0.75$, or 75% submerged.
 
-**Step 3 — The sinking limit.** In any fluid with SG below 0.6, even full submersion cannot displace enough weight, and the block sinks.
+**(c) The sinking limit.** In any fluid with SG below 0.6, even full submersion cannot displace enough weight, and the block sinks.
 
-**Step 4 — Pushing it under.** Suppose the block's volume is $0.01\\;\\text{m}^3$ (10 L). Fully submerged in water, $F_B = (1000)(0.01)(10) = 100\\;\\text{N}$, but the block weighs only $(600)(0.01)(10) = 60\\;\\text{N}$. Holding it under takes a downward push of $100 - 60 = 40\\;\\text{N}$, and that push is the same at any depth.
+**Problem 2.** The same block ($600\\;\\text{kg/m}^3$) has a volume of $0.01\\;\\text{m}^3$ (10 L) and is held completely under water. Use $g = 10\\;\\text{m/s}^2$.
+
+- **(a)** What buoyant force acts on the block?
+- **(b)** What does the block weigh?
+- **(c)** What downward push holds it under, and does that push change with depth?
+
+**(a) Buoyant force.** Fully submerged in water, $F_B = (1000)(0.01)(10) = 100\\;\\text{N}$.
+
+**(b) Weight.** $W = (600)(0.01)(10) = 60\\;\\text{N}$.
+
+**(c) Pushing it under.** With $F_B = 100\\;\\text{N}$ from (a) and $W = 60\\;\\text{N}$ from (b), holding it under takes a downward push of $100 - 60 = 40\\;\\text{N}$. That push is the same at any depth, because the buoyant force on a fully submerged object does not change with depth.
 
 ### Worked Example — Weighing an Ore Sample
 
-A geologist's rock sample weighs $50\\;\\text{N}$ in air and $40\\;\\text{N}$ when hung fully submerged in water.
+**Problem.** A geologist's rock sample weighs $50\\;\\text{N}$ in air and $40\\;\\text{N}$ when hung fully submerged in water. Use $g = 10\\;\\text{m/s}^2$.
 
-**Step 1 — Buoyant force.** $F_B = W - W_{\\text{apparent}} = 50 - 40 = 10\\;\\text{N}$.
+- **(a)** What buoyant force acts on the submerged sample?
+- **(b)** What is the sample's volume?
+- **(c)** What is its density?
+- **(d)** Does the shortcut $SG = W/F_B$ agree, and could the sample be gold (SG about 19)?
 
-**Step 2 — Volume.** $V = \\dfrac{F_B}{\\rho_{\\text{water}} g} = \\dfrac{10}{(1000)(10)} = 1.0 \\times 10^{-3}\\;\\text{m}^3$ (1 L).
+**(a) Buoyant force.** $F_B = W - W_{\\text{apparent}} = 50 - 40 = 10\\;\\text{N}$.
 
-**Step 3 — Density.** Mass $= 50/10 = 5.0\\;\\text{kg}$, so $\\rho = 5.0/(1.0 \\times 10^{-3}) = 5000\\;\\text{kg/m}^3$.
+**(b) Volume.** With $F_B = 10\\;\\text{N}$ from (a), $V = \\dfrac{F_B}{\\rho_{\\text{water}} g} = \\dfrac{10}{(1000)(10)} = 1.0 \\times 10^{-3}\\;\\text{m}^3$ (1 L).
 
-**Step 4 — Shortcut check.** $SG = W/F_B = 50/10 = 5$. Same answer in one line. Gold's SG is about 19, so this is not gold.`
+**(c) Density.** Mass $= 50/10 = 5.0\\;\\text{kg}$. With $V = 1.0 \\times 10^{-3}\\;\\text{m}^3$ from (b), $\\rho = 5.0/(1.0 \\times 10^{-3}) = 5000\\;\\text{kg/m}^3$.
+
+**(d) Shortcut check.** $SG = W/F_B = 50/10 = 5$, the same answer in one line. Gold's SG is about 19, so this is not gold.`
     },
     {
       id: 'fl2-quiz2',

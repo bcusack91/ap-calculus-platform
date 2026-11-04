@@ -87,13 +87,17 @@ Partly covering the end of a garden hose with a thumb shrinks the exit area, and
       type: 'text' as const,
       content: `### Worked Example — Why Capillary Blood Crawls
 
-The aorta (cross-section about $3\\;\\text{cm}^2$) carries blood at about $30\\;\\text{cm/s}$. The capillary bed's TOTAL cross-section is about $3000\\;\\text{cm}^2$.
+**Problem.** The aorta (cross-section about $3\\;\\text{cm}^2$) carries blood at about $30\\;\\text{cm/s}$. The capillary bed's TOTAL cross-section is about $3000\\;\\text{cm}^2$.
 
-**Step 1 — Flow rate, set by the heart.** $Q = Av = (3)(30) = 90\\;\\text{cm}^3/\\text{s}$. Sanity check: $90 \\times 60 = 5400\\;\\text{cm}^3/\\text{min} \\approx 5.4\\;\\text{L/min}$, a normal cardiac output.
+- **(a)** What flow rate does the heart send into the aorta, and is it a sensible cardiac output?
+- **(b)** How fast does blood move through the capillaries?
+- **(c)** Each capillary is far narrower than the aorta. Why is the blood slower there, not faster?
 
-**Step 2 — Continuity across the whole bed.** $v_{\\text{cap}} = \\dfrac{Q}{A_{\\text{total}}} = \\dfrac{90}{3000} = 0.03\\;\\text{cm/s}$
+**(a) Flow rate, set by the heart.** $Q = Av = (3)(30) = 90\\;\\text{cm}^3/\\text{s}$. Sanity check: $90 \\times 60 = 5400\\;\\text{cm}^3/\\text{min} \\approx 5.4\\;\\text{L/min}$, a normal cardiac output.
 
-**Step 3 — Interpret.** That is 1000 times slower than in the aorta, in exactly the place where slow flow helps exchange. Any single capillary IS far narrower than the aorta, but continuity applies to the summed area of all the parallel paths. "Narrow vessel, so fast blood" is single-tube thinking applied to a branching network.`
+**(b) Continuity across the whole bed.** With $Q = 90\\;\\text{cm}^3/\\text{s}$ from (a), $v_{\\text{cap}} = \\dfrac{Q}{A_{\\text{total}}} = \\dfrac{90}{3000} = 0.03\\;\\text{cm/s}$. That is 1000 times slower than in the aorta, in exactly the place where slow flow helps exchange.
+
+**(c) Interpret.** Any single capillary IS far narrower than the aorta, but continuity applies to the summed area of all the parallel paths. "Narrow vessel, so fast blood" is single-tube thinking applied to a branching network.`
     },
     {
       id: 'fl3-bernoulli',
@@ -140,31 +144,38 @@ the speed of an object dropped from height $h$: each parcel cashes in the potent
       type: 'text' as const,
       content: `### Worked Example — A Venturi Meter (Continuity, Then Bernoulli)
 
-Water ($\\rho = 1000\\;\\text{kg/m}^3$) flows at $1\\;\\text{m/s}$ through a horizontal pipe of cross-section $10\\;\\text{cm}^2$ that narrows to $2\\;\\text{cm}^2$. Use $g = 10\\;\\text{m/s}^2$.
+**Problem.** Water ($\\rho = 1000\\;\\text{kg/m}^3$) flows at $1\\;\\text{m/s}$ through a horizontal pipe of cross-section $10\\;\\text{cm}^2$ that narrows to $2\\;\\text{cm}^2$. Use $g = 10\\;\\text{m/s}^2$.
 
-**Step 1 — Continuity for the new speed.** $v_2 = v_1\\dfrac{A_1}{A_2} = (1)\\dfrac{10}{2} = 5\\;\\text{m/s}$
+- **(a)** How fast does the water move in the narrow section?
+- **(b)** How much lower is the pressure in the narrow section?
+- **(c)** By how much do the water levels in the meter's two open tubes differ?
+- **(d)** What is the volume flow rate through the pipe?
 
-**Step 2 — Bernoulli for the pressure change.** The pipe is horizontal, so the $\\rho g h$ terms cancel:
+**(a) Continuity for the new speed.** $v_2 = v_1\\dfrac{A_1}{A_2} = (1)\\dfrac{10}{2} = 5\\;\\text{m/s}$
+
+**(b) Bernoulli for the pressure change.** The pipe is horizontal, so the $\\rho g h$ terms cancel. With $v_2 = 5\\;\\text{m/s}$ from (a):
 
 $$P_1 - P_2 = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = \\tfrac{1}{2}(1000)(25 - 1) = 12{,}000\\;\\text{Pa}$$
 
-The narrow, fast section is LOWER in pressure by $12\\;\\text{kPa}$. Note that it is $v_2^2 - v_1^2$, not $(v_2 - v_1)^2$: squaring the difference, $(5 - 1)^2 = 16$, would give $8\\;\\text{kPa}$, which is wrong.
+The narrow, fast section is LOWER in pressure by $12\\;\\text{kPa}$. Squaring the difference instead, $(5 - 1)^2 = 16$, would give a wrong $8\\;\\text{kPa}$.
 
-**Step 3 — Read it on the meter.** The open tubes' water levels differ by $\\Delta h = \\dfrac{\\Delta P}{\\rho g} = \\dfrac{12{,}000}{(1000)(10)} = 1.2\\;\\text{m}$, lower over the throat.
+**(c) Read it on the meter.** With $\\Delta P = 12{,}000\\;\\text{Pa}$ from (b), $\\Delta h = \\dfrac{\\Delta P}{\\rho g} = \\dfrac{12{,}000}{(1000)(10)} = 1.2\\;\\text{m}$, lower over the throat.
 
-**Step 4 — Flow rate.** $Q = A_1 v_1 = (10 \\times 10^{-4}\\;\\text{m}^2)(1\\;\\text{m/s}) = 1.0 \\times 10^{-3}\\;\\text{m}^3/\\text{s}$, or 1 L/s, the same in both sections.
-
-Order matters: continuity first (geometry to speed), Bernoulli second (speed to pressure).
+**(d) Flow rate.** $Q = A_1 v_1 = (10 \\times 10^{-4}\\;\\text{m}^2)(1\\;\\text{m/s}) = 1.0 \\times 10^{-3}\\;\\text{m}^3/\\text{s}$, or 1 L/s, the same in both sections. Order matters: continuity first (geometry to speed), Bernoulli second (speed to pressure).
 
 ### Worked Example — Torricelli's Tank
 
-A wide open drum of water has a small hole of area $1.0\\;\\text{cm}^2$, $5\\;\\text{m}$ below the water surface.
+**Problem.** A wide open drum of water has a small hole of area $1.0\\;\\text{cm}^2$, $5\\;\\text{m}$ below the water surface. Use $g = 10\\;\\text{m/s}^2$.
 
-**Step 1 — Exit speed.** $v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10\\;\\text{m/s}$, the same speed a stone reaches after falling 5 m.
+- **(a)** How fast does the water leave the hole?
+- **(b)** How much water flows out each second?
+- **(c)** As the tank drains, how fast does the water leave when the depth above the hole is $1.25\\;\\text{m}$?
 
-**Step 2 — Flow out.** $Q = Av = (1.0 \\times 10^{-4}\\;\\text{m}^2)(10\\;\\text{m/s}) = 1.0 \\times 10^{-3}\\;\\text{m}^3/\\text{s}$, about 1 L/s.
+**(a) Exit speed.** $v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10\\;\\text{m/s}$, the same speed a stone reaches after falling 5 m.
 
-**Step 3 — As the tank drains.** The depth above the hole shrinks, so the exit speed and the flow both fall. At a depth of $1.25\\;\\text{m}$, $v = \\sqrt{25} = 5\\;\\text{m/s}$: a quarter of the depth gives half the speed.`
+**(b) Flow out.** With $v = 10\\;\\text{m/s}$ from (a), $Q = Av = (1.0 \\times 10^{-4}\\;\\text{m}^2)(10\\;\\text{m/s}) = 1.0 \\times 10^{-3}\\;\\text{m}^3/\\text{s}$, about 1 L/s.
+
+**(c) As the tank drains.** $v = \\sqrt{2(10)(1.25)} = \\sqrt{25} = 5\\;\\text{m/s}$: a quarter of the depth gives half of (a)'s speed. The exit speed and the flow both fall as the depth above the hole shrinks.`
     },
     {
       id: 'fl3-quiz2',

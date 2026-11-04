@@ -1,0 +1,59 @@
+/**
+ * Worked examples on slides: a lesson problem written as a setup, lettered
+ * questions and one solution per letter becomes an overview slide plus one
+ * slide per part (owner, 2026-11-04 — four steps at once was overwhelming in
+ * an online class, and a problem must ask its question).
+ */
+import { describe, it, expect } from 'vitest'
+import { applyDeckFigures, pollsInsideUnits, slideUnitKey, workedExampleSlides, type Slide } from '@/lib/slide-deck'
+
+const LIMITS = { maxChars: 700, maxBlocks: 5, maxSlides: 100, maxPolls: 8 }
+const T = 'Worked Example — Counting Charge'
+const setup = '**Problem 1.** A $9\\;\\text{V}$ battery delivers $0.50\\;\\text{A}$ for $1$ minute.'
+const blocks = [
+  setup,
+  '- **(a)** How much charge passes through the pump?',
+  '- **(b)** How many electrons is that?',
+  '**(a) Charge moved.** $\\Delta Q = I\\Delta t = 30\\;\\text{C}$',
+  '**(b) Electrons.** $N = 30/(1.6 \\times 10^{-19}) \\approx 1.9 \\times 10^{20}$',
+  'Estimate first: $30/1.6 \\approx 19$.',
+]
+
+describe('workedExampleSlides', () => {
+  it('builds an overview with every question, then one slide per part that repeats the setup', () => {
+    const slides = workedExampleSlides(T, blocks, LIMITS)!
+    expect(slides.map((s) => s.title)).toEqual([T, `${T} · Part (a)`, `${T} · Part (b)`])
+    expect(slides[0].blocks).toEqual([setup, '**(a)** How much charge passes through the pump?', '**(b)** How many electrons is that?', '→ Try each part before the next slide.'])
+    expect(slides[1].blocks).toEqual([setup, '**(a)** How much charge passes through the pump?', blocks[3]])
+    // A part's follow-on paragraph stays with that part.
+    expect(slides[2].blocks).toEqual([setup, '**(b)** How many electrons is that?', blocks[4], blocks[5]])
+  })
+
+  it('labels the problems when a section holds more than one', () => {
+    const second = ['**Problem 2.** One channel passes $2\\;\\text{pA}$.', '- **(a)** How many ions cross in $1\\;\\text{ms}$?', '**(a) Ions.** About $12{,}500$.']
+    const titles = workedExampleSlides(T, [...blocks, ...second], LIMITS)!.map((s) => s.title)
+    expect(titles).toEqual([T, `${T} · Problem 1 (a)`, `${T} · Problem 1 (b)`, `${T} · Problem 2`, `${T} · Problem 2 (a)`])
+  })
+
+  it('leaves a section that is not in the lettered shape alone', () => {
+    expect(workedExampleSlides(T, ['**Step 1 —** add the resistors.', '**Step 2 —** divide.'], LIMITS)).toBeNull()
+    // A solved part with no question asked is not a lettered problem.
+    expect(workedExampleSlides(T, [setup, '- **(a)** How much charge?', '**(a)** 30 C', '**(b)** 1.9e20'], LIMITS)).toBeNull()
+  })
+
+  it('keeps every part slide in the example unit, so no poll lands between parts', () => {
+    const slides = workedExampleSlides(T, blocks, LIMITS)!
+    expect(new Set(slides.map((s) => slideUnitKey(s.title)))).toEqual(new Set([T]))
+    const poll: Slide = { kind: 'poll', question: 'q', options: ['a', 'b'], correctIndex: 0, explanation: '' }
+    expect(pollsInsideUnits([slides[0], slides[1], poll, slides[2]])).toEqual([2])
+    expect(slideUnitKey(`${T} · Problem 2 (b) (cont.)`)).toBe(T)
+  })
+
+  it("puts an 'after' figure behind the last part, not between the overview and part (a)", () => {
+    const slides = workedExampleSlides(T, blocks, LIMITS)!
+    const figure = { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"></svg>', alt: 'the solved circuit' }
+    const out = applyDeckFigures(slides, [{ at: T, figure, mode: 'after' }])
+    expect(out.map((s) => s.title)).toEqual([T, `${T} · Part (a)`, `${T} · Part (b)`, `${T} (cont.)`])
+    expect((out[3] as Extract<Slide, { kind: 'content' }>).figure?.alt).toBe('the solved circuit')
+  })
+})

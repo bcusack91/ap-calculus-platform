@@ -151,19 +151,24 @@ Then ask three follow-up questions: a single tube or a branching network (use to
       type: 'text' as const,
       content: `### Worked Example — Grading a Stenosis
 
-A carotid ultrasound shows peak blood speed rising from $60\\;\\text{cm/s}$ upstream to $240\\;\\text{cm/s}$ inside a short stenosis. Take blood's density as $1000\\;\\text{kg/m}^3$ and $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$.
+**Problem.** A carotid ultrasound shows peak blood speed rising from $60\\;\\text{cm/s}$ upstream to $240\\;\\text{cm/s}$ inside a short stenosis. Take blood's density as $1000\\;\\text{kg/m}^3$ and $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$.
 
-**Step 1 — Continuity, run backwards.** At roughly constant flow, a 4-fold rise in speed means the area has fallen to one-quarter ($A \\propto 1/v$). Since $A \\propto r^2$, the radius is HALVED: a 50% reduction in diameter.
+- **(a)** By how much has the vessel's radius (and diameter) been reduced?
+- **(b)** How much lower is the pressure in the jet, in mmHg?
+- **(c)** If the narrowing were long rather than short, how would each centimetre of it compare in resistance with a normal centimetre of the vessel?
+- **(d)** What happens to the blood just beyond the stenosis, and how is it detected?
 
-**Step 2 — Bernoulli for the pressure dip.** In SI units the speeds are $0.6$ and $2.4\\;\\text{m/s}$:
+**(a) Continuity, run backwards.** At roughly constant flow, a 4-fold rise in speed means the area has fallen to one-quarter ($A \\propto 1/v$). Since $A \\propto r^2$, the radius is HALVED: a 50% reduction in diameter.
+
+**(b) Bernoulli for the pressure dip.** In SI units the speeds are $0.6$ and $2.4\\;\\text{m/s}$:
 
 $$\\Delta P = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = \\tfrac{1}{2}(1000)(5.76 - 0.36) = 500 \\times 5.4 = 2700\\;\\text{Pa}$$
 
 That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 
-**Step 3 — Poiseuille's warning.** If the narrowing were long rather than short, each centimetre of it would have $2^4 = 16$ times the resistance of a normal centimetre of the vessel. "Half the diameter" sounds mild; to a viscous fluid it is severe.
+**(c) Poiseuille's warning.** With the radius halved, from (a), and $R \\propto 1/r^4$, each centimetre would have $2^4 = 16$ times the resistance of a normal centimetre of the vessel. "Half the diameter" sounds mild; to a viscous fluid it is severe.
 
-**Step 4 — Downstream.** The fast jet becomes turbulent beyond the stenosis, and the turbulence is heard as a bruit.`
+**(d) Downstream.** The fast jet becomes turbulent beyond the stenosis, and the turbulence is heard as a bruit.`
     },
     {
       id: 'fl4-quiz2',

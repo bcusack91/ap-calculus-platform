@@ -37,19 +37,24 @@ The shift is upward for an approaching target and downward for a receding one. B
 
 ### Worked Example — Doppler Direction Check
 
-An ambulance siren at $600\\;\\text{Hz}$ approaches a stationary pedestrian at $34\\;\\text{m/s}$. Take $v = 340\\;\\text{m/s}$ for clean arithmetic (the room-temperature value, $343\\;\\text{m/s}$, gives about $666\\;\\text{Hz}$, the same to the precision tested).
+**Problem.** An ambulance siren at $600\\;\\text{Hz}$ approaches a stationary pedestrian at $34\\;\\text{m/s}$. Take $v = 340\\;\\text{m/s}$ for clean arithmetic.
 
-**Step 1 — Approaching source.** The source approaches, so subtract in the denominator:
+- **(a)** Before calculating, roughly what should the pedestrian hear as the ambulance approaches, and after it passes?
+- **(b)** Exactly what frequency does she hear while it approaches?
+- **(c)** What does she hear after it passes?
+- **(d)** If instead she runs at $34\\;\\text{m/s}$ toward a parked ambulance, what does she hear?
+
+**(a) Estimate first.** $u/v = 34/340 = 10\\%$, so expect a shift of about $60\\;\\text{Hz}$: roughly $660\\;\\text{Hz}$ approaching and $540\\;\\text{Hz}$ receding. Answer choices are usually far enough apart for the estimate to pick the right one.
+
+**(b) Approaching source.** The source approaches, so subtract in the denominator:
 
 $f' = 600\\,\\dfrac{340}{340 - 34} = 600\\,\\dfrac{340}{306} \\approx 667\\;\\text{Hz}$
 
-Approach, so the answer must exceed $600$: the minus sign was chosen to make that happen.
+Approach, so the answer must exceed $600$: the minus sign was chosen to make that happen. (The room-temperature value, $343\\;\\text{m/s}$, gives about $666\\;\\text{Hz}$, the same to the precision tested.)
 
-**Step 2 — After it passes.** Now the source recedes, the denominator becomes $340 + 34 = 374$, and $f' = 600(340/374) \\approx 545\\;\\text{Hz}$: the classic drive-by pitch drop.
+**(c) After it passes.** Now the source recedes, the denominator becomes $340 + 34 = 374$, and $f' = 600(340/374) \\approx 545\\;\\text{Hz}$: the classic drive-by pitch drop.
 
-**Step 3 — Estimate first.** $u/v = 34/340 = 10\\%$, so expect a shift of about $60\\;\\text{Hz}$: roughly $660\\;\\text{Hz}$ approaching and $540\\;\\text{Hz}$ receding. Answer choices are usually far enough apart for the estimate to pick the right one.
-
-**Step 4 — Switch who moves.** If instead the pedestrian runs toward a parked ambulance at $34\\;\\text{m/s}$: $f' = 600(340 + 34)/340 = 600(1.1) = 660\\;\\text{Hz}$. Close to $667$, but not identical, because only a moving source changes the wavelength.`
+**(d) Switch who moves.** A moving observer changes the numerator: $f' = 600(340 + 34)/340 = 600(1.1) = 660\\;\\text{Hz}$. Close to the $667\\;\\text{Hz}$ of (b), but not identical, because only a moving source changes the wavelength.`
     },
     {
       id: 'ws4-quiz1',
@@ -143,21 +148,42 @@ When the source moves FASTER than sound ($v_s > v$), it outruns its own wavefron
 
 **Problem 1 — How deep?** A pulse leaves the probe, and an echo from the far edge of the liver returns $130\\;\\mu\\text{s}$ later ($1\\;\\mu\\text{s} = 10^{-6}\\;\\text{s}$; $v = 1540\\;\\text{m/s}$).
 
-**Step 1.** Round-trip distance: $vt = (1540)(1.30 \\times 10^{-4}) \\approx 0.20\\;\\text{m}$
+- **(a)** How far does the pulse travel, there and back?
+- **(b)** How deep is the far edge of the liver?
+- **(c)** How soon would an echo return from a carotid artery about $2\\;\\text{cm}$ below the skin?
 
-**Step 2.** Halve it: $d \\approx 0.10\\;\\text{m} = 10\\;\\text{cm}$. For comparison, a carotid artery about $2\\;\\text{cm}$ below the skin echoes after only about $26\\;\\mu\\text{s}$.
+**(a) Round trip.** $vt = (1540)(1.30 \\times 10^{-4}) \\approx 0.20\\;\\text{m}$
 
-**Problem 2 — Which probe?** For the shallow carotid, a $12\\;\\text{MHz}$ probe gives $\\lambda = 1540/(1.2 \\times 10^{7}) \\approx 0.13\\;\\text{mm}$, fine enough to see the vessel wall. A $3\\;\\text{MHz}$ probe gives $\\lambda \\approx 0.51\\;\\text{mm}$: coarser, but it is the right choice for the liver, $10\\;\\text{cm}$ deep, where a $12\\;\\text{MHz}$ beam would be absorbed before its echo returned.
+**(b) Halve it.** The $0.20\\;\\text{m}$ from (a) covers the depth twice: $d \\approx 0.10\\;\\text{m} = 10\\;\\text{cm}$.
 
-**Problem 3 — Grading a stenosis with Doppler.** A $4.0\\;\\text{MHz}$ beam is aligned with carotid flow. The echo shift is $2.0\\;\\text{kHz}$ upstream and $8.0\\;\\text{kHz}$ inside a narrowing.
+**(c) Run it backward.** The round trip is $2(0.02) = 0.04\\;\\text{m}$, so $t = 0.04/1540 \\approx 26\\;\\mu\\text{s}$.
 
-**Step 1 — Speeds from the double shift.** $u = \\dfrac{v\\,\\Delta f}{2f}$. Upstream: $u = \\dfrac{(1540)(2000)}{2(4.0 \\times 10^{6})} \\approx 0.39\\;\\text{m/s}$. Inside: four times the shift, so four times the speed, about $1.5\\;\\text{m/s}$.
+**Problem 2 — Which probe?** A sonographer must image a carotid artery about $2\\;\\text{cm}$ deep and a liver $10\\;\\text{cm}$ deep, with a $12\\;\\text{MHz}$ or a $3\\;\\text{MHz}$ probe ($v = 1540\\;\\text{m/s}$).
 
-**Step 2 — Area by continuity.** At (nearly) constant flow, $A \\propto 1/u$: the lumen's area is one-quarter of the upstream area.
+- **(a)** What wavelength does the $12\\;\\text{MHz}$ probe give, and is it fine enough for the carotid wall?
+- **(b)** What wavelength does the $3\\;\\text{MHz}$ probe give?
+- **(c)** Which probe should image the liver, and why?
 
-**Step 3 — Radius.** $A \\propto r^2$, so the radius is halved, about a 50% diameter narrowing. Note that a ratio question never needs the factor of 2 or the probe frequency; they cancel.
+**(a) The 12 MHz probe.** $\\lambda = 1540/(1.2 \\times 10^{7}) \\approx 0.13\\;\\text{mm}$, fine enough to see the vessel wall of the shallow carotid.
 
-**Step 4 — Interpret.** Beyond the stenosis, turbulence widens the spread of shifts. The pressure and resistance consequences of the narrowing (Bernoulli and Poiseuille) are in the *Fluids* lesson.`
+**(b) The 3 MHz probe.** $\\lambda = 1540/(3 \\times 10^{6}) \\approx 0.51\\;\\text{mm}$: coarser.
+
+**(c) The liver.** The $3\\;\\text{MHz}$ probe. Its $0.51\\;\\text{mm}$ wavelength from (b) is coarser, but at $10\\;\\text{cm}$ deep a $12\\;\\text{MHz}$ beam would be absorbed before its echo returned.
+
+**Problem 3 — Grading a stenosis with Doppler.** A $4.0\\;\\text{MHz}$ beam is aligned with carotid flow ($v = 1540\\;\\text{m/s}$). The echo shift is $2.0\\;\\text{kHz}$ upstream and $8.0\\;\\text{kHz}$ inside a narrowing.
+
+- **(a)** How fast is the blood moving upstream, and inside the narrowing?
+- **(b)** How does the lumen's area inside the narrowing compare with the upstream area?
+- **(c)** How does its radius compare?
+- **(d)** What does the Doppler signal show just beyond the narrowing?
+
+**(a) Speeds from the double shift.** $u = \\dfrac{v\\,\\Delta f}{2f}$. Upstream: $u = \\dfrac{(1540)(2000)}{2(4.0 \\times 10^{6})} \\approx 0.39\\;\\text{m/s}$. Inside: four times the shift, so four times the speed, about $1.5\\;\\text{m/s}$.
+
+**(b) Area by continuity.** At (nearly) constant flow, $A \\propto 1/u$. With four times the speed from (a), the lumen's area is one-quarter of the upstream area.
+
+**(c) Radius.** $A \\propto r^2$, so one-quarter the area means the radius is halved, about a 50% diameter narrowing. Note that a ratio question never needs the factor of 2 or the probe frequency; they cancel.
+
+**(d) Interpret.** Beyond the stenosis, turbulence widens the spread of shifts. The pressure and resistance consequences of the narrowing (Bernoulli and Poiseuille) are in the *Fluids* lesson.`
     },
     {
       id: 'ws4-quiz2',

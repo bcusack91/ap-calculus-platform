@@ -144,9 +144,13 @@ Finally, the energy a wave carries grows with the **square of its amplitude**: t
 
 **Problem 1 — One tone, three media.** A $500\\;\\text{Hz}$ tone travels through air ($340\\;\\text{m/s}$), then water ($1500\\;\\text{m/s}$), then bone (take $4000\\;\\text{m/s}$).
 
-**Step 1 — Frequency.** The source sets it, and boundaries cannot change it: $500\\;\\text{Hz}$ in all three media.
+- **(a)** What is the tone's frequency in each medium?
+- **(b)** What is its wavelength in each medium?
+- **(c)** From air to bone, which quantities change and which stays fixed?
 
-**Step 2 — Wavelengths.** $\\lambda = v/f$ in each:
+**(a) Frequency.** The source sets it, and boundaries cannot change it: $500\\;\\text{Hz}$ in all three media.
+
+**(b) Wavelengths.** With $f = 500\\;\\text{Hz}$ from (a), $\\lambda = v/f$ in each:
 
 | Medium | $v$ (m/s) | $\\lambda = v/f$ |
 |---|---|---|
@@ -154,21 +158,31 @@ Finally, the energy a wave carries grows with the **square of its amplitude**: t
 | water | $1500$ | $1500/500 = 3.0\\;\\text{m}$ |
 | bone | $4000$ | $4000/500 = 8.0\\;\\text{m}$ |
 
-**Step 3 — Sanity check.** Speed and wavelength rise together while frequency holds still. If your answer shows frequency changing at a boundary, start again.
+**(c) Sanity check.** Speed and wavelength rise together (from $0.68$ to $8.0\\;\\text{m}$) while frequency holds still at $500\\;\\text{Hz}$. If your answer shows frequency changing at a boundary, start again.
 
 **Problem 2 — A string under tension.** A string with $\\mu = 0.010\\;\\text{kg/m}$ is held at tension $F_T = 100\\;\\text{N}$ and shaken by a vibrator at $250\\;\\text{Hz}$.
 
-**Step 1 — Speed from the medium.** $v = \\sqrt{F_T/\\mu} = \\sqrt{100/0.010} = \\sqrt{10^4} = 100\\;\\text{m/s}$
+- **(a)** How fast do waves travel along the string?
+- **(b)** What is their wavelength?
+- **(c)** If the tension is quadrupled to $400\\;\\text{N}$, what are the new speed and wavelength?
 
-**Step 2 — Wavelength.** $\\lambda = v/f = 100/250 = 0.40\\;\\text{m}$
+**(a) Speed from the medium.** $v = \\sqrt{F_T/\\mu} = \\sqrt{100/0.010} = \\sqrt{10^4} = 100\\;\\text{m/s}$
 
-**Step 3 — Quadruple the tension to $400\\;\\text{N}$.** The speed scales as $\\sqrt{F_T}$, so it doubles to $200\\;\\text{m/s}$. The vibrator still sets $250\\;\\text{Hz}$, so the wavelength doubles to $0.80\\;\\text{m}$. Notice the square root: four times the tension gives only twice the speed.
+**(b) Wavelength.** With $v = 100\\;\\text{m/s}$ from (a): $\\lambda = v/f = 100/250 = 0.40\\;\\text{m}$
+
+**(c) Quadruple the tension.** The speed scales as $\\sqrt{F_T}$, so it doubles to $200\\;\\text{m/s}$. The vibrator still sets $250\\;\\text{Hz}$, so the wavelength doubles to $0.80\\;\\text{m}$. Notice the square root: four times the tension gives only twice the speed.
 
 **Problem 3 — A pendulum clock.** A pendulum is $1.0\\;\\text{m}$ long ($g = 10\\;\\text{m/s}^2$).
 
-**Step 1.** $T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{0.10} \\approx 2\\pi(0.32) \\approx 2.0\\;\\text{s}$, one second for each swing across.
+- **(a)** What is its period?
+- **(b)** What is the period with a bob twice as heavy, or with a slightly wider (still small) swing?
+- **(c)** What is the period if the length is increased to $4.0\\;\\text{m}$?
 
-**Step 2 — Changes.** A bob twice as heavy: still $2.0\\;\\text{s}$. A length of $4.0\\;\\text{m}$: $\\sqrt{4} = 2$, so $4.0\\;\\text{s}$. A slightly wider (still small) swing: still $2.0\\;\\text{s}$.`
+**(a) Period.** $T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{0.10} \\approx 2\\pi(0.32) \\approx 2.0\\;\\text{s}$, one second for each swing across.
+
+**(b) Mass and amplitude.** Neither appears in $T = 2\\pi\\sqrt{L/g}$, so both leave the period at $2.0\\;\\text{s}$.
+
+**(c) Four times the length.** $T \\propto \\sqrt{L}$ and $\\sqrt{4} = 2$, so the $2.0\\;\\text{s}$ from (a) doubles to $4.0\\;\\text{s}$.`
     },
     {
       id: 'ws1-quiz2',
