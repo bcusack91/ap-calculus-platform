@@ -40,6 +40,21 @@ export type Slide =
 // + title, agenda, worked examples and the closing quiz slide).
 const MAX_CONTENT_SLIDES = 28
 const MAX_POLLS = 8
+/**
+ * Polls per deck, however many parts the lesson has: five-part lessons grew
+ * to 24 checks, and with their worked examples a 90-minute class could not
+ * get through them (owner, 2026-11-04: cap as physics, 16).
+ */
+const MAX_DECK_POLLS = 16
+/**
+ * Worked problems per lesson part shown on the slides, in lesson order (owner,
+ * 2026-11-04). Each lettered problem takes 3–5 slides; lessons with 3–4 per
+ * part spent half the class on them. The interactive lesson keeps them all
+ * for self-study.
+ */
+export const MAX_DECK_PROBLEMS_PER_PART = 2
+/** A part's remaining worked-problem allowance; `dropped` collects sections left off the slides. */
+export type WorkedBudget = { problems: number; dropped: string[] }
 /** Pool questions considered per deck; the best-matching MAX_POLLS are used. */
 const MAX_POLL_CANDIDATES = 40
 const MAX_BLOCKS_PER_SLIDE = 5
@@ -69,7 +84,7 @@ export function deckLimits(prose: boolean, partCount: number, minedSlides = 0): 
     maxChars,
     maxBlocks: prose ? 4 : MAX_BLOCKS_PER_SLIDE,
     maxSlides: perBlock * blocks,
-    maxPolls: MAX_POLLS * blocks,
+    maxPolls: Math.min(MAX_POLLS * blocks, MAX_DECK_POLLS),
   }
 }
 /** A mined lesson this long re-teaches everything its topic summary says — the summary slides are dropped. */
@@ -236,7 +251,7 @@ const PART_SUFFIX = /\s*·\s*(?:Part \([a-z]\)|Problem \d+(?: \([a-z]\))?)\s*$/i
  * Returns null when the section is not in this shape; it is then chunked
  * like any other section.
  */
-export function workedExampleSlides(title: string, blocks: string[], limits: DeckLimits): ContentSlide[] | null {
+export function workedExampleSlides(title: string, blocks: string[], limits: DeckLimits, budget?: WorkedBudget): ContentSlide[] | null {
   type Problem = { setup: string[]; questions: Map<string, string>; parts: { letter: string; blocks: string[] }[] }
   const problems: Problem[] = []
   const intro: string[] = []
@@ -267,6 +282,15 @@ export function workedExampleSlides(title: string, blocks: string[], limits: Dec
   for (const p of problems) {
     if (p.questions.size === 0 || p.parts.length === 0) return null
     if (p.parts.some((part) => !p.questions.has(part.letter))) return null
+  }
+  if (budget) {
+    const keep = Math.max(0, Math.min(problems.length, budget.problems))
+    budget.problems -= keep
+    if (keep === 0) {
+      budget.dropped.push(title)
+      return []
+    }
+    problems.length = keep
   }
 
   const out: ContentSlide[] = []
@@ -321,6 +345,8 @@ export function slideUnitKey(title: string): string {
  *  slide always opens a NEW worked example, even right after another one. */
 export function sameSlideUnit(prevTitle: string, nextTitle: string): boolean {
   if (/^Worked Example — Try It First$/.test(nextTitle.trim())) return false
+  // A part's Common Traps grid finishes its Key Takeaways — one recap, no poll between.
+  if (/^Common Traps\b/.test(nextTitle.trim()) && /^(Key Takeaways|Common Traps)\b/i.test(slideUnitKey(prevTitle))) return true
   return slideUnitKey(prevTitle) === slideUnitKey(nextTitle)
 }
 
@@ -460,7 +486,7 @@ export function applyDeckFigures<T extends Slide>(
 
 
 /** Lesson markdown → content slides: one per `##` section, long sections split. */
-function contentSlidesFrom(markdown: string, fallbackTitle: string, limits: DeckLimits = DEFAULT_LIMITS): ContentSlide[] {
+export function contentSlidesFrom(markdown: string, fallbackTitle: string, limits: DeckLimits = DEFAULT_LIMITS, budget?: WorkedBudget): ContentSlide[] {
   const slides: ContentSlide[] = []
   const lines = markdown.split('\n')
   let currentTitle = fallbackTitle
@@ -493,8 +519,8 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string, limits: Deck
         return
       }
     }
-    if (/^Worked Example\b/i.test(currentTitle)) {
-      const parts = workedExampleSlides(currentTitle, blocks, limits)
+    if (/^Worked Examples?\b/i.test(currentTitle)) {
+      const parts = workedExampleSlides(currentTitle, blocks, limits, budget)
       if (parts) {
         slides.push(...parts)
         blocks = []
@@ -628,8 +654,10 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // slides, so a topic with a long hand-written summary (Disorders, 5,700
   // chars) taught from the summary and never showed its lesson sections.
   const lessonMd: string[] = []
+  const lessonMdPart: number[] = [] // the lesson part each lessonMd entry came from
   let partCount = 0
   let limits = DEFAULT_LIMITS
+  const droppedSections: string[] = [] // worked examples past the per-part slide allowance
   {
     try {
       const reg = await import('@/data/interactive-lessons/registry')
@@ -645,6 +673,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
             // Drop lesson-navigation lines ("Part 3 of 7 — …") — deck pacing
             // is the teacher's, not the lesson's.
             lessonMd.push(stripMetaSections(stripLowYield(sec.content).replace(/^\*\*Part \d+ of \d+.*$/gm, '')))
+            lessonMdPart.push(part)
           }
           const exercise = (sec as { exercise?: { questions?: unknown[] } }).exercise
           for (const q of exercise?.questions ?? []) {
@@ -672,7 +701,13 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   if (lessonMd.length > 0) {
     const prose = !/\$/.test(summaryMd + lessonMd.join(''))
     limits = deckLimits(prose, partCount)
-    const lessonSlides = lessonMd.flatMap((md) => contentSlidesFrom(md, topic.title, limits)).filter((s) => s.blocks.length > 0)
+    const budgets = new Map<number, WorkedBudget>()
+    const budgetFor = (part: number) => {
+      if (!budgets.has(part)) budgets.set(part, { problems: MAX_DECK_PROBLEMS_PER_PART, dropped: [] })
+      return budgets.get(part)!
+    }
+    const lessonSlides = lessonMd.flatMap((md, i) => contentSlidesFrom(md, topic.title, limits, budgetFor(lessonMdPart[i]))).filter((s) => s.blocks.length > 0)
+    droppedSections.push(...[...budgets.values()].flatMap((b) => b.dropped))
     // Topic.textContent is a summary of the same lesson; once the lesson
     // itself is on the slides, the summary only repeats it (a second "Key
     // Takeaways" early in the deck). The agenda slide still previews the arc.
@@ -728,7 +763,14 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // deck was silently stored with NO figures (found 2026-10-29). A broken
   // registry must fail the regeneration run instead.
   const { DECK_FIGURES } = await import('@/data/deck-figures')
-  content = applyDeckFigures(content, DECK_FIGURES[topicSlug])
+  // A figure drawn for a worked example that is now past its part's slide
+  // allowance goes with it; any other unmatched figure still fails loudly.
+  const figures = DECK_FIGURES[topicSlug]?.filter((p) => {
+    const needle = p.at.trim().toLowerCase()
+    const matches = content.some((s) => slideUnitKey(s.title).toLowerCase().startsWith(needle))
+    return matches || !droppedSections.some((t) => t.toLowerCase().startsWith(needle))
+  })
+  content = applyDeckFigures(content, figures)
 
   // ---- Segment the content into teaching beats of ~3 slides (whole units) ----
   const segments: ContentSlide[][] = segmentContent(content, SEGMENT_SIZE)

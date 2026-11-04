@@ -5,7 +5,7 @@
  * an online class, and a problem must ask its question).
  */
 import { describe, it, expect } from 'vitest'
-import { applyDeckFigures, pollsInsideUnits, slideUnitKey, takeawayGridSlides, workedExampleSlides, type Slide } from '@/lib/slide-deck'
+import { applyDeckFigures, contentSlidesFrom, pollsInsideUnits, slideUnitKey, takeawayGridSlides, workedExampleSlides, type Slide } from '@/lib/slide-deck'
 
 const LIMITS = { maxChars: 700, maxBlocks: 5, maxSlides: 100, maxPolls: 8 }
 const T = 'Worked Example — Counting Charge'
@@ -55,6 +55,29 @@ describe('workedExampleSlides', () => {
     const out = applyDeckFigures(slides, [{ at: T, figure, mode: 'after' }])
     expect(out.map((s) => s.title)).toEqual([T, `${T} · Part (a)`, `${T} · Part (b)`, `${T} (cont.)`])
     expect((out[3] as Extract<Slide, { kind: 'content' }>).figure?.alt).toBe('the solved circuit')
+  })
+})
+
+describe('worked-example sections in lesson markdown', () => {
+  it('splits a plural "Worked Examples" heading into parts too', () => {
+    const md = [
+      '### Worked Examples — Clearance Calculations',
+      '',
+      '**Problem 1.** Urine inulin is 30 mg/mL, urine flow 2 mL/min and plasma inulin 0.5 mg/mL.',
+      '',
+      '- **(a)** What is the inulin clearance?',
+      '- **(b)** What is the GFR?',
+      '',
+      '**(a) Clearance.** UV/P = 60/0.5 = 120 mL/min.',
+      '',
+      '**(b) GFR.** Inulin is filtered only, so GFR = 120 mL/min.',
+    ].join('\n')
+    const titles = contentSlidesFrom(md, 'Renal').map((s) => s.title)
+    expect(titles).toEqual([
+      'Worked Examples — Clearance Calculations',
+      'Worked Examples — Clearance Calculations · Part (a)',
+      'Worked Examples — Clearance Calculations · Part (b)',
+    ])
   })
 })
 
