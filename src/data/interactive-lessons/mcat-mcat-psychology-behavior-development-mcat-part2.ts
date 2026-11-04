@@ -56,15 +56,53 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
       type: 'text' as const,
       content: `### Worked Example — An Attachment-Methods Passage, Fully Read
 
-**Passage.** In a longitudinal study, 200 infants complete the Strange Situation at 12 months. At reunion, Infant J ignores his returning mother and continues playing with his back turned; Infant K alternates between reaching to be held and arching away in anger, and cannot be soothed. At age 5, teachers blind to classification rate former secure infants higher in peer competence (d = 0.4). A second sample studied in a culture emphasizing early independence training shows nearly double the avoidant rate, and a third sample in which infants are almost never apart from their mothers shows elevated resistant classifications. Finally, temperament assessed at 3 months (irritability) predicts later resistant classification even after controlling for maternal sensitivity.
+**Problem 1.** In a longitudinal study, 200 infants complete the Strange Situation at 12 months. At reunion, Infant J ignores his returning mother and keeps playing, back turned. Infant K reaches to be held, then arches away in anger, and cannot be soothed.
 
-**Step 1 — classify from the reunion.** J: exploration plus reunion avoidance = insecure-avoidant. K: clingy-angry, comfort-resistant distress = insecure-ambivalent/resistant. The separations themselves are not diagnostic — many secure infants cry at separation; the REUNION response carries the classification.
+- **(a)** How is Infant J classified?
+- **(b)** How is Infant K classified?
+- **(c)** Infant J showed almost no distress when his mother left. Why is that not evidence that he is securely attached?
 
-**Step 2 — treat the age-5 result correctly.** Blind ratings remove expectancy bias, and d = 0.4 is a modest effect: attachment security is a probabilistic predictor, not a determinant. Answers phrased as "secure attachment causes later competence" overreach a correlational, self-selected design — sensitive parents may differ in many ways.
+**(a) Infant J.** Exploration plus avoidance of the returning caregiver is insecure-avoidant.
 
-**Step 3 — read the cross-cultural rates.** Systematically shifted distributions suggest the Strange Situation's behaviors carry different meanings under different caregiving norms (independence training makes reunion indifference normative; constant proximity care makes brief separation exceptionally alarming). The measured conclusion: the procedure's VALIDITY is partly culture-bound, not that most infants in those cultures are disordered.
+**(b) Infant K.** Seeking contact while angrily resisting it, with distress that will not resolve, is insecure-ambivalent/resistant.
 
-**Step 4 — use the temperament finding.** Early irritability predicting resistant attachment independent of maternal sensitivity supports a child-driven contribution — the bidirectional model. The strongest wrong answer will attribute classification entirely to parenting; the data given explicitly block that inference.`
+**(c) The reunion decides.** Low separation distress is typical of avoidant infants, and many secure infants cry when the caregiver leaves, so separation behavior is not diagnostic. J's avoidance at the RETURN carries the classification.
+
+**Problem 2.** In the same study, irritability assessed at 3 months predicts later resistant classification, even after controlling for maternal sensitivity.
+
+- **(a)** What does controlling for maternal sensitivity rule out?
+- **(b)** Which model of development does the result support?
+- **(c)** Which tempting conclusion about attachment does the result block?
+
+**(a) The parenting-only route.** If irritable infants became resistant only because they received less sensitive care, the link would vanish once sensitivity is held constant. It does not vanish.
+
+**(b) Bidirectional.** The child contributes directly: early temperament shapes attachment outcomes alongside caregiving (and temperament can also evoke particular parenting) — the bidirectional model.
+
+**(c) Parenting as the sole cause.** The strongest wrong answer attributes attachment classification entirely to parenting. The data given explicitly block that inference.
+
+**Problem 3.** At age 5, teachers blind to the children's attachment classifications rate former secure infants higher in peer competence (d = 0.4).
+
+- **(a)** What does keeping the teachers blind protect against?
+- **(b)** How large is an effect of d = 0.4?
+- **(c)** Can the study conclude that secure attachment causes later competence?
+
+**(a) Expectancy bias.** Teachers who knew a child's classification might rate the child to fit it; blind ratings remove that bias.
+
+**(b) Modest.** d = 0.4 is a modest effect: attachment security is a probabilistic predictor of later competence, not a determinant.
+
+**(c) No.** The design is correlational and self-selected: sensitive parents may differ in many other ways that also build competence. "Secure attachment causes later competence" overreaches the data.
+
+**Problem 4.** A second sample, from a culture emphasizing early independence training, shows nearly double the avoidant rate. A third, in which infants are almost never apart from their mothers, shows elevated resistant classifications.
+
+- **(a)** Why might independence training raise avoidant classifications?
+- **(b)** Why might constant closeness raise resistant classifications?
+- **(c)** What do the shifted rates call into question?
+
+**(a) Indifference is normal there.** Where infants are trained toward early independence, calm indifference at reunion is normative behavior, yet the coding reads it as avoidance.
+
+**(b) Separation is rare there.** For an infant almost never apart from the mother, even a brief separation is exceptionally alarming, so the distress and clinging at reunion look resistant.
+
+**(c) The measure, not the children.** The same behaviors carry different meanings under different caregiving norms, so the procedure's VALIDITY is partly culture-bound. The data do not show that most infants in those cultures are disordered.`
     },
     {
       id: 'dev2-quiz1',
@@ -80,11 +118,11 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
             explanation: `The behaviorist/psychoanalytic consensus held that infants attach to whoever satisfies hunger. Feeding was assigned to the wire mother, yet attachment behaviors — clinging, fear-time refuge, secure-base exploration — all organized around the cloth mother, isolating contact comfort as the operative variable. The design's power is exactly that it unconfounded food from touch.`
           },
           {
-            question: `In the Strange Situation, an infant plays with toys while her father is present, shows little reaction when he leaves, and turns away, avoiding eye contact, when he returns. Her classification is:`,
-            options: [`Secure, given her calm play and low separation distress`, `Disorganized, given her contradictory behavior at reunion`, `Insecure-resistant, given her rejection of him at reunion`, `Insecure-avoidant, given her low distress and avoidance at reunion`],
+            question: `In the Strange Situation, an infant plays happily while her father is present and shows no distress when he leaves. When he returns, she smiles, crawls over to show him a toy, and then goes back to playing. Her classification is:`,
+            options: [`Insecure-avoidant, given her lack of distress at separation`, `Disorganized, given her shifts between play and approach`, `Insecure-resistant, given her need for contact at reunion`, `Secure, given her warm greeting and her quick return to play`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `Reunion behavior is the diagnostic window: turning away from the returning caregiver defines avoidant attachment. A secure infant may or may not cry at separation but greets and settles at reunion; a resistant infant is inconsolable and angrily clings; disorganized infants show contradictory or frozen behavior, which is absent here.`
+            explanation: `Reunion behavior is the diagnostic window: greeting the returning caregiver and settling back into exploration defines secure attachment, whatever happened at the separation — secure infants may or may not cry when the caregiver leaves. Low separation distress is the trap that pulls toward avoidant, but an avoidant infant ignores or turns away at reunion, which she does not. A resistant infant clings angrily and cannot be soothed, and disorganized infants freeze or show contradictory approach-avoidance; moving between play and a brief greeting is neither.`
           },
           {
             question: `A tutoring program succeeds by giving each child problems slightly beyond independent ability while a tutor supplies hints that are progressively withdrawn as skill grows. The program is a direct application of:`,
@@ -115,14 +153,22 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Harlow: contact comfort beats feeding (cloth vs wire unconfounds them); Lorenz: imprinting shows time-windowed prepared bonding; Bowlby: attachment as evolved proximity system with normative stranger and separation anxiety
-- Strange Situation classifies by REUNION: secure (settles, greets), avoidant (ignores), resistant (clings and rages, inconsolable), disorganized (contradictory/frozen); cross-cultural rate shifts question the measure, not the children
-- Temperament (easy/difficult/slow-to-warm) is early, biological, moderately stable; goodness of fit and child-to-parent effects make parenting correlations bidirectional
-- Baumrind grid: demandingness x responsiveness — authoritative (high/high) best on average; authoritarian, permissive, neglectful each miss one or both
-- Vygotsky vs Piaget: guided interaction, ZPD, scaffolding, private speech = Vygotsky; solo construction gated by stage readiness = Piaget — pick by the vignette's mechanism of gain
+- **Roots of attachment.** Harlow: touch, not food, builds attachment; Bowlby: stranger (~8 mo) and separation anxiety are normal.
+- **Classify by the reunion.** Secure settles and greets, avoidant ignores, resistant clings and rages, disorganized freezes.
+- **Temperament and parenting.** Temperament is early and biological; authoritative (firm and warm) parenting does best on average.
+- **Vygotsky's guided growth.** Gains made with help inside the zone of proximal development, via fading scaffolding, are Vygotsky's.
+
+**Common traps**
+
+- **Classifying by the separation.** Crying when the parent leaves classifies nothing; the response at the reunion decides the style.
+- **Parents cause everything.** A child's temperament evokes parenting, so parenting-outcome correlations are not automatically parent-caused.
+- **Mixing up the A-words.** Authoritative is firm plus warm and explains; authoritarian is firm but cold, punitive and obedience-focused.
+- **Imprinting in humans.** Lorenz's critical-period imprinting fits precocial birds; human attachment forms gradually.
 
 <!-- yield:low -->
-- Low-yield extras: Strange Situation base rates (secure ~60-65%, avoidant ~20%, resistant ~10-15%, disorganized a small remainder); Thomas & Chess temperament percentages (easy ~40%, difficult ~10%, slow-to-warm-up ~15%)
+**Low-yield extras**
+
+- Strange Situation base rates (secure ~60-65%, avoidant ~20%, resistant ~10-15%, disorganized a small remainder); Thomas & Chess temperament percentages (easy ~40%, difficult ~10%, slow-to-warm-up ~15%)
 <!-- /yield -->`
     }
   ]

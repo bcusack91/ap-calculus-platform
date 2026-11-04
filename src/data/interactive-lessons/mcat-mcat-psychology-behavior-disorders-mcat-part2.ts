@@ -60,15 +60,50 @@ Timeline: **prodrome** (withdrawal, odd beliefs) → active phase → residual. 
       type: 'text' as const,
       content: `### Worked Example — A Two-Pathway Pharmacology Passage, Fully Read
 
-**Passage.** A 21-year-old college junior is brought in after a month of conviction that campus cameras broadcast his thoughts, hearing two voices commenting on his actions, and increasingly tangential speech. His roommate reports a year of gradual withdrawal, declining hygiene, and abandoned activities preceding the acute symptoms. On a D2-antagonist antipsychotic, the voices and delusion fade within weeks, but he remains flat, unmotivated, and socially disengaged; he also develops tremor and rigidity. A research aside notes that amphetamine at high doses reproduces paranoid psychosis in healthy users, and that an NMDA antagonist (ketamine) transiently produces BOTH positive-like and negative-like symptoms in volunteers.
+**Problem 1.** A 21-year-old junior has had a month of conviction that campus cameras broadcast his thoughts, two voices commenting on his actions, and tangential speech. His roommate describes a year of withdrawal, declining hygiene and abandoned activities before that.
 
-**Step 1 — inventory and classify the symptoms.** Thought broadcasting delusion + commenting voices + tangential speech = positive symptoms (1-month active phase). The preceding year of withdrawal, avolition, and decline = prodrome contributing to the 6-month duration criterion, and its avolition/flat affect are negative symptoms. Both criteria columns are satisfied — the vignette is built to make you assemble the timeline.
+- **(a)** Which of his symptoms are positive symptoms?
+- **(b)** What is the year that came before, and which symptoms does it contain?
+- **(c)** Does his course meet schizophrenia's duration criteria?
 
-**Step 2 — read the treatment response as pathway evidence.** D2 blockade relieves positive symptoms → consistent with mesolimbic dopamine EXCESS. Persistence of negative symptoms fits mesocortical HYPOfunction — blocking dopamine cannot fix a pathway that is already underactive (and may worsen it). The motor side effects (tremor, rigidity) are the third pathway: nigrostriatal D2 blockade producing parkinsonism — connect to Parkinson's disease pharmacology, where the therapeutic direction is reversed.
+**(a) The active phase.** The thought-broadcasting delusion, the commenting voices and the tangential speech are all positive symptoms, and together they make up a 1-month active phase.
 
-**Step 3 — use the drug-model evidence.** Amphetamine (dopamine releaser) reproducing ONLY paranoid positive symptoms supports dopamine's sufficiency for that cluster; ketamine reproducing both clusters is the standard argument that NMDA/glutamate hypofunction sits upstream, explaining what the dopamine hypothesis alone cannot — the negative/cognitive symptoms.
+**(b) The prodrome.** The preceding year of withdrawal and decline is the prodrome. Its abandoned activities and withdrawal (avolition, asociality) are negative symptoms.
 
-**Step 4 — the discrimination item to expect.** "Which feature best distinguishes his negative symptoms from a co-occurring major depressive episode?" Depression carries prominent depressed MOOD and guilt with intact idea generation; primary negative symptoms present as absence — flat affect and avolition without the subjective sadness — and predate the mood-reactive picture. If a full mood episode dominated the course with psychosis also persisting outside it, schizoaffective disorder would enter the differential — course bookkeeping decides.`
+**(c) Yes.** A 1-month active phase plus a year of prodrome exceeds the 6 months of continuous disturbance. Both criteria columns are satisfied: the vignette is built to make you assemble the timeline.
+
+**Problem 2.** On a D2-antagonist antipsychotic, his voices and delusion fade within weeks, but he remains flat, unmotivated, and socially disengaged; he also develops tremor and rigidity.
+
+- **(a)** What does the relief of his voices and delusion suggest about mesolimbic dopamine?
+- **(b)** Why do the flat affect and low motivation persist?
+- **(c)** Where do the tremor and rigidity come from?
+
+**(a) Mesolimbic excess.** D2 blockade relieves positive symptoms, which is consistent with mesolimbic dopamine EXCESS.
+
+**(b) Mesocortical hypofunction.** Negative symptoms fit an underactive mesocortical pathway. Blocking dopamine cannot fix a pathway that is already underactive, and it may worsen it.
+
+**(c) The nigrostriatal pathway.** D2 blockade in this third pathway produces parkinsonism. Connect it to Parkinson's disease pharmacology, where the therapeutic direction is reversed.
+
+**Problem 3.** A research aside notes that amphetamine at high doses reproduces paranoid psychosis in healthy users, and that an NMDA antagonist (ketamine) transiently produces BOTH positive-like and negative-like symptoms in volunteers.
+
+- **(a)** What does the amphetamine finding support?
+- **(b)** What does the ketamine finding add?
+
+**(a) Dopamine for positive symptoms.** Amphetamine, a dopamine releaser, reproduces ONLY paranoid positive symptoms. That supports dopamine's sufficiency for that cluster.
+
+**(b) Glutamate upstream.** Ketamine reproducing both clusters is the standard argument that NMDA/glutamate hypofunction sits upstream. It explains what the dopamine hypothesis alone cannot: the negative and cognitive symptoms.
+
+**Problem 4.** A passage item asks which feature best distinguishes his negative symptoms from a co-occurring major depressive episode.
+
+- **(a)** What would mark a major depressive episode?
+- **(b)** What marks primary negative symptoms?
+- **(c)** What course would bring schizoaffective disorder into the differential?
+
+**(a) Depressed mood.** Depression carries prominent depressed MOOD and guilt, with idea generation intact.
+
+**(b) Absence.** Primary negative symptoms present as absence: flat affect and avolition without the subjective sadness. They also predate the mood-reactive picture.
+
+**(c) Mood episodes plus psychosis outside them.** If a full mood episode dominated the course while psychosis also persisted outside it, schizoaffective disorder would enter the differential. Course bookkeeping decides.`
     },
     {
       id: 'dis2-quiz1',
@@ -84,18 +119,18 @@ Timeline: **prodrome** (withdrawal, odd beliefs) → active phase → residual. 
             explanation: `Four-day elevated episodes without severe impairment, psychosis, or hospitalization are hypomania; hypomania plus at least one major depressive episode defines Bipolar II. Bipolar I requires full mania (a week, or any duration if hospitalized) and does NOT require depression. Four days is exactly the hypomanic threshold, so her episodes exceed cyclothymia's subthreshold fluctuations, and her major depressive episode rules out cyclothymia outright. Feeling RESTED on little sleep is decreased need for sleep — the opposite of insomnia.`
           },
           {
-            question: `Six months into treatment, a patient with schizophrenia no longer hears voices, but rarely speaks spontaneously, initiates no activities, and shows little facial expression. These residual features are classified as:`,
-            options: [`Positive symptoms that are responding slowly to medication`, `Catatonia secondary to the underlying psychotic illness`, `Medication-induced parkinsonism from D2 blockade`, `Negative symptoms: alogia, avolition, and flat affect`],
+            question: `Six months into treatment, a patient with schizophrenia no longer hears voices, but rarely speaks spontaneously, initiates no activities, and shows little facial expression. Compared with the voices he once heard, these residual features are the ones that:`,
+            options: [`Will clear once his D2-blocker dose is raised further`, `Show that the diagnosis was brief psychotic disorder`, `Signal that the voices will return within a few weeks`, `Best predict his long-term social and job functioning`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `Hallucinations and delusions are positive (added) phenomena; poverty of speech, loss of motivation, and blunted affect are negative (subtracted) phenomena. The dissociated treatment response is classic: D2 blockade quiets mesolimbic excess but does not restore mesocortical function. Parkinsonism would present with tremor and rigidity, and catatonia with posturing or stupor — neither is described.`
+            explanation: `Poverty of speech, loss of motivation, and blunted affect are negative (subtracted) symptoms, and negative symptoms predict functional outcome better than positive ones while responding worst to classic antipsychotics. A higher D2-blocker dose quiets mesolimbic excess but cannot restore an underactive mesocortical pathway, so these features will not simply clear. Six months of illness rules out brief psychotic disorder (under one month), and persisting negative symptoms carry no forecast that the voices will return.`
           },
           {
             question: `Two observations historically anchored the dopamine hypothesis of psychosis: clinical potency of early antipsychotics correlated with D2-receptor affinity, and:`,
-            options: [`Light therapy improved seasonal depression by shifting circadian timing`, `High-dose amphetamine induces paranoid psychosis in people without schizophrenia`, `Lithium stabilized mood swings in patients with bipolar disorder`, `Benzodiazepines reduced anxiety by enhancing GABA-A receptor activity`],
+            options: [`Light therapy improved seasonal depression by shifting circadian timing`, `L-DOPA can trigger hallucinations and paranoia in Parkinson's patients`, `Lithium stabilized mood swings in patients with bipolar disorder`, `Benzodiazepines reduced anxiety by enhancing GABA-A receptor activity`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `The hypothesis rests on converging pharmacology: blocking D2 receptors relieves positive symptoms, and boosting dopamine (amphetamine, or L-DOPA in Parkinson's patients) can CREATE them. Together they bracket dopamine from both directions. The lithium, light-therapy, and GABA facts are true but belong to other disorders and carry no evidence about psychosis mechanisms.`
+            explanation: `The hypothesis rests on converging pharmacology: blocking D2 receptors relieves positive symptoms, and boosting dopamine (L-DOPA given for Parkinson's disease, or high-dose amphetamine) can CREATE them. Together they bracket dopamine from both directions. The lithium, light-therapy, and GABA facts are true but belong to other disorders and carry no evidence about psychosis mechanisms.`
           },
           {
             question: `A patient reports two weeks of profound loss of interest in previously enjoyed activities, weight loss, insomnia, fatigue, worthlessness, and poor concentration, but insists his mood is "fine, just numb." Can he meet criteria for major depressive disorder?`,
@@ -119,14 +154,22 @@ Timeline: **prodrome** (withdrawal, odd beliefs) → active phase → residual. 
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- MDD: 5+ symptoms, 2+ weeks, cardinal = depressed mood OR anhedonia; dysthymia = 2+ years chronic; monoamine hypothesis is supported but incomplete (therapeutic lag → neuroplasticity); HPA/cortisol and hippocampal findings
-- Bipolar bookkeeping: mania (1 week, impairment/psychosis/hospitalization) = Bipolar I, no depression needed; hypomania (4 days, no marked impairment) + major depression = Bipolar II; 2 years subthreshold = cyclothymia; decreased NEED for sleep is the tell; lithium stabilizes
-- Schizophrenia: 2+ of delusions, hallucinations, disorganized speech, disorganized/catatonic behavior, negative symptoms — at least one of the first three; 1-month active phase within ≥6 months; schizophreniform 1-6 months, brief psychotic under 1 month, schizoaffective = mood episodes plus psychosis that also occurs outside them
-- Dopamine hypothesis: mesolimbic excess = positive symptoms (D2 blockers, amphetamine psychosis); mesocortical deficit = negative/cognitive; nigrostriatal blockade = parkinsonian side effects; NMDA hypofunction covers what dopamine alone cannot
-- Ask about suicide directly — it assesses risk and does not create it
+- **MDD criteria.** Five symptoms for 2+ weeks, one being depressed mood or anhedonia; dysthymia is milder but lasts 2+ years.
+- **Bipolar bookkeeping.** Mania (1+ week, or hospitalized) = Bipolar I; hypomania (4+ days) + major depression = II; cyclothymia: 2 years subthreshold.
+- **Schizophrenia criteria.** Two of five symptoms, one of them core psychotic: a 1-month active phase within 6+ months.
+- **Dopamine, two pathways.** Mesolimbic excess is linked to positive symptoms; mesocortical deficit to negative ones.
+
+**Common traps**
+
+- **Need vs. inability to sleep.** Feeling rested on 3 hours is decreased need for sleep (mania); insomnia is tired yet sleepless.
+- **Requiring depressed mood.** Anhedonia can replace depressed mood as the cardinal symptom of MDD.
+- **Calling short psychosis schizophrenia.** Under 1 month is brief psychotic disorder; 1–6 months is schizophreniform.
+- **Fearing to ask about suicide.** Asking directly assesses risk and does not create it.
 
 <!-- yield:low -->
-- Low-yield extras: BDNF as the best-studied neuroplasticity signal in depression; schizoaffective disorder's formal 2-week rule for psychosis without a mood episode
+**Low-yield extras**
+
+- BDNF as the best-studied neuroplasticity signal in depression; schizoaffective disorder's formal 2-week rule for psychosis without a mood episode.
 <!-- /yield -->`
     }
   ]

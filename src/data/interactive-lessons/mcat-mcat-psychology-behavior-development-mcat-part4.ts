@@ -50,15 +50,53 @@ export const mcatPsychDevPart4Data = {
       type: 'text' as const,
       content: `### Worked Example — A Nature-Nurture Passage, Fully Read
 
-**Passage.** A study of cognitive ability reports: MZ-together correlation 0.86; MZ-apart 0.74; DZ-together 0.59; adoptive siblings (unrelated, same home) 0.28 in childhood, falling to near 0.04 by adulthood; adopted children's IQ correlates more with biological than adoptive parents by adolescence. The authors estimate heritability at ~0.5 in childhood, rising toward ~0.7 in adulthood. A commentator objects: "If IQ is 70% genetic, early-childhood enrichment programs are pointless, and the average difference between two neighborhoods' test scores must be genetic."
+**Problem 1.** A study of cognitive ability reports these correlations: MZ twins reared together 0.86; MZ twins reared apart 0.74; DZ twins reared together 0.59.
 
-**Step 1 — extract the design logic.** MZ-apart (0.74) approaching MZ-together (0.86) shows strong similarity WITHOUT a shared home → genetic contribution plus a modest shared-environment effect (the 0.12 gap). Adoptive-sibling correlations fading to ~0 by adulthood is the classic finding that shared family environment's influence on IQ wanes as people select their own environments (active gene-environment correlation — niche-picking).
+- **(a)** What does the MZ-apart correlation, compared with MZ-together, show?
+- **(b)** What does the 0.12 gap between the two MZ groups estimate?
+- **(c)** Does the MZ-together vs. DZ-together comparison point the same way?
 
-**Step 2 — explain heritability RISING with age.** Counterintuitive but standard: as individuals increasingly choose environments matching their genotypes, genetic differences amplify; and adult environments (self-selected) vary less arbitrarily than childhood ones. Rising heritability is evidence of gene-environment correlation at work, not of genes "switching on" alone.
+**(a) Genes.** Identical twins raised in different homes stay strongly similar (0.74), close to those raised together (0.86). Similarity WITHOUT a shared home points to a genetic contribution.
 
-**Step 3 — dismantle the commentator, claim by claim.** (a) Population heritability does not bound what a NEW environment can do — heritability is computed over existing environments; enrichment adds one that wasn't in the data (height is highly heritable, yet mean height rose across a century of better nutrition). (b) Within-group heritability licenses no inference about between-group gaps: two neighborhoods can differ entirely for environmental reasons while heritability within each is high — identical seed, different soil. Both errors are named, canonical, and heavily tested.
+**(b) Shared environment.** Separating MZ twins lowers their correlation from 0.86 to 0.74; that 0.12 gap is a modest shared-environment effect.
 
-**Step 4 — the design-extension item.** "Which additional group would best isolate shared-environment effects?" Unrelated adoptive siblings already do — their entire similarity (0.28 in childhood) IS shared environment, since they share no genes. Recognizing which correlation carries which variance component is the skill the passage is built to test.`
+**(c) Yes.** Both pair types share a home, but MZ twins share about twice the segregating genes of DZ twins and correlate more (0.86 vs. 0.59) — again a genetic contribution. Caveat: MZ twins are also treated more alike.
+
+**Problem 2.** The authors estimate heritability at ~0.5 in childhood, rising toward ~0.7 in adulthood. A commentator objects: "If IQ is 70% genetic, early-childhood enrichment programs are pointless, and the average difference between two neighborhoods' test scores must be genetic."
+
+- **(a)** What does "70% genetic" misstate about heritability?
+- **(b)** Does high heritability make enrichment programs pointless?
+- **(c)** Does high heritability within each neighborhood explain the gap between them?
+
+**(a) A population statistic.** A heritability of 0.7 means about 70% of the variance among people in that population is associated with genetic differences. It does not mean 70% of any one person's IQ is genetic.
+
+**(b) No.** Heritability is computed over existing environments; enrichment adds one that was not in the data. Height is highly heritable, yet mean height rose across a century of better nutrition.
+
+**(c) No.** Within-group heritability licenses no inference about between-group gaps: two neighborhoods can differ entirely for environmental reasons while heritability within each is high — identical seed, different soil. Both errors are canonical and heavily tested.
+
+**Problem 3.** Adoptive siblings (unrelated, raised in the same home) correlate 0.28 in childhood, falling to near 0.04 by adulthood. By adolescence, adopted children's IQ correlates more with their biological than their adoptive parents.
+
+- **(a)** Which variance component does the adoptive-sibling correlation measure, and why?
+- **(b)** What does its fall to near 0.04 suggest about shared family environment?
+- **(c)** What does the adoptees' resemblance to their biological parents add?
+
+**(a) Shared environment.** Adoptive siblings share no genes, so their entire similarity (0.28 in childhood) IS shared environment.
+
+**(b) It fades.** Shared family environment's influence on IQ wanes as people grow up and select their own environments — active gene-environment correlation (niche-picking).
+
+**(c) Genes show through.** Adoptees resemble the parents who supplied only their genes more than the parents who raised them, so the genetic contribution shows through as the family effect fades.
+
+**Problem 4.** The same authors estimate heritability of cognitive ability at ~0.5 in childhood, rising toward ~0.7 in adulthood — the opposite of what many students expect.
+
+- **(a)** How can genetic differences gain influence as people age?
+- **(b)** Why might adult environments add less arbitrary variance than childhood ones?
+- **(c)** Is the rise evidence that genes act on their own later in life?
+
+**(a) Niche-picking.** As individuals increasingly choose environments that match their genotypes, genetic differences are amplified by the environments they select.
+
+**(b) Self-selected settings.** Children largely receive the environment their family provides; adults choose theirs, so adult environments vary less arbitrarily and track genotype more closely.
+
+**(c) No.** Rising heritability is evidence of gene-environment correlation at work, not of genes "switching on" by themselves.`
     },
     {
       id: 'dev4-quiz1',
@@ -95,11 +133,11 @@ export const mcatPsychDevPart4Data = {
             explanation: `Teratogen impact follows developmental timing: organs are most disruptable while being BUILT, and organogenesis spans the embryonic period (weeks 3-8). The germinal period tends toward all-or-none loss rather than malformation. The essential clinical caveat: CNS development continues across all trimesters, so no stage is safe for alcohol — which is why no safe dose is recognized.`
           },
           {
-            question: `A trait's heritability within a well-nourished population is estimated at 0.80. Which conclusion is actually licensed by this number?`,
-            options: [`80% of the trait in each individual person is caused by their genes`, `About 80% of variance among people here is associated with genetic differences`, `Environmental interventions cannot meaningfully change the trait's level`, `Differences between this population and a malnourished one must be mostly genetic`],
+            question: `Nearly every person develops ten fingers under a shared genetic developmental program, yet the heritability of finger number is close to zero. Which explanation is correct?`,
+            options: [`Genes play no meaningful role in how fingers form`, `Most variation in finger number comes from accidents`, `Heritability can be estimated only for behavioral traits`, `Twin studies cannot be used to study physical traits`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Heritability partitions VARIANCE ACROSS PEOPLE in a specific population-environment context. It cannot be applied to an individual, it can change when environments change, and novel interventions can shift the whole distribution regardless (high heritability of height coexists with large secular gains from nutrition). And within-group heritability never licenses between-group inferences — the two-soils trap (blaming the gap with a malnourished population on genes) is the exam's most reliable wrong answer.`
+            explanation: `Heritability measures how much of the VARIATION among people tracks genetic differences. Almost everyone carries the same finger-building program, so there is little genetic variation to track, and most of the few differences that exist come from accidents and injuries — environment. A near-zero heritability therefore does not mean genes play no role in how fingers form; it describes differences in a population, not what builds the trait. Heritability is estimated for physical traits such as height as readily as for behavioral ones, and twin studies work for physical traits too.`
           }
         ]
       }
@@ -109,14 +147,22 @@ export const mcatPsychDevPart4Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Design logic: MZ-DZ concordance gap = genes; adoptee-biological resemblance = genes; adoptive-sibling similarity = shared environment; MZ concordance under 100% = environment and chance are real
-- Heritability is a population variance statistic: not individual, not fixed, not intervention-proof, and never a bridge from within-group to between-group differences
-- Gene-environment: interaction (allele effect depends on exposure) vs correlation (passive, evocative, active/niche-picking — the reason heritability rises with age)
-- Teratogens strike by timing: embryonic weeks 3-8 = organogenesis peak; brain vulnerable all pregnancy; FAS = leading preventable intellectual disability
-- Methods: cross-sectional confounds age with cohort; longitudinal fights attrition and practice effects; sequential separates them; infant cognition is read from looking-time recovery
+- **Read the design.** MZ above DZ, or adoptees like birth parents: genes; adoptive siblings: shared home; MZ below 100%: environment.
+- **Heritability is variance.** It describes differences among people in one population and environment, and it can change.
+- **Genes and environment.** Interaction: an allele's effect depends on exposure; correlation: passive, evocative, active.
+- **Teratogens by timing.** Weeks 3-8 (organogenesis) carry peak risk; the brain stays vulnerable all pregnancy.
+
+**Common traps**
+
+- **Heritability for one person.** "80% heritable" never means 80% of one person's trait comes from genes; it describes population variance.
+- **High heritability, no fix.** Heritability covers existing environments; a new one, like better nutrition, can still shift the mean.
+- **Within-group to between-group.** High heritability inside two groups says nothing about why they differ: same seed, different soil.
+- **Cohort as aging.** Cross-sectional age gaps include generational differences; longitudinal data on the same people isolate change.
 
 <!-- yield:low -->
-- Low-yield extras: high-amplitude sucking, the newborn version of habituation-dishabituation (sucking rate rebounds when a new stimulus is detected)
+**Low-yield extras**
+
+- High-amplitude sucking, the newborn version of habituation-dishabituation (sucking rate rebounds when a new stimulus is detected)
 <!-- /yield -->`
     }
   ]

@@ -53,8 +53,13 @@ const MAX_DECK_POLLS = 16
  * for self-study.
  */
 export const MAX_DECK_PROBLEMS_PER_PART = 2
-/** Share of a poll's terms drawn from one worked problem above which the poll counts as that problem's twin. */
-const POLL_TWIN_OVERLAP = 0.6
+/**
+ * Share of a poll's terms drawn from one worked problem above which the poll
+ * counts as that problem's twin. Calibrated on reviewer-confirmed twins
+ * (2026-11-04: 0.44–0.56, so 0.42 leaves a margin); 0.6 caught none of them. False positives only cost
+ * a spare candidate, since twins are dropped only while the budget stays full.
+ */
+const POLL_TWIN_OVERLAP = 0.42
 /** A part's remaining worked-problem allowance; `dropped` collects sections left off the slides. */
 export type WorkedBudget = { problems: number; dropped: string[] }
 /** Pool questions considered per deck; the best-matching MAX_POLLS are used. */
@@ -824,6 +829,13 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     return [...problemTerms.values()].some((set) => terms.filter((t) => set.has(t)).length / terms.length >= POLL_TWIN_OVERLAP)
   }
   const twins = new Set((polls as PollSlide[]).filter(restatesProblem))
+  if (process.env.DECK_DEBUG === 'twins') {
+    for (const p of polls as PollSlide[]) {
+      const terms = [...termsOf(`${p.question} ${p.options.join(' ')}`)].filter((t) => !deckCommon.has(t))
+      const best = Math.max(0, ...[...problemTerms.values()].map((set) => terms.filter((t) => set.has(t)).length / Math.max(1, terms.length)))
+      console.error(`[twin] ${best.toFixed(2)} n=${terms.length} ${p.question.slice(0, 90)}`)
+    }
+  }
   if (process.env.DECK_DEBUG) console.error(`[deck] ${topicSlug}: ${twins.size} of ${polls.length} poll candidates restate a worked problem`, [...twins].map((p) => p.question.slice(0, 70)))
   if (twins.size && polls.length - twins.size >= limits.maxPolls) polls = polls.filter((p) => !twins.has(p as PollSlide))
   const pollsBySeg = new Map<number, { poll: PollSlide; score: number }[]>()

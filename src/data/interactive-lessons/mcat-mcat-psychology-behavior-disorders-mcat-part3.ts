@@ -31,7 +31,7 @@ Personality disorders are **ego-syntonic** (experienced as "just how I am") — 
 - **Somatic symptom disorder**: ≥ 1 distressing physical symptom PLUS excessive thoughts/anxiety/time devoted to it — the symptom may or may not have medical explanation; the DISORDER lies in the disproportionate response
 - **Illness anxiety disorder**: preoccupation with HAVING a serious disease with minimal or no somatic symptoms
 - **Conversion disorder (functional neurological symptom disorder)**: neurological deficits (paralysis, blindness, seizures) incompatible with recognized pathology — deficits are NOT consciously produced
-- Contrast (not somatic disorders): **factitious disorder** = intentional symptom production for the sick ROLE; **malingering** = intentional production for EXTERNAL gain (not a mental disorder)
+- Contrast: **factitious disorder** (classified in this same DSM-5 chapter, but symptoms are intentionally produced) = intentional symptom production for the sick ROLE; **malingering** = intentional production for EXTERNAL gain (not a mental disorder)
 
 ### Neurocognitive Disorders (the biological-psychology bridge)
 
@@ -52,15 +52,53 @@ Personality disorders are **ego-syntonic** (experienced as "just how I am") — 
       type: 'text' as const,
       content: `### Worked Example — A Differential-Sorting Passage, Fully Read
 
-**Passage.** Four hospital consults. Patient 1: a 74-year-old admitted for pneumonia becomes agitated and disoriented on night two, mistakes IV tubing for snakes, drifts in and out of lucidity, and cannot sustain attention; family insists she was "sharp as a tack" last week. Patient 2: a 71-year-old with two years of gradually worsening memory, now getting lost driving familiar routes, with fluent but emptying speech; alert and attentive in interview. Patient 3: a 68-year-old with a pill-rolling tremor at rest, cogwheel rigidity, slowed gait with reduced arm swing, and intact cognition. Patient 4: a 29-year-old with sudden left-arm paralysis after witnessing a violent assault; reflexes, imaging, and nerve conduction are normal, and she seems strikingly untroubled by the deficit.
+**Problem 1.** Patient 1, 74, hospitalized with pneumonia: by night two she is agitated, sees IV tubing as snakes, drifts in and out, and cannot hold attention; "sharp as a tack" last week. Patient 2, 71: two years of worsening memory, now lost on familiar routes; alert and attentive.
 
-**Step 1 — separate acute from chronic (Patients 1 vs 2).** Abrupt onset, FLUCTUATING course, impaired attention/arousal, visual misperceptions, and a medical precipitant (infection) = delirium — a reversible emergency, treated by finding the cause. Patient 2's insidious two-year decline with intact attention is a major neurocognitive disorder; anterograde-first memory loss with spatial disorientation makes Alzheimer's the leading etiology (hippocampus first, plaques and tangles, cholinergic deficit). The attention axis — not memory — is the fastest delirium/dementia discriminator.
+- **(a)** What is Patient 1's diagnosis, and how is it treated?
+- **(b)** What is Patient 2's diagnosis, and what is its most likely cause?
+- **(c)** Both have memory trouble. Which axis separates them fastest?
 
-**Step 2 — localize Patient 3.** Resting tremor + rigidity + bradykinesia is the Parkinson triad: substantia nigra dopaminergic loss with Lewy bodies. L-DOPA replaces the missing precursor. Cross-link: D2-blocking antipsychotics produce this same picture pharmacologically (Part 2's nigrostriatal pathway), and excess dopamine therapy can produce psychotic symptoms — the two disorders mirror each other across one transmitter.
+**(a) Delirium.** Abrupt onset, a FLUCTUATING course, impaired attention and arousal, visual misperceptions and a medical precipitant (infection) make delirium: a reversible emergency, treated by finding the cause.
 
-**Step 3 — read Patient 4 without accusation.** Neurological deficit incompatible with anatomy plus normal studies after an acute stressor = conversion disorder (functional neurological symptom disorder). The deficit is not consciously feigned: no external incentive is evident (ruling out malingering) and she is not seeking the sick role through fabrication (ruling out factitious disorder). The calm indifference is a classically described but nonspecific feature — do not diagnose on it alone.
+**(b) Alzheimer's dementia.** An insidious two-year decline with intact attention is a major neurocognitive disorder. Anterograde-first memory loss with spatial disorientation makes Alzheimer's the leading cause (hippocampus first, plaques and tangles, cholinergic deficit).
 
-**Step 4 — the personality-disorder extension.** If a passage adds a lifelong pattern — say, a consultant who has always been rigidly perfectionistic, lists-and-rules driven, and proud of it — the ego-syntonic, trait-like quality (OCPD) separates personality pathology from the episodic, ego-dystonic disorders in this ward. Course and the patient's own attitude toward the symptoms are the two sorting axes for the entire passage.`
+**(c) Attention.** The attention axis, not memory, is the fastest delirium/dementia discriminator: impaired in Patient 1, spared in Patient 2.
+
+**Problem 2.** Patient 3, 29, has sudden left-arm paralysis after witnessing a violent assault. Reflexes, imaging, and nerve conduction are normal, the "paralyzed" arm steers away from her face when dropped, and she seems strikingly untroubled.
+
+- **(a)** Which diagnosis fits?
+- **(b)** Why not malingering or factitious disorder?
+- **(c)** Should her calm indifference drive the diagnosis?
+
+**(a) Conversion disorder.** Normal studies plus a finding no lesion explains (the dropped arm steering clear of her face) make functional neurological symptom disorder (conversion disorder). It often follows a stressor, but DSM-5 does not require one. The deficit is not consciously feigned.
+
+**(b) No sign of intent.** No external incentive is evident, ruling out malingering, and she is not fabricating symptoms to occupy the sick role, ruling out factitious disorder.
+
+**(c) No.** The calm indifference is a classically described but nonspecific feature. Do not diagnose on it alone.
+
+**Problem 3.** Patient 4, 68, has a pill-rolling tremor at rest, cogwheel rigidity, slowed gait with reduced arm swing, and intact cognition.
+
+- **(a)** Which disease is this, and what is its pathology?
+- **(b)** What treatment follows?
+- **(c)** How do antipsychotics connect to this picture?
+
+**(a) Parkinson's disease.** Resting tremor + rigidity + bradykinesia is the Parkinson triad: substantia nigra dopaminergic loss with Lewy bodies.
+
+**(b) L-DOPA.** It replaces the missing dopamine precursor.
+
+**(c) A mirror across one transmitter.** D2-blocking antipsychotics produce this same picture pharmacologically (Part 2's nigrostriatal pathway), and excess dopamine therapy can produce psychotic symptoms.
+
+**Problem 4.** The passage adds two staff members, both lifelong loners. One prefers solitude and feels nothing is missing. The other longs for friends but skips every gathering, sure he would be mocked.
+
+- **(a)** Which personality disorder fits each?
+- **(b)** Which cluster holds each?
+- **(c)** What separates both from the four patients' disorders?
+
+**(a) Schizoid, then avoidant.** The first is genuinely indifferent to relationships: schizoid. The second wants closeness but fears rejection: avoidant. The behavior is the same; the motive decides.
+
+**(b) Cluster A, then Cluster C.** Schizoid sits with the odd/eccentric disorders (Cluster A); avoidant sits with the anxious/fearful ones (Cluster C).
+
+**(c) Course.** Their patterns are lifelong and trait-like, from early adulthood. Each patient's disorder is a change from an earlier baseline, acute (delirium, conversion) or late-life (Alzheimer's, Parkinson's).`
     },
     {
       id: 'dis3-quiz1',
@@ -90,11 +128,11 @@ Personality disorders are **ego-syntonic** (experienced as "just how I am") — 
             explanation: `Sudden, selective loss of autobiographical identity after trauma, unexplained travel, negative workup, and later full recovery compose dissociative amnesia with fugue. Organic amnesias (Korsakoff, hippocampal) impair NEW learning and do not selectively erase identity while sparing skills — nor do they remit wholesale. Malingering requires evidence of intentional production for external gain, which nothing here supports.`
           },
           {
-            question: `A 79-year-old develops confusion over hours during a urinary tract infection: she is drowsy, cannot sustain attention, misidentifies staff, and her lucidity waxes and wanes through the day. The feature that most reliably distinguishes this state from dementia is:`,
-            options: [`Her advanced age, which makes a dementing process the more likely cause`, `Acute onset with a fluctuating course and impaired attention`, `The presence of memory difficulty, which dementia always involves`, `The misidentification of people, which signals hallucination`],
+            question: `An 82-year-old with three years of slowly worsening memory from Alzheimer's disease becomes drowsy and inattentive two days after starting a new sleep medication, and her lucidity now waxes and wanes through the day. The best account of this new change is:`,
+            options: [`Expected progression of her Alzheimer's disease over these two days`, `Delirium on top of dementia, given acute, fluctuating inattention`, `Normal age-related forgetfulness made worse by poor sleep`, `A conversion disorder triggered by the change in medication`],
             correctAnswer: 1,
             yield: 'MEDIUM',
-            explanation: `Delirium is defined by rapid onset, fluctuation, and a primary disturbance of ATTENTION and arousal, typically precipitated by infection, drugs, or metabolic insult — and it is reversible with treatment of the cause. Dementia develops insidiously over years with attention relatively preserved early. Memory problems and misidentification occur in both, and age is common to both, so none of those discriminate.`
+            explanation: `Delirium is defined by rapid onset, fluctuation, and a primary disturbance of ATTENTION and arousal, typically precipitated by drugs, infection, or metabolic insult, and it can sit on top of an existing dementia, which raises the risk. Alzheimer's progresses over months to years with attention relatively preserved early, so a two-day change is not its expected progression. Ordinary forgetfulness does not produce drowsiness and fluctuating attention, and conversion disorder involves neurological deficits incompatible with anatomy, not a fluctuating confusional state. The fix is to find and remove the cause, here most likely the new drug.`
           },
           {
             question: `Match the pathology to the disease: amyloid-beta plaques and tau neurofibrillary tangles with early hippocampal atrophy versus Lewy bodies with degeneration of the substantia nigra. Respectively, these describe:`,
@@ -111,14 +149,22 @@ Personality disorders are **ego-syntonic** (experienced as "just how I am") — 
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Personality disorders are enduring, pervasive, ego-syntonic; Cluster A odd (paranoid/schizoid/schizotypal), B dramatic (antisocial/borderline/histrionic/narcissistic), C anxious (avoidant/dependent/OCPD)
-- Sharp pairs: schizoid (indifferent) vs avoidant (wants but fears); schizotypal (odd, reality testing intact) vs schizophrenia; OCD (ego-dystonic obsessions/rituals) vs OCPD (ego-syntonic perfectionism); antisocial requires age 18 plus earlier conduct disorder
-- Dissociative: DID (multiple states + recall gaps, trauma-linked), amnesia with possible fugue (reversible autobiographical loss), depersonalization/derealization (detachment WITH intact reality testing)
-- Somatic family: somatic symptom (excessive response to symptoms), illness anxiety (disease fear, few symptoms), conversion (anatomy-incompatible deficits, not feigned); factitious = sick role, malingering = external gain and not a disorder
-- Neurocognitive: Alzheimer's = plaques/tangles/ACh/hippocampus; Parkinson's = nigra/dopamine/Lewy bodies/L-DOPA; delirium = acute, fluctuating, attention-first, reversible — dementia is none of those
+- **Personality clusters.** A odd (paranoid, schizoid, schizotypal); B dramatic (antisocial, borderline, histrionic, narcissistic); C anxious (avoidant, dependent, OCPD).
+- **Dissociative disorders.** DID (2+ identities, recall gaps), dissociative amnesia (possibly with fugue), depersonalization with reality testing intact.
+- **The somatic family.** Somatic symptom disorder is an excessive response; illness anxiety is disease fear with few symptoms.
+- **Neurocognitive pairs.** Alzheimer's: plaques, tangles, ACh loss; Parkinson's: nigral dopamine loss, Lewy bodies, L-DOPA.
+
+**Common traps**
+
+- **OCD vs. OCPD.** OCPD has no true obsessions or rituals; it is ego-syntonic perfectionism, unlike ego-dystonic OCD.
+- **Schizoid vs. avoidant.** Schizoid people are indifferent to relationships; avoidant people want them but fear rejection.
+- **Delirium as dementia.** Acute onset, fluctuation and impaired attention mark delirium; memory trouble occurs in both.
+- **Conversion as faking.** Conversion deficits are not conscious; factitious seeks the sick role, malingering external gain.
 
 <!-- yield:low -->
-- Low-yield extras: depressive "pseudodementia" in the elderly mimics dementia but gives quick, low-effort "I don't know" answers and lifts with mood treatment
+**Low-yield extras**
+
+- Depressive "pseudodementia" in the elderly mimics dementia but gives quick, low-effort "I don't know" answers and lifts with mood treatment.
 <!-- /yield -->`
     }
   ]

@@ -48,15 +48,56 @@ Sociology-of-culture passages lean on distinctive designs; know each one's chara
       type: 'text' as const,
       content: `### Worked Example — A Moral Panic Passage, Fully Read
 
-**Passage.** After two widely reported incidents involving teenagers and a new social app, national coverage of "app-driven teen crime" increases twelve-fold within months, though police data show teen arrests flat over the same period. Legislators propose an under-18 ban. A survey finds adults who consume the most coverage estimate teen crime rose 40 percent. Meanwhile, researchers embedded in three high schools report that students labeled "app kids" by teachers are increasingly excluded from school activities, and some begin cutting class together, describing themselves as "the delinquents, apparently."
+**Problem 1.** Passage: after two widely reported incidents involving teens and a new app, coverage of "app-driven teen crime" rises twelve-fold within months, though police data show teen arrests flat. Legislators propose an under-18 ban. Adults who consume the most coverage estimate teen crime rose 40 percent.
 
-**Layer 1 — name the collective phenomenon.** Coverage and fear escalating while the measured behavior stays flat is the signature of a **moral panic**: a disproportionate, media-amplified reaction constructing a folk devil ("app kids"). The 40-percent misperception among heavy consumers shows the DEFINITION of the situation being manufactured — and, per the Thomas theorem, that definition is about to produce real consequences (a ban) regardless of its accuracy.
+- **(a)** What collective phenomenon does the passage describe?
+- **(b)** What does the heavy consumers' 40-percent estimate show?
+- **(c)** Per the Thomas theorem, does the estimate's inaccuracy limit its consequences?
 
-**Layer 2 — trace the micro mechanism.** The embedded researchers document labeling theory operating in real time: an externally imposed label → institutional exclusion → the labeled band together → emergent self-definition ("the delinquents, apparently") → early secondary deviance. Note the exquisite irony the MCAT loves: the panic ABOUT deviance is producing the deviance.
+**(a) Name it.** Coverage and fear escalating while the measured behavior stays flat is the signature of a **moral panic**: a disproportionate, media-amplified reaction that constructs a folk devil out of app-using teens.
 
-**Layer 3 — audit the methods.** The embedded-researcher component is an ethnography: it delivers the mechanism (how labeling reorganizes identity) but cannot say how common the process is — three schools generalize to nothing. The survey shows association between coverage consumption and misperception; selection is live (already-fearful adults may seek alarming coverage). The arrest data are the passage's only trend measure — expect a question asking which data source undermines the ban's premise, and the answer is the flat arrest series, not the vivid ethnography.
+**(b) The misperception.** It shows the DEFINITION of the situation being manufactured: heavy consumers perceive a crime wave the arrest data do not show.
 
-**Layer 4 — anticipate the theory-discrimination item.** "Which framework BEST explains legislators' response?" Conflict theory would note whose platforms compete with the app; functionalism would call the panic boundary-maintenance reasserting adult authority; interactionism owns the labeling chain. The correct answer depends on which FINDING the question stem cites — match the mechanism in the stem, not your favorite theory. That stem-matching habit is the single highest-yield behavior in MCAT sociology.`
+**(c) Real consequences.** No. A situation defined as real is real in its consequences, so the definition is about to produce a real ban regardless of its accuracy.
+
+**Problem 2.** Same passage: researchers embedded in three high schools report that students labeled "app kids" by teachers are increasingly excluded from school activities, and some begin cutting class together, describing themselves as "the delinquents, apparently."
+
+- **(a)** Which theory does the embedded researchers' finding illustrate?
+- **(b)** What chain of steps leads from the teachers' label to cutting class?
+- **(c)** How does this finding relate to the panic described in Problem 1?
+
+**(a) The theory.** **Labeling theory**, operating in real time, at the micro level.
+
+**(b) The chain.** An externally imposed label → institutional exclusion → the labeled band together → emergent self-definition ("the delinquents, apparently") → early secondary deviance.
+
+**(c) The irony.** The exquisite irony the MCAT loves: the panic ABOUT deviance is producing the deviance.
+
+**Problem 3.** The same passage rests on three sources: an ethnography by researchers embedded in three high schools, a survey linking coverage consumption to crime estimates, and police data showing teen arrests flat.
+
+- **(a)** What can the ethnography establish, and what can it not?
+- **(b)** What rival explanation threatens the survey's link between coverage and misperception?
+- **(c)** Which data source undermines the ban's premise?
+
+**(a) The ethnography.** It delivers the mechanism (how labeling reorganizes identity) but cannot say how common the process is: three schools generalize to nothing.
+
+**(b) The survey.** It shows only an association, and selection is live: already-fearful adults may seek out alarming coverage.
+
+**(c) The ban's premise.** The flat arrest series, the passage's only behavioral trend measure, not the vivid ethnography.
+
+**Problem 4.** A question on the same passage asks: "Which framework BEST explains legislators' response?" The answer choices are conflict theory, functionalism and symbolic interactionism.
+
+- **(a)** What would a conflict theorist note about the legislators' response?
+- **(b)** What would a functionalist call the panic?
+- **(c)** Which part of the passage does interactionism explain best?
+- **(d)** How do you decide which framework is the answer?
+
+**(a) Conflict theory.** It would note whose platforms compete with the app, and so whose interests a ban serves.
+
+**(b) Functionalism.** It would call the panic boundary-maintenance, reasserting adult authority.
+
+**(c) Interactionism.** It owns the labeling chain inside the schools.
+
+**(d) Match the stem.** The correct answer depends on which FINDING the question stem cites: match the mechanism in the stem, not your favorite theory. That stem-matching habit is the single highest-yield behavior in MCAT sociology.`
     },
     {
       id: 'cult4-quiz1',
@@ -107,11 +148,17 @@ Sociology-of-culture passages lean on distinctive designs; know each one's chara
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Identities are socialized: gender is the social role built on sex; race is a constructed classification (varies across societies, still produces real consequences); ethnicity is claimed shared culture
-- Collective behavior scale: fads/fashions → panics (fear disproportionate to measured behavior, folk devils) → riots → organized social movements
-- Movement theories discriminate cleanly: relative deprivation = perceived gap between deserved and actual; resource mobilization = organization and access decide, discontent is never enough
-- Method audit for culture studies: ethnography gives mechanism, not generality (plus Hawthorne reactivity); cross-cultural variation is the evidence for construction; socialization claims need longitudinal designs; selection stalks every media/peer correlation
-- Passage strategy: match theory to the mechanism in the STEM — panic passages typically layer a macro construction story over a micro labeling chain, and questions alternate between the layers`
+- **Socialized identities.** Gender is a social role built on sex; race a constructed classification; ethnicity claimed shared culture and ancestry.
+- **Moral panics.** Fear and coverage outrun the measured behavior, and the media construct a folk devil.
+- **Movement theories.** Relative deprivation is a perceived gap; resource mobilization adds organization, as discontent alone is never enough.
+- **Match design to claim.** Ethnography: mechanism, not generality. Cross-cultural variation shows construction; longitudinal data show sequence.
+
+**Common traps**
+
+- **Correlation as causation.** People choose peers and media that fit prior traits, so selection rivals any agent-outcome link.
+- **Absolute deprivation.** Movements track perceived, relative deprivation, not absolute misery; the poorest rarely rebel.
+- **Constructed means unreal.** A socially constructed category such as race still has real consequences for how people are treated.
+- **Matching your favorite theory.** Pick the framework that fits the mechanism the question stem cites, not the one you like best.`
     }
   ]
 };

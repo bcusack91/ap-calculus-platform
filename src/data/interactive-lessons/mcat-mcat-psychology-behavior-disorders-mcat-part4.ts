@@ -47,15 +47,56 @@ export const mcatPsychDisordersPart4Data = {
       type: 'text' as const,
       content: `### Worked Example — An Antidepressant-Trial Passage, Fully Read
 
-**Passage.** 480 adults with moderate MDD are randomized to SSRI, pill placebo, CBT, or waitlist. Raters blind to condition score symptoms at 0, 8, and 24 weeks. At 8 weeks: SSRI improves 11.2 points from baseline, placebo 8.1, CBT 10.8, waitlist 4.9 (drug vs placebo p = 0.03, d = 0.28). At 24 weeks, relapse among responders is 41% for discontinued SSRI, 22% for CBT. Dropout: 31% SSRI (mostly side effects), 12% CBT. An editorial concludes "antidepressants barely beat sugar pills, so depression is not biological."
+**Problem 1.** 480 adults with moderate MDD are randomized to SSRI, pill placebo, CBT, or waitlist; raters blind to condition score symptoms at 0, 8, and 24 weeks. At 8 weeks: SSRI improves 11.2 points from baseline, placebo 8.1, CBT 10.8, waitlist 4.9 (drug vs placebo p = 0.03, d = 0.28).
 
-**Step 1 — read the four arms as machinery.** Waitlist improvement (4.9) estimates natural course plus regression to the mean — enrollees start near their nadir. Placebo (8.1) adds expectancy and clinical contact. Only the drug-minus-placebo gap (3.1, d = 0.28) is the pharmacological effect. Never grade any arm against baseline; grade arms against each other.
+- **(a)** What does the waitlist's improvement estimate?
+- **(b)** What does the placebo arm add on top of that?
+- **(c)** How large is the pharmacological effect?
+- **(d)** Is that effect clinically meaningful?
 
-**Step 2 — evaluate the effect honestly.** The drug effect is statistically significant but small (d = 0.28) — a statistical-vs-clinical significance flag. CBT matches the drug acutely and HALVES relapse after treatment ends, the classic durability advantage of learned skills over discontinued medication. Differential dropout (31% vs 12%) biases completer analyses toward the drug — intention-to-treat analysis is the requested fix.
+**(a) Natural course.** The waitlist's 4.9 points estimate natural course plus regression to the mean: enrollees start near their nadir.
 
-**Step 3 — dismantle the editorial.** Its inference commits a category error twice. First, a modest drug-placebo gap does not mean the drug does nothing — placebo arms in depression trials capture real improvement processes (expectancy, contact, regression), inflating the comparator. Second, treatment response NEVER certifies etiology in either direction: aspirin relieving headaches does not prove headaches are aspirin-deficiency diseases, and CBT working does not prove depression is "just thoughts." Etiology claims need etiological designs (Part 4 of the development lesson), not outcome trials.
+**(b) Expectancy and contact.** Placebo (8.1) adds expectancy and clinical contact. Never grade any arm against baseline; grade arms against each other.
 
-**Step 4 — the anticipated items.** "Why include placebo rather than waitlist alone?" — to separate expectancy/contact effects from natural course. "Why blind the raters?" — observer expectations distort self-report-adjacent measures (the Rosenhan lesson operationalized). "Which patients does the trial's conclusion cover?" — moderate MDD completers under trial conditions; generalization beyond that is an external-validity question the data cannot settle.`
+**(c) The drug-minus-placebo gap.** Only that gap, 11.2 − 8.1 = 3.1 points (d = 0.28), is the pharmacological effect.
+
+**(d) Probably not on its own.** p = 0.03 makes it statistically significant, but d = 0.28 is small: a statistical-vs-clinical significance flag.
+
+**Problem 2.** In the same trial, SSRI and CBT were close at 8 weeks (11.2 vs 10.8 points). At 24 weeks, relapse among responders is 41% after the SSRI is stopped and 22% after CBT. Dropout: 31% SSRI (mostly side effects), 12% CBT.
+
+- **(a)** What does the relapse comparison show?
+- **(b)** How does the dropout difference bias an analysis of completers only?
+- **(c)** Which analysis is the fix?
+
+**(a) CBT lasts.** CBT matched the drug acutely (10.8 vs 11.2 points) and roughly HALVES relapse after treatment ends (22% vs 41%): the classic durability advantage of learned skills over discontinued medication.
+
+**(b) Toward the drug.** Differential dropout (31% vs 12%) leaves the SSRI arm's completers a selected, better-tolerating group, biasing completer analyses toward the drug.
+
+**(c) Intention-to-treat.** Analyzing everyone as randomized, dropouts included, is the requested fix.
+
+**Problem 3.** Citing the trial's 8-week drug-placebo gap (11.2 vs 8.1 points), an editorial concludes: "Antidepressants barely beat sugar pills, so depression is not biological."
+
+- **(a)** Does a modest drug-placebo gap mean the drug does nothing?
+- **(b)** Can a treatment's success or failure tell you a disorder's cause?
+- **(c)** What kind of evidence would an etiology claim need?
+
+**(a) No.** Placebo arms in depression trials capture real improvement processes (expectancy, contact, regression), inflating the comparator. A modest gap does not mean an inert drug.
+
+**(b) Never, in either direction.** Aspirin relieving headaches does not prove headaches are aspirin-deficiency diseases, and CBT working does not prove depression is "just thoughts." The editorial commits this category error twice.
+
+**(c) Etiological designs.** Etiology claims need etiological designs (Part 4 of the development lesson), not outcome trials.
+
+**Problem 4.** Expect three follow-up items on the same trial's design.
+
+- **(a)** Why include a placebo arm rather than a waitlist alone?
+- **(b)** Why blind the raters?
+- **(c)** Which patients does the trial's conclusion cover?
+
+**(a) To separate effects.** A placebo arm separates expectancy and contact effects from natural course.
+
+**(b) Observer expectations.** Raters' expectations distort self-report-adjacent measures: the Rosenhan lesson operationalized.
+
+**(c) Only those studied.** It covers adults with moderate MDD like those enrolled, under trial conditions. Generalizing beyond them is an external-validity question the data cannot settle.`
     },
     {
       id: 'dis4-quiz1',
@@ -85,11 +126,11 @@ export const mcatPsychDisordersPart4Data = {
             explanation: `Lithium is the prototype mood stabilizer for bipolar disorder, reducing both poles and suicide risk; the paired exam fact is that unopposed antidepressants risk switching a bipolar patient into mania. Benzodiazepines are short-term GABAergic anxiolytics, cholinesterase inhibitors target Alzheimer's cholinergic deficit, and L-DOPA replaces striatal dopamine in Parkinson's.`
           },
           {
-            question: `In a drug trial, neither the patients nor the clinicians rating symptom severity know who receives active medication. The specific inferential threat this double-blind arrangement removes is:`,
-            options: [`Failure of random assignment to balance groups at baseline`, `Regression to the mean in patients enrolled at their worst`, `Expectancy effects in both patients and symptom raters`, `Attrition of participants who drop out before the endpoint`],
+            question: `In a randomized drug trial, patients do not know whether they receive the drug or a placebo, but the clinicians rating symptom severity do know. Rated improvement favors the drug. The inferential threat this design leaves open is:`,
+            options: [`Failure of random assignment to balance groups at baseline`, `Patient expectancy, since patients knew which arm they were in`, `Rater expectancy biasing the symptom scores toward the drug`, `Regression to the mean in patients enrolled at their worst`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `Blinding targets expectations: unblinded patients respond to the belief they are treated, and unblinded raters — like Rosenhan's staff reading normal behavior as pathological — bend judgment toward what they expect to see. Randomization (a separate procedure) handles baseline confounds; regression to the mean is handled by having a control group at all; attrition must be addressed analytically, e.g., intention-to-treat.`
+            explanation: `Only the patients are blinded, so the raters' expectations remain free to bend their scores toward the drug — the Rosenhan lesson, where staff read normal behavior through the label, applied to symptom ratings. Patient expectancy is controlled here, because patients were blinded and never knew their arm. Random assignment is a separate procedure that handles baseline confounds, and regression to the mean occurs in both arms, so the placebo comparison absorbs it.`
           },
           {
             question: `A study reports that a treatment works for "pure" social anxiety disorder, excluding anyone with depression or substance use. A critic notes most real-world patients with social anxiety carry such comorbidity. The critic is questioning the study's:`,
@@ -106,11 +147,17 @@ export const mcatPsychDisordersPart4Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Frameworks map to treatments: behavioral = exposure/extinction and counterconditioning (desensitization, flooding, response prevention, token economies); cognitive = restructuring; biological = the drug-class map (SSRIs, benzodiazepines, D2 antagonists, lithium, cholinesterase inhibitors, L-DOPA); biopsychosocial integrates
-- Treatment response never proves etiology — in either direction
-- Labels communicate and predict but also stigmatize and steer observer perception (Rosenhan's enduring lesson, methods critiques notwithstanding); medicalization is the social-construction flip side
-- Trial reading: compare arms, never baselines (regression to the mean); placebo isolates expectancy; double-blind protects both patient response and rater judgment; watch differential dropout, comorbidity exclusions (external validity), and effect size vs p-value
-- Criteria bookkeeping wins items: 2 weeks MDD, 6 months GAD and schizophrenia, 1 month PTSD and panic disorder's worry criterion — most wrong diagnoses in answer choices fail on duration`
+- **Frameworks map to treatments.** Behavioral → exposure, cognitive → restructuring, biological → drugs; biopsychosocial integrates.
+- **Exposure is extinction.** Desensitization adds relaxation up a hierarchy; flooding starts at the top; response prevention blocks rituals.
+- **The drug-class map.** SSRIs: depression, anxiety; benzodiazepines: short-term anxiety; lithium: bipolar; D2 blockers: psychosis.
+- **Criteria bookkeeping.** 2 weeks MDD; 6 months GAD and schizophrenia; 1 month PTSD and panic's worry. Most wrong answers fail on duration.
+
+**Common traps**
+
+- **Grading against baseline.** Regression to the mean guarantees average improvement; compare arms, never baselines.
+- **Response proves cause.** A treatment working, or failing, never proves a disorder's etiology, in either direction.
+- **p-value as importance.** A significant difference can be tiny; check the effect size and functional outcomes.
+- **Pure samples generalize.** Excluding comorbid patients helps internal validity but weakens external validity.`
     }
   ]
 };

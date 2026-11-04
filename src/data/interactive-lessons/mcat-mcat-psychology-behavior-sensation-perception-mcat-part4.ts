@@ -35,7 +35,7 @@ A patient who can describe an object but cannot reach for it accurately (or vice
 ### The Classic Discrimination Traps (final pass)
 
 - **Sensory adaptation** (receptor-level, unlearned) vs. **habituation** (central, learned, shows dishabituation)
-- **Sensitivity ($d'$)** vs. **criterion (β)** — payoffs and instructions move only the criterion
+- **Sensitivity ($d'$)** vs. **criterion (β)**: know which interventions touch which
 - **Trichromatic** (cone receptor level) vs. **opponent-process** (ganglion/LGN level; explains afterimages) — both are correct, at different stages
 - **Place coding** (basilar-membrane location, high frequencies) vs. **frequency/temporal coding** (firing rate matches the tone, low frequencies; volley principle in between)
 - **Weber's Law** is about *proportional* change; never answer with a constant absolute increment`
@@ -45,15 +45,44 @@ A patient who can describe an object but cannot reach for it accurately (or vice
       type: 'text' as const,
       content: `### Worked Example — An Expectation-and-Detection Passage, Fully Read
 
-**Passage.** Radiology trainees view chest images, half containing a subtle nodule. In Block 1, trainees are told nodule prevalence is 10%; in Block 2, a different image set with the same objective prevalence (50% of trials) is described as coming from a "high-risk clinic." Results: Block 1 — 62% hits, 8% false alarms. Block 2 — 84% hits, 24% false alarms. Computed $d'$ does not differ between blocks. A final experiment finds trainees fixate the nodule region equally long in both blocks, but report "no nodule" more often in Block 1 even after fixating it.
+**Problem 1.** Radiology trainees read chest images, half with a nodule. Block 1 is told prevalence is 10%; Block 2 (same true prevalence) is described as from a "high-risk clinic." Hits / false alarms: Block 1 62% / 8%; Block 2 84% / 24%. $d'$ is equal.
 
-**Step 1 — classify the manipulation.** Objective stimuli are matched; only the *described* prevalence changes. This manipulates expectation, a top-down variable — nothing about receptors or acuity can differ between blocks.
+- **(a)** What does the study manipulate, and is that a bottom-up or a top-down variable?
+- **(b)** How do the hit and false-alarm rates change from Block 1 to Block 2?
+- **(c)** Which SDT parameter changed, and in which direction?
+- **(d)** Could an answer claiming sharper perception or a lower absolute threshold be correct?
 
-**Step 2 — read the SDT signature.** Hits AND false alarms rise together while $d'$ stays flat: a **liberal criterion shift**. The trainees did not become better discriminators; they became more willing to say "nodule." Any answer choice claiming improved sensitivity, lowered absolute threshold, or sharpened perception is wrong on the numbers given.
+**(a) The manipulation.** The images are matched; only the DESCRIBED prevalence changes. That manipulates expectation, a top-down variable, so nothing about receptors or acuity can differ between blocks.
 
-**Step 3 — use the eye-tracking dissociation.** Equal fixation with different reports shows the information reached the eyes in both blocks; the difference arose at the *decision/interpretation* stage. This is the passage's way of localizing the effect downstream of sensation — exactly the sensation-vs-perception distinction from Part 1, now measured.
+**(b) Read both rates.** Hits rise from 62% to 84%, and false alarms ALSO rise, from 8% to 24%.
 
-**Step 4 — anticipate the extension item.** "Which change would most likely increase $d'$ rather than shift criterion?" Criterion movers: instructions, payoffs, prevalence beliefs. Sensitivity movers: better image contrast, longer viewing time, training that improves discrimination. Match the intervention to the SDT parameter it touches — that mapping is the single most reused P/S data skill.`
+**(c) A liberal criterion shift.** Hits and false alarms rising together while $d'$ stays flat is a liberal criterion shift. The trainees did not become better discriminators; they became more willing to say "nodule."
+
+**(d) Wrong on the numbers.** No. Improved sensitivity, a lowered absolute threshold or sharper perception would raise hits without the matching rise in false alarms, and $d'$ would grow.
+
+**Problem 2.** An extension item on the same passage asks: "Which change would most likely increase $d'$ rather than shift the criterion?"
+
+- **(a)** Which kinds of intervention move only the criterion?
+- **(b)** Which kinds of intervention can raise $d'$?
+- **(c)** Would paying trainees a bonus for every nodule found raise $d'$?
+
+**(a) Criterion movers.** Instructions, payoffs and prevalence beliefs change only the willingness to say "yes."
+
+**(b) Sensitivity movers.** Better image contrast, longer viewing time and training that improves discrimination separate signal from noise, raising $d'$.
+
+**(c) Apply the mapping.** No. A bonus is a payoff: it shifts the criterion, raising hits and false alarms together. Matching each intervention to the SDT parameter it touches is the single most reused P/S data skill.
+
+**Problem 3.** A final experiment tracks the trainees' eyes. They fixate the nodule region equally long in both blocks, yet in Block 1 they report "no nodule" more often, even after fixating it.
+
+- **(a)** Did the nodule information reach the trainees' eyes in both blocks?
+- **(b)** At what stage of processing did the two blocks differ?
+- **(c)** Which distinction from Part 1 does this dissociation measure?
+
+**(a) Equal input.** Yes. Equal fixation means the same visual information reached the eyes in both blocks.
+
+**(b) Downstream of sensation.** With equal input, the different reports arose at the decision and interpretation stage, not at the receptors.
+
+**(c) Sensation vs. perception.** The passage localizes the effect downstream of sensation: Part 1's sensation-versus-perception distinction, now measured.`
     },
     {
       id: 'sp4-quiz1',
@@ -62,11 +91,11 @@ A patient who can describe an object but cannot reach for it accurately (or vice
       exercise: {
         questions: [
           {
-            question: `Participants told that "most trials contain a faint tone" report the tone more often than participants told tones are rare, on identical trial sets. Hit and false-alarm rates both rise in the first group, and $d'$ is equal across groups. The instruction manipulated the participants':`,
-            options: [`Auditory sensitivity, by amplifying cochlear output`, `Absolute threshold, by lowering the 50% detection point`, `Response criterion, by making them respond more liberally`, `Rate of sensory adaptation, by fatiguing hair cells`],
+            question: `In a tone-detection study, participants switch to headphones that make a faint tone stand out more clearly from the background noise. Their hit rate rises from 60% to 75%, and their false-alarm rate falls from 20% to 10%. The change most directly altered the participants':`,
+            options: [`Response criterion, made more liberal by the clearer tone`, `Rate of habituation, slowed because the tone sounded novel`, `Perceptual sensitivity ($d'$), as hits rose while false alarms fell`, `Absolute threshold, raised so that faint tones went unheard`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `The joint rise of hits and false alarms with unchanged $d'$ is the fingerprint of a criterion shift. Expectations are a top-down, decision-stage variable; they cannot reach the cochlea, and a true threshold or sensitivity change would raise hits without a matching false-alarm rise.`
+            explanation: `Hits rising while false alarms FALL is the signature of greater sensitivity: the clearer tone lets listeners separate signal from noise, so $d'$ grows (from about 1.1 to about 2.0). A more liberal criterion would raise hits and false alarms together, so the falling false-alarm rate rules it out. A raised absolute threshold would lower hits, not raise them. Habituation reduces responding to a repeated stimulus; it cannot raise hits and cut false alarms at once.`
           },
           {
             question: `After a stroke, a patient names and describes objects accurately but consistently misreaches for them and cannot judge their motion. The lesion most likely lies in the:`,
@@ -104,11 +133,17 @@ A patient who can describe an object but cannot reach for it accurately (or vice
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Perceptual set, context, and prevalence beliefs act top-down: they shift interpretation and response criterion, never $d'$ — hits and false alarms rising together is a criterion shift
-- Ventral stream (occipital to temporal) = identity/"what" (agnosias); dorsal stream (occipital to parietal) = location, motion, action/"where-how"; magno feeds dorsal, parvo feeds ventral
-- Data-reading toolkit: always pair hit rate with false-alarm rate; JND proportional to baseline = Weber's Law; aftereffects = fatigable dedicated channel; infant looking-time recovery = discrimination evidence
-- Final trap list: adaptation vs habituation (dishabituation decides), trichromatic vs opponent (receptor vs ganglion stage), place vs frequency coding (high vs low pitch), sensitivity vs criterion (what the intervention touches)
-- Passage habit: classify every manipulation as bottom-up (stimulus, receptors) or top-down (expectation, payoff, context) BEFORE reading the answer choices`
+- **Expectations move the criterion.** Perceptual set, context and prevalence beliefs shift interpretation and the criterion, not $d'$.
+- **Two visual streams.** Ventral (occipital → temporal) codes "what"; dorsal (occipital → parietal) codes where, motion and action.
+- **Aftereffects and looking-time recovery.** Aftereffects show a dedicated fatigable channel; recovery of infant looking time shows discrimination.
+- **Classify manipulations first.** Label each manipulation bottom-up or top-down before reading the answer choices.
+
+**Common traps**
+
+- **Skipping the dishabituation test.** Recovery after a novel stimulus marks learned, central habituation, not receptor adaptation.
+- **Choosing one color theory.** Trichromatic theory holds at the cones; opponent processing comes later and explains afterimages.
+- **One pitch code for all frequencies.** Place theory codes high pitches; firing-rate coding handles low ones, with volleys in between.
+- **Crediting payoffs with better perception.** Instructions, payoffs and prevalence move the criterion; contrast, viewing time and training raise $d'$.`
     }
   ]
 };

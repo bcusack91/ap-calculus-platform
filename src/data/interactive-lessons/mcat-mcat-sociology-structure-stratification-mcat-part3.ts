@@ -55,19 +55,47 @@ Inequality also ranks nations (high-, middle-, low-income). Note the level-of-an
       type: 'text' as const,
       content: `### Worked Example — Whose Mobility Is It?
 
-**Passage-style problem.** Sociologists compare two cohorts in an industrial city. Cohort 1 entered the labor force in 1965; Cohort 2 in 1995, after the city's factories closed. Findings:
+**Problem 1.** Sociologists compare two cohorts in an industrial city: Cohort 1 entered the labor force in 1965, Cohort 2 in 1995, after the city's factories closed. In Cohort 1, 40 percent of factory workers' children reached professional occupations; in Cohort 2, only 12 percent did.
 
-1. In Cohort 1, 40 percent of factory workers' children reached professional occupations; in Cohort 2, only 12 percent did.
-2. In Cohort 2, the children of factory workers who DID reach professional jobs overwhelmingly had a parent who had completed some college and reported "knowing a professional family socially."
-3. Interviewed Cohort 2 members who stayed in manual work overwhelmingly attributed their position to personal failure ("I didn't apply myself").
+- **(a)** What kind of mobility does the drop from 40 to 12 percent reflect?
+- **(b)** What feature of the comparison points to that classification?
+- **(c)** What would an effort-based explanation of the drop have to assume?
 
-**Reading finding 1.** The cohort-wide collapse in upward movement tracks the disappearance of an industrial ladder — this is **structural mobility** running downward: the opportunity structure changed, so mobility rates changed for everyone, independent of any individual's talent or effort. Comparing across cohorts (not individuals) is the tell.
+**(a) Structural mobility.** Intergenerational structural mobility: children are compared with their factory-worker parents, and the vanishing industrial ladder cut upward movement for the whole cohort.
 
-**Reading finding 2.** Within the constrained structure, WHICH families still climbed? Those holding **cultural capital** (parental college exposure) and **social capital** (professional networks). This is Bourdieu's conversion machinery: non-economic capitals buffering a family against economic restructuring. An answer that says only "they had more money" misses the passage's actual variables.
+**(b) The tell.** The comparison is across cohorts, not individuals: two whole generations meeting different opportunity structures.
 
-**Reading finding 3.** Members read a structural outcome as a personal one. Sociologists flag this as the ideology of **meritocracy** doing legitimating work: when the belief that positions reflect effort is internalized, structurally produced immobility is experienced as individual failure — which quiets challenges to the structure (a conflict-theory point) and shapes self-concept (an interactionist one).
+**(c) The effort assumption.** That Cohort 2's children had less talent or worked less hard than Cohort 1's. Nothing in the data requires that: the opportunity structure changed, so mobility rates changed for everyone, independent of any individual's talent or effort.
 
-**The integrative point.** One dataset yields three altitude-appropriate claims: a macro claim about opportunity structures, a meso claim about family capitals, and a micro claim about internalized attribution. The MCAT's favorite wrong answers move a finding to the wrong altitude — e.g., citing finding 3's self-blame as EVIDENCE that effort differences caused finding 1's decline.`
+**Problem 2.** In the same city's Cohort 2, the children of factory workers who DID reach professional jobs overwhelmingly had a parent who had completed some college and reported "knowing a professional family socially."
+
+- **(a)** Which capital does a parent's college experience represent?
+- **(b)** Which capital does knowing a professional family represent?
+- **(c)** Which Bourdieu idea explains how these children still climbed after the closures?
+- **(d)** Why is "they had more money" a weak reading of this finding?
+
+**(a) Cultural capital.** Parental college exposure supplies the know-how and fluency that advantaged institutions reward.
+
+**(b) Social capital.** Knowing a professional family socially is a network: resources reached through who you know.
+
+**(c) Conversion.** Within the constrained structure, the families that still climbed held non-economic capitals. This is Bourdieu's conversion machinery: those capitals buffered a family against economic restructuring.
+
+**(d) The passage's variables.** An answer that says only "they had more money" misses the passage's actual variables: education and networks, not income.
+
+**Problem 3.** In the same city, interviewed Cohort 2 members who stayed in manual work overwhelmingly attributed their position to personal failure ("I didn't apply myself"), even though upward mobility had fallen from 40 to 12 percent.
+
+- **(a)** Which belief is doing the work when people read a structural outcome as a personal one?
+- **(b)** What does a conflict theorist say this belief accomplishes?
+- **(c)** What does an interactionist add?
+- **(d)** Is this self-blame EVIDENCE that effort differences caused the cohort-wide decline?
+
+**(a) Meritocracy.** Members read a structural outcome as a personal one: the ideology of **meritocracy** doing legitimating work. Once the belief that positions reflect effort is internalized, structurally produced immobility is experienced as individual failure.
+
+**(b) Conflict reading.** Experiencing immobility as personal failure quiets challenges to the structure.
+
+**(c) Interactionist reading.** The internalized attribution shapes self-concept ("I didn't apply myself" becomes who I am).
+
+**(d) Wrong altitude.** No. The cohort comparison is a macro claim about opportunity structures, the capitals a meso claim about families, and this a micro claim about attribution. Citing micro self-blame as evidence for the macro decline is the MCAT's favorite wrong answer.`
     },
     {
       id: 'strat3-quiz1',
@@ -118,11 +146,17 @@ Inequality also ranks nations (high-, middle-, low-income). Note the level-of-an
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Stratification systems range from closed (caste, ascribed) to open (class); SES bundles income, education, occupation
-- Weber splits position into class, status/prestige, and power — dimensions that can diverge; Bourdieu adds cultural and social capital, and families CONVERT capitals to reproduce advantage
-- Mobility vocabulary: inter- vs. intragenerational, vertical vs. horizontal, and structural mobility (the economy moves whole strata); meritocracy is a legitimating ideal to test, not assume
-- Absolute poverty = below subsistence; relative poverty = below one's society's standard of participation; feminization of poverty and social exclusion describe who and how deep
-- Space stratifies: residential segregation concentrates (dis)advantage, environmental hazards cluster near poor communities — the bridge to health disparities; keep between-nation and within-nation explanations at their own levels`
+- **Weber's three dimensions.** Class, status/prestige and power usually travel together but can diverge.
+- **Bourdieu's capitals convert.** Families convert economic, cultural and social capital into one another to reproduce advantage.
+- **Mobility vocabulary.** Inter- vs. intragenerational, vertical vs. horizontal; structural mobility moves whole strata at once.
+- **Absolute vs. relative poverty.** Absolute is below subsistence; relative is below one's own society's standard of participation.
+
+**Common traps**
+
+- **Swapping the capitals.** Know-how and credentials are cultural capital, networks social capital; neither is simply more money.
+- **Swapping levels.** Colonial extraction explains between-nation inequality, not one family's poverty within a nation.
+- **Self-blame as evidence.** Internalized self-blame is meritocratic ideology at work, not proof that effort caused a structural decline.
+- **Relative poverty isn't poverty.** A family with food and shelter can still be poor, cut off from ordinary participation.`
     }
   ]
 };

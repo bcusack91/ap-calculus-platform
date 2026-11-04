@@ -59,6 +59,50 @@ Classical thresholds treat detection as purely sensory. SDT recognizes that dete
 Every sense converts a physical stimulus into a receptor potential, then into action potentials relayed (for all senses **except smell**) through the **thalamus** to a dedicated cortical area. Later parts trace each pathway.`
     },
     {
+      id: 'sp1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Thresholds & SDT
+
+**Problem 1.** A subject just detects a brightness change from $120$ to $126\\;\\text{cd/m}^2$. The same subject is then tested at a baseline of $300\\;\\text{cd/m}^2$.
+
+- **(a)** What is the subject's Weber fraction?
+- **(b)** What change must the subject see to detect a difference at $300\\;\\text{cd/m}^2$?
+- **(c)** Would a $6\\;\\text{cd/m}^2$ change at the new baseline be noticed? Why or why not?
+
+**(a) Weber fraction.** $k = \\dfrac{126 - 120}{120} = \\dfrac{6}{120} = 0.05$, so the JND is 5% of the baseline.
+
+**(b) Scale to the new baseline.** With $k = 0.05$ from (a): $\\Delta I = 0.05 \\times 300 = 15\\;\\text{cd/m}^2$.
+
+**(c) The constant-amount trap.** No. Weber's Law fixes the RATIO, not the difference. Six units is 5% of 120 but only 2% of 300, below the JND. Compute the fraction from the given pair, then scale; the answer is never "the same 6 units."
+
+**Problem 2.** Each observer sees 100 signal trials and 100 noise trials. Observer A scores 85 hits and 40 false alarms; Observer B scores 70 hits and 10 false alarms.
+
+- **(a)** What is each observer's gap between hit rate and false-alarm rate?
+- **(b)** Which observer discriminates signal from noise better?
+- **(c)** Which observer holds the more liberal criterion?
+- **(d)** Does A's higher hit rate show better perception?
+
+**(a) The gaps.** A: $0.85 - 0.40 = 0.45$. B: $0.70 - 0.10 = 0.60$.
+
+**(b) Sensitivity.** Sensitivity tracks the gap between hits and false alarms, so with gaps of 0.45 (A) and 0.60 (B) from (a), B discriminates better. The formal $d'$, computed from z-scores, agrees: about 1.3 for A and 1.8 for B.
+
+**(c) Criterion.** A says "yes" far more often on both trial types (85 and 40, against 70 and 10), so A holds the more liberal criterion.
+
+**(d) Bias, not skill.** No. A high hit rate that comes with a high false-alarm rate reveals a liberal bias. Always read both rates before crediting sensitivity.
+
+**Problem 3.** A word is flashed too briefly for participants to report it, yet it speeds their recognition of related words a moment later.
+
+- **(a)** Where does the flash fall relative to the absolute threshold for conscious report?
+- **(b)** What is the faster recognition called, and how large and lasting is the effect?
+- **(c)** Does this show that subliminal stimuli control behavior?
+
+**(a) Below threshold.** Participants cannot report the word, so the flash is subliminal: below the absolute threshold for conscious report.
+
+**(b) Priming.** The speed-up is priming, a real but small and short-lived effect on processing speed. Priming is implicit facilitation of related material.
+
+**(c) The bounded conclusion.** No. Priming does not show durable attitude or behavior change; controlled studies find no strong "subliminal persuasion." The MCAT rewards the modest, evidence-bounded conclusion.`
+    },
+    {
       id: 'sp1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Thresholds & Signal Detection** 🎯`,
@@ -89,58 +133,26 @@ Every sense converts a physical stimulus into a receptor potential, then into ac
       }
     },
     {
-      id: 'sp1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Thresholds & SDT
-
-<details>
-<summary><b>Example 1: Weber's Law with a new modality</b></summary>
-
-**Question:** A subject just detects a brightness change from 120 cd/m² to 126 cd/m². What change is needed at 300 cd/m²?
-
-**Solution:**
-$$k = \\frac{126 - 120}{120} = 0.05$$
-$$\\Delta I = 0.05 \\times 300 = 15 \\text{ cd/m}^2 \\checkmark$$
-
-**Key idea:** Compute the Weber fraction from the given pair, then scale. The answer is never "the same 6 units."
-</details>
-
-<details>
-<summary><b>Example 2: Reading an SDT table</b></summary>
-
-**Question:** Observer A: 85 hits / 40 false alarms per 100 trials of each type. Observer B: 70 hits / 10 false alarms. Who is more sensitive? Who is more liberal?
-
-**Solution:**
-1. Sensitivity tracks the *gap* between hit and false-alarm rates. A: $0.85 - 0.40 = 0.45$; B: $0.70 - 0.10 = 0.60$ → **B discriminates better.**
-2. A says "yes" far more often overall → **A holds the more liberal criterion.** ✓
-
-**MCAT lesson:** A high hit rate with a high false-alarm rate reveals bias, not skill.
-</details>
-
-<details>
-<summary><b>Example 3: Subliminal ≠ subconscious persuasion</b></summary>
-
-**Question:** A word flashed too briefly for participants to report still speeds recognition of related words. Does this show subliminal stimuli control behavior?
-
-**Solution:**
-1. The flash is below the *absolute threshold for conscious report*, yet produces **priming** — a real but small, short-lived effect on processing speed. ✓
-2. It does **not** demonstrate durable attitude or behavior change; controlled studies find no strong "subliminal persuasion."
-
-**Connection:** Priming is top-down facilitation; the MCAT rewards the modest, evidence-bounded conclusion.
-</details>`
-    },
-    {
       id: 'sp1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Sensation = bottom-up transduction; perception = top-down interpretation.
-- Absolute threshold and JND are both defined at 50% detection; Weber's Law: $\\Delta I / I = k$.
-- SDT splits detection into sensitivity ($d'$) and criterion (bias); payoffs move the criterion, not $d'$.
-- Sensory adaptation is receptor-level and stimulus-bound; habituation is learned and shows dishabituation.
+- **Sensation vs. perception.** Sensation is bottom-up receptor transduction; perception is the brain's top-down interpretation.
+- **Thresholds at 50%.** The absolute threshold and the JND are both the levels detected on 50% of trials.
+- **Weber's Law.** $\\Delta I / I = k$: compute the fraction from one known pair, then scale it to any baseline.
+- **SDT splits detection.** Sensitivity ($d'$) is discrimination; the criterion is willingness to say "yes," moved by payoffs.
+
+**Common traps**
+
+- **Treating the JND as a fixed amount.** The JND grows with the baseline; at four times the baseline it is four times larger.
+- **Reading hit rate as skill.** Hits rising with false alarms is a criterion shift; compare both rates before crediting sensitivity.
+- **Calling every response decline adaptation.** Adaptation is receptor-level; habituation is learned and recovers after novelty.
+- **Believing in subliminal persuasion.** Subliminal stimuli can prime faster processing but do not durably change attitudes or behavior.
 
 <!-- yield:low -->
-- Low-yield extras: Stevens' power law ($S = k I^n$, with $n > 1$ for electric shock) as the alternative to Fechner's logarithmic law
+**Low-yield extras**
+
+- Stevens' power law ($S = k I^n$, with $n > 1$ for electric shock) as the alternative to Fechner's logarithmic law
 <!-- /yield -->`
     }
   ]

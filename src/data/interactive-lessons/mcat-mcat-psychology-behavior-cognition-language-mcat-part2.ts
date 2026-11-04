@@ -45,15 +45,35 @@ Related distortions: **framing effects** (identical options chosen differently a
       type: 'text' as const,
       content: `### Worked Example — A Diagnostic-Reasoning Passage, Fully Read
 
-**Passage.** Medical residents read a vignette of a 24-year-old with fatigue and joint pain whose presentation "closely resembles" a rare autoimmune disease (prevalence 1 in 10,000) but is also consistent with a common viral syndrome (prevalence 1 in 20). 71% of residents rank the rare disease first. In Phase 2, residents who just completed an ICU rotation featuring a fatal case of the rare disease rank it first at even higher rates. In Phase 3, giving residents explicit base-rate information cuts the error nearly in half, and requiring them to list evidence AGAINST their leading diagnosis cuts it further.
+**Problem 1.** A vignette of a 24-year-old with fatigue and joint pain "closely resembles" a rare autoimmune disease (1 in 10,000) but also fits a common viral syndrome (1 in 20); 71% of residents rank the rare disease first. In Phase 2, residents fresh from an ICU rotation with a fatal case of it rank it first more often.
 
-**Step 1 — name the Phase 1 error.** Ranking by resemblance to a memorized prototype while ignoring prevalence is the representativeness heuristic producing base-rate neglect: even a strong match to a 1-in-10,000 disease usually loses to a moderate match to a 1-in-20 one.
+- **(a)** Which heuristic drives the Phase 1 ranking, and what error does it produce?
+- **(b)** Why should even a strong match to the rare disease usually lose?
+- **(c)** What pushes the Phase 2 rate higher still?
+- **(d)** What changed between Phase 1 and Phase 2, and what stayed the same?
 
-**Step 2 — name the Phase 2 amplifier.** A vivid, recent, emotionally charged case makes the rare disease easier to call to mind — availability now compounds representativeness. Note the two heuristics are dissociable: Phase 2 changed only recall ease, not the vignette's resemblance.
+**(a) Representativeness.** Ranking by resemblance to a memorized prototype while ignoring prevalence is the representativeness heuristic, and its signature error is base-rate neglect.
 
-**Step 3 — map the debiasing results.** Base-rate provision attacks representativeness directly; the consider-the-opposite instruction attacks confirmation bias (residents otherwise seek features consistent with their leading hypothesis). The MCAT rewards matching each intervention to the specific bias it targets, not "education reduces bias" in general.
+**(b) The base rates.** The viral syndrome is 500 times more common ($\\tfrac{1}{20}$ vs. $\\tfrac{1}{10{,}000}$), so a moderate match to it usually beats a strong match to the 1-in-10,000 disease.
 
-**Step 4 — the extension item.** "A resident who orders one more confirmatory test for the favored diagnosis, rather than the test that would best discriminate between the two, is displaying..." — confirmation bias, because the information sought can only support, not challenge, the current hypothesis. Discriminating tests are the clinical version of falsification.`
+**(c) Availability.** A vivid, recent, emotionally charged case makes the rare disease easier to call to mind, so availability now compounds representativeness.
+
+**(d) Only recall ease changed.** The vignette, and so its resemblance to the prototype, stayed the same in both phases; Phase 2 changed only how easily a case comes to mind. That is why the two heuristics are dissociable.
+
+**Problem 2.** In Phase 3, explicit base-rate information cuts the error nearly in half, and requiring residents to list evidence AGAINST their leading diagnosis cuts it further. One resident orders one more test whose result is expected in the favored diagnosis.
+
+- **(a)** Which heuristic's error does base-rate information attack?
+- **(b)** Which bias does listing contrary evidence attack?
+- **(c)** What is the resident who orders that test displaying?
+- **(d)** What kind of test would a falsification mindset choose instead?
+
+**(a) Base-rate neglect.** Supplying base rates attacks base-rate neglect, the error of the representativeness heuristic: it puts back the prevalence information that resemblance-based judgment ignores.
+
+**(b) Confirmation bias.** Residents otherwise seek features consistent with their leading hypothesis; the consider-the-opposite instruction forces a search the other way. The MCAT rewards matching each intervention to the specific bias it targets, not "education reduces bias" in general.
+
+**(c) Confirmation bias again.** The test was chosen because it fits the favored diagnosis, so the information sought can only support, not challenge, the current hypothesis.
+
+**(d) A discriminating test.** A test whose result differs between the two diagnoses can disconfirm the favored one. Discriminating tests are the clinical version of falsification.`
     },
     {
       id: 'cog2-quiz1',
@@ -61,13 +81,6 @@ Related distortions: **framing effects** (identical options chosen differently a
       content: `**Heuristics, Biases & Intelligence** 🎯`,
       exercise: {
         questions: [
-          {
-            question: `Told that Steve is "quiet, tidy, and loves detail," most people judge him more likely a librarian than a farmer, even though farmers outnumber male librarians many times over. The error illustrates:`,
-            options: [`Representativeness heuristic and base-rate neglect`, `The availability heuristic, driven by ease of recall`, `Anchoring on the first occupation that was named`, `Functional fixedness applied to job categories`],
-            correctAnswer: 0,
-            yield: 'HIGH',
-            explanation: `The judgment is driven by how well Steve MATCHES the librarian prototype while the vastly larger farmer base rate is ignored — the defining representativeness error. Availability would require the judgment to depend on ease of recalling instances; no initial numeric anchor is given; and functional fixedness concerns object use in problem solving.`
-          },
           {
             question: `After a week of saturation news coverage of a rare train derailment, survey respondents rate rail travel as more dangerous than driving, contradicting fatality statistics. The bias at work is:`,
             options: [`The conjunction fallacy about combined events`,`The belief perseverance effect`, `The availability heuristic`, `Hindsight bias about the crash`],
@@ -95,6 +108,13 @@ Related distortions: **framing effects** (identical options chosen differently a
             correctAnswer: 0,
             yield: 'HIGH',
             explanation: `The options are numerically identical; only the description changed, yet choices reversed — the framing effect, rooted in prospect theory's asymmetry (people treat losses as looming larger than equivalent gains). Rational-agent reasoning would be frame-invariant. The gambler's fallacy concerns independence of sequential events, and the testing effect belongs to memory.`
+          },
+          {
+            question: `Told that Steve is "quiet, tidy, and loves detail," most people judge him more likely a librarian than a farmer, even though farmers outnumber male librarians many times over. The error illustrates:`,
+            options: [`Representativeness heuristic and base-rate neglect`, `The availability heuristic, driven by ease of recall`, `Anchoring on the first occupation that was named`, `Functional fixedness applied to job categories`],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `The judgment is driven by how well Steve MATCHES the librarian prototype while the vastly larger farmer base rate is ignored — the defining representativeness error. Availability would require the judgment to depend on ease of recalling instances; no initial numeric anchor is given; and functional fixedness concerns object use in problem solving.`
           }
         ]
       }
@@ -104,11 +124,17 @@ Related distortions: **framing effects** (identical options chosen differently a
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Algorithms guarantee, heuristics approximate; insight restructures after impasse; mental set and functional fixedness are the two classic blocks
-- Representativeness = judging by resemblance (base-rate neglect, conjunction fallacy); availability = judging by recall ease (vivid media risks); anchoring = insufficient adjustment from a starting number
-- Framing: identical facts, different choices — risk-averse for gains, risk-seeking for losses; confirmation bias is countered by seeking disconfirming, discriminating evidence
-- Intelligence theories: Spearman's g (positive test correlations) vs Gardner (multiple, weakly separable) vs Sternberg (analytic/creative/practical); fluid declines with age, crystallized endures
-- IQ is a deviation score (mean 100, SD 15); the Flynn effect implicates environment; heritability is a population statistic, and stereotype threat is a situational depressant of scores — never an ability measure`
+- **Representativeness.** Judging by resemblance to a prototype produces base-rate neglect and the conjunction fallacy.
+- **Availability and anchoring.** Vivid, recent cases feel frequent; estimates stay too close to an initial number.
+- **Intelligence theories.** Spearman's one g vs. Gardner's many vs. Sternberg's three; IQ is a deviation score, mean 100, SD 15.
+- **Fluid vs. crystallized.** Novel reasoning declines from early adulthood; knowledge and vocabulary hold steady or rise.
+
+**Common traps**
+
+- **Mental set vs. fixedness.** Mental set repeats an old strategy; functional fixedness locks an object into its usual role.
+- **Treating the choice gap as rational.** "90% survival" and "10% mortality" are identical; different choices are a framing effect.
+- **Generic debiasing.** Match fix to bias: base rates counter representativeness, contrary evidence counters confirmation bias.
+- **Heritability as individual.** A population statistic; it says nothing about the cause of differences between groups in different environments.`
     }
   ]
 };

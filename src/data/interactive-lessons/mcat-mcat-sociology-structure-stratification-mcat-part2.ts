@@ -47,21 +47,32 @@ A **social institution** is a durable complex of statuses, roles, norms, and val
       type: 'text' as const,
       content: `### Worked Example — Tracing One Mechanism Through Two Institutions
 
-**Passage-style problem.** A longitudinal study follows 2,000 students from kindergarten through age 30. At age 8, students are assigned to "gifted" or "standard" tracks based on a test with a known socioeconomic score gradient. Researchers report three findings:
+**Problem 1.** A longitudinal study follows 2,000 students to age 30. At age 8, a test with a known socioeconomic score gradient assigns them to "gifted" or "standard" tracks. Teachers give gifted-track students more time and call them "college material," even when compared with standard-track students within one point of the cutoff.
 
-1. Teachers spend more instructional time with gifted-track students and describe them as "college material" in parent conferences, even comparing students whose age-8 scores were within one point of the cutoff.
-2. By age 16, just-above-cutoff students outperform just-below-cutoff students by a wide margin — far larger than their age-8 one-point difference.
-3. At age 30, track assignment at age 8 predicts occupational prestige better than the age-8 test score itself.
+- **(a)** Why do the researchers compare students just above and just below the cutoff?
+- **(b)** What mechanism does the differential treatment show?
+- **(c)** Does the near-cutoff comparison make the study an experiment?
 
-**Reading finding 1.** The near-cutoff comparison is the analytic heart of the study: students on either side of the line are essentially identical in measured ability, so any later divergence cannot be attributed to the ability the test measured. The differential treatment (time, expectations, labels) is the **teacher expectancy** mechanism operating on institutionally created categories.
+**(a) The near-cutoff comparison.** It is the analytic heart of the study: students on either side of the line are essentially identical in measured ability, so any later divergence cannot be attributed to the ability the test measured.
 
-**Reading finding 2.** Initially similar students diverge AFTER the label is applied — a **self-fulfilling prophecy**: the institutional definition ("gifted") changed treatment, treatment changed performance, and performance now appears to justify the original label. Note how this is the Thomas theorem embedded inside an institution.
+**(b) Teacher expectancy.** The differential treatment (time, expectations, labels) is the **teacher expectancy** mechanism operating on institutionally created categories: beliefs about a student change how the student is taught.
 
-**Reading finding 3.** Track — an institutional variable — outpredicts measured ability. This is the conflict/social-reproduction claim in quantitative form: education converts small (and class-correlated) initial differences into large, legitimated adult inequalities. The credential system then transmits position to the labor market.
+**(c) Design caution.** No. Because track assignment was not random, the comparison approximates, but does not equal, an experiment. Confounding by unmeasured family factors is reduced, not eliminated. Expect a question testing whether you notice this.
 
-**Paradigm cross-check.** A functionalist could still argue tracking's manifest function is instructional efficiency; this study's contribution is documenting a latent dysfunction with a micro mechanism. The strongest MCAT answers name the MECHANISM (expectancy → treatment → performance), not just the paradigm.
+**Problem 2.** In the same tracking study, by age 16 just-above-cutoff (gifted-track) students outperform just-below-cutoff students by far more than their one-point age-8 gap. At age 30, track assignment at age 8 predicts occupational prestige better than the age-8 test score itself.
 
-**Design caution.** Because track assignment was not random, the near-cutoff comparison approximates — but does not equal — an experiment. Confounding by unmeasured family factors is reduced, not eliminated. Expect a question testing whether you notice this.`
+- **(a)** When does the age-16 gap open relative to the label, and what process does that show?
+- **(b)** Which paradigm's claim does the age-30 result support?
+- **(c)** How does education carry small childhood differences into adult inequality?
+- **(d)** How could a functionalist respond, and what makes the strongest MCAT answer here?
+
+**(a) Self-fulfilling prophecy.** Initially similar students diverge AFTER the label is applied. The definition ("gifted") changed treatment, treatment changed performance, and performance now appears to justify the label: the Thomas theorem embedded inside an institution.
+
+**(b) Social reproduction.** Track, an institutional variable, outpredicts measured ability. This is the conflict/social-reproduction claim in quantitative form.
+
+**(c) Converting small gaps.** Education converts small (and class-correlated) initial differences into large, legitimated adult inequalities. The credential system then transmits position to the labor market.
+
+**(d) Paradigm cross-check.** A functionalist could still argue tracking's manifest function is instructional efficiency; the study documents a latent dysfunction with a micro mechanism. The strongest answers name the MECHANISM (expectancy → treatment → performance), not just the paradigm.`
     },
     {
       id: 'strat2-quiz1',
@@ -112,11 +123,17 @@ A **social institution** is a durable complex of statuses, roles, norms, and val
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Institutions are durable complexes of statuses, roles, and norms around basic needs; each paradigm re-reads them (family: socialization vs. inheritance of inequality)
-- Education's tested trio: hidden curriculum (unofficial norms), tracking (sorting that becomes self-fulfilling), teacher expectancy (beliefs → treatment → performance); credentialism filters jobs by degree
-- Religion: church → denomination → sect → cult orders rising tension with society; secularization coexists with fundamentalist revival; Durkheim (solidarity), Marx (opiate preserving inequality), Weber (religious ethics driving economies)
-- Authority = legitimate power; Weber's types are traditional (custom), charismatic (person — unstable succession), rational-legal (office and rules)
-- Medicine: medicalization redefines conditions as disease; the sick role trades exemptions for the duty to seek help and want recovery — chronic illness and unequal access are its standard critiques`
+- **Education's tested trio.** Hidden curriculum teaches norms; tracking sorts; teacher expectancy: beliefs change treatment, which changes performance.
+- **Religion's tension axis.** Church → denomination → sect → cult rises in tension; Durkheim: solidarity, Marx: preserves inequality, Weber: drives economies.
+- **Authority is legitimate power.** Weber's types: traditional (custom), charismatic (the person), rational-legal (the office and rules).
+- **Medicine redefines and exempts.** Medicalization turns conditions into disease; the sick role trades exemptions for seeking help.
+
+**Common traps**
+
+- **Slow recovery ends the sick role.** Only refusing competent help or not trying to recover forfeits it; slow recovery does not.
+- **Obeying the person.** Rational-legal obedience belongs to the office, so it passes to a successor; charisma struggles with succession.
+- **Track gaps prove ability gaps.** Near-cutoff students start equal; the later gap follows the label, a self-fulfilling prophecy.
+- **Cutoff comparison as experiment.** Track assignment was not random, so confounding is reduced, not eliminated.`
     }
   ]
 };

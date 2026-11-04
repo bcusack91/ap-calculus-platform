@@ -58,15 +58,53 @@ Either verdict ("steal" or "don't steal") can be argued at ANY stage — items t
       type: 'text' as const,
       content: `### Worked Example — A Moral-Reasoning Study, Fully Read
 
-**Passage.** Researchers present the Heinz dilemma to 90 participants (ages 10, 16, 30). Four sample responses are recorded: (A) "He shouldn't steal — he'll be jailed." (B) "He should steal — a good husband is expected to protect his family, and people would think badly of him otherwise." (C) "He shouldn't steal — if everyone broke laws whenever they had a reason, society couldn't function." (D) "He should steal — the right to life is a universal principle that outranks property law, though he should accept the legal consequences." Stage distribution shifts upward with age, but many 30-year-olds remain at Stage 4, and cross-cultural replications find Stage 5-6 responses rare outside formally schooled populations. Female participants more often justify choices by relationship preservation, which the original scoring places at Stage 3.
+**Problem 1.** Researchers present the Heinz dilemma to 90 participants (ages 10, 16, 30). Response A: "He shouldn't steal — he'll be jailed." Response B: "He should steal — the right to life is a universal principle that outranks property law, though he should accept the legal consequences."
 
-**Step 1 — score each response by its justification.** A = Stage 1 (punishment avoidance, preconventional). B = Stage 3 (role approval, conventional) — note it REACHES the opposite verdict from A, proving verdicts don't carry stage information. C = Stage 4 (law-and-order, conventional). D = Stage 5/6 (principle over law, postconventional) — accepting punishment while violating the law is the postconventional tell.
+- **(a)** At which Kohlberg stage does Response A reason?
+- **(b)** At which level does Response B reason, and which detail marks it?
+- **(c)** A third participant says: "He should steal — otherwise his wife's family will punish him." At which stage, and what does the comparison with A show?
 
-**Step 2 — read the age data with the theory's own claims.** Upward drift supports an invariant SEQUENCE; adults plateauing at Stage 4 shows the top stages are not universal endpoints — Kohlberg himself conceded Stage 6 is rare. Sequence claims and universality claims are separable; the data support the first more than the second.
+**(a) Response A.** Stage 1, preconventional: the only reason given is avoiding punishment.
 
-**Step 3 — handle the cultural and gender findings.** Rarity of postconventional scores in unschooled populations may mean the scoring privileges Western, verbal, principle-citing argument styles (a measurement-validity issue) rather than that whole cultures reason "lower." The gender finding is Gilligan's exact objection: care-based justifications get filed at Stage 3 by a scheme built on justice reasoning — a scoring-orientation bias, not a female deficit.
+**(b) Response B.** Stage 5/6, postconventional: a universal principle (the right to life) is ranked above the law. The tell is breaking the law while accepting its punishment: the speaker respects the legal system yet holds a principle above it.
 
-**Step 4 — the anticipated item.** "A participant argues Heinz should NOT steal because his wife's care network would collapse if he were imprisoned. Under Kohlberg vs. Gilligan..." — Kohlberg's scheme scores the relational content conventionally; Gilligan reads it as a mature ethic of care. Recognizing that the SAME response scores differently under the two frameworks is the passage's payoff.`
+**(c) Verdicts carry no stage.** Stage 1 again: the same reason as A, avoiding punishment, leads to the opposite verdict. Either verdict can be argued at any stage, so only the justification carries stage information.
+
+**Problem 2.** In the same study, female participants more often justify choices by preserving relationships, and their average stage scores come out lower. One argues Heinz should NOT steal because his wife's care network would collapse if he were imprisoned.
+
+- **(a)** How does Kohlberg's scheme score this response?
+- **(b)** How would Gilligan read the same response?
+- **(c)** What does the gender difference in scores reveal?
+
+**(a) Kohlberg.** The justification is preserving a relationship, so the original scoring files it as conventional Stage 3 — below law-and-order reasoning and the postconventional principle stages.
+
+**(b) Gilligan.** The response expresses a mature ethic of care, an alternative moral voice rather than a lower stage. Recognizing that the SAME response scores differently under the two frameworks is the passage's payoff.
+
+**(c) A scoring bias.** This is Gilligan's exact objection: a scheme built on justice reasoning files care-based justifications at Stage 3 — a bias in the scoring's orientation, not a female deficit.
+
+**Problem 3.** Two more responses from the same study. Response C: "He should steal — a good husband is expected to protect his family, and people would think badly of him otherwise." Response D: "He shouldn't steal — if everyone broke laws whenever they had a reason, society couldn't function."
+
+- **(a)** At which stage does Response C reason?
+- **(b)** At which stage does Response D reason?
+- **(c)** Both are conventional. What separates them?
+
+**(a) Response C.** Stage 3, conventional: the reason is meeting role expectations and winning others' approval ("a good husband", "people would think badly").
+
+**(b) Response D.** Stage 4, conventional: law and order — laws must be upheld because society depends on them.
+
+**(c) Approval vs. order.** Stage 3 looks to the expectations and approval of particular people; Stage 4 looks to keeping the whole social system running through its laws and duties.
+
+**Problem 4.** In the same study, stage scores shift upward with age, but many 30-year-olds remain at Stage 4. Cross-cultural replications find Stage 5-6 responses rare outside formally schooled populations.
+
+- **(a)** Which of Kohlberg's claims does the upward drift support?
+- **(b)** What does the Stage 4 plateau among adults show?
+- **(c)** How should the rarity of postconventional scores in unschooled populations be read?
+
+**(a) The sequence.** Upward drift with age is consistent with an invariant SEQUENCE of stages (showing it directly takes longitudinal data, since these are three different age groups).
+
+**(b) Not universal endpoints.** Many adults never move past Stage 4, so the top stages are not universal endpoints — Kohlberg himself conceded Stage 6 is rare. Sequence and universality claims are separable; the data support the first more than the second.
+
+**(c) A measurement question.** The scoring may privilege Western, verbal, principle-citing argument styles — a measurement-validity issue — rather than showing that whole cultures reason "lower."`
     },
     {
       id: 'dev3-quiz1',
@@ -82,11 +120,11 @@ Either verdict ("steal" or "don't steal") can be argued at ANY stage — items t
             explanation: `Adolescence in Erikson's scheme centers on constructing a coherent identity across roles; her deliberate sampling of selves is that crisis in action (and, in Marcia's terms, moratorium). Industry precedes it in the school years, and intimacy — which Erikson argued REQUIRES a settled identity — is the young-adult crisis that follows.`
           },
           {
-            question: `Two children judge a man who stole medicine for his dying wife. One says he was wrong "because stealing gets you put in jail"; the other says he was right "because saving a life matters more than any law, and he should accept his punishment." Kohlberg would score them as:`,
-            options: [`Both conventional, since both mention the law`, `Preconventional and postconventional, respectively`, `Stage 3 and Stage 4, respectively`, `Unscorable, since their verdicts differ`],
+            question: `Two employees discuss whether to report a coworker who padded his expense account. One says yes, "because if nobody followed company rules, the whole place would fall apart"; the other says no, "because he covered for me last month, so I owe him one." Kohlberg would score them as:`,
+            options: [`Both conventional, since both cite an obligation`, `Stage 4 and Stage 2, respectively`, `Stage 3 and Stage 5, respectively`, `Unscorable, since their verdicts differ`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Justification is everything: fear of jail is Stage 1 self-interest; ranking a universal principle (life) above legal rules while accepting consequences is postconventional. Opposite verdicts are fully scorable — any conclusion can be argued at any stage, which is precisely why conclusion-based options are traps.`
+            explanation: `Justification is everything: keeping rules because the organization depends on them is Stage 4 law-and-order (conventional); repaying a favor is Stage 2 instrumental exchange (preconventional). The obligations they cite differ in kind, so "both conventional" misreads the second, and "Stage 3 and Stage 5" mistakes rule-keeping for approval-seeking and a traded favor for a social contract. Opposite verdicts are fully scorable — any conclusion can be argued at any stage, which is precisely why conclusion-based options are traps.`
           },
           {
             question: `A college freshman announces he will be a cardiologist "because everyone in my family is one — I've never really considered anything else," and reports no distress about the choice. Marcia's identity-status framework classifies him as:`,
@@ -117,14 +155,22 @@ Either verdict ("steal" or "don't steal") can be argued at ANY stage — items t
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Erikson ladder: trust → autonomy → initiative → industry → identity → intimacy → generativity → integrity; match age plus struggle, and remember intimacy presupposes identity
-- Kohlberg: score justifications only — punishment/exchange (preconventional), approval/law-and-order (conventional), social contract/universal principle (postconventional); sequence is better supported than universality
-- Gilligan: care-based reasoning is an alternative orientation the justice-based scoring undervalues, not a lower stage
-- Marcia grid: exploration x commitment → diffusion, foreclosure (commitment without exploration), moratorium, achievement
-- Adolescent egocentrism: imaginary audience + personal fable (invulnerability → risk); aging brings socioemotional selectivity and the positivity effect — smaller, warmer networks by choice
+- **Erikson's ladder.** Trust, autonomy, initiative, industry, identity, intimacy, generativity, integrity: match age and struggle.
+- **Score the reasoning.** Punishment or exchange is preconventional, approval or law conventional, principle postconventional.
+- **Marcia's grid.** Exploration × commitment: diffusion (neither), foreclosure, moratorium (exploring), achievement (both).
+- **Teens and older adults.** Teens show imaginary audience and personal fable; older adults keep smaller, warmer networks by choice.
+
+**Common traps**
+
+- **Classifying by verdict.** Either verdict can be argued at any Kohlberg stage; only the justification sets the stage.
+- **Adjacent Erikson crises.** Distractors offer the neighboring stage; intimacy is young-adult and needs a formed identity first.
+- **Foreclosure as achievement.** Firm commitment without exploration is foreclosure; achievement requires exploring first.
+- **Care as a lower stage.** For Gilligan, care-based reasoning is a different moral voice, not Stage 3 immaturity.
 
 <!-- yield:low -->
-- Low-yield extras: Erikson's named virtues for the eight favorable resolutions (hope, will, purpose, competence, fidelity, love, care, wisdom)
+**Low-yield extras**
+
+- Erikson's named virtues for the eight favorable resolutions (hope, will, purpose, competence, fidelity, love, care, wisdom)
 <!-- /yield -->`
     }
   ]

@@ -353,7 +353,7 @@ export const mcatDevelopmentFigures: DeckFigurePlacement[] = [
         'A four-step staircase rising with age. Sensorimotor (0–2 years): marquee ability object permanence; marquee failure out of sight equals out of mind. Preoperational (2–7): symbolic play and language; egocentric and fails conservation. Concrete operational (7–11): conservation and reversibility; nothing abstract or hypothetical. Formal operational (11 and up): hypothetico-deductive reasoning; no set failure, but not universally reached.',
     },
     blocks: [
-      '- **Conservation** is the star demo: the preoperational child **centers** on height and cannot **reverse** the pouring',
+      '- Preoperational limits: **egocentrism** (three-mountain task), animism, failed **conservation**',
       '- Object permanence begins ~8 mo, complete by 18–24 mo',
       '- Formal operations: isolate variables systematically (the pendulum task)',
     ],

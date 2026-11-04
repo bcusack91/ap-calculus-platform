@@ -47,15 +47,38 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
       type: 'text' as const,
       content: `### Worked Example — A Conservation-and-Critique Passage, Fully Read
 
-**Passage.** Researchers test 120 children (ages 4-9) on conservation of liquid. Standard procedure: equal beakers, pour one into a tall cylinder, ask "same or more?" Percent conserving: age 4 — 8%; age 6 — 41%; age 8 — 87%. In Condition 2, a "naughty teddy" appears to knock the liquid over accidentally into the cylinder before the question is asked; conservation answers at age 5 nearly double relative to the standard procedure. In Condition 3, infants aged 5 months watch a screen rotate through the space where a hidden block sits; they look far longer when the screen passes through the block's location than when it stops against it.
+**Problem 1.** 120 children (ages 4-9) see two equal rows of 6 counters, then one row spread out: "same or more?" Conserving number: age 4 — 8%; age 6 — 41%; age 8 — 87%. In Condition 2, a "naughty teddy" spreads the row "by accident"; at age 5, conservation answers nearly double.
 
-**Step 1 — read the developmental gradient.** The age trend in the standard task is the expected preoperational-to-concrete transition: centration and irreversibility fade as operations consolidate. So far, pure Piaget.
+- **(a)** Which Piagetian stage transition does the age trend track, and does it challenge Piaget?
+- **(b)** Which two limitations make most 4-year-olds answer "more"?
+- **(c)** In the standard procedure, what might the adult's deliberate spreading plus the repeated question signal?
+- **(d)** What does the teddy result imply about what the standard task measures?
 
-**Step 2 — interpret the naughty-teddy result.** When the transformation looks accidental, the child is less likely to infer that the adult's deliberate action plus repeated question SIGNALS that the answer should change (a pragmatic, conversational demand). Improved performance under incidental transformation suggests the standard task overestimates conceptual failure by adding social-interpretive load — competence was masked by performance factors.
+**(a) The transition.** The climb from 8% to 87% between ages 4 and 8 is the expected move from the preoperational stage (2-7) into concrete operations (7-11), when conservation is acquired. On the standard task that is pure Piaget; any challenge has to come from changing the procedure.
 
-**Step 3 — interpret the looking-time result.** Five-month-olds look longer at the IMPOSSIBLE event (screen passing through a hidden solid), implying they represented the unseen block — object permanence knowledge well before the 8-month search benchmark. Violation-of-expectation logic: longer looking = detected anomaly = the infant held an expectation.
+**(b) Why they fail.** Centration: the child fixes on the row's length and ignores that the counters are spaced farther apart. Irreversibility: the child cannot mentally push the counters back. Both fade as operations consolidate.
 
-**Step 4 — the synthesis item.** "Which conclusion do Conditions 2 and 3 jointly support?" Piaget's SEQUENCE stands, but his METHODS conflated competence with task demands (motor search, conversational pragmatics), so his age norms run late. That measured, both-things-true conclusion is the MCAT's favorite correct answer; extreme options ("Piaget was wrong about stages existing") overshoot the data.`
+**(c) The hidden message.** A deliberate action followed by the same question again can SIGNAL that the answer is expected to change — a pragmatic, conversational demand layered on top of the conservation concept itself.
+
+**(d) Competence masked.** When the change looks accidental, the child is less likely to infer that the adult wants a different answer, so the social-interpretive load drops. Some 5-year-olds have the concept, but performance factors hid it: the standard task confounds competence with task demands.
+
+**Problem 2.** In Condition 3, 5-month-old infants watch a screen rotate through the space where a hidden block sits. They look far longer when the screen passes through the block's location than when it stops against it.
+
+- **(a)** Why is longer looking treated as evidence of an expectation?
+- **(b)** What do the infants appear to know, and how does that compare with Piaget's timeline?
+- **(c)** Why would Piaget's manual-search task miss this knowledge?
+- **(d)** Do Conditions 2 and 3 overturn Piaget's sequence of development?
+- **(e)** A synthesis option reads: "Piaget was wrong that developmental stages exist." Is it supported?
+
+**(a) Violation-of-expectation logic.** Infants look longer at what surprises them. Longer looking at the IMPOSSIBLE event (a screen passing through a hidden solid) means they detected an anomaly, so they held an expectation.
+
+**(b) Early object permanence.** To be surprised, they must have represented the unseen block — object permanence in some form at 5 months, well before the 8-month search benchmark.
+
+**(c) Task demands.** Reaching for a hidden object requires means-end motor planning the infant lacks. The search criterion tests that motor skill along with the concept, so it dates the concept too late.
+
+**(d) The sequence stands.** No. The standard task replicates the expected age gradient (Problem 1), and neither manipulation reverses the order in which abilities appear. Both show competence hidden by task demands — conversational pragmatics in Condition 2, motor search in Condition 3 — so Piaget's age norms run late.
+
+**(e) It overshoots.** No. The data revise Piaget's timing and methods; they say nothing against stages existing. The measured, both-things-true conclusion is the MCAT's favorite correct answer; extreme options overshoot the data.`
     },
     {
       id: 'dev1-quiz1',
@@ -92,11 +115,11 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
             explanation: `Generating hypotheses and testing them by controlling variables — abstract, systematic, ahead of the data — is Piaget's formal-operational signature, assessed with exactly this pendulum task. The concrete-operational child can operate on real objects (hence conservation) but cannot organize a systematic abstract search of possibilities.`
           },
           {
-            question: `Five-month-olds look reliably longer when a rising drawbridge appears to rotate through the space occupied by a hidden box than when it stops at the box. Researchers cite this against Piaget primarily because it suggests that:`,
-            options: [`Infants simply prefer watching motion over watching stillness`, `Infants of this age already reason hypothetico-deductively`, `The drawbridge display distressed the infants and disrupted their attention`, `Object permanence emerges earlier than manual-search tasks indicate`],
+            question: `Five-month-olds see a hand place a second doll behind a screen beside a first one; when the screen drops, they look longer at one doll than at two. When a hand instead removes one of two dolls, they look longer at two. Researchers cite this against Piaget primarily because it suggests that:`,
+            options: [`Infants simply prefer looking at the smaller of two displays`, `Infants of this age already conserve number across transformations`, `The impossible display startled the infants and broke attention`, `Number expectations emerge earlier than Piaget's own tasks indicate`],
             correctAnswer: 3,
             yield: 'MEDIUM',
-            explanation: `Longer looking at the impossible event implies the infants represented the hidden box and registered a violation — object permanence in some form by 5 months. Piaget's reach-for-the-hidden-object criterion also demands means-end motor planning, so it dates the CONCEPT too late. The finding revises his timeline and method, not the existence of developmental change, and says nothing about formal reasoning.`
+            explanation: `Longer looking at whichever outcome is arithmetically impossible implies the infants expected one plus one to make two, and two minus one to make one — a rudimentary number expectation years before Piaget's tasks credit any number concept. The removal condition rules out a simple preference for the smaller display, since there the infants looked longer at the larger one. Like the hidden-object studies, the finding revises Piaget's timeline and methods; it does not show that infants conserve number across transformations, and longer looking at only the impossible outcome is the opposite of broken attention.`
           }
         ]
       }
@@ -106,14 +129,22 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Newborn kit: rooting, Moro, grasping, Babinski reflexes; milestones run cephalocaudal and proximodistal with universal order, variable timing
-- Engine: assimilation fits input to a schema, accommodation rebuilds the schema, equilibration drives the alternation
-- Stage anchors: sensorimotor = object permanence; preoperational = egocentrism, centration, failed conservation; concrete = conservation and reversibility on real objects; formal = abstract hypothetico-deductive reasoning (pendulum task)
-- Conservation failure = centration + irreversibility; the pour never changes amount
-- Critiques: looking-time studies push competence earlier (methods confound concept with motor/pragmatic demands); development is more continuous and domain-uneven than strict stages — but the sequence itself replicates
+- **Reflexes and milestones.** Rooting, Moro, grasping, Babinski at birth; milestones run head-down and center-out, order near-fixed, timing variable.
+- **Assimilate or accommodate.** Assimilation fits input to a schema, accommodation rebuilds it; equilibration drives the switch.
+- **Stage anchors.** Sensorimotor: object permanence; preoperational: egocentrism; concrete: conservation; formal: abstract logic.
+- **Critiques revise timing.** Looking-time studies show competence earlier and abilities arrive unevenly; the sequence replicates.
+
+**Common traps**
+
+- **Reversing the pair.** Forcing a cat into the "doggie" schema is assimilation; building a new "kitty" schema is accommodation.
+- **Misreading non-conservation.** It is centration plus irreversibility in the preoperational child, not an object-permanence failure.
+- **Failed search, no concept.** A missed manual search can reflect motor-planning demands rather than a missing concept.
+- **Overshooting the critiques.** The critiques move Piaget's age norms earlier; they do not show that stages or the sequence are false.
 
 <!-- yield:low -->
-- Low-yield extras: Piaget called within-stage unevenness across domains (number conserved before volume) horizontal decalage
+**Low-yield extras**
+
+- Piaget called within-stage unevenness across domains (number conserved before volume) horizontal decalage
 <!-- /yield -->`
     }
   ]

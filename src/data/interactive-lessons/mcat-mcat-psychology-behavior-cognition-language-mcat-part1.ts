@@ -48,15 +48,32 @@ Three classic accounts, ordered by where the filter sits:
       type: 'text' as const,
       content: `### Worked Example — An Attention Passage, Fully Read
 
-**Passage.** Participants shadow a story played to the right ear while a word list plays to the left. Afterward, recognition of left-ear words is at chance — but participants' skin conductance rises when previously fear-conditioned words occur in the left ear during shadowing, and 34% of participants detect their own name there. In Experiment 2, novices and expert typists type while repeating aloud a spoken passage; novices' typing accuracy collapses, experts' barely changes. In Experiment 3, expert typists show large interference when the spoken passage is replaced by a second manual task (sorting cards by suit).
+**Problem 1.** Participants shadow a story in the right ear while a word list plays in the left. Later recognition of left-ear words is at chance, yet skin conductance rises to fear-conditioned left-ear words, and 34% of participants detect their own name there.
 
-**Step 1 — locate the filter.** Chance recognition says unattended content did not reach explicit memory. But the skin-conductance response to conditioned words and the name breakthrough show meaning was analyzed at least shallowly for select, low-threshold items — too much analysis for Broadbent's strict early filter, exactly what Treisman's attenuation predicts. Cite attenuation, not late selection: late selection predicts widespread semantic processing, and chance recognition argues against that.
+- **(a)** What does chance recognition say about the unattended words?
+- **(b)** What do the skin-conductance rise and the name detection add?
+- **(c)** Which filter model fits the whole pattern?
+- **(d)** What would late selection predict here, and does the data fit?
 
-**Step 2 — read the expertise dissociation.** For experts, typing has become automatic — it no longer consumes the central resources that speech shadowing needs, so the two proceed in parallel. Novice typing is controlled processing, and two controlled tasks overload capacity.
+**(a) Explicit memory.** Chance recognition says the unattended content never reached explicit memory: on this finding alone, the left ear looks fully blocked.
 
-**Step 3 — explain Experiment 3's reversal.** Automaticity is resource-specific, not absolute: two MANUAL tasks now compete for the same motor/spatial resources, restoring interference even in experts. This is the multiple-resource refinement the MCAT loves — automatic does not mean cost-free under every pairing.
+**(b) Some meaning got in.** A skin-conductance response to conditioned words, and the name breakthrough, show that meaning was analyzed at least shallowly for select, low-threshold items. That is too much analysis for a filter that blocks everything before meaning.
 
-**Step 4 — anticipate the application item.** "What does this predict about hands-free phone use while driving?" Interference persists, because conversation and hazard monitoring compete for central attention, not for hands — the passage's novice-typist logic transferred to the road.`
+**(c) Treisman's attenuation.** Broadbent's strict early filter cannot pass any meaning. Treisman's filter is early but turns the channel down rather than off, so most words are lost while low-threshold items (one's name, danger words) still break through. That is exactly the pattern in (a) and (b).
+
+**(d) Too much processing predicted.** Late selection predicts widespread semantic processing of the unattended ear, so recognition of those words should be well above chance. The data do not fit: recognition is at chance. Cite attenuation, not late selection.
+
+**Problem 2.** In Experiment 2, novices and expert typists type while repeating aloud a spoken passage: novices' accuracy collapses, experts' barely changes. In Experiment 3, experts show large interference when the spoken passage is replaced by a second manual task (sorting cards by suit).
+
+- **(a)** Why do experts type well while shadowing when novices cannot?
+- **(b)** Why does interference return for experts in Experiment 3?
+- **(c)** Hazard monitoring in traffic is controlled. What does the pattern predict about hands-free phone use while driving?
+
+**(a) Automatic vs. controlled.** For experts, typing has become automatic: it no longer consumes the central resources that speech shadowing needs, so the two proceed in parallel. Novice typing is controlled processing, and two controlled tasks overload capacity.
+
+**(b) Resource-specific automaticity.** Automaticity is not absolute. Two MANUAL tasks compete for the same motor and spatial resources, restoring interference even in experts. This is the multiple-resource refinement the MCAT loves: automatic does not mean cost-free under every pairing.
+
+**(c) Hands-free still costs.** Interference persists, because conversation and hazard monitoring compete for central attention, not for hands. It is the novice-typist logic transferred to the road.`
     },
     {
       id: 'cog1-quiz1',
@@ -64,13 +81,6 @@ Three classic accounts, ordered by where the filter sits:
       content: `**Attention & Automatic Processing** 🎯`,
       exercise: {
         questions: [
-          {
-            question: `At a loud reception, a physician is absorbed in one conversation yet immediately turns when her name is spoken across the room. Among classic attention theories, this breakthrough is BEST accommodated by:`,
-            options: [`Broadbent's early filter model, with strict channel blocking`, `Treisman's attenuation model, with a leaky early filter`, `Baddeley's visuospatial sketchpad in working memory`, `Sensory adaptation within the auditory nerve`],
-            correctAnswer: 1,
-            yield: 'HIGH',
-            explanation: `A strict early filter cannot explain how an unattended word's MEANING (her name) was recognized. Attenuation theory keeps the filter early but leaky: unattended channels are turned down, and items with permanently low thresholds — one's name, danger words — break through. The sketchpad is a working-memory component, and adaptation would reduce, not enable, detection.`
-          },
           {
             question: `Radiologists searching CT images for lung nodules were shown scans with a small gorilla image embedded; a large majority failed to notice it despite eye-tracking showing many looked directly at it. This is a demonstration of:`,
             options: [`Change blindness across a visual disruption`,`Stroop-type interference`, `Retroactive memory interference`, `Inattentional blindness`],
@@ -98,6 +108,13 @@ Three classic accounts, ordered by where the filter sits:
             correctAnswer: 3,
             yield: 'MEDIUM',
             explanation: `A linear RT-by-set-size slope is the signature of serial, attention-demanding comparison; a flat function means all items were processed simultaneously — the target pops out via a basic feature difference. Swapping the labels inverts that signature; slopes that differ between conditions rule out one parallel mechanism in both, and nothing in the data indicates search was abandoned. This RT-slope logic is the standard way cognition passages quantify whether processing is controlled or automatic, so read the axes before the conclusions.`
+          },
+          {
+            question: `At a loud reception, a physician is absorbed in one conversation yet immediately turns when her name is spoken across the room. Among classic attention theories, this breakthrough is BEST accommodated by:`,
+            options: [`Broadbent's early filter model, with strict channel blocking`, `Treisman's attenuation model, with a leaky early filter`, `Baddeley's visuospatial sketchpad in working memory`, `Sensory adaptation within the auditory nerve`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `A strict early filter cannot explain how an unattended word's MEANING (her name) was recognized. Attenuation theory keeps the filter early but leaky: unattended channels are turned down, and items with permanently low thresholds — one's name, danger words — break through. The sketchpad is a working-memory component, and adaptation would reduce, not enable, detection.`
           }
         ]
       }
@@ -107,11 +124,17 @@ Three classic accounts, ordered by where the filter sits:
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Filter theories: Broadbent = early strict block; Treisman = early attenuation with low-threshold breakthrough (the cocktail party answer); late selection = filtering after meaning
-- Inattentional and change blindness prove awareness needs attention, not just fixation — looking is not seeing
-- Controlled processing is serial, effortful, capacity-limited; automaticity comes from practice, runs involuntarily, and is measured by Stroop intrusion and flat RT-by-set-size curves
-- Dual-task success requires different resources or an automatic member; hands-free phone impairment is central, not manual
-- Data habit: linear RT slope = serial search; flat slope = parallel pop-out; practice converts the first into the second`
+- **Filter models.** Broadbent blocks early, Treisman attenuates (your name breaks through), late selection filters after meaning.
+- **Looking is not seeing.** Inattentional and change blindness show that awareness needs attention, not just fixation.
+- **Automaticity.** Practice makes processing fast, parallel and involuntary; Stroop interference is its standard index.
+- **Reading RT slopes.** RT rising linearly with set size means serial search; a flat line means parallel pop-out.
+
+**Common traps**
+
+- **Strict filter for your name.** Broadbent's filter would block your name; the cocktail party effect is Treisman's attenuation.
+- **Late selection by default.** It predicts widespread unattended meaning; chance recognition of the ignored ear argues against it.
+- **Automatic means cost-free.** Automaticity is resource-specific: two manual tasks still interfere, even for experts.
+- **Hands-free is safe.** Phone talk competes with driving for central attention, not for hands, so hands-free still impairs.`
     }
   ]
 };

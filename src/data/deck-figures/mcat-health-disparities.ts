@@ -9,7 +9,7 @@ import type { DeckFigurePlacement } from './index'
  * charts, an intervention ladder …) — no textbook, prep-company or AAMC
  * figure was copied. No curve here is data: the lesson gives no study
  * numbers, so the charts are labelled schematics and their captions say
- * "illustrative" (the ladder's right panel uses the lesson's own HYPOTHETICAL
+ * "illustrative" (the capstone chart uses the lesson's own HYPOTHETICAL
  * capstone-passage numbers and says so).
  *
  * Arrowheads: a <marker> inherits colour from ITS OWN ancestors, not from the
@@ -423,16 +423,17 @@ ${[650, 780, 910].map((x) => `<line x1="${x}" y1="380" x2="${x}" y2="388" stroke
 <g class="fig-accent-2"><text x="760" y="450" font-size="15" text-anchor="middle" fill="currentColor">same ancestry — health falls as exposure accumulates</text></g>
 </svg>`
 
-/* 9 — The intervention ladder, and the capstone passage's opt-out result (lead, 1000×460) */
+/* 9 — The intervention ladder (lead, 610×460). The capstone passage's
+   opt-out result is its own figure (10), placed AFTER the capstone worked
+   example so it never prints that problem's numbers or answer before the class
+   has tried it. */
 const rungs: Array<[string, string, string, string]> = [
   ['STRUCTURAL / policy', 'segregation, income, insurance design', 'coverage expansion, housing mobility,', 'pollution zoning, income support'],
   ['INSTITUTIONAL', 'hospital placement, protocols, algorithms', 'site placement, automatic screening,', 'algorithm audits, interpreters'],
   ['ENCOUNTER', 'provider judgment, communication', 'decision support, standardized criteria,', 'bias feedback, shared-decision training'],
   ['INDIVIDUAL / behavioral', 'knowledge, trust, navigation', 'health literacy programs, community', 'health workers, patient navigation'],
 ]
-const pct = (v: number) => 380 - v * 2.7
-const ladderSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-hd-ladder')}</defs>
+const ladderSvg = `${SVG_OPEN} viewBox="0 0 610 460">
 <g class="fig-muted">
 <text x="115" y="40" font-size="14" text-anchor="middle" fill="currentColor">UPSTREAM</text>
 <text x="115" y="404" font-size="14" text-anchor="middle" fill="currentColor">DOWNSTREAM</text>
@@ -450,10 +451,15 @@ ${rungs
   })
   .join('\n')}
 <g class="fig-accent-2"><text x="290" y="438" font-size="15" font-weight="700" text-anchor="middle" fill="currentColor">a downstream fix never discharges an upstream finding</text></g>
-<g class="fig-muted"><line x1="585" y1="30" x2="585" y2="450" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 6"/></g>
+</svg>`
+
+/* 10 — The capstone passage's opt-out result (after the capstone worked example, 400×430) */
+const pct = (v: number) => 380 - v * 2.7
+const capstoneSvg = `${SVG_OPEN} viewBox="590 30 400 430">
+<defs>${ARROW('arr-hd-capstone')}</defs>
 <text x="800" y="56" font-size="18" font-weight="700" text-anchor="middle" fill="currentColor">Opt-out mailers (capstone passage)</text>
-<line x1="650" y1="380" x2="650" y2="80" stroke="currentColor" stroke-width="2" marker-end="url(#arr-hd-ladder)"/>
-<line x1="650" y1="380" x2="965" y2="380" stroke="currentColor" stroke-width="2" marker-end="url(#arr-hd-ladder)"/>
+<line x1="650" y1="380" x2="650" y2="80" stroke="currentColor" stroke-width="2" marker-end="url(#arr-hd-capstone)"/>
+<line x1="650" y1="380" x2="965" y2="380" stroke="currentColor" stroke-width="2" marker-end="url(#arr-hd-capstone)"/>
 <text x="622" y="235" font-size="15" text-anchor="middle" fill="currentColor" transform="rotate(-90 622 235)">% screened</text>
 <g class="fig-muted">
 <rect x="680" y="${pct(70)}" width="40" height="${380 - pct(70)}" rx="4" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="1.5"/>
@@ -569,9 +575,19 @@ export const mcatHealthDisparitiesFigures: DeckFigurePlacement[] = [
     figure: {
       svg: ladderSvg,
       alt:
-        'Left: a four-rung ladder from upstream to downstream. Structural/policy — mechanism in segregation, income, insurance design; fix: coverage expansion, housing mobility, pollution zoning, income support. Institutional — hospital placement, protocols, algorithms; fix: site placement, automatic screening, algorithm audits, interpreters. Encounter — provider judgment, communication; fix: decision support, standardized criteria, bias feedback, shared-decision training. Individual/behavioral — knowledge, trust, navigation; fix: health literacy programs, community health workers, patient navigation. A downstream fix never discharges an upstream finding. Right: a bar chart of per cent screened before (physician referral) and after (automatic opt-out mailer) from the lesson\'s capstone passage: top income quartile 70 to 82, bottom quartile 42 to 69 — the gap narrows from 28 to 13 points because a default needs no personal resources, so the disadvantaged gain most.',
-      caption: 'Right panel: the lesson\'s hypothetical capstone-passage numbers, not real data.',
+        'A four-rung ladder from upstream to downstream. Structural/policy — mechanism in segregation, income, insurance design; fix: coverage expansion, housing mobility, pollution zoning, income support. Institutional — hospital placement, protocols, algorithms; fix: site placement, automatic screening, algorithm audits, interpreters. Encounter — provider judgment, communication; fix: decision support, standardized criteria, bias feedback, shared-decision training. Individual/behavioral — knowledge, trust, navigation; fix: health literacy programs, community health workers, patient navigation. A downstream fix never discharges an upstream finding.',
     },
     blocks: ['- Match the remedy to the LEVEL the data implicate; resource-dependent designs (opt-in, information) widen gaps, defaults narrow them'],
+  },
+  {
+    at: 'Worked Example — A Capstone Passage',
+    mode: 'after',
+    figure: {
+      svg: capstoneSvg,
+      alt:
+        'A bar chart of per cent screened before (physician referral) and after (automatic opt-out mailer) from the lesson\'s capstone passage: top income quartile 70 to 82, bottom quartile 42 to 69 — the gap narrows from 28 to 13 points because a default needs no personal resources, so the disadvantaged gain most.',
+      caption: 'The lesson\'s hypothetical capstone-passage numbers, not real data.',
+    },
+    blocks: ['- Defaults remove the resource-dependent step, so the bottom quartile gains most (+27 vs. +12 points)'],
   },
 ]

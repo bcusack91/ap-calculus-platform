@@ -35,17 +35,61 @@ Set by the **$Na^{+}/K^{+}$-ATPase** (pumps 3 $Na^{+}$ out, 2 $K^{+}$ in) plus $
 - **Relative refractory period:** a stronger-than-normal stimulus can fire (during hyperpolarization).`
     },
     {
+      id: 'bbb1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Action Potentials
+
+**Problem 1.** A local anesthetic (e.g., lidocaine) blocks voltage-gated $Na^{+}$ channels in a sensory neuron that carries pain signals.
+
+- **(a)** Which phase of the action potential depends on the blocked channels?
+- **(b)** Can the neuron still generate and propagate action potentials?
+- **(c)** What does the patient feel, and why?
+
+**(a) The upstroke.** Voltage-gated $Na^{+}$ channels drive the depolarizing (rising) phase. With them blocked, the membrane cannot produce the AP upstroke.
+
+**(b) No propagation.** Without the upstroke, no action potential is generated or conducted along the axon.
+
+**(c) Numbness.** The pain signal never reaches the CNS. This is exactly how local anesthetics work: they silence the axon by blocking $Na^{+}$ entry.
+
+**Problem 2.** In an experiment, the extracellular $K^{+}$ concentration around a neuron is raised.
+
+- **(a)** What happens to the $K^{+}$ gradient and to $K^{+}$ efflux at rest?
+- **(b)** Which way does the resting membrane potential move?
+- **(c)** How does excitability change at first?
+- **(d)** What happens to excitability if the change is sustained?
+
+**(a) Smaller gradient.** Raising external $K^{+}$ reduces the $K^{+}$ concentration gradient, so less $K^{+}$ leaks out at rest.
+
+**(b) Depolarization.** With less $K^{+}$ efflux, the membrane becomes less negative: it depolarizes.
+
+**(c) Hyperexcitable.** The depolarized membrane sits closer to threshold, so at first the neuron fires more easily.
+
+**(d) Depolarization block.** Sustained depolarization inactivates $Na^{+}$ channels, so excitability is eventually lost. This is why severe hyperkalemia is dangerous to cardiac and neural tissue.
+
+**Problem 3.** An action potential is travelling down an axon, away from the soma and toward the axon terminals.
+
+- **(a)** What state are the $Na^{+}$ channels in just behind the advancing AP?
+- **(b)** Can the patch of membrane just traversed fire again right away?
+- **(c)** Which way, then, can the AP propagate?
+
+**(a) Inactivated.** Behind the advancing AP, $Na^{+}$ channels are INACTIVATED: this is the absolute refractory period.
+
+**(b) No.** The inactivated $Na^{+}$ channels cannot reopen until the membrane repolarizes, so the region just traversed cannot be re-excited.
+
+**(c) One way only.** Only the unexcited membrane ahead can fire, so the AP travels toward the terminals, never back toward the soma. The refractory period enforces one-way travel; regeneration at each patch keeps the AP non-decremental.`
+    },
+    {
       id: 'bbb1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Neurons & Action Potentials** 🎯`,
       exercise: {
         questions: [
           {
-            question: `The rising (depolarizing) phase of the action potential is driven primarily by:`,
-            options: [`$Na^{+}$ entering through voltage-gated channels`, `$K^{+}$ leaving through voltage-gated channels`, `The $Na^{+}/K^{+}$-ATPase exchanging ions across the membrane`, `$K^{+}$ entering through leak channels`],
+            question: `A toxin blocks voltage-gated $K^{+}$ channels, while voltage-gated $Na^{+}$ channels keep working normally. The most direct effect on the action potential is that:`,
+            options: [`Repolarization slows, so each spike is prolonged`, `The depolarizing upstroke can no longer occur`, `The resting potential becomes far more negative`, `Spike amplitude shrinks as it travels the axon`],
             correctAnswer: 0,
             yield: 'ULTRA_HIGH',
-            explanation: `When threshold (~ −55 mV) is reached, voltage-gated $Na^{+}$ channels open and $Na^{+}$ flows IN down its electrochemical gradient, rapidly depolarizing the membrane toward +30 mV. Repolarization is the later $K^{+}$-efflux phase; the ATPase restores gradients but does not drive the spike itself; and $K^{+}$ moves OUT, not in, through leak channels, which set the resting potential rather than producing the spike.`
+            explanation: `Repolarization depends on $K^{+}$ flowing OUT through voltage-gated $K^{+}$ channels. With them blocked, the membrane returns toward rest only slowly, so each spike is prolonged (and the undershoot shrinks). The upstroke is driven by voltage-gated $Na^{+}$ channels, which still work, so it still occurs. The resting potential is set mainly by $K^{+}$ leak channels and the pump, so it does not become far more negative. And an AP is regenerated at full, all-or-none size as it travels, so its amplitude does not shrink along the axon.`
           },
           {
             question: `Because of the all-or-none principle, a neuron encodes the INTENSITY of a stimulus by:`,
@@ -65,57 +109,21 @@ Set by the **$Na^{+}/K^{+}$-ATPase** (pumps 3 $Na^{+}$ out, 2 $K^{+}$ in) plus $
       }
     },
     {
-      id: 'bbb1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Action Potentials
-
-<details>
-<summary><b>Example 1: Predict the effect of a $Na^{+}$-channel blocker</b></summary>
-
-**Question:** A local anesthetic (e.g., lidocaine) blocks voltage-gated $Na^{+}$ channels in a sensory neuron. Predict the effect on action potentials and on pain sensation.
-
-**Solution:**
-1. Voltage-gated $Na^{+}$ channels drive the depolarizing (rising) phase. Blocking them prevents the membrane from reaching the AP upstroke. ✓
-2. No action potentials can propagate → the sensory signal (pain) never reaches the CNS → numbness. ✓
-
-**MCAT note:** This is exactly how local anesthetics work — they silence the axon by blocking $Na^{+}$ entry.
-</details>
-
-<details>
-<summary><b>Example 2: Reason about a changed $K^{+}$ gradient</b></summary>
-
-**Question:** Extracellular $K^{+}$ is raised experimentally. Qualitatively, what happens to the resting membrane potential and excitability?
-
-**Solution:**
-1. Raising external $K^{+}$ reduces the $K^{+}$ concentration gradient, so $K^{+}$ efflux at rest decreases.
-2. The membrane DEPOLARIZES (moves toward less negative). ✓
-3. Initially the neuron is closer to threshold (hyperexcitable), but sustained depolarization inactivates $Na^{+}$ channels → eventual loss of excitability (depolarization block). ✓
-
-**Connection:** This is why severe hyperkalemia is dangerous to cardiac and neural tissue.
-</details>
-
-<details>
-<summary><b>Example 3: Explain why APs travel one direction</b></summary>
-
-**Question:** Why does an action potential propagate down the axon in only one direction rather than back toward the soma?
-
-**Solution:**
-1. Behind the advancing AP, $Na^{+}$ channels are INACTIVATED (absolute refractory period). ✓
-2. They cannot reopen until the membrane repolarizes, so the region just traversed cannot be re-excited.
-3. Only the unexcited region ahead can fire → unidirectional propagation toward the terminals. ✓
-
-**Key idea:** The refractory period enforces one-way, non-decremental signaling.
-</details>`
-    },
-    {
       id: 'bbb1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Signal flow: dendrites → soma → axon hillock (threshold ~ −55 mV) → axon → terminals.
-- Resting potential ~ −70 mV set by $Na^{+}/K^{+}$-ATPase (3 $Na^{+}$ out / 2 $K^{+}$ in) and $K^{+}$ leak.
-- AP: $Na^{+}$ IN (depolarize) → $K^{+}$ OUT (repolarize) → hyperpolarize; all-or-none; intensity coded by FREQUENCY.
-- Refractory period ensures one-way conduction; myelin enables fast saltatory conduction (lost in MS).`
+- **Signal flow.** Dendrites → soma → axon hillock (fires at ~ −55 mV) → axon → terminals; myelin speeds conduction.
+- **Resting potential.** About −70 mV, set by the $Na^{+}/K^{+}$-ATPase (3 $Na^{+}$ out, 2 $K^{+}$ in) and $K^{+}$ leak channels.
+- **AP phases.** $Na^{+}$ in depolarizes, $K^{+}$ out repolarizes, and slow-closing $K^{+}$ channels cause the undershoot.
+- **All-or-none, one way.** Every AP is the same size, so intensity is coded by frequency; refractoriness keeps APs one-way.
+
+**Common traps**
+
+- **Bigger spikes for stronger stimuli.** Amplitude is fixed above threshold; a stronger stimulus raises firing frequency instead.
+- **The pump drives the spike.** The $Na^{+}/K^{+}$-ATPase maintains gradients; voltage-gated $Na^{+}$ channels drive the upstroke.
+- **Raised outside $K^{+}$ hyperpolarizes.** More external $K^{+}$ shrinks the $K^{+}$ gradient, so the membrane depolarizes instead.
+- **Nothing fires while refractory.** Only the absolute period blocks every AP; in the relative one a stronger-than-normal stimulus fires.`
     }
   ]
 };

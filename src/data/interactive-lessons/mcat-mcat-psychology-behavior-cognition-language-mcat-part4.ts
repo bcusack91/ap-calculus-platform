@@ -61,15 +61,35 @@ Reward circuit: mesolimbic **dopamine** pathway (VTA → nucleus accumbens); tol
       type: 'text' as const,
       content: `### Worked Example — A Sleep-and-Memory Passage, Fully Read
 
-**Passage.** Participants learn a word-pair list at 9 PM. Group A sleeps normally with polysomnography; Group B stays awake until 3 AM, then sleeps; Group C sleeps but is briefly awakened whenever slow-wave (delta) activity appears, so it gets almost no N3. At 9 AM, recall is: A 74%, B 51%, C 58%. Within Group A, recall correlates r = 0.62 with minutes of N3 sleep in the first half of the night. A second task — a mirror-tracing motor skill — shows improvement correlating instead with REM plus N2 spindle density, not N3.
+**Problem 1.** Participants learn a word-pair list at 9 PM. Group A sleeps normally with polysomnography; Group B stays awake until 3 AM, then sleeps; Group C sleeps but is briefly awakened whenever delta activity appears, so it gets almost no N3. At 9 AM, recall is: A 74%, B 51%, C 58%.
 
-**Step 1 — identify the logic of three groups.** B still sleeps, but later and for less time, so its deficit mixes timing and duration — it shows sleep helps but cannot say which stage matters; C sleeps a full night minus N3, isolating a stage-specific mechanism rather than sleep duration. Neither group alone would justify a stage-specific conclusion.
+- **(a)** What can Group B's deficit show, and what can it not?
+- **(b)** What does Group C's design isolate?
+- **(c)** What does the gap between Groups A and C let you conclude?
+- **(d)** What extra control group would strengthen that conclusion?
 
-**Step 2 — map task to stage.** Declarative word pairs track N3 slow-wave sleep (early night); procedural mirror tracing tracks REM/N2 spindles. This double dissociation — two tasks, two different stage correlates — mirrors the explicit/implicit memory split: different memory systems consolidate in different sleep states.
+**(a) Sleep helps, stage unknown.** Group B still sleeps, but later and for less time, so its deficit mixes timing and duration. It shows sleep helps but cannot say which stage matters.
 
-**Step 3 — flag the inference limits.** The N3 correlation within Group A is correlational: deeper sleepers may differ in ways that also aid memory. The causal claim for N3 rests on Group C's selective disruption: removing N3 alone cut recall from 74% to 58%. Also note awakenings themselves stress participants — a strong answer choice will mention a yoked-control (awakened equally often at random times), and the best experimental-design option on the real exam usually is that control.
+**(b) A stage, not duration.** Group C sleeps a full night minus N3. Group B alone cannot isolate a stage; Group C's selective N3 removal, compared with Group A, can, because total sleep time is held roughly equal.
 
-**Step 4 — the integration item.** "A drug that suppresses REM but preserves N3 should impair which task?" Mirror tracing (procedural), sparing word pairs — answer directly off the dissociation. If the stem instead describes morning-shifted REM loss from an early alarm, reason from architecture: REM concentrates late in the night, so early waking preferentially costs REM.`
+**(c) N3 aids declarative recall.** Removing N3 alone cut recall from 74% to 58%, so slow-wave sleep supports consolidation of the word pairs. This selective disruption carries the causal claim.
+
+**(d) A yoked control.** The awakenings themselves stress participants. A group awakened equally often at random times separates N3 loss from disruption, and on the real exam the best experimental-design option is usually that control.
+
+**Problem 2.** Within Group A, recall correlates r = 0.62 with minutes of N3 sleep in the first half of the night. A second task, a mirror-tracing motor skill, shows improvement correlating instead with REM plus N2 spindle density, not N3.
+
+- **(a)** Does the r = 0.62 correlation show that N3 causes better recall?
+- **(b)** How do the two tasks map onto sleep stages and memory systems?
+- **(c)** A drug suppresses REM but preserves N3. Which task should it impair?
+- **(d)** An early alarm cuts the last hours of sleep. Which stage is lost most?
+
+**(a) No.** The correlation within Group A is only correlational: deeper sleepers may differ in ways that also aid memory. The causal claim rests on Group C's selective removal of N3.
+
+**(b) A double dissociation.** Declarative word pairs track N3 slow-wave sleep (early night); procedural mirror tracing tracks REM and N2 spindles. Two tasks with two different stage correlates mirror the explicit/implicit split: different memory systems consolidate in different sleep states.
+
+**(c) Mirror tracing.** The procedural task should suffer while word pairs are spared, read directly off the dissociation in (b).
+
+**(d) REM.** Reason from architecture: REM concentrates late in the night, so early waking preferentially costs REM, and with it the procedural gains.`
     },
     {
       id: 'cog4-quiz1',
@@ -120,14 +140,22 @@ Reward circuit: mesolimbic **dopamine** pathway (VTA → nucleus accumbens); tol
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- EEG ladder: beta (alert wake) → alpha (relaxed wake) → N1 theta → N2 spindles/K-complexes → N3 delta (terrors, sleepwalking, early night) → REM (vivid dreams, atonia, lengthens toward morning); cycles ~90 min
-- REM rebound = regulated need; declarative memory tracks N3, procedural tracks REM/N2 spindles — the sleep-consolidation double dissociation
-- Disorders by stage: night terrors and somnambulism = N3 early; nightmares = REM late; narcolepsy = waking REM intrusion; apnea = breathing, not staging
-- Drug classes: depressants (GABA), stimulants (dopamine/NE), opioids (endorphin receptors), hallucinogens (serotonin); reward = VTA-to-accumbens dopamine
-- Experiment reading: RT indexes processing and conflict; within-subject designs demand counterbalancing; match each manipulation to the processing stage it touches before choosing a theory
+- **The EEG ladder.** Beta alert, alpha relaxed, N1 theta, N2 spindles and K-complexes, N3 delta, REM beta-like with atonia.
+- **Night architecture.** Cycles run ~90 min; N3 dominates early in the night, and REM periods lengthen toward morning.
+- **Sleep and memory.** Declarative memory tracks N3, procedural skill tracks REM and N2 spindles; REM rebound signals a need.
+- **Drug classes.** Depressants enhance GABA, amphetamine/cocaine boost dopamine/NE, opioids hit endorphin receptors.
+
+**Common traps**
+
+- **Night terror vs. nightmare.** Night terrors are N3, early and unrecalled; nightmares are REM, later in the night, and remembered.
+- **Sleepwalking as dream enactment.** Somnambulism happens in N3, not REM, so the sleeper is not acting out a dream.
+- **Fixed block order.** A within-subject design run in one order confounds the manipulation with practice and fatigue; counterbalance.
+- **Correlation as cause.** A stage-recall correlation is not causal; selective disruption of that stage, with a yoked control, is.
 
 <!-- yield:low -->
-- Low-yield extras: narcolepsy reflects a deficiency of orexin (hypocretin)
+**Low-yield extras**
+
+- Narcolepsy reflects a deficiency of orexin (hypocretin)
 <!-- /yield -->`
     }
   ]

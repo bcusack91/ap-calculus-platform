@@ -45,7 +45,7 @@ Panic attacks mimic cardiac emergencies — passages love the ER vignette with n
 3. **Negative alterations in cognition/mood** (blame, detachment, anhedonia)
 4. **Alterations in arousal/reactivity** (hypervigilance, exaggerated startle, sleep disturbance)
 
-Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting up to 1 month = **acute stress disorder**. Adjustment disorder = disproportionate distress after a NON-catastrophic stressor.
+Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting up to 1 month = **acute stress disorder**. Adjustment disorder = disproportionate distress after a stressor, usually an ordinary one; after a trauma it applies only when PTSD or acute stress disorder criteria are not met.
 
 <!-- yield:low -->
 - Acute stress disorder's window formally runs from 3 days to 1 month after the trauma.
@@ -56,15 +56,35 @@ Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting up t
       type: 'text' as const,
       content: `### Worked Example — An Emergency-Department Vignette, Fully Read
 
-**Vignette.** A 23-year-old graduate student has three episodes in six weeks of abrupt palpitations, chest tightness, shortness of breath, dizziness, and an overwhelming feeling that she is dying, each peaking within about ten minutes and resolving within the hour. Cardiac and thyroid workups are normal. Since the second episode she has stopped attending lectures held in the large auditorium, sits near exits, and repeatedly checks her pulse. She reports the episodes "come out of nowhere," including one that woke her from sleep. She also mentions long-standing but manageable nervousness before presentations.
+**Problem 1.** A 23-year-old student has had three episodes in six weeks of abrupt palpitations, breathlessness and a sense of dying, peaking within ten minutes and gone within the hour. Cardiac and thyroid workups are normal. The episodes "come out of nowhere," one waking her from sleep.
 
-**Step 1 — name the events, then the disorder.** The episodes are panic attacks: abrupt surge, rapid peak, somatic storm plus catastrophic cognition. The DIAGNOSIS of panic disorder is supported by what happens BETWEEN attacks — a month-plus of anticipatory worry and maladaptive behavior change (avoiding the auditorium, exit-sitting, pulse-checking). Attacks alone, without the inter-attack syndrome, would not suffice.
+- **(a)** What are the episodes themselves?
+- **(b)** Why does the normal medical workup matter?
+- **(c)** What does "out of nowhere," including from sleep, tell you?
+- **(d)** She also has long-standing, manageable nervousness before presentations. Does it justify a social anxiety diagnosis?
 
-**Step 2 — use the discriminators the vignette planted.** "Out of nowhere," including from sleep = UNEXPECTED attacks, pointing away from specific phobia or social anxiety, where attacks are cued by an identifiable trigger. Her presentation nervousness is subclinical and situational — a distractor inviting an unjustified social anxiety diagnosis. The normal medical workup removes the great mimics (cardiac, thyroid) that any competent item will mention.
+**(a) Panic attacks.** An abrupt surge that peaks within minutes and resolves within the hour, a somatic storm, and catastrophic cognition make each episode a panic attack. An attack is an event, not yet a diagnosis.
 
-**Step 3 — track the developing complication.** Avoidance of the auditorium and preference for escape routes is early agoraphobic avoidance — fear of situations where escape would be difficult if an attack struck. If it generalizes (transit, crowds, leaving home), agoraphobia becomes a second diagnosis.
+**(b) Mimics removed.** Cardiac and thyroid disease are the great mimics of panic, and any competent item mentions ruling them out. A normal workup is the vignette's signal to think panic.
 
-**Step 4 — connect mechanism to treatment logic.** The maintaining cycle is interoceptive: bodily sensations → catastrophic appraisal → sympathetic surge → stronger sensations. Behavioral treatment (interoceptive exposure — deliberately inducing the feared sensations) breaks the association, and the safety behaviors (pulse-checking, exit-sitting) must be withdrawn because they function as negative reinforcers preserving the fear — the same operant engine as OCD rituals.`
+**(c) Unexpected attacks.** Attacks without a trigger, even from sleep, are UNEXPECTED. That points away from specific phobia and social anxiety, where attacks are cued by an identifiable trigger.
+
+**(d) No.** Her presentation nervousness is subclinical and situational. It is a distractor planted to invite an unjustified social anxiety diagnosis.
+
+**Problem 2.** The same student, since her first episode six weeks ago, has stopped attending lectures held in the large auditorium, sits near exits, and repeatedly checks her pulse.
+
+- **(a)** Does she now meet criteria for panic disorder?
+- **(b)** What does avoiding the auditorium and sitting near exits signal?
+- **(c)** What cycle keeps the attacks coming?
+- **(d)** Which behavioral treatment follows, and what must happen to the pulse-checking and exit-sitting?
+
+**(a) Yes, from the inter-attack syndrome.** The diagnosis rests on what happens BETWEEN attacks: recurrent unexpected attacks followed by a month-plus of worry about more attacks or maladaptive behavior change. Her six weeks of avoidance and pulse-checking supply it; attacks alone would not suffice.
+
+**(b) Early agoraphobia.** Avoiding places where escape would be hard if an attack struck is early agoraphobic avoidance. If it generalizes to two or more situation types (transit, crowds, leaving home) for 6+ months, agoraphobia becomes a second diagnosis.
+
+**(c) An interoceptive loop.** Bodily sensations → catastrophic appraisal → sympathetic surge → stronger sensations. Each pass through the loop confirms the fear.
+
+**(d) Interoceptive exposure.** Deliberately inducing the feared sensations breaks the association. The safety behaviors must be withdrawn, because they act as negative reinforcers that preserve the fear: the same operant engine as OCD rituals.`
     },
     {
       id: 'dis1-quiz1',
@@ -73,11 +93,11 @@ Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting up t
       exercise: {
         questions: [
           {
-            question: `A man experiences sudden surges of palpitations, sweating, and fear of dying that peak within minutes, sometimes during calm activities. For the past two months he has restructured his life around avoiding another episode and worries about them daily. Distinguishing his DISORDER from his ATTACKS, the diagnosis of panic disorder rests on:`,
-            options: [`The intensity of the physical symptoms during each episode, which must exceed a severity threshold`, `Having more than two attacks in a lifetime, regardless of what happens between them`, `Recurrent unexpected attacks plus a month or more of worry or behavioral change`, `The presence of an identifiable situational trigger preceding each attack`],
+            question: `Over two months, a man has had four sudden surges of palpitations, sweating, and fear of dying that peak within minutes, some during calm activities. Cardiac and thyroid workups are normal. Between attacks he does not worry about having more, and he has changed nothing in his routine. Does he meet criteria for panic disorder?`,
+            options: [`Yes; four unexpected attacks in two months meet the recurrence threshold`, `No; attacks during calm activities point to generalized anxiety disorder`, `No; he also needs a month of worry or behavior change between attacks`, `Yes, because his normal cardiac and thyroid workups confirm panic`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `Panic attacks are events that occur across many disorders and in healthy people; panic DISORDER is defined by unexpected recurrence plus the inter-attack syndrome — anticipatory fear-of-the-fear and behavior change lasting at least a month. Identifiable triggers would point toward phobic disorders, and neither attack intensity nor a lifetime count defines the diagnosis.`
+            explanation: `Panic attacks are events that occur across many disorders and in healthy people; panic DISORDER needs recurrent unexpected attacks PLUS the inter-attack syndrome — at least a month of worry about more attacks or maladaptive behavior change. He has the attacks but not the syndrome, so neither the count of four attacks nor the normal workup completes the diagnosis (the workup only removes mimics). Attacks during calm activities are uncued, which fits panic rather than generalized anxiety disorder, whose core is broad, uncontrollable worry.`
           },
           {
             question: `A woman spends two hours nightly checking that appliances are off. Intrusive images of her house burning cause mounting anxiety that only the checking relieves — briefly, until the images return. In learning terms, the checking persists because it is:`,
@@ -91,7 +111,7 @@ Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting up t
             options: [`Both have PTSD, since identical symptom clusters outweigh the difference in timing`, `Both have adjustment disorder, since a car accident is a common stressor`, `The first has generalized anxiety disorder; the second has PTSD`, `The first has acute stress disorder; the second has PTSD`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `The symptom clusters (intrusion, avoidance, negative mood, hyperarousal) are shared; DURATION draws the line — up to one month after trauma is acute stress disorder, beyond one month is PTSD. Adjustment disorder requires a NON-catastrophic stressor, and GAD requires pervasive multi-domain worry, not trauma-locked symptoms.`
+            explanation: `The symptom clusters (intrusion, avoidance, negative mood, hyperarousal) are shared; DURATION draws the line — up to one month after trauma is acute stress disorder, beyond one month is PTSD. Adjustment disorder applies after a trauma only when PTSD or acute stress disorder criteria are not met, and both patients meet them; GAD requires pervasive multi-domain worry, not trauma-locked symptoms.`
           },
           {
             question: `A political dissident is described by state media as mentally ill because her views are statistically rare and socially disruptive. Under the DSM's working definition of disorder, this attribution fails PRIMARILY because:`,
@@ -115,14 +135,22 @@ Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting up t
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Disorder = internal dysfunction + distress/impairment; rarity and social deviance never suffice; DSM-5 is categorical and atheoretical; diathesis-stress is the default causal frame
-- Anxiety map: GAD = broad, uncontrollable, 6+ months; phobia/social anxiety = cued fear; panic disorder = unexpected attacks PLUS a month of fear-of-the-fear; agoraphobia = fear of unescapable situations
-- Panic attacks are events, not a diagnosis — the inter-attack syndrome makes the disorder; normal cardiac workup is the vignette's signal
-- OCD: ego-dystonic obsessions + anxiety-neutralizing compulsions run on negative reinforcement (hence exposure with response prevention)
-- PTSD's four clusters (intrusion, avoidance, negative cognition/mood, hyperarousal); over 1 month = PTSD, under = acute stress disorder; adjustment disorder = ordinary stressor, disproportionate response
+- **DSM logic.** DSM-5 is categorical and atheoretical; diathesis-stress (vulnerability plus stress) is the default causal frame.
+- **The anxiety map.** GAD: broad, uncontrollable worry for 6+ months; phobias: cued fear; agoraphobia: fear of no escape.
+- **OCD runs on relief.** Rituals remove obsession-driven anxiety (negative reinforcement); exposure with response prevention treats it.
+- **PTSD by the calendar.** Four clusters: over 1 month is PTSD, up to 1 month acute stress disorder; adjustment: ordinary stressor.
+
+**Common traps**
+
+- **Diagnosing the attack.** A panic attack is an event; panic disorder needs a month of worry or behavior change between attacks.
+- **Rarity as disorder.** Rare or socially deviant views are not a disorder without dysfunction and distress or impairment.
+- **Cued vs. uncued.** Attacks with a clear trigger point to phobia or social anxiety; attacks "out of nowhere" point to panic.
+- **Rituals as reward.** Compulsions persist because they remove anxiety (negative reinforcement), not because they please.
 
 <!-- yield:low -->
-- Low-yield extras: acute stress disorder's formal window starts 3 days after the trauma
+**Low-yield extras**
+
+- Acute stress disorder's formal window starts 3 days after the trauma.
 <!-- /yield -->`
     }
   ]

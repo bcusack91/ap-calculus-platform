@@ -59,22 +59,59 @@ The interactionist entry: no act is deviant until labeled, and the LABEL itself 
       type: 'text' as const,
       content: `### Worked Example — Four Theories, One Delinquent
 
-**Passage-style problem.** A longitudinal study follows Marcus, arrested at 15 for selling stolen electronics. Researchers with four theoretical commitments each cite one finding:
+**Problem 1.** A longitudinal study follows Marcus, arrested at 15 for selling stolen electronics. One researcher reports: "Marcus's selling techniques, supplier contacts, and his saying that 'insurance covers it so nobody's hurt' were all acquired from two older cousins over months of daily contact."
 
-1. "Marcus fully endorses conventional success — he wants a house, a business, 'the whole dream' — but his neighborhood's schools rarely place students in college or stable jobs."
-2. "Marcus's selling techniques, supplier contacts, and his saying that 'insurance covers it so nobody's hurt' were all acquired from two older cousins over months of daily contact."
-3. "Before the arrest, Marcus was failing school, had no adult he felt close to, no activities, and said rules 'never made sense to me.'"
-4. "After the arrest was publicized, Marcus was expelled, legitimate employers stopped responding, adults introduced him as 'the criminal kid,' and his offending — previously occasional — became his main activity and identity."
+- **(a)** Which theory of deviance does this finding support?
+- **(b)** What two kinds of content did Marcus acquire, and what kind of content is "nobody's hurt"?
+- **(c)** Which detail shows how often and how closely Marcus was exposed?
 
-**Finding 1 is strain theory (Merton).** Conventional GOALS embraced, legitimate MEANS structurally blocked → **innovation**. The tell: the researcher documents Marcus's mainstream values; his deviance flows from the goal-means gap, not from deviant values.
+**(a) The theory.** **Differential association** (Sutherland): deviance is LEARNED through transmission in intimate groups.
 
-**Finding 2 is differential association (Sutherland).** Intimate-group transmission of both techniques AND neutralizing definitions ("nobody's hurt" is a definition favorable to violation). The dosage language — months of daily contact — mirrors Sutherland's frequency/intensity variables.
+**(b) What was learned.** Techniques (selling methods, supplier contacts) AND definitions. "Insurance covers it so nobody's hurt" is a neutralizing definition, one favorable to violation.
 
-**Finding 3 is control theory (Hirschi).** All four bonds read as absent: attachment (no close adult), commitment (failing school = no stakes), involvement (no activities), belief (rules "never made sense"). Note this theory needs no positive cause of deviance at all — only missing restraints.
+**(c) The dosage.** "Months of daily contact" with two older cousins mirrors Sutherland's frequency, duration and intensity variables: the more often, the longer and the closer the contact, the stronger the learning.
 
-**Finding 4 is labeling theory.** Occasional offending (primary deviance) is transformed BY the public label: expulsion and hiring exclusion close legitimate doors, "the criminal kid" becomes a master status, and offending reorganizes into identity — secondary deviance. The causal arrow runs from societal REACTION to escalated deviance, the theory's defining claim.
+**Problem 2.** A second researcher on the Marcus study reports: "Before the arrest, Marcus was failing school, had no adult he felt close to, no activities, and said rules 'never made sense to me.'"
 
-**Discrimination drill.** Findings 2 and 3 are the classic confusable pair: both involve peers and family, but Sutherland says deviance is LEARNED (a positive acquisition), while Hirschi says it is UNRESTRAINED (a failure of bonds). Ask: does the evidence show transmission of deviant content, or absence of conventional ties? Findings 1 and 4 separate on timing: strain explains the FIRST offense; labeling explains the ESCALATION after the reaction.`
+- **(a)** Which theory of deviance does this finding support?
+- **(b)** Which conventional tie does each detail show to be missing?
+- **(c)** Does this theory need a positive cause of deviance?
+- **(d)** How do you tell this finding apart from the one in Problem 1, since both involve close relationships and family?
+
+**(a) The theory.** **Social control theory** (Hirschi): weak bonds, not deviant learning, predict deviance.
+
+**(b) The bonds.** Hirschi's four bonds all read as absent: attachment (no close adult), commitment (failing school, so no stakes), involvement (no activities), belief (rules "never made sense").
+
+**(c) No positive cause.** None at all, only missing restraints. Hirschi assumes everyone would deviate and asks why most people DON'T.
+
+**(d) Discrimination drill.** Sutherland says deviance is LEARNED (a positive acquisition); Hirschi says it is UNRESTRAINED (a failure of bonds). Ask: does the evidence show transmission of deviant content, or absence of conventional ties?
+
+**Problem 3.** A third researcher on the Marcus study reports: "Marcus fully endorses conventional success — he wants a house, a business, 'the whole dream' — but his neighborhood's schools rarely place students in college or stable jobs."
+
+- **(a)** Which theory of deviance does this finding support?
+- **(b)** Which goals and which means does Marcus accept, and what is that combination called?
+- **(c)** Does this theory trace Marcus's offending to deviant values?
+
+**(a) The theory.** **Strain theory** (Merton): a gap between the culture's goals and the legitimate means available produces deviance.
+
+**(b) The adaptation.** He embraces the conventional GOALS, but with the legitimate MEANS structurally blocked he turns to illegitimate routes. Goals accepted, means rejected is **innovation**.
+
+**(c) Shared values.** No. The tell is that the researcher documents Marcus's mainstream values; his deviance flows from the goal-means gap, not from deviant values.
+
+**Problem 4.** A fourth researcher on the Marcus study reports: "After the arrest was publicized, Marcus was expelled, legitimate employers stopped responding, adults introduced him as 'the criminal kid,' and his offending — previously occasional — became his main activity and identity."
+
+- **(a)** Which theory of deviance does this finding support?
+- **(b)** What was Marcus's offending before the arrest, and what did it become after?
+- **(c)** Which way does the causal arrow run?
+- **(d)** How do this finding and the one in Problem 3 divide up Marcus's offending?
+
+**(a) The theory.** **Labeling theory**: no act is deviant until labeled, and the label itself has causal power.
+
+**(b) Primary to secondary.** Occasional offending was primary deviance. The public label transformed it: expulsion and hiring exclusion closed legitimate doors, "the criminal kid" became a master status, and offending reorganized into identity, which is secondary deviance.
+
+**(c) The arrow.** From the societal REACTION to escalated deviance, the theory's defining claim.
+
+**(d) Timing.** Strain and labeling separate on timing: strain explains the FIRST offense; labeling explains the ESCALATION after the reaction.`
     },
     {
       id: 'cult3-quiz1',
@@ -125,11 +162,17 @@ The interactionist entry: no act is deviant until labeled, and the LABEL itself 
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Deviance is norm-relative (culture, situation, actor/audience); crime is state-outlawed deviance; Durkheim: deviance clarifies boundaries, builds solidarity, drives change
-- Merton's strain grid: classify by goals and means separately — innovation (goals yes, means no) is the tested cell; deviance from shared values plus blocked opportunity
-- Sutherland vs. Hirschi is transmission vs. restraint: learned techniques and favorable definitions VERSUS missing bonds (attachment, commitment, involvement, belief)
-- Labeling: primary deviance is minor and unlabeled; the societal reaction — stigma, master status, closed doors — manufactures secondary deviance; who gets labeled tracks power
-- Punishment logics (deterrence, retribution, incapacitation, rehabilitation) are graded empirically by recidivism — which labeling theory predicts punishment can worsen`
+- **Deviance is relative.** Deviance varies by culture, situation and actor; crime is the deviance a state formally outlaws.
+- **Durkheim's functions.** Deviance clarifies moral boundaries, builds solidarity and drives social change.
+- **Merton's strain grid.** Classify by goals and means separately; innovation keeps the goals but rejects legitimate means.
+- **Labeling theory.** The societal reaction turns minor primary deviance into secondary deviance and a master status.
+
+**Common traps**
+
+- **Sutherland vs. Hirschi.** Learned techniques and favorable definitions are differential association; missing bonds are control theory.
+- **Innovators' values.** Innovators share mainstream goals; blocked opportunity, not deviant values, drives their deviance.
+- **Ritualist vs. retreatist.** A ritualist gives up the goals but keeps the means; a retreatist rejects both.
+- **"Functional" as approval.** Durkheim's claim is about consequences for the social system, not approval of the deviance.`
     }
   ]
 };

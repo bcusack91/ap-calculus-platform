@@ -52,22 +52,32 @@ The sociological position is not that biology is irrelevant — it is that biolo
       type: 'text' as const,
       content: `### Worked Example — Reading a Self Under Construction
 
-**Passage-style problem.** A researcher observes children at a preschool and follows one cohort for a decade. Field notes:
+**Problem 1.** A researcher follows Ana. At 2 she waves a toy stethoscope as a nurse did, but presses it to a doll's foot. At 5 she plays "Dr. Ruiz" to her toys in his exact phrases, scolding them for skipping vegetables. At 9 she runs a clinic game, tracking surgeon, anesthetist, nurse and patient at once.
 
-1. "Ana, age 2, waves a toy stethoscope exactly as the visiting nurse did, but presses it to a doll's foot, then her own hair — she copies motions with no sense of what a nurse is for."
-2. "Ana, age 5, spends an hour 'being Dr. Ruiz,' scolding her stuffed animals for skipping vegetables, using Dr. Ruiz's exact phrases. She cannot yet play 'hospital' with other children — when a friend plays nurse, Ana keeps directing BOTH parts."
-3. "Ana, age 9, organizes a full clinic game: she plays surgeon while tracking what the anesthetist, nurse, and patient are each supposed to do, adjusting her actions to all of them at once."
-4. "Ana, age 12, interviewed: 'I want to sit with the new kid, and honestly part of me just does things like that without thinking — but then I hear how the whole class talks about people who sit there, and I stop myself.'"
+- **(a)** Which of Mead's stages is Ana in at age 2, and what detail shows it?
+- **(b)** Which stage is she in at age 5, and what makes it more than imitation?
+- **(c)** Which stage is she in at age 9?
 
-**Note 1 — preparatory stage.** Imitation without role comprehension: motion copying, no meaning. The misapplied stethoscope is the giveaway that no role is being TAKEN, only mimicked.
+**(a) Age 2: preparatory stage.** Imitation without role comprehension: she copies the motions with no sense of what a nurse is for. The misapplied stethoscope is the giveaway that no role is being TAKEN, only mimicked.
 
-**Note 2 — play stage.** Ana takes the role of ONE significant other (a specific person, Dr. Ruiz) and cannot yet coordinate complementary roles — needing to control both parts is exactly the one-role-at-a-time limitation.
+**(b) Age 5: play stage.** She genuinely takes the role of ONE significant other, a specific person (Dr. Ruiz): she adopts his perspective toward her "patients" and enforces his rules, instead of only copying motions. One role at a time is the play stage's limit.
 
-**Note 3 — game stage.** Simultaneous coordination of multiple roles within an organized activity; her adjustments to each position show she holds the whole structure in mind.
+**(c) Age 9: game stage.** She coordinates multiple roles at once within an organized activity; adjusting her actions to each position shows she holds the whole structure in mind.
 
-**Note 4 — the "I," the "me," and the generalized other.** The unthinking impulse to sit with the new kid is the **"I"**; the internalized voice of "how the whole class talks" — no particular person, but the class as an organized attitude — is the **generalized other** speaking through the **"me,"** and her self-restraint is the negotiation between the two. If she had cited one specific friend's expected reaction, that would be a significant other instead — a distinction the MCAT tests directly.
+**Problem 2.** Ana, age 12, interviewed: "I want to sit with the new kid, and honestly part of me just does things like that without thinking — but then I hear how the whole class talks about people who sit there, and I stop myself."
 
-**Cooley cross-check.** Note that Ana at 12 responds to an IMAGINED collective judgment; nothing requires the class to actually disapprove. A question asking "what if the class secretly admires kindness?" is testing the looking-glass self's key property: imagined judgments, accurate or not, do the shaping.`
+- **(a)** Which phase of Mead's self is the unthinking impulse to sit with the new kid?
+- **(b)** Is "how the whole class talks" a significant other or the generalized other?
+- **(c)** In Mead's terms, what is her stopping herself?
+- **(d)** Suppose the class secretly admires kindness. Would Cooley expect that to change how the judgment shapes her?
+
+**(a) The impulse.** The **"I"**: the spontaneous, impulsive phase of the self that acts without thinking.
+
+**(b) The class.** The **generalized other**: no particular person, but the class as an organized attitude. Had she cited one specific friend's expected reaction, that would be a significant other instead, a distinction the MCAT tests directly.
+
+**(c) The restraint.** The generalized other speaks through the **"me"**, and her self-restraint is the negotiation between the "I" and the "me".
+
+**(d) Cooley cross-check.** No. She responds to an IMAGINED collective judgment, and nothing requires the class to actually disapprove. That is the looking-glass self's key property: imagined judgments, accurate or not, do the shaping.`
     },
     {
       id: 'cult2-quiz1',
@@ -118,11 +128,17 @@ The sociological position is not that biology is irrelevant — it is that biolo
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Socialization builds the self from interaction; isolation cases show social experience is a developmental requirement, not an option
-- Agents in sequence: family (primary), school (universalistic standards + hidden curriculum), peers (unchosen-by-adults norms), media, workplace
-- Cooley: self = imagined appearance → imagined judgment → internalized feeling; the judgments need not be accurate to shape the self
-- Mead: preparatory (imitation) → play (one significant other) → game (many roles at once) → generalized other (society internalized); behavior = dialogue of spontaneous "I" and social "me"
-- Anticipatory socialization rehearses future roles; resocialization rebuilds selves inside total institutions via identity-stripping degradation ceremonies`
+- **The self needs society.** Isolation cases show that language and a social self do not develop normally without interaction.
+- **Agents of socialization.** Family gives primary socialization; school, peers, media and work add standards and roles for life.
+- **Looking-glass self.** Cooley: imagined appearance, imagined judgment, self-feeling; the judgment need not be accurate.
+- **Mead's sequence.** Imitation (preparatory), one significant other (play), many roles (game), then the generalized other.
+
+**Common traps**
+
+- **Significant vs. generalized other.** One specific person's view is a significant other; the group's organized attitude is the generalized other.
+- **Play vs. game stage.** Enacting one role at a time is the play stage; coordinating many roles at once is the game stage.
+- **Swapping "I" and "me".** The "I" acts spontaneously; the "me" is internalized expectations. Behavior is their dialogue; neither alone is the self.
+- **Anticipatory vs. resocialization.** Rehearsing a future role is anticipatory; rebuilding a self inside a total institution is resocialization.`
     }
   ]
 };

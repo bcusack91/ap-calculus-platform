@@ -490,10 +490,10 @@ export const mcatCognitionLanguageFigures: DeckFigurePlacement[] = [
         "A schematic left hemisphere seen from the side, front to the left. Broca's area (blue box) sits in the frontal lobe near motor cortex and is labelled production. Wernicke's area (red box) sits in the superior temporal lobe behind the lateral fissure and is labelled comprehension. A two-headed arrow labelled arcuate fasciculus, repetition, arcs between them. Damage: Broca's gives nonfluent speech, Wernicke's fluent but empty speech, and arcuate damage impairs repetition only.",
     },
     blocks: [
-      "- **Broca's** (left frontal): effortful, telegraphic speech; comprehension intact; aware and frustrated",
-      "- **Wernicke's** (left temporal): fluent but empty, neologisms; poor comprehension; unaware",
-      '- **Arcuate fasciculus**: fluent, understands, but cannot repeat (conduction aphasia)',
-      '- Global aphasia = both regions',
+      "- **Broca's area** (left frontal, near motor cortex): speech production",
+      "- **Wernicke's area** (left superior temporal): language comprehension",
+      '- **Arcuate fasciculus**: the tract linking the two, used for repetition',
+      '- Global aphasia = both regions; language is left-dominant in nearly all right-handers',
     ],
   },
   {

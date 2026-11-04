@@ -40,23 +40,39 @@ Classical (Pavlovian, respondent) conditioning pairs a neutral stimulus with one
 ### Biological Boundaries (the MCAT's favorite exceptions)
 
 - **Taste aversion (Garcia effect)**: nausea conditions to a *taste* in **one trial** across a delay of **hours** — violating the usual need for repeated, close pairings — yet nausea will not readily condition to lights or sounds
-- **Preparedness**: organisms are biologically primed to associate certain stimulus classes (taste→illness, in rats; color/visual cues→illness, in birds such as quail that pick food by sight) — learning is constrained by evolution, not infinitely flexible
-- Clinically: chemotherapy patients develop anticipatory nausea to clinic smells and foods eaten before sessions — a direct Garcia-effect application`
+- **Preparedness**: organisms are biologically primed to associate certain stimulus classes (taste→illness, in rats; color/visual cues→illness, in birds such as quail that pick food by sight) — learning is constrained by evolution, not infinitely flexible`
     },
     {
       id: 'lmem1-worked',
       type: 'text' as const,
       content: `### Worked Example — Labeling and Predicting in a Clinical Vignette
 
-**Vignette.** A patient receiving chemotherapy eats a distinctive mint candy in the waiting room before each infusion. The drug reliably causes nausea an hour later. After four sessions, tasting the mint anywhere makes her queasy. Months after treatment ends, mints no longer bother her — until, a year later, one unexpected mint at a party produces a wave of mild nausea.
+**Problem 1.** A patient receiving chemotherapy eats a distinctive mint candy in the waiting room before each infusion. The drug reliably causes nausea an hour later. After four sessions, tasting a mint anywhere makes her queasy.
 
-**Step 1 — run the labeling algorithm.** What causes nausea with no learning? The chemotherapy drug → **US**; drug-induced nausea → **UR**. The mint predicts the drug → **CS**; queasiness to mint alone → **CR**. The waiting room itself may become a weaker second CS (context conditioning).
+- **(a)** Which stimulus is the US, and what is the UR?
+- **(b)** Which stimulus is the CS, and what is the CR?
+- **(c)** Could anything else in the clinic become a conditioned stimulus?
+- **(d)** Why did conditioning succeed in so few trials across an hour's delay, and attach to the mint rather than the waiting-room television?
 
-**Step 2 — explain the unusual efficiency.** Conditioning succeeded in few trials across a one-hour delay, and attached to a *taste* rather than to the (equally present) waiting-room television. That is the Garcia pattern: prepared taste–illness association defeating the ordinary contiguity rules.
+**(a) The unlearned pair.** Ask what causes nausea with no learning: the chemotherapy drug is the **US**, and the drug-induced nausea is the **UR**.
 
-**Step 3 — name the late events.** Mints losing their effect after treatment = **extinction** (mint experienced repeatedly without the drug). The party episode = **spontaneous recovery** after a rest interval — evidence extinction suppressed, rather than deleted, the association.
+**(b) The learned pair.** The mint predicts the drug, so it is the **CS**; queasiness to the mint alone is the **CR**.
 
-**Step 4 — anticipate the study question.** A passage might ask how to *prevent* anticipatory nausea. The literature answer: give a novel, expendable "scapegoat" flavor before infusions so the aversion attaches to it instead of to the patient's regular diet — an intervention that only makes sense once you see conditioning as prediction-learning.`
+**(c) Context conditioning.** Yes. The waiting room itself may become a weaker second CS, because it also reliably precedes the drug.
+
+**(d) The Garcia pattern.** Taste–illness is a biologically prepared association. It conditions in few trials across a long delay and favors a *taste* over an equally present sight or sound, defeating the ordinary contiguity and equal-associability assumptions.
+
+**Problem 2.** Months after her treatment ends, the same patient has eaten mints many times with no drug, and they no longer bother her. A year later, one unexpected mint at a party produces a wave of mild nausea.
+
+- **(a)** What process made the mints stop bothering her?
+- **(b)** What is the party episode called, and what does it reveal about the original association?
+- **(c)** How could a clinic keep anticipatory nausea from attaching to a patient's regular diet?
+
+**(a) Extinction.** The CS (mint) was experienced repeatedly without the US (drug), so the CR faded.
+
+**(b) Spontaneous recovery.** The extinguished CR partially returned after a rest interval. That shows extinction suppressed the mint–drug association rather than deleting it.
+
+**(c) A scapegoat flavor.** Give a novel, expendable flavor before each infusion so the aversion attaches to it instead of to familiar foods. Anticipatory nausea to clinic smells and pre-session foods is a direct Garcia-effect application. The intervention only makes sense once you see conditioning as prediction-learning.`
     },
     {
       id: 'lmem1-quiz1',
@@ -107,11 +123,17 @@ Classical (Pavlovian, respondent) conditioning pairs a neutral stimulus with one
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Label mechanically: the stimulus that works untrained is the US; its reflex is the UR; the learned predictor is the CS; its acquired response is the CR
-- Forward/delayed pairing conditions best; prediction (contingency) matters more than mere co-occurrence
-- Extinction is new inhibitory learning — spontaneous recovery after rest proves the original association survives
-- Generalization spreads the CR to similar stimuli; discrimination training (CS+ vs CS-) narrows it; higher-order conditioning chains a second, weaker CS
-- Garcia taste aversion: one trial, hours-long delay, taste-specific — biological preparedness constrains what can be learned, and it explains anticipatory nausea in chemotherapy`
+- **Label mechanically.** The untrained trigger is the US and its reflex the UR; the learned predictor is the CS, its response the CR.
+- **Prediction drives conditioning.** Forward (delayed) pairing works best; contingency, not mere co-occurrence, decides what is learned.
+- **Extinction is new learning.** Presenting the CS alone suppresses the CR; spontaneous recovery after rest shows the association survived.
+- **Preparedness limits learning.** One-trial, hours-delay aversion forms in rats only for taste paired with illness, not for lights or sounds.
+
+**Common traps**
+
+- **Backward pairing.** A US that comes before the CS conditions weakly or not at all; the CS must come first and predict the US.
+- **Extinction as erasure.** Extinction suppresses the CR without deleting it, which is why spontaneous recovery can occur.
+- **Generalization vs. discrimination.** Spreading the CR to similar stimuli is generalization; narrowing it to the true CS is discrimination.
+- **Requiring a US for every CS.** In higher-order conditioning an established CS trains a new stimulus with no US, yielding a weaker CR.`
     }
   ]
 };

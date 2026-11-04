@@ -54,22 +54,53 @@ Language transmits culture across generations and, per the **Sapir-Whorf hypothe
       type: 'text' as const,
       content: `### Worked Example — Classifying Culture Under Pressure
 
-**Passage-style problem.** An anthropology team observes a fishing village. Excerpts from their field notes:
+**Problem 1.** An anthropology team's field notes from a fishing village: "Villagers consider it disgraceful — though not criminal — for an able adult to refuse a share of a rescue expedition; two men who declined last year are still excluded from communal feasts."
 
-1. "Villagers consider it disgraceful — though not criminal — for an able adult to refuse a share of a rescue expedition; two men who declined last year are still excluded from communal feasts."
-2. "Outboard motors arrived eight years ago and every boat now has one, but disputes over who may fish which waters are still argued under rules written for paddled canoes; conflicts have tripled."
-3. "A junior researcher wrote in her notes that the villagers' food-sharing rules are 'primitive and inefficient compared to proper markets.' The team lead struck the sentence and asked her to first document what the sharing rules accomplish within village life."
-4. "Teenagers who study in the mainland city return wearing city clothes and using city slang, but still attend net-mending circles; villagers call them 'the city kids' with a mix of pride and teasing."
+- **(a)** Is the rescue rule a folkway, a more, a taboo or a law?
+- **(b)** What kind of sanction is the exclusion from communal feasts?
+- **(c)** Which feature of the note settles the grade of the norm?
 
-**Note 1** describes a **more**, not a folkway: violation triggers moral condemnation and durable exclusion (a strong informal negative sanction), yet no formal law is involved. The grading of norms is by the REACTION to violation, not by the topic of the rule.
+**(a) The norm.** A **more**, not a folkway: refusing draws moral condemnation and durable exclusion, yet no formal law is involved.
 
-**Note 2** is textbook **culture lag**: material culture (motors) outran nonmaterial culture (allocation norms), and the gap itself generates conflict. The tripled disputes are the measurable consequence the exam likes to ask about.
+**(b) The sanction.** A strong **informal negative** sanction: it is a punishment, and it is administered by fellow villagers rather than by an institution.
 
-**Note 3** contrasts **ethnocentrism** (judging sharing rules by market standards) with **cultural relativism** as a METHOD — the team lead demands the practice be understood within its own context first. Note that the lead issued no moral verdict; relativism here is a discipline of observation, which is why it belongs in a scientific protocol.
+**(c) The criterion.** The REACTION to violation, not the topic of the rule. Moral condemnation plus lasting exclusion marks a more; stares and mild disapproval would have marked a folkway.
 
-**Note 4** shows a **subculture** forming (city-schooled youth with distinctive dress and slang) that remains integrated — they still mend nets. If the returning students organized to abolish communal fishing rights, THAT would be a counterculture: the line is active opposition to dominant norms, not mere distinctiveness.
+**Problem 2.** From the same field notes: "Outboard motors arrived eight years ago and every boat now has one, but disputes over who may fish which waters are still argued under rules written for paddled canoes; conflicts have tripled."
 
-**Strategy transfer.** Every classification above turned on a functional criterion — how violations are punished, which culture component moved first, whose standards judge, whether difference opposes or coexists. Memorizing definitions without these criteria is what the wrong answers are priced to exploit.`
+- **(a)** Which component of the village's culture changed first, material or nonmaterial?
+- **(b)** What is this mismatch called, and whose concept is it?
+- **(c)** Which detail in the note is the measurable consequence an exam question would ask about?
+
+**(a) What moved first.** Material culture: the motors. The nonmaterial culture, the norms allocating fishing waters, still fits paddled canoes.
+
+**(b) The name.** Textbook **culture lag** (Ogburn): material culture outruns the nonmaterial culture that regulates it.
+
+**(c) The consequence.** The tripled disputes. The gap between new technology and old allocation norms itself generates the conflict.
+
+**Problem 3.** From the same field notes: "A junior researcher wrote that the villagers' food-sharing rules are 'primitive and inefficient compared to proper markets.' The team lead struck the sentence and asked her to first document what the sharing rules accomplish within village life."
+
+- **(a)** What stance does the junior researcher's sentence show?
+- **(b)** What stance does the team lead's instruction require?
+- **(c)** Does the instruction commit the team to judging the sharing rules morally acceptable?
+
+**(a) The junior researcher.** **Ethnocentrism**: she judges the sharing rules by the standards of her own culture's markets and finds them inferior.
+
+**(b) The team lead.** **Cultural relativism** as a METHOD: the practice must be understood within its own context before anyone judges it.
+
+**(c) No verdict.** The lead issued no moral verdict. Relativism here is a discipline of observation, which is why it belongs in a scientific protocol.
+
+**Problem 4.** From the same field notes: "Teenagers who study in the mainland city return wearing city clothes and using city slang, but still attend net-mending circles; villagers call them 'the city kids' with a mix of pride and teasing."
+
+- **(a)** Do the city kids form a subculture or a counterculture?
+- **(b)** What would they have to do to belong in the other category?
+- **(c)** What kind of criterion settled every classification in Problems 1–4?
+
+**(a) The group.** A **subculture**: city-schooled youth with distinctive dress and slang who remain integrated, since they still mend nets.
+
+**(b) The line.** If the returning students organized to abolish communal fishing rights, THAT would be a counterculture: the line is active opposition to dominant norms, not mere distinctiveness.
+
+**(c) Strategy transfer.** A functional one: how violations are punished, which culture component moved first, whose standards judge, whether difference opposes or coexists. Memorized definitions without these criteria are what wrong answers exploit.`
     },
     {
       id: 'cult1-quiz1',
@@ -120,11 +151,17 @@ Language transmits culture across generations and, per the **Sapir-Whorf hypothe
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Culture = material (objects) + nonmaterial (language, beliefs, values, norms); values are ideals, norms are enforceable rules
-- Grade norms by the reaction to violation: folkways (rudeness) → mores (immorality) → taboos (revulsion); laws formalize norms; sanctions are positive/negative and formal/informal
-- Sapir-Whorf on the MCAT = weak version: language shapes habitual thought, never rigidly determines it
-- Subculture coexists, counterculture opposes; assimilation absorbs, multiculturalism preserves (salad bowl), amalgamation blends (melting pot)
-- Ethnocentrism judges by one's own standards; cultural relativism is a method of understanding in context; culture lag = material change outrunning norms, generating conflict`
+- **Two kinds of culture.** Material culture is objects; nonmaterial is language, beliefs, values and norms (a ring vs. its meaning).
+- **Grade norms by reaction.** Folkways draw stares, mores condemnation, taboos revulsion; sanctions are formal/informal and positive/negative.
+- **Ethnocentrism vs. relativism.** Ethnocentrism judges by your own culture's standards; relativism first understands a practice in context.
+- **Culture lag.** Material culture changes faster than nonmaterial culture (Ogburn), and the mismatch generates conflict.
+
+**Common traps**
+
+- **Strong Sapir-Whorf.** On the MCAT, language shapes habitual thought; it does not rigidly determine what can be thought.
+- **Distinct means counterculture.** Distinctiveness alone makes a subculture; only active opposition to dominant norms is a counterculture.
+- **Relativism as approval.** Cultural relativism is a research method, not a claim that all practices are morally equal.
+- **Mixing up the metaphors.** A melting pot is amalgamation, not assimilation into the dominant culture; a salad bowl is multiculturalism.`
     }
   ]
 };

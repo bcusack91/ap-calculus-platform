@@ -67,6 +67,47 @@ Sound path: pinna → auditory canal → **tympanic membrane** → ossicles (**m
 - **Utricle & saccule** (otolithic organs): *linear* acceleration and head tilt, via calcium-carbonate **otoliths** bending hair cells`
     },
     {
+      id: 'sp2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Vision & Hearing
+
+**Problem 1.** After a stroke, a patient loses vision in the entire left visual field of both eyes.
+
+- **(a)** Which hemisphere receives the left visual field, and why?
+- **(b)** Where along the visual pathway is the lesion?
+- **(c)** How would a lesion at the middle of the optic chiasm change the deficit?
+
+**(a) Field to hemisphere.** At the optic chiasm the left eye's nasal fibers cross to the right, while the right eye's temporal fibers, which also see the left field, stay on the right. So the left visual FIELD, from both eyes, reaches the right hemisphere.
+
+**(b) Localize the lesion.** Losing one whole field in both eyes (homonymous hemianopia) places the lesion behind the chiasm on the right: the right optic tract, right LGN or right V1.
+
+**(c) A chiasm lesion.** A midline chiasm lesion cuts the crossing nasal fibers, which carry the peripheral (temporal) field of each eye, so the outer field of both eyes is lost: bitemporal hemianopia. Eyes are not visual fields.
+
+**Problem 2.** Patient X has fused ossicles. Patient Y has lost the cochlear hair cells.
+
+- **(a)** Which step of hearing does X lose, and what type of hearing loss results?
+- **(b)** Which step does Y lose, and what type of loss is that?
+- **(c)** Would sound delivered by bone conduction help either patient?
+
+**(a) Patient X.** Fused ossicles cannot amplify sound onto the oval window, so CONDUCTION fails: a conductive hearing loss. The transduction machinery is intact.
+
+**(b) Patient Y.** Without hair cells, TRANSDUCTION itself fails: no receptor potential forms however loud the sound, a sensorineural loss. Hair cells do not regenerate.
+
+**(c) Bone conduction.** It helps X only. Vibrating the skull moves the cochlear fluid directly, bypassing the ossicles, so X's intact hair cells still respond; Y has none. Ask which step (conduction, transduction or neural relay) a manipulation removes.
+
+**Problem 3.** A retinal disease destroys the cones but spares the rods.
+
+- **(a)** What happens to the patient's color vision and acuity?
+- **(b)** Which kinds of vision are preserved?
+- **(c)** What pattern would the reverse disease, rod loss, produce?
+
+**(a) Cone loss.** No cones means no color vision and poor acuity, worst at the fovea where cones cluster: central blindness in daylight.
+
+**(b) What survives.** The intact rods preserve dim-light and peripheral vision, though everything is grayscale and blurry.
+
+**(c) The reverse pattern.** Rod loss gives night blindness and tunnel vision, with central color vision preserved.`
+    },
+    {
       id: 'sp2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Vision & Hearing** 🎯`,
@@ -97,60 +138,26 @@ Sound path: pinna → auditory canal → **tympanic membrane** → ossicles (**m
       }
     },
     {
-      id: 'sp2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Vision & Hearing
-
-<details>
-<summary><b>Example 1: Localize the lesion from the visual deficit</b></summary>
-
-**Question:** A stroke patient loses vision in the entire *left visual field* of both eyes. Where is the lesion?
-
-**Solution:**
-1. At the optic chiasm, nasal retinal fibers cross, so all information from the left visual *field* is routed to the **right** hemisphere. ✓
-2. Loss of one full visual field (homonymous hemianopia) → lesion **behind the chiasm on the right** (right optic tract, LGN, or V1).
-
-**Key idea:** Eyes ≠ visual fields. Chiasm lesions cut *peripheral (temporal) fields of both eyes*; post-chiasm lesions cut *one whole field*.
-</details>
-
-<details>
-<summary><b>Example 2: Predict the deficit from receptor loss</b></summary>
-
-**Question:** A retinal disease destroys cones but spares rods. Predict the patient's vision.
-
-**Solution:**
-1. No cones → no color vision and poor acuity, especially at the fovea (central blindness in daylight). ✓
-2. Rods intact → preserved dim-light and peripheral vision, though everything is grayscale and blurry.
-
-**Connection:** The reverse pattern (rod loss) → night blindness and tunnel vision with preserved central color vision.
-</details>
-
-<details>
-<summary><b>Example 3: Conductive vs. sensorineural hearing loss</b></summary>
-
-**Question:** Patient X has fused ossicles; patient Y has destroyed cochlear hair cells. Contrast their deficits and the step of the pathway lost.
-
-**Solution:**
-1. X: sound cannot be mechanically amplified to the oval window → **conductive** loss; transduction machinery is intact, so bone conduction still works. ✓
-2. Y: transduction itself fails — no receptor potential regardless of amplification → **sensorineural** loss; hair cells do not regenerate.
-
-**MCAT lesson:** Identify *which step* (conduction vs. transduction vs. neural relay) an experimental manipulation removes.
-</details>`
-    },
-    {
       id: 'sp2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Light hyperpolarizes photoreceptors (cGMP falls, channels close); dark = depolarized.
-- Pathways: retina → LGN (thalamus) → V1; cochlea → MGN → A1. Smell is the only thalamus-bypassing sense.
-- Color: trichromatic at the cones, opponent-process afterward (explains afterimages).
-- Pitch: place theory for high frequencies, temporal/frequency coding (+ volley) for low.
-- Vestibular: semicircular canals = rotation; utricle/saccule = linear acceleration and tilt.
-- Rods far outnumber cones and dominate the periphery; cones cluster in the fovea.
+- **Rods vs. cones.** Rods far outnumber cones and dominate the periphery; cones cluster in the fovea for color and acuity.
+- **Thalamic relays.** Vision runs retina → LGN → V1, hearing cochlea → MGN → A1; smell alone bypasses the thalamus.
+- **Two color theories.** Trichromatic theory holds at the cones; opponent-process works downstream and explains afterimages.
+- **Pitch coding.** Place theory codes high frequencies; frequency coding, extended by volleys, codes low ones.
+
+**Common traps**
+
+- **Expecting light to depolarize.** Photoreceptors are depolarized in the dark; light lowers cGMP and hyperpolarizes them.
+- **Mapping each eye to one hemisphere.** Each visual field, not each eye, maps to the opposite hemisphere; nasal fibers cross.
+- **Assuming Na⁺ depolarizes hair cells.** Hair cells depolarize by K⁺ influx from the K⁺-rich endolymph.
+- **Crediting the canals with tilt.** Semicircular canals sense rotation; the utricle and saccule sense linear acceleration and tilt.
 
 <!-- yield:low -->
-- Low-yield extras: about 120 million rods vs. 6 million cones per retina; Hubel and Wiesel's 1981 Nobel Prize
+**Low-yield extras**
+
+- About 120 million rods vs. 6 million cones per retina; Hubel and Wiesel's 1981 Nobel Prize
 <!-- /yield -->`
     }
   ]

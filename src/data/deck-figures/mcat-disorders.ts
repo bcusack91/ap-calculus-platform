@@ -171,7 +171,7 @@ ${clusterBox(755, '4 Arousal', 'hypervigilance, startle,', 'sleep disturbance')}
 <text x="440" y="366" font-size="18" font-weight="700" text-anchor="middle" fill="currentColor">1 month</text>
 <g class="fig-muted">
 <text x="940" y="358" font-size="17" text-anchor="end" fill="currentColor">time →</text>
-<text x="500" y="432" font-size="18" text-anchor="middle" fill="currentColor">Adjustment disorder is a different lane: a NON-catastrophic stressor with a disproportionate response</text>
+<text x="500" y="432" font-size="18" text-anchor="middle" fill="currentColor">Adjustment disorder is a different lane: usually an ordinary stressor, a disproportionate response</text>
 </g>
 </svg>`
 
@@ -272,13 +272,13 @@ const schizophreniaSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <rect x="630" y="280" width="355" height="118" rx="12" fill="currentColor" fill-opacity="0.07" stroke="currentColor" stroke-width="3"/>
 <text x="648" y="312" font-size="21" font-weight="700" fill="currentColor">MESOCORTICAL — too little ↓</text>
 <text x="648" y="340" font-size="18" fill="currentColor">→ negative + cognitive symptoms</text>
-<text x="648" y="366" font-size="16" fill="currentColor">D2 blockers cannot fix an underactive path</text>
+<text x="648" y="366" font-size="16" fill="currentColor">a deficit, not an excess</text>
 </g>
 <defs>${ARROW('arr-dis-schz')}</defs>
 <line x1="606" y1="230" x2="626" y2="230" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-dis-schz)"/>
 <rect x="630" y="190" width="355" height="80" rx="12" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="648" y="218" font-size="18" font-weight="700" fill="currentColor">NIGROSTRIATAL — fine until blocked</text>
-<text x="648" y="246" font-size="16" fill="currentColor">D2 blockade → tremor + rigidity (parkinsonism)</text>
+<text x="648" y="218" font-size="18" font-weight="700" fill="currentColor">NIGROSTRIATAL — motor control</text>
+<text x="648" y="246" font-size="16" fill="currentColor">normal in schizophrenia</text>
 <g class="fig-muted"><text x="792" y="430" font-size="16" text-anchor="middle" fill="currentColor">one transmitter, three pathways, opposite directions</text></g>
 </svg>`
 
@@ -387,7 +387,7 @@ export const mcatDisordersFigures: DeckFigurePlacement[] = [
       '- Cued fear (phobia, social, agoraphobia) vs uncued attacks (panic) vs diffuse worry (GAD)',
       '- Panic DISORDER = unexpected attacks **plus** ≥ 1 month of worry or behaviour change',
       '- GAD = breadth + duration (≥ 6 months) + uncontrollability',
-      '- ER vignette with a normal cardiac workup = panic attack',
+      '- Rule out the cardiac and thyroid mimics first',
     ],
   },
   {
@@ -407,7 +407,7 @@ export const mcatDisordersFigures: DeckFigurePlacement[] = [
     figure: {
       svg: traumaSvg,
       alt:
-        'Timeline starting at a traumatic event (red marker) and running to the right. Above it, four symptom-cluster boxes: 1 intrusion (flashbacks, nightmares, intrusive memories), 2 avoidance (of reminders — places, people, talk), 3 negative mood (blame, detachment, anhedonia), 4 arousal (hypervigilance, startle, sleep disturbance); a note says the same four clusters apply on both sides of the line. A grey band from the event to the one-month mark is acute stress disorder: the same picture, lasting up to one month. A blue band beyond the dashed one-month line is PTSD: symptoms persist beyond one month. Footer: adjustment disorder is a different lane — a non-catastrophic stressor with a disproportionate response.',
+        'Timeline starting at a traumatic event (red marker) and running to the right. Above it, four symptom-cluster boxes: 1 intrusion (flashbacks, nightmares, intrusive memories), 2 avoidance (of reminders — places, people, talk), 3 negative mood (blame, detachment, anhedonia), 4 arousal (hypervigilance, startle, sleep disturbance); a note says the same four clusters apply on both sides of the line. A grey band from the event to the one-month mark is acute stress disorder: the same picture, lasting up to one month. A blue band beyond the dashed one-month line is PTSD: symptoms persist beyond one month. Footer: adjustment disorder is a different lane — usually an ordinary stressor with a disproportionate response.',
       caption: 'Same four clusters either side of one month: duration, not symptom type, separates acute stress disorder from PTSD.',
     },
     blocks: ['- Count the clusters, then check the calendar: ≤ 1 month = acute stress disorder, longer = PTSD'],
@@ -444,10 +444,10 @@ export const mcatDisordersFigures: DeckFigurePlacement[] = [
     figure: {
       svg: schizophreniaSvg,
       alt:
-        'Left: a ledger around a baseline labelled ordinary experience. Above it, in red, positive = added: delusions, hallucinations, disorganized speech. Below it, in blue, negative = subtracted: flat affect, avolition, alogia, anhedonia, asociality. Note: plus cognitive symptoms (working memory, attention); negative and cognitive symptoms predict function best. Right: a dopamine node with three arrows. Red: mesolimbic, too much — positive symptoms; D2 blockers quiet it and amphetamine mimics it. Blue: mesocortical, too little — negative and cognitive symptoms; D2 blockers cannot fix an underactive path. Plain: nigrostriatal, normal until blocked — D2 blockade causes tremor and rigidity (parkinsonism). Footer: one transmitter, three pathways, opposite directions.',
+        'Left: a ledger around a baseline labelled ordinary experience. Above it, in red, positive = added: delusions, hallucinations, disorganized speech. Below it, in blue, negative = subtracted: flat affect, avolition, alogia, anhedonia, asociality. Note: plus cognitive symptoms (working memory, attention); negative and cognitive symptoms predict function best. Right: a dopamine node with three arrows. Red: mesolimbic, too much — positive symptoms; D2 blockers quiet it and amphetamine mimics it. Blue: mesocortical, too little — negative and cognitive symptoms; a deficit, not an excess. Plain: nigrostriatal, motor control — normal in schizophrenia. Footer: one transmitter, three pathways, opposite directions.',
       caption: 'Added vs subtracted symptoms, and the dopamine hypothesis: one transmitter, opposite directions on two pathways.',
     },
-    blocks: ['- A D2 blocker quiets the voices, leaves the flatness, and adds tremor — three pathways in one vignette'],
+    blocks: ['- Added vs subtracted; one transmitter, opposite directions on two pathways'],
   },
   {
     // The section's first slide is the ego-syntonic paragraph; its cluster

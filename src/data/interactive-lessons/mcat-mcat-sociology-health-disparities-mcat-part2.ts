@@ -51,22 +51,55 @@ Access is not one barrier but a cascade; disparities compound at each step:
       type: 'text' as const,
       content: `### Worked Example — Finding the Disparity's Location
 
-**Passage-style problem.** Researchers investigate why Group M patients in a metropolitan area die of Disease D at 1.8 times Group N's rate. Four studies:
+Researchers investigate why Group M patients in a metropolitan area die of Disease D at 1.8 times Group N's rate. Each problem below is one of their studies.
 
-1. Insurance-claims analysis: after matching on insurance plan, disease stage at diagnosis, and comorbidities, Group M patients remain 30 percent less likely to receive the guideline-recommended procedure.
-2. Vignette experiment: 400 physicians receive identical case files for a hypothetical Disease D patient, randomized to carry Group M or Group N names and photos; recommended procedure rates are 25 percent lower for Group M files. Physicians' self-reported egalitarian attitudes do not predict their recommendations.
-3. Geographic audit: hospitals capable of the procedure average 4 miles from Group N neighborhoods and 11 miles from Group M neighborhoods; two Group M-area hospitals closed in the past decade.
-4. Interview study: Group M patients report prior dismissive encounters, describe delaying care until symptoms are severe, and are more often uncertain which symptoms warrant a visit.
+**Problem 1.** Insurance-claims analysis: after matching on insurance plan, disease stage at diagnosis, and comorbidities, Group M patients remain 30 percent less likely to receive the guideline-recommended procedure.
 
-**Study 1 localizes a within-clinic disparity.** Matching on plan, stage, and comorbidity removes the standard "sicker and uninsured" explanations; what remains occurs AFTER patients reach comparable clinical situations. But observational matching cannot prove provider behavior causes it — unmeasured differences (patient preferences?) survive matching. That residual doubt is what Study 2 exists to close.
+- **(a)** Which standard explanations does the matching remove?
+- **(b)** Where, then, does the remaining gap arise?
+- **(c)** Can this study prove what causes the remaining gap?
 
-**Study 2 is the causal lever.** Random assignment of group signal to IDENTICAL files isolates the patient's perceived group as the cause of differential recommendations — and the null result for explicit attitudes locates the mechanism at the implicit/automatic level (discrimination without self-reported prejudice; the audit logic from the groups lesson). Together, 1 and 2 place part of the disparity inside clinical judgment.
+**(a) Sicker or worse covered.** Matching on plan, stage and comorbidity removes the standard explanations that Group M patients are sicker or worse covered.
 
-**Study 3 adds the institutional layer**: distance and closures are structural access barriers — no biased individual required (institutional discrimination's signature). Note it cannot explain Study 2's file-based gap; the studies partition the disparity rather than competing.
+**(b) Inside the clinic.** What remains occurs AFTER patients reach comparable clinical situations, so the study localizes a within-clinic disparity.
 
-**Study 4 supplies the demand-side pathway, sociologically read**: dismissive prior care erodes trust → delayed presentation → later stage → worse outcomes. Warning: as an explanation it is downstream of PRIOR institutional behavior — an exam distractor will reframe Study 4 as "patient noncompliance," converting an institutionally produced pattern into a victim-blaming trait attribution. The interviews also show illness-interpretation barriers (uncertainty about symptom significance = health literacy as a navigation barrier).
+**(c) Not on its own.** No. Observational matching cannot prove provider behavior causes the gap: unmeasured differences (patient preferences?) survive matching. That residual doubt is what an experiment must close.
 
-**Synthesis question to expect:** "Which intervention addresses the mechanism in Study 2 specifically?" Not new hospitals (Study 3's fix), not outreach (Study 4's) — but decision-level redesign: standardized protocols that reduce discretionary judgment, decision support triggered by clinical criteria, and audit feedback to clinicians. Match each remedy to the layer whose data support it.`
+**Problem 2.** Vignette experiment: 400 physicians get identical Disease D case files, randomly carrying Group M or Group N names and photos. Group M files get 25 percent fewer procedure recommendations; self-reported egalitarian attitudes do not predict them.
+
+- **(a)** What does random assignment of group signal to identical files let you conclude?
+- **(b)** What does the null result for explicit attitudes say about the mechanism?
+- **(c)** Which intervention addresses this study's mechanism specifically?
+
+**(a) A causal claim.** Randomizing the group signal on IDENTICAL files isolates the patient's perceived group as the cause of the differential recommendations. With the claims study, it places part of the disparity inside clinical judgment.
+
+**(b) Implicit, not explicit.** The null result locates the mechanism at the implicit, automatic level: discrimination without self-reported prejudice (the audit logic from the groups lesson).
+
+**(c) Decision-level redesign.** Not new hospitals and not outreach (those fit distance and trust barriers), but standardized protocols that reduce discretionary judgment, decision support triggered by clinical criteria, and audit feedback to clinicians.
+
+**Problem 3.** Geographic audit: hospitals capable of the procedure average 4 miles from Group N neighborhoods and 11 miles from Group M neighborhoods; two Group M-area hospitals closed in the past decade.
+
+- **(a)** What kind of barrier is this, and does it require a biased individual?
+- **(b)** Can it explain the vignette study's gap between identical files?
+- **(c)** Which kind of remedy matches this layer?
+
+**(a) Institutional.** Distance and closures are structural access barriers, with no biased individual required: the signature of institutional discrimination.
+
+**(b) No.** Distance cannot explain a gap between identical files judged on paper. The studies partition the disparity rather than competing.
+
+**(c) Structural fixes.** Site placement: new or reopened hospitals and services where Group M lives. Match each remedy to the layer whose data support it.
+
+**Problem 4.** Interview study: Group M patients report prior dismissive encounters, describe delaying care until symptoms are severe, and are more often uncertain which symptoms warrant a visit.
+
+- **(a)** What causal chain links these reports to worse outcomes?
+- **(b)** An answer choice calls this pattern "patient noncompliance." What is wrong with that framing?
+- **(c)** Which access barrier does the uncertainty about symptoms represent?
+
+**(a) The demand-side pathway.** Dismissive prior care erodes trust, which delays presentation, which means a later stage and worse outcomes.
+
+**(b) Victim blaming.** The pattern is downstream of PRIOR institutional behavior. Calling it "noncompliance" converts an institutionally produced pattern into a trait attribution.
+
+**(c) Health literacy.** Uncertainty about which symptoms matter is an illness-interpretation barrier: health literacy acting as a navigation barrier. Outreach fits this layer.`
     },
     {
       id: 'hdis2-quiz1',
@@ -96,11 +129,11 @@ Access is not one barrier but a cascade; disparities compound at each step:
             explanation: `The defining features are all present: information flows both ways, the physician actively elicits values rather than just dispensing facts, and the decision is joint. Paternalism would decide FOR the patient; the informative model would hand over facts and leave the choosing entirely to the patient. The sick role's obligations (seek help, cooperate) describe patient duties, not a model of how a decision is reached. Classifying encounter models from dialogue is a standard discrete-question format.`
           },
           {
-            question: `Physicians given identical case vignettes recommend strong analgesia less often when the file shows a minority patient, yet these same physicians score as explicitly egalitarian and are unaware of any differential judgment. The construct best explaining the gap is:`,
+            question: `Physicians reviewing identical case files recommend strong analgesia less often for minority patients, but only when rushed between other tasks; given time to deliberate, the same physicians show no gap. The construct best explaining the pattern is:`,
             options: [`Explicit prejudice concealed from researchers`, `Implicit bias operating on clinical judgment`, `Institutional discrimination in hospital policy`, `The sick role's obligation to seek help`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `The dissociation — egalitarian explicit attitudes, group-patterned behavior, no awareness — is the operational definition of implicit bias, and the randomized identical-vignette design rules out clinical differences between patients. Concealed explicit prejudice is contradicted by the unawareness and by the failure of explicit measures to predict behavior, and institutional policy cannot explain different recommendations for identical files judged by the same physicians. This is the clinic-level mechanism behind documented treatment disparities.`
+            explanation: `A gap that appears under time pressure and disappears with deliberation is the signature of automatic processing: implicit bias operating on clinical judgment, which slow, effortful review can override. Identical files rule out clinical differences between patients. Concealed explicit prejudice would persist when physicians have time to act on their beliefs, so it does not fit a gap that vanishes with deliberation; institutional discrimination in hospital policy cannot explain different behavior by the same physicians on the same files; and the sick role's obligation to seek help describes patient duties, not physician decisions. The pattern also points to the remedy: structured, protocol-based decisions.`
           },
           {
             question: `An uninsured worker's leg infection is stabilized in an emergency department, but he cannot obtain the follow-up wound care or antibiotics course, re-presents septic, and accrues medical debt that costs him his apartment — worsening his health further. Which concept BEST captures the debt-and-housing spiral at the end?`,
@@ -117,14 +150,22 @@ Access is not one barrier but a cascade; disparities compound at each step:
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Disease (pathology) ≠ illness (experience) ≠ sickness (social role); they dissociate, and legitimacy — who is believed and excused — is unequally granted
-- Access is a cascade (coverage → reach → afford → navigate → stay); underinsurance deters necessary and unnecessary care alike, harming the poor and chronically ill most
-- Encounter models: paternalistic / informative / shared decision-making — classify from dialogue; power asymmetries (time, interruptions, scripts) are patterned by patient class, race, gender
-- Vignette and audit designs localize part of the disparity inside clinical judgment: implicit bias operates despite egalitarian explicit attitudes; structural barriers (closures, distance) are institutional discrimination needing no biased individual
-- Second sickness: the system's own operation (emergency-only care, medical debt, discontinuity) can amplify the illness it treats — match every proposed remedy to the layer whose data implicate it
+- **Disease, illness, sickness.** Pathology, experience and social role dissociate, and who is believed and excused is unequal.
+- **Access is a cascade.** Coverage, reach, cost, navigation and follow-up each lose patients, and losses compound step by step.
+- **Three encounter models.** Paternalistic, informative and shared decision-making: classify them from the dialogue.
+- **Second sickness.** Emergency-only care, medical debt and discontinuity can worsen the very illness the system treats.
+
+**Common traps**
+
+- **Cost-sharing as smart rationing.** Patients cannot tell needed from unneeded care, so cost barriers cut both, hurting the poor and chronically ill most.
+- **Egalitarian means unbiased.** Implicit bias shapes treatment even when physicians report egalitarian attitudes.
+- **Noncompliance as a trait.** Delay after dismissive care is an institutionally produced pattern, not a patient flaw.
+- **One remedy for every layer.** Protocols fix clinician bias, sites fix distance, outreach fixes trust and literacy: match the layer.
 
 <!-- yield:low -->
-- Low-yield extras: the US emergency mandate's name and date (EMTALA, 1986)
+**Low-yield extras**
+
+- The US emergency mandate's name and date (EMTALA, 1986).
 <!-- /yield -->`
     }
   ]

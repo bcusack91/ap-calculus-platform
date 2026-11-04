@@ -52,21 +52,44 @@ MCAT sociology passages are mostly STUDY REPORTS. Apply a fixed reading order:
       type: 'text' as const,
       content: `### Worked Example — A Full Passage Walkthrough
 
-**Passage.** Researchers examine Country Z, where death rates fell steeply from 1950 to 1975 while birth rates stayed high until about 1990, then declined. A second dataset, cross-sectional in 2020, shows that Country Z's regions with higher average income have lower average fertility. The researchers conclude: "Rising individual income causes women to choose fewer children."
+**Problem 1.** Researchers examine Country Z, where death rates fell steeply from 1950 to 1975 while birth rates stayed high until about 1990, then declined.
 
-**Question 1 — Where was Country Z in 1975, and what happened to population?**
-Deaths down, births still high = **stage 2** of the demographic transition; the widening birth-death gap means population was growing at its fastest. Note that neither rate alone answers this — the GAP is the growth engine, and the roughly 40-year lag between the onset of mortality decline (1950) and the onset of fertility decline (1990) is exactly the model's predicted sequence.
+- **(a)** Which stage of the demographic transition was Country Z in during 1975?
+- **(b)** What was population doing then, and what drove it?
+- **(c)** Does the timing of the two declines fit the model?
 
-**Question 2 — Evaluate the researchers' causal conclusion.**
-Two independent flaws, each a named error:
-- **Ecological fallacy**: the 2020 data correlate REGIONAL average income with REGIONAL average fertility. Nothing in region-level data shows that the individual women with higher incomes are the ones having fewer children — the correlation could even reverse at the individual level.
-- **Design overreach**: cross-sectional data cannot order income and fertility in time (fewer children might raise household income), and no confounders (urban residence, education, contraception access) were controlled. "Causes ... to choose" also smuggles in a micro mechanism (individual choice) from macro data — an altitude error.
+**(a) Stage.** Deaths down, births still high = **stage 2** of the demographic transition.
 
-**Question 3 — What finding would MOST strengthen the fertility-income claim?**
-A longitudinal, individual-level design: follow the same women, show income changes PRECEDING fertility changes, with education and residence controlled. Notice the answer pattern — the correct strengthener always fixes the design's weakest named link (here, level of analysis and temporal order), not just "more data."
+**(b) The gap.** The widening birth-death gap means population was growing at its fastest. Neither rate alone answers this: the GAP is the growth engine.
 
-**Question 4 — A theorist argues fertility fell because children shifted from economic assets (farm labor) to economic costs (schooling, urban housing), so parents rationally chose smaller families. Classify the account.**
-Cost-benefit machinery at the household level: **rational choice/exchange** logic. A conflict theorist would foreground whose interests population policy served; an interactionist would study how the MEANING of parenthood changed. Same fertility decline, three altitude-consistent explanations — the discrimination skill this entire lesson has been building.`
+**(c) The predicted lag.** Yes. The roughly 40-year lag between the onset of mortality decline (1950) and the onset of fertility decline (1990) is exactly the model's predicted sequence: deaths fall first, births follow.
+
+**Problem 2.** A cross-sectional 2020 dataset shows that Country Z's regions with higher average income have lower average fertility. The researchers conclude: "Rising individual income causes women to choose fewer children."
+
+- **(a)** At what level were the data measured, and what named error does the conclusion commit?
+- **(b)** Can these data put income and fertility in time order, and what was left uncontrolled?
+- **(c)** What does the phrase "causes ... to choose" add that the data cannot support?
+- **(d)** What finding would MOST strengthen the fertility-income claim?
+
+**(a) Ecological fallacy.** The data correlate REGIONAL average income with REGIONAL average fertility. Nothing in region-level data shows that the individual women with higher incomes are the ones having fewer children; the correlation could even reverse at the individual level.
+
+**(b) Design overreach.** No. Cross-sectional data cannot order income and fertility in time (fewer children might raise household income), and no confounders (urban residence, education, contraception access) were controlled.
+
+**(c) Altitude error.** "Causes ... to choose" smuggles in a micro mechanism (individual choice) from macro data.
+
+**(d) The strengthener.** A longitudinal, individual-level design: follow the same women, show income changes PRECEDING fertility changes, with education and residence controlled. The correct strengthener fixes the design's weakest named links (level of analysis, temporal order), not just "more data."
+
+**Problem 3.** A theorist argues Country Z's fertility fell because children shifted from economic assets (farm labor) to economic costs (schooling, urban housing), so parents rationally chose smaller families.
+
+- **(a)** Which theory does this account express?
+- **(b)** How would a conflict theorist approach the same decline?
+- **(c)** How would an interactionist approach it?
+
+**(a) Exchange logic.** Cost-benefit machinery at the household level: **rational choice/exchange** logic.
+
+**(b) Conflict.** A conflict theorist would foreground whose interests population policy served.
+
+**(c) Interactionism.** An interactionist would study how the MEANING of parenthood changed. Same fertility decline, three altitude-consistent explanations: the discrimination skill this entire lesson has been building.`
     },
     {
       id: 'strat4-quiz1',
@@ -89,11 +112,11 @@ Cost-benefit machinery at the household level: **rational choice/exchange** logi
             explanation: `The data live at the neighborhood level; the conclusion is about individuals. Group-level correlations cannot be transferred to members — the diabetic residents need not even be the fast-food eaters, and neighborhood-level confounders (income, walkability, clinic access) could generate the pattern entirely. That level-jump is the ecological fallacy, regardless of the study's timing or design.`
           },
           {
-            question: `Between 1955 and 1980, Country Q's death rate fell from 25 to 8 per 1,000 while its birth rate stayed near 40 per 1,000. According to the demographic transition model, Country Q in 1980 was:`,
-            options: [`In stage 4, with an aging, stable population`, `In stage 1, since birth rates remained high`, `In stage 2, with rapid population growth`, `In stage 3, since mortality was low`],
+            question: `Between 1980 and 2005, Country Q's death rate stayed near 8 per 1,000 while its birth rate fell from 40 to 22 per 1,000. According to the demographic transition model, Country Q in 2005 was:`,
+            options: [`In stage 4, with an aging, stable population`, `In stage 2, since deaths were low`, `In stage 3, with population growth slowing`, `In stage 1, since births still exceeded deaths`],
             correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `High and unchanged births combined with sharply fallen deaths is the stage-2 signature, and the wide birth-death gap means maximal growth. Stage 1 requires HIGH death rates too; stage 3 requires births to be visibly falling; stage 4 requires both rates low. The model's core sequence — mortality falls first, fertility follows after a lag — is exactly what the numbers show mid-lag.`
+            explanation: `Low, steady deaths combined with births that are visibly falling is the stage-3 signature: the birth-death gap is narrowing, so growth continues but slows. Stage 1 requires HIGH death rates; stage 2 has births still high and unchanged while deaths fall; stage 4 requires births to have fallen to about the level of deaths, and 22 per 1,000 is still well above 8. The model's sequence (mortality falls first, fertility follows after a lag) places Country Q in the catch-up phase.`
           },
           {
             question: `Researchers find that 70-year-olds score lower than 30-year-olds on internet-skills tests in a single 2024 survey and conclude that aging erodes internet skills. The most important rival explanation is:`,
@@ -117,11 +140,17 @@ Cost-benefit machinery at the household level: **rational choice/exchange** logi
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Population change runs on fertility, mortality, migration; pyramids encode the future (wide base → momentum-driven growth; top-heavy → dependency burden)
-- Demographic transition: deaths fall BEFORE births, and the stage-2 gap — not either rate alone — produces the population explosion; fertility decline with development rebuts Malthus
-- Urban processes stratify space: suburbanization/white flight drain, gentrification displaces
-- Passage discipline: name the design (cross-sectional vs. longitudinal vs. experiment), keep claims at their variable's level (ecological fallacy!), hunt SES-entangled confounders, and cap conclusion strength at what the design licenses; watch for cohort-vs-age traps in any single-time-point age comparison
-- Theory sweep: stability = functionalist, who-benefits = conflict, meaning = interactionist, cost-benefit = exchange — and always classify mobility on both axes (generation, and whether the structure itself moved)`
+- **Pyramids encode the future.** A wide base means momentum-driven growth; a top-heavy pyramid means a rising dependency burden.
+- **The stage-2 gap.** Deaths fall BEFORE births, and that gap, not either rate alone, produces the population explosion.
+- **Name the design.** Cross-sectional data give no time order, longitudinal data do, and only experiments license "causes."
+- **Theory sweep.** Stability = functionalist, who benefits = conflict, meaning = interactionist, cost-benefit = exchange.
+
+**Common traps**
+
+- **Ecological fallacy.** Group-level correlations cannot be applied to individuals; keep each claim at its variable's level.
+- **Reading an age gap as aging.** A single-time-point age comparison cannot separate growing old from the era a cohort was born into.
+- **Association as causation.** Observational designs support "is associated with"; check what was controlled before any causal claim.
+- **Calling gentrification flight.** Gentrification brings higher-income residents in and displaces; white flight moved affluence out.`
     }
   ]
 };

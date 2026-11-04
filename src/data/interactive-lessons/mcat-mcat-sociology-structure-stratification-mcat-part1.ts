@@ -49,21 +49,32 @@ Passages rarely name the paradigm. They describe a researcher's CLAIM, and you i
       type: 'text' as const,
       content: `### Worked Example — One Institution, Three Readings
 
-**Passage-style problem.** Three sociologists study the rise of standardized college-admissions testing.
+**Problem 1.** Researcher A says admissions testing persists because it sorts students by ability and keeps the education system coordinated and stable. Researcher B says it persists because affluent families buy prep that turns money into "merit," passing position to their children.
 
-- Researcher A argues testing persists because it efficiently sorts students into roles matching their abilities, providing universities a shared yardstick that keeps the education system coordinated and stable.
-- Researcher B argues testing persists because affluent families purchase preparation that converts economic advantage into "merit," letting elites transmit position to their children while the ideology of testing makes the outcome look earned.
-- Researcher C interviews students and finds that receiving a low score changes how students talk about themselves ("I'm just not a math person"), which then shapes the courses they attempt.
+- **(a)** At what scale does Researcher A argue, and through which paradigm?
+- **(b)** Which paradigm does Researcher B use, and how does B treat "merit"?
+- **(c)** Could Researcher A accept Researcher B's data without abandoning A's own paradigm?
 
-**Researcher A is a functionalist**: the argument form is persistence-because-function — sorting, coordination, stability. Note the tell-tale claim that the institution serves the SYSTEM, not any particular group.
+**(a) Macro functionalism.** Macro: the account concerns an institution and the system as a whole. The argument form is persistence-because-function (sorting, coordination, stability), and the institution serves the SYSTEM, not any particular group.
 
-**Researcher B is a conflict theorist**: the same institution is re-read as a mechanism of social reproduction; "merit" is analyzed as ideology that legitimizes inherited advantage. The question "who benefits?" organizes the entire account.
+**(b) Conflict theory.** The same institution is re-read as a mechanism of social reproduction organized by "who benefits?" "Merit" is analyzed as ideology that legitimizes inherited advantage: it makes a purchased outcome look earned.
 
-**Researcher C is a symbolic interactionist**: micro scale, and the causal engine is MEANING — a score becomes a label, the label is internalized into self-concept, and the redefined self alters behavior (the Thomas theorem in action).
+**(c) Paradigms as frames.** Yes. A functionalist would classify inequality transmission as a **latent dysfunction** of testing, without abandoning the claim that sorting is its manifest function. Paradigms are interpretive frames, not disjoint facts.
 
-**Extension 1.** Could Researcher A acknowledge Researcher B's data? Yes — a functionalist would classify inequality transmission as a **latent dysfunction** of testing, without abandoning the claim that sorting is its manifest function. Paradigms are interpretive frames, not disjoint facts.
+**Problem 2.** Researcher C finds a low score changes how students talk about themselves ("I'm just not a math person"), shaping the courses they attempt. Researcher D finds students prep only while admission benefits exceed study-time costs, quitting once admission is guaranteed.
 
-**Extension 2.** A fourth researcher notes that students continue test preparation only while perceived admission benefits exceed the cost of study time, quitting when a guaranteed-admission program is announced. That cost-benefit ledger is **social exchange / rational choice** — micro like interactionism, but driven by calculated utility rather than negotiated meaning. Distinguishing those two neighbors is a favorite MCAT discrimination.`
+- **(a)** At what scale does Researcher C work, what is the causal engine, and which paradigm is it?
+- **(b)** Which principle from this part does C's score-to-courses chain put into action?
+- **(c)** Which theory does Researcher D's account express?
+- **(d)** What separates C's account from D's?
+
+**(a) Micro interactionism.** Micro, and the engine is MEANING: a score becomes a label, the label is internalized into self-concept, and the redefined self alters behavior. That makes Researcher C a **symbolic interactionist**.
+
+**(b) Thomas theorem.** A situation defined as real ("I'm not a math person") becomes real in its consequences: the student attempts fewer math courses.
+
+**(c) Exchange logic.** That cost-benefit ledger is **social exchange / rational choice**: behavior continues while rewards exceed costs and stops when the payoff disappears.
+
+**(d) Different engines.** Both are micro, but D's is driven by calculated utility rather than negotiated meaning. Distinguishing those two neighbors is a favorite MCAT discrimination.`
     },
     {
       id: 'strat1-quiz1',
@@ -114,11 +125,17 @@ Passages rarely name the paradigm. They describe a researcher's CLAIM, and you i
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Match altitude first: functionalism and conflict theory are MACRO; symbolic interactionism and exchange theory are MICRO
-- Functionalism explains persistence by function — distinguish manifest (intended, recognized) from latent (unintended) functions and from dysfunctions
-- Conflict theory re-reads every "stabilizing" institution by asking who benefits; official justifications become ideology
-- Symbolic interactionism runs on negotiated meaning: the Thomas theorem (definitions of situations produce real consequences) and social constructionism (felt-natural categories are collectively built)
-- Micro neighbors differ by engine: exchange theory = cost-benefit ledgers; interactionism = meanings and labels — the MCAT loves this discrimination`
+- **Altitude first.** Functionalism and conflict theory are macro; symbolic interactionism and exchange theory are micro.
+- **Functionalism's tools.** It explains persistence by function: manifest is intended, latent is unintended, dysfunctions disrupt.
+- **Conflict asks who benefits.** It re-reads every "stabilizing" institution for whom it serves; official rationales become ideology.
+- **Interactionism runs on meaning.** Thomas theorem: situations defined as real are real in their consequences; social constructionism: natural-feeling categories are built.
+
+**Common traps**
+
+- **Symbols mean interactionism.** Mentioning norms or a symbol is not enough; interactionism needs meanings negotiated in interaction.
+- **Lumping micro theories together.** Exchange theory runs on cost-benefit ledgers; interactionism runs on meanings and labels.
+- **Latent means failed.** Manifest vs. latent is about intention and recognition, not success; failing a stated goal is a dysfunction.
+- **Requiring a true definition.** The Thomas theorem needs a definition only to be acted on: a false rumor still empties a solvent bank.`
     }
   ]
 };

@@ -38,6 +38,50 @@ People resolve dissonance by: **changing the attitude**, **changing the behavior
 **Counterintuitive finding:** SMALLER incentives produce MORE attitude change. With a small reward, there's no external justification for the behavior, so people change their internal attitude to reduce dissonance (Festinger & Carlsmith \\$1 vs. \\$20 study).`
     },
     {
+      id: 'sp1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Attitudes & Dissonance
+
+**Problem 1.** Ad 1 for a drug shows a famous doctor but gives no data, while background music distracts viewers. Ad 2 lists clinical trial results to an attentive audience.
+
+- **(a)** Which route to persuasion does Ad 1 target?
+- **(b)** Which route does Ad 2 target?
+- **(c)** Which ad produces the more lasting attitudes, and why?
+
+**(a) Ad 1.** The peripheral route. A celebrity cue plus distraction (low ability to process) means viewers respond to surface cues, not to arguments.
+
+**(b) Ad 2.** The central route. Substantive evidence plus an attentive audience (motivation and ability) allows careful, high-effort processing of argument quality.
+
+**(c) Durability.** Ad 2. Central-route attitudes are durable and resistant; the peripheral-route attitudes from Ad 1 are temporary and easily reversed. Distraction and low involvement push people to cues; motivation and ability enable central processing.
+
+**Problem 2.** Children are told not to play with an attractive toy while the adult leaves. Group A is warned of a severe punishment; Group B gets only a mild warning. No child touches the toy. Weeks later, they rate how much they like it.
+
+- **(a)** Which group has more external justification for not playing with the toy?
+- **(b)** Which group feels more dissonance?
+- **(c)** Which group comes to like the toy less?
+- **(d)** Which dissonance-reduction strategy does that group use?
+
+**(a) Justification.** Group A. "I'd have been punished" is ample external justification, so resisting the toy creates little dissonance.
+
+**(b) Dissonance.** Group B. A mild warning cannot fully explain the restraint, so the clash between "I wanted the toy" and "I didn't play with it" stays uncomfortable.
+
+**(c) Liking.** Group B. Group A has little dissonance and so little reason to change its view; Group B resolves its stronger dissonance by devaluing the toy (Aronson & Carlsmith's forbidden-toy study).
+
+**(d) Strategy.** Changing the attitude: "I didn't really want it." The behavior is done and no external excuse is available, so the attitude moves. This is the same insufficient-justification result as the \\$1 vs. \\$20 study, with a threat in place of a reward.
+
+**Problem 3.** A smoker who knows smoking causes cancer keeps smoking but says, "My grandfather smoked and lived to 90."
+
+- **(a)** Which two cognitions are in conflict?
+- **(b)** Has the smoker changed the behavior or the attitude?
+- **(c)** Which dissonance-reduction strategy is the smoker using?
+
+**(a) The conflict.** "Smoking is harmful" and "I smoke." Holding both creates dissonance.
+
+**(b) Neither.** The smoker does not quit (no behavior change) and does not revise the belief that smoking is harmful (no attitude change).
+
+**(c) Adding a justification.** The grandfather story is a new consonant cognition that makes the behavior feel acceptable: rationalization, the third classic route besides changing the attitude or the behavior.`
+    },
+    {
       id: 'sp1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Attitudes & Dissonance** 🎯`,
@@ -68,57 +112,21 @@ People resolve dissonance by: **changing the attitude**, **changing the behavior
       }
     },
     {
-      id: 'sp1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Attitudes & Dissonance
-
-<details>
-<summary><b>Example 1: Predict the direction of attitude change from incentive size</b></summary>
-
-**Question:** Two groups argue a position they privately disagree with. Group A is paid $50; Group B is paid $2. Which group shifts its private attitude MORE toward the argued position, and why?
-
-**Solution:**
-1. Counterattitudinal behavior creates dissonance.
-2. Group A has ample external justification ("I did it for $50") → little dissonance → little attitude change.
-3. Group B lacks sufficient justification → strong dissonance → resolves it by shifting their PRIVATE attitude toward the position. ✓
-
-**MCAT key:** Insufficient justification → greater internal attitude change. This is the signature dissonance result.
-</details>
-
-<details>
-<summary><b>Example 2: Diagnose the persuasion route from the manipulation</b></summary>
-
-**Question:** An ad for a drug shows a famous doctor but gives no data; viewers are distracted by background music. A second ad lists clinical trial results to an attentive audience. Which route does each target, and which produces more lasting attitudes?
-
-**Solution:**
-1. Ad 1: celebrity cue + distraction (low ability to process) → **peripheral route** → temporary, easily reversed attitudes. ✓
-2. Ad 2: substantive evidence + attentive audience → **central route** → durable, resistant attitudes. ✓
-
-**Why it matters:** Distraction and low involvement push people to peripheral cues; motivation and ability enable central processing.
-</details>
-
-<details>
-<summary><b>Example 3: Identify the dissonance-reduction strategy</b></summary>
-
-**Question:** A smoker who knows smoking causes cancer keeps smoking but says, "My grandfather smoked and lived to 90." Which dissonance-reduction strategy is this?
-
-**Solution:**
-1. The conflicting cognitions are "smoking is harmful" and "I smoke."
-2. The smoker neither quits (behavior change) nor accepts the risk (attitude change).
-3. Instead they ADD a consonant cognition to justify the behavior → **rationalization / adding justification.** ✓
-
-**Connection:** Adding a justifying belief is the third classic route (besides changing attitude or behavior) to relieve dissonance.
-</details>`
-    },
-    {
       id: 'sp1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Attitudes = affective + behavioral + cognitive (ABC); best predict behavior when specific, strong, direct-experience, weak situation.
-- ELM: central route = argument quality, durable; peripheral route = surface cues, temporary.
-- Cognitive dissonance: conflicting cognitions → discomfort → change attitude, change behavior, or add justification.
-- Insufficient external justification (small incentive) → GREATER internal attitude change (Festinger & Carlsmith).`
+- **The ABC model.** An attitude has affective (feelings), behavioral (actions) and cognitive (beliefs) components.
+- **When attitudes predict behavior.** When they are specific, strong, accessible and from direct experience, and situations press weakly.
+- **Two routes to persuasion.** The central route weighs argument quality and lasts; the peripheral route follows cues and fades.
+- **Resolving dissonance.** Conflicting cognitions ease by changing attitude or behavior or adding a justification; less excuse, more attitude change.
+
+**Common traps**
+
+- **Bigger reward, bigger change.** Backwards: a large incentive justifies the act externally, so a SMALL one moves the attitude more.
+- **Counting arguments as central.** The sheer number of arguments is a peripheral cue; the central route weighs their quality.
+- **Assuming cue-driven change lasts.** Attitudes won by celebrity or attractiveness are temporary; central-route attitudes resist change.
+- **Missing the third strategy.** Keeping the behavior and adding a justifying belief is rationalization, not attitude change.`
     }
   ]
 };

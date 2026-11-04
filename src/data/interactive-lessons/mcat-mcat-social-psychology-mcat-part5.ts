@@ -44,6 +44,56 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
 - **Social learning (Bandura, Bobo doll):** aggression is learned by observation and modeling.`
     },
     {
+      id: 'sp5-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Group Behavior & Helping
+
+**Problem 1.** A skilled typist types faster while coworkers watch. Workers on an anonymous group task each slack off. A masked crowd at night vandalizes property.
+
+- **(a)** Which phenomenon explains the typist's speed-up?
+- **(b)** Which phenomenon explains the workers' slacking?
+- **(c)** Which phenomenon explains the vandalism?
+- **(d)** Would the typist speed up with an audience on a complex, unfamiliar task?
+
+**(a) The typist.** Social facilitation: the presence of others (an audience or co-actors; evaluation strengthens it) raises arousal, which boosts a well-learned task.
+
+**(b) The workers.** Social loafing: individual effort falls when contributions are pooled into a SHARED, anonymous product.
+
+**(c) The crowd.** Deindividuation: anonymity plus arousal strip away self-awareness and restraint, so individual identity is lost in the group.
+
+**(d) A complex task.** No. The same arousal impairs complex or unfamiliar tasks, so performance would likely drop with coworkers watching.
+
+**Problem 2.** At a party, someone slumps over. Several guests glance over, see that no one else is reacting, and go back to their conversations.
+
+- **(a)** Did the guests complete step 1 (notice) of the bystander decision model?
+- **(b)** At which step did the helping process break down?
+- **(c)** What phenomenon blocked that step?
+- **(d)** What happens to the steps after it?
+
+**(a) Notice.** Yes: they glanced over, so they DID notice.
+
+**(b) Where it broke.** Step 2, interpreting the event as an emergency: because everyone else looked calm, each guest assumed it was not serious.
+
+**(c) The phenomenon.** Pluralistic ignorance: each person reads the others' calm as evidence that nothing is wrong.
+
+**(d) The rest of the chain.** Without an emergency to respond to, no one assumes responsibility, works out how to help or acts. Helping can fail at any stage; diffusion of responsibility would block step 3, but here the chain broke earlier.
+
+**Problem 3.** An animal will sacrifice itself if doing so saves enough relatives.
+
+- **(a)** By Hamilton's rule, when is kin-selected altruism favored?
+- **(b)** What share of genes do siblings and first cousins have in common?
+- **(c)** Must more siblings or more cousins be saved for the sacrifice to pay off?
+- **(d)** How does this explanation of altruism differ from reciprocal altruism?
+
+**(a) Hamilton's rule.** Altruism is favored when (relatedness × benefit to recipient) > (cost to actor).
+
+**(b) Relatedness.** Siblings share about 50% of their genes; first cousins about 12.5%.
+
+**(c) Siblings vs. cousins.** More cousins. With their higher relatedness, fewer siblings are needed for the inequality to hold: if each saved relative gains as much as the actor loses, it takes more than 2 siblings but more than 8 cousins.
+
+**(d) Inclusive fitness.** It reframes altruism as propagating shared genes. Reciprocal altruism instead expects a future return, and empathy-driven helping is a third explanation.`
+    },
+    {
       id: 'sp5-quiz1',
       type: 'multiple-choice' as const,
       content: `**Group Dynamics & Helping** 🎯`,
@@ -74,58 +124,21 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
       }
     },
     {
-      id: 'sp5-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Group Behavior & Helping
-
-<details>
-<summary><b>Example 1: Distinguish social facilitation, loafing, and deindividuation</b></summary>
-
-**Question:** (a) An expert sprinter runs faster with a crowd watching. (b) Workers on an anonymous group task each slack off. (c) A masked crowd at night vandalizes property. Classify each.
-
-**Solution:**
-- (a) Arousal from the watching crowd (presence of others) boosts a well-learned task → **social facilitation.** ✓
-- (b) Reduced effort when contributions are pooled/anonymous → **social loafing.** ✓
-- (c) Anonymity + arousal → loss of self-awareness and restraint → **deindividuation.** ✓
-
-**MCAT key:** Facilitation requires the presence of others (an audience or co-actors; evaluation strengthens it); loafing requires anonymity in a SHARED product; deindividuation is loss of individual identity in a group.
-</details>
-
-<details>
-<summary><b>Example 2: Walk a scenario through the bystander decision model</b></summary>
-
-**Question:** At a party, someone slumps over. Others glance, see no one reacting, and continue. Identify where the helping process broke down.
-
-**Solution:**
-1. Step 1 (notice): people DID notice.
-2. Step 2 (interpret as emergency): because everyone else looked calm, each assumed it was not serious → **pluralistic ignorance** blocked this step. ✓
-3. Without interpreting it as an emergency, no one assumes responsibility or helps.
-
-**Why it matters:** The 5-step model shows helping can fail at any stage; pluralistic ignorance commonly stalls it at interpretation.
-</details>
-
-<details>
-<summary><b>Example 3: Apply Hamilton's rule logic</b></summary>
-
-**Question:** An animal will sacrifice itself if doing so saves enough relatives. Qualitatively, when does kin-selected altruism pay off, and why does it favor siblings over cousins?
-
-**Solution:**
-1. Hamilton's rule: altruism is favored when (relatedness × benefit to recipient) > (cost to actor). ✓
-2. Siblings share ~50% of genes; cousins ~12.5%. The higher relatedness of siblings means fewer of them are needed for the inequality to hold.
-3. Thus self-sacrifice is "worth it" for fewer siblings than cousins. ✓
-
-**Connection:** Inclusive fitness reframes altruism as gene propagation, complementing reciprocal altruism (expecting return) and empathy-driven helping.
-</details>`
-    },
-    {
       id: 'sp5-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 5 (and Suite Review)
 
-- Social facilitation (others present: simple task ↑, complex task ↓), social loafing (anonymous pooled effort ↓), deindividuation (anonymity → impulsivity).
-- Group polarization amplifies the initial leaning; groupthink sacrifices good decisions for harmony (use a devil's advocate).
-- Bystander effect = diffusion of responsibility; helping requires notice → interpret → take responsibility → know how → act.
-- Altruism explained by kin selection (Hamilton's rule), reciprocal altruism, empathy–altruism, and social exchange; aggression by frustration–aggression and social learning (Bandura).`
+- **Others present.** Social facilitation lifts simple tasks and impairs complex ones; loafing cuts effort on anonymous pooled work.
+- **Group decisions.** Polarization amplifies the initial leaning; groupthink trades appraisal for harmony, and a devil's advocate counters it.
+- **The bystander effect.** Helping runs notice → interpret → take responsibility → know how → act; more bystanders diffuse responsibility.
+- **Why people help or harm.** Kin selection, reciprocity, empathy and social exchange explain helping; frustration and modeling explain aggression.
+
+**Common traps**
+
+- **Polarization vs. groupthink.** Polarization makes shared views more extreme; groupthink is a flawed decision driven by the wish for harmony.
+- **Facilitation helps every task.** Arousal from an audience boosts only simple, well-learned tasks; complex or new tasks get worse.
+- **Pluralistic ignorance as diffusion.** They block different steps: others' calm stops interpreting (step 2); "someone else will" stops step 3.
+- **Loafing vs. deindividuation.** Loafing is less effort on a pooled task; deindividuation is lost self-awareness leading to impulsive acts.`
     }
   ]
 };

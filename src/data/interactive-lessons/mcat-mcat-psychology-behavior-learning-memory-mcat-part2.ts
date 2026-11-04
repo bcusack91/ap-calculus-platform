@@ -49,17 +49,46 @@ export const mcatPsychLearnMemPart2Data = {
     {
       id: 'lmem2-worked',
       type: 'text' as const,
-      content: `### Worked Example — Reading an Operant Passage's Graph and Design
+      content: `### Worked Example — Reading an Operant Passage's Design
 
-**Passage.** Researchers train rats to lever-press. Group A is reinforced for every press; Group B on a variable-ratio 10 schedule; Group C receives food at unpredictable times regardless of pressing. After training, all food delivery stops. A cumulative-response graph shows Group A responding fastest during early training but quitting quickly in extinction; Group B pressing at the highest sustained rate and persisting longest after food stops; Group C pressing at chance levels throughout.
+**Problem 1.** Rats lever-press. Group A gets food for every press, Group B on variable-ratio 10, Group C at random times regardless of pressing. Then food stops. A learns fastest but quits first; B presses fastest and persists longest; C stays at baseline.
 
-**Step 1 — map groups to concepts.** A = continuous reinforcement (fast acquisition, fast extinction). B = VR (highest steady rate; the partial reinforcement extinction effect explains its persistence — the animal cannot easily detect that the contingency ended). C = noncontingent delivery: food is not a consequence of pressing, so no operant learning of pressing is expected (C is the control demonstrating that contingency, not mere food, drives the behavior).
+- **(a)** Why does Group A learn fastest yet quit soonest?
+- **(b)** Why does Group B keep pressing longest after food stops?
+- **(c)** What role does Group C play in the design?
+- **(d)** Could Group C's free food sustain lever-pressing through "superstitious" learning?
 
-**Step 2 — anticipate the "superstition" distractor.** Noncontingent reinforcement can produce idiosyncratic repeated behaviors (accidentally reinforced actions), but it cannot sustain the specific trained response at high rates — do not confuse the control group with a reinforcement schedule.
+**(a) Continuous reinforcement.** Every press pays, so acquisition is fastest, and the moment food stops the change is obvious, so extinction is fast too.
 
-**Step 3 — the transfer item.** "A casino's slot machine and a factory's per-piece pay differ how?" Slot machine = VR (count unpredictable → steady rapid play, extinction-resistant); piecework = FR (predictable count → high rate with post-reinforcement pauses). Both are ratio schedules — the difference is variability, and variability is what buys persistence.
+**(b) Partial reinforcement extinction effect.** On a VR schedule long unrewarded runs are normal, so the animal cannot easily detect that the contingency ended. VR also produces the highest steady rate.
 
-**Step 4 — spot the classical/operant boundary.** If the passage adds that rats began salivating when the food hopper clicked, that response is classical (click = CS predicting food), running in parallel with the operant lever-pressing. Real preparations almost always contain both — assign each response to its own paradigm.`
+**(c) The contingency control.** Food is not a consequence of pressing, so no operant learning of pressing is expected. Group C shows that contingency, not mere food, drives the behavior.
+
+**(d) The superstition distractor.** No. Noncontingent food can produce idiosyncratic repeated behaviors (accidentally reinforced actions), but it cannot sustain the specific trained response at high rates. Do not mistake the control group for a reinforcement schedule.
+
+**Problem 2.** During the same training, the food hopper clicks just before each pellet drops. The rats begin salivating at the click while they keep lever-pressing.
+
+- **(a)** Which paradigm explains the salivation, and what role does the click play?
+- **(b)** Which paradigm explains the lever-pressing?
+- **(c)** How should you handle a passage question that measures both responses?
+
+**(a) Classical.** Salivation is an elicited reflex, and the click is a CS that predicts the food (US).
+
+**(b) Operant.** Lever-pressing is an emitted behavior strengthened by the food that follows it.
+
+**(c) One paradigm per response.** The two kinds of learning run in parallel, and real preparations almost always contain both. Assign each dependent measure to its own paradigm.
+
+**Problem 3.** A salesperson earns a commission each time she closes a deal, which happens after an unpredictable number of calls. A factory pays its workers by the piece, a fixed amount for each set number of items finished.
+
+- **(a)** Which schedule does each arrangement use?
+- **(b)** How do the two response patterns differ?
+- **(c)** If payoffs stopped, which person would keep going longer, and why?
+
+**(a) VR and FR.** The commission is variable ratio (unpredictable count of calls); piecework is fixed ratio (predictable count). Both are ratio schedules.
+
+**(b) Steady vs. paused.** VR yields steady, rapid calling; FR yields a high rate with a brief pause after each reinforcement.
+
+**(c) The salesperson.** Under VR a run of failed calls looks like normal variability, so calling resists extinction. The difference between the schedules is variability, and variability is what buys persistence.`
     },
     {
       id: 'lmem2-quiz1',
@@ -110,11 +139,17 @@ export const mcatPsychLearnMemPart2Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- First fork: elicited response linking stimuli = classical; emitted behavior shaped by consequences = operant
-- The 2x2 is definitional: positive/negative = add/remove; reinforcement/punishment = behavior up/down; escape and avoidance are both negative reinforcement
-- Shaping builds novel behavior via successive approximations; extinction often begins with a burst
-- Schedule signatures: VR = highest rate, most extinction-resistant; FI = scallop; VI = slow and steady; continuous = fast acquisition but fast extinction (partial reinforcement extinction effect)
-- Learning without direct reinforcement is real: latent learning (cognitive maps; learning vs performance), observational learning (Bandura; vicarious consequences), and instinctive drift shows biology constrains it all`
+- **Classical vs. operant.** Classical links two stimuli to an elicited reflex; operant links an emitted behavior to its consequence.
+- **The consequence 2×2.** Positive/negative means a stimulus is added/removed; reinforcement/punishment means behavior rises/falls.
+- **Schedule signatures.** VR is highest and steadiest; FR pauses after each reward; FI scallops; VI is slow and steady.
+- **Beyond simple reward.** Shaping builds new behavior by approximations; latent and observational learning need no direct reward.
+
+**Common traps**
+
+- **Negative means bad.** "Negative" means removed: silencing an alarm or escaping pain is negative reinforcement, not punishment.
+- **Continuous means persistent.** Continuous reinforcement gives the fastest acquisition but the fastest extinction; partial resists it.
+- **Learning equals performance.** Latent learners show no gain until reward appears, yet their cognitive map was already built.
+- **Extinction as instant fading.** When reinforcement stops, responding often bursts briefly before it fades.`
     }
   ]
 };

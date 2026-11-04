@@ -180,7 +180,7 @@ const biasesSvg = `${SVG_OPEN} viewBox="0 0 560 440">
 ${biasCell(140, 70, 'fig-accent-2', '"I\'m brilliant"', 'INTERNAL · disposition', 'self-serving bias')}
 ${biasCell(350, 70, 'fig-accent', '"the test was unfair"', 'EXTERNAL · situation', 'self-serving bias')}
 ${biasCell(140, 232, 'fig-accent-2', '"she\'s just smart"', 'INTERNAL · disposition', 'fundamental attribution error')}
-${biasCell(350, 232, 'fig-accent-2', '"he\'s clumsy"', 'INTERNAL · disposition', 'fundamental attribution error')}
+${biasCell(350, 232, 'fig-accent-2', '"he\'s careless"', 'INTERNAL · disposition', 'fundamental attribution error')}
 <g class="fig-muted"><text x="280" y="422" font-size="15" text-anchor="middle" fill="currentColor">Same failure, different cause by row = actor–observer bias</text></g>
 </svg>`
 
@@ -461,7 +461,7 @@ export const mcatSocialPsychologyFigures: DeckFigurePlacement[] = [
     figure: {
       svg: biasesSvg,
       alt:
-        'A two-by-two grid. Rows: me (the actor) and others (whom I observe). Columns: success and failure. My success: "I\'m brilliant", internal, disposition — self-serving bias. My failure: "the test was unfair", external, situation — self-serving bias. Others\' success: "she\'s just smart", internal. Others\' failure: "he\'s clumsy", internal — both the fundamental attribution error. Footer: the same failure explained differently by row is the actor–observer bias.',
+        'A two-by-two grid. Rows: me (the actor) and others (whom I observe). Columns: success and failure. My success: "I\'m brilliant", internal, disposition — self-serving bias. My failure: "the test was unfair", external, situation — self-serving bias. Others\' success: "she\'s just smart", internal. Others\' failure: "he\'s careless", internal — both the fundamental attribution error. Footer: the same failure explained differently by row is the actor–observer bias.',
     },
     blocks: [
       '- **FAE**: others\' behavior → disposition, situation ignored',

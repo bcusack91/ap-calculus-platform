@@ -45,6 +45,7 @@ export const mcatPsychLearnMemPart4Data = {
 2. Is a voluntary behavior changing with its *consequences*? → operant (identify add/remove × increase/decrease, then the schedule)
 3. Did behavior change after mere *observation* of a model? → social/observational learning
 4. Is performance improving or failing on a *memory test*? → name the stage (encoding/storage/retrieval), the store, and the interference direction
+
 Most passages mix two of these; assign each dependent measure separately.`
     },
     {
@@ -52,15 +53,32 @@ Most passages mix two of these; assign each dependent measure separately.`
       type: 'text' as const,
       content: `### Worked Example — An Eyewitness-Memory Passage, Fully Read
 
-**Passage.** Participants watch a staged theft video. Group 1 then reads an inaccurate summary mentioning a "toolbox" (no toolbox appeared); Group 2 reads an accurate summary; Group 3 reads nothing. A week later, all take (a) a free-recall test and (b) a recognition test including the toolbox. Group 1 "recognizes" the toolbox 44% of the time versus 9% and 8% in Groups 2 and 3, and reports high confidence in those recognitions. A follow-up finds the effect shrinks when participants are warned about the summary's unreliability BEFORE reading it, but not when warned after a week.
+**Problem 1.** Participants watch a staged theft. Group 1 then reads a summary that falsely mentions a "toolbox"; Group 2 reads an accurate summary; Group 3 reads nothing. A week later, Group 1 "recognizes" the toolbox 44% of the time, versus 9% and 8% for Groups 2 and 3.
 
-**Step 1 — name the effect and the control logic.** Elevated false recognition only in the misled group is the misinformation effect. Group 2 controls for reading any summary; Group 3 for mere delay — so the false memory traces specifically to the misleading content.
+- **(a)** What effect does Group 1's result demonstrate?
+- **(b)** What does Group 2 control for?
+- **(c)** What does Group 3 control for, and what do the two controls together show?
 
-**Step 2 — interpret the confidence data.** High confidence accompanying false recognitions reproduces the confidence-accuracy dissociation: jurors weight confidence heavily, but the data show it tracks the FEELING of memory, not its source. Expect an answer choice equating confidence with accuracy — it is always wrong.
+**(a) Misinformation effect.** False recognition rises only in the group that read misleading post-event information.
 
-**Step 3 — use the warning asymmetry.** A pre-exposure warning lets participants tag the summary as a separate, suspect source at ENCODING; a warning after a week fails because the event and post-event sources have already blended — a source-monitoring account. This asymmetry is the passage's strongest clue that the mechanism is misattribution, not simple overwriting or social compliance.
+**(b) Reading a summary.** Group 2 reads a summary too, so the act of reading any summary cannot explain Group 1's errors.
 
-**Step 4 — the application item.** "Which police practice does this research most directly support?" Blind lineup administration and neutral, non-leading question wording — interventions that keep post-event information from entering the witness's memory in the first place, since the follow-up shows late corrections barely work.`
+**(c) Mere delay.** Group 3 experiences the same week with no summary. Together the controls trace the false memory specifically to the misleading content.
+
+**Problem 2.** Group 1 participants report high confidence in their toolbox recognitions. A follow-up finds the effect shrinks when participants are warned the summary is unreliable BEFORE reading it, but not when they are warned a week later.
+
+- **(a)** What does the confidence data say about confidence as a guide to accuracy?
+- **(b)** Why does a warning given before reading help?
+- **(c)** Why does a warning a week later fail, and which mechanism does the asymmetry point to?
+- **(d)** Which police practices does this research most directly support?
+
+**(a) Confidence-accuracy dissociation.** Confidence tracks the FEELING of remembering, not its accuracy. Here confidence stayed high for a false memory, so on the MCAT an answer equating confidence with accuracy is a trap.
+
+**(b) Tagging at encoding.** An early warning lets participants tag the summary as a separate, suspect source while they read it.
+
+**(c) Source misattribution.** After a week the event and the summary have already blended as sources. That source-monitoring account fits the asymmetry better than simple overwriting or social compliance.
+
+**(d) Prevention, not correction.** Blind lineup administration and neutral, non-leading question wording keep post-event information out of the witness's memory, since late corrections barely work.`
     },
     {
       id: 'lmem4-quiz1',
@@ -111,14 +129,22 @@ Most passages mix two of these; assign each dependent measure separately.`
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Diagnose forgetting by stage: cues/recognition restore it = retrieval failure; nothing restores it = encoding or storage; Ebbinghaus curve is steep early
-- Interference directions: proactive = old attacks new; retroactive = new attacks old — identify which memory is the TARGET first
-- Memory is reconstructive: misinformation effect, source-monitoring errors, and confident-but-drifting flashbulb memories; confidence never certifies accuracy
-- Clinical anchors: Alzheimer's = anterograde-first explicit loss (hippocampus, acetylcholine); Korsakoff = thiamine deficiency with confabulation; aging spares recognition more than recall
-- Passage flowchart: elicited-by-predictor = classical; consequence-driven = operant; model-driven = observational; test-performance = name stage, store, and interference direction
+- **Locate the failure stage.** If cues or recognition restore an item, retrieval failed; if nothing does, encoding or storage failed.
+- **Interference direction.** Proactive: old learning disrupts new; retroactive: new learning disrupts old. Find the target first.
+- **Memory is reconstructive.** Misinformation, source-monitoring errors and drifting flashbulb memories all feel genuine.
+- **Sort the paradigm.** Reflex to a predictor is classical, consequence-driven is operant, model-driven is observational.
+
+**Common traps**
+
+- **Confidence as accuracy.** Flashbulb and misled memories stay confidently held while their accuracy erodes like ordinary memory.
+- **Recall failure as storage loss.** Failed recall with successful recognition is a retrieval failure; the trace was stored.
+- **Anterograde vs. retrograde.** Anterograde blocks new memories; retrograde loses earlier ones. Korsakoff (thiamine deficiency) adds confabulation.
+- **One paradigm per passage.** Most passages mix two paradigms; assign each dependent measure to its own.
 
 <!-- yield:low -->
-- Low-yield extras: cryptomnesia (unconscious plagiarism) is a source-monitoring error in which a remembered idea feels new and self-generated
+**Low-yield extras**
+
+- Cryptomnesia (unconscious plagiarism) is a source-monitoring error in which a remembered idea feels new and self-generated.
 <!-- /yield -->`
     }
   ]

@@ -48,7 +48,7 @@ export const mcatPsychCogLangPart3Data = {
 | **Wernicke's area** (left superior temporal) | Wernicke's (receptive, fluent) aphasia | Fluent but empty/nonsensical, neologisms | Poor; often unaware of deficit | Impaired |
 | **Arcuate fasciculus** (connects the two) | Conduction aphasia | Fluent | Good | **Selectively impaired** |
 
-Global aphasia = both regions.
+Global aphasia = both regions. Left-dominant in nearly all right-handers, most left-handers.
 
 <!-- yield:low -->
 - The reading and writing analogs of aphasia are alexia and agraphia.
@@ -59,15 +59,50 @@ Global aphasia = both regions.
       type: 'text' as const,
       content: `### Worked Example — An Aphasia-Localization Passage, Fully Read
 
-**Passage.** Three stroke patients are assessed. Patient 1 speaks in slow, strained fragments ("...son... visit... Tuesday"), follows three-step spoken commands correctly, and grows visibly frustrated. Patient 2 produces rapid, melodic sentences peppered with invented words ("the flibbers were altogether on the granting"), fails simple commands, and seems untroubled. Patient 3 converses almost normally and understands well, but cannot repeat the phrase "no ifs, ands, or buts" despite trying. A fourth finding: Patient 1's right arm is weak.
+**Problem 1.** After strokes, Patient 1 speaks in slow, strained fragments ("...son... visit... Tuesday"), follows three-step spoken commands, grows frustrated, and has a weak right arm. Patient 2 speaks rapid, melodic sentences with invented words ("the flibbers were altogether on the granting"), fails simple commands, and seems untroubled.
 
-**Step 1 — build the two-axis grid.** Score each patient on fluency and comprehension before naming anything. P1: nonfluent + comprehension intact → Broca's (expressive) aphasia. P2: fluent + comprehension poor + neologisms + unawareness → Wernicke's (receptive) aphasia. P3: fluent + comprehends + isolated repetition failure → conduction aphasia (arcuate fasciculus).
+- **(a)** Scored on fluency and comprehension, which aphasia does Patient 1 have?
+- **(b)** Scored the same way, which aphasia does Patient 2 have?
+- **(c)** Why does Patient 1 have a weak right arm when Patient 2 does not?
+- **(d)** Why is one patient frustrated and the other untroubled?
+- **(e)** Could Patient 2's speech instead be a psychotic thought disorder?
 
-**Step 2 — use the neuro anatomy cross-checks.** Broca's area sits in the left frontal lobe adjacent to the motor strip's arm/face region — P1's right-arm weakness is the confirming neighbor sign (left hemisphere controls the right body). Wernicke's area is far from motor cortex, so P2 predictably lacks weakness. The frustration/unawareness contrast follows from comprehension: P1 can hear his own errors; P2 cannot fully monitor hers.
+**(a) Broca's aphasia.** Score fluency and comprehension before naming anything. Nonfluent speech with intact comprehension is Broca's (expressive) aphasia.
 
-**Step 3 — pre-empt the classic distractors.** "P2 has a thought disorder" — no: psychotic speech is disorganized at the IDEA level with intact grammar-word machinery, while Wernicke's speech is linguistically broken with neologisms and comprehension failure. "P3's problem is memory" — no: repetition of a just-heard phrase fails while conversation succeeds, isolating the perception-to-production relay, not storage.
+**(b) Wernicke's aphasia.** Fluent speech, poor comprehension, neologisms and unawareness make Wernicke's (receptive) aphasia.
 
-**Step 4 — the acquisition tie-in.** If the passage adds a congenitally deaf adult who acquired sign at 20 and shows persistent nonnative sign syntax despite decades of use, that supports a critical period for GRAMMAR specifically — pair it with Chomsky, not with Skinner's reinforcement account.`
+**(c) The neighbor sign.** Broca's area sits in the left frontal lobe beside the motor strip's face area, so a stroke there often spreads into the adjacent arm and face motor cortex; the left hemisphere controls the right body. Wernicke's area (left temporal) is far from motor cortex, so Patient 2 lacks weakness.
+
+**(d) Comprehension decides insight.** The contrast follows from comprehension: Patient 1 can hear his own errors; Patient 2 cannot fully monitor hers.
+
+**(e) No.** Psychotic speech is disorganized at the IDEA level, with intact grammar and word machinery. Wernicke's speech is linguistically broken, with neologisms and comprehension failure.
+
+**Problem 2.** A third stroke patient converses almost normally and understands well, but cannot repeat the phrase "no ifs, ands, or buts" despite trying.
+
+- **(a)** Scored on fluency and comprehension, which syndrome does this leave?
+- **(b)** Which structure is damaged, and why does that break only repetition?
+- **(c)** Could the failure be a memory problem instead?
+
+**(a) Conduction aphasia.** Fluent speech and good comprehension rule out both Broca's and Wernicke's aphasia; an isolated repetition failure is conduction aphasia.
+
+**(b) The arcuate fasciculus.** It connects Wernicke's area to Broca's area. With both centers working but the link cut, conversation still flows, while the direct route from a just-heard phrase to spoken output is broken.
+
+**(c) No.** Repeating a just-heard phrase fails while conversation succeeds, which isolates the perception-to-production relay, not storage.
+
+**Problem 3.** Adult immigrants who learned English after moving to the U.S. take a grammar-judgment test. Those who arrived as young children score like native speakers; scores fall steadily the later they arrived, yet every group has a large English vocabulary.
+
+- **(a)** Which part of language shows the age effect, and which does not?
+- **(b)** What does a decline with age of arrival suggest about how grammar is learned?
+- **(c)** A critic says late arrivals simply had fewer years of English. How would you test that?
+- **(d)** Why does a reinforcement account struggle with this pattern?
+
+**(a) Syntax, not vocabulary.** Grammar judgments depend on age of arrival; vocabulary does not. It is the same split the critical period predicts for first languages.
+
+**(b) A sensitive period for grammar.** Native-like syntax comes most easily from early exposure, and the window narrows with age: a maturational limit, as Chomsky's nativist account predicts.
+
+**(c) Match on exposure.** Compare speakers with the same years in the country but different ages of arrival. If age of arrival still predicts scores, maturation, not amount of exposure, explains the gap.
+
+**(d) Reinforcement is available at any age.** Late arrivals are corrected and rewarded for English too, so imitation and reinforcement cannot explain why their grammar stays nonnative.`
     },
     {
       id: 'cog3-quiz1',
@@ -83,11 +118,11 @@ Global aphasia = both regions.
             explanation: `No adult says "goed," so the form cannot be imitated; it appears precisely when the child induces the add -ed rule and overapplies it, temporarily displacing memorized irregulars. This U-shaped curve is normal development and the textbook evidence FOR internal rule learning and AGAINST Skinner's imitation-reinforcement account.`
           },
           {
-            question: `A stroke patient speaks in rapid, grammatical-sounding streams filled with invented words, cannot follow simple spoken instructions, and appears unaware anything is wrong. The lesion is most likely in the:`,
+            question: `A deaf woman who has used sign language since infancy has a stroke. She still signs fluently and her hands move normally, but her signed sentences are meaningless and she cannot understand others' signing. The lesion is most likely in the:`,
             options: [`Left inferior frontal lobe (Broca's area)`, `Left superior temporal lobe (Wernicke's area)`, `Arcuate fasciculus between language areas`, `Right occipital lobe (primary visual cortex)`],
             correctAnswer: 1,
             yield: 'HIGH',
-            explanation: `Fluent-but-empty output, neologisms, failed comprehension, and lack of insight compose Wernicke's (receptive) aphasia, localizing to left superior temporal cortex. Broca's lesions (left frontal) produce the opposite: effortful, telegraphic speech with preserved comprehension and marked frustration. Arcuate damage selectively spares both fluency and comprehension while breaking repetition.`
+            explanation: `Score it as for speech: fluent but meaningless output with failed comprehension is Wernicke's (receptive) aphasia, and sign-language aphasias follow the same left-hemisphere map, so the lesion is in left superior temporal cortex. A Broca's (left frontal) lesion would leave comprehension intact but make signing slow and effortful. Arcuate damage spares both fluency and comprehension and breaks repetition. Although sign is seen rather than heard, primary visual cortex damage would cause a visual-field loss, not a language disorder.`
           },
           {
             question: `Deaf individuals who are first exposed to sign language in adulthood typically achieve large vocabularies but persistently nonnative grammar, whereas those exposed from infancy sign with native syntax. This pattern most strongly supports:`,
@@ -104,11 +139,11 @@ Global aphasia = both regions.
             explanation: `Two-word combinations that keep syntactic ORDER while dropping grammatical function words (articles, inflections) define telegraphic speech, typical at 18-24 months. Babbling is prelinguistic sound play; holophrastic speech is the earlier one-word stage; overregularization comes later, once inflectional rules are being extracted.`
           },
           {
-            question: `A patient converses fluently and follows complex instructions without difficulty, yet reliably fails when asked to repeat sentences verbatim. The most likely site of damage, and why, is the:`,
-            options: [`Broca's area, because production is impaired`, `Hippocampus, because new memories cannot form`, `Wernicke's area, as input cannot be decoded`, `Arcuate fasciculus, as the relay to Broca's is cut`],
+            question: `A stroke patient follows complex spoken instructions but fails when asked to repeat sentences verbatim. To decide between conduction aphasia and Broca's aphasia, which bedside task is MOST informative?`,
+            options: [`Having the patient repeat a short sentence aloud`, `Recalling a list of words after a ten-minute delay`, `Following a three-step spoken command correctly`, `Describing a picture in spontaneous, connected speech`],
             correctAnswer: 3,
             yield: 'MEDIUM',
-            explanation: `Selective repetition failure with fluent output and good comprehension is conduction aphasia: both cortical language centers work, but the arcuate fasciculus connecting them is cut, breaking the direct perception-to-production route. Broca's or Wernicke's lesions would impair fluency or comprehension respectively, and hippocampal damage impairs new episodic learning, not immediate repetition.`
+            explanation: `Both syndromes impair repetition and leave comprehension largely intact; what separates them is fluency. Broca's speech is effortful and telegraphic, while conduction aphasia speech flows, so describing a picture in spontaneous speech shows the difference directly. Repeating another sentence would fail in both, and a spoken command would succeed in both, so neither discriminates. Delayed word-list recall tests memory, which defines neither aphasia.`
           }
         ]
       }
@@ -118,14 +153,22 @@ Global aphasia = both regions.
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Ladder: phonemes (sound) → morphemes (meaning units) → semantics → syntax → pragmatics; grammatical nonsense proves syntax and semantics are separable
-- Timeline: cooing → universal babbling that narrows by 10 months → one-word (12 mo) → telegraphic (18-24 mo) → overregularization (~3 yr, the anti-imitation evidence)
-- Theories: Skinner (reinforcement — fails on overregularization and poverty of stimulus), Chomsky (LAD, universal grammar, critical period — Genie, late sign learners), interactionist synthesis; Whorf survives only in weak form
-- Aphasia grid: score fluency and comprehension first — Broca's = nonfluent/comprehends/frustrated (frontal, watch for right-side weakness); Wernicke's = fluent nonsense/poor comprehension/unaware (temporal); conduction = only repetition broken (arcuate fasciculus)
-- Left hemisphere dominates language in nearly all right-handers and most left-handers
+- **The structural ladder.** Phonemes: smallest meaning-distinguishing sounds; morphemes: smallest meaning units; then syntax, semantics, pragmatics.
+- **Acquisition order.** Cooing, babbling (narrowing by ~10 mo), one word (~12 mo), telegraphic (18-24 mo), overregularization (~3 yr).
+- **The critical period.** Late first-language learners gain vocabulary but never native syntax, supporting Chomsky's nativism.
+- **The aphasia grid.** Broca's: nonfluent, comprehends; Wernicke's: fluent nonsense, poor comprehension; conduction: only repetition fails.
+
+**Common traps**
+
+- **Overregularization as delay.** "Goed" is normal rule extraction; no adult says it, so it is evidence against pure imitation.
+- **Strong Whorf.** Language does not determine thought; only the weak version, language nudging attention and memory, holds.
+- **Wernicke's as psychosis.** Wernicke's speech is linguistically broken; psychotic speech is disorganized at the level of ideas.
+- **Conduction as memory loss.** Failing to repeat a just-heard phrase while conversing normally is a cut relay, not lost storage.
 
 <!-- yield:low -->
-- Low-yield extras: English has roughly 40 phonemes; alexia and agraphia are the reading and writing analogs of aphasia
+**Low-yield extras**
+
+- English has roughly 40 phonemes; alexia and agraphia are the reading and writing analogs of aphasia
 <!-- /yield -->`
     }
   ]

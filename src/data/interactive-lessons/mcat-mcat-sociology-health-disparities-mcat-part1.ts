@@ -53,21 +53,44 @@ Early environments program later health: childhood poverty predicts adult cardio
       type: 'text' as const,
       content: `### Worked Example — Testing Fundamental Cause Theory Against Data
 
-**Passage-style problem.** Researchers assemble mortality data for Country X:
+**Problem 1.** In Country X, Disease B was untreatable and SES-flat in 1950. A cheap screening test and effective treatment arrived in 1980. By 2020 its mortality had fallen 60 percent overall: 85 percent in the top SES quintile, 35 percent in the bottom.
 
-1. In 1950, deaths from Disease A (no known prevention or treatment then or now) show almost no SES gradient. In 2020, Disease A mortality is still SES-flat.
-2. Disease B was untreatable in 1950, with SES-flat mortality. A cheap screening test and effective treatment arrived in 1980. By 2020, Disease B mortality has fallen 60 percent overall — but the decline is 85 percent in the top SES quintile and 35 percent in the bottom, opening a wide gradient where none existed.
-3. Disease C's major risk behavior was distributed EVENLY across classes in 1950; after mass publicity of the risk in 1970, the behavior declined fastest among the educated, and Disease C mortality now shows a steep gradient.
+- **(a)** What happened to the SES gradient in Disease B mortality between 1950 and 2020?
+- **(b)** Why, by fundamental cause theory, did a neutral technology produce the pattern in (a)?
+- **(c)** An answer choice says the treatment works less well in low-SES patients. Do the data show that?
+- **(d)** Which policy would the theory predict cuts the Disease B gradient most: an information campaign, more technology, or automatic screening?
 
-**Reading finding 1.** Where medicine and prevention are powerless, flexible resources have nothing to purchase — no gradient forms. This is fundamental cause theory's negative control, and its presence in a passage is never decorative: expect a question contrasting it with Disease B.
+**(a) The gradient.** A wide gradient opened where none existed. Mortality fell for everyone, but 85 percent at the top against 35 percent at the bottom: a life-saving innovation WIDENED the disparity.
 
-**Reading finding 2.** The technology arrived neutral, but deployment followed resources: knowledge of the test, insurance, clinic access, follow-up capacity. A life-saving innovation WIDENED the disparity — the theory's core prediction that new health-relevant technology is captured first and best by the advantaged. Note the trap answer "the treatment doesn't work for low-SES patients": the data show slower diffusion, not differential biology.
+**(b) Deployment followed resources.** Using the test and treatment took knowledge of the test, insurance, clinic access and follow-up capacity, all flexible resources. The theory's core prediction is that new health-relevant technology is captured first and best by the advantaged.
 
-**Reading finding 3.** Same logic, behavioral channel: information is also a resource, and the educated converted the publicity into behavior change faster. Risk behaviors that were once class-neutral became class-patterned — which is why TODAY'S behavioral gradients (smoking) are historically recent products, not timeless class traits.
+**(c) The biology trap.** No. The data show slower diffusion to the bottom quintile, not differential biology. The treatment still cut low-SES mortality by 35 percent.
 
-**The integrative question to expect:** "Which policy would fundamental cause theory predict REDUCES the Disease B gradient most?" Ranked by the theory: interventions that do not depend on personal flexible resources — automatic screening defaults, universal outreach, treatment brought to neighborhoods — beat information campaigns, which the advantaged metabolize faster. Any answer that only adds MORE technology without changing who can deploy it preserves or widens the gap.
+**(d) Defaults win.** Interventions that do not depend on personal flexible resources (automatic screening defaults, universal outreach, treatment brought to neighborhoods) beat information campaigns, which the advantaged use faster. Adding MORE technology without changing who can deploy it preserves or widens the gap.
 
-**Method footnote.** All three findings are ecological time-series — no individual-level causation is licensed; the theory survives because its distinctive PATTERN (gradients tracking treatability) appears where rivals predict none.`
+**Problem 2.** In Country X, Disease C's major risk behavior was spread EVENLY across classes in 1950. After mass publicity of the risk in 1970, the behavior declined fastest among the educated, and Disease C mortality now shows a steep gradient.
+
+- **(a)** Which flexible resource produced this gradient?
+- **(b)** What does this imply about today's behavioral gradients, such as smoking?
+- **(c)** Country X's findings are ecological time series. What can they not license, and why does the theory survive anyway?
+
+**(a) Information.** Same logic, behavioral channel: information is also a resource, and the educated converted the publicity into behavior change faster.
+
+**(b) Recent, not timeless.** Risk behaviors that were once class-neutral became class-patterned, so TODAY'S behavioral gradients (smoking) are historically recent products, not timeless class traits.
+
+**(c) Method check.** Ecological time series license no individual-level causation. The theory survives because its distinctive PATTERN appears where rival accounts predict none: gradients that open only once something can be done, after treatment for Disease B and after publicity for Disease C.
+
+**Problem 3.** In Country X, deaths from Disease A, which had no known prevention or treatment in 1950 and still has none in 2020, show almost no SES gradient in either year.
+
+- **(a)** Why does no gradient form for Disease A, according to fundamental cause theory?
+- **(b)** What job does Disease A do in a passage that tests the theory?
+- **(c)** What kind of question should you expect it to set up?
+
+**(a) Nothing to buy.** Where medicine and prevention are powerless, flexible resources have nothing to purchase, so no gradient forms.
+
+**(b) The negative control.** Disease A is the theory's negative control: it shows that a gradient appears only where something CAN be done. Its presence in a passage is never decorative.
+
+**(c) The contrast item.** Expect a question contrasting Disease A with Diseases B and C: same country and same classes, but a gradient only where prevention or treatment exists. That pattern is the theory's fingerprint.`
     },
     {
       id: 'hdis1-quiz1',
@@ -83,11 +106,11 @@ Early environments program later health: childhood poverty predicts adult cardio
             explanation: `The design holds healthcare access (and employment itself) essentially constant, yet the gradient persists across every grade — so unequal access to doctors cannot be the main engine. The gradient's fine-grained, every-step character instead implicates psychosocial factors that vary continuously with rank, such as control over work and chronic stress, which the other options name and the data leave standing.`
           },
           {
-            question: `Which pattern of disease-specific data would BEST support fundamental cause theory?`,
-            options: [`Equal SES gradients across all diseases regardless of treatability`, `Steep gradients for infectious diseases, flat ones for chronic diseases`, `Gradients that vanish once universal health coverage is introduced`, `Steep gradients for treatable diseases, flat ones for untreatable diseases`],
+            question: `Which disease-specific finding would most WEAKEN fundamental cause theory?`,
+            options: [`A gradient that widened after an effective treatment arrived`, `A gradient that persists under universal health coverage`, `A gradient that emerged after a risk behavior was publicized`, `A steep gradient for a disease no one can prevent or treat`],
             correctAnswer: 3,
             yield: 'MEDIUM',
-            explanation: `The theory's mechanism is flexible resources (money, knowledge, power, connections) deployed against current threats — so advantage should show its largest health payoff exactly where something CAN be done, and no payoff where nothing can. That treatability-tracking pattern is the theory's unique fingerprint; uniform gradients would fit simpler material-deprivation accounts instead, an infectious-versus-chronic split tracks disease type rather than treatability, and gradients vanishing under universal coverage contradicts the theory's prediction that resources find new routes to advantage.`
+            explanation: `The theory's mechanism is flexible resources (money, knowledge, power, connections) deployed against current threats, so advantage should pay off where something CAN be bought (prevention or treatment) and nowhere else. A steep gradient for a disease no one can prevent or treat is the one pattern the theory says should not exist, so it weakens the theory most. A gradient that widened after an effective treatment arrived and one that emerged after a risk behavior was publicized are the theory's core predictions, and a gradient that persists under universal health coverage fits its claim that resources find new routes to advantage.`
           },
           {
             question: `A researcher measures blood pressure, cortisol regulation, inflammatory markers, and metabolic indicators in adults, combining them into a single index of cumulative physiological wear that rises with years of economic hardship. The construct being measured is:`,
@@ -118,14 +141,22 @@ Early environments program later health: childhood poverty predicts adult cardio
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Health follows a fine-grained social GRADIENT (every step matters), persisting even with universal care — access alone cannot explain it
-- Social determinants — income, education, occupation, neighborhood, connection — are the upstream causes; isolation and low job control are mortality-grade exposures
-- Fundamental cause theory: flexible resources (money, knowledge, power, connections) get redeployed against each era's threats — so disparities concentrate where disease is preventable/treatable, and new technology widens gaps until deployment stops depending on personal resources
-- Chronic adversity becomes biology via stress axes: allostatic load tallies the wear; weathering extends it to discrimination-accelerated aging
-- Disparity = any group difference; inequity = the avoidable, socially produced subset; life-course effects (latency + accumulation) mean childhood conditions echo in adult disease
+- **A fine-grained gradient.** Income, education, occupation, neighborhood and connection shape health at every SES step.
+- **Fundamental cause theory.** Flexible resources are redeployed against each era's threats, so gaps peak where disease is preventable or treatable.
+- **Adversity becomes biology.** Allostatic load tallies chronic-stress wear; childhood conditions echo in adult disease (latency).
+- **Disparity vs. inequity.** A disparity is any group difference; an inequity is the avoidable, socially produced subset.
+
+**Common traps**
+
+- **Blaming access alone.** The gradient persists under identical coverage; job control and chronic stress, not access, vary with rank.
+- **Calling every gap an inequity.** Chromosome-linked differences are disparities only; inequity needs avoidability and injustice.
+- **New technology closes gaps.** A neutral innovation reaches the advantaged first, so it widens gaps until access is automatic.
+- **Mobility erases early risk.** Adults who rose out of childhood poverty still carry elevated cardiovascular risk.
 
 <!-- yield:low -->
-- Low-yield extras: fundamental cause theory's authors (Link and Phelan)
+**Low-yield extras**
+
+- Fundamental cause theory's authors (Link and Phelan).
 <!-- /yield -->`
     }
   ]

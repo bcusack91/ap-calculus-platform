@@ -38,6 +38,53 @@ We weigh three kinds of information to decide internal vs. external:
 - **Collectivist** cultures attend more to situational/contextual causes, weakening the FAE.`
     },
     {
+      id: 'sp2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Attribution
+
+**Problem 1.** Dev complains about the noise every time he visits one gym. Most other members complain about it too, but Dev rarely complains about noise anywhere else.
+
+- **(a)** Is consistency high or low, and what does that allow?
+- **(b)** Are consensus and distinctiveness high or low?
+- **(c)** Is the complaint best attributed to Dev or to the gym?
+- **(d)** Which attribution would follow if only Dev complained, and he complained at every gym?
+
+**(a) Consistency.** High: he complains on every visit, so the response is stable and an attribution is warranted.
+
+**(b) Consensus and distinctiveness.** Both high. Others complain too (high consensus), and Dev complains only here (high distinctiveness); both point to the stimulus, not to Dev.
+
+**(c) Attribution.** Situational (external). High consistency, high consensus and high distinctiveness mean the gym is noisy, not that "Dev complains about everything."
+
+**(d) The contrast.** Dispositional (internal). High consistency with LOW consensus and LOW distinctiveness points to Dev himself.
+
+**Problem 2.** Tom trips on a sidewalk. An onlooker thinks, "He's clumsy." Tom thinks, "That sidewalk is uneven."
+
+- **(a)** Is the onlooker's explanation dispositional or situational, and which bias does it show?
+- **(b)** Is Tom's own explanation dispositional or situational?
+- **(c)** Which bias names the mismatch between the two explanations?
+- **(d)** Why do actor and observer explain the same trip differently?
+
+**(a) The onlooker.** Dispositional: the trip is blamed on a trait (clumsiness) while the sidewalk is ignored. That is the fundamental attribution error.
+
+**(b) Tom.** Situational: he blames the uneven sidewalk.
+
+**(c) The mismatch.** Actor–observer bias: the observer attributes the act to disposition, the actor attributes it to the situation.
+
+**(d) Why.** We have access to our own situational pressures but see others mainly as actors, so we over-attribute their behavior internally.
+
+**Problem 3.** Some people assume a patient with lung disease "must have smoked and brought it on themselves," even without evidence.
+
+- **(a)** Is this explanation of the illness dispositional or situational?
+- **(b)** Which attribution bias is at work?
+- **(c)** Why does this bias matter in medicine?
+
+**(a) Type of attribution.** Dispositional: the illness is blamed on the patient's own choices, with no evidence about the actual cause.
+
+**(b) The bias.** The just-world hypothesis: assuming people get the outcomes they deserve leads to victim blaming.
+
+**(c) Why it matters.** It fuels stigma (e.g., toward patients with addiction, obesity or HIV), worsening care and adherence. The MCAT links attribution biases to health disparities and the patient–provider relationship.`
+    },
+    {
       id: 'sp2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Attribution Theory** 🎯`,
@@ -68,58 +115,21 @@ We weigh three kinds of information to decide internal vs. external:
       }
     },
     {
-      id: 'sp2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Attribution
-
-<details>
-<summary><b>Example 1: Apply Kelley's covariation model to data</b></summary>
-
-**Question:** Maria laughs at a particular comedian (consistency high). Almost everyone laughs at this comedian (consensus high), but Maria rarely laughs at other comedians (distinctiveness high). Internal or external attribution?
-
-**Solution:**
-1. High consistency → the response is stable, so an attribution is warranted.
-2. High consensus (others laugh too) → points to the stimulus, not Maria.
-3. High distinctiveness (only this comedian) → points to the stimulus.
-4. Conclusion: **situational/external** — the comedian is funny, not "Maria laughs at everything." ✓
-
-**MCAT pattern:** High-high-high → external; high consistency with low consensus & low distinctiveness → internal.
-</details>
-
-<details>
-<summary><b>Example 2: Separate FAE from actor–observer bias</b></summary>
-
-**Question:** Tom trips on a sidewalk. An onlooker thinks "He's clumsy." Tom thinks "That sidewalk is uneven." Name each attribution and the combined bias.
-
-**Solution:**
-1. Onlooker attributes Tom's trip to DISPOSITION (clumsy) → **fundamental attribution error.** ✓
-2. Tom attributes his own trip to the SITUATION (bad sidewalk).
-3. The mismatch — observer blames disposition, actor blames situation — is the **actor–observer bias.** ✓
-
-**Key:** We have access to our own situational pressures but see others mainly as actors, so we over-attribute their behavior internally.
-</details>
-
-<details>
-<summary><b>Example 3: Connect the just-world hypothesis to a health scenario</b></summary>
-
-**Question:** Some people assume a patient with lung disease "must have smoked and brought it on themselves," even without evidence. What bias is this, and why is it relevant to medicine?
-
-**Solution:**
-1. Assuming people get the outcomes they deserve → **just-world hypothesis** → victim blaming. ✓
-2. In medicine this fuels stigma (e.g., toward patients with addiction, obesity, or HIV), worsening care and adherence.
-
-**Connection:** The MCAT links attribution biases to health disparities and the patient–provider relationship.
-</details>`
-    },
-    {
       id: 'sp2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Attribution = inferring causes: dispositional (internal) vs. situational (external).
-- Kelley's covariation: high consensus + high distinctiveness + high consistency → situational; low consensus + low distinctiveness → dispositional.
-- FAE: overattribute OTHERS' behavior to disposition. Actor–observer: situation for self, disposition for others. Self-serving: success internal, failure external.
-- Just-world hypothesis → victim blaming; individualist cultures show stronger FAE.`
+- **Two kinds of cause.** Attribution infers whether behavior stems from disposition (internal traits) or situation (circumstances).
+- **Kelley's covariation.** High consensus, distinctiveness and consistency → situational; low consensus and distinctiveness, high consistency → dispositional.
+- **FAE and actor–observer.** We overweight disposition when judging others, yet cite the situation for our own behavior.
+- **Self-serving and just-world.** We credit our successes to ourselves and blame failures on circumstances; just-world belief blames victims.
+
+**Common traps**
+
+- **Self-serving bias vs. FAE.** The FAE explains OTHERS' behavior; the self-serving bias explains our OWN successes and failures.
+- **High distinctiveness as internal.** Behavior seen only in this one situation points to the situation, not to the person.
+- **Skipping consistency.** Without high consistency there is no stable pattern, so neither attribution is warranted.
+- **Assuming the FAE is universal.** It is stronger in individualist cultures; collectivist cultures weigh situational causes more.`
     }
   ]
 };

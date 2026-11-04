@@ -43,27 +43,59 @@ Modern disparities research treats discrimination the way toxicology treats a to
       type: 'text' as const,
       content: `### Worked Example — Auditing a Disparities Data Table
 
-**Passage-style problem.** A health department reports on Disease Z in City Q's two districts (North, historically segregated and low-income; South, affluent):
+A health department reports on Disease Z in City Q's two districts: North, historically segregated and low-income, and South, affluent. Each problem below audits one slice of its table.
+
+**Problem 1.** Disease Z death rates in City Q (per 100,000/yr):
 
 | Measure | North | South |
 |---------|-------|-------|
-| Crude Disease Z death rate (per 100,000/yr) | 90 | 60 |
-| Age-adjusted death rate (per 100,000/yr) | 110 | 45 |
-| Disease Z incidence (per 100,000/yr) | 150 | 140 |
-| Disease Z prevalence (per 100,000) | 400 | 900 |
-| Average survival after diagnosis | 2.7 yrs | 6.4 yrs |
+| Crude death rate | 90 | 60 |
+| Age-adjusted death rate | 110 | 45 |
 
-A columnist concludes: "South's higher prevalence proves the disease burden falls on the affluent, so resources should flow south."
+- **(a)** Did age adjustment narrow or widen the gap between the districts?
+- **(b)** What explains the change from crude to adjusted rates?
+- **(c)** With age structure held equal, about how many times South's rate is North's Disease Z death rate?
 
-**Step 1 — reconcile the crude and adjusted rates.** Adjustment WIDENED the gap (90 vs. 60 became 110 vs. 45): South's population is older (older populations accumulate deaths, inflating its crude rate), so at any given age, North residents die of Disease Z at roughly 2.4 times South's rate. Crude rates understated the disparity; a question asking "why did adjustment increase North's relative rate?" is answered by age structure, not data error.
+**(a) It widened.** Adjustment turned 90 vs. 60 into 110 vs. 45, so crude rates UNDERSTATED the disparity.
 
-**Step 2 — decode the incidence/prevalence inversion.** Incidence is nearly equal — people GET the disease at similar rates. Prevalence is 2.25x higher in the South because prevalence tracks incidence times DURATION: South's average survival is roughly 2.4 times longer, so its residents LIVE with the disease (raising prevalence), while North's residents die of it quickly (truncating prevalence). High prevalence here is a marker of BETTER outcomes — the columnist has read a survival advantage as a burden.
+**(b) Age structure.** Older populations accumulate deaths. South's older population inflates its crude rate, and North's younger one deflates its own; adjustment removes both distortions. A question asking "why did adjustment increase North's relative rate?" is answered by age structure, not data error.
 
-**Step 3 — name the disparity correctly.** The injustice-relevant numbers are age-adjusted mortality and post-diagnosis survival: equal risk of getting sick, radically unequal survival once sick — pointing at detection timing and treatment access (Part 2's cascade), not at differential disease susceptibility. Fundamental cause logic (Part 1) predicts exactly this pattern for a treatable disease.
+**(c) About 2.4 times.** $110/45 \\approx 2.4$: with age structure held equal, North's Disease Z death rate is roughly 2.4 times South's.
 
-**Step 4 — anticipate the over-adjustment trap.** Suppose a regression controls for insurance, stage at diagnosis, and hospital quality, and North's survival deficit "disappears." That does NOT acquit segregation — those controls are the very PATHWAYS segregation works through (mediators, not confounders). Adjusting for mediators answers "how does the disparity operate?", never "is there a disparity?"
+**Problem 2.** City Q also reports (per 100,000):
 
-**Verdict on the columnist:** wrong measure (prevalence for burden-of-injustice claims), wrong direction (high prevalence reflecting long survival), and a resource recommendation that would widen the actual mortality disparity.`
+| Measure | North | South |
+|---------|-------|-------|
+| Incidence per yr | 150 | 140 |
+| Prevalence | 400 | 900 |
+| Survival after diagnosis | 2.7 yrs | 6.4 yrs |
+
+A columnist: "South's higher prevalence proves the burden falls on the affluent, so resources should flow south."
+
+- **(a)** Do residents of the two districts get Disease Z at similar rates?
+- **(b)** Why is South's prevalence 2.25 times North's?
+- **(c)** Evaluate the columnist's measure, direction of inference, and recommendation.
+
+**(a) Yes.** Incidence is nearly equal (150 vs. 140): people GET the disease at similar rates.
+
+**(b) Duration.** Prevalence tracks incidence times DURATION. South's average survival is roughly 2.4 times longer, so its residents LIVE with the disease (raising prevalence), while North's residents die of it quickly (truncating prevalence).
+
+**(c) Wrong three ways.** Wrong measure (prevalence for a burden-of-injustice claim); wrong direction (high prevalence here marks BETTER outcomes, a survival advantage read as a burden); and a recommendation that would widen the actual mortality disparity.
+
+**Problem 3.** In City Q, incidence is nearly equal, but age-adjusted death rates are 110 (North) vs. 45 (South) and survival after diagnosis is 2.7 vs. 6.4 years. A regression controlling for insurance, stage and hospital quality erases North's survival deficit.
+
+- **(a)** Which numbers carry the injustice-relevant disparity?
+- **(b)** Does the pattern point at disease susceptibility or at detection and treatment access?
+- **(c)** Does the regression acquit segregation?
+- **(d)** Which question does adjusting for these variables answer?
+
+**(a) Mortality and survival.** Age-adjusted mortality and post-diagnosis survival: equal risk of getting sick, radically unequal survival once sick.
+
+**(b) Detection and access.** The gap points at detection timing and treatment access (Part 2's cascade), not differential susceptibility. Fundamental cause logic (Part 1) predicts exactly this pattern for a treatable disease.
+
+**(c) No.** Insurance, stage and hospital quality are the very PATHWAYS segregation works through: mediators, not confounders.
+
+**(d) How, not whether.** Adjusting for mediators answers "how does the disparity operate?", never "is there a disparity?"`
     },
     {
       id: 'hdis3-quiz1',
@@ -86,11 +118,11 @@ A columnist concludes: "South's higher prevalence proves the disease burden fall
             explanation: `Crude rates blend age-specific rates with the population's age mix; a young population generates few deaths overall even when its residents die at higher rates AT EVERY AGE. Adjustment strips the age-mix advantage and reveals the underlying excess — the direction of the crude-to-adjusted flip diagnoses the age structure. An older population would push the crude rate UP, not down; underreporting would depress crude and adjusted rates alike; and better care or longer life expectancy is contradicted by the higher adjusted rate.`
           },
           {
-            question: `A regression finds that a strong association between residential segregation and asthma disappears once the model controls for housing quality, air pollution exposure, and neighborhood poverty. The soundest conclusion is:`,
-            options: [`Segregation has no causal effect on asthma`, `Segregation affects asthma only through air pollution`, `The controls are mediators through which segregation acts`, `Asthma drives families into segregated neighborhoods`],
+            question: `A study finds that children in more segregated neighborhoods have higher asthma rates. Which variable is a confounder the analysts should adjust for, rather than a mediator through which segregation acts?`,
+            options: [`Air pollution levels near each child's home`, `Mold and pest levels in each child's housing`, `Each child's age at the time asthma is measured`, `Distance from each home to the nearest clinic`],
             correctAnswer: 2,
             yield: 'MEDIUM',
-            explanation: `Segregation's causal role is precisely to ASSIGN housing quality, pollution exposure, and concentrated poverty to groups; those variables are mediators downstream of it, not confounders lurking behind it. Controlling for mediators shrinks the exposure's coefficient by construction — the analysis decomposes the mechanism rather than testing existence. Mistaking mediator adjustment for refutation is the over-adjustment fallacy, and because three pathways were controlled together, no single one (such as pollution alone) can be crowned the sole route.`
+            explanation: `A confounder exists independently of the exposure while shaping the outcome: a child's age changes asthma risk, and age structures differ across neighborhoods, yet segregation cannot change how old a child is. Air pollution near the home, mold and pest levels in the housing, and distance to the nearest clinic are all ASSIGNED by segregation, so they are mediators downstream of it. Controlling for them would shrink segregation's coefficient by construction and explain how it acts, never whether it acts: the over-adjustment fallacy.`
           },
           {
             question: `Which finding would MOST directly support the weathering hypothesis over an explanation based purely on current income differences?`,
@@ -114,11 +146,17 @@ A columnist concludes: "South's higher prevalence proves the disease burden fall
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Incidence = new cases (risk of becoming sick); prevalence = existing cases (burden), rising with duration — treatments that extend survival raise prevalence with flat incidence
-- Compare groups with the RIGHT arithmetic: absolute differences vs. relative ratios answer different questions; never compare crude rates across different age structures — adjustment can flip or widen gaps
-- Segregation bundles exposures (food deserts, pollution siting, housing hazards, provider shortage); its downstream variables are mediators — adjusting for them explains the mechanism, never refutes the cause
-- Discrimination is a dosed exposure: vigilance → stress axes → allostatic load; weathering predicts age-widening, SES-resistant disparities; immigrant-generation and cross-national patterns pin health gaps on environment, not ancestry
-- Women's mortality-morbidity paradox and intersectional (interactive, not additive) disadvantage require stratified reading of any disparities table`
+- **Absolute vs. relative.** Differences and ratios answer different questions; a rare disease can pair a big ratio with a tiny gap.
+- **Segregation bundles exposures.** It assigns food deserts, pollution, housing hazards and provider shortages to groups.
+- **Discrimination as exposure.** Vigilance drives allostatic load; weathering predicts gaps that widen with age and persist at high SES.
+- **Paradoxes and intersections.** Women outlive men yet report more morbidity; disadvantages interact rather than add, so stratify.
+
+**Common traps**
+
+- **Prevalence as burden.** Prevalence counts existing cases and rises with duration, so longer survival raises it: success, not added burden.
+- **Comparing crude rates.** Different age structures distort crude rates; age adjustment can flip or widen a gap.
+- **Adjusting away the cause.** Controlling for segregation's mediators explains how it acts; it never shows it has no effect.
+- **Reading gaps as biology.** Immigrant-generation and cross-national patterns tie health gaps to exposure, not ancestry.`
     }
   ]
 };

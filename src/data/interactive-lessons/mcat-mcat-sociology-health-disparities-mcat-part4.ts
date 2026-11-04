@@ -32,15 +32,15 @@ Two exam-grade principles: (1) interventions relying on personal resources (info
 
 ### The Disparities Passage Playbook
 
-1. **Inventory the studies**: for each, note design (ecological, cohort, vignette experiment, audit, interview), level (structural/institutional/encounter/individual), and the measure used (incidence vs. prevalence, crude vs. adjusted, absolute vs. relative).
-2. **Assign each finding a causal privilege**: randomized designs (vignette/audit) license causal claims about their manipulated variable; matched observational studies localize but do not prove; ecological data suggest and never transfer to individuals (ecological fallacy); interviews supply mechanism and meaning, not magnitude.
-3. **Watch the four recurring traps**:
-   - Prevalence read as burden when it reflects survival duration
-   - Mediator adjustment read as refutation (the over-adjustment fallacy)
-   - Group-difference findings read as fixed biology when the design cannot separate exposure from ancestry
-   - Institutionally produced patterns re-described as individual choice ("noncompliance," "lifestyle")
-4. **For "which additional finding would strengthen..." items**: the right answer completes the causal chain at its weakest link — temporal order for cross-sectional claims, individual-level data for ecological claims, a dose-response or natural experiment for confounded claims.
-5. **For ethics-flavored stems** (community trust, research in disadvantaged groups): answers weighting community partnership, transparency, and returning benefit outrank efficiency-first options — the sociology section's ethics questions reward structural awareness, not paternalism.
+**Step 1 — Inventory the studies.** For each, note design (ecological, cohort, vignette experiment, audit, interview), level (structural/institutional/encounter/individual), and the measure used (incidence vs. prevalence, crude vs. adjusted, absolute vs. relative).
+
+**Step 2 — Assign each finding a causal privilege.** Randomized designs (vignette/audit) license causal claims about their manipulated variable; matched observational studies localize but do not prove; ecological data suggest and never transfer to individuals (ecological fallacy); interviews supply mechanism and meaning, not magnitude.
+
+**Step 3 — Watch the four recurring traps:** prevalence read as burden when it reflects survival duration; mediator adjustment read as refutation (the over-adjustment fallacy); group-difference findings read as fixed biology when the design cannot separate exposure from ancestry; and institutionally produced patterns re-described as individual choice ("noncompliance," "lifestyle").
+
+**Step 4 — "Which additional finding would strengthen..." items.** The right answer completes the causal chain at its weakest link: temporal order for cross-sectional claims, individual-level data for ecological claims, a dose-response or natural experiment for confounded claims.
+
+**Step 5 — Ethics-flavored stems** (community trust, research in disadvantaged groups). Answers weighting community partnership, transparency, and returning benefit outrank efficiency-first options; the sociology section's ethics questions reward structural awareness, not paternalism.
 
 ### The Course-Wide Web
 
@@ -51,27 +51,52 @@ This lesson is the sociology section's hub: stratification supplies SES and capi
       type: 'text' as const,
       content: `### Worked Example — A Capstone Passage, Played by the Book
 
-**Passage.** A state introduces automatic (opt-out) colorectal screening mailers for all residents aged 45 or more, replacing the previous physician-referral system. Researchers report:
+A state replaces its physician-referral system with automatic (opt-out) colorectal screening mailers for all residents aged 45 or more. Each problem below takes one piece of the researchers' report.
 
-- Study 1 (before/after ecological): statewide screening completion rises from 55 to 74 percent; the rise is 12 points in the top income quartile (70 to 82 percent) and 27 points in the bottom quartile (42 to 69 percent), narrowing the screening gap from 28 to 13 points — by more than half.
-- Study 2 (cohort): among screened patients, time-to-treatment after a positive result remains 2.5 times longer for uninsured patients.
-- Study 3 (interviews): low-income patients describe the mailed kit as "the first time the system came to me," while several report discarding kits due to instructions written at college reading level.
-- A commentator objects: "Screening gaps closed because poor residents finally took responsibility."
+**Problem 1.** Study 1: screening rises 12 points in the top income quartile (70 to 82 percent) and 27 points in the bottom (42 to 69 percent), narrowing the gap from 28 to 13 points. A commentator: "Gaps closed because poor residents finally took responsibility."
 
-**Question 1 — Why did an opt-out design narrow the gradient when decades of awareness campaigns widened it?**
-Fundamental cause logic: campaigns are information — a flexible resource the advantaged deploy faster. Defaults require NO personal resources; they equalize by removing the resource-dependent step (remembering, scheduling, transportation to a referral visit). The differential gain (27 vs. 12 points) is the theory's fingerprint in reverse — remove resource dependence and the disadvantaged gain most because the barrier was never motivation.
+- **(a)** Decades of awareness campaigns widened this gradient. Why did an opt-out design narrow it?
+- **(b)** What does the bigger gain in the bottom quartile reveal about the old barrier?
+- **(c)** What is wrong with the commentator's explanation?
 
-**Question 2 — What does Study 2 add?**
-The intervention fixed ONE stage of the access cascade (initiation) and left another (post-screening treatment) untouched: insurance still gates treatment speed. Expect the item "which intervention addresses Study 2's finding?" — the answer lives at the structural/coverage level, not more mailers, not navigation alone. Disparities relocate to the stages a policy does not reach.
+**(a) Defaults need no resources.** By fundamental cause logic, campaigns are information, a flexible resource the advantaged deploy faster. Defaults require NO personal resources: they equalize by removing the resource-dependent step (remembering, scheduling, transportation to a referral visit).
 
-**Question 3 — Evaluate the commentator.**
-The claim converts a DESIGN effect into a trait explanation ("responsibility") — the individual-choice trap. The data directly contradict it: the same individuals under the referral system screened less; what changed was the system's architecture, not residents' character. This is also the interactionist point about "compliance" language assigning moral blame for structural facts.
+**(b) The fingerprint in reverse.** The differential gain (27 vs. 12 points) is the theory's fingerprint in reverse: remove resource dependence and the disadvantaged gain most, because the barrier was never motivation.
 
-**Question 4 — What do the interviews contribute, and what can't they?**
-Mechanism and meaning: the "system came to me" narrative explains WHY defaults work here (they reverse the institutional burden of navigation), and the reading-level complaint identifies a health-literacy refinement (a real equity leak inside a successful program). As interview data, they quantify nothing — using them to estimate effect sizes would be the wrong-tool answer.
+**(c) The individual-choice trap.** The claim converts a DESIGN effect into a trait ("responsibility"). The same residents screened less under referral; what changed was the system's architecture, not their character. It is also the interactionist point about "compliance" language assigning moral blame.
 
-**Question 5 — Which additional finding would MOST strengthen the causal claim for the mailer program?**
-Study 1 is ecological and uncontrolled — secular trends could contribute. Strongest strengthener: a neighboring comparable state without the program showing flat screening over the same period (difference-in-differences logic), or staggered county-level rollout with screening rising county-by-county as the program arrives. Both supply the missing counterfactual; "larger sample" answers do not.`
+**Problem 2.** Study 1 is a before/after ecological study of the one state: statewide screening completion rose from 55 to 74 percent after the mailers began.
+
+- **(a)** What weakness leaves the program's causal claim open?
+- **(b)** Which additional finding would MOST strengthen the causal claim?
+- **(c)** Would a larger sample of residents help?
+
+**(a) No counterfactual.** Study 1 is ecological and uncontrolled, so secular trends could contribute to the rise.
+
+**(b) A comparison over time.** A neighboring comparable state without the program showing flat screening over the same period (difference-in-differences logic), or a staggered county rollout with screening rising as the program reaches each county. County data suffice here: the claim is about a population effect.
+
+**(c) No.** More residents shrink random error but leave secular trends uncontrolled; only a comparison group supplies the counterfactual.
+
+**Problem 3.** Study 2 (cohort): among screened patients, time-to-treatment after a positive result remains 2.5 times longer for uninsured patients.
+
+- **(a)** Which stage of the access cascade did the mailers fix, and which stage does this finding show untouched?
+- **(b)** Which kind of intervention addresses this finding?
+
+**(a) Initiation, not treatment.** The mailers fixed ONE stage (initiation) and left another (post-screening treatment) untouched: insurance still gates treatment speed.
+
+**(b) Coverage.** The answer lives at the structural, coverage level: not more mailers, not navigation alone. Disparities relocate to the stages a policy does not reach.
+
+**Problem 4.** Study 3 (interviews): low-income patients describe the mailed kit as "the first time the system came to me," while several report discarding kits due to instructions written at college reading level.
+
+- **(a)** What does the "system came to me" narrative explain?
+- **(b)** What does the reading-level complaint reveal?
+- **(c)** Could these interviews estimate the program's effect size?
+
+**(a) Why defaults work.** The narrative supplies mechanism and meaning: defaults reverse the institutional burden of navigation.
+
+**(b) An equity leak.** The complaint identifies a health-literacy refinement: a real equity leak inside a successful program.
+
+**(c) No.** As interview data, they quantify nothing; using them to estimate effect sizes would be the wrong-tool answer.`
     },
     {
       id: 'hdis4-quiz1',
@@ -122,11 +147,17 @@ Study 1 is ecological and uncontrolled — secular trends could contribute. Stro
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Theory-tag medicine passages: system maintenance (functionalist), power and profit (conflict), negotiated meaning and labels (interactionist), flexible resources chasing technology (fundamental cause)
-- Match intervention to mechanism level — structural, institutional, encounter, individual; resource-dependent designs (opt-in, information) widen gaps, defaults narrow them; fixing one cascade stage relocates disparities to the next
-- The four traps: prevalence-as-burden, mediator-adjustment-as-refutation, exposure-vs-ancestry conflation, and structure relabeled as individual choice
-- Strengthen-the-claim answers complete the weakest causal link: counterfactual comparisons (difference-in-differences, staggered rollout) for ecological claims, individual longitudinal data for level jumps
-- Ethics stems reward community partnership, transparency, and returned benefit — and the whole sociology section rewards connecting this hub lesson to stratification, interaction, demographics, and the stress biology that embodies them`
+- **Theory-tag the passage.** Functionalist: maintenance; conflict: power and profit; interactionist: labels; fundamental cause: resources chasing technology.
+- **Match remedy to level.** Fix the level the data implicate; opt-in designs widen gaps, and automatic defaults narrow them.
+- **Strengthen the weakest link.** Add a counterfactual for ecological claims and individual longitudinal data for level jumps.
+- **Ethics stems.** Community partnership, transparency and returned benefit outrank detached or efficiency-first designs.
+
+**Common traps**
+
+- **Prevalence as burden.** High prevalence can reflect longer survival rather than a heavier disease burden.
+- **Mediator adjustment as refutation.** Adjusting for a cause's pathways explains its mechanism; it never refutes it.
+- **Exposure read as ancestry.** Read a group gap as exposure-driven unless a design separating exposure from ancestry still finds it.
+- **Structure relabeled as choice.** "Noncompliance" and "lifestyle" framings recast institutional barriers as personal failings.`
     }
   ]
 };

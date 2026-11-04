@@ -50,6 +50,50 @@ These three are distinguished by the SOURCE of social influence.
 | **That's-not-all** | Add a bonus before the person decides |`
     },
     {
+      id: 'sp3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Social Influence
+
+**Problem 1.** A nurse gives a drug because the attending ordered it. A teen starts vaping because their friend group does. A shopper buys an upgrade after saying a small "yes" earlier.
+
+- **(a)** What is the source of influence on the nurse, and which type of influence is it?
+- **(b)** What is the source of influence on the teen, and which type is it?
+- **(c)** What is the source of influence on the shopper, and which type is it?
+
+**(a) The nurse.** An explicit command from an AUTHORITY → obedience.
+
+**(b) The teen.** Matching the GROUP's behavior, an implicit norm → conformity.
+
+**(c) The shopper.** Yielding to escalating REQUESTS → compliance (foot-in-the-door). The source decides it: authority (obedience), peer norm (conformity) or a request (compliance).
+
+**Problem 2.** Participant 1 faces a clear line-judgment task, echoes a wrong unanimous group, but privately knows the right answer. Participant 2 judges how far a still dot of light in a dark room seems to move, shifts to the group's estimate, and keeps it when later tested alone.
+
+- **(a)** Is Participant 1 showing public compliance or private acceptance?
+- **(b)** Is Participant 1 showing normative or informational conformity?
+- **(c)** Which type is Participant 2 showing?
+- **(d)** Which features of a situation push toward each type?
+
+**(a) Participant 1's agreement.** Public compliance: the participant agrees aloud but privately disagrees.
+
+**(b) Participant 1's motive.** Normative: on a clear task the only reason to go along is the wish to fit in.
+
+**(c) Participant 2.** Informational: the light's apparent motion is ambiguous, so the group serves as information; keeping its estimate when alone shows genuine private acceptance (Sherif's autokinetic studies).
+
+**(d) What pushes each.** Ambiguity and the importance of accuracy push toward informational influence; the desire for acceptance pushes toward normative influence.
+
+**Problem 3.** In Milgram's baseline, most participants obeyed to the maximum shock. In one variation the experimenter phones in orders from another room; in another the participant must press the victim's hand onto the "shock plate."
+
+- **(a)** How does obedience change when the experimenter gives orders by phone?
+- **(b)** How does obedience change when the participant must touch the victim?
+- **(c)** What do the two results show about the cause of obedience?
+
+**(a) Remote authority.** Obedience drops markedly: an absent authority weakens the legitimacy and pressure of the command.
+
+**(b) Closer victim.** Obedience also drops: the victim's proximity and the participant's direct involvement make the harm harder to ignore.
+
+**(c) Situational cause.** Both manipulations change the SITUATION, not the person, so obedience is largely situationally driven.`
+    },
+    {
       id: 'sp3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Conformity & Obedience** 🎯`,
@@ -80,59 +124,26 @@ These three are distinguished by the SOURCE of social influence.
       }
     },
     {
-      id: 'sp3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Social Influence
-
-<details>
-<summary><b>Example 1: Classify the type of influence</b></summary>
-
-**Question:** (a) A nurse gives a drug because the attending ordered it. (b) A teen starts vaping because their friend group does. (c) A shopper buys an upgrade after a small "yes" earlier. Classify each.
-
-**Solution:**
-- (a) Explicit command from an AUTHORITY → **obedience.** ✓
-- (b) Matching the GROUP's behavior (implicit norm) → **conformity.** ✓
-- (c) Yielding to escalating REQUESTS → **compliance** (foot-in-the-door). ✓
-
-**MCAT key:** Identify the source — authority (obedience), peer norm (conformity), or a request (compliance).
-</details>
-
-<details>
-<summary><b>Example 2: Predict the effect of a situational manipulation in Milgram's paradigm</b></summary>
-
-**Question:** In Milgram's baseline condition, most participants obeyed to the maximum shock. Predict the effect of (a) moving the experimenter to another room giving orders by phone and (b) placing the participant's hand on the victim's "shock plate."
-
-**Solution:**
-1. (a) Remote authority weakens the legitimacy/pressure of the command → obedience DROPS markedly. ✓
-2. (b) Increasing the victim's proximity and the participant's direct involvement → obedience DROPS. ✓
-
-**Why it matters:** Both manipulations change the SITUATION, not the person — reinforcing that obedience is largely situationally driven.
-</details>
-
-<details>
-<summary><b>Example 3: Distinguish normative from informational conformity</b></summary>
-
-**Question:** In a clear, easy judgment task, a participant still goes along with a wrong unanimous group but privately knows the right answer. In an ambiguous task, a participant adopts the group's answer and believes it. Which is normative and which informational?
-
-**Solution:**
-1. Clear task, public agreement but private disagreement → **normative** (wants to fit in). ✓
-2. Ambiguous task, genuine private acceptance → **informational** (wants to be correct). ✓
-
-**Connection:** Ambiguity and importance of accuracy push toward informational influence; desire for acceptance pushes toward normative influence.
-</details>`
-    },
-    {
       id: 'sp3-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Conformity = group norms (Asch); compliance = direct request; obedience = authority (Milgram).
-- Normative conformity = to be liked (public); informational = to be correct (private acceptance).
-- Asch: many conform even on an obvious task; one ally collapses conformity. Milgram: a majority obeyed to the maximum shock; obedience is situational.
-- Compliance tricks: foot-in-the-door (small→large), door-in-the-face (large→small), lowball, that's-not-all.
+- **Three sources of influence.** Conformity follows group norms (Asch), compliance a direct request, obedience an authority (Milgram).
+- **Normative vs. informational.** Normative conformity seeks acceptance (public compliance); informational seeks accuracy (private belief).
+- **Asch's unanimity.** Many conform to a wrong unanimous majority, but one dissenting ally makes conformity drop sharply.
+- **Milgram's obedience.** A majority obeyed to the maximum shock; a remote authority, a closer victim or rebelling peers cut it.
+
+**Common traps**
+
+- **Mixing up the door techniques.** Foot-in-the-door goes small, then larger; door-in-the-face goes large (refused), then smaller.
+- **Lowball vs. that's-not-all.** Lowball raises the cost after commitment; that's-not-all adds a bonus before the person decides.
+- **Obedience as a personality flaw.** Milgram's participants were ordinary people; changing the situation is what changed obedience.
+- **Ever-bigger groups, ever more conformity.** Conformity rises with group size but plateaus at about 3–4 confederates.
 
 <!-- yield:low -->
-- Low-yield extras: the exact Asch and Milgram percentages (conformity on about a third of critical trials, about 75% conforming at least once; 65% to the 450-volt maximum)
+**Low-yield extras**
+
+- The exact Asch and Milgram percentages: conformity on about a third of critical trials, about 75% conforming at least once; 65% to the 450-volt maximum.
 <!-- /yield -->`
     }
   ]
