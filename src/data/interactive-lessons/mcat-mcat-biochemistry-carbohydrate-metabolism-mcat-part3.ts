@@ -57,6 +57,58 @@ Cytosolic, parallel to glycolysis, **no ATP made or used**. Two products, two ph
 **G6PD deficiency:** the most common human enzyme deficiency. Oxidant stress (fava beans, sulfa drugs, antimalarials, infection) overwhelms glutathione regeneration → hemoglobin precipitates (**Heinz bodies**) → **hemolytic anemia** with bite cells. Mild advantage against malaria explains its prevalence.`
     },
     {
+      id: 'cm3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Storage & Shunt Problems
+
+**Problem 1.** During an ischemic forearm exercise test, a healthy subject's venous lactate rises several-fold; a patient's lactate stays flat, and the patient cramps early.
+
+- **(a)** Which enzyme is deficient?
+- **(b)** Why does lactate fail to rise, and why the early cramps?
+- **(c)** How does the lactate picture differ in von Gierke disease?
+
+**(a) Muscle phosphorylase.** Flat lactate despite exercise means muscle cannot mobilize glycogen: **muscle glycogen phosphorylase (McArdle disease)**. Glycolysis from blood glucose still works, but glycogen, the rapid fuel, is locked.
+
+**(b) No lactate burst.** The glycogen-fed burst of anaerobic glycolysis never happens; the early cramps reflect the resulting ATP shortfall in working fibers.
+
+**(c) The contrast.** "Exercise intolerance + no lactate rise" is the McArdle fingerprint; in von Gierke disease, lactate is chronically HIGH.
+
+<!-- yield:low -->
+- McArdle extras: in the forearm test, ammonia rises even though lactate stays flat (AMP is deaminated as ATP runs short), and severe cramping can release myoglobin into the urine. Patients also report a "second wind": with continued gentle exercise, blood glucose and free fatty acids arrive and oxidative metabolism substitutes for the missing glycogenolysis, easing symptoms.
+<!-- /yield -->
+
+**Problem 2.** A patient of Mediterranean descent develops dark urine, jaundice, and bite cells on smear two days after starting an antimalarial.
+
+- **(a)** What does the drug do inside red blood cells?
+- **(b)** What do RBCs need to detoxify peroxides, and how is it regenerated?
+- **(c)** Which enzyme deficiency explains this patient's vulnerability, and why does it break the defense?
+- **(d)** How does the shortfall produce the findings?
+
+**(a) Oxidant stress.** The drug generates oxidative stress (peroxides, superoxide) inside RBCs.
+
+**(b) GSH and NADPH.** Detoxification requires reduced glutathione (GSH); regenerating GSH requires NADPH via glutathione reductase.
+
+**(c) G6PD deficiency.** With deficient G6PD, the oxidative PPP cannot supply NADPH on demand, so GSH is exhausted.
+
+**(d) Heinz bodies to hemolysis.** Peroxides oxidize hemoglobin; denatured Hb precipitates as Heinz bodies that splenic macrophages "bite" out, and membranes fail: hemolysis, hemoglobinuria, jaundice. G6PD deficiency is X-linked and protects against malaria. The chain: drug → oxidant stress → NADPH/GSH shortfall → Heinz bodies/bite cells.
+
+**Problem 3.** Two patients each lack one enzyme of glycogen metabolism: one lacks branching enzyme, the other debranching enzyme.
+
+- **(a)** What glycogen forms when branching enzyme is deficient?
+- **(b)** What glycogen forms when debranching enzyme is deficient?
+- **(c)** Why is fasting hypoglycemia milder in debrancher deficiency than in von Gierke disease?
+
+**(a) No brancher.** Synthase still elongates $\\alpha$-1,4 chains: very LONG, UNBRANCHED chains, poorly soluble with fewer ends, and the abnormal polysaccharide damages the liver.
+
+**(b) No debrancher.** Phosphorylase strips chains down to 4 residues from each branch and stops: a "limit dextrin"-like glycogen with SHORT outer branches accumulates (Cori disease).
+
+**(c) Outer residues still released.** The outer $\\alpha$-1,4 residues remain releasable, so some glucose is mobilized. Structure predicts pathology: brancher missing = long straight chains; debrancher missing = short-branched limit dextrins.
+
+<!-- yield:low -->
+- Branching-enzyme deficiency is called Andersen disease.
+<!-- /yield -->`
+    },
+    {
       id: 'cm3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Glycogen & the PPP** 🎯`,
@@ -105,67 +157,21 @@ Cytosolic, parallel to glycolysis, **no ATP made or used**. Two products, two ph
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Glycogen: $\\alpha$-1,4 chains, $\\alpha$-1,6 branches; UDP-glucose builds it (synthase + brancher); phosphorylase (B6, phosphorolysis → G1P) + debrancher tear it down
-- Phosphorylation = breakdown mode (phosphorylase ON, synthase OFF); insulin/PP1 reverses; muscle adds AMP and Ca$^{2+}$ shortcuts, liver phosphorylase senses glucose
-- Disease anchors: von Gierke = G6Pase, McArdle = muscle phosphorylase (no exercise lactate rise), Cori = debrancher, Pompe = lysosomal acid $\\alpha$-glucosidase (cardiomegaly)
-- PPP: G6PD (rate-limiting, NADPH-inhibited) makes 2 NADPH + R5P; nonoxidative phase reversible (transketolase needs TPP)
-- NADPH = biosynthesis + glutathione defense; G6PD deficiency = oxidant-drug hemolysis with Heinz bodies
+- **Building and breaking glycogen.** UDP-glucose feeds synthase and brancher; phosphorylase (B6) releases G1P; the debrancher clears branches.
+- **Phosphorylation means breakdown.** PKA activates phosphorylase via phosphorylase kinase and directly inactivates synthase; insulin (PP1) reverses both.
+- **The PPP's products.** G6PD (rate-limiting, NADPH-inhibited) makes 2 NADPH and ribose-5-P; no ATP is made or used.
+- **NADPH's jobs.** NADPH drives lipid synthesis and keeps glutathione reduced; G6PD deficiency causes oxidant-triggered hemolysis.
+
+**Common traps**
+
+- **Mixing up storage diseases.** von Gierke = G6Pase; Cori = debrancher; McArdle = muscle phosphorylase; Pompe = lysosomal acid $\\alpha$-glucosidase (cardiomegaly).
+- **Lactate rising in McArdle.** Muscle phosphorylase loss means NO lactate rise on exercise; in von Gierke lactate is chronically high.
+- **Phosphorylase freeing glucose.** Phosphorolysis yields G1P; only the branch-point residues (~10%) come off as free glucose.
+- **Oxidative phase for ribose.** With NADPH ample, cells make ribose-5-P by running the reversible nonoxidative phase from F6P and G3P.
 
 <!-- yield:low -->
 - Low-yield extras: glycogenin primes new granules; Ca$^{2+}$ works through phosphorylase kinase's calmodulin subunit; Andersen disease is the name for branching-enzyme deficiency; McArdle extras (ammonia rise, myoglobinuria, the "second wind")
 <!-- /yield -->`
-    },
-    {
-      id: 'cm3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Storage & Shunt Problems
-
-<details>
-<summary><b>Example 1: McArdle disease exercise test</b></summary>
-
-**Question:** During an ischemic forearm exercise test, a healthy subject's venous lactate rises several-fold; a patient's lactate stays flat, and the patient cramps early. Which enzyme is deficient, and why does lactate fail to rise?
-
-**Solution:**
-1. Flat lactate despite exercise = muscle cannot mobilize glycogen → **muscle glycogen phosphorylase (McArdle disease)**. Glycolysis from blood glucose still works, but glycogen (the rapid fuel) is locked.
-2. Lactate fails to rise because the glycogen-fed burst of anaerobic glycolysis never happens; the early cramps reflect the resulting ATP shortfall in working fibers.
-
-**MCAT Strategy:** "Exercise intolerance + no lactate rise" is the McArdle fingerprint; contrast with von Gierke, where lactate is chronically HIGH.
-</details>
-
-<!-- yield:low -->
-- McArdle extras: in the forearm test, ammonia rises even though lactate stays flat (AMP is deaminated as ATP runs short), and severe cramping can release myoglobin into the urine. Patients also report a "second wind": with continued gentle exercise, blood glucose and free fatty acids arrive and oxidative metabolism substitutes for the missing glycogenolysis, easing symptoms.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 2: Predict glycogen structure from a missing enzyme</b></summary>
-
-**Question:** Describe the glycogen produced when (a) branching enzyme is deficient, and (b) debranching enzyme is deficient.
-
-**Solution:**
-1. (a) Without the brancher, synthase still elongates $\\alpha$-1,4 chains: very LONG, UNBRANCHED chains — poorly soluble, fewer ends, and the abnormal polysaccharide damages the liver.
-2. (b) Without the debrancher, phosphorylase strips chains down to 4 residues from each branch and stops: a "limit dextrin"-like glycogen with SHORT outer branches accumulates (Cori disease); fasting hypoglycemia is milder than von Gierke because the outer $\\alpha$-1,4 residues are still releasable.
-3. Structure predicts pathology: both are storage diseases, but the stored material differs in architecture.
-
-**MCAT Strategy:** Tie each enzyme to a structural signature — brancher missing = long straight chains; debrancher missing = short-branched limit dextrins.
-</details>
-
-<!-- yield:low -->
-- Branching-enzyme deficiency is called Andersen disease.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 3: G6PD deficiency drug challenge</b></summary>
-
-**Question:** A patient of Mediterranean descent develops dark urine, jaundice, and bite cells on smear two days after starting an antimalarial. Trace the biochemical chain from drug to hemolysis.
-
-**Solution:**
-1. The drug generates oxidative stress (peroxides, superoxide) inside RBCs.
-2. Detoxification requires reduced glutathione (GSH); regenerating GSH requires NADPH via glutathione reductase.
-3. With deficient G6PD, the oxidative PPP cannot supply NADPH on demand; GSH is exhausted.
-4. Peroxides oxidize hemoglobin → denatured Hb precipitates as Heinz bodies; splenic macrophages "bite" them out; membranes fail → hemolysis, hemoglobinuria, jaundice.
-
-**MCAT Strategy:** The tested chain is always drug → oxidant stress → NADPH/GSH shortfall → Heinz bodies/bite cells. Remember G6PD is X-linked and the deficiency is protective against malaria.
-</details>`
     }
   ]
 };

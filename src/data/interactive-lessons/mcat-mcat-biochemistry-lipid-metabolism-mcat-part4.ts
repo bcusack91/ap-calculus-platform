@@ -42,6 +42,54 @@ The cholesterol sensor is the ER transcription factor **SREBP**: when ER cholest
 | Fasting | Low/high | HSL on → FFA + glycerol out | Beta-oxidation + ketogenesis on; malonyl-CoA low → CPT-I open |`
     },
     {
+      id: 'lm4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Integration Problems
+
+**Problem 1.** During a large carbohydrate meal, a glucose carbon in the liver ends up in an adipocyte's stored triacylglycerol.
+
+- **(a)** How does the glucose carbon become mitochondrial acetyl-CoA?
+- **(b)** How does that acetyl-CoA become palmitate?
+- **(c)** How does the palmitate leave the liver?
+- **(d)** How does the fatty acid get into the adipocyte for storage?
+
+**(a) Glucose to acetyl-CoA.** Glycolysis (liver): glucose → pyruvate; pyruvate dehydrogenase (mitochondrion) → acetyl-CoA.
+
+**(b) Building palmitate.** Citrate shuttle → cytosolic acetyl-CoA → ACC → malonyl-CoA → FAS builds palmitate (NADPH from the pentose phosphate pathway).
+
+**(c) Export.** Palmitate is esterified to glycerol-3-phosphate → TG, packaged with apoB-100 into VLDL.
+
+**(d) Storage.** Adipose capillary LPL (insulin-stimulated, apoC-II-activated) hydrolyzes the VLDL TG; the fatty acid enters the adipocyte and is re-esterified. Passages love asking which step a drug or deficiency would break.
+
+**Problem 2.** A drug inhibits ATP-citrate lyase in hepatocytes.
+
+- **(a)** What happens to cytosolic acetyl-CoA?
+- **(b)** What happens to fatty acid synthesis?
+- **(c)** What happens to cholesterol synthesis and plasma LDL?
+
+**(a) Acetyl-CoA supply.** Cytosolic acetyl-CoA falls, because mitochondrial acetyl-CoA reaches the cytosol only as citrate cleaved by this enzyme.
+
+**(b) Fatty acid synthesis.** With less cytosolic acetyl-CoA from (a), ACC makes less malonyl-CoA, so fatty acid synthesis drops.
+
+**(c) Cholesterol and LDL.** The same cytosolic acetyl-CoA from (a) is the substrate for cholesterol synthesis, which falls; this triggers SREBP-driven LDL-receptor upregulation, so plasma LDL falls (statin logic, one step further upstream). Any block upstream of cytosolic acetyl-CoA hits both pathways.
+
+<!-- yield:low -->
+- Problem 2 aside: a real drug works this way. Bempedoic acid inhibits ATP-citrate lyase and lowers plasma LDL.
+<!-- /yield -->
+
+**Problem 3.** Compare the direction of lipid traffic in adipose tissue at 1 hour and at 18 hours after a mixed meal.
+
+- **(a)** Which way does lipid move at 1 hour, and which enzymes control it?
+- **(b)** Which way does it move at 18 hours, and where do the products go?
+- **(c)** How does the same tissue reverse direction so quickly?
+
+**(a) 1 hour: storage.** Fed, insulin high: adipose **LPL** (insulin-induced) unloads chylomicron/VLDL TG into the adipocyte, and **HSL is dephosphorylated and off**. Net flux IN.
+
+**(b) 18 hours: mobilization.** Fasted, glucagon/catecholamines up: **HSL is phosphorylated and on**. FFA leave on albumin, glycerol goes to the liver, and low hepatic malonyl-CoA lets CPT-I admit the FFA for beta-oxidation and ketogenesis. Net flux OUT.
+
+**(c) A phosphorylation switch.** HSL's phosphorylation state flips within minutes, with no new HSL synthesized. Insulin = dephosphorylation = storage; glucagon/epinephrine = PKA phosphorylation = mobilization.`
+    },
+    {
       id: 'lm4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Synthesis, Cholesterol & Integration** 🎯`,
@@ -90,65 +138,21 @@ The cholesterol sensor is the ER transcription factor **SREBP**: when ER cholest
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Synthesis vs oxidation: cytosol vs matrix, NADPH vs FAD/NAD$^+$, ACP vs CoA, malonyl-CoA in vs acetyl-CoA out
-- Citrate shuttle exports acetyl-CoA; **ACC (biotin, rate-limiting)** makes malonyl-CoA — insulin/citrate ON, glucagon/AMPK/palmitoyl-CoA OFF
-- Palmitate stoichiometry: 8 acetyl-CoA + 7 ATP + 14 NADPH; humans cannot desaturate past C9 → linoleate/linolenate essential
-- Cholesterol: **HMG-CoA reductase** rate-limiting; statins inhibit it → SREBP senses low cholesterol → more LDL receptors → lower plasma LDL
-- AMPK phosphorylates ACC and HMG-CoA reductase OFF; malonyl-CoA's fall reopens CPT-I
-- Fed = store and build (VLDL out); fasting = HSL, beta-oxidation, ketones
+- **Synthesis is not oxidation reversed.** Synthesis: cytosol, NADPH, ACP, malonyl-CoA added; oxidation: matrix, FAD/NAD$^+$, CoA.
+- **ACC is rate-limiting.** The citrate shuttle exports acetyl-CoA; ACC (biotin) makes malonyl-CoA, switched on by insulin and citrate.
+- **HMG-CoA reductase gates cholesterol.** Statins inhibit it; SREBP senses low cholesterol and adds LDL receptors, lowering LDL.
+- **Fed builds, fasting burns.** Fed: ACC and FAS on, VLDL out; fasting: HSL on, beta-oxidation and ketones, CPT-I open.
+
+**Common traps**
+
+- **Statins blocking absorption.** Statins act indirectly: less hepatic synthesis upregulates LDL receptors, which clear plasma LDL.
+- **AMPK as an activator.** AMPK phosphorylates ACC and HMG-CoA reductase, and phosphorylation switches both enzymes OFF.
+- **Acetyl-CoA on the carnitine shuttle.** Acetyl-CoA leaves the matrix only as citrate; the carnitine shuttle imports acyl groups.
+- **Making your own linoleate.** Humans cannot desaturate beyond C9, so linoleic and alpha-linolenic acids must be eaten.
 
 <!-- yield:low -->
 - Low-yield extras: bempedoic acid inhibits ATP-citrate lyase and lowers LDL by statin-like logic
 <!-- /yield -->`
-    },
-    {
-      id: 'lm4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Integration Problems
-
-<details>
-<summary><b>Example 1: Trace a carbon from glucose to stored fat</b></summary>
-
-**Question:** A carbon atom enters an adipocyte-bound pathway as glucose during a large carbohydrate meal. Trace it into stored triacylglycerol.
-
-**Solution:**
-1. Glycolysis (liver): glucose → pyruvate; pyruvate dehydrogenase (mitochondrion) → acetyl-CoA.
-2. Citrate shuttle → cytosolic acetyl-CoA → ACC → malonyl-CoA → FAS builds palmitate (NADPH from the pentose phosphate pathway).
-3. Palmitate esterified to glycerol-3-phosphate → TG, packaged with apoB-100 into VLDL.
-4. Adipose capillary LPL (insulin-stimulated, apoC-II-activated) hydrolyzes VLDL TG; the fatty acid enters the adipocyte and is re-esterified for storage.
-
-**MCAT Strategy:** This one question chains five sub-topics; practice writing the arrow diagram from memory — passages love asking which step a given drug or deficiency would break.
-</details>
-
-<details>
-<summary><b>Example 2: Predict the effect of an ATP-citrate lyase inhibitor</b></summary>
-
-**Question:** A drug inhibits ATP-citrate lyase in hepatocytes. Predict effects on (a) fatty acid synthesis, (b) cytosolic acetyl-CoA, (c) plasma LDL.
-
-**Solution:**
-1. (a) Cytosolic acetyl-CoA supply falls → less malonyl-CoA → fatty acid synthesis drops.
-2. (b) Cytosolic acetyl-CoA falls — and with it, substrate for cholesterol synthesis too.
-3. (c) Reduced cholesterol synthesis triggers SREBP-driven LDL-receptor upregulation → plasma LDL falls (the same logic as a statin, one step further upstream).
-
-**MCAT Strategy:** Both fatty acids AND cholesterol begin from cytosolic acetyl-CoA; any block upstream of it hits both pathways at once.
-</details>
-
-<!-- yield:low -->
-- Example 2 aside: a real drug works this way. Bempedoic acid inhibits ATP-citrate lyase and lowers plasma LDL.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 3: The 24-hour lipid ledger</b></summary>
-
-**Question:** Compare the dominant direction of lipid traffic in adipose tissue at 1 hour and at 18 hours after a mixed meal, naming the controlling enzymes.
-
-**Solution:**
-1. 1 hour (fed, insulin high): adipose **LPL** (insulin-induced) unloads chylomicron/VLDL TG into the adipocyte; **HSL is dephosphorylated and off**; net flux IN.
-2. 18 hours (fasted, glucagon/catecholamines up): **HSL phosphorylated and on**; FFA leave on albumin, glycerol to the liver; hepatic malonyl-CoA is low, so CPT-I admits the FFA the liver receives for beta-oxidation and ketogenesis; net flux OUT.
-3. The SAME tissue reverses its lipolysis switch through HSL's phosphorylation state, which flips within minutes without any new HSL being synthesized.
-
-**MCAT Strategy:** Insulin = dephosphorylation = storage; glucagon/epinephrine = phosphorylation via PKA = mobilization. That single rule answers most fed/fasted regulation questions.
-</details>`
     }
   ]
 };

@@ -50,6 +50,47 @@ Denaturation destroys 2°-4° structure while leaving the primary sequence intac
 Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underlie amyloid diseases and prion pathology.`
     },
     {
+      id: 'aa3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Structure & Denaturation Logic
+
+**Problem 1.** A tetrameric protein's surface Glu is mutated to Lys, breaking a salt bridge with an Arg. Gel filtration now shows a species one-quarter the native mass, whose CD spectrum (a readout of secondary structure) matches the native protein's.
+
+- **(a)** What does the quarter-mass species show about the assembly?
+- **(b)** Is each subunit still folded?
+- **(c)** Which structural level is disrupted?
+
+**(a) Quarter mass.** A species one-quarter the native mass is a single subunit: the tetramer has dissociated into monomers, so the broken salt bridge must have linked two subunits.
+
+**(b) Still folded.** A native-like CD spectrum means the monomers keep their secondary structure: each chain is still folded, and only the assembly falls apart.
+
+**(c) Quaternary.** With the salt bridge between chains (a) and each chain folded (b), **quaternary structure** is disrupted. Ask "within one chain or between chains?": the same interaction can be tertiary or quaternary depending on where it acts.
+
+**Problem 2.** An enzyme retains activity in 8 M urea but loses activity when $\\beta$-mercaptoethanol is added along with the urea. Activity does not return on dilution.
+
+- **(a)** What does stability in urea alone suggest?
+- **(b)** What does the loss of activity with $\\beta$-mercaptoethanol reveal?
+- **(c)** Why might activity fail to return on dilution?
+
+**(a) Urea alone.** The fold is unusually robust to loss of noncovalent interactions, implying covalent crosslinks hold it together.
+
+**(b) The reducing agent.** Reducing the protein destroys activity, so **disulfide bonds** were the critical stabilizers. This is the classic dissection: urea = noncovalent, $\\beta$-ME/DTT = covalent disulfides.
+
+**(c) No recovery.** The reduced protein misfolds or aggregates instead of re-forming its native disulfide pairs; the disulfides likely needed to form in a specific order.
+
+**Problem 3.** Two peptide segments are compared: segment 1 is Ala-Leu-Glu-Lys-Met-Ala; segment 2 is Pro-Gly-Pro-Ser-Gly-Pro.
+
+- **(a)** Does segment 1 contain helix formers or helix breakers?
+- **(b)** Why is segment 2 hostile to a helix?
+- **(c)** Which segment is more likely to form an $\\alpha$-helix?
+
+**(a) Segment 1.** It contains good helix formers (Ala, Leu, Met, Glu, Lys) and no breakers.
+
+**(b) Segment 2.** It is loaded with Pro (rigid, no N-H for helix H-bonding) and Gly (too flexible); this Pro-Gly-rich pattern is collagen-like.
+
+**(c) The helix former.** **Segment 1.** Two facts suffice: Pro and Gly disfavor $\\alpha$-helices, and Ala is the prototypical helix former.`
+    },
+    {
       id: 'aa3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Protein Structure & Folding** 🎯`,
@@ -98,59 +139,23 @@ Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underl
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Peptide bond: planar (resonance), trans-preferring, kinetically stable; formed by condensation, broken by hydrolysis
-- 1° sequence → 2° backbone H-bonding ($\\alpha$-helix i to i+4; $\\beta$-sheets) → 3° side-chain interactions → 4° multi-subunit assembly
-- Hydrophobic effect (solvent entropy) drives folding; sequence encodes the fold (Anfinsen); chaperones prevent aggregation
-- Match the denaturant to its target: reducing agents = disulfides only; SDS = hydrophobic; pH = ionic/H-bonds
-- Cooperativity (hemoglobin) = quaternary phenomenon
+- **The peptide bond.** Formed by condensation, broken by slow hydrolysis; resonance makes it planar, rigid and usually trans.
+- **Four structural levels.** 1° sequence, 2° backbone H-bonds, 3° one chain's side-chain fold, 4° subunits (cooperativity).
+- **The hydrophobic effect.** Solvent entropy from burying nonpolar side chains drives folding; the sequence encodes the fold.
+- **Match denaturant to target.** Reducing agents break only disulfides; urea breaks H-bonds and the hydrophobic effect.
+
+**Common traps**
+
+- **Chaperones dictate the fold.** Chaperones prevent aggregation; Anfinsen showed the native fold is encoded in the sequence.
+- **Backbone H-bonds drive folding.** They mostly replace H-bonds made with water; the solvent entropy gain dominates.
+- **Denaturing cuts peptide bonds.** Denaturants destroy 2° to 4° structure but leave the primary sequence intact.
+- **Bond type sets the level.** A salt bridge within one chain is tertiary; the same interaction between subunits is quaternary.
 
 <!-- yield:low -->
-- Low-yield extras: in vivo, correct disulfide pairing is often aided by the ER enzyme protein disulfide isomerase (PDI), which reshuffles mispaired disulfides
+**Low-yield extras**
+
+- In vivo, correct disulfide pairing is often aided by the ER enzyme protein disulfide isomerase (PDI), which reshuffles mispaired disulfides.
 <!-- /yield -->`
-    },
-    {
-      id: 'aa3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Structure & Denaturation Logic
-
-<details>
-<summary><b>Example 1: Which level of structure is affected?</b></summary>
-
-**Question:** A mutation changes a surface glutamate to lysine, breaking a salt bridge with an arginine on a neighboring subunit and causing the tetramer to dissociate into monomers. Each monomer remains folded and soluble. Which structural level is disrupted?
-
-**Solution:**
-1. The salt bridge is BETWEEN subunits — an intersubunit contact.
-2. Monomers still fold (tertiary intact); only the assembly falls apart.
-3. **Quaternary structure** is disrupted.
-
-**MCAT Strategy:** Ask "within one chain or between chains?" The same chemical interaction (salt bridge, H-bond) can be tertiary or quaternary depending on where it acts.
-</details>
-
-<details>
-<summary><b>Example 2: Interpreting a denaturation experiment</b></summary>
-
-**Question:** An enzyme retains activity in 8 M urea but loses activity when $\\beta$-mercaptoethanol is added along with the urea. Activity does not return on dilution. What does this suggest about the enzyme?
-
-**Solution:**
-1. Stability in urea alone → the fold is unusually robust to loss of noncovalent interactions, implying covalent crosslinks hold it together.
-2. Adding a reducing agent destroys activity → **disulfide bonds** were the critical stabilizers.
-3. No recovery after dilution → the reduced protein misfolds or aggregates instead of re-forming its native disulfide pairs; the disulfides likely needed to form in a specific order.
-
-**MCAT Strategy:** Urea vs. reducing agent is the classic experimental dissection: urea = noncovalent, $\\beta$-ME/DTT = covalent disulfides.
-</details>
-
-<details>
-<summary><b>Example 3: Predicting secondary structure from sequence</b></summary>
-
-**Question:** Two peptide segments are compared: segment 1 is Ala-Leu-Glu-Lys-Met-Ala; segment 2 is Pro-Gly-Pro-Ser-Gly-Pro. Which is more likely to form an $\\alpha$-helix?
-
-**Solution:**
-1. Segment 1 contains good helix formers (Ala, Leu, Met, Glu, Lys) and no breakers.
-2. Segment 2 is loaded with Pro (rigid, no N-H for helix H-bonding) and Gly (too flexible) — a helix-hostile composition; this Pro-Gly-rich pattern is actually collagen-like.
-3. **Segment 1** forms the helix.
-
-**MCAT Strategy:** You only need two facts: Pro and Gly disfavor $\\alpha$-helices, and Ala is the prototypical helix former.
-</details>`
     }
   ]
 };

@@ -108,59 +108,65 @@ MCAT trap: **kinase** (transfers phosphate from ATP to substrate) vs. **phosphat
       }
     },
     {
-      id: 'ek1-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 1
-
-- Enzymes lower $E_a$ by stabilizing the transition state; $\\Delta G$, $K_{eq}$, and spontaneity never change
-- Induced fit > lock and key; transition-state analogs = ultra-potent inhibitors
-- Catalytic toolkit: acid-base (His), covalent (Ser proteases), metal ions, proximity/orientation
-- Apoenzyme + cofactor = holoenzyme; coenzymes are vitamin-derived (NAD$^+$, FAD, CoA, TPP, PLP, biotin)
-- Know the six EC classes and the kinase/phosphatase/phosphorylase distinction`
-    },
-    {
       id: 'ek1-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — Catalysis Concepts
 
-<details>
-<summary><b>Example 1: Energy diagram reasoning</b></summary>
+**Problem 1.** An exergonic reaction has $\\Delta G^{\\circ\\prime} = -20$ kJ/mol and an uncatalyzed $E_a = 80$ kJ/mol. An enzyme is added.
 
-**Question:** For an exergonic reaction ($\\Delta G^{\\circ\\prime} = -20$ kJ/mol) with $E_a = 80$ kJ/mol uncatalyzed, sketch what changes when an enzyme is added.
+- **(a)** Do the reactant and product energy levels change?
+- **(b)** What happens to the peak of the energy diagram?
+- **(c)** How do the forward and reverse barriers change, and is $\\Delta G^{\\circ\\prime}$ preserved?
 
-**Solution:**
-1. Reactant and product energy levels: **unchanged** — so $\\Delta G^{\\circ\\prime}$ stays −20 kJ/mol.
-2. The peak (transition state) drops: $E_a$ might fall from 80 to, say, 30 kJ/mol.
-3. Both the forward barrier and reverse barrier decrease by the same absolute amount at the peak; their difference (still −20) is preserved.
+**(a) The endpoints.** Reactant and product energy levels are **unchanged**, so $\\Delta G^{\\circ\\prime}$ stays −20 kJ/mol.
 
-**MCAT Strategy:** On any energy-diagram question, the enzyme only moves the hump, never the endpoints.
-</details>
+**(b) The peak.** The transition state drops: $E_a$ might fall from 80 to, say, 30 kJ/mol.
 
-<details>
-<summary><b>Example 2: Distinguish cofactor depletion from inhibition</b></summary>
+**(c) Both barriers.** The forward and reverse barriers both decrease by the same absolute amount at the peak, so their difference (still −20 kJ/mol) is preserved. On any energy-diagram question, the enzyme only moves the hump, never the endpoints.
 
-**Question:** An enzyme preparation loses activity after dialysis against buffer, and activity is restored by adding back a small filtrate fraction that is heat-stable. Is the missing component more likely a protein subunit or a coenzyme?
+**Problem 2.** Three metabolic reactions each carry the signature of one enzyme class. Read the signature, then name the class.
 
-**Solution:**
-1. Dialysis removes SMALL molecules — a loosely bound cofactor/coenzyme dialyzes away; protein subunits generally do not.
-2. Heat stability: proteins denature with heat; small organic cofactors and metal ions survive boiling.
-3. Conclusion: a dialyzable, heat-stable **coenzyme** (or metal ion) was removed, converting holoenzyme to inactive apoenzyme.
+- **(a)** Which class catalyzes pyruvate + CO$_2$ + ATP → oxaloacetate + ADP + P$_i$?
+- **(b)** Which class catalyzes glucose-6-phosphate + H$_2$O → glucose + P$_i$?
+- **(c)** Which class catalyzes lactate + NAD$^+$ → pyruvate + NADH?
+- **(d)** What signature identifies each of these three classes, and how would a transferase look?
 
-**MCAT Strategy:** "Small, dialyzable, heat-stable" is exam code for cofactor/coenzyme.
-</details>
+**(a) Joining with ATP.** CO$_2$ is joined to pyruvate at the expense of ATP: a **ligase** (pyruvate carboxylase; note the biotin cofactor for carboxylations).
 
-<details>
-<summary><b>Example 3: Classify the enzyme from the reaction</b></summary>
+**(b) Water in.** A phosphate ester is cleaved using water: a **hydrolase** (glucose-6-phosphatase).
 
-**Question:** Classify each: (a) pyruvate + CO$_2$ + ATP → oxaloacetate + ADP + P$_i$; (b) glucose-6-phosphate + H$_2$O → glucose + P$_i$; (c) lactate + NAD$^+$ → pyruvate + NADH.
+**(c) Electrons moved.** Electrons transfer to NAD$^+$: an **oxidoreductase** (lactate dehydrogenase).
 
-**Solution:**
-1. (a) Joins CO$_2$ to pyruvate at the expense of ATP → **ligase** (pyruvate carboxylase; note biotin cofactor for carboxylations).
-2. (b) Cleaves a phosphate ester using water → **hydrolase** (glucose-6-phosphatase).
-3. (c) Electron transfer to NAD$^+$ → **oxidoreductase** (lactate dehydrogenase).
+**(d) The signatures.** ATP + joining = ligase; water = hydrolase; NAD$^+$/FAD = oxidoreductase. A transferase moves a group between two molecules, as a kinase moves phosphate from ATP to its substrate.
 
-**MCAT Strategy:** Scan for the signature: ATP + joining = ligase; water = hydrolase; NAD$^+$/FAD = oxidoreductase; group moved between molecules = transferase.
-</details>`
+**Problem 3.** An enzyme preparation loses activity after dialysis against buffer. Activity is restored by adding back a small filtrate fraction that is heat-stable.
+
+- **(a)** What size of molecule does dialysis remove?
+- **(b)** What does heat stability say about the missing component?
+- **(c)** Is the missing component more likely a protein subunit or a coenzyme?
+
+**(a) Dialysis.** Dialysis removes SMALL molecules: a loosely bound cofactor or coenzyme dialyzes away; protein subunits generally do not.
+
+**(b) Heat stability.** Proteins denature with heat; small organic cofactors and metal ions survive boiling.
+
+**(c) Conclusion.** A dialyzable, heat-stable **coenzyme** (or metal ion) was removed, converting the holoenzyme to inactive apoenzyme. "Small, dialyzable, heat-stable" is exam code for a cofactor or coenzyme.`
+    },
+    {
+      id: 'ek1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 1
+
+- **Catalysts lower $E_a$ only.** Enzymes stabilize the transition state; $\\Delta G$, $K_{eq}$ and spontaneity never change.
+- **Transition state binds tightest.** Induced fit beats lock and key, and transition-state analogs are ultra-potent inhibitors.
+- **Cofactors complete enzymes.** Apoenzyme + cofactor = holoenzyme; coenzymes are vitamin-derived (NAD$^+$, FAD, CoA, TPP, PLP).
+- **Six EC classes.** Oxidoreductase (redox), transferase (group), hydrolase (water), lyase (no-water split), isomerase (rearrange), ligase (ATP).
+
+**Common traps**
+
+- **Enzymes shifting equilibrium.** A catalyst speeds forward and reverse rates equally: it changes how fast, never where, equilibrium lies.
+- **Kinase vs. phosphatase vs. phosphorylase.** Kinases add phosphate from ATP, phosphatases hydrolyze it off, phosphorylases cleave with P$_i$.
+- **His as the nucleophile.** In the Ser-His-Asp triad, His is the general base; serine forms the covalent acyl-enzyme.
+- **A protein lost on dialysis.** Dialysis removes small molecules; a small, heat-stable rescue fraction is a coenzyme or metal ion, not a protein.`
     }
   ]
 };

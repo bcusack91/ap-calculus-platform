@@ -38,6 +38,50 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
 <!-- /yield -->`
     },
     {
+      id: 'lm3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Fasting Physiology
+
+**Problem 1.** Track the brain's dominant fuel at 4 hours, 2 days and 2 weeks without food.
+
+- **(a)** What keeps the brain supplied at 4 hours?
+- **(b)** What feeds it at 2 days, once glycogen is gone?
+- **(c)** What fuels it at 2 weeks, and what does that switch accomplish?
+
+**(a) 4 hours.** Dietary glucose is gone; **glycogenolysis** maintains blood glucose, and the brain burns glucose.
+
+**(b) 2 days.** Glycogen is exhausted (~24 h); **gluconeogenesis** (from amino acids, glycerol, lactate) feeds the brain glucose while ketogenesis ramps up.
+
+**(c) 2 weeks.** **Ketone bodies** supply roughly two-thirds of brain energy; gluconeogenesis slows, sharply reducing muscle protein breakdown. The switch is protein sparing: falling urinary nitrogen in late starvation reflects it.
+
+**Problem 2.** A type 1 diabetic presents with glucose 480 mg/dL, pH 7.12, low bicarbonate and an elevated anion gap.
+
+- **(a)** What does the missing insulin do to adipose lipolysis?
+- **(b)** What happens to the fatty acids that reach the liver?
+- **(c)** Why are pH and bicarbonate low with a raised anion gap, and why is the patient breathing deeply?
+- **(d)** Why is glucose so high?
+
+**(a) Lipolysis unopposed.** No insulin + high glucagon/catecholamines → HSL fully active → a massive FFA flux to the liver.
+
+**(b) Ketogenesis floods.** Beta-oxidation outstrips the TCA cycle; ketogenesis pours out acetoacetate and beta-hydroxybutyrate.
+
+**(c) The acidosis.** The acetoacetate and beta-hydroxybutyrate from (b) dissociate at blood pH (pKa ~4), consuming HCO$_3^-$: anion-gap metabolic acidosis. Hyperventilation (Kussmaul) is respiratory compensation.
+
+**(d) The hyperglycemia.** Tissues cannot take glucose up (GLUT4 needs insulin) while the liver overproduces it. DKA links hormone signaling, lipolysis, ketogenesis and acid-base in one patient.
+
+**Problem 3.** The liver converts its excess acetyl-CoA into ketone bodies rather than exporting acetyl-CoA itself.
+
+- **(a)** Why can't acetyl-CoA simply be exported?
+- **(b)** What makes ketone bodies easy to deliver?
+- **(c)** What does the conversion do for the hepatocyte's own CoA?
+
+**(a) No transporter.** CoA thioesters are large, charged and membrane-impermeant; there is no plasma-membrane carrier for acetyl-CoA, and cells guard their CoA pool.
+
+**(b) Solubility and delivery.** Acetoacetate and beta-hydroxybutyrate are small organic acids, freely soluble in plasma, crossing the blood-brain barrier on monocarboxylate transporters; no albumin or lipoprotein required.
+
+**(c) CoA recycled.** Turning 2 acetyl-CoA into one 4-carbon ketone frees CoA for continued beta-oxidation. When asked why a conversion exists, check membrane permeability first: it is usually a transport problem.`
+    },
+    {
       id: 'lm3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Ketone Body Metabolism** 🎯`,
@@ -86,61 +130,21 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Ketogenesis = liver mitochondria repackaging excess acetyl-CoA when OAA is drained by gluconeogenesis
-- Pathway: 2 acetyl-CoA → acetoacetyl-CoA → HMG-CoA (**mito HMG-CoA synthase, rate-limiting**) → acetoacetate → beta-hydroxybutyrate/acetone
-- Liver lacks **thiophorase** → cannot burn its own ketones; RBCs cannot use them either (no mitochondria)
-- Fasting brain runs largely on ketones after ~3 days, sparing muscle protein
-- DKA: unopposed lipolysis + ketogenesis → anion-gap acidosis; high NADH (alcohol) shifts pool to beta-hydroxybutyrate
-- Compartment trap: mitochondrial HMG-CoA → ketones; cytosolic HMG-CoA → cholesterol
+- **Why the liver makes ketones.** Gluconeogenesis drains OAA, so excess acetyl-CoA from beta-oxidation is repackaged as ketones.
+- **HMG-CoA synthase commits.** 2 acetyl-CoA → acetoacetyl-CoA → HMG-CoA (mitochondrial HMG-CoA synthase, rate-limiting) → acetoacetate.
+- **Ketones spare protein.** Over days of fasting the brain shifts to ketones, slowing gluconeogenesis and sparing muscle protein.
+- **DKA is unopposed ketogenesis.** Without insulin, lipolysis and ketogenesis run unchecked and ketoacids cause anion-gap acidosis.
+
+**Common traps**
+
+- **The liver burning ketones.** The liver lacks thiophorase (SCOT), so it exports the ketones it makes and burns none of them.
+- **Red cells on ketones.** RBCs have no mitochondria, so they use neither fatty acids nor ketones; they live on glycolysis.
+- **Mixing up the HMG-CoAs.** Mitochondrial HMG-CoA becomes ketones; cytosolic HMG-CoA (via HMG-CoA reductase) becomes cholesterol.
+- **Ignoring the NADH ratio.** High NADH (as after alcohol) shifts the ketone pool toward beta-hydroxybutyrate, not acetoacetate.
 
 <!-- yield:low -->
 - Low-yield extras: nitroprusside dipsticks detect acetoacetate, not beta-hydroxybutyrate, so they underestimate high-NADH (alcoholic) ketosis
 <!-- /yield -->`
-    },
-    {
-      id: 'lm3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Fasting Physiology
-
-<details>
-<summary><b>Example 1: Timeline of fuel switching in starvation</b></summary>
-
-**Question:** Rank the body's dominant fuel sources for the brain at 4 hours, 2 days, and 2 weeks without food.
-
-**Solution:**
-1. 4 hours: dietary glucose is gone; **glycogenolysis** maintains blood glucose — brain burns glucose.
-2. 2 days: glycogen is exhausted (~24 h); **gluconeogenesis** (from amino acids, glycerol, lactate) feeds the brain glucose; ketogenesis is ramping.
-3. 2 weeks: **ketone bodies** supply roughly two-thirds of brain energy; gluconeogenesis slows, dramatically reducing muscle protein breakdown.
-
-**MCAT Strategy:** The purpose of the ketone switch is protein sparing. A question asking why urinary nitrogen excretion FALLS in late starvation is really asking about brain ketone adaptation.
-</details>
-
-<details>
-<summary><b>Example 2: Interpret a DKA chemistry panel</b></summary>
-
-**Question:** A type 1 diabetic presents with glucose 480 mg/dL, pH 7.12, low bicarbonate, and an elevated anion gap. Explain each abnormality from hormone signaling downward.
-
-**Solution:**
-1. No insulin + high glucagon/catecholamines → HSL fully active → massive FFA flux to the liver.
-2. Beta-oxidation outstrips the TCA cycle; ketogenesis pours out acetoacetate and beta-hydroxybutyrate.
-3. These ketoacids dissociate at blood pH (pKa ~4), consuming HCO$_3^-$: anion-gap metabolic acidosis; hyperventilation (Kussmaul) is respiratory compensation.
-4. Glucose is high because tissues cannot take it up (GLUT4 needs insulin) while the liver simultaneously overproduces it.
-
-**MCAT Strategy:** DKA is the single most integrated lipid-metabolism vignette: hormone signaling, lipolysis, ketogenesis, and acid-base in one patient.
-</details>
-
-<details>
-<summary><b>Example 3: Why not just export acetyl-CoA?</b></summary>
-
-**Question:** Give two biochemical reasons the liver converts acetyl-CoA into ketone bodies rather than exporting acetyl-CoA itself.
-
-**Solution:**
-1. **No transporter:** CoA thioesters are large, charged, and membrane-impermeant; there is no plasma-membrane carrier for acetyl-CoA, and cells guard their CoA pool.
-2. **Solubility and delivery:** acetoacetate and beta-hydroxybutyrate are small organic acids, freely soluble in plasma, crossing the blood-brain barrier on monocarboxylate transporters — no albumin or lipoprotein required.
-3. Bonus: converting 2 acetyl-CoA into one 4-carbon ketone also frees CoA for continued beta-oxidation in the hepatocyte.
-
-**MCAT Strategy:** When asked why a shuttle or conversion exists, check membrane permeability first — the answer is usually a transport problem.
-</details>`
     }
   ]
 };

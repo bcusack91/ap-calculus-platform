@@ -46,6 +46,47 @@ The MCAT tests proteins mostly through **experimental passages**. You must know 
 Purification tables track **total protein** (mg), **total activity** (units), and **specific activity** (units/mg). A good purification step *raises specific activity* (purer enzyme) even as total activity drops slightly (some loss). Fold purification = specific activity after / specific activity before; yield = total activity after / initial total activity.`
     },
     {
+      id: 'aa4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Experimental Integration
+
+**Problem 1.** The target protein is 25 kDa with pI 4.5. The major contaminants are 25 kDa with pI 8.0 (contaminant 1) and 150 kDa with pI 4.5 (contaminant 2).
+
+- **(a)** Which technique separates the target from contaminant 1?
+- **(b)** Which technique separates the target from contaminant 2?
+- **(c)** Why are both techniques needed?
+
+**(a) Ion exchange.** Same size, different pI: at pH 7 the target is negative and contaminant 1 positive, so an anion exchanger binds only the target.
+
+**(b) Size exclusion.** Same pI, different size: on a size-exclusion column the 150 kDa contaminant elutes first.
+
+**(c) Both, in either order.** If two proteins share a property, a technique based on it cannot separate them, so neither technique alone removes both contaminants; the pair does. Match each contaminant to the property that differs.
+
+**Problem 2.** Cells are treated with a kinase inhibitor. Western blots of the lysates are probed with an antibody against total protein X and one specific for phospho-X. The total-X band is unchanged; the phospho-X band disappears.
+
+- **(a)** What does the unchanged total-X band show?
+- **(b)** What does the lost phospho-X band show?
+- **(c)** What do you conclude about X and the kinase?
+
+**(a) Total X.** The inhibitor does not affect X's expression or stability. Always check this total-protein control before concluding anything about expression.
+
+**(b) Phospho-X.** X is no longer phosphorylated; phospho-specific antibodies report modification state.
+
+**(c) Conclusion.** X is a substrate (direct or downstream) of the inhibited kinase; the inhibitor blocks X's phosphorylation, not its production.
+
+**Problem 3.** A pentapeptide is sequenced. Edman degradation releases Met first. Trypsin (cleaves after Lys/Arg) yields Met-Ala-Lys and Gly-Phe. Chymotrypsin (cleaves after aromatic residues) makes no internal cut.
+
+- **(a)** What does the Edman result fix in the sequence?
+- **(b)** In what order do the two trypsin fragments go?
+- **(c)** What is the sequence, and does the chymotrypsin result fit?
+
+**(a) Edman anchor.** Edman removes residues one at a time from the N-terminus, so Met is residue 1: any fragment that begins with Met must come first.
+
+**(b) Trypsin fragments.** Trypsin cuts after Lys, so Met-Ala-Lys (starting at the Met from (a)) is N-terminal and Gly-Phe follows. Order fragments so cleavage-site residues (Lys/Arg for trypsin; Phe/Trp/Tyr for chymotrypsin) sit at fragment C-termini.
+
+**(c) The sequence.** **Met-Ala-Lys-Gly-Phe.** Chymotrypsin is consistent: the only aromatic (Phe) is already the C-terminus, so there is no internal cut.`
+    },
+    {
       id: 'aa4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Purification & Analysis** 🎯`,
@@ -94,59 +135,23 @@ Purification tables track **total protein** (mg), **total activity** (units), an
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Size exclusion: BIG elutes first. SDS-PAGE: SMALL runs farthest. Don't mix these up.
-- Ion exchange: beads bind opposite charge; protein charge set by pH vs. pI; elute with salt
-- Reducing vs. nonreducing SDS-PAGE reveals disulfide-linked subunit composition
-- Edman = N-terminal sequencing (needs free N-terminus, short peptides); mass spec = identification by fragment mass
-- Specific activity (units/mg) is the purity metric; fold purification compares specific activities
+- **Size versus SDS-PAGE.** Size exclusion elutes BIG proteins first; on SDS-PAGE, SMALL proteins run farthest.
+- **Ion exchange.** Beads bind the opposite charge, which pH versus pI sets; bound proteins elute with a salt gradient.
+- **Reducing SDS-PAGE.** Reduced versus nonreduced gels reveal disulfide-linked subunits; native sizing weighs the whole complex.
+- **Specific activity is purity.** Units/mg tracks purity; fold purification compares specific activities before and after.
+
+**Common traps**
+
+- **Big proteins eluting last.** In size exclusion, small proteins wander into the bead pores; large ones are excluded and elute first.
+- **Anion exchangers binding cations.** An anion exchanger has positive beads and binds negative proteins; cation exchangers bind positive ones.
+- **Edman from either end.** Edman removes residues only from a free N-terminus; a blocked N-terminus gives no signal.
+- **Total activity as purity.** Total activity falls a little in a good step; a rise in specific activity is what shows purification.
 
 <!-- yield:low -->
-- Low-yield extras: the BCA assay is a second colorimetric total-protein assay; a sandwich ELISA pairs a plate-bound capture antibody with a labelled detection antibody
+**Low-yield extras**
+
+- The BCA assay is a second colorimetric total-protein assay; a sandwich ELISA pairs a plate-bound capture antibody with a labelled detection antibody.
 <!-- /yield -->`
-    },
-    {
-      id: 'aa4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Experimental Integration
-
-<details>
-<summary><b>Example 1: Design a two-step purification</b></summary>
-
-**Question:** Your target protein is 25 kDa with pI 4.5. Major contaminants are 25 kDa with pI 8.0, and 150 kDa with pI 4.5. Which two techniques, in either order, purify the target?
-
-**Solution:**
-1. Target vs. contaminant 1: same size, different pI → separate by **ion exchange** (at pH 7, target is negative, contaminant 1 positive; an anion exchanger binds only the target).
-2. Target vs. contaminant 2: same pI, different size → separate by **size exclusion** (150 kDa elutes first) or SDS-free sizing method.
-3. Neither technique alone resolves both contaminants; the pair does.
-
-**MCAT Strategy:** Match each contaminant to the property that differs. If two proteins share a property, that technique cannot separate them.
-</details>
-
-<details>
-<summary><b>Example 2: Interpreting a Western blot experiment</b></summary>
-
-**Question:** Cells are treated with a kinase inhibitor. Western blots of lysates are probed with (a) an antibody against total protein X and (b) an antibody specific for phospho-X. Band (a) is unchanged by treatment; band (b) disappears. Conclusion?
-
-**Solution:**
-1. Total X unchanged → the inhibitor does not affect X's expression or stability.
-2. Phospho-X lost → X is no longer phosphorylated.
-3. Conclusion: X is a substrate (direct or downstream) of the inhibited kinase; the inhibitor blocks X's phosphorylation, not its production.
-
-**MCAT Strategy:** Phospho-specific antibodies report modification state; always compare against the total-protein control before concluding anything about expression.
-</details>
-
-<details>
-<summary><b>Example 3: Sequencing with overlapping fragments</b></summary>
-
-**Question:** A pentapeptide gives these data: Edman degradation releases Met first. Trypsin (cleaves after Lys/Arg) yields two fragments: Met-Ala-Lys and Gly-Phe. Chymotrypsin (cleaves after aromatic residues) makes no internal cut. What is the sequence?
-
-**Solution:**
-1. Edman: N-terminus is **Met**.
-2. Trypsin cuts after Lys → the fragment Met-Ala-Lys must be N-terminal; Gly-Phe follows.
-3. Sequence: **Met-Ala-Lys-Gly-Phe**. Chymotrypsin is consistent: the only aromatic (Phe) is already the C-terminus, so no internal cut.
-
-**MCAT Strategy:** Anchor the N-terminus with Edman data, then order fragments so cleavage-site residues (Lys/Arg for trypsin; Phe/Trp/Tyr for chymotrypsin) sit at fragment C-termini.
-</details>`
     }
   ]
 };

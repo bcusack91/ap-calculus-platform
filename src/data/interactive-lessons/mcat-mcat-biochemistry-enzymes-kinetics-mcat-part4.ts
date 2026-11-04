@@ -91,63 +91,66 @@ In a pathway $A \\rightarrow B \\rightarrow C \\rightarrow D$, the end product D
       }
     },
     {
-      id: 'ek4-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 4
-
-- Sigmoidal velocity curve = cooperativity = multi-subunit allosteric enzyme (T/R states, $K_{0.5}$); same logic as hemoglobin
-- Heterotropic effectors bind regulatory sites: activators favor R, inhibitors favor T (feedback inhibition hits the first committed step)
-- Phosphorylation = fast reversible switch (phosphorylase ON / synthase OFF is the reciprocal pattern); zymogen cleavage = irreversible activation
-- Temperature and pH optima: activity falls off-optimum by ionization changes, then denaturation
-- Passage skill: never assign inhibitor type or mutation effect from a single-substrate-concentration data point
-
-<!-- yield:low -->
-- Low-yield extras: alkaline phosphatase's pH optimum (~9)
-<!-- /yield -->`
-    },
-    {
       id: 'ek4-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — MCAT-Style Integration
 
-<details>
-<summary><b>Example 1: Interpret an allosteric effector experiment</b></summary>
+**Problem 1.** In *E. coli*, ATCase (aspartate transcarbamoylase) catalyzes the committed step of pyrimidine synthesis. Adding CTP shifts its sigmoidal curve right (higher $K_{0.5}$); adding ATP shifts it left.
 
-**Question:** In E. coli, ATCase (aspartate transcarbamoylase) catalyzes the committed step of pyrimidine synthesis. Adding CTP shifts its sigmoidal curve right (higher $K_{0.5}$); adding ATP shifts it left. Explain the metabolic logic.
+- **(a)** What does a right shift versus a left shift of the curve mean?
+- **(b)** Why would the cell want CTP to inhibit the enzyme?
+- **(c)** Why would ATP activate it, and where do CTP and ATP bind?
 
-**Solution:**
-1. CTP is the pathway's END PRODUCT: high CTP means pyrimidines are plentiful, so CTP feedback-inhibits (stabilizes T state, right shift).
-2. ATP is a purine: high ATP signals abundant energy and a need to balance purine/pyrimidine pools, so ATP activates (stabilizes R state, left shift).
-3. Both act heterotropically at regulatory subunits — neither touches the catalytic site.
+**(a) Reading the shifts.** A right shift (higher $K_{0.5}$) is inhibition: more substrate is needed, and the T state is favored. A left shift is activation: the R state is favored.
 
-**MCAT Strategy:** Right shift = inhibition (more substrate needed); left shift = activation. Then ask "why would the cell want this?" — the answer is nearly always feedback economy or pathway balancing.
-</details>
+**(b) CTP.** CTP is the pathway's END PRODUCT: high CTP means pyrimidines are plentiful, so CTP feedback-inhibits by stabilizing the T state. That is feedback economy.
 
-<details>
-<summary><b>Example 2: A cascade amplification calculation</b></summary>
+**(c) ATP and the sites.** ATP is a purine: high ATP signals abundant energy and a need to balance purine and pyrimidine pools, so ATP activates via the R state. Both bind heterotropically at regulatory subunits; neither touches the catalytic site.
 
-**Question:** One hormone-bound receptor activates 10 molecules of kinase A; each kinase A activates 10 of kinase B; each kinase B activates 10 phosphorylase molecules, each producing 100 product molecules per second. How many product molecules per second result from ONE receptor?
+**Problem 2.** Mutant enzyme M has normal $k_{cat}$ but 10-fold higher $K_m$ than wild type. Drug D halves wild-type $V_{max}$ without changing $K_m$. A patient homozygous for M is treated with D.
 
-**Solution:**
-1. Kinase A: $10$; kinase B: $10 \\times 10 = 100$; phosphorylase: $100 \\times 10 = 1000$ active enzymes.
-2. Product: $1000 \\times 100 = 10^{5}$ molecules per second.
-3. This multiplicative amplification is why signaling uses kinase cascades rather than direct enzyme activation.
+- **(a)** What does mutation M change?
+- **(b)** What kind of inhibitor is drug D?
+- **(c)** What are the combined $K_m$ and $V_{max}$ relative to untreated wild type?
 
-**MCAT Strategy:** Cascade math is pure multiplication of the per-step factors; the exam wants you to recognize amplification as the PURPOSE of multi-step cascades.
-</details>
+**(a) Mutation M.** $K_m$ is 10-fold up (weaker substrate binding); $V_{max}$ is normal.
 
-<details>
-<summary><b>Example 3: Dissect a two-variable kinetics passage</b></summary>
+**(b) Drug D.** Noncompetitive: $V_{max}$ halved, $K_m$ untouched. It acts at an allosteric site, independent of the substrate pocket.
 
-**Question:** A passage reports that mutant enzyme M has normal $k_{cat}$ but 10-fold higher $K_m$ than wild type, and that drug D lowers wild-type $V_{max}$ by half without changing $K_m$. A patient homozygous for M is treated with D. Predict the combined kinetic parameters relative to untreated wild type.
+**(c) Combined.** $K_m$ ~10-fold above wild type (from M) AND $V_{max}$ ~half (from D). The effects stack because they act on different parts of the enzyme; treat them as independent unless the passage says the sites interact. Binding-site changes move $K_m$; allosteric (noncompetitive) effects move $V_{max}$.
 
-**Solution:**
-1. Mutation M: $K_m$ 10-fold up (weaker substrate binding), $V_{max}$ normal.
-2. Drug D is noncompetitive ($V_{max}$ halved, $K_m$ untouched) and acts at an allosteric site, independent of the substrate pocket.
-3. Combined: $K_m$ ~10-fold above wild type (from M) AND $V_{max}$ ~half (from D). The effects stack because they act on different parts of the enzyme.
+**Problem 3.** One hormone-bound receptor activates 10 molecules of kinase A; each kinase A activates 10 of kinase B; each kinase B activates 10 phosphorylase molecules, each making 100 product molecules per second.
 
-**MCAT Strategy:** Treat independent perturbations as independent: binding-site changes move $K_m$, allosteric/noncompetitive effects move $V_{max}$, and they combine without interference unless the passage says the sites interact.
-</details>`
+- **(a)** How many active phosphorylase molecules does one receptor produce?
+- **(b)** How many product molecules per second result from ONE receptor?
+- **(c)** Why does signaling use kinase cascades rather than direct enzyme activation?
+
+**(a) Active enzymes.** Kinase A: $10$; kinase B: $10 \\times 10 = 100$; phosphorylase: $100 \\times 10 = 1000$ active enzymes.
+
+**(b) Product.** With 1000 active phosphorylases from (a): $1000 \\times 100 = 10^{5}$ molecules per second.
+
+**(c) The purpose.** Amplification. Cascade math is pure multiplication of the per-step factors, and the exam wants you to recognize amplification as the PURPOSE of multi-step cascades.`
+    },
+    {
+      id: 'ek4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 4
+
+- **Sigmoidal means cooperative.** A sigmoidal curve marks a multi-subunit allosteric enzyme with T/R states and a $K_{0.5}$, like hemoglobin.
+- **Heterotropic effectors.** Activators favor R, inhibitors favor T; end products feedback-inhibit the first committed step.
+- **Two kinds of switch.** Phosphorylation is a fast, reversible switch; zymogen cleavage is an irreversible activation.
+- **Temperature and pH optima.** Rate rises with heat until the enzyme denatures; off the pH optimum, ionization states change, then the fold is lost.
+
+**Common traps**
+
+- **Single-concentration data.** One substrate level cannot separate affinity from turnover; judge inhibitor type or mutation effect from a full curve.
+- **Phosphorylation always activates.** One kinase cascade turns phosphorylase ON and glycogen synthase OFF: net glycogen breakdown.
+- **Zymogens as reversible switches.** Zymogen cleavage is irreversible; it keeps proteases inactive until they reach their site of action.
+- **Homotropic vs. heterotropic.** A homotropic effector is the substrate itself; an end product binding a regulatory site is heterotropic.
+
+<!-- yield:low -->
+- Low-yield extras: alkaline phosphatase's pH optimum (~9)
+<!-- /yield -->`
     }
   ]
 };

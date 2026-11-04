@@ -60,6 +60,57 @@ Glucose enters via GLUT2 → glucokinase (high $K_m$, no product inhibition — 
 When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) Which of the three regulated steps (or transporters) does it touch? (2) What happens to F2,6-BP? (3) Which tissue is being discussed — liver rules blood glucose; muscle keeps its glucose; brain and RBC are entitled consumers.`
     },
     {
+      id: 'cm4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Integration Passages
+
+**Problem 1.** A family carries a heterozygous glucokinase mutation that raises its $K_m$ for glucose twofold.
+
+- **(a)** What does the beta cell now need to produce its usual ATP signal?
+- **(b)** How are insulin secretion and fasting blood glucose affected?
+- **(c)** What happens in the liver, and why is the phenotype mild?
+- **(d)** How would a $V_{max}$ loss differ from this $K_m$ shift?
+
+**(a) Higher glucose.** The beta cell's "glucostat" now needs HIGHER glucose to generate the same glycolytic ATP signal.
+
+**(b) Raised set point.** Insulin secretion still occurs but at a raised set point: mild, stable fasting hyperglycemia (e.g., ~6-8 mM instead of ~5).
+
+**(c) Liver and severity.** Liver glucokinase is also less active, modestly reducing postprandial glucose uptake. The phenotype is mild because the whole curve shifts rather than collapsing.
+
+**(d) $K_m$ versus $V_{max}$.** A $K_m$ shift in a SENSOR enzyme moves the set point; a $V_{max}$ loss would cap the response. Distinguish those two outcomes whenever a passage mutates glucokinase.
+
+<!-- yield:low -->
+- In clinical terms, heterozygous glucokinase loss is MODY2 (a monogenic form of diabetes).
+<!-- /yield -->
+
+**Problem 2.** A type 1 diabetic misses insulin doses and presents with glucose of 450 mg/dL, deep rapid breathing, and fruity breath.
+
+- **(a)** Why is the blood glucose so high?
+- **(b)** Where do the ketone bodies come from?
+- **(c)** Why is the breathing deep and rapid, and why is the breath fruity?
+- **(d)** Why do type 2 patients rarely develop this state?
+
+**(a) Hyperglycemia.** No insulin + high glucagon: the liver runs gluconeogenesis and glycogenolysis at full tilt while peripheral uptake fails, so hyperglycemia is severe (osmotic diuresis, dehydration).
+
+**(b) Ketogenesis.** Unrestrained adipose lipolysis floods the liver with fatty acids; beta-oxidation acetyl-CoA exceeds TCA capacity (OAA drawn off for gluconeogenesis), so acetoacetate and beta-hydroxybutyrate accumulate.
+
+**(c) Acidosis and acetone.** Ketoacids consume bicarbonate → metabolic acidosis → compensatory hyperventilation (Kussmaul breathing); acetone, from spontaneous acetoacetate decarboxylation, gives the fruity breath.
+
+**(d) Type 2 contrast.** Absent insulin means maximal gluconeogenesis AND ketogenesis at once. Type 2 patients usually retain enough insulin to suppress ketogenesis.
+
+**Problem 3.** In an insulin clamp study, insulin is infused while glucose is infused at whatever rate keeps blood glucose constant. Subject A requires a high glucose infusion rate; subject B requires very little.
+
+- **(a)** What does the glucose infusion rate measure?
+- **(b)** Which subject is insulin resistant, and which tissues explain the difference?
+- **(c)** Why must blood glucose be held constant?
+
+**(a) The readout.** The glucose infusion rate measures how much glucose the body DISPOSES of under insulin: high rate = insulin-sensitive.
+
+**(b) Subject B.** With the low rate, subject B is insulin resistant: muscle/adipose GLUT4-mediated uptake responds poorly, and the liver keeps releasing glucose despite insulin.
+
+**(c) Isolating insulin.** Holding glucose constant removes the confound of hyperglycemia driving uptake by mass action, so the infusion rate IS the readout of insulin action. Map "less glucose needed" to "less insulin effect."`
+    },
+    {
       id: 'cm4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Hormonal Integration** 🎯`,
@@ -108,63 +159,21 @@ When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) W
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Insulin = RTK, anabolic, GLUT4 translocation; glucagon = GPCR/cAMP, liver-only, catabolic; epinephrine covers muscle in stress
-- Transporter map: GLUT1 basal, GLUT2 high-$K_m$ sensor (liver/beta cell), GLUT3 neurons, GLUT4 insulin/exercise, SGLT secondary active
-- Beta-cell sensing: GLUT2 → glucokinase → ATP up → K$_{ATP}$ channels close → depolarize → Ca$^{2+}$ → insulin; sulfonylureas close K$_{ATP}$ directly
-- Fast timeline: glycogen carries ~24 h, then gluconeogenesis; ketones spare protein in prolonged fasting
-- T1DM = absent insulin (DKA risk); T2DM = resistance; HbA1c = nonenzymatic glycation clock
+- **Insulin versus glucagon.** Insulin (RTK) is anabolic and moves GLUT4; glucagon (GPCR, cAMP) is catabolic and acts on liver.
+- **Transporter map.** GLUT1 basal, GLUT2 high-$K_m$ sensor, GLUT3 neurons, GLUT4 insulin/exercise, SGLT secondary active.
+- **Beta-cell sensing.** Glucose metabolism raises ATP/ADP: K$_{ATP}$ closes, the cell depolarizes, Ca$^{2+}$ enters, insulin is released.
+- **Fasting timeline.** Liver glycogen carries about 24 h; gluconeogenesis then dominates, and ketones later spare muscle protein.
+
+**Common traps**
+
+- **Glucagon acting on muscle.** Muscle lacks glucagon receptors; epinephrine drives muscle glycogen breakdown in stress.
+- **A low-$K_m$ sensor.** Low-$K_m$ systems saturate at fasting glucose; high-$K_m$ GLUT2 and glucokinase let flux track it.
+- **Exercise needing insulin.** Contraction recruits GLUT4 by itself, so working muscle takes up glucose without insulin.
+- **Ketoacidosis in type 2.** DKA is a type 1 risk; type 2 patients usually keep enough insulin to suppress ketogenesis.
 
 <!-- yield:low -->
 - Low-yield extras: aldose reductase makes sorbitol in lens and nerves (cataracts, neuropathy); the glucokinase set-point mutation is called MODY2
 <!-- /yield -->`
-    },
-    {
-      id: 'cm4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Integration Passages
-
-<details>
-<summary><b>Example 1: Predict the phenotype of a glucokinase mutation</b></summary>
-
-**Question:** A family carries a heterozygous glucokinase mutation raising its $K_m$ for glucose twofold. Predict the effect on insulin secretion and fasting blood glucose.
-
-**Solution:**
-1. The beta cell's "glucostat" now needs HIGHER glucose to generate the same glycolytic ATP signal.
-2. Insulin secretion still occurs but at a raised set point: mild, stable fasting hyperglycemia (e.g., ~6-8 mM instead of ~5).
-3. Liver glucokinase is also less active, modestly reducing postprandial glucose uptake. The phenotype is mild because the whole curve shifts rather than collapsing.
-
-**MCAT Strategy:** A $K_m$ shift in a SENSOR enzyme moves the set point; a $V_{max}$ loss would cap the response. Distinguish those two outcomes whenever a passage mutates glucokinase.
-</details>
-
-<!-- yield:low -->
-- In clinical terms, heterozygous glucokinase loss is MODY2 (a monogenic form of diabetes).
-<!-- /yield -->
-
-<details>
-<summary><b>Example 2: Interpret a euglycemic clamp experiment</b></summary>
-
-**Question:** In an insulin clamp study, insulin is infused while glucose is infused at whatever rate keeps blood glucose constant. Subject A requires a high glucose infusion rate; subject B requires very little. Who is insulin resistant, and which tissues explain the difference?
-
-**Solution:**
-1. The glucose infusion rate measures how much glucose the body DISPOSES of under insulin: high rate = insulin-sensitive.
-2. Subject B (low rate) is insulin resistant: muscle/adipose GLUT4-mediated uptake responds poorly, and the liver keeps releasing glucose despite insulin.
-3. The clamp isolates insulin action because glucose itself is held constant — removing the confound of hyperglycemia driving uptake by mass action.
-
-**MCAT Strategy:** In clamp passages, the infusion rate IS the readout. Map "less glucose needed" to "less insulin effect."
-</details>
-
-<details>
-<summary><b>Example 3: Diabetic ketoacidosis chain of logic</b></summary>
-
-**Question:** A type 1 diabetic misses insulin doses and presents with glucose of 450 mg/dL, deep rapid breathing, and fruity breath. Connect the hormone state to each finding.
-
-**Solution:**
-1. No insulin + high glucagon: liver runs gluconeogenesis/glycogenolysis at full tilt while peripheral uptake fails → severe hyperglycemia (osmotic diuresis, dehydration).
-2. Unrestrained adipose lipolysis floods the liver with fatty acids; beta-oxidation acetyl-CoA exceeds TCA capacity (OAA drawn off for gluconeogenesis) → ketone bodies (acetoacetate, beta-hydroxybutyrate) accumulate.
-3. Ketoacids consume bicarbonate → metabolic acidosis → compensatory hyperventilation (Kussmaul breathing); acetone (from spontaneous acetoacetate decarboxylation) gives the fruity breath.
-
-**MCAT Strategy:** DKA questions are pathway questions in disguise: absent insulin = simultaneous maximal gluconeogenesis AND ketogenesis. Type 2 patients usually retain enough insulin to suppress ketogenesis.
-</details>`
     }
   ]
 };

@@ -102,63 +102,66 @@ Hexokinase (most tissues) has a LOW $K_m$ — it works at full speed even at low
       }
     },
     {
-      id: 'ek2-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 2
-
-- $v_0 = V_{max}[S]/(K_m + [S])$; at $[S] = K_m$, $v_0 = V_{max}/2$
-- Low $K_m$ = high apparent affinity; $K_m$ ignores enzyme amount, $V_{max}$ scales with it ($V_{max} = k_{cat}[E]_t$)
-- $k_{cat}/K_m$ = efficiency at low substrate; diffusion limit defines "catalytic perfection"
-- Lineweaver-Burk: y-intercept $1/V_{max}$, x-intercept $-1/K_m$, slope $K_m/V_{max}$
-- Hexokinase (low $K_m$, always on) vs. glucokinase (high $K_m$, glucose sensor) is the classic physiological application
-
-<!-- yield:low -->
-- Low-yield extras: the numerical diffusion limit, roughly $10^{8}$-$10^{9}\\ M^{-1}s^{-1}$
-<!-- /yield -->`
-    },
-    {
       id: 'ek2-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — Kinetics Calculations
 
-<details>
-<summary><b>Example 1: Compute velocity at a given substrate concentration</b></summary>
+**Problem 1.** An enzyme has $V_{max} = 120$ $\\mu$mol/min and $K_m = 4$ mM. The assay runs at $[S] = 12$ mM.
 
-**Question:** An enzyme has $V_{max} = 120$ $\\mu$mol/min and $K_m = 4$ mM. What is $v_0$ at $[S] = 12$ mM?
+- **(a)** What is $v_0$?
+- **(b)** 12 mM is what multiple of $K_m$, and what fraction of $V_{max}$ should that give?
+- **(c)** What fraction of $V_{max}$ does any enzyme reach at $[S] = K_m$, $4K_m$ and $9K_m$?
 
-**Solution:**
-1. $v_0 = V_{max}[S]/(K_m + [S]) = 120 \\times 12/(4 + 12)$
-2. $= 1440/16 = 90$ $\\mu$mol/min
-3. Sanity check: 12 mM is $3K_m$, and $3/(1+3) = 3/4$ of $V_{max}$ — indeed $0.75 \\times 120 = 90$.
+**(a) Plug in.** $v_0 = V_{max}[S]/(K_m + [S]) = 120 \\times 12/(4 + 12) = 1440/16 = 90$ $\\mu$mol/min.
 
-**MCAT Strategy:** Memorize the fraction shortcut: at $[S] = nK_m$, $v_0 = \\frac{n}{n+1}V_{max}$. At $K_m$: 1/2. At $4K_m$: 4/5. At $9K_m$: 90%.
-</details>
+**(b) Sanity check.** 12 mM is $3K_m$, and $3/(1+3) = 3/4$ of $V_{max}$: indeed $0.75 \\times 120 = 90$, matching (a).
 
-<details>
-<summary><b>Example 2: Extract constants from a Lineweaver-Burk plot</b></summary>
+**(c) The fraction shortcut.** At $[S] = nK_m$, $v_0 = \\frac{n}{n+1}V_{max}$. At $K_m$: 1/2. At $4K_m$: 4/5. At $9K_m$: 90%.
 
-**Question:** A double-reciprocal plot has y-intercept $0.01$ (min/$\\mu$mol) and x-intercept $-0.5$ (1/mM). Find $V_{max}$ and $K_m$.
+**Problem 2.** A double-reciprocal plot has y-intercept $0.01$ (min/$\\mu$mol) and x-intercept $-0.5$ (1/mM).
 
-**Solution:**
-1. y-intercept $= 1/V_{max} = 0.01$, so $V_{max} = 100$ $\\mu$mol/min.
-2. x-intercept $= -1/K_m = -0.5$, so $K_m = 2$ mM.
-3. Slope check: $K_m/V_{max} = 2/100 = 0.02$ mM·min/$\\mu$mol — consistent.
+- **(a)** What is $V_{max}$?
+- **(b)** What is $K_m$?
+- **(c)** What slope should the line have, and is it consistent?
 
-**MCAT Strategy:** Invert and drop the sign. Most errors come from forgetting that intercepts are RECIPROCALS: a small y-intercept means a big $V_{max}$.
-</details>
+**(a) The y-intercept.** $1/V_{max} = 0.01$, so $V_{max} = 100$ $\\mu$mol/min. Intercepts are RECIPROCALS: a small y-intercept means a big $V_{max}$.
 
-<details>
-<summary><b>Example 3: Interpret a mutation's kinetic signature</b></summary>
+**(b) The x-intercept.** $-1/K_m = -0.5$, so $K_m = 2$ mM. Invert and drop the sign.
 
-**Question:** A point mutation in an enzyme's substrate-binding pocket (far from the catalytic residues) is characterized kinetically. Predict the likely changes in $K_m$ and $k_{cat}$, and what the Lineweaver-Burk plot would show versus wild type.
+**(c) Slope check.** With $K_m = 2$ mM from (b) and $V_{max} = 100$ $\\mu$mol/min from (a): $K_m/V_{max} = 2/100 = 0.02$ mM·min/$\\mu$mol, consistent.
 
-**Solution:**
-1. Weakened substrate binding raises $K_m$ (more substrate needed to reach half-saturation).
-2. The chemistry step is untouched, so $k_{cat}$ (and $V_{max}$ at fixed enzyme) is roughly unchanged.
-3. Plot: same y-intercept, x-intercept pulled toward the origin, steeper slope — the same signature as a competitive inhibitor, but permanent.
+**Problem 3.** A point mutation in an enzyme's substrate-binding pocket, far from the catalytic residues, is characterized kinetically against wild type.
 
-**MCAT Strategy:** Map mutations to parameters: binding-site changes move $K_m$; catalytic-residue changes move $k_{cat}$. A passage giving you a kinetics table is really asking which part of the enzyme the perturbation touched.
-</details>`
+- **(a)** How does $K_m$ change?
+- **(b)** How do $k_{cat}$ and $V_{max}$ change?
+- **(c)** What does the Lineweaver-Burk plot show versus wild type?
+
+**(a) Binding.** Weakened substrate binding raises $K_m$: more substrate is needed to reach half-saturation.
+
+**(b) Catalysis.** The chemistry step is untouched, so $k_{cat}$ (and $V_{max}$ at fixed enzyme) is roughly unchanged.
+
+**(c) The plot.** Same y-intercept, x-intercept pulled toward the origin, steeper slope: the same signature as a competitive inhibitor, but permanent. Binding-site changes move $K_m$; catalytic-residue changes move $k_{cat}$. A passage giving you a kinetics table is really asking which part of the enzyme the perturbation touched.`
+    },
+    {
+      id: 'ek2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 2
+
+- **The Michaelis-Menten equation.** $v_0 = V_{max}[S]/(K_m + [S])$; at $[S] = nK_m$, $v_0 = \\frac{n}{n+1}V_{max}$, so $V_{max}/2$ at $K_m$.
+- **Reading $K_m$.** Low $K_m$ = high apparent affinity: hexokinase runs flat out, while high-$K_m$ glucokinase tracks blood glucose.
+- **Efficiency is $k_{cat}/K_m$.** It ranks enzymes at low substrate; enzymes near the diffusion limit are "catalytically perfect."
+- **Lineweaver-Burk intercepts.** The y-intercept is $1/V_{max}$, the x-intercept $-1/K_m$, and the slope $K_m/V_{max}$.
+
+**Common traps**
+
+- **More enzyme, new $K_m$.** Adding enzyme raises $V_{max} = k_{cat}[E]_t$ but leaves $K_m$, a property of the enzyme-substrate pair, alone.
+- **Reading intercepts directly.** Intercepts are reciprocals: a small y-intercept means a big $V_{max}$; an x-intercept nearer zero, a bigger $K_m$.
+- **Raw $k_{cat}$ at low substrate.** At low $[S]$ the enzyme with the higher $k_{cat}/K_m$ is faster, not the one with the higher $k_{cat}$.
+- **Large $K_m$ as tight binding.** A larger $K_m$ means WEAKER apparent affinity: more substrate is needed for half-maximal speed.
+
+<!-- yield:low -->
+- Low-yield extras: the numerical diffusion limit, roughly $10^{8}$-$10^{9}\\ M^{-1}s^{-1}$
+<!-- /yield -->`
     }
   ]
 };

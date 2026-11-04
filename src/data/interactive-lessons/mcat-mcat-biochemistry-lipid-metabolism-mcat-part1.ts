@@ -49,6 +49,53 @@ PKA also phosphorylates **perilipins**, the proteins coating the fat droplet, wh
 <!-- /yield -->`
     },
     {
+      id: 'lm1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Transport Problems
+
+**Problem 1.** A long-chain fatty acid starts in a meal's triglyceride and ends as ATP in a cardiac muscle cell.
+
+- **(a)** How does the fatty acid get from the gut lumen into the blood?
+- **(b)** How does it get out of its lipoprotein and into the cardiomyocyte?
+- **(c)** What happens to it inside the cardiomyocyte?
+- **(d)** Did it ever travel "free" in plasma on the way from the gut?
+
+**(a) Gut to blood.** Bile-salt micelle → pancreatic lipase frees the FA → the enterocyte re-esterifies it to TG → chylomicron (apoB-48) → lymph → blood.
+
+**(b) Unloading.** Cardiac capillary LPL (activated by apoC-II acquired from HDL) hydrolyzes the TG; the FA enters the cardiomyocyte.
+
+**(c) Burning it.** Activation to fatty acyl-CoA, the carnitine shuttle into mitochondria, then beta-oxidation → acetyl-CoA → TCA → ETC → ATP.
+
+**(d) Never free.** No: from the gut it moved inside a lipoprotein; only adipose-mobilized FAs ride albumin. Distinguish the two modes: lipoprotein TG (fed state, LPL unloads) vs. albumin-bound FFA (fasting, HSL releases).
+
+**Problem 2.** A fasting patient's plasma is creamy, with a thick floating layer of apoB-48 particles on ultracentrifugation. Post-heparin plasma LPL protein is normal but inactive; adding normal HDL restores its activity.
+
+- **(a)** Which lipoprotein is persisting?
+- **(b)** What does HDL donate, so what is deficient?
+- **(c)** Which other TG-rich particle should also accumulate, and what experiment confirms the diagnosis?
+- **(d)** What does a "restored by adding X" experiment identify?
+
+**(a) The particle.** apoB-48 + a floating layer after an overnight fast = persistent CHYLOMICRONS (they should clear within hours).
+
+**(b) The diagnosis.** LPL protein is present but inactive, yet normal HDL restores activity. HDL's relevant donation is **apoC-II**, so the patient has apoC-II deficiency.
+
+**(c) VLDL and the confirmation.** VLDL also depends on apoC-II-activated LPL to unload its TG, so it should accumulate too. Adding purified apoC-II would be the confirming experiment.
+
+**(d) The general rule.** It identifies the missing cofactor, not the enzyme. Map each apoprotein to its job: B-48 assembly, C-II LPL activation, E remnant uptake, B-100 LDL receptor, A-I LCAT.
+
+**Problem 3.** A bacterium shifted from 37 to 20 degrees C remodels its membrane lipids.
+
+- **(a)** Does the cold membrane need to become more or less fluid?
+- **(b)** How do its fatty acid saturation and chain length change?
+- **(c)** What happens on warming, and what buffers fluidity in animal membranes?
+
+**(a) Direction.** Cold rigidifies membranes, so the cell must INCREASE fluidity to compensate (homeoviscous adaptation).
+
+**(b) The lipid changes.** It incorporates MORE unsaturated (cis-kinked) fatty acids and SHORTER chains; both pack less tightly, lowering the transition temperature.
+
+**(c) Warming and cholesterol.** The reverse occurs on warming. In animal membranes, cholesterol buffers fluidity: it rigidifies fluid membranes and fluidizes rigid ones. Levers: unsaturation UP = fluid; chain length UP = rigid; cholesterol = buffer both ways.`
+    },
+    {
       id: 'lm1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Lipid Transport & Digestion** 🎯`,
@@ -97,60 +144,21 @@ PKA also phosphorylates **perilipins**, the proteins coating the fat droplet, wh
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Fat = reduced + anhydrous = ~9 kcal/g; cis double bonds kink chains, lowering melting point and raising membrane fluidity
-- Digestion: bile salts emulsify → pancreatic lipase → 2-MAG + FFA → re-esterified → chylomicrons (apoB-48) → LYMPH
-- Density ladder: chylomicron → VLDL (B-100) → IDL → LDL (cholesterol out) vs. HDL (A-I, cholesterol back; LCAT esterifies)
-- LPL needs apoC-II; LDL receptor reads apoB-100 (familial hypercholesterolemia when absent)
-- Fasting: PKA → hormone-sensitive lipase ON → FFA on albumin + glycerol to liver; insulin reverses
+- **Fat stores dense energy.** Triacylglycerol is reduced and anhydrous: about 9 kcal/g versus about 4 for hydrated glycogen.
+- **Dietary fat rides lymph.** Bile salts emulsify, lipase digests, and enterocytes pack TG into apoB-48 chylomicrons for lymph.
+- **The density ladder.** Chylomicrons/VLDL unload TG; LDL (apoB-100 → LDL receptor; FH when absent) delivers cholesterol; HDL returns it.
+- **Fasting mobilizes stored fat.** PKA turns on hormone-sensitive lipase; FFAs ride albumin, glycerol goes to liver; insulin switches HSL off.
+
+**Common traps**
+
+- **LPL working without apoC-II.** LPL is inactive without apoC-II, so TG-rich particles pile up even when LPL protein is normal.
+- **Chylomicrons in the portal vein.** Chylomicrons enter lacteals and bypass the liver; only short/medium-chain FAs use the portal vein.
+- **Mixing up the two lipases.** LPL unloads lipoprotein TG in capillaries; HSL releases the adipocyte's stored TG in fasting.
+- **Kinks make membranes rigid.** Cis double bonds pack poorly, lowering melting point and RAISING fluidity; cholesterol buffers both ways.
 
 <!-- yield:low -->
 - Low-yield extras: PKA also phosphorylates perilipins, the droplet-coating proteins, to give HSL access to stored TG
 <!-- /yield -->`
-    },
-    {
-      id: 'lm1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Transport Problems
-
-<details>
-<summary><b>Example 1: Track a dietary fatty acid to muscle ATP</b></summary>
-
-**Question:** Outline the path of a long-chain fatty acid from a meal's triglyceride to ATP in cardiac muscle, naming each carrier and enzyme checkpoint.
-
-**Solution:**
-1. Bile-salt micelle → pancreatic lipase frees the FA → enterocyte re-esterifies to TG → chylomicron (apoB-48) → lymph → blood.
-2. Cardiac capillary LPL (activated by apoC-II acquired from HDL) hydrolyzes the TG; the FA enters the cardiomyocyte.
-3. Activation to fatty acyl-CoA, carnitine shuttle into mitochondria, beta-oxidation → acetyl-CoA → TCA → ETC → ATP.
-4. Note the FA never traveled "free" in plasma from the gut — it moved inside a lipoprotein; only adipose-mobilized FAs ride albumin.
-
-**MCAT Strategy:** Distinguish the two FFA transport modes: lipoprotein TG (fed state, LPL unloads) vs. albumin-bound FFA (fasting, HSL releases).
-</details>
-
-<details>
-<summary><b>Example 2: Predict membrane fluidity changes</b></summary>
-
-**Question:** A bacterium shifted from 37 to 20 degrees C remodels its membrane lipids. Predict the direction of change in fatty acid saturation and chain length, and explain.
-
-**Solution:**
-1. Cold rigidifies membranes; the cell must INCREASE fluidity to compensate (homeoviscous adaptation).
-2. It incorporates MORE unsaturated (cis-kinked) fatty acids and SHORTER chains — both pack less tightly, lowering the transition temperature.
-3. The reverse occurs on warming. In animal membranes, cholesterol buffers fluidity: it rigidifies fluid membranes and fluidizes rigid ones.
-
-**MCAT Strategy:** Fluidity levers: unsaturation UP = fluid; chain length UP = rigid; cholesterol = buffer in both directions.
-</details>
-
-<details>
-<summary><b>Example 3: Interpret a lipoprotein electrophoresis/assay panel</b></summary>
-
-**Question:** A fasting patient's plasma is creamy. Ultracentrifugation shows a thick floating layer; the particles contain apoB-48. A heparin-releasable plasma enzyme assay shows normal lipase protein but no activity, which is restored by adding normal HDL. What is deficient?
-
-**Solution:**
-1. apoB-48 + floating layer after an overnight fast = persistent CHYLOMICRONS (they should clear within hours).
-2. LPL protein is present but inactive in the patient's plasma — yet normal HDL restores activity. HDL's relevant donation is **apoC-II**.
-3. Conclusion: apoC-II deficiency; chylomicrons (and VLDL) cannot be unloaded. Adding purified apoC-II would be the confirming experiment.
-
-**MCAT Strategy:** "Restored by adding X" experiments identify the missing cofactor, not the enzyme; map each apoprotein to its function (B-48 assembly, C-II LPL activation, E remnant uptake, B-100 LDL receptor, A-I LCAT).
-</details>`
     }
   ]
 };

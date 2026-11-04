@@ -23,6 +23,8 @@ Electrons flow down an electrochemical staircase in the **inner mitochondrial me
 
 Because FADH$_2$ enters at Complex II (no pumping), its electrons drive fewer proton translocations: **~2.5 ATP per NADH vs. ~1.5 ATP per FADH$_2$**.
 
+The free energy of each electron transfer follows from the reduction potentials: $\\Delta G^{\\circ\\prime} = -nF\\Delta E^{\\circ\\prime}$, with $\\Delta E^{\\circ\\prime} = E^{\\circ\\prime}_{\\text{acceptor}} - E^{\\circ\\prime}_{\\text{donor}}$; NADH ($-0.32$ V) → O$_2$ ($+0.82$ V) releases $\\approx -220$ kJ/mol.
+
 ### Chemiosmosis
 
 Proton pumping creates a **proton-motive force** across the inner membrane — part concentration gradient ($\\Delta$pH, matrix alkaline) and part electrical potential ($\\Delta\\psi$, matrix negative). Protons flow back through **ATP synthase** (F$_o$ membrane channel spins the rotor; F$_1$ catalytic heads make ATP). ETC and ATP synthesis are **coupled**: block one and the other stalls.
@@ -48,6 +50,66 @@ Glycolytic NADH is cytosolic, and the inner membrane is impermeable to NADH.
 - **Glycerol-3-phosphate shuttle** (muscle, brain): NADH → FADH$_2$ on the inner membrane → CoQ (~1.5 ATP). Faster but less efficient.
 
 This shuttle choice is why total ATP per glucose is quoted as a **range (~30-32)** rather than a single number.`
+    },
+    {
+      id: 'be3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — ETC Experiments
+
+**Problem 1.** In poisoned mitochondria, NADH, CoQ and Complex III are all found fully REDUCED, while cytochrome c and Complex IV are fully OXIDIZED.
+
+- **(a)** What redox state do carriers upstream and downstream of a block take?
+- **(b)** Where is the reduced/oxidized boundary here?
+- **(c)** Which step is blocked, and which inhibitor fits?
+
+**(a) The rule.** Everything UPSTREAM of a block backs up in the reduced state (electrons pile up); everything downstream drains to the oxidized state. This is the ETC's version of a dammed river.
+
+**(b) The boundary.** Between Complex III (reduced) and cytochrome c (oxidized).
+
+**(c) The target.** Electron transfer from Complex III to cytochrome c is blocked — the behavior of antimycin A, a Complex III inhibitor. "Reduced before, oxidized after": find the boundary and you have found the inhibitor's target.
+
+<!-- yield:low -->
+- Problem 1 aside: within Complex III, antimycin A binds the Q cycle's matrix-facing quinone site (Qi), stalling electron flow through the complex.
+<!-- /yield -->
+
+**Problem 2.** Severe salicylate (aspirin) toxicity produces hyperthermia, increased O$_2$ consumption, and falling ATP despite abundant fuel.
+
+- **(a)** What do toxic doses of salicylate do at the inner membrane?
+- **(b)** Why do O$_2$ consumption and body temperature rise?
+- **(c)** Why does ATP fall despite abundant fuel?
+
+**(a) Uncoupling.** At toxic doses salicylates act as protonophore UNCOUPLERS: they shuttle H$^+$ across the inner membrane, dissipating the gradient.
+
+**(b) Oxygen and heat.** Electron transport races to rebuild the gradient → O$_2$ consumption rises; the gradient's energy is lost as heat → hyperthermia.
+
+**(c) No ATP.** No gradient reaches ATP synthase → ATP synthesis falls, even with the ETC running at maximum. The triad "more O$_2$, less ATP, more heat" always means uncoupling — the same physiology as brown-fat thermogenin, just pathological.
+
+**Problem 3.** One NADH is made inside the matrix by isocitrate dehydrogenase. A liver cell oxidizes one cytosolic NADH via the malate-aspartate shuttle; a muscle cell oxidizes one via the glycerol-3-phosphate shuttle.
+
+- **(a)** About how much ATP does the matrix NADH yield?
+- **(b)** About how much ATP does the liver's cytosolic NADH yield?
+- **(c)** About how much ATP does the muscle's cytosolic NADH yield?
+- **(d)** How do the three yields rank?
+
+**(a) Matrix NADH.** It enters Complex I directly → ~2.5 ATP.
+
+**(b) Liver shuttle.** The malate-aspartate shuttle regenerates NADH INSIDE the matrix → also ~2.5 ATP.
+
+**(c) Muscle shuttle.** The glycerol-3-P shuttle delivers the electrons via FAD to CoQ, skipping Complex I → ~1.5 ATP.
+
+**(d) Ranking.** From (a)–(c): matrix = liver shuttle > muscle shuttle. Ask ONE question about any NADH: do its electrons reach Complex I or skip to CoQ? That single fact sets the yield.
+
+**Problem 4.** Electrons pass from NADH ($E^{\\circ\\prime} = -0.32$ V) to O$_2$ ($E^{\\circ\\prime} = +0.82$ V). Use $\\Delta G^{\\circ\\prime} = -nF\\Delta E^{\\circ\\prime}$ with $F \\approx 96.5$ kJ/(mol·V).
+
+- **(a)** What is $\\Delta E^{\\circ\\prime}$ for the transfer?
+- **(b)** What is $\\Delta G^{\\circ\\prime}$ per NADH oxidized?
+- **(c)** If one NADH yields ~2.5 ATP at 30.5 kJ/mol each, what fraction of that free energy is captured?
+
+**(a) Potential difference.** $\\Delta E^{\\circ\\prime} = E^{\\circ\\prime}_{\\text{acceptor}} - E^{\\circ\\prime}_{\\text{donor}} = +0.82 - (-0.32) = +1.14$ V. A positive $\\Delta E^{\\circ\\prime}$ means electrons flow downhill, toward O$_2$.
+
+**(b) Free energy.** NADH donates 2 electrons ($n = 2$), so with $\\Delta E^{\\circ\\prime} = +1.14$ V from (a): $\\Delta G^{\\circ\\prime} = -(2)(96.5)(1.14) \\approx -220$ kJ/mol.
+
+**(c) Efficiency.** $2.5 \\times 30.5 \\approx 76$ kJ/mol is captured as ATP — about 35% of the 220 kJ/mol from (b) under standard conditions. The rest is released as heat.`
     },
     {
       id: 'be3-quiz1',
@@ -98,64 +160,21 @@ This shuttle choice is why total ATP per glucose is quoted as a **range (~30-32)
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Electron path: NADH → I → CoQ → III → cyt c → IV → O$_2$; FADH$_2$ enters at II (no pumping) → ~1.5 vs ~2.5 ATP
-- Proton-motive force = $\\Delta$pH + $\\Delta\\psi$ across the INNER membrane; ATP synthase (F$_o$F$_1$) is a rotary motor
-- Inhibitor map: rotenone I, antimycin A III, CN/CO/azide IV, oligomycin ATP synthase
-- Uncouplers (DNP, thermogenin): O$_2$ consumption UP, ATP DOWN, heat UP — opposite O$_2$ signature from inhibitors
-- Shuttles for cytosolic NADH: malate-aspartate (keeps NADH value) vs. glycerol-3-phosphate (drops to FADH$_2$ value)
+- **The electron path.** NADH → I → CoQ → III → cyt c → IV → O$_2$; FADH$_2$ enters at II, which pumps no protons.
+- **A gradient couples it.** Proton-motive force ($\\Delta$pH + $\\Delta\\psi$ across the INNER membrane) drives rotary ATP synthase.
+- **Inhibitors vs. uncouplers.** Rotenone (I), antimycin A (III), cyanide (IV), oligomycin (ATP synthase) cut O$_2$ use; uncouplers raise it.
+- **Complex I sets the yield.** Electrons reaching Complex I give ~2.5 ATP; entering at CoQ (FADH$_2$, glycerol-3-P shuttle) ~1.5.
+
+**Common traps**
+
+- **Uncouplers stop respiration.** Uncouplers (DNP, aspirin overdose) speed O$_2$ use while ATP falls and heat rises.
+- **Oligomycin blocks the chain.** It blocks ATP synthase; O$_2$ use stops only secondarily, as the gradient backs up.
+- **Rotenone acts like cyanide.** Rotenone blocks only NADH entry, so succinate electrons still reach O$_2$; cyanide stops all flow.
+- **FADH$_2$ carries fewer electrons.** Both carry 2 e$^-$; FADH$_2$ gives ~1.5 ATP because Complex II pumps no protons.
 
 <!-- yield:low -->
 - Low-yield extras: antimycin A acts at Complex III's Qi site, the matrix-facing quinone-binding site of the Q cycle
 <!-- /yield -->`
-    },
-    {
-      id: 'be3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — ETC Experiments
-
-<details>
-<summary><b>Example 1: Diagnose the site of a block from carrier redox states</b></summary>
-
-**Question:** In poisoned mitochondria, NADH, CoQ, and Complex III are all found fully REDUCED, while cytochrome c and Complex IV are fully OXIDIZED. Where is the block?
-
-**Solution:**
-1. Everything UPSTREAM of a block backs up in the reduced state (electrons pile up); everything downstream drains to the oxidized state.
-2. The reduced/oxidized boundary lies between Complex III and cytochrome c.
-3. The inhibitor blocks electron transfer from Complex III to cytochrome c — the behavior of antimycin A, a Complex III inhibitor.
-
-**MCAT Strategy:** "Reduced before, oxidized after" — find the boundary and you have found the inhibitor's target. This is the ETC's version of a dammed river.
-</details>
-
-<!-- yield:low -->
-- Example 1 aside: within Complex III, antimycin A binds the Q cycle's matrix-facing quinone site (Qi), stalling electron flow through the complex.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 2: Why does aspirin overdose cause fever and metabolic derangement?</b></summary>
-
-**Question:** Severe salicylate toxicity produces hyperthermia, increased O$_2$ consumption, and falling ATP despite abundant fuel. Which single mechanism explains all three findings?
-
-**Solution:**
-1. Salicylates at toxic doses act as protonophore UNCOUPLERS: they shuttle H$^+$ across the inner membrane, dissipating the gradient.
-2. Electron transport races to rebuild the gradient → O$_2$ consumption rises; the gradient's energy is lost as heat → hyperthermia.
-3. No gradient reaches ATP synthase → ATP synthesis falls even though the ETC is running at maximum.
-
-**MCAT Strategy:** The triad "more O$_2$, less ATP, more heat" always means uncoupling — the same physiology as brown-fat thermogenin, just pathological.
-</details>
-
-<details>
-<summary><b>Example 3: ATP arithmetic for one NADH under different conditions</b></summary>
-
-**Question:** A liver cell oxidizes one cytosolic NADH via the malate-aspartate shuttle; a muscle cell oxidizes one via the glycerol-3-phosphate shuttle; a third NADH is generated inside the matrix by isocitrate dehydrogenase. Rank the ATP yields.
-
-**Solution:**
-1. Matrix NADH (isocitrate DH): enters Complex I directly → ~2.5 ATP.
-2. Liver cytosolic NADH: malate-aspartate shuttle regenerates NADH INSIDE the matrix → also ~2.5 ATP.
-3. Muscle cytosolic NADH: glycerol-3-P shuttle delivers electrons via FAD to CoQ → ~1.5 ATP.
-4. Ranking: matrix = liver shuttle > muscle shuttle.
-
-**MCAT Strategy:** Ask ONE question about any NADH: do its electrons reach Complex I or skip to CoQ? That single fact sets the yield.
-</details>`
     }
   ]
 };

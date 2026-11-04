@@ -46,15 +46,58 @@ A C$_{16}$ chain needs **7 cycles** (n/2 − 1) producing **8 acetyl-CoA, 7 FADH
 - 8 acetyl-CoA × 10 (each spins the TCA cycle: 3 NADH, 1 FADH$_2$, 1 GTP) = **80**
 - 7 NADH × 2.5 = **17.5**
 - 7 FADH$_2$ × 1.5 = **10.5**
-- Subtract 2 ATP equivalents for activation
-
-$$80 + 17.5 + 10.5 - 2 = 106\\ ATP$$
+- Subtract 2 ATP equivalents for activation: $80 + 17.5 + 10.5 - 2 = 106$ ATP
 
 ### Special Chains
 
 - **Odd-chain fatty acids:** the final thiolysis leaves **propionyl-CoA** (3 C) → carboxylated (biotin) to methylmalonyl-CoA → **methylmalonyl-CoA mutase (vitamin B$_{12}$)** → succinyl-CoA, which enters the TCA cycle. This is the ONLY fatty acid fragment that can feed net gluconeogenesis.
 - **Unsaturated fatty acids:** existing cis double bonds require an **isomerase** (and, for polyunsaturates, a reductase) and skip the FADH$_2$-generating step at that position — slightly LESS ATP than a saturated chain of equal length.
 - **Very-long chains (> 20 C):** shortened first in **peroxisomes**, where the initial oxidation hands electrons to O$_2$, making H$_2$O$_2$ (no ATP from that first step).`
+    },
+    {
+      id: 'lm2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Oxidation Arithmetic
+
+**Problem 1.** Capric acid (C10:0) is completely oxidized. Count 2.5 ATP per NADH and 1.5 ATP per FADH$_2$.
+
+- **(a)** How many beta-oxidation cycles does it run, and how many acetyl-CoA does it release?
+- **(b)** How much ATP do the acetyl-CoA, NADH and FADH$_2$ each contribute?
+- **(c)** What is the net ATP yield?
+
+**(a) Cycles and acetyl-CoA.** Cycles = 10/2 − 1 = **4**; acetyl-CoA = 10/2 = **5**.
+
+**(b) Each product's share.** With 4 cycles and 5 acetyl-CoA from (a): 5 acetyl-CoA × 10 = 50; 4 NADH × 2.5 = 10; 4 FADH$_2$ × 1.5 = 6.
+
+**(c) Net yield.** The subtotal from (b) is 66; subtract 2 for activation → **64 ATP**. Every saturated even chain: cycles = n/2 − 1, acetyl-CoA = n/2. Wrong answers are built from forgetting the −2 activation cost.
+
+**Problem 2.** An infant has seizures after long gaps between feedings. Labs during an episode: low glucose, LOW ketones, normal carnitine.
+
+- **(a)** What does hypoketotic hypoglycemia during fasting say about fat burning?
+- **(b)** Where is the lesion, given the normal carnitine?
+- **(c)** Why does glucose fall so far?
+
+**(a) Fat burning is broken.** Normal fasting produces ABUNDANT ketones, so fasting + hypoketotic hypoglycemia means the fat-burning pathway is broken.
+
+**(b) The lesion.** Normal carnitine points past the shuttle: an acyl-CoA dehydrogenase defect (classically MCAD).
+
+**(c) Why glucose crashes.** Muscle and other tissues, unable to burn fat, keep consuming glucose, and hepatic gluconeogenesis stalls without beta-oxidation-derived acetyl-CoA to activate pyruvate carboxylase and supply ATP. Ketogenesis and gluconeogenesis BOTH lean on beta-oxidation in fasting.
+
+<!-- yield:low -->
+- Problem 2 aside: a supporting lab clue in MCAD deficiency is elevated urinary dicarboxylic acids, because the backed-up fatty acids are diverted to backup omega-oxidation in the ER.
+<!-- /yield -->
+
+**Problem 3.** Oleate (18:1, cis-9) and stearate (18:0) are both fully oxidized.
+
+- **(a)** How many cycles and acetyl-CoA does each produce?
+- **(b)** Which step does oleate's existing double bond skip, and what does it lose?
+- **(c)** Which yields more ATP, and by roughly how much?
+
+**(a) Same skeleton.** Both are 18 C: 8 cycles, 9 acetyl-CoA.
+
+**(b) The skipped step.** The acyl-CoA dehydrogenase step is SKIPPED for that round (an isomerase repositions the bond instead), so oleate makes one fewer FADH$_2$.
+
+**(c) The difference.** With one fewer FADH$_2$ from (b), stearate wins by ~1.5 ATP (stearate ≈ 120, oleate ≈ 118.5). Existing unsaturation = electrons already removed = less energy left to harvest.`
     },
     {
       id: 'lm2-quiz1',
@@ -105,64 +148,21 @@ $$80 + 17.5 + 10.5 - 2 = 106\\ ATP$$
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Activation costs 2 ATP equivalents (ATP → AMP + PP$_i$), once per fatty acid
-- Carnitine shuttle (CPT-I → translocase → CPT-II) imports long chains; **malonyl-CoA inhibits CPT-I** (no futile cycle)
-- Each cycle: FADH$_2$ + NADH + acetyl-CoA; chain shrinks by 2 C
-- Palmitate: 7 cycles → 8 acetyl-CoA, 7 FADH$_2$, 7 NADH → 80 + 10.5 + 17.5 − 2 = **106 ATP**
-- Odd chains → propionyl-CoA → (biotin, then B12) → succinyl-CoA → the one glucogenic fat fragment
-- Unsaturated chains: isomerase/reductase needed, slightly less ATP; very-long chains start in peroxisomes
+- **Activation costs 2 ATP.** ATP → AMP + PP$_i$ costs 2 ATP equivalents, paid once per fatty acid whatever its length.
+- **Malonyl-CoA guards the gate.** The carnitine shuttle (CPT-I, translocase, CPT-II) imports long chains; malonyl-CoA blocks CPT-I.
+- **One cycle, three products.** Each round makes 1 FADH$_2$, 1 NADH and 1 acetyl-CoA and shortens the chain by 2 carbons.
+- **Palmitate nets 106 ATP.** 7 cycles and 8 acetyl-CoA give $80 + 17.5 + 10.5 - 2 = 106$ ATP.
+
+**Common traps**
+
+- **Forgetting activation.** Leaving out the 2-ATP activation cost gives 108 for palmitate instead of 106.
+- **Counting n/2 cycles.** An n-carbon chain runs n/2 − 1 cycles but releases n/2 acetyl-CoA (palmitate: 7 and 8).
+- **Calling fat glucogenic.** Acetyl-CoA makes no net glucose; only an odd chain's propionyl-CoA → succinyl-CoA can.
+- **Unsaturated equals saturated.** An existing cis double bond skips (or costs) a redox step, so the chain yields slightly less ATP.
 
 <!-- yield:low -->
 - Low-yield extras: in acyl-CoA dehydrogenase defects such as MCAD, backed-up fatty acids spill into omega-oxidation, so urinary dicarboxylic acids rise
 <!-- /yield -->`
-    },
-    {
-      id: 'lm2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Oxidation Arithmetic
-
-<details>
-<summary><b>Example 1: ATP yield for a 10-carbon fatty acid</b></summary>
-
-**Question:** Calculate the net ATP from complete oxidation of capric acid (C10:0), using 2.5/NADH and 1.5/FADH$_2$.
-
-**Solution:**
-1. Cycles = 10/2 − 1 = **4**; acetyl-CoA = 10/2 = **5**.
-2. 5 acetyl-CoA × 10 = 50; 4 NADH × 2.5 = 10; 4 FADH$_2$ × 1.5 = 6.
-3. Subtotal 66; subtract 2 for activation → **64 ATP**.
-
-**MCAT Strategy:** Two formulas cover every saturated even chain: cycles = n/2 − 1, acetyl-CoA = n/2. Never forget the −2 activation cost — wrong answers on the exam are built from exactly that omission.
-</details>
-
-<details>
-<summary><b>Example 2: Diagnose the fasting-intolerant patient</b></summary>
-
-**Question:** An infant has seizures after long gaps between feedings. Labs during an episode: low glucose, LOW ketones, normal carnitine. Where is the lesion, and why does glucose fall so far?
-
-**Solution:**
-1. Fasting + hypoketotic hypoglycemia = the fat-burning pathway is broken (normal fasting produces ABUNDANT ketones).
-2. Normal carnitine points past the shuttle: an acyl-CoA dehydrogenase defect (classically MCAD).
-3. Glucose crashes because muscle and liver, unable to burn fat, keep consuming glucose, and gluconeogenesis stalls without beta-oxidation-derived acetyl-CoA to activate pyruvate carboxylase and supply ATP.
-
-**MCAT Strategy:** Tie the observations to dependencies: ketogenesis and gluconeogenesis BOTH lean on beta-oxidation during fasting.
-</details>
-
-<!-- yield:low -->
-- Example 2 aside: a supporting lab clue in MCAD deficiency is elevated urinary dicarboxylic acids, because the backed-up fatty acids are diverted to backup omega-oxidation in the ER.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 3: Compare oleate to stearate</b></summary>
-
-**Question:** Oleate (18:1, cis-9) and stearate (18:0) are both fully oxidized. Which yields more ATP, and by roughly how much?
-
-**Solution:**
-1. Both are 18 C: 8 cycles, 9 acetyl-CoA.
-2. Oleate's pre-existing double bond means the acyl-CoA dehydrogenase step is SKIPPED for that round (an isomerase repositions the bond instead) — one fewer FADH$_2$.
-3. Stearate wins by ~1.5 ATP (stearate ≈ 120, oleate ≈ 118.5).
-
-**MCAT Strategy:** Existing unsaturation = electrons already removed = less energy left to harvest. Directionally, unsaturated chains always yield slightly less than the saturated chain of equal length.
-</details>`
     }
   ]
 };

@@ -88,59 +88,62 @@ Uncompetitive and mixed inhibitors are pharmacologically attractive: a competiti
       }
     },
     {
-      id: 'ek3-summary',
-      type: 'text' as const,
-      content: `### Key Takeaways — Part 3
-
-- Competitive: binds free E at active site; $K_m$ up, $V_{max}$ same; beaten by substrate; LB lines meet on y-axis
-- Noncompetitive: binds E and ES equally at allosteric site; $V_{max}$ down, $K_m$ same; LB lines meet on x-axis
-- Uncompetitive: binds ES only; BOTH $K_m$ and $V_{max}$ down; parallel LB lines; worsened by more substrate
-- Mixed: unequal E/ES binding; $V_{max}$ down, $K_m$ either direction
-- Irreversible = covalent (aspirin, organophosphates, penicillin); survives dialysis; recovery needs new enzyme synthesis`
-    },
-    {
       id: 'ek3-worked-examples',
       type: 'text' as const,
       content: `### Worked Examples — Diagnosing Inhibitors
 
-<details>
-<summary><b>Example 1: Classify an inhibitor from a kinetics table</b></summary>
+**Problem 1.** Without inhibitor: $K_m = 5$ mM, $V_{max} = 200$ units. With inhibitor: apparent $K_m = 2.5$ mM, apparent $V_{max} = 100$ units.
 
-**Question:** Without inhibitor: $K_m = 5$ mM, $V_{max} = 200$ units. With inhibitor: apparent $K_m = 2.5$ mM, apparent $V_{max} = 100$ units. Classify the inhibitor.
+- **(a)** Can the inhibitor be competitive?
+- **(b)** How did the apparent $K_m$ change, and by what factor compared with $V_{max}$?
+- **(c)** What type of inhibitor is it, and what do its Lineweaver-Burk lines look like?
 
-**Solution:**
-1. $V_{max}$ fell (200 to 100), so it is not competitive.
-2. Apparent $K_m$ also FELL — and by the same factor of 2 as $V_{max}$.
-3. Both parameters reduced by the same factor = **uncompetitive** inhibition (parallel Lineweaver-Burk lines; the ratio $K_m/V_{max}$ is unchanged at 0.025).
+**(a) $V_{max}$ first.** $V_{max}$ fell from 200 to 100, so the inhibitor is not competitive.
 
-**MCAT Strategy:** Compute the ratio $K_m/V_{max}$ with and without inhibitor. Unchanged ratio = uncompetitive. $K_m$ unchanged alone = noncompetitive. $V_{max}$ unchanged alone = competitive.
-</details>
+**(b) $K_m$ next.** The apparent $K_m$ also FELL, from 5 to 2.5 mM: the same factor of 2 as $V_{max}$.
 
-<details>
-<summary><b>Example 2: Predict the effect of substrate accumulation in a pathway</b></summary>
+**(c) Classify.** Both parameters reduced by the same factor = **uncompetitive** inhibition: parallel Lineweaver-Burk lines, with $K_m/V_{max}$ unchanged at 0.025. Unchanged ratio = uncompetitive; $K_m$ unchanged alone = noncompetitive; $V_{max}$ unchanged alone = competitive.
 
-**Question:** Drug X competitively inhibits enzyme 2 of a linear pathway (A to B to C). After dosing, the concentration of B rises 20-fold. What happens to the drug's inhibition of enzyme 2 over time, and how would an uncompetitive inhibitor differ?
+**Problem 2.** Drug X competitively inhibits enzyme 2 of a linear pathway (A to B to C). After dosing, the concentration of B rises 20-fold.
 
-**Solution:**
-1. B is enzyme 2's substrate. As B accumulates, it increasingly outcompetes the competitive drug — inhibition weakens (the pathway partially "self-rescues").
-2. An uncompetitive inhibitor binds only the ES complex. More substrate means MORE ES complex, so accumulation of B would maintain or even enhance inhibition.
-3. This is why medicinal chemists often prefer uncompetitive/mixed inhibitors for enzymes whose substrates build up.
+- **(a)** What happens to the drug's inhibition of enzyme 2 over time?
+- **(b)** How would an uncompetitive inhibitor of enzyme 2 behave instead?
+- **(c)** Which inhibitor types suit an enzyme whose substrate builds up?
 
-**MCAT Strategy:** In pathway questions, always ask what happens to the inhibited enzyme's substrate level and feed that back into the inhibition type.
-</details>
+**(a) The competitive drug.** B is enzyme 2's substrate. As B accumulates, it increasingly outcompetes the drug, so inhibition weakens: the pathway partially "self-rescues".
 
-<details>
-<summary><b>Example 3: Design an experiment to distinguish reversible from irreversible inhibition</b></summary>
+**(b) An uncompetitive drug.** It binds only the ES complex. More substrate means MORE ES complex, so the buildup of B would maintain or even enhance inhibition.
 
-**Question:** An enzyme preparation loses 90% activity when incubated with compound Z. Propose a simple experiment to determine whether Z is a tight-binding reversible inhibitor or a covalent irreversible one.
+**(c) The design choice.** Uncompetitive or mixed inhibitors, which is why medicinal chemists often prefer them for such enzymes. In pathway questions, always ask what happens to the inhibited enzyme's substrate level.
 
-**Solution:**
-1. **Dilute or dialyze** the enzyme-Z mixture extensively, then re-assay.
-2. Reversible inhibitor: dissociates and washes away; activity returns toward 100%.
-3. Irreversible inhibitor: the covalent adduct stays; activity remains ~10% after dialysis. (Confirmation: mass spectrometry showing an enzyme mass increase equal to the adduct.)
+**Problem 3.** An enzyme preparation loses 90% of its activity when incubated with compound Z. Is Z a tight-binding reversible inhibitor or a covalent irreversible one?
 
-**MCAT Strategy:** "Does activity recover after dialysis/dilution?" is the standard experimental discriminator; activity that keeps falling with incubation time at a fixed inhibitor concentration also hints at covalent chemistry.
-</details>`
+- **(a)** What simple experiment distinguishes the two?
+- **(b)** What result would a reversible inhibitor give?
+- **(c)** What result would an irreversible inhibitor give, and how could it be confirmed?
+
+**(a) The experiment.** **Dilute or dialyze** the enzyme-Z mixture extensively, then re-assay.
+
+**(b) Reversible.** The inhibitor dissociates and washes away; activity returns toward 100%.
+
+**(c) Irreversible.** The covalent adduct stays; activity remains ~10% after dialysis. Mass spectrometry showing an enzyme mass increase equal to the adduct confirms it. Activity that keeps falling with incubation time at a fixed inhibitor concentration also hints at covalent chemistry.`
+    },
+    {
+      id: 'ek3-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 3
+
+- **Competitive.** Binds free E at the active site; $K_m$ up, $V_{max}$ same; beaten by substrate; LB lines meet on the y-axis.
+- **Noncompetitive.** Binds E and ES equally at an allosteric site; $V_{max}$ down, $K_m$ same; LB lines meet on the x-axis.
+- **Uncompetitive.** Binds ES only; $K_m$ and $V_{max}$ fall by the same factor; parallel LB lines; worse with more substrate.
+- **Irreversible.** Covalent (aspirin, organophosphates, penicillin); survives dialysis; recovery needs new enzyme synthesis.
+
+**Common traps**
+
+- **More substrate always rescues.** Only competitive inhibition is overcome by substrate; uncompetitive inhibition gets worse with more.
+- **Lower $K_m$ as a better enzyme.** A falling apparent $K_m$ is no gain: the uncompetitive inhibitor traps ES and blocks turnover, so $V_{max}$ falls equally.
+- **Mixed as noncompetitive.** A mixed inhibitor binds E and ES unequally, so $K_m$ moves either way while $V_{max}$ falls.
+- **Tight binding vs. covalent.** Reversible inhibitors wash out on dilution or dialysis; activity that never returns means covalent modification.`
     }
   ]
 };

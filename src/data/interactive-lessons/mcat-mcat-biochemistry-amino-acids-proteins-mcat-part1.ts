@@ -39,6 +39,50 @@ All 20 standard amino acids are **L-stereoisomers** with **(S) absolute configur
 In a water-soluble globular protein, nonpolar residues (V, L, I, F, M) cluster in the **interior**; charged/polar residues face the **aqueous exterior**. In a transmembrane segment, the pattern inverts: hydrophobic residues face the lipid bilayer. Passage questions often give you a mutation (e.g., Ile to Asp in a membrane-spanning helix) and ask you to predict destabilization.`
     },
     {
+      id: 'aa1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Amino Acid Identification
+
+**Problem 1.** A valine buried in the interior of a soluble cytosolic enzyme is mutated. Three mutants are made: Val to Ile, Val to Lys, and Val to Asp.
+
+- **(a)** What kind of environment does the valine occupy?
+- **(b)** What happens when Lys or Asp is placed there?
+- **(c)** Which substitution is LEAST likely to disrupt folding?
+
+**(a) The environment.** The interior of a soluble protein is its hydrophobic core, and Val is small and nonpolar, so its replacement must tolerate a nonpolar setting.
+
+**(b) Charged replacements.** Lys (+) and Asp (−) are charged; burying a charge in the nonpolar core carries a large energetic penalty and can misfold the protein.
+
+**(c) Least disruptive.** Val to Ile. Ile is also nonpolar and nearly the same size, a **conservative** substitution (similar chemistry: nonpolar for nonpolar, charge for like charge). The exam tests matching side-chain chemistry to environment, not memorized structures.
+
+**Problem 2.** A protein is inactivated by a reagent that alkylates free thiol groups. Mutating one residue to serine abolishes sensitivity to the reagent but preserves most activity.
+
+- **(a)** Which residue carries a free thiol?
+- **(b)** Why does the serine mutant no longer react?
+- **(c)** What does the retained activity say about the thiol's role?
+- **(d)** Could the target residue have been methionine?
+
+**(a) Free thiol.** A free thiol ($-SH$) means **cysteine**.
+
+**(b) The serine swap.** Serine is cysteine's oxygen analog ($-OH$ in place of $-SH$): similar size, no thiol, so the alkylating agent no longer reacts. Cys-to-Ser swaps are the classic test of whether a specific thiol matters.
+
+**(c) Retained activity.** Most activity survives the swap, so the thiol was not strictly catalytic; it was the modification target.
+
+**(d) Not methionine.** Met also contains sulfur, but as a thioether: it does not react like a free thiol and cannot form disulfides.
+
+**Problem 3.** Collagen's triple helix requires glycine at every third position (Gly-X-Y, with X often Pro). A mutation replaces one such glycine with arginine.
+
+- **(a)** Where does every third residue sit in the triple helix?
+- **(b)** Why can only glycine occupy that position?
+- **(c)** Why is the Gly-to-Arg mutation so destabilizing?
+
+**(a) The crowded axis.** In the tightly wound triple helix, every third residue packs at the crowded central axis where the three chains meet.
+
+**(b) Only glycine fits.** Glycine's side chain is a single H, the only one small enough for that position.
+
+**(c) Arginine cannot fit.** Arginine's long, bulky, charged side chain disrupts the helix (the basis of diseases such as osteogenesis imperfecta). When a Gly mutation is uniquely damaging, think steric constraint: there is literally no room for a side chain.`
+    },
+    {
       id: 'aa1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Amino Acid Structure & Classification** 🎯`,
@@ -87,57 +131,17 @@ In a water-soluble globular protein, nonpolar residues (V, L, I, F, M) cluster i
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Backbone = zwitterion at pH 7; all are L (S-configuration) except Cys (R) and achiral Gly
-- Classify instantly: nonpolar (G, A, V, L, I, P, M), aromatic (F, W, Y), polar (S, T, C, N, Q), acidic (D, E), basic (K, R, H)
-- Special residues: Gly = flexible, Pro = rigid helix breaker, Cys = disulfides, His = pKa ~6 catalyst, Met = start codon
-- Hydrophobic in = soluble protein core; hydrophobic out = transmembrane segment
-- Trp/Tyr absorb at 280 nm (protein quantification)`
-    },
-    {
-      id: 'aa1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Amino Acid Identification
+- **Backbone and chirality.** Zwitterion at pH 7. All chiral residues are L; all L residues are (S) except Cys (R); Gly is achiral.
+- **Five side-chain classes.** Nonpolar (G A V L I P M), aromatic (F W Y; Trp/Tyr absorb at 280 nm), polar (S T C N Q), acidic (D E), basic (K R H).
+- **Special residues.** Gly is flexible, Pro breaks helices, Cys forms disulfides, His (pKa ~6) is a common active-site acid-base catalyst.
+- **Hydrophobicity sets location.** Nonpolar residues fill a soluble protein's core but face the lipid in a transmembrane segment.
 
-<details>
-<summary><b>Example 1: Predict the effect of a conservative vs. nonconservative mutation</b></summary>
+**Common traps**
 
-**Question:** A cytosolic enzyme's hydrophobic core contains a valine. Which substitution is LEAST likely to disrupt folding: Val to Ile, Val to Lys, or Val to Asp?
-
-**Solution:**
-1. Val is small and nonpolar, buried in the hydrophobic core.
-2. Ile is also nonpolar and nearly the same size — a **conservative** substitution. Minimal disruption.
-3. Lys (+) and Asp (−) are charged; burying a charge in the nonpolar core carries a large energetic penalty and can misfold the protein.
-
-**Answer:** Val to Ile.
-
-**MCAT Strategy:** "Conservative" = similar chemistry (nonpolar for nonpolar, charge for like charge). The exam tests whether you match side-chain chemistry to environment, not memorized structures.
-</details>
-
-<details>
-<summary><b>Example 2: Identify a residue from functional clues</b></summary>
-
-**Question:** A protein is inactivated by a reagent that alkylates free thiol groups. Site-directed mutagenesis of one residue to serine abolishes sensitivity to the reagent but preserves most activity. What was the original residue?
-
-**Solution:**
-1. Free thiol ($-SH$) means **cysteine**.
-2. Serine is cysteine's oxygen analog ($-OH$ in place of $-SH$): similar size, no thiol, so the alkylating agent no longer reacts.
-3. Retained activity indicates the thiol was not strictly catalytic but was the modification target.
-
-**MCAT Strategy:** Cys-to-Ser swaps are the classic experiment for testing whether a specific thiol matters. Met also contains sulfur but as a thioether — it does not react like a free thiol and cannot form disulfides.
-</details>
-
-<details>
-<summary><b>Example 3: Collagen's Gly-X-Y logic</b></summary>
-
-**Question:** Collagen's triple helix requires glycine at every third position (Gly-X-Y, with X often Pro). A mutation replaces one such glycine with arginine. Why is this so destabilizing?
-
-**Solution:**
-1. In the tightly wound triple helix, every third residue packs at the crowded central axis where the three chains meet.
-2. Only glycine — side chain = H — is small enough to occupy that position.
-3. Arginine's long, bulky, charged side chain cannot fit, disrupting the helix (the basis of diseases such as osteogenesis imperfecta).
-
-**MCAT Strategy:** When a question says a mutation of Gly is uniquely damaging, think steric constraint: Gly marks positions where there is literally no room for a side chain.
-</details>`
+- **Calling every L residue (S).** Cysteine is L but (R), because its sulfur raises the side chain's priority; glycine is achiral.
+- **Treating His as charged.** With pKa ~6, His is mostly neutral at pH 7; only Lys and Arg are reliably positive.
+- **Methionine disulfides.** Met's sulfur is a thioether; only cysteine's free thiol can form a disulfide bond.
+- **Size-only substitutions.** Similar size is not enough: a charged residue buried in a nonpolar core or bilayer destabilizes the fold.`
     }
   ]
 };

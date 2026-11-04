@@ -53,6 +53,50 @@ The acetyl-CoA logic is elegant: when the fasting liver burns fat, abundant acet
 Ethanol oxidation floods the liver with NADH, pushing pyruvate → lactate and OAA → malate — starving gluconeogenesis of substrates. This is why heavy drinking while fasting causes **hypoglycemia**.`
     },
     {
+      id: 'cm2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Gluconeogenic Reasoning
+
+**Problem 1.** Muscle exports 2 lactate made anaerobically (2 ATP gained in muscle), and the liver reconverts them to 1 glucose.
+
+- **(a)** What does the liver spend to remake the glucose?
+- **(b)** What is the whole-body ATP balance for one full loop?
+- **(c)** Why is the cycle still worthwhile?
+
+**(a) Liver cost.** Gluconeogenesis from 2 lactate costs the liver 6 ATP-equivalents (4 ATP + 2 GTP).
+
+**(b) Net balance.** Muscle gains 2 ATP and the liver spends the 6 from (a): net −4 ATP per loop for the body. Liver fat oxidation pays for the "missing" 4 ATP.
+
+**(c) An energy transfer.** The cycle moves the energy cost from an O$_2$-starved, working muscle (or an RBC that can never oxidize) to the well-oxygenated liver, and it recycles carbon instead of losing it as lactate in urine. It is an energy TRANSFER, not an energy source.
+
+**Problem 2.** A fasting patient's liver receives glycerol from adipose lipolysis, palmitate (C16), alanine from muscle, and propionate from gut bacteria.
+
+- **(a)** Does glycerol contribute NET carbon to new glucose?
+- **(b)** Does palmitate?
+- **(c)** Does alanine?
+- **(d)** Does propionate?
+
+**(a) Glycerol.** Glycerol → glycerol-3-P → DHAP: YES, a direct gluconeogenic entry.
+
+**(b) Palmitate.** Palmitate → 8 acetyl-CoA: NO net glucose (carbons lost as CO$_2$); it only provides ATP and the acetyl-CoA activation signal.
+
+**(c) Alanine.** Alanine → pyruvate by transamination: YES.
+
+**(d) Propionate.** Propionate → propionyl-CoA → succinyl-CoA, a TCA intermediate that becomes OAA: YES, the odd-carbon exception. Sort every precursor: one that becomes pyruvate, OAA, a TCA intermediate or DHAP is glucogenic; one that becomes only acetyl-CoA is not.
+
+**Problem 3.** Hepatocytes engineered to express a PFK-1 variant insensitive to ATP and citrate inhibition are incubated in fasting conditions with glucagon.
+
+- **(a)** Which two opposing reactions now run at once?
+- **(b)** What is the net result of each round?
+- **(c)** Compared with normal cells, what happens to ATP consumption, heat production and glucose output?
+
+**(a) Both enzymes on.** Glucagon activates gluconeogenesis (F1,6-BPase working), but the mutant PFK-1 cannot be turned down and keeps rephosphorylating F6P → F1,6-BP.
+
+**(b) A futile cycle.** Each round hydrolyzes ATP (PFK-1) and releases P$_i$ (F1,6-BPase) with **no net flux**: a futile (substrate) cycle.
+
+**(c) Heat, not glucose.** ATP consumption and heat output rise; net glucose production falls. Whenever paired opposing enzymes are BOTH active, count the ATP burned per cycle and expect heat as the energy's fate (some organisms use this deliberately for thermogenesis).`
+    },
+    {
       id: 'cm2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Gluconeogenesis** 🎯`,
@@ -101,60 +145,21 @@ Ethanol oxidation floods the liver with NADH, pushing pyruvate → lactate and O
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Four bypass enzymes: pyruvate carboxylase (biotin, mito, needs acetyl-CoA), PEPCK (GTP), F1,6-BPase (rate-limiting), G6Pase (liver/kidney ER only)
-- Substrates: lactate (Cori), alanine, glycerol, odd-chain propionyl-CoA — NEVER net glucose from acetyl-CoA/even-chain fat
-- Cost: 6 high-energy bonds per glucose (vs. 2 earned by glycolysis) — futile cycling is prevented by reciprocal regulation
-- F2,6-BP is the fed/fasting toggle: activates PFK-1, inhibits F1,6-BPase; glucagon destroys it, insulin raises it
-- Ethanol → high NADH → substrate steal → fasting hypoglycemia
+- **Four bypass enzymes.** Pyruvate carboxylase (mito, biotin), PEPCK (GTP), F1,6-BPase, G6Pase (liver/kidney; muscle can't export glucose).
+- **Glucogenic substrates.** Lactate (Cori cycle), alanine, glycerol and odd-chain propionyl-CoA can all become new glucose.
+- **Price and reciprocity.** One glucose costs 6 high-energy bonds versus 2 earned, so reciprocal regulation blocks futile cycling.
+- **The F2,6-BP toggle.** Insulin raises F2,6-BP (PFK-1 on, F1,6-BPase off); glucagon lowers it, reversing both.
+
+**Common traps**
+
+- **Glycolysis in reverse.** Gluconeogenesis is not glycolysis run backward; four dedicated enzymes bypass its irreversible steps.
+- **Glucose from even-chain fat.** Acetyl-CoA loses two CO$_2$ per TCA turn, so even-chain fatty acids give no net glucose.
+- **Acetyl-CoA as a brake.** Acetyl-CoA activates pyruvate carboxylase while inhibiting PDH, steering pyruvate toward glucose.
+- **Overlooking ethanol's NADH.** Ethanol's NADH pushes pyruvate to lactate and OAA to malate, so fasting drinkers become hypoglycemic.
 
 <!-- yield:low -->
 - Low-yield extras: odd-chain propionyl-CoA reaches succinyl-CoA via methylmalonyl-CoA, using the vitamin B12-dependent methylmalonyl-CoA mutase
 <!-- /yield -->`
-    },
-    {
-      id: 'cm2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Gluconeogenic Reasoning
-
-<details>
-<summary><b>Example 1: Energy bookkeeping for the Cori cycle</b></summary>
-
-**Question:** Muscle exports 2 lactate made anaerobically (2 ATP gained in muscle). The liver reconverts them to 1 glucose. What is the whole-body ATP balance for one full loop, and why is the cycle still worthwhile?
-
-**Solution:**
-1. Muscle: +2 ATP (anaerobic glycolysis).
-2. Liver: −6 ATP-equivalents (4 ATP + 2 GTP) for gluconeogenesis from 2 lactate.
-3. Net: −4 ATP per loop for the body. Worthwhile because it moves the energy cost from an O$_2$-starved, working muscle (or an RBC that can never oxidize) to the well-oxygenated liver, and it recycles carbon instead of losing it as lactate in urine.
-
-**MCAT Strategy:** The Cori cycle is an energy TRANSFER, not an energy source — expect a question asking where the "missing" 4 ATP went (liver fat oxidation pays the bill).
-</details>
-
-<details>
-<summary><b>Example 2: Which precursors yield net glucose?</b></summary>
-
-**Question:** A fasting patient's liver receives: (a) glycerol from adipose lipolysis, (b) palmitate (C16), (c) alanine from muscle, (d) propionate from gut bacteria. Which contribute NET carbon to new glucose?
-
-**Solution:**
-1. (a) Glycerol → glycerol-3-P → DHAP: YES, direct gluconeogenic entry.
-2. (b) Palmitate → 8 acetyl-CoA: NO net glucose (carbons lost as CO$_2$); it only provides ATP and the acetyl-CoA activation signal.
-3. (c) Alanine → pyruvate (transamination): YES.
-4. (d) Propionate → propionyl-CoA → succinyl-CoA (a TCA intermediate that becomes OAA): YES — the odd-carbon exception.
-
-**MCAT Strategy:** Sort every precursor into "becomes pyruvate/OAA/TCA intermediate/DHAP" (glucogenic) vs. "becomes acetyl-CoA only" (not).
-</details>
-
-<details>
-<summary><b>Example 3: Interpret a futile-cycle experiment</b></summary>
-
-**Question:** Hepatocytes engineered to express a PFK-1 variant insensitive to ATP and citrate inhibition are incubated in fasting conditions with glucagon. Compared with normal cells, what happens to ATP consumption and heat production?
-
-**Solution:**
-1. Glucagon activates gluconeogenesis (F1,6-BPase working), but the mutant PFK-1 cannot be turned down and keeps rephosphorylating F6P → F1,6-BP.
-2. The two opposing reactions cycle: each round hydrolyzes ATP (PFK-1) and P$_i$ is released (F1,6-BPase) with **no net flux** — a futile (substrate) cycle.
-3. ATP consumption and heat output rise; net glucose production falls.
-
-**MCAT Strategy:** Whenever paired opposing enzymes are BOTH active, count the ATP burned per cycle and expect "heat" as the answer to where the energy goes (some organisms use this deliberately for thermogenesis).
-</details>`
     }
   ]
 };

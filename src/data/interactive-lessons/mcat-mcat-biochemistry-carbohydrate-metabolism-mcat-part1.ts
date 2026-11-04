@@ -49,6 +49,47 @@ Two phases: an **investment phase** (2 ATP spent) and a **payoff phase** (4 ATP 
 - **Galactose:** galactokinase → gal-1-P; GALT (uridyltransferase) exchanges it with UDP-glucose, releasing G1P → G6P. Deficiencies: classic galactosemia (GALT) is severe; aldolase B deficiency = hereditary fructose intolerance.`
     },
     {
+      id: 'cm1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Glycolysis Logic
+
+**Problem 1.** A cell converts 3 molecules of glyceraldehyde-3-phosphate (G3P, already formed) through the rest of glycolysis to pyruvate.
+
+- **(a)** How many ATP and NADH does one G3P yield on its way to pyruvate?
+- **(b)** How many ATP and NADH do the 3 G3P yield?
+- **(c)** Does any investment ATP have to be subtracted?
+
+**(a) Per G3P.** GAPDH makes 1 NADH; PGK makes 1 ATP; pyruvate kinase makes 1 ATP. That is 2 ATP + 1 NADH per G3P.
+
+**(b) Three G3P.** With 2 ATP + 1 NADH per G3P from (a): $3 \\times 2 = 6$ ATP and $3$ NADH.
+
+**(c) No investment cost.** The hexokinase and PFK-1 ATP were spent upstream of G3P, so nothing is subtracted. "Per G3P: 2 ATP, 1 NADH" is worth memorizing; whole-glucose numbers are this doubled, minus the 2 invested ATP.
+
+**Problem 2.** A patient has pyruvate kinase deficiency confined to red blood cells, causing hemolytic anemia.
+
+- **(a)** Why are RBCs selectively vulnerable?
+- **(b)** Does the level of 2,3-BPG in these cells rise or fall?
+- **(c)** How does that change affect oxygen delivery?
+
+**(a) Sole ATP source.** RBCs rely solely on glycolysis; losing its final ATP-generating step starves them of ATP, membrane pumps fail, and cells lyse. Other tissues survive on oxidative metabolism and other isozymes.
+
+**(b) Upstream pileup.** Intermediates upstream of the block accumulate, including 1,3-BPG, and the excess 1,3-BPG is shunted to 2,3-BPG, so **2,3-BPG rises**.
+
+**(c) Partial compensation.** The raised 2,3-BPG from (b) right-shifts the hemoglobin curve, improving O$_2$ unloading and partly offsetting the anemia. For any glycolytic enzyme deficiency: upstream intermediates accumulate, downstream products fall, and RBCs suffer first.
+
+**Problem 3.** Glucose labeled at C-6 undergoes anaerobic glycolysis to lactate.
+
+- **(a)** Which triose carries the label after aldolase splits F1,6-BP?
+- **(b)** Where would a label at glucose C-1 end up in G3P?
+- **(c)** Which carbon of lactate carries the C-6 label?
+
+**(a) Aldolase split.** C-1 to C-3 become DHAP and C-4 to C-6 become G3P, so the label sits on G3P, at its phosphate-bearing C-3 position.
+
+**(b) TPI symmetry.** TPI converts DHAP to G3P too, so both halves proceed; glucose C-1 maps to the same G3P position (C-3) as C-6.
+
+**(c) Lactate's methyl carbon.** G3P's C-3 becomes pyruvate's C-3 (the methyl carbon), and LDH reduction does not move carbons: the label lands on **lactate's methyl carbon (C-3)**. By the same symmetry, glucose C-3 and C-4 become pyruvate's carboxyl carbon.`
+    },
+    {
       id: 'cm1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Glycolysis** 🎯`,
@@ -97,55 +138,17 @@ Two phases: an **investment phase** (2 ATP spent) and a **payoff phase** (4 ATP 
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Cytosolic, O$_2$-independent; net 2 ATP + 2 NADH + 2 pyruvate per glucose
-- Three irreversible steps = the control points: hexokinase/glucokinase, PFK-1 (rate-limiting; F2,6-BP is the master activator), pyruvate kinase
-- GAPDH is the lone oxidation (needs NAD$^+$); PGK and PK are the substrate-level phosphorylations
-- Anaerobic fates exist to regenerate NAD$^+$ (lactate in humans, ethanol in yeast); RBCs are obligate glycolyzers
-- Fructose enters BELOW PFK-1 (unregulated); galactose converges at G6P via GALT`
-    },
-    {
-      id: 'cm1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Glycolysis Logic
+- **Net yield.** Cytosolic and O$_2$-independent: one glucose gives net 2 ATP, 2 NADH and 2 pyruvate.
+- **Three control points.** Hexokinase/glucokinase, PFK-1 (rate-limiting, activated by F2,6-BP) and pyruvate kinase are irreversible.
+- **Oxidation and ATP steps.** GAPDH is the lone oxidation (needs NAD$^+$); PGK and pyruvate kinase make ATP at the substrate level.
+- **Why lactate forms.** LDH regenerates NAD$^+$ so glycolysis continues; RBCs, lacking mitochondria, always end at lactate.
 
-<details>
-<summary><b>Example 1: Count ATP and NADH from half a pathway</b></summary>
+**Common traps**
 
-**Question:** A cell converts 3 molecules of glyceraldehyde-3-phosphate (already formed) through the rest of glycolysis to pyruvate. How many ATP and NADH result?
-
-**Solution:**
-1. Per G3P: GAPDH makes 1 NADH; PGK makes 1 ATP; pyruvate kinase makes 1 ATP → 2 ATP + 1 NADH each.
-2. For 3 G3P: $3 \\times 2 = 6$ ATP and $3$ NADH.
-3. Note there is no investment cost here — the hexokinase and PFK-1 ATP were spent upstream of G3P.
-
-**MCAT Strategy:** "Per G3P: 2 ATP, 1 NADH" is worth memorizing; whole-glucose numbers are just this doubled, minus the 2 invested ATP.
-</details>
-
-<details>
-<summary><b>Example 2: Predict the effect of an enzyme deficiency</b></summary>
-
-**Question:** A patient has pyruvate kinase deficiency confined to red blood cells, causing hemolytic anemia. Explain why RBCs are selectively vulnerable, and predict the level of 2,3-BPG in these cells.
-
-**Solution:**
-1. RBCs rely solely on glycolysis; losing its final ATP-generating step starves them of ATP, membrane pumps fail, and cells lyse. Other tissues survive on oxidative metabolism and other isozymes.
-2. Intermediates upstream of the block accumulate — including the 3-phosphoglycerate/2,3-BPG pool. **2,3-BPG rises.**
-3. Elevated 2,3-BPG right-shifts the hemoglobin curve, improving O$_2$ unloading — partially compensating for the anemia (a favorite MCAT twist).
-
-**MCAT Strategy:** For any glycolytic enzyme deficiency: upstream intermediates accumulate, downstream products fall, and RBCs suffer first.
-</details>
-
-<details>
-<summary><b>Example 3: Trace a labeled carbon into lactate</b></summary>
-
-**Question:** Glucose labeled at C-6 undergoes anaerobic glycolysis. Where does the label appear in lactate?
-
-**Solution:**
-1. Aldolase splits F1,6-BP: C-1 to C-3 become DHAP, C-4 to C-6 become G3P (C-6 ends up as G3P's phosphate-bearing C-3 position).
-2. TPI converts DHAP to G3P too, so both halves proceed; by symmetry C-1 and C-6 both map to the same position of G3P.
-3. G3P's C-3 becomes pyruvate's C-3 (the methyl carbon), and LDH reduction does not move carbons: the label lands on **lactate's methyl carbon (C-3)**.
-
-**MCAT Strategy:** Remember the symmetry: after aldolase + TPI, glucose C-1 and C-6 become equivalent (pyruvate C-3); C-3 and C-4 become pyruvate's carboxyl carbon.
-</details>`
+- **Lactate as an ATP source.** LDH makes no ATP; it recycles NAD$^+$ so the 2 ATP of glycolysis can keep flowing.
+- **Fructose obeys PFK-1.** In liver, fructose enters as G3P/DHAP below PFK-1, so it skips the main glycolytic brake.
+- **Counting one triose.** TPI turns DHAP into G3P, so both halves run and every payoff-phase yield doubles per glucose.
+- **Subtracting investment twice.** Starting from G3P, the 2 invested ATP were already spent: each G3P gives 2 ATP + 1 NADH.`
     }
   ]
 };
