@@ -103,25 +103,25 @@ const rolesSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <defs>${ARROW('arr-gi-roles-b')}</defs>
 <text x="20" y="44" font-size="20" font-weight="700" fill="currentColor">ROLE STRAIN</text>
 <rect x="110" y="118" width="130" height="44" rx="10" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2.5"/>
-<text x="175" y="147" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">ICU nurse</text>
+<text x="175" y="147" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">professor</text>
 <line x1="108" y1="140" x2="58" y2="140" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-gi-roles-b)"/>
 <line x1="242" y1="140" x2="292" y2="140" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-gi-roles-b)"/>
 </g>
-<text x="75" y="184" font-size="13" text-anchor="middle" fill="currentColor">advocate for</text>
-<text x="75" y="202" font-size="13" text-anchor="middle" fill="currentColor">the family</text>
-<text x="266" y="184" font-size="13" text-anchor="middle" fill="currentColor">follow the</text>
-<text x="266" y="202" font-size="13" text-anchor="middle" fill="currentColor">attending's orders</text>
+<text x="75" y="184" font-size="13" text-anchor="middle" fill="currentColor">grade</text>
+<text x="75" y="202" font-size="13" text-anchor="middle" fill="currentColor">rigorously</text>
+<text x="266" y="184" font-size="13" text-anchor="middle" fill="currentColor">be nurturing</text>
+<text x="266" y="202" font-size="13" text-anchor="middle" fill="currentColor">to students</text>
 <text x="175" y="258" font-size="15" text-anchor="middle" fill="currentColor">ONE status pulled two ways</text>
 <text x="175" y="280" font-size="15" text-anchor="middle" fill="currentColor">by its own role set</text>
 <g class="fig-muted">
-<text x="175" y="320" font-size="13" text-anchor="middle" fill="currentColor">advocate vs. order-follower:</text>
-<text x="175" y="340" font-size="13" text-anchor="middle" fill="currentColor">both duties belong to THIS nurse</text>
+<text x="175" y="320" font-size="13" text-anchor="middle" fill="currentColor">rigor vs. nurture:</text>
+<text x="175" y="340" font-size="13" text-anchor="middle" fill="currentColor">both expected of the same professor</text>
 </g>
 <g class="fig-accent-2">
 <defs>${ARROW('arr-gi-roles-r')}</defs>
 <text x="345" y="44" font-size="20" font-weight="700" fill="currentColor">ROLE CONFLICT</text>
 <rect x="350" y="118" width="100" height="44" rx="10" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2.5"/>
-<text x="400" y="147" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">nurse</text>
+<text x="400" y="147" font-size="16" font-weight="700" text-anchor="middle" fill="currentColor">physician</text>
 <rect x="550" y="118" width="100" height="44" rx="10" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2.5"/>
 <text x="600" y="147" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">parent</text>
 <line x1="452" y1="140" x2="484" y2="140" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-gi-roles-r)"/>
@@ -129,14 +129,14 @@ const rolesSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 </g>
 <circle cx="500" cy="140" r="12" fill="currentColor"/>
 <g class="fig-muted">
-<text x="400" y="186" font-size="13" text-anchor="middle" fill="currentColor">the code runs over</text>
-<text x="600" y="186" font-size="13" text-anchor="middle" fill="currentColor">the recital</text>
+<text x="400" y="186" font-size="13" text-anchor="middle" fill="currentColor">paged to the ER</text>
+<text x="600" y="186" font-size="13" text-anchor="middle" fill="currentColor">the child's recital</text>
 </g>
 <text x="500" y="258" font-size="15" text-anchor="middle" fill="currentColor">TWO statuses issue</text>
 <text x="500" y="280" font-size="15" text-anchor="middle" fill="currentColor">incompatible demands at once</text>
 <g class="fig-muted">
-<text x="500" y="320" font-size="13" text-anchor="middle" fill="currentColor">"you're always a nurse first" —</text>
-<text x="500" y="340" font-size="13" text-anchor="middle" fill="currentColor">the job becoming a master status</text>
+<text x="500" y="320" font-size="13" text-anchor="middle" fill="currentColor">neither demand is unreasonable —</text>
+<text x="500" y="340" font-size="13" text-anchor="middle" fill="currentColor">the clash is between the statuses</text>
 </g>
 <text x="670" y="44" font-size="20" font-weight="700" fill="currentColor">ROLE EXIT</text>
 <rect x="690" y="90" width="110" height="140" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="7 5"/>
@@ -157,7 +157,7 @@ ${person(745, 148, 0.7)}
 <text x="878" y="313" font-size="13" text-anchor="middle" fill="currentColor">departure</text>
 <text x="950" y="354" font-size="13" text-anchor="middle" fill="currentColor">"ex" identity</text>
 <g class="fig-muted">
-<text x="835" y="392" font-size="13" text-anchor="middle" fill="currentColor">"a former ICU nurse" —</text>
+<text x="835" y="392" font-size="13" text-anchor="middle" fill="currentColor">the retiring athlete, the ex-nun —</text>
 <text x="835" y="412" font-size="13" text-anchor="middle" fill="currentColor">the old status still does the talking</text>
 </g>
 <text x="500" y="448" font-size="17" font-weight="700" text-anchor="middle" fill="currentColor">count the STATUSES: one → strain · two → conflict · leaving one → exit</text>
@@ -326,7 +326,7 @@ ${person(330, 160)}
 ${person(810, 160, 1, true)}
 <text x="810" y="272" font-size="14" text-anchor="middle" fill="currentColor">the script dropped:</text>
 <text x="810" y="294" font-size="14" text-anchor="middle" fill="currentColor">rehearse · repair · vent</text>
-<text x="810" y="318" font-size="13" text-anchor="middle" fill="currentColor">(the kitchen, the workroom)</text>
+<text x="810" y="318" font-size="13" text-anchor="middle" fill="currentColor">(the restaurant kitchen)</text>
 </g>
 <g class="fig-muted">
 ${dot(100, 384, 8)}${dot(146, 384, 8)}${dot(192, 384, 8)}${dot(238, 384, 8)}${dot(284, 384, 8)}${dot(330, 384, 8)}${dot(376, 384, 8)}${dot(422, 384, 8)}${dot(468, 384, 8)}${dot(514, 384, 8)}${dot(560, 384, 8)}
@@ -432,8 +432,8 @@ ${pathology(260, 'efficiency · calculability', 'McDONALDIZATION', 'Ritzer: dehu
 <g class="fig-muted"><text x="650" y="300" font-size="12" text-anchor="middle" fill="currentColor">predictability · control</text></g>
 ${pathology(336, 'scale needs delegation', 'IRON LAW of OLIGARCHY', 'Michels: a small elite rules')}
 <g class="fig-muted">
-<text x="770" y="412" font-size="13" text-anchor="middle" fill="currentColor">the defect is STRUCTURAL —</text>
-<text x="770" y="430" font-size="13" text-anchor="middle" fill="currentColor">staff follow the system faithfully, and it still misfires</text>
+<text x="770" y="412" font-size="13" text-anchor="middle" fill="currentColor">the price of predictability:</text>
+<text x="770" y="430" font-size="13" text-anchor="middle" fill="currentColor">each pathology grows from the design itself</text>
 </g>
 </svg>`
 
@@ -568,7 +568,7 @@ export const mcatGroupsInteractionFigures: DeckFigurePlacement[] = [
     figure: {
       svg: rolesSvg,
       alt:
-        'Three columns. Role strain, in blue, tagged "1 status": one status box, ICU nurse, with arrows pulling in opposite directions toward "advocate for the family" and "follow the attending\'s orders" — one status pulled two ways by its own role set; advocate vs. order-follower, both duties belong to this nurse. Role conflict, in red, tagged "2 statuses": two status boxes, nurse and parent, each firing an arrow into the same person in the middle, captioned "the code runs over" and "the recital" — two statuses issue incompatible demands at once; "you\'re always a nurse first" is the job becoming a master status. Role exit, tagged "leaving one": a stick figure inside a dashed box labelled central role, with an arrow out to an "ex" identity box — leaving a central role, then rebuilding the self; a timeline beneath runs doubt, seek alternatives, departure, "ex" identity, captioned "a former ICU nurse": the old status still does the talking. Footer: count the statuses — one is strain, two is conflict, leaving one is exit.',
+        'Three columns. Role strain, in blue, tagged "1 status": one status box, professor, with arrows pulling in opposite directions toward "grade rigorously" and "be nurturing to students" — one status pulled two ways by its own role set; rigor vs. nurture, both expected of the same professor. Role conflict, in red, tagged "2 statuses": two status boxes, physician and parent, each firing an arrow into the same person in the middle, captioned "paged to the ER" and "the child\'s recital" — two statuses issue incompatible demands at once; neither demand is unreasonable, the clash is between the statuses. Role exit, tagged "leaving one": a stick figure inside a dashed box labelled central role, with an arrow out to an "ex" identity box — leaving a central role, then rebuilding the self; a timeline beneath runs doubt, seek alternatives, departure, "ex" identity, captioned "the retiring athlete, the ex-nun": the old status still does the talking. Footer: count the statuses — one is strain, two is conflict, leaving one is exit.',
     },
     blocks: ['- The number of expectations never settles it — count the STATUSES issuing them (the exam\'s favorite distractor is "conflict" for a one-status case)'],
   },
@@ -599,7 +599,7 @@ export const mcatGroupsInteractionFigures: DeckFigurePlacement[] = [
     figure: {
       svg: dramaturgySvg,
       alt:
-        'A stage split by a dashed curtain. Front stage, in blue, holds two stick figures performing as a team (they keep each other\'s secrets) beside a framed diploma labelled "a prop"; the performance runs here — script followed, props, setting, tone — which equals impression management. Back stage, in red, holds the same kind of figure with arms down: audience excluded, the script dropped — rehearse, repair, vent (the kitchen, the workroom). Below the front stage a row of grey dots is the audience: the performance is for them, and a disruption (the doctor panicking) threatens the shared definition of the situation, so the audience tactfully helps repair it (face-work). Note under the back stage: back stage is relative to an audience — the kitchen is front stage for impressing the head chef.',
+        'A stage split by a dashed curtain. Front stage, in blue, holds two stick figures performing as a team (they keep each other\'s secrets) beside a framed diploma labelled "a prop"; the performance runs here — script followed, props, setting, tone — which equals impression management. Back stage, in red, holds the same kind of figure with arms down: audience excluded, the script dropped — rehearse, repair, vent (the restaurant kitchen). Below the front stage a row of grey dots is the audience: the performance is for them, and a disruption (the doctor panicking) threatens the shared definition of the situation, so the audience tactfully helps repair it (face-work). Note under the back stage: back stage is relative to an audience — the kitchen is front stage for impressing the head chef.',
     },
     blocks: ['- Regions are defined by AUDIENCE ACCESS, not by the room: find who is watching before you label front or back stage'],
   },
@@ -619,9 +619,9 @@ export const mcatGroupsInteractionFigures: DeckFigurePlacement[] = [
     figure: {
       svg: weberSvg,
       alt:
-        'Left: a three-tier pyramid of offices — a director over billing, nursing and records, each over clerks — labelled as Weber\'s ideal type of bureaucracy (an analytic model, not praise), with its five features numbered beneath: division of labor (specialized offices), hierarchy of authority (each office answers to the one above), written rules and records (procedures outlive persons), impersonality ("case no. 4471", not a name), technical qualification (hired and promoted on credentials). The goal is predictability plus efficiency; authority is rational-legal — you obey the office, not the person. Right, "the same design, run long enough": four cause-to-effect pairs in red. Rules become the point → goal displacement (red tape, trained incapacity). Rationality everywhere → the iron cage (efficiency drains meaning). Efficiency, calculability, predictability, control → McDonaldization (Ritzer: dehumanization). Scale needs delegation → the iron law of oligarchy (Michels: a small elite rules). Footer: the defect is structural — staff follow the system faithfully, and it still misfires.',
+        'Left: a three-tier pyramid of offices — a director over billing, nursing and records, each over clerks — labelled as Weber\'s ideal type of bureaucracy (an analytic model, not praise), with its five features numbered beneath: division of labor (specialized offices), hierarchy of authority (each office answers to the one above), written rules and records (procedures outlive persons), impersonality ("case no. 4471", not a name), technical qualification (hired and promoted on credentials). The goal is predictability plus efficiency; authority is rational-legal — you obey the office, not the person. Right, "the same design, run long enough": four cause-to-effect pairs in red. Rules become the point → goal displacement (red tape, trained incapacity). Rationality everywhere → the iron cage (efficiency drains meaning). Efficiency, calculability, predictability, control → McDonaldization (Ritzer: dehumanization). Scale needs delegation → the iron law of oligarchy (Michels: a small elite rules). Footer: the price of predictability — each pathology grows from the design itself.',
     },
-    blocks: ['- The pathologies are the features working AS DESIGNED — the exam answer is "structural", never "lazy employees"'],
+    blocks: ['- The pathologies come from the design itself, run long enough — the same features that buy predictability'],
   },
   {
     at: 'The Tripartite Distinction the Exam Never Stops Testing',

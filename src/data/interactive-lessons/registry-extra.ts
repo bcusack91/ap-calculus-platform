@@ -2785,8 +2785,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'The Bacterial Genome, Mutation & Selection', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[0]) },
       { title: 'Horizontal Gene Transfer in Depth', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[1]) },
-      { title: 'Mobile Elements, Defense & Regulation', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[2]) },
-      { title: 'Viral Genetics & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-microbiology-genetics-regulation-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Mobile Elements, Defense & Regulation', loader: () => import('./mcat-mcat-microbiology-genetics-regulation-mcat').then((m) => m.parts[0]) },
+      { title: 'Viral Genetics & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-genetics-regulation-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-cell-biology-cell-cycle-mcat': {
@@ -2983,8 +2988,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Fertilization, Cleavage & Implantation', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[0]) },
       { title: 'Gastrulation, Neurulation & Germ-Layer Derivatives', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[1]) },
-      { title: 'Organogenesis, Extraembryonic Membranes & Fetal Circulation', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[2]) },
-      { title: 'MCAT Integration: Potency, Induction & Experimental Embryology', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-anatomy-physiology-organogenesis-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Organogenesis, Extraembryonic Membranes & Fetal Circulation', loader: () => import('./mcat-mcat-anatomy-physiology-organogenesis-mcat').then((m) => m.parts[0]) },
+      { title: 'MCAT Integration: Potency, Induction & Experimental Embryology', loader: () => import('./mcat-mcat-anatomy-physiology-organogenesis-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-anatomy-physiology-musculoskeletal-mcat': {
@@ -3037,8 +3047,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Statuses, Roles & the Anatomy of Groups', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[0]) },
       { title: 'How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[1]) },
-      { title: 'The Interaction Order: Dramaturgy, Networks & Bureaucracy', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[2]) },
-      { title: 'MCAT Integration: Prejudice, Discrimination & Reading Interaction Experiments', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-sociology-interaction-organizations-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Interaction Order: Dramaturgy, Networks & Bureaucracy', loader: () => import('./mcat-mcat-sociology-interaction-organizations-mcat').then((m) => m.parts[0]) },
+      { title: 'MCAT Integration: Prejudice, Discrimination & Reading Interaction Experiments', loader: () => import('./mcat-mcat-sociology-interaction-organizations-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-sociology-health-disparities-mcat': {
@@ -3753,6 +3768,45 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Test Day at MEPS or a MET Site', loader: () => import('./asvab-test-strategy').then((m) => m.parts[4]) },
       { title: 'Study Plans and Common Traps', loader: () => import('./asvab-test-strategy').then((m) => m.parts[5]) },
       { title: 'Mastery Check', loader: () => import('./asvab-test-strategy').then((m) => m.parts[6]) },
+    ],
+  },
+  'mcat-general-chemistry-spectra-nuclear-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Spectra, PES & Bohr Model', loader: () => import('./mcat-mcat-general-chemistry-spectra-nuclear-mcat').then((m) => m.parts[0]) },
+      { title: 'Nuclear Chemistry & Half-Life', loader: () => import('./mcat-mcat-general-chemistry-spectra-nuclear-mcat').then((m) => m.parts[1]) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-spectra-nuclear-mcat').then((m) => m.parts[2]) },
+    ],
+  },
+  'mcat-general-chemistry-solutions-gases-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Solutions, Molarity & Colligative Properties', loader: () => import('./mcat-mcat-general-chemistry-solutions-gases-mcat').then((m) => m.parts[0]) },
+      { title: 'Gas Laws & Electrochemistry', loader: () => import('./mcat-mcat-general-chemistry-solutions-gases-mcat').then((m) => m.parts[1]) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-solutions-gases-mcat').then((m) => m.parts[2]) },
+    ],
+  },
+  'mcat-general-chemistry-energy-mechanisms-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Activation Energy & Arrhenius Equation', loader: () => import('./mcat-mcat-general-chemistry-energy-mechanisms-mcat').then((m) => m.parts[0]) },
+      { title: 'Mechanisms, RDS & Catalysis', loader: () => import('./mcat-mcat-general-chemistry-energy-mechanisms-mcat').then((m) => m.parts[1]) },
+      { title: 'Mixed MCAT Review', loader: () => import('./mcat-mcat-general-chemistry-energy-mechanisms-mcat').then((m) => m.parts[2]) },
+    ],
+  },
+  'mcat-general-chemistry-titrations-equilibrium-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Titrations & Indicators', loader: () => import('./mcat-mcat-general-chemistry-titrations-equilibrium-mcat').then((m) => m.parts[0]) },
+      { title: 'Equilibrium, Ksp & Le Chatelier\'s Principle', loader: () => import('./mcat-mcat-general-chemistry-titrations-equilibrium-mcat').then((m) => m.parts[1]) },
+    ],
+  },
+  'mcat-lab-methods-spectroscopy-assays-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Centrifugation', loader: () => import('./mcat-mcat-lab-methods-spectroscopy-assays-mcat').then((m) => m.parts[0]) },
+      { title: 'Spectroscopy & Beer\'s Law', loader: () => import('./mcat-mcat-lab-methods-spectroscopy-assays-mcat').then((m) => m.parts[1]) },
+      { title: 'Molecular Assays & Review', loader: () => import('./mcat-mcat-lab-methods-spectroscopy-assays-mcat').then((m) => m.parts[2]) },
     ],
   },
 }

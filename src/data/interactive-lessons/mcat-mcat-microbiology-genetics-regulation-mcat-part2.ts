@@ -1,19 +1,19 @@
 // Authored 2026-10-29 by Opus 5.5 — PENDING FABLE REVIEW
-export const mcatMicrobialGeneticsPart4Data = {
-  topicSlug: 'mcat-microbiology-genetics-mcat',
+export const mcatMicrobialGeneticsRegulationPart2Data = {
+  topicSlug: 'mcat-microbiology-genetics-regulation-mcat',
   sections: [
     {
       id: 'mg4-intro',
       type: 'text' as const,
-      content: `# Microbial Genetics
+      content: `# Mobile Elements, Gene Regulation & Viral Genetics
 
-**Part 4 of 4 — Viral Genetics & MCAT Integration**
+**Part 2 of 2 — Viral Genetics & MCAT Integration**
 
-> Phage life cycles and the Baltimore classes are taught in the Viruses lesson; this part covers the genetics built on them.
+> Phage life cycles and the Baltimore classes are taught in the Viruses lesson; this part covers the genetics built on them. Its closing integration table also builds on the *Bacterial Genetics & Gene Transfer* lesson, sorting the between-cell transfer routes taught there alongside this lesson's within-cell moves.
 
 ### Prophages and Induction
 
-A temperate phage can integrate its genome into the host chromosome as a **prophage**, which is copied passively with the chromosome. A phage **repressor** keeps the lytic genes off and makes the lysogen **immune** to superinfection by the same phage. **Induction:** DNA damage, such as UV light, leads to destruction of the repressor; the prophage excises, enters the lytic cycle, and the cell lyses. If excision is imprecise at that moment, host genes beside the insertion site ride along into the next cell the phage infects: specialized transduction.
+A temperate phage can integrate its genome into the host chromosome as a **prophage**, which is copied passively with the chromosome. A phage **repressor** keeps the lytic genes off and makes the lysogen **immune** to superinfection by the same phage. **Induction:** DNA damage, such as UV light, leads to destruction of the repressor; the prophage excises, enters the lytic cycle, and the cell lyses. If excision is imprecise at that moment, host genes beside the insertion site ride along into the next cell the phage infects: specialized transduction (phage-carried transfer of the host genes beside the prophage).
 
 <!-- yield:low -->
 - The damage sensor is the host SOS response: activated RecA promotes self-cleavage of the phage repressor.
@@ -64,9 +64,9 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
 | Clue in the passage | Mechanism |
 |---------------------|-----------|
 | New trait appears only in descendants; counts fluctuate between parallel cultures | Spontaneous mutation, then selection |
-| Transfer stopped by DNase | Transformation |
-| Transfer needs cell contact, resists DNase; gene on a plasmid with transfer genes | Conjugation |
-| Transfer crosses a filter, resists DNase, needs a phage receptor | Transduction |
+| Transfer stopped by DNase | Transformation (uptake of naked DNA) |
+| Transfer needs cell contact, resists DNase; gene on a plasmid with transfer genes | Conjugation (plasmid transfer through a pilus bridge) |
+| Transfer crosses a filter, resists DNase, needs a phage receptor | Transduction (host DNA carried in a phage coat) |
 | Gene moves between chromosome and plasmid inside one cell, flanked by IS elements | Transposition |
 | New spacer in the CRISPR array; immunity to one phage only | CRISPR acquisition |
 | Virus gains whole segments from another strain | Reassortment (shift) |
@@ -194,7 +194,7 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
     {
       id: 'mg4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 4
+      content: `### Key Takeaways — Part 2
 
 - **Prophage and induction.** A phage repressor keeps the prophage silent; DNA damage leads to the repressor's destruction, and lysis.
 - **Hershey-Chase.** $^{32}$P (DNA) entered the cells and reached progeny; $^{35}$S (protein) stayed outside → DNA is the genetic material.
@@ -212,7 +212,9 @@ RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and ret
 **Low-yield extras**
 
 SOS/RecA-driven repressor cleavage; Benzer's rII system, the cistron, and doubling the wild-type recombinant frequency to get map distance; intragenic complementation; order-of-magnitude error rates.
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Antimicrobials & Resistance* lesson — drug targets, resistance pathways, and treatment principles.`
     }
   ]
 };

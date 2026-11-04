@@ -150,6 +150,17 @@ const WS_ALL = [...mcatWavesSoundFigures, ...mcatWavesSoundExtraFigures]
 const PERIODIC_AT = ['Describing Anything That Repeats', 'Simple Harmonic Motion', 'The Wave Equation and Who Controls What']
 const INTERFERENCE_AT = ['Path Difference Decides the Phase', 'Beats', 'Superposition and Standing Waves']
 
+// Nov 2026 part splits (src/lib/mcat-topic-split.ts MCAT_PART_SPLITS): the
+// kept slug holds the first lesson parts, the new slug the headings listed here.
+const SPECTRA_NUCLEAR_AT = ['Spectral Series in Hydrogen', 'Interpreting a PES Spectrum', 'Worked Example — An Iodine-131 Countdown']
+const SOLUTIONS_GASES_AT = ['Dilution', 'Worked Example — Precipitating Silver Chloride', 'Special Cases']
+const ENERGY_MECHANISMS_AT = ['Activation Energy', 'Arrhenius Equation', 'Collision Theory', 'Worked Example — Testing a Mechanism']
+const TITRATIONS_EQUILIBRIUM_AT = ['Strong Acid + Strong Base', 'Worked Example — Titrating Acetic Acid with NaOH', 'Reaction Quotient Q', "Le Chatelier's Principle"]
+const SPECTROSCOPY_ASSAYS_AT = ['Sedimentation Logic', 'Two Major Techniques', 'Beer–Lambert Law', 'Absorbance vs. Transmittance', 'Biochemistry Hooks']
+const GENE_REGULATION_AT = ['Transposable Elements', 'Restriction-Modification: Innate Defense', 'CRISPR-Cas: Adaptive Immunity', 'Worked Examples — Mobile DNA and Regulation', 'Hershey-Chase: DNA Is the Genetic Material of Phage', 'Worked Examples — Experiment Reading', 'Recombination and Reassortment']
+const ORGANOGENESIS_AT = ['The Four Extraembryonic Membranes', 'The Placenta', 'The Three Fetal Shunts', 'The Potency Hierarchy', 'Morphogens: Concentration Encodes Fate']
+const INTERACTION_ORGANIZATIONS_AT = ["Goffman's Dramaturgy — Life as Staged Performance", 'Social Networks — The Architecture Between Groups', "Formal Organizations & Weber's Bureaucracy", 'The Tripartite Distinction the Exam Never Stops Testing', 'Individual vs. Institutional Discrimination']
+
 export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-learning-memory-mcat': mcatLearningMemoryFigures,
   'mcat-psychology-behavior-sensation-perception-mcat': mcatSensationPerceptionFigures,
@@ -160,7 +171,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-disorders-mcat': mcatDisordersFigures,
   'mcat-psychology-behavior-mcat': mcatPsychologyBehaviorFigures,
   'mcat-sociology-culture-socialization-mcat': mcatCultureSocializationFigures,
-  'mcat-sociology-groups-interaction-mcat': mcatGroupsInteractionFigures,
+  'mcat-sociology-groups-interaction-mcat': figuresAt(mcatGroupsInteractionFigures, INTERACTION_ORGANIZATIONS_AT, false),
+  'mcat-sociology-interaction-organizations-mcat': figuresAt(mcatGroupsInteractionFigures, INTERACTION_ORGANIZATIONS_AT, true),
   'mcat-sociology-health-disparities-mcat': mcatHealthDisparitiesFigures,
   'mcat-sociology-mcat': mcatSociologyFigures,
   'mcat-sociology-structure-stratification-mcat': mcatStructureStratificationFigures,
@@ -189,12 +201,14 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-microbiology-bacteria-mcat': mcatBacteriaFigures,
   'mcat-microbiology-viruses-mcat': mcatVirusesFigures,
   'mcat-microbiology-antimicrobials-mcat': mcatAntimicrobialsFigures,
-  'mcat-microbiology-genetics-mcat': mcatMicrobialGeneticsFigures,
+  'mcat-microbiology-genetics-mcat': figuresAt(mcatMicrobialGeneticsFigures, GENE_REGULATION_AT, false),
+  'mcat-microbiology-genetics-regulation-mcat': figuresAt(mcatMicrobialGeneticsFigures, GENE_REGULATION_AT, true),
   'mcat-microbiology-mcat': mcatMicrobiologyFigures,
   'mcat-anatomy-physiology-musculoskeletal-mcat': mcatMusculoskeletalFigures,
   'mcat-anatomy-physiology-reproductive-mcat': mcatReproductiveFigures,
   'mcat-anatomy-physiology-sensory-mcat': mcatSensoryFigures,
-  'mcat-anatomy-physiology-embryology-mcat': mcatEmbryologyFigures,
+  'mcat-anatomy-physiology-embryology-mcat': figuresAt(mcatEmbryologyFigures, ORGANOGENESIS_AT, false),
+  'mcat-anatomy-physiology-organogenesis-mcat': figuresAt(mcatEmbryologyFigures, ORGANOGENESIS_AT, true),
   'mcat-anatomy-physiology-mcat': mcatAnatomyPhysiologyFigures,
   'mcat-organ-systems-respiratory-mcat': mcatRespiratoryFigures,
   'mcat-organ-systems-renal-mcat': mcatRenalFigures,
@@ -220,11 +234,15 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-electricity-optics-mcat': mcatOpticsFigures,
   'mcat-physics-electricity-electrochemistry-mcat': mcatElectrochemistryFigures,
   'mcat-physics-electricity-mcat': mcatElectricityFigures,
-  'mcat-general-chemistry-atomic-structure-mcat': mcatAtomicStructureFigures,
-  'mcat-general-chemistry-stoichiometry-mcat': mcatStoichiometryFigures,
+  'mcat-general-chemistry-atomic-structure-mcat': figuresAt(mcatAtomicStructureFigures, SPECTRA_NUCLEAR_AT, false),
+  'mcat-general-chemistry-spectra-nuclear-mcat': figuresAt(mcatAtomicStructureFigures, SPECTRA_NUCLEAR_AT, true),
+  'mcat-general-chemistry-stoichiometry-mcat': figuresAt(mcatStoichiometryFigures, SOLUTIONS_GASES_AT, false),
+  'mcat-general-chemistry-solutions-gases-mcat': figuresAt(mcatStoichiometryFigures, SOLUTIONS_GASES_AT, true),
   'mcat-general-chemistry-thermodynamics-mcat': mcatThermodynamicsFigures,
-  'mcat-general-chemistry-kinetics-mcat': mcatChemKineticsFigures,
-  'mcat-general-chemistry-acid-base-equilibrium-mcat': mcatAcidBaseFigures,
+  'mcat-general-chemistry-kinetics-mcat': figuresAt(mcatChemKineticsFigures, ENERGY_MECHANISMS_AT, false),
+  'mcat-general-chemistry-energy-mechanisms-mcat': figuresAt(mcatChemKineticsFigures, ENERGY_MECHANISMS_AT, true),
+  'mcat-general-chemistry-acid-base-equilibrium-mcat': figuresAt(mcatAcidBaseFigures, TITRATIONS_EQUILIBRIUM_AT, false),
+  'mcat-general-chemistry-titrations-equilibrium-mcat': figuresAt(mcatAcidBaseFigures, TITRATIONS_EQUILIBRIUM_AT, true),
   'mcat-general-chemistry-mcat': mcatGeneralChemistryFigures,
   'mcat-organic-chemistry-functional-groups-mcat': mcatFunctionalGroupsFigures,
   'mcat-organic-chemistry-stereochemistry-mcat': mcatStereochemistryFigures,
@@ -232,7 +250,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-organic-chemistry-carbonyls-mcat': mcatCarbonylsFigures,
   'mcat-organic-chemistry-spectroscopy-mcat': mcatSpectroscopyFigures,
   'mcat-organic-chemistry-mcat': mcatOrganicChemistryFigures,
-  'mcat-lab-methods-mcat': mcatLabMethodsFigures,
+  'mcat-lab-methods-mcat': figuresAt(mcatLabMethodsFigures, SPECTROSCOPY_ASSAYS_AT, false),
+  'mcat-lab-methods-spectroscopy-assays-mcat': figuresAt(mcatLabMethodsFigures, SPECTROSCOPY_ASSAYS_AT, true),
   // Strategy (only the decks whose lessons are picture-shaped; CARS and test-day stay text)
   'mcat-research-methods-mcat': mcatResearchMethodsFigures,
   'mcat-biostatistics-mcat': mcatBiostatisticsFigures,

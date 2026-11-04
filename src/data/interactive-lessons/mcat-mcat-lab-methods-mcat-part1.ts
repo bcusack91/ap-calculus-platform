@@ -4,9 +4,9 @@ export const mcatLabMethodsPart1Data = {
     {
       id: 'lm1-intro',
       type: 'text' as const,
-      content: `# Laboratory Methods & Separations
+      content: `# Lab Methods: Separations & Electrophoresis
 
-**Part 1 of 5 — Chromatography, Extraction, Distillation & Recrystallization**
+**Part 1 of 2 —Chromatography, Extraction, Distillation & Recrystallization**
 
 Chromatography separates a mixture distributed between a **stationary phase** (fixed) and a **mobile phase** (moving). Molecules that interact MORE with the stationary phase move SLOWER.
 

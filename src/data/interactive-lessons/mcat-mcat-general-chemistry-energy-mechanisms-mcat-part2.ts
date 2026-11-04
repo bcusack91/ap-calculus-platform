@@ -1,12 +1,12 @@
-export const mcatKineticsPart4Data = {
-  topicSlug: 'mcat-general-chemistry-kinetics-mcat',
+export const mcatEnergyMechanismsPart2Data = {
+  topicSlug: 'mcat-general-chemistry-energy-mechanisms-mcat',
   sections: [
     {
       id: 'kin4-intro',
       type: 'text' as const,
-      content: `# Chemical Kinetics
+      content: `# Kinetics: Energy, Catalysis & Mechanisms
 
-**Part 4 of 5 — Reaction Mechanisms, Rate-Determining Step & Catalysis**
+**Part 2 of 3 — Reaction Mechanisms, Rate-Determining Step & Catalysis**
 
 ## Elementary Steps & Molecularity
 
@@ -43,7 +43,7 @@ The **slowest elementary step** controls the overall rate. The rate law for the 
 - For an elementary step $\\text{A} + \\text{B} \\rightleftharpoons \\text{C}$: $k_f[\\text{A}][\\text{B}] = k_r[\\text{C}]$, so $K = \\dfrac{[\\text{C}]}{[\\text{A}][\\text{B}]} = \\dfrac{k_f}{k_r}$.
 - A catalyst raises $k_f$ and $k_r$ by the same factor, so $K$ is unchanged; equilibrium is simply reached sooner.
 - Temperature changes $k_f$ and $k_r$ by DIFFERENT factors, because the two directions have different barriers, so $K$ itself moves with temperature.
-- Equilibrium constants, $Q$ vs $K$ and Le Châtelier's principle are taught in the *Acid-Base & Equilibrium* lesson, Part 5.
+- Equilibrium constants, $Q$ vs $K$ and Le Châtelier's principle are taught in the *Titrations, Equilibrium & Solubility* lesson, Part 2.
 
 ## Worked Example — Testing a Mechanism
 
@@ -181,7 +181,7 @@ Step 2: C + E → F + A`,
     {
       id: 'kin4-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 4
+      content: `## Key Takeaways — Part 2
 
 - **The RDS sets the rate law.** Write it from the slowest elementary step; species that react after it never appear.
 - **Intermediate vs. catalyst.** An intermediate is made then used up; a catalyst is used then remade; neither is in the overall equation.

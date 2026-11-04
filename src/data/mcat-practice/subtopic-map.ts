@@ -25,16 +25,31 @@ export interface SubtopicRule {
 
 export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
   'gen-chem': [
-    { slug: 'mcat-general-chemistry-kinetics-mcat', title: 'Chemical Kinetics',
-      pattern: /rate law|reaction rate|activation energy|arrhenius|catalys|rate constant|order of (the )?reaction|rate-determining|collision theory/i },
+    // Five gen-chem lessons were split in two (Nov 2026, MCAT_PART_SPLITS).
+    // Second-half vocabulary first: activation-energy and mechanism stems
+    // also say "rate"; nuclear stems also say "first-order"; titration and Ksp
+    // stems also say "acid"; colligative and gas stems also say "moles".
+    { slug: 'mcat-general-chemistry-energy-mechanisms-mcat', title: 'Kinetics: Energy, Catalysis & Mechanisms',
+      pattern: /activation energy|arrhenius|catalys|rate-determining|collision theory|reaction mechanism|elementary step|molecularity|transition state|michaelis|lineweaver|frequency factor/i },
+    { slug: 'mcat-general-chemistry-spectra-nuclear-mcat', title: 'Atomic Spectra & Nuclear Chemistry',
+      pattern: /photoelectr|emission spectr|absorption spectr|spectral (line|series)|\bbohr\b|lyman|balmer|paschen|de broglie|work function|radioactiv|alpha (decay|particle)|beta(-| )?(minus|plus|decay|emi)|gamma (ray|emission|decay)|positron|electron capture|nuclear (decay|binding|fission|fusion|medicine)|mass defect|fission|fusion|radioisotope|radionuclide/i },
+    { slug: 'mcat-general-chemistry-kinetics-mcat', title: 'Kinetics: Rate Laws & Half-Lives',
+      pattern: /rate law|reaction rate|rate constant|order of (the )?reaction|initial rates?|integrated rate|(zero|first|second)[- ]order/i },
     { slug: 'mcat-general-chemistry-thermodynamics-mcat', title: 'Thermodynamics',
       pattern: /enthalp|entrop|gibbs|spontaneo|exothermic|endothermic|calorimet|heat capacity|free energy|hess|\bΔG\b|\bΔH\b|\bΔS\b/i },
-    { slug: 'mcat-general-chemistry-acid-base-equilibrium-mcat', title: 'Acid-Base & Equilibrium',
-      pattern: /\bpH\b|\bpKa\b|\bpOH\b|acid|base\b|buffer|titrat|equilibri|le chatelier|\bKa\b|\bKb\b|\bKeq\b|\bKsp\b|conjugate/i },
+    { slug: 'mcat-general-chemistry-titrations-equilibrium-mcat', title: 'Titrations, Equilibrium & Solubility',
+      pattern: /titrat|equivalence point|indicator|\bKeq\b|\bKsp\b|\bK_?c\b|\bK_?p\b|equilibrium constant|reaction quotient|le chatelier|solubility product|molar solubility|common.ion|precipitat/i },
+    { slug: 'mcat-general-chemistry-acid-base-equilibrium-mcat', title: 'Acids, Bases & Buffers',
+      pattern: /\bpH\b|\bpKa\b|\bpOH\b|acid|base\b|buffer|\bKa\b|\bKb\b|conjugate|henderson|bicarbonate/i },
+    // Equilibrium stems with no acid-base vocabulary.
+    { slug: 'mcat-general-chemistry-titrations-equilibrium-mcat', title: 'Titrations, Equilibrium & Solubility',
+      pattern: /equilibri/i },
     { slug: 'mcat-general-chemistry-atomic-structure-mcat', title: 'Atomic Structure & Periodic Trends',
-      pattern: /electron configuration|orbital|quantum number|periodic trend|ionization energy|electronegativ|atomic radius|isotope|photoelectron|valence electron|effective nuclear/i },
-    { slug: 'mcat-general-chemistry-stoichiometry-mcat', title: 'Stoichiometry & Chemical Reactions',
-      pattern: /stoichiometr|limiting (reagent|reactant)|molar mass|empirical formula|percent yield|molarity|dilution|balanced equation|moles of/i },
+      pattern: /electron configuration|orbital|quantum number|periodic trend|ionization energy|electronegativ|atomic radius|isotope|valence electron|effective nuclear/i },
+    { slug: 'mcat-general-chemistry-solutions-gases-mcat', title: 'Solutions, Gases & Electrolysis',
+      pattern: /molarity|molality|dilut|colligative|boiling point elevation|freezing point depression|osmotic pressure|van ?'?t ?hoff|mole fraction|ideal gas|PV ?= ?nRT|partial pressure|dalton|graham|effus|real gas|van der waals|faraday|electrolysis|electroplat|net ionic|spectator ion|solubility rule/i },
+    { slug: 'mcat-general-chemistry-stoichiometry-mcat', title: 'Stoichiometry: Moles & Reactions',
+      pattern: /stoichiometr|limiting (reagent|reactant)|molar mass|empirical formula|percent yield|balanced equation|moles of/i },
   ],
 
   'org-chem': [
@@ -135,6 +150,10 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
   ],
 
   'organ-systems': [
+    // Fetal circulation, placenta and potency vocabulary (Organogenesis, Nov 2026)
+    // is more specific than the heart, lung and reproductive rules below.
+    { slug: 'mcat-anatomy-physiology-organogenesis-mcat', title: 'Organogenesis, Fetal Circulation & Developmental Mechanisms',
+      pattern: /placenta|umbilical|amnion|amniotic|chorion|yolk sac|allantois|fetal (circulation|hemoglobin)|foramen ovale|ductus (arteriosus|venosus)|\bHbF\b|teratogen|organogenesis|totipoten|pluripoten|multipoten|embryonic induction|spemann|organizer|morphogen/i },
     { slug: 'mcat-anatomy-physiology-musculoskeletal-mcat', title: 'Musculoskeletal System',
       pattern: /muscle|sarcomere|actin|myosin|sarcoplasmic|troponin|tropomyosin|bone|osteo|skeletal/i },
     { slug: 'mcat-organ-systems-cardiovascular-mcat', title: 'Cardiovascular System',
@@ -147,8 +166,10 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
       pattern: /reproduct|menstrual|estrogen|progesterone|testosterone|spermato|oogene|ovulat/i },
     { slug: 'mcat-anatomy-physiology-sensory-mcat', title: 'Sensory Systems',
       pattern: /retina|cochlea|auditory|photorecept|olfact|taste bud|vestibular/i },
-    { slug: 'mcat-anatomy-physiology-embryology-mcat', title: 'Embryology & Development',
-      pattern: /embryo|gastrul|neurulat|germ layer|ectoderm|mesoderm|endoderm|blastocyst/i },
+    // Embryology is two lessons (Nov 2026); its later-development rule sits at
+    // the top of the list (fetal-circulation stems also say heart and lungs).
+    { slug: 'mcat-anatomy-physiology-embryology-mcat', title: 'Early Embryology: Fertilization to Germ Layers',
+      pattern: /embryo|gastrul|neurulat|germ layer|ectoderm|mesoderm|endoderm|blastocyst|zygote|cleavage|morula|implantation|polyspermy|acrosom|zona pellucida|trophoblast|primitive streak|notochord|neural tube|neural crest/i },
     { slug: 'mcat-organ-systems-endocrine-nervous-mcat', title: 'Endocrine & Nervous Systems',
       pattern: /hormone|endocrine|insulin|glucagon|thyroid|cortisol|pituitary|neuron|action potential|synap|neurotransmit|myelin|acetylcholine/i },
   ],
@@ -179,8 +200,12 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
       pattern: /cognit|language acquisition|problem.?solving|heuristic|cognitive bias|broca|wernicke/i },
     { slug: 'mcat-sociology-health-disparities-mcat', title: 'Health Disparities',
       pattern: /health disparit|access to.*care|social determinant/i },
-    { slug: 'mcat-sociology-groups-interaction-mcat', title: 'Groups & Social Interaction',
-      pattern: /conformity|obedience|bystander|social facilitation|in.?group|out.?group|discriminat|prejudic|stereotype|group think/i },
+    // Groups & Interaction is two lessons (Nov 2026); prejudice and
+    // organization vocabulary first.
+    { slug: 'mcat-sociology-interaction-organizations-mcat', title: 'Social Interaction, Organizations & Discrimination',
+      pattern: /discriminat|prejudic|stereotyp|dramaturg|impression management|front stage|back stage|goffman|emotional labor|weak ties|social network|bureaucra|iron law of oligarchy|mcdonaldi|formal organization|contact hypothesis|self-fulfilling prophecy|audit stud/i },
+    { slug: 'mcat-sociology-groups-interaction-mcat', title: 'Groups, Roles & Social Influence',
+      pattern: /conformity|obedience|bystander|social facilitation|social loafing|in.?group|out.?group|group ?think|group polarization|role (strain|conflict|exit)|master status/i },
     { slug: 'mcat-sociology-structure-stratification-mcat', title: 'Social Structure & Stratification',
       pattern: /stratif|social class|socioeconomic|inequality|social mobility|meritocra/i },
     { slug: 'mcat-sociology-culture-socialization-mcat', title: 'Culture & Socialization',

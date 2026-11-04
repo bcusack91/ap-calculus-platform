@@ -4,9 +4,9 @@ export const mcatStoichiometryPart2Data = {
     {
       id: 'st2-intro',
       type: 'text' as const,
-      content: `# Stoichiometry & Chemical Reactions
+      content: `# Stoichiometry: Moles & Reactions
 
-**Part 2 of 5 — Limiting Reagent, Percent Yield & Reaction Types**
+**Part 2 of 2 — Limiting Reagent, Percent Yield & Reaction Types**
 
 ## Limiting Reagent
 
@@ -97,6 +97,25 @@ $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\to x\\te
             correctAnswer: 2,
             yield: 'HIGH',
             explanation: `$\\% \\text{ yield} = (27.2/34.0) \\times 100 = \\mathbf{80\\%}$. The value 125% puts the theoretical yield on top of the fraction instead of the bottom, 20% is the share LOST rather than recovered, and 90% would need 30.6 g recovered.`
+          },
+          {
+            question: `Combustion of propane: $\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\to 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$. If 2.00 mol $\\text{C}_3\\text{H}_8$ reacts with 8.00 mol $\\text{O}_2$, what is the limiting reagent?`,
+            options: [
+              `$\\text{C}_3\\text{H}_8$; 2.00 mol is far less than 8.00 mol`,
+              `$\\text{O}_2$; 2.00 mol of propane needs 10.0 mol of it`,
+              `Neither; the two are mixed in their exact 1 : 5 mole ratio`,
+              `Neither; a gas-phase reaction never has a limiting reagent`
+            ],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `2 mol $\\text{C}_3\\text{H}_8$ requires $2 \\times 5 = 10\\text{ mol O}_2$, but only 8 mol $\\text{O}_2$ is available. Therefore $\\text{O}_2$ is limiting. Alternatively: $2.00/1 = 2.00$ (propane ratio); $8.00/5 = 1.60$ ($\\text{O}_2$ ratio) — smaller ratio → **$\\text{O}_2$ is limiting**. Having fewer moles does not make propane limiting, the mixture is 1 : 4 rather than 1 : 5, and gas-phase reactions obey the same mole bookkeeping.`
+          },
+          {
+            question: `An experiment produces 15.3 g of water from the combustion of hydrogen. The theoretical yield is 22.5 g. What is the percent yield?`,
+            options: [`32.0%`, `147%`, `68.0%`, `6.80%`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `Percent yield $= (\\text{actual}/\\text{theoretical}) \\times 100 = (15.3/22.5) \\times 100 = \\mathbf{68.0\\%}$. 32.0% is the share lost, 147% puts the theoretical yield on top, and 6.80% slips a decimal place.`
           },
           {
             question: `Which reaction is classified as a **double displacement** (metathesis) reaction?`,
@@ -190,6 +209,8 @@ $$3.00 \\times 44.0 = \\mathbf{132\\text{ g CO}_2}$$
 - **Product from the excess.** Theoretical yield comes from the limiting reagent; the excess reagent is simply left over.
 - **Inverted percent yield.** Theoretical goes on the bottom: 27.2 g recovered of 34.0 g theoretical is 80%, not 125%.
 - **Counting O atoms as $\\text{O}_2$.** Butane's products hold 13 O atoms, so the $\\text{O}_2$ coefficient is 13/2, not 13.
+
+**Next up:** the *Solutions, Gases & Electrolysis* lesson — molarity, dilution and solution stoichiometry, colligative properties and precipitation, the gas laws, and Faraday's law of electrolysis.
 `
     }
   ]

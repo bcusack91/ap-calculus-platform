@@ -6,7 +6,7 @@ export const mcatAtomicStructurePart2Data = {
       type: 'text' as const,
       content: `# Atomic Structure & Periodic Trends
 
-**Part 2 of 5 — Periodic Trends: Atomic Radius, Ionization Energy & Electronegativity**
+**Part 2 of 3 — Periodic Trends: Atomic Radius, Ionization Energy & Electronegativity**
 
 Periodic trends follow directly from **effective nuclear charge ($Z_{\\text{eff}}$)** — the net positive charge an outer electron "feels" after inner electrons partially shield it.
 

@@ -1,12 +1,14 @@
-export const mcatSocioGroupsPart3Data = {
-  topicSlug: 'mcat-sociology-groups-interaction-mcat',
+export const mcatSocioInteractionOrgsPart1Data = {
+  topicSlug: 'mcat-sociology-interaction-organizations-mcat',
   sections: [
     {
       id: 'grp3-intro',
       type: 'text' as const,
-      content: `# Groups & Social Interaction — Deep Dive
+      content: `# Social Interaction, Organizations & Discrimination
 
-**Part 3 of 4 — The Interaction Order: Dramaturgy, Networks & Bureaucracy**
+**Part 1 of 2 — The Interaction Order: Dramaturgy, Networks & Bureaucracy**
+
+**Where this fits.** The *Groups, Roles & Social Influence* lesson covered statuses and roles, the kinds of groups, and how groups bend individuals through conformity, obedience and groupthink. This lesson turns to interaction itself and to the organizations people work inside, then to stereotypes, prejudice and discrimination and how the MCAT tests them with experiments.
 
 ### Goffman's Dramaturgy — Life as Staged Performance
 
@@ -42,7 +44,7 @@ A **network** is the web of ties linking actors; its structure carries consequen
 
 ### Formal Organizations & Weber's Bureaucracy
 
-Modern goals are pursued through **formal organizations** — deliberately designed secondary groups. Weber's **ideal type** of bureaucracy (an analytic model, not praise) has five tested features:
+Modern goals are pursued through **formal organizations** — deliberately designed secondary groups (large, impersonal, goal-oriented groups, unlike intimate primary groups such as family). Weber's **ideal type** of bureaucracy (an analytic model, not praise) has five tested features:
 
 1. **Division of labor** — specialized offices
 2. **Hierarchy of authority** — each office supervised by a higher one
@@ -66,22 +68,53 @@ The two halves of this part are one story: bureaucracies script front-stage perf
       type: 'text' as const,
       content: `### Worked Example — Reading a Hospital Through Both Lenses
 
-**Passage-style problem.** An ethnographer spends six months in a teaching hospital. Condensed field notes:
+**Problem 1.** An ethnographer in a teaching hospital notes: "At bedside, residents speak in measured, confident tones and never disagree with attendings in front of patients. In the workroom, the same residents debate diagnoses heatedly, mock the electronic chart's phrasing requirements, and rehearse how to present bad news."
 
-1. "At bedside, residents speak in measured, confident tones and never disagree with attendings in front of patients. In the workroom, the same residents debate diagnoses heatedly, mock the electronic chart's phrasing requirements, and rehearse how to present bad news."
-2. "Nurses say the official transfer protocol takes hours, so experienced nurses call friends on other floors to arrange transfers informally; new nurses without such contacts wait for the paperwork."
-3. "The billing office rejected an urgent-scan request because the form used last year's code — staff acknowledged the scan was medically necessary but said 'the system can't process it without the right code.'"
-4. "Job-seeking interns report that positions come less from close friends — who know the same openings they do — than from former rotation acquaintances at other hospitals."
+- **(a)** Which region is the bedside, and which is the workroom?
+- **(b)** Who performs at the bedside, and what definition of the situation do they sustain?
+- **(c)** Which detail shows the workroom is more than a place to relax?
 
-**Note 1 — front stage and back stage.** Bedside is the front stage: a TEAM performance (residents protecting the attending's authority before the audience) sustaining the definition "this team is unified and certain." The workroom is back stage: script dropped, rehearsals ("how to present bad news") and repairs run openly. The rehearsal detail is diagnostic — back stage is where performances are PREPARED, not merely where people relax.
+**(a) The two regions.** Bedside is the front stage, with patients as the audience. The workroom is back stage: that audience is excluded, so the script drops and repairs run openly.
 
-**Note 2 — informal networks doing the organization's real work.** The formal structure (protocol) is slow; strong informal ties bypass it. Note the stratifying consequence: nurses WITHOUT network capital wait — network position converts directly into effectiveness, an inequality invisible on the organization chart.
+**(b) A team performance.** Residents protect the attending's authority before the audience, sustaining the definition "this team is unified and certain."
 
-**Note 3 — goal displacement.** The rule (correct code) has displaced the goal (necessary care): impersonal proceduralism, a written-records requirement, and hierarchy all functioning AS DESIGNED, yet producing an outcome everyone recognizes as irrational. This is the Weberian pathology answer, not "employee laziness" — the individuals are following the system faithfully; the defect is structural.
+**(c) The rehearsal.** Rehearsing "how to present bad news" is diagnostic: back stage is where performances are PREPARED, not merely where people relax.
 
-**Note 4 — the strength of weak ties.** Close friends share a redundant information pool; acquaintances bridge to OTHER clusters where unknown openings live. Granovetter's finding, reproduced in miniature.
+**Problem 2.** The field notes continue: "The billing office rejected an urgent-scan request because the form used last year's code — staff acknowledged the scan was medically necessary but said 'the system can't process it without the right code.'"
 
-**Integration question to expect:** "Which observation best illustrates that bureaucratic dysfunction is structural rather than attitudinal?" Answer: Note 3 — staff AGREED the scan was needed and still could not act; the block lay in the rule system. Distractors will point to Note 1 (that is dramaturgy, not dysfunction) or Note 2 (that is informal adaptation — evidence the formal structure is inadequate, but the note documents a work-around, not a rule defeating its own goal).`
+- **(a)** Which bureaucratic pathology is this?
+- **(b)** Which bureaucratic features produce it, and are they malfunctioning?
+- **(c)** Is the dysfunction structural or attitudinal, and how do you know?
+
+**(a) Goal displacement.** The rule (correct code) has displaced the goal (necessary care).
+
+**(b) Working as designed.** Impersonal proceduralism, a written-records requirement, and hierarchy all function AS DESIGNED, yet produce an outcome everyone recognizes as irrational.
+
+**(c) Structural.** Staff AGREED the scan was needed and still could not act; the block lay in the rule system. This is the Weberian pathology answer, not "employee laziness" — the individuals follow the system faithfully.
+
+**Problem 3.** Another note: "Nurses say the official transfer protocol takes hours, so experienced nurses call friends on other floors to arrange transfers informally; new nurses without such contacts wait for the paperwork."
+
+- **(a)** What is doing the organization's real work here?
+- **(b)** What is the stratifying consequence?
+- **(c)** Does this note show a rule defeating its own goal?
+
+**(a) Informal networks.** The formal structure (the protocol) is slow; informal ties bypass it.
+
+**(b) Network capital.** Nurses WITHOUT network capital wait — network position converts directly into effectiveness, an inequality invisible on the organization chart.
+
+**(c) A work-around.** No. This is informal adaptation, evidence the formal structure is inadequate, but not a rule defeating its own goal. A question asking for structural dysfunction wants the rejected scan in Problem 2 instead; the bedside scene in Problem 1 is dramaturgy, not dysfunction.
+
+**Problem 4.** A final note: "Patients in the hospital's rare-disease clinic say they learn of new clinical trials less from family and close friends than from acquaintances made in support groups at other hospitals."
+
+- **(a)** Which network finding does this reproduce?
+- **(b)** Why does the close circle rarely supply the news?
+- **(c)** What structural role do the acquaintances play?
+
+**(a) Strength of weak ties.** Granovetter's finding, first shown for job leads, reproduced in a new setting.
+
+**(b) Redundancy.** Family and close friends form one dense, redundant cluster: they hear what the patient hears, so they rarely hold news the patient lacks.
+
+**(c) Bridges.** Support-group acquaintances bridge to OTHER clusters (other patients, other clinics), where unseen trial news circulates. The explanation is structural, not a matter of who cares more.`
     },
     {
       id: 'grp3-quiz1',
@@ -122,7 +155,7 @@ The two halves of this part are one story: bureaucracies script front-stage perf
             options: [`Proves the founders secretly wanted power`, `Resulted from groupthink among ordinary members`, `Could have been avoided by stronger shared values`, `Illustrates the iron law of oligarchy`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `Michels's claim is structural inevitability, not hidden motive: coordinating a mass organization requires full-time delegation, which concentrates expertise, information, and agenda control in the delegates — who then entrench. Because the mechanism is organizational scale itself, ideals and values do not immunize; that is what makes the "law" iron. Member psychology such as groupthink is not the engine.`
+            explanation: `Michels's claim is structural inevitability, not hidden motive: coordinating a mass organization requires full-time delegation, which concentrates expertise, information, and agenda control in the delegates — who then entrench. Because the mechanism is organizational scale itself, ideals and values do not immunize; that is what makes the "law" iron. Member psychology such as groupthink (a cohesive group suppressing dissent to keep unanimity) is not the engine.`
           }
         ]
       }
@@ -130,16 +163,24 @@ The two halves of this part are one story: bureaucracies script front-stage perf
     {
       id: 'grp3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 3
+      content: `### Key Takeaways — Part 1
 
-- Dramaturgy: interaction is teamed performance — impression management on the front stage, script-dropping and rehearsal on the (audience-relative) back stage; face-work and tact keep shared definitions of reality intact
-- Feeling rules script what to feel; emotional labor sells it, and chronic mismatch between felt and required emotion predicts burnout
-- Networks: strong ties give redundant support, weak ties bridge clusters and carry novel information (jobs!); brokering between separate clusters is social capital in action
-- Weber's bureaucracy (division of labor, hierarchy, written rules, impersonality, technical qualification) buys predictability at the price of goal displacement, the iron cage, and McDonaldization's dehumanizing rationality
-- Michels: scale itself breeds oligarchy; and in every organizational vignette, read BOTH layers — the formal chart and the informal network doing the real coordination
+- **Front and back stage.** People perform before an audience; back stage, defined relative to it, is for rehearsal and repair.
+- **Emotional labor.** Feeling rules script what to feel; chronic mismatch between felt and paid-for emotion predicts burnout.
+- **Strength of weak ties.** Strong ties are dense and redundant; weak ties bridge clusters and carry novel information like job leads.
+- **Bureaucracy's two layers.** Weber's features buy predictability but breed goal displacement; informal ties do much of the real work.
+
+**Common traps**
+
+- **Back stage as a fixed place.** A region is back stage only relative to an audience; the kitchen is front stage for the head chef.
+- **Blaming the clerk.** Goal displacement is structural: staff follow the rules faithfully and the system still defeats its goal.
+- **Friends help more.** Weak ties win on novel information, not willingness; close friends simply know the same openings.
+- **Good values prevent oligarchy.** Michels's law is structural: scale requires delegation, so even democratic groups drift to elite rule.
 
 <!-- yield:low -->
-- Low-yield extras: Hochschild's split of emotional labor into surface acting (faking the display) and deep acting (inducing the feeling), with deep acting's risk of self-estrangement; Burt's term "structural holes" for the gaps network brokers span
+**Low-yield extras**
+
+- Hochschild's split of emotional labor into surface acting (faking the display) and deep acting (inducing the feeling), with deep acting's risk of self-estrangement; Burt's term "structural holes" for the gaps network brokers span
 <!-- /yield -->`
     }
   ]

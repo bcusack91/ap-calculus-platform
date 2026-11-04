@@ -4,9 +4,9 @@ export const mcatAcidBaseEqPart1Data = {
     {
       id: 'ab1-intro',
       type: 'text' as const,
-      content: `# Acid-Base Chemistry & Equilibrium
+      content: `# Acids, Bases & Buffers
 
-**Part 1 of 5 — pH, pOH, $K_w$, and Strong vs. Weak Acids/Bases**
+**Part 1 of 3 —pH, pOH, $K_w$, and Strong vs. Weak Acids/Bases**
 
 ## Acid-Base Definitions
 

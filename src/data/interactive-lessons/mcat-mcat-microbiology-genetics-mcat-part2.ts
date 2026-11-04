@@ -5,9 +5,9 @@ export const mcatMicrobialGeneticsPart2Data = {
     {
       id: 'mg2-intro',
       type: 'text' as const,
-      content: `# Microbial Genetics
+      content: `# Bacterial Genetics & Gene Transfer
 
-**Part 2 of 4 — Horizontal Gene Transfer in Depth**
+**Part 2 of 2 — Horizontal Gene Transfer in Depth**
 
 Vertical transfer (parent to daughter) is clonal. **Horizontal** transfer moves DNA between cells, even between species, by three routes. Because genes jump between unrelated lineages, bacterial ancestry looks more like a network than a strictly branching tree.
 
@@ -183,7 +183,9 @@ Lysogenic conversion, where the phage's OWN genes (such as toxin genes) change t
 **Low-yield extras**
 
 Artificial competence by calcium chloride plus heat shock or electroporation; lambda's gal/bio neighbors and the P1/P22 generalized transducers; relaxase and rolling-circle transfer.
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Mobile Elements, Gene Regulation & Viral Genetics* lesson — transposons, restriction-modification and CRISPR defense, operon genetics with merodiploids, phage genetics and complementation, and how viruses mutate, recombine and reassort.`
     }
   ]
 };

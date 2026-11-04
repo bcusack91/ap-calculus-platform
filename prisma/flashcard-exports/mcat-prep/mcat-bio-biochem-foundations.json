@@ -1,31 +1,31 @@
 [
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "A cell is {{c1::determined}} once its fate stays fixed even after transplantation to a new region, a commitment preceding visible differentiation.",
   "back": "Determined. The sequence is specification (fate reversible if moved), then determination (irreversible commitment), then differentiation (overt specialized structure and gene expression). Transplantation experiments distinguish the first two states."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "A congenital diaphragmatic hernia kills mainly through {{c1::pulmonary hypoplasia}}, not through the displaced bowel itself.",
   "back": "Pulmonary hypoplasia. Abdominal contents in the chest occupy the space needed for airway branching and vascular growth, so alveoli never develop adequately, leaving severe hypoxemia and pulmonary hypertension at birth."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "A persistent {{c1::vitelline}} duct leaves a Meckel diverticulum on the ileum, sometimes lined with ectopic gastric mucosa.",
   "back": "Vitelline (omphalomesenteric). It is a true diverticulum containing all bowel layers, and acid from ectopic gastric tissue can ulcerate the adjacent ileum, causing painless rectal bleeding in a child. Compare the allantois, whose persistence gives a urachal fistula."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "A ventricular septal defect shunts {{c1::left to right}} at first because pulmonary vascular resistance is lower than systemic resistance.",
   "back": "Left to right. The extra pulmonary flow is initially acyanotic, but chronic overcirculation remodels pulmonary arterioles until their resistance exceeds systemic. The shunt then reverses (Eisenmenger syndrome) and late cyanosis appears."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Around week 6 the midgut normally herniates into the umbilical cord and returns by week {{c1::10}} after rotating 270 degrees.",
   "back": "10. The abdominal cavity is too small until then, so the loop grows outside it. Failure to return gives an omphalocele covered by peritoneum, while failure of the abdominal wall itself to close gives gastroschisis with uncovered bowel."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Bilateral renal agenesis causes {{c1::oligohydramnios}}, which then compresses the fetus and prevents lung development.",
   "back": "Oligohydramnios. After the first trimester amniotic fluid is mostly fetal urine, so absent kidneys mean almost no fluid. The Potter sequence follows: limb deformities, flattened facies, and lethal pulmonary hypoplasia, all downstream of one primary defect."
  },
@@ -40,7 +40,7 @@
   "back": "**Rapid division without growth, decreasing cell size**\n\nThe embryo's total volume stays roughly constant."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Cleft lip versus cleft palate: which fusion failure produces each?",
   "back": "Cleft lip is failure of the maxillary prominence to fuse with the medial nasal prominence that forms the upper lip. Cleft palate is failure of the palatine shelves to fuse with each other and the primary palate. They arise separately and may occur alone or together."
  },
@@ -50,12 +50,12 @@
   "back": "**Incomplete separation of a single embryo**\n\nSplitting occurs unusually late."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Define determination vs. differentiation.",
   "back": "Determination is the commitment to a fate (not yet visible); differentiation is the realization of specialized structure and function."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Define induction and competence, and give a classic inductive pair.",
   "back": "Induction: signals from one tissue redirect the developmental fate of a neighbor, as when the optic vesicle induces surface ectoderm to form the lens. Competence: the responding tissue must possess the receptors and machinery to answer, and competence fades with time, creating critical periods."
  },
@@ -75,7 +75,7 @@
   "back": "Epithelial linings of the GI and respiratory tracts plus liver, pancreas, thyroid follicular cells, parathyroids, thymic epithelium, bladder and most urethra lining, auditory tube and middle-ear lining, and tonsillar epithelium. Gut smooth muscle and connective tissue are mesodermal."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Fetal surfactant becomes adequate near week {{c1::34}}, and a lecithin-to-sphingomyelin ratio above 2 predicts lung maturity.",
   "back": "34. Type II pneumocytes begin secreting around week 24, so infants born between 24 and 34 weeks face the highest risk of respiratory distress syndrome. Maternal betamethasone accelerates surfactant synthesis when preterm delivery is expected."
  },
@@ -90,7 +90,7 @@
   "back": "The neural plate folds during week 3 and fusion starts in the cervical region. The anterior neuropore closes about day 25; failure causes anencephaly. The posterior neuropore closes about day 27-28; failure causes spina bifida. Maternal folate lowers risk; open defects raise AFP."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Give the signature defects of thalidomide, isotretinoin, alcohol, and ACE inhibitors.",
   "back": "Thalidomide: limb reduction defects (phocomelia), exposure weeks 4-6. Isotretinoin: craniofacial, cardiac, and CNS malformations. Alcohol: fetal alcohol syndrome (smooth philtrum, thin upper lip, microcephaly), the leading preventable cause of intellectual disability. ACE inhibitors: fetal renal damage and oligohydramnios."
  },
@@ -100,27 +100,27 @@
   "back": "Neural crest. Migration proceeds rostral to caudal, so the aganglionic segment always includes the rectum. That segment cannot relax and stays tonically contracted while proximal bowel dilates, and the newborn fails to pass meconium."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "How can one morphogen gradient specify several distinct cell types?",
   "back": "Cells read the local concentration against internal thresholds, activating different gene programs at different distances from the source (the French flag model). Examples: SHH from the limb's zone of polarizing activity sets digit identity, and SHH from the notochord sets ventral neural fates."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "How does the placenta exchange gases and nutrients without mixing maternal and fetal blood?",
   "back": "Maternal spiral arteries fill the intervillous space, bathing chorionic villi that contain fetal capillaries; the barrier is syncytiotrophoblast plus fetal endothelium. The placenta also secretes hCG, human placental lactogen, progesterone, and estrogens."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Hypospadias, a urethral opening on the ventral penis, reflects failed fusion of the {{c1::urethral folds}}, a DHT-dependent step.",
   "back": "Urethral folds. The same folds become the labia minora when androgen is absent. Because closure depends on DHT, hypospadias appears with mild androgen signaling defects and should prompt a search for other genital anomalies."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Indomethacin closes a patent ductus arteriosus by blocking {{c1::prostaglandin}} synthesis, while prostaglandin E1 holds it open.",
   "back": "Prostaglandin. Keeping the duct open is lifesaving in duct-dependent lesions such as transposition of the great arteries, where it is the only mixing point until surgery. A continuous machine-like murmur suggests a persistent duct."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Interdigital webbing is removed by programmed cell death, so failed {{c1::apoptosis}} leaves syndactyly.",
   "back": "Apoptosis. Sculpting by cell death is a general developmental strategy: it also clears the tail bud, hollows out lumens such as the duodenum and vagina, and prunes neurons that fail to capture enough target-derived growth factor."
  },
@@ -155,7 +155,7 @@
   "back": "Sonic hedgehog and bone morphogenetic proteins form opposing concentration gradients; neural progenitors read their local ratio to adopt ventral motor, intermediate interneuron, or dorsal sensory identities along the dorsoventral axis."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Pluripotent stem cells can form:",
   "back": "**Any cell of the body but not placenta**\n\nEmbryonic stem cells from the inner cell mass."
  },
@@ -165,12 +165,12 @@
   "back": "Zygote → cleavage → morula → blastula (blastocyst) → gastrula → neurula → organogenesis."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Rank the potency of a zygote, an inner cell mass cell, and a hematopoietic stem cell.",
   "back": "Zygote and early blastomeres are totipotent (embryo plus trophoblast); inner cell mass and epiblast cells are pluripotent (all three germ layers but not trophoblast); hematopoietic stem cells are multipotent (restricted to blood lineages). Potency narrows progressively during development."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Spemann's organizer (dorsal blastopore lip) induces a second body axis when transplanted, secreting BMP antagonists such as {{c1::noggin}} and chordin.",
   "back": "Noggin (with chordin and follistatin). By blocking BMP signaling, the organizer lets dorsal ectoderm follow its default neural fate; the transplant experiment produced twinned embryos and defined embryonic induction."
  },
@@ -180,7 +180,7 @@
   "back": "Surface ectoderm: epidermis, hair, nails, lens and corneal epithelium, otic placode (inner ear), anterior pituitary via Rathke's pouch, tooth enamel, mammary and sweat glands. Neuroectoderm: entire CNS, retina and optic nerve, posterior pituitary, pineal gland."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "The {{c1::allantois}} becomes the urachus; when this duct stays patent, urine leaks from the umbilicus.",
   "back": "Allantois, an outpocketing into the connecting stalk. Its intra-abdominal portion becomes the urachus, later the median umbilical ligament, and the umbilical vessels develop alongside it. A patent urachus creates a bladder-to-umbilicus fistula."
  },
@@ -190,7 +190,7 @@
   "back": "Notochord, a midline mesodermal rod derived from the primitive node. It is the axial signaling center, secreting sonic hedgehog to pattern the ventral neural tube and sclerotome; its adult remnant is the nucleus pulposus of each intervertebral disc."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "The {{c1::yolk sac}} is the first site of hematopoiesis and the origin of primordial germ cells, which migrate to the gonadal ridge.",
   "back": "Yolk sac. Blood islands appear in its wall in week 3, and primordial germ cells specified there in week 4 crawl along the hindgut to colonize the gonads. Its connection to the midgut, the vitelline duct, can persist as a Meckel diverticulum."
  },
@@ -225,7 +225,7 @@
   "back": "**The beginning of gastrulation and bilateral symmetry**\n\nCells migrate inward through it to form mesoderm and endoderm."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "The switch from fetal hemoglobin to HbA finishes around {{c1::6 months}} of age, which is why sickle cell disease is silent in early infancy.",
   "back": "6 months. HbF is $\\alpha_2\\gamma_2$ and cannot sickle; only as gamma chains are replaced by beta chains does the mutant beta-globin dominate. Hydroxyurea helps partly by re-inducing fetal hemoglobin later in life."
  },
@@ -235,22 +235,22 @@
   "back": "Foramen cecum. A remnant of that duct can form a midline neck cyst that moves upward with swallowing or tongue protrusion, the classic discriminator from a lateral branchial cleft cyst. Rarely the entire gland stays lingual and presents as hypothyroidism."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Weeks {{c1::3-8}} of development (organogenesis) are the window of peak teratogen susceptibility; weeks 1-2 follow the all-or-none rule.",
   "back": "Weeks 3-8, the embryonic period, when organ primordia are forming. Before implantation and gastrulation, an insult either kills the conceptus or is fully compensated. Fetal-period exposures instead cause growth restriction and CNS or functional deficits, not gross malformations."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "What are stem cell potency levels?",
   "back": "Totipotent (any cell plus placenta), pluripotent (any body cell), multipotent (limited lineage), unipotent (one type)."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "What are the fetal circulatory shunts?",
   "back": "Ductus venosus (bypasses liver), foramen ovale (right to left atrium), ductus arteriosus (pulmonary artery to aorta) — all bypass the non-functioning lungs."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "What are the functions of the amnion, and what is its fluid made of over time?",
   "back": "The amnion cushions the embryo, buffers temperature, permits movement needed for musculoskeletal development, and prevents adhesions. Amniotic fluid is initially a maternal transudate but later is mostly fetal urine, continuously swallowed and excreted; amniocentesis samples its fetal cells."
  },
@@ -270,17 +270,17 @@
   "back": "Around the 8-cell stage, blastomeres flatten and maximize contact via E-cadherin, creating inside vs outside cells. Inner cells are biased toward the inner cell mass and outer cells toward trophoblast, before the 16-cell morula forms on day 3-4."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "What is induction in development?",
   "back": "One tissue signaling a neighbor to change its developmental fate — e.g. the notochord inducing the neural plate."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "What is the chorion made of, and which prenatal test samples it?",
   "back": "The chorion, the outermost membrane, is trophoblast plus extraembryonic somatic mesoderm; its villi at the chorion frondosum become the fetal half of the placenta. Chorionic villus sampling at about 10-13 weeks karyotypes fetal tissue earlier than amniocentesis can."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "What is the role of apoptosis in development?",
   "back": "It sculpts structures — removing the webbing between digits and pruning excess neurons."
  },
@@ -300,17 +300,17 @@
   "back": "They come from two independently fertilized eggs that implant separately, so each conceptus builds its own chorion and amnion; their placentas may secondarily fuse but the membranes remain distinct. Genetically they are ordinary siblings, unlike monozygotic twins."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Why does an undescended testis impair sperm production but not testosterone production?",
   "back": "Spermatogenesis requires a temperature a few degrees below core, so intra-abdominal germ cells degenerate. Leydig cells are not temperature-sensitive, so androgen output continues and puberty proceeds normally. Cryptorchidism also raises germ cell tumor risk even after correction."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Why does esophageal atresia cause polyhydramnios?",
   "back": "Amniotic fluid volume is the balance between fetal urine production and fetal swallowing. A blocked esophagus removes the swallowing arm, so fluid accumulates. Excess fluid plus a nasogastric tube that will not pass suggests the diagnosis at birth."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Why is tetralogy of Fallot cyanotic while an isolated septal defect is not?",
   "back": "Pulmonary outflow obstruction raises right ventricular pressure above left, so deoxygenated blood crosses the ventricular septal defect into the overriding aorta. Squatting raises systemic resistance and reduces that right-to-left shunt, relieving a hypercyanotic spell."
  },
@@ -325,7 +325,7 @@
   "back": "The neural tube closes on days 25-28, usually before pregnancy is recognized, so protection must already be in place. The same logic of organ-specific windows (heart weeks 3-6, limbs weeks 4-8) means the timing of a teratogen exposure determines which malformation results."
  },
  {
-  "topicSlug": "mcat-anatomy-physiology-embryology-mcat",
+  "topicSlug": "mcat-anatomy-physiology-organogenesis-mcat",
   "front": "Why must the conceptus secrete hCG, and what hormonal handoff follows?",
   "back": "hCG is an LH analog that rescues the corpus luteum, whose progesterone maintains the endometrium. By weeks 8-10 the placenta itself makes enough progesterone (luteal-placental shift), and hCG declines from its first-trimester peak. Urine hCG is the pregnancy test."
  },
@@ -5691,12 +5691,12 @@
   "back": "A leucine auxotroph. Comparing growth on minimal versus supplemented plates maps which biosynthetic gene is broken, and auxotrophic markers provide the selection that made conjugation, transduction, and complementation mapping experiments possible."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "A composite transposon consists of cargo genes flanked by two {{c1::insertion sequences (IS elements)}}.",
   "back": "The flanking IS elements supply the transposase and inverted repeats, so the whole unit, often carrying antibiotic-resistance cargo, hops as one block. Tn10 (tetracycline resistance) is the classic example."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "A gene is inactivated by a large insertion that also confers kanamycin resistance. What element is responsible?",
   "back": "A composite transposon: a resistance gene flanked by insertion sequences that jump as a unit. Transposition into a coding sequence disrupts it, so transposons are simultaneously a natural mutagen, a resistance vector, and a laboratory insertional-mutagenesis tool."
  },
@@ -5746,7 +5746,7 @@
   "back": "Generalized: any host DNA is randomly packaged. Specialized: only genes adjacent to the prophage integration site are transferred."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "CRISPR-Cas is a bacterial adaptive immune system that stores fragments of past invaders as {{c1::spacers}}.",
   "back": "Spacers are transcribed into guide RNAs that direct Cas nucleases to cleave matching phage or plasmid DNA. Unlike innate pattern recognition, the memory is sequence specific and heritable, and reprogramming the guide converted it into a genome-editing tool."
  },
@@ -5761,7 +5761,7 @@
   "back": "A selectable marker such as an antibiotic resistance gene kills every cell lacking the construct, so survivors are transformants. A screenable marker such as lacZ or GFP lets all cells live and merely lets you identify the right ones by inspection."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Distinguish conservative (cut-and-paste) from replicative transposition.",
   "back": "Cut-and-paste excises the element entirely and reinserts it elsewhere, leaving a break at the donor site. Replicative transposition copies the element through a cointegrate intermediate that a resolvase resolves, leaving one copy at the original site and one at the target."
  },
@@ -5781,7 +5781,7 @@
   "back": "Transformation requires free extracellular DNA, so DNase abolishes it. Transduction survives DNase because donor DNA is inside a phage capsid, and conjugation survives because DNA passes through a mating bridge. These are the classic discriminating experiments."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Give three genetic consequences of a transposon inserting into or near a bacterial gene.",
   "back": "Insertion can inactivate the gene (insertional mutagenesis), exert polar effects that silence downstream genes in the same operon, and mobilize neighboring sequences, including moving resistance genes between plasmid and chromosome."
  },
@@ -5791,7 +5791,7 @@
   "back": "They treated the S-cell extract with specific hydrolases: protease and RNase left transformation intact, but DNase abolished it. Transformation of R to S therefore required DNA, identifying DNA as the genetic material."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "How did phage co-infection experiments (rII-style) map mutation positions within a single gene?",
   "back": "Co-infecting one host with two phage mutants lets their genomes recombine; the frequency of wild-type recombinant plaques is proportional to the distance between the mutation sites. This showed genes are divisible linear arrays of mutable sites."
  },
@@ -5801,12 +5801,12 @@
   "back": "Spontaneous mutation or horizontal transfer (conjugation, transduction, transformation) — often plasmid-borne."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "How do complementation and recombination differ as explanations for wild-type progeny from two mutants?",
   "back": "Complementation restores function without altering either genome and affects the whole cell immediately. Recombination physically builds a wild-type allele, occurs at low frequency even between sites within one gene, and the wild-type genotype is heritable."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "How does a restriction-modification system destroy phage DNA without cutting the bacterium's own chromosome?",
   "back": "A methyltransferase marks host recognition sites, and the restriction endonuclease cleaves only unmethylated versions of that sequence. Incoming unmethylated phage DNA is degraded, which is both a primitive defense and the origin of cloning enzymes."
  },
@@ -5821,7 +5821,7 @@
   "back": "The F plasmid integrates into the chromosome by homologous recombination between insertion sequences (IS elements) present on both F and the chromosome. Different IS locations give different integration sites and orientations, producing distinct Hfr strains."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "How does an integron accumulate and express multiple resistance genes?",
   "back": "An integron encodes an integrase that captures circular gene cassettes at its attI site, stacking them in an array transcribed from one common promoter. Repeated capture events build multidrug-resistance arrays, often riding on transposons and plasmids."
  },
@@ -5831,17 +5831,17 @@
   "back": "Colonies from a nonselective master plate are transferred in register to drug plates; resistant colonies appear at the same coordinates each time. Going back to the never-exposed master plate at those positions recovers resistant cells that never met the drug."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "If two recessive mutations fail to complement in trans, they are almost certainly in the {{c1::same gene}}.",
   "back": "Neither genome can supply a functional copy of that gene, so the mutant phenotype persists in the heterokaryon or merodiploid. Rare exceptions include intragenic complementation in multimeric proteins and unlinked non-allelic non-complementation."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "In a cis-trans test, why must the cis configuration always be checked as a control?",
   "back": "With both mutations on one genome and a wild-type copy on the other, the phenotype should be wild-type regardless of whether the mutations are allelic. If the cis control is mutant, a dominant mutation is present and the trans result cannot be interpreted."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "In a phage cross, wild-type recombinants appear at $0.001$ of total progeny. What map distance separates the mutations?",
   "back": "Recombinants arise in two reciprocal classes, but only wild type is selectable, so total recombinants are twice the observed frequency: $0.002$, or 0.2 map units. This fine-structure logic let Benzer map hundreds of sites inside a single gene."
  },
@@ -5871,7 +5871,7 @@
   "back": "Blending at successive minutes and scoring markers yields a map in minutes rather than map units. Later markers appear in fewer recombinants because the fragile mating bridge usually breaks before the whole chromosome and the terminal F factor transfer."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Mutants 1 and 2 complement, 2 and 3 complement, but 1 and 3 do not. How many genes are represented?",
   "back": "Two. Mutations 1 and 3 fail to complement so they share a gene; mutation 2 complements both, so it defines a second gene. Complementation groups are built by transitivity, and this pattern is the standard way to count genes in a pathway."
  },
@@ -5911,7 +5911,7 @@
   "back": "Parallel cultures gave wildly variable resistant counts, consistent with random mutations occurring at different generations, not with induction by phage. Selection reveals preexisting variation, the same logic underlying antibiotic resistance and natural selection."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "The number of complementation groups in a mutant screen equals the number of {{c1::genes}} identified in the pathway.",
   "back": "All mutations that fail to complement one another define one gene, and groups that complement each other define separate genes. Counting groups estimates how many genes the screen has saturated for the phenotype."
  },
@@ -5921,17 +5921,17 @@
   "back": "Phage capsids protect DNA in transit between cells, while competent bacteria scavenge naked DNA from dead neighbors. Together with conjugation these are the three horizontal routes, and each has a distinct experimental signature (DNase sensitivity, contact dependence)."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Transposable elements were first discovered by {{c1::Barbara McClintock}}, in maize, before their bacterial roles were known.",
   "back": "Her mobile controlling elements explained unstable kernel pigmentation decades before IS elements and resistance transposons were found in bacteria. The discovery established that genomes are dynamic, with sequences that relocate and remodel gene expression."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Two recessive mutants with the same phenotype are combined in one cell and the phenotype is wild-type. What do you conclude?",
   "back": "The mutations complement, so they lie in different genes: each genome supplies the functional product the other lacks. Complementation sorts a mutant collection into complementation groups, each corresponding to one gene."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "What are transposons?",
   "back": "\"Jumping genes\" that relocate within the genome, potentially disrupting genes or spreading resistance cassettes."
  },
@@ -5941,7 +5941,7 @@
   "back": "Mice died and live S cells were recovered, showing a heritable 'transforming principle' passed from dead S cells to live R cells. Neither component alone was lethal, so the R cells had acquired the capsule trait from dead-cell material."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "What DNA sequence features mark the two ends of a transposon and the site where it landed?",
   "back": "The transposon terminates in inverted repeats recognized by its transposase, and insertion generates short direct repeats of target DNA flanking the element. The target-site duplication arises from staggered cuts filled in by host repair."
  },
@@ -5966,7 +5966,7 @@
   "back": "The physiological state permitting uptake of free environmental DNA (natural transformation)."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "What is the CRISPR system natively?",
   "back": "A bacterial adaptive immune system storing spacers from past phage infections to recognize and cut returning invaders."
  },
@@ -5991,12 +5991,12 @@
   "back": "Transfer starts at oriT within the integrated F, so chromosomal genes enter first and the rest of F would enter only after the entire chromosome (about 100 minutes). Matings almost always break off early, so the recipient gets donor genes but not a complete F."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Why is a complementation test uninterpretable for a dominant mutation?",
   "back": "Complementation logic assumes each mutation is recessive, so a wild-type allele can mask it. A dominant allele produces the mutant phenotype even with a functional partner present, so failure to see wild-type says nothing about whether the genes differ."
  },
  {
-  "topicSlug": "mcat-microbiology-genetics-mcat",
+  "topicSlug": "mcat-microbiology-genetics-regulation-mcat",
   "front": "Why were F' merodiploids essential for analyzing the lac operon?",
   "back": "A merodiploid carries two alleles of the same region, allowing cis-trans and dominance tests in bacteria. Placing lacI+ on F' opposite a chromosomal lacI- showed repressor acts in trans, while operator mutations proved cis-dominant, defining regulatory logic."
  },

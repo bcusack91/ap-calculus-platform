@@ -5,7 +5,10 @@
  * Each family is a retired slug plus its successors in course order. The
  * script makes the database match that list, whatever state it starts from
  * (the original combined row, or an earlier split that has since been split
- * again):
+ * again). A PART SPLIT (MCAT_PART_SPLITS) is a family with no retired row:
+ * the kept topic anchors it and stays first, the new half is created right
+ * after it, cards move by the same fingerprint map (keyed by the kept slug)
+ * and step 5 carries the kept topic's pre-split credit to the new half:
  *   1. creates missing successor rows (same category and parent) and orders
  *      the family consecutively from where it starts, later siblings after it;
  *   2. keeps every successor's title, description and topic-page summary in
@@ -56,7 +59,7 @@ config({ path: process.env.SEED_DB === 'prod' ? '.env' : '.env.local', override:
 import fs from 'node:fs'
 import path from 'node:path'
 import { PrismaClient, type ExamYield, type ProgressStatus } from '@prisma/client'
-import { MCAT_SPLIT_TITLES, MCAT_SPLIT_TOPICS } from '../src/lib/mcat-topic-split'
+import { MCAT_PART_SPLITS, MCAT_SPLIT_TITLES, MCAT_SPLIT_TOPICS } from '../src/lib/mcat-topic-split'
 import { fingerprint } from '../src/lib/flashcard-yield-artifact'
 import { SUCCESSOR_META } from './split-mcat-topics.meta'
 
@@ -66,7 +69,7 @@ const IS_PROD = process.env.SEED_DB === 'prod'
 const CREATE_ONLY = process.env.CREATE_ONLY === '1'
 const BACKUP_PREFIX = '_split-mcat-topics-backup-'
 
-/** fingerprint → final topic slug, per family (keyed by the retired slug). */
+/** fingerprint → final topic slug, per family (keyed by the retired slug, or by the kept slug of a part split). */
 const CARD_MAP: Record<string, Record<string, string>> = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'split-mcat-topics.cards.json'), 'utf8'),
 )
@@ -77,6 +80,19 @@ const PART_MOVES: { from: string; to: string }[] = [
   { from: 'mcat-physics-electricity-emf-capacitors-mcat', to: 'mcat-physics-electricity-rc-circuits-mcat' },
   { from: 'mcat-physics-mechanics-fluids-mcat', to: 'mcat-physics-mechanics-fluid-dynamics-mcat' },
   { from: 'mcat-physics-waves-sound-mcat', to: 'mcat-physics-waves-interference-mcat' },
+  // Part splits (Nov 2026): the kept topic's pre-split credit covers the new half too.
+  ...MCAT_PART_SPLITS.map(({ keep, add }) => ({ from: keep, to: add })),
+]
+
+/**
+ * Every family the script manages. A retired-slug family anchors on the old
+ * row; a part split (MCAT_PART_SPLITS) has no retired row and anchors on the
+ * kept topic, which stays first.
+ */
+type Family = { key: string; oldSlug: string | null; successors: readonly string[] }
+const FAMILIES: Family[] = [
+  ...Object.entries(MCAT_SPLIT_TOPICS).map(([old, successors]) => ({ key: old, oldSlug: old, successors })),
+  ...MCAT_PART_SPLITS.map(({ keep, add }) => ({ key: keep, oldSlug: null, successors: [keep, add] })),
 ]
 
 type NewCard = { front: string; back: string; hint?: string; yield: ExamYield; part?: number }
@@ -91,11 +107,12 @@ const prisma = new PrismaClient()
 type Row = { id: string; slug: string; order: number; categoryId: string; parentTopicId: string | null; title: string; description: string | null; textContent: string | null; createdAt: Date }
 type ProgressCopy = { userId: string; status: ProgressStatus; masteryLevel: number; completedAt: Date | null; timeSpent: number; masteredParts: unknown; to: string }
 type Plan = {
+  /** Family key: the retired slug, or the kept slug of a part split. */
   oldSlug: string
   successors: readonly string[]
   old: Row | null
   create: { slug: string; order: number }[]
-  reorder: { id: string; slug: string; from: number; to: number }[]
+  reorder: { slug: string; from: number; to: number }[]
   meta: { id: string; slug: string; fields: string[] }[]
   cardMoves: { id: string; to: string }[]
   unknownCards: number
@@ -111,38 +128,55 @@ type Plan = {
 
 const TOPIC_SELECT = { id: true, slug: true, order: true, categoryId: true, parentTopicId: true, title: true, description: true, textContent: true, createdAt: true } as const
 
-async function planFamily(oldSlug: string, successors: readonly string[]): Promise<Plan> {
+/**
+ * Order changes and new rows planned by earlier families. Families that share
+ * a category (the gen-chem part splits) are planned against the layout the
+ * earlier ones leave, so one run lands every family in place; reorders are
+ * applied by slug, which also covers rows created earlier in the transaction.
+ */
+const pendingOrder = new Map<string, number>()
+const pendingRows: { slug: string; order: number; categoryId: string; parentTopicId: string | null }[] = []
+
+async function planFamily({ key, oldSlug, successors }: Family): Promise<Plan> {
   const plan: Plan = {
-    oldSlug, successors, old: null, create: [], reorder: [], meta: [], cardMoves: [], unknownCards: 0,
+    oldSlug: key, successors, old: null, create: [], reorder: [], meta: [], cardMoves: [], unknownCards: 0,
     progressCopy: [], progressMove: [], progressDelete: [], bookmarkMove: [], bookmarkDelete: [], deckId: null,
     newCards: new Map(), credited: new Set(),
   }
-  const old = await prisma.topic.findUnique({ where: { slug: oldSlug }, select: TOPIC_SELECT })
+  const old = oldSlug ? await prisma.topic.findUnique({ where: { slug: oldSlug }, select: TOPIC_SELECT }) : null
   plan.old = old
   const existing = await prisma.topic.findMany({ where: { slug: { in: [...successors] } }, select: TOPIC_SELECT })
   const bySlug = new Map(existing.map((t) => [t.slug, t]))
   const anchor = old ?? successors.map((s) => bySlug.get(s)).find(Boolean)
   if (!anchor) {
-    console.log(`  ! ${oldSlug}: neither the retired row nor any successor exists — nothing to anchor the family to`)
+    console.log(`  ! ${key}: neither the retired row nor any successor exists — nothing to anchor the family to`)
     return plan
   }
 
   // 1. rows + order: the family runs consecutively from where it starts.
-  const base = old ? old.order : Math.min(...existing.map((t) => t.order))
-  const siblings = (await prisma.topic.findMany({
-    where: { categoryId: anchor.categoryId, parentTopicId: anchor.parentTopicId },
-    select: { id: true, slug: true, order: true },
-    orderBy: { order: 'asc' },
-  })).filter((t) => t.slug !== oldSlug && !successors.includes(t.slug))
+  const orderOf = (t: { slug: string; order: number }) => pendingOrder.get(t.slug) ?? t.order
+  const base = old ? orderOf(old) : Math.min(...existing.map(orderOf))
+  const siblings = [
+    ...(await prisma.topic.findMany({
+      where: { categoryId: anchor.categoryId, parentTopicId: anchor.parentTopicId },
+      select: { slug: true, order: true },
+    })),
+    ...pendingRows.filter((r) => r.categoryId === anchor.categoryId && r.parentTopicId === anchor.parentTopicId),
+  ]
+    .map((t) => ({ slug: t.slug, order: orderOf(t) }))
+    .filter((t) => t.slug !== oldSlug && !successors.includes(t.slug))
+    .sort((a, b) => a.order - b.order)
   successors.forEach((slug, i) => {
     const row = bySlug.get(slug)
     if (!row) plan.create.push({ slug, order: base + i })
-    else if (row.order !== base + i) plan.reorder.push({ id: row.id, slug, from: row.order, to: base + i })
+    else if (orderOf(row) !== base + i) plan.reorder.push({ slug, from: orderOf(row), to: base + i })
   })
   siblings.filter((t) => t.order >= base).forEach((t, j) => {
     const to = base + successors.length + j
-    if (t.order !== to) plan.reorder.push({ id: t.id, slug: t.slug, from: t.order, to })
+    if (t.order !== to) plan.reorder.push({ slug: t.slug, from: t.order, to })
   })
+  for (const c of plan.create) pendingRows.push({ slug: c.slug, order: c.order, categoryId: anchor.categoryId, parentTopicId: anchor.parentTopicId })
+  for (const r of plan.reorder) pendingOrder.set(r.slug, r.to)
   if (CREATE_ONLY) return plan
 
   // 2. titles and topic-page text of existing successors.
@@ -153,7 +187,7 @@ async function planFamily(oldSlug: string, successors: readonly string[]): Promi
   }
 
   // 3. every card of the family to its topic.
-  const map = CARD_MAP[oldSlug] ?? {}
+  const map = CARD_MAP[key] ?? {}
   const holders = [...(old ? [old] : []), ...existing]
   const slugOf = new Map(holders.map((t) => [t.id, t.slug]))
   const cards = await prisma.flashcard.findMany({ where: { topicId: { in: holders.map((t) => t.id) } }, select: { id: true, topicId: true, front: true, back: true } })
@@ -172,7 +206,7 @@ async function planFamily(oldSlug: string, successors: readonly string[]): Promi
     ? await prisma.topicProgress.findMany({ where: { topicId: { in: existing.map((t) => t.id) } }, select: { userId: true, topicId: true } })
     : []
   const has = new Set(successorRows.map((r) => `${r.userId}|${slugOf.get(r.topicId)}`))
-  if (old) {
+  if (old && oldSlug) {
     for (const r of await prisma.topicProgress.findMany({ where: { topicId: old.id } })) {
       if (r.status === 'MASTERED' || r.status === 'COMPLETED') {
         for (const to of successors) {
@@ -233,15 +267,16 @@ async function main() {
   if (!host) throw new Error('DATABASE_URL is empty after loading the env file')
   if (APPLY && IS_PROD && !isNeon) throw new Error(`Refusing to write: SEED_DB=prod but host ${host} is not the Neon production host`)
   if (APPLY && !IS_PROD && isNeon) throw new Error(`Refusing to write: host ${host} is the Neon production host but SEED_DB is not "prod"`)
-  for (const slug of Object.values(MCAT_SPLIT_TOPICS).flat()) {
+  for (const slug of FAMILIES.flatMap((f) => f.successors)) {
     if (!SUCCESSOR_META[slug] || !MCAT_SPLIT_TITLES[slug]) throw new Error(`${slug}: no title or topic-page text`)
   }
 
   const plans: Plan[] = []
-  for (const [oldSlug, successors] of Object.entries(MCAT_SPLIT_TOPICS)) {
-    const p = await planFamily(oldSlug, successors)
+  for (const family of FAMILIES) {
+    const p = await planFamily(family)
+    const successors = family.successors
     plans.push(p)
-    console.log(`\n${oldSlug}${p.old ? '' : ' (retired row already gone)'}`)
+    console.log(`\n${family.key}${family.oldSlug ? (p.old ? '' : ' (retired row already gone)') : ' (part split)'}`)
     for (const c of p.create) console.log(`  + create ${c.slug} (order ${c.order})`)
     for (const r of p.reorder) console.log(`  ~ ${r.slug}: order ${r.from} -> ${r.to}`)
     for (const m of p.meta) console.log(`  ~ ${m.slug}: ${m.fields.join(', ')}`)
@@ -267,9 +302,10 @@ async function main() {
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
   const backupPath = path.join('scripts', `${BACKUP_PREFIX}${stamp}.json`)
   const oldIds = work.flatMap((p) => (p.old ? [p.old.id] : []))
-  const touchedTopicIds = [...oldIds, ...work.flatMap((p) => [...p.reorder.map((r) => r.id), ...p.meta.map((m) => m.id)])]
+  const touchedTopicIds = [...oldIds, ...work.flatMap((p) => p.meta.map((m) => m.id))]
+  const reorderedSlugs = work.flatMap((p) => p.reorder.map((r) => r.slug))
   const [bTopics, bCards, bProgress, bBookmarks, bDecks, bExamples] = await Promise.all([
-    prisma.topic.findMany({ where: { id: { in: touchedTopicIds } } }),
+    prisma.topic.findMany({ where: { OR: [{ id: { in: touchedTopicIds } }, { slug: { in: reorderedSlugs } }] } }),
     prisma.flashcard.findMany({ where: { id: { in: work.flatMap((p) => p.cardMoves.map((m) => m.id)) } } }),
     prisma.topicProgress.findMany({ where: { topicId: { in: oldIds } } }),
     prisma.bookmark.findMany({ where: { topicSlug: { in: work.filter((p) => p.old).map((p) => p.oldSlug) } } }),
@@ -284,7 +320,7 @@ async function main() {
       const anchor = p.old ?? (await tx.topic.findFirst({ where: { slug: { in: [...p.successors] } }, select: TOPIC_SELECT }))
       if (!anchor) throw new Error(`${p.oldSlug}: family has no anchor row; aborting (nothing written)`)
       // Orders first (to free the numbers), then the new rows.
-      for (const r of p.reorder) await tx.topic.update({ where: { id: r.id }, data: { order: r.to } })
+      for (const r of p.reorder) await tx.topic.update({ where: { slug: r.slug }, data: { order: r.to } })
       for (const c of p.create) {
         const meta = SUCCESSOR_META[c.slug]
         await tx.topic.create({

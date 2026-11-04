@@ -1,12 +1,12 @@
-export const mcatLabMethodsPart4Data = {
-  topicSlug: 'mcat-lab-methods-mcat',
+export const mcatSpectroscopyAssaysPart2Data = {
+  topicSlug: 'mcat-lab-methods-spectroscopy-assays-mcat',
   sections: [
     {
       id: 'lm4-intro',
       type: 'text' as const,
-      content: `# Laboratory Methods & Separations
+      content: `# Lab Methods: Centrifugation, Spectroscopy & Assays
 
-**Part 4 of 5 — Spectroscopy & Beer's Law**
+**Part 2 of 3 —Spectroscopy & Beer's Law**
 
 Spectroscopy measures how molecules absorb/emit electromagnetic radiation. Different energies probe different transitions.
 
@@ -116,7 +116,7 @@ $$A = -\\log_{10}(T) = -\\log_{10}\\!\\left(\\frac{I}{I_0}\\right)$$
     {
       id: 'lm4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 4
+      content: `### Key Takeaways — Part 2
 
 - **Beer–Lambert law.** $A = \\varepsilon l c$: absorbance is linear in concentration and path length, up to about $A = 1$.
 - **Absorbance is logarithmic.** $A = -\\log_{10} T$: 10% transmitted gives $A = 1$, and 1% gives $A = 2$.

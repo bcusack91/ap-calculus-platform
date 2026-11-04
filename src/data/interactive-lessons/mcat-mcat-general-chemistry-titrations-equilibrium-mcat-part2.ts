@@ -1,12 +1,12 @@
-export const mcatAcidBaseEqPart5Data = {
-  topicSlug: 'mcat-general-chemistry-acid-base-equilibrium-mcat',
+export const mcatTitrationsEqPart2Data = {
+  topicSlug: 'mcat-general-chemistry-titrations-equilibrium-mcat',
   sections: [
     {
       id: 'ab5-intro',
       type: 'text' as const,
-      content: `# Acid-Base Chemistry & Equilibrium
+      content: `# Titrations, Equilibrium & Solubility
 
-**Part 5 of 5 — Equilibrium: $K_c$, $K_p$, Le Chatelier's Principle & $K_{sp}$**
+**Part 2 of 2 —Equilibrium: $K_c$, $K_p$, Le Chatelier's Principle & $K_{sp}$**
 
 ## Equilibrium Constant Expressions
 
@@ -205,7 +205,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
     {
       id: 'ab5-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 5
+      content: `## Key Takeaways — Part 2
 
 - **Compression favours fewer gas moles.** Squeezing a gas mixture shifts it toward the side with fewer moles of gas.
 - **Q moves toward K.** $Q < K$ shifts right and $Q > K$ left; for a salt, $Q_{sp} > K_{sp}$ means a precipitate forms.
@@ -219,25 +219,18 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
 - **Common ion, more dissolving.** A shared ion pushes dissolution LEFT, so the salt becomes LESS soluble.
 - **Kp always equals Kc.** Only when $\\Delta n = 0$; otherwise $K_p = K_c(RT)^{\\Delta n}$.
 
-## Acid-Base & Equilibrium — Complete Topic Summary
+## Titrations, Equilibrium & Solubility — Complete Topic Summary
 
-**Part 1:** pH, pOH, Kw, strong vs weak acids/bases, pH calculation methods.
+**Part 1:** Titration curves, equivalence vs half-equivalence point (pH = pKa), indicators, strong/weak acid titration differences, polyprotic titrations.
 
-**Part 2:** Ka, Kb, pKa, Henderson-Hasselbalch equation, percent dissociation, polyprotic acids, amphiprotic species.
-
-**Part 3:** Buffer mechanism (HA consumes $OH^{-}$; $A^{-}$ consumes $H^{+}$), buffer capacity, buffer range (pKa ± 1), bicarbonate buffer in blood, acid-base disturbances.
-
-**Part 4:** Titration curves, equivalence vs half-equivalence point (pH = pKa), indicators, strong/weak acid titration differences, polyprotic titrations.
-
-**Part 5:** Kc, Kp, Δn, reaction quotient Q, Le Chatelier's principle (only T changes K), Ksp, molar solubility, common ion effect, precipitation criterion (Q vs Ksp).
+**Part 2:** Kc, Kp, Δn, reaction quotient Q, Le Chatelier's principle (only T changes K), Ksp, molar solubility, common ion effect, precipitation criterion (Q vs Ksp).
 
 ### Most Tested MCAT Concepts
 1. Half-equivalence point: pH = pKa (titrations)
 2. Le Chatelier shifts vs. K changes (only T changes K)
 3. Common ion effect reduces solubility
-4. Henderson-Hasselbalch for buffer pH
-5. pH > 7 at equivalence for weak acid + strong base titration
-6. Ksp → molar solubility (account for stoichiometric coefficients)
+4. pH > 7 at equivalence for weak acid + strong base titration
+5. Ksp → molar solubility (account for stoichiometric coefficients)
 `
     }
   ]

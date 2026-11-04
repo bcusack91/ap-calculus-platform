@@ -30,6 +30,7 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   // ---- Anatomy & Physiology (curriculum) → Organ Systems (bank) ----
   'mcat-anatomy-physiology-mcat': ['mcat-organ-systems-cardio-resp-mcat', 'mcat-organ-systems-digestive-renal-mcat', 'mcat-organ-systems-immune-musculoskeletal-mcat'],
   'mcat-anatomy-physiology-embryology-mcat': ['mcat-organ-systems-embryology-mcat'],
+  'mcat-anatomy-physiology-organogenesis-mcat': ['mcat-organ-systems-embryology-mcat'],
   'mcat-anatomy-physiology-reproductive-mcat': ['mcat-organ-systems-reproductive-mcat'],
   'mcat-anatomy-physiology-musculoskeletal-mcat': ['mcat-organ-systems-immune-musculoskeletal-mcat'],
   'mcat-anatomy-physiology-sensory-mcat': ['mcat-psych-sensation-perception-mcat', 'mcat-organ-systems-nervous-mcat'],
@@ -59,6 +60,7 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-microbiology-bacteria-mcat': ['mcat-biology-microbiology-mcat'],
   'mcat-microbiology-viruses-mcat': ['mcat-biology-microbiology-mcat'],
   'mcat-microbiology-genetics-mcat': ['mcat-biology-microbiology-mcat'],
+  'mcat-microbiology-genetics-regulation-mcat': ['mcat-biology-microbiology-mcat'],
   'mcat-microbiology-antimicrobials-mcat': ['mcat-biology-microbiology-mcat'],
 
   // ---- Genetics & evolution ----
@@ -81,10 +83,15 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   // ---- General chemistry (aligned; parent topic points at its first child) ----
   'mcat-general-chemistry-mcat': ['mcat-general-chemistry-stoichiometry-mcat'],
   'mcat-general-chemistry-atomic-structure-mcat': ['mcat-general-chemistry-atomic-structure-mcat'],
+  // Second halves of the Nov 2026 part splits play their first half's bank subtopic.
+  'mcat-general-chemistry-spectra-nuclear-mcat': ['mcat-general-chemistry-atomic-structure-mcat'],
   'mcat-general-chemistry-stoichiometry-mcat': ['mcat-general-chemistry-stoichiometry-mcat'],
+  'mcat-general-chemistry-solutions-gases-mcat': ['mcat-general-chemistry-stoichiometry-mcat', 'mcat-general-chemistry-solubility-ions-mcat'],
   'mcat-general-chemistry-thermodynamics-mcat': ['mcat-general-chemistry-thermodynamics-mcat'],
   'mcat-general-chemistry-kinetics-mcat': ['mcat-general-chemistry-kinetics-mcat'],
+  'mcat-general-chemistry-energy-mechanisms-mcat': ['mcat-general-chemistry-kinetics-mcat'],
   'mcat-general-chemistry-acid-base-equilibrium-mcat': ['mcat-general-chemistry-acid-base-equilibrium-mcat', 'mcat-general-chemistry-solubility-ions-mcat'],
+  'mcat-general-chemistry-titrations-equilibrium-mcat': ['mcat-general-chemistry-acid-base-equilibrium-mcat', 'mcat-general-chemistry-solubility-ions-mcat'],
 
   // ---- Organic chemistry ----
   'mcat-organic-chemistry-mcat': ['mcat-organic-chemistry-functional-groups-mcat'],
@@ -122,6 +129,7 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
 
   // ---- Lab technique & data analysis ----
   'mcat-lab-methods-mcat': ['mcat-lab-separations-mcat'],
+  'mcat-lab-methods-spectroscopy-assays-mcat': ['mcat-lab-separations-mcat'],
   'mcat-research-methods-mcat': ['mcat-research-methods-biostats-mcat'],
   'mcat-biostatistics-mcat': ['mcat-research-methods-biostats-mcat'],
   'mcat-quantitative-skills-mcat': ['mcat-research-methods-biostats-mcat'],
@@ -144,6 +152,7 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-sociology-mcat': ['mcat-psych-sociology-social-structure-mcat'],
   'mcat-sociology-structure-stratification-mcat': ['mcat-psych-sociology-social-structure-mcat', 'mcat-psych-social-inequality-mcat'],
   'mcat-sociology-groups-interaction-mcat': ['mcat-psych-social-psychology-mcat'],
+  'mcat-sociology-interaction-organizations-mcat': ['mcat-psych-social-psychology-mcat'],
   'mcat-sociology-culture-socialization-mcat': ['mcat-psych-identity-self-concept-mcat', 'mcat-psych-demographics-social-change-mcat'],
   'mcat-sociology-health-disparities-mcat': ['mcat-psych-social-inequality-mcat'],
 

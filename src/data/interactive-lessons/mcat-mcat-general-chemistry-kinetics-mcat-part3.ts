@@ -2,215 +2,94 @@ export const mcatKineticsPart3Data = {
   topicSlug: 'mcat-general-chemistry-kinetics-mcat',
   sections: [
     {
-      id: 'kin3-intro',
+      id: 'kin5-intro',
       type: 'text' as const,
-      content: `# Chemical Kinetics
+      content: `# Kinetics: Rate Laws & Half-Lives
 
-**Part 3 of 5 — Activation Energy, Arrhenius Equation & Collision Theory**
+**Part 3 of 3 — Mixed MCAT Review**
 
-## Activation Energy ($E_a$)
+## High-Yield Checklist
 
-The **activation energy** is the minimum energy that colliding molecules must have for a reaction to occur. The transition state (activated complex) sits at the energy maximum.
+- ✅ **Rate law:** experimentally determined; rate = $k[\\text{A}]^m[\\text{B}]^n$
+- ✅ **Units of $k$:** 0th order = M/s; 1st order = $\\text{s}^{-1}$; 2nd order = $\\text{M}^{-1}\\text{s}^{-1}$
+- ✅ **Integrated rate laws:** 0th ($[A]$ vs $t$), 1st ($\\ln[A]$ vs $t$), 2nd ($1/[A]$ vs $t$)
+- ✅ **First-order half-life:** $t_{1/2} = 0.693/k$ (constant)
 
-**Energy diagram key points:**
+## Worked Example — From Rate Data to Half-Life
 
-- **Reactants** → **Transition state** → **Products**
-- $E_a(\\text{forward})$ = energy gap from reactants to peak
-- $E_a(\\text{reverse})$ = energy gap from products to peak
-- $\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$
-- Exothermic: products at lower energy than reactants ($\\Delta H < 0$)
-- Endothermic: products at higher energy than reactants ($\\Delta H > 0$)
+**Problem.** Initial-rate runs on the decomposition of A show that doubling [A] doubles the rate. At $[\\text{A}] = 0.50$ M the rate is $0.010$ M/s.
 
-A **catalyst** lowers $E_a$ (provides an alternative pathway) without changing $\\Delta H$ or the equilibrium constant.
+- **(a)** What is the order in A?
+- **(b)** What is $k$, with its units?
+- **(c)** What is the half-life?
+- **(d)** About how long until 1/8 of the A remains?
 
-## Worked Example — Barriers, ΔH and a Catalyst
+**(a) Order.** $2 = 2^m$ gives $m = 1$: first order, rate $= k[\\text{A}]$.
 
-**Problem.** A reaction has $E_a(\\text{fwd}) = 80$ kJ/mol and $\\Delta H = -30$ kJ/mol. A catalyst lowers the forward barrier to 60 kJ/mol.
+**(b) Rate constant.** $k = \\text{rate}/[\\text{A}] = 0.010/0.50 = 0.020\\text{ s}^{-1}$. The units $\\text{s}^{-1}$ confirm first order.
 
-- **(a)** Is the reaction exothermic or endothermic, and where do the products sit?
-- **(b)** What is $E_a(\\text{rev})$ without the catalyst?
-- **(c)** What are the forward and reverse barriers with the catalyst?
-- **(d)** Does the catalyst change $\\Delta H$ or $K$?
+**(c) Half-life.** First order, so the half-life is constant: $t_{1/2} = 0.693/k = 0.693/0.020 \\approx 35$ s (34.7 s).
 
-**(a) Sign of ΔH.** $\\Delta H < 0$, so the reaction is **exothermic**: the products sit 30 kJ/mol below the reactants.
-
-**(b) Reverse barrier.** From $\\Delta H = E_a(\\text{fwd}) - E_a(\\text{rev})$: $E_a(\\text{rev}) = 80 - (-30) = 110$ kJ/mol. Climbing back from the lower product plateau takes more energy.
-
-**(c) Catalyzed barriers.** The catalyst lowers the single peak by 20 kJ/mol, so BOTH barriers fall by 20: $E_a(\\text{fwd}) = 60$ kJ/mol and $E_a(\\text{rev}) = 110 - 20 = 90$ kJ/mol.
-
-**(d) Thermodynamics.** No. With the barriers from (c), $\\Delta H = 60 - 90 = -30$ kJ/mol, unchanged: the plateaus never move. Both directions speed up equally, so equilibrium arrives sooner with the same $K$.
-
-## Transition State Theory
-
-The **transition state** (activated complex) is at the peak of the reaction coordinate diagram. It is not a stable product and cannot be isolated.
-
-| Species | Where it sits | Can it be isolated? |
-|---------|--------------|---------------------|
-| Transition state | Highest-energy point of a step (a peak) | No |
-| Intermediate | Local energy minimum between steps (a valley) | Sometimes; it is short-lived |
-
-## Collision Theory
-
-A reaction needs molecules to collide with enough energy ($\\geq E_a$) AND in the correct **orientation**. The fraction with enough energy is about $f = e^{-E_a/RT}$, which grows exponentially as $T$ rises or a catalyst lowers $E_a$.
-
-Anything that raises the **collision frequency** also speeds the reaction, without changing that fraction:
-
-- **Concentration:** more reactant (or a higher gas partial pressure) means more collisions per second.
-- **Surface area:** a powdered solid reacts faster than a lump.
-- **Phase:** reactants mixed in one phase collide far more often than separate phases meeting at an interface.
-
-## Arrhenius Equation
-
-The Arrhenius equation describes how the rate constant $k$ depends on temperature:
-
-$$k = Ae^{-E_a/RT}$$
-
-where $A$ = frequency factor (pre-exponential factor accounting for collision frequency and orientation), $R = 8.314$ J/mol·K, $T$ = temperature in kelvin.
-
-In a rate law, rate $= k[\\text{A}]^m[\\text{B}]^n$, the concentrations change as the reaction runs at a fixed $k$; only temperature or a catalyst (through $E_a$) changes $k$ itself.
-
-**Logarithmic form:** a plot of $\\ln k$ against $1/T$ is a straight line with slope $-E_a/R$ and intercept $\\ln A$; the steeper the line, the larger $E_a$.
-
-$$\\ln k = \\ln A - \\frac{E_a}{R}\\cdot\\frac{1}{T}$$
-
-**Two-temperature form (MCAT-useful):** compares the rate constants at two temperatures directly.
-
-$$\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$$
-
-**Qualitative Rule of Thumb:** for many reactions near room temperature, a **10°C rise in temperature approximately doubles the rate constant** (though the precise factor depends on $E_a$).
-
-## Worked Example — Arrhenius and a Fever
-
-**Problem.** A reaction with $E_a = 50$ kJ/mol runs at body temperature, 37 °C; a fever raises it to 40 °C. ($R = 8.314$ J/mol·K)
-
-- **(a)** What are the two temperatures in kelvin?
-- **(b)** What is $\\ln(k_2/k_1)$?
-- **(c)** By what factor does $k$ rise?
-
-**(a) Kelvin.** $T_1 = 37 + 273 = 310$ K and $T_2 = 40 + 273 = 313$ K. Arrhenius always needs absolute temperature.
-
-**(b) Two-temperature form.** With the temperatures from (a):
-
-$$\\ln\\frac{k_2}{k_1} = \\frac{50{,}000}{8.314}\\left(\\frac{1}{310} - \\frac{1}{313}\\right) = 6014 \\times 3.09 \\times 10^{-5} \\approx 0.186$$
-
-**(c) Factor.** $k_2/k_1 = e^{0.186} \\approx 1.20$ (for small $x$, $e^x \\approx 1 + x$): about 20% faster, although the absolute temperature rose by only 1%. That exponential sensitivity is why small temperature changes matter so much.
-
-## Effect of Temperature on Rate
-
-| Factor | Effect on $k$ |
-|--------|--------------|
-| Increase $T$ | Increases $k$ (exponentially) |
-| Decrease $T$ | Decreases $k$ |
-| Lower $E_a$ (catalyst) | Increases $k$ |
-| Higher $E_a$ | Decreases $k$ |
-
-**MCAT application:** The Arrhenius equation explains why biological enzymes are so effective — they dramatically lower $E_a$ for biochemical reactions.
-
-## Kinetic vs. Thermodynamic Control
-
-When one reactant can form two products, the **kinetic product** has the LOWER $E_a$ (it forms faster), while the **thermodynamic product** is the more STABLE one, whatever its barrier. Barrier height is kinetics; product energy is thermodynamics.
-
-- **Kinetic control:** at low temperature, over short times, or when the steps are irreversible, neither product can revert, so the faster-forming product wins.
-- **Thermodynamic control:** when the steps are reversible (higher temperature, long times), the mixture equilibrates and the more stable product wins.
+**(d) Time to 1/8.** $1/8 = (1/2)^3$, so three half-lives: $3 \\times 34.7 \\approx 104$ s, a little under 2 minutes.
 `
     },
     {
-      id: 'kin3-quiz',
+      id: 'kin5-quiz',
       type: 'multiple-choice' as const,
-      content: `**Activation Energy, Arrhenius & Transition State** 🎯`,
+      content: `**Mixed Kinetics — MCAT-Style Questions** 🎯`,
       exercise: {
         questions: [
           {
-            question: `A catalyst is added to a reaction. Which of the following is TRUE?`,
+            question: `The rate law for a reaction is rate = $k[\\text{A}]^2[\\text{B}]$. The initial concentrations are $[\\text{A}] = 0.4$ M and $[\\text{B}] = 0.2$ M; rate = $1.6 \\times 10^{-3}$ M/s. What is $k$?`,
             options: [
-              `$\\Delta H$ falls, so the reaction releases more heat`,
-              `$E_a$ falls; $\\Delta H$ is unchanged`,
-              `$E_a$ and $\\Delta H$ both fall by the same amount`,
-              `The equilibrium constant $K$ rises, favoring products`
+              `$5.0 \\times 10^{-2}\\;\\text{M}^{-2}\\text{s}^{-1}$`,
+              `$1.0 \\times 10^{-1}\\;\\text{M}^{-2}\\text{s}^{-1}$`,
+              `$2.0 \\times 10^{-2}\\;\\text{M}^{-2}\\text{s}^{-1}$`,
+              `$5.0 \\times 10^{-3}\\;\\text{M}^{-2}\\text{s}^{-1}$`
             ],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `$k = \\text{rate}/([\\text{A}]^2[\\text{B}]) = (1.6 \\times 10^{-3})/((0.4)^2(0.2)) = (1.6 \\times 10^{-3})/(0.032) = \\mathbf{5.0 \\times 10^{-2}}\\text{ M}^{-2}\\text{s}^{-1}$. Dividing by $[\\text{A}][\\text{B}]^2 = 0.016$ (squaring the wrong reactant) gives $1.0 \\times 10^{-1}$; dividing by $[\\text{A}][\\text{B}] = 0.08$ (forgetting the square) gives $2.0 \\times 10^{-2}$; and slipping a decimal to 0.32 gives $5.0 \\times 10^{-3}$.`
+          },
+          {
+            question: `Carbon-14 has a half-life of 5730 years. A sample originally has 400 μg. Approximately how much remains after 11,460 years?`,
+            options: [`200 μg`, `133 μg`, `100 μg`, `50 μg`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `$11{,}460 / 5{,}730 = 2$ half-lives. Amount remaining $= 400 \\times (1/2)^2 = 400/4 = \\mathbf{100\\text{ μg}}$. 200 μg is what remains after only one half-life and 50 μg after three; 133 μg divides by 3, as if two half-lives removed thirds rather than halving twice.`
+          },
+          {
+            question: `A plot of $\\ln[\\text{A}]$ vs time for a reaction yields a straight line with slope = $-0.050\\text{ s}^{-1}$. What is the half-life?`,
+            options: [`0.035 s`, `13.9 s`, `20.0 s`, `27.7 s`],
             correctAnswer: 1,
-            yield: 'ULTRA_HIGH',
-            explanation: `A catalyst provides an alternative pathway with lower $E_a$, but it does not change the thermodynamics of the reaction — $\\Delta H$ and $K$ are unchanged. Only the kinetics are affected. The reactant and product energies do not move, so neither $\\Delta H$ alone nor $\\Delta H$ together with $E_a$ can fall, and since forward and reverse rates rise equally, $K$ cannot shift toward products.`
-          },
-          {
-            question: `For a reaction with $E_a = 50$ kJ/mol, temperature increases from 300 K to 310 K. Using the Arrhenius equation (assume $R = 8.314$ J/mol·K), how does $k$ change?`,
-            options: [
-              `$k$ nearly doubles, to about 1.9 times`,
-              `$k$ rises about 3%, as $T$ does`,
-              `$k$ stays the same`,
-              `$k$ rises about 50-fold`
-            ],
-            correctAnswer: 0,
-            yield: 'MEDIUM',
-            explanation: `$\\ln(k_2/k_1) = (E_a/R)(1/T_1 - 1/T_2) = (50{,}000/8.314)(1/300 - 1/310) = 6014 \\times 1.075 \\times 10^{-4} \\approx 0.65$. $k_2/k_1 = e^{0.65} \\approx 1.9 \\approx \\mathbf{2\\times}$. This confirms the "doubling per 10°C" rule. A 3% rise treats $k$ as proportional to $T$, but $k$ depends exponentially on $1/T$; a 50-fold jump would need a far larger $E_a$.`
-          },
-          {
-            question: `An energy diagram shows two humps (transition states) with a valley between them. What occupies the valley between the two humps?`,
-            options: [
-              `The products`,
-              `The reactants`,
-              `A reaction intermediate`,
-              `The transition state`
-            ],
-            correctAnswer: 2,
             yield: 'HIGH',
-            explanation: `A valley (local energy minimum) between two transition-state peaks represents a **reaction intermediate** — a species that forms and then reacts further. Transition states are at energy peaks, not valleys. Reactants and products sit on the plateaus at the two ends of the diagram, not between the humps.`
-          },
-          {
-            question: `Two reactions A and B have the same $E_a$, but reaction A has a larger pre-exponential factor $A$ in the Arrhenius equation. At the same temperature, how do their rate constants compare?`,
-            options: [
-              `$k_A < k_B$`,
-              `$k_A = k_B$`,
-              `$k_A > k_B$`,
-              `Cannot be determined without knowing $\\Delta H$`
-            ],
-            correctAnswer: 2,
-            yield: 'MEDIUM',
-            explanation: `$k = Ae^{-E_a/RT}$. Since $E_a$ and $T$ are equal for both, the larger pre-exponential $A$ (which reflects collision frequency and geometric probability) gives a **larger $k$** for reaction A. Equal rate constants would need equal $A$ as well, and $\\Delta H$ does not appear in the Arrhenius equation at all, so it is not needed.`
-          },
-          {
-            question: `Which change increases the fraction of collisions with sufficient energy to react?`,
-            options: [
-              `Raising the reactant concentration`,
-              `Raising the activation energy`,
-              `Raising the temperature`,
-              `Withdrawing the catalyst`
-            ],
-            correctAnswer: 2,
-            yield: 'HIGH',
-            explanation: `The fraction $f = e^{-E_a/RT}$ increases when the exponent $(-E_a/RT)$ becomes less negative — either by decreasing $E_a$ (catalyst) or **increasing $T$**. More thermal energy means more molecules exceed the activation energy threshold. More reactant raises the NUMBER of collisions per second, and so the rate, but not the fraction that clears $E_a$. A higher $E_a$, or removing a catalyst (which restores the higher barrier), shrinks that fraction.`
-          },
-          {
-            question: `A reactant can form either product P₁, through the lower activation barrier, or product P₂, which is lower in energy but has the higher barrier. The reaction is run cold, for a short time, under conditions where neither step reverses. Which product dominates?`,
-            options: [
-              `P₁, since its lower barrier lets it form faster`,
-              `P₂, since the more stable product always dominates`,
-              `P₁, since its lower barrier also makes it more stable`,
-              `Equal amounts, since both form from the same reactant`
-            ],
-            correctAnswer: 0,
-            yield: 'HIGH',
-            explanation: `Cold, short and irreversible means **kinetic control**: each product forms at the rate its own barrier allows and cannot revert, so the faster-forming P₁ wins. The more stable product dominates only under thermodynamic control, when the steps are reversible (warm, long times) and the mixture equilibrates, so "always" is wrong. Barrier height says nothing about product stability; here P₂ is the more stable one. A common reactant does not force equal amounts, because the two rates differ through $e^{-E_a/RT}$.`
+            explanation: `Linear $\\ln[\\text{A}]$ vs $t$ plot → 1st-order reaction. Slope $= -k = -0.050\\text{ s}^{-1}$, so $k = 0.050\\text{ s}^{-1}$. $t_{1/2} = 0.693/0.050 = \\mathbf{13.9\\text{ s}}$. Multiplying instead, $0.693 \\times 0.050$, gives 0.035 s; $1/k = 20.0$ s drops the $\\ln 2$; and 27.7 s is two half-lives.`
           }
         ]
       }
     },
     {
-      id: 'kin3-summary',
+      id: 'kin5-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 3
+      content: `## Rate Laws & Half-Lives — Complete Topic Summary
 
-- **ΔH from the barriers.** $\\Delta H = E_a(\\text{fwd}) - E_a(\\text{rev})$; exothermic products sit below the reactants.
-- **Arrhenius.** $k = Ae^{-E_a/RT}$: only well-aimed collisions past $E_a$ react, so higher $T$ or lower $E_a$ raises $k$.
-- **Catalysts change kinetics only.** A catalyst lowers $E_a$ both ways and speeds the reaction, leaving $\\Delta H$ and $K$ unchanged.
-- **Kinetic vs. thermodynamic product.** Cold, short or irreversible favors the lower-$E_a$ product; reversible or hot favors the more stable one.
+**Part 1:** Rate laws, extracting order from experimental data, units of $k$, zero-order reactions.
+
+**Part 2:** Integrated rate laws (0th, 1st, 2nd), graphical identification, half-life formulas, first-order $(1/2)^n$ calculations.
+
+**Part 3:** Integrated MCAT practice.
+
+## Key Takeaways — Part 3
+
+- **Orders come from data.** Read them from initial-rate ratios, from which plot is linear, or from the units of $k$.
+- **Count first-order half-lives.** $t_{1/2} = 0.693/k$ is constant, so $(1/2)^n$ remains after $n$ half-lives.
 
 **Common traps**
 
-- **Transition state as intermediate.** A transition state is an energy peak that cannot be isolated; an intermediate sits in a valley.
-- **Celsius in Arrhenius.** $T$ in $e^{-E_a/RT}$ must be in kelvin; plugging in °C gives wrong ratios.
-- **Catalyst shifting equilibrium.** It speeds both directions equally, so equilibrium comes sooner with the same $K$.
-- **Linear temperature thinking.** 300 K to 310 K raises $T$ by 3% yet nearly doubles $k$ (for $E_a \\approx 50$ kJ/mol), because $k$ depends exponentially on $1/T$.
+- **Rate laws from stoichiometry.** Coefficients give orders only for an elementary step; otherwise use experimental data.
+- **Misreading the linear plot.** $\\ln[\\text{A}]$ linear is first order and $1/[\\text{A}]$ linear is second; an $[\\text{A}]$ line is zero order.
+
+**Next up:** the *Kinetics: Energy, Catalysis & Mechanisms* lesson — activation energy, the Arrhenius equation, collision theory, reaction mechanisms and the rate-determining step, and catalysis, including enzyme kinetics.
 `
     }
   ]

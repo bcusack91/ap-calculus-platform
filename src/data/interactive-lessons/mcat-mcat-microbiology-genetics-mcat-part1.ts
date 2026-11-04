@@ -5,9 +5,9 @@ export const mcatMicrobialGeneticsPart1Data = {
     {
       id: 'mg1-intro',
       type: 'text' as const,
-      content: `# Microbial Genetics
+      content: `# Bacterial Genetics & Gene Transfer
 
-**Part 1 of 4 — The Bacterial Genome, Mutation & Selection**
+**Part 1 of 2 — The Bacterial Genome, Mutation & Selection**
 
 > This lesson goes deeper, and more experimental, than the survey in the Bacteria lesson (Part 3). Phage life cycles are in the Viruses lesson; the operon tables are in Transcription.
 

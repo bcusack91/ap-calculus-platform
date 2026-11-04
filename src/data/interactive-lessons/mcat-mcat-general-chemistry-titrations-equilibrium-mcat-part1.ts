@@ -1,12 +1,14 @@
-export const mcatAcidBaseEqPart4Data = {
-  topicSlug: 'mcat-general-chemistry-acid-base-equilibrium-mcat',
+export const mcatTitrationsEqPart1Data = {
+  topicSlug: 'mcat-general-chemistry-titrations-equilibrium-mcat',
   sections: [
     {
       id: 'ab4-intro',
       type: 'text' as const,
-      content: `# Acid-Base Chemistry & Equilibrium
+      content: `# Titrations, Equilibrium & Solubility
 
-**Part 4 of 5 — Acid-Base Titrations**
+**Part 1 of 2 — Acid-Base Titrations**
+
+**Where this fits.** The *Acids, Bases & Buffers* lesson covered pH, $K_a$ and $K_b$, the Henderson–Hasselbalch equation and how buffers resist pH change. This lesson puts those tools to work on titration curves, then widens to equilibrium in general: $K_c$ and $K_p$, Le Chatelier's principle and solubility ($K_{sp}$).
 
 ## Titration Fundamentals
 
@@ -96,7 +98,7 @@ Color changes at pH ≈ $pK_{a}$ (indicator). The indicator transitions over ~pH
 
 **(a) Acetate concentration.** $5.00\\text{ mmol}/100.0\\text{ mL} = 0.0500$ M: the volume doubled, so the concentration halved.
 
-**(b) Hydroxide.** Acetate is a weak base, so use the weak-base shortcut $[\\text{OH}^-] \\approx \\sqrt{K_b C}$, with $K_b = K_w/K_a \\approx 5.6 \\times 10^{-10}$ and $C = 0.0500$ M from (a): $[\\text{OH}^-] \\approx \\sqrt{2.8 \\times 10^{-11}} = \\sqrt{28 \\times 10^{-12}} \\approx 5.3 \\times 10^{-6}$ M.
+**(b) Hydroxide.** Acetate is a weak base, so use the weak-base shortcut $[\\text{OH}^-] \\approx \\sqrt{K_b C}$ (valid because so little of the base reacts that $C$ barely changes), with $K_b = K_w/K_a \\approx 5.6 \\times 10^{-10}$ and $C = 0.0500$ M from (a): $[\\text{OH}^-] \\approx \\sqrt{2.8 \\times 10^{-11}} = \\sqrt{28 \\times 10^{-12}} \\approx 5.3 \\times 10^{-6}$ M.
 
 **(c) pOH, then pH.** With $[\\text{OH}^-] \\approx 5.3 \\times 10^{-6}$ M from (b): $\\text{pOH} = 6 - \\log 5.3 \\approx 6 - 0.72 = 5.28$, so $\\text{pH} = 14 - \\text{pOH} \\approx 8.72$.
 
@@ -111,7 +113,7 @@ For $\\text{H}_3\\text{PO}_4$ + NaOH:
 - 2nd equiv. point: $\\text{NaH}_2\\text{PO}_4 \\to \\text{Na}_2\\text{HPO}_4$
 - 3rd equiv. point: $\\text{Na}_2\\text{HPO}_4 \\to \\text{Na}_3\\text{PO}_4$
 
-Each stage has its own buffer region. Halfway to the first equivalence point, pH = $\\text{p}K_{a1}$; halfway between the first and second, pH = $\\text{p}K_{a2}$. At the first equivalence point the solution is the amphiprotic $\\text{H}_2\\text{PO}_4^-$, and its pH sits midway between the two: $\\text{pH} \\approx (\\text{p}K_{a1} + \\text{p}K_{a2})/2$.
+Each stage has its own buffer region. Halfway to the first equivalence point, pH = $\\text{p}K_{a1}$; halfway between the first and second, pH = $\\text{p}K_{a2}$. At the first equivalence point the solution is the amphiprotic $\\text{H}_2\\text{PO}_4^-$ (it can both donate and accept a proton), and its pH sits midway between the two: $\\text{pH} \\approx (\\text{p}K_{a1} + \\text{p}K_{a2})/2$.
 
 <!-- yield:low -->
 - In practice the third equivalence point of $\\text{H}_3\\text{PO}_4$ is barely visible in water: $\\text{p}K_{a3} \\approx 12.3$ is so close to the pH of the NaOH titrant that the curve shows almost no jump there.
@@ -187,7 +189,7 @@ Each stage has its own buffer region. Halfway to the first equivalence point, pH
     {
       id: 'ab4-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 4
+      content: `## Key Takeaways — Part 1
 
 - **Equivalence: moles match.** At equivalence, moles of acid = moles of base; $M_aV_a = M_bV_b$ for a 1:1 reaction.
 - **Half-equivalence: pH = pKa.** Halfway, $[\\text{HA}] = [\\text{A}^-]$, so pH = $\\text{p}K_a$: the most tested titration fact.

@@ -12,58 +12,10 @@
   "why": "Buffer effective range pKa +/- 1; standard buffer-design reasoning step"
  },
  {
-  "front": "A monoprotic unknown needs 25 mL of 0.10 M NaOH to reach equivalence. What does that tell you, and what does it not?",
-  "fp": "30b16f1f94da",
-  "yield": "MEDIUM",
-  "why": "Equivalence volume gives moles not strength; secondary titration reasoning"
- },
- {
   "front": "A panicking patient hyperventilates. Using the $CO_2$ and bicarbonate equilibrium, predict the change in blood pH.",
   "fp": "b5fda54e2768",
   "yield": "ULTRA_HIGH",
   "why": "Hyperventilation -> respiratory alkalosis via bicarbonate equilibrium; tested every year"
- },
- {
-  "front": "A precipitate forms when the ion product $Q$ is {{c1::greater than}} $K_{sp}$, and the solution is unsaturated when $Q$ is below $K_{sp}$.",
-  "fp": "0868687c602a",
-  "yield": "HIGH",
-  "why": "Q vs Ksp precipitation criterion; common solubility question"
- },
- {
-  "front": "A saturated solution of $Mg(OH)_2$ is treated with strong acid. Predict the effect on dissolved $[Mg^{2+}]$.",
-  "fp": "ec6b04c7aca3",
-  "yield": "MEDIUM",
-  "why": "Acid raising Mg(OH)2 solubility; application of the conjugate-base solubility rule on another card"
- },
- {
-  "front": "A titration curve is steepest at the {{c1::equivalence point}} and flattest at the {{c2::half-equivalence point}}.",
-  "fp": "8c808f97ac1a",
-  "yield": "ULTRA_HIGH",
-  "why": "Titration curve anatomy: steepest at equivalence, flattest at half-equivalence; core every year"
- },
- {
-  "front": "Adding 0.5 equivalents of strong base to a weak acid gives a buffer whose pH equals {{c1::the $pK_a$}}.",
-  "fp": "b957d159ac79",
-  "yield": "MEDIUM",
-  "why": "Half-neutralization gives pH = pKa; alternate framing of the half-equivalence card"
- },
- {
-  "front": "Adding a common ion shifts weak-acid ionization {{c1::left}}, decreasing percent dissociation while $K_a$ stays {{c2::unchanged}}.",
-  "fp": "bdbb7bd49eef",
-  "yield": "ULTRA_HIGH",
-  "why": "Common ion shifts ionization, Ka unchanged; Le Chatelier vs constant is a perennial discrete"
- },
- {
-  "front": "Adding a common ion to a saturated solution:",
-  "fp": "bf6318cbe500",
-  "yield": "HIGH",
-  "why": "Common ion effect lowers solubility; standard Ksp/Le Chatelier item"
- },
- {
-  "front": "Adding an inert gas at constant volume:",
-  "fp": "fba8686fb800",
-  "yield": "HIGH",
-  "why": "Inert gas at constant volume does not shift equilibrium; classic Le Chatelier trap"
  },
  {
   "front": "Amino acid anchors: the alpha carboxyl $pK_a$ is about {{c1::2}} and the alpha amino $pK_a$ is about {{c2::9.5}}.",
@@ -102,18 +54,6 @@
   "why": "Aspirin overdose urine alkalinization; clinical example of ion trapping covered on another card"
  },
  {
-  "front": "At the first equivalence point of a diprotic acid the dominant species is amphoteric. How do you estimate that pH?",
-  "fp": "b8f246a67996",
-  "yield": "HIGH",
-  "why": "pH at first equivalence of a diprotic acid; recurring polyprotic titration step"
- },
- {
-  "front": "At the half-equivalence point of a weak acid titration, pH = {{c1::pKa}}.",
-  "fp": "33ce9affe9ce",
-  "yield": "ULTRA_HIGH",
-  "why": "Half-equivalence pH = pKa; the single most tested titration fact"
- },
- {
   "front": "Autoionization of water produces:",
   "fp": "938e341d301e",
   "yield": "MEDIUM",
@@ -132,18 +72,6 @@
   "why": "Buffer capacity maximal at pH = pKa and rises with concentration; commonly tested"
  },
  {
-  "front": "Can you rank the solubility of two salts just by comparing their $K_{sp}$ values?",
-  "fp": "02c709708e6d",
-  "yield": "HIGH",
-  "why": "Ksp comparison valid only for equal stoichiometry; frequent solubility trap"
- },
- {
-  "front": "Choose an indicator whose $pK_a$ is near the {{c1::pH at the equivalence point}}, since its color change spans about $pK_a \\pm 1$.",
-  "fp": "6c5059ea4a4e",
-  "yield": "HIGH",
-  "why": "Indicator pKa near equivalence pH; standard titration design question"
- },
- {
   "front": "Complex ion formation is a Lewis acid-base reaction where the metal is the {{c1::Lewis acid}} and the ligand is the {{c2::Lewis base}}.",
   "fp": "9b4ff4a182e1",
   "yield": "MEDIUM",
@@ -156,22 +84,10 @@
   "why": "Bicarbonate buffer equation; the reasoning backbone of every acid-base physiology item"
  },
  {
-  "front": "Distinguish the endpoint of a titration from the equivalence point.",
-  "fp": "f53270a17bd6",
-  "yield": "MEDIUM",
-  "why": "Endpoint vs equivalence point; useful definition rarely costing a point"
- },
- {
   "front": "For a polyprotic acid, $K_{a1}$ exceeds $K_{a2}$ by {{c1::several orders of magnitude}} because pulling a proton off an anion is far harder.",
   "fp": "26c333abd41c",
   "yield": "HIGH",
   "why": "Ka1 >> Ka2 for polyprotic acids; commonly needed to read titration curves"
- },
- {
-  "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} = {{c1::4s^3}}$.",
-  "fp": "e936dc7b57a6",
-  "yield": "ULTRA_HIGH",
-  "why": "Ksp = 4s^3 for AB2 salts; molar solubility calculation appears every year"
  },
  {
   "front": "For a weak monoprotic acid at concentration $C$, what is the fast estimate of $[H^+]$?",
@@ -186,12 +102,6 @@
   "why": "Ka x Kb = Kw, pKa + pKb = 14; foundational conjugate-pair relation"
  },
  {
-  "front": "From the starting pH alone, before any titrant is added, how do you tell a strong acid from a weak one?",
-  "fp": "1edf77700ab2",
-  "yield": "HIGH",
-  "why": "Reading strong vs weak acid from initial pH and curve shape; common curve-interpretation step"
- },
- {
   "front": "Give the Henderson–Hasselbalch equation.",
   "fp": "dfa485867315",
   "yield": "ULTRA_HIGH",
@@ -204,28 +114,10 @@
   "why": "pH = -log[H+] and pH + pOH = 14; the foundational definitions"
  },
  {
-  "front": "How do you predict the direction of shift using $Q$ and $K$?",
-  "fp": "0623ba0746cf",
-  "yield": "ULTRA_HIGH",
-  "why": "Q vs K predicts direction of shift; core equilibrium reasoning every year"
- },
- {
-  "front": "How does adding excess $NH_3$ dissolve solid $AgCl$?",
-  "fp": "2a936001684d",
-  "yield": "MEDIUM",
-  "why": "AgCl dissolved by NH3 via Kf; secondary complex-ion example"
- },
- {
   "front": "How does temperature affect $K_w$ and the pH of pure water at 37 degrees C?",
   "fp": "ddcbdfcf7671",
   "yield": "MEDIUM",
   "why": "Kw rises with temperature, neutral pH 6.8 at 37 C; occasional AAMC trick"
- },
- {
-  "front": "How many equivalence points and buffer regions does a diprotic acid titration curve show?",
-  "fp": "333c9b5bbfa3",
-  "yield": "HIGH",
-  "why": "Diprotic titration has two buffer regions and two equivalence points; common curve question"
  },
  {
   "front": "In a solution of an acid and its conjugate base, the {{c1::conjugate base}} predominates whenever the pH is above the $pK_a$.",
@@ -264,12 +156,6 @@
   "why": "Respiratory vs metabolic disorder defined by pCO2 vs HCO3-; commonly tested physiology link"
  },
  {
-  "front": "State the common ion effect.",
-  "fp": "c1249695c7d8",
-  "yield": "LOW",
-  "why": "Restates the common ion effect card"
- },
- {
   "front": "Strong acid is added to a buffer. What is the correct order of operations to find the new pH?",
   "fp": "2f0bc37b91bb",
   "yield": "HIGH",
@@ -300,22 +186,10 @@
   "why": "Lower pKa means stronger acid; foundational relation used every year"
  },
  {
-  "front": "What is the pH at the equivalence point of a weak acid–strong base titration?",
-  "fp": "910eec2ea9de",
-  "yield": "ULTRA_HIGH",
-  "why": "Weak acid-strong base equivalence pH > 7; tested every year"
- },
- {
   "front": "What is the pH of a 0.01 M HCl solution?",
   "fp": "9280a15277da",
   "yield": "HIGH",
   "why": "pH of 0.01 M strong acid = 2; routine calculation"
- },
- {
-  "front": "What is true at the half-equivalence point?",
-  "fp": "8e05d359a131",
-  "yield": "LOW",
-  "why": "Restates the half-equivalence pH = pKa card"
  },
  {
   "front": "When does the 'x is small' approximation in a weak-acid ICE table break down?",
@@ -358,17 +232,5 @@
   "fp": "cefd672be585",
   "yield": "MEDIUM",
   "why": "Dilution raises weak-acid pH yet increases percent dissociation; second-tier reasoning"
- },
- {
-  "front": "Why is $CaCO_3$ far more soluble in acid while $NaCl$ solubility is pH-independent?",
-  "fp": "6e337a4ea194",
-  "yield": "HIGH",
-  "why": "Solubility pH-dependent only for conjugate bases of weak acids; common solubility reasoning"
- },
- {
-  "front": "Why is the vertical jump at equivalence smaller for a weak acid than for a strong acid at the same concentration?",
-  "fp": "aea09e12f0d2",
-  "yield": "MEDIUM",
-  "why": "Smaller equivalence jump for weak acids; curve detail rarely costing a point"
  }
 ]

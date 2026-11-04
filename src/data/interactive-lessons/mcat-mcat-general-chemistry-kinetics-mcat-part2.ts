@@ -4,9 +4,9 @@ export const mcatKineticsPart2Data = {
     {
       id: 'kin2-intro',
       type: 'text' as const,
-      content: `# Chemical Kinetics
+      content: `# Kinetics: Rate Laws & Half-Lives
 
-**Part 2 of 5 — Integrated Rate Laws & Half-Life**
+**Part 2 of 3 — Integrated Rate Laws & Half-Life**
 
 ## Integrated Rate Laws
 

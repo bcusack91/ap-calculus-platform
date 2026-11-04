@@ -1,12 +1,14 @@
-export const mcatEmbryoPart3Data = {
-  topicSlug: 'mcat-anatomy-physiology-embryology-mcat',
+export const mcatOrganogenesisPart1Data = {
+  topicSlug: 'mcat-anatomy-physiology-organogenesis-mcat',
   sections: [
     {
       id: 'emb3-intro',
       type: 'text' as const,
-      content: `# Embryology — Deep Dive
+      content: `# Organogenesis, Fetal Circulation & Developmental Mechanisms
 
-**Part 3 of 4 — Organogenesis, Extraembryonic Membranes & Fetal Circulation**
+**Part 1 of 2 — Organogenesis, Extraembryonic Membranes & Fetal Circulation**
+
+**Where this fits.** The *Early Embryology: Fertilization to Germ Layers* lesson took the embryo from fertilization through implantation, gastrulation (the formation of the three germ layers: ectoderm, mesoderm and endoderm) and the neural tube. This lesson follows the embryo into organogenesis: the membranes and placenta that support it, how fetal blood bypasses the lungs and liver, and then the potency, induction and signaling experiments that explain how cells choose their fates.
 
 ### The Four Extraembryonic Membranes
 
@@ -152,7 +154,7 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
     {
       id: 'emb3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 3
+      content: `### Key Takeaways — Part 1
 
 - **Each membrane has a job.** Amnion cushions; chorion forms the fetal placenta and makes hCG; yolk sac makes the first blood and germ cells.
 - **Placenta exchanges, never mixes.** Villi exchange without blood mixing; hCG first, then placental progesterone/estrogen; IgG crosses.

@@ -4,9 +4,9 @@ export const mcatEmbryoPart2Data = {
     {
       id: 'emb2-intro',
       type: 'text' as const,
-      content: `# Embryology — Deep Dive
+      content: `# Early Embryology: Fertilization to Germ Layers
 
-**Part 2 of 4 — Gastrulation, Neurulation & Germ-Layer Derivatives**
+**Part 2 of 2 — Gastrulation, Neurulation & Germ-Layer Derivatives**
 
 ### Gastrulation: From Disc to Three Layers
 
@@ -157,7 +157,9 @@ If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell i
 **Low-yield extras**
 
 - The notochord's remnant is the nucleus pulposus.
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Organogenesis, Fetal Circulation & Developmental Mechanisms* lesson — the extraembryonic membranes and placenta, fetal circulation and its shunts, teratogens, then potency, induction and the experiments that reveal them.`
     }
   ]
 };

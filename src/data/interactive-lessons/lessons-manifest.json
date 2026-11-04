@@ -3040,7 +3040,13 @@
     "importPath": "./mcat-mcat-microbiology-genetics-mcat",
     "partTitles": [
       "The Bacterial Genome, Mutation & Selection",
-      "Horizontal Gene Transfer in Depth",
+      "Horizontal Gene Transfer in Depth"
+    ]
+  },
+  {
+    "slug": "mcat-microbiology-genetics-regulation-mcat",
+    "importPath": "./mcat-mcat-microbiology-genetics-regulation-mcat",
+    "partTitles": [
       "Mobile Elements, Defense & Regulation",
       "Viral Genetics & MCAT Integration"
     ]
@@ -3260,7 +3266,13 @@
     "importPath": "./mcat-mcat-anatomy-physiology-embryology-mcat",
     "partTitles": [
       "Fertilization, Cleavage & Implantation",
-      "Gastrulation, Neurulation & Germ-Layer Derivatives",
+      "Gastrulation, Neurulation & Germ-Layer Derivatives"
+    ]
+  },
+  {
+    "slug": "mcat-anatomy-physiology-organogenesis-mcat",
+    "importPath": "./mcat-mcat-anatomy-physiology-organogenesis-mcat",
+    "partTitles": [
       "Organogenesis, Extraembryonic Membranes & Fetal Circulation",
       "MCAT Integration: Potency, Induction & Experimental Embryology"
     ]
@@ -3320,7 +3332,13 @@
     "importPath": "./mcat-mcat-sociology-groups-interaction-mcat",
     "partTitles": [
       "Statuses, Roles & the Anatomy of Groups",
-      "How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies",
+      "How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies"
+    ]
+  },
+  {
+    "slug": "mcat-sociology-interaction-organizations-mcat",
+    "importPath": "./mcat-mcat-sociology-interaction-organizations-mcat",
+    "partTitles": [
       "The Interaction Order: Dramaturgy, Networks & Bureaucracy",
       "MCAT Integration: Prejudice, Discrimination & Reading Interaction Experiments"
     ]
@@ -4104,6 +4122,50 @@
       "Test Day at MEPS or a MET Site",
       "Study Plans and Common Traps",
       "Mastery Check"
+    ]
+  },
+  {
+    "slug": "mcat-general-chemistry-spectra-nuclear-mcat",
+    "importPath": "./mcat-mcat-general-chemistry-spectra-nuclear-mcat",
+    "partTitles": [
+      "Spectra, PES & Bohr Model",
+      "Nuclear Chemistry & Half-Life",
+      "Mixed MCAT Review"
+    ]
+  },
+  {
+    "slug": "mcat-general-chemistry-solutions-gases-mcat",
+    "importPath": "./mcat-mcat-general-chemistry-solutions-gases-mcat",
+    "partTitles": [
+      "Solutions, Molarity & Colligative Properties",
+      "Gas Laws & Electrochemistry",
+      "Mixed MCAT Review"
+    ]
+  },
+  {
+    "slug": "mcat-general-chemistry-energy-mechanisms-mcat",
+    "importPath": "./mcat-mcat-general-chemistry-energy-mechanisms-mcat",
+    "partTitles": [
+      "Activation Energy & Arrhenius Equation",
+      "Mechanisms, RDS & Catalysis",
+      "Mixed MCAT Review"
+    ]
+  },
+  {
+    "slug": "mcat-general-chemistry-titrations-equilibrium-mcat",
+    "importPath": "./mcat-mcat-general-chemistry-titrations-equilibrium-mcat",
+    "partTitles": [
+      "Titrations & Indicators",
+      "Equilibrium, Ksp & Le Chatelier's Principle"
+    ]
+  },
+  {
+    "slug": "mcat-lab-methods-spectroscopy-assays-mcat",
+    "importPath": "./mcat-mcat-lab-methods-spectroscopy-assays-mcat",
+    "partTitles": [
+      "Centrifugation",
+      "Spectroscopy & Beer's Law",
+      "Molecular Assays & Review"
     ]
   }
 ]

@@ -2997,12 +2997,12 @@
   "back": "It stores and transmits accumulated knowledge across generations, enables shared symbols and abstract thought, and (per Sapir-Whorf's weak form) shapes habitual perception. Culture cannot persist without it."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "{{c1::Bonding}} social capital is dense within-group ties that supply support; {{c2::bridging}} social capital crosses groups and supplies novel information.",
   "back": "Bonding ties enforce norms and provide emotional and material help, while bridging ties reach beyond redundant contacts. This is why Granovetter's weak ties deliver job leads: strong ties mostly know what you already know, so opportunity flows across bridges."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "{{c1::Emotional labor}} (Hochschild) is managing feeling to meet a job's display rules; {{c2::surface}} acting fakes it, deep acting alters the feeling.",
   "back": "Surface acting generates the greatest emotional dissonance and predicts burnout and depersonalization among nurses and physicians; deep acting is less depleting. Feeling rules are organizational norms about what one should feel, not merely what one should show."
  },
@@ -3012,17 +3012,17 @@
   "back": "Janis's term, illustrated by the Bay of Pigs: illusions of unanimity and invulnerability, self-censorship, pressure on dissenters. Remedies include devil's advocates and soliciting outside opinions."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "{{c1::Homophily}} is the tendency to form ties with similar others; network {{c2::density}} is the fraction of possible ties that actually exist.",
   "back": "High homophily plus high density produces redundant information and strong norm enforcement, which is how behaviors such as smoking, obesity, and vaccination spread through networks. The same structure limits access to new opportunities, which is why weak bridging ties matter."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "{{c1::Impression management}} is the conscious shaping of how others perceive us — a physician's white coat, steady tone, and framed diplomas.",
   "back": "Goffman's term for controlling the definition of the situation: dress, speech, setting, and selective disclosure. Job interviews and first dates are peak impression management; social media extends it online."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "{{c1::McDonaldization}} (Ritzer): efficiency, calculability, predictability, and control via technology spread from fast food across institutions.",
   "back": "Ritzer extended Weber's rationalization: universities (credit hours), medicine (15-minute visits, checklists), and retail adopt the four principles. The 'irrationality of rationality' is dehumanization and lost quality."
  },
@@ -3037,7 +3037,7 @@
   "back": "Ebaugh's stages: initial doubts, seeking alternatives, a departure turning point, then creating an 'ex' identity. Old roles linger, and others may still respond to the former status."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "{{c1::Social isolation}} is objectively having few contacts; {{c2::loneliness}} is the subjective distress of a gap between desired and actual connection.",
   "back": "They correlate only moderately: a person can be isolated without feeling lonely, or lonely in a crowd. Both independently predict elevated mortality, with meta-analytic effect sizes comparable to smoking, which is why screening should ask about both separately."
  },
@@ -3077,7 +3077,7 @@
   "back": "Group polarization: discussion pushes the group toward the extreme of its initial average, producing a risky shift when members lean risky and a cautious shift when they lean cautious. The mechanisms are persuasive arguments and social comparison, not diffusion of responsibility."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "A neighbor helps you move and you feel obliged to reciprocate. Which interaction theory explains this, and what norm enforces it?",
   "back": "Social exchange theory (Homans and Blau): interaction is analyzed as exchange of rewards and costs, and relationships persist while the ratio stays favorable relative to alternatives. The norm of reciprocity enforces repayment and creates standing obligation, so unreciprocated help strains ties."
  },
@@ -3127,7 +3127,7 @@
   "back": "Discomfort from conflicting cognitions, resolved by changing an attitude or behavior to restore consistency (Festinger)."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Describe front stage and back stage for a restaurant server.",
   "back": "Front stage: the dining room performance — smiles, scripted greetings, clean uniform, deference. Back stage: the kitchen — venting about customers, dropped posture, shared shortcuts. Goffman's dramaturgical model."
  },
@@ -3142,17 +3142,17 @@
   "back": "More bystanders means less helping, due to diffusion of responsibility and pluralistic ignorance."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Four types of social support: {{c1::emotional}} (empathy), instrumental (tangible aid), {{c2::informational}} (advice), and appraisal (feedback).",
   "back": "Matching matters: informational support helps most with controllable problems, emotional support with uncontrollable ones. A ride to dialysis is instrumental; a support group supplies emotional and appraisal support by showing how others in the same position are coping."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Garfinkel had students behave as boarders in their own homes, and families reacted with anger and alarm. What was he demonstrating?",
   "back": "Ethnomethodology: social order rests on taken-for-granted background expectancies that stay invisible until violated. Breaching experiments make norms visible by breaking them, showing that interaction is actively and continuously accomplished rather than merely following fixed rules."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Goffman: a {{c1::discredited}} stigma is already visible; a {{c2::discreditable}} one is concealable, making information control the central task.",
   "back": "A facial scar is discredited; HIV status or a psychiatric history is discreditable, forcing decisions about disclosure, passing, and covering. Courtesy stigma extends to associates, such as family members or clinicians who care for stigmatized patients."
  },
@@ -3162,17 +3162,17 @@
   "back": "Repeated instrumental contact can generate genuine attachment: coworkers or classmates begin as goal-oriented associates and develop enduring friendships valued for their own sake. The categories mark ends of a continuum."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "How do mutual-help groups such as Alcoholics Anonymous work, analyzed sociologically rather than clinically?",
   "back": "They convert a discreditable stigma into a shared identity, supply a reference group carrying new norms, and use resocialization plus role modeling by members further along. The active mechanism is normative influence and identity change, not transfer of information."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Implicit bias in clinical settings can cause:",
   "back": "**Differential treatment despite egalitarian intentions**\n\nDocumented in pain management disparities."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "In dramaturgy (Goffman), the {{c1::front stage}} is where we perform a role for an audience; the {{c2::back stage}} is where the performance drops.",
   "back": "Goffman's Presentation of Self in Everyday Life: social life is theater. A server is polished in the dining room (front) and vents in the kitchen (back). Props, setting, and manner sustain the performance."
  },
@@ -3187,12 +3187,12 @@
   "back": "**The experimenter was remote or the victim was close**\n\nProximity to consequences and distance from authority both reduced compliance."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Marx's four forms of alienation: from the {{c1::product}} of labor, from the {{c2::process}} of work, from other workers, and from one's human potential.",
   "back": "Alienation follows from lacking control over one's labor, not from disliking the job. Sociologists apply it to clinicians who lose control over pace, documentation, and clinical decisions, linking erosion of autonomy to burnout and to what is now called moral injury."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Name common dysfunctions of bureaucracy.",
   "back": "Red tape and rigidity, trained incapacity (rules followed even when counterproductive), goal displacement (means become ends), alienation of workers and clients, and oligarchy. Merton emphasized ritualist rule-following."
  },
@@ -3202,7 +3202,7 @@
   "back": "Assign a devil's advocate, have the leader withhold his opinion at the outset, invite outside experts, split into independent subgroups that meet separately, and hold a second-chance meeting after a preliminary consensus. Each works by legitimizing dissent rather than by exhorting members to think harder."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Relative risk of 2.0 means the exposed group has:",
   "back": "**Twice the risk of the unexposed group**\n\nRR = 1.0 indicates no association."
  },
@@ -3212,42 +3212,42 @@
   "back": "**Reduced individual effort in group tasks**\n\nReduced when individual contributions are identifiable."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Support predicts better health only among highly stressed people in one study but among everyone in another. Name the two competing hypotheses.",
   "back": "The stress-buffering hypothesis, in which support protects specifically by blunting appraisal and physiological reactivity to stressors, versus the direct or main effect hypothesis, in which integration benefits health regardless of stress. Perceived support usually buffers; structural integration usually shows main effects."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Symbolic interactionism focuses on:",
   "back": "**How individuals create meaning through social interaction**\n\nSymbolic interactionism (Mead, Blumer) is a micro-level sociological perspective that examines how people create meaning through symbols, language, and interaction in everyday life."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "The {{c1::iron law of oligarchy}} (Michels): all large organizations, even democratic ones, drift toward rule by a small elite.",
   "back": "Michels argued leaders accumulate expertise, control of information, and communication channels, entrenching themselves. Seen in unions, parties, and associations originally built for member control."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "The contact hypothesis states prejudice reduces when groups have contact that is:",
   "back": "**Cooperative, equal-status, and institutionally supported**\n\nMere contact without these conditions can worsen prejudice."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "The organizational chart says the attending decides, but the charge nurse effectively controls bed assignment. Name the distinction at work.",
   "back": "Formal versus informal organization: alongside official structure, informal networks, norms, and expertise-based influence determine how work actually gets done. Informal structure can raise efficiency or subvert stated goals, and it is entirely invisible on the formal chart."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Weber's ideal bureaucracy: division of labor, hierarchy of authority, written {{c1::rules}}, {{c2::impersonality}}, and merit-based hiring.",
   "back": "The five classic characteristics make large-scale coordination efficient and predictable. Weber also warned of the 'iron cage': rationalized systems trap individuals in rule-bound, disenchanted lives."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What are Etzioni's three types of formal organizations?",
   "back": "Utilitarian: joined for pay or credential (companies, universities). Normative or voluntary: joined for shared goals (charities, advocacy groups). Coercive: membership forced (prisons, psychiatric commitment), overlapping Goffman's total institutions."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What are the consequences of strong in-group identification?",
   "back": "In-group favoritism in rewards and trust, out-group homogeneity ('they're all alike'), scapegoating under threat, and double standards for judging identical acts. It builds solidarity while manufacturing prejudice."
  },
@@ -3257,7 +3257,7 @@
   "back": "Asch: conformity to an obviously wrong majority. Milgram: obedience to legitimate authority."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What did Weber mean by the 'iron cage'?",
   "back": "Rationalization and bureaucracy, once ascendant, imprison individuals in systems of efficiency, calculation, and rules, draining life of meaning and spontaneity — disenchantment. Ritzer's McDonaldization updates the idea."
  },
@@ -3267,22 +3267,22 @@
   "back": "The array of roles attached to a single status: a professor's role set includes teacher (to students), colleague (to faculty), employee (to administration), and mentor (to advisees). Competing role-set demands create strain."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is a self-fulfilling prophecy in social interaction?",
   "back": "A false definition of a situation evokes behavior that makes it come true (Merton). Classic case: teachers told certain students were 'bloomers' treated them differently, and those students' performance rose (Rosenthal effect)."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is a voluntary (normative) association, and what functions does it serve?",
   "back": "An organization joined freely for shared purpose — Rotary, advocacy groups, congregational committees. Functions: pursuing collective goals, sociability, civic-skill building, and social capital (Putnam's concern in Bowling Alone)."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is face-work in Goffman's interaction theory?",
   "back": "Efforts to maintain one's own and others' 'face' — the positive social value claimed in interaction. Includes avoidance (dodging embarrassing topics) and corrective rituals (apologies, tactfully ignoring a gaffe)."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is goal displacement in organizations?",
   "back": "When adherence to rules and organizational self-preservation displace the original mission — a charity spending mainly on fundraising, or clinics optimizing documentation metrics over patient care. A classic bureaucratic pathology."
  },
@@ -3297,17 +3297,17 @@
   "back": "An audience improves performance on simple/well-learned tasks but impairs it on complex/novel ones."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is stereotype threat?",
   "back": "Anxiety about confirming a negative stereotype consumes working memory and depresses performance."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is the 'strength of weak ties' (Granovetter)?",
   "back": "Acquaintances (weak ties) bridge otherwise separate networks, so they carry novel information — job leads especially — that close friends, who share your contacts, cannot. Networks matter beyond intimacy."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is the fundamental attribution error?",
   "back": "Overattributing others' behavior to disposition while underweighting the situation. The mirror image — explaining our own behavior situationally — is the **actor–observer bias**; the **self-serving bias** further credits our own successes to disposition and our failures to circumstance."
  },
@@ -3317,12 +3317,12 @@
   "back": "A status is a position in a social structure; a role is the behavior expected of that position. You occupy a status and play a role: 'medical student' is the status; studying and professionalism are the role."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "What is the Thomas theorem?",
   "back": "'If men define situations as real, they are real in their consequences.' Subjective definitions drive behavior regardless of objective truth — a rumor of bank failure causes a real run. Basis of the self-fulfilling prophecy."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Which test compares means between two independent groups?",
   "back": "**Independent t-test**\n\nANOVA extends this to three or more groups."
  },
@@ -3332,12 +3332,12 @@
   "back": "A triad survives the loss of one member and disputes can be mediated by the third party; in a dyad, either member's exit destroys the group, so its existence depends continuously on both individuals."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Why do physicians and hospital administrators conflict structurally, in Weberian terms?",
   "back": "Professional authority rests on expertise and autonomous judgment over individual cases, while bureaucratic authority rests on rules, hierarchy, and standardization. Protocols, utilization review, and productivity targets sit on that fault line, a well-documented source of role strain and burnout."
  },
  {
-  "topicSlug": "mcat-sociology-groups-interaction-mcat",
+  "topicSlug": "mcat-sociology-interaction-organizations-mcat",
   "front": "Worker output at the Hawthorne plant rose whether the lighting was raised or lowered. Name the effect and the design lesson.",
   "back": "The Hawthorne effect: being observed and singled out changes behavior independent of the manipulation. It is a reactivity threat that requires a control group receiving equal attention. Later reanalyses suggest the original effect was smaller and partly driven by feedback and rest breaks."
  },

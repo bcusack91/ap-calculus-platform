@@ -4,9 +4,9 @@ export const mcatSocioGroupsPart2Data = {
     {
       id: 'grp2-intro',
       type: 'text' as const,
-      content: `# Groups & Social Interaction — Deep Dive
+      content: `# Groups, Roles & Social Influence
 
-**Part 2 of 4 — How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies**
+**Part 2 of 2 — How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies**
 
 ### Two Reasons People Conform
 
@@ -44,25 +44,77 @@ In crowds, anonymity + arousal + diffused responsibility can suspend self-awaren
       type: 'text' as const,
       content: `### Worked Example — One Hospital Committee, Five Mechanisms
 
-**Passage-style problem.** Researchers observe a hospital's quality-improvement committee and its aftermath.
+**Problem 1.** Researchers observe a hospital quality-improvement committee. The chair announces her preferred policy first; two members later say they had objections but stayed silent "to keep the peace"; one reassures the chair that "everyone is on board." The policy fails badly.
 
-1. In early meetings, the chair announces her preferred policy first; two members later tell interviewers they had objections but stayed silent "to keep the peace"; one member actively reassures the chair that "everyone is on board." The policy fails badly.
-2. A subcommittee of six members who all mildly favored stricter infection protocols meets separately; it returns demanding protocols far stricter than any individual member initially endorsed.
-3. During a full-capacity crisis, staff report that an attending's verbal orders were followed even when two nurses privately judged one order unsafe; both said "he was the attending, and he said he'd take responsibility."
-4. On group audit shifts where individual chart-review counts are not recorded, per-person review output drops 30 percent relative to solo shifts; publishing individual counts eliminates the drop.
-5. A resident performing a well-practiced suturing technique performs faster and cleaner when observed by evaluators, but a resident attempting a newly learned technique performs markedly worse under the same observation.
+- **(a)** Which group decision pathology does this show?
+- **(b)** Which of its symptoms appear, and in which details?
+- **(c)** What remedy would most directly prevent it?
 
-**Finding 1 is groupthink**, with the full symptom cluster: directive leadership (chair states preference first), self-censorship ("stayed silent"), and a mindguard (the reassuring member). The remedy question writes itself: have the chair withhold her view and assign a devil's advocate.
+**(a) Groupthink.** A cohesive group suppressed dissent to protect unanimity, and the output was a defective decision members privately doubted.
 
-**Finding 2 is group polarization** — a shared initial lean made MORE extreme by discussion among the like-minded. Nothing was suppressed; the shift is the pathology. If an answer choice says "groupthink," check: was there dissent to suppress? Here, no.
+**(b) The symptom cluster.** Directive leadership (the chair states her preference first), self-censorship ("stayed silent"), and a mindguard (the member reassuring the chair).
 
-**Finding 3 is obedience** to legitimate authority, complete with responsibility transfer ("he'd take responsibility" = the agentic state's signature). It is not conformity — the nurses responded to hierarchy, not to peer consensus.
+**(c) The remedy.** The remedy question writes itself: have the chair withhold her view and assign a devil's advocate.
 
-**Finding 4 is social loafing**, diagnosed by its cure: identifiability restores effort, confirming that pooled, anonymous output was the mechanism rather than fatigue or skill.
+**Problem 2.** A subcommittee of six members who all mildly favored stricter infection protocols meets separately; it returns demanding protocols far stricter than any individual member initially endorsed.
 
-**Finding 5 is social facilitation's two-sided law**: observation improves the DOMINANT (practiced) response and impairs the non-dominant (novel) one. Any answer treating "audiences help" or "audiences hurt" as a one-directional rule is wrong by construction.
+- **(a)** Which phenomenon does this show?
+- **(b)** Was there dissent to suppress, and why does that matter for the label?
+- **(c)** What drives the shift during discussion?
 
-**Transfer note.** The MCAT rarely names these mechanisms in the passage; it gives you finding-shaped descriptions and asks for the label, the mechanism, or the intervention. Practice mapping intervention → mechanism: identifiability → loafing; dissenter → conformity collapse (Asch's unanimity result); leader silence → groupthink; separating like-minded deliberators → polarization.`
+**(a) Group polarization.** A shared initial lean was made MORE extreme by discussion among the like-minded. The shift itself is the pathology.
+
+**(b) No dissent.** Everyone already leaned the same way, so nothing was suppressed. If an answer choice says "groupthink," check: was there dissent to suppress? Here, no.
+
+**(c) Two mechanisms.** Hearing new arguments for the shared side (informational) and one-upping the valued position (normative).
+
+**Problem 3.** During a full-capacity crisis, an attending's verbal orders were followed even when two nurses privately judged one order unsafe; both said "he was the attending, and he said he'd take responsibility."
+
+- **(a)** Which form of social influence is this?
+- **(b)** Which phrase shows how the nurses justified complying?
+- **(c)** Is this conformity? Why or why not?
+
+**(a) Obedience.** The nurses complied with a legitimate authority's orders.
+
+**(b) Responsibility transfer.** "He'd take responsibility" is the agentic state's signature: the nurses treated themselves as instruments of the attending's will.
+
+**(c) Not conformity.** The nurses responded to hierarchy, not to peer consensus.
+
+**Problem 4.** On group audit shifts where individual chart-review counts are not recorded, per-person review output drops 30 percent relative to solo shifts; publishing individual counts eliminates the drop.
+
+- **(a)** Which presence effect explains the drop?
+- **(b)** What does the effect of publishing counts reveal about the mechanism?
+- **(c)** What other fixes follow from that mechanism?
+
+**(a) Social loafing.** Individuals exert less effort when contributions are pooled and unidentifiable.
+
+**(b) Diagnosed by its cure.** Identifiability restores effort, confirming that pooled, anonymous output was the mechanism rather than fatigue or skill.
+
+**(c) Other antidotes.** Raise the task's meaning or shrink the group; like published counts, both make each person's contribution more visible or more valued.
+
+**Problem 5.** A resident performing a well-practiced suturing technique performs faster and cleaner when observed by evaluators, but a resident attempting a newly learned technique performs markedly worse under the same observation.
+
+- **(a)** Which presence effect explains both results?
+- **(b)** Why does the same audience help one resident and hurt the other?
+- **(c)** Can an answer saying audiences simply help, or simply hurt, be right?
+
+**(a) Social facilitation.** Both residents are identifiable in front of observers — facilitation conditions, not loafing conditions.
+
+**(b) The dominant response.** Observation improves the DOMINANT (practiced) response and impairs the non-dominant (novel) one — facilitation's two-sided law.
+
+**(c) Never.** Any answer treating "audiences help" or "audiences hurt" as a one-directional rule is wrong by construction.
+
+**Problem 6.** A consultant lists three interventions: add one dissenter to a unanimous majority; have the leader withhold her preference; separate like-minded deliberators.
+
+- **(a)** Which mechanism does adding one dissenter target?
+- **(b)** Which does leader silence target?
+- **(c)** Which does separating like-minded deliberators target?
+
+**(a) One dissenter.** Conformity: a single dissenter collapses it (Asch's unanimity result).
+
+**(b) Leader silence.** Groupthink: it removes the directive leadership that invites self-censorship.
+
+**(c) Separation.** Polarization: no like-minded discussion, no amplified lean. The MCAT rarely names these mechanisms; it gives finding-shaped descriptions and asks for the label, the mechanism, or the intervention.`
     },
     {
       id: 'grp2-quiz1',
@@ -113,11 +165,19 @@ In crowds, anonymity + arousal + diffused responsibility can suspend self-awaren
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Conformity splits by motive: normative (to belong; public-only, shown by Asch's unambiguous task and the written-response drop) vs. informational (to be right; ambiguity, private acceptance); one dissenter breaks unanimity's spell
-- Obedience is situational: legitimacy, proximity, responsibility transfer (agentic state); defiant peers are the strongest antidote
-- Compliance techniques classify by request sequence: foot-in-the-door (small → large, self-perception), door-in-the-face (large refused → moderate, reciprocity), lowball (commit → reveal costs)
-- Presence effects: facilitation strengthens the dominant response (helps practiced, hurts novel tasks); loafing follows unidentifiable pooled effort — cure with identifiability; deindividuation = anonymity + arousal dissolving self-monitoring
-- Groupthink (suppressed dissent, directive leader, mindguards → defective consensus) vs. polarization (shared lean amplified by discussion) — diagnose by asking whether dissent existed and was silenced`
+- **Normative vs. informational.** Normative conformity seeks acceptance (public only); informational seeks accuracy under ambiguity.
+- **Obedience is situational.** The authority's legitimacy and proximity plus responsibility transfer drive it; defiant peers are the strongest antidote.
+- **Presence effects.** Observers strengthen the dominant response; pooled effort invites loafing; anonymity plus arousal deindividuates.
+- **Groupthink vs. polarization.** Groupthink silences dissent into a bad consensus; polarization amplifies a shared lean.
+
+**Common traps**
+
+- **Unanimity means groupthink.** A unanimous verdict never diagnoses groupthink alone; dissent must have existed and been silenced.
+- **Audiences always help.** Observers improve practiced tasks but impair novel ones; any one-direction rule is wrong.
+- **Mixing up request order.** Foot-in-the-door runs small then large; door-in-the-face runs large-and-refused, then moderate.
+- **Asch as informational.** The lines were unambiguous and conformity nearly vanished with written answers, so it was normative.
+
+**Next up:** the *Social Interaction, Organizations & Discrimination* lesson — Goffman's dramaturgy, emotional labor, social networks and Weber's bureaucracy, then stereotypes, prejudice and discrimination and how to read interaction experiments.`
     }
   ]
 };

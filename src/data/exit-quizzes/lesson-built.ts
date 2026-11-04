@@ -143,6 +143,15 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-general-chemistry-kinetics-mcat',
   'mcat-general-chemistry-stoichiometry-mcat',
   'mcat-organic-chemistry-stereochemistry-mcat',
+  // Second halves of the Nov 2026 part splits (src/lib/mcat-topic-split.ts MCAT_PART_SPLITS).
+  'mcat-general-chemistry-spectra-nuclear-mcat',
+  'mcat-general-chemistry-solutions-gases-mcat',
+  'mcat-general-chemistry-energy-mechanisms-mcat',
+  'mcat-general-chemistry-titrations-equilibrium-mcat',
+  'mcat-lab-methods-spectroscopy-assays-mcat',
+  'mcat-microbiology-genetics-regulation-mcat',
+  'mcat-anatomy-physiology-organogenesis-mcat',
+  'mcat-sociology-interaction-organizations-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

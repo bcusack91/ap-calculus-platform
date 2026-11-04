@@ -4,9 +4,9 @@ export const mcatAcidBaseEqPart3Data = {
     {
       id: 'ab3-intro',
       type: 'text' as const,
-      content: `# Acid-Base Chemistry & Equilibrium
+      content: `# Acids, Bases & Buffers
 
-**Part 3 of 5 — Buffers: Mechanism, Capacity & Physiological Relevance**
+**Part 3 of 3 —Buffers: Mechanism, Capacity & Physiological Relevance**
 
 ## What Is a Buffer?
 
@@ -190,6 +190,16 @@ Counting all dissolved $\\text{CO}_2$, the effective $\\text{p}K_a$ is 6.1, so p
 - **A buffer fixes the pH.** The pH still shifts a little, and once one component is used up, buffering stops.
 - **Hyperventilation as acidosis.** Fast breathing blows off $\\text{CO}_2$ and RAISES pH: respiratory alkalosis.
 - **Mixing up the two causes.** A primary $\\text{CO}_2$ change is respiratory; a primary $\\text{HCO}_3^-$ change is metabolic.
+
+## Acids, Bases & Buffers — Complete Topic Summary
+
+**Part 1:** pH, pOH, Kw, strong vs weak acids/bases, pH calculation methods.
+
+**Part 2:** Ka, Kb, pKa, Henderson-Hasselbalch equation, percent dissociation, polyprotic acids, amphiprotic species.
+
+**Part 3:** Buffer mechanism (HA consumes $OH^{-}$; $A^{-}$ consumes $H^{+}$), buffer capacity, buffer range (pKa ± 1), bicarbonate buffer in blood, acid-base disturbances.
+
+**Next up:** the *Titrations, Equilibrium & Solubility* lesson — titration curves, equivalence and half-equivalence points, indicators, equilibrium constants, Le Chatelier's principle and $K_{sp}$.
 `
     }
   ]

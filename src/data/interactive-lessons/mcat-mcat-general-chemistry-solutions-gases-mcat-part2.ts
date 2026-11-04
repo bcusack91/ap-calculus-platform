@@ -1,12 +1,12 @@
-export const mcatStoichiometryPart4Data = {
-  topicSlug: 'mcat-general-chemistry-stoichiometry-mcat',
+export const mcatSolutionsGasesPart2Data = {
+  topicSlug: 'mcat-general-chemistry-solutions-gases-mcat',
   sections: [
     {
       id: 'st4-intro',
       type: 'text' as const,
-      content: `# Stoichiometry & Chemical Reactions
+      content: `# Solutions, Gases & Electrolysis
 
-**Part 4 of 5 — Gas Laws & Electrochemistry Stoichiometry**
+**Part 2 of 3 — Gas Laws & Electrochemistry Stoichiometry**
 
 ## Ideal Gas Law
 
@@ -201,7 +201,7 @@ On the MCAT, you don't calculate with van der Waals, but you must identify when 
     {
       id: 'st4-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 4
+      content: `## Key Takeaways — Part 2
 
 - **Ideal gas law.** $PV = nRT$ with $R = 0.0821$ L·atm/mol·K and $T$ in kelvin; for fixed $n$, $P_1V_1/T_1 = P_2V_2/T_2$.
 - **Dalton's law.** Partial pressures add up to the total, and each gas contributes $P_i = \\chi_i P_{\\text{total}}$.

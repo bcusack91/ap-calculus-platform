@@ -4,9 +4,9 @@ export const mcatEmbryoPart1Data = {
     {
       id: 'emb1-intro',
       type: 'text' as const,
-      content: `# Embryology — Deep Dive
+      content: `# Early Embryology: Fertilization to Germ Layers
 
-**Part 1 of 4 — Fertilization, Cleavage & Implantation**
+**Part 1 of 2 — Fertilization, Cleavage & Implantation**
 
 ### Fertilization: Where and How
 

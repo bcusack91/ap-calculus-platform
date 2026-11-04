@@ -5,7 +5,14 @@
       "2C",
       "3B"
     ],
-    "tested": "Fertilization through gastrulation, germ-layer derivatives, induction, determination vs differentiation, neurulation."
+    "tested": "Fertilization, cleavage and implantation, twinning, gastrulation, germ-layer derivatives, neurulation, neural crest."
+  },
+  "mcat-anatomy-physiology-organogenesis-mcat": {
+    "aamc": [
+      "2C",
+      "3B"
+    ],
+    "tested": "Extraembryonic membranes, placenta, fetal circulation and shunts, HbF, teratogens and organogenesis, potency, determination vs differentiation, induction, morphogens, experimental embryology."
   },
   "mcat-anatomy-physiology-mcat": {
     "aamc": [
@@ -111,7 +118,14 @@
       "2B",
       "1C"
     ],
-    "tested": "Transformation, transduction, conjugation, plasmids, transposons, and how they move resistance."
+    "tested": "Transformation, transduction, conjugation, plasmids (F, R), mutation and selection, Hfr mapping, and how they move resistance."
+  },
+  "mcat-microbiology-genetics-regulation-mcat": {
+    "aamc": [
+      "2B",
+      "1C"
+    ],
+    "tested": "Transposons, restriction-modification and CRISPR, operon regulation and cis/trans tests, complementation, and viral mutation, recombination and reassortment."
   },
   "mcat-microbiology-mcat": {
     "aamc": [
@@ -289,7 +303,14 @@
       "8C",
       "7B"
     ],
-    "tested": "Status and roles, impression management, dramaturgy, group types and networks, social institutions."
+    "tested": "Status and roles, role strain and conflict, group types and size, conformity, obedience, compliance, social facilitation and loafing, deindividuation, groupthink and group polarization."
+  },
+  "mcat-sociology-interaction-organizations-mcat": {
+    "aamc": [
+      "8C",
+      "8B"
+    ],
+    "tested": "Impression management and dramaturgy, emotional labor, social networks and weak ties, bureaucracy and formal organizations, stereotypes, prejudice, individual vs institutional discrimination, contact hypothesis, stereotype threat, self-fulfilling prophecy, audit studies."
   },
   "mcat-sociology-health-disparities-mcat": {
     "aamc": [
@@ -313,22 +334,40 @@
   },
   "mcat-general-chemistry-acid-base-equilibrium-mcat": {
     "aamc": [
+      "5A"
+    ],
+    "tested": "pH/pKa and Henderson-Hasselbalch, strong vs. weak acids and bases, Ka/Kb, percent dissociation, buffers and blood pH."
+  },
+  "mcat-general-chemistry-titrations-equilibrium-mcat": {
+    "aamc": [
       "5A",
       "5B"
     ],
-    "tested": "pH/pKa and Henderson-Hasselbalch, buffers, titration curves, Ka/Kb, equilibrium constants and Le Chatelier."
+    "tested": "Titration curves, equivalence and half-equivalence points, indicators, equilibrium constants, Le Chatelier, Ksp and the common-ion effect."
   },
   "mcat-general-chemistry-atomic-structure-mcat": {
     "aamc": [
       "4E"
     ],
-    "tested": "Electron configuration, quantum numbers, periodic trends (radius, ionization energy, electronegativity), bonding types, VSEPR."
+    "tested": "Quantum numbers, electron configuration and its exceptions, isotopes and atomic weight, effective nuclear charge, periodic trends (radius, ionization energy, electron affinity, electronegativity), ion sizes."
+  },
+  "mcat-general-chemistry-spectra-nuclear-mcat": {
+    "aamc": [
+      "4E"
+    ],
+    "tested": "Bohr model and hydrogen spectra, emission vs absorption, photoelectric effect, photoelectron spectroscopy, de Broglie and uncertainty, alpha/beta/gamma decay, positron emission and electron capture, half-life, mass defect and binding energy, nuclear medicine."
   },
   "mcat-general-chemistry-kinetics-mcat": {
     "aamc": [
       "5E"
     ],
-    "tested": "Rate laws and orders from data, Arrhenius/activation energy, catalysts, rate-determining step, half-life for first order."
+    "tested": "Rate laws and orders from data, units of k, integrated rate laws and their plots, half-life for first order (and zero/second order)."
+  },
+  "mcat-general-chemistry-energy-mechanisms-mcat": {
+    "aamc": [
+      "5E"
+    ],
+    "tested": "Arrhenius/activation energy, energy diagrams, collision theory, catalysts, reaction mechanisms and the rate-determining step, enzyme (Michaelis-Menten) kinetics."
   },
   "mcat-general-chemistry-mcat": {
     "aamc": [
@@ -341,10 +380,16 @@
   },
   "mcat-general-chemistry-stoichiometry-mcat": {
     "aamc": [
+      "4E"
+    ],
+    "tested": "Moles and molar mass, percent composition, empirical and molecular formulas, balancing, limiting reagent, percent yield, reaction types."
+  },
+  "mcat-general-chemistry-solutions-gases-mcat": {
+    "aamc": [
       "4E",
       "5A"
     ],
-    "tested": "Moles and limiting reagent, percent yield, balancing including redox, oxidation states, reaction types."
+    "tested": "Molarity, dilution, solution and titration stoichiometry, colligative properties, net ionic equations and solubility, ideal and real gas laws, partial pressures, effusion, redox and oxidation states, Faraday's law of electrolysis."
   },
   "mcat-general-chemistry-thermodynamics-mcat": {
     "aamc": [
@@ -357,6 +402,13 @@
       "5C"
     ],
     "tested": "Separations (extraction, distillation, chromatography, electrophoresis), purification, safety; interpretation more than procedure."
+  },
+  "mcat-lab-methods-spectroscopy-assays-mcat": {
+    "aamc": [
+      "4D",
+      "1B"
+    ],
+    "tested": "Centrifugation, spectroscopy (UV-Vis, IR, NMR, mass spec) and Beer's law, blots, PCR and ELISA; interpretation more than procedure."
   },
   "mcat-organic-chemistry-carbonyls-mcat": {
     "aamc": [

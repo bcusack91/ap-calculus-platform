@@ -32,6 +32,12 @@ export interface PoolTopicResolution {
 export const MCAT_LESSON_ALIASES: Record<string, string> = {
   // Chem/Phys
   'mcat-general-chemistry-mcat': 'mcat-area-general-chemistry',
+  // Second halves of the Nov 2026 gen-chem part splits play their first
+  // half's bank subtopic (the first halves ARE those subtopics' slugs).
+  'mcat-general-chemistry-spectra-nuclear-mcat': 'mcat-general-chemistry-atomic-structure-mcat',
+  'mcat-general-chemistry-solutions-gases-mcat': 'mcat-general-chemistry-stoichiometry-mcat',
+  'mcat-general-chemistry-energy-mechanisms-mcat': 'mcat-general-chemistry-kinetics-mcat',
+  'mcat-general-chemistry-titrations-equilibrium-mcat': 'mcat-general-chemistry-acid-base-equilibrium-mcat',
   'mcat-organic-chemistry-mcat': 'mcat-area-organic-chemistry',
   'mcat-physics-mechanics-mcat': 'mcat-area-physics-mechanics',
   'mcat-physics-mechanics-fluids-waves-mcat': 'mcat-area-physics-mechanics',
@@ -47,6 +53,7 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   'mcat-physics-waves-interference-mcat': 'mcat-physics-waves-sound-mcat',
   'mcat-biochemistry-foundations-mcat': 'mcat-area-biochemistry',
   'mcat-lab-methods-mcat': 'mcat-area-lab-data',
+  'mcat-lab-methods-spectroscopy-assays-mcat': 'mcat-area-lab-data',
   'mcat-biostatistics-mcat': 'mcat-research-methods-biostats-mcat',
   'mcat-research-methods-mcat': 'mcat-research-methods-biostats-mcat',
   'mcat-quantitative-skills-mcat': 'mcat-research-methods-biostats-mcat',
@@ -65,6 +72,7 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   'mcat-microbiology-antimicrobials-mcat': 'mcat-biology-microbiology-mcat',
   'mcat-microbiology-bacteria-mcat': 'mcat-biology-microbiology-mcat',
   'mcat-microbiology-genetics-mcat': 'mcat-biology-microbiology-mcat',
+  'mcat-microbiology-genetics-regulation-mcat': 'mcat-biology-microbiology-mcat',
   'mcat-microbiology-viruses-mcat': 'mcat-biology-microbiology-mcat',
   'mcat-genetics-evolution-immunology-mcat': 'mcat-organ-systems-immune-musculoskeletal-mcat',
   'mcat-genetics-evolution-mendelian-mcat': 'mcat-genetics-mendelian-mcat',
@@ -72,6 +80,7 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   'mcat-genetics-evolution-population-genetics-mcat': 'mcat-genetics-evolution-mcat',
   'mcat-anatomy-physiology-mcat': 'mcat-area-organ-systems',
   'mcat-anatomy-physiology-embryology-mcat': 'mcat-organ-systems-embryology-mcat',
+  'mcat-anatomy-physiology-organogenesis-mcat': 'mcat-organ-systems-embryology-mcat',
   'mcat-anatomy-physiology-musculoskeletal-mcat': 'mcat-organ-systems-immune-musculoskeletal-mcat',
   'mcat-anatomy-physiology-reproductive-mcat': 'mcat-organ-systems-reproductive-mcat',
   'mcat-anatomy-physiology-sensory-mcat': 'mcat-organ-systems-nervous-mcat',
@@ -92,6 +101,7 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   'mcat-sociology-mcat': 'mcat-area-psychology-sociology',
   'mcat-sociology-culture-socialization-mcat': 'mcat-area-psychology-sociology',
   'mcat-sociology-groups-interaction-mcat': 'mcat-area-psychology-sociology',
+  'mcat-sociology-interaction-organizations-mcat': 'mcat-area-psychology-sociology',
   'mcat-sociology-health-disparities-mcat': 'mcat-psych-social-inequality-mcat',
   'mcat-sociology-structure-stratification-mcat': 'mcat-psych-sociology-social-structure-mcat',
   // CARS — every passage / reasoning / strategy lesson is CARS practice.

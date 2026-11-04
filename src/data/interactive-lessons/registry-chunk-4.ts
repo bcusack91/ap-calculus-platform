@@ -1532,9 +1532,6 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Chromatography', loader: () => import('./mcat-mcat-lab-methods-mcat-part1').then(m => m.mcatLabMethodsPart1Data) },
       { title: 'Electrophoresis', loader: () => import('./mcat-mcat-lab-methods-mcat-part2').then(m => m.mcatLabMethodsPart2Data) },
-      { title: 'Centrifugation', loader: () => import('./mcat-mcat-lab-methods-mcat-part3').then(m => m.mcatLabMethodsPart3Data) },
-      { title: "Spectroscopy & Beer's Law", loader: () => import('./mcat-mcat-lab-methods-mcat-part4').then(m => m.mcatLabMethodsPart4Data) },
-      { title: 'Molecular Assays & Review', loader: () => import('./mcat-mcat-lab-methods-mcat-part5').then(m => m.mcatLabMethodsPart5Data) },
     ],
   },
   'mcat-social-psychology-mcat': {

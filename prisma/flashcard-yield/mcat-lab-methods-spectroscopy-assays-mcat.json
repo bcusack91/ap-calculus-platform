@@ -1,0 +1,92 @@
+[
+ {
+  "front": "Density-gradient (isopycnic) centrifugation separates particles by {{c1::buoyant density}}, each band settling where its density matches the medium.",
+  "fp": "1247343f8d1d",
+  "yield": "MEDIUM",
+  "why": "Density-gradient centrifugation mainly appears via Meselson-Stahl context"
+ },
+ {
+  "front": "Distinguish Southern, Northern, and Western blots.",
+  "fp": "4d3ad9d9341f",
+  "yield": "ULTRA_HIGH",
+  "why": "Southern/Northern/Western blot targets are tested on nearly every exam"
+ },
+ {
+  "front": "How does a sandwich ELISA generate a quantitative signal?",
+  "fp": "f4636dde3c7b",
+  "yield": "HIGH",
+  "why": "ELISA mechanism is common in immunology and assay passages"
+ },
+ {
+  "front": "In an assay, a {{c1::negative}} control contains everything except the variable of interest and should produce no signal.",
+  "fp": "cf1223b9f40f",
+  "yield": "ULTRA_HIGH",
+  "why": "Negative vs positive controls are tested on essentially every exam"
+ },
+ {
+  "front": "In differential centrifugation, in what order do cellular components pellet as speed is increased?",
+  "fp": "4abfa5c50c93",
+  "yield": "MEDIUM",
+  "why": "Differential centrifugation order is second-tier cell fractionation detail"
+ },
+ {
+  "front": "In IR, a strong sharp band near {{c1::1700}} cm$^{-1}$ signals a C=O, while a broad band across 3200-3600 signals {{c2::O-H}}.",
+  "fp": "232dbfa93d08",
+  "yield": "ULTRA_HIGH",
+  "why": "C=O at 1700 and broad O-H at 3200-3600 are the IR facts tested every year"
+ },
+ {
+  "front": "In mass spectrometry the molecular ion peak gives the {{c1::molecular weight}}, and an M+2 peak nearly equal in height indicates {{c2::bromine}}.",
+  "fp": "4fe4c0a836a3",
+  "yield": "LOW",
+  "why": "Mass-spec isotope patterns are off-outline trivia for the MCAT"
+ },
+ {
+  "front": "Southern blotting detects {{c1::DNA}}, Northern blotting detects {{c2::RNA}}, and Western blotting detects protein using antibodies.",
+  "fp": "d954223f8dfd",
+  "yield": "LOW",
+  "why": "Restates the blot card"
+ },
+ {
+  "front": "State Beer's law.",
+  "fp": "b6130fa8a66c",
+  "yield": "ULTRA_HIGH",
+  "why": "Beer's law is the calculation equation for absorbance questions"
+ },
+ {
+  "front": "UV-Vis absorbance is most informative about what structural feature, and what law quantifies it?",
+  "fp": "4f3a2cb07db1",
+  "yield": "HIGH",
+  "why": "Conjugation shifting UV absorbance and Beer's law appear regularly"
+ },
+ {
+  "front": "What does a standard curve accomplish in a quantitative assay, and what is its limitation?",
+  "fp": "1e3d37033dfc",
+  "yield": "MEDIUM",
+  "why": "Standard curve and linear range are secondary assay reasoning"
+ },
+ {
+  "front": "What key reagent makes PCR possible?",
+  "fp": "4a92e84452e7",
+  "yield": "HIGH",
+  "why": "Taq's heat stability is a common PCR item"
+ },
+ {
+  "front": "What three pieces of information does a proton NMR spectrum provide?",
+  "fp": "2b28330b1351",
+  "yield": "HIGH",
+  "why": "Shift, integration, splitting are the NMR basics the outline names"
+ },
+ {
+  "front": "Why is the sedimentation coefficient in Svedberg units not additive?",
+  "fp": "45f46b9eb653",
+  "yield": "MEDIUM",
+  "why": "Non-additive Svedberg units is a known trap but secondary"
+ },
+ {
+  "front": "Why must a spectrophotometer be blanked before a sample's absorbance is measured?",
+  "fp": "fe9adddb1931",
+  "yield": "MEDIUM",
+  "why": "Blanking is supporting reasoning for absorbance questions"
+ }
+]

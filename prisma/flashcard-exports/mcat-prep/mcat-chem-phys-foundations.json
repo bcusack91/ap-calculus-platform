@@ -2194,7 +2194,7 @@
   "back": "Outside that window one component is nearly exhausted and cannot absorb further addition. Designing a buffer therefore means picking a conjugate pair whose $pK_a$ is closest to the target pH."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "A monoprotic unknown needs 25 mL of 0.10 M NaOH to reach equivalence. What does that tell you, and what does it not?",
   "back": "It gives moles of analyte (2.5 mmol), hence concentration or molar mass, but nothing about acid strength. Strength comes from the pH at half-equivalence, never from the titrant volume."
  },
@@ -2204,37 +2204,37 @@
   "back": "Blowing off $CO_2$ pulls $CO_2 + H_2O$ to $H^{+} + HCO_3^{-}$ leftward, consuming $H^{+}$, so pH rises: respiratory alkalosis. Rebreathing restores $pCO_2$. Run the same equilibrium forward and breath-holding acidifies the blood."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "A precipitate forms when the ion product $Q$ is {{c1::greater than}} $K_{sp}$, and the solution is unsaturated when $Q$ is below $K_{sp}$.",
   "back": "$Q$ uses actual instantaneous concentrations after mixing, so remember to account for dilution when volumes combine. $Q = K_{sp}$ defines a saturated solution at equilibrium."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "A saturated solution of $Mg(OH)_2$ is treated with strong acid. Predict the effect on dissolved $[Mg^{2+}]$.",
   "back": "It rises, because $H^+$ consumes $OH^-$, dropping $Q$ below $K_{sp}$ and driving more solid to dissolve. The same logic explains why hydroxyapatite in tooth enamel dissolves under acidic conditions."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "A titration curve is steepest at the {{c1::equivalence point}} and flattest at the {{c2::half-equivalence point}}.",
   "back": "The flat stretch is the buffer region, where titrant is absorbed by conversion between the conjugate pair. The steep jump reflects the sudden absence of anything left to neutralize."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Adding 0.5 equivalents of strong base to a weak acid gives a buffer whose pH equals {{c1::the $pK_a$}}.",
   "back": "Half the HA has been converted to $A^{-}$, so the ratio in Henderson-Hasselbalch is 1 and the log term vanishes. This partial-neutralization route is how buffers are actually made in lab, and it is the same state as half-equivalence on a titration curve."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Adding a common ion shifts weak-acid ionization {{c1::left}}, decreasing percent dissociation while $K_a$ stays {{c2::unchanged}}.",
   "back": "Le Chatelier moves the position of an equilibrium, never the constant itself. Only a change in temperature changes an equilibrium constant."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Adding a common ion to a saturated solution:",
   "back": "**Decreases solubility**\n\nLe Chatelier shifts toward the solid; $K_{sp}$ is a constant at fixed temperature."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Adding an inert gas at constant volume:",
   "back": "**Does not shift the equilibrium**\n\nPartial pressures of the reacting species are unchanged."
  },
@@ -2269,12 +2269,12 @@
   "back": "Aspirin is a weak acid with $pK_a$ near 3.5. Raising urine pH with bicarbonate deprotonates it, and the charged conjugate base cannot diffuse back across the tubule membrane, so it is trapped and excreted. Only the uncharged form crosses membranes."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "At the first equivalence point of a diprotic acid the dominant species is amphoteric. How do you estimate that pH?",
   "back": "pH $\\approx (pK_{a1} + pK_{a2})/2$, independent of concentration. The species both donates and accepts protons, so its own two constants bracket the result."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "At the half-equivalence point of a weak acid titration, pH = {{c1::pKa}}.",
   "back": "Half the acid is deprotonated, so [HA] = [A⁻] and Henderson-Hasselbalch gives pH = pKa."
  },
@@ -2294,12 +2294,12 @@
   "back": "At equal amounts the buffer absorbs added acid or base equally well in both directions. Capacity is about how much can be neutralized; pH is about the ratio."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Can you rank the solubility of two salts just by comparing their $K_{sp}$ values?",
   "back": "Only when they share the same ion stoichiometry. A 1:2 salt and a 1:1 salt convert $K_{sp}$ to molar solubility through different powers, so the smaller $K_{sp}$ can belong to the more soluble salt."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Choose an indicator whose $pK_a$ is near the {{c1::pH at the equivalence point}}, since its color change spans about $pK_a \\pm 1$.",
   "back": "Phenolphthalein (range 8-10) suits a weak acid titrated with strong base, whose equivalence point is basic. Using it on a weak base titration would signal far past the true endpoint."
  },
@@ -2314,7 +2314,7 @@
   "back": "$CO_{2} + H_{2}O \\rightleftharpoons H_{2}CO_{3} \\rightleftharpoons H^{+} + HCO_{3}^{-}$. Hyperventilation removes $CO_{2}$, raising pH."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Distinguish the endpoint of a titration from the equivalence point.",
   "back": "The endpoint is where the indicator visibly changes color; the equivalence point is the stoichiometric truth. A well-chosen indicator makes them nearly coincide, and the gap is the titration's systematic error."
  },
@@ -2324,7 +2324,7 @@
   "back": "The accumulating negative charge holds the next proton more tightly. That large gap is exactly why the successive titration steps resolve into separate, well-separated equivalence points."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} = {{c1::4s^3}}$.",
   "back": "Each formula unit releases one $A^{2+}$ and two $B^-$, so $K_{sp} = (s)(2s)^2$. Getting the stoichiometric coefficient inside the exponent right is where most solubility calculations fail."
  },
@@ -2339,7 +2339,7 @@
   "back": "This converts any tabulated $K_a$ into its partner's $K_b$ instantly. It also encodes the rule that the stronger an acid, the weaker its conjugate base."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "From the starting pH alone, before any titrant is added, how do you tell a strong acid from a weak one?",
   "back": "A strong acid starts near $-\\log C$, so 0.1 M starts at pH 1 and barely moves at first. A weak acid starts much higher and immediately enters a flat buffer region. The equivalence pH then confirms it: 7 for strong, above 7 for weak."
  },
@@ -2354,12 +2354,12 @@
   "back": "$pH = -\\log[H^{+}]$, and $pH + pOH = 14$ at 25°C."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "How do you predict the direction of shift using $Q$ and $K$?",
   "back": "$Q < K$ shifts forward (toward products); $Q > K$ shifts backward; $Q = K$ is equilibrium."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "How does adding excess $NH_3$ dissolve solid $AgCl$?",
   "back": "$Ag^+$ forms the complex ion $Ag(NH_3)_2^+$ with a large formation constant $K_f$, stripping free $Ag^+$ from solution and dragging the $K_{sp}$ equilibrium forward. Net solubility is governed by $K_{sp} \\times K_f$."
  },
@@ -2369,7 +2369,7 @@
   "back": "Autoionization is endothermic, so $K_w$ rises with temperature and neutral water's pH falls below 7, to about 6.8 at body temperature. The water is still neutral because $[H^+] = [OH^-]$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "How many equivalence points and buffer regions does a diprotic acid titration curve show?",
   "back": "Two of each, alternating: buffer plateau, first equivalence, second buffer plateau, second equivalence. The two plateaus are centered at $pK_{a1}$ and $pK_{a2}$."
  },
@@ -2404,7 +2404,7 @@
   "back": "Hypoventilation retains $CO_2$ for respiratory acidosis; hyperventilation gives respiratory alkalosis. Compensation moves the other variable the same direction to restore the 20 to 1 ratio, and it is renal and slow for respiratory problems, respiratory and fast for metabolic ones."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "State the common ion effect.",
   "back": "Adding an ion already in the equilibrium shifts it backward, decreasing solubility. $K_{sp}$ itself is unchanged."
  },
@@ -2434,7 +2434,7 @@
   "back": "A stronger acid (larger $K_a$, more dissociation) and a correspondingly weaker conjugate base."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "What is the pH at the equivalence point of a weak acid–strong base titration?",
   "back": "Greater than 7 — only the conjugate base remains, and it hydrolyzes water."
  },
@@ -2444,7 +2444,7 @@
   "back": "**2**\n\nHCl is a strong acid that fully dissociates. [$H^{+}$] = 0.01 M = $10^{-2}$ M, so pH = $-\\log (10^{-2})$ = 2."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "What is true at the half-equivalence point?",
   "back": "$[HA] = [A^{-}]$, so $pH = pK_a$ — the most useful point for reading $pK_a$ off a titration curve."
  },
@@ -2484,12 +2484,12 @@
   "back": "Fewer total protons per liter means higher pH, but Le Chatelier favors the side with more dissolved particles on dilution, so a larger fraction ionizes. The two trends are not contradictory."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Why is $CaCO_3$ far more soluble in acid while $NaCl$ solubility is pH-independent?",
   "back": "Carbonate is the conjugate base of a weak acid, so $H^+$ consumes it and pulls dissolution forward. Chloride is the conjugate of a strong acid and does not react with $H^+$ at all."
  },
  {
-  "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
+  "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
   "front": "Why is the vertical jump at equivalence smaller for a weak acid than for a strong acid at the same concentration?",
   "back": "The weak acid starts at higher pH and its conjugate base buffers the approach, compressing the curve. A very weak acid may show almost no discernible jump, which makes indicator choice critical."
  },
@@ -2499,12 +2499,12 @@
   "back": "Group 1 and 2 metals lose electrons and halogens and chalcogens gain them to reach the nearest noble-gas configuration, giving the predictable charges $Na^{+}$, $Mg^{2+}$, $O^{2-}$, and $Cl^{-}$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "A neutron-rich nucleus decays by {{c1::beta-minus emission}}; a neutron-poor one uses {{c2::positron emission or electron capture}}.",
   "back": "Both routes move the nuclide toward the belt of stability. Predicting the decay mode from the neutron-to-proton ratio is the standard question, not memorizing which isotopes do what."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "A photon ejects an electron only above a threshold frequency. This shows:",
   "back": "**Energy is quantized ($E = h\\nu$)**\n\nPhotoelectric effect: one photon of energy $h\\nu$ must exceed the work function; intensity changes count, not energy."
  },
@@ -2514,27 +2514,27 @@
   "back": "You are forcing a negative electron onto an already negative ion against Coulomb repulsion. That is why forming $O^{2-}$ is uphill in isolation and only pays off inside an ionic lattice."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "After n half-lives the fraction of a sample remaining is {{c1::$(1/2)^n$}}.",
   "back": "Radioactive decay is first order, so half-life does not depend on the starting amount: $t_{1/2}=\\ln 2/k$. Three half-lives leave $1/8$, and about ten half-lives leave under a thousandth."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Alpha decay ejects {{c1::a helium-4 nucleus}}, lowering Z by {{c2::2}} and A by 4.",
   "back": "The alpha particle is $^{4}_{2}He^{2+}$: massive, doubly charged, strongly ionizing but stopped by paper. Alpha emission is characteristic of very heavy nuclei shedding mass toward stability."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "An electron dropping to a lower level {{c1::emits}} a photon whose energy equals {{c2::the gap between the two levels}}.",
   "back": "Absorption is the reverse and demands exactly that same energy. Because levels crowd together at high n, transitions between high levels release lower-energy, longer-wavelength photons."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "An emission spectrum line results from an electron:",
   "back": "**Dropping to a lower energy level**\n\nEnergy released equals $\\Delta E = h\\nu$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Carbon-14 dating works on once-living material because $^{14}C$ has a half-life of about {{c1::5730 years}}.",
   "back": "An organism exchanges carbon with the atmosphere while alive and stops at death, after which the $^{14}C$ fraction decays. Past roughly 50,000 years too little remains to measure, so older samples require long-lived isotopes such as uranium-lead."
  },
@@ -2544,12 +2544,12 @@
   "back": "Halogens release the most energy (most negative electron affinity) because one added electron completes an octet. Noble gases and group 2 metals have full subshells, so the electron must enter a higher subshell and the process is unfavorable."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Compare positron emission and electron capture.",
   "back": "Both convert a proton into a neutron, so Z falls by 1 and A is unchanged. Positron emission ejects a $\\beta^{+}$ particle; electron capture instead pulls in an inner-shell electron. Both correct a neutron-poor nucleus."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Compare the penetrating and ionizing power of alpha, beta, and gamma radiation.",
   "back": "Ionizing power runs alpha > beta > gamma, while penetrating power runs the opposite way. Alpha is stopped by paper or skin but is very damaging if inhaled or ingested; gamma passes through tissue and needs lead or concrete."
  },
@@ -2559,7 +2559,7 @@
   "back": "Cr is [Ar] $4s^1 3d^5$ and Cu is [Ar] $4s^1 3d^{10}$, not the naive Aufbau filling. The exchange energy and symmetry of the half or fully filled d subshell more than repay the promotion cost. Mo and Ag follow the same pattern."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "De Broglie says $\\lambda = h/p$, so a particle's wavelength is {{c1::inversely proportional to its momentum}}.",
   "back": "Accelerated electrons have wavelengths thousands of times shorter than visible light, which is why an electron microscope resolves structures a light microscope cannot. Everyday objects have wavelengths far too small to detect, hiding their wave nature."
  },
@@ -2584,17 +2584,17 @@
   "back": "**$[Ar]3d^{6}$**\n\nTransition metals lose $4s$ electrons before $3d$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Energy levels are negative, but an emitted photon carries {{c1::the absolute value of $\\Delta E$}}.",
   "back": "A bound electron has negative energy because the zero point is defined at full separation. Falling from $n=3$ to $n=2$ changes the electron's energy by $-1.89$ eV and releases a photon of $+1.89$ eV. A negative photon energy is always a wrong answer."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Gamma emission changes {{c1::neither Z nor A}}.",
   "back": "The nucleus simply relaxes from an excited state and releases a high-energy photon. Gamma rays are the most penetrating and least ionizing of the three classic emissions, so they require dense shielding."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "How do fission and fusion differ in the nuclei involved?",
   "back": "Fission splits a heavy nucleus such as uranium into mid-sized fragments plus neutrons; fusion joins very light nuclei such as hydrogen isotopes. Both move products toward the binding-energy-per-nucleon peak near iron, releasing energy."
  },
@@ -2609,7 +2609,7 @@
   "back": "A lower subshell is left unfilled while a higher one is occupied, as in $1s^2 2s^2 2p^3 3s^1$ for oxygen. The ground state uses the same eight electrons as $1s^2 2s^2 2p^4$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "How do you tell an absorption spectrum from an emission spectrum, and why do their lines line up?",
   "back": "Emission is bright lines on a dark background, from electrons falling and releasing photons. Absorption is dark lines interrupting a continuous background, from electrons absorbing and jumping up. The energy gaps are identical, so the wavelengths coincide."
  },
@@ -2624,7 +2624,7 @@
   "back": "$2l+1$ orbitals and $2(2l+1)$ electrons, so s holds 2, p holds 6, d holds 10, and f holds 14. An entire shell n holds $2n^2$ electrons."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Hydrogen's levels are $E_n = -13.6/n^2$ eV, so ionizing a ground-state H atom costs {{c1::13.6 eV}}.",
   "back": "The levels crowd upward: $-13.6$ at $n=1$, $-3.4$ at $n=2$, $-1.51$ at $n=3$. The $n=2$ to $n=1$ drop releases 10.2 eV, deep in the ultraviolet, which is why that transition is invisible to the eye."
  },
@@ -2634,22 +2634,22 @@
   "back": "Both anomalies repeat in every period (Mg to Al, P to S). Apart from these two dips, first ionization energy rises across a period and falls down a group."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "In a labeling experiment, $^{35}S$ selectively tags {{c1::protein}} while $^{32}P$ tags {{c2::nucleic acid}}.",
   "back": "Sulfur appears in Met and Cys but not in DNA; phosphorus is in the nucleic acid backbone but not in standard amino acids. Hershey and Chase used exactly this split. Tritiated thymidine specifically labels newly replicated DNA."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "In beta-minus decay a {{c1::neutron}} converts to a proton, so Z {{c2::increases by 1}} while A is unchanged.",
   "back": "An electron and an antineutrino are ejected. Nuclei carrying too many neutrons relative to protons use beta-minus decay to move toward the belt of stability."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "In PET, an emitted positron annihilates with an electron to give {{c1::two 511 keV photons}} traveling {{c2::in opposite directions}}.",
   "back": "Detecting the back-to-back pair localizes the decay along a line, and many such lines reconstruct the image. The tracer is usually fluorine-18 on a glucose analog, so the scan maps glucose uptake and lights up tumors and metabolically active brain."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Iodine-131 treats thyroid disease because it is a {{c1::beta emitter}} and the thyroid {{c2::concentrates iodine}}.",
   "back": "Beta particles travel only millimeters, so the destructive dose lands in exactly the tissue that took up the tracer. The targeting comes from biology (the iodide transporter), not from the physics of the decay."
  },
@@ -2669,12 +2669,12 @@
   "back": "**18**\n\n$2n^{2} = 2(3)^{2} = 18$ (3s, 3p, 3d)."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "On a photoelectron spectrum, peak position gives {{c1::a subshell's binding energy}} and peak height gives {{c2::how many electrons it holds}}.",
   "back": "Core electrons appear at far higher binding energy than valence electrons, and each element's pattern is distinctive. A peak three times as tall holds three times as many electrons, so a filled p subshell towers over the s peaks of the same shell."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Photon shortcut: energy in eV equals {{c1::1240}} divided by wavelength in nm.",
   "back": "Visible light spans 400 to 700 nm, so about 1.8 to 3.1 eV, which matches valence electron transitions. UV photons carry enough energy per photon to break bonds and damage DNA; infrared photons only excite vibrations."
  },
@@ -2684,17 +2684,17 @@
   "back": "n is 1, 2, 3 and up; l runs 0 to $n-1$ (s, p, d, f); $m_l$ runs $-l$ to $+l$; $m_s$ is $+1/2$ or $-1/2$. Together the four uniquely label a single electron."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Radioactive decay rate is unaffected by {{c1::temperature, pressure, and chemical bonding}}, unlike a chemical reaction rate.",
   "back": "Decay is a nuclear process, so heating a sample or incorporating the atom into a molecule leaves the half-life unchanged. That invariance is what makes isotopes trustworthy clocks and trustworthy metabolic tracers."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Raising light intensity raises {{c1::the number of ejected electrons}} but not {{c2::their kinetic energy}}.",
   "back": "Higher intensity means more photons per second, each still carrying energy $hf$. Only raising the frequency raises the kinetic energy of the ejected electrons, which is the classic evidence that light is quantized."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Relate photon wavelength, frequency, and energy for an atomic transition.",
   "back": "$E = hf = hc/\\lambda$, so energy is inversely proportional to wavelength. A blue photon carries more energy than a red one, and hydrogen transitions landing on n = 2 produce the visible Balmer lines."
  },
@@ -2714,32 +2714,32 @@
   "back": "No two electrons in an atom share all four quantum numbers, so an orbital holds at most 2 electrons with opposite spins."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "State the photoelectric effect equation and explain the threshold frequency.",
   "back": "$KE_{max}=hf-\\Phi$. Below the threshold frequency $f_0 = \\Phi/h$ no electrons are ejected no matter how intense the light, because one photon must supply the entire work function at once."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Technetium-99m dominates nuclear imaging because it emits {{c1::gamma rays only}} with a half-life of about {{c2::6 hours}}.",
   "back": "Gamma photons are penetrating enough to escape the body and reach a detector while depositing little ionizing damage. Six hours is long enough to inject and scan, short enough to clear quickly. No alpha or beta particles means minimal patient dose."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "The {{c1::Balmer}} series is visible because it ends at $n=2$, while the {{c2::Lyman}} series ends at $n=1$ and is ultraviolet.",
   "back": "Lines within a series converge as n rises because the upper levels crowd toward zero, and the convergence limit equals the ionization energy from that lower level. Paschen, ending at $n=3$, is infrared."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "The Bohr model is quantitatively correct only for {{c1::one-electron systems}} such as H and $He^{+}$.",
   "back": "With more than one electron, electron-electron repulsion and shielding break the simple result that $E_n$ scales with $-1/n^2$. The qualitative lesson survives: levels are quantized and crowd together as n rises."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "The Heisenberg uncertainty principle states you cannot simultaneously know:",
   "back": "**Position and momentum precisely**\n\nMotivates the probabilistic orbital model."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "The strong nuclear force is {{c1::powerful but very short-range}}, which is why {{c2::large}} nuclei become unstable.",
   "back": "Proton-proton electrostatic repulsion acts across the whole nucleus, while the strong force only reaches neighboring nucleons. Big nuclei need extra neutrons for spacing, and past bismuth no nuclide is stable."
  },
@@ -2759,12 +2759,12 @@
   "back": "An orbital is a probability density region, about a 90 percent chance of finding the electron, not a path; the uncertainty principle forbids knowing position and momentum together. Radial nodes number $n-l-1$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "What does the photoelectric effect demonstrate?",
   "back": "Light is quantized: only photons with $E = h\\nu$ above the work function eject electrons. Intensity changes electron COUNT, not energy."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "What is mass defect and how does it relate to nuclear binding energy?",
   "back": "A nucleus weighs less than its separated nucleons, and the missing mass appears as binding energy through $E=mc^2$. Binding energy per nucleon peaks near iron, so fusing light nuclei and splitting heavy ones both release energy."
  },
@@ -2789,7 +2789,7 @@
   "back": "**Angular momentum quantum number (l)**\n\nThe angular momentum quantum number (l) determines the shape of an orbital: l=0 is s (spherical), l=1 is p (dumbbell), l=2 is d (cloverleaf)."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Why are atomic emission spectra discrete lines rather than a continuum?",
   "back": "Electrons occupy quantized energy levels, so a transition emits a photon carrying exactly the energy gap: $E = hf = hc/\\lambda$. An absorption spectrum shows the same pattern as dark lines against a continuous background."
  },
@@ -2809,12 +2809,12 @@
   "back": "By the Madelung $(n+l)$ rule, 4s has $n+l=4$ while 3d has 5, so 4s lies lower in the neutral atom. Once the d subshell is occupied its energy drops below 4s, which is why cations lose their 4s electrons first."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Why is a first-order half-life independent of starting amount, unlike a zero-order one?",
   "back": "For first order the rate is proportional to the amount present, so a bigger sample decays proportionally faster and the halving time is constant. For zero order the rate is fixed, so $t_{1/2}$ shrinks as the sample shrinks."
  },
  {
-  "topicSlug": "mcat-general-chemistry-atomic-structure-mcat",
+  "topicSlug": "mcat-general-chemistry-spectra-nuclear-mcat",
   "front": "Why is a gamma emitter chosen for imaging but an alpha or beta emitter for therapy?",
   "back": "Gamma photons are highly penetrating and weakly ionizing, so they exit the body to be detected with little tissue damage. Alpha and beta particles are strongly ionizing but travel a very short distance, so they destroy cells right where the isotope accumulated."
  },
@@ -2829,22 +2829,22 @@
   "back": "$Fe^{2+}$ is [Ar]$3d^6$, not [Ar]$4s^2 3d^4$. Transition metals always ionize from the highest principal quantum number first, so 4s electrons leave before 3d even though 4s filled first."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "$K_M$ is the substrate concentration giving {{c1::half of $V_{max}$}}, so a low $K_M$ means {{c2::high apparent affinity}}.",
   "back": "$K_M$ is a concentration in molar units and is independent of how much enzyme is present. $V_{max}$ is not: doubling enzyme doubles $V_{max}$ while $K_M$ holds still. Physiological substrate levels often sit near $K_M$ so rate stays responsive to supply."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "A catalyst lowers $E_a$ for the forward step. What does it do to the reverse step and to $K_{eq}$?",
   "back": "It lowers the reverse $E_a$ by an identical amount and leaves $K_{eq}$, $\\Delta G$, and $\\Delta H$ untouched. Catalysts speed the approach to equilibrium in both directions without moving its position."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "A competitive inhibitor raises {{c1::$K_M$}} while leaving {{c2::$V_{max}$}} unchanged.",
   "back": "It occupies the active site, so piling on substrate outcompetes it and full velocity is still reachable. On a Lineweaver-Burk plot the inhibited line shares the y-intercept and is steeper. Statins acting on HMG-CoA reductase are the standard example."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "A heterogeneous catalyst is one that:",
   "back": "**Is in a different phase than the reactants**\n\nA solid catalyst with gaseous reactants, as in a catalytic converter."
  },
@@ -2859,17 +2859,17 @@
   "back": "The integrated second-order form is $1/[A] = kt + 1/[A]_0$. Note the slope is positive here, unlike the negative slopes of the zero- and first-order linearizations."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "A mechanism's slow step contains an intermediate. How do you convert its rate law into an experimentally valid one?",
   "back": "Use the fast pre-equilibrium ahead of it to express the intermediate in terms of true reactants, then substitute. Intermediates cannot appear in a final rate law because their concentrations are not experimentally controlled."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "A reaction has an activation energy of 50 kJ/mol without a catalyst and 30 kJ/mol with a catalyst. By what factor does the rate increase at 310 K? (R = 8.314 J/mol·K)",
   "back": "**~2,200 times faster**\n\nUsing the Arrhenius equation ratio: $k_{2}/k_{1}$ = $e^{(Ea_{1}-Ea_{2})/RT}$ = $e^{20000/(8.314\\times 310)}$ ≈ $e^{7.76}$ ≈ 2,340. The catalyzed reaction is approximately 2,200 times faster."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "A reaction intermediate:",
   "back": "**Is produced then consumed, never appearing in the overall equation**\n\nIntermediates sit in energy wells between transition states and cancel when steps are summed."
  },
@@ -2889,32 +2889,32 @@
   "back": "$(1/2)^4 = 1/16$, roughly 6 percent. Counting half-lives is the fastest route through decay and drug-elimination items and requires no logarithms."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "An Arrhenius plot graphs $\\ln k$ against {{c1::$1/T$}} and gives a straight line of slope {{c2::$-E_a/R$}}.",
   "back": "A steeper downward slope means a larger activation energy. Two $(k, T)$ pairs suffice to solve for $E_a$ without ever knowing the pre-exponential factor $A$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "By what physical mechanism do enzymes and other catalysts actually lower $E_a$?",
   "back": "They supply an alternate pathway whose transition state is stabilized, often by binding the transition state more tightly than the substrate itself. They never push reactants uphill or add energy."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Catalytic efficiency is {{c1::$k_{cat}/K_M$}}, and the diffusion limit in $M^{-1}s^{-1}$ is about {{c2::$10^8$ to $10^9$}}.",
   "back": "An enzyme at that ceiling reacts essentially every time it encounters substrate, so no improvement in chemistry can speed it further. $k_{cat}$ is the turnover number, reactions per enzyme per second, equal to $V_{max}$ divided by total enzyme."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Collision theory says most collisions accomplish nothing. Which two filters do they have to pass?",
   "back": "Enough energy, at least $E_a$, captured by the exponential term of Arrhenius; and correct orientation, captured by the steric factor inside the prefactor A. Termolecular steps are rare precisely because three particles seldom meet at once with usable geometry."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Compare kinetic and thermodynamic products.",
   "back": "Kinetic forms fastest (lowest $E_a$), favored at low temperature. Thermodynamic is most stable, favored at high temperature with reversibility."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Distinguish homogeneous from heterogeneous catalysis with an MCAT-level example of each.",
   "back": "Homogeneous catalysts share the reactants' phase (aqueous acid catalyzing ester hydrolysis); heterogeneous ones do not (solid Pt catalyzing gas-phase hydrogenation), so their surface area governs the rate."
  },
@@ -2924,12 +2924,12 @@
   "back": "**First**\n\n$2^{1} = 2$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Enzyme rate climbs with temperature then plunges. Why does the Arrhenius picture fail above the optimum?",
   "back": "Arrhenius only captures the rising fraction of sufficiently energetic collisions. Past the optimum the enzyme denatures, so the concentration of functional catalyst collapses and rate crashes. A pH profile shows the same peaked shape for an analogous reason."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Enzymes are biological catalysts that:",
   "back": "**Lower $E_a$ without being consumed**\n\nThey accelerate forward and reverse rates equally."
  },
@@ -2954,7 +2954,7 @@
   "back": "**Depends on initial concentration**\n\n$t_{1/2} = [A]_0/(2k)$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "For an exothermic reaction, how does $E_a$ of the reverse reaction compare with $E_a$ of the forward reaction?",
   "back": "The reverse barrier is larger, by exactly the magnitude of $\\Delta H$. Products sit in a deeper energy well, so climbing back out costs more, which is why exothermic reactions are usually slow to reverse."
  },
@@ -2964,7 +2964,7 @@
   "back": "The 0.693 is $\\ln 2$. Five half-lives clear roughly 97 percent of a drug, the standard clinical benchmark both for washout and for reaching steady state on repeated dosing."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Give the Arrhenius equation.",
   "back": "$k = Ae^{-E_a/RT}$. Raising $T$ or lowering $E_a$ increases $k$."
  },
@@ -2974,37 +2974,37 @@
   "back": "$t_{1/2} = \\frac{0.693}{k}$ — independent of starting concentration."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "How can a catalyst appear in the experimental rate law when it is absent from the balanced overall equation?",
   "back": "It is consumed in an early step and regenerated later, so it cancels overall, yet it may still participate in the rate-determining step. Acid-catalyzed rate laws containing $[H^+]$ are the classic case."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "How do you distinguish an intermediate from a catalyst?",
   "back": "An intermediate is produced then consumed; a catalyst is consumed then regenerated. Neither appears in the overall equation."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "How do you extract the overall $\\Delta H$ from a reaction-coordinate diagram?",
   "back": "Take the energy of the final products minus the energy of the initial reactants; the intervening peaks are irrelevant. Equivalently, $\\Delta H = E_{a,forward} - E_{a,reverse}$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "How do you spot a catalyst versus an intermediate when reading a written-out mechanism?",
   "back": "A catalyst is consumed in an early step and regenerated later, so it appears on the left before it appears on the right. An intermediate shows the opposite order: produced first, then consumed."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "How does a catalyst speed a reaction?",
   "back": "It provides an alternate pathway with lower $E_a$. It does NOT change $\\Delta G$, $\\Delta H$, or the equilibrium position."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "In $k = Ae^{-E_a/RT}$, the exponential term represents the {{c1::fraction of collisions with enough energy}} to react.",
   "back": "The pre-exponential factor $A$ carries collision frequency and orientation requirements. Because $E_a$ sits in an exponent, a modest drop in the barrier produces an enormous jump in $k$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "In a multistep energy diagram, which step is the rate-determining step?",
   "back": "The one whose transition state lies highest above its own preceding valley, i.e. the largest activation barrier. It is not automatically the first peak, nor simply the peak with the highest absolute energy."
  },
@@ -3014,27 +3014,27 @@
   "back": "Isolating one variable lets the rate ratio expose that reactant's exponent alone. If two concentrations change at once you must solve both exponents simultaneously, which is why AAMC data tables are built to hold one fixed."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Kinetic versus thermodynamic product: which dominates at low temperature and short reaction time?",
   "back": "The kinetic product, formed fastest over the lower activation barrier. Higher temperature and longer reaction times let the system equilibrate toward the more stable thermodynamic product."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "On a Lineweaver-Burk plot the y-intercept is {{c1::$1/V_{max}$}} and the x-intercept is {{c2::$-1/K_M$}}.",
   "back": "Plotting $1/v$ against $1/[S]$ linearizes the hyperbola with slope $K_M/V_{max}$. The double reciprocal exists because $V_{max}$ is only approached asymptotically on the direct plot but can be read exactly from an intercept."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "On a Michaelis-Menten plot of v versus [S], the reaction is {{c1::first}} order at low [S] and {{c2::zero}} order at saturation.",
   "back": "At low substrate, free enzyme is abundant and rate tracks [S]; once every active site is occupied the rate plateaus at $V_{max}$ and adding substrate does nothing. The curve is a hyperbola, and the same saturation logic explains zero-order drug elimination."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "On a reaction profile, activation energy is measured from the {{c1::reactant valley}} up to the peak, not from the axis zero.",
   "back": "Each elementary step has its own barrier measured from its own starting well. Forgetting this makes the final step of an exothermic sequence look as if it has no barrier at all."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "On an energy diagram an intermediate sits at a local {{c1::minimum}} (valley) while a transition state sits at a local {{c2::maximum}} (peak).",
   "back": "Intermediates are real species with finite lifetimes that can in principle be trapped; a transition state exists for a single vibration and can never be isolated. Count peaks to count elementary steps."
  },
@@ -3044,17 +3044,17 @@
   "back": "Rate $= k[A][B]^{1/2}$ is order 1.5 overall. Orders can be fractional, zero, or even negative when a species inhibits the reaction."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Reaction order vs molecularity: which is experimental, and which applies only to an elementary step?",
   "back": "Order is experimental, read off the rate law, and may be fractional, zero, or negative. Molecularity counts the species colliding in a single elementary step and must be a small positive integer. They agree only when the step in question is elementary."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Replacing a C-H bond with C-D slows the reaction several-fold. What does that reveal about the mechanism?",
   "back": "That the C-H bond is being broken in the rate-determining step. The heavier deuterium bond has lower zero-point energy and therefore a higher barrier to break. No rate change means the bond breaks after the rate-determining step, or not at all."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Rule of thumb: near physiological temperature, reaction rate roughly {{c1::doubles}} for every {{c2::10 degrees C}} rise.",
   "back": "That $Q_{10}$ of about 2 corresponds to an activation energy near 50 kJ/mol. It is why fever accelerates metabolism and why samples go on ice to freeze biochemistry in place. Small temperature changes have outsized kinetic effects."
  },
@@ -3064,7 +3064,7 @@
   "back": "Changing concentration changes the rate but never $k$. If a passage reports that $k$ itself changed, look for a temperature change or a new catalyst, never a dilution."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "The slow step's rate law is the overall rate law directly whenever the slow step is the {{c1::first}} step of the mechanism.",
   "back": "When the rate-determining step comes first, its molecularity sets the exponents in terms of true reactants. If a fast equilibrium precedes it, you must first substitute for the intermediate."
  },
@@ -3079,22 +3079,22 @@
   "back": "The rate factor equals the concentration ratio raised to the order. A 1.4-fold rise on doubling means order one half; a rate that falls when a species is added means a negative order, i.e. inhibition. Compare only trials where one concentration changed."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Two Arrhenius plots are drawn for one reaction with and without catalyst. The catalyzed line has {{c1::the shallower slope}}.",
   "back": "Slope is $-E_a/R$, so a smaller activation energy gives a less steep line. A catalyzed reaction is therefore also less sensitive to temperature, since less of its rate rides on the exponential term."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Two reactions have identical $\\Delta G$. What determines which one is faster?",
   "back": "Only the activation energy, which is entirely independent of $\\Delta G$. A strongly spontaneous reaction can be immeasurably slow, as with diamond converting to graphite at room temperature."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "What determines the experimental rate law?",
   "back": "The rate-determining (slowest) step, plus any fast equilibria preceding it — not the balanced overall equation."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "What two conditions must a molecular collision satisfy to be productive?",
   "back": "Sufficient kinetic energy to surmount $E_a$ and correct relative orientation. The steric requirement lives inside the Arrhenius $A$ term, which is why bulky reactants react slowly despite favorable energetics."
  },
@@ -3119,17 +3119,17 @@
   "back": "At time zero the concentrations are exactly the known starting values, no product has built up to drive the reverse reaction, and product inhibition or catalyst decay has not set in. It also lets one variable be changed at a time cleanly across trials."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Why does temperature increase reaction rate?",
   "back": "The Maxwell–Boltzmann distribution shifts, so a larger fraction of collisions exceed $E_a$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Why doesn't a catalyst change the yield of an equilibrium-limited reaction?",
   "back": "It lowers forward and reverse barriers equally, so $K_{eq}$ is unchanged and only the time to reach equilibrium shortens. To change yield you must change concentration, pressure, or temperature."
  },
  {
-  "topicSlug": "mcat-general-chemistry-kinetics-mcat",
+  "topicSlug": "mcat-general-chemistry-energy-mechanisms-mcat",
   "front": "Why is the rate law of a bimolecular elementary step simply rate $= k[A][B]$?",
   "back": "For an elementary step only, molecularity equals order because the step literally requires that one collision. This is the single place where coefficients may legitimately be used as exponents."
  },
@@ -3493,12 +3493,12 @@
   "back": "$\\Pi = iMRT$. Water moves toward the compartment of higher particle concentration, and osmotic pressure is the pressure that must be applied to stop that flow. This underlies tonicity questions in physiology passages."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "A 10 mL sample of 1.0 M stock diluted to 100 mL total becomes {{c1::0.10 M}}, a {{c2::10-fold}} dilution.",
   "back": "The dilution factor is final volume over initial volume. Note that the denominator is the final total volume of solution, not the volume of solvent added to it."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "A drug is dosed at 5 mg/kg to a 70 kg adult. Set up the calculation and the conversion you will need next.",
   "back": "5 mg/kg times 70 kg gives 350 mg. To find the volume to draw, divide by the vial's concentration in mg/mL. Weight-based dosing is pure dimensional analysis: cancel kg first, then cancel mg against the concentration."
  },
@@ -3508,7 +3508,7 @@
   "back": "Moles of water, from mass lost divided by 18 g/mol. Dividing by the moles of anhydrous salt remaining gives the hydration number, as in $CuSO_4 \\cdot 5H_2O$. The phrase heat to constant mass signals that all volatile water is gone."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "A serum glucose of 90 mg/dL equals about {{c1::5 mM}}, using a molar mass of {{c2::180 g/mol}}.",
   "back": "90 mg/dL is 900 mg/L, i.e. 0.9 g/L; dividing by 180 g/mol gives 0.005 M. Clinical labs report mass per volume while chemistry needs molarity, so this one conversion shows up throughout MCAT biochemistry passages."
  },
@@ -3518,7 +3518,7 @@
   "back": "The excess reagent. Divide each reactant's moles by its coefficient; the smallest quotient identifies the limiting reagent and sets the yield. Leftover excess equals its initial moles minus what the limiting reagent consumed."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "A weak acid titrated with strong base reaches equivalence at pH {{c1::above 7}} because {{c2::the conjugate base hydrolyzes water}}.",
   "back": "Strong acid with strong base gives pH 7; weak base with strong acid gives pH below 7. What sets the pH is the species present at equivalence, not the identity of the titrant."
  },
@@ -3528,12 +3528,12 @@
   "back": "Assume a 100 g sample so mass percents become grams directly. If a ratio lands near 1.5 or 1.33, multiply every value by 2 or 3 to clear it to whole numbers."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "At the equivalence point of a titration, what quantity is equal on the two sides?",
   "back": "Moles of available $H^{+}$ equal moles of $OH^{-}$ added: $M_aV_an_a = M_bV_bn_b$, with n the protons or hydroxides per molecule. Equivalence means stoichiometric equality, which is not the same as pH 7."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Away from STP you must use {{c1::$n = PV/RT$}}; the 22.4 L per mole shortcut is valid only at {{c2::STP}}.",
   "back": "Temperature must be in kelvin and R chosen to match the pressure units. Assuming 22.4 L per mole at body temperature or at elevated pressure is a frequent error in gas stoichiometry items."
  },
@@ -3553,22 +3553,22 @@
   "back": "**5**\n\n$C_{3}H_{8} + 5O_{2} \\rightarrow 3CO_{2} + 4H_{2}O$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Define mole fraction and name where it shows up on the MCAT.",
   "back": "Mole fraction X is moles of one component divided by total moles, and all fractions sum to 1. It appears in Dalton's law of partial pressures, $P_i = X_iP_{total}$, and in Raoult's law for vapor pressure lowering."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Define normality and say when it differs from molarity.",
   "back": "Normality equals molarity times equivalents per mole. For acids and bases an equivalent is one transferable $H^{+}$ or $OH^{-}$, so 1 M $H_2SO_4$ is 2 N; in redox it counts electrons transferred. Normality makes $N_1V_1=N_2V_2$ work for polyprotic titrations."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Dissolving 0.5 mol $CaCl_2$ in 1 L gives {{c1::0.5 M}} formula units but {{c2::1.5 M}} total ions.",
   "back": "Track particles, not just formula units, whenever a question involves conductivity, colligative properties, ionic strength, or a solubility product. $CaCl_2$ dissociates into one $Ca^{2+}$ and two $Cl^{-}$."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Distinguish a spectator ion from a participant in a net ionic equation.",
   "back": "Spectators appear unchanged on both sides and are deleted; the net ionic equation keeps only species that actually change. This is why precipitation and neutralization stoichiometry is simpler than the full molecular equation suggests."
  },
@@ -3583,17 +3583,17 @@
   "back": "A food Calorie is 1 kcal, or 4184 J. Fat stores more than twice the energy per gram because its carbons are far more reduced, so oxidizing them releases more energy. Ethanol falls in between at roughly 7 kcal/g."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "For gases at the same temperature and pressure, volume ratios equal {{c1::mole ratios}}.",
   "back": "This is Avogadro's law, so gas volumes can be used directly as stoichiometric coefficients with no conversion to moles. At STP one mole of ideal gas occupies 22.4 L."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Four successive 1:10 serial dilutions leave the sample at {{c1::$10^{-4}$}} of the original concentration.",
   "back": "Dilution factors multiply rather than add. Read the wording carefully: a 1:10 dilution normally means 1 part sample plus 9 parts diluent for a tenfold total. Serial dilution is how standard curves and plate counts are built."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Give the ideal gas law and its constant.",
   "back": "$PV = nRT$ with $R = 0.0821\\ \\text{L}\\cdot\\text{atm}/(\\text{mol}\\cdot\\text{K})$ or $8.314\\ \\text{J}/(\\text{mol}\\cdot\\text{K})$."
  },
@@ -3603,12 +3603,12 @@
   "back": "$\\text{Percent yield} = \\frac{\\text{actual}}{\\text{theoretical}} \\times 100\\%$"
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Half-reactions are scaled so that {{c1::electrons lost equal electrons gained}}.",
   "back": "Multiply each half-reaction by whatever factor produces the least common multiple of the two electron counts, then cancel the electrons. Electrons never appear in the final overall balanced equation."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "How do you assign oxidation states quickly?",
   "back": "O is $-2$ (peroxides $-1$), H is $+1$ with nonmetals, free elements 0; the sum equals the species charge."
  },
@@ -3618,12 +3618,12 @@
   "back": "Assume 100 g, convert each mass to moles, divide all by the smallest, then scale to whole numbers."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "How do you find the concentration when two solutions of the same solute are mixed?",
   "back": "Add the moles contributed by each solution and divide by the total volume, assuming volumes are additive. If the two solutions instead react, run a limiting-reagent analysis first and then find the concentration of what remains."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "How do you get an unknown acid's concentration from a titration curve?",
   "back": "Read the volume at the steep midpoint of the jump, convert to moles of titrant, apply the mole ratio (doubling for a diprotic acid), then divide by the original acid volume. Use the equivalence point, never the buffer-region midpoint."
  },
@@ -3643,12 +3643,12 @@
   "back": "Only the pure fraction reacts, so multiply the sample mass by the purity fraction before converting to moles. Running it in reverse, comparing product formed to total sample mass lets you back-calculate percent purity."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "How does the ideal gas law give an unknown gas's molar mass?",
   "back": "From $PV=nRT$ with $n = m/M$, rearrange to $M = mRT/PV$, or $M = dRT/P$ when density is given. Passages frequently supply a gas density at stated conditions and expect the molar mass as an identification."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "How many equivalence points does a diprotic acid titration show, and how do the volumes relate?",
   "back": "Two, and the titrant volume to reach the second is exactly twice the volume to reach the first, since each proton consumes the same number of moles of base. Two buffer plateaus separate them."
  },
@@ -3663,17 +3663,17 @@
   "back": "Past the plateau A is in excess and the other reactant is limiting, so more A produces nothing further. The break point sits at the stoichiometric ratio, which lets you read the reaction coefficients straight off the graph."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "In a redox reaction, the oxidizing agent:",
   "back": "**Is itself reduced**\n\nIt accepts electrons from the species being oxidized."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "In an electrochemical cell, which process occurs at the cathode?",
   "back": "**Reduction**\n\nReduction always occurs at the cathode. Remember \"An Ox, Red Cat\" — Anode = Oxidation, Cathode = Reduction."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "In assigning oxidation numbers, O is normally {{c1::$-2$}} but $-1$ in peroxides, and H is {{c2::$+1$}} but $-1$ in metal hydrides.",
   "back": "Free elements are 0, monatomic ions equal their charge, F is always $-1$, and the sum of all oxidation numbers equals the overall charge of the species."
  },
@@ -3683,27 +3683,27 @@
   "back": "All carbon ends up in $CO_2$ and all hydrogen in $H_2O$, so convert those masses to moles of C and H. Oxygen is found by difference, sample mass minus the C and H masses, because combustion adds $O_2$ from outside."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "In dilute aqueous solution, 1 ppm equals {{c1::1 mg/L}}.",
   "back": "One liter of dilute aqueous solution masses about 1 kg, so one part per million by mass is 1 mg per kg, which is 1 mg per liter. Likewise 1 ppb is 1 microgram per liter. The shortcut fails in nonaqueous solvents with different density."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Milliequivalents: 1 mmol of $Ca^{2+}$ is {{c1::2 mEq}}, because equivalents count {{c2::charge}} rather than particles.",
   "back": "mEq equals mmol times the magnitude of the charge. For monovalent $Na^{+}$ or $K^{+}$ the two numbers coincide, which is why electrolyte panels can quote either unit. It is the same n-factor idea that defines normality."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Molality differs from molarity because it uses:",
   "back": "**kg of solvent, not L of solution**\n\nMolality (mol/kg solvent) is temperature-independent since mass does not expand."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Molarity is moles of solute per {{c1::liter of solution}}; molality is moles per {{c2::kilogram of solvent}}.",
   "back": "The difference matters because a solution's volume changes with temperature while solvent mass does not. In dilute aqueous solution the two values nearly coincide, since one liter of water weighs about one kilogram."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Neutralization stoichiometry is {{c1::$n_aM_aV_a = n_bM_bV_b$}}, where n counts {{c2::protons donated or accepted}}.",
   "back": "For $H_2SO_4$ against NaOH, n is 2 for the acid, so it takes twice the base volume that a naive $MV = MV$ predicts. Applying the simple form to a polyprotic acid is a classic distractor built into the answer choices."
  },
@@ -3718,17 +3718,17 @@
   "back": "With a molar mass near 64,500 g/mol, a normal 15 g/dL of hemoglobin is roughly 2.3 mM in heme sites. Cooperativity changes how readily the sites fill, but stoichiometry still caps capacity at four oxygens per tetramer."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Outline a gravimetric analysis calculation.",
   "back": "Precipitate the analyte quantitatively, then filter, dry, and weigh it. Convert precipitate mass to moles, apply the mole ratio back to the analyte, and divide by original sample mass for percent composition. The precipitate must be pure with a known formula."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Outline balancing a redox half-reaction in acidic solution.",
   "back": "Balance the main atoms, add $H_2O$ to balance oxygen, add $H^{+}$ to balance hydrogen, then add electrons to balance charge. Finally scale the two half-reactions so electrons lost equal electrons gained, and add them."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Oxidation is {{c1::loss of electrons}} and appears as {{c2::an increase in oxidation number}}.",
   "back": "The oxidizing agent is itself reduced and the reducing agent is itself oxidized. Name the agent by what it does to its partner, never by what happens to it."
  },
@@ -3738,12 +3738,12 @@
   "back": "Given a target actual mass and a stated percent yield, work backward: divide by the yield fraction to get the theoretical yield, then use the mole ratio to find the starting material required."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "State the dilution equation.",
   "back": "$M_1V_1 = M_2V_2$ — moles of solute are conserved when solvent is added."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "The 22.4 L per mole shortcut holds only at {{c1::STP}}; at body temperature one mole of gas occupies about {{c2::25.4 L}}.",
   "back": "Volume scales with absolute temperature, so $22.4 \\times (310/273)$ is about 25.4 L. A passage set at 25 degrees C gives roughly 24.5 L. Whenever conditions are not STP, go back to $V = nRT/P$ instead of the memorized number."
  },
@@ -3753,17 +3753,17 @@
   "back": "Moles of excess reagent consumed come from the limiting reagent through the balanced mole ratio. Adding more of the excess reagent cannot raise the yield, a common passage-based trap."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "To convert an acid-balanced equation to basic conditions, add {{c1::hydroxide}} to both sides to neutralize $H^{+}$, forming {{c2::water}}.",
   "back": "Add one $OH^-$ to each side for every $H^+$ present, combine them into $H_2O$, then cancel water molecules appearing on both sides. Atom and charge balance are preserved, and no free $H^{+}$ should remain in a basic-solution answer."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Water anchors: one liter of water is {{c1::1 kg}} and about {{c2::55.5 mol}}.",
   "back": "That is why molality and molarity are nearly identical for dilute aqueous solutions, and why water's concentration is treated as constant and omitted from equilibrium expressions. It also makes 1 mL of water 1 g for quick density work."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "What does percent mass per volume mean in a clinical passage?",
   "back": "Grams of solute per 100 mL of solution, so 0.9 percent saline is 0.9 g NaCl per 100 mL, or 9 g/L. Divide g/L by the molar mass to convert: 9 divided by 58.5 gives about 0.154 M NaCl."
  },
@@ -3773,12 +3773,12 @@
   "back": "Round molar masses (12 for C, 16 for O, 14 for N, 1 for H) and settle the power of ten before the digits. MCAT answer choices are usually separated by more than a factor of two, so if only one option has the right exponent the arithmetic is already done."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "What is a back titration and when is it used?",
   "back": "Add a known excess of reagent, let it fully react with a slow-reacting or insoluble analyte, then titrate the leftover excess. Analyte moles equal moles added minus moles left over. Useful when a direct endpoint would be hard to detect."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "What is the difference between molarity and molality?",
   "back": "Molarity = mol solute / L solution (temperature-dependent). Molality = mol solute / kg solvent (temperature-independent)."
  },
@@ -3798,7 +3798,7 @@
   "back": "Multiply the fractional yields: $0.8 \\times 0.5 \\times 0.5 = 0.20$, so 20 percent. Multistep yields collapse quickly, which is why passages focus on improving the single lowest-yielding step."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Which gas law combines all four variables?",
   "back": "**$PV = nRT$**\n\nThe ideal gas law encompasses the others as special cases."
  },
@@ -3808,17 +3808,17 @@
   "back": "Exact ones: balanced-equation coefficients, counted objects, and defined conversions such as 1000 mL per liter. Only measured quantities limit the answer, and the least precise measurement sets the ceiling for the whole result."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Why does making a molar solution require filling to a volumetric mark rather than adding a set solvent volume?",
   "back": "Molarity is per liter of solution, not per liter of solvent, and dissolved solute changes the total volume. Molality sidesteps the issue entirely by weighing the solvent, which is why it is used where volume changes matter."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Why is the dilution relation $M_1V_1 = M_2V_2$ valid?",
   "back": "Adding solvent changes the volume but not the number of moles of solute, and moles equal M times V. The same logic covers serial dilutions: multiply the successive dilution factors for the overall factor."
  },
  {
-  "topicSlug": "mcat-general-chemistry-stoichiometry-mcat",
+  "topicSlug": "mcat-general-chemistry-solutions-gases-mcat",
   "front": "Why must a titrant be standardized against a primary standard?",
   "back": "Solutions such as NaOH absorb atmospheric water and $CO_2$, so their concentration drifts. Titrating against a stable, high-purity, high-molar-mass solid weighed precisely gives the true molarity before it is used on unknowns."
  },
@@ -4213,12 +4213,12 @@
   "back": "GC vaporizes the sample into a carrier gas, so anything that decomposes on heating or will not vaporize is disqualified, including proteins and most sugars. HPLC keeps everything in a liquid mobile phase at ambient temperature."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "Density-gradient (isopycnic) centrifugation separates particles by {{c1::buoyant density}}, each band settling where its density matches the medium.",
   "back": "Unlike differential centrifugation, size and shape become secondary. The Meselson-Stahl experiment used a CsCl gradient exactly this way to distinguish heavy from light DNA."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "Distinguish Southern, Northern, and Western blots.",
   "back": "Southern detects **DNA**, Northern detects **RNA**, Western detects **protein** (mnemonic: SNoW DRoP). Southern and Northern probe the membrane with a labeled complementary nucleic acid; Western probes it with a labeled antibody against the target protein."
  },
@@ -4233,7 +4233,7 @@
   "back": "Add a few drops of water and watch which layer grows. Density rules of thumb can mislead once dissolved salts or solutes change the density of a phase, so the drop test is the reliable check before discarding anything."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "How does a sandwich ELISA generate a quantitative signal?",
   "back": "A capture antibody binds the antigen, a second enzyme-linked antibody binds a different epitope, and added substrate is converted to a colored product read by absorbance. Signal scales with antigen concentration."
  },
@@ -4263,12 +4263,12 @@
   "back": "Relative density decides, with water at about 1.0 g/mL. If you cannot recall which is which, adding a drop of water and watching which layer it joins settles it experimentally."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "In an assay, a {{c1::negative}} control contains everything except the variable of interest and should produce no signal.",
   "back": "A positive control uses a known active sample to confirm the assay can detect a real effect. Signal in a negative control indicates contamination or nonspecific binding and invalidates the run."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "In differential centrifugation, in what order do cellular components pellet as speed is increased?",
   "back": "Nuclei first, then mitochondria and chloroplasts, then membrane fragments and lysosomes, then ribosomes at the highest speeds. Larger and denser particles sediment at lower centrifugal force."
  },
@@ -4278,7 +4278,7 @@
   "back": "The phosphate backbone gives every fragment the same negative charge per unit length, so separation depends only on size. Shorter fragments thread through the gel matrix faster and travel farther."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "In IR, a strong sharp band near {{c1::1700}} cm$^{-1}$ signals a C=O, while a broad band across 3200-3600 signals {{c2::O-H}}.",
   "back": "IR reports functional groups, not connectivity. The alcohol O-H is broad because of hydrogen bonding; a carboxylic acid shows an even broader O-H stretch plus the carbonyl."
  },
@@ -4288,7 +4288,7 @@
   "back": "With no net charge it stops moving in the electric field and focuses into a sharp band. Two-dimensional gels run isoelectric focusing first, then SDS-PAGE perpendicular to it."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "In mass spectrometry the molecular ion peak gives the {{c1::molecular weight}}, and an M+2 peak nearly equal in height indicates {{c2::bromine}}.",
   "back": "Chlorine instead gives an M+2 about one third the height of M. Isotope patterns are read from relative peak heights, never from memorized exact masses."
  },
@@ -4328,12 +4328,12 @@
   "back": "Large proteins are excluded from the pores, travel only the space between beads, and come off first; salts and small molecules sample the full internal volume and lag behind. Exchanging buffer this way avoids dialysis."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "Southern blotting detects {{c1::DNA}}, Northern blotting detects {{c2::RNA}}, and Western blotting detects protein using antibodies.",
   "back": "All three transfer gel-separated molecules onto a membrane before probing. Only the Western uses antibodies; the two nucleic-acid blots use complementary labeled probes."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "State Beer's law.",
   "back": "$A = \\varepsilon lc$ — absorbance is linear in path length and concentration, enabling spectrophotometric quantification."
  },
@@ -4353,7 +4353,7 @@
   "back": "The two dimensions use independent properties, so proteins that co-migrate in one still resolve in the other. The result is a spot map capable of separating thousands of proteins from a single lysate."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "UV-Vis absorbance is most informative about what structural feature, and what law quantifies it?",
   "back": "Extended conjugation, which narrows the HOMO-LUMO gap and shifts absorption to longer wavelength. Beer's law, $A = \\epsilon lc$, makes absorbance linear in concentration for quantitation."
  },
@@ -4363,7 +4363,7 @@
   "back": "Boiling occurs when vapor pressure equals ambient pressure, so reducing the ambient pressure reduces the boiling point. It is the standard approach for high-boiling organic compounds."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "What does a standard curve accomplish in a quantitative assay, and what is its limitation?",
   "back": "Known concentrations calibrate signal so unknowns can be interpolated. Readings above the linear range must be diluted and rerun, because Beer's law fails at high absorbance."
  },
@@ -4388,12 +4388,12 @@
   "back": "Large molecules elute FIRST — they cannot enter the porous beads and take a shorter path."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "What key reagent makes PCR possible?",
   "back": "Taq polymerase — heat-stable, so it survives the ~95°C denaturation step of each cycle."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "What three pieces of information does a proton NMR spectrum provide?",
   "back": "Chemical shift reveals the electronic environment, since deshielding moves peaks downfield; integration gives the relative number of equivalent protons; splitting into $n+1$ peaks counts neighboring nonequivalent protons."
  },
@@ -4443,12 +4443,12 @@
   "back": "Matching $R_f$ values in separate lanes can be coincidence, and $R_f$ shifts with chamber conditions. Spotting the unknown and an authentic sample on top of one another controls for that: one round spot supports identity, two spots or an oval proves difference."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "Why is the sedimentation coefficient in Svedberg units not additive?",
   "back": "S depends on shape and mass together, not mass alone, which is why a 50S and a 30S subunit assemble into a 70S ribosome. Assuming additivity is the classic trap on this topic."
  },
  {
-  "topicSlug": "mcat-lab-methods-mcat",
+  "topicSlug": "mcat-lab-methods-spectroscopy-assays-mcat",
   "front": "Why must a spectrophotometer be blanked before a sample's absorbance is measured?",
   "back": "The blank holds solvent and reagents without analyte, so zeroing against it subtracts their absorbance and any cuvette effects. Without blanking, the measured absorbance overstates the analyte's contribution."
  },

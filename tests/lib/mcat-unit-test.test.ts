@@ -95,9 +95,11 @@ describe('gradeUnitTest', () => {
 
 describe('retakes on the real exit pools', () => {
   // A typical cycle: one B/B, one C/P, one P/S, one CARS and one survey topic.
+  // Seven sittings need 35 fresh items per topic; the gen-chem halves split in
+  // Nov 2026 hold ~25 each, so the C/P slot uses an unsplit pool.
   const PLAN = [
     'mcat-biochemistry-enzymes-kinetics-mcat',
-    'mcat-general-chemistry-acid-base-equilibrium-mcat',
+    'mcat-general-chemistry-thermodynamics-mcat',
     'mcat-psychology-behavior-disorders-mcat',
     'mcat-cars-reasoning-mcat',
     'mcat-molecular-biology-transcription-mcat',

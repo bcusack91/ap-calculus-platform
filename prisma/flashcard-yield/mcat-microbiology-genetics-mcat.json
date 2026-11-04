@@ -6,18 +6,6 @@
   "why": "Auxotroph selection is the standard passage tool for bacterial genetics experiments"
  },
  {
-  "front": "A composite transposon consists of cargo genes flanked by two {{c1::insertion sequences (IS elements)}}.",
-  "fp": "1e457a5f34b3",
-  "yield": "MEDIUM",
-  "why": "Composite transposon IS-element structure; supporting detail on how cargo moves"
- },
- {
-  "front": "A gene is inactivated by a large insertion that also confers kanamycin resistance. What element is responsible?",
-  "fp": "c317c225f7e2",
-  "yield": "HIGH",
-  "why": "Recognizing a transposon by knockout plus resistance is applied core content"
- },
- {
   "front": "A silent mutation:",
   "fp": "5854514f37eb",
   "yield": "HIGH",
@@ -72,12 +60,6 @@
   "why": "Generalized vs specialized transduction is directly asked on essentially every administration"
  },
  {
-  "front": "CRISPR-Cas is a bacterial adaptive immune system that stores fragments of past invaders as {{c1::spacers}}.",
-  "fp": "c826ce13b5b7",
-  "yield": "LOW",
-  "why": "Near-restatement of the 'What is CRISPR natively?' card in this deck"
- },
- {
   "front": "Different Hfr strains transfer different genes first, in different orders. What did this reveal about the E. coli chromosome?",
   "fp": "59160f7c3003",
   "yield": "MEDIUM",
@@ -88,12 +70,6 @@
   "fp": "3cf3d72281bd",
   "yield": "MEDIUM",
   "why": "Selectable vs screenable marker is recombinant-DNA context, secondary here"
- },
- {
-  "front": "Distinguish conservative (cut-and-paste) from replicative transposition.",
-  "fp": "e6b2d586f11c",
-  "yield": "LOW",
-  "why": "Cointegrate/resolvase mechanism is beyond AAMC scope for transposons"
  },
  {
   "front": "During meiosis, crossing over occurs in:",
@@ -114,40 +90,16 @@
   "why": "Restates the DNase-blocks-transformation card from the opposite direction"
  },
  {
-  "front": "Give three genetic consequences of a transposon inserting into or near a bacterial gene.",
-  "fp": "0f51d41cf577",
-  "yield": "MEDIUM",
-  "why": "Consequences of transposon insertion support the transposon definition card"
- },
- {
   "front": "How did Avery, MacLeod, and McCarty identify the transforming principle chemically?",
   "fp": "1dc0611ada51",
   "yield": "MEDIUM",
   "why": "Avery-MacLeod-McCarty is canonical history; the DNase logic card is the primary"
  },
  {
-  "front": "How did phage co-infection experiments (rII-style) map mutation positions within a single gene?",
-  "fp": "54076bd98f51",
-  "yield": "LOW",
-  "why": "Benzer rII fine-structure mapping is history/trivia, not tested"
- },
- {
   "front": "How do bacteria acquire antibiotic resistance genetically?",
   "fp": "33ed98d8c752",
   "yield": "ULTRA_HIGH",
   "why": "Mutation plus three HGT routes for resistance is the category's core every-year question"
- },
- {
-  "front": "How do complementation and recombination differ as explanations for wild-type progeny from two mutants?",
-  "fp": "e00f04b4ae69",
-  "yield": "MEDIUM",
-  "why": "Complementation vs recombination is second-step reasoning a rushed student can skip"
- },
- {
-  "front": "How does a restriction-modification system destroy phage DNA without cutting the bacterium's own chromosome?",
-  "fp": "13b5f54ed87e",
-  "yield": "MEDIUM",
-  "why": "Restriction-modification self-protection is useful passage context, not required"
  },
  {
   "front": "How does an F' plasmid form, and what genetic condition does it create in a recipient?",
@@ -162,34 +114,10 @@
   "why": "IS-mediated F integration is named-machinery detail behind the Hfr concept"
  },
  {
-  "front": "How does an integron accumulate and express multiple resistance genes?",
-  "fp": "024ae23597d3",
-  "yield": "LOW",
-  "why": "Integrons/attI/integrase are beyond the AAMC outline"
- },
- {
   "front": "How does replica plating demonstrate that antibiotic-resistant mutants were not induced by the drug?",
   "fp": "641d3e6ed76b",
   "yield": "HIGH",
   "why": "Replica plating (mutations precede selection) is classic AAMC experimental reasoning"
- },
- {
-  "front": "If two recessive mutations fail to complement in trans, they are almost certainly in the {{c1::same gene}}.",
-  "fp": "72aaa82c11ac",
-  "yield": "HIGH",
-  "why": "No complementation implies same gene: the core complementation inference"
- },
- {
-  "front": "In a cis-trans test, why must the cis configuration always be checked as a control?",
-  "fp": "360107774cbd",
-  "yield": "LOW",
-  "why": "Cis-control nuance of the cis-trans test is beyond what AAMC asks"
- },
- {
-  "front": "In a phage cross, wild-type recombinants appear at $0.001$ of total progeny. What map distance separates the mutations?",
-  "fp": "106ba44a73b0",
-  "yield": "LOW",
-  "why": "Phage fine-structure map-unit doubling is trivia-grade specificity"
  },
  {
   "front": "In a U-tube with a filter separating two strains, gene transfer still occurs. What does this identify, and what does it rule out?",
@@ -220,12 +148,6 @@
   "fp": "cecfd36c9f16",
   "yield": "LOW",
   "why": "Near-restatement of the interrupted-mating card"
- },
- {
-  "front": "Mutants 1 and 2 complement, 2 and 3 complement, but 1 and 3 do not. How many genes are represented?",
-  "fp": "31dc2d8361b4",
-  "yield": "HIGH",
-  "why": "Worked complementation-group counting is the reasoning pattern AAMC uses"
  },
  {
   "front": "Natural transformation requires the recipient to be {{c1::competent}}, expressing dedicated DNA-uptake machinery.",
@@ -270,46 +192,16 @@
   "why": "Luria-Delbruck eponym is low-yield in all three microbiology lessons (owner, 2026-10-29)"
  },
  {
-  "front": "The number of complementation groups in a mutant screen equals the number of {{c1::genes}} identified in the pathway.",
-  "fp": "aadc66ccfb03",
-  "yield": "LOW",
-  "why": "Restates the complementation-group cards already in the deck"
- },
- {
   "front": "Transduction moves resistance genes without cell contact; transformation moves them via {{c1::free DNA released from lysed cells}}.",
   "fp": "91d1528b6f68",
   "yield": "ULTRA_HIGH",
   "why": "Three HGT routes contrasted by mechanism is tested essentially every year"
  },
  {
-  "front": "Transposable elements were first discovered by {{c1::Barbara McClintock}}, in maize, before their bacterial roles were known.",
-  "fp": "afac69ee554e",
-  "yield": "LOW",
-  "why": "Discovery/history fact; who found transposons is never tested"
- },
- {
-  "front": "Two recessive mutants with the same phenotype are combined in one cell and the phenotype is wild-type. What do you conclude?",
-  "fp": "9483debc1f48",
-  "yield": "HIGH",
-  "why": "Wild-type in trans means different genes: basic complementation inference"
- },
- {
-  "front": "What are transposons?",
-  "fp": "01f7b4e254c6",
-  "yield": "ULTRA_HIGH",
-  "why": "Transposon definition is named core content tested every year"
- },
- {
   "front": "What did Griffith's experiment show when heat-killed smooth (S) pneumococci were mixed with live rough (R) cells?",
   "fp": "9e8ac2366985",
   "yield": "HIGH",
   "why": "Griffith's experiment is the canonical transformation example in passages"
- },
- {
-  "front": "What DNA sequence features mark the two ends of a transposon and the site where it landed?",
-  "fp": "c6e579c41a73",
-  "yield": "LOW",
-  "why": "Inverted repeats / target-site duplication is structural detail beyond AAMC"
  },
  {
   "front": "What does a high co-transformation frequency for two markers imply, and why?",
@@ -336,12 +228,6 @@
   "why": "Competence is the named prerequisite for transformation"
  },
  {
-  "front": "What is the CRISPR system natively?",
-  "fp": "20e51ab79db0",
-  "yield": "MEDIUM",
-  "why": "CRISPR as bacterial adaptive immunity is plausible passage context"
- },
- {
   "front": "Why do R plasmids spread multidrug resistance faster than chromosomal mutation ever could?",
   "fp": "3cd8331c7ca4",
   "yield": "MEDIUM",
@@ -364,17 +250,5 @@
   "fp": "b182654b404b",
   "yield": "ULTRA_HIGH",
   "why": "Why Hfr recipients stay F- is the classic Hfr vs F+ discriminator, tested every year"
- },
- {
-  "front": "Why is a complementation test uninterpretable for a dominant mutation?",
-  "fp": "cec1c24fd7b0",
-  "yield": "LOW",
-  "why": "Dominant-mutation caveat to complementation is beyond AAMC scope"
- },
- {
-  "front": "Why were F' merodiploids essential for analyzing the lac operon?",
-  "fp": "370b1373b118",
-  "yield": "MEDIUM",
-  "why": "F' merodiploids in lac operon analysis; supporting detail for cis/trans reasoning"
  }
 ]

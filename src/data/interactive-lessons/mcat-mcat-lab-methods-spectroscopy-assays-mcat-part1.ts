@@ -1,12 +1,14 @@
-export const mcatLabMethodsPart3Data = {
-  topicSlug: 'mcat-lab-methods-mcat',
+export const mcatSpectroscopyAssaysPart1Data = {
+  topicSlug: 'mcat-lab-methods-spectroscopy-assays-mcat',
   sections: [
     {
       id: 'lm3-intro',
       type: 'text' as const,
-      content: `# Laboratory Methods & Separations
+      content: `# Lab Methods: Centrifugation, Spectroscopy & Assays
 
-**Part 3 of 5 — Centrifugation (Separating by Density & Size)**
+**Part 1 of 3 — Centrifugation (Separating by Density & Size)**
+
+**Where this fits.** The *Lab Methods: Separations & Electrophoresis* lesson separated molecules by polarity, charge and size on columns and gels. This lesson adds the other bench techniques: centrifugation for particles and organelles, spectroscopy and Beer's law for measuring what you isolated, and the blots, PCR and ELISA that detect specific molecules.
 
 Centrifugation spins samples to generate a force that drives denser/larger particles outward (to the bottom = pellet). The rest stays in the **supernatant**.
 
@@ -125,7 +127,7 @@ $$= 8944 \\times g \\approx 8.9 \\times 10^{3} \\; g$$
     {
       id: 'lm3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 3
+      content: `### Key Takeaways — Part 1
 
 - **Sedimentation rate.** Larger particles, and particles denser than the medium, sediment faster.
 - **Differential pelleting order.** Rising speeds pellet nuclei, then mitochondria, then microsomes, then ribosomes.

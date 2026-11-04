@@ -1,12 +1,14 @@
-export const mcatEmbryoPart4Data = {
-  topicSlug: 'mcat-anatomy-physiology-embryology-mcat',
+export const mcatOrganogenesisPart2Data = {
+  topicSlug: 'mcat-anatomy-physiology-organogenesis-mcat',
   sections: [
     {
       id: 'emb4-intro',
       type: 'text' as const,
-      content: `# Embryology — Deep Dive
+      content: `# Organogenesis, Fetal Circulation & Developmental Mechanisms
 
-**Part 4 of 4 — MCAT Integration: Potency, Induction & Experimental Embryology**
+**Part 2 of 2 — MCAT Integration: Potency, Induction & Experimental Embryology**
+
+This part builds on the *Early Embryology: Fertilization to Germ Layers* lesson: the germ layers, notochord and neural tube it traced are now the raw material for asking how a cell's fate gets fixed.
 
 ### The Potency Hierarchy
 
@@ -44,7 +46,7 @@ A **gastrula** is an embryo undergoing gastrulation, the stage when cells move i
 
 ### Morphogens: Concentration Encodes Fate
 
-A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)**, secreted by the notochord and the neural tube's ventral floor plate, patterns the tube's ventral side (Shh also patterns the limb); **BMPs** from the overlying surface ectoderm pattern its dorsal side. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
+A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)**, secreted by the notochord and the ventral floor plate of the neural tube (the embryo's precursor of the brain and spinal cord), patterns the tube's ventral side (Shh also patterns the limb); **BMPs** from the overlying surface ectoderm pattern its dorsal side. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
 
 <!-- yield:low -->
 - This threshold picture is nicknamed the **"French flag" model**: one gradient read as three stripes.
@@ -63,7 +65,7 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
 
 ### Regulative vs. Mosaic Development — Closing the Loop
 
-- **Regulative** development (indeterminate cleavage, in which early blastomeres are not yet committed, e.g., mammals): early cells can compensate — remove a blastomere and the rest regulate to form a whole embryo; split the embryo and get **monozygotic twins**. Fates are assigned largely by SIGNALING (conditional specification).
+- **Regulative** development (indeterminate cleavage, in which the blastomeres made by the zygote's first rapid divisions are not yet committed, e.g., mammals): early cells can compensate — remove a blastomere and the rest regulate to form a whole embryo; split the embryo and get **monozygotic twins**. Fates are assigned largely by SIGNALING (conditional specification).
 - **Mosaic** development (determinate cleavage, e.g., tunicates): fates are fixed early by localized cytoplasmic determinants; remove a blastomere and its structures are simply MISSING. No twinning by splitting.`
     },
     {
@@ -142,7 +144,7 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
     {
       id: 'emb4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 4
+      content: `### Key Takeaways — Part 2
 
 - **Potency only narrows.** Totipotent cells also make trophoblast; pluripotent ICM/ES cells make all three germ layers; multipotent, one family.
 - **Determination, then differentiation.** Commitment is invisible and tested by transplant; differentiation is the visible build-out that follows.

@@ -4,9 +4,9 @@ export const mcatStoichiometryPart1Data = {
     {
       id: 'st1-intro',
       type: 'text' as const,
-      content: `# Stoichiometry & Chemical Reactions
+      content: `# Stoichiometry: Moles & Reactions
 
-**Part 1 of 5 — Moles, Molar Mass & Avogadro's Number**
+**Part 1 of 2 — Moles, Molar Mass & Avogadro's Number**
 
 Stoichiometry is the quantitative backbone of chemistry. Every MCAT general chemistry calculation—concentration, yield, titration, gas laws—relies on accurate mole conversions.
 

@@ -4,9 +4,9 @@ export const mcatAcidBaseEqPart2Data = {
     {
       id: 'ab2-intro',
       type: 'text' as const,
-      content: `# Acid-Base Chemistry & Equilibrium
+      content: `# Acids, Bases & Buffers
 
-**Part 2 of 5 — $K_a$, $K_b$, Henderson-Hasselbalch & Percent Dissociation**
+**Part 2 of 3 —$K_a$, $K_b$, Henderson-Hasselbalch & Percent Dissociation**
 
 ## The Acid Dissociation Constant $K_a$
 

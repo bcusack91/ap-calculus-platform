@@ -4,9 +4,9 @@ export const mcatLabMethodsPart2Data = {
     {
       id: 'lm2-intro',
       type: 'text' as const,
-      content: `# Laboratory Methods & Separations
+      content: `# Lab Methods: Separations & Electrophoresis
 
-**Part 2 of 5 — Electrophoresis (Separating by Size & Charge)**
+**Part 2 of 2 —Electrophoresis (Separating by Size & Charge)**
 
 Electrophoresis drives charged molecules through a gel matrix in an electric field. Migration depends on **charge**, **size**, and the gel's sieving.
 
@@ -123,7 +123,9 @@ $$\\text{At pH} = \\text{pI}, \\quad \\text{net charge} = 0 \\Rightarrow \\text{
 - **Lower band = larger.** A band lower on the gel traveled farther, so it is the SMALLER molecule.
 - **Negative to the cathode.** DNA and SDS-coated proteins are net negative and always run to the positive anode.
 - **Native gel = size only.** Without SDS, a native gel separates by size, shape and charge together.
-- **Same height, same protein.** Two 2D spots at one height share a size but differ in pI, as a phosphorylated isoform does.`
+- **Same height, same protein.** Two 2D spots at one height share a size but differ in pI, as a phosphorylated isoform does.
+
+**Next up:** the *Lab Methods: Centrifugation, Spectroscopy & Assays* lesson — centrifugation, UV-Vis, IR, NMR and mass spectrometry with Beer's law, and the blots, PCR and ELISA that detect what a separation isolates.`
     }
   ]
 };

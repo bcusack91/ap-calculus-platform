@@ -1,0 +1,242 @@
+[
+ {
+  "front": "$K_M$ is the substrate concentration giving {{c1::half of $V_{max}$}}, so a low $K_M$ means {{c2::high apparent affinity}}.",
+  "fp": "6609b8ac7550",
+  "yield": "MEDIUM",
+  "why": "KM definition and enzyme independence; biochem content covered in the enzymes deck"
+ },
+ {
+  "front": "A catalyst lowers $E_a$ for the forward step. What does it do to the reverse step and to $K_{eq}$?",
+  "fp": "74b5389baff7",
+  "yield": "HIGH",
+  "why": "Catalyst lowers reverse Ea equally and leaves Keq; commonly tested nuance"
+ },
+ {
+  "front": "A competitive inhibitor raises {{c1::$K_M$}} while leaving {{c2::$V_{max}$}} unchanged.",
+  "fp": "52172a8da166",
+  "yield": "MEDIUM",
+  "why": "Competitive inhibitor raises KM; biochem content covered in the enzymes deck"
+ },
+ {
+  "front": "A heterogeneous catalyst is one that:",
+  "fp": "d3af8fbdaaac",
+  "yield": "LOW",
+  "why": "Heterogeneous catalyst definition; restated with examples on another card"
+ },
+ {
+  "front": "A mechanism's slow step contains an intermediate. How do you convert its rate law into an experimentally valid one?",
+  "fp": "a44bf9af5c00",
+  "yield": "MEDIUM",
+  "why": "Pre-equilibrium substitution for intermediates; secondary mechanism skill"
+ },
+ {
+  "front": "A reaction has an activation energy of 50 kJ/mol without a catalyst and 30 kJ/mol with a catalyst. By what factor does the rate increase at 310 K? (R = 8.314 J/mol·K)",
+  "fp": "226dc2471460",
+  "yield": "MEDIUM",
+  "why": "Arrhenius ratio for a 20 kJ/mol drop; the exponential arithmetic is beyond exam calculations"
+ },
+ {
+  "front": "A reaction intermediate:",
+  "fp": "545f9ffeed49",
+  "yield": "HIGH",
+  "why": "Intermediate is produced then consumed; common definition"
+ },
+ {
+  "front": "An Arrhenius plot graphs $\\ln k$ against {{c1::$1/T$}} and gives a straight line of slope {{c2::$-E_a/R$}}.",
+  "fp": "83c97f3e8467",
+  "yield": "ULTRA_HIGH",
+  "why": "Arrhenius plot ln k vs 1/T slope -Ea/R; recurring graph-interpretation item"
+ },
+ {
+  "front": "By what physical mechanism do enzymes and other catalysts actually lower $E_a$?",
+  "fp": "5023eae7f76f",
+  "yield": "MEDIUM",
+  "why": "Catalysts stabilize the transition state; supporting mechanism"
+ },
+ {
+  "front": "Catalytic efficiency is {{c1::$k_{cat}/K_M$}}, and the diffusion limit in $M^{-1}s^{-1}$ is about {{c2::$10^8$ to $10^9$}}.",
+  "fp": "bac7273b02e0",
+  "yield": "LOW",
+  "why": "kcat/KM diffusion limit numbers; off-outline trivia"
+ },
+ {
+  "front": "Collision theory says most collisions accomplish nothing. Which two filters do they have to pass?",
+  "fp": "d3ab10fbf5b1",
+  "yield": "HIGH",
+  "why": "Energy and orientation requirements of collision theory; commonly tested"
+ },
+ {
+  "front": "Compare kinetic and thermodynamic products.",
+  "fp": "4a056c9c554e",
+  "yield": "HIGH",
+  "why": "Kinetic vs thermodynamic product; commonly tested in gen chem and orgo"
+ },
+ {
+  "front": "Distinguish homogeneous from heterogeneous catalysis with an MCAT-level example of each.",
+  "fp": "ab4bd404643b",
+  "yield": "MEDIUM",
+  "why": "Homogeneous vs heterogeneous catalysis examples; secondary"
+ },
+ {
+  "front": "Enzyme rate climbs with temperature then plunges. Why does the Arrhenius picture fail above the optimum?",
+  "fp": "0f09a9cb1763",
+  "yield": "MEDIUM",
+  "why": "Enzyme rate crashes past optimum from denaturation; biochem-flavored nuance"
+ },
+ {
+  "front": "Enzymes are biological catalysts that:",
+  "fp": "57665c4c2724",
+  "yield": "MEDIUM",
+  "why": "Enzymes lower Ea without being consumed; restates the catalyst cards in enzyme terms"
+ },
+ {
+  "front": "For an exothermic reaction, how does $E_a$ of the reverse reaction compare with $E_a$ of the forward reaction?",
+  "fp": "7f563ce9974c",
+  "yield": "HIGH",
+  "why": "Reverse Ea exceeds forward Ea by dH for exothermic; common diagram reasoning"
+ },
+ {
+  "front": "Give the Arrhenius equation.",
+  "fp": "fe55715b486a",
+  "yield": "ULTRA_HIGH",
+  "why": "Arrhenius equation k = A e^(-Ea/RT); foundational and tested every year"
+ },
+ {
+  "front": "How can a catalyst appear in the experimental rate law when it is absent from the balanced overall equation?",
+  "fp": "745a321bb79e",
+  "yield": "MEDIUM",
+  "why": "Catalyst can appear in the rate law; secondary nuance"
+ },
+ {
+  "front": "How do you distinguish an intermediate from a catalyst?",
+  "fp": "fd808ceab8e6",
+  "yield": "HIGH",
+  "why": "Intermediate vs catalyst distinction; commonly tested"
+ },
+ {
+  "front": "How do you extract the overall $\\Delta H$ from a reaction-coordinate diagram?",
+  "fp": "58f6d4358840",
+  "yield": "ULTRA_HIGH",
+  "why": "dH from reaction-coordinate diagram; read off nearly every energy diagram question"
+ },
+ {
+  "front": "How do you spot a catalyst versus an intermediate when reading a written-out mechanism?",
+  "fp": "7467d3324baa",
+  "yield": "LOW",
+  "why": "Restates the intermediate vs catalyst card"
+ },
+ {
+  "front": "How does a catalyst speed a reaction?",
+  "fp": "911035bef6bd",
+  "yield": "ULTRA_HIGH",
+  "why": "Catalyst lowers Ea without changing dG or equilibrium; tested every administration"
+ },
+ {
+  "front": "In $k = Ae^{-E_a/RT}$, the exponential term represents the {{c1::fraction of collisions with enough energy}} to react.",
+  "fp": "8c5785b8e283",
+  "yield": "HIGH",
+  "why": "Exponential term is fraction of sufficiently energetic collisions; common Arrhenius reasoning"
+ },
+ {
+  "front": "In a multistep energy diagram, which step is the rate-determining step?",
+  "fp": "85b029013454",
+  "yield": "ULTRA_HIGH",
+  "why": "Rate-determining step has the largest barrier; core diagram reasoning every year"
+ },
+ {
+  "front": "Kinetic versus thermodynamic product: which dominates at low temperature and short reaction time?",
+  "fp": "8c707718e6bd",
+  "yield": "LOW",
+  "why": "Restates the kinetic vs thermodynamic product card"
+ },
+ {
+  "front": "On a Lineweaver-Burk plot the y-intercept is {{c1::$1/V_{max}$}} and the x-intercept is {{c2::$-1/K_M$}}.",
+  "fp": "b0cb0dc01301",
+  "yield": "MEDIUM",
+  "why": "Lineweaver-Burk intercepts; biochem content covered in the enzymes deck"
+ },
+ {
+  "front": "On a Michaelis-Menten plot of v versus [S], the reaction is {{c1::first}} order at low [S] and {{c2::zero}} order at saturation.",
+  "fp": "e3a2c5fdad1f",
+  "yield": "HIGH",
+  "why": "Michaelis-Menten first order at low [S], zero at saturation; links order to enzyme kinetics"
+ },
+ {
+  "front": "On a reaction profile, activation energy is measured from the {{c1::reactant valley}} up to the peak, not from the axis zero.",
+  "fp": "90cf3ce49fd2",
+  "yield": "HIGH",
+  "why": "Ea measured from the reactant valley; common diagram-reading step"
+ },
+ {
+  "front": "On an energy diagram an intermediate sits at a local {{c1::minimum}} (valley) while a transition state sits at a local {{c2::maximum}} (peak).",
+  "fp": "da2ff0e169cd",
+  "yield": "ULTRA_HIGH",
+  "why": "Intermediate at valley, transition state at peak; foundational diagram reading"
+ },
+ {
+  "front": "Reaction order vs molecularity: which is experimental, and which applies only to an elementary step?",
+  "fp": "5f234eeea53a",
+  "yield": "HIGH",
+  "why": "Order (experimental) vs molecularity (elementary step); commonly tested"
+ },
+ {
+  "front": "Replacing a C-H bond with C-D slows the reaction several-fold. What does that reveal about the mechanism?",
+  "fp": "b25e0012b7e9",
+  "yield": "LOW",
+  "why": "Kinetic isotope effect; off-outline mechanism detail"
+ },
+ {
+  "front": "Rule of thumb: near physiological temperature, reaction rate roughly {{c1::doubles}} for every {{c2::10 degrees C}} rise.",
+  "fp": "ac022bf55e33",
+  "yield": "MEDIUM",
+  "why": "Q10 rule of thumb; supporting physiology-flavored detail"
+ },
+ {
+  "front": "The slow step's rate law is the overall rate law directly whenever the slow step is the {{c1::first}} step of the mechanism.",
+  "fp": "5a2971e3947b",
+  "yield": "HIGH",
+  "why": "Slow first step gives the rate law directly; common mechanism question"
+ },
+ {
+  "front": "Two Arrhenius plots are drawn for one reaction with and without catalyst. The catalyzed line has {{c1::the shallower slope}}.",
+  "fp": "e968a831e89b",
+  "yield": "MEDIUM",
+  "why": "Catalyzed Arrhenius plot has shallower slope; second-tier graph detail"
+ },
+ {
+  "front": "Two reactions have identical $\\Delta G$. What determines which one is faster?",
+  "fp": "5f9c38667e8b",
+  "yield": "ULTRA_HIGH",
+  "why": "dG does not set rate, Ea does; kinetics vs thermodynamics distinction every year"
+ },
+ {
+  "front": "What determines the experimental rate law?",
+  "fp": "baeb6eae53a4",
+  "yield": "ULTRA_HIGH",
+  "why": "Rate law set by the rate-determining step; foundational every year"
+ },
+ {
+  "front": "What two conditions must a molecular collision satisfy to be productive?",
+  "fp": "1a13b7269531",
+  "yield": "LOW",
+  "why": "Restates the collision-theory requirements card"
+ },
+ {
+  "front": "Why does temperature increase reaction rate?",
+  "fp": "6ecdd27f8142",
+  "yield": "HIGH",
+  "why": "Temperature raises the fraction of collisions above Ea; commonly tested"
+ },
+ {
+  "front": "Why doesn't a catalyst change the yield of an equilibrium-limited reaction?",
+  "fp": "d3f02470d0e2",
+  "yield": "MEDIUM",
+  "why": "Catalyst does not change yield; restates Keq unchanged in yield terms"
+ },
+ {
+  "front": "Why is the rate law of a bimolecular elementary step simply rate $= k[A][B]$?",
+  "fp": "201fb6fda1e2",
+  "yield": "HIGH",
+  "why": "Elementary bimolecular step rate = k[A][B]; commonly tested"
+ }
+]

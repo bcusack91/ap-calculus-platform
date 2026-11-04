@@ -1,12 +1,12 @@
-export const mcatAtomicStructurePart4Data = {
-  topicSlug: 'mcat-general-chemistry-atomic-structure-mcat',
+export const mcatSpectraNuclearPart2Data = {
+  topicSlug: 'mcat-general-chemistry-spectra-nuclear-mcat',
   sections: [
     {
       id: 'as4-intro',
       type: 'text' as const,
-      content: `# Atomic Structure & Periodic Trends
+      content: `# Atomic Spectra & Nuclear Chemistry
 
-**Part 4 of 5 — Nuclear Chemistry: Radioactive Decay & Half-Life**
+**Part 2 of 3 — Nuclear Chemistry: Radioactive Decay & Half-Life**
 
 Nuclear chemistry is a distinct but related MCAT topic. You need to recognize decay types, balance nuclear equations, and calculate remaining quantity using half-life.
 

@@ -1,13 +1,15 @@
 // Authored 2026-10-29 by Opus 5.5 — PENDING FABLE REVIEW
-export const mcatMicrobialGeneticsPart3Data = {
-  topicSlug: 'mcat-microbiology-genetics-mcat',
+export const mcatMicrobialGeneticsRegulationPart1Data = {
+  topicSlug: 'mcat-microbiology-genetics-regulation-mcat',
   sections: [
     {
       id: 'mg3-intro',
       type: 'text' as const,
-      content: `# Microbial Genetics
+      content: `# Mobile Elements, Gene Regulation & Viral Genetics
 
-**Part 3 of 4 — Mobile Elements, Defense & Regulation**
+**Part 1 of 2 — Mobile Elements, Defense & Regulation**
+
+**Where this fits.** The *Bacterial Genetics & Gene Transfer* lesson covered the bacterial genome, mutation and selection, and the three routes of horizontal transfer between cells. This lesson moves DNA within one cell (transposons), shows how bacteria defend against foreign DNA (restriction-modification and CRISPR) and how they regulate genes (operons), then turns to the genetics of viruses.
 
 ### Transposable Elements ("Jumping Genes")
 
@@ -28,7 +30,7 @@ Transposons are DNA segments that move from one site to another **within** a cel
 
 1. **Insertional inactivation:** landing in a coding sequence knocks the gene out. Transposons are a natural mutagen, and labs use them for insertional mutagenesis, since the resistance marker makes every insertion selectable.
 2. **Polar effects:** an insertion in an upstream gene of an operon can silence the downstream genes of the same polycistronic transcript, though those genes are intact.
-3. **Mobilization:** a resistance gene can move from the chromosome onto a conjugative plasmid, then leave the cell by conjugation.
+3. **Mobilization:** a resistance gene can move from the chromosome onto a conjugative plasmid, then leave the cell by conjugation (direct transfer to a recipient through a pilus bridge).
 4. **Rearrangement:** recombination between two copies of an IS element can delete, invert or fuse DNA, and IS homology is how the F plasmid integrates into the chromosome to form an Hfr (high-frequency-of-recombination) donor, which transfers chromosomal genes by conjugation.
 
 ### Restriction-Modification: Innate Defense
@@ -198,7 +200,7 @@ A cell that cannot make cAMP (no adenylyl cyclase) expresses lac poorly even wit
     {
       id: 'mg3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 3
+      content: `### Key Takeaways — Part 1
 
 - **Mobile DNA.** Transposons move DNA within one cell; composite ones carry cargo, often resistance, between two IS elements.
 - **Innate vs. adaptive defense.** Restriction enzymes cut unmethylated copies of their recognition sequence; CRISPR guides Cas to one remembered invader.

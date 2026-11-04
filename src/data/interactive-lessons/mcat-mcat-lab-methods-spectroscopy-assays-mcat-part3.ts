@@ -1,12 +1,12 @@
-export const mcatLabMethodsPart5Data = {
-  topicSlug: 'mcat-lab-methods-mcat',
+export const mcatSpectroscopyAssaysPart3Data = {
+  topicSlug: 'mcat-lab-methods-spectroscopy-assays-mcat',
   sections: [
     {
       id: 'lm5-intro',
       type: 'text' as const,
-      content: `# Laboratory Methods & Separations
+      content: `# Lab Methods: Centrifugation, Spectroscopy & Assays
 
-**Part 5 of 5 — Molecular & Immunological Assays + Review**
+**Part 3 of 3 —Molecular & Immunological Assays + Review**
 
 This part covers the detection/amplification methods that follow separations, plus a method-selection review.
 
@@ -40,6 +40,8 @@ after $n$ cycles (ideal doubling). Steps per cycle:
 - Signal (color/absorbance via Beer's law) ∝ amount of antigen.
 
 ### Method-Selection Cheat Sheet
+
+SDS-PAGE (a gel that sorts proteins by size) and affinity chromatography (a column that binds one tagged molecule) come from the *Lab Methods: Separations & Electrophoresis* lesson.
 
 | Goal | Best method |
 |------|-------------|
@@ -117,12 +119,12 @@ after $n$ cycles (ideal doubling). Steps per cycle:
 
 **(a) Slope.** The standards are linear: 0.02 absorbance units per ng/mL (0.2/10).
 
-**(b) Patient.** With the slope of 0.02 from (a): $c = 0.5 / 0.02 = 25$ ng/mL. This mirrors the Beer's-law standard curve in Part 4 of this lesson (Beer's law): ELISA turns antigen amount into a colored signal read by a spectrophotometer.`
+**(b) Patient.** With the slope of 0.02 from (a): $c = 0.5 / 0.02 = 25$ ng/mL. This mirrors the Beer's-law standard curve in Part 2 of this lesson: ELISA turns antigen amount into a colored signal read by a spectrophotometer.`
     },
     {
       id: 'lm5-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 5 (and Lesson Review)
+      content: `### Key Takeaways — Part 3 (and Lesson Review)
 
 - **SNoW DRoP.** Southern blots detect DNA, Northern blots RNA, and Western blots protein.
 - **PCR doubles each cycle.** Copies $= N_{0} \\times 2^{n}$ after $n$ denature, anneal and extend cycles; RT-PCR starts from RNA.

@@ -1,12 +1,14 @@
-export const mcatStoichiometryPart3Data = {
-  topicSlug: 'mcat-general-chemistry-stoichiometry-mcat',
+export const mcatSolutionsGasesPart1Data = {
+  topicSlug: 'mcat-general-chemistry-solutions-gases-mcat',
   sections: [
     {
       id: 'st3-intro',
       type: 'text' as const,
-      content: `# Stoichiometry & Chemical Reactions
+      content: `# Solutions, Gases & Electrolysis
 
-**Part 3 of 5 — Solutions: Molarity, Dilution & Solution Stoichiometry**
+**Part 1 of 3 — Solutions: Molarity, Dilution & Solution Stoichiometry**
+
+**Where this fits.** The *Stoichiometry: Moles & Reactions* lesson built the mole conversions and the balanced-equation mole ratio (moles of one substance → moles of another, using the equation's coefficients). This lesson carries that same bookkeeping into solutions, gases and electrolysis.
 
 ## Concentration Units
 
@@ -218,7 +220,7 @@ These rules are tendencies. When concentrations and $K_{sp}$ are given, compute 
     {
       id: 'st3-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 3
+      content: `## Key Takeaways — Part 1
 
 - **Molarity and dilution.** $M = n/V$ with $V$ in litres; dilution keeps the moles fixed, so $M_1V_1 = M_2V_2$.
 - **Solution stoichiometry.** Get moles from $n = MV$, carry them across the balanced equation's ratio, then convert back.

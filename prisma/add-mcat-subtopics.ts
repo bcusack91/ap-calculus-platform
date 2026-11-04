@@ -20,11 +20,15 @@ const mcatSubtopics: ParentSeed[] = [
   {
     parentSlug: 'mcat-general-chemistry-mcat',
     subtopics: [
-      { slug: 'mcat-general-chemistry-atomic-structure-mcat', title: 'Atomic Structure & Periodic Trends', description: 'Electron configuration, periodic trends, and atomic properties' },
-      { slug: 'mcat-general-chemistry-stoichiometry-mcat', title: 'Stoichiometry & Chemical Reactions', description: 'Balancing equations, mole conversions, limiting reactants, and yields' },
+      { slug: 'mcat-general-chemistry-atomic-structure-mcat', title: 'Atomic Structure & Periodic Trends', description: 'Quantum numbers, electron configuration, isotopes, and periodic trends' },
+      { slug: 'mcat-general-chemistry-spectra-nuclear-mcat', title: 'Atomic Spectra & Nuclear Chemistry', description: 'Bohr model and spectra, photoelectric effect, PES, radioactive decay, and half-life' },
+      { slug: 'mcat-general-chemistry-stoichiometry-mcat', title: 'Stoichiometry: Moles & Reactions', description: 'Mole conversions, formulas, limiting reactants, yields, and reaction types' },
+      { slug: 'mcat-general-chemistry-solutions-gases-mcat', title: 'Solutions, Gases & Electrolysis', description: 'Molarity, dilution, colligative properties, net ionic equations, gas laws, and electrolysis' },
       { slug: 'mcat-general-chemistry-thermodynamics-mcat', title: 'Thermodynamics', description: 'Enthalpy, entropy, Gibbs free energy, and spontaneity' },
-      { slug: 'mcat-general-chemistry-kinetics-mcat', title: 'Chemical Kinetics', description: 'Rate laws, reaction mechanisms, activation energy, and catalysts' },
-      { slug: 'mcat-general-chemistry-acid-base-equilibrium-mcat', title: 'Acid-Base & Equilibrium', description: 'pH, buffers, Ka/Kb, Le Chatelier, and solubility equilibria' }
+      { slug: 'mcat-general-chemistry-kinetics-mcat', title: 'Kinetics: Rate Laws & Half-Lives', description: 'Rate laws, reaction order, initial rates, integrated rate laws, and half-lives' },
+      { slug: 'mcat-general-chemistry-energy-mechanisms-mcat', title: 'Kinetics: Energy, Catalysis & Mechanisms', description: 'Activation energy, Arrhenius, collision theory, mechanisms, rate-determining step, and catalysis' },
+      { slug: 'mcat-general-chemistry-acid-base-equilibrium-mcat', title: 'Acids, Bases & Buffers', description: 'pH and pOH, strong vs. weak acids, Ka/Kb, Henderson-Hasselbalch, and buffers' },
+      { slug: 'mcat-general-chemistry-titrations-equilibrium-mcat', title: 'Titrations, Equilibrium & Solubility', description: 'Titration curves, indicators, equilibrium constants, Le Chatelier, and solubility equilibria' }
     ]
   },
   {
@@ -146,7 +150,8 @@ const mcatSubtopics: ParentSeed[] = [
       { slug: 'mcat-anatomy-physiology-musculoskeletal-mcat', title: 'Musculoskeletal System', description: 'Muscle contraction, bone physiology, and movement' },
       { slug: 'mcat-anatomy-physiology-reproductive-mcat', title: 'Reproductive System', description: 'Gamete development, hormonal cycles, and reproduction' },
       { slug: 'mcat-anatomy-physiology-sensory-mcat', title: 'Sensory Systems', description: 'Vision, hearing, balance, and sensory integration' },
-      { slug: 'mcat-anatomy-physiology-embryology-mcat', title: 'Embryology & Development', description: 'Early development stages and tissue differentiation' }
+      { slug: 'mcat-anatomy-physiology-embryology-mcat', title: 'Early Embryology: Fertilization to Germ Layers', description: 'Fertilization, cleavage, implantation, gastrulation, germ-layer derivatives, and neurulation' },
+      { slug: 'mcat-anatomy-physiology-organogenesis-mcat', title: 'Organogenesis, Fetal Circulation & Developmental Mechanisms', description: 'Extraembryonic membranes, placenta, fetal circulation, teratogens, potency, induction, and morphogens' }
     ]
   },
   {
@@ -154,7 +159,8 @@ const mcatSubtopics: ParentSeed[] = [
     subtopics: [
       { slug: 'mcat-microbiology-bacteria-mcat', title: 'Bacteria', description: 'Bacterial structure, growth, and classification' },
       { slug: 'mcat-microbiology-viruses-mcat', title: 'Viruses', description: 'Viral replication cycles and host interactions' },
-      { slug: 'mcat-microbiology-genetics-mcat', title: 'Microbial Genetics', description: 'Horizontal gene transfer and resistance mechanisms' },
+      { slug: 'mcat-microbiology-genetics-mcat', title: 'Bacterial Genetics & Gene Transfer', description: 'Mutation and selection, plasmids, and horizontal gene transfer by transformation, transduction and conjugation' },
+      { slug: 'mcat-microbiology-genetics-regulation-mcat', title: 'Mobile Elements, Gene Regulation & Viral Genetics', description: 'Transposons, CRISPR and restriction-modification, operon genetics, and viral genetics' },
       { slug: 'mcat-microbiology-antimicrobials-mcat', title: 'Antimicrobials & Resistance', description: 'Drug targets, resistance pathways, and treatment principles' }
     ]
   },
@@ -178,7 +184,8 @@ const mcatSubtopics: ParentSeed[] = [
     subtopics: [
       { slug: 'mcat-sociology-structure-stratification-mcat', title: 'Social Structure & Stratification', description: 'Class, status, power, and mobility' },
       { slug: 'mcat-sociology-culture-socialization-mcat', title: 'Culture & Socialization', description: 'Norms, values, and agents of socialization' },
-      { slug: 'mcat-sociology-groups-interaction-mcat', title: 'Groups & Social Interaction', description: 'Group behavior, identity, and social influence' },
+      { slug: 'mcat-sociology-groups-interaction-mcat', title: 'Groups, Roles & Social Influence', description: 'Statuses, roles, group types, conformity, obedience, and group decision-making' },
+      { slug: 'mcat-sociology-interaction-organizations-mcat', title: 'Social Interaction, Organizations & Discrimination', description: 'Dramaturgy, networks, bureaucracy, prejudice, and discrimination' },
       { slug: 'mcat-sociology-health-disparities-mcat', title: 'Health Disparities', description: 'Social determinants of health and population-level outcomes' }
     ]
   },

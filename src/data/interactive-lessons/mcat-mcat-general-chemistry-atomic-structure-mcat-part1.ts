@@ -6,7 +6,7 @@ export const mcatAtomicStructurePart1Data = {
       type: 'text' as const,
       content: `# Atomic Structure & Periodic Trends
 
-**Part 1 of 5 — Quantum Numbers & Electron Configuration**
+**Part 1 of 3 — Quantum Numbers & Electron Configuration**
 
 Atomic structure is tested in virtually every MCAT general chemistry passage. Questions focus on quantum number rules, electron configurations, and predicting properties from position on the periodic table.
 
