@@ -3158,6 +3158,24 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'MCAT Integration: Blood Flow, Ultrasound & Passage Strategy', loader: () => import('./mcat-mcat-physics-mechanics-fluids-waves-mcat').then((m) => m.parts[3]) },
     ],
   },
+  'mcat-physics-mechanics-fluids-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Density, Pressure & Pascal\'s Principle', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[0]) },
+      { title: 'Buoyancy, Archimedes & Surface Tension', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[1]) },
+      { title: 'Fluid Dynamics: Continuity & Bernoulli', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[2]) },
+      { title: 'Viscosity, Poiseuille & Blood Flow', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-waves-sound-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Periodic Motion & Wave Basics', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[0]) },
+      { title: 'Superposition, Interference & Standing Waves', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[1]) },
+      { title: 'Sound: Intensity, Decibels & Hearing', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[2]) },
+      { title: 'Doppler, Ultrasound & Shock Waves', loader: () => import('./mcat-mcat-physics-waves-sound-mcat').then((m) => m.parts[3]) },
+    ],
+  },
   'mcat-psychology-behavior-sensation-perception-mcat': {
     completionDestination: 'competitive',
     parts: [

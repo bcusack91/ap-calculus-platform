@@ -44,7 +44,10 @@ const mcatSubtopics: ParentSeed[] = [
       { slug: 'mcat-physics-mechanics-forces-newton-laws-mcat', title: 'Forces & Newton\'s Laws', description: 'Free-body diagrams, friction, and dynamics' },
       { slug: 'mcat-physics-mechanics-work-energy-power-mcat', title: 'Work, Energy, and Power', description: 'Conservation of energy and mechanical work calculations' },
       { slug: 'mcat-physics-mechanics-momentum-collisions-mcat', title: 'Momentum & Collisions', description: 'Impulse, conservation of momentum, and collision analysis' },
-      { slug: 'mcat-physics-mechanics-fluids-waves-mcat', title: 'Fluids & Waves', description: 'Hydrostatics, buoyancy, Bernoulli flow, and basic wave behavior' }
+      // Fluids & Waves was split in two (Nov 2026, one live-class session each);
+      // the old 'mcat-physics-mechanics-fluids-waves-mcat' row is retired.
+      { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids', description: 'Pressure, buoyancy, continuity, Bernoulli, viscosity, and blood flow' },
+      { slug: 'mcat-physics-waves-sound-mcat', title: 'Waves & Sound', description: 'Periodic motion, standing waves, sound intensity and decibels, Doppler, and ultrasound' }
     ]
   },
   {

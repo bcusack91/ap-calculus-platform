@@ -25,33 +25,33 @@ import type { DeckFigurePlacement } from './index'
  * figure (arr-fw-<figure>-<colour>).
  */
 
-const SVG_OPEN = '<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif"'
+export const SVG_OPEN = '<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif"'
 
-const ARROW = (id: string) =>
+export const ARROW = (id: string) =>
   `<marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>`
 
 /** A text element in the current colour. `weight` is the font-weight attribute as a string ('400' | '700'). */
-const T = (x: number, y: number, size: number, text: string, anchor: 'start' | 'middle' | 'end' = 'start', weight = '400') =>
+export const T = (x: number, y: number, size: number, text: string, anchor: 'start' | 'middle' | 'end' = 'start', weight = '400') =>
   `<text x="${x}" y="${y}" font-size="${size}"${weight !== '400' ? ` font-weight="${weight}"` : ''}${anchor !== 'start' ? ` text-anchor="${anchor}"` : ''} fill="currentColor">${text}</text>`
 
 /** `base` with a subscript `sub` (as tspans), then `rest` back on the baseline — for use inside T(). */
-const SUB = (base: string, sub: string, size: number, rest = '') =>
+export const SUB = (base: string, sub: string, size: number, rest = '') =>
   `${base}<tspan dy="${Math.round(size * 0.28)}" font-size="${Math.round(size * 0.72)}">${sub}</tspan><tspan dy="-${Math.round(size * 0.28)}">${rest}</tspan>`
 
 /** A straight arrow (line with a marker-end) in the current colour. */
-const ARR = (x1: number, y1: number, x2: number, y2: number, id: string, sw = 3) =>
+export const ARR = (x1: number, y1: number, x2: number, y2: number, id: string, sw = 3) =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${sw}" marker-end="url(#${id})"/>`
 
 /** A double-headed arrow (dimension line) in the current colour. */
-const DIM = (x1: number, y1: number, x2: number, y2: number, id: string, sw = 2) =>
+export const DIM = (x1: number, y1: number, x2: number, y2: number, id: string, sw = 2) =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${sw}" marker-start="url(#${id})" marker-end="url(#${id})"/>`
 
 /** A plain rectangle outlined in the current colour (fillOpacity > 0 tints it). */
-const RECT = (x: number, y: number, w: number, h: number, sw = 2.5, fillOpacity = 0, rx = 0) =>
+export const RECT = (x: number, y: number, w: number, h: number, sw = 2.5, fillOpacity = 0, rx = 0) =>
   `<rect x="${x}" y="${y}" width="${w}" height="${h}"${rx ? ` rx="${rx}"` : ''} fill="${fillOpacity ? 'currentColor' : 'none'}"${fillOpacity ? ` fill-opacity="${fillOpacity}"` : ''} stroke="currentColor" stroke-width="${sw}"/>`
 
 /** A sine curve y = yc − amp·sin(2π(x − x0)/λ + phase) from x0 to x1, sampled every 4 units. */
-const sinePath = (x0: number, x1: number, yc: number, amp: number, lambda: number, phase = 0) => {
+export const sinePath = (x0: number, x1: number, yc: number, amp: number, lambda: number, phase = 0) => {
   let d = ''
   for (let x = x0; x <= x1; x += 4) {
     const y = yc - amp * Math.sin((2 * Math.PI * (x - x0)) / lambda + phase)
@@ -61,7 +61,7 @@ const sinePath = (x0: number, x1: number, yc: number, amp: number, lambda: numbe
 }
 
 /** Standing-wave envelope (both mirror curves) y = yc ± amp·sin(k·(x − x0)) over x0..x0+L, with k = n·π/(div·L). */
-const envelopePath = (x0: number, L: number, yc: number, amp: number, n: number, div: number) => {
+export const envelopePath = (x0: number, L: number, yc: number, amp: number, n: number, div: number) => {
   let up = ''
   let down = ''
   for (let i = 0; i <= 50; i++) {
@@ -149,10 +149,10 @@ ${T(500, 390, 18, 'Force ×10 from the ×10 area — but distance ÷10: A₁d₁
 </svg>`
 
 /* 3 — Archimedes: float, hover, sink (lead, 1000×460) */
-const tank = (c: number) =>
+export const tank = (c: number) =>
   `<g class="fig-accent"><rect x="${c - 128}" y="160" width="256" height="198" fill="currentColor" fill-opacity="0.12"/><line x1="${c - 128}" y1="160" x2="${c + 128}" y2="160" stroke="currentColor" stroke-width="2"/></g>
 <path d="M${c - 130} 120 L${c - 130} 360 L${c + 130} 360 L${c + 130} 120" fill="none" stroke="currentColor" stroke-width="3"/>`
-const block = (c: number, top: number) => RECT(c - 45, top, 90, 90, 2.5, 0.18, 6)
+export const block = (c: number, top: number) => RECT(c - 45, top, 90, 90, 2.5, 0.18, 6)
 const archimedesSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <defs>${ARROW('arr-fw-arch')}</defs>
 ${T(170, 62, 20, 'FLOATS', 'middle', '700')}
@@ -224,7 +224,7 @@ ${T(410, 405, 18, '(10 cm²)(1 m/s) = (2 cm²)(5 m/s) = 10 cm³/s', 'middle')}
 </svg>`
 
 /* 5 — Bernoulli: a Venturi with standpipes, and Torricelli's tank (lead, 1000×460) */
-const standpipe = (c: number, top: number, level: number) =>
+export const standpipe = (c: number, top: number, level: number) =>
   `<g class="fig-accent"><rect x="${c - 11}" y="${level}" width="22" height="${top - level}" fill="currentColor" fill-opacity="0.25"/></g>
 <path d="M${c - 12} ${top} L${c - 12} 90 M${c + 12} 90 L${c + 12} ${top}" fill="none" stroke="currentColor" stroke-width="2.5"/>
 <g class="fig-accent"><line x1="${c - 11}" y1="${level}" x2="${c + 11}" y2="${level}" stroke="currentColor" stroke-width="2"/></g>`
@@ -264,7 +264,7 @@ ${T(795, 425, 17, '= √(2 · 10 · 5) = 10 m/s', 'middle')}
 </svg>`
 
 /* 6 — Viscosity: Poiseuille's r⁴, laminar vs turbulent flow (lead, 1000×460) */
-const tube = (yc: number, r: number) =>
+export const tube = (yc: number, r: number) =>
   `<g class="fig-accent"><rect x="150" y="${yc - r}" width="180" height="${2 * r}" fill="currentColor" fill-opacity="0.12"/></g>
 <path d="M150 ${yc - r} L330 ${yc - r} M150 ${yc + r} L330 ${yc + r}" fill="none" stroke="currentColor" stroke-width="2.5"/>`
 const PROFILE_Y = [105, 120, 135, 150, 165, 180, 195]
@@ -284,7 +284,7 @@ ${T(130, 116, 18, 'r / 2', 'end')}
 ${T(130, 186, 18, 'r', 'end')}
 ${T(130, 296, 18, '2r', 'end')}
 ${T(260, 370, 18, 'flow ∝ r⁴: double r ⇒ ×16', 'middle', '700')}
-${T(260, 398, 16, 'shrink r by 19 % (0.81⁴ ≈ ½) ⇒ flow HALVES', 'middle')}
+${T(260, 398, 16, 'shrink r by 16 % (0.84⁴ ≈ ½) ⇒ flow HALVES', 'middle')}
 <g class="fig-muted">${T(260, 426, 15, 'arteriolar radius is the body’s flow knob', 'middle')}</g>
 ${T(560, 72, 17, 'Laminar — layers slide, fastest at the axis', 'start', '700')}
 <g class="fig-accent"><rect x="560" y="90" width="380" height="120" fill="currentColor" fill-opacity="0.1"/></g>
@@ -350,9 +350,9 @@ ${T(810, 356, 15, 'v and λ change together with the medium', 'middle')}
 
 /* 8 — Standing waves: both ends alike vs closed at one end (replace-table, 560×440) */
 const ROW_Y = [112, 192, 272]
-const standingRow = (x0: number, yc: number, n: number, div: number) =>
+export const standingRow = (x0: number, yc: number, n: number, div: number) =>
   `<g class="fig-accent"><path d="${envelopePath(x0, 200, yc, 26, n, div)}" fill="none" stroke="currentColor" stroke-width="2.5"/></g>`
-const nodesOf = (x0: number, yc: number, n: number, div: number) => {
+export const nodesOf = (x0: number, yc: number, n: number, div: number) => {
   // node positions: sin(nπ·u/div) = 0 → u = k·div/n for k = 0..; antinodes midway
   const out: string[] = []
   for (let k = 0; k * div <= n; k++) {
@@ -361,7 +361,7 @@ const nodesOf = (x0: number, yc: number, n: number, div: number) => {
   }
   return out.join('')
 }
-const antinodesOf = (x0: number, yc: number, n: number, div: number) => {
+export const antinodesOf = (x0: number, yc: number, n: number, div: number) => {
   const out: string[] = []
   for (let k = 0; (k + 0.5) * div <= n + 0.0001; k++) {
     const u = ((k + 0.5) * div) / n
@@ -402,7 +402,7 @@ const FRONTS: [number, number][] = [
   [360, 80],
   [390, 40],
 ]
-const listener = (x: number) =>
+export const listener = (x: number) =>
   `<circle cx="${x}" cy="208" r="11" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M${x} 219 L${x} 248 M${x - 14} 232 L${x + 14} 232 M${x} 248 L${x - 11} 268 M${x} 248 L${x + 11} 268" fill="none" stroke="currentColor" stroke-width="2.5"/>`
 const dopplerSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 ${T(300, 45, 18, 'Source moving right: fronts bunch ahead, spread behind', 'middle', '700')}
@@ -435,7 +435,7 @@ ${T(810, 368, 14, 'moving OBSERVER: meets fronts more often, λ unchanged', 'mid
 <g class="fig-muted">${T(810, 420, 14, 'ultrasound reads blood speed from exactly this shift', 'middle')}</g>
 </svg>`
 
-export const mcatFluidsWavesFigures: DeckFigurePlacement[] = [
+const fluidsWavesFigures: DeckFigurePlacement[] = [
   {
     at: 'Pressure',
     mode: 'lead',
@@ -512,11 +512,11 @@ export const mcatFluidsWavesFigures: DeckFigurePlacement[] = [
     figure: {
       svg: viscositySvg,
       alt:
-        'Left: Q = πΔPr⁴/8ηL over three tubes of radius r/2, r and 2r with red flow arrows and flows Q/16, Q and 16 Q; notes: flow ∝ r⁴ — double r ⇒ ×16; shrink r by 19 % (0.81⁴ ≈ ½) ⇒ flow halves; arteriolar radius is the body’s flow knob. Right, top: laminar flow — a tube with parallel grey streamlines and red velocity arrows forming a parabolic profile, longest on the axis and zero at the wall (layers slide, fastest at the axis). Right, bottom: turbulent flow — the same tube with wavy crossing paths and curling eddies (energy-hungry, audible); turbulence is favoured by high v, large d, high ρ, low η; heart murmurs and bruits are turbulence you can hear.',
+        'Left: Q = πΔPr⁴/8ηL over three tubes of radius r/2, r and 2r with red flow arrows and flows Q/16, Q and 16 Q; notes: flow ∝ r⁴ — double r ⇒ ×16; shrink r by 16 % (0.84⁴ ≈ ½) ⇒ flow halves; arteriolar radius is the body’s flow knob. Right, top: laminar flow — a tube with parallel grey streamlines and red velocity arrows forming a parabolic profile, longest on the axis and zero at the wall (layers slide, fastest at the axis). Right, bottom: turbulent flow — the same tube with wavy crossing paths and curling eddies (energy-hungry, audible); turbulence is favoured by high v, large d, high ρ, low η; heart murmurs and bruits are turbulence you can hear.',
       caption: "Poiseuille's law and flow regimes: flow scales with the fourth power of the radius; laminar layers vs turbulent eddies — illustrative.",
     },
     blocks: [
-      '- Poiseuille: $Q = \\dfrac{\\pi\\,\\Delta P\\,r^4}{8\\eta L}$ — double $r$ ⇒ ×16 flow; a 19% narrowing halves it',
+      '- Poiseuille: $Q = \\dfrac{\\pi\\,\\Delta P\\,r^4}{8\\eta L}$ — double $r$ ⇒ ×16 flow; a 16% narrowing halves it',
       '- Turbulence (murmurs, bruits) is favoured by high $v$, large $d$, high $\\rho$, low $\\eta$',
     ],
   },
@@ -565,3 +565,11 @@ export const mcatFluidsWavesFigures: DeckFigurePlacement[] = [
     ],
   },
 ]
+
+/**
+ * Fluids & Waves was split in two (Nov 2026): the Fluids and Waves & Sound
+ * lessons each get the figures for the sections they teach.
+ */
+const WAVES_SECTIONS = new Set(['The Wave Equation and Who Controls What', 'Superposition and Standing Waves', 'Doppler: Relative Approach Raises Pitch'])
+export const mcatFluidsFigures = fluidsWavesFigures.filter((f) => !WAVES_SECTIONS.has(f.at))
+export const mcatWavesSoundFigures = fluidsWavesFigures.filter((f) => WAVES_SECTIONS.has(f.at))

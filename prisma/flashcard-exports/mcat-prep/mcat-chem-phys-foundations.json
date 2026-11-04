@@ -8715,344 +8715,624 @@
   "back": "Total internal reflection only happens going from higher to lower index. The core-cladding step sets the critical angle, so light launched within the acceptance cone reflects repeatedly and stays trapped along the whole fiber."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "A hydraulic lift multiplies force tenfold, so the input piston must move {{c1::ten times farther}}.",
   "back": "The fluid is incompressible so displaced volumes match, $A_1d_1 = A_2d_2$, and work in equals work out. Machines trade force for distance and never create energy."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A mass on a spring has period $T = 2\\pi\\sqrt{m/k}$, so its period is independent of {{c1::amplitude and gravity}}.",
   "back": "Only mass and spring constant matter, so the same spring-mass system oscillates at the same rate horizontally, vertically, or on the Moon, and a larger pull does not slow it down."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A plot of sound level in dB against the logarithm of $I/I_0$ is a straight line with slope {{c1::10}}.",
   "back": "The definition $\\beta = 10\\log(I/I_0)$ is linear in the log of intensity. Semi-log axes are the standard presentation in acoustics and audiology data, where a straight line signals a power-law relationship in the raw variables."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A simple pendulum has period $T = 2\\pi\\sqrt{L/g}$, so its period is independent of {{c1::the bob's mass}}.",
   "back": "For small angles it is also independent of amplitude, but unlike a spring it does depend on the local value of $g$, which is why pendulum clocks run slow at high altitude."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A siren and a listener move at the same velocity in the same direction; the observed frequency is {{c1::unchanged}}.",
   "back": "There is no relative motion along the line joining them, so wavefronts are neither compressed nor stretched. Only relative approach or recession produces a shift."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A sound is 10 times more intense than another. How many decibels louder, and does it sound ten times as loud?",
   "back": "Ten decibels louder, since each tenfold intensity increase adds 10 dB. Perceptually it sounds only about twice as loud, because loudness perception is itself roughly logarithmic and a 10 dB rise is heard as a doubling."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A sound wave passes from air into soft tissue. Which wave properties change?",
   "back": "Frequency is fixed by the source and does not change; speed changes with the medium, so wavelength adjusts through $v = f\\lambda$. This behavior underlies ultrasound imaging."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "A standing wave forms when:",
   "back": "**Two identical waves travel in opposite directions**\n\nInterference creates fixed nodes and antinodes."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "A submarine is at a depth of 100 m in seawater (ρ = 1025 $kg/m^{3}$). What is the gauge pressure? (g = 9.8 $m/s^{2}$)",
   "back": "**$1.005 \\times 10^{6}$ Pa**\n\nGauge pressure = ρgh = 1025 × 9.8 × 100 = 1,004,500 Pa ≈ $1.005 \\times 10^{6}$ Pa. This is the pressure due to the water column above, not including atmospheric pressure."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "A vessel narrows to half its radius at constant driving pressure. By what factor does flow drop?",
   "back": "Sixteenfold, because Poiseuille flow scales with $r^4$. This sensitivity is why arteriolar radius dominates blood pressure regulation, and why plaque can grow substantially before flow limitation becomes clinically obvious."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Acoustic impedance is {{c1::$Z = \\rho v$}}, and reflection at a boundary is strongest when {{c1::the mismatch is large}}.",
   "back": "Boundaries between tissues of similar impedance transmit most of the sound and appear dark on the image; large mismatches such as tissue-to-bone or tissue-to-air reflect strongly and appear bright. This is why lung and bowel gas obscure ultrasound."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "An IV bag must hang high enough that {{c1::$\\rho g h$}} exceeds {{c1::the patient's venous pressure}}.",
   "back": "For a venous pressure near 10 mmHg, about 1300 Pa, the minimum height is $1300/(1000 \\times 10) \\approx 0.13$ m above the vein. Bags hang near a meter so flow stays adequate; raising the bag raises driving pressure and flow rate."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "An object floats when its density is:",
   "back": "**Less than the fluid density**\n\nIt sinks when denser and hovers when equal."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Blood has a specific gravity near 1.06, so its density is {{c1::about $1060$ kg/m$^3$}}.",
   "back": "Specific gravity is density relative to water at $1000$ kg/m$^3$ and is dimensionless. It feeds directly into buoyancy and hydrostatic pressure calculations for body fluids."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "By Bernoulli's principle, where a fluid speeds up at constant height its pressure {{c1::decreases}}.",
   "back": "The sum $P + \\rho gh + \\frac{1}{2}\\rho v^2$ stays constant along a streamline, so kinetic energy per unit volume rises at the expense of pressure energy."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Continuity or Poiseuille: which explains slow capillary flow, and which explains high resistance in a stenosis?",
   "back": "Continuity, with $Av$ constant, explains capillary speed: their enormous combined cross-sectional area forces low velocity. Poiseuille explains resistance through a narrowed vessel. Continuity is about conserved volume flow; Poiseuille is about pressure cost."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Contrast longitudinal and transverse waves.",
   "back": "Longitudinal oscillates parallel to travel (sound); transverse oscillates perpendicular (light, string waves)."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Describe the Doppler effect.",
   "back": "Approaching source → higher observed frequency (compressed wavefronts); receding → lower."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Does the buoyant force on a fully submerged object increase with depth?",
   "back": "No. In an incompressible fluid, displaced volume and density are unchanged, so buoyancy is constant. Pressure rises on both the top and bottom surfaces, leaving the difference the same."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "For a string fixed at both ends, the allowed wavelengths are {{c1::$\\lambda_n = 2L/n$}}.",
   "back": "Nodes must sit at both ends, so every integer harmonic exists and $f_n = nv/(2L)$. The fundamental has one antinode, at the midpoint."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Give hydrostatic pressure with depth.",
   "back": "$P = P_0 + \\rho gh$. It depends on depth and density, not container shape or total volume."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Give the continuity equation.",
   "back": "$A_1v_1 = A_2v_2$ — fluid speeds up where the pipe narrows, since volumetric flow rate is constant."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "How do the harmonics of an open pipe differ from a pipe closed at one end?",
   "back": "An open pipe supports all harmonics with $f_n = nv/(2L)$; a closed pipe supports only odd harmonics with $f_n = nv/(4L)$, so its fundamental is an octave below an open pipe of equal length."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "How do you reason out the direction of a Doppler shift without the formula?",
   "back": "Any relative approach compresses wavefronts and raises the observed frequency; any relative recession stretches them and lowers it. The shift grows with relative speed, as exploited in Doppler echocardiography."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "How does absolute pressure at depth differ from gauge pressure?",
   "back": "Absolute pressure is $P = P_0 + \\rho g h$, including atmospheric pressure; gauge pressure is just the $\\rho g h$ excess above atmosphere. Clinical blood pressure readings are gauge pressures."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "How does hydrostatic weighing determine body composition?",
   "back": "Apparent weight underwater equals true weight minus buoyant force, which yields body volume and thus density. Fat is less dense than water and lean tissue is denser, so density predicts body fat fraction."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "How does raising hematocrit affect cardiac workload?",
   "back": "It raises blood viscosity, and Poiseuille resistance is proportional to viscosity, so a larger pressure gradient is needed for the same flow. The heart must generate more pressure per beat."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "How does sound intensity vary with distance from a point source?",
   "back": "It falls as $1/r^2$, since the same power spreads over a sphere of area $4\\pi r^2$. Doubling the distance quarters intensity but lowers the level by only about 6 dB."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "How does vessel radius affect flow (Poiseuille)?",
   "back": "Flow $\\propto r^{4}$ — halving the radius cuts flow to $\\frac{1}{16}$. Small arterial narrowing has outsized effect."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "In Doppler ultrasound of blood flow, why does the angle between beam and vessel matter?",
   "back": "Only the velocity component along the beam produces a shift, so the measured value scales with $\\cos\\theta$. A beam perpendicular to the vessel yields no shift at all, and a poorly aligned probe systematically underestimates flow velocity."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "In Poiseuille's law, flow rate is proportional to {{c1::the fourth power of the radius}}.",
   "back": "Halving a vessel's radius cuts flow to one-sixteenth at fixed pressure gradient, which is why small changes in arteriolar tone dominate total peripheral resistance."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "In simple harmonic motion, where are speed and acceleration each maximal?",
   "back": "Speed peaks at the equilibrium position where the restoring force is zero; acceleration peaks at the extremes where displacement and restoring force are largest. The two are exactly out of phase."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Laplace's law for an alveolus gives $P = 2\\gamma/r$. What does it predict?",
   "back": "At fixed surface tension, smaller alveoli generate higher collapsing pressure and would empty into larger ones. Surfactant lowers tension more in small alveoli, stabilizing the whole lung."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Leg swing during walking behaves like a pendulum, so a taller person's natural cadence is {{c1::slower}}.",
   "back": "Pendulum period goes as the square root of $L/g$ and is independent of mass, so longer legs swing more slowly. Taller people compensate with longer strides, which is why walking speed still increases with height even as step frequency falls."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "One mmHg is about {{c1::133 Pa}}, and atmospheric pressure is about {{c1::760 mmHg}}.",
   "back": "That makes 1 atm roughly $10^5$ Pa. A blood pressure of 120 mmHg is therefore near 16 kPa, only about a sixth of an atmosphere, a useful sanity check whenever a passage mixes clinical and SI pressure units."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Pressure in a static fluid depends on depth and density but not on {{c1::the shape or volume of the container}}.",
   "back": "A narrow tube and a wide reservoir have identical pressure at the same depth, the hydrostatic paradox. Only vertical depth below the free surface matters."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Raising sound intensity by a factor of 1000 raises the level by {{c1::30 dB}}.",
   "back": "Each factor of ten in intensity adds 10 dB, so factors of 10, 100, and 1000 add 10, 20, and 30 dB. Conversely every 10 dB step is a tenfold intensity change."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Relate wave speed, frequency, and wavelength.",
   "back": "$v = f\\lambda$. In a fixed medium $v$ is constant, so $f$ and $\\lambda$ are inversely related."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Sound intensity is proportional to {{c1::amplitude squared}}, so doubling the amplitude multiplies intensity by {{c1::4}}.",
   "back": "Loudness tracks amplitude while frequency sets pitch. This is also why a 6 dB rise, a factor of about 4 in intensity, corresponds to a doubling of the wave's pressure amplitude."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Sound level in decibels is {{c1::$\\beta = 10\\log(I/I_0)$}}.",
   "back": "The reference $I_0$ is $10^{-12}$ W/m$^2$, the threshold of hearing. The logarithm compresses the enormous dynamic range of human hearing onto a manageable scale."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Sound passing through the interior of a liquid or gas travels only as a {{c1::longitudinal}} wave.",
   "back": "Fluids cannot support shear, so transverse mechanical waves die out within them and survive only on surfaces. This is why ultrasound imaging relies on compression waves."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Sound travels fastest in:",
   "back": "**Solids**\n\nStiffer media transmit compressions faster; sound cannot travel in vacuum."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "State Archimedes' principle.",
   "back": "Buoyant force equals the weight of displaced fluid: $F_b = \\rho_{fluid}Vg$. An object floats if it can displace its own weight."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "State Bernoulli's principle.",
   "back": "Where fluid speed is higher, pressure is lower: $P + \\frac{1}{2}\\rho v^{2} + \\rho gh$ is constant. Explains airfoil lift and the Venturi effect."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "State Pascal's principle and its hydraulic consequence.",
   "back": "Pressure applied to an enclosed fluid is transmitted undiminished throughout, so $F_1/A_1 = F_2/A_2$. A small force on a small piston balances a large force on a large piston."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Surface tension arises from {{c1::cohesive forces between liquid molecules}} at an interface.",
   "back": "Surface molecules have unbalanced attractions pulling them inward, so the liquid minimizes surface area. Pulmonary surfactant lowers alveolar surface tension so small alveoli resist collapse."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "The buoyant force equals the weight of {{c1::the fluid displaced}}, not the weight of the object.",
   "back": "In symbols $F_B = \\rho_{fluid}V_{displaced}g$, so buoyancy depends on the fluid's density and the submerged volume, never on the object's own density or composition."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "The threshold of hearing is {{c1::$10^{-12}$ W/m$^2$}}, defined as {{c1::0 dB}}.",
   "back": "Conversation sits near 60 dB and the pain threshold near 120 dB, spanning a trillionfold range of intensity. The scale is logarithmic because the ear's usable range is that wide, not because intensity itself behaves logarithmically."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Two tuning forks at 440 Hz and 444 Hz sound together; the beat frequency is {{c1::4 Hz}}.",
   "back": "Beats occur at the difference of the two frequencies, heard as loudness rising and falling at that rate. Musicians tune an instrument by driving the beat frequency to zero."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Ultrasound imaging relies on:",
   "back": "**Reflection at tissue interfaces of differing impedance**\n\nEcho timing localizes structures."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Vascular resistance is {{c1::$8\\eta L/(\\pi r^4)$}}, so viscosity and length enter {{c1::linearly}}.",
   "back": "Flow rate equals the pressure difference divided by that resistance. Polycythemia raises viscosity and therefore resistance proportionally, while even a small radius change dominates everything else through the fourth power."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Wave speed on a string is $v = \\sqrt{T/\\mu}$, so tightening a string {{c1::raises}} its pitch.",
   "back": "Higher tension or lower linear mass density raises wave speed, and with length fixed, $f_1 = v/(2L)$ rises with it. Thicker strings have larger mass per length and sound lower."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "What distinguishes turbulent from laminar flow, and why does it matter clinically?",
   "back": "Turbulence appears above a critical Reynolds number, favored by high velocity, large diameter, high density, and low viscosity. It produces sound, which is why murmurs, bruits, and Korotkoff sounds are audible."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "What four assumptions does Bernoulli's equation require?",
   "back": "Steady, laminar flow of an incompressible, nonviscous fluid along one streamline. Real blood is viscous, so pressure also falls steadily along a vessel of uniform diameter."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "What fraction of a floating object sits below the surface?",
   "back": "The density ratio $\\rho_{obj}/\\rho_{fluid}$. Ice near $920$ kg/m$^3$ floats with roughly 92 percent of its volume submerged in fresh water."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "What happens to pressure inside an arterial stenosis?",
   "back": "Flow accelerates through the narrowing, so pressure drops there, which can partly collapse a compliant vessel and generate turbulence and an audible bruit just downstream."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "What is resonance, and where does it matter physiologically?",
   "back": "Driving a system at its natural frequency transfers energy efficiently and builds large amplitude. The ear canal resonates near 3 kHz, boosting sensitivity there, and the basilar membrane resonates tonotopically by position."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "When a wave enters a new medium, what stays constant?",
   "back": "**Frequency**\n\nThe source sets frequency; speed and wavelength adjust together."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Which raises resistance more: halving a vessel's radius, or doubling its length?",
   "back": "Halving the radius, by a factor of 16, versus only a factor of 2 for doubled length. Radius carries the fourth power in Poiseuille's law, making vasoconstriction a far more powerful control than any change in length or viscosity."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why can a forced expiration collapse an airway (dynamic compression)?",
   "back": "Fast flow lowers the pressure inside the airway by Bernoulli's principle, while pleural pressure outside rises during the effort. Once outside exceeds inside, the compliant airway narrows, which raises velocity further, a self-reinforcing collapse prominent in COPD."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Why do higher-frequency ultrasound probes give better resolution but shallower penetration?",
   "back": "Resolution improves as wavelength shrinks, and $\\lambda = v/f$ falls as frequency rises. But tissue attenuation also rises with frequency, so the beam dies out sooner. Superficial structures use high frequency; abdominal and cardiac imaging use low."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why do stiletto heels damage a floor when flat shoes do not, if body weight is unchanged?",
   "back": "Pressure is force per unit area. The same 600 N spread over a 100 cm$^2$ sole is about 60 kPa, but concentrated on a 1 cm$^2$ heel it is 6 MPa. Force sets the total load; pressure decides whether a surface, or skin, fails."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why does a person float higher in salt water than in fresh water?",
   "back": "Denser fluid means less volume must be displaced to match body weight, so the submerged fraction $\\rho_{body}/\\rho_{fluid}$ falls. Body density near $985$ kg/m$^3$ leaves little above water in either case."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why does a person with a higher body fat fraction float more easily?",
   "back": "Fat has density near 0.9 g/cm$^3$ while lean tissue and bone run near 1.1. More fat pulls whole-body density toward or below water's 1.0, so a larger fraction floats above the surface. Hydrostatic weighing converts that buoyancy into a body-fat estimate."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why does an aneurysm tend to enlarge once it forms?",
   "back": "The widened segment slows the flow, so Bernoulli predicts higher local pressure pushing the wall outward. Laplace's law compounds it, since wall tension rises with radius at fixed pressure."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why is arterial pressure higher in the feet than at the heart when standing?",
   "back": "The extra hydrostatic column adds $\\rho g h$, roughly 80 to 100 mmHg over about 1.3 m. Venous valves and the skeletal muscle pump are needed to return blood against that column."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
   "front": "Why is blood slowest in capillaries even though each capillary is tiny?",
   "back": "The combined cross-sectional area of all capillaries far exceeds the aorta's, so continuity forces the lowest velocity there. Slow transit maximizes time for gas and solute exchange."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-waves-mcat",
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A $50.0$ cm$^3$ sample of olive oil has a mass of $46.0$ g. What are its density in SI units and its specific gravity?",
+  "back": "$920$ kg/m$^3$ and SG $= 0.92$. $\\rho = 46.0/50.0 = 0.92$ g/cm$^3$, and multiplying by 1000 gives kg/m$^3$. SG divides by water's $1000$ kg/m$^3$, so it has no units and equals the density in g/cm$^3$."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Absolute pressure is about $2$ atm at a depth of $10$ m in a freshwater lake, so at $30$ m it is about {{c1::$4$ atm}}.",
+  "back": "Each 10 m of water adds about 1 atm, so 30 m adds 3 atm on top of the 1 atm at the surface. Only the $\\rho g h$ part scales with depth; tripling the total to 6 atm is the trap."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A mercury barometer stands at $760$ mm. Filled with water instead, its column would be about {{c1::$10.3$ m}} tall.",
+  "back": "Both columns balance the same atmosphere, so $\\rho_{\\text{Hg}} h_{\\text{Hg}} = \\rho_w h_w$ and $h_w = 13.6 \\times 0.76 \\approx 10.3$ m. The near-vacuum above the column means a barometer reads absolute pressure."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "In an open-tube U manometer, the liquid is pushed down on the {{c1::higher-pressure}} side, and the level difference gives $P - P_{\\text{atm}} = \\rho g \\Delta h$.",
+  "back": "The open arm already carries atmospheric pressure, so the height difference measures only the excess: a gauge reading. A gas below atmospheric pressure lets the liquid rise on its own side."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Intrapleural pressure is normally about $-4$ mmHg. What does the negative sign mean, and what is the absolute pressure at sea level?",
+  "back": "It is a gauge reading: 4 mmHg below atmospheric, not a negative absolute pressure. Absolute pressure $= 760 - 4 = 756$ mmHg. Gauge pressure can be negative; absolute pressure never can."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A hydraulic jack's output piston has $5$ times the input piston's diameter. What load can a $200$ N input force support?",
+  "back": "$5000$ N. Area scales with diameter squared, so the area ratio is $5^2 = 25$ and $F_2 = 200 \\times 25$. Using the diameter ratio without squaring gives the 1000 N trap."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A rock weighs $50$ N in air and $40$ N when hung fully submerged in water. What is its specific gravity?",
+  "back": "$5$. $F_B = 50 - 40 = 10$ N, the weight of an equal volume of water, so $SG = W/F_B = 50/10 = 5$ (density $5000$ kg/m$^3$). Divide the TRUE weight, not the apparent weight, by $F_B$."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A floating object displaces its own {{c1::weight}} of fluid; a fully submerged object displaces its own {{c2::volume}} of fluid.",
+  "back": "Floating is equilibrium, so $F_B = W$ and the displaced fluid weighs as much as the object. A submerged object pushes aside its full volume of fluid, whatever its weight."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A block floats in water with $60\\%$ of its volume submerged. What fraction is submerged when it floats in oil of SG $0.8$?",
+  "back": "$75\\%$. The submerged fraction in water is the SG, so $\\rho_{\\text{block}} = 600$ kg/m$^3$; in oil the fraction is $0.6/0.8 = 0.75$. It rides lower in the less dense fluid and would sink in any fluid with SG below 0.6."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "An object denser than oil but less dense than water is dropped into a beaker of oil floating on water. Where does it come to rest?",
+  "back": "At the oil-water boundary, partly in each layer. It sinks through the oil but cannot sink fully into the water, so it settles where the displaced oil and water together weigh as much as it does."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "When an ice cube floating in a glass of water melts completely, the water level {{c1::stays the same}}.",
+  "back": "Floating ice displaces exactly its own weight of water, and melting turns it into exactly that weight of water, which fills the volume it had displaced."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "In a narrow glass tube, water forms a {{c1::concave}} meniscus and rises, while mercury forms a {{c2::convex}} meniscus and is depressed.",
+  "back": "Water's adhesion to glass exceeds its cohesion, so it climbs the walls; mercury's cohesion wins, so it domes up and sits below the outside level. Narrower tubes give a larger rise or fall."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Normal urine specific gravity runs from about {{c1::$1.005$ to $1.030$}}.",
+  "back": "Measured with a hydrometer, which rides higher in denser urine. Values near the top of the range mean concentrated urine, as in dehydration."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "An infusion pump delivers $120$ mL/min through tubing of cross-sectional area $0.10$ cm$^2$. What is the saline's average speed?",
+  "back": "$20$ cm/s. $Q = 120/60 = 2$ cm$^3$/s, and $v = Q/A = 2/0.10 = 20$ cm/s. Convert minutes to seconds first, and remember $1$ mL $= 1$ cm$^3$."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Doppler shows blood speeding from $30$ to $270$ cm/s through a stenosis at unchanged flow, so the lumen radius is about {{c1::one-third}} of normal.",
+  "back": "Speed rose 9-fold, so by $A_1v_1 = A_2v_2$ the area fell to one-ninth. Area goes as $r^2$, so the radius is $\\sqrt{1/9} = 1/3$ of normal. Answering one-ninth confuses area with radius."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Water flows at $1$ m/s through a horizontal pipe of area $10$ cm$^2$ into a throat of area $2$ cm$^2$. How much lower is the throat pressure, and what height difference do the Venturi tubes show?",
+  "back": "$12$ kPa and $1.2$ m. Continuity: $v_2 = 5$ m/s. Bernoulli: $\\Delta P = \\tfrac{1}{2}(1000)(25 - 1) = 12{,}000$ Pa, using $v_2^2 - v_1^2$, not $(v_2 - v_1)^2$. Then $\\Delta h = \\Delta P/(\\rho g) = 1.2$ m, lower over the throat."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Water at $1$ m/s in a $6$ cm$^2$ pipe rises $2$ m into a $2$ cm$^2$ section. How much lower is the pressure in the upper section? ($g = 10$ m/s$^2$)",
+  "back": "$24$ kPa. Continuity gives $v_2 = 3$ m/s. Bernoulli: $\\tfrac{1}{2}(1000)(9 - 1) + (1000)(10)(2) = 4000 + 20{,}000$ Pa. Speeding up and climbing both lower the pressure, so the terms add."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Liquid leaks from a small hole a depth $h$ below the surface of a wide open tank at speed {{c1::$v = \\sqrt{2gh}$}}.",
+  "back": "Torricelli: surface and jet are both at atmospheric pressure, so the jet has the free-fall speed from the surface. At $h = 1.8$ m, $v = \\sqrt{36} = 6$ m/s; doubling the depth multiplies $v$ by only $\\sqrt{2}$."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "A pitot tube reads a stagnation pressure $250$ Pa above the static pressure in an air stream ($\\rho = 1.25$ kg/m$^3$). What is the air speed?",
+  "back": "$20$ m/s. Bringing the flow to rest at the tip turns the kinetic term into pressure: $\\tfrac{1}{2}\\rho v^2 = 250$, so $v^2 = 2(250)/1.25 = 400$."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
+  "back": "Poiseuille flow scales as $r^4$, and $0.84^4 \\approx 0.50$. That is why small changes in arteriolar tone produce large changes in flow."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
+  "back": "Billions of capillaries sit in parallel, so their combined resistance is lower than the arterioles'. Pressure falls from about 90 to about 35 mmHg across the arterioles, whose smooth muscle sets resistance."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
+  "back": "Both rise. Parallel resistances combine to less than any single branch, so removing one raises the total; since $MAP \\approx CO \\times TPR$, MAP rises too."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
+  "back": "Bernoulli fits a SHORT narrowing: speed changes quickly and friction is small, explaining the pressure dip in the jet. Poiseuille fits a LONG narrowing or a fixed driving pressure: resistance rises as $1/r^4$ and flow falls."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
+  "back": "Static (depth, floating, pistons): $P = P_0 + \\rho g h$, Pascal, Archimedes. Ideal flow (non-viscous, short constrictions): continuity, Bernoulli, Torricelli. Viscous flow (long vessels, viscosity given): Poiseuille, $Q = \\Delta P/R$. If turbulent, neither equation holds."
+ },
+ {
+  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "front": "Why can severe anemia produce a heart murmur even with normal valves?",
+  "back": "Low hematocrit lowers blood viscosity, and cardiac output rises to compensate, so blood moves faster. Both raise the Reynolds number $Re = \\rho v D/\\eta$, pushing flow toward turbulence, which is audible."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
   "front": "Why is coupling gel applied between an ultrasound transducer and the skin?",
   "back": "Air has an acoustic impedance thousands of times lower than tissue, so an air gap reflects nearly all the sound before it can enter the body. The gel matches impedances closely enough for the beam to transmit and for echoes to return."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A resting heart beats $90$ times per minute. What are the frequency and the period of one cardiac cycle?",
+  "back": "Convert to seconds first: $f = 90/60 = 1.5$ Hz, so $T = 1/f \\approx 0.67$ s. Taking $1/90$ without converting the minute is the classic error."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Angular frequency is {{c1::$\\omega = 2\\pi f$}}, measured in rad/s.",
+  "back": "One cycle is $2\\pi$ radians, so $f$ cycles per second is $2\\pi f$ radians per second. Passages may write the motion as $x = A\\cos\\omega t$."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Two identical pendulums swing side by side; whenever one is at its far-left turning point, the other is at its far-right. Their phase difference is {{c1::$180^\\circ$ ($\\pi$ rad)}}.",
+  "back": "Opposite extremes at the same instant means half a cycle apart. A $360^\\circ$ offset is the same as $0^\\circ$ (in phase), and $90^\\circ$ would put one at a turning point while the other passes equilibrium."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A mass oscillates on a spring. What happens to its period if the mass is quadrupled? If the spring is swapped for one four times stiffer?",
+  "back": "$T = 2\\pi\\sqrt{m/k}$, so four times the mass doubles $T$, and four times the stiffness halves it. Both enter under a square root."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "The speed of sound in a medium is {{c1::$v = \\sqrt{B/\\rho}$}}, where $B$ is the bulk modulus (stiffness against compression) and $\\rho$ the density.",
+  "back": "Greater density alone would slow sound, but solids are vastly stiffer than gases, and stiffness wins. That is why steel carries sound about 15 times faster than air despite being thousands of times denser."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Two pulses meet on a rope: an upright pulse $3$ cm high and an inverted pulse $1$ cm deep. What is the displacement when they exactly overlap, and what happens afterward?",
+  "back": "Displacements add with their signs: $+3 + (-1) = +2$ cm. Superposition is temporary, so each pulse then continues on with its original shape."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Two in-phase sources interfere constructively where the path difference is {{c1::a whole number of wavelengths}} and destructively where it is {{c2::an odd number of half-wavelengths}}.",
+  "back": "A path difference of $\\lambda$ shifts the phase by $360^\\circ$ (back in step); $\\lambda/2$ shifts it by $180^\\circ$ (crest on trough). Always convert the path difference into wavelengths before judging."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A tuner hears $4$ beats per second between a $440$ Hz tuning fork and a string. Tightening the string makes the beats slower. What was the string's frequency?",
+  "back": "Four beats puts the string at $436$ or $444$ Hz. Tightening raises its frequency, and slower beats mean it moved toward $440$, so it started flat, at $436$ Hz."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "In a standing wave, adjacent nodes are {{c1::$\\lambda/2$}} apart, and a node and the next antinode are {{c2::$\\lambda/4$}} apart.",
+  "back": "Nodes never move; antinodes swing most, midway between nodes. These spacings are why strings and open pipes hold half-wavelengths and closed pipes hold quarter-wavelengths."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "The first overtone is which harmonic for a string or open pipe, and which for a pipe closed at one end?",
+  "back": "Overtones count the harmonics above the fundamental. Strings and open pipes have every harmonic, so the first overtone is the 2nd harmonic; a closed pipe has odd harmonics only, so its first overtone is the 3rd harmonic."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Described by pressure, an open end of a pipe is a pressure {{c1::node}} and a closed end is a pressure {{c2::antinode}}.",
+  "back": "Pressure and displacement patterns are swapped: air at an open end moves freely but stays at room pressure, while air at a closed end cannot move but its pressure swings most. The harmonic formulas are unchanged."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A tube's two consecutive resonances are $150$ Hz and $250$ Hz. Is it open or closed at one end, and what is its fundamental?",
+  "back": "The gap is $100$ Hz. An open tube would have $f_1 = 100$ Hz, but $150$ is not a multiple of $100$. A closed tube's gap is $2f_1$, so $f_1 = 50$ Hz, with $150 = 3f_1$ and $250 = 5f_1$: closed."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "The ear canal acts as a pipe {{c1::closed at one end}} (sealed by the eardrum), so a $2.5$ cm canal resonates near $3400$ Hz.",
+  "back": "$f_1 = v/4L = 340/(4 \\times 0.025) = 340/0.10 = 3400$ Hz. This resonance helps make human hearing most sensitive at about $2$ to $5$ kHz."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Heavier damping makes a driven system's resonance {{c1::weaker and less sharp}}.",
+  "back": "Damping drains vibrational energy to friction, viscosity or absorption, so amplitude dies away and the peak at the natural frequency is smaller. Damping of a travelling sound wave is called attenuation."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A vibrating surface pushing outward creates a {{c1::compression}} in the air; pulling back leaves a {{c2::rarefaction}}.",
+  "back": "Compressions have pressure and density slightly above normal, rarefactions slightly below. The zones travel outward as a longitudinal wave while each air molecule only jiggles about its rest position."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Why does a wind instrument go sharp as it warms up during a concert?",
+  "back": "Decide what is fixed: the pipe's length fixes the resonant wavelengths $\\lambda_n$. Warmer air carries sound faster, so $f_n = v/\\lambda_n$ rises and every resonance shifts up."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Two identical $70$ dB alarms sound together. The combined level is about {{c1::$73$ dB}}.",
+  "back": "Two equal sources double the intensity, and $10\\log 2 \\approx 3$ dB. Adding the levels to get $140$ dB treats a logarithmic scale as linear; ten such alarms would give $80$ dB."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A sound becomes $5$ times as intense. About how much does its level rise?",
+  "back": "Write $5 = 10/2$: $+10$ dB for the factor of ten, then $-3$ dB for halving, so about $+7$ dB. Break any ratio into factors of 10 (10 dB each) and 2 (3 dB each)."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A blender delivers $10^{-5}$ W/m$^2$ to your ear. What is the sound level?",
+  "back": "$\\beta = 10\\log(10^{-5}/10^{-12}) = 10\\log(10^{7}) = 70$ dB. Shortcut: count the powers of ten above $10^{-12}$ and multiply by 10."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A loudspeaker produces $90$ dB at $1$ m. Treating it as a point source and ignoring absorption, what is the level at $10$ m?",
+  "back": "Ten times the distance gives $1/10^2 = 1/100$ of the intensity, two factors of ten, so $-20$ dB: $70$ dB. Using $1/r$ instead of $1/r^2$ would wrongly give $80$ dB."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Why does distant thunder sound like a low rumble while nearby thunder is a sharp crack?",
+  "back": "The medium absorbs higher frequencies more strongly (attenuation), so the high components fade with distance. Inverse-square spreading dims every frequency equally, and all audible frequencies travel at the same speed in air."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A violin and a flute play the same note. Why do they sound different?",
+  "back": "They share the fundamental frequency, so the pitch is the same, but each adds a different blend of overtones, which sets timbre. Pitch follows frequency, loudness follows intensity, timbre follows the mix of harmonics."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Human hearing spans about {{c1::20 Hz to 20 kHz}}; sound below that range is called {{c2::infrasound}}.",
+  "back": "Sound above $20$ kHz is ultrasound (bat echolocation; medical imaging at 1 to 20 MHz). The upper limit falls with age and noise exposure, so high frequencies are lost first."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "In $f' = f\\,(v \\pm v_o)/(v \\mp v_s)$, how do you choose each sign?",
+  "back": "Choose each independently so that approach raises $f'$: an observer moving toward the source takes $+v_o$ (bigger top); a source moving toward the observer takes $-v_s$ (smaller bottom). Moving away flips that sign; a stationary party contributes zero."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A $600$ Hz siren approaching a still listener at $34$ m/s is heard at about $667$ Hz ($v = 340$ m/s). A listener running at $34$ m/s toward a parked siren hears {{c1::$660$ Hz}}.",
+  "back": "Moving observer: $f' = 600(340 + 34)/340 = 600(1.1) = 660$ Hz. The results differ because only a moving source changes the wavelength; a moving observer just meets the wavefronts more often."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "Sound reflecting off a target moving at speed $u$ (much slower than sound) has its frequency shifted by about {{c1::$2fu/v$}}.",
+  "back": "The target first receives the sound as a moving observer, then re-emits it as a moving source: two shifts in sequence. The echo shifts up for an approaching target and down for a receding one."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "An ultrasound echo returns $130\\;\\mu\\text{s}$ after the pulse leaves the probe ($v = 1540$ m/s in tissue). How deep is the reflecting boundary?",
+  "back": "The pulse travels there and back, so $d = vt/2 = (1540)(1.30 \\times 10^{-4})/2 \\approx 0.10$ m $= 10$ cm. Forgetting the factor of 2 doubles every depth."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "An ultrasound probe's crystal is {{c1::piezoelectric}}: it deforms when a voltage is applied and generates a voltage when squeezed.",
+  "back": "So the same crystal both transmits (electrical pulse into a burst of sound) and receives (returning echo into an electrical signal)."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "With the same probe and beam angle, the Doppler shift inside a stenosis is $3$ times the upstream shift. The lumen's area there is {{c1::one-third}} of the upstream area.",
+  "back": "The shift is proportional to blood speed, so the speed tripled, and continuity ($A_1u_1 = A_2u_2$) gives one-third the area. Squaring the ratio (one-ninth) is the trap; the factor of 2 and probe frequency cancel."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A jet flies level at Mach $1.5$. When does a listener on the ground hear its sonic boom?",
+  "back": "Once, after the jet has passed overhead, when the trailing Mach cone (a shock wave) sweeps past. The cone trails the jet for as long as it flies supersonically; the boom is not a one-time event at Mach 1."
+ },
+ {
+  "topicSlug": "mcat-physics-waves-sound-mcat",
+  "front": "A Mach cone's half-angle satisfies {{c1::$\\sin\\theta = 1/M$}}, so a faster source makes a narrower cone.",
+  "back": "At $M = 2$, $\\sin\\theta = 0.5$ and $\\theta = 30^\\circ$. The qualitative trend (faster means narrower) is enough for the MCAT; the formula itself is low-yield."
  },
  {
   "topicSlug": "mcat-physics-mechanics-forces-newton-laws-mcat",

@@ -121,6 +121,53 @@ The cell membrane is a capacitor (the bilayer) in parallel with resistors (the i
 - Capacitor combination rules are the reverse of resistor rules.
 - Steady state: no current through a capacitor branch.`,
   },
+  'mcat-physics-mechanics-fluids-mcat': {
+    description: 'Pressure, buoyancy, continuity, Bernoulli, viscosity, and blood flow',
+    textContent: `# Fluids
+
+## Pressure and Pascal's Principle
+Pressure in a static fluid grows with depth, not container shape:
+$$P = P_0 + \\rho gh$$
+Gauge pressure leaves out the atmosphere; absolute pressure includes it. Pascal's principle transmits a pressure change undiminished, so a hydraulic lift multiplies force by the area ratio while the small piston moves farther.
+
+## Buoyancy
+Archimedes' principle: the buoyant force equals the weight of the fluid displaced, $F_b = \\rho_{fluid}V_{sub}g$. An object floats when its average density is below the fluid's, and the submerged fraction equals the density ratio.
+
+## Flow
+Continuity, $A_1v_1 = A_2v_2$, makes fluid speed up where a pipe narrows. Bernoulli's equation,
+$$P + \\tfrac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}$$
+is energy conservation for ideal flow: faster means lower pressure. Real fluids are viscous: Poiseuille's law makes flow scale with $r^4$, so small changes in vessel radius control blood flow.
+
+## Key Takeaways
+- Depth, not shape, sets static pressure.
+- Buoyancy depends on the fluid displaced, not on the object's weight.
+- Narrower means faster means lower pressure (ideal flow).
+- Halving a vessel's radius cuts flow 16-fold (viscous flow).`,
+  },
+  'mcat-physics-waves-sound-mcat': {
+    description: 'Periodic motion, standing waves, sound intensity and decibels, Doppler, and ultrasound',
+    textContent: `# Waves & Sound
+
+## Waves
+Every wave obeys $v = f\\lambda$. The medium sets the speed, the source sets the frequency, and the frequency stays the same when a wave crosses into a new medium. Sound is a longitudinal wave that travels fastest in solids and slowest in gases.
+
+## Superposition and Standing Waves
+Overlapping waves add. Two close frequencies beat at $|f_1 - f_2|$. A string fixed at both ends, or a pipe open at both ends, supports every harmonic, $f_n = nv/2L$; a pipe closed at one end supports only odd harmonics, $f_n = nv/4L$.
+
+## Sound Intensity
+Intensity falls with the square of distance from a point source. Sound level is logarithmic:
+$$\\beta = 10\\log\\frac{I}{I_0}$$
+so each 10 dB step is a tenfold change in intensity.
+
+## Doppler and Ultrasound
+Approach raises the observed frequency and recession lowers it. Ultrasound images tissue from echo timing, and Doppler ultrasound measures blood speed from the frequency shift.
+
+## Key Takeaways
+- Medium sets speed; source sets frequency.
+- Closed-end pipes: odd harmonics only.
+- +10 dB means 10 times the intensity.
+- Relative approach raises pitch.`,
+  },
 }
 
 const prisma = new PrismaClient()

@@ -163,6 +163,7 @@ export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
       // MCAT: topics split into one lesson per live-class session (Nov 2026,
       // src/lib/mcat-topic-split.ts). The old slug forwards to the first part.
       'mcat-physics-electricity-circuits-mcat': 'mcat-physics-electricity-dc-circuits-mcat',
+      'mcat-physics-mechanics-fluids-waves-mcat': 'mcat-physics-mechanics-fluids-mcat',
 }
 
 export function isLegacyTopicSlug(slug: string): boolean {

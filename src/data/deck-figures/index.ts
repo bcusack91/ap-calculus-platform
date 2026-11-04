@@ -52,7 +52,9 @@ import { mcatKinematicsFigures } from './mcat-cp-kinematics'
 import { mcatForcesFigures } from './mcat-cp-forces'
 import { mcatWorkEnergyFigures } from './mcat-cp-work-energy'
 import { mcatMomentumFigures } from './mcat-cp-momentum'
-import { mcatFluidsWavesFigures } from './mcat-cp-fluids-waves'
+import { mcatFluidsFigures, mcatWavesSoundFigures } from './mcat-cp-fluids-waves'
+import { mcatFluidsExtraFigures } from './mcat-cp-fluids'
+import { mcatWavesSoundExtraFigures } from './mcat-cp-waves-sound'
 import { mcatMechanicsFigures } from './mcat-cp-mechanics'
 import { mcatElectrostaticsFigures } from './mcat-cp-electrostatics'
 import { mcatDcCircuitsFigures, mcatEmfCapacitorsFigures } from './mcat-cp-circuits'
@@ -183,7 +185,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-mechanics-forces-newton-laws-mcat': mcatForcesFigures,
   'mcat-physics-mechanics-work-energy-power-mcat': mcatWorkEnergyFigures,
   'mcat-physics-mechanics-momentum-collisions-mcat': mcatMomentumFigures,
-  'mcat-physics-mechanics-fluids-waves-mcat': mcatFluidsWavesFigures,
+  'mcat-physics-mechanics-fluids-mcat': [...mcatFluidsFigures, ...mcatFluidsExtraFigures],
+  'mcat-physics-waves-sound-mcat': [...mcatWavesSoundFigures, ...mcatWavesSoundExtraFigures],
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
   'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
   'mcat-physics-electricity-dc-circuits-mcat': [...mcatDcCircuitsFigures, ...mcatDcCircuitsExtraFigures],

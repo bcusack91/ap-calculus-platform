@@ -440,12 +440,17 @@
     ],
     "tested": "Snell's law and total internal reflection, thin lenses and mirrors (1/f equation, sign conventions), magnification, diffraction/polarization basics."
   },
-  "mcat-physics-mechanics-fluids-waves-mcat": {
+  "mcat-physics-mechanics-fluids-mcat": {
     "aamc": [
-      "4B",
+      "4B"
+    ],
+    "tested": "Density and specific gravity, hydrostatic pressure and gauge vs absolute, Pascal, buoyancy and floating fraction, continuity, Bernoulli and Venturi, viscosity and Poiseuille r^4, turbulence, surface tension, blood flow."
+  },
+  "mcat-physics-waves-sound-mcat": {
+    "aamc": [
       "4D"
     ],
-    "tested": "Density and pressure, buoyancy, continuity and Bernoulli, Poiseuille qualitatively; wave properties, sound intensity and Doppler, standing waves."
+    "tested": "Periodic motion, v = f lambda and what sets wave speed, superposition and beats, standing waves in strings and pipes, resonance, intensity and decibels, Doppler, ultrasound, shock waves."
   },
   "mcat-physics-mechanics-forces-newton-laws-mcat": {
     "aamc": [

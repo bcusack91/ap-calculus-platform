@@ -66,8 +66,12 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
       pattern: /magnet|induction|flux|solenoid|lorentz/i },
     { slug: 'mcat-physics-electricity-optics-mcat', title: 'Optics',
       pattern: /lens|mirror|refract|reflect|snell|focal|diffraction|interference|polariz|optic/i },
-    { slug: 'mcat-physics-mechanics-fluids-waves-mcat', title: 'Fluids & Waves',
-      pattern: /fluid|buoyan|bernoulli|viscos|pascal|archimedes|wavelength|sound wave|doppler|resonan|harmonic|standing wave/i },
+    // Fluids & Waves was split in two (Nov 2026). Sound and oscillation
+    // vocabulary is specific; fluid vocabulary follows it.
+    { slug: 'mcat-physics-waves-sound-mcat', title: 'Waves & Sound',
+      pattern: /wavelength|sound|doppler|resonan|harmonic|standing wave|decibel|ultrasound|beat frequenc|pendulum|oscillat/i },
+    { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids',
+      pattern: /fluid|buoyan|bernoulli|viscos|pascal|archimedes|hydrostatic|specific gravity|poiseuille|continuity equation|flow rate|surface tension/i },
     { slug: 'mcat-physics-mechanics-momentum-collisions-mcat', title: 'Momentum & Collisions',
       pattern: /momentum|collision|impulse|elastic|inelastic/i },
     { slug: 'mcat-physics-mechanics-work-energy-power-mcat', title: 'Work, Energy, and Power',

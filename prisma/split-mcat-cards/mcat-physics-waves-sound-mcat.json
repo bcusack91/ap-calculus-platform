@@ -1,0 +1,250 @@
+[
+  {
+    "front": "A resting heart beats $90$ times per minute. What are the frequency and the period of one cardiac cycle?",
+    "back": "Convert to seconds first: $f = 90/60 = 1.5$ Hz, so $T = 1/f \\approx 0.67$ s. Taking $1/90$ without converting the minute is the classic error.",
+    "hint": "$f = 1/T$, with $f$ in cycles per second.",
+    "yield": "HIGH",
+    "why": "Period-frequency conversion with a per-minute unit trap is common in physiology passages.",
+    "part": 1
+  },
+  {
+    "front": "Angular frequency is {{c1::$\\omega = 2\\pi f$}}, measured in rad/s.",
+    "back": "One cycle is $2\\pi$ radians, so $f$ cycles per second is $2\\pi f$ radians per second. Passages may write the motion as $x = A\\cos\\omega t$.",
+    "hint": "How many radians are in one full cycle?",
+    "yield": "MEDIUM",
+    "why": "SHM notation shows up mainly as passage context.",
+    "part": 1
+  },
+  {
+    "front": "Two identical pendulums swing side by side; whenever one is at its far-left turning point, the other is at its far-right. Their phase difference is {{c1::$180^\\circ$ ($\\pi$ rad)}}.",
+    "back": "Opposite extremes at the same instant means half a cycle apart. A $360^\\circ$ offset is the same as $0^\\circ$ (in phase), and $90^\\circ$ would put one at a turning point while the other passes equilibrium.",
+    "hint": "One full cycle is $360^\\circ$.",
+    "yield": "HIGH",
+    "why": "Phase difference is the basis of every interference question.",
+    "part": 1
+  },
+  {
+    "front": "A mass oscillates on a spring. What happens to its period if the mass is quadrupled? If the spring is swapped for one four times stiffer?",
+    "back": "$T = 2\\pi\\sqrt{m/k}$, so four times the mass doubles $T$, and four times the stiffness halves it. Both enter under a square root.",
+    "hint": "Mass on top, spring constant on the bottom, all under a square root.",
+    "yield": "MEDIUM",
+    "why": "SHM period formulas are secondary on the MCAT and appear mostly in passages.",
+    "part": 1
+  },
+  {
+    "front": "The speed of sound in a medium is {{c1::$v = \\sqrt{B/\\rho}$}}, where $B$ is the bulk modulus (stiffness against compression) and $\\rho$ the density.",
+    "back": "Greater density alone would slow sound, but solids are vastly stiffer than gases, and stiffness wins. That is why steel carries sound about 15 times faster than air despite being thousands of times denser.",
+    "hint": "Stiffness over density.",
+    "yield": "HIGH",
+    "why": "The 'denser means faster' misconception is commonly tested.",
+    "part": 1
+  },
+  {
+    "front": "Two pulses meet on a rope: an upright pulse $3$ cm high and an inverted pulse $1$ cm deep. What is the displacement when they exactly overlap, and what happens afterward?",
+    "back": "Displacements add with their signs: $+3 + (-1) = +2$ cm. Superposition is temporary, so each pulse then continues on with its original shape.",
+    "hint": "A trough counts as a negative displacement.",
+    "yield": "HIGH",
+    "why": "Signed superposition underlies all interference reasoning.",
+    "part": 2
+  },
+  {
+    "front": "Two in-phase sources interfere constructively where the path difference is {{c1::a whole number of wavelengths}} and destructively where it is {{c2::an odd number of half-wavelengths}}.",
+    "back": "A path difference of $\\lambda$ shifts the phase by $360^\\circ$ (back in step); $\\lambda/2$ shifts it by $180^\\circ$ (crest on trough). Always convert the path difference into wavelengths before judging.",
+    "hint": "Measure the extra distance in wavelengths, not metres.",
+    "yield": "HIGH",
+    "why": "Path-difference interference is commonly tested for both sound and light.",
+    "part": 2
+  },
+  {
+    "front": "A tuner hears $4$ beats per second between a $440$ Hz tuning fork and a string. Tightening the string makes the beats slower. What was the string's frequency?",
+    "back": "Four beats puts the string at $436$ or $444$ Hz. Tightening raises its frequency, and slower beats mean it moved toward $440$, so it started flat, at $436$ Hz.",
+    "hint": "Tightening raises a string's pitch.",
+    "yield": "HIGH",
+    "why": "Beat-direction reasoning in tuning is a classic MCAT sound question.",
+    "part": 2
+  },
+  {
+    "front": "In a standing wave, adjacent nodes are {{c1::$\\lambda/2$}} apart, and a node and the next antinode are {{c2::$\\lambda/4$}} apart.",
+    "back": "Nodes never move; antinodes swing most, midway between nodes. These spacings are why strings and open pipes hold half-wavelengths and closed pipes hold quarter-wavelengths.",
+    "hint": "One full wavelength contains two loops.",
+    "yield": "HIGH",
+    "why": "Node spacing drives every standing-wave length calculation.",
+    "part": 2
+  },
+  {
+    "front": "The first overtone is which harmonic for a string or open pipe, and which for a pipe closed at one end?",
+    "back": "Overtones count the harmonics above the fundamental. Strings and open pipes have every harmonic, so the first overtone is the 2nd harmonic; a closed pipe has odd harmonics only, so its first overtone is the 3rd harmonic.",
+    "hint": "A closed pipe has no even harmonics.",
+    "yield": "HIGH",
+    "why": "Overtone-versus-harmonic numbering is a frequent trap in pipe questions.",
+    "part": 2
+  },
+  {
+    "front": "Described by pressure, an open end of a pipe is a pressure {{c1::node}} and a closed end is a pressure {{c2::antinode}}.",
+    "back": "Pressure and displacement patterns are swapped: air at an open end moves freely but stays at room pressure, while air at a closed end cannot move but its pressure swings most. The harmonic formulas are unchanged.",
+    "hint": "It is the reverse of the displacement description.",
+    "yield": "MEDIUM",
+    "why": "Pressure descriptions of pipes appear in passages; the formulas do not change.",
+    "part": 2
+  },
+  {
+    "front": "A tube's two consecutive resonances are $150$ Hz and $250$ Hz. Is it open or closed at one end, and what is its fundamental?",
+    "back": "The gap is $100$ Hz. An open tube would have $f_1 = 100$ Hz, but $150$ is not a multiple of $100$. A closed tube's gap is $2f_1$, so $f_1 = 50$ Hz, with $150 = 3f_1$ and $250 = 5f_1$: closed.",
+    "hint": "Consecutive closed-pipe resonances differ by $2f_1$.",
+    "yield": "ULTRA_HIGH",
+    "why": "Closed-pipe odd harmonics are tested on nearly every MCAT.",
+    "part": 2
+  },
+  {
+    "front": "The ear canal acts as a pipe {{c1::closed at one end}} (sealed by the eardrum), so a $2.5$ cm canal resonates near $3400$ Hz.",
+    "back": "$f_1 = v/4L = 340/(4 \\times 0.025) = 340/0.10 = 3400$ Hz. This resonance helps make human hearing most sensitive at about $2$ to $5$ kHz.",
+    "hint": "One end opens to the air; what closes the other?",
+    "yield": "HIGH",
+    "why": "A favorite physiology application of closed-pipe resonance.",
+    "part": 2
+  },
+  {
+    "front": "Heavier damping makes a driven system's resonance {{c1::weaker and less sharp}}.",
+    "back": "Damping drains vibrational energy to friction, viscosity or absorption, so amplitude dies away and the peak at the natural frequency is smaller. Damping of a travelling sound wave is called attenuation.",
+    "hint": "Where does the vibration's energy go?",
+    "yield": "MEDIUM",
+    "why": "Damping appears qualitatively in resonance passages.",
+    "part": 2
+  },
+  {
+    "front": "A vibrating surface pushing outward creates a {{c1::compression}} in the air; pulling back leaves a {{c2::rarefaction}}.",
+    "back": "Compressions have pressure and density slightly above normal, rarefactions slightly below. The zones travel outward as a longitudinal wave while each air molecule only jiggles about its rest position.",
+    "hint": "Crowded air versus spread-out air.",
+    "yield": "MEDIUM",
+    "why": "Sound-production vocabulary supports passage reading more than calculation.",
+    "part": 3
+  },
+  {
+    "front": "Why does a wind instrument go sharp as it warms up during a concert?",
+    "back": "Decide what is fixed: the pipe's length fixes the resonant wavelengths $\\lambda_n$. Warmer air carries sound faster, so $f_n = v/\\lambda_n$ rises and every resonance shifts up.",
+    "hint": "What does the pipe fix, and what does temperature change?",
+    "yield": "HIGH",
+    "why": "The 'decide what is fixed' reasoning is a passage favorite.",
+    "part": 3
+  },
+  {
+    "front": "Two identical $70$ dB alarms sound together. The combined level is about {{c1::$73$ dB}}.",
+    "back": "Two equal sources double the intensity, and $10\\log 2 \\approx 3$ dB. Adding the levels to get $140$ dB treats a logarithmic scale as linear; ten such alarms would give $80$ dB.",
+    "hint": "Add intensities, never decibels.",
+    "yield": "ULTRA_HIGH",
+    "why": "Decibel arithmetic is tested on nearly every MCAT.",
+    "part": 3
+  },
+  {
+    "front": "A sound becomes $5$ times as intense. About how much does its level rise?",
+    "back": "Write $5 = 10/2$: $+10$ dB for the factor of ten, then $-3$ dB for halving, so about $+7$ dB. Break any ratio into factors of 10 (10 dB each) and 2 (3 dB each).",
+    "hint": "$\\log 2 \\approx 0.3$",
+    "yield": "HIGH",
+    "why": "Non-power-of-ten ratios test the +3 dB rule directly.",
+    "part": 3
+  },
+  {
+    "front": "A blender delivers $10^{-5}$ W/m$^2$ to your ear. What is the sound level?",
+    "back": "$\\beta = 10\\log(10^{-5}/10^{-12}) = 10\\log(10^{7}) = 70$ dB. Shortcut: count the powers of ten above $10^{-12}$ and multiply by 10.",
+    "hint": "Divide by $I_0$ before taking the log.",
+    "yield": "HIGH",
+    "why": "Converting intensity to decibels is a standard discrete question.",
+    "part": 3
+  },
+  {
+    "front": "A loudspeaker produces $90$ dB at $1$ m. Treating it as a point source and ignoring absorption, what is the level at $10$ m?",
+    "back": "Ten times the distance gives $1/10^2 = 1/100$ of the intensity, two factors of ten, so $-20$ dB: $70$ dB. Using $1/r$ instead of $1/r^2$ would wrongly give $80$ dB.",
+    "hint": "Find the intensity ratio first, then convert to decibels.",
+    "yield": "HIGH",
+    "why": "Inverse-square spreading combined with decibels is frequently tested.",
+    "part": 3
+  },
+  {
+    "front": "Why does distant thunder sound like a low rumble while nearby thunder is a sharp crack?",
+    "back": "The medium absorbs higher frequencies more strongly (attenuation), so the high components fade with distance. Inverse-square spreading dims every frequency equally, and all audible frequencies travel at the same speed in air.",
+    "hint": "Absorption depends on frequency; geometry does not.",
+    "yield": "MEDIUM",
+    "why": "Frequency-dependent attenuation is mostly passage context.",
+    "part": 3
+  },
+  {
+    "front": "A violin and a flute play the same note. Why do they sound different?",
+    "back": "They share the fundamental frequency, so the pitch is the same, but each adds a different blend of overtones, which sets timbre. Pitch follows frequency, loudness follows intensity, timbre follows the mix of harmonics.",
+    "hint": "Same pitch, different quality.",
+    "yield": "HIGH",
+    "why": "Mapping physical properties to pitch, loudness and timbre is commonly tested.",
+    "part": 3
+  },
+  {
+    "front": "Human hearing spans about {{c1::20 Hz to 20 kHz}}; sound below that range is called {{c2::infrasound}}.",
+    "back": "Sound above $20$ kHz is ultrasound (bat echolocation; medical imaging at 1 to 20 MHz). The upper limit falls with age and noise exposure, so high frequencies are lost first.",
+    "hint": "Elephant calls lie below the range; bat calls lie above it.",
+    "yield": "HIGH",
+    "why": "Hearing range and the definitions of infrasound and ultrasound are commonly tested.",
+    "part": 3
+  },
+  {
+    "front": "In $f' = f\\,(v \\pm v_o)/(v \\mp v_s)$, how do you choose each sign?",
+    "back": "Choose each independently so that approach raises $f'$: an observer moving toward the source takes $+v_o$ (bigger top); a source moving toward the observer takes $-v_s$ (smaller bottom). Moving away flips that sign; a stationary party contributes zero.",
+    "hint": "Approach raises the frequency.",
+    "yield": "ULTRA_HIGH",
+    "why": "Doppler direction and sign choice are tested on nearly every MCAT.",
+    "part": 4
+  },
+  {
+    "front": "A $600$ Hz siren approaching a still listener at $34$ m/s is heard at about $667$ Hz ($v = 340$ m/s). A listener running at $34$ m/s toward a parked siren hears {{c1::$660$ Hz}}.",
+    "back": "Moving observer: $f' = 600(340 + 34)/340 = 600(1.1) = 660$ Hz. The results differ because only a moving source changes the wavelength; a moving observer just meets the wavefronts more often.",
+    "hint": "Observer speed goes in the numerator.",
+    "yield": "HIGH",
+    "why": "Distinguishing moving-observer and moving-source cases is commonly tested.",
+    "part": 4
+  },
+  {
+    "front": "Sound reflecting off a target moving at speed $u$ (much slower than sound) has its frequency shifted by about {{c1::$2fu/v$}}.",
+    "back": "The target first receives the sound as a moving observer, then re-emits it as a moving source: two shifts in sequence. The echo shifts up for an approaching target and down for a receding one.",
+    "hint": "Count the Doppler steps in an echo.",
+    "yield": "HIGH",
+    "why": "The reflection double shift underlies Doppler ultrasound questions.",
+    "part": 4
+  },
+  {
+    "front": "An ultrasound echo returns $130\\;\\mu\\text{s}$ after the pulse leaves the probe ($v = 1540$ m/s in tissue). How deep is the reflecting boundary?",
+    "back": "The pulse travels there and back, so $d = vt/2 = (1540)(1.30 \\times 10^{-4})/2 \\approx 0.10$ m $= 10$ cm. Forgetting the factor of 2 doubles every depth.",
+    "hint": "The echo time covers a round trip.",
+    "yield": "HIGH",
+    "why": "Echo-depth calculation is a standard ultrasound question.",
+    "part": 4
+  },
+  {
+    "front": "An ultrasound probe's crystal is {{c1::piezoelectric}}: it deforms when a voltage is applied and generates a voltage when squeezed.",
+    "back": "So the same crystal both transmits (electrical pulse into a burst of sound) and receives (returning echo into an electrical signal).",
+    "hint": "Mechanical stress and voltage convert both ways.",
+    "yield": "MEDIUM",
+    "why": "The transducer mechanism appears in imaging passages.",
+    "part": 4
+  },
+  {
+    "front": "With the same probe and beam angle, the Doppler shift inside a stenosis is $3$ times the upstream shift. The lumen's area there is {{c1::one-third}} of the upstream area.",
+    "back": "The shift is proportional to blood speed, so the speed tripled, and continuity ($A_1u_1 = A_2u_2$) gives one-third the area. Squaring the ratio (one-ninth) is the trap; the factor of 2 and probe frequency cancel.",
+    "hint": "Shift tracks speed; speed and area are inversely related.",
+    "yield": "HIGH",
+    "why": "Doppler blood flow paired with continuity is a common combined passage question.",
+    "part": 4
+  },
+  {
+    "front": "A jet flies level at Mach $1.5$. When does a listener on the ground hear its sonic boom?",
+    "back": "Once, after the jet has passed overhead, when the trailing Mach cone (a shock wave) sweeps past. The cone trails the jet for as long as it flies supersonically; the boom is not a one-time event at Mach 1.",
+    "hint": "Mach number $M = v_s/v$; the cone trails the source.",
+    "yield": "MEDIUM",
+    "why": "Shock waves are tested qualitatively, mostly in passages.",
+    "part": 4
+  },
+  {
+    "front": "A Mach cone's half-angle satisfies {{c1::$\\sin\\theta = 1/M$}}, so a faster source makes a narrower cone.",
+    "back": "At $M = 2$, $\\sin\\theta = 0.5$ and $\\theta = 30^\\circ$. The qualitative trend (faster means narrower) is enough for the MCAT; the formula itself is low-yield.",
+    "hint": "$M = v_s/v$",
+    "yield": "LOW",
+    "why": "Inside the lesson's low-yield block; the cone-angle formula is rarely tested.",
+    "part": 4
+  }
+]

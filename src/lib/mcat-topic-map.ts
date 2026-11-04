@@ -103,6 +103,9 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   // The bank split the combined fluids-waves subtopic into two (AAMC 4B/4D);
   // playing either satisfies the combined curriculum topic.
   'mcat-physics-mechanics-fluids-waves-mcat': ['mcat-physics-mechanics-fluids-mcat', 'mcat-physics-waves-sound-mcat'],
+  // Its successors (Nov 2026) are the bank's own subtopics.
+  'mcat-physics-mechanics-fluids-mcat': ['mcat-physics-mechanics-fluids-mcat'],
+  'mcat-physics-waves-sound-mcat': ['mcat-physics-waves-sound-mcat'],
   'mcat-physics-electricity-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   'mcat-physics-electricity-electrostatics-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   // Retired Nov 2026 (split in two); kept so legacy assignments still complete.

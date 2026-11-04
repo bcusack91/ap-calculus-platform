@@ -123,6 +123,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-physics-mechanics-work-energy-power-mcat': () => import('./mcat-physics-mechanics'),
   'mcat-physics-mechanics-momentum-collisions-mcat': () => import('./mcat-physics-mechanics'),
   'mcat-physics-mechanics-fluids-waves-mcat': () => import('./mcat-physics-mechanics'),
+  // Fluids & Waves split in two (Nov 2026); the old slug's loader stays for attempt history.
+  'mcat-physics-mechanics-fluids-mcat': () => import('./lesson-built/mcat-physics-mechanics-fluids-mcat'),
+  'mcat-physics-waves-sound-mcat': () => import('./lesson-built/mcat-physics-waves-sound-mcat'),
   'mcat-physics-electricity': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias
   'mcat-physics-electricity-electrostatics-mcat': () => import('./mcat-physics-electricity'),
