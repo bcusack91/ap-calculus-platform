@@ -24,6 +24,11 @@ export const VIDEO_SHORT_LINKS: Record<string, VideoShortLink> = {
   bonds5: { topicSlug: 'types-of-chemical-bonds', clip: 5, campaign: 'apchem-bonds' },
   bonds6: { topicSlug: 'types-of-chemical-bonds', clip: 6, campaign: 'apchem-bonds' },
   bonds7: { topicSlug: 'types-of-chemical-bonds', clip: 7, campaign: 'apchem-bonds' },
+  // MCAT · Circuits Part 1: Current & Resistance (recording plan clips 1–4)
+  current1: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 1, campaign: 'mcat-circuits1' },
+  voltage1: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 2, campaign: 'mcat-circuits1' },
+  ohm1: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 3, campaign: 'mcat-circuits1' },
+  series1: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 4, campaign: 'mcat-circuits1' },
 }
 
 export function lookupShortLink(code: string): (VideoShortLink & { code: string }) | null {
