@@ -1,31 +1,32 @@
 /**
- * Entrance Quiz — Kinetics (MCAT)
- * 10 questions · 5 parts (2 per part)
+ * Entrance Quiz — Kinetics: Rate Laws & Half-Lives (MCAT)
+ * 8 questions · 3 parts (3 / 3 / 2)
+ * Part titles match the interactive lesson's "Part N of 3" lines.
+ * Activation energy, Arrhenius, mechanisms and catalysis moved to
+ * mcat-general-chemistry-energy-mechanisms-mcat when the topic was split (Nov 2026).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Rate Laws & Reaction Order'
+const P2 = 'Integrated Rate Laws & Half-Life'
+const P3 = 'Mixed MCAT Review'
+
 const questions: EntranceQuizQuestion[] = [
   // Part 1 — Rate Laws & Reaction Order
-  { id: 'mgkn-ent-1a', question: 'For the rate law $rate = k[A]^2[B]$, the overall reaction order is:', options: ['1', '2', '3', '4'], correctIndex: 2, explanation: 'Overall order = sum of exponents = 2 + 1 = 3.', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
-  { id: 'mgkn-ent-1b', question: 'When [A] doubles and the rate quadruples (with all other concentrations fixed), the order in A is:', options: ['0', '1', '2', '3'], correctIndex: 2, explanation: 'rate ∝ [A]^n. If [A] doubles and rate × 4 = $2^{n}$ → n = 2 (second order in A).', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
+  { id: 'mgkn-ent-1a', question: 'For the rate law rate $= k[\\text{A}]^2[\\text{B}]$, what is the overall reaction order?', options: ['1', '2', '3', '4'], correctIndex: 2, explanation: 'The overall order is the sum of the exponents: $2 + 1 = 3$. Two is the order in A alone.', partNumber: 1, partTitle: P1 },
+  { id: 'mgkn-ent-1b', question: 'Tripling [B] while [A] is held constant leaves the initial rate unchanged. What is the order of the reaction in B?', options: ['0', '1', '2', '3'], correctIndex: 0, explanation: 'With [A] fixed, $\\text{rate}_2/\\text{rate}_1 = 3^n$, and a ratio of 1 means $n = 0$: B does not appear in the rate law. First order would triple the rate and second order would raise it ninefold.', partNumber: 1, partTitle: P1 },
+  { id: 'mgkn-ent-1c', question: 'A reaction obeys rate $= k[\\text{A}][\\text{B}]^2$. If both [A] and [B] are doubled at the same temperature, the rate rises by a factor of:', options: ['2', '4', '6', '8'], correctIndex: 3, explanation: 'Each change multiplies the rate by (factor)$^{\\text{order}}$: $2^1 \\times 2^2 = 8$. A factor of 4 counts only B, 6 adds the factors instead of multiplying them, and $k$ stays fixed because the temperature does not change.', partNumber: 1, partTitle: P1 },
 
   // Part 2 — Integrated Rate Laws & Half-Life
-  { id: 'mgkn-ent-2a', question: 'For a first-order reaction with k = 0.10 $s^{-1}$, the half-life is approximately:', options: ['0.10 s', '6.93 s', '10 s', '693 s'], correctIndex: 1, explanation: '$t_{1}/_{2}$ = ln 2 / k = 0.693 / 0.10 ≈ 6.93 s.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
-  { id: 'mgkn-ent-2b', question: 'The integrated rate law for a first-order reaction A → products is:', options: ['$[A] = [A]_0 - kt$', '$\\ln[A] = \\ln[A]_0 - kt$', '$1/[A] = 1/[A]_0 + kt$', '$[A]^2 = [A]_0^2 - kt$'], correctIndex: 1, explanation: 'A plot of ln[A] vs. t is linear (slope = −k) for a first-order reaction.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
+  { id: 'mgkn-ent-2a', question: 'For a first-order reaction with $k = 0.10\\;\\text{s}^{-1}$, the half-life is approximately:', options: ['0.069 s', '6.9 s', '10 s', '69 s'], correctIndex: 1, explanation: '$t_{1/2} = 0.693/k = 0.693/0.10 \\approx 6.9$ s. Ten seconds is $1/k$, which leaves out the $\\ln 2$, and the other two misplace the decimal.', partNumber: 2, partTitle: P2 },
+  { id: 'mgkn-ent-2b', question: 'Which is the integrated rate law for a first-order reaction A → products?', options: ['$[\\text{A}] = [\\text{A}]_0 - kt$', '$\\ln[\\text{A}] = \\ln[\\text{A}]_0 - kt$', '$1/[\\text{A}] = 1/[\\text{A}]_0 + kt$', '$[\\text{A}]^2 = [\\text{A}]_0^2 - kt$'], correctIndex: 1, explanation: 'For a first-order reaction $\\ln[\\text{A}]$ falls linearly with time, with slope $-k$. The straight subtraction $[\\text{A}] = [\\text{A}]_0 - kt$ is zero order, the reciprocal form is second order, and no standard order uses $[\\text{A}]^2$.', partNumber: 2, partTitle: P2 },
+  { id: 'mgkn-ent-2c', question: 'For which reaction order does a plot of [A] against time give a straight line?', options: ['Zero order, with slope $-k$', 'First order, with slope $-k$', 'Second order, with slope $+k$', 'First order, with slope $+k$'], correctIndex: 0, explanation: 'Zero order follows $[\\text{A}] = [\\text{A}]_0 - kt$, so [A] itself falls linearly with slope $-k$. First-order data are linear only as $\\ln[\\text{A}]$ against $t$, and second-order data as $1/[\\text{A}]$ against $t$, the one plot with slope $+k$.', partNumber: 2, partTitle: P2 },
 
-  // Part 3 — Activation Energy & Arrhenius Equation
-  { id: 'mgkn-ent-3a', question: 'Increasing temperature speeds up most reactions primarily because:', options: ['Activation energy decreases at higher T', 'A larger fraction of molecules has energy ≥ Ea', 'The reaction becomes more exothermic', 'Equilibrium constant always increases'], correctIndex: 1, explanation: 'Per the Maxwell-Boltzmann distribution, higher T means more molecules have enough energy to surmount Ea — so k (rate constant) increases.', partNumber: 3, partTitle: 'Activation Energy & Arrhenius Equation' },
-  { id: 'mgkn-ent-3b', question: 'The Arrhenius equation $k = A e^{-E_a/RT}$ predicts that, for fixed A and Ea, k:', options: ['Decreases as T increases', 'Increases as T increases', 'Is independent of T', 'Depends only on the catalyst'], correctIndex: 1, explanation: 'As T increases, the exponent −Ea/RT becomes less negative, so $e^{-E_a/RT}$ grows — k increases.', partNumber: 3, partTitle: 'Activation Energy & Arrhenius Equation' },
-
-  // Part 4 — Mechanisms, RDS & Catalysis
-  { id: 'mgkn-ent-4a', question: 'In a multi-step reaction mechanism, the overall rate is determined by:', options: ['The fastest elementary step', 'The slowest elementary step (rate-determining step)', 'The step with the highest yield', 'The number of intermediates formed'], correctIndex: 1, explanation: 'The slowest step is the bottleneck — the rate-determining step (RDS) — and the rate law typically reflects it.', partNumber: 4, partTitle: 'Mechanisms, RDS & Catalysis' },
-  { id: 'mgkn-ent-4b', question: 'A catalyst increases reaction rate by:', options: ['Increasing the activation energy', 'Lowering the activation energy via an alternative pathway', 'Shifting equilibrium to favor products', 'Increasing the temperature of the system'], correctIndex: 1, explanation: 'A catalyst provides a different pathway with lower Ea. It is not consumed and does not shift equilibrium — it speeds both forward and reverse equally.', partNumber: 4, partTitle: 'Mechanisms, RDS & Catalysis' },
-
-  // Part 5 — Mixed MCAT Review
-  { id: 'mgkn-ent-5a', question: 'Doubling the temperature of a reaction (in K) typically:', options: ['Has no effect on rate', 'Doubles the rate', 'Increases rate by a factor of roughly 2–4 per 10 K rise', 'Decreases the rate by half'], correctIndex: 2, explanation: 'A common rule of thumb: rate roughly doubles for every ~10 K rise (the actual factor depends on Ea via Arrhenius).', partNumber: 5, partTitle: 'Mixed MCAT Review' },
-  { id: 'mgkn-ent-5b', question: 'A zero-order reaction A → products has a rate that is:', options: ['Proportional to [A]', 'Proportional to [A]$ {}^{2}$', 'Independent of [A]', 'Inversely proportional to [A]'], correctIndex: 2, explanation: 'rate = k[A]$ {}^{0}$ = k. Common for surface-catalyzed or enzyme-saturated reactions where [A] doesn\'t matter at high concentrations.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
+  // Part 3 — Mixed MCAT Review
+  { id: 'mgkn-ent-3a', question: 'A reaction has a rate constant of $0.035\\;\\text{s}^{-1}$. What are its order and half-life?', options: ['Second order; about 20 s', 'First order; about 29 s', 'Zero order; about 14 s', 'First order; about 20 s'], correctIndex: 3, explanation: 'Units of $\\text{s}^{-1}$ mark a first-order reaction, whose half-life is $0.693/k = 0.693/0.035 \\approx 20$ s at any concentration. About 29 s is $1/k$ without the $\\ln 2$; a second-order $k$ would carry units of $\\text{M}^{-1}\\text{s}^{-1}$ and a zero-order $k$ units of M/s.', partNumber: 3, partTitle: P3 },
+  { id: 'mgkn-ent-3b', question: 'An enzyme is saturated with substrate, so the reaction is zero order. If the starting substrate concentration is doubled, the time needed to consume half of it:', options: ['Becomes half as long', 'Stays exactly the same', 'Becomes twice as long', 'Becomes four times as long'], correctIndex: 2, explanation: 'A zero-order reaction uses substrate at a constant rate $k$, so its half-life is $[\\text{A}]_0/(2k)$: twice as much to consume at the same rate takes twice as long. A fixed half-life is the first-order signature, and a half-life that shrinks as $[\\text{A}]_0$ grows is second order.', partNumber: 3, partTitle: P3 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -34,10 +35,8 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
-    { partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
-    { partNumber: 3, partTitle: 'Activation Energy & Arrhenius Equation' },
-    { partNumber: 4, partTitle: 'Mechanisms, RDS & Catalysis' },
-    { partNumber: 5, partTitle: 'Mixed MCAT Review' },
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
   ]
 }

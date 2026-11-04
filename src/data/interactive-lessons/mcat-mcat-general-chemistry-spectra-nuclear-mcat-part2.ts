@@ -18,7 +18,7 @@ Nuclear chemistry is a distinct but related MCAT topic. You need to recognize de
 | Beta-minus decay | $\\beta^-$ | $0$ | $+1$ | Electron + antineutrino |
 | Beta-plus (positron) | $\\beta^+$ | $0$ | $-1$ | Positron + neutrino |
 | Gamma | $\\gamma$ | $0$ | $0$ | High-energy photon |
-| Electron capture | EC | $0$ | $-1$ | Neutrino (an inner electron is absorbed; X-rays follow) |
+| Electron capture | EC | $0$ | $-1$ | Neutrino (an inner electron is absorbed; outer electrons drop into the vacancy and emit X-rays) |
 
 where $A$ = mass number (protons + neutrons), $Z$ = atomic number (protons).
 

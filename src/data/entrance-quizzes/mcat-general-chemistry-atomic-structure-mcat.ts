@@ -1,32 +1,32 @@
 /**
- * Entrance Quiz — Atomic Structure (MCAT)
- * 10 questions · 5 parts (2 per part)
- * Part titles aligned to the interactive lesson.
+ * Entrance Quiz — Atomic Structure & Periodic Trends (MCAT)
+ * 8 questions · 3 parts (3 / 3 / 2)
+ * Part titles match the interactive lesson's "Part N of 3" lines.
+ * Spectra, PES, the Bohr model and nuclear chemistry moved to
+ * mcat-general-chemistry-spectra-nuclear-mcat when the topic was split (Nov 2026).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Quantum Numbers & Electron Configuration'
+const P2 = 'Periodic Trends: Atomic Radius, Ionization Energy & Electronegativity'
+const P3 = 'Mixed MCAT Review: Passage-Style Practice'
+
 const questions: EntranceQuizQuestion[] = [
   // Part 1 — Quantum Numbers & Electron Configuration
-  { id: 'mgas-ent-1a', question: 'For n = 3, the possible values of the angular momentum quantum number ℓ are:', options: ['0, 1', '0, 1, 2', '1, 2, 3', '0, 1, 2, 3'], correctIndex: 1, explanation: 'ℓ ranges from 0 to n−1. For n = 3: ℓ = 0 (s), 1 (p), 2 (d).', partNumber: 1, partTitle: 'Quantum Numbers & Electron Configuration' },
-  { id: 'mgas-ent-1b', question: 'The ground-state electron configuration of chromium (Z = 24) is:', options: ['[Ar] $3d^{4}$ $4s^{2}$', '[Ar] $3d^{5}$ $4s^{1}$', '[Ar] $3d^{6}$ $4s^{0}$', '[Ar] $4s^{2}$ $4p^{4}$'], correctIndex: 1, explanation: 'Chromium adopts [Ar] $3d^{5}$ $4s^{1}$ instead of $3d^{4}$ $4s^{2}$ because a half-filled d subshell is especially stable.', partNumber: 1, partTitle: 'Quantum Numbers & Electron Configuration' },
+  { id: 'mgas-ent-1a', question: 'An electron is in a subshell with $\\ell = 3$. How many orbitals does that subshell contain?', options: ['3', '5', '7', '9'], correctIndex: 2, explanation: 'A subshell has $2\\ell + 1$ orbitals, so $\\ell = 3$ (an $f$ subshell) has 7. Five is the count for a $d$ subshell ($\\ell = 2$), three is for $p$, and nine is the total for a whole $n = 3$ shell.', partNumber: 1, partTitle: P1 },
+  { id: 'mgas-ent-1b', question: 'The ground-state electron configuration of chromium ($Z = 24$) is:', options: ['$[\\text{Ar}]\\, 3d^5\\, 4s^1$', '$[\\text{Ar}]\\, 3d^4\\, 4s^2$', '$[\\text{Ar}]\\, 3d^6\\, 4s^0$', '$[\\text{Ar}]\\, 4s^2\\, 4p^4$'], correctIndex: 0, explanation: 'A half-filled $3d$ subshell is especially stable, so chromium moves one $4s$ electron into $3d$: $[\\text{Ar}]\\, 3d^5\\, 4s^1$. The $3d^4\\, 4s^2$ arrangement is the Aufbau prediction that chromium breaks, an empty $4s$ is not the neutral ground state, and $4p$ fills only after $3d$.', partNumber: 1, partTitle: P1 },
+  { id: 'mgas-ent-1c', question: 'Chlorine-35 and chlorine-37 atoms differ in their number of:', options: ['Protons in the nucleus', 'Neutrons in the nucleus', 'Electrons around the nucleus', 'Valence electrons'], correctIndex: 1, explanation: 'Isotopes share the atomic number $Z$ (17 protons for chlorine), and so the same electrons and the same chemistry. Only the neutron count differs: $35 - 17 = 18$ and $37 - 17 = 20$.', partNumber: 1, partTitle: P1 },
 
   // Part 2 — Periodic Trends
-  { id: 'mgas-ent-2a', question: 'Which property generally increases left-to-right across a period?', options: ['Atomic radius', 'Metallic character', 'Electronegativity', 'Number of valence shells'], correctIndex: 2, explanation: 'Effective nuclear charge increases across a period, pulling electrons in tighter and increasing electronegativity (and ionization energy).', partNumber: 2, partTitle: 'Periodic Trends' },
-  { id: 'mgas-ent-2b', question: 'Which species has the largest atomic/ionic radius?', options: ['$Na^{+}$', '$Mg^{2+}$', '$F^{-}$', '$O^{2-}$'], correctIndex: 3, explanation: 'All four are isoelectronic (10 electrons). The species with the fewest protons (O, Z = 8) holds those 10 electrons most loosely → largest radius.', partNumber: 2, partTitle: 'Periodic Trends' },
+  { id: 'mgas-ent-2a', question: 'Which property generally increases from left to right across a period?', options: ['Atomic radius', 'Metallic character', 'Electronegativity', 'Number of electron shells'], correctIndex: 2, explanation: 'Effective nuclear charge rises across a period, pulling electrons in more tightly, so electronegativity (and ionization energy) increases. Atomic radius and metallic character fall across a period, and the shell count stays the same.', partNumber: 2, partTitle: P2 },
+  { id: 'mgas-ent-2b', question: 'Atomic radius decreases from sodium to chlorine across Period 3 mainly because:', options: ['A new, more distant shell is added at each step', 'Inner-electron shielding grows across the period', 'Repulsion between electrons falls as more are added', 'Nuclear charge rises while the shell stays the same'], correctIndex: 3, explanation: 'Across a period, protons are added but the new electrons go into the same shell, and the core that shields them does not change, so $Z_{\\text{eff}}$ rises and pulls the shell in. New shells are added going DOWN a group, inner shielding stays roughly constant across a period, and added electrons increase repulsion rather than reduce it.', partNumber: 2, partTitle: P2 },
+  { id: 'mgas-ent-2c', question: 'An element has the valence configuration $ns^2\\, np^5$. In its compounds it most often:', options: ['Gains one electron to form a $-1$ ion', 'Loses one electron to form a $+1$ ion', 'Loses two electrons to form a $+2$ ion', 'Stays unbonded, since its shell is full'], correctIndex: 0, explanation: 'A valence shell of $ns^2\\, np^5$ is one electron short of an octet, which marks a halogen. Halogens are highly electronegative and gain one electron to form a $-1$ ion, as $\\text{Cl}^-$ does. Losing electrons is the pattern of the Group IA ($+1$) and IIA ($+2$) metals, and only a filled $ns^2\\, np^6$ shell is nearly inert.', partNumber: 2, partTitle: P2 },
 
-  // Part 3 — Spectra, PES & Bohr Model
-  { id: 'mgas-ent-3a', question: 'An electron in a hydrogen atom drops from n = 4 to n = 2. The emitted photon falls in the:', options: ['Lyman series (UV)', 'Balmer series (visible)', 'Paschen series (IR)', 'Brackett series (IR)'], correctIndex: 1, explanation: 'Transitions ending at n = 2 produce the Balmer series (visible light). The 4 → 2 transition emits a ~486 nm blue-green photon.', partNumber: 3, partTitle: 'Spectra, PES & Bohr Model' },
-  { id: 'mgas-ent-3b', question: 'In a photoelectron spectrum (PES), peak position corresponds to:', options: ['The number of electrons in a subshell', 'The binding (ionization) energy of those electrons', 'The atomic mass of the element', 'The orbital angular momentum'], correctIndex: 1, explanation: 'PES peaks are plotted by binding energy. Peak height (or area) reflects the relative number of electrons at that energy.', partNumber: 3, partTitle: 'Spectra, PES & Bohr Model' },
-
-  // Part 4 — Nuclear Chemistry & Half-Life
-  { id: 'mgas-ent-4a', question: 'A radioactive isotope has a half-life of 10 years. After 30 years, what fraction of the original sample remains?', options: ['1/2', '1/4', '1/8', '1/16'], correctIndex: 2, explanation: '30 years = 3 half-lives. Remaining fraction = $(1/2)^{3}$ = 1/8.', partNumber: 4, partTitle: 'Nuclear Chemistry & Half-Life' },
-  { id: 'mgas-ent-4b', question: 'Beta-minus $(\\beta^{-})$ decay results in:', options: ['Loss of 4 mass units, gain of −2 charge', 'No change in mass; atomic number increases by 1', 'No change in mass; atomic number decreases by 1', 'Loss of 1 mass unit; charge unchanged'], correctIndex: 1, explanation: 'In $\\beta^{-}$ decay, a neutron converts to a proton + electron + antineutrino. Mass number is unchanged; Z increases by 1.', partNumber: 4, partTitle: 'Nuclear Chemistry & Half-Life' },
-
-  // Part 5 — Mixed MCAT Review
-  { id: 'mgas-ent-5a', question: 'Which atom is paramagnetic in its ground state?', options: ['Ne', 'Mg', 'O', 'Ca'], correctIndex: 2, explanation: 'Oxygen $(1s^{2} 2s^{2} 2p^{4})$ has two unpaired p electrons → paramagnetic. Ne, Mg, and Ca all have fully paired electrons → diamagnetic.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
-  { id: 'mgas-ent-5b', question: "Heisenberg's Uncertainty Principle implies that for an electron, we cannot simultaneously know with arbitrary precision both:", options: ['Mass and charge', 'Position and momentum', 'Spin and energy level', 'Orbital and subshell'], correctIndex: 1, explanation: 'ΔxΔp ≥ ℏ/2. This is why we describe electrons with probabilistic orbitals rather than fixed paths.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
+  // Part 3 — Mixed MCAT Review
+  { id: 'mgas-ent-3a', question: 'Atom X is $[\\text{Ne}]\\, 3s^1$ and atom Y is $[\\text{Ne}]\\, 3s^2\\, 3p^5$. Which statement is correct?', options: ['X has the higher first ionization energy', 'Y has the smaller radius of the two atoms', 'X has the higher electronegativity', 'Y loses an electron more easily than X'], correctIndex: 1, explanation: 'X has 11 electrons (sodium) and Y has 17 (chlorine), both in Period 3. Across the period $Z_{\\text{eff}}$ rises, so chlorine is smaller, holds its electrons more tightly (higher ionization energy) and attracts bonding electrons more strongly (higher electronegativity). Sodium, with a single $3s$ electron, is the one that gives up an electron easily.', partNumber: 3, partTitle: P3 },
+  { id: 'mgas-ent-3b', question: 'A $+2$ ion has the ground-state configuration $[\\text{Ar}]\\, 3d^{10}$. Which element formed it?', options: ['Ni ($Z = 28$)', 'Cu ($Z = 29$)', 'Zn ($Z = 30$)', 'Ga ($Z = 31$)'], correctIndex: 2, explanation: 'A $+2$ ion with $[\\text{Ar}]\\, 3d^{10}$ has 28 electrons, so the atom had 30: zinc, $[\\text{Ar}]\\, 3d^{10}\\, 4s^2$, which loses its two $4s$ electrons first. $\\text{Ni}^{2+}$ is $3d^8$, $\\text{Cu}^{2+}$ is $3d^9$, and $\\text{Ga}^{2+}$ still holds one $4s$ electron.', partNumber: 3, partTitle: P3 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -35,10 +35,8 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Quantum Numbers & Electron Configuration' },
-    { partNumber: 2, partTitle: 'Periodic Trends' },
-    { partNumber: 3, partTitle: 'Spectra, PES & Bohr Model' },
-    { partNumber: 4, partTitle: 'Nuclear Chemistry & Half-Life' },
-    { partNumber: 5, partTitle: 'Mixed MCAT Review' },
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
   ]
 }

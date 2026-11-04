@@ -321,9 +321,13 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   // General Chemistry
   'mcat-general-chemistry-mcat': () => import('./mcat-general-chemistry-mcat'),
   'mcat-general-chemistry-atomic-structure-mcat': () => import('./mcat-general-chemistry-atomic-structure-mcat'),
+  'mcat-general-chemistry-spectra-nuclear-mcat': () => import('./mcat-general-chemistry-spectra-nuclear-mcat'),
   'mcat-general-chemistry-stoichiometry-mcat': () => import('./mcat-general-chemistry-stoichiometry-mcat'),
+  'mcat-general-chemistry-solutions-gases-mcat': () => import('./mcat-general-chemistry-solutions-gases-mcat'),
   'mcat-general-chemistry-acid-base-equilibrium-mcat': () => import('./mcat-general-chemistry-acid-base-equilibrium-mcat'),
+  'mcat-general-chemistry-titrations-equilibrium-mcat': () => import('./mcat-general-chemistry-titrations-equilibrium-mcat'),
   'mcat-general-chemistry-kinetics-mcat': () => import('./mcat-general-chemistry-kinetics-mcat'),
+  'mcat-general-chemistry-energy-mechanisms-mcat': () => import('./mcat-general-chemistry-energy-mechanisms-mcat'),
   'mcat-general-chemistry-thermodynamics-mcat': () => import('./mcat-general-chemistry-thermodynamics-mcat'),
   // Organic Chemistry
   'mcat-organic-chemistry-mcat': () => import('./mcat-organic-chemistry-mcat'),
