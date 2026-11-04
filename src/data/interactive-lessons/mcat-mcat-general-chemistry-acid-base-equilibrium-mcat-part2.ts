@@ -6,7 +6,7 @@ export const mcatAcidBaseEqPart2Data = {
       type: 'text' as const,
       content: `# Acids, Bases & Buffers
 
-**Part 2 of 3 —$K_a$, $K_b$, Henderson-Hasselbalch & Percent Dissociation**
+**Part 2 of 3 — $K_a$, $K_b$, Henderson-Hasselbalch & Percent Dissociation**
 
 ## The Acid Dissociation Constant $K_a$
 

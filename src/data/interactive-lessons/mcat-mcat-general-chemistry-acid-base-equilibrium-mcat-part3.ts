@@ -6,7 +6,7 @@ export const mcatAcidBaseEqPart3Data = {
       type: 'text' as const,
       content: `# Acids, Bases & Buffers
 
-**Part 3 of 3 —Buffers: Mechanism, Capacity & Physiological Relevance**
+**Part 3 of 3 — Buffers: Mechanism, Capacity & Physiological Relevance**
 
 ## What Is a Buffer?
 
@@ -157,7 +157,7 @@ Counting all dissolved $\\text{CO}_2$, the effective $\\text{p}K_a$ is 6.1, so p
             ],
             correctAnswer: 1,
             yield: 'MEDIUM',
-            explanation: `Buffer capacity depends on how many moles of acid and base are available to react. Higher **absolute concentrations** of HA and $A^{-}$ = more capacity. $pK_{a}$ governs the pH at which the buffer is optimal, but capacity (moles that can be absorbed) comes from concentration. Temperature shifts $K_a$ slightly but not how much acid or base is on hand, and volume does not set capacity, which is measured per litre.`
+            explanation: `Buffer capacity depends on how many moles of acid and base are available to react. Higher **absolute concentrations** of HA and $A^{-}$ = more capacity. $pK_{a}$ governs the pH at which the buffer is optimal, but capacity (moles that can be absorbed) comes from concentration. Temperature shifts $K_a$ slightly but not how much acid or base is on hand, and a larger volume of the same buffer holds more total moles but resists pH change no better per litre; the concentrations set that.`
           },
           {
             question: `A buffer is prepared with 0.10 M acetic acid and 0.10 M sodium acetate ($\\text{p}K_a = 4.74$). Enough NaOH is added to convert exactly all the acetic acid. The solution now contains only acetate (about 0.20 M). What happens to the buffering?`,

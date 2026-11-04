@@ -239,7 +239,7 @@ You cannot simultaneously know both position and momentum exactly. This is why q
     {
       id: 'as3-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 3
+      content: `## Key Takeaways — Part 1
 
 - **Bohr transitions.** In hydrogen $E_n = -13.6/n^2$ eV; a fall emits a photon of $E = hc/\\lambda$, a rise absorbs one.
 - **Spectral series.** Lyman ends at $n = 1$ (UV), Balmer at $n = 2$ (visible), Paschen at $n = 3$ (infrared).

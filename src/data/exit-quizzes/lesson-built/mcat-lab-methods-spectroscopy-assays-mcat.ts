@@ -374,6 +374,115 @@ export const EXIT_POOL: LessonExitItem[] = [
     yield: 'MEDIUM',
     part: 3,
   },
+
+  // ───────────────────────── Added Nov 2026 (pool grown to 38 default items) ─────────────────────────
+  // Part 1 — centrifugation
+  {
+    question: `A protocol was written for a 10 cm rotor spun at 6,000 RPM. A lab runs it on a 20 cm rotor at the same 6,000 RPM. Compared with the protocol, the force on the samples is:`,
+    options: [`The same`, `Four times as large`, `Twice as large`, `Half as large`],
+    correctAnswer: 2,
+    explanation: `RCF is proportional to the rotor radius times the RPM squared, so doubling the radius at the same RPM doubles the force. Expecting the same force assumes RPM alone sets it, which is exactly why protocols quote × g instead. Four times as large squares the radius, but only the RPM enters squared, and a larger radius raises the force rather than halving it.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `A student's mitochondrial pellet, collected at about 10,000 g, is heavily contaminated with nuclei. Which step of the differential protocol was most likely skipped?`,
+    options: [
+      `The ultracentrifuge spin that pellets the free ribosomes`,
+      `The first low-speed spin that pellets nuclei and debris`,
+      `The final spin that collects microsomes from the cytosol`,
+      `A CsCl gradient spun to equilibrium before any pelleting`,
+    ],
+    correctAnswer: 1,
+    explanation: `Differential centrifugation removes the biggest contaminant first: a low-speed spin pellets nuclei and debris, and only its supernatant is spun faster to collect mitochondria. Skipping it lets the nuclei come down with the mitochondria at 10,000 g. The ribosome and microsome spins come after the mitochondrial pellet is collected, so they cannot affect it, and differential pelleting needs no CsCl gradient.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 1,
+  },
+  {
+    question: `The microsomal fraction, collected after the mitochondria have been pelleted, consists mainly of:`,
+    options: [
+      `Intact mitochondria too small to pellet at medium speed`,
+      `Ribosomal subunits released from the nuclear envelope`,
+      `Nuclear fragments left behind by the first low-speed spin`,
+      `Small vesicles formed from ER fragments during homogenization`,
+    ],
+    correctAnswer: 3,
+    explanation: `Microsomes are small vesicles that form from fragments of the endoplasmic reticulum when cells are homogenized, and they pellet after the mitochondria but before the ribosomes. Mitochondria have already been collected by this point, and nuclear material came down in the first, low-speed spin. Ribosomes pellet only later, in the ultracentrifuge.`,
+    difficulty: 'easy',
+    yield: 'MEDIUM',
+    part: 1,
+  },
+
+  // Part 2 — spectroscopy & Beer's law
+  {
+    question: `A nucleic-acid prep reads $A_{260} = 0.90$ and $A_{280} = 0.50$. Its $A_{260}/A_{280}$ ratio and what it indicates are:`,
+    options: [
+      `1.8, which fits pure DNA`,
+      `0.56, which fits protein contamination`,
+      `1.8, which signals protein contamination`,
+      `1.8, which fits a pure RNA sample`,
+    ],
+    correctAnswer: 0,
+    explanation: `The ratio is 0.90 ÷ 0.50 = 1.8, the value for pure DNA. A ratio of 0.56 inverts the division. Protein contamination raises $A_{280}$ and pushes the ratio below 1.8, so 1.8 does not signal it, and pure RNA gives about 2.0 rather than 1.8.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 2,
+  },
+  {
+    question: `Two solutions of the same dye are read in the same cuvette at the same wavelength. Solution X transmits 1% of the light and solution Y transmits 10%. What is the ratio of X's concentration to Y's?`,
+    options: [`10 : 1`, `2 : 1`, `1 : 10`, `1 : 2`],
+    correctAnswer: 1,
+    explanation: `From $A = -\\log_{10} T$, X has absorbance 2 and Y has absorbance 1, and with the same dye and path length absorbance is proportional to concentration, so X is twice as concentrated. A 10 : 1 ratio treats transmittance as if it fell linearly with concentration, ignoring the log scale. Both reversed ratios have the direction wrong, because the solution that transmits less light holds more dye.`,
+    difficulty: 'hard',
+    yield: 'MEDIUM',
+    part: 2,
+  },
+  {
+    question: `A reaction lengthens a molecule's conjugated π system. Which technique tracks this change most directly?`,
+    options: [
+      `IR, which reads bond vibrations`,
+      `NMR, which reads nuclear spin states`,
+      `Mass spec, which reads mass-to-charge`,
+      `UV-Vis, which reads electronic transitions`,
+    ],
+    correctAnswer: 3,
+    explanation: `UV-Vis spectroscopy probes electronic transitions such as π→π*, so it reports conjugation directly. IR reads bond vibrations to identify functional groups, NMR reads nuclear spin to map hydrogen and carbon environments, and mass spectrometry ionizes molecules to give mass and fragments; none of them measures electronic transitions.`,
+    difficulty: 'easy',
+    yield: 'MEDIUM',
+    part: 2,
+  },
+
+  // Part 3 — molecular & immunological assays
+  {
+    question: `Why does PCR use Taq polymerase rather than a typical DNA polymerase from human cells?`,
+    options: [
+      `Taq is heat-stable and survives the ~95 °C step of each cycle`,
+      `Taq copies RNA directly, so no reverse transcription is needed`,
+      `Taq anneals the primers, so the cycle needs no annealing step`,
+      `Taq works only at 95 °C, the temperature at which strands separate`,
+    ],
+    correctAnswer: 0,
+    explanation: `Every PCR cycle heats the reaction to about 95 °C to separate the strands, and heat-stable Taq survives that step so it can extend primers again at about 72 °C. Taq is a DNA polymerase, so RNA must still be reverse-transcribed to cDNA first. Primers anneal on their own as the reaction cools to about 50–65 °C, and Taq extends at about 72 °C rather than working only at 95 °C.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 3,
+  },
+  {
+    question: `How does a direct ELISA differ from a sandwich ELISA?`,
+    options: [
+      `A capture antibody traps the antigen and a second antibody reports it`,
+      `The antigen is detected with a labeled DNA probe instead of antibodies`,
+      `The antigen is bound to the well and an enzyme-linked primary antibody reports it`,
+      `The enzyme is linked to the antigen itself, and no antibody is used at all`,
+    ],
+    correctAnswer: 2,
+    explanation: `In a direct ELISA the antigen itself is bound to the well and an enzyme-linked primary antibody binds it and produces color. A capture antibody that traps the antigen for a second, reporting antibody describes the sandwich ELISA, not the direct one. Labeled DNA probes belong to blots such as Southern and Northern, and every ELISA relies on antibodies to recognize the antigen.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 3,
+  },
 ]
 
 export const generateExitQuiz = makeLessonExitQuiz(EXIT_POOL, 'mcat-lab-methods-spectroscopy-assays-mcat')

@@ -35,7 +35,7 @@ In crowds, anonymity + arousal + diffused responsibility can suspend self-awaren
 
 ### Group Decision Pathologies — The Confusable Pair
 
-- **Groupthink**: cohesive, insulated groups under directive leadership suppress dissent to protect unanimity — symptoms include illusions of invulnerability, self-censorship, "mindguards," and stereotyping outsiders. OUTPUT: a defective decision everyone doubts privately. Remedies: devil's advocates, outside opinions, leaders withholding preferences.
+- **Groupthink**: cohesive, insulated groups under directive leadership suppress dissent to protect unanimity — symptoms include illusions of invulnerability, self-censorship, "mindguards" (members who shield the leader or group from doubts and contrary information), and stereotyping outsiders. OUTPUT: a defective decision everyone doubts privately. Remedies: devil's advocates, outside opinions, leaders withholding preferences.
 - **Group polarization**: discussion among like-minded people shifts the group AVERAGE toward a more EXTREME version of its initial lean (risky or cautious). Mechanisms: hearing new arguments for the shared side (informational) and one-upping the valued position (normative).
 - Discriminator: groupthink is about suppressed dissent producing a bad consensus; polarization is about shared leanings AMPLIFYING. A jury that started slightly punitive and ends extremely punitive polarized; a cabinet that privately doubted but publicly approved a doomed plan groupthought.`
     },

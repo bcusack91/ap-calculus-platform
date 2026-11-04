@@ -6,7 +6,7 @@ export const mcatSpectroscopyAssaysPart2Data = {
       type: 'text' as const,
       content: `# Lab Methods: Centrifugation, Spectroscopy & Assays
 
-**Part 2 of 3 —Spectroscopy & Beer's Law**
+**Part 2 of 3 — Spectroscopy & Beer's Law**
 
 Spectroscopy measures how molecules absorb/emit electromagnetic radiation. Different energies probe different transitions.
 

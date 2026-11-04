@@ -167,7 +167,7 @@ $$\\boxed{\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\to \\text{AgCl}(s)}$$
 
 **Always soluble:** nitrates ($\\text{NO}_3^-$), alkali metals ($\\text{Na}^+$, $\\text{K}^+$), ammonium ($\\text{NH}_4^+$)
 
-**Usually insoluble:** $\\text{Ag}^+$ halides (except $\\text{AgF}$), $\\text{Ba}^{2+}$/$\\text{Pb}^{2+}$/$\\text{Ca}^{2+}$ sulfates, most carbonates and phosphates (except Group IA and $\\text{NH}_4^+$), most hydroxides (except Group IA and $\\text{Ba}^{2+}$)
+**Usually insoluble:** $\\text{Ag}^+$ halides (except $\\text{AgF}$), $\\text{Ba}^{2+}$/$\\text{Pb}^{2+}$/$\\text{Ca}^{2+}$ sulfates, most carbonates and phosphates (except Group IA and $\\text{NH}_4^+$), most hydroxides (except Group IA and $\\text{Ba}^{2+}$; $\\text{Ca}^{2+}$ and $\\text{Sr}^{2+}$ hydroxides are only slightly soluble)
 
 These rules are tendencies. When concentrations and $K_{sp}$ are given, compute $Q$ (each ion's concentration raised to its coefficient, multiplied) and compare: a precipitate forms only if $Q > K_{sp}$, even for an "insoluble" salt.
 `

@@ -6,7 +6,7 @@ export const mcatAcidBaseEqPart1Data = {
       type: 'text' as const,
       content: `# Acids, Bases & Buffers
 
-**Part 1 of 3 —pH, pOH, $K_w$, and Strong vs. Weak Acids/Bases**
+**Part 1 of 3 — pH, pOH, $K_w$, and Strong vs. Weak Acids/Bases**
 
 ## Acid-Base Definitions
 

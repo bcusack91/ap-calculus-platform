@@ -6,7 +6,7 @@ export const mcatLabMethodsPart1Data = {
       type: 'text' as const,
       content: `# Lab Methods: Separations & Electrophoresis
 
-**Part 1 of 2 —Chromatography, Extraction, Distillation & Recrystallization**
+**Part 1 of 2 — Chromatography, Extraction, Distillation & Recrystallization**
 
 Chromatography separates a mixture distributed between a **stationary phase** (fixed) and a **mobile phase** (moving). Molecules that interact MORE with the stationary phase move SLOWER.
 
@@ -173,7 +173,7 @@ The more volatile (lower-bp) component distills first.
 
 **(b) Resin.** A cation-exchange resin (negatively charged) binds positively charged proteins; an anion-exchange resin (positively charged) binds negative ones.
 
-**(c) Elution.** Apply a **salt gradient** (competing ions displace the protein) or change the **pH** toward the protein's pI to neutralize it. Weakly bound proteins elute first.
+**(c) Elution.** Apply a **salt gradient** (competing ions displace the protein) or change the **pH** toward the protein's pI to neutralize it. Weakly bound proteins elute first: the more charge a protein carries opposite the resin's, the more tightly it binds and the more salt it takes to release it.
 
 **Problem 4.** A mixture of pentane (bp 36 °C), hexane (bp 69 °C) and octane (bp 126 °C) is run on a nonpolar GC column.
 

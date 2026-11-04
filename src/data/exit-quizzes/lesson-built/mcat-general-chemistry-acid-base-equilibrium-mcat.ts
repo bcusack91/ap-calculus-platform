@@ -373,6 +373,77 @@ export const EXIT_POOL: LessonExitItem[] = [
     yield: 'MEDIUM',
     part: 3,
   },
+
+  // ─────────────── Added Nov 2026 (pool grow to 38 default) ───────────────
+  {
+    question: `Four acids are each dissolved in water at 0.010 M. Which solution has a pH of 2.0?`,
+    options: [`HF`, `HCN`, `$\\text{HClO}_4$`, `$\\text{H}_2\\text{CO}_3$`],
+    correctAnswer: 2,
+    explanation: `Only a strong acid dissociates completely, giving $[\\text{H}^+] = C = 10^{-2}$ M and pH 2.0, and perchloric acid is on the short list of strong acids. HF, HCN and carbonic acid are weak, so each releases far less than 0.010 M $\\text{H}^+$ and its pH sits above 2.`,
+    difficulty: 'easy',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `Separate 0.10 M solutions of KCN, KBr and $\\text{NH}_4\\text{Br}$ are prepared at 25°C. Which order runs from highest to lowest pH?`,
+    options: [
+      `KCN > KBr > $\\text{NH}_4\\text{Br}$`,
+      `KBr > KCN > $\\text{NH}_4\\text{Br}$`,
+      `$\\text{NH}_4\\text{Br}$ > KBr > KCN`,
+      `KCN > $\\text{NH}_4\\text{Br}$ > KBr`,
+    ],
+    correctAnswer: 0,
+    explanation: `Cyanide is the conjugate base of weak HCN, so it takes $\\text{H}^+$ from water and makes KCN basic. KBr is neutral because both of its ions come from a strong acid and a strong base, and ammonium bromide is acidic because $\\text{NH}_4^+$ donates $\\text{H}^+$ while bromide is inert. Putting KBr first treats cyanide as inert, the fully reversed order swaps acidic and basic, and ranking ammonium bromide above KBr makes an acidic salt more basic than a neutral one.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `A 0.10 M solution of a weak acid HA has a measured pH of 3.0. What is the acid's $K_a$?`,
+    options: [`$1.0 \\times 10^{-3}$`, `$1.0 \\times 10^{-6}$`, `$1.0 \\times 10^{-2}$`, `$1.0 \\times 10^{-5}$`],
+    correctAnswer: 3,
+    explanation: `At pH 3.0, $[\\text{H}^+] = [\\text{A}^-] = 10^{-3}$ M and $[\\text{HA}] \\approx 0.10$ M, so $K_a = (10^{-3})^2/0.10 = 10^{-5}$. The value $10^{-3}$ is just $[\\text{H}^+]$, $10^{-6}$ is the numerator without dividing by $[\\text{HA}]$, and $10^{-2}$ is the fraction dissociated ($10^{-3}/0.10$) rather than the constant.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 2,
+  },
+  {
+    question: `A drug is a weak acid with $\\text{p}K_a = 4.4$. In blood plasma at pH 7.4, what is the approximate ratio of its ionized form ($\\text{A}^-$) to its un-ionized form (HA)?`,
+    options: [`100 : 1`, `1000 : 1`, `1 : 1000`, `3 : 1`],
+    correctAnswer: 1,
+    explanation: `Henderson–Hasselbalch gives $7.4 = 4.4 + \\log([\\text{A}^-]/[\\text{HA}])$, so the log of the ratio is 3 and the ratio is $10^3$, or 1000:1; a pH above the $\\text{p}K_a$ favours the base form. A 1:1000 ratio flips base over acid, 100:1 drops one power of ten, and 3:1 reads the three-unit gap as a linear ratio.`,
+    difficulty: 'hard',
+    yield: 'MEDIUM',
+    part: 2,
+  },
+  {
+    question: `A small amount of HCl is added to a buffer made from $\\text{NH}_3$ and $\\text{NH}_4\\text{Cl}$. Which reaction keeps the pH nearly constant?`,
+    options: [
+      `$\\text{NH}_4^+ + \\text{H}_2\\text{O} \\to \\text{NH}_3 + \\text{H}_3\\text{O}^+$`,
+      `$\\text{NH}_3 + \\text{H}^+ \\to \\text{NH}_4^+$`,
+      `$\\text{Cl}^- + \\text{H}_3\\text{O}^+ \\to \\text{HCl} + \\text{H}_2\\text{O}$`,
+      `$\\text{NH}_4^+ + \\text{OH}^- \\to \\text{NH}_3 + \\text{H}_2\\text{O}$`,
+    ],
+    correctAnswer: 1,
+    explanation: `Added acid is consumed by the buffer's base component, so ammonia takes up the $\\text{H}^+$ and becomes ammonium. Ammonium reacting with $\\text{OH}^-$ is what happens when base is added instead. Chloride, the conjugate of a strong acid, is too weak to take back $\\text{H}^+$, and ammonium donating a proton to water would add hydronium and push the pH down, the opposite of buffering.`,
+    difficulty: 'easy',
+    yield: 'HIGH',
+    part: 3,
+  },
+  {
+    question: `A climber spends several days at high altitude, breathing rapidly the whole time. Which disturbance develops, and how do the kidneys compensate?`,
+    options: [
+      `Respiratory acidosis; they retain $\\text{HCO}_3^-$`,
+      `Metabolic alkalosis; they excrete $\\text{HCO}_3^-$`,
+      `Respiratory alkalosis; they excrete $\\text{HCO}_3^-$`,
+      `Respiratory alkalosis; they retain $\\text{HCO}_3^-$`,
+    ],
+    correctAnswer: 2,
+    explanation: `Rapid breathing blows off $\\text{CO}_2$, pulling the bicarbonate equilibrium away from $\\text{H}^+$ and raising pH: respiratory alkalosis, which the kidneys offset by excreting $\\text{HCO}_3^-$. Retaining bicarbonate would push the pH higher still. Acidosis follows slow breathing, and the primary change here is in $\\text{CO}_2$, so the disturbance is respiratory rather than metabolic.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 3,
+  },
 ]
 
 export const generateExitQuiz = makeLessonExitQuiz(EXIT_POOL, 'mcat-general-chemistry-acid-base-equilibrium-mcat')

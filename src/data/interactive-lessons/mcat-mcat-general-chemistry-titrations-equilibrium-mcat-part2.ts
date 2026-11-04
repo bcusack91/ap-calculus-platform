@@ -6,7 +6,7 @@ export const mcatTitrationsEqPart2Data = {
       type: 'text' as const,
       content: `# Titrations, Equilibrium & Solubility
 
-**Part 2 of 2 —Equilibrium: $K_c$, $K_p$, Le Chatelier's Principle & $K_{sp}$**
+**Part 2 of 2 — Equilibrium: $K_c$, $K_p$, Le Chatelier's Principle & $K_{sp}$**
 
 ## Equilibrium Constant Expressions
 

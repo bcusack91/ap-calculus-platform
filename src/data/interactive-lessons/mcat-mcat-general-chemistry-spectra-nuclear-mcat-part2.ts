@@ -255,7 +255,7 @@ $^{14}\\text{C}$ ($t_{1/2} = 5{,}730$ years) is used to date organic materials u
     {
       id: 'as4-summary',
       type: 'text' as const,
-      content: `## Key Takeaways — Part 4
+      content: `## Key Takeaways — Part 2
 
 - **Alpha decay.** An alpha particle, $^4_2\\text{He}$, leaves: $A$ falls by 4 and $Z$ by 2, and both totals balance.
 - **Beta and capture.** $\\beta^-$ turns a neutron into a proton ($Z + 1$); $\\beta^+$ and electron capture do the reverse ($Z - 1$).

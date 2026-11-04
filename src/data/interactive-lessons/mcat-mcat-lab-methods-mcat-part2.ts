@@ -6,7 +6,7 @@ export const mcatLabMethodsPart2Data = {
       type: 'text' as const,
       content: `# Lab Methods: Separations & Electrophoresis
 
-**Part 2 of 2 —Electrophoresis (Separating by Size & Charge)**
+**Part 2 of 2 — Electrophoresis (Separating by Size & Charge)**
 
 Electrophoresis drives charged molecules through a gel matrix in an electric field. Migration depends on **charge**, **size**, and the gel's sieving.
 
@@ -35,7 +35,8 @@ where $q$ = net charge, $E$ = field strength, and $f$ = frictional drag (rises w
 $$\\text{At pH} = \\text{pI}, \\quad \\text{net charge} = 0 \\Rightarrow \\text{molecule stops migrating}$$
 
 - pH > pI → molecule is net **negative** → moves to anode (+).
-- pH < pI → molecule is net **positive** → moves to cathode (−).`
+- pH < pI → molecule is net **positive** → moves to cathode (−).
+- The farther the buffer pH sits from the pI, the larger the net charge, so (at equal size and shape) the faster the molecule migrates.`
     },
     {
       id: 'lm2-quiz1',

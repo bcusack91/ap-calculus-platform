@@ -6,7 +6,7 @@ export const mcatSpectroscopyAssaysPart3Data = {
       type: 'text' as const,
       content: `# Lab Methods: Centrifugation, Spectroscopy & Assays
 
-**Part 3 of 3 —Molecular & Immunological Assays + Review**
+**Part 3 of 3 — Molecular & Immunological Assays + Review**
 
 This part covers the detection/amplification methods that follow separations, plus a method-selection review.
 
