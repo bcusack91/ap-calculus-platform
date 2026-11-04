@@ -3068,6 +3068,24 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'MCAT Integration: Complex Circuits & Bioelectricity', loader: () => import('./mcat-mcat-physics-electricity-circuits-mcat').then((m) => m.parts[3]) },
     ],
   },
+  'mcat-physics-electricity-dc-circuits-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Charge, Current & Voltage', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[0]) },
+      { title: 'Resistance, Ohm\'s Law & Series vs. Parallel', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[1]) },
+      { title: 'Kirchhoff\'s Rules & Reducing Networks', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[2]) },
+      { title: 'Circuit Changes, Power & Bulb Brightness', loader: () => import('./mcat-mcat-physics-electricity-dc-circuits-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-emf-capacitors-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'EMF, Internal Resistance & Meters', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[0]) },
+      { title: 'Capacitance, Dielectrics & Stored Energy', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[1]) },
+      { title: 'Capacitor Networks & RC Circuits', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[2]) },
+      { title: 'Bioelectricity & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.parts[3]) },
+    ],
+  },
   'mcat-physics-electricity-magnetism-mcat': {
     completionDestination: 'competitive',
     parts: [

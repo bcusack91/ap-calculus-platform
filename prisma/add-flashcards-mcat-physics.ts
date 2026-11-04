@@ -11,7 +11,7 @@ async function main() {
     'mcat-physics-mechanics-forces-newton-laws-mcat',
     'mcat-physics-mechanics-work-energy-power-mcat',
     'mcat-physics-electricity-electrostatics-mcat',
-    'mcat-physics-electricity-circuits-mcat',
+    'mcat-physics-electricity-dc-circuits-mcat',
     'mcat-physics-electricity-optics-mcat',
   ];
 
@@ -69,7 +69,7 @@ async function main() {
     console.log('✅ Electrostatics flashcards');
   }
 
-  const t5 = await prisma.topic.findFirst({ where: { slug: 'mcat-physics-electricity-circuits-mcat' } });
+  const t5 = await prisma.topic.findFirst({ where: { slug: 'mcat-physics-electricity-dc-circuits-mcat' } });
   if (t5) {
     await prisma.flashcard.createMany({
       data: [

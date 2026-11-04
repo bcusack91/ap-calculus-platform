@@ -3,6 +3,7 @@ import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { MCAT_SPLIT_TITLES, MCAT_SPLIT_TOPICS, isSplitMcatTopic, mcatCreditSlugs, mcatSuccessorSlug } from '@/lib/mcat-topic-split'
 import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 import { unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
 import {
@@ -56,8 +57,12 @@ function parseRecommendedTopics(results: unknown): RecommendedTopic[] {
         name?: unknown
         priority?: unknown
       }
-      const slug = typeof typedTopic.slug === 'string' ? typedTopic.slug : ''
-      const name = typeof typedTopic.name === 'string' ? typedTopic.name : slug
+      const storedSlug = typeof typedTopic.slug === 'string' ? typedTopic.slug : ''
+      // A recommendation of a since-split topic points at its first lesson.
+      const slug = mcatSuccessorSlug(storedSlug)
+      const name = slug !== storedSlug
+        ? MCAT_SPLIT_TITLES[slug] ?? slug
+        : typeof typedTopic.name === 'string' ? typedTopic.name : slug
       const priority: 'high' | 'medium' | 'low' = typedTopic.priority === 'high' || typedTopic.priority === 'low'
         ? typedTopic.priority
         : 'medium'
@@ -199,7 +204,7 @@ export async function buildMcatPlanStatus(userId: string): Promise<McatPlanStatu
     prisma.exitQuizAttempt.findMany({
       where: {
         userId: userId,
-        topicSlug: { in: candidateSlugs },
+        topicSlug: { in: candidateSlugs.flatMap(mcatCreditSlugs) },
       },
       orderBy: { completedAt: 'desc' },
       select: {
@@ -229,19 +234,25 @@ export async function buildMcatPlanStatus(userId: string): Promise<McatPlanStatu
   exitAttempts.forEach((attempt) => {
     if (!attempt.totalQuestions || attempt.totalQuestions <= 0) return
     const scorePercent = Math.round((attempt.score / attempt.totalQuestions) * 100)
-    const existing = bestExitBySlug.get(attempt.topicSlug)
-    if (!existing || scorePercent > existing.scorePercent) {
-      bestExitBySlug.set(attempt.topicSlug, {
-        scorePercent,
-        score: attempt.score,
-        totalQuestions: attempt.totalQuestions,
-        completedAt: attempt.completedAt,
-      })
-    }
-    if (scorePercent >= requiredScorePercent) {
-      const firstPass = firstPassAtBySlug.get(attempt.topicSlug)
-      if (!firstPass || attempt.completedAt.getTime() < firstPass.getTime()) {
-        firstPassAtBySlug.set(attempt.topicSlug, attempt.completedAt)
+    // An attempt on a retired, since-split slug counts for each successor.
+    const creditedSlugs = isSplitMcatTopic(attempt.topicSlug)
+      ? MCAT_SPLIT_TOPICS[attempt.topicSlug]
+      : [attempt.topicSlug]
+    for (const slug of creditedSlugs) {
+      const existing = bestExitBySlug.get(slug)
+      if (!existing || scorePercent > existing.scorePercent) {
+        bestExitBySlug.set(slug, {
+          scorePercent,
+          score: attempt.score,
+          totalQuestions: attempt.totalQuestions,
+          completedAt: attempt.completedAt,
+        })
+      }
+      if (scorePercent >= requiredScorePercent) {
+        const firstPass = firstPassAtBySlug.get(slug)
+        if (!firstPass || attempt.completedAt.getTime() < firstPass.getTime()) {
+          firstPassAtBySlug.set(slug, attempt.completedAt)
+        }
       }
     }
   })

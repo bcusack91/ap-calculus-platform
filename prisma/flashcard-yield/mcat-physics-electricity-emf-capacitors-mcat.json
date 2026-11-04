@@ -1,0 +1,362 @@
+[
+ {
+  "front": "$R_1$ and $R_2$ are in series across a battery and a capacitor is wired in parallel with $R_2$. What charge does it hold at steady state?",
+  "fp": "a46786f0542f",
+  "yield": "HIGH",
+  "why": "Capacitor in parallel with a divider resistor at steady state is a common circuit puzzle"
+ },
+ {
+  "front": "A $12$ V battery, a $2$ k$\\Omega$ resistor, and an uncharged $10\\ \\mu$F capacitor sit in series. What is the current the instant the switch closes?",
+  "fp": "0161c3178fed",
+  "yield": "HIGH",
+  "why": "Initial RC current calculation is a standard discrete"
+ },
+ {
+  "front": "A 12 V battery with internal resistance 1.0 Ω is connected to an external 5.0 Ω resistor. What is the terminal voltage?",
+  "fp": "77ab86d7ca45",
+  "yield": "ULTRA_HIGH",
+  "why": "Terminal voltage V = emf - Ir is a calculation equation"
+ },
+ {
+  "front": "A battery of emf $12$ V and internal resistance $0.5\\,\\Omega$ delivers $4$ A. What is its terminal voltage?",
+  "fp": "d0b1082fb025",
+  "yield": "LOW",
+  "why": "Near-restatement of the terminal voltage calculation card"
+ },
+ {
+  "front": "A defibrillator must deliver $200$ J from a $100\\,\\mu$F capacitor. What principle sets the charging voltage?",
+  "fp": "1b7447a5861e",
+  "yield": "MEDIUM",
+  "why": "Rearranged restatement of the U = 1/2 CV^2 defibrillator card"
+ },
+ {
+  "front": "A defibrillator's $100\\ \\mu$F capacitor charged to $2000$ V stores $U = \\frac12 CV^2 =$ {{c1::$200$ J}}.",
+  "fp": "10f493ebfe8f",
+  "yield": "ULTRA_HIGH",
+  "why": "Capacitor energy U = 1/2 CV^2 is a calculation equation"
+ },
+ {
+  "front": "A neuron's membrane time constant is $\\tau = R_mC_m$, so a longer $\\tau$ produces {{c1::greater temporal summation}} of successive inputs.",
+  "fp": "19d132d4d7b9",
+  "yield": "MEDIUM",
+  "why": "Membrane time constant is a plausible neuro passage step"
+ },
+ {
+  "front": "A voltmeter is placed {{c1::in parallel}} with the element and must have very high resistance.",
+  "fp": "24c3016a19ab",
+  "yield": "HIGH",
+  "why": "Voltmeter in parallel, high resistance is a stock discrete"
+ },
+ {
+  "front": "Adding another parallel branch raises total current, so the internal $Ir$ drop grows and terminal voltage {{c1::falls}}.",
+  "fp": "2d868dc3a416",
+  "yield": "MEDIUM",
+  "why": "Internal resistance sag under added load is a second-step application"
+ },
+ {
+  "front": "After a long time in a DC circuit, current through a capacitor is:",
+  "fp": "bd76c74930aa",
+  "yield": "LOW",
+  "why": "Restates the capacitor wire-then-open card"
+ },
+ {
+  "front": "After one time constant, what fraction of its final charge does a charging capacitor hold?",
+  "fp": "f3236366c0f3",
+  "yield": "HIGH",
+  "why": "63% after one time constant is commonly asked"
+ },
+ {
+  "front": "An ammeter is placed {{c1::in series}} and must have very low resistance so it barely perturbs the circuit.",
+  "fp": "24aebc296808",
+  "yield": "HIGH",
+  "why": "Ammeter in series, low resistance is a stock discrete"
+ },
+ {
+  "front": "At steady state a capacitor in series with a resistor passes {{c1::zero}} current, so the full battery voltage sits across the capacitor.",
+  "fp": "52315d6c5958",
+  "yield": "HIGH",
+  "why": "Steady-state series RC with Q = CV is a common calculation"
+ },
+ {
+  "front": "At the instant an uncharged capacitor is connected, it behaves like:",
+  "fp": "bbbba86f63cd",
+  "yield": "LOW",
+  "why": "Restates the capacitor wire-then-open card"
+ },
+ {
+  "front": "Capacitors in parallel add directly: $C_{eq} = {{c1::C_1 + C_2}}$.",
+  "fp": "6ba2d0c7132d",
+  "yield": "ULTRA_HIGH",
+  "why": "Parallel capacitor addition rule is used in calculations every year"
+ },
+ {
+  "front": "Capacitors in parallel:",
+  "fp": "b20070c5ade8",
+  "yield": "LOW",
+  "why": "Restates the parallel capacitor cloze card"
+ },
+ {
+  "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} = {{c1::1/C_1 + 1/C_2}}$.",
+  "fp": "b588baf16441",
+  "yield": "ULTRA_HIGH",
+  "why": "Series capacitor reciprocal rule is used in calculations every year"
+ },
+ {
+  "front": "Doubling $R$ in a charging RC circuit changes what, and what stays the same?",
+  "fp": "4f2a736898bf",
+  "yield": "HIGH",
+  "why": "RC parameter change reasoning is commonly asked"
+ },
+ {
+  "front": "During discharge, capacitor charge decays {{c1::exponentially}}, following $Q = Q_0e^{-t/\\tau}$.",
+  "fp": "8d63c55db35d",
+  "yield": "HIGH",
+  "why": "Exponential discharge form is on the outline"
+ },
+ {
+  "front": "EMF is not a force; it is the {{c1::energy per unit charge}} supplied by a source, measured in volts.",
+  "fp": "be8e11d2ddbe",
+  "yield": "HIGH",
+  "why": "EMF as energy per charge is commonly tested"
+ },
+ {
+  "front": "In a charging RC circuit, when is the current largest?",
+  "fp": "6886c93d4381",
+  "yield": "MEDIUM",
+  "why": "Restates the capacitor-as-wire-at-t=0 card"
+ },
+ {
+  "front": "In an RC circuit an uncharged capacitor acts like a {{c1::wire}} at $t = 0$ and like an open switch at steady state.",
+  "fp": "c0c8a5f7ad5b",
+  "yield": "ULTRA_HIGH",
+  "why": "Capacitor as wire at t=0 and open at steady state is asked every year"
+ },
+ {
+  "front": "Myelin raises membrane resistance, lengthening the axon's length constant, so a passive signal decays {{c1::less}} with distance.",
+  "fp": "97ba3ab55cda",
+  "yield": "MEDIUM",
+  "why": "Myelin and length constant is a neuro passage crossover"
+ },
+ {
+  "front": "Physically, why does putting capacitors in series lower the total capacitance?",
+  "fp": "65f7ffbf36aa",
+  "yield": "MEDIUM",
+  "why": "Physical picture behind series capacitors; supporting reasoning"
+ },
+ {
+  "front": "That $2000$ V defibrillator discharges through a $50\\ \\Omega$ thorax. Estimate the peak current and the pulse duration.",
+  "fp": "bd6f286b73c5",
+  "yield": "MEDIUM",
+  "why": "Defibrillator pulse estimate is a passage-style application"
+ },
+ {
+  "front": "The RC time constant is $\\tau = {{c1::RC}}$ and carries units of seconds.",
+  "fp": "cb39c0547f73",
+  "yield": "ULTRA_HIGH",
+  "why": "tau = RC is a calculation equation and appears every year"
+ },
+ {
+  "front": "Two identical capacitors are connected across the same battery, first in parallel and then in series. Which arrangement stores more energy?",
+  "fp": "481c7854f9cd",
+  "yield": "HIGH",
+  "why": "Series vs parallel capacitor energy comparison is a common calculation"
+ },
+ {
+  "front": "What error appears when a real voltmeter with finite resistance is placed across a large resistor?",
+  "fp": "d0626469d7fc",
+  "yield": "MEDIUM",
+  "why": "Meter loading is a plausible experimental passage point"
+ },
+ {
+  "front": "When is a battery's terminal voltage greater than its emf?",
+  "fp": "0c9ee661a73d",
+  "yield": "MEDIUM",
+  "why": "Terminal voltage above emf during charging is secondary"
+ },
+ {
+  "front": "Why do car headlights dim when the starter motor engages?",
+  "fp": "a7d02f29f5a0",
+  "yield": "LOW",
+  "why": "Restates the internal-resistance sag card"
+ },
+ {
+  "front": "Why do series capacitors carry equal charge while parallel capacitors carry equal voltage?",
+  "fp": "265341d6ce41",
+  "yield": "MEDIUM",
+  "why": "Why series capacitors share charge is supporting reasoning"
+ },
+ {
+  "front": "Why is an axon membrane modeled as a resistor and capacitor in parallel?",
+  "fp": "93e74df56033",
+  "yield": "MEDIUM",
+  "why": "Axon as RC circuit is a neuro passage crossover"
+ },
+ {
+  "front": "Why can a worn-out battery read its full EMF on a voltmeter, yet fail as soon as a real load is attached?",
+  "fp": "cebf3a456e8d",
+  "yield": "HIGH",
+  "why": "Open-circuit voltage vs loaded terminal voltage is a standard real-battery question."
+ },
+ {
+  "front": "A voltmeter reads $9.0$ V across an unloaded battery and $8.0$ V once a $4.0\\,\\Omega$ resistor is connected across it. What is the internal resistance?",
+  "fp": "82e10d64f0b7",
+  "yield": "HIGH",
+  "why": "Extracting internal resistance from two readings is a common discrete calculation."
+ },
+ {
+  "front": "Four $1.5$ V cells are stacked in series, but one is inserted backward. The total EMF is {{c1::$3.0$ V}}.",
+  "fp": "d8651de986dc",
+  "yield": "HIGH",
+  "why": "Series cell stacks and the reversed-cell trap appear in circuit questions regularly."
+ },
+ {
+  "front": "Two identical $1.5$ V cells, each with internal resistance $r$, are connected in parallel. What are the pack's EMF and internal resistance?",
+  "fp": "94461c0362d8",
+  "yield": "MEDIUM",
+  "why": "Parallel battery packs are secondary to series stacks on the exam."
+ },
+ {
+  "front": "A phone battery is rated $2000$ mAh at $3.7$ V. How much charge does it hold, and roughly how much energy?",
+  "fp": "add5fa675d78",
+  "yield": "MEDIUM",
+  "why": "Capacity unit conversions show up in passage-based device questions."
+ },
+ {
+  "front": "What happens if an ammeter is mistakenly connected in parallel across a lamp?",
+  "fp": "7c8607844503",
+  "yield": "HIGH",
+  "why": "Misplaced-meter consequences are a classic conceptual circuit question."
+ },
+ {
+  "front": "A voltmeter wired in series with a $100\\,\\Omega$ resistor across an ideal $9.0$ V battery reads about {{c1::$9.0$ V}}.",
+  "fp": "b4171210efc6",
+  "yield": "HIGH",
+  "why": "Misplaced-meter consequences are a classic conceptual circuit question."
+ },
+ {
+  "front": "A battery's EMF is the cell potential of its galvanic cell, set by the redox reaction through $\\Delta G = -nFE$; the battery's positive terminal is the {{c1::cathode}}.",
+  "fp": "2c4377730af7",
+  "yield": "MEDIUM",
+  "why": "The electrochemistry bridge is tested, but mostly in the chemistry topic."
+ },
+ {
+  "front": "Capacitance is the charge stored per volt, $C = Q/V$, measured in {{c1::farads}} ($1\\text{ F} = 1\\text{ C/V}$).",
+  "fp": "e6c5b1867931",
+  "yield": "ULTRA_HIGH",
+  "why": "C = Q/V underlies every capacitor question on the MCAT."
+ },
+ {
+  "front": "A parallel-plate capacitor's plate area is doubled and its plate gap is tripled. What is the new capacitance?",
+  "fp": "b5cee69ef861",
+  "yield": "ULTRA_HIGH",
+  "why": "Parallel-plate scaling is tested on nearly every exam."
+ },
+ {
+  "front": "$12$ V is applied across capacitor plates $2.0$ mm apart. What is the electric field between them?",
+  "fp": "eb9c634058a4",
+  "yield": "HIGH",
+  "why": "$E = V/d$ between plates links capacitors to electrostatics questions."
+ },
+ {
+  "front": "How does a dielectric between the plates raise a capacitor's capacitance?",
+  "fp": "33d4119b0cfc",
+  "yield": "HIGH",
+  "why": "The mechanism of dielectrics is a common conceptual question."
+ },
+ {
+  "front": "A dielectric ($\\kappa$) is slid into a capacitor that stays connected to its battery. What happens to $Q$, $V$, $E$, and $U$?",
+  "fp": "f6fc7c5b3950",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT."
+ },
+ {
+  "front": "A $2.0\\,\\mu$F capacitor charged to $100$ V is disconnected, then filled with a $\\kappa = 4$ slab. What are its new voltage and stored energy?",
+  "fp": "b4b89054b7dd",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT."
+ },
+ {
+  "front": "The plates of a charged, isolated capacitor are pulled apart to twice their separation. What happens to $C$, $Q$, $V$, and $U$?",
+  "fp": "99ce12d84624",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT."
+ },
+ {
+  "front": "With the battery still connected, doubling a capacitor's plate separation {{c1::halves}} both its charge and its stored energy.",
+  "fp": "16b8a1205fd1",
+  "yield": "ULTRA_HIGH",
+  "why": "Connected-vs-disconnected capacitor changes are tested on every MCAT."
+ },
+ {
+  "front": "A capacitor's stored energy is $U = \\tfrac{1}{2}QV = \\tfrac{1}{2}CV^2 =$ {{c1::$Q^2/2C$}}.",
+  "fp": "296548f32e48",
+  "yield": "ULTRA_HIGH",
+  "why": "Choosing the right energy form drives every capacitor energy question."
+ },
+ {
+  "front": "A battery charges an uncharged capacitor through a resistor, moving charge $Q$ at voltage $V$. How much energy does the battery supply, and where does it all go?",
+  "fp": "36b8798cbf2e",
+  "yield": "MEDIUM",
+  "why": "The half-lost-as-heat result appears mainly as a passage-level conceptual trap."
+ },
+ {
+  "front": "A $3.0\\,\\mu$F and a $6.0\\,\\mu$F capacitor are in series across $12$ V. What voltage does each one take?",
+  "fp": "0da80ab65ada",
+  "yield": "HIGH",
+  "why": "Voltage division in series capacitors is a common network calculation."
+ },
+ {
+  "front": "When a charged capacitor discharges through a resistor, the current flows in the {{c1::opposite}} direction to the charging current.",
+  "fp": "633106c757d7",
+  "yield": "HIGH",
+  "why": "Charging-vs-discharging behavior is commonly tested with RC graphs."
+ },
+ {
+  "front": "A charging capacitor follows $Q(t) =$ {{c1::$C\\varepsilon(1 - e^{-t/RC})$}}, rising quickly and then leveling off.",
+  "fp": "4401dab6fc5c",
+  "yield": "MEDIUM",
+  "why": "Exact exponential forms are recognition-only, supplied in passages."
+ },
+ {
+  "front": "A $2.0\\text{ k}\\Omega$ resistor charges a $50\\,\\mu$F capacitor from a battery. About how long until the capacitor is essentially fully charged?",
+  "fp": "e750f0a7186e",
+  "yield": "MEDIUM",
+  "why": "Time-constant arithmetic is secondary, mostly in passage questions."
+ },
+ {
+  "front": "A capacitor reaches half its final charge (or loses half while discharging) after about {{c1::$0.69\\tau$}}.",
+  "fp": "373dcca5692c",
+  "yield": "LOW",
+  "why": "The half-time is marked low-yield in the lesson."
+ },
+ {
+  "front": "A toxin opens many extra $\\text{K}^+$ leak channels in a neuron. How do the membrane resistance and time constant change?",
+  "fp": "9eec3fe0e39a",
+  "yield": "HIGH",
+  "why": "Channel opening as parallel resistors is a common bioelectricity translation."
+ },
+ {
+  "front": "Why does myelin LOWER the axon's membrane capacitance?",
+  "fp": "09a0fa656c55",
+  "yield": "HIGH",
+  "why": "Myelin as series capacitors is a favorite physics-in-biology question."
+ },
+ {
+  "front": "In a myelinated axon, the action potential is regenerated only at the {{c1::nodes of Ranvier}}, where voltage-gated $\\text{Na}^+$ channels are concentrated.",
+  "fp": "463555ce47fa",
+  "yield": "HIGH",
+  "why": "Saltatory conduction is tested in both physics and biology contexts."
+ },
+ {
+  "front": "In multiple sclerosis, how do a demyelinated internode's capacitance and resistance compare with a healthy one, and why does conduction suffer?",
+  "fp": "107f6cb4c339",
+  "yield": "HIGH",
+  "why": "Demyelination is a common clinical framing of membrane RC properties."
+ },
+ {
+  "front": "A defibrillator charges its capacitor over $6.0$ s and delivers the same energy in about $6.0$ ms. How does the delivery power compare with the charging power?",
+  "fp": "eeff7ef53432",
+  "yield": "HIGH",
+  "why": "Defibrillator energy-and-power reasoning is a common applied capacitor question."
+ }
+]

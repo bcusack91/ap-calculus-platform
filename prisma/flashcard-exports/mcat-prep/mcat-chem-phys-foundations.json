@@ -6527,327 +6527,612 @@
   "back": "Its side chain carries sulfur, which outranks the carboxyl carbon under CIP. The priority order of the side chain and the COOH group swaps, reversing the apparent rotation label even though cysteine's three-dimensional arrangement matches the other L-amino acids."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "$R_1$ and $R_2$ are in series across a battery and a capacitor is wired in parallel with $R_2$. What charge does it hold at steady state?",
   "back": "No current enters the capacitor, so the resistors form a simple divider: $V_2 = \\varepsilon R_2/(R_1 + R_2)$ and $Q = CV_2$. A capacitor takes the voltage of whatever it parallels, not the battery voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A $12$ V battery, a $2$ k$\\Omega$ resistor, and an uncharged $10\\ \\mu$F capacitor sit in series. What is the current the instant the switch closes?",
   "back": "An uncharged capacitor initially behaves like a wire, so $I = 12/2000 = 6$ mA, the maximum value. The current then decays exponentially toward zero with $\\tau = RC = 0.02$ s."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A $6\\,\\Omega$ and a $3\\,\\Omega$ resistor are connected in parallel. What is the equivalent resistance?",
   "back": "$2\\,\\Omega$, from the product-over-sum shortcut $R_1R_2/(R_1+R_2) = 18/9$. Notice the result is smaller than either individual resistor."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A $60$ W and a $100$ W bulb rated for the same line voltage are wired in series. Which is brighter?",
   "back": "The $60$ W bulb. Its higher resistance, from $R = V^2/P$, dissipates more power once the current is shared. Wattage ratings hold only at the rated voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A 12 V battery with internal resistance 1.0 Ω is connected to an external 5.0 Ω resistor. What is the terminal voltage?",
   "back": "**10 V**\n\nCurrent I = E/(R+r) = 12/6 = 2 A. Terminal voltage V = E − Ir = 12 − 2(1) = 10 V (also IRload = 2×5 = 10 V)."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A battery of emf $12$ V and internal resistance $0.5\\,\\Omega$ delivers $4$ A. What is its terminal voltage?",
   "back": "$12 - (4)(0.5) = 10$ V. The missing $2$ V is dissipated as heat inside the battery itself."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A defibrillator must deliver $200$ J from a $100\\,\\mu$F capacitor. What principle sets the charging voltage?",
   "back": "Stored energy is $U = \\frac{1}{2}CV^2$, so $V = \\sqrt{2U/C} = 2000$ V. Capacitors charge slowly and then dump that energy in milliseconds."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A defibrillator's $100\\ \\mu$F capacitor charged to $2000$ V stores $U = \\frac12 CV^2 =$ {{c1::$200$ J}}.",
   "back": "Rearranged, a required energy fixes the charging voltage: $V = \\sqrt{2U/C}$. Because energy scales with $V^2$, doubling the charging voltage quadruples the delivered shock."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A fuse protects a circuit by:",
   "back": "**Melting and breaking the circuit at excess current**\n\nCircuit breakers serve the same function reusably."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A neuron's membrane time constant is $\\tau = R_mC_m$, so a longer $\\tau$ produces {{c1::greater temporal summation}} of successive inputs.",
   "back": "Typical neuronal $\\tau$ runs from a few to tens of milliseconds. Slow decay of a postsynaptic potential lets a second input arrive before the first fades, so their depolarizations add."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A new resistor is added in parallel with an existing element. What happens to total current from the battery?",
   "back": "Total resistance drops, so total current from the battery rises. The original branch keeps the same voltage across it and therefore the same current."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A resistanceless wire is connected across one resistor in a series chain. What happens?",
   "back": "That resistor is short-circuited: essentially all current bypasses it, so it dissipates no power. Total resistance falls and current through the rest of the circuit increases."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A short circuit is dangerous because:",
   "back": "**Very low resistance allows very high current**\n\nHigh current generates heat and fire risk."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "A third identical bulb is added in series to two bulbs already in series. What happens to the original two?",
   "back": "Total resistance rises, so the shared current falls and all three bulbs are dimmer than the original pair. Each bulb now drops one third of the battery voltage instead of one half, and each dissipates less power ($P = I^2R$)."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "A voltmeter is placed {{c1::in parallel}} with the element and must have very high resistance.",
   "back": "Connecting across the element exposes it to the same potential difference. High resistance ensures almost no current is diverted through the meter."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Adding another parallel branch raises total current, so the internal $Ir$ drop grows and terminal voltage {{c1::falls}}.",
   "back": "Every existing branch therefore dims slightly. This is why lights dim when a high-draw appliance switches on, and why a battery with large internal resistance sags badly under load."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "After a long time in a DC circuit, current through a capacitor is:",
   "back": "**Zero (fully charged)**\n\nIt behaves like an open circuit at steady state."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "After one time constant, what fraction of its final charge does a charging capacitor hold?",
   "back": "About $63$ percent, since $1 - e^{-1}$ is roughly $0.63$. It is about $95$ percent charged after $3\\tau$ and effectively complete after $5\\tau$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "An ammeter is placed {{c1::in series}} and must have very low resistance so it barely perturbs the circuit.",
   "back": "Series placement forces all the measured current through it. A high-resistance ammeter would reduce the very current it is trying to read."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "At steady state a capacitor in series with a resistor passes {{c1::zero}} current, so the full battery voltage sits across the capacitor.",
   "back": "With $12$ V and $C = 10\\ \\mu$F the final charge is $Q = CV = 1.2\\times 10^{-4}$ C. Because no current flows, there is no $IR$ drop across the resistor no matter how large it is."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "At the instant an uncharged capacitor is connected, it behaves like:",
   "back": "**A wire (short circuit)**\n\nZero voltage across it initially permits maximum current."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Capacitors in parallel add directly: $C_{eq} = {{c1::C_1 + C_2}}$.",
   "back": "They share the same voltage and the total stored charge is the sum, so capacitances add like resistors in series. It is equivalent to enlarging the plate area."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Capacitors in parallel:",
   "back": "**Add directly ($C_{total} = C_1 + C_2$)**\n\nOpposite of resistors — parallel capacitors effectively increase plate area."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} = {{c1::1/C_1 + 1/C_2}}$.",
   "back": "Series capacitors carry the same charge but split the voltage, so the equivalent is less than the smallest one. The rule is the exact reverse of resistors."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Distinguish the kilowatt-hour from the watt.",
   "back": "The watt is power, energy per second. The kilowatt-hour is energy, the amount a $1$ kW device uses in one hour, about $3.6 \\times 10^6$ J."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Doubling $R$ in a charging RC circuit changes what, and what stays the same?",
   "back": "The time constant doubles so charging takes twice as long, and the initial current is halved. The final stored charge $Q = C\\varepsilon$ is unchanged."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "During discharge, capacitor charge decays {{c1::exponentially}}, following $Q = Q_0e^{-t/\\tau}$.",
   "back": "Current and voltage decay with the same exponential. After one time constant about $37$ percent of the original charge remains."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "EMF is not a force; it is the {{c1::energy per unit charge}} supplied by a source, measured in volts.",
   "back": "A battery converts chemical energy into electrical potential energy for each coulomb moved. Terminal voltage is what the external circuit actually receives."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "For elements in series, compare power with $P = {{c1::I^2R}}$, so the larger resistor dissipates more.",
   "back": "Series elements share the same current, making power directly proportional to resistance. Do not apply $V^2/R$ intuition to series comparisons."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "For household AC, $V_{rms} = {{c1::V_{peak}/\\sqrt{2}}}$, so a $120$ V outlet actually peaks near $170$ V.",
   "back": "Rms values are defined so that $P = V_{rms}I_{rms}$ and $P = V_{rms}^2/R$ give the true average power. Quoted voltages and current ratings are rms unless a problem says otherwise."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "How does raising the temperature of a metal conductor affect its resistance?",
   "back": "Resistance increases, because greater lattice vibration scatters conduction electrons more. Semiconductors behave oppositely, with resistance falling as temperature rises."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "How is total power delivered by a battery related to power dissipated in the resistors?",
   "back": "They are equal in steady state: $P = I\\varepsilon$ from the battery equals the sum of $I^2R$ over all resistors. Energy per unit time is conserved."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "If one of two identical bulbs wired in series burns out, {{c1::both go dark}}, because the single current path is broken.",
   "back": "Series elements share one current, so any break stops everything. A parallel string keeps each branch independent, which is exactly why household outlets are wired in parallel."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "In a charging RC circuit, when is the current largest?",
   "back": "At $t = 0$, when the capacitor voltage is zero and the full emf drives current through $R$. Current then decays exponentially toward zero as capacitor voltage builds."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "In a series circuit with a 12 V battery and three 4 Ω resistors, what is the current?",
   "back": "**1 A**\n\nIn series: R_total = 4 + 4 + 4 = 12 Ω. I = V/R = 12/12 = 1 A."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "In an RC circuit an uncharged capacitor acts like a {{c1::wire}} at $t = 0$ and like an open switch at steady state.",
   "back": "With no stored charge there is no opposing voltage, so current is maximal immediately. Once fully charged, no further current flows into it."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "In series, {{c1::current}} is the same through all components; in parallel, {{c2::voltage}} is the same across all branches.",
   "back": "Series shares current (resistances add); parallel shares voltage (1/R adds)."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Kirchhoff's junction rule is based on conservation of:",
   "back": "**Charge**\n\nKirchhoff's junction (current) rule states that the total current entering a junction equals the total current leaving it, based on conservation of charge."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Kirchhoff's loop rule says potential changes around a closed loop sum to zero, expressing {{c1::energy conservation}}.",
   "back": "A charge returning to its starting point must have the same potential energy. Batteries raise the potential and resistors drop it."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Myelin raises membrane resistance, lengthening the axon's length constant, so a passive signal decays {{c1::less}} with distance.",
   "back": "Current leaking out through the membrane is what degrades a spreading signal. Higher $R_m$ and lower $C_m$ keep more current flowing axially, so the depolarization still reaches the next node of Ranvier above threshold."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "One bulb is in series with a parallel pair of identical bulbs. Which bulb is brightest?",
   "back": "The series bulb, because it carries the full circuit current while the pair splits it. With $P = I^2R$ and equal resistances, more current means more power."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Physically, why does putting capacitors in series lower the total capacitance?",
   "back": "It behaves like increasing the effective plate separation, and $C = \\varepsilon_0 A/d$ falls as $d$ grows. Parallel connection instead increases effective plate area."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Placing $N$ identical resistors of resistance $R$ in parallel gives an equivalent resistance of {{c1::$R/N$}}.",
   "back": "Each branch carries the same current, so the total current is $N$ times larger for the same voltage. Four $12\\,\\Omega$ resistors in parallel give $3\\,\\Omega$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Resistors in series vs. parallel?",
   "back": "**Series**: $R_{\\text{total}} = R_1 + R_2 + \\cdots$ (current is same)\n\n**Parallel**: $\\frac{1}{R_{\\text{total}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\cdots$ (voltage is same)",
   "hint": "Series adds; parallel gives less than smallest."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "State Ohm's law and identify what each variable means.",
   "back": "$V = IR$ — voltage (volts, V) equals current (amps, A) times resistance (ohms, $\\Omega$).\n\nRearranged, $I = V/R$: at fixed voltage, current falls as resistance rises.",
   "hint": "The foundation of circuit analysis."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "That $2000$ V defibrillator discharges through a $50\\ \\Omega$ thorax. Estimate the peak current and the pulse duration.",
   "back": "Peak $I = V/R = 40$ A, and $\\tau = RC = (50)(100\\times 10^{-6}) = 5$ ms, so the shock lasts a few milliseconds. Very high current for a very short time is what depolarizes the whole myocardium at once."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "The equivalent resistance of a parallel combination is always less than {{c1::the smallest individual resistor}}.",
   "back": "Adding parallel branches gives current more routes, lowering the total. Use this as an instant sanity check on any parallel calculation."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "The power dissipated by a 100 Ω resistor carrying 0.5 A of current is:",
   "back": "**25 W**\n\nP = $I^{2}R$ = $(0.5)^{2}$ × 100 = 0.25 × 100 = 25 W."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "The RC time constant is $\\tau = {{c1::RC}}$ and carries units of seconds.",
   "back": "Ohms times farads gives seconds. It sets how quickly a capacitor charges or discharges and does not depend on the battery voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Three resistors of 6 Ω each are connected in parallel. What is the total resistance?",
   "back": "**2 Ω**\n\n1/R_total = 1/6 + 1/6 + 1/6 = 3/6 = 1/2. So R_total = 2 Ω. For n identical resistors R in parallel, R_total = R/n."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Traversing a resistor in the same direction as the current, what is the sign of the potential change?",
   "back": "Negative: the potential drops by $IR$. Going against the current gives $+IR$, and crossing a battery from the negative to the positive terminal gives $+\\varepsilon$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Two 6 Ω resistors in series give:",
   "back": "**12 Ω**\n\nSeries resistances add directly."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Two identical bulbs are in parallel across a battery and one burns out. What happens to the other bulb and to the total current?",
   "back": "The surviving bulb still has the full battery voltage across it, so its brightness is unchanged. Equivalent resistance doubles and total current from the battery halves."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Two identical capacitors are connected across the same battery, first in parallel and then in series. Which arrangement stores more energy?",
   "back": "Parallel. The voltage is the same in both cases, but parallel gives $C_{eq} = 2C$ versus $C/2$ in series, so $U = \\frac12 CV^2$ is four times larger in the parallel arrangement."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "What are the equivalent expressions for power dissipated by a resistor?",
   "back": "$P = IV = I^{2}R = \\frac{V^{2}}{R}$, in watts.\n\nUse $I^{2}R$ when the current is fixed (series elements) and $V^{2}/R$ when the voltage is fixed (parallel elements).",
   "hint": "Three equivalent formulas."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "What condition trips a GFCI outlet, and why does an ordinary fuse not protect against the same hazard?",
   "back": "It trips when current in the hot wire differs from the returning current by a few milliamps, meaning current is leaking through another path such as a person. A fuse reacts only to large total current, far above the fibrillation threshold."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "What error appears when a real voltmeter with finite resistance is placed across a large resistor?",
   "back": "It sits in parallel with the resistor, lowering the local equivalent resistance and reducing the actual voltage there. The reading comes out too low, an effect called meter loading."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "When is a battery's terminal voltage greater than its emf?",
   "back": "While it is being charged. Current is forced backward through the source, so the internal drop adds: $V = \\varepsilon + Ir$. During discharge, current exits the positive terminal and $V = \\varepsilon - Ir$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Why do car headlights dim when the starter motor engages?",
   "back": "The starter draws a huge current, so the drop $Ir$ across the battery's internal resistance grows and terminal voltage falls. Less voltage then reaches the headlights."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Why do series capacitors carry equal charge while parallel capacitors carry equal voltage?",
   "back": "The isolated conductors between series capacitors must remain neutral, forcing equal and opposite induced charge. Parallel elements connect to the same two nodes, so they share voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
   "front": "Why is an axon membrane modeled as a resistor and capacitor in parallel?",
   "back": "The lipid bilayer stores separated charge like a capacitor, while ion channels provide a leak resistance. Their product is the membrane time constant governing how fast voltage can change."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "Why can a worn-out battery read its full EMF on a voltmeter, yet fail as soon as a real load is attached?",
+  "back": "An ideal voltmeter draws almost no current, so $Ir \\approx 0$ and the open-circuit reading equals $\\varepsilon$. Aging raises the internal resistance $r$, so under load the drop $Ir$ is large and $V_{\\text{term}} = \\varepsilon - Ir$ sags."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A voltmeter reads $9.0$ V across an unloaded battery and $8.0$ V once a $4.0\\,\\Omega$ resistor is connected across it. What is the internal resistance?",
+  "back": "$0.50\\,\\Omega$. The open-circuit reading is the EMF. Loaded, $I = 8.0/4.0 = 2.0$ A, and the missing $1.0$ V is dropped inside the battery: $r = (9.0 - 8.0)/2.0 = 0.50\\,\\Omega$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "Four $1.5$ V cells are stacked in series, but one is inserted backward. The total EMF is {{c1::$3.0$ V}}.",
+  "back": "In series, EMFs (and internal resistances) add, but a reversed cell pushes against the others and subtracts: $1.5 + 1.5 + 1.5 - 1.5 = 3.0$ V, not $4.5$ V."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "Two identical $1.5$ V cells, each with internal resistance $r$, are connected in parallel. What are the pack's EMF and internal resistance?",
+  "back": "The EMF stays $1.5$ V, and the internal resistances are in parallel, giving $r/2$. The pack sags less under load and lasts longer. Rule of thumb: series for more voltage, parallel for more current capacity."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A phone battery is rated $2000$ mAh at $3.7$ V. How much charge does it hold, and roughly how much energy?",
+  "back": "A mAh rating is charge, since $Q = It$: $(2.0\\text{ A})(3600\\text{ s}) = 7200$ C. The energy is roughly $QV = (7200)(3.7) \\approx 2.7 \\times 10^4$ J."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "What happens if an ammeter is mistakenly connected in parallel across a lamp?",
+  "back": "Its near-zero resistance shorts the lamp. Almost all the current detours through the meter, the lamp goes dark (nearly $0$ V across it), and the large current can blow the meter's fuse."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A voltmeter wired in series with a $100\\,\\Omega$ resistor across an ideal $9.0$ V battery reads about {{c1::$9.0$ V}}.",
+  "back": "The meter's enormous resistance chokes the current to nearly zero, so the resistor drops almost nothing ($IR \\approx 0$) and nearly the whole EMF appears across the meter. Everything else in the loop goes dark."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A battery's EMF is the cell potential of its galvanic cell, set by the redox reaction through $\\Delta G = -nFE$; the battery's positive terminal is the {{c1::cathode}}.",
+  "back": "In a galvanic cell, reduction occurs at the cathode, which sits at the higher potential. A spontaneous reaction ($\\Delta G < 0$) gives a positive cell potential, which is the EMF the circuit sees."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "Capacitance is the charge stored per volt, $C = Q/V$, measured in {{c1::farads}} ($1\\text{ F} = 1\\text{ C/V}$).",
+  "back": "$C$ is fixed by construction, so doubling $V$ doubles $Q$; it does not halve $C$. $Q$ means the charge on EACH plate. A farad is huge: real capacitors run from $\\mu$F to pF, and $\\mu\\text{F} \\times \\text{V} = \\mu\\text{C}$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A parallel-plate capacitor's plate area is doubled and its plate gap is tripled. What is the new capacitance?",
+  "back": "$C = \\kappa\\varepsilon_0 A/d$, so $C \\propto A/d$: $\\times 2$ then $\\div 3$ gives $\\tfrac{2}{3}C$. Bigger plates and a smaller gap raise $C$; a dielectric multiplies it by $\\kappa$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "$12$ V is applied across capacitor plates $2.0$ mm apart. What is the electric field between them?",
+  "back": "The field is uniform and points from the $+$ plate to the $-$ plate: $E = V/d = 12/(2.0 \\times 10^{-3}\\text{ m}) = 6.0 \\times 10^3$ V/m. Skipping the mm conversion gives an answer 1000 times too small."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "How does a dielectric between the plates raise a capacitor's capacitance?",
+  "back": "Its molecules polarize, lining up negative charge next to the $+$ plate and positive charge next to the $-$ plate. These induced charges partly cancel the field, so for the same $Q$ the field and voltage drop by $\\kappa$, and $C = \\kappa C_0$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A dielectric ($\\kappa$) is slid into a capacitor that stays connected to its battery. What happens to $Q$, $V$, $E$, and $U$?",
+  "back": "The battery holds $V$ fixed, so $V$ and $E = V/d$ are unchanged. $C$ rises by $\\kappa$, so the battery pushes on more charge: $Q \\times \\kappa$, and $U = \\tfrac{1}{2}CV^2 \\times \\kappa$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A $2.0\\,\\mu$F capacitor charged to $100$ V is disconnected, then filled with a $\\kappa = 4$ slab. What are its new voltage and stored energy?",
+  "back": "The $200\\,\\mu$C is trapped. $C$ becomes $8.0\\,\\mu$F, so $V = 200/8.0 = 25$ V, and $U = Q^2/2C$ falls by 4: from $1.0 \\times 10^{-2}$ J to $2.5 \\times 10^{-3}$ J. The field also falls by 4."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "The plates of a charged, isolated capacitor are pulled apart to twice their separation. What happens to $C$, $Q$, $V$, and $U$?",
+  "back": "$Q$ is trapped. $C$ halves, so $V = Q/C$ doubles and $U = Q^2/2C$ doubles. The extra energy is the work done pulling the attracting plates apart."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "With the battery still connected, doubling a capacitor's plate separation {{c1::halves}} both its charge and its stored energy.",
+  "back": "$V$ is held fixed while $C$ halves, so $Q = CV$ halves and $U = \\tfrac{1}{2}CV^2$ halves. The same move on an ISOLATED capacitor doubles $V$ and $U$ instead."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A capacitor's stored energy is $U = \\tfrac{1}{2}QV = \\tfrac{1}{2}CV^2 =$ {{c1::$Q^2/2C$}}.",
+  "back": "Pick the form whose variables stay fixed: battery connected ($V$ fixed) use $\\tfrac{1}{2}CV^2$, so $U \\propto C$; isolated ($Q$ fixed) use $Q^2/2C$, so $U \\propto 1/C$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A battery charges an uncharged capacitor through a resistor, moving charge $Q$ at voltage $V$. How much energy does the battery supply, and where does it all go?",
+  "back": "The battery supplies $QV$, but the capacitor stores only $\\tfrac{1}{2}QV$. The other half is lost as heat in the resistance, whatever the resistance's size."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A $3.0\\,\\mu$F and a $6.0\\,\\mu$F capacitor are in series across $12$ V. What voltage does each one take?",
+  "back": "$C_{\\text{eq}} = (3.0)(6.0)/(3.0 + 6.0) = 2.0\\,\\mu$F, so each holds $Q = 24\\,\\mu$C. Then $V_3 = 24/3.0 = 8.0$ V and $V_6 = 24/6.0 = 4.0$ V: the SMALLER capacitor takes the larger voltage."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "When a charged capacitor discharges through a resistor, the current flows in the {{c1::opposite}} direction to the charging current.",
+  "back": "Charge now leaves the plates instead of arriving. During discharge, charge, voltage and current all start at their maximum and decay toward zero."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A charging capacitor follows $Q(t) =$ {{c1::$C\\varepsilon(1 - e^{-t/RC})$}}, rising quickly and then leveling off.",
+  "back": "Recognize the shape; a passage will supply the formula. At $t = RC$, $1 - e^{-1} \\approx 0.63$. The current does the opposite: it starts at $\\varepsilon/R$ and decays toward zero."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A $2.0\\text{ k}\\Omega$ resistor charges a $50\\,\\mu$F capacitor from a battery. About how long until the capacitor is essentially fully charged?",
+  "back": "$\\tau = RC = (2.0 \\times 10^3)(5.0 \\times 10^{-5}) = 0.10$ s, and \"essentially full\" takes about $5\\tau = 0.50$ s. After one $\\tau$ it holds only about 63%."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A capacitor reaches half its final charge (or loses half while discharging) after about {{c1::$0.69\\tau$}}.",
+  "back": "Setting $e^{-t/\\tau} = \\tfrac{1}{2}$ gives $t = \\tau \\ln 2 \\approx 0.69\\tau$, a bit less than one time constant."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A toxin opens many extra $\\text{K}^+$ leak channels in a neuron. How do the membrane resistance and time constant change?",
+  "back": "Each open channel is another resistor in parallel, so $R_m$ falls; with $C_m$ unchanged, $\\tau = R_mC_m$ shortens. The membrane responds faster, but each input fades faster."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "Why does myelin LOWER the axon's membrane capacitance?",
+  "back": "Myelin is many membrane wraps stacked in series, and series capacitors act like a wider gap $d$, so $C_m$ falls. Less charge is needed to change each stretch's voltage, so depolarization spreads farther and faster."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "In a myelinated axon, the action potential is regenerated only at the {{c1::nodes of Ranvier}}, where voltage-gated $\\text{Na}^+$ channels are concentrated.",
+  "back": "The signal seems to jump node to node: saltatory conduction. It is fast and energy-efficient, because ions cross the membrane only at the nodes, leaving less for the $\\text{Na}^+/\\text{K}^+$ pump to restore."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "In multiple sclerosis, how do a demyelinated internode's capacitance and resistance compare with a healthy one, and why does conduction suffer?",
+  "back": "$C_m$ rises and $R_m$ falls, because the series layers are gone. More charge is needed per millivolt and current leaks out across the membrane, so conduction slows or fails."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-emf-capacitors-mcat",
+  "front": "A defibrillator charges its capacitor over $6.0$ s and delivers the same energy in about $6.0$ ms. How does the delivery power compare with the charging power?",
+  "back": "Power is energy per time, so the same energy in $10^{-3}$ of the time means about $10^3$ times the power. The capacitor is a time compressor, not an energy source."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Why is current, not voltage, the quantity that determines the severity of electrical injury?",
   "back": "Damage comes from charge actually flowing through tissue, causing fibrillation or burns. Dry skin's high resistance limits that current, which is why wet skin is far more dangerous."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Why is household wiring parallel rather than series?",
   "back": "Every outlet then receives the full line voltage, and devices operate independently, so switching one off or having one fail does not interrupt the rest. The tradeoff is that added devices raise total current, requiring breakers."
  },
  {
-  "topicSlug": "mcat-physics-electricity-circuits-mcat",
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
   "front": "Wire resistance is $R = {{c1::\\rho L/A}}$, so doubling the radius cuts resistance to one fourth.",
   "back": "Cross-sectional area scales as the radius squared. Longer, thinner wires resist more, which is why long extension cords lose voltage."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Conventional current flows out of the source's {{c1::positive}} terminal, through the external circuit, and back into the negative terminal.",
+  "back": "It is defined as the direction positive charge would move. In a metal wire the electrons actually drift the opposite way, from the negative terminal through the circuit toward the positive one."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A steady $0.50$ A current flows for $1$ minute. How much charge passes, and about how many electrons is that?",
+  "back": "$\\Delta Q = I\\Delta t = (0.50)(60) = 30$ C, so $N = 30/(1.6 \\times 10^{-19}) \\approx 1.9 \\times 10^{20}$ electrons. Convert minutes to seconds first."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $2$ pA channel current carried by $\\text{Ca}^{2+}$ needs {{c1::half as many}} ions per second as the same current carried by $\\text{K}^+$.",
+  "back": "Count carriers with $N = \\Delta Q/q_{carrier}$, and each $\\text{Ca}^{2+}$ carries $2e$. In $1$ ms, $2 \\times 10^{-15}$ C is about $12{,}500$ $\\text{K}^+$ ions but only about $6{,}250$ $\\text{Ca}^{2+}$ ions."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "In saline, conventional current runs from left to right. Do the $\\text{Na}^+$ and $\\text{Cl}^-$ contributions to the current cancel?",
+  "back": "No, they add. $\\text{Na}^+$ drifts right and $\\text{Cl}^-$ drifts left, and negative charge moving left transports charge exactly as positive charge moving right does."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Heating a metal {{c1::lowers}} its conductivity, while heating an electrolyte solution {{c2::raises}} its conductivity.",
+  "back": "A hotter metal lattice scatters its fixed supply of electrons more often. In solution, warmer ions move faster through a less viscous solvent."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "By how much does the potential energy of one $\\text{Na}^+$ ion change when it crosses a $70$ mV membrane potential?",
+  "back": "$|\\Delta U| = q|\\Delta V| = (1.6 \\times 10^{-19}\\,\\text{C})(0.070\\,\\text{V}) \\approx 1.1 \\times 10^{-20}$ J, which is $0.07$ eV. Convert millivolts to volts first."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Released from rest in an electric field, an electron moves toward {{c1::higher}} potential, and its potential energy decreases.",
+  "back": "In $\\Delta U = q\\Delta V$, a negative $q$ makes $\\Delta U$ negative only when $\\Delta V$ is positive. Positive charges fall to lower potential; both kinds lose potential energy."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $9$ V ideal battery, an open switch and a lamp form one loop. What is the voltage across the lamp, and across the switch gap?",
+  "back": "$0$ V across the lamp, because no current flows and $V = IR = 0$. The full $9$ V appears across the open gap, so the loop rule still holds."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A metal wire is drawn out to three times its length at constant volume. By what factor does its resistance change?",
+  "back": "It increases ninefold. Tripling $L$ cuts $A$ to one third, and $R = \\rho L/A$ picks up a factor of $3$ from each. Stretching by $n$ multiplies $R$ by $n^2$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Axon B has twice the diameter of axon A, with identical cytoplasm. Compare the internal resistance of equal lengths.",
+  "back": "B's is one quarter of A's: $R \\propto 1/A$, and area scales as diameter squared. One sixteenth would borrow the $r^4$ Poiseuille scaling of fluid flow, which does not apply to electrical resistance."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Conductance is $G = {{c1::1/R}}$, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
+  "back": "More conductance means more current per volt. Parallel branches act like added cross-sectional area, which is why $1/R_{eq}$ is a sum."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "For an ohmic resistor, what is the slope of a graph of current (vertical axis) against voltage (horizontal axis)?",
+  "back": "$1/R$, the conductance, since $I = (1/R)V$. The slope equals $R$ only when voltage is on the vertical axis."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Doubling the voltage across an incandescent filament {{c1::less than doubles}} the current, because the filament is non-ohmic.",
+  "back": "The hotter filament has higher resistivity, so $R$ rises with voltage and its $I$ vs. $V$ curve flattens. An ohmic element would give exactly double the current."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Three identical resistors are in series across an ideal battery, and the middle one is shorted by a wire. By what factor does the battery current change?",
+  "back": "It rises by a factor of $3/2$: $R_{eq}$ falls from $3R$ to $2R$, so $I$ goes from $V/3R$ to $V/2R$. The shorted resistor has $0$ V across it and carries no current."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Solving Kirchhoff's equations gives a negative value for a current whose direction you guessed. What does that mean?",
+  "back": "The current flows opposite to your guess, and its magnitude is still correct. Either walking direction around a loop works, as long as the sign conventions are applied consistently."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $9$ V and a $3$ V battery push in opposite directions in one loop with a $2\\,\\Omega$ resistor. What is the current?",
+  "back": "$3$ A. Opposing sources subtract: $+9 - 3 - 2I = 0$, so $I = 6/2 = 3$ A, in the direction the $9$ V battery pushes."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $9$ V battery drives current through $1\\,\\text{k}\\Omega$ (at its positive terminal) and then $2\\,\\text{k}\\Omega$ in series. The node between them is grounded. What is the potential of the negative terminal?",
+  "back": "$-6$ V. The current is $9/3000 = 3$ mA, so the $2\\,\\text{k}\\Omega$ resistor drops $6$ V on the way to the negative terminal; the positive terminal sits at $+3$ V. Ground shifts potentials, never differences."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "For two resistors in series across a voltage $V$, the voltage across $R_1$ is the total $V$ multiplied by {{c1::$R_1/(R_1 + R_2)$}}.",
+  "back": "Series resistors share voltage in proportion to resistance. A $2\\,\\text{k}\\Omega$ and an $8\\,\\text{k}\\Omega$ resistor across $10$ V drop $2$ V and $8$ V."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "$5.0$ mA enters a $1\\,\\text{k}\\Omega$ muscle path in parallel with a $4\\,\\text{k}\\Omega$ fat path. How much current goes through the muscle path?",
+  "back": "$4.0$ mA. Current divides in inverse proportion to resistance: $I_1 = I\\,R_2/(R_1 + R_2) = 5.0 \\times 4/5$. The OTHER resistor goes in the numerator."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $12$ V ideal battery feeds a $2\\,\\Omega$ resistor in series with a parallel pair of $6\\,\\Omega$ and $3\\,\\Omega$. Find the current in each parallel branch.",
+  "back": "$1$ A and $2$ A. The pair is $18/9 = 2\\,\\Omega$, so $R_{eq} = 4\\,\\Omega$ and $I = 3$ A. The series resistor drops $6$ V, leaving $6$ V across the pair: $6/6$ and $6/3$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A resistor $R_s$ sits in series in front of a parallel bank. A new branch is added to the bank. What happens to the current in each original branch?",
+  "back": "It falls. $R_{eq}$ drops and the total current rises, so $R_s$ drops more voltage and less is left across the bank. Branches stay independent only when the bank sits directly across an ideal source."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $24$ V ideal source drives a $2\\,\\Omega$ resistor in series with two $4\\,\\Omega$ resistors in parallel. One $4\\,\\Omega$ resistor fails open. What happens to the current in the other?",
+  "back": "It rises from $3$ A to $4$ A. Before: $R_{eq} = 2 + 2 = 4\\,\\Omega$, so $6$ A splits evenly. After: $R_{eq} = 6\\,\\Omega$ and all $4$ A goes through the survivor. The total current fell, yet the survivor's rose."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A wire connected across one branch of a parallel bank shorts {{c1::every branch of the bank}}.",
+  "back": "All the branches share the same two nodes, so all of them now have $0$ V across them and carry no current. The total current flows through the wire."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A heater on a fixed-voltage outlet gets a new element with half the resistance. What happens to the power it draws?",
+  "back": "It doubles. At fixed $V$, use $P = V^2/R$. Using $I^2R$ while holding $I$ fixed wrongly predicts halving; the current actually doubles too."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $2000$ W space heater runs for $5$ hours at 15 cents per kilowatt-hour. What does it cost?",
+  "back": "1.50 dollars. $E = Pt = (2.0\\,\\text{kW})(5\\,\\text{h}) = 10$ kWh, and $10 \\times 15$ cents is 150 cents. Convert watts to kilowatts before multiplying."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Each of $n$ identical bulbs in series on an ideal source dissipates {{c1::$P_0/n^2$}}, where $P_0$ is one bulb's power when connected alone.",
+  "back": "Each bulb gets $V/n$, and $P = V^2/R$ squares that factor. Two in series each glow at one quarter of solo power; in parallel each keeps full power."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Bulb A is in series with identical bulbs B and C in parallel, all across an ideal battery. C burns out. What happens to A and B?",
+  "back": "A dims and B brightens. $R_{eq}$ rises from $1.5R$ to $2R$, so the total current falls. A's share of the voltage drops from two thirds to one half, leaving B one half instead of one third."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "A $120$ V shock passes hand to hand. The body path is $10^5\\,\\Omega$ with dry skin and $10^3\\,\\Omega$ with wet skin. Compare the currents.",
+  "back": "Dry: $120/10^5 = 1.2$ mA, a tingle. Wet: $120/10^3 = 0.12$ A, $100$ times larger and potentially lethal. The voltage never changed; only the resistance did."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
+  "front": "Approximate body-current thresholds: about {{c1::1 mA}} is perceptible, and about {{c2::100 mA}} across the chest can trigger ventricular fibrillation.",
+  "back": "Roughly $10$ to $20$ mA prevents letting go. The values vary with path, duration and frequency, and passages supply them when needed."
  },
  {
   "topicSlug": "mcat-physics-electricity-electrochemistry-mcat",

@@ -395,11 +395,18 @@
     ],
     "tested": "Chirality and R/S, enantiomers vs diastereomers, meso, optical activity, E/Z, conformations."
   },
-  "mcat-physics-electricity-circuits-mcat": {
+  "mcat-physics-electricity-dc-circuits-mcat": {
     "aamc": [
       "4C"
     ],
-    "tested": "Ohm's law, series/parallel resistors and capacitors, power, Kirchhoff's rules, RC qualitative behavior."
+    "tested": "Current and conventional direction, metallic vs electrolytic conduction, Ohm's law, resistivity, series/parallel resistors, Kirchhoff's rules, power and bulb brightness."
+  },
+  "mcat-physics-electricity-emf-capacitors-mcat": {
+    "aamc": [
+      "4C",
+      "3A"
+    ],
+    "tested": "EMF, internal resistance and terminal voltage, meters, capacitance, dielectrics, stored energy, capacitor networks, RC qualitative behavior, membrane-as-RC and myelin."
   },
   "mcat-physics-electricity-electrochemistry-mcat": {
     "aamc": [

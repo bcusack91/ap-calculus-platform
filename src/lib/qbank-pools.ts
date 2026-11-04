@@ -34,6 +34,7 @@
  * pure, so the builder API and tests share it.
  */
 import { questionKey } from '@/lib/question-key'
+import { isSplitMcatTopic } from '@/lib/mcat-topic-split'
 import { generateExitQuiz, listExitQuizSlugs, type ExitQuizQuestion } from '@/data/exit-quizzes'
 import { SAT_FORM_V3_EXCLUDED } from '@/data/sat-practice/form-v3-exclusions'
 import { SAT_V3_CONVENTIONS } from '@/data/sat-practice/v3-bank/conventions'
@@ -105,6 +106,8 @@ const MCAT_DRAW = 5000
 /** Section + discipline of an MCAT curriculum topic; null = not exam content (strategy/logistics). */
 export function mcatTopicInfo(slug: string): { section: string; discipline: string } | null {
   if (/test-day-strategy|science-passage-strategy|quantitative-skills/.test(slug)) return null
+  // A retired, since-split topic keeps its loader for attempt history only.
+  if (isSplitMcatTopic(slug)) return null
   if (slug.startsWith('mcat-cars')) return { section: 'cars', discipline: 'CARS' }
   if (/general-chemistry/.test(slug)) return { section: 'chem-phys', discipline: 'General Chemistry' }
   if (/organic-chemistry|lab-methods/.test(slug)) return { section: 'chem-phys', discipline: 'Organic Chemistry' }

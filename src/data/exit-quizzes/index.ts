@@ -127,6 +127,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias
   'mcat-physics-electricity-electrostatics-mcat': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-circuits-mcat': () => import('./mcat-physics-electricity'),
+  // Circuits split in two (Nov 2026); the old slug's loader stays for attempt history.
+  'mcat-physics-electricity-dc-circuits-mcat': () => import('./lesson-built/mcat-physics-electricity-dc-circuits-mcat'),
+  'mcat-physics-electricity-emf-capacitors-mcat': () => import('./lesson-built/mcat-physics-electricity-emf-capacitors-mcat'),
   'mcat-physics-electricity-magnetism-mcat': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-optics-mcat': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-electrochemistry-mcat': () => import('./mcat-physics-electricity'),

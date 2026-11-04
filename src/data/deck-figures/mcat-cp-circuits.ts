@@ -30,42 +30,42 @@ import type { DeckFigurePlacement } from './index'
  * figure (arr-ci-<figure>-<colour>).
  */
 
-const SVG_OPEN = '<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif"'
+export const SVG_OPEN = '<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif"'
 
-const ARROW = (id: string) =>
+export const ARROW = (id: string) =>
   `<marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>`
 
 /** A text element in the current colour. `weight` is the font-weight attribute as a string ('400' | '700'). */
-const T = (x: number, y: number, size: number, text: string, anchor: 'start' | 'middle' | 'end' = 'start', weight = '400') =>
+export const T = (x: number, y: number, size: number, text: string, anchor: 'start' | 'middle' | 'end' = 'start', weight = '400') =>
   `<text x="${x}" y="${y}" font-size="${size}"${weight !== '400' ? ` font-weight="${weight}"` : ''}${anchor !== 'start' ? ` text-anchor="${anchor}"` : ''} fill="currentColor">${text}</text>`
 
 /** A rounded box outlined in the current colour; `fillOpacity` > 0 tints it with the same colour. */
-const BOX = (x: number, y: number, w: number, h: number, rx = 12, sw = 2.5, fillOpacity = 0, dashed = false) =>
+export const BOX = (x: number, y: number, w: number, h: number, rx = 12, sw = 2.5, fillOpacity = 0, dashed = false) =>
   `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${fillOpacity ? 'currentColor' : 'none'}"${fillOpacity ? ` fill-opacity="${fillOpacity}"` : ''} stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="8 6"' : ''}/>`
 
 /** A straight arrow in the current colour ending in the given marker. */
-const ARR = (x1: number, y1: number, x2: number, y2: number, marker: string, sw = 3, dashed = false) =>
+export const ARR = (x1: number, y1: number, x2: number, y2: number, marker: string, sw = 3, dashed = false) =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="7 5"' : ''} marker-end="url(#${marker})"/>`
 
 /** A plain line in the current colour. */
-const LINE = (x1: number, y1: number, x2: number, y2: number, sw = 2.5, dashed = false) =>
+export const LINE = (x1: number, y1: number, x2: number, y2: number, sw = 2.5, dashed = false) =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="7 5"' : ''}/>`
 
 /** A horizontal dimension line with end ticks. */
-const DIM = (x1: number, x2: number, y: number) =>
+export const DIM = (x1: number, x2: number, y: number) =>
   `<path d="M${x1} ${y - 6} L${x1} ${y + 6} M${x1} ${y} L${x2} ${y} M${x2} ${y - 6} L${x2} ${y + 6}" fill="none" stroke="currentColor" stroke-width="2"/>`
 
 /** Subscript helper: base + small subscript, back to baseline. */
-const SUB = (base: string, sub: string, size: number) =>
+export const SUB = (base: string, sub: string, size: number) =>
   `${base}<tspan dy="${Math.round(size * 0.25)}" font-size="${Math.round(size * 0.7)}">${sub}</tspan><tspan dy="${-Math.round(size * 0.25)}" font-size="${size}"> </tspan>`
 
 /** A polyline path through the points. */
-const PATH = (pts: [number, number][]) => 'M' + pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join(' L')
+export const PATH = (pts: [number, number][]) => 'M' + pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join(' L')
 
 /* ── circuit symbols ─────────────────────────────────────────────────────── */
 
 /** A wire with a resistor zigzag (60 units long, ±8 wide) centred on the segment (x1,y1)→(x2,y2). */
-const RES = (x1: number, y1: number, x2: number, y2: number, sw = 2.5) => {
+export const RES = (x1: number, y1: number, x2: number, y2: number, sw = 2.5) => {
   const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy)
   const ux = dx / len, uy = dy / len, nx = -uy, ny = ux
   const lead = (len - 60) / 2
@@ -79,29 +79,29 @@ const RES = (x1: number, y1: number, x2: number, y2: number, sw = 2.5) => {
 }
 
 /** A battery in a VERTICAL wire at (cx, cy): long thin plate (+) on top, short thick plate (−) below. The wire must stop at cy−6 and resume at cy+6. */
-const BATV = (cx: number, cy: number) =>
+export const BATV = (cx: number, cy: number) =>
   `<path d="M${cx - 18} ${cy - 6} L${cx + 18} ${cy - 6}" stroke="currentColor" stroke-width="3"/><path d="M${cx - 9} ${cy + 6} L${cx + 9} ${cy + 6}" stroke="currentColor" stroke-width="5.5"/>`
 
 /** A capacitor in a HORIZONTAL wire at (cx, cy): two vertical plates. The wire must stop at cx−5 and resume at cx+5. */
-const CAPH = (cx: number, cy: number) =>
+export const CAPH = (cx: number, cy: number) =>
   `<path d="M${cx - 5} ${cy - 16} L${cx - 5} ${cy + 16} M${cx + 5} ${cy - 16} L${cx + 5} ${cy + 16}" stroke="currentColor" stroke-width="3.5"/>`
 
 /** A capacitor in a VERTICAL wire at (cx, cy): two horizontal plates. The wire must stop at cy−5 and resume at cy+5. */
-const CAPV = (cx: number, cy: number) =>
+export const CAPV = (cx: number, cy: number) =>
   `<path d="M${cx - 16} ${cy - 5} L${cx + 16} ${cy - 5} M${cx - 16} ${cy + 5} L${cx + 16} ${cy + 5}" stroke="currentColor" stroke-width="3.5"/>`
 
 /** A meter: a circle in the figure background (it sits ON the wire) with a letter inside. */
-const METER = (cx: number, cy: number, letter: string) =>
+export const METER = (cx: number, cy: number, letter: string) =>
   `<circle class="fig-bg" cx="${cx}" cy="${cy}" r="18" stroke="currentColor" stroke-width="2.5"/>${T(cx, cy + 7, 19, letter, 'middle', '700')}`
 
 /** A bulb on the wire with an optional red glow (drawn by the caller inside a fig-accent-2 group via BULB_GLOW). */
-const BULB = (cx: number, cy: number) =>
+export const BULB = (cx: number, cy: number) =>
   `<circle class="fig-bg" cx="${cx}" cy="${cy}" r="16" stroke="currentColor" stroke-width="2.5"/><path d="M${cx - 9} ${cy - 9} L${cx + 9} ${cy + 9} M${cx + 9} ${cy - 9} L${cx - 9} ${cy + 9}" stroke="currentColor" stroke-width="2"/>`
-const BULB_GLOW = (cx: number, cy: number, r: number, opacity: number) =>
+export const BULB_GLOW = (cx: number, cy: number, r: number, opacity: number) =>
   `<circle cx="${cx}" cy="${cy}" r="${r}" fill="currentColor" fill-opacity="${opacity}"/>`
 
 /** A vertical wire from y1 to y2 at x, broken for a battery at cy (plates drawn). */
-const WIRE_BAT = (x: number, y1: number, y2: number, cy: number) =>
+export const WIRE_BAT = (x: number, y1: number, y2: number, cy: number) =>
   `${LINE(x, y1, x, cy - 6)}${LINE(x, cy + 6, x, y2)}${BATV(x, cy)}`
 
 /* 1 — Ohm's law: one loop, the V–I line, the wire geometry R = ρL/A (lead, 1000×460) */
@@ -525,7 +525,7 @@ ${T(40, 388, 17, 'the 2 Ω drops 3 A × 2 Ω = 6 V  →  6 V is left across the 
 <g class="fig-muted">${T(40, 446, 15, 'the 3 Ω branch carries twice the current of the 6 Ω — inverse to resistance, always')}</g>
 </svg>`
 
-export const mcatCircuitsFigures: DeckFigurePlacement[] = [
+const circuitsFigures: DeckFigurePlacement[] = [
   {
     at: 'Resistance and Ohm',
     mode: 'lead',
@@ -628,7 +628,7 @@ export const mcatCircuitsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Strategy 4',
+    at: 'The Cell Membrane Is an RC Circuit',
     mode: 'lead',
     figure: {
       svg: membraneSvg,
@@ -656,3 +656,12 @@ export const mcatCircuitsFigures: DeckFigurePlacement[] = [
     ],
   },
 ]
+
+/**
+ * Circuits was split in two (Nov 2026): Part 1 (resistor networks, power) and
+ * Part 2 (EMF, meters, capacitors, bioelectricity) each get the figures for
+ * the sections their lesson teaches.
+ */
+const PART_2_SECTIONS = new Set(['EMF vs. Terminal Voltage', 'Meters', 'Capacitor Networks', 'The Cell Membrane Is an RC Circuit'])
+export const mcatDcCircuitsFigures = circuitsFigures.filter((f) => !PART_2_SECTIONS.has(f.at))
+export const mcatEmfCapacitorsFigures = circuitsFigures.filter((f) => PART_2_SECTIONS.has(f.at))

@@ -105,7 +105,10 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-physics-mechanics-fluids-waves-mcat': ['mcat-physics-mechanics-fluids-mcat', 'mcat-physics-waves-sound-mcat'],
   'mcat-physics-electricity-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   'mcat-physics-electricity-electrostatics-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
+  // Retired Nov 2026 (split in two); kept so legacy assignments still complete.
   'mcat-physics-electricity-circuits-mcat': ['mcat-physics-electricity-circuits-mcat'],
+  'mcat-physics-electricity-dc-circuits-mcat': ['mcat-physics-electricity-circuits-mcat'],
+  'mcat-physics-electricity-emf-capacitors-mcat': ['mcat-physics-electricity-circuits-mcat'],
   'mcat-physics-electricity-magnetism-mcat': ['mcat-physics-electricity-magnetism-mcat'],
   'mcat-physics-electricity-optics-mcat': ['mcat-physics-electricity-optics-mcat'],
   'mcat-physics-electricity-electrochemistry-mcat': ['mcat-physics-electricity-electrochemistry-mcat'],

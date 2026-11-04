@@ -36,6 +36,9 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   'mcat-physics-mechanics-mcat': 'mcat-area-physics-mechanics',
   'mcat-physics-mechanics-fluids-waves-mcat': 'mcat-area-physics-mechanics',
   'mcat-physics-electricity-mcat': 'mcat-area-physics-electricity',
+  // Circuits Part 1 and Part 2 both play the bank's circuits subtopic.
+  'mcat-physics-electricity-dc-circuits-mcat': 'mcat-physics-electricity-circuits-mcat',
+  'mcat-physics-electricity-emf-capacitors-mcat': 'mcat-physics-electricity-circuits-mcat',
   'mcat-biochemistry-foundations-mcat': 'mcat-area-biochemistry',
   'mcat-lab-methods-mcat': 'mcat-area-lab-data',
   'mcat-biostatistics-mcat': 'mcat-research-methods-biostats-mcat',

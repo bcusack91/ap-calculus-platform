@@ -5,6 +5,7 @@ import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
 import { effectiveDailyLimits } from '@/lib/flashcard-daily-limits'
+import { mcatCreditSlugs } from '@/lib/mcat-topic-split'
 
 /** A topic at or above this masteryLevel is "mastered" (progress/save sets MASTERED here too). */
 export const MASTERY_THRESHOLD = 0.9
@@ -135,7 +136,8 @@ export async function maybeUnlockFlashcards(
 
   if (hasExitQuiz(topicSlug) && !entranceMastered) {
     const quizAttempt = await prisma.exitQuizAttempt.findFirst({
-      where: { userId, topicSlug },
+      // A split topic's retired slug counts for each of its successors.
+      where: { userId, topicSlug: { in: mcatCreditSlugs(topicSlug) } },
       select: { id: true },
     })
     if (!quizAttempt) return LOCKED
@@ -146,7 +148,7 @@ export async function maybeUnlockFlashcards(
   let lessonDone = progress?.status === 'COMPLETED' || progress?.status === 'MASTERED'
   if (!lessonDone) {
     const presented = await prisma.slideDeck.findFirst({
-      where: { topicSlug, session: { attendance: { some: { userId } } } },
+      where: { topicSlug: { in: mcatCreditSlugs(topicSlug) }, session: { attendance: { some: { userId } } } },
       select: { id: true },
     })
     lessonDone = presented !== null

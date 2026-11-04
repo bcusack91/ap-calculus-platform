@@ -437,6 +437,9 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       // fill-ap-precalculus.ts, reach-500-topics.ts, final-expansion-to-500.ts and
       // split-parametric-vectors-polar.ts recreate its legacy rows and Categories.
       'restructure-precalc.ts',
+      // MCAT topics split into one lesson per live-class session
+      // (src/lib/mcat-topic-split.ts): retires the old combined rows.
+      'split-mcat-topics.ts',
     ],
   },
 ]
@@ -445,6 +448,7 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
 const FILE_ENV: Record<string, Record<string, string>> = {
   'restructure-calc.ts': { APPLY: '1' },
   'restructure-precalc.ts': { APPLY: '1' },
+  'split-mcat-topics.ts': { APPLY: '1' },
 }
 
 async function main() {

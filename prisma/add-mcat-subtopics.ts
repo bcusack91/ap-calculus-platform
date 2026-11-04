@@ -51,7 +51,10 @@ const mcatSubtopics: ParentSeed[] = [
     parentSlug: 'mcat-physics-electricity-mcat',
     subtopics: [
       { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics', description: 'Electric force, fields, potential, and capacitance' },
-      { slug: 'mcat-physics-electricity-circuits-mcat', title: 'Circuits', description: 'Current, resistance, Ohm\'s law, and series/parallel circuits' },
+      // Circuits was split in two (Nov 2026, one live-class session each); the
+      // old 'mcat-physics-electricity-circuits-mcat' row is retired.
+      { slug: 'mcat-physics-electricity-dc-circuits-mcat', title: 'Circuits Part 1: Current & Resistance', description: 'Current, voltage, Ohm\'s law, resistivity, series and parallel resistors, Kirchhoff\'s rules, and power' },
+      { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 2: EMF & Capacitors', description: 'EMF and internal resistance, meters, capacitors and dielectrics, RC circuits, and bioelectricity' },
       { slug: 'mcat-physics-electricity-magnetism-mcat', title: 'Magnetism & Electromagnetic Induction', description: 'Magnetic fields, forces, and induced current concepts' },
       { slug: 'mcat-physics-electricity-optics-mcat', title: 'Optics', description: 'Reflection, refraction, mirrors, lenses, and image formation' },
       { slug: 'mcat-physics-electricity-electrochemistry-mcat', title: 'Electrochemistry', description: 'Galvanic/electrolytic cells, redox, and Nernst equation' }

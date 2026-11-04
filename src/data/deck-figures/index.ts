@@ -55,7 +55,9 @@ import { mcatMomentumFigures } from './mcat-cp-momentum'
 import { mcatFluidsWavesFigures } from './mcat-cp-fluids-waves'
 import { mcatMechanicsFigures } from './mcat-cp-mechanics'
 import { mcatElectrostaticsFigures } from './mcat-cp-electrostatics'
-import { mcatCircuitsFigures } from './mcat-cp-circuits'
+import { mcatDcCircuitsFigures, mcatEmfCapacitorsFigures } from './mcat-cp-circuits'
+import { mcatDcCircuitsExtraFigures } from './mcat-cp-dc-circuits'
+import { mcatEmfCapacitorsExtraFigures } from './mcat-cp-emf-capacitors'
 import { mcatMagnetismFigures } from './mcat-cp-magnetism'
 import { mcatOpticsFigures } from './mcat-cp-optics'
 import { mcatElectrochemistryFigures } from './mcat-cp-electrochemistry'
@@ -184,7 +186,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-mechanics-fluids-waves-mcat': mcatFluidsWavesFigures,
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
   'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
-  'mcat-physics-electricity-circuits-mcat': mcatCircuitsFigures,
+  'mcat-physics-electricity-dc-circuits-mcat': [...mcatDcCircuitsFigures, ...mcatDcCircuitsExtraFigures],
+  'mcat-physics-electricity-emf-capacitors-mcat': [...mcatEmfCapacitorsFigures, ...mcatEmfCapacitorsExtraFigures],
   'mcat-physics-electricity-magnetism-mcat': mcatMagnetismFigures,
   'mcat-physics-electricity-optics-mcat': mcatOpticsFigures,
   'mcat-physics-electricity-electrochemistry-mcat': mcatElectrochemistryFigures,

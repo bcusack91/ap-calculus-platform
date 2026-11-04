@@ -3356,6 +3356,26 @@
     ]
   },
   {
+    "slug": "mcat-physics-electricity-dc-circuits-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-dc-circuits-mcat",
+    "partTitles": [
+      "Charge, Current & Voltage",
+      "Resistance, Ohm's Law & Series vs. Parallel",
+      "Kirchhoff's Rules & Reducing Networks",
+      "Circuit Changes, Power & Bulb Brightness"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-emf-capacitors-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-emf-capacitors-mcat",
+    "partTitles": [
+      "EMF, Internal Resistance & Meters",
+      "Capacitance, Dielectrics & Stored Energy",
+      "Capacitor Networks & RC Circuits",
+      "Bioelectricity & Passage Strategy"
+    ]
+  },
+  {
     "slug": "mcat-physics-electricity-magnetism-mcat",
     "importPath": "./mcat-mcat-physics-electricity-magnetism-mcat",
     "partTitles": [

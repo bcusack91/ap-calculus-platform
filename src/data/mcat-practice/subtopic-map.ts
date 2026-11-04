@@ -51,8 +51,13 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
   ],
 
   physics: [
-    { slug: 'mcat-physics-electricity-circuits-mcat', title: 'Circuits',
-      pattern: /circuit|resistor|ohm'?s law|current of|voltage|in series|in parallel|kirchhoff|capacitor.*(charg|circuit)/i },
+    // Circuits is split across two lessons (Nov 2026). Part 2's vocabulary
+    // (capacitors, EMF, meters) must come first: those stems also say
+    // "circuit" or "voltage", which would otherwise route them to Part 1.
+    { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 2: EMF & Capacitors',
+      pattern: /capacit|dielectric|\bemf\b|electromotive|internal resistance|terminal (voltage|potential)|ammeter|voltmeter|time constant|\bRC (circuit|time)|defibrillat/i },
+    { slug: 'mcat-physics-electricity-dc-circuits-mcat', title: 'Circuits Part 1: Current & Resistance',
+      pattern: /circuit|resistor|resistivity|ohm'?s law|current of|voltage|in series|in parallel|kirchhoff|power dissipat/i },
     { slug: 'mcat-physics-electricity-electrochemistry-mcat', title: 'Electrochemistry',
       pattern: /electrochem|galvanic|electrolytic|cathode|anode|electrode|cell potential|nernst|redox|oxidation state/i },
     { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics',

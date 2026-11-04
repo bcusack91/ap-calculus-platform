@@ -1,0 +1,234 @@
+[
+  {
+    "front": "Conventional current flows out of the source's {{c1::positive}} terminal, through the external circuit, and back into the negative terminal.",
+    "back": "It is defined as the direction positive charge would move. In a metal wire the electrons actually drift the opposite way, from the negative terminal through the circuit toward the positive one.",
+    "hint": "Every circuit rule on the MCAT uses this direction.",
+    "yield": "HIGH",
+    "why": "Current-direction conventions underlie every circuit and electrochemistry question.",
+    "part": 1
+  },
+  {
+    "front": "A steady $0.50$ A current flows for $1$ minute. How much charge passes, and about how many electrons is that?",
+    "back": "$\\Delta Q = I\\Delta t = (0.50)(60) = 30$ C, so $N = 30/(1.6 \\times 10^{-19}) \\approx 1.9 \\times 10^{20}$ electrons. Convert minutes to seconds first.",
+    "hint": "$\\Delta Q = I\\Delta t$, then divide by the charge per carrier.",
+    "yield": "HIGH",
+    "why": "Charge and carrier counting from current is a common discrete calculation.",
+    "part": 1
+  },
+  {
+    "front": "A $2$ pA channel current carried by $\\text{Ca}^{2+}$ needs {{c1::half as many}} ions per second as the same current carried by $\\text{K}^+$.",
+    "back": "Count carriers with $N = \\Delta Q/q_{carrier}$, and each $\\text{Ca}^{2+}$ carries $2e$. In $1$ ms, $2 \\times 10^{-15}$ C is about $12{,}500$ $\\text{K}^+$ ions but only about $6{,}250$ $\\text{Ca}^{2+}$ ions.",
+    "hint": "Divide by the charge per carrier, not automatically by $e$.",
+    "yield": "MEDIUM",
+    "why": "Ion-channel charge counting appears mainly in biology-framed passages.",
+    "part": 1
+  },
+  {
+    "front": "In saline, conventional current runs from left to right. Do the $\\text{Na}^+$ and $\\text{Cl}^-$ contributions to the current cancel?",
+    "back": "No, they add. $\\text{Na}^+$ drifts right and $\\text{Cl}^-$ drifts left, and negative charge moving left transports charge exactly as positive charge moving right does.",
+    "hint": "Think about the direction of charge transport, not of motion.",
+    "yield": "HIGH",
+    "why": "Electrolytic conduction links circuits to body fluids and electrochemistry and is a frequent trap.",
+    "part": 1
+  },
+  {
+    "front": "Heating a metal {{c1::lowers}} its conductivity, while heating an electrolyte solution {{c2::raises}} its conductivity.",
+    "back": "A hotter metal lattice scatters its fixed supply of electrons more often. In solution, warmer ions move faster through a less viscous solvent.",
+    "hint": "The two conductors use different carriers.",
+    "yield": "MEDIUM",
+    "why": "Temperature behaviour of conductors is secondary, usually passage context.",
+    "part": 1
+  },
+  {
+    "front": "By how much does the potential energy of one $\\text{Na}^+$ ion change when it crosses a $70$ mV membrane potential?",
+    "back": "$|\\Delta U| = q|\\Delta V| = (1.6 \\times 10^{-19}\\,\\text{C})(0.070\\,\\text{V}) \\approx 1.1 \\times 10^{-20}$ J, which is $0.07$ eV. Convert millivolts to volts first.",
+    "hint": "$\\Delta U = q\\Delta V$; $1\\,\\text{eV} = 1.6 \\times 10^{-19}$ J.",
+    "yield": "HIGH",
+    "why": "Voltage as energy per charge, with eV conversions, is commonly tested in biology contexts.",
+    "part": 1
+  },
+  {
+    "front": "Released from rest in an electric field, an electron moves toward {{c1::higher}} potential, and its potential energy decreases.",
+    "back": "In $\\Delta U = q\\Delta V$, a negative $q$ makes $\\Delta U$ negative only when $\\Delta V$ is positive. Positive charges fall to lower potential; both kinds lose potential energy.",
+    "hint": "Any charge released from rest speeds up.",
+    "yield": "HIGH",
+    "why": "The sign of charge versus direction of potential is a classic MCAT trap.",
+    "part": 1
+  },
+  {
+    "front": "A $9$ V ideal battery, an open switch and a lamp form one loop. What is the voltage across the lamp, and across the switch gap?",
+    "back": "$0$ V across the lamp, because no current flows and $V = IR = 0$. The full $9$ V appears across the open gap, so the loop rule still holds.",
+    "hint": "No current does not mean no voltage.",
+    "yield": "MEDIUM",
+    "why": "Open-circuit reasoning appears in switch and burnout questions but less often than core rules.",
+    "part": 1
+  },
+  {
+    "front": "A metal wire is drawn out to three times its length at constant volume. By what factor does its resistance change?",
+    "back": "It increases ninefold. Tripling $L$ cuts $A$ to one third, and $R = \\rho L/A$ picks up a factor of $3$ from each. Stretching by $n$ multiplies $R$ by $n^2$.",
+    "hint": "Constant volume means the wire also gets thinner.",
+    "yield": "HIGH",
+    "why": "Resistivity geometry scalings are a common discrete question.",
+    "part": 2
+  },
+  {
+    "front": "Axon B has twice the diameter of axon A, with identical cytoplasm. Compare the internal resistance of equal lengths.",
+    "back": "B's is one quarter of A's: $R \\propto 1/A$, and area scales as diameter squared. One sixteenth would borrow the $r^4$ Poiseuille scaling of fluid flow, which does not apply to electrical resistance.",
+    "hint": "Wire resistance goes as $1/r^2$, not $1/r^4$.",
+    "yield": "MEDIUM",
+    "why": "Biology-framed geometry scaling with a fluid-flow trap; secondary to the basic formula.",
+    "part": 2
+  },
+  {
+    "front": "Conductance is $G = {{c1::1/R}}$, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
+    "back": "More conductance means more current per volt. Parallel branches act like added cross-sectional area, which is why $1/R_{eq}$ is a sum.",
+    "hint": "$1\\,\\text{S} = 1\\,\\Omega^{-1}$",
+    "yield": "MEDIUM",
+    "why": "Conductance appears mostly in passages, such as membrane conductance.",
+    "part": 2
+  },
+  {
+    "front": "For an ohmic resistor, what is the slope of a graph of current (vertical axis) against voltage (horizontal axis)?",
+    "back": "$1/R$, the conductance, since $I = (1/R)V$. The slope equals $R$ only when voltage is on the vertical axis.",
+    "hint": "Rearrange $V = IR$ for $I$.",
+    "yield": "HIGH",
+    "why": "Reading I-V graphs is a commonly tested data-interpretation skill.",
+    "part": 2
+  },
+  {
+    "front": "Doubling the voltage across an incandescent filament {{c1::less than doubles}} the current, because the filament is non-ohmic.",
+    "back": "The hotter filament has higher resistivity, so $R$ rises with voltage and its $I$ vs. $V$ curve flattens. An ohmic element would give exactly double the current.",
+    "hint": "Metal resistance rises with temperature.",
+    "yield": "MEDIUM",
+    "why": "Ohmic vs. non-ohmic behaviour is secondary, usually graph or passage context.",
+    "part": 2
+  },
+  {
+    "front": "Three identical resistors are in series across an ideal battery, and the middle one is shorted by a wire. By what factor does the battery current change?",
+    "back": "It rises by a factor of $3/2$: $R_{eq}$ falls from $3R$ to $2R$, so $I$ goes from $V/3R$ to $V/2R$. The shorted resistor has $0$ V across it and carries no current.",
+    "hint": "A shorted element drops out of the circuit.",
+    "yield": "HIGH",
+    "why": "Quantifying the effect of a short is a common circuit-change question.",
+    "part": 2
+  },
+  {
+    "front": "Solving Kirchhoff's equations gives a negative value for a current whose direction you guessed. What does that mean?",
+    "back": "The current flows opposite to your guess, and its magnitude is still correct. Either walking direction around a loop works, as long as the sign conventions are applied consistently.",
+    "hint": "The guess only sets the sign.",
+    "yield": "MEDIUM",
+    "why": "Loop-rule bookkeeping matters for multi-step problems but is rarely tested directly.",
+    "part": 3
+  },
+  {
+    "front": "A $9$ V and a $3$ V battery push in opposite directions in one loop with a $2\\,\\Omega$ resistor. What is the current?",
+    "back": "$3$ A. Opposing sources subtract: $+9 - 3 - 2I = 0$, so $I = 6/2 = 3$ A, in the direction the $9$ V battery pushes.",
+    "hint": "Net source voltage drives current through the total resistance.",
+    "yield": "MEDIUM",
+    "why": "Opposing sources appear occasionally; most MCAT loops have one source.",
+    "part": 3
+  },
+  {
+    "front": "A $9$ V battery drives current through $1\\,\\text{k}\\Omega$ (at its positive terminal) and then $2\\,\\text{k}\\Omega$ in series. The node between them is grounded. What is the potential of the negative terminal?",
+    "back": "$-6$ V. The current is $9/3000 = 3$ mA, so the $2\\,\\text{k}\\Omega$ resistor drops $6$ V on the way to the negative terminal; the positive terminal sits at $+3$ V. Ground shifts potentials, never differences.",
+    "hint": "Ground is just the point you call $0$ V.",
+    "yield": "MEDIUM",
+    "why": "Ground and reference potentials appear in passages and figure questions.",
+    "part": 3
+  },
+  {
+    "front": "For two resistors in series across a voltage $V$, the voltage across $R_1$ is the total $V$ multiplied by {{c1::$R_1/(R_1 + R_2)$}}.",
+    "back": "Series resistors share voltage in proportion to resistance. A $2\\,\\text{k}\\Omega$ and an $8\\,\\text{k}\\Omega$ resistor across $10$ V drop $2$ V and $8$ V.",
+    "hint": "The bigger resistor takes the bigger share.",
+    "yield": "HIGH",
+    "why": "Voltage dividers are a common shortcut in series circuit questions.",
+    "part": 3
+  },
+  {
+    "front": "$5.0$ mA enters a $1\\,\\text{k}\\Omega$ muscle path in parallel with a $4\\,\\text{k}\\Omega$ fat path. How much current goes through the muscle path?",
+    "back": "$4.0$ mA. Current divides in inverse proportion to resistance: $I_1 = I\\,R_2/(R_1 + R_2) = 5.0 \\times 4/5$. The OTHER resistor goes in the numerator.",
+    "hint": "Current favours the smaller resistance.",
+    "yield": "HIGH",
+    "why": "Current dividers are commonly tested, often in physiology contexts.",
+    "part": 3
+  },
+  {
+    "front": "A $12$ V ideal battery feeds a $2\\,\\Omega$ resistor in series with a parallel pair of $6\\,\\Omega$ and $3\\,\\Omega$. Find the current in each parallel branch.",
+    "back": "$1$ A and $2$ A. The pair is $18/9 = 2\\,\\Omega$, so $R_{eq} = 4\\,\\Omega$ and $I = 3$ A. The series resistor drops $6$ V, leaving $6$ V across the pair: $6/6$ and $6/3$.",
+    "hint": "Collapse inside-out, then walk back out.",
+    "yield": "ULTRA_HIGH",
+    "why": "Reducing a mixed network and walking back out is tested on essentially every MCAT.",
+    "part": 3
+  },
+  {
+    "front": "A resistor $R_s$ sits in series in front of a parallel bank. A new branch is added to the bank. What happens to the current in each original branch?",
+    "back": "It falls. $R_{eq}$ drops and the total current rises, so $R_s$ drops more voltage and less is left across the bank. Branches stay independent only when the bank sits directly across an ideal source.",
+    "hint": "Order: $R_{eq}$, total current, series drop, what is left.",
+    "yield": "HIGH",
+    "why": "Predicting circuit changes in mixed networks is commonly tested.",
+    "part": 4
+  },
+  {
+    "front": "A $24$ V ideal source drives a $2\\,\\Omega$ resistor in series with two $4\\,\\Omega$ resistors in parallel. One $4\\,\\Omega$ resistor fails open. What happens to the current in the other?",
+    "back": "It rises from $3$ A to $4$ A. Before: $R_{eq} = 2 + 2 = 4\\,\\Omega$, so $6$ A splits evenly. After: $R_{eq} = 6\\,\\Omega$ and all $4$ A goes through the survivor. The total current fell, yet the survivor's rose.",
+    "hint": "Total current does not stay fixed when the network changes.",
+    "yield": "HIGH",
+    "why": "Removing a branch from a mixed network is a common change-the-circuit question.",
+    "part": 4
+  },
+  {
+    "front": "A wire connected across one branch of a parallel bank shorts {{c1::every branch of the bank}}.",
+    "back": "All the branches share the same two nodes, so all of them now have $0$ V across them and carry no current. The total current flows through the wire.",
+    "hint": "Parallel branches share both nodes.",
+    "yield": "HIGH",
+    "why": "Shorts are a common trap in circuit-change questions.",
+    "part": 4
+  },
+  {
+    "front": "A heater on a fixed-voltage outlet gets a new element with half the resistance. What happens to the power it draws?",
+    "back": "It doubles. At fixed $V$, use $P = V^2/R$. Using $I^2R$ while holding $I$ fixed wrongly predicts halving; the current actually doubles too.",
+    "hint": "Pick the power form containing the quantity held constant.",
+    "yield": "ULTRA_HIGH",
+    "why": "Choosing the right power form is tested on essentially every MCAT.",
+    "part": 4
+  },
+  {
+    "front": "A $2000$ W space heater runs for $5$ hours at 15 cents per kilowatt-hour. What does it cost?",
+    "back": "1.50 dollars. $E = Pt = (2.0\\,\\text{kW})(5\\,\\text{h}) = 10$ kWh, and $10 \\times 15$ cents is 150 cents. Convert watts to kilowatts before multiplying.",
+    "hint": "The kilowatt-hour is a unit of energy.",
+    "yield": "HIGH",
+    "why": "Energy-cost and kWh conversions are a commonly tested application of power.",
+    "part": 4
+  },
+  {
+    "front": "Each of $n$ identical bulbs in series on an ideal source dissipates {{c1::$P_0/n^2$}}, where $P_0$ is one bulb's power when connected alone.",
+    "back": "Each bulb gets $V/n$, and $P = V^2/R$ squares that factor. Two in series each glow at one quarter of solo power; in parallel each keeps full power.",
+    "hint": "Power goes as voltage squared.",
+    "yield": "HIGH",
+    "why": "Bulb-brightness ratios between series and parallel are commonly tested.",
+    "part": 4
+  },
+  {
+    "front": "Bulb A is in series with identical bulbs B and C in parallel, all across an ideal battery. C burns out. What happens to A and B?",
+    "back": "A dims and B brightens. $R_{eq}$ rises from $1.5R$ to $2R$, so the total current falls. A's share of the voltage drops from two thirds to one half, leaving B one half instead of one third.",
+    "hint": "A burned-out bulb is an open branch.",
+    "yield": "HIGH",
+    "why": "Burnout in mixed bulb circuits is a classic commonly tested question.",
+    "part": 4
+  },
+  {
+    "front": "A $120$ V shock passes hand to hand. The body path is $10^5\\,\\Omega$ with dry skin and $10^3\\,\\Omega$ with wet skin. Compare the currents.",
+    "back": "Dry: $120/10^5 = 1.2$ mA, a tingle. Wet: $120/10^3 = 0.12$ A, $100$ times larger and potentially lethal. The voltage never changed; only the resistance did.",
+    "hint": "$I = V/R_{body}$",
+    "yield": "MEDIUM",
+    "why": "Body-current calculations appear in physiology-framed passages.",
+    "part": 4
+  },
+  {
+    "front": "Approximate body-current thresholds: about {{c1::1 mA}} is perceptible, and about {{c2::100 mA}} across the chest can trigger ventricular fibrillation.",
+    "back": "Roughly $10$ to $20$ mA prevents letting go. The values vary with path, duration and frequency, and passages supply them when needed.",
+    "hint": "Milliamps, not amps, are dangerous.",
+    "yield": "LOW",
+    "why": "Specific thresholds sit in the lesson's low-yield block; passages provide them.",
+    "part": 4
+  }
+]
