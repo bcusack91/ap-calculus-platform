@@ -3410,7 +3410,13 @@
     "importPath": "./mcat-mcat-physics-electricity-magnetism-mcat",
     "partTitles": [
       "Magnetic Fields & Their Sources",
-      "Forces on Moving Charges",
+      "Forces on Moving Charges"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-induction-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-induction-mcat",
+    "partTitles": [
       "Wires, Velocity Selectors & the Mass Spectrometer",
       "MCAT Integration: Induction, MRI & Passage Strategy"
     ]

@@ -17,7 +17,7 @@ import {
 
 /** Deck sizes in the committed export mirror (topics, cards). */
 const EXPECTED: Record<string, { topics: number; cards: number }> = {
-  'mcat-prep': { topics: 116, cards: 5282 },
+  'mcat-prep': { topics: 117, cards: 5282 },
   'ap-chemistry': { topics: 41, cards: 316 },
   'ap-biology': { topics: 30, cards: 187 },
   'ap-physics-1': { topics: 28, cards: 261 },

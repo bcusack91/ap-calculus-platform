@@ -66,7 +66,9 @@ const mcatSubtopics: ParentSeed[] = [
       { slug: 'mcat-physics-electricity-kirchhoff-power-mcat', title: "Circuits Part 2: Kirchhoff's Rules & Power", description: 'Kirchhoff\'s rules, network reduction, dividers, circuit changes, power, bulbs, and electrical safety' },
       { slug: 'mcat-physics-electricity-emf-capacitors-mcat', title: 'Circuits Part 3: EMF & Capacitance', description: 'EMF and internal resistance, meters, capacitance, dielectrics, and stored energy' },
       { slug: 'mcat-physics-electricity-rc-circuits-mcat', title: 'Circuits Part 4: Capacitor Networks & Bioelectricity', description: 'Capacitor networks, RC circuits, the membrane as an RC circuit, myelin, and defibrillators' },
-      { slug: 'mcat-physics-electricity-magnetism-mcat', title: 'Magnetism & Electromagnetic Induction', description: 'Magnetic fields, forces, and induced current concepts' },
+      // Magnetism was split in two by lesson part (Nov 2026; src/lib/mcat-topic-split.ts MCAT_PART_SPLITS).
+      { slug: 'mcat-physics-electricity-magnetism-mcat', title: 'Magnetism Part 1: Fields & Forces on Charges', description: 'Magnetic fields and their sources, magnetic materials, the force on a moving charge, and circular motion in a field' },
+      { slug: 'mcat-physics-electricity-induction-mcat', title: 'Magnetism Part 2: Wires, Spectrometers & Induction', description: 'Force on a current-carrying wire, parallel wires, the velocity selector and mass spectrometer, flux, Faraday\'s and Lenz\'s laws, and MRI' },
       { slug: 'mcat-physics-electricity-optics-mcat', title: 'Optics', description: 'Reflection, refraction, mirrors, lenses, and image formation' },
       { slug: 'mcat-physics-electricity-electrochemistry-mcat', title: 'Electrochemistry', description: 'Galvanic/electrolytic cells, redox, and Nernst equation' }
     ]

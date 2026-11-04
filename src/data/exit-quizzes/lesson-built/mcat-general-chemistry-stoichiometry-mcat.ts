@@ -415,6 +415,97 @@ export const EXIT_POOL: LessonExitItem[] = [
     yield: 'HIGH',
     part: 2,
   },
+
+  // ─────── Part 1 — balancing and combustion analysis (added Nov 2026) ───────
+  {
+    question: `Ammonia burns in oxygen to give nitrogen and water: $\\text{NH}_3 + \\text{O}_2 \\to \\text{N}_2 + \\text{H}_2\\text{O}$. When the equation is balanced with whole numbers and a coefficient of 4 for $\\text{NH}_3$, what is the coefficient of $\\text{O}_2$?`,
+    options: [`6`, `2`, `3`, `5`],
+    correctAnswer: 2,
+    yield: 'HIGH',
+    explanation: `Four $\\text{NH}_3$ carry 4 N and 12 H, giving $2\\text{N}_2$ and $6\\text{H}_2\\text{O}$; the six O atoms in the water come from $3\\text{O}_2$: $4\\text{NH}_3 + 3\\text{O}_2 \\to 2\\text{N}_2 + 6\\text{H}_2\\text{O}$. The value 6 counts the O atoms as molecules, 2 would supply only four O atoms for six waters, and 5 is the oxygen coefficient when ammonia burns to NO instead of $\\text{N}_2$.`,
+    difficulty: 'medium',
+    part: 1,
+  },
+  {
+    question: `Tin(II) reduces iron(III) in solution. Which equation is balanced for both atoms and charge?`,
+    options: [
+      `$\\text{Sn}^{2+} + \\text{Fe}^{3+} \\to \\text{Sn}^{4+} + \\text{Fe}^{2+}$`,
+      `$\\text{Sn}^{2+} + 2\\text{Fe}^{3+} \\to \\text{Sn}^{4+} + 2\\text{Fe}^{2+}$`,
+      `$\\text{Sn}^{2+} + 2\\text{Fe}^{3+} \\to \\text{Sn}^{4+} + \\text{Fe}^{2+}$`,
+      `$\\text{Sn}^{2+} + \\text{Fe}^{3+} \\to \\text{Sn}^{4+} + \\text{Fe}$`,
+    ],
+    correctAnswer: 1,
+    yield: 'MEDIUM',
+    explanation: `Each tin loses two electrons and each iron(III) gains one, so two $\\text{Fe}^{3+}$ are needed per $\\text{Sn}^{2+}$: the charge is $2 + 6 = 8+$ on the left and $4 + 4 = 8+$ on the right, with one Sn and two Fe on each side. The one-to-one version has $5+$ against $6+$; the version with two $\\text{Fe}^{3+}$ but one $\\text{Fe}^{2+}$ loses an iron atom; and the version forming iron metal has $5+$ against $4+$.`,
+    difficulty: 'medium',
+    part: 1,
+  },
+  {
+    question: `A 0.600 g sample of a compound containing C, H and O burns completely to give 1.32 g of $\\text{CO}_2$ (44.0 g/mol) and 0.720 g of $\\text{H}_2\\text{O}$ (18.0 g/mol). What is its empirical formula?`,
+    options: [`$\\text{C}_3\\text{H}_8$`, `$\\text{C}_3\\text{H}_8\\text{O}_2$`, `$\\text{C}_3\\text{H}_4\\text{O}$`, `$\\text{C}_3\\text{H}_8\\text{O}$`],
+    correctAnswer: 3,
+    yield: 'MEDIUM',
+    explanation: `$1.32/44.0 = 0.0300$ mol C (0.360 g); $0.720/18.0 = 0.0400$ mol water, so 0.0800 mol H (0.080 g). Oxygen is the remainder, $0.600 - 0.360 - 0.080 = 0.160$ g, or 0.0100 mol, and dividing by 0.0100 gives $\\text{C}_3\\text{H}_8\\text{O}$. $\\text{C}_3\\text{H}_8$ ignores the 0.160 g that carbon and hydrogen leave unaccounted for, $\\text{C}_3\\text{H}_4\\text{O}$ counts one H per water, and $\\text{C}_3\\text{H}_8\\text{O}_2$ doubles the oxygen.`,
+    difficulty: 'hard',
+    part: 1,
+  },
+  {
+    question: `A 0.280 g sample of an unknown compound burns completely; from the trapped $\\text{CO}_2$ and $\\text{H}_2\\text{O}$, the sample is found to have contained 0.240 g of carbon and 0.040 g of hydrogen. What is its empirical formula?`,
+    options: [`$\\text{C}_6\\text{H}$`, `$\\text{C}_2\\text{H}_4$`, `$\\text{CH}_2$`, `$\\text{CH}_2\\text{O}$`],
+    correctAnswer: 2,
+    yield: 'MEDIUM',
+    explanation: `Carbon and hydrogen together weigh $0.240 + 0.040 = 0.280$ g, the whole sample, so the compound contains no oxygen. Moles: C $0.240/12.0 = 0.0200$, H $0.040/1.0 = 0.040$, a $1 : 2$ ratio, so the empirical formula is $\\text{CH}_2$. $\\text{C}_6\\text{H}$ treats the 6 : 1 mass ratio as a mole ratio, $\\text{C}_2\\text{H}_4$ has the right ratio but is not the simplest, and $\\text{CH}_2\\text{O}$ adds oxygen that the mass balance rules out.`,
+    difficulty: 'medium',
+    part: 1,
+  },
+
+  // ─────── Part 2 — product check and multi-step yield (added Nov 2026) ───────
+  {
+    question: `Silicon carbide is made by $\\text{SiO}_2 + 3\\text{C} \\to \\text{SiC} + 2\\text{CO}$. A furnace charge holds 2.0 mol $\\text{SiO}_2$ and 4.5 mol C. Which statement is correct?`,
+    options: [
+      `C limits; it can make only 1.5 mol of SiC`,
+      `$\\text{SiO}_2$ limits; it can make only 2.0 mol of SiC`,
+      `$\\text{SiO}_2$ limits; fewer moles of it are present`,
+      `Neither limits; the 2.0 : 4.5 mixture is exact`,
+    ],
+    correctAnswer: 0,
+    yield: 'HIGH',
+    explanation: `Product check: 2.0 mol $\\text{SiO}_2$ could make 2.0 mol SiC, while 4.5 mol of carbon at three per SiC could make only 1.5 mol, so carbon limits despite its larger mole count. Taking $\\text{SiO}_2$ as limiting with 2.0 mol works from the excess reagent, fewer moles never decides on its own, and the equation needs 1 : 3, not 2.0 : 4.5 (which is 1 : 2.25).`,
+    difficulty: 'medium',
+    part: 2,
+  },
+  {
+    question: `A linear synthesis has three steps, each with an 80% yield. What fraction of the starting material ends up as final product?`,
+    options: [`80%`, `64%`, `51%`, `40%`],
+    correctAnswer: 2,
+    yield: 'HIGH',
+    explanation: `Step yields multiply: $0.80 \\times 0.80 \\times 0.80 = 0.512$, about 51%. The value 80% is one step's yield rather than the chain's, 64% multiplies only two of the three steps, and 40% subtracts three 20% losses from 100% as if losses added.`,
+    difficulty: 'easy',
+    part: 2,
+  },
+  {
+    question: `A one-step reaction converts 20.0 g of S (100 g/mol) to D (250 g/mol) in a 1 : 1 mole ratio at 60% yield, giving 30.0 g of D. A student objects that 30.0 g of product cannot come from 20.0 g of starting material. Which statement is correct?`,
+    options: [
+      `The student is right; a product's mass can never exceed the starting material's`,
+      `The student is right; 60% of 20.0 g is only 12.0 g of product`,
+      `The student is wrong; D is heavier per mole, and its extra mass comes from the other reagents`,
+      `The student is wrong; percent yield compares moles, so masses are irrelevant`,
+    ],
+    correctAnswer: 2,
+    yield: 'MEDIUM',
+    explanation: `20.0 g of S is 0.200 mol, so 0.200 mol of D is the theoretical yield and 60% of it is 0.120 mol, or $0.120 \\times 250 = 30.0$ g: more grams than S because each D carries atoms added by the other reagents. Mass is conserved over ALL reactants, not over S alone, so the product may outweigh one starting material; 12.0 g applies the 60% to grams of S with no mole ratio; and masses matter, since yield is computed from the moles that the masses give.`,
+    difficulty: 'medium',
+    part: 2,
+  },
+  {
+    question: `Methanol burns completely: $\\text{CH}_3\\text{OH} + \\text{O}_2 \\to \\text{CO}_2 + \\text{H}_2\\text{O}$. With a coefficient of 2 for methanol, what is the coefficient of $\\text{O}_2$?`,
+    options: [`4`, `3`, `2`, `6`],
+    correctAnswer: 1,
+    yield: 'MEDIUM',
+    explanation: `For one $\\text{CH}_4\\text{O}$ the shortcut gives $x + y/4 - z/2 = 1 + 1 - 0.5 = 1.5$, so two methanols need 3 $\\text{O}_2$: $2\\text{CH}_3\\text{OH} + 3\\text{O}_2 \\to 2\\text{CO}_2 + 4\\text{H}_2\\text{O}$. The value 4 ignores the oxygen the fuel brings, 2 subtracts the whole $z$ instead of $z/2$, and 6 counts the O atoms that $\\text{O}_2$ supplies rather than the molecules.`,
+    difficulty: 'medium',
+    part: 2,
+  },
 ]
 
 export const generateExitQuiz = makeLessonExitQuiz(EXIT_POOL, 'mcat-general-chemistry-stoichiometry-mcat')

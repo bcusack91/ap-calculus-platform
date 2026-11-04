@@ -51,6 +51,8 @@ export const MCAT_LESSON_ALIASES: Record<string, string> = {
   // waves subtopics (Fluids at Rest and Sound ARE those subtopics' slugs).
   'mcat-physics-mechanics-fluid-dynamics-mcat': 'mcat-physics-mechanics-fluids-mcat',
   'mcat-physics-waves-interference-mcat': 'mcat-physics-waves-sound-mcat',
+  // Second half of the Nov 2026 Magnetism part split plays its first half's bank subtopic.
+  'mcat-physics-electricity-induction-mcat': 'mcat-physics-electricity-magnetism-mcat',
   'mcat-biochemistry-foundations-mcat': 'mcat-area-biochemistry',
   'mcat-lab-methods-mcat': 'mcat-area-lab-data',
   'mcat-lab-methods-spectroscopy-assays-mcat': 'mcat-area-lab-data',

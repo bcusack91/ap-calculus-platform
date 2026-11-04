@@ -159,7 +159,9 @@ const TITRATIONS_EQUILIBRIUM_AT = ['Strong Acid + Strong Base', 'Worked Example 
 const SPECTROSCOPY_ASSAYS_AT = ['Sedimentation Logic', 'Two Major Techniques', 'Worked Examples — Spectroscopy', 'Absorbance vs. Transmittance', 'Biochemistry Hooks']
 const GENE_REGULATION_AT = ['Transposable Elements', 'Restriction-Modification: Innate Defense', 'CRISPR-Cas: Adaptive Immunity', 'Worked Examples — Mobile DNA and Regulation', 'Hershey-Chase: DNA Is the Genetic Material of Phage', 'Worked Examples — Experiment Reading', 'Recombination and Reassortment']
 const ORGANOGENESIS_AT = ['The Four Extraembryonic Membranes', 'The Placenta', 'The Three Fetal Shunts', 'The Potency Hierarchy', 'Morphogens: Concentration Encodes Fate']
-const INTERACTION_ORGANIZATIONS_AT = ["Goffman's Dramaturgy — Life as Staged Performance", 'Social Networks — The Architecture Between Groups', "Formal Organizations & Weber's Bureaucracy", 'The Tripartite Distinction the Exam Never Stops Testing', 'Individual vs. Institutional Discrimination']
+// Magnetism (Nov 2026 part split): wires, the selector and induction move to the new slug.
+const INDUCTION_AT = ['Force on a Current-Carrying Wire', 'Parallel Wires', 'The Velocity Selector', "Faraday's Law", "Lenz's Law"]
+const INTERACTION_ORGANIZATIONS_AT =["Goffman's Dramaturgy — Life as Staged Performance", 'Social Networks — The Architecture Between Groups', "Formal Organizations & Weber's Bureaucracy", 'The Tripartite Distinction the Exam Never Stops Testing', 'Individual vs. Institutional Discrimination']
 
 export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-learning-memory-mcat': mcatLearningMemoryFigures,
@@ -230,7 +232,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, true),
   'mcat-physics-electricity-emf-capacitors-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, false),
   'mcat-physics-electricity-rc-circuits-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, true),
-  'mcat-physics-electricity-magnetism-mcat': mcatMagnetismFigures,
+  'mcat-physics-electricity-magnetism-mcat': figuresAt(mcatMagnetismFigures, INDUCTION_AT, false),
+  'mcat-physics-electricity-induction-mcat': figuresAt(mcatMagnetismFigures, INDUCTION_AT, true),
   'mcat-physics-electricity-optics-mcat': mcatOpticsFigures,
   'mcat-physics-electricity-electrochemistry-mcat': mcatElectrochemistryFigures,
   'mcat-physics-electricity-mcat': mcatElectricityFigures,

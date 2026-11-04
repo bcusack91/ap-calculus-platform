@@ -530,6 +530,123 @@ export const EXIT_POOL: LessonExitItem[] = [
     yield: 'ULTRA_HIGH',
     part: 2,
   },
+
+  // ───────────────────────── Added Nov 2026 (build-out: GC/HPLC, column, distillation, recrystallization, workup; gels and pI) ─────────────────────────
+  // Part 1 — instrument choice, distillation, recrystallization
+  {
+    question: `A peptide drug is nonvolatile and decomposes above 100 °C. Which analytical separation suits it?`,
+    options: [
+      `Gas chromatography with a polar stationary phase`,
+      `Reverse-phase HPLC at room temperature`,
+      `Fractional distillation under vacuum`,
+      `Thin-layer chromatography on a heated plate`,
+    ],
+    correctAnswer: 1,
+    explanation: `HPLC pumps a liquid mobile phase through the column at room temperature, so a nonvolatile, heat-sensitive molecule separates intact, and reverse phase is its usual mode. GC must vaporize the sample in a heated injector, which this peptide cannot survive whatever the column's polarity. Distillation separates liquids by boiling point and would heat it, and TLC plates are not heated to develop them.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `A silica column is eluted with hexane. A nonpolar by-product comes off quickly, but the polar product does not move down the column. What should be done next?`,
+    options: [
+      `Add ethyl acetate to make the eluent more polar`,
+      `Switch to pure hexane at a faster flow rate`,
+      `Repack the column with a thicker layer of silica`,
+      `Add more hexane and wait for the product to elute`,
+    ],
+    correctAnswer: 0,
+    explanation: `A polar compound stays bound to polar silica until the mobile phase competes it off, so raising the eluent's polarity with a more polar solvent such as ethyl acetate releases it, the same move that raises a stuck TLC spot. Faster or more hexane cannot displace what hexane could not displace at all, and more silica only gives the product more stationary phase to cling to.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `During recrystallization, a student dissolves the crude solid in three times the minimum volume of hot solvent. The most likely consequence is:`,
+    options: [
+      `Less product recovered, as more stays dissolved cold`,
+      `A purer product, since the impurities are more dilute`,
+      `No crystals at all until the solvent is boiled off`,
+      `Crystals that trap impurities as they form quickly`,
+    ],
+    correctAnswer: 0,
+    explanation: `The cold solvent still dissolves the compound a little, so three times the volume keeps three times as much product in the mother liquor and the recovery falls. Diluting the impurities does not make the crystals purer; they were going to stay in solution anyway. Some crystals still form on cooling as long as the solution becomes saturated, and trapped impurities come from cooling too fast, not from using too much solvent.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 1,
+  },
+  {
+    question: `Why does a fractionating column separate two liquids whose boiling points differ by only 10 °C when a simple distillation cannot?`,
+    options: [
+      `Its packing repeats vaporize–condense cycles many times`,
+      `It lowers the pressure so both boil lower`,
+      `It heats the mixture more slowly, so only one liquid boils`,
+      `It condenses the higher-boiling liquid before it vaporizes`,
+    ],
+    correctAnswer: 0,
+    explanation: `Each time vapor condenses on the packing and re-boils, it grows richer in the more volatile component, so the column acts as many simple distillations in series and can resolve close boiling points. The column does not change the pressure; that is what a vacuum distillation does. Both liquids boil together whatever the heating rate, and the higher-boiling liquid does vaporize, which is exactly why one cycle leaves a mixture.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 1,
+  },
+
+  // Part 2 — gels and pI
+  {
+    question: `A protein elutes from a size-exclusion column at ~150 kDa. SDS-PAGE shows one band at 150 kDa without a reducer and one band at 50 kDa with DTT. Its structure is best described as:`,
+    options: [
+      `Three 50 kDa chains, all joined by disulfide bonds`,
+      `Three 50 kDa chains held together noncovalently`,
+      `One 150 kDa chain that DTT cuts into three pieces`,
+      `Two 75 kDa chains joined by a disulfide bond`,
+    ],
+    correctAnswer: 0,
+    explanation: `The native mass divided by the reduced band gives 150 ÷ 50 = 3 chains, and because SDS alone leaves the full 150 kDa intact, the chains are held by bonds SDS cannot break: disulfides, which only DTT cleaves. Noncovalently bound chains would already separate in SDS without a reducer. DTT breaks disulfides, not peptide bonds, and two 75 kDa chains would give a 75 kDa band once reduced.`,
+    difficulty: 'hard',
+    yield: 'HIGH',
+    part: 2,
+  },
+  {
+    question: `Pepsin (pI ≈ 1) and lysozyme (pI ≈ 11) are run on an IEF strip whose gradient spans pH 3 at the anode (+) to pH 10 at the cathode (−). What happens?`,
+    options: [
+      `Pepsin collects at the acidic end, lysozyme at the basic end`,
+      `Lysozyme collects at the acidic end, pepsin at the basic end`,
+      `Both focus near pH 7, where most proteins are neutral`,
+      `Neither moves, as their pI values lie outside the range`,
+    ],
+    correctAnswer: 0,
+    explanation: `Every pH on the strip is above pepsin's pI, so pepsin is net negative throughout and runs to the anode at the acidic end; every pH is below lysozyme's pI, so it is net positive throughout and runs to the cathode at the basic end. Swapping them reverses the pH-versus-pI rule. A protein focuses only where pH equals its own pI, not at pH 7, and being charged at every point on the strip makes each protein move, not stay put.`,
+    difficulty: 'hard',
+    yield: 'MEDIUM',
+    part: 2,
+  },
+  {
+    question: `A soluble enzyme (pI 5.3) is held in a buffer at pH 7.4. Lowering the buffer to pH 5.3 makes it precipitate because:`,
+    options: [
+      `At zero net charge the molecules no longer repel one another`,
+      `It becomes strongly positive and binds the buffer's anions`,
+      `The acid hydrolyzes its peptide bonds into insoluble fragments`,
+      `Its disulfide bonds break, exposing hydrophobic residues`,
+    ],
+    correctAnswer: 0,
+    explanation: `At its pI a protein carries no net charge, so the electrostatic repulsion that kept the molecules apart disappears and they aggregate; this isoelectric precipitation is a separation step in its own right. At pH equal to pI the protein is neutral, not strongly positive. Mild acid at room temperature does not hydrolyze peptide bonds, and acid does not break disulfide bonds; a reducer does.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 2,
+  },
+  {
+    question: `A 10 kDa and a 12 kDa protein co-migrate as one band on an 8 % polyacrylamide gel. Which change is most likely to resolve them?`,
+    options: [
+      `Cast a higher-percentage gel with smaller pores`,
+      `Cast a lower-percentage gel with larger pores`,
+      `Switch to an agarose gel, whose pores are larger`,
+      `Run the gel at a lower voltage for the same time`,
+    ],
+    correctAnswer: 0,
+    explanation: `Sieving sets the separation, and small proteins are resolved by small pores, so a higher-percentage gel spreads the two apart. Larger pores, whether from a lower-percentage polyacrylamide gel or from agarose, let both small proteins slip through almost unhindered and keep them together. A lower voltage slows both proteins equally and changes nothing about their relative positions.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 2,
+  },
 ]
 
 export const generateExitQuiz = makeLessonExitQuiz(EXIT_POOL, 'mcat-lab-methods-mcat')

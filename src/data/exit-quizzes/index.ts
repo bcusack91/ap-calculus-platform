@@ -143,6 +143,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': () => import('./lesson-built/mcat-physics-electricity-kirchhoff-power-mcat'),
   'mcat-physics-electricity-rc-circuits-mcat': () => import('./lesson-built/mcat-physics-electricity-rc-circuits-mcat'),
   'mcat-physics-electricity-magnetism-mcat': () => import('./lesson-built/mcat-physics-electricity-magnetism-mcat'),
+  'mcat-physics-electricity-induction-mcat': () => import('./lesson-built/mcat-physics-electricity-induction-mcat'), // second half of mcat-physics-electricity-magnetism-mcat (part split, Nov 2026)
   'mcat-physics-electricity-optics-mcat': () => import('./lesson-built/mcat-physics-electricity-optics-mcat'),
   'mcat-physics-electricity-electrochemistry-mcat': () => import('./lesson-built/mcat-physics-electricity-electrochemistry-mcat'),
   'mcat-biochemistry': () => import('./mcat-biochemistry'),

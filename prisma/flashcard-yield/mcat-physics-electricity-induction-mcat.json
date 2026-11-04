@@ -1,0 +1,242 @@
+[
+ {
+  "front": "A bar magnet's north pole approaches a wire loop. What does the induced current do?",
+  "fp": "2fedb62a1999",
+  "yield": "HIGH",
+  "why": "Lenz law applied to an approaching magnet is a standard induction question"
+ },
+ {
+  "front": "A conducting loop is pulled out of a field region. Which way does the induced current flow, and does pulling require work?",
+  "fp": "fbf481c685a9",
+  "yield": "MEDIUM",
+  "why": "Work required to pull a loop out is second-step Lenz reasoning"
+ },
+ {
+  "front": "A copper ring rests on the core of an electromagnet and the current is switched on. What happens to the ring?",
+  "fp": "b9cb827fe920",
+  "yield": "MEDIUM",
+  "why": "Jumping-ring demo is an application of Lenz, plausible passage context"
+ },
+ {
+  "front": "A current-carrying wire in a magnetic field experiences a force. The direction of this force is determined by:",
+  "fp": "f933ab126edf",
+  "yield": "ULTRA_HIGH",
+  "why": "F = ILB and the right-hand rule for wires are core outline content"
+ },
+ {
+  "front": "A doubly charged ion follows a radius {{c1::half}} that of a singly charged ion of the same mass and speed.",
+  "fp": "496217764729",
+  "yield": "HIGH",
+  "why": "Radius inversely proportional to charge is a common mass-spec discrete"
+ },
+ {
+  "front": "A motor does mechanical work, yet magnetic forces do no work on moving charges. Resolve the apparent contradiction.",
+  "fp": "b2628da4ee07",
+  "yield": "MEDIUM",
+  "why": "Motor-vs-no-work paradox is conceptual depth beyond typical questions"
+ },
+ {
+  "front": "A rod of length $L$ moving at speed $v$ perpendicular to field $B$ generates motional emf $\\varepsilon = {{c1::BLv}}$.",
+  "fp": "30715de30502",
+  "yield": "MEDIUM",
+  "why": "Motional emf BLv is prep-book detail; induction is tested qualitatively"
+ },
+ {
+  "front": "After a velocity selector, why does a mass spectrometer separate ions by mass?",
+  "fp": "06327169c0c5",
+  "yield": "HIGH",
+  "why": "Mass spectrometer separation by m/q is a common passage step"
+ },
+ {
+  "front": "An electromagnetic blood flowmeter reads a transverse voltage $V = BLv$, so its signal is proportional to {{c1::flow velocity}}.",
+  "fp": "4c8168f25f23",
+  "yield": "LOW",
+  "why": "Blood flowmeter is a near-restatement of motional emf; passage would supply"
+ },
+ {
+  "front": "An ideal transformer with a $10{:}1$ turns ratio cuts voltage tenfold and multiplies current by {{c1::10}}, because power is conserved.",
+  "fp": "2449daf61ceb",
+  "yield": "MEDIUM",
+  "why": "Transformer turns ratio is circuits-adjacent, plausible but secondary"
+ },
+ {
+  "front": "Compare the radiation risks of MRI and CT.",
+  "fp": "af19f855c37b",
+  "yield": "LOW",
+  "why": "MRI vs CT radiation risk is off-outline clinical trivia"
+ },
+ {
+  "front": "Contrast a motor with a generator in energy terms.",
+  "fp": "3d58752d4a9f",
+  "yield": "MEDIUM",
+  "why": "Motor vs generator energy conversion is supporting context"
+ },
+ {
+  "front": "Faraday's law gives $\\varepsilon = -N\\Delta\\Phi/\\Delta t$, where the minus sign encodes {{c1::Lenz's law}}.",
+  "fp": "4d85f6e00f80",
+  "yield": "HIGH",
+  "why": "Faraday law with Lenz minus sign; core, but restates the Faraday card"
+ },
+ {
+  "front": "How does MRI work in principle?",
+  "fp": "181b5c213dd5",
+  "yield": "HIGH",
+  "why": "MRI principle appears often in passages; spin alignment and RF is enough"
+ },
+ {
+  "front": "How does transcranial magnetic stimulation excite neurons without any electrode touching the brain?",
+  "fp": "8b83d8ebe24c",
+  "yield": "LOW",
+  "why": "TMS is an off-outline application a passage would explain"
+ },
+ {
+  "front": "In a velocity selector, undeflected particles satisfy $qE = qvB$, so the selected speed is $v = {{c1::E/B}}$.",
+  "fp": "81ad14b4524b",
+  "yield": "ULTRA_HIGH",
+  "why": "Velocity selector v = E/B is a standard calculation"
+ },
+ {
+  "front": "Induced emf depends on the {{c1::rate of change}} of flux, so a loop sitting motionless in a huge steady field has no induced emf at all.",
+  "fp": "630052bf7801",
+  "yield": "HIGH",
+  "why": "Emf needs changing flux, not flux; core induction concept"
+ },
+ {
+  "front": "Ions accelerated through the same potential difference then bent by the same field: heavier ions follow {{c1::larger}} radii.",
+  "fp": "ddc80f633d7a",
+  "yield": "HIGH",
+  "why": "Same-voltage ions and radius vs mass is a common two-step question"
+ },
+ {
+  "front": "Magnetic flux is given by:",
+  "fp": "db35859615b5",
+  "yield": "HIGH",
+  "why": "Flux definition; restates the cloze flux card"
+ },
+ {
+  "front": "Magnetic flux through a loop is $\\Phi = {{c1::BA\\cos\\theta}}$, where $\\theta$ is measured from the surface normal.",
+  "fp": "2456c607b0de",
+  "yield": "ULTRA_HIGH",
+  "why": "Phi = BA cos(theta) with theta from the normal is the flux definition"
+ },
+ {
+  "front": "MRI excites protons with a radiofrequency pulse tuned to the {{c1::Larmor}} frequency, proportional to field strength.",
+  "fp": "4b4ac03e2309",
+  "yield": "LOW",
+  "why": "Larmor frequency naming is off-outline detail"
+ },
+ {
+  "front": "MRI images hydrogen in water and fat, so {{c1::cortical bone}} and air-filled lung return little signal and appear dark.",
+  "fp": "43d3bda25dae",
+  "yield": "LOW",
+  "why": "MRI bone and air appearance is clinical trivia"
+ },
+ {
+  "front": "MRI relies primarily on:",
+  "fp": "10ceaa51fc16",
+  "yield": "MEDIUM",
+  "why": "Restates the MRI principle card"
+ },
+ {
+  "front": "Name three ways to change the flux through a loop and induce an emf.",
+  "fp": "89839b431d02",
+  "yield": "HIGH",
+  "why": "Three ways to change flux is a standard induction question"
+ },
+ {
+  "front": "Power is transmitted at very high voltage because line losses scale as {{c1::$I^2R$}}.",
+  "fp": "a8c045dff8ea",
+  "yield": "MEDIUM",
+  "why": "I^2 R line loss belongs to circuits and is covered there"
+ },
+ {
+  "front": "Protons precess at about $42.6$ MHz per tesla, so a $1.5$ T MRI uses radiofrequency near {{c1::64 MHz}}.",
+  "fp": "568f9ff255ae",
+  "yield": "LOW",
+  "why": "42.6 MHz per tesla is trivia"
+ },
+ {
+  "front": "State Faraday's law.",
+  "fp": "1fbec0aac609",
+  "yield": "ULTRA_HIGH",
+  "why": "Faraday law is the core induction equation"
+ },
+ {
+  "front": "State Lenz's law in terms of what the induced current opposes.",
+  "fp": "37b2a6f577a1",
+  "yield": "ULTRA_HIGH",
+  "why": "Lenz law direction reasoning is tested nearly every administration"
+ },
+ {
+  "front": "State Lenz's law.",
+  "fp": "380f5aca720f",
+  "yield": "HIGH",
+  "why": "Restates the Lenz law card"
+ },
+ {
+  "front": "Transformers work only with {{c1::alternating}} current, because a constant flux induces no emf.",
+  "fp": "cab0016759a0",
+  "yield": "MEDIUM",
+  "why": "Transformers need AC; supporting induction detail"
+ },
+ {
+  "front": "Two isotopes of equal charge enter a mass spectrometer at the same speed. Which lands farther out?",
+  "fp": "e48da23534bc",
+  "yield": "HIGH",
+  "why": "Isotope separation by radius is a common mass-spec question"
+ },
+ {
+  "front": "Two parallel wires carry current in opposite directions. Do they attract or repel?",
+  "fp": "538c0ed847f2",
+  "yield": "HIGH",
+  "why": "Parallel wires attract or repel is a common discrete"
+ },
+ {
+  "front": "Two parallel wires carrying current in the same direction {{c1::attract}} one another.",
+  "fp": "a4ec1e123366",
+  "yield": "MEDIUM",
+  "why": "Restates the parallel-wires card"
+ },
+ {
+  "front": "What do gradient coils contribute to MRI?",
+  "fp": "64b8ff664da8",
+  "yield": "LOW",
+  "why": "Gradient coils are off-outline MRI engineering detail"
+ },
+ {
+  "front": "What is the role of the strong static field in an MRI scanner?",
+  "fp": "703b69c3c9a9",
+  "yield": "LOW",
+  "why": "Third restatement of the MRI static-field principle"
+ },
+ {
+  "front": "Why are pacemakers, ferromagnetic implants, and loose steel objects hazardous near an MRI magnet?",
+  "fp": "5470dedae8a0",
+  "yield": "LOW",
+  "why": "MRI safety hazards are clinical trivia"
+ },
+ {
+  "front": "Why does a magnet dropped down a copper pipe fall unusually slowly?",
+  "fp": "daea06cec8da",
+  "yield": "MEDIUM",
+  "why": "Eddy-current braking is a Lenz application, plausible passage context"
+ },
+ {
+  "front": "Why does an MRI scanner bang loudly during a scan?",
+  "fp": "558257c3c638",
+  "yield": "LOW",
+  "why": "MRI noise mechanism is trivia"
+ },
+ {
+  "front": "Why does MRI image hydrogen nuclei rather than other nuclei?",
+  "fp": "42ede3e6c3b8",
+  "yield": "LOW",
+  "why": "Why MRI images hydrogen is MRI detail beyond the outline"
+ },
+ {
+  "front": "Why must ECG lead wires never be looped inside an MRI bore?",
+  "fp": "db90d1c865c3",
+  "yield": "LOW",
+  "why": "ECG lead loops in MRI is clinical safety trivia"
+ }
+]

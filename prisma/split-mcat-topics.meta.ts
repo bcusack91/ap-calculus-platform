@@ -369,4 +369,36 @@ A stereotype is a belief, prejudice an attitude and discrimination a behavior, a
 - Goal displacement is structural: staff follow the rules and the system still defeats its goal.
 - Behavior in a randomized audit outranks self-reported attitudes.`,
   },
+  // Magnetism part split (owner decision 2026-11-04): both halves.
+  'mcat-physics-electricity-magnetism-mcat': {
+    description: 'Magnetic fields and their sources, tesla and gauss, magnetic materials, the force on a moving charge, the right-hand rule, and circular motion in a field',
+    textContent: `# Magnetism Part 1: Fields & Forces on Charges
+
+## Magnetic Fields and Their Sources
+All magnetism comes from moving charge. Field strength is measured in tesla ($1\\;\\text{G} = 10^{-4}\\;\\text{T}$; Earth's field is about 0.5 G, an MRI magnet 1.5 to 3 T). There are no magnetic monopoles, so every field line is a closed loop. A long straight wire's field circles it, $B = \\mu_0 I/2\\pi r$, falling off as $1/r$ (not inverse-square), with its sense from the right-hand curl rule; loops act as dipoles and a solenoid gives a strong, uniform interior field. Ferromagnets stay magnetized, paramagnets (unpaired electrons, deoxyhemoglobin) are weakly attracted while a field is on, and diamagnets (paired electrons, water, oxyhemoglobin) are weakly repelled.
+
+## Forces on Moving Charges
+$$F = qvB\\sin\\theta$$
+The force is zero on a charge at rest or moving along the field and greatest when the velocity is perpendicular to it. The right-hand rule (fingers along $\\vec{v}$, curl toward $\\vec{B}$, thumb gives the force on a positive charge; flip it for a negative one) sets the direction. Because the force is always perpendicular to the velocity it does no work: a magnetic field steers a charge but never changes its speed. Perpendicular entry gives a circle with $r = mv/qB$ and a speed-independent period $T = 2\\pi m/qB$; oblique entry gives a helix.
+
+## Key Takeaways
+- A wire's field falls off as $1/r$; a point charge's field as $1/r^2$.
+- Only an electric field changes a charge's kinetic energy.
+- Faster or heavier means a wider circle; a stronger field or a bigger charge means a tighter one.`,
+  },
+  'mcat-physics-electricity-induction-mcat': {
+    description: "Force on a current-carrying wire, parallel wires, the velocity selector and mass spectrometer, magnetic flux, Faraday's and Lenz's laws, and the MRI passage",
+    textContent: `# Magnetism Part 2: Wires, Spectrometers & Induction
+
+## Wires, Selectors and the Mass Spectrometer
+A current-carrying wire feels $F = BIL\\sin\\theta$, zero when it lies along the field and greatest when perpendicular; parallel currents attract and antiparallel currents repel. Crossed electric and magnetic fields pass only the speed $v = E/B$, whatever the particle's mass or charge (the velocity selector). In the analyzer field that follows, $r = mv/qB$ turns mass into radius; strictly the spectrometer sorts ions by $m/q$.
+
+## Induction
+Magnetic flux is $\\Phi = BA\\cos\\theta$ in webers, with $\\theta$ measured from the loop's normal. Faraday's law, $|\\varepsilon| = N\\,\\Delta\\Phi/\\Delta t$, says only a CHANGING flux induces an EMF, by changing $B$, $A$ or $\\theta$ (a sliding rod gives $\\varepsilon = BLv$; a rotating loop is a generator). Lenz's law is the minus sign: the induced current opposes the change in flux, which is energy conservation. An MRI scanner is a superconducting solenoid whose steady field induces nothing; its switched gradient coils do, which is why implanted wires are a hazard.
+
+## Key Takeaways
+- Parallel currents attract, the reverse of like charges.
+- A velocity selector picks a speed; the radius in the analyzer reads $m/q$.
+- A steady flux, however large, induces no EMF; multiply by the turns $N$.`,
+  },
 }

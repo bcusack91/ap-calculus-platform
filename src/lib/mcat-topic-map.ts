@@ -124,6 +124,8 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-physics-electricity-emf-capacitors-mcat': ['mcat-physics-electricity-circuits-mcat'],
   'mcat-physics-electricity-rc-circuits-mcat': ['mcat-physics-electricity-circuits-mcat'],
   'mcat-physics-electricity-magnetism-mcat': ['mcat-physics-electricity-magnetism-mcat'],
+  // Second half of the Nov 2026 Magnetism part split plays its first half's bank subtopic.
+  'mcat-physics-electricity-induction-mcat': ['mcat-physics-electricity-magnetism-mcat'],
   'mcat-physics-electricity-optics-mcat': ['mcat-physics-electricity-optics-mcat'],
   'mcat-physics-electricity-electrochemistry-mcat': ['mcat-physics-electricity-electrochemistry-mcat'],
 

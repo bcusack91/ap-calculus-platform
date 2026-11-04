@@ -1,14 +1,14 @@
 import type { LessonData } from './registry'
 
-export const magnetismMcatPart4: LessonData = {
-  topicSlug: 'mcat-physics-electricity-magnetism-mcat',
+export const inductionMcatPart2: LessonData = {
+  topicSlug: 'mcat-physics-electricity-induction-mcat',
   sections: [
     {
       id: 'mag4-strategy',
       type: 'text' as const,
-      content: `# Magnetism & Electromagnetic Induction
+      content: `# Magnetism Part 2: Wires, Spectrometers & Induction
 
-**Part 4 of 4 — MCAT Integration: Induction, MRI & Passage Strategy**
+**Part 2 of 2 — MCAT Integration: Induction, MRI & Passage Strategy**
 
 ### Magnetic Flux
 
@@ -135,7 +135,7 @@ $$|\\varepsilon| = N\\frac{\\Delta\\Phi}{\\Delta t} = 50 \\times \\frac{0.1}{0.1
     {
       id: 'mag4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 4
+      content: `### Key Takeaways — Part 2
 
 - **Magnetic flux.** $\\Phi = BA\\cos\\theta$ in webers, with $\\theta$ from the loop's normal; zero when $\\vec{B}$ lies in the plane.
 - **Faraday's law.** $|\\varepsilon| = N\\,\\Delta\\Phi/\\Delta t$: only CHANGING flux induces an EMF, by changing $B$, $A$ or $\\theta$.

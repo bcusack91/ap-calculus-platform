@@ -53,6 +53,8 @@ If a system at equilibrium is disturbed, it shifts to **partially counteract** t
 
 **Key distinction:** Adding or removing species and changing pressure shift the position of equilibrium but do **not** change $K$. Only temperature changes $K$.
 
+**Why it works: every shift is $Q$ chasing $K$.** Adding a reactant enlarges the denominator of $Q$, so $Q < K$ and the reaction runs right until $Q$ climbs back to $K$. Compression raises every partial pressure by the same factor, and the side with more gas moles carries more factors, so shifting toward fewer moles brings $Q$ back; dilution does the opposite and favours the side with more dissolved particles. Temperature alone leaves $Q$ untouched and moves $K$ itself.
+
 ## Solubility Product ($K_{sp}$)
 
 For a sparingly soluble salt: $\\text{MX}(s) \\rightleftharpoons \\text{M}^+(aq) + \\text{X}^-(aq)$
@@ -74,8 +76,12 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
 - If $Q_{sp} > K_{sp}$: **precipitation occurs** (solution is supersaturated)
 - If $Q_{sp} < K_{sp}$: no precipitate (solution is unsaturated)
 - If $Q_{sp} = K_{sp}$: saturated, at equilibrium
-
-### Worked Example — Q, Le Chatelier and Molar Solubility
+`
+    },
+    {
+      id: 'ab5-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Q, Le Chatelier and Molar Solubility
 
 **Problem 1.** The reaction $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\text{NO}_2(g)$ is endothermic, with $K_c = 5.0 \\times 10^{-3}$. A flask holds $0.20$ M $\\text{N}_2\\text{O}_4$ and $0.020$ M $\\text{NO}_2$.
 
@@ -199,27 +205,158 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
       }
     },
     {
+      id: 'ab5-ice',
+      type: 'text' as const,
+      content: `## ICE Tables: Finding Equilibrium Concentrations
+
+Given $K$ and the starting amounts, find the equilibrium concentrations with an **ICE table**: Initial, Change, Equilibrium. The Change row follows the coefficients, with one unknown $x$.
+
+For $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$ starting from $C$ M of $\\text{PCl}_5$ and no products:
+
+| | $\\text{PCl}_5$ | $\\text{PCl}_3$ | $\\text{Cl}_2$ |
+|---|---|---|---|
+| Initial | $C$ | 0 | 0 |
+| Change | $-x$ | $+x$ | $+x$ |
+| Equilibrium | $C - x$ | $x$ | $x$ |
+
+$$K_c = \\frac{x^2}{C - x}$$
+
+**The small-x approximation.** When $K$ is tiny compared with $C$, very little reacts, so $C - x \\approx C$ and the equation collapses to $x \\approx \\sqrt{K_c C}$. Check it afterwards: the approximation is safe when $x/C < 5\\%$.
+
+**When it fails.** If $K$ is comparable to $C$ (say $K = 0.1$ with $C = 0.1$ M), a large fraction reacts, $C - x$ is nowhere near $C$, and dropping $x$ overstates the products; the honest route is the quadratic. Products present at the start go into the Initial row, and comparing $Q$ with $K$ decides the signs in the Change row. The MCAT rarely asks for the quadratic, but it does ask whether the shortcut is justified.
+
+## Solubility and pH
+
+Whether a salt dissolves more in acid depends on its ANION. If the anion is the conjugate base of a weak acid, added $\\text{H}^+$ converts it to that acid ($\\text{F}^- \\to \\text{HF}$, $\\text{OH}^- \\to \\text{H}_2\\text{O}$, $\\text{CO}_3^{2-} \\to \\text{HCO}_3^- \\to \\text{H}_2\\text{CO}_3$). Removing a product ion drops $Q_{sp}$ below $K_{sp}$, so more solid dissolves: Le Chatelier applied to a salt. The anions of strong acids ($\\text{Cl}^-$, $\\text{Br}^-$, $\\text{I}^-$, $\\text{NO}_3^-$) are not protonated at any ordinary pH, so AgCl is as insoluble in acid as in water.
+
+| Salt | Anion | Solubility in acid |
+|---|---|---|
+| $\\text{CaF}_2$, $\\text{CaCO}_3$, $\\text{Ca}_3(\\text{PO}_4)_2$, $\\text{Mg(OH)}_2$ | conjugate base of a weak acid | rises sharply |
+| AgCl, AgBr, AgI | anion of a strong acid | about the same |
+
+The physiology follows: milk of magnesia, $\\text{Mg(OH)}_2$, barely dissolves in water but is cleared by stomach acid, and calcium phosphate stones form in alkaline urine, where phosphate stays unprotonated. The reverse is the **common-ion effect** in hydroxide form: raising the pH pushes $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+} + 2\\text{OH}^-$ left. A buffer fixes $[\\text{OH}^-]$, so the solubility is simply $K_{sp}/[\\text{OH}^-]^2$.`
+    },
+    {
+      id: 'ab5-worked2',
+      type: 'text' as const,
+      content: `### Worked Example — An ICE Table and the Small-x Check
+
+**Problem.** $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$ has $K_c = 1.0 \\times 10^{-4}$ at one temperature and $K_c = 1.0$ at a higher one. A flask starts with $1.0$ M $\\text{PCl}_5$ and no products.
+
+- **(a)** In terms of $x$, what are the three equilibrium concentrations?
+- **(b)** At the lower temperature, what is $[\\text{Cl}_2]$ at equilibrium?
+- **(c)** Is the small-x approximation justified there?
+- **(d)** At the higher temperature, what goes wrong with the same shortcut?
+
+**(a) The table.** $\\text{PCl}_5$ loses $x$ while each product gains $x$: $[\\text{PCl}_5] = 1.0 - x$ and $[\\text{PCl}_3] = [\\text{Cl}_2] = x$, so $K_c = x^2/(1.0 - x)$.
+
+**(b) Small x.** With $K_c = 1.0 \\times 10^{-4}$ tiny, take $1.0 - x \\approx 1.0$: $x^2 \\approx 1.0 \\times 10^{-4}$, so $x = [\\text{Cl}_2] = 1.0 \\times 10^{-2}$ M.
+
+**(c) The 5% check.** $x/C = 0.010/1.0 = 1\\%$, under 5%, so dropping $x$ changed nothing that matters: $[\\text{PCl}_5]$ is $0.99$ M, as good as the $1.0$ M assumed.
+
+**(d) When it fails.** With $K_c = 1.0$ the shortcut gives $x^2 = 1.0$, so $x = 1.0$ M: ALL of the $\\text{PCl}_5$ gone, which is impossible. $K$ is not small next to $C$, so solve $x^2 + x - 1.0 = 0$ exactly: $x \\approx 0.62$ M, with $0.38$ M $\\text{PCl}_5$ left.`
+    },
+    {
+      id: 'ab5-worked3',
+      type: 'text' as const,
+      content: `### Worked Example — Magnesium Hydroxide in Base and in Acid
+
+**Problem.** Milk of magnesia is $\\text{Mg(OH)}_2$, with $K_{sp} = [\\text{Mg}^{2+}][\\text{OH}^-]^2 = 3.2 \\times 10^{-11}$.
+
+- **(a)** What is its molar solubility in pure water?
+- **(b)** What is its solubility in $0.010$ M NaOH?
+- **(c)** What is its solubility in a solution buffered at pH 9.0?
+- **(d)** Why does it dissolve completely in stomach acid?
+
+**(a) Pure water.** $[\\text{Mg}^{2+}] = s$ and $[\\text{OH}^-] = 2s$: $4s^3 = 3.2 \\times 10^{-11}$, so $s^3 = 8.0 \\times 10^{-12}$ and $s = 2.0 \\times 10^{-4}$ M.
+
+**(b) Common ion.** The hydroxide from NaOH swamps the $2s$ from the salt, so $[\\text{OH}^-] \\approx 0.010$ M: $s = K_{sp}/(0.010)^2 = (3.2 \\times 10^{-11})/(1.0 \\times 10^{-4}) = 3.2 \\times 10^{-7}$ M, about 600 times less than the $2.0 \\times 10^{-4}$ M from (a).
+
+**(c) Buffered at pH 9.0.** pOH = 5.0, so the buffer holds $[\\text{OH}^-] = 1.0 \\times 10^{-5}$ M whatever dissolves: $s = (3.2 \\times 10^{-11})/(1.0 \\times 10^{-10}) = 0.32$ M, over a thousand times the pure-water value: the buffer consumes the hydroxide the salt releases.
+
+**(d) Stomach acid.** At pH 1–2, $\\text{H}^+$ turns every $\\text{OH}^-$ released into water, so $Q_{sp}$ never reaches $K_{sp}$ and dissolution runs to completion: the product ion is removed as fast as it forms. That is the antacid working, and why $\\text{CaCO}_3$ and $\\text{CaF}_2$ dissolve in acid while AgCl does not.`
+    },
+    {
+      id: 'ab5-quiz2',
+      type: 'multiple-choice' as const,
+      content: `**Practice: ICE Tables & Solubility vs pH** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: `For $\\text{A}(g) \\rightleftharpoons \\text{B}(g) + \\text{C}(g)$, $K_c = 2.0 \\times 10^{-5}$. A flask starts with $0.50$ M A and no products. What is $[\\text{B}]$ at equilibrium?`,
+            options: [
+              `$3.2 \\times 10^{-3}$ M`,
+              `$1.0 \\times 10^{-5}$ M`,
+              `$4.5 \\times 10^{-3}$ M`,
+              `$2.0 \\times 10^{-5}$ M`
+            ],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `With $[\\text{B}] = [\\text{C}] = x$ and $[\\text{A}] = 0.50 - x \\approx 0.50$: $x^2 \\approx (2.0 \\times 10^{-5})(0.50) = 1.0 \\times 10^{-5}$, so $x = 3.2 \\times 10^{-3}$ M, under 1% of 0.50 M, so the shortcut holds. The value $1.0 \\times 10^{-5}$ stops before the square root, $4.5 \\times 10^{-3}$ takes the root of $K$ alone and forgets the 0.50 M, and $2.0 \\times 10^{-5}$ simply repeats $K$.`
+          },
+          {
+            question: `In which case is the small-x approximation (dropping $x$ from $C - x$) LEAST reliable?`,
+            options: [
+              `$K = 0.10$ with $C = 0.10$ M`,
+              `$K = 10^{-8}$ with $C = 0.10$ M`,
+              `$K = 10^{-5}$ with $C = 1.0$ M`,
+              `$K = 10^{-10}$ with $C = 0.010$ M`
+            ],
+            correctAnswer: 0,
+            yield: 'MEDIUM',
+            explanation: `The shortcut needs $K$ tiny next to $C$ so that only a small fraction reacts. When $K$ equals $C$, a large fraction reacts and $C - x$ is nowhere near $C$, so the quadratic is needed. In the other three cases $C/K$ is at least $10^5$, and $x$ comes out far below 5% of $C$.`
+          },
+          {
+            question: `Which salt becomes markedly more soluble when HCl is added to its saturated solution?`,
+            options: [`$\\text{BaCO}_3$`, `AgCl`, `$\\text{PbI}_2$`, `AgBr`],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `Carbonate is the conjugate base of the weak acid $\\text{HCO}_3^-$, so added $\\text{H}^+$ removes it as $\\text{HCO}_3^-$ and $\\text{H}_2\\text{CO}_3$, drops $Q_{sp}$ below $K_{sp}$ and pulls more $\\text{BaCO}_3$ into solution. Chloride, bromide and iodide come from strong acids and are not protonated, and for AgCl the chloride in HCl is a common ion that makes it LESS soluble.`
+          },
+          {
+            question: `$\\text{Mg(OH)}_2$ ($K_{sp} = 3.2 \\times 10^{-11}$) is added to solutions held at different pH values. In which is it most soluble?`,
+            options: [`pH 9.5`, `pH 11.0`, `pH 12.5`, `Pure water`],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `With the pH fixed, $s = K_{sp}/[\\text{OH}^-]^2$, so the less hydroxide present, the more dissolves: pH 9.5 ($[\\text{OH}^-] = 3.2 \\times 10^{-5}$ M) gives 0.032 M, pH 11.0 gives $3.2 \\times 10^{-5}$ M and pH 12.5 only $3.2 \\times 10^{-6}$ M. Pure water is the trap: there the salt's own hydroxide sets $[\\text{OH}^-]$ at $4.0 \\times 10^{-4}$ M (pH about 10.6), more than the pH 9.5 buffer holds, so only $2.0 \\times 10^{-4}$ M dissolves.`
+          },
+          {
+            question: `The aqueous equilibrium $\\text{A}(aq) \\rightleftharpoons \\text{B}(aq) + \\text{C}(aq)$ is diluted with water at constant temperature. What happens?`,
+            options: [
+              `It shifts right, toward more dissolved particles`,
+              `It shifts left, toward fewer particles`,
+              `No shift, as all concentrations fall alike`,
+              `It shifts right, and $K$ increases`
+            ],
+            correctAnswer: 0,
+            yield: 'MEDIUM',
+            explanation: `Halving every concentration halves the numerator $[\\text{B}][\\text{C}]$ twice over but the denominator $[\\text{A}]$ only once, so $Q$ falls below $K$ and the reaction runs right, toward the side with more dissolved particles, like a gas expanding toward more moles. A left shift is the response to concentrating the solution, the equal fall does not cancel because the two sides carry different powers, and $K$ changes only with temperature.`
+          }
+        ]
+      }
+    },
+    {
       id: 'ab5-summary',
       type: 'text' as const,
       content: `## Key Takeaways — Part 2
 
-- **Compression favours fewer gas moles.** Squeezing a gas mixture shifts it toward the side with fewer moles of gas.
 - **Q moves toward K.** $Q < K$ shifts right and $Q > K$ left; for a salt, $Q_{sp} > K_{sp}$ means a precipitate forms.
-- **Only temperature changes K.** Concentration and pressure move the position; heating favors the endothermic side.
-- **Ksp follows stoichiometry.** Raise each ion to its coefficient: $\\text{CaF}_2$ gives $K_{sp} = (s)(2s)^2 = 4s^3$.
+- **Shifts partly undo the change.** Add reactant → right; compress → fewer gas moles; heat → endothermic side, the only change that moves $K$.
+- **Ksp follows stoichiometry.** Raise each ion to its coefficient: $\\text{CaF}_2$ gives $K_{sp} = (s)(2s)^2 = 4s^3$; a common ion cuts $s$.
+- **Acid frees basic anions.** $\\text{H}^+$ removes $\\text{F}^-$, $\\text{OH}^-$ or $\\text{CO}_3^{2-}$ as it forms, so $\\text{CaF}_2$, $\\text{Mg(OH)}_2$ and $\\text{CaCO}_3$ dissolve more at low pH.
 
 **Common traps**
 
 - **Catalysts shift equilibrium.** A catalyst speeds both directions equally; neither the position nor $K$ changes.
 - **Inert gas shifts equilibrium.** Adding an inert gas at constant volume changes no partial pressure, so nothing shifts.
 - **Common ion, more dissolving.** A shared ion pushes dissolution LEFT, so the salt becomes LESS soluble.
-- **Kp always equals Kc.** Only when $\\Delta n = 0$; otherwise $K_p = K_c(RT)^{\\Delta n}$.
+- **Small x with a large K.** Drop $x$ from $C - x$ only when $K \\ll C$; check $x/C < 5\\%$, otherwise solve the quadratic.
 
 ## Titrations, Equilibrium & Solubility — Complete Topic Summary
 
-**Part 1:** Titration curves, equivalence vs half-equivalence point (pH = pKa), indicators, strong/weak acid titration differences, polyprotic titrations.
+**Part 1:** Titration curves, equivalence vs half-equivalence (pH = pKa), indicators, strong vs weak acid curves, the weak-base mirror, reading polyprotic curves.
 
-**Part 2:** Kc, Kp, Δn, reaction quotient Q, Le Chatelier's principle (only T changes K), Ksp, molar solubility, common ion effect, precipitation criterion (Q vs Ksp).
+**Part 2:** Kc, Kp, Δn, Q, Le Chatelier (only T changes K), ICE tables and small x, Ksp, common ion effect, precipitation (Q vs Ksp), solubility vs pH.
 
 ### Most Tested MCAT Concepts
 1. Half-equivalence point: pH = pKa (titrations)

@@ -496,6 +496,103 @@ export const EXIT_POOL: LessonExitItem[] = [
     yield: 'MEDIUM',
     part: 2,
   },
+
+  // ─────── Added Nov 2026 (build-out: weak-base curve, polyprotic curve reading, ICE tables, solubility vs pH) ───────
+  // ── Part 1 — default ──
+  {
+    question: `A weak base B ($K_b = 1.0 \\times 10^{-5}$) is titrated with HCl; at equivalence the solution is 0.10 M $\\text{BH}^+$. Using $K_a = K_w/K_b$ and $[\\text{H}^+] \\approx \\sqrt{K_a C}$, what is the pH at equivalence?`,
+    options: [`5.0`, `9.0`, `7.0`, `10.0`],
+    correctAnswer: 0,
+    explanation: `$K_a = 10^{-14}/10^{-5} = 10^{-9}$, so $[\\text{H}^+] \\approx \\sqrt{(10^{-9})(0.10)} = 10^{-5}$ M and pH = 5.0, below 7 because $\\text{BH}^+$ is a weak acid. Reporting 9.0 gives the pOH instead of the pH, 7.0 ignores the hydrolysis of $\\text{BH}^+$, and 10.0 skips the square root.`,
+    difficulty: 'hard',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `A recorded titration curve starts near pH 11, runs along a flat shelf, then drops sharply through pH 5 before levelling off. Which pair of reagents produced it?`,
+    options: [
+      `A weak base in the flask, titrated with a strong acid`,
+      `A weak acid in the flask, titrated with a strong base`,
+      `A strong base in the flask, titrated with a strong acid`,
+      `A strong acid in the flask, titrated with a weak base`,
+    ],
+    correctAnswer: 0,
+    explanation: `Starting high means the flask held a base; the flat shelf is a buffer region, so that base is weak (B and $\\text{BH}^+$ coexist, pH = $\\text{p}K_a$ of $\\text{BH}^+$ at its midpoint); and a jump through pH 5, below 7, means the species left at equivalence is the weak acid $\\text{BH}^+$. A weak acid with strong base starts low and rises, a strong base with strong acid has no shelf and drops through pH 7, and a strong acid in the flask would start near pH 1, not 11.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `On a diprotic acid's titration curve the first equivalence point comes at 12.5 mL of NaOH. At what volume does the second fall?`,
+    options: [`25.0 mL`, `12.5 mL`, `18.75 mL`, `50.0 mL`],
+    correctAnswer: 0,
+    explanation: `Each proton needs the same number of moles of base, so the second equivalence point lands at exactly twice the first, 25.0 mL. The value 12.5 mL repeats the first jump, 18.75 mL is the midpoint between the jumps, where pH = $\\text{p}K_{a2}$, and 50.0 mL doubles the volume twice.`,
+    difficulty: 'easy',
+    yield: 'HIGH',
+    part: 1,
+  },
+  {
+    question: `The titration curve of an unknown diprotic acid shows pH 3.0 at 5.0 mL of NaOH, a first jump at 10.0 mL, pH 7.0 at 15.0 mL and a second jump at 20.0 mL. What are its $\\text{p}K_a$ values?`,
+    options: [`3.0 and 7.0`, `3.0 and 5.0`, `5.0 and 7.0`, `5.0 and 10.0`],
+    correctAnswer: 0,
+    explanation: `Each $\\text{p}K_a$ is read at a half-step: 5.0 mL is halfway to the first jump, so $\\text{p}K_{a1} = 3.0$, and 15.0 mL is halfway between the jumps, so $\\text{p}K_{a2} = 7.0$. The pH at the first jump itself, the average 5.0, is not a $\\text{p}K_a$: pairing it with 3.0 or 7.0 misreads the amphiprotic midpoint, and 10.0 is the volume of that jump, not a constant.`,
+    difficulty: 'hard',
+    yield: 'MEDIUM',
+    part: 1,
+  },
+
+  // ── Part 2 — default ──
+  {
+    question: `For $\\text{A}(g) \\rightleftharpoons \\text{B}(g) + \\text{C}(g)$, $K_c = 8.0 \\times 10^{-6}$. A flask starts with 2.0 M A and no products. What is $[\\text{C}]$ at equilibrium?`,
+    options: [
+      `$4.0 \\times 10^{-3}$ M`,
+      `$1.6 \\times 10^{-5}$ M`,
+      `$2.8 \\times 10^{-3}$ M`,
+      `$4.0 \\times 10^{-6}$ M`,
+    ],
+    correctAnswer: 0,
+    explanation: `With $[\\text{B}] = [\\text{C}] = x$ and $[\\text{A}] = 2.0 - x \\approx 2.0$: $x^2 \\approx (8.0 \\times 10^{-6})(2.0) = 1.6 \\times 10^{-5}$, so $x = 4.0 \\times 10^{-3}$ M, far under 5% of 2.0 M. The value $1.6 \\times 10^{-5}$ stops before the square root, $2.8 \\times 10^{-3}$ takes the root of $K$ without the 2.0 M, and $4.0 \\times 10^{-6}$ halves $K$.`,
+    difficulty: 'medium',
+    yield: 'HIGH',
+    part: 2,
+  },
+  {
+    question: `An ICE table for $\\text{A} \\rightleftharpoons \\text{B} + \\text{C}$ starting at 0.10 M A gives $x = 0.020$ M once $x$ is dropped from $0.10 - x$. What should the student conclude?`,
+    options: [
+      `The shortcut fails, since $x$ is 20% of the start`,
+      `The shortcut holds, since $x$ is less than 0.10 M`,
+      `The shortcut holds, since $K$ must be small`,
+      `The result is exact, since $x$ came out positive`,
+    ],
+    correctAnswer: 0,
+    explanation: `Dropping $x$ is justified only when $x/C$ stays under 5%, and 0.020/0.10 is 20%, so $0.10 - x$ is really 0.080 M and the quadratic is needed. Being smaller than $C$ is not the test, a $K$ that gives 20% reaction is not small next to $C$, and a positive $x$ says nothing about whether the approximation held.`,
+    difficulty: 'medium',
+    yield: 'MEDIUM',
+    part: 2,
+  },
+  {
+    question: `Which salt is about as insoluble in dilute nitric acid as it is in pure water?`,
+    options: [`$\\text{PbI}_2$`, `$\\text{CaCO}_3$`, `$\\text{Mg(OH)}_2$`, `$\\text{CaF}_2$`],
+    correctAnswer: 0,
+    explanation: `Iodide is the anion of the strong acid HI, so $\\text{H}^+$ cannot protonate it and nothing pulls $\\text{PbI}_2$ into solution. Carbonate, hydroxide and fluoride are conjugate bases of weak acids: acid converts them to $\\text{H}_2\\text{CO}_3$, water and HF, lowering $Q_{sp}$ and dissolving far more of each salt.`,
+    difficulty: 'easy',
+    yield: 'HIGH',
+    part: 2,
+  },
+  {
+    question: `$\\text{Mg(OH)}_2$ has $K_{sp} = 3.2 \\times 10^{-11}$. What is its molar solubility in a solution buffered at pH 10.0?`,
+    options: [
+      `$3.2 \\times 10^{-3}$ M`,
+      `$3.2 \\times 10^{-7}$ M`,
+      `$2.0 \\times 10^{-4}$ M`,
+      `$3.2 \\times 10^{-15}$ M`,
+    ],
+    correctAnswer: 0,
+    explanation: `At pH 10.0 the buffer fixes pOH = 4.0, so $[\\text{OH}^-] = 1.0 \\times 10^{-4}$ M and $s = [\\text{Mg}^{2+}] = K_{sp}/[\\text{OH}^-]^2 = (3.2 \\times 10^{-11})/(1.0 \\times 10^{-8}) = 3.2 \\times 10^{-3}$ M. The value $3.2 \\times 10^{-7}$ divides by $[\\text{OH}^-]$ rather than by its square, $2.0 \\times 10^{-4}$ is the pure-water solubility from $4s^3$, and $3.2 \\times 10^{-15}$ multiplies by $[\\text{OH}^-]$ instead of dividing by its square.`,
+    difficulty: 'hard',
+    yield: 'HIGH',
+    part: 2,
+  },
 ]
 
 export const generateExitQuiz = makeLessonExitQuiz(EXIT_POOL, 'mcat-general-chemistry-titrations-equilibrium-mcat')

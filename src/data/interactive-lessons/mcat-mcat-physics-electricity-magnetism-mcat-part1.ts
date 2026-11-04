@@ -6,11 +6,11 @@ export const magnetismMcatPart1: LessonData = {
     {
       id: 'mag1-intro',
       type: 'text' as const,
-      content: `# Magnetism & Electromagnetic Induction
+      content: `# Magnetism Part 1: Fields & Forces on Charges
 
-**Part 1 of 4 — Magnetic Fields & Their Sources**
+**Part 1 of 2 — Magnetic Fields & Their Sources**
 
-**Where this fits.** The *Electrostatics* lesson treated charges at rest, and the four Circuits lessons, ending with *Circuits Part 4: Capacitor Networks & Bioelectricity*, set them moving as current. Moving charge does something resting charge cannot: it creates and feels magnetic fields. This lesson covers where magnetic fields come from, the forces they exert on moving charges and wires, and how a changing field induces an EMF. Next comes the *Optics* lesson.
+**Where this fits.** The *Electrostatics* lesson treated charges at rest, and the four Circuits lessons, ending with *Circuits Part 4: Capacitor Networks & Bioelectricity*, set them moving as current. Moving charge does something resting charge cannot: it creates and feels magnetic fields. This lesson covers where magnetic fields come from, how materials respond to them, and the force a field exerts on a single moving charge. Next comes the *Magnetism Part 2: Wires, Spectrometers & Induction* lesson, which turns that force on whole wires and ion beams and adds induction.
 
 ### The Magnetic Field
 

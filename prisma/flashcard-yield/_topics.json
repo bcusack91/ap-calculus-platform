@@ -489,7 +489,13 @@
     "aamc": [
       "4C"
     ],
-    "tested": "Magnetic force on moving charges and wires (F = qvB), right-hand rules, induction qualitatively."
+    "tested": "Magnetic fields from currents (1/r wire field, solenoids), tesla vs gauss, ferro-/para-/diamagnetism, F = qvB sin θ, right-hand rule, no work by magnetic force, circular motion r = mv/qB."
+  },
+  "mcat-physics-electricity-induction-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Force on a current-carrying wire (F = BIL sin θ), parallel wires, velocity selector v = E/B and mass spectrometer (m/q), flux, Faraday and Lenz qualitatively, MRI passage."
   },
   "mcat-physics-electricity-mcat": {
     "aamc": [

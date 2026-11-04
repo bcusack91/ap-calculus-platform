@@ -20,6 +20,10 @@ The **limiting reagent** is the reactant that is completely consumed first, limi
 
 If the results tie, the reactants are in **exact stoichiometric ratio** and both are used up: for $2\\text{Al} + 3\\text{Cl}_2 \\to 2\\text{AlCl}_3$, 5.40 g Al (0.200 mol, $\\div 2 = 0.100$) and 21.3 g $\\text{Cl}_2$ (0.300 mol, $\\div 3 = 0.100$) leave nothing over.
 
+### The Product Check
+
+An equivalent route, often faster on the exam: ask how much product EACH reactant could make if the other were unlimited. The reactant that makes **less** is limiting, and its answer is already the theoretical yield. Because product $\\propto$ moles $\\div$ coefficient, the two routes always agree; raw moles or grams decide nothing unless the coefficients happen to be equal.
+
 ## Percent Yield
 
 $$\\%\\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100$$
@@ -28,6 +32,14 @@ $$\\%\\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\
 - **Actual yield:** experimentally measured.
 
 **Causes of < 100% yield:** side reactions, incomplete reaction, product loss during isolation.
+
+### Yield Across a Multi-Step Synthesis
+
+Most real syntheses chain several reactions, and each step's product is the next step's limiting reagent. Percent yields along the chain **multiply**; they never add or average:
+
+$$\\text{overall yield} = y_1 \\times y_2 \\times y_3 \\times \\cdots$$
+
+Three steps at 90%, 75% and 80% deliver $0.90 \\times 0.75 \\times 0.80 = 0.54$, or 54% overall, far below their 82% average. Losses compound, so long linear routes waste material quickly (five steps at 90% keep only 59%), and the weakest step dominates. To find the starting material a target amount needs, divide by the overall fraction (worked example later in this part).
 
 ### Worked Example — Finding the Limiting Reagent
 
@@ -50,7 +62,28 @@ $$0.200\\text{ mol }\\text{Cl}_2 \\times \\frac{2\\text{ mol }\\text{AlCl}_3}{3\
 
 **(e) Percent yield.** With 17.8 g theoretical from (c): $\\%\\text{ yield} = 15.0/17.8 \\times 100 = 84.3\\%$.
 
-## Types of Chemical Reactions
+### Worked Example — Which Reactant Makes More Product?
+
+**Problem.** In the thermite reaction $\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\to 2\\text{Fe} + \\text{Al}_2\\text{O}_3$, a crucible holds 1.00 mol of $\\text{Fe}_2\\text{O}_3$ (160 g) and 1.50 mol of Al (40.5 g).
+
+- **(a)** How many moles of Fe could each reactant make on its own?
+- **(b)** Which reactant is limiting, and would comparing moles alone have said the same?
+- **(c)** How much of the other reactant is left when the reaction stops?
+- **(d)** Which reactant must be added to make more iron?
+
+**(a) Product check.** $\\text{Fe}_2\\text{O}_3$: $1.00 \\times 2 = 2.00$ mol Fe. Al: $1.50 \\times \\dfrac{2\\text{ mol Fe}}{2\\text{ mol Al}} = 1.50$ mol Fe.
+
+**(b) The smaller product wins.** Al makes less (1.50 < 2.00 from (a)), so **Al is limiting** and the theoretical yield is 1.50 mol Fe (83.7 g). Raw moles point the wrong way: $\\text{Fe}_2\\text{O}_3$ has fewer moles (1.00 < 1.50) yet is in excess. Moles $\\div$ coefficient ($1.00/1 = 1.00$ against $1.50/2 = 0.75$) agrees with the product check.
+
+**(c) Leftover.** The 1.50 mol Al consumes $1.50 \\times \\dfrac{1\\text{ mol Fe}_2\\text{O}_3}{2\\text{ mol Al}} = 0.750$ mol $\\text{Fe}_2\\text{O}_3$, leaving $1.00 - 0.750 = 0.250$ mol (40.0 g) unreacted.
+
+**(d) Only the limiter helps.** More Al. Adding $\\text{Fe}_2\\text{O}_3$, already in excess from (b), only increases the leftover; the yield rises only with the limiting reagent.
+`
+    },
+    {
+      id: 'st2-types',
+      type: 'text' as const,
+      content: `## Types of Chemical Reactions
 
 | Type | General Form | Example |
 |------|-------------|---------|
@@ -60,10 +93,31 @@ $$0.200\\text{ mol }\\text{Cl}_2 \\times \\frac{2\\text{ mol }\\text{AlCl}_3}{3\
 | Double displacement | $AB + CD \\to AD + CB$ | $\\text{NaCl} + \\text{AgNO}_3 \\to \\text{AgCl}\\downarrow + \\text{NaNO}_3$ |
 | Combustion | hydrocarbon + $\\text{O}_2 \\to \\text{CO}_2 + \\text{H}_2\\text{O}$ | $\\text{CH}_4 + 2\\text{O}_2 \\to \\text{CO}_2 + 2\\text{H}_2\\text{O}$ |
 
+A **neutralization** ($\\text{HNO}_3 + \\text{KOH} \\to \\text{KNO}_3 + \\text{H}_2\\text{O}$) is a double displacement whose products are a salt and water. Every **single displacement** is also a redox reaction, and a nonmetal can displace as well as a metal: $\\text{Cl}_2 + 2\\text{NaI} \\to 2\\text{NaCl} + \\text{I}_2$.
+
 ### Combustion Stoichiometry Shortcut
 
 For $\\text{C}_x\\text{H}_y$ + $\\text{O}_2$:
 $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\to x\\text{CO}_2 + \\frac{y}{2}\\text{H}_2\\text{O}$$
+
+If the fuel already contains oxygen, $\\text{C}_x\\text{H}_y\\text{O}_z$, subtract what it brings: $\\text{O}_2$ needed $= x + y/4 - z/2$. Ethanol, $\\text{C}_2\\text{H}_6\\text{O}$, needs $2 + 1.5 - 0.5 = 3$ $\\text{O}_2$.
+
+### Worked Example — Classifying Reactions
+
+**Problem.** Classify each reaction by its pattern.
+
+- **(a)** Which pattern is $\\text{Zn} + \\text{Cu}(\\text{NO}_3)_2 \\to \\text{Zn}(\\text{NO}_3)_2 + \\text{Cu}$?
+- **(b)** Which pattern is $2\\text{NaHCO}_3 \\to \\text{Na}_2\\text{CO}_3 + \\text{H}_2\\text{O} + \\text{CO}_2$?
+- **(c)** Which pattern is $\\text{Pb}(\\text{NO}_3)_2 + 2\\text{KI} \\to \\text{PbI}_2 + 2\\text{KNO}_3$?
+- **(d)** Which pattern is $\\text{CH}_3\\text{COOH} + \\text{O}_2 \\to \\text{CO}_2 + \\text{H}_2\\text{O}$, and what $\\text{O}_2$ coefficient balances it?
+
+**(a) Single displacement.** Free zinc takes copper's place and copper metal is released ($A + BC \\to AC + B$); the nitrate ion rides along unchanged, while Zn is oxidized and $\\text{Cu}^{2+}$ reduced.
+
+**(b) Decomposition.** One compound (baking soda, on heating) splits into three simpler ones ($AB \\to A + B$).
+
+**(c) Double displacement.** Two ionic compounds swap partners ($AB + CD \\to AD + CB$); the yellow $\\text{PbI}_2$ precipitate drives it.
+
+**(d) Combustion.** An oxygen-containing fuel still burns to $\\text{CO}_2$ and $\\text{H}_2\\text{O}$. As $\\text{C}_2\\text{H}_4\\text{O}_2$: $x + y/4 - z/2 = 2 + 1 - 1 = 2$, so $\\text{CH}_3\\text{COOH} + 2\\text{O}_2 \\to 2\\text{CO}_2 + 2\\text{H}_2\\text{O}$ (O: $2 + 4 = 6 = 4 + 2$).
 `
     },
     {
@@ -128,6 +182,44 @@ $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\to x\\te
             correctAnswer: 2,
             yield: 'MEDIUM',
             explanation: `$\\text{BaCl}_2 + \\text{Na}_2\\text{SO}_4 \\to \\text{BaSO}_4 + 2\\text{NaCl}$: Two ionic compounds exchange partners ($\\text{Ba}^{2+}$ and $\\text{Na}^+$ switch anions). This is a classic double displacement (precipitation) reaction. $\\text{Fe} + \\text{CuSO}_4$ is single displacement; breaking down $\\text{KClO}_3$ is decomposition; burning $\\text{CH}_4$ is combustion.`
+          },
+          {
+            question: `In $\\text{A} + 3\\text{B} \\to \\text{AB}_3$, equal MASSES of A and B are mixed, and A's molar mass is twice B's. Which reactant is limiting?`,
+            options: [
+              `B, since there are only 2 mol of it per mol of A`,
+              `A, since fewer moles of it are present`,
+              `A, since its molar mass is the larger`,
+              `Neither, since equal masses react fully`
+            ],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `Equal masses with half the molar mass means twice the moles: 2 mol of B for every mol of A. The equation needs 3 B per A, so B runs out first; A could make 1 unit of product per mole while B makes only 2/3. A does have fewer moles, but fewer moles does not mean limiting, the larger molar mass is only why A has fewer moles, and equal masses are not the 1 : 3 mole ratio the equation needs.`
+          },
+          {
+            question: `Calcium carbide makes acetylene by $\\text{CaC}_2 + 2\\text{H}_2\\text{O} \\to \\text{Ca}(\\text{OH})_2 + \\text{C}_2\\text{H}_2$. If 1.0 mol $\\text{CaC}_2$ meets 1.5 mol $\\text{H}_2\\text{O}$, which reactant limits, and how much acetylene forms?`,
+            options: [
+              `$\\text{H}_2\\text{O}$; at most 0.75 mol forms`,
+              `$\\text{CaC}_2$; at most 1.0 mol forms`,
+              `$\\text{H}_2\\text{O}$; at most 1.5 mol forms`,
+              `$\\text{CaC}_2$; at most 0.50 mol forms`
+            ],
+            correctAnswer: 0,
+            yield: 'HIGH',
+            explanation: `Product check: 1.0 mol $\\text{CaC}_2$ could make 1.0 mol $\\text{C}_2\\text{H}_2$, while 1.5 mol of water, at two per acetylene, could make only 0.75 mol, so water limits despite having more moles. Taking $\\text{CaC}_2$ as limiting with 1.0 mol works from the excess reagent, 1.5 mol gives water a 1 : 1 ratio it does not have, and 0.50 mol divides the carbide by 2 as if it carried the coefficient.`
+          },
+          {
+            question: `A four-step synthesis has step yields of 90%, 80%, 50% and 100%. What is the overall yield?`,
+            options: [`80%`, `36%`, `50%`, `20%`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `Yields multiply: $0.90 \\times 0.80 \\times 0.50 \\times 1.00 = 0.36$, so 36%. The value 80% is the average of the four steps, 50% is just the worst step on its own, and 20% subtracts the three losses (10 + 20 + 50) from 100 as if they added.`
+          },
+          {
+            question: `A chemist needs 10.0 g of product from a two-step route with yields of 50% and then 80%. Each step is 1 : 1 in moles, and the product has the same molar mass as the starting material. How much starting material is needed?`,
+            options: [`4.00 g`, `12.5 g`, `25.0 g`, `20.0 g`],
+            correctAnswer: 2,
+            yield: 'MEDIUM',
+            explanation: `The overall fraction is $0.50 \\times 0.80 = 0.40$, and with equal molar masses and 1 : 1 ratios the target divides by it: $10.0/0.40 = 25.0$ g. The value 4.00 g multiplies by 0.40 instead of dividing, 12.5 g allows only for the 80% step, and 20.0 g only for the 50% step.`
           }
         ]
       }
@@ -135,7 +227,7 @@ $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\to x\\te
     {
       id: 'st2-worked',
       type: 'text' as const,
-      content: `## Worked Example: Combustion Analysis
+      content: `## Worked Example: Combustion Stoichiometry
 
 **Problem.** A burner consumes 44.1 g of propane ($\\text{C}_3\\text{H}_8$, $M = 44.1$ g/mol), which burns completely in oxygen ($M_{\\text{CO}_2} = 44.0$ g/mol):
 
@@ -156,6 +248,23 @@ $$1.00 \\times 3 = 3.00\\text{ mol CO}_2$$
 $$3.00 \\times 44.0 = \\mathbf{132\\text{ g CO}_2}$$
 
 **(d) Shortcut check.** For $\\text{C}_3\\text{H}_8$, $x = 3$ and $y = 8$, so $\\text{O}_2$ needed $= 3 + 8/4 = 3 + 2 = 5$, matching the equation. ✓
+
+### Worked Example — Yield Across a Multi-Step Synthesis
+
+**Problem.** A drug D is made from starting material S in three steps, $\\text{S} \\to \\text{A} \\to \\text{B} \\to \\text{D}$, each 1 : 1 in moles, with step yields of 90%, 75% and 80%. $M_{\\text{S}} = 100$ g/mol, $M_{\\text{D}} = 200$ g/mol, and the chemist starts with 50.0 g of S.
+
+- **(a)** What is the overall percent yield?
+- **(b)** How many moles of D are isolated?
+- **(c)** What mass of D is that? Can a product outweigh the starting material it came from?
+- **(d)** If the weakest step were made quantitative (100%), what would the overall yield become?
+
+**(a) Multiply the fractions.** $0.90 \\times 0.75 \\times 0.80 = 0.540$, so the overall yield is **54.0%**, not the 82% average of the three steps.
+
+**(b) Moles of D.** $50.0/100 = 0.500$ mol S; with 1 : 1 ratios the theoretical yield is 0.500 mol D, and the 54.0% from (a) leaves $0.500 \\times 0.540 = 0.270$ mol D.
+
+**(c) Mass of D.** With 0.270 mol from (b): $0.270 \\times 200 = 54.0$ g. That exceeds the 50.0 g of S because D is twice as heavy per mole; the extra atoms come from the reagents added along the way, so no conservation law is broken.
+
+**(d) Fixing the weakest step.** Raising the 75% step to 100% gives $0.90 \\times 1.00 \\times 0.80 = 0.720$, or 72.0%: a single poor step costs more than its share.
 `
     },
     {
@@ -189,6 +298,37 @@ $$3.00 \\times 44.0 = \\mathbf{132\\text{ g CO}_2}$$
             correctAnswer: 2,
             yield: 'HIGH',
             explanation: `Moles $\\text{Fe}_2\\text{O}_3 = 40.0/160 = 0.250\\text{ mol}$. Each mole of $\\text{Fe}_2\\text{O}_3$ produces 2 mol Fe: $0.250 \\times 2 = 0.500\\text{ mol Fe}$. Mass $= 0.500 \\times 55.8 = \\mathbf{27.9\\text{ g}}$. 14.0 g assumes a 1 : 1 ratio, 41.9 g uses the 3 : 1 ratio of CO instead of Fe, and 55.8 g is a full mole of Fe.`
+          },
+          {
+            question: `Which reaction is a single displacement?`,
+            options: [
+              `$\\text{BaCl}_2 + \\text{K}_2\\text{SO}_4 \\to \\text{BaSO}_4 + 2\\text{KCl}$`,
+              `$\\text{Br}_2 + 2\\text{KI} \\to 2\\text{KBr} + \\text{I}_2$`,
+              `$2\\text{HgO} \\to 2\\text{Hg} + \\text{O}_2$`,
+              `$\\text{SO}_2 + \\text{H}_2\\text{O} \\to \\text{H}_2\\text{SO}_3$`
+            ],
+            correctAnswer: 1,
+            yield: 'MEDIUM',
+            explanation: `Free bromine takes iodine's place in KI and releases iodine as the free element, the $A + BC \\to AC + B$ pattern; a nonmetal displacing a nonmetal is still a single displacement (and a redox reaction). Barium chloride and potassium sulfate swap partners in a double displacement, mercury(II) oxide splitting into its elements is a decomposition, and sulfur dioxide joining water is a combination.`
+          },
+          {
+            question: `Glucose, $\\text{C}_6\\text{H}_{12}\\text{O}_6$, burns completely to $\\text{CO}_2$ and $\\text{H}_2\\text{O}$. With a coefficient of 1 for glucose, what is the coefficient of $\\text{O}_2$?`,
+            options: [`9`, `6`, `12`, `3`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `The fuel brings its own oxygen, so $\\text{O}_2 = x + y/4 - z/2 = 6 + 3 - 3 = 6$: $\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\to 6\\text{CO}_2 + 6\\text{H}_2\\text{O}$ (O: $6 + 12 = 18 = 12 + 6$). The value 9 ignores the fuel's six oxygens, 12 counts the O atoms that $\\text{O}_2$ must supply as molecules, and 3 subtracts the whole $z$ instead of $z/2$.`
+          },
+          {
+            question: `Which reaction is a combination (synthesis)?`,
+            options: [
+              `$2\\text{Na} + 2\\text{H}_2\\text{O} \\to 2\\text{NaOH} + \\text{H}_2$`,
+              `$\\text{NH}_4\\text{Cl} \\to \\text{NH}_3 + \\text{HCl}$`,
+              `$\\text{CaO} + \\text{H}_2\\text{O} \\to \\text{Ca}(\\text{OH})_2$`,
+              `$\\text{Na}_2\\text{S} + 2\\text{HCl} \\to 2\\text{NaCl} + \\text{H}_2\\text{S}$`
+            ],
+            correctAnswer: 2,
+            yield: 'MEDIUM',
+            explanation: `Calcium oxide and water join into a single product, the $A + B \\to AB$ pattern. Sodium metal replacing hydrogen in water is a single displacement, ammonium chloride splitting into ammonia and HCl is a decomposition, and sodium sulfide and HCl exchanging partners is a double displacement.`
           }
         ]
       }
@@ -198,15 +338,15 @@ $$3.00 \\times 44.0 = \\mathbf{132\\text{ g CO}_2}$$
       type: 'text' as const,
       content: `## Key Takeaways — Part 2
 
-- **Moles ÷ coefficient.** Convert each reactant to moles and divide by its coefficient; the smallest result is the limiting reagent.
-- **Yield follows the limiter.** Theoretical yield is the product the limiting reagent gives at 100% conversion.
-- **Percent yield.** % yield $=$ actual / theoretical $\\times 100$; side reactions and isolation losses keep it below 100%.
-- **Five reaction patterns.** Combination, decomposition, single and double displacement, combustion; $\\text{C}_x\\text{H}_y$ needs $x + y/4$ $\\text{O}_2$.
+- **Moles ÷ coefficient.** The smallest moles-per-coefficient limits; equivalently, the reactant that could make LESS product.
+- **Yield follows the limiter.** Theoretical yield is the product the limiting reagent gives at 100%; more excess reagent adds nothing.
+- **Percent yields multiply.** % yield $=$ actual / theoretical $\\times 100$; across steps the fractions multiply: $0.90 \\times 0.75 \\times 0.80 = 54\\%$.
+- **Five reaction patterns.** Combination, decomposition, single and double displacement, combustion; $\\text{C}_x\\text{H}_y\\text{O}_z$ needs $x + y/4 - z/2$ $\\text{O}_2$.
 
 **Common traps**
 
 - **Comparing raw amounts.** The reactant with fewer grams or fewer moles need not limit; divide moles by each coefficient first.
-- **Product from the excess.** Theoretical yield comes from the limiting reagent; the excess reagent is simply left over.
+- **Averaging step yields.** Steps at 90%, 75% and 80% give 54% overall, not their 82% average; a single weak step dominates.
 - **Inverted percent yield.** Theoretical goes on the bottom: 27.2 g recovered of 34.0 g theoretical is 80%, not 125%.
 - **Counting O atoms as $\\text{O}_2$.** Butane's products hold 13 O atoms, so the $\\text{O}_2$ coefficient is 13/2, not 13.
 

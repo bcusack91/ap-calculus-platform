@@ -81,8 +81,12 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
       pattern: /electrochem|galvanic|electrolytic|cathode|anode|electrode|cell potential|nernst|redox|oxidation state/i },
     { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics',
       pattern: /coulomb|electric field|point charge|electric potential|electrostatic/i },
-    { slug: 'mcat-physics-electricity-magnetism-mcat', title: 'Magnetism & Electromagnetic Induction',
-      pattern: /magnet|induction|flux|solenoid|lorentz/i },
+    // Magnetism is two lessons (Nov 2026 part split); wire-force, selector,
+    // spectrometer and induction vocabulary first (those stems also say "magnet").
+    { slug: 'mcat-physics-electricity-induction-mcat', title: 'Magnetism Part 2: Wires, Spectrometers & Induction',
+      pattern: /induc|faraday|lenz|flux|\bemf\b|electromotive|generator|transformer|eddy|motional|current-carrying wire|wire (segment|in a|of length)|parallel wires|velocity selector|mass spectromet|lorentz|crossed (electric|fields)|\bBIL\b|\bILB\b|\bMRI\b/i },
+    { slug: 'mcat-physics-electricity-magnetism-mcat', title: 'Magnetism Part 1: Fields & Forces on Charges',
+      pattern: /magnet|solenoid|tesla|\bgauss\b|ferromagnet|paramagnet|diamagnet|cyclotron|right-hand rule|\bqvB\b/i },
     { slug: 'mcat-physics-electricity-optics-mcat', title: 'Optics',
       pattern: /lens|mirror|refract|reflect|snell|focal|diffraction|interference|polariz|optic/i },
     // Fluids & Waves is five lessons (Nov 2026); specific vocabulary first.

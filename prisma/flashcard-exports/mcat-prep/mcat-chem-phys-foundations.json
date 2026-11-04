@@ -7763,7 +7763,7 @@
   "back": "Unequal electron sharing leaves partial negative charge on the carbonyl oxygen and partial positive charge on the amide nitrogen. Aligned peptide dipoles help stabilize the alpha helix."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A bar magnet's north pole approaches a wire loop. What does the induced current do?",
   "back": "It circulates so that the loop's near face becomes a north pole, repelling the magnet and opposing the rising flux. Withdrawing the magnet reverses the current."
  },
@@ -7778,22 +7778,22 @@
   "back": "A helix: the perpendicular velocity component gives circular motion while the parallel component continues unchanged. This is how charged particles spiral along field lines."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A conducting loop is pulled out of a field region. Which way does the induced current flow, and does pulling require work?",
   "back": "The current flows so as to maintain the decreasing flux, and the magnetic force on that current opposes the motion, so external work is required. That work becomes resistive heating, the basis of eddy-current braking."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A copper ring rests on the core of an electromagnet and the current is switched on. What happens to the ring?",
   "back": "Rising flux induces a current in the ring whose own field opposes the increase, so by Lenz's law the ring is repelled and jumps off the core. Once the current is steady, no emf is induced and nothing happens."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A current-carrying wire in a magnetic field experiences a force. The direction of this force is determined by:",
   "back": "**The right-hand rule (F = IL × B)**\n\nThe force on a current-carrying wire in a magnetic field is F = IL × B. The direction is found using the right-hand rule: point fingers in the direction of current (I), curl toward B, and the thumb points in the direction of force."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A doubly charged ion follows a radius {{c1::half}} that of a singly charged ion of the same mass and speed.",
   "back": "Radius $mv/(qB)$ is inversely proportional to charge. Spectrometers therefore separate by mass-to-charge ratio rather than by mass alone."
  },
@@ -7808,7 +7808,7 @@
   "back": "Molecular orbital theory predicts two unpaired electrons in $O_2$, explaining why liquid oxygen clings to a magnet. Deoxyhemoglobin is likewise paramagnetic."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A motor does mechanical work, yet magnetic forces do no work on moving charges. Resolve the apparent contradiction.",
   "back": "The magnetic force on a charge is always perpendicular to its velocity, so it only redirects motion. The energy comes from the battery driving current against the motor's back emf; the field converts that into rotation."
  },
@@ -7823,7 +7823,7 @@
   "back": "None, because $\\sin 0 = 0$. Only the velocity component perpendicular to the field produces force, so purely parallel motion is unaffected."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "A rod of length $L$ moving at speed $v$ perpendicular to field $B$ generates motional emf $\\varepsilon = {{c1::BLv}}$.",
   "back": "Magnetic force separates charges along the rod until an internal electric field balances it. This principle underlies electromagnetic blood flowmeters."
  },
@@ -7833,32 +7833,32 @@
   "back": "Point the right thumb up along the current and the fingers curl counterclockwise as seen from above. East of the wire that curl points north, so the field there is horizontal and directed north."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "After a velocity selector, why does a mass spectrometer separate ions by mass?",
   "back": "In the analyzer field $r = mv/(qB)$, so with $v$ fixed the radius is proportional to the mass-to-charge ratio. Heavier ions of equal charge sweep wider arcs."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "An electromagnetic blood flowmeter reads a transverse voltage $V = BLv$, so its signal is proportional to {{c1::flow velocity}}.",
   "back": "Blood is a conductor. In a transverse field its moving ions are pushed toward opposite vessel walls until the electric force balances the magnetic force, leaving a measurable motional emf across the diameter."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "An ideal transformer with a $10{:}1$ turns ratio cuts voltage tenfold and multiplies current by {{c1::10}}, because power is conserved.",
   "back": "$V_s/V_p = N_s/N_p$ while $I_pV_p = I_sV_s$. Transformers work only on AC, since a steady current gives constant flux and induces no emf in the secondary."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Compare the radiation risks of MRI and CT.",
   "back": "CT uses ionizing X-rays that can damage DNA, while MRI uses non-ionizing radio waves and static magnetic fields. MRI's main hazards are ferromagnetic projectiles and tissue heating."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Contrast a motor with a generator in energy terms.",
   "back": "A motor drives current through a coil in a field to produce torque, converting electrical energy to mechanical. A generator rotates a coil to change flux, converting mechanical energy to electrical."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Faraday's law gives $\\varepsilon = -N\\Delta\\Phi/\\Delta t$, where the minus sign encodes {{c1::Lenz's law}}.",
   "back": "Induced emf depends on the rate of flux change, not on the flux itself. A steady field through a stationary loop induces nothing at all."
  },
@@ -7893,12 +7893,12 @@
   "back": "Earth's is about $5 \\times 10^{-5}$ T while a clinical MRI runs $1.5$ to $3$ T, roughly $5 \\times 10^4$ times stronger. One tesla is one newton per ampere-meter."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "How does MRI work in principle?",
   "back": "A strong field aligns hydrogen nuclear spins; RF pulses perturb them and the relaxation signal is detected and localized."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "How does transcranial magnetic stimulation excite neurons without any electrode touching the brain?",
   "back": "A rapidly changing coil current creates a rapidly changing flux through the cortex. By Faraday's law that induces an electric field in the conductive tissue, which drives ionic current and depolarizes neurons."
  },
@@ -7908,12 +7908,12 @@
   "back": "$T = 2\\pi m/(qB)$ contains no velocity: faster particles simply travel proportionally larger circles. This lets a fixed-frequency driving voltage keep accelerating them."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "In a velocity selector, undeflected particles satisfy $qE = qvB$, so the selected speed is $v = {{c1::E/B}}$.",
   "back": "Charge cancels, so the selected speed is independent of both charge and mass. Only particles at that exact speed pass straight through."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Induced emf depends on the {{c1::rate of change}} of flux, so a loop sitting motionless in a huge steady field has no induced emf at all.",
   "back": "$\\varepsilon = -N\\Delta\\Phi/\\Delta t$. A patient lying still in a $3$ T magnet experiences no induced current from the static field; only the switching gradient and RF fields induce anything."
  },
@@ -7923,17 +7923,17 @@
   "back": "Here $n$ is turns per unit length, so the field does not depend on the solenoid's radius. MRI bore magnets exploit exactly this uniformity."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Ions accelerated through the same potential difference then bent by the same field: heavier ions follow {{c1::larger}} radii.",
   "back": "Equal charge and equal accelerating voltage means equal kinetic energy, so a heavier ion moves slower but carries more momentum. Since $r = mv/(qB)$, greater momentum means a wider arc, separating masses at the detector."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Magnetic flux is given by:",
   "back": "**$\\Phi = BA\\cos\\theta$**\n\nMaximum when the field is perpendicular to the surface."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Magnetic flux through a loop is $\\Phi = {{c1::BA\\cos\\theta}}$, where $\\theta$ is measured from the surface normal.",
   "back": "Flux is maximal when the loop faces the field squarely and zero when the loop is edge-on. Only a changing flux induces an emf."
  },
@@ -7943,47 +7943,47 @@
   "back": "**Perpendicular**\n\n$\\sin 90° = 1$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "MRI excites protons with a radiofrequency pulse tuned to the {{c1::Larmor}} frequency, proportional to field strength.",
   "back": "Only resonant photons can flip the spins. Relaxation afterward re-emits a detectable signal characterized by the T1 and T2 times."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "MRI images hydrogen in water and fat, so {{c1::cortical bone}} and air-filled lung return little signal and appear dark.",
   "back": "Signal requires mobile protons. Bone mineral and air have very few, which is why CT remains superior for bone and lung detail while MRI excels at soft-tissue contrast."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "MRI relies primarily on:",
   "back": "**Nuclear spin alignment in a strong magnetic field**\n\nHydrogen nuclei precess and emit detectable radiofrequency signals."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Name three ways to change the flux through a loop and induce an emf.",
   "back": "Change the field strength, change the loop's area, or rotate the loop to change its orientation. Moving the loop into or out of a field region works for the same reason."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Power is transmitted at very high voltage because line losses scale as {{c1::$I^2R$}}.",
   "back": "Delivering the same power $P = IV$ at ten times the voltage requires one tenth the current, cutting resistive loss a hundredfold. Transformers step the voltage back down near the point of use."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Protons precess at about $42.6$ MHz per tesla, so a $1.5$ T MRI uses radiofrequency near {{c1::64 MHz}}.",
   "back": "Larmor frequency is proportional to field strength, so a $3$ T scanner uses roughly $128$ MHz. These are radio photons, orders of magnitude below ionizing energies."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "State Faraday's law.",
   "back": "Induced EMF equals the negative rate of change of magnetic flux: $\\text{EMF} = -N\\frac{\\Delta\\Phi_B}{\\Delta t}$, where $\\Phi_B = BA\\cos\\theta$ and $\\theta$ is measured from the normal to the loop.\n\nOnly a *changing* flux induces EMF — vary $B$, the loop area, or its orientation; a static field induces nothing."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "State Lenz's law in terms of what the induced current opposes.",
   "back": "The induced current flows so that its own magnetic field opposes the change in flux that produced it. This follows from energy conservation rather than being a separate law."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "State Lenz's law.",
   "back": "Induced current opposes the flux change that created it — a consequence of energy conservation."
  },
@@ -7998,27 +7998,27 @@
   "back": "**$1/r$**\n\n$B = \\mu_0 I/(2\\pi r)$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Transformers work only with {{c1::alternating}} current, because a constant flux induces no emf.",
   "back": "The primary's changing current makes changing flux in the shared core, inducing emf in the secondary. Direct current would give only a brief pulse at switch-on."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Two isotopes of equal charge enter a mass spectrometer at the same speed. Which lands farther out?",
   "back": "The heavier isotope, since $r = mv/(qB)$ grows with mass. Doubling the charge instead would halve the radius."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Two parallel wires carry current in opposite directions. Do they attract or repel?",
   "back": "They repel. Same-direction currents attract and opposite currents repel. Each wire sits in the other's field and feels $F = ILB$, and reversing one current reverses the direction of that force."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Two parallel wires carrying current in the same direction {{c1::attract}} one another.",
   "back": "Each wire sits in the other's circular field, and the right-hand rule gives inward forces. Antiparallel currents repel instead."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "What do gradient coils contribute to MRI?",
   "back": "They superimpose a spatially varying field so resonance frequency depends on position, encoding location. Without them the returning signal would carry no spatial information."
  },
@@ -8028,7 +8028,7 @@
   "back": "Circular loops around the wire. Right-hand rule: thumb along current, fingers curl along $B$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "What is the role of the strong static field in an MRI scanner?",
   "back": "It aligns hydrogen nuclear spins along the bore axis, creating a small net magnetization. The spins precess at a frequency proportional to field strength."
  },
@@ -8038,7 +8038,7 @@
   "back": "A circle — the constant perpendicular force is centripetal. This is the basis of mass spectrometry."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Why are pacemakers, ferromagnetic implants, and loose steel objects hazardous near an MRI magnet?",
   "back": "The strong static field exerts large torques and attractive forces on ferromagnetic material, turning loose objects into projectiles, while switching gradient and RF fields can induce currents and heating in implanted leads."
  },
@@ -8048,12 +8048,12 @@
   "back": "No magnetic monopoles exist, so lines never start or terminate on a source."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Why does a magnet dropped down a copper pipe fall unusually slowly?",
   "back": "The changing flux induces eddy currents in the copper whose fields oppose the magnet's motion. Copper is not ferromagnetic, so the braking comes purely from induction."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Why does an MRI scanner bang loudly during a scan?",
   "back": "Gradient coils carry large pulsed currents inside the strong static field, so every pulse produces a force $F = ILB$ on the windings. The coils flex and vibrate at audio frequencies with each gradient switch."
  },
@@ -8063,7 +8063,7 @@
   "back": "Deoxyhemoglobin has unpaired electrons on iron and is paramagnetic, distorting the local field and speeding proton dephasing; oxyhemoglobin is diamagnetic. Active regions receive extra oxygenated blood, so the BOLD signal rises."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Why does MRI image hydrogen nuclei rather than other nuclei?",
   "back": "Hydrogen is abundant in water and fat and has a large magnetic moment, giving strong signal. Tissue contrast comes from differing water content and relaxation times."
  },
@@ -8073,7 +8073,7 @@
   "back": "It is always perpendicular to velocity, so it changes direction but not speed — producing circular motion."
  },
  {
-  "topicSlug": "mcat-physics-electricity-magnetism-mcat",
+  "topicSlug": "mcat-physics-electricity-induction-mcat",
   "front": "Why must ECG lead wires never be looped inside an MRI bore?",
   "back": "Switching gradients and RF pulses change the flux through any conductive loop, inducing emf and circulating current by Faraday's law. Resistive heating at the skin contact can then cause burns."
  },

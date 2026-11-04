@@ -46,6 +46,8 @@ export const MCAT_PART_SPLITS: readonly { keep: string; add: string }[] = [
   { keep: 'mcat-microbiology-genetics-mcat', add: 'mcat-microbiology-genetics-regulation-mcat' },
   { keep: 'mcat-anatomy-physiology-embryology-mcat', add: 'mcat-anatomy-physiology-organogenesis-mcat' },
   { keep: 'mcat-sociology-groups-interaction-mcat', add: 'mcat-sociology-interaction-organizations-mcat' },
+  // Magnetism (owner decision 2026-11-04): Parts 1–2 stay, Parts 3–4 become the new topic.
+  { keep: 'mcat-physics-electricity-magnetism-mcat', add: 'mcat-physics-electricity-induction-mcat' },
 ]
 
 /** Topic titles of the successors (and of both halves of each part split). */
@@ -74,6 +76,8 @@ export const MCAT_SPLIT_TITLES: Record<string, string> = {
   'mcat-anatomy-physiology-organogenesis-mcat': 'Organogenesis, Fetal Circulation & Developmental Mechanisms',
   'mcat-sociology-groups-interaction-mcat': 'Groups, Roles & Social Influence',
   'mcat-sociology-interaction-organizations-mcat': 'Social Interaction, Organizations & Discrimination',
+  'mcat-physics-electricity-magnetism-mcat': 'Magnetism Part 1: Fields & Forces on Charges',
+  'mcat-physics-electricity-induction-mcat': 'Magnetism Part 2: Wires, Spectrometers & Induction',
 }
 
 /** True for a retired pre-split slug. */

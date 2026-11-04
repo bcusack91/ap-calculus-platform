@@ -152,6 +152,7 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-microbiology-genetics-regulation-mcat',
   'mcat-anatomy-physiology-organogenesis-mcat',
   'mcat-sociology-interaction-organizations-mcat',
+  'mcat-physics-electricity-induction-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

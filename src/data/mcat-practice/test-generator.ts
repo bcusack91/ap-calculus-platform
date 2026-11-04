@@ -163,6 +163,7 @@ export const MCAT_SECTIONS: MCATSection[] = [
       'mcat-physics-electricity-emf-capacitors-mcat',
       'mcat-physics-electricity-rc-circuits-mcat',
       'mcat-physics-electricity-magnetism-mcat',
+      'mcat-physics-electricity-induction-mcat',
       'mcat-physics-electricity-optics-mcat',
       'mcat-physics-electricity-electrochemistry-mcat',
     ],

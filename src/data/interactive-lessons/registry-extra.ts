@@ -3116,8 +3116,13 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Magnetic Fields & Their Sources', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[0]) },
       { title: 'Forces on Moving Charges', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[1]) },
-      { title: 'Wires, Velocity Selectors & the Mass Spectrometer', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[2]) },
-      { title: 'MCAT Integration: Induction, MRI & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-induction-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Wires, Velocity Selectors & the Mass Spectrometer', loader: () => import('./mcat-mcat-physics-electricity-induction-mcat').then((m) => m.parts[0]) },
+      { title: 'MCAT Integration: Induction, MRI & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-induction-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-physics-electricity-electrochemistry-mcat': {

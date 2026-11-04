@@ -6,9 +6,9 @@ export const magnetismMcatPart2: LessonData = {
     {
       id: 'mag2-intro',
       type: 'text' as const,
-      content: `# Magnetism & Electromagnetic Induction
+      content: `# Magnetism Part 1: Fields & Forces on Charges
 
-**Part 2 of 4 — Forces on Moving Charges**
+**Part 2 of 2 — Forces on Moving Charges**
 
 ### The Magnetic Force Law
 
@@ -139,7 +139,9 @@ About $4\\;\\text{cm}$. Divide the powers of ten first ($10^{-21}/10^{-20} = 10^
 - **Force on a resting charge.** A magnetic field exerts no force on a stationary charge; only an electric field does.
 - **Magnetic speed-up.** Magnetic force does zero work; only an electric field changes a charge's kinetic energy.
 - **Electrons follow the same rule.** The right-hand rule is for positive charges; an electron feels the opposite force.
-- **Period grows with speed.** A faster particle sweeps a larger circle in the same period; only the radius grows.`
+- **Period grows with speed.** A faster particle sweeps a larger circle in the same period; only the radius grows.
+
+**Next up:** the *Magnetism Part 2: Wires, Spectrometers & Induction* lesson — the force on a current-carrying wire, parallel wires, the velocity selector and the mass spectrometer, then how a changing flux induces an EMF (Faraday and Lenz) and the MRI passage.`
     }
   ]
 };

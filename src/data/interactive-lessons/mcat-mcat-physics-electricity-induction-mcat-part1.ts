@@ -1,14 +1,16 @@
 import type { LessonData } from './registry'
 
-export const magnetismMcatPart3: LessonData = {
-  topicSlug: 'mcat-physics-electricity-magnetism-mcat',
+export const inductionMcatPart1: LessonData = {
+  topicSlug: 'mcat-physics-electricity-induction-mcat',
   sections: [
     {
       id: 'mag3-intro',
       type: 'text' as const,
-      content: `# Magnetism & Electromagnetic Induction
+      content: `# Magnetism Part 2: Wires, Spectrometers & Induction
 
-**Part 3 of 4 — Wires, Velocity Selectors & the Mass Spectrometer**
+**Part 1 of 2 — Wires, Velocity Selectors & the Mass Spectrometer**
+
+**Where this fits.** The *Magnetism Part 1: Fields & Forces on Charges* lesson gave you the field of a current (a long wire's field circles it, $B = \\mu_0 I/2\\pi r$) and the force on a single moving charge, $F = qvB\\sin\\theta$, pointed by the right-hand rule (fingers along $\\vec{v}$, curl toward $\\vec{B}$, thumb gives the force on a positive charge). This lesson scales that force up to whole currents and ion beams: the push on a wire, the force between parallel wires, the velocity selector and the mass spectrometer. Part 2 adds induction, how a changing field makes an EMF, and the MRI passage.
 
 ### Force on a Current-Carrying Wire
 
@@ -18,7 +20,7 @@ $$F = BIL\\sin\\theta$$
 
 where $L$ is the length of wire in the field and $\\theta$ the angle between the current direction and $\\vec{B}$.
 
-- Same right-hand rule: fingers along $I$ (conventional current), curl toward $\\vec{B}$, thumb-side push.
+- Same right-hand rule as for a single charge: fingers along $I$ (conventional current), curl toward $\\vec{B}$, thumb-side push.
 - Wire parallel to the field → zero force; perpendicular → maximum $F = BIL$, the working principle of electric motors.
 
 <!-- yield:low -->
@@ -27,7 +29,7 @@ where $L$ is the length of wire in the field and $\\theta$ the angle between the
 
 ### Parallel Wires
 
-Each wire sits in the other's circular field:
+Each wire sits in the other's circular field (the $B = \\mu_0 I/2\\pi r$ field that curls around any current), so each feels $F = BIL$ from the other:
 
 - Currents in the SAME direction: wires ATTRACT.
 - OPPOSITE directions: wires REPEL.
@@ -47,7 +49,7 @@ The combined force $\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$ is the **
 
 ### The Mass Spectrometer
 
-After the selector fixes $v$, the beam enters a region with only a magnetic field and bends in a circle:
+After the selector fixes $v$, the beam enters a region with only a magnetic field and bends in a circle (the magnetic force supplies the centripetal force, $qvB = mv^2/r$):
 
 $$r = \\frac{mv}{qB}$$
 
@@ -134,7 +136,7 @@ A $2.5\\;\\text{mm}$ radius.
     {
       id: 'mag3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 3
+      content: `### Key Takeaways — Part 1
 
 - **Force on a wire.** $F = BIL\\sin\\theta$: zero when the wire lies along the field, maximum when perpendicular; motors.
 - **Parallel currents.** Currents in the same direction attract; currents in opposite directions repel.
