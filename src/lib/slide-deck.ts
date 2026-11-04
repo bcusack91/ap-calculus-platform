@@ -807,8 +807,13 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
       }).filter((s) => s.blocks.length > 0)
       return { slides: made, dropped: [...budgets.values()].flatMap((b) => b.dropped) }
     }
+    // Polls by lesson length, not by a slide-count cliff: deckLimits grows
+    // the poll budget in 28-slide blocks, so trimming four orphan slides from
+    // a two-part lesson halved its checks (16 → 8). A two-part lesson gets 12,
+    // three or more get the full 16.
+    const pollFloor = Math.min(MAX_DECK_POLLS, MAX_POLLS + 4 * (partCount - 1))
     let mined = mine()
-    const pollsPlanned = Math.min(polls.length, limits.maxPolls)
+    const pollsPlanned = Math.min(polls.length, Math.max(limits.maxPolls, pollFloor))
     const classMinutes = () => estimateMinutes(mined.slides, pollsPlanned) + extraSlides * SLIDE_MINUTES.content
     for (let part = partCount; part >= 1 && classMinutes() > CLASS_MINUTES_MAX; part--) {
       if ((problemsFor.get(part) ?? MAX_DECK_PROBLEMS_PER_PART) <= 1) continue
@@ -827,6 +832,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     // of the lesson off the deck.
     const partSlides = lessonSlides.filter((s) => PART_SUFFIX.test(s.title.replace(/\s*\(cont\.\)\s*$/i, ''))).length
     limits = deckLimits(prose, partCount, summary.length + lessonSlides.length - partSlides)
+    limits = { ...limits, maxPolls: Math.max(limits.maxPolls, pollFloor) }
     content = [...summary, ...lessonSlides].slice(0, limits.maxSlides + partSlides)
   }
 
@@ -976,12 +982,25 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     return best
   })
   const teachTerms = segTerms.map((t, i) => (recapSeg[i] ? new Set<string>() : t))
+  // Inside its own part a poll goes to the beat that shares the MOST of its
+  // words (ties to the later beat), not the rarity-weighted match used across
+  // a whole deck: a cascade poll was landing on the hormone-classes beat two
+  // slides before the cascade was taught, because "hormone" was rarer there.
+  const mostOverlap = (terms: Set<string>, cands: number[]): number => {
+    let best = -1, bestN = 1
+    for (const i of cands) {
+      let n = 0
+      for (const t of terms) if (teachTerms[i].has(t)) n++
+      if (n >= bestN) { best = i; bestN = n }
+    }
+    return best
+  }
   const placePoll = (p: PollSlide, terms: Set<string>): number => {
     const part = pollPart.get(p)
     const own = part === undefined ? [] : segPart.flatMap((sp, i) => (sp === part && !recapSeg[i] ? [i] : []))
     if (own.length === 0) return bestSegment(terms, teachTerms)
-    const local = bestSegment(terms, own.map((i) => teachTerms[i]))
-    return local >= 0 ? own[local] : own[own.length - 1]
+    const local = mostOverlap(terms, own)
+    return local >= 0 ? local : own[own.length - 1]
   }
   for (const p of polls as PollSlide[]) {
     const terms = new Set([...termsOf(`${p.question} ${p.options.join(' ')}`)].filter((t) => !deckCommon.has(t)))
@@ -1121,11 +1140,13 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
 export function displayTitle(title: string): string {
   const cont = /\s*\(cont\.\)\s*$/i.test(title) ? ' (cont.)' : ''
   let base = title.replace(/\s*\(cont\.\)\s*$/i, '').trim()
-  if (PART_SUFFIX.test(base)) base = base.replace(/^Worked Examples?\s*(?:—|–|-|:)\s*/i, '')
-  else if (base.length > 56) {
-    const m = base.match(/^(.{12,}?)\s*\(([^()$]{8,})\)$/)
-    if (m) base = m[1].trim()
+  const suffix = base.match(PART_SUFFIX)?.[0] ?? ''
+  let name = suffix ? base.slice(0, base.length - suffix.length).replace(/^Worked Examples?\s*(?:—|–|-|:)\s*/i, '') : base
+  if (name.length + suffix.length > 56) {
+    const m = name.match(/^(.{12,}?)\s*\(([^()$]{8,})\)$/)
+    if (m) name = m[1].trim()
   }
+  base = name + suffix
   return base + cont
 }
 function displayTitled(s: Slide): Slide {
