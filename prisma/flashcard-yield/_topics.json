@@ -464,17 +464,11 @@
     ],
     "tested": "Flow rate, continuity, Bernoulli, Venturi, Torricelli, pitot, viscosity and Poiseuille r^4, turbulence, circulation, stenosis."
   },
-  "mcat-physics-waves-periodic-motion-mcat": {
-    "aamc": [
-      "4D"
-    ],
-    "tested": "Period, frequency, phase, SHM springs and pendulums, transverse vs longitudinal, v = f lambda and what sets wave speed."
-  },
   "mcat-physics-waves-interference-mcat": {
     "aamc": [
       "4D"
     ],
-    "tested": "Superposition, path difference, beats, standing waves in strings and pipes, harmonics and overtones, resonance and damping."
+    "tested": "Period, frequency, phase, SHM springs and pendulums, v = f lambda and what sets wave speed; superposition, path difference, beats, standing waves in strings and pipes, harmonics and overtones, resonance."
   },
   "mcat-physics-waves-sound-mcat": {
     "aamc": [

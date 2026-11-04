@@ -1,5 +1,101 @@
 [
  {
+  "front": "A mass on a spring has period $T = 2\\pi\\sqrt{m/k}$, so its period is independent of {{c1::amplitude and gravity}}.",
+  "fp": "eb8aa5d18981",
+  "yield": "ULTRA_HIGH",
+  "why": "Spring period equation and its amplitude independence; calculated every year"
+ },
+ {
+  "front": "A simple pendulum has period $T = 2\\pi\\sqrt{L/g}$, so its period is independent of {{c1::the bob's mass}}.",
+  "fp": "820ca6bdd585",
+  "yield": "ULTRA_HIGH",
+  "why": "Pendulum period equation and mass independence; tested every year"
+ },
+ {
+  "front": "A sound wave passes from air into soft tissue. Which wave properties change?",
+  "fp": "df02e9bd2c65",
+  "yield": "HIGH",
+  "why": "Frequency fixed across media; restated by the shorter constant-frequency card"
+ },
+ {
+  "front": "Contrast longitudinal and transverse waves.",
+  "fp": "4752a12a78e2",
+  "yield": "ULTRA_HIGH",
+  "why": "Longitudinal vs transverse waves; foundational wave definition"
+ },
+ {
+  "front": "In simple harmonic motion, where are speed and acceleration each maximal?",
+  "fp": "4be6d0d8001f",
+  "yield": "HIGH",
+  "why": "SHM speed max at equilibrium, acceleration max at extremes; common discrete"
+ },
+ {
+  "front": "Leg swing during walking behaves like a pendulum, so a taller person's natural cadence is {{c1::slower}}.",
+  "fp": "3873bbb363fe",
+  "yield": "LOW",
+  "why": "Walking cadence pendulum analogy is trivia"
+ },
+ {
+  "front": "Relate wave speed, frequency, and wavelength.",
+  "fp": "ef5e90ee8d37",
+  "yield": "ULTRA_HIGH",
+  "why": "v=f*lambda; foundational wave equation"
+ },
+ {
+  "front": "Sound passing through the interior of a liquid or gas travels only as a {{c1::longitudinal}} wave.",
+  "fp": "c981812c21cf",
+  "yield": "MEDIUM",
+  "why": "Sound only longitudinal in fluids; supporting detail for the wave-type card"
+ },
+ {
+  "front": "Sound travels fastest in:",
+  "fp": "378f4932db3f",
+  "yield": "HIGH",
+  "why": "Sound fastest in solids, none in vacuum; common discrete"
+ },
+ {
+  "front": "Wave speed on a string is $v = \\sqrt{T/\\mu}$, so tightening a string {{c1::raises}} its pitch.",
+  "fp": "15cb0ab64c9a",
+  "yield": "MEDIUM",
+  "why": "String wave speed sqrt(T/mu) and pitch; beyond outline sound-speed basics"
+ },
+ {
+  "front": "When a wave enters a new medium, what stays constant?",
+  "fp": "27e85bbd867f",
+  "yield": "ULTRA_HIGH",
+  "why": "Frequency constant across media; foundational wave fact"
+ },
+ {
+  "front": "A resting heart beats $90$ times per minute. What are the frequency and the period of one cardiac cycle?",
+  "fp": "0d1ac3deb8b2",
+  "yield": "HIGH",
+  "why": "Period-frequency conversion with a per-minute unit trap is common in physiology passages."
+ },
+ {
+  "front": "Angular frequency is {{c1::$\\omega = 2\\pi f$}}, measured in rad/s.",
+  "fp": "77b3172156aa",
+  "yield": "MEDIUM",
+  "why": "SHM notation shows up mainly as passage context."
+ },
+ {
+  "front": "Two identical pendulums swing side by side; whenever one is at its far-left turning point, the other is at its far-right. Their phase difference is {{c1::$180^\\circ$ ($\\pi$ rad)}}.",
+  "fp": "dfa9bfc80dfc",
+  "yield": "HIGH",
+  "why": "Phase difference is the basis of every interference question."
+ },
+ {
+  "front": "A mass oscillates on a spring. What happens to its period if the mass is quadrupled? If the spring is swapped for one four times stiffer?",
+  "fp": "2df7e8131ec8",
+  "yield": "MEDIUM",
+  "why": "SHM period formulas are secondary on the MCAT and appear mostly in passages."
+ },
+ {
+  "front": "The speed of sound in a medium is {{c1::$v = \\sqrt{B/\\rho}$}}, where $B$ is the bulk modulus (stiffness against compression) and $\\rho$ the density.",
+  "fp": "2a32dea7f7bc",
+  "yield": "HIGH",
+  "why": "The 'denser means faster' misconception is commonly tested."
+ },
+ {
   "front": "A standing wave forms when:",
   "fp": "3c6fb8f6954d",
   "yield": "HIGH",

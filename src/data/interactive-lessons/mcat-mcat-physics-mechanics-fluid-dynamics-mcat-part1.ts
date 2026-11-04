@@ -10,7 +10,7 @@ export const fluidsInMotionMcatPart1: LessonData = {
 
 **Part 1 of 2 — Fluid Dynamics: Continuity & Bernoulli**
 
-**Where this fits.** The previous lesson, *Fluids at Rest*, covered density, pressure, buoyancy and surface tension. This lesson sets the fluid moving: continuity and Bernoulli for ideal flow, then viscosity, Poiseuille's law and blood flow. The next lesson, *Periodic Motion & Waves*, turns from fluids to oscillations and waves.
+**Where this fits.** The previous lesson, *Fluids at Rest*, covered density, pressure, buoyancy and surface tension. This lesson sets the fluid moving: continuity and Bernoulli for ideal flow, then viscosity, Poiseuille's law and blood flow. The next lesson, *Waves & Interference*, turns from fluids to oscillations and waves.
 
 Throughout this part we assume an **ideal fluid**, which has three properties:
 

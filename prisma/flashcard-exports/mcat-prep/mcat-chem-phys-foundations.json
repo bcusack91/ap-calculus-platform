@@ -8720,7 +8720,7 @@
   "back": "The fluid is incompressible so displaced volumes match, $A_1d_1 = A_2d_2$, and work in equals work out. Machines trade force for distance and never create energy."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A mass on a spring has period $T = 2\\pi\\sqrt{m/k}$, so its period is independent of {{c1::amplitude and gravity}}.",
   "back": "Only mass and spring constant matter, so the same spring-mass system oscillates at the same rate horizontally, vertically, or on the Moon, and a larger pull does not slow it down."
  },
@@ -8730,7 +8730,7 @@
   "back": "The definition $\\beta = 10\\log(I/I_0)$ is linear in the log of intensity. Semi-log axes are the standard presentation in acoustics and audiology data, where a straight line signals a power-law relationship in the raw variables."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A simple pendulum has period $T = 2\\pi\\sqrt{L/g}$, so its period is independent of {{c1::the bob's mass}}.",
   "back": "For small angles it is also independent of amplitude, but unlike a spring it does depend on the local value of $g$, which is why pendulum clocks run slow at high altitude."
  },
@@ -8745,7 +8745,7 @@
   "back": "Ten decibels louder, since each tenfold intensity increase adds 10 dB. Perceptually it sounds only about twice as loud, because loudness perception is itself roughly logarithmic and a 10 dB rise is heard as a doubling."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A sound wave passes from air into soft tissue. Which wave properties change?",
   "back": "Frequency is fixed by the source and does not change; speed changes with the medium, so wavelength adjusts through $v = f\\lambda$. This behavior underlies ultrasound imaging."
  },
@@ -8795,7 +8795,7 @@
   "back": "Continuity, with $Av$ constant, explains capillary speed: their enormous combined cross-sectional area forces low velocity. Poiseuille explains resistance through a narrowed vessel. Continuity is about conserved volume flow; Poiseuille is about pressure cost."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Contrast longitudinal and transverse waves.",
   "back": "Longitudinal oscillates parallel to travel (sound); transverse oscillates perpendicular (light, string waves)."
  },
@@ -8870,7 +8870,7 @@
   "back": "Halving a vessel's radius cuts flow to one-sixteenth at fixed pressure gradient, which is why small changes in arteriolar tone dominate total peripheral resistance."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "In simple harmonic motion, where are speed and acceleration each maximal?",
   "back": "Speed peaks at the equilibrium position where the restoring force is zero; acceleration peaks at the extremes where displacement and restoring force are largest. The two are exactly out of phase."
  },
@@ -8880,7 +8880,7 @@
   "back": "At fixed surface tension, smaller alveoli generate higher collapsing pressure and would empty into larger ones. Surfactant lowers tension more in small alveoli, stabilizing the whole lung."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Leg swing during walking behaves like a pendulum, so a taller person's natural cadence is {{c1::slower}}.",
   "back": "Pendulum period goes as the square root of $L/g$ and is independent of mass, so longer legs swing more slowly. Taller people compensate with longer strides, which is why walking speed still increases with height even as step frequency falls."
  },
@@ -8900,7 +8900,7 @@
   "back": "Each factor of ten in intensity adds 10 dB, so factors of 10, 100, and 1000 add 10, 20, and 30 dB. Conversely every 10 dB step is a tenfold intensity change."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Relate wave speed, frequency, and wavelength.",
   "back": "$v = f\\lambda$. In a fixed medium $v$ is constant, so $f$ and $\\lambda$ are inversely related."
  },
@@ -8915,12 +8915,12 @@
   "back": "The reference $I_0$ is $10^{-12}$ W/m$^2$, the threshold of hearing. The logarithm compresses the enormous dynamic range of human hearing onto a manageable scale."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Sound passing through the interior of a liquid or gas travels only as a {{c1::longitudinal}} wave.",
   "back": "Fluids cannot support shear, so transverse mechanical waves die out within them and survive only on surfaces. This is why ultrasound imaging relies on compression waves."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Sound travels fastest in:",
   "back": "**Solids**\n\nStiffer media transmit compressions faster; sound cannot travel in vacuum."
  },
@@ -8970,7 +8970,7 @@
   "back": "Flow rate equals the pressure difference divided by that resistance. Polycythemia raises viscosity and therefore resistance proportionally, while even a small radius change dominates everything else through the fourth power."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Wave speed on a string is $v = \\sqrt{T/\\mu}$, so tightening a string {{c1::raises}} its pitch.",
   "back": "Higher tension or lower linear mass density raises wave speed, and with length fixed, $f_1 = v/(2L)$ rises with it. Thicker strings have larger mass per length and sound lower."
  },
@@ -9000,7 +9000,7 @@
   "back": "Driving a system at its natural frequency transfers energy efficiently and builds large amplitude. The ear canal resonates near 3 kHz, boosting sensitivity there, and the basilar membrane resonates tonotopically by position."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "When a wave enters a new medium, what stays constant?",
   "back": "**Frequency**\n\nThe source sets frequency; speed and wavelength adjust together."
  },
@@ -9180,27 +9180,27 @@
   "back": "Air has an acoustic impedance thousands of times lower than tissue, so an air gap reflects nearly all the sound before it can enter the body. The gel matches impedances closely enough for the beam to transmit and for echoes to return."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A resting heart beats $90$ times per minute. What are the frequency and the period of one cardiac cycle?",
   "back": "Convert to seconds first: $f = 90/60 = 1.5$ Hz, so $T = 1/f \\approx 0.67$ s. Taking $1/90$ without converting the minute is the classic error."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Angular frequency is {{c1::$\\omega = 2\\pi f$}}, measured in rad/s.",
   "back": "One cycle is $2\\pi$ radians, so $f$ cycles per second is $2\\pi f$ radians per second. Passages may write the motion as $x = A\\cos\\omega t$."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "Two identical pendulums swing side by side; whenever one is at its far-left turning point, the other is at its far-right. Their phase difference is {{c1::$180^\\circ$ ($\\pi$ rad)}}.",
   "back": "Opposite extremes at the same instant means half a cycle apart. A $360^\\circ$ offset is the same as $0^\\circ$ (in phase), and $90^\\circ$ would put one at a turning point while the other passes equilibrium."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "A mass oscillates on a spring. What happens to its period if the mass is quadrupled? If the spring is swapped for one four times stiffer?",
   "back": "$T = 2\\pi\\sqrt{m/k}$, so four times the mass doubles $T$, and four times the stiffness halves it. Both enter under a square root."
  },
  {
-  "topicSlug": "mcat-physics-waves-periodic-motion-mcat",
+  "topicSlug": "mcat-physics-waves-interference-mcat",
   "front": "The speed of sound in a medium is {{c1::$v = \\sqrt{B/\\rho}$}}, where $B$ is the bulk modulus (stiffness against compression) and $\\rho$ the density.",
   "back": "Greater density alone would slow sound, but solids are vastly stiffer than gases, and stiffness wins. That is why steel carries sound about 15 times faster than air despite being thousands of times denser."
  },

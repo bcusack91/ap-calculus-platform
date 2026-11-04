@@ -127,7 +127,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-physics-mechanics-fluids-mcat': () => import('./lesson-built/mcat-physics-mechanics-fluids-mcat'),
   'mcat-physics-waves-sound-mcat': () => import('./lesson-built/mcat-physics-waves-sound-mcat'),
   'mcat-physics-mechanics-fluid-dynamics-mcat': () => import('./lesson-built/mcat-physics-mechanics-fluid-dynamics-mcat'),
-  'mcat-physics-waves-periodic-motion-mcat': () => import('./lesson-built/mcat-physics-waves-periodic-motion-mcat'),
   'mcat-physics-waves-interference-mcat': () => import('./lesson-built/mcat-physics-waves-interference-mcat'),
   'mcat-physics-electricity': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias

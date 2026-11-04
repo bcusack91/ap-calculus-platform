@@ -10,14 +10,14 @@ export const soundDopplerMcatPart1: LessonData = {
 
 **Part 1 of 2 — Sound: Intensity, Decibels & Hearing**
 
-**Where this fits.** The previous lesson, *Interference & Standing Waves*, covered superposition, beats, standing waves and resonance. This lesson closes the fluids-and-waves sequence with sound itself: intensity, decibels and hearing, then the Doppler effect, ultrasound and shock waves. The next lesson, *Optics*, moves on to light.
+**Where this fits.** The previous lesson, *Waves & Interference*, covered periodic motion, wave basics, superposition, beats, standing waves and resonance. This lesson closes the fluids-and-waves sequence with sound itself: intensity, decibels and hearing, then the Doppler effect, ultrasound and shock waves. The next lesson, *Optics*, moves on to light.
 
 ### How Sound Is Made
 
 Every sound starts with something vibrating: vocal folds, a speaker cone, a tuning fork's prongs, a guitar string's body. As the vibrating surface pushes outward it crowds the air in front of it into a **compression** (pressure and density slightly above normal); as it pulls back it leaves a **rarefaction** (slightly below normal). These alternating zones travel outward as a longitudinal pressure wave. The air molecules themselves only jiggle back and forth about their resting positions.
 
 - Sound needs a medium. In a vacuum there is nothing to compress, so no sound travels, although light still crosses it.
-- Its speed is set by the medium (the *Periodic Motion & Waves* lesson): about $343\\;\\text{m/s}$ in room-temperature air, faster in warmer air, faster still in liquids, and fastest in solids.
+- Its speed is set by the medium (the *Waves & Interference* lesson): about $343\\;\\text{m/s}$ in room-temperature air, faster in warmer air, faster still in liquids, and fastest in solids.
 - The frequency is the vibration rate of the source.
 
 ### Passage Strategy: Decide What Is Fixed Before You Compute
@@ -31,7 +31,7 @@ Most wave errors come from changing the wrong variable. Before writing a formula
 | Standing wave on a given string or pipe | $\\lambda_n$ (set by $L$) | $f_n = v/\\lambda_n$, so $f$ follows $v$ |
 | Tighten a string, or warm the air in a pipe | $\\lambda_n$ | $v$ rises, so the resonant frequencies rise |
 
-The last row explains a passage favourite: a wind instrument goes sharp as it warms up, because its pipe fixes the resonant wavelengths while warmer air carries sound faster. Helium is the related case. The vocal folds vibrate at about the same rate, but the vocal tract's resonant frequencies rise because sound travels faster in helium, so the voice's quality (its timbre, the blend of harmonics covered later in this part) shifts toward its higher harmonics (the *Interference & Standing Waves* lesson).
+The last row explains a passage favourite: a wind instrument goes sharp as it warms up, because its pipe fixes the resonant wavelengths while warmer air carries sound faster. Helium is the related case. The vocal folds vibrate at about the same rate, but the vocal tract's resonant frequencies rise because sound travels faster in helium, so the voice's quality (its timbre, the blend of harmonics covered later in this part) shifts toward its higher harmonics (the *Waves & Interference* lesson).
 
 ### Intensity and the Inverse-Square Law
 
@@ -178,7 +178,7 @@ The physics maps onto perception:
 | intensity | **loudness**: roughly logarithmic, which is why the decibel scale fits hearing |
 | mix of harmonics | **timbre**: the quality that distinguishes instruments |
 
-A violin and a flute playing the same note share the same fundamental frequency, so they have the same pitch. They sound different because each adds a different blend of **overtones**, the harmonics above the fundamental (the *Interference & Standing Waves* lesson).
+A violin and a flute playing the same note share the same fundamental frequency, so they have the same pitch. They sound different because each adds a different blend of **overtones**, the harmonics above the fundamental (the *Waves & Interference* lesson).
 
 - **Human hearing spans about $20\\;\\text{Hz}$ to $20\\;\\text{kHz}$.** The upper limit falls with age and noise exposure, so high frequencies are lost first. Sensitivity peaks around $2$ to $5\\;\\text{kHz}$, helped by the ear canal's resonance.
 - **Infrasound** lies below $20\\;\\text{Hz}$ (elephant and whale calls, earthquakes). **Ultrasound** lies above $20\\;\\text{kHz}$: bats and dolphins use it to echolocate, and medical imaging uses 1 to 20 MHz.

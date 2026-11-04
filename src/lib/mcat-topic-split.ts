@@ -23,7 +23,6 @@ export const MCAT_SPLIT_TOPICS: Record<string, readonly string[]> = {
   'mcat-physics-mechanics-fluids-waves-mcat': [
     'mcat-physics-mechanics-fluids-mcat',
     'mcat-physics-mechanics-fluid-dynamics-mcat',
-    'mcat-physics-waves-periodic-motion-mcat',
     'mcat-physics-waves-interference-mcat',
     'mcat-physics-waves-sound-mcat',
   ],
@@ -37,8 +36,7 @@ export const MCAT_SPLIT_TITLES: Record<string, string> = {
   'mcat-physics-electricity-rc-circuits-mcat': 'Circuits Part 4: Capacitor Networks & Bioelectricity',
   'mcat-physics-mechanics-fluids-mcat': 'Fluids at Rest',
   'mcat-physics-mechanics-fluid-dynamics-mcat': 'Fluids in Motion',
-  'mcat-physics-waves-periodic-motion-mcat': 'Periodic Motion & Waves',
-  'mcat-physics-waves-interference-mcat': 'Interference & Standing Waves',
+  'mcat-physics-waves-interference-mcat': 'Waves & Interference',
   'mcat-physics-waves-sound-mcat': 'Sound, Doppler & Ultrasound',
 }
 

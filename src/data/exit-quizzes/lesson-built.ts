@@ -123,7 +123,6 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-physics-electricity-kirchhoff-power-mcat',
   'mcat-physics-electricity-rc-circuits-mcat',
   'mcat-physics-mechanics-fluid-dynamics-mcat',
-  'mcat-physics-waves-periodic-motion-mcat',
   'mcat-physics-waves-interference-mcat',
 ] as const
 

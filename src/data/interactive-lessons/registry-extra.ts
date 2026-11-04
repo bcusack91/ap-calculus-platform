@@ -3182,16 +3182,11 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Viscosity, Poiseuille & Blood Flow', loader: () => import('./mcat-mcat-physics-mechanics-fluid-dynamics-mcat').then((m) => m.parts[1]) },
     ],
   },
-  'mcat-physics-waves-periodic-motion-mcat': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Periodic Motion & Wave Basics', loader: () => import('./mcat-mcat-physics-waves-periodic-motion-mcat').then((m) => m.parts[0]) },
-    ],
-  },
   'mcat-physics-waves-interference-mcat': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Superposition, Interference & Standing Waves', loader: () => import('./mcat-mcat-physics-waves-interference-mcat').then((m) => m.parts[0]) },
+      { title: 'Periodic Motion & Wave Basics', loader: () => import('./mcat-mcat-physics-waves-interference-mcat').then((m) => m.parts[0]) },
+      { title: 'Superposition, Interference & Standing Waves', loader: () => import('./mcat-mcat-physics-waves-interference-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-physics-waves-sound-mcat': {

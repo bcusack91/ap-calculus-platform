@@ -97,31 +97,18 @@ Viscous flow obeys Poiseuille's law: flow scales with $r^4$, so small changes in
 - Narrower means faster means lower pressure (ideal flow).
 - Halving a vessel's radius cuts flow 16-fold (viscous flow).`,
   },
-  'mcat-physics-waves-periodic-motion-mcat': {
-    description: 'Period and frequency, simple harmonic motion, and wave speed',
-    textContent: `# Periodic Motion & Waves
+  'mcat-physics-waves-interference-mcat': {
+    description: 'Periodic motion, simple harmonic motion, wave speed, superposition, beats, standing waves, and resonance',
+    textContent: `# Waves & Interference
 
-## Periodic Motion
-Period and frequency are reciprocals, $f = 1/T$. A mass on a spring has $T = 2\\pi\\sqrt{m/k}$ and a pendulum $T = 2\\pi\\sqrt{L/g}$; neither depends on the amplitude.
+## Periodic Motion and Waves
+Period and frequency are reciprocals, $f = 1/T$. A mass on a spring has $T = 2\\pi\\sqrt{m/k}$ and a pendulum $T = 2\\pi\\sqrt{L/g}$; neither depends on the amplitude. Every wave obeys $v = f\\lambda$: the medium sets the speed, the source sets the frequency.
 
-## Waves
-Every wave obeys $v = f\\lambda$. The medium sets the speed, the source sets the frequency, and the frequency stays the same when a wave crosses into a new medium. Sound is longitudinal and travels fastest in solids.
+## Interference and Standing Waves
+Overlapping waves add. A path difference of a whole number of wavelengths interferes constructively; an odd number of half-wavelengths, destructively. Two close frequencies beat at $|f_1 - f_2|$. A string fixed at both ends, or a pipe open at both ends, supports every harmonic, $f_n = nv/2L$; a pipe closed at one end supports only odd harmonics, $f_n = nv/4L$.
 
 ## Key Takeaways
 - Medium sets speed; source sets frequency.
-- Amplitude does not change a spring's or a pendulum's period.`,
-  },
-  'mcat-physics-waves-interference-mcat': {
-    description: 'Superposition, beats, standing waves in strings and pipes, and resonance',
-    textContent: `# Interference & Standing Waves
-
-## Superposition
-Overlapping waves add. A path difference of a whole number of wavelengths interferes constructively; an odd number of half-wavelengths, destructively. Two close frequencies beat at $|f_1 - f_2|$.
-
-## Standing Waves
-A string fixed at both ends, or a pipe open at both ends, supports every harmonic, $f_n = nv/2L$; a pipe closed at one end supports only odd harmonics, $f_n = nv/4L$. Driving a system at its natural frequency makes it resonate.
-
-## Key Takeaways
 - Path difference, in wavelengths, decides the interference.
 - Closed-end pipes: odd harmonics only.`,
   },

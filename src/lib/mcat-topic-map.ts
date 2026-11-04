@@ -106,7 +106,6 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   // Its successors (Nov 2026) are the bank's own subtopics.
   'mcat-physics-mechanics-fluids-mcat': ['mcat-physics-mechanics-fluids-mcat'],
   'mcat-physics-mechanics-fluid-dynamics-mcat': ['mcat-physics-mechanics-fluids-mcat'],
-  'mcat-physics-waves-periodic-motion-mcat': ['mcat-physics-waves-sound-mcat'],
   'mcat-physics-waves-interference-mcat': ['mcat-physics-waves-sound-mcat'],
   'mcat-physics-waves-sound-mcat': ['mcat-physics-waves-sound-mcat'],
   'mcat-physics-electricity-mcat': ['mcat-physics-electricity-electrostatics-mcat'],

@@ -76,7 +76,6 @@ const PART_MOVES: { from: string; to: string }[] = [
   { from: 'mcat-physics-electricity-dc-circuits-mcat', to: 'mcat-physics-electricity-kirchhoff-power-mcat' },
   { from: 'mcat-physics-electricity-emf-capacitors-mcat', to: 'mcat-physics-electricity-rc-circuits-mcat' },
   { from: 'mcat-physics-mechanics-fluids-mcat', to: 'mcat-physics-mechanics-fluid-dynamics-mcat' },
-  { from: 'mcat-physics-waves-sound-mcat', to: 'mcat-physics-waves-periodic-motion-mcat' },
   { from: 'mcat-physics-waves-sound-mcat', to: 'mcat-physics-waves-interference-mcat' },
 ]
 

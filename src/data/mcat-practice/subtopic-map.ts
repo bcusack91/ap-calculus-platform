@@ -73,10 +73,8 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
     // Fluids & Waves is five lessons (Nov 2026); specific vocabulary first.
     { slug: 'mcat-physics-waves-sound-mcat', title: 'Sound, Doppler & Ultrasound',
       pattern: /decibel|doppler|ultrasound|sound intensity|intensity level|loudness|sonic boom|shock wave|\becho/i },
-    { slug: 'mcat-physics-waves-interference-mcat', title: 'Interference & Standing Waves',
-      pattern: /standing wave|harmonic|overtone|resonan|beat frequenc|\bbeats\b|\bnodes?\b|antinode|closed (pipe|tube)|open (pipe|tube)|superposition/i },
-    { slug: 'mcat-physics-waves-periodic-motion-mcat', title: 'Periodic Motion & Waves',
-      pattern: /wavelength|sound|pendulum|oscillat|simple harmonic|spring constant|period of|transverse|longitudinal/i },
+    { slug: 'mcat-physics-waves-interference-mcat', title: 'Waves & Interference',
+      pattern: /standing wave|harmonic|overtone|resonan|beat frequenc|\bbeats\b|\bnodes?\b|antinode|closed (pipe|tube)|open (pipe|tube)|superposition|wavelength|sound|pendulum|oscillat|simple harmonic|spring constant|period of|transverse|longitudinal/i },
     { slug: 'mcat-physics-mechanics-fluid-dynamics-mcat', title: 'Fluids in Motion',
       pattern: /bernoulli|continuity equation|flow rate|viscos|poiseuille|turbulen|laminar|venturi|torricelli|stenosis/i },
     { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids at Rest',

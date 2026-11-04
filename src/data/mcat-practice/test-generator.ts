@@ -151,7 +151,6 @@ export const MCAT_SECTIONS: MCATSection[] = [
       'mcat-physics-mechanics-momentum-collisions-mcat',
       'mcat-physics-mechanics-fluids-mcat',
       'mcat-physics-mechanics-fluid-dynamics-mcat',
-      'mcat-physics-waves-periodic-motion-mcat',
       'mcat-physics-waves-interference-mcat',
       'mcat-physics-waves-sound-mcat',
       'mcat-physics-electricity-electrostatics-mcat',

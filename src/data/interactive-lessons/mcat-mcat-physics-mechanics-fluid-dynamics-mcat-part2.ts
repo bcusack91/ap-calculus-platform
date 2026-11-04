@@ -223,7 +223,7 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 - the critical Reynolds number (about 2000); the Korotkoff name; airway resistance peaking in the medium bronchi; the Fåhræus–Lindqvist effect.
 <!-- /yield -->
 
-**Next up:** the *Periodic Motion & Waves* lesson, which covers oscillations, simple harmonic motion and the basics of waves, including $v = f\\lambda$.`
+**Next up:** the *Waves & Interference* lesson, which covers oscillations, simple harmonic motion, wave basics, interference and standing waves, including $v = f\\lambda$.`
     }
   ]
 }

@@ -48,8 +48,7 @@ const mcatSubtopics: ParentSeed[] = [
       // the old 'mcat-physics-mechanics-fluids-waves-mcat' row is retired.
       { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids at Rest', description: 'Density, hydrostatic pressure, Pascal\'s principle, buoyancy, and surface tension' },
       { slug: 'mcat-physics-mechanics-fluid-dynamics-mcat', title: 'Fluids in Motion', description: 'Continuity, Bernoulli, viscosity, Poiseuille flow, and blood flow' },
-      { slug: 'mcat-physics-waves-periodic-motion-mcat', title: 'Periodic Motion & Waves', description: 'Period and frequency, simple harmonic motion, and wave speed' },
-      { slug: 'mcat-physics-waves-interference-mcat', title: 'Interference & Standing Waves', description: 'Superposition, beats, standing waves in strings and pipes, and resonance' },
+      { slug: 'mcat-physics-waves-interference-mcat', title: 'Waves & Interference', description: 'Periodic motion, simple harmonic motion, wave speed, superposition, beats, standing waves, and resonance' },
       { slug: 'mcat-physics-waves-sound-mcat', title: 'Sound, Doppler & Ultrasound', description: 'Sound intensity and decibels, the Doppler effect, ultrasound, and shock waves' }
     ]
   },

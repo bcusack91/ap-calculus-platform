@@ -3484,16 +3484,10 @@
     ]
   },
   {
-    "slug": "mcat-physics-waves-periodic-motion-mcat",
-    "importPath": "./mcat-mcat-physics-waves-periodic-motion-mcat",
-    "partTitles": [
-      "Periodic Motion & Wave Basics"
-    ]
-  },
-  {
     "slug": "mcat-physics-waves-interference-mcat",
     "importPath": "./mcat-mcat-physics-waves-interference-mcat",
     "partTitles": [
+      "Periodic Motion & Wave Basics",
       "Superposition, Interference & Standing Waves"
     ]
   },
