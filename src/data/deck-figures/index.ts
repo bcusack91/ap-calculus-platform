@@ -60,6 +60,7 @@ import { mcatElectrostaticsFigures } from './mcat-cp-electrostatics'
 import { mcatDcCircuitsFigures, mcatEmfCapacitorsFigures } from './mcat-cp-circuits'
 import { mcatDcCircuitsExtraFigures } from './mcat-cp-dc-circuits'
 import { circuits1Loops } from './mcat-cp-circuits1-loops'
+import { circuits2Loops } from './mcat-cp-circuits2-loops'
 import { mcatEmfCapacitorsExtraFigures } from './mcat-cp-emf-capacitors'
 import { mcatMagnetismFigures } from './mcat-cp-magnetism'
 import { mcatOpticsFigures } from './mcat-cp-optics'
@@ -270,7 +271,7 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
   'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
   'mcat-physics-electricity-dc-circuits-mcat': withSlideLoops(figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, false), 'circuits-1', circuits1Loops),
-  'mcat-physics-electricity-kirchhoff-power-mcat': figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, true),
+  'mcat-physics-electricity-kirchhoff-power-mcat': withSlideLoops(figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, true), 'circuits-2', circuits2Loops),
   'mcat-physics-electricity-emf-capacitors-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, false),
   'mcat-physics-electricity-rc-circuits-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, true),
   'mcat-physics-electricity-magnetism-mcat': figuresAt(mcatMagnetismFigures, INDUCTION_AT, false),
