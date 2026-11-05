@@ -3,6 +3,9 @@ import { filterSectionsForYield, stripLowYield } from '@/lib/lesson-yield'
 import { generateExitQuiz } from '@/data/exit-quizzes'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { bestSegment, termsOf } from '@/lib/text-terms'
+import type { SlideVideo } from '@/lib/slide-video'
+export type { SlideVideo } from '@/lib/slide-video'
+export { slideVideoProblems } from '@/lib/slide-video'
 
 /**
  * Auto-generated in-class slide decks (owner spec, Aug 2026: ~25 slides ≈ one
@@ -26,8 +29,12 @@ import { bestSegment, termsOf } from '@/lib/text-terms'
  * before circuits had been introduced.
  */
 
-/** A hand-drawn inline SVG on a slide (same shape and rules as a lesson figure; gated by isSafeSvg at render). */
-export type SlideFigure = { svg: string; alt: string; caption?: string }
+/**
+ * A slide's picture: a hand-drawn inline SVG (same shape and rules as a lesson
+ * figure; gated by isSafeSvg at render), or a looping `video`. When `video` is
+ * set it is shown instead, and `svg` (may be empty) is only a fallback.
+ */
+export type SlideFigure = { svg: string; alt: string; caption?: string; video?: SlideVideo }
 
 export type Slide =
   | { kind: 'title'; title: string; subtitle: string }

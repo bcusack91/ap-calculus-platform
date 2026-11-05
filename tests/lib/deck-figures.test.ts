@@ -6,7 +6,10 @@
 import { describe, it, expect } from 'vitest'
 import { applyDeckFigures, deckLimits, pollsInsideUnits, segmentContent, slideUnitKey, type Slide, type SlideFigure } from '@/lib/slide-deck'
 import { figureProblems } from '@/lib/lesson-figure'
-import { DECK_FIGURES } from '@/data/deck-figures'
+import { DECK_FIGURES, withSlideLoops } from '@/data/deck-figures'
+import { slideVideoProblems } from '@/lib/slide-video'
+import { existsSync } from 'fs'
+import { join } from 'path'
 
 const fig: SlideFigure = { svg: '<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="2" fill="currentColor"/></svg>', alt: 'a dot' }
 const c = (title: string, blocks: string[] = ['x']): Extract<Slide, { kind: 'content' }> => ({ kind: 'content', title, blocks })
@@ -20,7 +23,15 @@ describe('authored deck figures', () => {
       const placements = DECK_FIGURES[topic]
       expect(placements.length, topic).toBeGreaterThan(0)
       for (const p of placements) {
-        expect(figureProblems(p.figure), `${topic}: ${p.at}`).toEqual([])
+        if (p.figure.video) {
+          // A looping animation: same-site files that exist, plus real alt text.
+          expect(slideVideoProblems(p.figure.video), `${topic}: ${p.at}`).toEqual([])
+          for (const f of [p.figure.video.src, p.figure.video.poster]) expect(existsSync(join(process.cwd(), 'public', f)), `${topic}: ${f} missing`).toBe(true)
+          expect(p.figure.alt.trim().length, `${topic}: ${p.at} alt`).toBeGreaterThanOrEqual(10)
+          if (p.figure.svg) expect(figureProblems(p.figure), `${topic}: ${p.at}`).toEqual([])
+        } else {
+          expect(figureProblems(p.figure), `${topic}: ${p.at}`).toEqual([])
+        }
         expect(p.at.trim().length).toBeGreaterThan(3)
         for (const b of p.blocks ?? []) expect(b.length, `${p.at} block`).toBeLessThan(200)
       }
@@ -85,5 +96,29 @@ describe('deckLimits', () => {
     expect(deckLimits(false, 4, 500)).toMatchObject({ maxSlides: 112, maxPolls: 16 })
     expect(deckLimits(false, 1, 90)).toMatchObject({ maxSlides: 28, maxPolls: 8 })
     expect(deckLimits(true, 7, 100)).toMatchObject({ maxSlides: 152, maxPolls: 16 })
+  })
+})
+
+describe('slide loop animations', () => {
+  it('only same-site /slide-media files pass', () => {
+    expect(slideVideoProblems({ src: '/slide-media/circuits-1/a-b.mp4', poster: '/slide-media/circuits-1/a-b.jpg' })).toEqual([])
+    expect(slideVideoProblems({ src: 'https://evil.example/x.mp4', poster: '/slide-media/c/x.jpg' })).toHaveLength(1)
+    expect(slideVideoProblems({ src: '/slide-media/../x.mp4', poster: '/slide-media/c/x.jpg' })).toHaveLength(1)
+    expect(slideVideoProblems({ src: '/slide-media/c/x.jpg', poster: '/slide-media/c/x.mp4' })).toHaveLength(2)
+  })
+
+  it('attaches to a drawn figure or adds a lead slide', () => {
+    const drawn = [{ at: 'Ohmic vs. Non-Ohmic', mode: 'replace' as const, figure: fig, blocks: ['- line'] }]
+    const out = withSlideLoops(drawn, 'circuits-1', [
+      { at: 'ohmic vs. non-ohmic', name: 'iv', alt: 'a dot traces the curve' },
+      { at: 'Short Circuits', name: 'short', alt: 'a wire shorts bulb one', caption: 'cap' },
+    ])
+    expect(out).toHaveLength(2)
+    expect(out[0].mode).toBe('replace')
+    expect(out[0].blocks).toEqual(['- line'])
+    expect(out[0].figure.svg).toBe(fig.svg)
+    expect(out[0].figure.video).toEqual({ src: '/slide-media/circuits-1/iv.mp4', poster: '/slide-media/circuits-1/iv.jpg' })
+    expect(out[1]).toMatchObject({ at: 'Short Circuits', mode: 'lead', blocks: [], figure: { svg: '', caption: 'cap' } })
+    expect(drawn[0].figure.video).toBeUndefined() // input not mutated
   })
 })

@@ -1,10 +1,11 @@
 'use client'
 
-import { useLayoutEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { MathText } from '@/components/MathText'
 import { STAGE_H, STAGE_W, fitStepDown, MIN_FIT, stageScale } from '@/lib/slide-stage'
 import { FIGURE_THEME_CLASSES, isSafeSvg } from '@/lib/lesson-figure'
 import type { SlideFigure } from '@/lib/slide-deck'
+import { isSafeSlideVideo, type SlideVideo } from '@/lib/slide-video'
 
 /**
  * Shared visual language for slide decks — used by the live presentation
@@ -266,11 +267,89 @@ export function TitleSlideView({ title, subtitle, palette }: { title: string; su
  * full size. An SVG that fails isSafeSvg shows its alt text so the slide is
  * never blank.
  */
+/**
+ * A looping slide animation (src/lib/slide-video.ts): muted, inline, looping,
+ * and playing only while it is on screen (the teacher library renders every
+ * slide at once). It honours prefers-reduced-motion and blocked autoplay by
+ * waiting on a play button; a click pauses or resumes it on that screen only.
+ * Sized like a full-width figure (1600 × 736 frames, the 23.75em height cap)
+ * so stage fitting treats it exactly like a drawing.
+ */
+function SlideLoopVideo({ video, alt, side }: { video: SlideVideo; alt: string; side: boolean }) {
+  const ref = useRef<HTMLVideoElement>(null)
+  // Mirrors the element's own play/pause events, so the play button shows
+  // whenever playback is stopped (reduced motion, blocked autoplay, a click).
+  const [paused, setPaused] = useState(false)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    el.muted = true // React does not reflect `muted` into server HTML; autoplay needs it set
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      el.pause()
+      return
+    }
+    const play = () => {
+      el.play().catch(() => el.pause())
+    }
+    if (typeof IntersectionObserver === 'undefined') {
+      play()
+      return
+    }
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry?.isIntersecting) play()
+      else el.pause()
+    }, { threshold: 0.4 })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [video.src])
+  const toggle = () => {
+    const el = ref.current
+    if (!el) return
+    if (el.paused) el.play().catch(() => el.pause())
+    else el.pause()
+  }
+  return (
+    <div
+      className="relative mx-auto w-full overflow-hidden rounded-2xl border border-gray-200 bg-[#0b1020] dark:border-gray-700"
+      style={{ aspectRatio: '1600 / 736', maxWidth: side ? '67.9em' : '51.6em' }}
+    >
+      <video
+        ref={ref}
+        data-testid="slide-figure-video"
+        src={video.src}
+        poster={video.poster}
+        aria-label={alt}
+        muted
+        loop
+        playsInline
+        autoPlay
+        preload="auto"
+        onClick={toggle}
+        onPlay={() => setPaused(false)}
+        onPause={() => setPaused(true)}
+        className="block h-full w-full cursor-pointer object-contain"
+      />
+      {paused && (
+        <button
+          type="button"
+          onClick={toggle}
+          aria-label="Play animation"
+          className="absolute inset-0 m-auto flex h-[4em] w-[4em] items-center justify-center rounded-full bg-black/55 text-[1.5em] text-white shadow-lg ring-2 ring-white/70 hover:bg-black/70 focus-visible:outline-none focus-visible:ring-4"
+        >
+          <span aria-hidden="true" className="ml-[0.15em]">▶</span>
+        </button>
+      )}
+    </div>
+  )
+}
+
 function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean }) {
   const alt = typeof figure.alt === 'string' ? figure.alt : ''
   return (
     <figure className="m-0 flex w-full flex-col items-center gap-3">
-      {isSafeSvg(figure.svg) ? (
+      {figure.video && isSafeSlideVideo(figure.video) ? (
+        <SlideLoopVideo video={figure.video} alt={alt} side={side} />
+      ) : isSafeSvg(figure.svg) ? (
         <div
           role="img"
           aria-label={alt}

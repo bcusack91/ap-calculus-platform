@@ -59,6 +59,7 @@ import { mcatMechanicsFigures } from './mcat-cp-mechanics'
 import { mcatElectrostaticsFigures } from './mcat-cp-electrostatics'
 import { mcatDcCircuitsFigures, mcatEmfCapacitorsFigures } from './mcat-cp-circuits'
 import { mcatDcCircuitsExtraFigures } from './mcat-cp-dc-circuits'
+import { circuits1Loops } from './mcat-cp-circuits1-loops'
 import { mcatEmfCapacitorsExtraFigures } from './mcat-cp-emf-capacitors'
 import { mcatMagnetismFigures } from './mcat-cp-magnetism'
 import { mcatOpticsFigures } from './mcat-cp-optics'
@@ -131,6 +132,44 @@ export interface DeckFigurePlacement {
   mode?: 'lead' | 'after' | 'replace' | 'replace-table' | 'beside'
   /** Short lines shown with the figure (see each mode). Same block syntax as deck slides. */
   blocks?: string[]
+}
+
+/**
+ * A looping slide animation for one section (Nov 2026; src/lib/slide-video.ts).
+ * Files live in public/slide-media/<folder>/<name>.mp4 + .jpg (poster).
+ * If the section already has a drawn figure, the animation plays in its place
+ * (the drawing stays as the fallback, and `alt`/`caption`/`mode`/`blocks`
+ * override the figure's only when given). Otherwise it becomes a new figure
+ * placement (default mode 'lead': a full-width animation slide in front of
+ * the section).
+ */
+export interface SlideLoop {
+  at: string
+  name: string
+  alt: string
+  caption?: string
+  mode?: DeckFigurePlacement['mode']
+  blocks?: string[]
+}
+
+export function withSlideLoops(placements: DeckFigurePlacement[], folder: string, loops: readonly SlideLoop[]): DeckFigurePlacement[] {
+  const out = placements.map((p) => ({ ...p }))
+  for (const loop of loops) {
+    const video = { src: `/slide-media/${folder}/${loop.name}.mp4`, poster: `/slide-media/${folder}/${loop.name}.jpg` }
+    const i = out.findIndex((p) => p.at.trim().toLowerCase() === loop.at.trim().toLowerCase())
+    if (i >= 0) {
+      const p = out[i]
+      out[i] = {
+        ...p,
+        mode: loop.mode ?? p.mode,
+        blocks: loop.blocks ?? p.blocks,
+        figure: { ...p.figure, alt: loop.alt, caption: loop.caption ?? p.figure.caption, video },
+      }
+    } else {
+      out.push({ at: loop.at, mode: loop.mode ?? 'lead', blocks: loop.blocks ?? [], figure: { svg: '', alt: loop.alt, caption: loop.caption, video } })
+    }
+  }
+  return out
 }
 
 /**
@@ -228,7 +267,7 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-waves-sound-mcat': figuresAt(figuresAt(WS_ALL, PERIODIC_AT, false), INTERFERENCE_AT, false),
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
   'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
-  'mcat-physics-electricity-dc-circuits-mcat': figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, false),
+  'mcat-physics-electricity-dc-circuits-mcat': withSlideLoops(figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, false), 'circuits-1', circuits1Loops),
   'mcat-physics-electricity-kirchhoff-power-mcat': figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, true),
   'mcat-physics-electricity-emf-capacitors-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, false),
   'mcat-physics-electricity-rc-circuits-mcat': figuresAt(EC_ALL, RC_CIRCUITS_AT, true),
