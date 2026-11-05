@@ -33,6 +33,33 @@ export const VIDEO_SHORT_LINKS: Record<string, VideoShortLink> = {
   ohm2: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 6, campaign: 'mcat-circuits1' },
   series1: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 7, campaign: 'mcat-circuits1' },
   series2: { topicSlug: 'mcat-physics-electricity-dc-circuits-mcat', clip: 8, campaign: 'mcat-circuits1' },
+  // MCAT · Circuits Part 2: Kirchhoff's Rules & Power — concept clip <topic>1, worked-examples clip <topic>2
+  loop1: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 1, campaign: 'mcat-circuits2' },
+  loop2: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 2, campaign: 'mcat-circuits2' },
+  divider1: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 3, campaign: 'mcat-circuits2' },
+  divider2: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 4, campaign: 'mcat-circuits2' },
+  power1: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 5, campaign: 'mcat-circuits2' },
+  power2: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 6, campaign: 'mcat-circuits2' },
+  bulb1: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 7, campaign: 'mcat-circuits2' },
+  bulb2: { topicSlug: 'mcat-physics-electricity-kirchhoff-power-mcat', clip: 8, campaign: 'mcat-circuits2' },
+  // MCAT · Circuits Part 3: EMF & Capacitance — concept clip <topic>1, worked-examples clip <topic>2
+  emf1: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 1, campaign: 'mcat-circuits3' },
+  emf2: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 2, campaign: 'mcat-circuits3' },
+  meter1: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 3, campaign: 'mcat-circuits3' },
+  meter2: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 4, campaign: 'mcat-circuits3' },
+  cap1: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 5, campaign: 'mcat-circuits3' },
+  cap2: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 6, campaign: 'mcat-circuits3' },
+  energy1: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 7, campaign: 'mcat-circuits3' },
+  energy2: { topicSlug: 'mcat-physics-electricity-emf-capacitors-mcat', clip: 8, campaign: 'mcat-circuits3' },
+  // MCAT · Circuits Part 4: Capacitor Networks & Bioelectricity — concept clip <topic>1, worked-examples clip <topic>2
+  capnet1: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 1, campaign: 'mcat-circuits4' },
+  capnet2: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 2, campaign: 'mcat-circuits4' },
+  tau1: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 3, campaign: 'mcat-circuits4' },
+  tau2: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 4, campaign: 'mcat-circuits4' },
+  membrane1: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 5, campaign: 'mcat-circuits4' },
+  membrane2: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 6, campaign: 'mcat-circuits4' },
+  defib1: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 7, campaign: 'mcat-circuits4' },
+  defib2: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 8, campaign: 'mcat-circuits4' },
 }
 
 export function lookupShortLink(code: string): (VideoShortLink & { code: string }) | null {

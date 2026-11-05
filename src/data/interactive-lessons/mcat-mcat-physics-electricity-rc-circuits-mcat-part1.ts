@@ -10,7 +10,7 @@ export const rcCircuitsMcatPart1: LessonData = {
 
 **Part 1 of 2 — Capacitor Networks & RC Circuits**
 
-**Where this fits.** The *Circuits Part 3: EMF & Capacitance* lesson introduced the single capacitor: $C = Q/V$, dielectrics and stored energy. This final Circuits lesson wires capacitors into networks and RC circuits, then reads the cell membrane, myelin and the defibrillator as circuits and closes with passage strategy. Next comes the *Magnetism & Electromagnetic Induction* lesson.
+**Where this fits.** The *Circuits Part 3: EMF & Capacitance* lesson introduced the single capacitor: $C = Q/V$, dielectrics and stored energy. This final Circuits lesson wires capacitors into networks and RC circuits, then reads the cell membrane, myelin and the defibrillator as circuits and closes with passage strategy. Next comes the *Magnetism Part 1: Fields & Forces on Charges* lesson.
 
 ### Capacitor Networks
 

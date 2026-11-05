@@ -226,7 +226,7 @@ $$P_{\\text{deliver}} \\approx \\frac{200\\;\\text{J}}{1.0 \\times 10^{-2}\\;\\t
 - **Bioelectricity** (Part 2 of this lesson): the membrane is an RC circuit, myelin is capacitors in series, and a defibrillator charges slowly and discharges fast.
 - **Network rules:** whenever a capacitor problem reduces to a resistor network (steady state, $t = 0$), the series/parallel rules come from the *Circuits Part 1: Current & Resistance* lesson and the Kirchhoff and power tools from the *Circuits Part 2: Kirchhoff's Rules & Power* lesson. If any network step felt shaky, review them there before the exit quiz.
 
-**Next up:** the *Magnetism & Electromagnetic Induction* lesson.`
+**Next up:** the *Magnetism Part 1: Fields & Forces on Charges* lesson.`
     }
   ]
 }

@@ -96,7 +96,7 @@ Rule of thumb: series for more voltage, parallel for more current capacity at th
 
 What goes wrong when they are swapped:
 
-- **Ammeter wired in parallel** across an element: its near-zero resistance is a short circuit. Almost all the current detours through the meter, the element goes dark (nearly $0\\;\\text{V}$ across it), and the surge can blow the meter's fuse.
+- **Ammeter wired in parallel** across an element: its near-zero resistance is a short circuit. Almost all the current detours through the meter, the element goes dark (nearly $0\\;\\text{V}$ across it, because the drop moves to the battery's internal resistance and anything else in series), and the surge can blow the meter's fuse.
 - **Voltmeter wired in series**: its enormous resistance chokes the current to nearly zero. Every other element goes dark, and the meter reads nearly the full EMF, because almost the whole drop is now across the meter itself.
 
 Real meters are not ideal: a voltmeter's finite resistance in parallel slightly lowers the combined resistance, so it reads a little low; an ammeter's small series resistance slightly lowers the current it is measuring.
@@ -171,7 +171,7 @@ Check with the loop: $I = \\varepsilon / (R + r) = 9.0 / 4.5 = 2.0\\;\\text{A}$.
             options: [`The lamp brightens because the meter adds a second current path`, `The current nearly stops because the meter blocks the circuit`, `The meter reads the lamp's current, but slightly low`, `The lamp goes dark as a large current bypasses it through the meter`],
             correctAnswer: 3,
             yield: 'HIGH',
-            explanation: `An ammeter has nearly zero resistance, so in parallel it shorts out the lamp: almost all the current takes the meter path, the lamp's voltage falls to nearly zero, and the large current may blow the meter's fuse. Choking the current to nearly zero is what a high-resistance VOLTMETER does when it is wrongly placed in series.`
+            explanation: `An ammeter has nearly zero resistance, so in parallel it shorts out the lamp: almost all the current takes the meter path, the lamp's voltage falls to nearly zero (the drop moves to the battery's internal resistance and any other series resistance), and the large current may blow the meter's fuse. Choking the current to nearly zero is what a high-resistance VOLTMETER does when it is wrongly placed in series.`
           },
           {
             question: `A voltmeter is accidentally connected in series with a $100\\;\\Omega$ resistor across a $9.0\\;\\text{V}$ battery of negligible internal resistance. What does the voltmeter read?`,

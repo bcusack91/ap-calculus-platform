@@ -9,6 +9,9 @@ import type { ShotList } from './types'
 const SHOT_LISTS: Record<string, () => Promise<ShotList>> = {
   'types-of-chemical-bonds': () => import('./ap-chemistry/types-of-chemical-bonds').then((m) => m.shotList),
   'mcat-physics-electricity-dc-circuits-mcat': () => import('./mcat-prep/mcat-physics-electricity-dc-circuits-mcat').then((m) => m.shotList),
+  'mcat-physics-electricity-kirchhoff-power-mcat': () => import('./mcat-prep/mcat-physics-electricity-kirchhoff-power-mcat').then((m) => m.shotList),
+  'mcat-physics-electricity-emf-capacitors-mcat': () => import('./mcat-prep/mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.shotList),
+  'mcat-physics-electricity-rc-circuits-mcat': () => import('./mcat-prep/mcat-physics-electricity-rc-circuits-mcat').then((m) => m.shotList),
 }
 
 export function hasShotList(topicSlug: string): boolean {
