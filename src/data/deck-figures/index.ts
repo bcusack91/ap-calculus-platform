@@ -150,13 +150,15 @@ export interface SlideLoop {
   caption?: string
   mode?: DeckFigurePlacement['mode']
   blocks?: string[]
+  /** Always a NEW placement, even when the section already has a figure (e.g. a second animation 'after' it). */
+  add?: boolean
 }
 
 export function withSlideLoops(placements: DeckFigurePlacement[], folder: string, loops: readonly SlideLoop[]): DeckFigurePlacement[] {
   const out = placements.map((p) => ({ ...p }))
   for (const loop of loops) {
     const video = { src: `/slide-media/${folder}/${loop.name}.mp4`, poster: `/slide-media/${folder}/${loop.name}.jpg` }
-    const i = out.findIndex((p) => p.at.trim().toLowerCase() === loop.at.trim().toLowerCase())
+    const i = loop.add ? -1 : out.findIndex((p) => p.at.trim().toLowerCase() === loop.at.trim().toLowerCase())
     if (i >= 0) {
       const p = out[i]
       out[i] = {

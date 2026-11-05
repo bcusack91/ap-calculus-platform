@@ -120,5 +120,9 @@ describe('slide loop animations', () => {
     expect(out[0].figure.video).toEqual({ src: '/slide-media/circuits-1/iv.mp4', poster: '/slide-media/circuits-1/iv.jpg' })
     expect(out[1]).toMatchObject({ at: 'Short Circuits', mode: 'lead', blocks: [], figure: { svg: '', caption: 'cap' } })
     expect(drawn[0].figure.video).toBeUndefined() // input not mutated
+    const added = withSlideLoops(drawn, 'circuits-1', [{ at: 'Ohmic vs. Non-Ohmic', name: 'heat', alt: 'a second animation here', mode: 'after', add: true }])
+    expect(added).toHaveLength(2)
+    expect(added[0].figure.video).toBeUndefined()
+    expect(added[1]).toMatchObject({ at: 'Ohmic vs. Non-Ohmic', mode: 'after', figure: { video: { src: '/slide-media/circuits-1/heat.mp4' } } })
   })
 })

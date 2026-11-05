@@ -32,6 +32,15 @@ export const circuits1Loops: SlideLoop[] = [
     alt: 'Left, a metal: electrons drift left past fixed ion cores while current points right. Right, saline between electrodes: Na+ drifts toward the negative electrode and Cl- toward the positive, and their contributions join into one current arrow.',
   },
   {
+    // Second animation for the section, behind its table (the Heating row).
+    at: 'Metallic vs. Electrolytic Conduction',
+    name: 'circ1-heating',
+    mode: 'after',
+    add: true,
+    alt: 'A thermometer rises and falls between two panels: in a metal the vibrating lattice scatters drifting electrons more as it heats, so resistivity rises and conductivity falls; in saline the ions move faster as it warms, so conductivity rises.',
+    caption: 'Heat both: the hotter metal lattice scatters electrons, so $\\sigma$ FALLS; warmer ions move faster through the solution, so $\\sigma$ RISES.',
+  },
+  {
     at: 'Voltage — Energy per Charge',
     name: 'circ1-energy-staircase',
     alt: 'A positive charge laps a 9 V loop with two resistors while a potential-versus-position graph traces up 9 V through the battery, flat along wires, down 4 V across R1 and 5 V across R2.',
@@ -60,6 +69,15 @@ export const circuits1Loops: SlideLoop[] = [
     name: 'circ1-wire-stretch',
     alt: 'A wire under R = ρL/A: doubling its length doubles R, doubling its diameter makes the area four times larger and R a quarter, and stretching it to twice the length at constant volume makes R four times larger.',
     caption: '$R = \\rho L/A$: twice the length doubles $R$, twice the diameter quarters it, and stretching to 2× at constant volume makes $R$ four times larger.',
+  },
+  {
+    // Behind the section's "Temperature dependence" paragraph.
+    at: 'Resistivity and Wire Geometry',
+    name: 'circ1-heating',
+    mode: 'after',
+    add: true,
+    alt: 'A thermometer rises and falls: in a metal the vibrating lattice scatters drifting electrons more as it heats, so resistivity rises; in saline the ions move faster, so conductivity rises instead.',
+    caption: 'Metals: resistivity RISES with temperature, because the hotter lattice scatters electrons more often. Electrolytes go the other way.',
   },
   {
     at: 'Ohmic vs. Non-Ohmic',
