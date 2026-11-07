@@ -49,7 +49,7 @@ export default async function VideoLessonPage(props: Props) {
 
   const readHref = hasInteractiveLesson(topic.slug) ? `/topics/${topic.slug}/interactive` : `/topics/${topic.slug}`
   const pickerHref = cards.length > 1 ? `/topics/${topic.slug}/video` : null
-  const steps = studentSteps(lesson.steps)
+  const steps = studentSteps(lesson.steps, lesson.videoTitles)
   // ?clip=N (from a short link in a YouTube video): open that clip's checkpoint.
   const clipParam = typeof sp.clip === 'string' ? Number.parseInt(sp.clip, 10) : NaN
   const focusClip = Number.isInteger(clipParam) && clipParam >= 1 && clipParam <= steps.length ? clipParam : null

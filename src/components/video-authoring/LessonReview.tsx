@@ -8,7 +8,7 @@ import type { LessonStatus } from '@/lib/video-lesson-admin'
 import { btn, card, field, fmtDuration, jsonFetch, label, StatusBadge, YouTubeEmbed } from './ui'
 
 type ReviewClip = { id: string; title: string; providerId: string; durationSec: number; status: string; instructorId: string }
-type ReviewQuestion = { question: string; options: string[]; correctAnswer: number; explanation: string; yield?: 'LOW' }
+type ReviewQuestion = { kind?: 'choice' | 'numeric'; question: string; options?: string[]; correctAnswer?: number; explanation: string; yield?: 'LOW'; parts?: { label: string; prompt: string; expected: string }[] }
 type ReviewStep = { clip: ReviewClip | null; clipId?: string; yield: string | null; questions: ReviewQuestion[] }
 type ReviewData = {
   lesson: {
@@ -159,8 +159,17 @@ export function LessonReview({ lessonId, onBack, onChanged }: { lessonId: string
                     <MathText text={q.question} className="min-w-0 flex-1 text-sm font-medium text-gray-900 dark:text-gray-100" />
                     {q.yield === 'LOW' && <span className="shrink-0 rounded-full bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-600 dark:bg-gray-700 dark:text-gray-300">Low-yield</span>}
                   </div>
+                  {q.kind === 'numeric' && (
+                    <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                      {(q.parts ?? []).map((p) => (
+                        <li key={p.label} className="rounded-lg px-2 py-1">
+                          ({p.label}) <MathText text={p.prompt} inline /> <span className="font-semibold text-green-800 dark:text-green-300">→ {p.expected}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <ul className="space-y-1">
-                    {q.options.map((o, oi) => {
+                    {(q.options ?? []).map((o, oi) => {
                       const correct = oi === q.correctAnswer
                       return (
                         <li

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { ArrowRight, BookOpen, CheckCircle2, Circle, Layers, Lock, PlayCircle, RotateCcw, Users, XCircle } from 'lucide-react'
+import { ArrowRight, BookOpen, CheckCircle2, Circle, Layers, Lock, PlayCircle, RotateCcw, SkipForward, Users, XCircle } from 'lucide-react'
 import VideoPlayer, { type VideoPlayerHandle } from './VideoPlayer'
 import { PreferVideoToggle } from './PreferVideoToggle'
 import { InstructorAvatar } from './InstructorAvatar'
@@ -10,20 +10,30 @@ import { MathText } from '@/components/MathText'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { addPlayback, isClipWatched, mergeRanges, watchedFraction, type WatchRange } from '@/lib/video-watch'
-import type { ProgressSteps, StudentStep } from '@/lib/video-lesson-core'
+import type { ProgressSteps, StudentQuestion, StudentStep } from '@/lib/video-lesson-core'
 
 /**
  * The student video-lesson player (/topics/<slug>/video/<instructor>).
  *
- * Clips play in order. A clip unlocks once the one before it is watched
- * (≥90% of real, contiguous playback; seeking ahead plays but doesn't count)
- * and its checkpoint is answered. Each checkpoint question is graded on the
- * server (the page never has the key); a miss offers a rewatch, never a
- * gate. Watch time is saved about every 15 s while playing and on pause,
- * end, clip change and page hide; the server caps claims by wall time, so
- * saves send only what that budget allows and keep the rest for the next
- * one. Finishing every clip and checkpoint completes the lesson (TopicProgress
- * COMPLETED on the server); credit comes from the topic's exit quiz.
+ * Clips play in order. A clip is a whole short video or ONE SECTION of a
+ * longer one; sections are listed under the video they came from. A clip
+ * unlocks once the one before it is watched (≥90% of real, contiguous
+ * playback; seeking ahead plays but doesn't count) and its checkpoint is
+ * settled. A section with no question runs straight into the next one.
+ *
+ * Checkpoints are graded on the server (the page never has the key):
+ * - a multiple-choice miss sends the student back through the section, then
+ *   asks again; a second miss reveals the answer and explanation;
+ * - a worked example's problem section ends on "pause and try it", and the
+ *   student types an answer for each part. Every part right earns a green
+ *   check and the solution may be skipped; any miss plays the solution
+ *   section, which is the explanation.
+ *
+ * Watch time is saved about every 15 s while playing and on pause, end, clip
+ * change and page hide; the server caps claims by wall time, so saves send
+ * only what that budget allows and keep the rest for the next one. Finishing
+ * every clip and checkpoint completes the lesson (TopicProgress COMPLETED on
+ * the server); credit comes from the topic's exit quiz.
  */
 
 export type VideoLessonPlayerProps = {
@@ -44,9 +54,12 @@ export type VideoLessonPlayerProps = {
   openCheckpointOnLoad?: boolean
 }
 
-type Answered = Record<string, Record<string, { correct: boolean; attempts: number }>>
+type AnswerState = { correct: boolean; attempts: number; settled: boolean }
+type Answered = Record<string, Record<string, AnswerState>>
 type Phase = 'video' | 'checkpoint' | 'done'
-type Result = { correct: boolean; correctIndex: number; explanation: string; chosen: number }
+type Result =
+  | { kind: 'choice'; correct: boolean; reveal: boolean; correctIndex: number | null; explanation: string; chosen: number }
+  | { kind: 'numeric'; correct: boolean; parts: { correct: boolean; expected: string }[]; explanation: string }
 type Flashcards = { newCards: number; topicTitle?: string }
 
 const SAVE_EVERY_MS = 15_000
@@ -103,11 +116,19 @@ function rangesWithinBudget(server: WatchRange[], local: WatchRange[], budget: n
   return { send: mergeRanges([...srv, ...taken], duration).map(([a, b]) => [round1(a), round1(b)] as WatchRange), leftover }
 }
 
-function initialAnswered(progress: ProgressSteps): Answered {
+/** A question needs no further attempt: right, numeric answered once, or a choice missed twice (revealed). */
+function settledFor(q: StudentQuestion, correct: boolean, attempts: number): boolean {
+  return correct || q.kind === 'numeric' || attempts >= 2
+}
+
+function initialAnswered(steps: StudentStep[], progress: ProgressSteps): Answered {
   const out: Answered = {}
-  for (const [clipId, p] of Object.entries(progress)) {
-    for (const [idx, a] of Object.entries(p.answered ?? {})) {
-      ;(out[clipId] ??= {})[idx] = { correct: !!a.correct, attempts: a.attempts ?? 1 }
+  for (const s of steps) {
+    for (const q of s.questions) {
+      const a = progress[s.clipId]?.answered?.[String(q.index)]
+      if (!a) continue
+      const attempts = a.attempts ?? 1
+      ;(out[s.clipId] ??= {})[String(q.index)] = { correct: !!a.correct, attempts, settled: settledFor(q, !!a.correct, attempts) }
     }
   }
   return out
@@ -127,6 +148,21 @@ function resumeAt(ranges: WatchRange[], duration: number): number {
   return 0
 }
 
+/** The steps grouped under the video they came from (one group when clips are whole videos). */
+function groupSteps(steps: StudentStep[]): { key: string; title: string | null; items: { step: StudentStep; i: number }[] }[] {
+  const groups: { key: string; title: string | null; items: { step: StudentStep; i: number }[] }[] = []
+  steps.forEach((step, i) => {
+    const key = step.video === null ? 'all' : `v${step.video}`
+    let g = groups[groups.length - 1]
+    if (!g || g.key !== key) {
+      g = { key, title: step.video === null ? null : step.videoTitle ?? `Video ${step.video}`, items: [] }
+      groups.push(g)
+    }
+    g.items.push({ step, i })
+  })
+  return groups
+}
+
 export default function VideoLessonPlayer({
   lessonId,
   topicSlug,
@@ -144,7 +180,7 @@ export default function VideoLessonPlayer({
 }: VideoLessonPlayerProps) {
   const [index, setIndex] = useState(() => Math.min(Math.max(initialIndex, 0), Math.max(steps.length - 1, 0)))
   const [ranges, setRanges] = useState(() => initialRanges(steps, initialProgress))
-  const [answered, setAnswered] = useState<Answered>(() => initialAnswered(initialProgress))
+  const [answered, setAnswered] = useState<Answered>(() => initialAnswered(steps, initialProgress))
   const [phase, setPhase] = useState<Phase>(initiallyComplete && !openCheckpointOnLoad ? 'done' : 'video')
   const [playing, setPlaying] = useState(false)
   const [autoPlay, setAutoPlay] = useState(false)
@@ -155,12 +191,13 @@ export default function VideoLessonPlayer({
   // Checkpoint card
   const [qPos, setQPos] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
+  const [values, setValues] = useState<string[]>([])
   const [result, setResult] = useState<Result | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [answerError, setAnswerError] = useState<string | null>(null)
   const [reviewing, setReviewing] = useState(false)
   const shownAtRef = useRef(0)
-  /** After "Rewatch this clip": the question to come back to when the clip ends. */
+  /** After "Rewatch this section": the question to come back to when the clip ends. */
   const retryRef = useRef<number | null>(null)
 
   const playerRef = useRef<VideoPlayerHandle>(null)
@@ -168,6 +205,7 @@ export default function VideoLessonPlayer({
 
   // Save bookkeeping (refs: read by timers and unload handlers).
   const rangesRef = useRef(ranges)
+  const answeredRef = useRef(answered)
   const serverRef = useRef<Record<string, WatchRange[]>>(initialRanges(steps, initialProgress))
   const dirtyRef = useRef(new Set<string>())
   const activeRef = useRef({ seconds: 0, lastTick: null as number | null })
@@ -180,18 +218,43 @@ export default function VideoLessonPlayer({
   }, [])
 
   const step = steps[index]
-  const stepIsDone = useCallback(
-    (s: StudentStep) => isClipWatched(ranges[s.clipId] ?? [], s.durationSec) && s.questions.every((q) => !!answered[s.clipId]?.[String(q.index)]),
-    [ranges, answered],
+
+  /** A solution section may be skipped when the problem before it was solved fully on the first try. */
+  const solutionSkippable = useCallback(
+    (i: number, ans: Answered) => {
+      const s = steps[i]
+      const prev = steps[i - 1]
+      if (!s || s.role !== 'solution' || !prev || prev.role !== 'problem') return false
+      const numeric = prev.questions.filter((q) => q.kind === 'numeric')
+      return numeric.length > 0 && numeric.every((q) => {
+        const a = ans[prev.clipId]?.[String(q.index)]
+        return !!a?.correct && a.attempts === 1
+      })
+    },
+    [steps],
   )
-  const unlocked = (i: number) => steps.slice(0, i).every(stepIsDone)
-  const allDone = steps.length > 0 && steps.every(stepIsDone)
+  const stepIsDoneWith = useCallback(
+    (i: number, rg: Record<string, WatchRange[]>, ans: Answered) => {
+      const s = steps[i]
+      if (!s) return false
+      const watched = isClipWatched(rg[s.clipId] ?? [], s.durationSec) || solutionSkippable(i, ans)
+      return watched && s.questions.every((q) => !!ans[s.clipId]?.[String(q.index)]?.settled)
+    },
+    [steps, solutionSkippable],
+  )
+  const stepIsDone = useCallback((i: number) => stepIsDoneWith(i, ranges, answered), [stepIsDoneWith, ranges, answered])
+  const unlocked = (i: number) => steps.slice(0, i).every((_, k) => stepIsDone(k))
+  const allDone = steps.length > 0 && steps.every((_, i) => stepIsDone(i))
 
   useActivitySurface(playing ? { surface: 'VIDEO', topicSlug, timed: true } : { surface: 'VIDEO', topicSlug })
 
   const applyRanges = (next: Record<string, WatchRange[]>) => {
     rangesRef.current = next
     setRanges(next)
+  }
+  const applyAnswered = (fn: (prev: Answered) => Answered) => {
+    answeredRef.current = fn(answeredRef.current)
+    setAnswered(answeredRef.current)
   }
 
   /** Send dirty clips' new watch time (and active seconds). Chained, or direct with keepalive on page hide. */
@@ -292,9 +355,14 @@ export default function VideoLessonPlayer({
     }
   }
 
-  const firstOpenQuestion = (s: StudentStep) => {
-    const i = s.questions.findIndex((q) => !answered[s.clipId]?.[String(q.index)])
-    return i
+  const firstOpenQuestion = (s: StudentStep) => s.questions.findIndex((q) => !answeredRef.current[s.clipId]?.[String(q.index)]?.settled)
+
+  const resetCard = () => {
+    setSelected(null)
+    setValues([])
+    setResult(null)
+    setAnswerError(null)
+    shownAtRef.current = Date.now()
   }
 
   const openCheckpoint = (from?: number) => {
@@ -303,10 +371,7 @@ export default function VideoLessonPlayer({
     const open = firstOpenQuestion(step)
     setReviewing(open === -1 && from === undefined)
     setQPos(from ?? Math.max(0, open))
-    setSelected(null)
-    setResult(null)
-    setAnswerError(null)
-    shownAtRef.current = Date.now()
+    resetCard()
     setPhase('checkpoint')
     void save()
   }
@@ -321,19 +386,8 @@ export default function VideoLessonPlayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openCheckpointOnLoad])
 
-  const handleEnded = (clipId: string, duration: number) => {
-    void save()
-    if (isClipWatched(rangesRef.current[clipId] ?? [], duration)) {
-      setSkipNotice(false)
-      openCheckpoint(retryRef.current ?? undefined)
-      retryRef.current = null
-    } else {
-      setSkipNotice(true)
-    }
-  }
-
-  const goTo = (i: number, play: boolean) => {
-    if (i < 0 || i >= steps.length || !unlocked(i)) return
+  /** Move to step i without the unlock check (the caller just made it reachable). */
+  const advanceTo = (i: number, play: boolean) => {
     void save()
     retryRef.current = null
     indexRef.current = i
@@ -341,21 +395,49 @@ export default function VideoLessonPlayer({
     setAutoPlay(play)
     setPhase('video')
     setSkipNotice(false)
-    setResult(null)
-    setSelected(null)
+    resetCard()
+  }
+
+  const handleEnded = (clipId: string, duration: number) => {
+    void save()
+    if (!isClipWatched(rangesRef.current[clipId] ?? [], duration)) {
+      setSkipNotice(true)
+      return
+    }
+    setSkipNotice(false)
+    // A section with nothing to ask runs straight on.
+    if (step && step.questions.length === 0 && retryRef.current === null && index + 1 < steps.length) {
+      advanceTo(index + 1, true)
+      return
+    }
+    openCheckpoint(retryRef.current ?? undefined)
+    retryRef.current = null
+  }
+
+  const goTo = (i: number, play: boolean) => {
+    if (i < 0 || i >= steps.length || !unlocked(i)) return
+    advanceTo(i, play)
   }
 
   const submitAnswer = async () => {
-    if (!step || selected === null || submitting) return
+    if (!step || submitting) return
     const q = step.questions[qPos]
     if (!q) return
+    const payload: Record<string, unknown> = { clipId: step.clipId, questionIndex: q.index, durationMs: Math.min(3_600_000, Date.now() - shownAtRef.current) }
+    if (q.kind === 'numeric') {
+      if (q.parts.some((_, i) => !(values[i] ?? '').trim())) return
+      payload.values = q.parts.map((_, i) => (values[i] ?? '').trim().slice(0, 60))
+    } else {
+      if (selected === null) return
+      payload.chosenIndex = selected
+    }
     setSubmitting(true)
     setAnswerError(null)
     const post = () =>
       fetch(`/api/video-lessons/${encodeURIComponent(lessonId)}/answer`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ clipId: step.clipId, questionIndex: q.index, chosenIndex: selected, durationMs: Math.min(3_600_000, Date.now() - shownAtRef.current) }),
+        body: JSON.stringify(payload),
       })
     try {
       let res = await post()
@@ -374,14 +456,33 @@ export default function VideoLessonPlayer({
         return
       }
       const body = await res.json()
-      setResult({ correct: !!body.correct, correctIndex: Number(body.correctIndex), explanation: String(body.explanation ?? ''), chosen: selected })
-      setAnswered((prev) => {
+      const correct = !!body.correct
+      const attempts = Number(body.attempts) || 1
+      if (q.kind === 'numeric') {
+        setResult({
+          kind: 'numeric',
+          correct,
+          parts: q.parts.map((_, i) => ({ correct: !!body.parts?.[i]?.correct, expected: String(body.parts?.[i]?.expected ?? '') })),
+          explanation: String(body.explanation ?? ''),
+        })
+      } else {
+        setResult({
+          kind: 'choice',
+          correct,
+          reveal: !!body.reveal,
+          correctIndex: typeof body.correctIndex === 'number' ? body.correctIndex : null,
+          explanation: String(body.explanation ?? ''),
+          chosen: selected ?? 0,
+        })
+      }
+      applyAnswered((prev) => {
         const before = prev[step.clipId]?.[String(q.index)]
+        const everCorrect = before ? before.correct || correct : correct
         return {
           ...prev,
           [step.clipId]: {
             ...prev[step.clipId],
-            [String(q.index)]: before ? { correct: before.correct || !!body.correct, attempts: before.attempts + 1 } : { correct: !!body.correct, attempts: 1 },
+            [String(q.index)]: { correct: everCorrect, attempts, settled: settledFor(q, everCorrect, attempts) },
           },
         }
       })
@@ -398,10 +499,7 @@ export default function VideoLessonPlayer({
     if (!step) return
     if (qPos + 1 < step.questions.length) {
       setQPos(qPos + 1)
-      setSelected(null)
-      setResult(null)
-      setAnswerError(null)
-      shownAtRef.current = Date.now()
+      resetCard()
       return
     }
     finishCheckpoint()
@@ -409,15 +507,8 @@ export default function VideoLessonPlayer({
 
   const finishCheckpoint = () => {
     if (index + 1 < steps.length) {
-      // The answer just recorded unlocks the next clip; unlocked() reads last render, so go directly.
-      void save()
-      retryRef.current = null
-      indexRef.current = index + 1
-      setIndex(index + 1)
-      setAutoPlay(true)
-      setPhase('video')
-      setResult(null)
-      setSelected(null)
+      // The answer just recorded unlocks the next clip; go directly.
+      advanceTo(index + 1, true)
     } else {
       void save()
       setPhase('done')
@@ -428,13 +519,24 @@ export default function VideoLessonPlayer({
     retryRef.current = qPos
     setResult(null)
     setSelected(null)
+    setValues([])
     setPhase('video')
     playerRef.current?.seekTo(0)
     playerRef.current?.play()
   }
 
+  /** After a worked example: the next step is its solution clip. */
+  const nextIsSolution = !!step && steps[index + 1]?.role === 'solution'
+  const skipSolution = () => {
+    if (index + 2 < steps.length) advanceTo(index + 2, true)
+    else {
+      void save()
+      setPhase('done')
+    }
+  }
+
   // ── Derived display values ──
-  const clipsWatched = steps.filter((s) => isClipWatched(ranges[s.clipId] ?? [], s.durationSec)).length
+  const clipsWatched = steps.filter((_, i) => isClipWatched(ranges[steps[i].clipId] ?? [], steps[i].durationSec) || solutionSkippable(i, answered)).length
   let scoreCorrect = 0
   let scoreTotal = 0
   for (const s of steps) {
@@ -448,6 +550,13 @@ export default function VideoLessonPlayer({
   const curPct = step ? Math.round(watchedFraction(curRanges, step.durationSec) * 100) : 0
   const curWatched = step ? isClipWatched(curRanges, step.durationSec) : false
   const curQuestion = step?.questions[qPos]
+  const groups = groupSteps(steps)
+  const sectioned = groups.some((g) => g.title !== null)
+  const stepLabel = (i: number) => {
+    const g = groups.find((x) => x.items.some((it) => it.i === i))
+    const n = g ? g.items.findIndex((it) => it.i === i) + 1 : i + 1
+    return sectioned ? `Section ${n} of ${g?.items.length ?? steps.length}` : `Clip ${i + 1} of ${steps.length}`
+  }
 
   if (!step) {
     return <p className="py-10 text-center text-gray-600 dark:text-gray-400">This video lesson has no clips yet.</p>
@@ -483,52 +592,59 @@ export default function VideoLessonPlayer({
   )
 
   const clipList = (
-    <nav aria-label="Clips" className="rounded-2xl border border-gray-200 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-gray-900">
+    <nav aria-label={sectioned ? 'Sections' : 'Clips'} className="rounded-2xl border border-gray-200 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-gray-900">
       <p className="px-2 pb-1 pt-1 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
-        {steps.length} clips · {Math.max(1, Math.round(steps.reduce((n, s) => n + s.durationSec, 0) / 60))} min
+        {steps.length} {sectioned ? 'sections' : 'clips'} · {Math.max(1, Math.round(steps.reduce((n, s) => n + s.durationSec, 0) / 60))} min
       </p>
-      <ol className="space-y-1">
-        {steps.map((s, i) => {
-          const done = stepIsDone(s)
-          const open = unlocked(i)
-          const current = i === index && phase !== 'done'
-          const pct = Math.round(watchedFraction(ranges[s.clipId] ?? [], s.durationSec) * 100)
-          const Icon = done ? CheckCircle2 : !open ? Lock : current ? PlayCircle : Circle
-          return (
-            <li key={s.clipId}>
-              <button
-                type="button"
-                onClick={() => goTo(i, true)}
-                disabled={!open}
-                aria-current={current ? 'step' : undefined}
-                className={`flex w-full items-start gap-3 rounded-xl px-3 py-2.5 text-left transition-colors ${
-                  current
-                    ? 'bg-accent-subtle ring-1 ring-accent-muted dark:bg-accent-light/20 dark:ring-accent-hover'
-                    : open
-                      ? 'hover:bg-gray-50 dark:hover:bg-gray-800'
-                      : 'cursor-not-allowed opacity-50'
-                }`}
-              >
-                <Icon
-                  className={`mt-0.5 h-5 w-5 shrink-0 ${done ? 'text-green-600 dark:text-green-400' : current ? 'text-accent dark:text-accent-muted' : 'text-gray-400 dark:text-gray-500'}`}
-                  aria-hidden
-                />
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-medium text-gray-900 dark:text-gray-100">
-                    {i + 1}. {s.title}
-                  </span>
-                  <span className="block text-xs text-gray-500 dark:text-gray-400">
-                    {fmtClock(s.durationSec)}
-                    {!done && pct > 0 ? ` · ${pct}% watched` : ''}
-                    {!open ? ' · locked' : ''}
-                    {done ? ' · done' : ''}
-                  </span>
-                </span>
-              </button>
-            </li>
-          )
-        })}
-      </ol>
+      {groups.map((g) => (
+        <div key={g.key} className="mt-1">
+          {g.title && <p className="px-3 pb-1 pt-2 text-sm font-semibold text-gray-800 dark:text-gray-200">{g.title}</p>}
+          <ol className="space-y-1">
+            {g.items.map(({ step: s, i }, n) => {
+              const done = stepIsDone(i)
+              const open = unlocked(i)
+              const current = i === index && phase !== 'done'
+              const skipped = !isClipWatched(ranges[s.clipId] ?? [], s.durationSec) && solutionSkippable(i, answered)
+              const pct = Math.round(watchedFraction(ranges[s.clipId] ?? [], s.durationSec) * 100)
+              const Icon = done ? CheckCircle2 : !open ? Lock : current ? PlayCircle : Circle
+              return (
+                <li key={s.clipId}>
+                  <button
+                    type="button"
+                    onClick={() => goTo(i, true)}
+                    disabled={!open}
+                    aria-current={current ? 'step' : undefined}
+                    className={`flex w-full items-start gap-3 rounded-xl px-3 py-2 text-left transition-colors ${
+                      current
+                        ? 'bg-accent-subtle ring-1 ring-accent-muted dark:bg-accent-light/20 dark:ring-accent-hover'
+                        : open
+                          ? 'hover:bg-gray-50 dark:hover:bg-gray-800'
+                          : 'cursor-not-allowed opacity-50'
+                    }`}
+                  >
+                    <Icon
+                      className={`mt-0.5 h-5 w-5 shrink-0 ${done ? 'text-green-600 dark:text-green-400' : current ? 'text-accent dark:text-accent-muted' : 'text-gray-400 dark:text-gray-500'}`}
+                      aria-hidden
+                    />
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-medium text-gray-900 dark:text-gray-100">
+                        {n + 1}. {s.title}
+                      </span>
+                      <span className="block text-xs text-gray-500 dark:text-gray-400">
+                        {fmtClock(s.durationSec)}
+                        {s.questions.length > 0 ? ` · ${s.questions.length === 1 ? '1 question' : `${s.questions.length} questions`}` : ''}
+                        {!done && pct > 0 ? ` · ${pct}% watched` : ''}
+                        {!open ? ' · locked' : ''}
+                        {done ? (skipped ? ' · skipped, solved' : ' · done') : ''}
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              )
+            })}
+          </ol>
+        </div>
+      ))}
     </nav>
   )
 
@@ -541,7 +657,7 @@ export default function VideoLessonPlayer({
           <p className="text-2xl font-bold text-gray-900 dark:text-white">
             {clipsWatched}/{steps.length}
           </p>
-          <p className="text-xs text-gray-500 dark:text-gray-400">clips watched</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">{sectioned ? 'sections watched' : 'clips watched'}</p>
         </div>
         <div className="rounded-xl bg-gray-50 p-3 dark:bg-gray-800">
           <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -578,7 +694,7 @@ export default function VideoLessonPlayer({
       )}
       <div className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
         <button type="button" onClick={() => setPhase('video')} className="inline-flex items-center gap-1 font-medium text-accent hover:text-accent-hover dark:text-accent-muted">
-          <RotateCcw className="h-4 w-4" aria-hidden /> Rewatch a clip
+          <RotateCcw className="h-4 w-4" aria-hidden /> Rewatch a {sectioned ? 'section' : 'clip'}
         </button>
         <Link href={readHref} className="inline-flex items-center gap-1 font-medium text-accent hover:text-accent-hover dark:text-accent-muted">
           <BookOpen className="h-4 w-4" aria-hidden /> Read the lesson
@@ -588,14 +704,184 @@ export default function VideoLessonPlayer({
   )
 
   const optionClass = (i: number) => {
-    if (result) {
-      if (i === result.correctIndex) return 'border-green-500 bg-green-50 dark:border-green-500 dark:bg-green-900/20'
-      if (i === result.chosen) return 'border-red-500 bg-red-50 dark:border-red-500 dark:bg-red-900/20'
+    if (result && result.kind === 'choice') {
+      if (result.reveal && i === result.correctIndex) return 'border-green-500 bg-green-50 dark:border-green-500 dark:bg-green-900/20'
+      if (i === result.chosen) return result.correct ? 'border-green-500 bg-green-50 dark:border-green-500 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:border-red-500 dark:bg-red-900/20'
       return 'border-gray-200 opacity-70 dark:border-gray-700'
     }
     return selected === i
       ? 'border-accent bg-accent-subtle dark:border-accent-muted dark:bg-accent-light/20'
       : 'border-gray-200 hover:border-accent-muted dark:border-gray-700 dark:hover:border-accent-hover'
+  }
+
+  const primaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover'
+  const secondaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-5 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800'
+
+  const choiceCard = (q: Extract<StudentQuestion, { kind: 'choice' }>) => {
+    const r = result && result.kind === 'choice' ? result : null
+    return (
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">
+          Checkpoint · Question {qPos + 1} of {step.questions.length}
+        </p>
+        <MathText text={q.question} className="mt-2 text-base font-medium text-gray-900 dark:text-gray-100 sm:text-lg" />
+        <fieldset className="mt-4 space-y-2" disabled={!!r || submitting}>
+          <legend className="sr-only">Choose an answer</legend>
+          {q.options.map((opt, i) => (
+            <label key={i} className={`flex cursor-pointer items-start gap-3 rounded-xl border-2 px-3 py-2.5 transition-colors ${optionClass(i)}`}>
+              <input
+                type="radio"
+                name={`cp-${step.clipId}-${q.index}`}
+                className="mt-1 h-4 w-4 shrink-0 accent-accent"
+                checked={selected === i}
+                onChange={() => setSelected(i)}
+              />
+              <MathText text={opt} inline className="min-w-0 flex-1 text-sm text-gray-800 dark:text-gray-200 sm:text-base" />
+              {r && r.reveal && i === r.correctIndex && <CheckCircle2 className="h-5 w-5 shrink-0 text-green-600 dark:text-green-400" aria-label="Correct answer" />}
+              {r && i === r.chosen && !r.correct && <XCircle className="h-5 w-5 shrink-0 text-red-600 dark:text-red-400" aria-label="Your answer" />}
+            </label>
+          ))}
+        </fieldset>
+        {answerError && <p className="mt-3 text-sm text-red-600 dark:text-red-400" role="alert">{answerError}</p>}
+        {r ? (
+          <div className="mt-4" aria-live="polite">
+            {r.correct ? (
+              <p className="font-semibold text-green-700 dark:text-green-400">Correct!</p>
+            ) : r.reveal ? (
+              <p className="font-semibold text-red-700 dark:text-red-400">Not quite. Here&apos;s the answer.</p>
+            ) : (
+              <p className="font-semibold text-red-700 dark:text-red-400">Not quite. Watch this section again, then try once more.</p>
+            )}
+            {r.reveal && r.explanation && <MathText text={r.explanation} className="mt-1 text-sm text-gray-700 dark:text-gray-300" />}
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
+              {!r.correct && !r.reveal ? (
+                <button type="button" onClick={rewatch} className={primaryBtn}>
+                  <RotateCcw className="h-4 w-4" aria-hidden /> Rewatch this section
+                </button>
+              ) : (
+                <>
+                  {!r.correct && (
+                    <button type="button" onClick={rewatch} className={secondaryBtn}>
+                      <RotateCcw className="h-4 w-4" aria-hidden /> Rewatch this section
+                    </button>
+                  )}
+                  <button type="button" onClick={continueAfterQuestion} className={primaryBtn}>
+                    Continue <ArrowRight className="h-4 w-4" aria-hidden />
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="mt-4 flex justify-end">
+            <button
+              type="button"
+              onClick={submitAnswer}
+              disabled={selected === null || submitting}
+              className="w-full rounded-xl bg-accent px-6 py-2.5 font-semibold text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+            >
+              {submitting ? 'Checking…' : 'Submit'}
+            </button>
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  const numericCard = (q: Extract<StudentQuestion, { kind: 'numeric' }>) => {
+    const r = result && result.kind === 'numeric' ? result : null
+    const filled = q.parts.every((_, i) => (values[i] ?? '').trim().length > 0)
+    return (
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">Your turn · type your answers</p>
+        <MathText text={q.question} className="mt-2 text-base font-medium text-gray-900 dark:text-gray-100 sm:text-lg" />
+        <form
+          className="mt-4 space-y-3"
+          onSubmit={(e) => {
+            e.preventDefault()
+            void submitAnswer()
+          }}
+        >
+          <fieldset className="space-y-3" disabled={!!r || submitting}>
+            <legend className="sr-only">Answers</legend>
+            {q.parts.map((p, i) => {
+              const pr = r?.parts[i]
+              const ring = pr ? (pr.correct ? 'border-green-500 bg-green-50 dark:border-green-500 dark:bg-green-900/20' : 'border-red-500 bg-red-50 dark:border-red-500 dark:bg-red-900/20') : 'border-gray-200 dark:border-gray-700'
+              return (
+                <div key={p.label} className={`rounded-xl border-2 px-3 py-2.5 ${ring}`}>
+                  <label htmlFor={`np-${step.clipId}-${q.index}-${i}`} className="block text-sm font-medium text-gray-900 dark:text-gray-100">
+                    ({p.label}) <MathText text={p.prompt} inline />
+                  </label>
+                  <div className="mt-1.5 flex items-center gap-2">
+                    <input
+                      id={`np-${step.clipId}-${q.index}-${i}`}
+                      type="text"
+                      inputMode="decimal"
+                      autoComplete="off"
+                      spellCheck={false}
+                      placeholder="e.g. 1.6e-2 or 1.6 × 10^-2"
+                      value={values[i] ?? ''}
+                      onChange={(e) => setValues((v) => q.parts.map((_, k) => (k === i ? e.target.value : v[k] ?? '')))}
+                      className="w-full max-w-xs rounded-lg border border-gray-300 bg-white px-3 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-muted dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100"
+                    />
+                    {p.unit && <span className="text-sm text-gray-600 dark:text-gray-400">{p.unit}</span>}
+                    {pr && (pr.correct ? <CheckCircle2 className="h-5 w-5 shrink-0 text-green-600 dark:text-green-400" aria-label="Correct" /> : <XCircle className="h-5 w-5 shrink-0 text-red-600 dark:text-red-400" aria-label="Incorrect" />)}
+                  </div>
+                  {pr && !pr.correct && (
+                    <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                      Answer: <span className="font-semibold">{pr.expected}</span>
+                    </p>
+                  )}
+                </div>
+              )
+            })}
+          </fieldset>
+          {answerError && <p className="text-sm text-red-600 dark:text-red-400" role="alert">{answerError}</p>}
+          {r ? (
+            <div aria-live="polite">
+              {r.correct ? (
+                <p className="font-semibold text-green-700 dark:text-green-400">All correct. Nice work.</p>
+              ) : (
+                <p className="font-semibold text-red-700 dark:text-red-400">Not quite. {nextIsSolution ? 'Watch the full solution next.' : ''}</p>
+              )}
+              {(!r.correct || !nextIsSolution) && r.explanation && <MathText text={r.explanation} className="mt-1 text-sm text-gray-700 dark:text-gray-300" />}
+              <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
+                {nextIsSolution ? (
+                  r.correct ? (
+                    <>
+                      <button type="button" onClick={() => advanceTo(index + 1, true)} className={secondaryBtn}>
+                        <PlayCircle className="h-4 w-4" aria-hidden /> Watch the solution anyway
+                      </button>
+                      <button type="button" onClick={skipSolution} className={primaryBtn}>
+                        <SkipForward className="h-4 w-4" aria-hidden /> Skip the solution
+                      </button>
+                    </>
+                  ) : (
+                    <button type="button" onClick={() => advanceTo(index + 1, true)} className={primaryBtn}>
+                      <PlayCircle className="h-4 w-4" aria-hidden /> Watch the solution
+                    </button>
+                  )
+                ) : (
+                  <button type="button" onClick={continueAfterQuestion} className={primaryBtn}>
+                    Continue <ArrowRight className="h-4 w-4" aria-hidden />
+                  </button>
+                )}
+              </div>
+            </div>
+          ) : (
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                disabled={!filled || submitting}
+                className="w-full rounded-xl bg-accent px-6 py-2.5 font-semibold text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+              >
+                {submitting ? 'Checking…' : 'Check my answers'}
+              </button>
+            </div>
+          )}
+        </form>
+      </div>
+    )
   }
 
   const checkpointCard = (
@@ -604,87 +890,21 @@ export default function VideoLessonPlayer({
         <div className="text-center">
           <CheckCircle2 className="mx-auto mb-2 h-8 w-8 text-green-600 dark:text-green-400" aria-hidden />
           <p className="font-semibold text-gray-900 dark:text-white">
-            {step.questions.length === 0 ? 'Clip finished' : 'Checkpoint done'}
+            {step.questions.length === 0 ? (sectioned ? 'Section finished' : 'Clip finished') : 'Checkpoint done'}
           </p>
           <div className="mt-4 flex flex-col justify-center gap-2 sm:flex-row">
             {step.questions.length > 0 && (
-              <button
-                type="button"
-                onClick={() => openCheckpoint(0)}
-                className="rounded-xl border-2 border-gray-300 px-5 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
-              >
+              <button type="button" onClick={() => openCheckpoint(0)} className={secondaryBtn}>
                 Answer again
               </button>
             )}
-            <button type="button" onClick={finishCheckpoint} className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover">
-              {index + 1 < steps.length ? 'Next clip' : 'Finish'} <ArrowRight className="h-4 w-4" aria-hidden />
+            <button type="button" onClick={finishCheckpoint} className={primaryBtn}>
+              {index + 1 < steps.length ? (sectioned ? 'Next section' : 'Next clip') : 'Finish'} <ArrowRight className="h-4 w-4" aria-hidden />
             </button>
           </div>
         </div>
       ) : curQuestion ? (
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">
-            Checkpoint · Question {qPos + 1} of {step.questions.length}
-          </p>
-          <MathText text={curQuestion.question} className="mt-2 text-base font-medium text-gray-900 dark:text-gray-100 sm:text-lg" />
-          <fieldset className="mt-4 space-y-2" disabled={!!result || submitting}>
-            <legend className="sr-only">Choose an answer</legend>
-            {curQuestion.options.map((opt, i) => (
-              <label key={i} className={`flex cursor-pointer items-start gap-3 rounded-xl border-2 px-3 py-2.5 transition-colors ${optionClass(i)}`}>
-                <input
-                  type="radio"
-                  name={`cp-${step.clipId}-${curQuestion.index}`}
-                  className="mt-1 h-4 w-4 shrink-0 accent-accent"
-                  checked={selected === i}
-                  onChange={() => setSelected(i)}
-                />
-                <MathText text={opt} inline className="min-w-0 flex-1 text-sm text-gray-800 dark:text-gray-200 sm:text-base" />
-                {result && i === result.correctIndex && <CheckCircle2 className="h-5 w-5 shrink-0 text-green-600 dark:text-green-400" aria-label="Correct answer" />}
-                {result && i === result.chosen && !result.correct && <XCircle className="h-5 w-5 shrink-0 text-red-600 dark:text-red-400" aria-label="Your answer" />}
-              </label>
-            ))}
-          </fieldset>
-          {answerError && <p className="mt-3 text-sm text-red-600 dark:text-red-400" role="alert">{answerError}</p>}
-          {result ? (
-            <div className="mt-4" aria-live="polite">
-              <p className={`font-semibold ${result.correct ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}`}>
-                {result.correct ? 'Correct!' : 'Not quite.'}
-              </p>
-              {result.explanation && (
-                <MathText text={result.explanation} className="mt-1 text-sm text-gray-700 dark:text-gray-300" />
-              )}
-              <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
-                {!result.correct && (
-                  <button
-                    type="button"
-                    onClick={rewatch}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-5 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
-                  >
-                    <RotateCcw className="h-4 w-4" aria-hidden /> Rewatch this clip
-                  </button>
-                )}
-                <button
-                  type="button"
-                  onClick={continueAfterQuestion}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover"
-                >
-                  Continue <ArrowRight className="h-4 w-4" aria-hidden />
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="mt-4 flex justify-end">
-              <button
-                type="button"
-                onClick={submitAnswer}
-                disabled={selected === null || submitting}
-                className="w-full rounded-xl bg-accent px-6 py-2.5 font-semibold text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
-              >
-                {submitting ? 'Checking…' : 'Submit'}
-              </button>
-            </div>
-          )}
-        </div>
+        curQuestion.kind === 'numeric' ? numericCard(curQuestion) : choiceCard(curQuestion)
       ) : null}
     </div>
   )
@@ -693,7 +913,8 @@ export default function VideoLessonPlayer({
     <div className="mt-3 flex flex-wrap items-center gap-3 rounded-2xl border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-900">
       <div className="min-w-0 flex-1">
         <p className="text-sm font-semibold text-gray-900 dark:text-white">
-          Clip {index + 1} of {steps.length}: {step.title}
+          {stepLabel(index)}: {step.title}
+          {sectioned && step.videoTitle ? <span className="font-normal text-gray-500 dark:text-gray-400"> · {step.videoTitle}</span> : null}
         </p>
         <div className="mt-1.5 flex items-center gap-2">
           <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700" aria-hidden>
@@ -703,11 +924,13 @@ export default function VideoLessonPlayer({
         </div>
         {skipNotice ? (
           <p className="mt-1.5 text-xs text-amber-700 dark:text-amber-400" role="status">
-            You skipped part of this clip. Watch at least 90% of it for it to count toward finishing the lesson.
+            You skipped part of this {sectioned ? 'section' : 'clip'}. Watch at least 90% of it for it to count toward finishing the lesson.
           </p>
         ) : !curWatched ? (
           <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">
-            {step.questions.length > 0 ? 'Answer the checkpoint any time. ' : ''}Watch at least 90% for this clip to count toward finishing the lesson; skipping ahead doesn&apos;t count.
+            {step.role === 'problem'
+              ? 'When the problem is up, pause, work it out, then type your answers.'
+              : `${step.questions.length > 0 ? 'Answer the checkpoint any time. ' : ''}Watch at least 90% for this ${sectioned ? 'section' : 'clip'} to count; skipping ahead doesn’t count.`}
           </p>
         ) : null}
       </div>
@@ -718,7 +941,7 @@ export default function VideoLessonPlayer({
           disabled={!curWatched && step.questions.length === 0}
           className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-600 dark:disabled:bg-gray-700 dark:disabled:text-gray-400 sm:w-auto"
         >
-          {step.questions.length > 0 ? 'Checkpoint' : 'Next'} <ArrowRight className="h-4 w-4" aria-hidden />
+          {step.role === 'problem' ? 'Enter my answers' : step.questions.length > 0 ? 'Checkpoint' : 'Next'} <ArrowRight className="h-4 w-4" aria-hidden />
         </button>
       )}
     </div>

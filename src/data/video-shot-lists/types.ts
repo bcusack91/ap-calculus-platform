@@ -1,4 +1,4 @@
-import type { CheckpointQuestion } from '@/lib/video-lesson-core'
+import type { ChoiceQuestion as CheckpointQuestion } from '@/lib/video-lesson-core'
 
 /**
  * Shot lists: what an instructor records for one topic's video lesson.

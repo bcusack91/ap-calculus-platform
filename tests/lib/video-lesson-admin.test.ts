@@ -55,9 +55,9 @@ describe('validateDraftForApproval', () => {
     }
   })
 
-  it('requires 1+ steps and 1-3 questions per step', () => {
+  it('requires 1+ steps and 0-3 questions per step (a section may just teach)', () => {
     expect(validateDraftForApproval(draft([]), clips, 'ins1').ok).toBe(false)
-    expect(validateDraftForApproval(draft([{ clipId: 'c1', questions: [] }]), clips, 'ins1').ok).toBe(false)
+    expect(validateDraftForApproval(draft([{ clipId: 'c1', questions: [] }]), clips, 'ins1').ok).toBe(true)
     expect(validateDraftForApproval(draft([{ clipId: 'c1', questions: [q(), q(), q(), q()] }]), clips, 'ins1').ok).toBe(false)
   })
 

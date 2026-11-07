@@ -1,33 +1,74 @@
 import { z } from 'zod'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { isClipWatched, mergeRanges, type WatchRange } from '@/lib/video-watch'
+import { gradeNumeric } from '@/lib/numeric-answer'
 
 /**
  * Video lessons: shapes, validation and the rules shared by the student
  * player, the progress/answer routes and the authoring tools. Client-safe.
  *
- * A lesson is an ordered list of steps; each step is one clip plus 1–3
- * checkpoint questions in the lesson-exercise shape. LOW-yield steps and
- * questions are hidden unless the student opted in (User.lessonIncludeLowYield),
- * exactly like the text lessons (src/lib/lesson-yield.ts).
+ * A lesson is an ordered list of steps; each step is one clip plus 0–3
+ * checkpoint questions. A clip is either a whole short video or ONE SECTION of
+ * a longer one (the website cut of a YouTube video): then its tags carry
+ * `video-N` (which video it came from), `section-<id>` and a role,
+ * `role-teach` | `role-problem` | `role-solution`. A problem clip ends on
+ * "pause and try it" and carries a NUMERIC question whose parts the student
+ * types answers to; the solution clip that follows IS the explanation, so a
+ * student who got every part right may skip it.
+ *
+ * Questions come in two kinds: multiple choice (the lesson-exercise shape;
+ * `kind` omitted or 'choice') and numeric entry (`kind: 'numeric'`, 1–4 parts).
+ * LOW-yield steps and questions are hidden unless the student opted in
+ * (User.lessonIncludeLowYield), exactly like the text lessons.
  */
 
-export const MAX_STEPS = 12
+export const MAX_STEPS = 80
 export const MAX_QUESTIONS_PER_STEP = 3
 
-export const checkpointQuestionSchema = z.object({
+export const choiceQuestionSchema = z.object({
+  kind: z.literal('choice').optional(),
   question: z.string().trim().min(1).max(2000),
   options: z.array(z.string().trim().min(1).max(500)).length(4),
   correctAnswer: z.number().int().min(0).max(3),
   explanation: z.string().trim().min(1).max(3000),
   yield: z.literal('LOW').optional(),
 })
+export type ChoiceQuestion = z.infer<typeof choiceQuestionSchema>
+
+export const numericPartSchema = z.object({
+  /** "a", "b" … as the problem labels them. */
+  label: z.string().trim().min(1).max(8),
+  prompt: z.string().trim().min(1).max(500),
+  answer: z.number().finite(),
+  /** Relative tolerance (default 5%). */
+  tolerance: z.number().min(0).max(0.5).optional(),
+  unit: z.string().trim().max(40).optional(),
+  /** How the key is shown after a miss, e.g. "1.6 × 10⁻² C". */
+  expected: z.string().trim().min(1).max(80),
+})
+export type NumericPart = z.infer<typeof numericPartSchema>
+
+export const numericQuestionSchema = z.object({
+  kind: z.literal('numeric'),
+  /** The problem as asked (shown above the entry boxes). */
+  question: z.string().trim().min(1).max(2000),
+  parts: z.array(numericPartSchema).min(1).max(4),
+  explanation: z.string().trim().min(1).max(3000),
+  yield: z.literal('LOW').optional(),
+})
+export type NumericQuestion = z.infer<typeof numericQuestionSchema>
+
+export const checkpointQuestionSchema = z.union([choiceQuestionSchema, numericQuestionSchema])
 export type CheckpointQuestion = z.infer<typeof checkpointQuestionSchema>
+
+export function isNumericQuestion(q: CheckpointQuestion): q is NumericQuestion {
+  return (q as NumericQuestion).kind === 'numeric'
+}
 
 export const stepDraftSchema = z.object({
   clipId: z.string().min(1).max(64),
   yield: z.literal('LOW').nullable().optional(),
-  questions: z.array(checkpointQuestionSchema).min(1).max(MAX_QUESTIONS_PER_STEP),
+  questions: z.array(checkpointQuestionSchema).max(MAX_QUESTIONS_PER_STEP),
 })
 export type StepDraft = z.infer<typeof stepDraftSchema>
 
@@ -37,19 +78,38 @@ export const lessonDraftSchema = z.object({
 })
 export type LessonDraft = z.infer<typeof lessonDraftSchema>
 
+// ── Clip roles (from VideoClip.tags) ──────────────────────────────────────
+
+export type StepRole = 'teach' | 'problem' | 'solution'
+export type StepMeta = { role: StepRole; video: number | null; section: string | null }
+
+/** What a clip's tags say about it: `role-<r>`, `video-<n>`, `section-<id>`. */
+export function stepMeta(tags: readonly string[] | undefined): StepMeta {
+  let role: StepRole = 'teach'
+  let video: number | null = null
+  let section: string | null = null
+  for (const t of tags ?? []) {
+    if (t === 'role-problem' || t === 'role-solution' || t === 'role-teach') role = t.slice(5) as StepRole
+    else if (/^video-\d+$/.test(t)) video = Number(t.slice(6))
+    else if (t.startsWith('section-')) section = t.slice(8)
+  }
+  return { role, video, section }
+}
+
 /** A step as stored (VideoLessonStep) joined with its clip. */
 export type StoredStep = {
   order: number
   clipId: string
   yield: string | null
   questions: unknown
-  clip: { title: string; provider: string; providerId: string; durationSec: number }
+  clip: { title: string; provider: string; providerId: string; durationSec: number; tags?: string[] }
 }
 
 /** Per-clip progress (VideoLessonProgress.steps[clipId]). */
+export type AnsweredRecord = { correct: boolean; at: string; attempts?: number; parts?: boolean[] }
 export type ClipProgress = {
   ranges?: WatchRange[]
-  answered?: Record<string, { correct: boolean; at: string; attempts?: number }>
+  answered?: Record<string, AnsweredRecord>
 }
 export type ProgressSteps = Record<string, ClipProgress>
 
@@ -63,13 +123,30 @@ export function parseProgressSteps(raw: unknown): ProgressSteps {
   return raw as ProgressSteps
 }
 
-/** Deterministic option order for a checkpoint question (same on page and in grading). */
-export function shuffledQuestion(q: CheckpointQuestion): { options: string[]; correctIndex: number } {
+/** Deterministic option order for a choice question (same on page and in grading). */
+export function shuffledQuestion(q: ChoiceQuestion): { options: string[]; correctIndex: number } {
   return shuffleOptions(q.options, q.correctAnswer, q.question)
 }
 
+/** Grade every part of a numeric question against what the student typed. */
+export function gradeNumericQuestion(q: NumericQuestion, values: readonly string[]): { correct: boolean; parts: boolean[] } {
+  const parts = q.parts.map((p, i) => gradeNumeric(values[i] ?? '', p.answer, p.tolerance).correct)
+  return { correct: parts.every(Boolean), parts }
+}
+
+/**
+ * A question is settled once it needs no further attempt: answered right, or
+ * (choice) missed twice, when the key and explanation were shown, or
+ * (numeric) answered at all, since the solution clip follows a miss.
+ */
+export function questionSettled(q: CheckpointQuestion, a: AnsweredRecord | undefined): boolean {
+  if (!a) return false
+  if (a.correct) return true
+  return isNumericQuestion(q) || (a.attempts ?? 1) >= 2
+}
+
 /** A visible step for one student: hidden LOW steps dropped, hidden LOW questions dropped (index kept). */
-export type VisibleStep = StoredStep & { visibleQuestions: { index: number; q: CheckpointQuestion }[] }
+export type VisibleStep = StoredStep & { meta: StepMeta; visibleQuestions: { index: number; q: CheckpointQuestion }[] }
 
 export function visibleSteps(steps: readonly StoredStep[], includeLowYield: boolean): VisibleStep[] {
   return [...steps]
@@ -77,31 +154,46 @@ export function visibleSteps(steps: readonly StoredStep[], includeLowYield: bool
     .filter((s) => includeLowYield || s.yield !== 'LOW')
     .map((s) => ({
       ...s,
+      meta: stepMeta(s.clip.tags),
       visibleQuestions: parseQuestions(s.questions)
         .map((q, index) => ({ index, q }))
         .filter(({ q }) => includeLowYield || q.yield !== 'LOW'),
     }))
 }
 
-export function stepDone(step: VisibleStep, progress: ProgressSteps): { watched: boolean; answered: boolean } {
+/**
+ * A solution clip may be skipped when the problem clip before it was answered
+ * fully right on the first try: the student already has the answer.
+ */
+export function solutionSkippable(step: VisibleStep, prev: VisibleStep | undefined, progress: ProgressSteps): boolean {
+  if (step.meta.role !== 'solution' || !prev || prev.meta.role !== 'problem') return false
+  const p = progress[prev.clipId]?.answered ?? {}
+  const numeric = prev.visibleQuestions.filter(({ q }) => isNumericQuestion(q))
+  return numeric.length > 0 && numeric.every(({ index }) => {
+    const a = p[String(index)]
+    return !!a?.correct && (a.attempts ?? 1) === 1
+  })
+}
+
+export function stepDone(step: VisibleStep, progress: ProgressSteps, prev?: VisibleStep): { watched: boolean; answered: boolean } {
   const p = progress[step.clipId] ?? {}
-  const watched = isClipWatched(p.ranges ?? [], step.clip.durationSec)
-  const answered = step.visibleQuestions.every(({ index }) => !!p.answered?.[String(index)])
+  const watched = isClipWatched(p.ranges ?? [], step.clip.durationSec) || solutionSkippable(step, prev, progress)
+  const answered = step.visibleQuestions.every(({ index, q }) => questionSettled(q, p.answered?.[String(index)]))
   return { watched, answered }
 }
 
-/** Every visible step watched and every visible checkpoint answered. */
+/** Every visible step watched (or skippable) and every visible checkpoint settled. */
 export function isLessonComplete(steps: readonly VisibleStep[], progress: ProgressSteps): boolean {
-  return steps.length > 0 && steps.every((s) => {
-    const d = stepDone(s, progress)
+  return steps.length > 0 && steps.every((s, i) => {
+    const d = stepDone(s, progress, steps[i - 1])
     return d.watched && d.answered
   })
 }
 
 /** The first step not yet finished (or the last one when all are done). */
 export function resumeIndex(steps: readonly VisibleStep[], progress: ProgressSteps): number {
-  const i = steps.findIndex((s) => {
-    const d = stepDone(s, progress)
+  const i = steps.findIndex((s, k) => {
+    const d = stepDone(s, progress, steps[k - 1])
     return !(d.watched && d.answered)
   })
   return i === -1 ? Math.max(steps.length - 1, 0) : i
@@ -126,6 +218,11 @@ export function mergeClipRanges(prev: ClipProgress | undefined, add: readonly un
   return mergeRanges([...(prev?.ranges ?? []), ...add], durationSec)
 }
 
+/** What a student's page receives for one question: no answer keys. */
+export type StudentQuestion =
+  | { index: number; kind: 'choice'; question: string; options: string[]; lowYield: boolean }
+  | { index: number; kind: 'numeric'; question: string; parts: { label: string; prompt: string; unit: string | null }[]; lowYield: boolean }
+
 /** What a student's page receives for one step: no answer keys. */
 export type StudentStep = {
   clipId: string
@@ -134,10 +231,14 @@ export type StudentStep = {
   providerId: string
   durationSec: number
   lowYield: boolean
-  questions: { index: number; question: string; options: string[]; lowYield: boolean }[]
+  role: StepRole
+  /** Which source video this section came from (1-based), with its title. */
+  video: number | null
+  videoTitle: string | null
+  questions: StudentQuestion[]
 }
 
-export function studentSteps(steps: readonly VisibleStep[]): StudentStep[] {
+export function studentSteps(steps: readonly VisibleStep[], videoTitles: Readonly<Record<number, string>> = {}): StudentStep[] {
   return steps.map((s) => ({
     clipId: s.clipId,
     title: s.clip.title,
@@ -145,11 +246,13 @@ export function studentSteps(steps: readonly VisibleStep[]): StudentStep[] {
     providerId: s.clip.providerId,
     durationSec: s.clip.durationSec,
     lowYield: s.yield === 'LOW',
-    questions: s.visibleQuestions.map(({ index, q }) => ({
-      index,
-      question: q.question,
-      options: shuffledQuestion(q).options,
-      lowYield: q.yield === 'LOW',
-    })),
+    role: s.meta.role,
+    video: s.meta.video,
+    videoTitle: s.meta.video !== null ? videoTitles[s.meta.video] ?? null : null,
+    questions: s.visibleQuestions.map(({ index, q }) =>
+      isNumericQuestion(q)
+        ? { index, kind: 'numeric' as const, question: q.question, parts: q.parts.map((p) => ({ label: p.label, prompt: p.prompt, unit: p.unit ?? null })), lowYield: q.yield === 'LOW' }
+        : { index, kind: 'choice' as const, question: q.question, options: shuffledQuestion(q).options, lowYield: q.yield === 'LOW' },
+    ),
   }))
 }

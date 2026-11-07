@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { visibleSteps, parseProgressSteps, type StoredStep, type VisibleStep, type ProgressSteps } from '@/lib/video-lesson-core'
+import { getShotList } from '@/data/video-shot-lists'
 
 /**
  * Server reads for video lessons. Students only ever see lessons that are
@@ -15,7 +16,7 @@ const stepInclude = {
     clipId: true,
     yield: true,
     questions: true,
-    clip: { select: { title: true, provider: true, providerId: true, durationSec: true } },
+    clip: { select: { title: true, provider: true, providerId: true, durationSec: true, tags: true } },
   },
 }
 
@@ -72,9 +73,27 @@ export type LoadedLesson = {
   version: number
   instructor: { id: string; slug: string; name: string; headline: string; photoUrl: string | null }
   steps: VisibleStep[]
+  /** Titles of the source videos (by `video-N` tag) when the steps are sections of longer videos. */
+  videoTitles: Record<number, string>
   includeLowYield: boolean
   progress: ProgressSteps
   completedAt: Date | null
+}
+
+/**
+ * Titles for the source videos a lesson's sections came from: the topic's
+ * shot list names clip N (1-based). Only numbers the steps actually use.
+ */
+export async function videoTitlesFor(topicSlug: string, steps: readonly VisibleStep[]): Promise<Record<number, string>> {
+  const used = new Set(steps.map((s) => s.meta.video).filter((n): n is number => n !== null))
+  if (used.size === 0) return {}
+  const plan = await getShotList(topicSlug).catch(() => null)
+  const out: Record<number, string> = {}
+  for (const n of used) {
+    const title = plan?.clips[n - 1]?.title
+    if (title) out[n] = title
+  }
+  return out
 }
 
 /** A student's view of one instructor's lesson for a topic, with their progress. */
@@ -99,6 +118,7 @@ export async function loadStudentLesson(topicSlug: string, instructorSlug: strin
       ])
     : [null, null]
   const includeLowYield = !!user?.lessonIncludeLowYield
+  const steps = visibleSteps(lesson.steps as StoredStep[], includeLowYield)
   return {
     id: lesson.id,
     title: lesson.title,
@@ -106,7 +126,8 @@ export async function loadStudentLesson(topicSlug: string, instructorSlug: strin
     courseSlug: lesson.courseSlug,
     version: lesson.version,
     instructor: lesson.instructor,
-    steps: visibleSteps(lesson.steps as StoredStep[], includeLowYield),
+    steps,
+    videoTitles: await videoTitlesFor(lesson.topicSlug, steps),
     includeLowYield,
     progress: parseProgressSteps(progress?.steps),
     completedAt: progress?.completedAt ?? null,

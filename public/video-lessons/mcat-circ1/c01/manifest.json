@@ -1,0 +1,78 @@
+{
+ "key": "mcat-circ1",
+ "video": 1,
+ "stem": "mcat_circ1_c01_current",
+ "topic": "circuits-part1-current-resistance",
+ "clips": [
+  {
+   "section": "02-charge",
+   "file": "02-charge.mp4",
+   "seconds": 39.8,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "03-rate",
+   "file": "03-rate.mp4",
+   "seconds": 37.35,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "04-rearrange",
+   "file": "04-rearrange.mp4",
+   "seconds": 40.067,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "05-direction",
+   "file": "05-direction.mp4",
+   "seconds": 35.184,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "06-same-current",
+   "file": "06-same-current.mp4",
+   "seconds": 25.584,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "07-instant",
+   "file": "07-instant.mp4",
+   "seconds": 31.817,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "08-electrolytes",
+   "file": "08-electrolytes.mp4",
+   "seconds": 41.767,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "09-heating",
+   "file": "09-heating.mp4",
+   "seconds": 33.417,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "10-compare",
+   "file": "10-compare.mp4",
+   "seconds": 27.867,
+   "source": "silent-render",
+   "voiced": false
+  },
+  {
+   "section": "11-recap",
+   "file": "11-recap.mp4",
+   "seconds": 26.017,
+   "source": "silent-render",
+   "voiced": false
+  }
+ ]
+}

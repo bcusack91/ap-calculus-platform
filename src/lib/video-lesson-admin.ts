@@ -1,11 +1,12 @@
 import { z } from 'zod'
 import {
-  checkpointQuestionSchema,
-  lessonDraftSchema,
+  type ChoiceQuestion,
+  type LessonDraft,
   MAX_QUESTIONS_PER_STEP,
   MAX_STEPS,
-  type CheckpointQuestion,
-  type LessonDraft,
+  choiceQuestionSchema,
+  isNumericQuestion,
+  lessonDraftSchema,
 } from '@/lib/video-lesson-core'
 
 /**
@@ -177,13 +178,17 @@ export function stepRowsFromDraft(draft: LessonDraft) {
     order,
     clipId: s.clipId,
     yield: s.yield === 'LOW' ? ('LOW' as const) : null,
-    questions: s.questions.map((q) => ({
-      question: q.question,
-      options: q.options,
-      correctAnswer: q.correctAnswer,
-      explanation: q.explanation,
-      ...(q.yield === 'LOW' ? { yield: 'LOW' as const } : {}),
-    })),
+    questions: s.questions.map((q) =>
+      isNumericQuestion(q)
+        ? { kind: 'numeric' as const, question: q.question, parts: q.parts, explanation: q.explanation, ...(q.yield === 'LOW' ? { yield: 'LOW' as const } : {}) }
+        : {
+            question: q.question,
+            options: q.options,
+            correctAnswer: q.correctAnswer,
+            explanation: q.explanation,
+            ...(q.yield === 'LOW' ? { yield: 'LOW' as const } : {}),
+          },
+    ),
   }))
 }
 
@@ -225,16 +230,16 @@ export function lessonStatus(l: {
 
 // ── Checkpoint-question suggestions ────────────────────────────────────────
 
-export type QuestionSuggestion = CheckpointQuestion & { source: string }
+export type QuestionSuggestion = ChoiceQuestion & { source: string }
 
 type Rec = Record<string, unknown>
 const isRec = (x: unknown): x is Rec => !!x && typeof x === 'object' && !Array.isArray(x)
 
 /** One candidate → checkpoint shape, or null if it is not a 4-option MCQ with a key. */
-function normalizeCandidate(raw: Rec, opts: { keyField: 'correctAnswer' | 'correctIndex'; low?: boolean }): CheckpointQuestion | null {
+function normalizeCandidate(raw: Rec, opts: { keyField: 'correctAnswer' | 'correctIndex'; low?: boolean }): ChoiceQuestion | null {
   const question = typeof raw.question === 'string' ? raw.question : typeof raw.text === 'string' ? raw.text : null
   if (!question) return null
-  const parsed = checkpointQuestionSchema.safeParse({
+  const parsed = choiceQuestionSchema.safeParse({
     question,
     options: raw.options,
     correctAnswer: raw[opts.keyField],

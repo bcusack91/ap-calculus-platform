@@ -69,19 +69,15 @@ export function lookupShortLink(code: string): (VideoShortLink & { code: string 
 }
 
 /**
- * Where a short link sends a visitor, given the instructors who have a
- * published lesson for the topic:
- * - one instructor → straight to that lesson, on the clip's checkpoint;
- * - several → the instructor picker, which carries the clip through;
- * - none yet (not approved) → the clip's questions from its recording plan
- *   (/v/<code>/questions), so the link opens real questions from day one.
+ * Where a short link sends a visitor: the clip's three questions from its
+ * recording plan (/v/<code>/questions), whether or not the topic's video
+ * lesson is published. A YouTube viewer has just watched the WHOLE video, and
+ * the website lesson is cut into sections with a question after each, so
+ * there is no single "clip N" step to land on; the questions page offers the
+ * section-by-section lesson once one exists. `_instructorSlugs` is kept for
+ * callers that already resolved them.
  */
-export function shortLinkDestination(link: VideoShortLink & { code: string }, instructorSlugs: readonly string[]): string {
+export function shortLinkDestination(link: VideoShortLink & { code: string }, _instructorSlugs: readonly string[] = []): string {
   const utm = new URLSearchParams({ utm_source: 'youtube', utm_medium: 'video', utm_campaign: link.campaign, utm_content: link.code })
-  const base = `/topics/${encodeURIComponent(link.topicSlug)}`
-  if (instructorSlugs.length === 0) return `/v/${encodeURIComponent(link.code)}/questions?${utm}`
-  const withClip = new URLSearchParams({ clip: String(link.clip) })
-  utm.forEach((v, k) => withClip.set(k, v))
-  if (instructorSlugs.length === 1) return `${base}/video/${encodeURIComponent(instructorSlugs[0])}?${withClip}`
-  return `${base}/video?${withClip}`
+  return `/v/${encodeURIComponent(link.code)}/questions?${utm}`
 }

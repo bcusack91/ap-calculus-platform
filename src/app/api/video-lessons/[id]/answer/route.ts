@@ -4,29 +4,43 @@ import type { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { loadPublishedLessonById } from '@/lib/video-lessons-server'
-import { isLessonComplete, parseProgressSteps, parseQuestions, shuffledQuestion, visibleSteps, type StoredStep } from '@/lib/video-lesson-core'
+import {
+  gradeNumericQuestion,
+  isLessonComplete,
+  isNumericQuestion,
+  parseProgressSteps,
+  parseQuestions,
+  shuffledQuestion,
+  visibleSteps,
+  type StoredStep,
+} from '@/lib/video-lesson-core'
 import { questionKey, optionKey } from '@/lib/question-key'
 import { recordQuestions } from '@/lib/study-tracking'
 import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progress'
 
 /**
- * POST /api/video-lessons/[id]/answer { clipId, questionIndex, chosenIndex }
- *   → { correct, correctIndex, explanation, complete, completedNow, flashcards? }
+ * POST /api/video-lessons/[id]/answer
+ *   choice:  { clipId, questionIndex, chosenIndex }
+ *     → { kind: 'choice', correct, attempts, reveal, correctIndex?, explanation?, complete, completedNow, flashcards? }
+ *   numeric: { clipId, questionIndex, values: string[] }
+ *     → { kind: 'numeric', correct, parts: [{ correct, expected }], explanation, complete, completedNow, flashcards? }
  *
  * Grades one checkpoint question on the server (the page never receives the
- * key). chosenIndex is in the displayed (shuffled) order. A checkpoint can be
- * answered before the clip is watched here: students arriving from a short
- * link in a YouTube video (/v/<code>) usually watched it there. Finishing the
- * lesson still needs every clip watched on StudyMondo (isLessonComplete).
- * Every attempt is logged as a VIDEO_CHECK answer, so misses
- * reach the student's mistake log and the teacher's study report; the first
- * attempt is what the checkpoint score counts.
+ * key). chosenIndex is in the displayed (shuffled) order. A choice question
+ * missed on the FIRST try is not revealed: the page sends the student back
+ * through the section and asks again; the second miss reveals the key and the
+ * explanation. A numeric question (a worked example's parts) is graded once;
+ * a miss sends the student into the solution clip, which is the explanation.
+ * Every attempt is logged as a VIDEO_CHECK answer, so misses reach the
+ * mistake log and the teacher's study report; the first attempt is what the
+ * checkpoint score counts.
  */
 
 const bodySchema = z.object({
   clipId: z.string().min(1).max(64),
   questionIndex: z.number().int().min(0).max(9),
-  chosenIndex: z.number().int().min(0).max(3),
+  chosenIndex: z.number().int().min(0).max(3).optional(),
+  values: z.array(z.string().max(60)).max(4).optional(),
   durationMs: z.number().int().min(0).max(3_600_000).optional(),
 })
 
@@ -37,7 +51,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const { id } = await params
   const parsed = bodySchema.safeParse(await request.json().catch(() => null))
   if (!parsed.success) return NextResponse.json({ error: 'Invalid answer' }, { status: 400 })
-  const { clipId, questionIndex, chosenIndex, durationMs } = parsed.data
+  const { clipId, questionIndex, chosenIndex, values, durationMs } = parsed.data
 
   const lesson = await loadPublishedLessonById(id)
   if (!lesson) return NextResponse.json({ error: 'Lesson not found' }, { status: 404 })
@@ -45,8 +59,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const q = step ? parseQuestions(step.questions)[questionIndex] : undefined
   if (!step || !q) return NextResponse.json({ error: 'Question not found' }, { status: 400 })
 
-  const shown = shuffledQuestion(q)
-  const correct = chosenIndex === shown.correctIndex
+  const numeric = isNumericQuestion(q)
+  if (numeric && !values) return NextResponse.json({ error: 'Type an answer for each part' }, { status: 400 })
+  if (!numeric && chosenIndex === undefined) return NextResponse.json({ error: 'Choose an answer' }, { status: 400 })
+
+  const shown = numeric ? null : shuffledQuestion(q)
+  const graded = numeric ? gradeNumericQuestion(q, values ?? []) : null
+  const correct = numeric ? graded!.correct : chosenIndex === shown!.correctIndex
 
   const result = await prisma.$transaction(async (tx) => {
     await tx.$queryRaw`SELECT id FROM "VideoLessonProgress" WHERE "userId" = ${userId} AND "lessonId" = ${lesson.id} FOR UPDATE`
@@ -63,7 +82,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       answered: {
         ...prev.answered,
         // Keep a first-attempt-correct record; later attempts only add a count.
-        [String(questionIndex)]: { correct: before ? before.correct || correct : correct, at: new Date().toISOString(), attempts },
+        [String(questionIndex)]: {
+          correct: before ? before.correct || correct : correct,
+          at: new Date().toISOString(),
+          attempts,
+          ...(graded ? { parts: graded.parts } : {}),
+        },
       },
     }
     const user = await tx.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } })
@@ -74,22 +98,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       update: { steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
       create: { userId, lessonId: lesson.id, steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
     })
-    return { complete, completedNow, firstAttempt: attempts === 1 }
+    return { complete, completedNow, attempts }
   })
 
   await recordQuestions(userId, [{
     source: 'VIDEO_CHECK',
     topicSlug: lesson.topicSlug,
     courseSlug: lesson.courseSlug,
-    questionKey: questionKey({ question: q.question, options: q.options, correctIndex: q.correctAnswer }),
+    questionKey: numeric
+      ? questionKey({ question: q.question, options: q.parts.map((p) => String(p.answer)), correctIndex: 0 })
+      : questionKey({ question: q.question, options: q.options, correctIndex: q.correctAnswer }),
     answered: 1,
     correct: correct ? 1 : 0,
     durationMs: durationMs ?? null,
     attemptKind: 'video-check',
     attemptId: lesson.id,
     itemIndex: questionIndex,
-    chosenIndex,
-    chosenKey: optionKey(shown.options[chosenIndex] ?? ''),
+    ...(numeric
+      ? { chosenText: (values ?? []).join(' | '), chosenKey: optionKey((values ?? []).join('|')) }
+      : { chosenIndex, chosenKey: optionKey(shown!.options[chosenIndex!] ?? '') }),
   }])
 
   let flashcards: ReturnType<typeof flashcardUnlockPayload>
@@ -101,12 +128,21 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
   }
 
+  const common = { correct, attempts: result.attempts, complete: result.complete, completedNow: result.completedNow, ...(flashcards ? { flashcards } : {}) }
+  if (numeric) {
+    return NextResponse.json({
+      kind: 'numeric',
+      ...common,
+      parts: q.parts.map((p, i) => ({ correct: graded!.parts[i], expected: p.expected })),
+      explanation: q.explanation,
+    })
+  }
+  // A first miss is not revealed: rewatch the section, then answer again.
+  const reveal = correct || result.attempts >= 2
   return NextResponse.json({
-    correct,
-    correctIndex: shown.correctIndex,
-    explanation: q.explanation,
-    complete: result.complete,
-    completedNow: result.completedNow,
-    ...(flashcards ? { flashcards } : {}),
+    kind: 'choice',
+    ...common,
+    reveal,
+    ...(reveal ? { correctIndex: shown!.correctIndex, explanation: q.explanation } : {}),
   })
 }

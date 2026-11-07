@@ -9,6 +9,8 @@ import { shuffledQuestion } from '@/lib/video-lesson-core'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { PlanCheckpointQuiz } from '@/components/video/PlanCheckpointQuiz'
+import { publishedLessonsForTopic } from '@/lib/video-lessons-server'
+import { PlayCircle } from 'lucide-react'
 
 /**
  * /v/<code>/questions — a clip's checkpoint questions, straight from its
@@ -38,9 +40,10 @@ export default async function PlanQuestionsPage(props: Props) {
   const clip = link && plan ? plan.clips[link.clip - 1] : null
   if (!link || !plan || !clip) notFound()
 
-  const [session, topic] = await Promise.all([
+  const [session, topic, lessons] = await Promise.all([
     auth(),
     prisma.topic.findUnique({ where: { slug: link.topicSlug }, select: { slug: true, title: true } }),
+    publishedLessonsForTopic(link.topicSlug).catch(() => []),
   ])
   const topicSlug = topic?.slug ?? link.topicSlug
   const readHref = hasInteractiveLesson(topicSlug) ? `/topics/${topicSlug}/interactive` : `/topics/${topicSlug}`
@@ -58,6 +61,19 @@ export default async function PlanQuestionsPage(props: Props) {
         <p className="mt-2 text-gray-600 dark:text-gray-300">
           {questions.length} quick questions on the video you just watched. Each answer comes with an explanation.
         </p>
+        {lessons.length > 0 && (
+          <div className="mt-5 flex flex-col gap-3 rounded-2xl border border-accent-muted bg-accent-subtle p-4 dark:border-accent-hover dark:bg-accent-light/20 sm:flex-row sm:items-center">
+            <p className="flex-1 text-sm text-gray-800 dark:text-gray-200">
+              <span className="font-semibold">Prefer to learn it step by step?</span> The same video is on StudyMondo cut into short sections, each with its own question, and the worked examples let you type your answers before the solution plays.
+            </p>
+            <Link
+              href={`/topics/${topicSlug}/video`}
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover"
+            >
+              <PlayCircle className="h-4 w-4" aria-hidden /> Open the video lesson
+            </Link>
+          </div>
+        )}
         <div className="mt-6">
           <PlanCheckpointQuiz
             code={link.code}

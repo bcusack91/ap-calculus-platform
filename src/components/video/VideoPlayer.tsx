@@ -2,11 +2,12 @@
 
 import { forwardRef } from 'react'
 import { YouTubePlayer } from './providers/youtube'
+import { FilePlayer } from './providers/file'
 import { VideoUnavailable } from './VideoUnavailable'
 
 /**
  * THE video player for video lessons: one interface, one provider file per
- * host. Pages only ever render <VideoPlayer>; moving to a paid host (Mux,
+ * host (YOUTUBE, and FILE for self-hosted MP4 sections). Pages only ever render <VideoPlayer>; moving to a paid host (Mux,
  * Bunny, Cloudflare Stream) means adding a provider file and a case below,
  * with no page changes.
  *
@@ -42,6 +43,8 @@ const VideoPlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(function Vid
   switch (props.provider.toUpperCase()) {
     case 'YOUTUBE':
       return <YouTubePlayer key={props.providerId} ref={ref} {...props} />
+    case 'FILE':
+      return <FilePlayer key={props.providerId} ref={ref} {...props} />
     default:
       return (
         <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
