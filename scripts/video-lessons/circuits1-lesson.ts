@@ -35,6 +35,8 @@ export const LESSON = {
     headline: 'Physics & MCAT tutor',
     bio: 'Teaches MCAT physics and AP Physics in live StudyMondo classes and on the StudyMondo YouTube channel.',
     email: 'brendan@cusackprep.com',
+    /** Illustrated (cel-shaded) version of the owner's photo on the brand gradient; see memory video-pipeline/avatar/. */
+    photoUrl: '/instructors/brendan-cusack.png',
     courses: ['mcat-prep'],
   },
   videos: [

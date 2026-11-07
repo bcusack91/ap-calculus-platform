@@ -76,6 +76,7 @@ async function main() {
     name: LESSON.instructor.name,
     headline: LESSON.instructor.headline,
     bio: LESSON.instructor.bio,
+    photoUrl: LESSON.instructor.photoUrl ?? null,
     courses: LESSON.instructor.courses,
     isActive: true,
     ...(userId ? { userId } : {}),
