@@ -14,6 +14,13 @@
  *
  * Run it AFTER the section files are deployed (the clips point at
  * /video-lessons/<key>/c0N/<section>.mp4 on the site).
+ *
+ * Only VOICED videos go into the live lesson: a video whose manifest is all
+ * silent placeholders (no export cut yet) is left out, so students never sit
+ * through silent clips and later videos are not locked behind them. Re-running
+ * after a video's export is cut adds it back in its place. Set
+ * INCLUDE_PLACEHOLDERS=1 to publish the silent placeholders too (local
+ * structure testing).
  */
 import { config } from 'dotenv'
 config({ path: process.env.SEED_DB === 'prod' ? '.env' : '.env.local', override: true })
@@ -57,15 +64,24 @@ async function main() {
   const userId = user && !takenBy ? user.id : existing?.userId ?? null
   console.log(`Instructor ${LESSON.instructor.slug}: ${existing ? 'update' : 'create'}${userId ? ` (account ${LESSON.instructor.email})` : ' (no account linked)'}`)
 
+  // A video is live once its export has been cut (any voiced section), or always with INCLUDE_PLACEHOLDERS=1.
+  const INCLUDE_PLACEHOLDERS = process.env.INCLUDE_PLACEHOLDERS === '1'
+  const liveVideos = LESSON.videos.filter(
+    (v) => INCLUDE_PLACEHOLDERS || v.sections.some((s) => seconds.get(`${v.video}:${s.id}`)!.voiced),
+  )
   let voicedCount = 0
   let total = 0
-  for (const v of LESSON.videos) for (const s of v.sections) {
-    total++
-    const d = seconds.get(`${v.video}:${s.id}`)!
-    if (d.voiced) voicedCount++
-    console.log(`  video ${v.video} · ${s.id.padEnd(16)} ${String(Math.round(d.seconds)).padStart(3)} s  ${s.role.padEnd(8)} ${s.questions?.length ?? 0} q${d.voiced ? '' : '  (silent placeholder)'}`)
+  for (const v of LESSON.videos) {
+    const live = liveVideos.includes(v)
+    for (const s of v.sections) {
+      const d = seconds.get(`${v.video}:${s.id}`)!
+      if (live) total++
+      if (live && d.voiced) voicedCount++
+      console.log(`  video ${v.video} · ${s.id.padEnd(16)} ${String(Math.round(d.seconds)).padStart(3)} s  ${s.role.padEnd(8)} ${s.questions?.length ?? 0} q${d.voiced ? '' : '  (silent placeholder)'}${live ? '' : '  -- NOT LIVE'}`)
+    }
   }
-  console.log(`${total} sections, ${voicedCount} voiced`)
+  console.log(`${total} live sections, ${voicedCount} voiced${liveVideos.length < LESSON.videos.length ? `; left out until exported: video ${LESSON.videos.filter((v) => !liveVideos.includes(v)).map((v) => v.video).join(', ')}` : ''}`)
+  if (liveVideos.length === 0) throw new Error('no video has a voiced export yet: nothing to publish (INCLUDE_PLACEHOLDERS=1 to publish the placeholders)')
   if (!APPLY) {
     console.log('Dry run: nothing written. Set APPLY=1 to write.')
     await prisma.$disconnect()
@@ -89,7 +105,7 @@ async function main() {
   })
 
   const steps: { clipId: string; questions: CheckpointJson }[] = []
-  for (const v of LESSON.videos) {
+  for (const v of liveVideos) {
     for (const s of v.sections) {
       const tags = [`lesson-${LESSON.key}`, `video-${v.video}`, `section-${s.id}`, `role-${s.role}`]
       const d = seconds.get(`${v.video}:${s.id}`)!
