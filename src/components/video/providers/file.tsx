@@ -3,6 +3,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type { VideoPlayerHandle, VideoPlayerProps } from '../VideoPlayer'
 import { VideoUnavailable } from '../VideoUnavailable'
+import { clampVideoSpeed, readVideoSpeed, saveVideoSpeed } from '@/lib/video-speed'
 
 /**
  * Self-hosted provider for VideoPlayer: a plain HTML5 <video> whose source is
@@ -13,6 +14,10 @@ import { VideoUnavailable } from '../VideoUnavailable'
  * Playback is sampled from timeupdate; each (previous, now) pair goes to
  * onProgress and the caller's addPlayback keeps only contiguous playback, so a
  * seek adds nothing. A poster is looked for beside the file (<name>.jpg).
+ *
+ * Speed: each section starts at the student's saved speed (default 1.15×,
+ * src/lib/video-speed.ts); changing it in the player's menu is saved and
+ * carries to the next section.
  */
 
 export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(function FilePlayer(
@@ -56,6 +61,11 @@ export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(functi
     if (!v) return
     let playing = false
     lastRef.current = null
+    // Start at the saved speed. defaultPlaybackRate too, so the reset that
+    // load() does keeps it instead of snapping back to 1×.
+    const speed = readVideoSpeed()
+    v.defaultPlaybackRate = speed
+    v.playbackRate = speed
     const setPlaying = (next: boolean) => {
       if (playing === next) return
       playing = next
@@ -67,7 +77,15 @@ export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(functi
       if (from !== null && t !== from) cbRef.current.onProgress(from, t)
       lastRef.current = t
     }
+    const onRateChange = () => {
+      const r = clampVideoSpeed(v.playbackRate)
+      if (r !== v.playbackRate) v.playbackRate = r // keep within what earns watch credit
+      v.defaultPlaybackRate = r
+      saveVideoSpeed(r)
+    }
     const onLoaded = () => {
+      const saved = readVideoSpeed()
+      if (v.playbackRate !== saved) v.playbackRate = saved
       if (v.duration > 0 && Number.isFinite(v.duration)) cbRef.current.onDuration?.(v.duration)
       const { startAt: start, autoPlay: auto } = initRef.current
       if (start && start > 0 && start < v.duration) v.currentTime = start
@@ -113,6 +131,7 @@ export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(functi
     v.addEventListener('waiting', onWaiting)
     v.addEventListener('ended', onEnded)
     v.addEventListener('error', onError)
+    v.addEventListener('ratechange', onRateChange)
     v.src = providerId
     v.load()
     return () => {
@@ -125,6 +144,7 @@ export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(functi
       v.removeEventListener('waiting', onWaiting)
       v.removeEventListener('ended', onEnded)
       v.removeEventListener('error', onError)
+      v.removeEventListener('ratechange', onRateChange)
       if (playing) cbRef.current.onPlayingChange(false)
       v.pause()
       v.removeAttribute('src')
