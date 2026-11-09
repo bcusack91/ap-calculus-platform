@@ -4,8 +4,8 @@
  * question, and the worked examples' numeric answer keys. This is the
  * question → section map; `sync-circuits1.ts` writes it to the database.
  *
- * Videos 1–2 (Current) are live first; add videos 3–8 here as their section
- * files reach public/video-lessons/mcat-circ1/c0N/.
+ * Videos 1–3 are live; add videos 4–8 here as their section files reach
+ * public/video-lessons/mcat-circ1/c0N/.
  */
 import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics-electricity-dc-circuits-mcat'
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
@@ -95,6 +95,19 @@ export const LESSON = {
         },
         { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
         { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(2, 0), plan(2, 1), plan(2, 2)] },
+      ],
+    },
+    {
+      video: 3,
+      sections: [
+        { id: '02-energy-per-charge', title: 'Voltage is energy per charge', role: 'teach' },
+        { id: '03-signs', title: 'Both charges lose energy', role: 'teach', questions: [plan(3, 0)] },
+        { id: '04-electron-volt', title: 'The electron-volt', role: 'teach' },
+        { id: '05-ground', title: 'Ground: only differences matter', role: 'teach' },
+        { id: '06-water-analogy', title: 'The water analogy', role: 'teach' },
+        { id: '07-analogy-breaks', title: 'Where the analogy breaks', role: 'teach', questions: [plan(3, 2)] },
+        { id: '08-open-switch', title: 'The open switch', role: 'teach', questions: [plan(3, 1)] },
+        { id: '09-recap', title: 'Remember', role: 'teach' },
       ],
     },
   ] as VideoSpec[],

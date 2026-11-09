@@ -1,0 +1,64 @@
+{
+ "key": "mcat-circ1",
+ "video": 3,
+ "stem": "mcat_circ1_c03_voltage",
+ "topic": "circuits-part1-current-resistance",
+ "clips": [
+  {
+   "section": "02-energy-per-charge",
+   "file": "02-energy-per-charge.mp4",
+   "seconds": 60.284,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-signs",
+   "file": "03-signs.mp4",
+   "seconds": 50.1,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-electron-volt",
+   "file": "04-electron-volt.mp4",
+   "seconds": 32.834,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ground",
+   "file": "05-ground.mp4",
+   "seconds": 53.984,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-water-analogy",
+   "file": "06-water-analogy.mp4",
+   "seconds": 36.45,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-analogy-breaks",
+   "file": "07-analogy-breaks.mp4",
+   "seconds": 49.1,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-open-switch",
+   "file": "08-open-switch.mp4",
+   "seconds": 46.484,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-recap",
+   "file": "09-recap.mp4",
+   "seconds": 25.4,
+   "source": "c03 Current v1.mov",
+   "voiced": true
+  }
+ ]
+}
