@@ -1,14 +1,14 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { LogIn, UserPlus } from 'lucide-react'
+import { ArrowRight, Lock, LogIn, UserPlus } from 'lucide-react'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { loadStudentLesson, publishedLessonsForTopic } from '@/lib/video-lessons-server'
-import { isLessonComplete, resumeIndex, studentSteps } from '@/lib/video-lesson-core'
+import { isLessonComplete, lessonParts, partIndexOf, partTitle, resumeIndex, studentSteps } from '@/lib/video-lesson-core'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
-import VideoLessonPlayer from '@/components/video/VideoLessonPlayer'
+import VideoLessonPlayer, { type PartNav } from '@/components/video/VideoLessonPlayer'
 import { InstructorAvatar } from '@/components/video/InstructorAvatar'
 
 /**
@@ -18,6 +18,12 @@ import { InstructorAvatar } from '@/components/video/InstructorAvatar'
  * steps/questions filtered by their setting, options in display order, no
  * answer keys (studentSteps). Signed-out visitors see the lesson outline and
  * a sign-in prompt — progress, checkpoints and credit need an account.
+ *
+ * A lesson cut from YouTube videos is shown one PART per page (?part=N): a
+ * concept video and its worked-examples video (lessonParts). A part opens
+ * once every part before it is finished, like the sections inside it. With
+ * no ?part, the page opens the part holding the student's next unfinished
+ * section.
  */
 
 export const dynamic = 'force-dynamic'
@@ -50,10 +56,34 @@ export default async function VideoLessonPage(props: Props) {
   const readHref = hasInteractiveLesson(topic.slug) ? `/topics/${topic.slug}/interactive` : `/topics/${topic.slug}`
   const pickerHref = cards.length > 1 ? `/topics/${topic.slug}/video` : null
   const steps = studentSteps(lesson.steps, lesson.videoTitles)
-  // ?clip=N (from a short link in a YouTube video): open that clip's checkpoint.
+  // ?clip=N (1-based over the whole lesson): open that clip's checkpoint.
   const clipParam = typeof sp.clip === 'string' ? Number.parseInt(sp.clip, 10) : NaN
   const focusClip = Number.isInteger(clipParam) && clipParam >= 1 && clipParam <= steps.length ? clipParam : null
   const focusStep = focusClip ? steps[focusClip - 1] : null
+
+  // One page per part (concept video + its worked examples).
+  const parts = lessonParts(steps.map((s) => s.video))
+  const partDone = parts.map((p) => isLessonComplete(lesson.steps.slice(p.start, p.end), lesson.progress))
+  const partParam = typeof sp.part === 'string' ? Number.parseInt(sp.part, 10) : NaN
+  const partIdx = focusClip
+    ? partIndexOf(parts, focusClip - 1)
+    : Number.isInteger(partParam) && partParam >= 1 && partParam <= parts.length
+      ? partParam - 1
+      : partIndexOf(parts, resumeIndex(lesson.steps, lesson.progress))
+  const lessonHref = `/topics/${topic.slug}/video/${lesson.instructor.slug}`
+  const partNav: PartNav[] = parts.map((p, k) => {
+    const ps = steps.slice(p.start, p.end)
+    return {
+      title: partTitle(lesson.videoTitles[p.videos[0]], k + 1),
+      videoTitles: p.videos.map((v) => lesson.videoTitles[v] ?? `Video ${v}`),
+      sections: ps.length,
+      minutes: Math.max(1, Math.round(ps.reduce((n, s) => n + s.durationSec, 0) / 60)),
+      done: partDone[k],
+      href: `${lessonHref}?part=${k + 1}`,
+    }
+  })
+  const firstOpenPart = partDone.findIndex((d) => !d)
+  const partLocked = firstOpenPart !== -1 && partIdx > firstOpenPart
 
   if (!userId) {
     const path = `/topics/${topic.slug}/video/${lesson.instructor.slug}${focusClip ? `?clip=${focusClip}` : ''}`
@@ -66,7 +96,8 @@ export default async function VideoLessonPage(props: Props) {
             </div>
             <h1 className="mt-3 text-2xl font-bold text-gray-900 dark:text-white">{lesson.title}</h1>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              {lesson.instructor.name} · {steps.length} {steps.length === 1 ? 'clip' : 'clips'} · {Math.max(1, Math.round(steps.reduce((n, s) => n + s.durationSec, 0) / 60))} min
+              {lesson.instructor.name}
+              {parts.length > 1 ? ` · ${parts.length} parts` : ''} · {steps.length} {steps.length === 1 ? 'clip' : 'clips'} · {Math.max(1, Math.round(steps.reduce((n, s) => n + s.durationSec, 0) / 60))} min
             </p>
             {focusStep ? (
               <p className="mt-4 text-gray-700 dark:text-gray-300">
@@ -98,20 +129,51 @@ export default async function VideoLessonPage(props: Props) {
     )
   }
 
+  const part = parts[partIdx]
+  if (part && partLocked) {
+    const open = partNav[firstOpenPart]
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+        <div className="mx-auto max-w-2xl px-4 py-10">
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm dark:border-gray-700 dark:bg-gray-900 sm:p-8">
+            <Lock className="mx-auto mb-3 h-10 w-10 text-gray-400 dark:text-gray-500" aria-hidden />
+            <p className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+              {lesson.title} · Part {partIdx + 1} of {parts.length}
+            </p>
+            <h1 className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">{partNav[partIdx].title} is locked</h1>
+            <p className="mt-3 text-gray-700 dark:text-gray-300">
+              Finish Part {firstOpenPart + 1}, {open.title}, first. Each part opens when the one before it is done.
+            </p>
+            <Link href={open.href} className="mt-5 inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 font-semibold text-white hover:bg-accent-hover">
+              Go to Part {firstOpenPart + 1}: {open.title} <ArrowRight className="h-5 w-5" aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  const partSteps = part ? steps.slice(part.start, part.end) : steps
+  const partVisible = part ? lesson.steps.slice(part.start, part.end) : lesson.steps
+  const partOffset = part?.start ?? 0
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       <div className="mx-auto max-w-6xl px-4 py-6">
         <VideoLessonPlayer
+          key={partIdx}
           lessonId={lesson.id}
           topicSlug={topic.slug}
           topicTitle={topic.title}
           title={lesson.title}
           instructor={{ name: lesson.instructor.name, headline: lesson.instructor.headline, photoUrl: lesson.instructor.photoUrl }}
-          steps={steps}
+          steps={partSteps}
+          parts={partNav}
+          partIndex={partIdx}
           initialProgress={lesson.progress}
-          initialIndex={focusClip ? focusClip - 1 : resumeIndex(lesson.steps, lesson.progress)}
+          initialIndex={focusClip ? focusClip - 1 - partOffset : resumeIndex(partVisible, lesson.progress)}
           openCheckpointOnLoad={focusClip !== null}
           initiallyComplete={isLessonComplete(lesson.steps, lesson.progress)}
+          partInitiallyComplete={partDone[partIdx] ?? false}
           pickerHref={pickerHref}
           readHref={readHref}
           exitQuizHref={hasExitQuiz(topic.slug) ? `/topics/${topic.slug}/interactive?exitQuiz=1` : null}

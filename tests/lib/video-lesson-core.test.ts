@@ -3,6 +3,9 @@ import {
   checkpointScore,
   gradeNumericQuestion,
   isLessonComplete,
+  lessonParts,
+  partIndexOf,
+  partTitle,
   lessonDraftSchema,
   parseQuestions,
   questionSettled,
@@ -140,5 +143,34 @@ describe('video lesson rules', () => {
     expect(out[0].videoTitle).toBe('Current: Worked Examples')
     expect(JSON.stringify(out)).not.toMatch(/answer|expected|explanation/)
     expect(out[0].questions[0]).toMatchObject({ kind: 'numeric', parts: [{ label: 'a', unit: 'C' }, { label: 'b', unit: null }] })
+  })
+})
+
+describe('lesson parts (one page per concept + worked-examples pair)', () => {
+  it('pairs videos 1–2, 3–4 … in step order', () => {
+    const parts = lessonParts([1, 1, 2, 2, 3, 3, 4, 5])
+    expect(parts).toEqual([
+      { start: 0, end: 4, videos: [1, 2] },
+      { start: 4, end: 7, videos: [3, 4] },
+      { start: 7, end: 8, videos: [5] },
+    ])
+    expect(partIndexOf(parts, 0)).toBe(0)
+    expect(partIndexOf(parts, 5)).toBe(1)
+    expect(partIndexOf(parts, 7)).toBe(2)
+  })
+  it('keeps a part whose examples video is not out yet', () => {
+    expect(lessonParts([1, 2, 3, 3])).toEqual([
+      { start: 0, end: 2, videos: [1, 2] },
+      { start: 2, end: 4, videos: [3] },
+    ])
+  })
+  it('treats a lesson of whole clips as one part', () => {
+    expect(lessonParts([null, null, null])).toEqual([{ start: 0, end: 3, videos: [] }])
+    expect(lessonParts([])).toEqual([])
+  })
+  it('names a part from its concept video', () => {
+    expect(partTitle('Current: Charge on the Move', 1)).toBe('Current')
+    expect(partTitle("Resistance and Ohm's Law", 3)).toBe("Resistance and Ohm's Law")
+    expect(partTitle(null, 2)).toBe('Part 2')
   })
 })

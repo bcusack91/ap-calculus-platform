@@ -96,6 +96,57 @@ export function stepMeta(tags: readonly string[] | undefined): StepMeta {
   return { role, video, section }
 }
 
+// ── Parts (pages of a section lesson) ─────────────────────────────────────
+
+/**
+ * A lesson cut from YouTube videos is shown a PART at a time, one page per
+ * pair of source videos: a concept video and its worked-examples video (the
+ * YouTube format), so videos 1–2 are part 1, 3–4 part 2, and so on. A lesson
+ * of whole clips (no `video-N` tags) is a single part. Parts are display
+ * only: progress, completion and credit stay per lesson.
+ */
+export const VIDEOS_PER_PART = 2
+
+export type LessonPart = {
+  /** Steps [start, end) of the full visible list. */
+  start: number
+  end: number
+  /** Source video numbers in this part, in order. */
+  videos: number[]
+}
+
+export function partOfVideo(video: number | null): number {
+  return video === null ? 0 : Math.ceil(video / VIDEOS_PER_PART)
+}
+
+/** Consecutive runs of steps in the same part (steps are already in order). */
+export function lessonParts(videos: readonly (number | null)[]): LessonPart[] {
+  const out: (LessonPart & { key: number })[] = []
+  videos.forEach((v, i) => {
+    const key = partOfVideo(v)
+    let cur = out[out.length - 1]
+    if (!cur || cur.key !== key) {
+      cur = { key, start: i, end: i, videos: [] }
+      out.push(cur)
+    }
+    cur.end = i + 1
+    if (v !== null && !cur.videos.includes(v)) cur.videos.push(v)
+  })
+  return out.map(({ start, end, videos: vs }) => ({ start, end, videos: vs }))
+}
+
+/** A part's short name from its concept video's title: "Current: Charge on the Move" → "Current". */
+export function partTitle(firstVideoTitle: string | null | undefined, position: number): string {
+  const t = (firstVideoTitle ?? '').split(':')[0].trim()
+  return t || `Part ${position}`
+}
+
+/** Which part (0-based) holds step i of the full list. */
+export function partIndexOf(parts: readonly LessonPart[], i: number): number {
+  const k = parts.findIndex((p) => i >= p.start && i < p.end)
+  return k === -1 ? 0 : k
+}
+
 /** A step as stored (VideoLessonStep) joined with its clip. */
 export type StoredStep = {
   order: number

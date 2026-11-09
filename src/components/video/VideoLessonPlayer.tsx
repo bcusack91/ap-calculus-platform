@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { ArrowRight, BookOpen, CheckCircle2, Circle, Layers, Lock, PlayCircle, RotateCcw, SkipForward, Users, XCircle } from 'lucide-react'
 import VideoPlayer, { type VideoPlayerHandle } from './VideoPlayer'
 import { PreferVideoToggle } from './PreferVideoToggle'
@@ -34,7 +35,24 @@ import type { ProgressSteps, StudentQuestion, StudentStep } from '@/lib/video-le
  * only what that budget allows and keep the rest for the next one. Finishing
  * every clip and checkpoint completes the lesson (TopicProgress COMPLETED on
  * the server); credit comes from the topic's exit quiz.
+ *
+ * A lesson cut from YouTube videos is shown one PART per page (a concept
+ * video and its worked examples). `steps` are then only this part's
+ * sections; the part navigator links the others, a part opens once every
+ * part before it is done, and a part's end screen leads to the next part
+ * (the last part's leads to the exit quiz).
  */
+
+/** One part (page) of the lesson, for the navigator. */
+export type PartNav = {
+  title: string
+  videoTitles: string[]
+  sections: number
+  minutes: number
+  /** Finished, as of page load (the current part's state is live). */
+  done: boolean
+  href: string
+}
 
 export type VideoLessonPlayerProps = {
   lessonId: string
@@ -42,7 +60,12 @@ export type VideoLessonPlayerProps = {
   topicTitle: string
   title: string
   instructor: { name: string; headline: string; photoUrl: string | null }
+  /** This part's steps (all of them when the lesson has one part). */
   steps: StudentStep[]
+  parts?: PartNav[]
+  partIndex?: number
+  /** This part is finished (open on its end screen). Defaults to initiallyComplete. */
+  partInitiallyComplete?: boolean
   initialProgress: ProgressSteps
   initialIndex: number
   initiallyComplete: boolean
@@ -170,6 +193,9 @@ export default function VideoLessonPlayer({
   title,
   instructor,
   steps,
+  parts = [],
+  partIndex = 0,
+  partInitiallyComplete,
   initialProgress,
   initialIndex,
   initiallyComplete,
@@ -181,7 +207,8 @@ export default function VideoLessonPlayer({
   const [index, setIndex] = useState(() => Math.min(Math.max(initialIndex, 0), Math.max(steps.length - 1, 0)))
   const [ranges, setRanges] = useState(() => initialRanges(steps, initialProgress))
   const [answered, setAnswered] = useState<Answered>(() => initialAnswered(steps, initialProgress))
-  const [phase, setPhase] = useState<Phase>(initiallyComplete && !openCheckpointOnLoad ? 'done' : 'video')
+  const router = useRouter()
+  const [phase, setPhase] = useState<Phase>((partInitiallyComplete ?? initiallyComplete) && !openCheckpointOnLoad ? 'done' : 'video')
   const [playing, setPlaying] = useState(false)
   const [autoPlay, setAutoPlay] = useState(false)
   const [skipNotice, setSkipNotice] = useState(false)
@@ -202,6 +229,7 @@ export default function VideoLessonPlayer({
 
   const playerRef = useRef<VideoPlayerHandle>(null)
   const checkpointRef = useRef<HTMLDivElement>(null)
+  const endRef = useRef<HTMLDivElement>(null)
 
   // Save bookkeeping (refs: read by timers and unload handlers).
   const rangesRef = useRef(ranges)
@@ -326,6 +354,16 @@ export default function VideoLessonPlayer({
   useEffect(() => {
     if (phase === 'checkpoint') checkpointRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }, [phase, qPos])
+
+  // A finished part's end screen (with "Next part") replaces a card further down the page: bring it into view.
+  const loadedRef = useRef(false)
+  useEffect(() => {
+    if (!loadedRef.current) {
+      loadedRef.current = true
+      return
+    }
+    if (phase === 'done') endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [phase])
 
   const handleProgress = (clipId: string, duration: number, from: number, to: number) => {
     const now = Date.now()
@@ -546,6 +584,21 @@ export default function VideoLessonPlayer({
       if (a?.correct && a.attempts === 1) scoreCorrect++
     }
   }
+  // Parts: the current part's "done" is live; a part opens once every part before it is done.
+  const multiPart = parts.length > 1
+  const partLiveDone = (k: number) => (k === partIndex ? allDone : parts[k]?.done ?? false)
+  const partOpen = (k: number) => parts.slice(0, k).every((_, j) => partLiveDone(j))
+  const nextPart = multiPart && partIndex + 1 < parts.length ? parts[partIndex + 1] : null
+  const lessonDone = complete || (allDone && parts.every((p, k) => k === partIndex || p.done))
+  const [leaving, setLeaving] = useState(false)
+  const goToPart = async (href: string) => {
+    if (leaving) return
+    setLeaving(true)
+    // Bank the last watch time first, so the next page sees this part as finished.
+    await save()
+    router.push(href)
+  }
+
   const curRanges = step ? ranges[step.clipId] ?? [] : []
   const curPct = step ? Math.round(watchedFraction(curRanges, step.durationSec) * 100) : 0
   const curWatched = step ? isClipWatched(curRanges, step.durationSec) : false
@@ -588,6 +641,52 @@ export default function VideoLessonPlayer({
           </p>
         </div>
       </div>
+      {multiPart && (
+        <nav aria-label="Lesson parts" className="mt-4">
+          <ol className="flex flex-wrap gap-2">
+            {parts.map((p, k) => {
+              const current = k === partIndex
+              const done = partLiveDone(k)
+              const open = partOpen(k)
+              const Icon = done ? CheckCircle2 : !open ? Lock : current ? PlayCircle : Circle
+              const body = (
+                <>
+                  <Icon
+                    className={`mt-0.5 h-5 w-5 shrink-0 ${done ? 'text-green-600 dark:text-green-400' : current ? 'text-accent dark:text-accent-muted' : 'text-gray-400 dark:text-gray-500'}`}
+                    aria-hidden
+                  />
+                  <span className="min-w-0">
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Part {k + 1}</span>
+                    <span className="block text-sm font-semibold text-gray-900 dark:text-gray-100">{p.title}</span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400">
+                      {p.videoTitles.length} {p.videoTitles.length === 1 ? 'video' : 'videos'} · {p.minutes} min
+                      {done ? ' · done' : !open ? ' · locked' : ''}
+                    </span>
+                  </span>
+                </>
+              )
+              const cls = `flex h-full items-start gap-2.5 rounded-xl border px-3 py-2 text-left transition-colors ${
+                current
+                  ? 'border-accent-muted bg-accent-subtle dark:border-accent-hover dark:bg-accent-light/20'
+                  : open
+                    ? 'border-gray-200 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800'
+                    : 'cursor-not-allowed border-gray-200 opacity-50 dark:border-gray-700'
+              }`
+              return (
+                <li key={p.href} className="min-w-[10rem] flex-1">
+                  {current ? (
+                    <div aria-current="page" className={cls}>{body}</div>
+                  ) : open ? (
+                    <button type="button" onClick={() => void goToPart(p.href)} className={`w-full ${cls}`}>{body}</button>
+                  ) : (
+                    <div aria-disabled="true" className={cls}>{body}</div>
+                  )}
+                </li>
+              )
+            })}
+          </ol>
+        </nav>
+      )}
     </div>
   )
 
@@ -649,9 +748,14 @@ export default function VideoLessonPlayer({
   )
 
   const endScreen = (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm dark:border-gray-700 dark:bg-gray-900 sm:p-8" data-testid="video-lesson-end">
+    <div ref={endRef} className="scroll-mt-20 rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm dark:border-gray-700 dark:bg-gray-900 sm:p-8" data-testid="video-lesson-end">
       <CheckCircle2 className="mx-auto mb-3 h-12 w-12 text-green-600 dark:text-green-400" aria-hidden />
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{complete || allDone ? 'Video lesson complete' : 'Almost there'}</h2>
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+        {nextPart ? (allDone ? `Part ${partIndex + 1} complete: ${parts[partIndex].title}` : 'Almost there') : lessonDone ? 'Video lesson complete' : 'Almost there'}
+      </h2>
+      {nextPart && !allDone && (
+        <p className="mx-auto mt-2 max-w-md text-sm text-gray-600 dark:text-gray-400">Finish every section in this part to open Part {partIndex + 2}.</p>
+      )}
       <div className="mx-auto mt-5 grid max-w-sm grid-cols-2 gap-3">
         <div className="rounded-xl bg-gray-50 p-3 dark:bg-gray-800">
           <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -672,7 +776,21 @@ export default function VideoLessonPlayer({
           {flashcards.newCards} new flashcard{flashcards.newCards === 1 ? '' : 's'} unlocked{flashcards.topicTitle ? ` for ${flashcards.topicTitle}` : ''}.
         </p>
       )}
-      {exitQuizHref ? (
+      {nextPart ? (
+        <>
+          <button
+            type="button"
+            onClick={() => void goToPart(nextPart.href)}
+            disabled={!allDone || leaving}
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+          >
+            Next: Part {partIndex + 2} · {nextPart.title} <ArrowRight className="h-5 w-5" aria-hidden />
+          </button>
+          <p className="mx-auto mt-3 max-w-md text-sm text-gray-600 dark:text-gray-400">
+            {nextPart.videoTitles.join(' and ')} · {nextPart.minutes} min
+          </p>
+        </>
+      ) : exitQuizHref ? (
         <>
           <Link
             href={exitQuizHref}
@@ -899,7 +1017,7 @@ export default function VideoLessonPlayer({
               </button>
             )}
             <button type="button" onClick={finishCheckpoint} className={primaryBtn}>
-              {index + 1 < steps.length ? (sectioned ? 'Next section' : 'Next clip') : 'Finish'} <ArrowRight className="h-4 w-4" aria-hidden />
+              {index + 1 < steps.length ? (sectioned ? 'Next section' : 'Next clip') : nextPart ? 'Finish this part' : 'Finish'} <ArrowRight className="h-4 w-4" aria-hidden />
             </button>
           </div>
         </div>
