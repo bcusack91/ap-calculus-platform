@@ -1,0 +1,14 @@
+name = "studymondo-live-relay"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "SessionRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["SessionRoom"]
+
+[observability]
+enabled = true

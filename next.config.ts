@@ -15,6 +15,21 @@ const analyzeBundles = withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
+// Live relay (live-relay/): the browser opens a WebSocket to it during slide
+// presentations, so its host must be allowed by connect-src. Empty when unset.
+const liveRelayOrigin = (() => {
+  const url = process.env.NEXT_PUBLIC_LIVE_RELAY_URL;
+  if (!url) return "";
+  try {
+    const u = new URL(url);
+    // Plain ws:// only for a local worker (wrangler dev); production is wss://.
+    const scheme = u.protocol === "ws:" || u.protocol === "http:" ? "ws" : "wss";
+    return ` ${scheme}://${u.host}`;
+  } catch {
+    return "";
+  }
+})();
+
 const nextConfig: NextConfig = {
   outputFileTracingRoot: __dirname,
   // The share-card routes read their fonts from disk at request time
@@ -138,7 +153,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://esm.sh",
-              "connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc",
+              `connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc${liveRelayOrigin}`,
               // Live class sessions frame video: YouTube for webcast mode,
               // 8x8.vc for the embedded JaaS conference room. Without these the
               // browser refuses the iframe ("This content is blocked").

@@ -10,6 +10,8 @@ import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlid
 import { lockStageView, needsAnswerStrip, stageView, toLogicalScene } from '@/lib/slide-stage'
 import type { SlideFigure } from '@/lib/slide-deck'
 import { classCourseCount, orderLauncherCourses, type LauncherCourse } from '@/lib/deck-launcher-courses'
+import { useLiveRelay } from '@/hooks/useLiveRelay'
+import { changedElements, LASER_MIN_INTERVAL_MS, LASER_STALE_MS, STROKE_FLUSH_MS, type RelayMessage } from '@/lib/live-relay-messages'
 
 declare global {
   interface Window { EXCALIDRAW_ASSET_PATH?: string }
@@ -27,8 +29,10 @@ if (typeof window !== 'undefined') {
  * shows the class the correct option + explanation. Students: view follows
  * the teacher's slide; on polls they tap an answer (changeable until reveal)
  * and then see the class distribution. Deck ends on the exit-quiz handoff
- * slide. Sync = the same 2.5s polling pattern as chat/boards; students never
- * receive answer keys until reveal.
+ * slide. Sync = the same 2.5s polling pattern as chat/boards, which remains
+ * the record; when the live relay is configured (live-relay/), slide changes,
+ * pen strokes and the laser pointer also travel over a WebSocket and land in
+ * well under a second. Students never receive answer keys until reveal.
  *
  * Every viewer sees the IDENTICAL slide: slides render on a fixed 1280 × 720
  * logical stage scaled to each screen (SlideStage / src/lib/slide-stage.ts),
@@ -41,6 +45,15 @@ type Slide =
   | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' | 'grid' }
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
+
+/** How long a locally applied slide change outranks a disagreeing poll (ms). */
+const SLIDE_HOLD_MS = 3000
+
+/** One line per slide for the teacher's jump list. */
+function slideLabel(s: Slide): string {
+  const text = s.kind === 'poll' ? `Quick check: ${s.question}` : s.kind === 'quiz' ? `Exit quiz: ${s.title}` : s.title
+  return text.length > 56 ? `${text.slice(0, 55).trimEnd()}…` : text
+}
 
 /** counts/total are null for students until the teacher reveals the answer. */
 interface PollState { counts: number[] | null; total: number | null; myAnswer: number | null; classSize?: number }
@@ -95,13 +108,15 @@ export default function SlideDeckSection({
     if (annotating && deck && localSceneRef.current) {
       const key = `${deck.id}:${deck.currentSlide}`
       const local = localSceneRef.current
-      setAnnScene(prev => ({ key, rev: prev?.key === key ? prev.rev : 0, scene: mergeScenes(prev?.key === key ? prev.scene : EMPTY_SCENE, local) }))
+      setAnnScene(prev => ({ key, rev: prev?.key === key ? prev.rev : 0, seq: (prev?.key === key ? prev.seq : 0) + 1, scene: mergeScenes(prev?.key === key ? prev.scene : EMPTY_SCENE, local) }))
     }
     localSceneRef.current = null
     setAnnotating(v => !v)
   }
-  // Latest annotation scene for the CURRENT slide (rev-gated via the poll).
-  const [annScene, setAnnScene] = useState<{ key: string; rev: number; scene: BoardScene } | null>(null)
+  // Latest annotation scene for the CURRENT slide: `rev` is the database's
+  // revision (from the poll), `seq` counts every local change to the scene
+  // (poll merges and relay deltas alike) so the view layer knows to re-apply.
+  const [annScene, setAnnScene] = useState<{ key: string; rev: number; seq: number; scene: BoardScene } | null>(null)
   const annRevRef = useRef(-1)
   const annSlideRef = useRef<string>('')
   // Full screen (whole section, controls included): the teacher projects it;
@@ -120,36 +135,189 @@ export default function SlideDeckSection({
     else void rootRef.current?.requestFullscreen().catch(() => {})
   }
 
+  // ---- Live relay (live-relay/): slide changes, strokes and the laser reach
+  // everyone in well under a second; the polls remain the record, so nothing
+  // here is required for correctness and a session without a relay still
+  // works as before. ----
+  const deckRef = useRef<DeckState | null>(null)
+  useEffect(() => {
+    deckRef.current = deck
+  }, [deck])
+  const slidesRef = useRef<Slide[] | null>(null)
+  useEffect(() => {
+    slidesRef.current = slides
+  }, [slides])
+  // The teacher's laser as received: the last few positions (a short trail)
+  // in logical stage units; hidden when no update arrives for a while.
+  const [laser, setLaser] = useState<{ slide: number; points: { x: number; y: number }[]; at: number } | null>(null)
+  useEffect(() => {
+    if (!laser) return
+    const t = setTimeout(() => setLaser(l => (l && l.at === laser.at ? null : l)), LASER_STALE_MS)
+    return () => clearTimeout(t)
+  }, [laser])
+  const applyDeckMessage = useCallback((m: Extract<RelayMessage, { t: 'deck' }>) => {
+    const prev = deckRef.current
+    if (!prev || prev.id !== m.deckId) return
+    if (m.ended) {
+      setDeck(p => (p?.id === m.deckId ? null : p))
+      return
+    }
+    const slideChanged = m.currentSlide !== undefined && m.currentSlide !== prev.currentSlide
+    if (slideChanged) {
+      const key = `${prev.id}:${m.currentSlide}`
+      annSlideRef.current = key
+      annRevRef.current = -1
+      setAnnScene(s => (s?.key === key ? s : null))
+      setLaser(null)
+      slideOverrideRef.current = { deckId: prev.id, index: m.currentSlide as number, at: Date.now() }
+    }
+    setDeck(p => {
+      if (!p || p.id !== m.deckId) return p
+      const next = { ...p }
+      if (slideChanged) {
+        next.currentSlide = m.currentSlide as number
+        // The new slide's poll state and reveal arrive with the next poll.
+        next.poll = null
+        next.currentReveal = null
+      }
+      if (m.reveal) {
+        if (!next.revealed.includes(m.reveal.index)) next.revealed = [...next.revealed, m.reveal.index]
+        if (m.reveal.index === next.currentSlide) next.currentReveal = { correctIndex: m.reveal.correctIndex, explanation: m.reveal.explanation }
+      }
+      return next
+    })
+  }, [])
+  const onRelayMessage = useCallback((m: RelayMessage) => {
+    if (m.t === 'deck') {
+      applyDeckMessage(m)
+      return
+    }
+    const d = deckRef.current
+    if (!d || m.deckId !== d.id || m.slide !== d.currentSlide) return
+    if (m.t === 'els') {
+      const key = `${d.id}:${m.slide}`
+      setAnnScene(prev => {
+        const same = prev?.key === key
+        return {
+          key,
+          rev: same ? prev.rev : 0,
+          seq: (same ? prev.seq : 0) + 1,
+          scene: mergeScenes(same ? prev.scene : EMPTY_SCENE, { elements: m.els, files: {}, logical: true }),
+        }
+      })
+    } else {
+      const now = Date.now()
+      setLaser(prev => (m.on
+        ? { slide: m.slide, at: now, points: [...(prev && prev.slide === m.slide ? prev.points.slice(-9) : []), { x: m.x, y: m.y }] }
+        : null))
+    }
+  }, [applyDeckMessage])
+  const relay = useLiveRelay(sessionId, !!deck, onRelayMessage)
+  const relaySend = relay.send
+  const relayEls = useCallback((els: BoardElement[]) => {
+    const d = deckRef.current
+    if (d) relaySend({ t: 'els', deckId: d.id, slide: d.currentSlide, els })
+  }, [relaySend])
+  const laserLastRef = useRef(0)
+  const laserOnRef = useRef(false)
+  const relayLaser = useCallback((p: { x: number; y: number; on: boolean }) => {
+    const d = deckRef.current
+    if (!d) return
+    const now = Date.now()
+    if (p.on) {
+      if (now - laserLastRef.current < LASER_MIN_INTERVAL_MS) return
+      laserOnRef.current = true
+    } else {
+      if (!laserOnRef.current) return // "off" goes out once, not on every mouse move
+      laserOnRef.current = false
+    }
+    laserLastRef.current = now
+    relaySend({ t: 'laser', deckId: d.id, slide: d.currentSlide, x: p.x, y: p.y, on: p.on })
+  }, [relaySend])
+
   const control = useCallback(async (payload: Record<string, unknown>) => {
+    // Teacher navigation goes out over the relay first and applies here at
+    // once; the POST below makes it the record and the poll confirms it.
+    const d = deckRef.current
+    if (d && payload.action === 'goto' && typeof payload.index === 'number') {
+      const m: RelayMessage = { t: 'deck', deckId: d.id, currentSlide: payload.index }
+      relaySend(m)
+      applyDeckMessage(m)
+    } else if (d && payload.action === 'reveal' && typeof payload.index === 'number') {
+      const s = slidesRef.current?.[payload.index]
+      if (s?.kind === 'poll') {
+        const m: RelayMessage = { t: 'deck', deckId: d.id, reveal: { index: payload.index, correctIndex: s.correctIndex, explanation: s.explanation } }
+        relaySend(m)
+        applyDeckMessage(m)
+      }
+    } else if (d && payload.action === 'end') {
+      relaySend({ t: 'deck', deckId: d.id, ended: true })
+    }
     const r = await fetch(`/api/live-sessions/${sessionId}/deck`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
+    // The change is in the database from now on: polls started before this
+    // moment may still carry the old slide, so the hold runs from here.
+    const o = slideOverrideRef.current
+    if (r.ok && d && o && o.deckId === d.id && payload.action === 'goto' && o.index === payload.index) o.at = Date.now()
     return r.ok
-  }, [sessionId])
+  }, [sessionId, relaySend, applyDeckMessage])
+
+  // A slide change applied locally (the teacher's click, or a relay message)
+  // before the database has it: a poll that STARTED before `at` + the hold
+  // window may still carry the old slide and must not drag the view back.
+  // Cleared once a poll agrees; after the hold the database wins regardless
+  // (the change never landed).
+  const slideOverrideRef = useRef<{ deckId: string; index: number; at: number } | null>(null)
 
   // State poll (2.5s) + one-time full fetch per deck id.
   useEffect(() => {
     let active = true
     const poll = async () => {
       try {
+        const started = Date.now()
         const r = await fetch(`/api/live-sessions/${sessionId}/deck?annRev=${annRevRef.current}`, { cache: 'no-store' })
         if (!r.ok || !active) return
-        const d = (await r.json()).deck as DeckState | null
+        let d = (await r.json()).deck as DeckState | null
+        const o = slideOverrideRef.current
+        if (d && o && o.deckId === d.id) {
+          if (d.currentSlide === o.index) slideOverrideRef.current = null
+          else if (started < o.at + SLIDE_HOLD_MS) {
+            // Stale with respect to the local change: keep our slide; the
+            // tallies and strokes in this response belong to the old one.
+            d = { ...d, currentSlide: o.index, poll: null, currentReveal: null, annotation: undefined }
+          }
+        }
+        // Reveals only ever grow within a deck: never lose one a relay message delivered.
+        const prevDeck = deckRef.current
+        if (d && prevDeck && prevDeck.id === d.id && prevDeck.revealed.some(i => !d!.revealed.includes(i))) {
+          d = { ...d, revealed: [...new Set([...d.revealed, ...prevDeck.revealed])] }
+        }
         setDeck(d)
         if (d) {
           const slideKey = `${d.id}:${d.currentSlide}`
           if (annSlideRef.current !== slideKey) {
-            // New slide — forget the old slide's annotation state and refetch.
+            // New slide — forget the old slide's annotation state and refetch
+            // (unless the relay already delivered strokes for this slide).
             annSlideRef.current = slideKey
             annRevRef.current = -1
-            setAnnScene(null)
+            setAnnScene(prev => (prev?.key === slideKey ? prev : null))
           }
           if (d.annotation) {
             if (d.annotation.scene !== undefined) {
-              annRevRef.current = d.annotation.rev
-              setAnnScene({ key: slideKey, rev: d.annotation.rev, scene: asScene(d.annotation.scene) })
+              const rev = d.annotation.rev
+              const polled = asScene(d.annotation.scene)
+              annRevRef.current = rev
+              // Merge, never replace: strokes that came over the relay in the
+              // last ~2 s are newer than the database's copy (version wins).
+              setAnnScene(prev => ({
+                key: slideKey,
+                rev,
+                seq: (prev?.key === slideKey ? prev.seq : 0) + 1,
+                scene: prev?.key === slideKey ? mergeScenes(prev.scene, polled) : polled,
+              }))
             } else if (d.annotation.rev !== annRevRef.current && d.annotation.rev < annRevRef.current) {
               // Rev went backwards (deck restarted) — resync next poll.
               annRevRef.current = -1
@@ -236,7 +404,26 @@ export default function SlideDeckSection({
             🖥️ Presenting
           </span>
           <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{deck.title}</span>
-          <span className="text-xs text-gray-400">slide {deck.currentSlide + 1}/{deck.slideCount}</span>
+          {youAreTeacher ? (
+            // Jump to any slide: a native select, so it works with a keyboard,
+            // on a phone and inside full screen without a popover of our own.
+            <select
+              aria-label="Jump to slide"
+              title="Jump to slide"
+              value={deck.currentSlide}
+              onChange={(e) => void control({ action: 'goto', index: Number(e.target.value) })}
+              className="max-w-[16rem] cursor-pointer rounded-md border border-gray-300 bg-white px-1.5 py-0.5 text-xs text-gray-600 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300"
+            >
+              {slides.map((s, i) => (
+                <option key={i} value={i}>{i + 1}/{deck.slideCount} · {slideLabel(s)}</option>
+              ))}
+            </select>
+          ) : (
+            <span className="text-xs text-gray-400">slide {deck.currentSlide + 1}/{deck.slideCount}</span>
+          )}
+          {youAreTeacher && relay.connected && (
+            <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400" title="Live relay connected: students see your slide changes, pen and laser within a fraction of a second">● live</span>
+          )}
         </div>
         <div className="flex flex-wrap items-center gap-1.5">
           {youAreTeacher && (
@@ -295,18 +482,23 @@ export default function SlideDeckSection({
       <SlideStage
         key={deck.currentSlide}
         overlay={(k) => (
-          <AnnotationLayer
-            key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : `view-${annHasStrokes ? 1 : 0}`}`}
-            sessionId={sessionId}
-            slideIndex={deck.currentSlide}
-            canDraw={youAreTeacher && annotating}
-            remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
-            onApi={onAnnApi}
-            onLocalScene={onLocalScene}
-            tool={penTool}
-            size={penSize}
-            scale={k}
-          />
+          <>
+            <AnnotationLayer
+              key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : `view-${annHasStrokes ? 1 : 0}`}`}
+              sessionId={sessionId}
+              slideIndex={deck.currentSlide}
+              canDraw={youAreTeacher && annotating}
+              remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
+              onApi={onAnnApi}
+              onLocalScene={onLocalScene}
+              onElements={relayEls}
+              onLaser={relayLaser}
+              tool={penTool}
+              size={penSize}
+              scale={k}
+            />
+            {laser && laser.slide === deck.currentSlide && <LaserOverlay points={laser.points} k={k} />}
+          </>
         )}
         below={(k) => {
           // On a phone the stage's own buttons are too small to tap, so the
@@ -665,6 +857,44 @@ function PenToolbar({
  *  wheel/pinch/pan can't move it (re-asserted on every change and on resize),
  *  so the teacher's zoom can never differ from a student's — slide-stage.ts.
  */
+/**
+ * The teacher's laser as the students see it: a red dot with a short trail,
+ * positioned in viewer pixels from logical stage units (the same mapping as
+ * the pen canvas). Excalidraw's own laser only exists on the presenter's
+ * screen, so the positions arrive over the live relay.
+ */
+function LaserOverlay({ points, k }: { points: { x: number; y: number }[]; k: number }) {
+  const last = points[points.length - 1]
+  if (!last) return null
+  return (
+    <div className="pointer-events-none absolute inset-0 z-30" aria-hidden data-laser-overlay>
+      {points.length > 1 && (
+        <svg className="absolute inset-0 h-full w-full">
+          <polyline
+            points={points.map(p => `${p.x * k},${p.y * k}`).join(' ')}
+            fill="none"
+            stroke="rgba(255,59,48,.45)"
+            strokeWidth={Math.max(2, 4 * k)}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
+      <div
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          left: last.x * k,
+          top: last.y * k,
+          width: Math.max(12, 18 * k),
+          height: Math.max(12, 18 * k),
+          background: 'radial-gradient(circle, #ff3b30 0 38%, rgba(255,59,48,.55) 62%, transparent 74%)',
+          boxShadow: '0 0 12px 4px rgba(255,59,48,.45)',
+        }}
+      />
+    </div>
+  )
+}
+
 function AnnotationLayer({
   sessionId,
   slideIndex,
@@ -674,12 +904,18 @@ function AnnotationLayer({
   tool = 'red',
   size = 'fine',
   onLocalScene,
+  onElements,
+  onLaser,
   scale,
 }: {
   sessionId: string
   slideIndex: number
   canDraw: boolean
-  remote: { rev: number; scene: BoardScene } | null
+  remote: { rev: number; seq: number; scene: BoardScene } | null
+  /** Draw mode: the elements that changed, batched every STROKE_FLUSH_MS, for the live relay. */
+  onElements?: (els: BoardElement[]) => void
+  /** Draw mode with the laser in hand: the pointer's position in logical stage units. */
+  onLaser?: (p: { x: number; y: number; on: boolean }) => void
   /** The stage's scale k — the one zoom this canvas may have. */
   scale: number
   /** Hands the canvas API to the presenter bar's pen tools (null on unmount). */
@@ -702,7 +938,7 @@ function AnnotationLayer({
   // Strokes already known at mount go in as initialData (both modes): the
   // canvas initialises asynchronously and replaces anything pushed through the
   // API before that, which used to leave viewers blank until the NEXT stroke.
-  const appliedRevRef = useRef(remote?.rev ?? -1)
+  const appliedStampRef = useRef(remote ? `${remote.rev}:${remote.seq}` : '')
   // Captured once at mount (the parent remounts this layer per slide/mode via
   // key) — a useState initializer, not a ref, so render never reads a ref.
   // Pre-stage scenes (no `logical` flag) are converted on the way in.
@@ -713,9 +949,35 @@ function AnnotationLayer({
   // What the server already has: a draw layer re-mounted on a slide with
   // strokes must not re-post the identical scene on Done (each rev bump makes
   // every viewer re-download the whole scene).
+  // Live relay (draw mode): elements changed since the last message, batched
+  // for a few tens of ms so a stroke in progress goes out as it is drawn.
+  const knownRef = useRef(new Map<string, number>())
+  const pendingRef = useRef(new Map<string, BoardElement>())
   useEffect(() => {
-    if (canDraw && initial.elements.length) lastSentRef.current = sceneVersion({ elements: initial.elements, files: {} })
+    if (canDraw && initial.elements.length) {
+      lastSentRef.current = sceneVersion({ elements: initial.elements, files: {} })
+      // Strokes already on the slide are known to everyone: never re-sent.
+      for (const el of initial.elements) knownRef.current.set(el.id, el.version ?? 0)
+    }
   }, [canDraw, initial])
+  const flushTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const onElementsRef = useRef(onElements)
+  useEffect(() => {
+    onElementsRef.current = onElements
+  }, [onElements])
+  const flushElements = useCallback(() => {
+    flushTimerRef.current = null
+    const els = [...pendingRef.current.values()]
+    pendingRef.current.clear()
+    if (els.length) onElementsRef.current?.(els)
+  }, [])
+  useEffect(() => () => {
+    // Unmount (Done, slide change): the last few ms of a stroke still go out.
+    if (flushTimerRef.current !== null) {
+      clearTimeout(flushTimerRef.current)
+      flushElements()
+    }
+  }, [flushElements])
   const toolRef = useRef(tool)
   useEffect(() => {
     toolRef.current = tool
@@ -734,8 +996,10 @@ function AnnotationLayer({
   }, [scale])
   const applyRemote = useCallback((api: ExcalApi) => {
     const r = remoteRef.current
-    if (!r || r.rev === appliedRevRef.current) return
-    appliedRevRef.current = r.rev
+    if (!r) return
+    const stamp = `${r.rev}:${r.seq}`
+    if (stamp === appliedStampRef.current) return
+    appliedStampRef.current = stamp
     const scene = toLogicalScene(r.scene)
     api.updateScene({ elements: scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
     const files = Object.values(scene.files)
@@ -807,7 +1071,7 @@ function AnnotationLayer({
   if (!canDraw && !hasStrokes) return null
 
   return (
-    <div ref={wrapRef} className={`slide-annotations absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`}>
+    <div ref={wrapRef} className={`slide-annotations absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`} data-ann-count={(remote?.scene.elements ?? []).filter(el => !el.isDeleted).length}>
       <Excalidraw
         excalidrawAPI={(api) => {
           const a = api as unknown as ExcalApi
@@ -842,6 +1106,13 @@ function AnnotationLayer({
           // each change — this is what the push loop and the unmount flush send.
           latestSceneRef.current = { elements: [...(elements as unknown as BoardElement[])], files: (files ?? {}) as Record<string, unknown>, logical: true }
           onLocalScene?.(latestSceneRef.current)
+          if (onElementsRef.current) {
+            const changed = changedElements(knownRef.current, latestSceneRef.current.elements)
+            if (changed.length) {
+              for (const el of changed) pendingRef.current.set(el.id, el)
+              if (flushTimerRef.current === null) flushTimerRef.current = setTimeout(flushElements, STROKE_FLUSH_MS)
+            }
+          }
           // A canvas shortcut (V, 1, Escape…) can swap the tool out from under
           // the presenter bar; put the chosen pen back.
           const active = (appState as { activeTool?: { type?: string } }).activeTool?.type
@@ -852,6 +1123,10 @@ function AnnotationLayer({
         } : (_elements, appState) => {
           if (apiRef.current) lockStageView(apiRef.current, appState as Parameters<typeof lockStageView>[1], scaleRef.current, CaptureUpdateAction.NEVER)
         }}
+        onPointerUpdate={canDraw && onLaser ? ({ pointer, button }) => {
+          // Scene coordinates = logical stage units here (zoom k, scroll 0).
+          if (toolRef.current === 'laser') onLaser({ x: pointer.x, y: pointer.y, on: button === 'down' })
+        } : undefined}
         viewModeEnabled={!canDraw}
         zenModeEnabled={canDraw}
         UIOptions={{ canvasActions: { toggleTheme: false, changeViewBackgroundColor: false } }}

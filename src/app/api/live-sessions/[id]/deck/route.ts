@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { generateSlideDeck, revealedList, type Slide } from '@/lib/slide-deck'
 import { touchAttendance } from '@/lib/live-session'
 import { asScene, mergeScenes } from '@/lib/board-merge'
+import { sessionAccess } from '@/lib/live-session-access'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -20,30 +21,6 @@ interface Ctx { params: Promise<{ id: string }> }
  * POST (student) { action: 'answer', slideIndex, answerIndex } — one answer
  *                per poll per student (latest wins until revealed).
  */
-
-async function sessionAccess(sessionId: string, userId: string) {
-  const live = await prisma.liveSession.findUnique({
-    where: { id: sessionId },
-    select: { id: true, status: true, classroomId: true, classroom: { select: { teacherId: true } } },
-  })
-  if (!live) return null
-  const user = await prisma.user.findUnique({ where: { id: userId }, select: { name: true, role: true } })
-  const isTeacher =
-    live.classroom.teacherId === userId ||
-    user?.role === 'ADMIN' ||
-    !!(await prisma.classroomCoTeacher.findUnique({
-      where: { classroomId_userId: { classroomId: live.classroomId, userId } },
-      select: { id: true },
-    }))
-  if (!isTeacher) {
-    const member = await prisma.classroomMember.findUnique({
-      where: { classroomId_userId: { classroomId: live.classroomId, userId } },
-      select: { isActive: true },
-    })
-    if (!member?.isActive) return null
-  }
-  return { live, isTeacher, userName: user?.name || 'Student' }
-}
 
 export async function GET(req: NextRequest, { params }: Ctx) {
   const { id } = await params

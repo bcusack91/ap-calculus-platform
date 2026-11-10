@@ -268,3 +268,10 @@ inside StudyMondo with automatic moderator/student roles and names:
      (`base64 -i Key.pk` in Terminal, paste the output)
 4. Redeploy. Conference mode switches to embedded automatically — no code
    change.
+
+**Live relay for slides (15 minutes, free):** makes your slide changes, pen
+strokes and laser pointer appear on students' screens in a fraction of a
+second (without it: 2–5 s, and the laser stays on your screen only). Steps in
+`live-relay/README.md`: create a free Cloudflare account, run four commands in
+Terminal, add `NEXT_PUBLIC_LIVE_RELAY_URL` and `LIVE_RELAY_SECRET` in Vercel,
+redeploy. The presenter bar shows a green "● live" when it's connected.
