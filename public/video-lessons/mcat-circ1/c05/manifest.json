@@ -1,0 +1,64 @@
+{
+ "key": "mcat-circ1",
+ "video": 5,
+ "stem": "mcat_circ1_c05_resistance",
+ "topic": "circuits-part1-current-resistance",
+ "clips": [
+  {
+   "section": "02-ohms-law",
+   "file": "02-ohms-law.mp4",
+   "seconds": 48.384,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-hold-fixed",
+   "file": "03-hold-fixed.mp4",
+   "seconds": 65.384,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-iv-graph",
+   "file": "04-iv-graph.mp4",
+   "seconds": 58.684,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-wire-shape",
+   "file": "05-wire-shape.mp4",
+   "seconds": 56.7,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-stretching",
+   "file": "06-stretching.mp4",
+   "seconds": 31.0,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-temperature",
+   "file": "07-temperature.mp4",
+   "seconds": 28.15,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-axon",
+   "file": "08-axon.mp4",
+   "seconds": 42.934,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-recap",
+   "file": "09-recap.mp4",
+   "seconds": 11.0,
+   "source": "c05 Resistance v1.mov",
+   "voiced": true
+  }
+ ]
+}

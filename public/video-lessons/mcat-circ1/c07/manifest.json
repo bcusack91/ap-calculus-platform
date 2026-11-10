@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ1",
+ "video": 7,
+ "stem": "mcat_circ1_c07_series_parallel",
+ "topic": "circuits-part1-current-resistance",
+ "clips": [
+  {
+   "section": "02-series",
+   "file": "02-series.mp4",
+   "seconds": 67.55,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-parallel",
+   "file": "03-parallel.mp4",
+   "seconds": 78.934,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-compare",
+   "file": "04-compare.mp4",
+   "seconds": 47.734,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-shortcuts",
+   "file": "05-shortcuts.mp4",
+   "seconds": 53.334,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-nodes",
+   "file": "06-nodes.mp4",
+   "seconds": 41.334,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-short",
+   "file": "07-short.mp4",
+   "seconds": 45.134,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 17.184,
+   "source": "c07 Series and Parallel Resistors.mov",
+   "voiced": true
+  }
+ ]
+}

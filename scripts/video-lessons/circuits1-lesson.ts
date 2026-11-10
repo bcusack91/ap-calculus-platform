@@ -4,8 +4,8 @@
  * question, and the worked examples' numeric answer keys. This is the
  * question → section map; `sync-circuits1.ts` writes it to the database.
  *
- * Videos 1–4 are live; add videos 5–8 here as their section files reach
- * public/video-lessons/mcat-circ1/c0N/.
+ * All eight videos are live. A new video's section files go to
+ * public/video-lessons/mcat-circ1/c0N/ and its block is added here.
  */
 import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics-electricity-dc-circuits-mcat'
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
@@ -153,6 +153,145 @@ export const LESSON = {
         },
         { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
         { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(4, 0), plan(4, 1), plan(4, 2)] },
+      ],
+    },
+    {
+      video: 5,
+      sections: [
+        { id: '02-ohms-law', title: 'V = IR defines resistance', role: 'teach' },
+        { id: '03-hold-fixed', title: 'Hold one quantity fixed', role: 'teach', questions: [plan(5, 1)] },
+        { id: '04-iv-graph', title: 'Reading an I–V graph', role: 'teach', questions: [plan(5, 0)] },
+        { id: '05-wire-shape', title: 'R = ρL/A: the wire’s shape', role: 'teach' },
+        { id: '06-stretching', title: 'Stretching a wire', role: 'teach' },
+        { id: '07-temperature', title: 'Temperature', role: 'teach' },
+        { id: '08-axon', title: 'Axons: 1/r², not 1/r⁴', role: 'teach', questions: [plan(5, 2)] },
+        { id: '09-recap', title: 'Remember', role: 'teach' },
+      ],
+    },
+    {
+      video: 6,
+      sections: [
+        {
+          id: '02-ex1-problem',
+          title: 'Example 1: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question: 'Example 1. A copper wire has a resistance of 2.0 Ω.',
+              parts: [
+                { label: 'a', prompt: 'Resistance of a wire of the same copper that is twice as long with twice the diameter', answer: 1.0, unit: 'Ω', expected: '1.0 Ω' },
+                { label: 'b', prompt: 'Resistance of the original wire stretched to three times its length at constant volume', answer: 18, unit: 'Ω', expected: '18 Ω' },
+                { label: 'c', prompt: 'Current through the wire from (a) across 6.0 V', answer: 6.0, unit: 'A', expected: '6.0 A' },
+                { label: 'c', prompt: 'Current through the stretched wire from (b) across 6.0 V', answer: 0.333, unit: 'A', expected: 'about 0.33 A' },
+              ],
+              explanation:
+                'Write R = ρL/A as factors: new R = old R × (length factor) ÷ (area factor), and the area factor is the diameter factor squared. (a) Length × 2, diameter × 2 so area × 4: R = 2.0 × 2 / 4 = 1.0 Ω. Dividing by 2 for the diameter is the trap. (b) Stretching at constant volume: length × 3 and area ÷ 3, so R = 2.0 × 3 × 3 = 18 Ω; a stretched wire also gets thinner. (c) V is fixed, so I = V/R: 6.0 / 1.0 = 6.0 A and 6.0 / 18 ≈ 0.33 A.',
+            },
+          ],
+        },
+        { id: '03-ex1-solution', title: 'Example 1: the solution', role: 'solution' },
+        {
+          id: '04-ex2-problem',
+          title: 'Example 2: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question:
+                'Example 2. A resistor’s I–V line passes through (6.0 V, 0.20 A). A filament bulb’s curve passes through (6.0 V, 0.50 A) and (12 V, 0.75 A).',
+              parts: [
+                { label: 'a', prompt: 'The resistor’s resistance', answer: 30, unit: 'Ω', expected: '30 Ω' },
+                { label: 'a', prompt: 'The current the resistor carries at 15 V', answer: 0.5, unit: 'A', expected: '0.50 A' },
+                { label: 'b', prompt: 'The bulb’s resistance at (6.0 V, 0.50 A)', answer: 12, unit: 'Ω', expected: '12 Ω' },
+                { label: 'b', prompt: 'The bulb’s resistance at (12 V, 0.75 A)', answer: 16, unit: 'Ω', expected: '16 Ω' },
+              ],
+              explanation:
+                'Resistance at a point is V/I at that point. (a) 6.0 / 0.20 = 30 Ω, and the line is straight through the origin, so at 15 V the current is 15 / 30 = 0.50 A. (b) 6.0 / 0.50 = 12 Ω and 12 / 0.75 = 16 Ω: the resistance rises as the filament heats. The slope between the two points, 6 V / 0.25 A = 24 Ω, is not the resistance at either point.',
+            },
+            {
+              question: 'Is the filament bulb ohmic?',
+              options: [
+                'No: its resistance rises from 12 Ω to 16 Ω as it heats',
+                'Yes: V = IR holds at both of the given points',
+                'Yes: its resistance is 24 Ω, the slope between the points',
+                'No: its resistance falls from 16 Ω to 12 Ω as it heats',
+              ],
+              correctAnswer: 0,
+              explanation:
+                'An ohmic element has one resistance at every point, a straight I–V line through the origin. The bulb’s V/I grows from 12 Ω to 16 Ω as the filament heats, so it is non-ohmic. V = IR defines R at each point without making R constant, the slope between two points is ΔV/ΔI rather than a resistance, and a falling resistance would make the curve steepen rather than flatten.',
+            },
+          ],
+        },
+        { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
+        { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(6, 0), plan(6, 1), plan(6, 2)] },
+      ],
+    },
+    {
+      video: 7,
+      sections: [
+        { id: '02-series', title: 'Series: one path', role: 'teach', questions: [plan(7, 2)] },
+        { id: '03-parallel', title: 'Parallel: the same two nodes', role: 'teach' },
+        { id: '04-compare', title: 'Series vs. parallel, side by side', role: 'teach', questions: [plan(7, 1)] },
+        { id: '05-shortcuts', title: 'Shortcuts', role: 'teach' },
+        { id: '06-nodes', title: 'Judge by the nodes, not the drawing', role: 'teach' },
+        { id: '07-short', title: 'A short and an open', role: 'teach', questions: [plan(7, 0)] },
+        { id: '08-recap', title: 'Remember', role: 'teach' },
+      ],
+    },
+    {
+      video: 8,
+      sections: [
+        {
+          id: '02-ex1-problem',
+          title: 'Example 1: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question: 'Example 1. A 24 V battery drives 2 Ω, 4 Ω and 6 Ω resistors in series.',
+              parts: [
+                { label: 'a', prompt: 'The equivalent resistance', answer: 12, unit: 'Ω', expected: '12 Ω' },
+                { label: 'b', prompt: 'The current', answer: 2.0, unit: 'A', expected: '2.0 A' },
+              ],
+              explanation:
+                '(a) One path, so the resistances add: 2 + 4 + 6 = 12 Ω. (b) The battery sees 12 Ω, so I = V/R_eq = 24 / 12 = 2.0 A, and that same 2.0 A flows through all three resistors.',
+            },
+            {
+              kind: 'numeric',
+              question: 'Example 1, continued. The same 24 V battery and the 2 Ω, 4 Ω and 6 Ω series string.',
+              parts: [
+                { label: 'c', prompt: 'Voltage across the 2 Ω resistor', answer: 4, unit: 'V', expected: '4 V' },
+                { label: 'c', prompt: 'Voltage across the 4 Ω resistor', answer: 8, unit: 'V', expected: '8 V' },
+                { label: 'c', prompt: 'Voltage across the 6 Ω resistor', answer: 12, unit: 'V', expected: '12 V' },
+              ],
+              explanation:
+                'Each drop is IR with the same 2.0 A: 4 V, 8 V and 12 V. The biggest resistor takes the biggest drop, the drops run 1:2:3 like the resistances, and they add back to the 24 V of the battery. Splitting the 24 V equally (8 V each) only works when the resistors are equal.',
+            },
+          ],
+        },
+        { id: '03-ex1-solution', title: 'Example 1: the solution', role: 'solution' },
+        {
+          id: '04-ex2-problem',
+          title: 'Example 2: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question: 'Example 2. A 12 V battery sits across a 4 Ω and a 12 Ω resistor in parallel.',
+              parts: [
+                { label: 'a', prompt: 'The equivalent resistance', answer: 3, unit: 'Ω', expected: '3 Ω' },
+                { label: 'b', prompt: 'Current in the 4 Ω branch', answer: 3, unit: 'A', expected: '3 A' },
+                { label: 'b', prompt: 'Current in the 12 Ω branch', answer: 1, unit: 'A', expected: '1 A' },
+                { label: 'c', prompt: 'The total current', answer: 4, unit: 'A', expected: '4 A' },
+              ],
+              explanation:
+                'Both resistors join the same two nodes, so each has the full 12 V across it. (a) 1/R_eq = 1/4 + 1/12 = 1/3, so R_eq = 3 Ω (invert at the end; product over sum gives 48/16 = 3 Ω too), below the smallest branch as a parallel answer must be. (b) Each branch current is V/R: 12/4 = 3 A and 12/12 = 1 A. (c) The branch currents merge: 3 + 1 = 4 A, the same as 12 V / 3 Ω.',
+            },
+          ],
+        },
+        { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
+        { id: '06-recap', title: 'Remember: the two recipes', role: 'teach', questions: [plan(8, 0), plan(8, 1), plan(8, 2)] },
       ],
     },
   ] as VideoSpec[],
