@@ -1,0 +1,43 @@
+{
+ "key": "mcat-circ1",
+ "video": 4,
+ "stem": "mcat_circ1_c04_voltage_examples",
+ "topic": "circuits-part1-current-resistance",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 40.8,
+   "source": "c04 VoltageExamples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 80.5,
+   "source": "c04 VoltageExamples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 35.034,
+   "source": "c04 VoltageExamples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 80.0,
+   "source": "c04 VoltageExamples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 23.8,
+   "source": "c04 VoltageExamples v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -4,7 +4,7 @@
  * question, and the worked examples' numeric answer keys. This is the
  * question → section map; `sync-circuits1.ts` writes it to the database.
  *
- * Videos 1–3 are live; add videos 4–8 here as their section files reach
+ * Videos 1–4 are live; add videos 5–8 here as their section files reach
  * public/video-lessons/mcat-circ1/c0N/.
  */
 import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics-electricity-dc-circuits-mcat'
@@ -108,6 +108,51 @@ export const LESSON = {
         { id: '07-analogy-breaks', title: 'Where the analogy breaks', role: 'teach', questions: [plan(3, 2)] },
         { id: '08-open-switch', title: 'The open switch', role: 'teach', questions: [plan(3, 1)] },
         { id: '09-recap', title: 'Remember', role: 'teach' },
+      ],
+    },
+    {
+      video: 4,
+      sections: [
+        {
+          id: '02-ex1-problem',
+          title: 'Example 1: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question: 'Example 1. A 9.0 V battery delivers 0.50 A to a small pump for 1.0 minute. (e = 1.6 × 10⁻¹⁹ C)',
+              parts: [
+                { label: 'a', prompt: 'How much charge flows?', answer: 30, unit: 'C', expected: '30 C' },
+                { label: 'b', prompt: 'How many electrons is that?', answer: 1.875e20, unit: 'electrons', expected: 'about 1.9 × 10²⁰ electrons' },
+                { label: 'c', prompt: 'How much energy does the battery deliver?', answer: 270, unit: 'J', expected: '270 J' },
+                { label: 'd', prompt: 'How much energy does each electron carry, in electron-volts?', answer: 9, unit: 'eV', expected: '9.0 eV (about 1.4 × 10⁻¹⁸ J)' },
+              ],
+              explanation:
+                'Time in seconds first: 1.0 min = 60 s. (a) ΔQ = IΔt = (0.50 A)(60 s) = 30 C. (b) N = ΔQ/e = 30 / 1.6 × 10⁻¹⁹ ≈ 1.9 × 10²⁰ electrons. (c) W = qV = (30 C)(9.0 V) = 270 J. IV = 4.5 is power in watts, not energy; energy needs the time. (d) Each electron crosses 9.0 V, so it carries 9.0 eV ≈ 1.4 × 10⁻¹⁸ J. Check: (1.9 × 10²⁰)(1.4 × 10⁻¹⁸ J) ≈ 270 J.',
+            },
+          ],
+        },
+        { id: '03-ex1-solution', title: 'Example 1: the solution', role: 'solution' },
+        {
+          id: '04-ex2-problem',
+          title: 'Example 2: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question:
+                'Example 2. A Ca²⁺ ion crosses a cell membrane from outside (0 V) to inside (−70 mV). Find its change in electric potential energy, ΔU. Keep the sign: a negative ΔU means the ion loses potential energy. (e = 1.6 × 10⁻¹⁹ C)',
+              parts: [
+                { label: 'a', prompt: 'ΔU in electron-volts', answer: -0.14, unit: 'eV', expected: '−0.14 eV (it loses energy)' },
+                { label: 'b', prompt: 'ΔU in joules', answer: -2.24e-20, unit: 'J', expected: 'about −2.2 × 10⁻²⁰ J' },
+              ],
+              explanation:
+                'ΔV = final − initial = (−0.070 V) − 0 = −0.070 V. Ca²⁺ carries +2e, so ΔU = qΔV = (+2e)(−0.070 V) = −0.14 eV. In joules: −0.14 × 1.6 × 10⁻¹⁹ ≈ −2.2 × 10⁻²⁰ J. Negative, so the ion LOSES potential energy: the field points from high potential to low (outside to inside) and pulls the positive ion in. Using q = e for every ion gives half the right answer; count the charges.',
+            },
+          ],
+        },
+        { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
+        { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(4, 0), plan(4, 1), plan(4, 2)] },
       ],
     },
   ] as VideoSpec[],
