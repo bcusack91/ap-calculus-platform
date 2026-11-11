@@ -67,8 +67,10 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     if (!isTeacher) return NextResponse.json({ error: 'Teachers only' }, { status: 403 })
     const sinceParam = req.nextUrl.searchParams.get('since')
     const since = sinceParam ? new Date(sinceParam) : null
+    // Student pads only: not the class board, the teacher's view row, nor the
+    // slide-annotation rows the presentation keeps here (`deck:<id>:<slide>`).
     const boards = await prisma.liveBoard.findMany({
-      where: { sessionId: id, ownerKey: { notIn: ['class', CLASS_VIEW_KEY] } },
+      where: { sessionId: id, ownerKey: { notIn: ['class', CLASS_VIEW_KEY], not: { startsWith: 'deck:' } } },
       orderBy: { updatedAt: 'desc' },
       select: { ownerKey: true, ownerName: true, rev: true, updatedAt: true, scene: true },
     })

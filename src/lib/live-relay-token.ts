@@ -13,10 +13,12 @@ export interface RelayClaims {
   s: string
   /** User id. */
   u: string
-  /** Teachers may publish; students only listen. */
+  /** Teachers may publish anything; students only their own pad (and the shared class board). */
   r: 'teacher' | 'student'
   /** Expiry, ms since the epoch. */
   e: number
+  /** Display name: labels the member's pad in the teacher's gallery. */
+  n?: string
 }
 
 export const RELAY_TOKEN_TTL_MS = 10 * 60_000
@@ -68,5 +70,6 @@ export async function verifyRelayToken(token: string, secret: string, now = Date
   if (typeof claims.s !== 'string' || typeof claims.u !== 'string') return null
   if (claims.r !== 'teacher' && claims.r !== 'student') return null
   if (typeof claims.e !== 'number' || claims.e < now) return null
+  if (claims.n !== undefined && typeof claims.n !== 'string') return null
   return claims
 }

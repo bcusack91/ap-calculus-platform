@@ -22,6 +22,6 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
   const secret = process.env.LIVE_RELAY_SECRET
   const headers = { 'Cache-Control': 'private, no-store' }
   if (!url || !secret) return NextResponse.json({ url: null }, { headers })
-  const token = await signRelayToken({ s: id, u: session.user.id, r: access.isTeacher ? 'teacher' : 'student' }, secret)
+  const token = await signRelayToken({ s: id, u: session.user.id, r: access.isTeacher ? 'teacher' : 'student', n: access.userName.slice(0, 80) }, secret)
   return NextResponse.json({ url, token, ttlMs: RELAY_TOKEN_TTL_MS }, { headers })
 }

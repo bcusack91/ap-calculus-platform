@@ -9,6 +9,7 @@ import { ChatPanel, JitsiEmbed, leaveCall, type JitsiApi, type SessionInfo } fro
 import { useLivePopoutHost } from '@/lib/live-popout'
 import LessonRecorderControls from '@/components/LessonRecorderControls'
 import ClassMatchLive from '@/components/competitive/ClassMatchLive'
+import { LiveRelayProvider } from '@/components/live/LiveRelayProvider'
 
 // Whiteboards pull in Excalidraw (~a MB) — load only when a session page opens.
 const BoardSection = nextDynamic(() => import('@/components/LiveBoards'), {
@@ -138,6 +139,9 @@ export default function LiveSessionPage() {
   }
 
   return (
+    // One live-relay socket for the slides and the whiteboards (live-relay/);
+    // without a relay configured the provider is inert and the polls carry on.
+    <LiveRelayProvider sessionId={session.id} enabled={session.status === 'LIVE'}>
     <Shell wide={session.mode === 'WEBCAST'}>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
@@ -292,6 +296,7 @@ export default function LiveSessionPage() {
         onBoardActive={handleBoardActive}
       />
     </Shell>
+    </LiveRelayProvider>
   )
 }
 

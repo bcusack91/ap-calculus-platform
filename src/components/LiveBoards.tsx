@@ -3,10 +3,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Excalidraw, CaptureUpdateAction, exportToSvg } from '@excalidraw/excalidraw'
 import '@excalidraw/excalidraw/index.css'
-import { asScene, mergeScenes, sceneVersion, type BoardScene, type BoardElement } from '@/lib/board-merge'
+import { asScene, mergeScenes, sceneVersion, EMPTY_SCENE, type BoardScene, type BoardElement } from '@/lib/board-merge'
 import { fitView, sameView, viewFromAppState, type BoardViewRect } from '@/lib/board-view'
 import { SlidersHorizontal } from 'lucide-react'
 import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, type PenSize } from '@/lib/pen-sizes'
+import { useRelay, useRelayMessages } from '@/components/live/LiveRelayProvider'
+import { changedElements, markKnown, STROKE_FLUSH_MS, type RelayMessage } from '@/lib/live-relay-messages'
 
 /**
  * Whiteboards for live class sessions (see /live/[id]).
@@ -17,10 +19,14 @@ import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, t
  *   padsEnabled       — every student gets a personal pad; the teacher watches
  *                       all of them in a live gallery.
  *
- * Sync is poll-based (Vercel — no sockets): drawers PUT their full scene every
- * ~2.5s, everyone GETs and element-merges every ~3s (see board-merge.ts), so
- * strokes land on other screens within a few seconds. Fonts/locales are served
- * from /public/excalidraw-assets — the CSP forbids CDNs.
+ * Sync: drawers PUT their full scene every ~2.5s and everyone GETs and
+ * element-merges every ~3s (see board-merge.ts), which is the record. When
+ * the live relay is connected (LiveRelayProvider, live-relay/), the changed
+ * elements also go out as they are drawn and land on other screens within a
+ * fraction of a second: the class board to everyone, a student's pad to the
+ * teacher's gallery, the teacher's view to the students. Pasted images still
+ * arrive through the poll (their bytes never travel over the relay).
+ * Fonts/locales are served from /public/excalidraw-assets — the CSP forbids CDNs.
  *
  * "Students follow my view": the teacher's class board reports the region it
  * shows; students' boards scroll/zoom to it whenever it moves (it rides along
@@ -135,6 +141,7 @@ function SyncedBoard({
   canDraw,
   onSettings,
   viewRole,
+  follow = true,
 }: {
   sessionId: string
   owner: 'class' | 'me'
@@ -142,6 +149,8 @@ function SyncedBoard({
   onSettings: (s: Settings) => void
   /** Class board only: the teacher broadcasts their view; students follow it. */
   viewRole?: 'broadcast' | 'follow'
+  /** Teacher: whether students follow the view (rides along with each view message). */
+  follow?: boolean
 }) {
   const apiRef = useRef<ExcalApi | null>(null)
   const knownRevRef = useRef(-1)
@@ -149,6 +158,19 @@ function SyncedBoard({
   const appliedViewRevRef = useRef(-1)
   const sentViewRef = useRef<BoardViewRect | null>(null)
   const [teacherView, setTeacherView] = useState<ViewPayload | null>(null)
+  // Live relay: the elements changed since the last message go out as they
+  // are drawn; anything applied from elsewhere is marked known so it is never
+  // echoed back (two people drawing on the shared board would otherwise loop).
+  const relay = useRelay()
+  const relaySend = relay.send
+  const knownRef = useRef(new Map<string, number>())
+  const pendingRef = useRef(new Map<string, BoardElement>())
+  const flushTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const relaySentViewRef = useRef<BoardViewRect | null>(null)
+  const followRef = useRef(follow)
+  useEffect(() => {
+    followRef.current = follow
+  }, [follow])
   // Pen panel beside the board; Excalidraw's own style panel stays hidden
   // unless "More options" is on.
   const [penColor, setPenColor] = useState(BOARD_COLORS[0].color)
@@ -184,6 +206,20 @@ function SyncedBoard({
     return { elements: [...api.getSceneElementsIncludingDeleted()], files: api.getFiles() }
   }, [])
 
+  // Merge a remote scene (a poll's full copy, or a relay delta) into the canvas.
+  const applyScene = useCallback((incoming: BoardScene) => {
+    const api = apiRef.current
+    if (!api) return
+    const local = localScene()
+    const merged = mergeScenes(local, incoming)
+    if (sceneVersion(merged) === sceneVersion(local) && merged.elements.length === local.elements.length) return
+    markKnown(knownRef.current, merged.elements)
+    // NEVER: remote strokes must not pollute the local undo stack.
+    api.updateScene({ elements: merged.elements, captureUpdate: CaptureUpdateAction.NEVER })
+    const files = Object.values(merged.files)
+    if (files.length > 0) api.addFiles(files)
+  }, [localScene])
+
   // Pull + merge remote changes.
   useEffect(() => {
     let active = true
@@ -196,6 +232,7 @@ function SyncedBoard({
         if (!r.ok || !active) return
         const d = await r.json()
         const v: ViewPayload | undefined = d.view
+        if (v) followRef.current = v.follow
         onSettings({ boardMode: d.boardMode, padsEnabled: d.padsEnabled, followView: v?.follow ?? true })
         const api = apiRef.current
         if (viewRole === 'follow' && v) {
@@ -209,30 +246,63 @@ function SyncedBoard({
         if (!d.board || !api) return
         knownRevRef.current = d.board.rev
         if (d.board.scene === undefined) return
-        const local = localScene()
-        const merged = mergeScenes(local, asScene(d.board.scene))
-        if (sceneVersion(merged) !== sceneVersion(local) || merged.elements.length !== local.elements.length) {
-          // NEVER: remote strokes must not pollute the local undo stack.
-          api.updateScene({ elements: merged.elements, captureUpdate: CaptureUpdateAction.NEVER })
-          const files = Object.values(merged.files)
-          if (files.length > 0) api.addFiles(files)
-        }
+        applyScene(asScene(d.board.scene))
       } catch { /* transient — next poll retries */ }
     }
     pull()
     const t = setInterval(pull, 3000)
     return () => { active = false; clearInterval(t) }
-  }, [sessionId, owner, onSettings, localScene, viewRole])
+  }, [sessionId, owner, onSettings, applyScene, viewRole])
 
-  // Teacher: report the region of the class board on screen when it moves.
+  // Live relay, inbound (class board only): strokes as they are drawn, and the
+  // teacher's view as it moves. Pads reach only the teacher's gallery.
+  useRelayMessages(useCallback((m: RelayMessage) => {
+    if (owner !== 'class') return
+    if (m.t === 'board') {
+      if (m.owner === 'class') applyScene({ elements: m.els, files: {} })
+      return
+    }
+    if (m.t === 'view' && viewRole === 'follow') {
+      const nextFollow = m.follow ?? followRef.current
+      followRef.current = nextFollow
+      setTeacherView((prev) => ({ rev: (prev?.rev ?? 0) + 1, follow: nextFollow, view: m.view !== undefined ? m.view : prev?.view ?? null }))
+      const api = apiRef.current
+      if (nextFollow && m.view && api) showView(api, m.view)
+    }
+  }, [owner, viewRole, applyScene]))
+
+  // Live relay, outbound: the elements changed since the last message, batched
+  // for a few tens of ms so a stroke in progress goes out as it is drawn.
+  const flushRelay = useCallback(() => {
+    flushTimerRef.current = null
+    const els = [...pendingRef.current.values()]
+    pendingRef.current.clear()
+    if (els.length) relaySend({ t: 'board', owner, els })
+  }, [relaySend, owner])
+  useEffect(() => () => {
+    if (flushTimerRef.current !== null) {
+      clearTimeout(flushTimerRef.current)
+      flushRelay()
+    }
+  }, [flushRelay])
+
+  // Teacher: report the region of the class board on screen when it moves —
+  // at once over the relay, and to the record at most every 1.5 s.
   useEffect(() => {
     if (viewRole !== 'broadcast') return
     let active = true
+    let lastPut = 0
     const report = async () => {
       const api = apiRef.current
       if (!api || !active) return
       const view = viewFromAppState(api.getAppState())
-      if (!view || sameView(view, sentViewRef.current)) return
+      if (!view) return
+      if (!sameView(view, relaySentViewRef.current)) {
+        relaySentViewRef.current = view
+        relaySend({ t: 'view', view, follow: followRef.current })
+      }
+      if (sameView(view, sentViewRef.current) || Date.now() - lastPut < 1500) return
+      lastPut = Date.now()
       try {
         const r = await fetch(`/api/live-sessions/${sessionId}/board`, {
           method: 'PUT',
@@ -242,9 +312,9 @@ function SyncedBoard({
         if (r.ok) sentViewRef.current = view
       } catch { /* retried next tick */ }
     }
-    const t = setInterval(report, 1500)
+    const t = setInterval(report, 500)
     return () => { active = false; clearInterval(t) }
-  }, [sessionId, viewRole])
+  }, [sessionId, viewRole, relaySend])
 
   // Push local changes while allowed to draw.
   useEffect(() => {
@@ -312,6 +382,12 @@ function SyncedBoard({
         excalidrawAPI={(api) => { apiRef.current = api as unknown as ExcalApi }}
         initialData={canDraw ? { appState: { currentItemStrokeColor: penColor, ...penSizeAppState(penSize) } } : undefined}
         viewModeEnabled={!canDraw}
+        onChange={canDraw ? (elements) => {
+          const changed = changedElements(knownRef.current, elements as unknown as BoardElement[])
+          if (!changed.length) return
+          for (const el of changed) pendingRef.current.set(el.id, el)
+          if (flushTimerRef.current === null) flushTimerRef.current = setTimeout(flushRelay, STROKE_FLUSH_MS)
+        } : undefined}
         UIOptions={{ canvasActions: { toggleTheme: false } }}
       />
     </div>
@@ -329,6 +405,54 @@ function PadGallery({ sessionId }: { sessionId: string }) {
   const [pads, setPads] = useState<Map<string, PadInfo>>(new Map())
   const [expanded, setExpanded] = useState<string | null>(null)
   const sinceRef = useRef<string | null>(null)
+  // Each pad's scene as last seen (the poll's full copies merged with relay
+  // deltas), rendered to SVG at most a few times a second per pad.
+  const scenesRef = useRef(new Map<string, BoardScene>())
+  const renderTimersRef = useRef(new Map<string, ReturnType<typeof setTimeout>>())
+  const activeRef = useRef(true)
+  useEffect(() => {
+    activeRef.current = true
+    const timers = renderTimersRef.current
+    return () => {
+      activeRef.current = false
+      for (const t of timers.values()) clearTimeout(t)
+      timers.clear()
+    }
+  }, [])
+
+  const renderPad = useCallback(async (ownerKey: string, ownerName: string, rev: number, updatedAt: string) => {
+    const scene = scenesRef.current.get(ownerKey) ?? EMPTY_SCENE
+    const visible = scene.elements.filter(el => !el.isDeleted)
+    let svg: string | undefined
+    let empty = true
+    if (visible.length > 0) {
+      empty = false
+      try {
+        const el = await exportToSvg({
+          elements: visible as never[],
+          files: scene.files as never,
+          appState: { exportBackground: true, viewBackgroundColor: '#ffffff' },
+        })
+        el.removeAttribute('width')
+        el.removeAttribute('height')
+        svg = el.outerHTML
+      } catch { /* un-renderable scene — show placeholder */ }
+    }
+    if (!activeRef.current) return
+    setPads(prev => {
+      const next = new Map(prev)
+      next.set(ownerKey, { ownerKey, ownerName, rev, updatedAt, svg, empty })
+      return next
+    })
+  }, [])
+  const scheduleRender = useCallback((ownerKey: string, ownerName: string, rev: number, updatedAt: string) => {
+    const timers = renderTimersRef.current
+    if (timers.has(ownerKey)) return
+    timers.set(ownerKey, setTimeout(() => {
+      timers.delete(ownerKey)
+      void renderPad(ownerKey, ownerName, rev, updatedAt)
+    }, 250))
+  }, [renderPad])
 
   useEffect(() => {
     let active = true
@@ -341,36 +465,25 @@ function PadGallery({ sessionId }: { sessionId: string }) {
         sinceRef.current = new Date().toISOString()
         for (const b of d.boards ?? []) {
           if (b.scene === undefined) continue
-          const scene = asScene(b.scene)
-          const visible = scene.elements.filter(el => !el.isDeleted)
-          let svg: string | undefined
-          let empty = true
-          if (visible.length > 0) {
-            empty = false
-            try {
-              const el = await exportToSvg({
-                elements: visible as never[],
-                files: scene.files as never,
-                appState: { exportBackground: true, viewBackgroundColor: '#ffffff' },
-              })
-              el.removeAttribute('width')
-              el.removeAttribute('height')
-              svg = el.outerHTML
-            } catch { /* un-renderable scene — show placeholder */ }
-          }
-          if (!active) return
-          setPads(prev => {
-            const next = new Map(prev)
-            next.set(b.ownerKey, { ownerKey: b.ownerKey, ownerName: b.ownerName, rev: b.rev, updatedAt: b.updatedAt, svg, empty })
-            return next
-          })
+          const prev = scenesRef.current.get(b.ownerKey) ?? EMPTY_SCENE
+          scenesRef.current.set(b.ownerKey, mergeScenes(prev, asScene(b.scene)))
+          scheduleRender(b.ownerKey, b.ownerName, b.rev, b.updatedAt)
         }
       } catch { /* transient */ }
     }
     poll()
     const t = setInterval(poll, 4000)
     return () => { active = false; clearInterval(t) }
-  }, [sessionId])
+  }, [sessionId, scheduleRender])
+
+  // Live relay: a student's strokes land in their pad as they are drawn.
+  useRelayMessages(useCallback((m: RelayMessage) => {
+    if (m.t !== 'board' || m.owner === 'class') return
+    const prev = scenesRef.current.get(m.owner) ?? EMPTY_SCENE
+    scenesRef.current.set(m.owner, mergeScenes(prev, { elements: m.els, files: {} }))
+    const known = pads.get(m.owner)
+    scheduleRender(m.owner, m.ownerName ?? known?.ownerName ?? 'Student', known?.rev ?? 0, new Date().toISOString())
+  }, [pads, scheduleRender]))
 
   const list = [...pads.values()].sort((a, b) => a.ownerName.localeCompare(b.ownerName))
   const expandedPad = expanded ? pads.get(expanded) : null
@@ -426,7 +539,7 @@ function PadGallery({ sessionId }: { sessionId: string }) {
                 ? <div dangerouslySetInnerHTML={{ __html: expandedPad.svg }} />
                 : <p className="py-16 text-center text-sm text-gray-400">This pad is empty.</p>}
             </div>
-            <p className="mt-2 text-xs text-gray-400">Updates live every few seconds.</p>
+            <p className="mt-2 text-xs text-gray-400">Updates live as the student draws.</p>
           </div>
         </div>
       )}
@@ -459,6 +572,18 @@ export default function BoardSection({
   }, [])
 
   const { boardMode, padsEnabled, followView } = settings
+
+  // Live relay: the teacher's settings go to the room (the worker gates what
+  // students may publish by them) on connect and on every change; everyone
+  // else learns a mode change at once instead of on the next poll.
+  const relay = useRelay()
+  useEffect(() => {
+    if (youAreTeacher && relay.connected) relay.send({ t: 'board-mode', mode: boardMode, pads: padsEnabled })
+  }, [youAreTeacher, relay, boardMode, padsEnabled])
+  useRelayMessages(useCallback((m: RelayMessage) => {
+    if (m.t === 'board-mode') setSettings(s => (s.boardMode === m.mode && s.padsEnabled === m.pads ? s : { ...s, boardMode: m.mode, padsEnabled: m.pads }))
+    else if (m.t === 'view' && m.follow !== undefined) setSettings(s => (s.followView === m.follow ? s : { ...s, followView: m.follow as boolean }))
+  }, []))
 
   // Tell the page when a board becomes the main event (video → corner).
   useEffect(() => {
@@ -512,6 +637,7 @@ export default function BoardSection({
 
   const setFollow = async (follow: boolean) => {
     setSettings(s => ({ ...s, followView: follow }))
+    relay.send({ t: 'view', follow })
     await fetch(`/api/live-sessions/${sessionId}/board`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
@@ -602,9 +728,10 @@ export default function BoardSection({
             canDraw={youAreTeacher || boardMode === 'SHARED'}
             onSettings={onSettings}
             viewRole={youAreTeacher ? 'broadcast' : 'follow'}
+            follow={followView}
           />
           <p className="mt-1.5 text-xs text-gray-400 dark:text-gray-500">
-            Strokes reach other screens within a few seconds. Tip: paste an image (⌘V) to draw over it.
+            {relay.connected ? 'Strokes reach other screens as you draw.' : 'Strokes reach other screens within a few seconds.'} Tip: paste an image (⌘V) to draw over it.
           </p>
         </>
       )}

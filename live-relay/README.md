@@ -2,9 +2,11 @@
 
 A tiny WebSocket server for live class sessions. While a teacher presents,
 their slide changes, pen strokes and laser pointer are broadcast to the
-students in the room in well under a second. Without it the site still works:
-students catch up through the 2.5 s poll, as before, and the laser stays on
-the teacher's screen.
+students in the room in well under a second; on the whiteboards, class-board
+strokes and the teacher's view reach everyone the same way, and each student's
+pad reaches the teacher's gallery as it is drawn. Without it the site still
+works: everyone catches up through the polls, as before, and the laser stays
+on the teacher's screen.
 
 It runs on Cloudflare Workers with a Durable Object per session (hibernating
 WebSockets), which is free at classroom scale: Cloudflare's free plan allows
@@ -43,8 +45,15 @@ To update the relay later: `npx wrangler deploy` again from this folder.
 - `src/hooks/useLiveRelay.ts` opens the socket from the browser and reconnects
   with a fresh token when it drops.
 - `src/lib/live-relay-messages.ts` is the protocol: `deck` (slide change,
-  reveal, end), `els` (changed pen elements) and `laser` (pointer position).
-- `SlideDeckSection` publishes as the teacher and applies as a student.
+  reveal, end), `els` (changed pen elements), `laser` (pointer position),
+  `board` (changed whiteboard elements), `view` (the teacher's board view and
+  the follow switch) and `board-mode` (the teacher's board settings).
+- `src/lib/live-relay-routing.ts` decides who may publish what and who
+  receives it; the worker runs it for every message. Teachers publish
+  anything; a student only their own pad (to teachers) or the class board
+  while the teacher has it shared.
+- `src/components/live/LiveRelayProvider.tsx` holds the one socket per live
+  page; `SlideDeckSection` and `LiveBoards` publish and subscribe through it.
 
 ## Local test
 

@@ -10,7 +10,7 @@ import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlid
 import { lockStageView, needsAnswerStrip, stageView, toLogicalScene } from '@/lib/slide-stage'
 import type { SlideFigure } from '@/lib/slide-deck'
 import { classCourseCount, orderLauncherCourses, type LauncherCourse } from '@/lib/deck-launcher-courses'
-import { useLiveRelay } from '@/hooks/useLiveRelay'
+import { useRelay, useRelayMessages } from '@/components/live/LiveRelayProvider'
 import { changedElements, LASER_MIN_INTERVAL_MS, LASER_STALE_MS, STROKE_FLUSH_MS, type RelayMessage } from '@/lib/live-relay-messages'
 
 declare global {
@@ -192,6 +192,7 @@ export default function SlideDeckSection({
       applyDeckMessage(m)
       return
     }
+    if (m.t !== 'els' && m.t !== 'laser') return // whiteboard traffic (LiveBoards)
     const d = deckRef.current
     if (!d || m.deckId !== d.id || m.slide !== d.currentSlide) return
     if (m.t === 'els') {
@@ -212,7 +213,9 @@ export default function SlideDeckSection({
         : null))
     }
   }, [applyDeckMessage])
-  const relay = useLiveRelay(sessionId, !!deck, onRelayMessage)
+  // The page's shared relay socket (LiveRelayProvider); inert without one.
+  const relay = useRelay()
+  useRelayMessages(onRelayMessage)
   const relaySend = relay.send
   const relayEls = useCallback((els: BoardElement[]) => {
     const d = deckRef.current
