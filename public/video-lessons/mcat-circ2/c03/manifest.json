@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ2",
+ "video": 3,
+ "stem": "mcat_circ2_c03_dividers",
+ "topic": "circuits-part2-kirchhoff-power",
+ "clips": [
+  {
+   "section": "02-nodes",
+   "file": "02-nodes.mp4",
+   "seconds": 54.7,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-collapse",
+   "file": "03-collapse.mp4",
+   "seconds": 71.8,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-dividers",
+   "file": "04-dividers.mp4",
+   "seconds": 63.1,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-body",
+   "file": "05-body.mp4",
+   "seconds": 41.1,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-chain",
+   "file": "06-chain.mp4",
+   "seconds": 52.8,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-cases",
+   "file": "07-cases.mp4",
+   "seconds": 60.8,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 32.1,
+   "source": "p2 c03 dividers v1.mov",
+   "voiced": true
+  }
+ ]
+}
