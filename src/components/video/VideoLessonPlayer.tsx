@@ -8,6 +8,7 @@ import VideoPlayer, { type VideoPlayerHandle } from './VideoPlayer'
 import { PreferVideoToggle } from './PreferVideoToggle'
 import { InstructorAvatar } from './InstructorAvatar'
 import { MathText } from '@/components/MathText'
+import { LessonFigure } from '@/components/lesson/LessonFigure'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { addPlayback, isClipWatched, mergeRanges, watchedFraction, type WatchRange } from '@/lib/video-watch'
@@ -847,6 +848,11 @@ export default function VideoLessonPlayer({
           Checkpoint · Question {qPos + 1} of {step.questions.length}
         </p>
         <MathText text={q.question} className="mt-2 text-base font-medium text-gray-900 dark:text-gray-100 sm:text-lg" />
+        {q.figure && (
+          <div className="mt-3">
+            <LessonFigure figure={q.figure} />
+          </div>
+        )}
         <fieldset className="mt-4 space-y-2" disabled={!!r || submitting}>
           <legend className="sr-only">Choose an answer</legend>
           {q.options.map((opt, i) => (
@@ -917,6 +923,11 @@ export default function VideoLessonPlayer({
       <div>
         <p className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">Your turn · type your answers</p>
         <MathText text={q.question} className="mt-2 text-base font-medium text-gray-900 dark:text-gray-100 sm:text-lg" />
+        {q.figure && (
+          <div className="mt-3">
+            <LessonFigure figure={q.figure} />
+          </div>
+        )}
         <form
           className="mt-4 space-y-3"
           onSubmit={(e) => {

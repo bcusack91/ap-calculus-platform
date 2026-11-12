@@ -101,6 +101,18 @@ describe('video lesson rules', () => {
     expect(first.clipId).toBe('c1')
   })
 
+  it('keeps a question\'s figure (the circuit drawing) for the student, choice and numeric alike', () => {
+    const figure = { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><line x1="0" y1="5" x2="10" y2="5" stroke="currentColor"/></svg>', alt: 'A single wire drawn across the figure.' }
+    const withFigs: StoredStep[] = [
+      { ...steps[1], questions: [{ ...q('Pic'), figure }, { ...numeric, figure }] },
+    ]
+    const out = studentSteps(visibleSteps(withFigs, false))
+    expect(out[0].questions.map((x) => x.figure)).toEqual([figure, figure])
+    expect(JSON.stringify(out)).not.toMatch(/correctAnswer|explanation|because/)
+    expect(lessonDraftSchema.safeParse({ title: 'T', steps: [{ clipId: 'c1', questions: [{ ...q('Pic'), figure }] }] }).success).toBe(true)
+    expect(lessonDraftSchema.safeParse({ title: 'T', steps: [{ clipId: 'c1', questions: [{ ...q('Pic'), figure: { svg: '<svg/>', alt: 'short' } }] }] }).success).toBe(false)
+  })
+
   it(`validates drafts: 1–${MAX_STEPS} steps, 0–3 questions, exactly four options`, () => {
     const good = { title: 'Bonds', steps: [{ clipId: 'c1', questions: [q('Ok')] }] }
     expect(lessonDraftSchema.safeParse(good).success).toBe(true)

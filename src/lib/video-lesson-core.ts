@@ -25,8 +25,22 @@ import { gradeNumeric } from '@/lib/numeric-answer'
 export const MAX_STEPS = 80
 export const MAX_QUESTIONS_PER_STEP = 3
 
+/**
+ * An optional picture above the question (a circuit, a graph): the lesson
+ * figure shape (src/lib/lesson-figure.ts), drawn with the same renderer, so
+ * the SVG is injected only after isSafeSvg and follows light/dark mode.
+ */
+export const questionFigureSchema = z.object({
+  svg: z.string().trim().min(1).max(60_000),
+  alt: z.string().trim().min(10).max(1000),
+  caption: z.string().trim().max(500).optional(),
+  size: z.enum(['sm', 'md', 'lg']).optional(),
+})
+export type QuestionFigure = z.infer<typeof questionFigureSchema>
+
 export const choiceQuestionSchema = z.object({
   kind: z.literal('choice').optional(),
+  figure: questionFigureSchema.optional(),
   question: z.string().trim().min(1).max(2000),
   options: z.array(z.string().trim().min(1).max(500)).length(4),
   correctAnswer: z.number().int().min(0).max(3),
@@ -50,6 +64,7 @@ export type NumericPart = z.infer<typeof numericPartSchema>
 
 export const numericQuestionSchema = z.object({
   kind: z.literal('numeric'),
+  figure: questionFigureSchema.optional(),
   /** The problem as asked (shown above the entry boxes). */
   question: z.string().trim().min(1).max(2000),
   parts: z.array(numericPartSchema).min(1).max(4),
@@ -271,8 +286,8 @@ export function mergeClipRanges(prev: ClipProgress | undefined, add: readonly un
 
 /** What a student's page receives for one question: no answer keys. */
 export type StudentQuestion =
-  | { index: number; kind: 'choice'; question: string; options: string[]; lowYield: boolean }
-  | { index: number; kind: 'numeric'; question: string; parts: { label: string; prompt: string; unit: string | null }[]; lowYield: boolean }
+  | { index: number; kind: 'choice'; question: string; figure?: QuestionFigure; options: string[]; lowYield: boolean }
+  | { index: number; kind: 'numeric'; question: string; figure?: QuestionFigure; parts: { label: string; prompt: string; unit: string | null }[]; lowYield: boolean }
 
 /** What a student's page receives for one step: no answer keys. */
 export type StudentStep = {
@@ -302,8 +317,8 @@ export function studentSteps(steps: readonly VisibleStep[], videoTitles: Readonl
     videoTitle: s.meta.video !== null ? videoTitles[s.meta.video] ?? null : null,
     questions: s.visibleQuestions.map(({ index, q }) =>
       isNumericQuestion(q)
-        ? { index, kind: 'numeric' as const, question: q.question, parts: q.parts.map((p) => ({ label: p.label, prompt: p.prompt, unit: p.unit ?? null })), lowYield: q.yield === 'LOW' }
-        : { index, kind: 'choice' as const, question: q.question, options: shuffledQuestion(q).options, lowYield: q.yield === 'LOW' },
+        ? { index, kind: 'numeric' as const, question: q.question, ...(q.figure ? { figure: q.figure } : {}), parts: q.parts.map((p) => ({ label: p.label, prompt: p.prompt, unit: p.unit ?? null })), lowYield: q.yield === 'LOW' }
+        : { index, kind: 'choice' as const, question: q.question, ...(q.figure ? { figure: q.figure } : {}), options: shuffledQuestion(q).options, lowYield: q.yield === 'LOW' },
     ),
   }))
 }

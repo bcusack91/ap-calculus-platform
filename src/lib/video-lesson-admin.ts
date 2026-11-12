@@ -7,6 +7,7 @@ import {
   choiceQuestionSchema,
   isNumericQuestion,
   lessonDraftSchema,
+  questionFigureSchema,
 } from '@/lib/video-lesson-core'
 
 /**
@@ -79,6 +80,7 @@ export function linkableRoleError(role: string): string | null {
 /** Work-in-progress draft: same shape as lessonDraftSchema, blanks allowed. */
 const looseQuestionSchema = z.object({
   question: z.string().max(2000),
+  figure: questionFigureSchema.optional(),
   options: z.array(z.string().max(500)).length(4),
   correctAnswer: z.number().int().min(0).max(3),
   explanation: z.string().max(3000),

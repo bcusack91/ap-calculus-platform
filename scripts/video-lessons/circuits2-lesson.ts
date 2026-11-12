@@ -11,6 +11,7 @@
 import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics-electricity-kirchhoff-power-mcat'
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
 import type { LessonSpec } from './lesson-spec'
+import { FIG } from './circuits2-figures'
 
 const plan = (video: number, index: number): CheckpointQuestion => {
   const q = shotList.clips[video - 1]?.checkpoint[index]
@@ -55,6 +56,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v2_ex1,
               question: 'Example 1. A 30 V ideal battery drives 3 Ω, 5 Ω and 7 Ω resistors in series, in that order from its + terminal. Walk the loop with the current.',
               parts: [
                 { label: 'a', prompt: 'The current the loop rule predicts', answer: 2.0, unit: 'A', expected: '2.0 A' },
@@ -67,6 +69,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v2_ex1,
               question: 'Example 1, part (c). The battery’s − terminal is grounded (0 V). Give the potential at each point, following the current from the + terminal.',
               parts: [
                 { label: 'c', prompt: 'Just past the battery’s + terminal', answer: 30, unit: 'V', expected: '30 V' },
@@ -87,6 +90,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v2_ex2,
               question: 'Example 2. A 12 V and a 4 V ideal battery sit in one loop, oriented to push current in opposite directions, with a 2 Ω and a 6 Ω resistor.',
               parts: [
                 { label: 'a', prompt: 'The current in the loop', answer: 1.0, unit: 'A', expected: '1.0 A, the way the 12 V battery pushes' },
@@ -98,6 +102,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v2_ex2,
               question: 'Example 2, part (c). Walk the same loop AGAINST the current. Record the potential change for each element (negative for a drop) and check that the sum closes.',
               parts: [
                 { label: 'c', prompt: 'The 12 V battery, crossed + to −', answer: -12, unit: 'V', expected: '−12 V' },
@@ -126,6 +131,7 @@ export const LESSON: LessonSpec = {
           role: 'teach',
           questions: [
             {
+              figure: FIG.v3_nodes_1,
               question: 'Resistor R₁ runs from node a to node b. R₂ and R₃ each run from node b to node c. The battery connects node c back to node a. How are the resistors arranged?',
               options: [
                 'R₂ and R₃ are in parallel, and R₁ is in series with that pair',
@@ -138,6 +144,7 @@ export const LESSON: LessonSpec = {
                 'R₂ and R₃ join the same two nodes, b and c, so they are in parallel. The current leaving node a has only one path, through R₁, before it reaches the junction at b, so R₁ is in series with the pair. R₁ and R₂ are not in series: junction b lies between them and splits the current. Touching one shared node is not enough for parallel; the elements must share BOTH nodes. And R₃ joins b to c, not the battery’s two terminals.',
             },
             {
+              figure: FIG.v3_nodes_2,
               question: 'Two resistors lie end to end along one wire. At the point where they meet, a third wire branches off to another part of the circuit. Are the two resistors in series?',
               options: [
                 'No: the branch point is a junction, so the current splits between them',
@@ -158,6 +165,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v3_collapse_1,
               question: 'Practice 1. A 24 V ideal battery feeds a 2 Ω resistor in series with a parallel pair of 3 Ω and 6 Ω. Collapse inside-out, then walk back out.',
               parts: [
                 { label: 'a', prompt: 'Resistance of the 3 Ω ∥ 6 Ω pair', answer: 2, unit: 'Ω', expected: '2 Ω' },
@@ -170,6 +178,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v3_collapse_2,
               question: 'Practice 2. A 12 V ideal battery sits directly across two branches: one is a single 6 Ω resistor, the other is a 2 Ω and a 4 Ω resistor in series. Collapse the innermost group first.',
               parts: [
                 { label: 'a', prompt: 'Resistance of the 2 Ω + 4 Ω branch', answer: 6, unit: 'Ω', expected: '6 Ω' },
@@ -189,6 +198,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v3_dividers_1,
               question: 'Practice 1. A 12 V ideal source sits across a 1 kΩ and a 5 kΩ resistor in series. Use the voltage divider, then check with Ohm’s law.',
               parts: [
                 { label: 'a', prompt: 'Voltage across the 1 kΩ resistor', answer: 2, unit: 'V', expected: '2 V' },
@@ -200,6 +210,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v3_dividers_2,
               question: 'Practice 2. A total current of 9.0 mA enters a parallel pair of 1 kΩ and 2 kΩ. Use the current divider, then check that both branches have the same voltage.',
               parts: [
                 { label: 'a', prompt: 'Current in the 1 kΩ branch', answer: 6, unit: 'mA', expected: '6.0 mA' },
@@ -219,6 +230,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v3_body_1,
               question: 'Practice 1. Two electrodes on an arm drive a total of 10 mA through two parallel tissue paths: a 500 Ω blood-and-muscle path and a 4.5 kΩ fat path.',
               parts: [
                 { label: 'a', prompt: 'Current through the blood-and-muscle path', answer: 9, unit: 'mA', expected: '9 mA' },
@@ -230,6 +242,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v3_body_2,
               question: 'Practice 2. A total of 12 mA splits among THREE parallel tissue paths of 1 kΩ, 2 kΩ and 2 kΩ. With three branches, find the shared voltage first, then each current.',
               parts: [
                 { label: 'a', prompt: 'Resistance of the three paths together', answer: 500, unit: 'Ω', expected: '500 Ω (0.5 kΩ)' },
@@ -250,6 +263,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v3_chain_1,
               question: 'Practice 1. A 12 V ideal battery feeds a 2 Ω resistor in series with a single 6 Ω branch. A second 6 Ω branch is then added in parallel with the first. Follow the chain: R_eq, total current, series drop, bank voltage.',
               parts: [
                 { label: 'a', prompt: 'New total resistance', answer: 5, unit: 'Ω', expected: '5 Ω' },
@@ -262,6 +276,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v3_chain_2,
               question: 'Practice 2. A 15 V ideal battery feeds a 1 Ω resistor in series with a bank of two 4 Ω branches in parallel. One 4 Ω branch then breaks open. Compare before and after.',
               parts: [
                 { label: 'a', prompt: 'Total current BEFORE the branch opens', answer: 5, unit: 'A', expected: '5 A' },
@@ -281,6 +296,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v3_cases_1,
               question: 'Practice 1. A 12 V ideal battery has two branches directly across it, 4 Ω and 6 Ω, with nothing in series. A third branch of 3 Ω is then added across the battery.',
               parts: [
                 { label: 'a', prompt: 'Current in the 4 Ω branch AFTER the change', answer: 3, unit: 'A', expected: '3 A (unchanged)' },
@@ -292,6 +308,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v3_cases_2,
               question: 'Practice 2. A 12 V ideal battery feeds a 2 Ω resistor in series with a bank of 3 Ω and 6 Ω in parallel. A bare wire is then laid across the 6 Ω branch.',
               parts: [
                 { label: 'a', prompt: 'Current in the 3 Ω resistor BEFORE the short', answer: 2, unit: 'A', expected: '2 A' },
@@ -312,6 +329,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v3_recap_1,
               question: 'Put it together, 1. A 16 V ideal battery feeds a 1 Ω resistor in series with a parallel pair of 4 Ω and 12 Ω.',
               parts: [
                 { label: 'a', prompt: 'Total resistance seen by the battery', answer: 4, unit: 'Ω', expected: '4 Ω' },
@@ -324,6 +342,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v3_recap_2,
               question: 'Put it together, 2. Both dividers with the same two resistors. First a 24 V ideal source sits across a 2 kΩ and a 6 kΩ resistor in series; then, separately, 24 mA enters the same two resistors in parallel.',
               parts: [
                 { label: 'a', prompt: 'Series: voltage across the 2 kΩ', answer: 6, unit: 'V', expected: '6 V' },
@@ -348,6 +367,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v4_ex1,
               question: 'Example 1. A 12 V ideal battery feeds a 2 Ω resistor in series with a parallel pair of 6 Ω and 3 Ω.',
               parts: [
                 { label: 'a', prompt: 'Resistance of the 6 Ω ∥ 3 Ω pair', answer: 2, unit: 'Ω', expected: '2 Ω' },
@@ -360,6 +380,7 @@ export const LESSON: LessonSpec = {
             },
             {
               kind: 'numeric',
+              figure: FIG.v4_ex1c,
               question: 'Example 1, parts (b) and (c). The pair has 6 V across it. Then the 6 Ω branch breaks open.',
               parts: [
                 { label: 'b', prompt: 'Current in the 6 Ω branch', answer: 1.0, unit: 'A', expected: '1.0 A' },
@@ -380,6 +401,7 @@ export const LESSON: LessonSpec = {
           questions: [
             {
               kind: 'numeric',
+              figure: FIG.v4_ex2,
               question: 'Example 2. (a) A 15 V ideal source sits across a 2 kΩ and a 3 kΩ resistor in series. (b) Separately, a total current of 8.0 mA enters a parallel pair of 2 kΩ and 6 kΩ.',
               parts: [
                 { label: 'a', prompt: 'Voltage across the 2 kΩ resistor', answer: 6, unit: 'V', expected: '6.0 V' },
