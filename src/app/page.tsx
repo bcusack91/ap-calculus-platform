@@ -147,7 +147,7 @@ export default async function Home() {
                   </linearGradient>
                 </defs>
                 <rect x="14" y="20" width="36" height="24" rx="5" fill="#fff" stroke="var(--accent)" strokeWidth="2"/>
-                <rect x="18" y="24" width="28" height="16" rx="3" fill="#e0e7ff"/>
+                <rect x="18" y="24" width="28" height="16" rx="3" style={{ fill: 'var(--accent-light)' }}/>
                 <path d="M18 24 Q32 29 46 24" fill="none" stroke="var(--accent)" strokeWidth="1.5"/>
                 <ellipse cx="26" cy="33" rx="2.5" ry="3" fill="var(--accent)"/>
                 <ellipse cx="38" cy="33" rx="2.5" ry="3" fill="var(--accent)"/>

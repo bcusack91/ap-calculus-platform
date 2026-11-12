@@ -280,7 +280,7 @@ export function Navbar() {
                   </linearGradient>
                 </defs>
                 <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="var(--accent)" strokeWidth="1.2"/>
-                <rect x="9" y="12" width="14" height="8" rx="1.5" fill="#e0e7ff"/>
+                <rect x="9" y="12" width="14" height="8" rx="1.5" style={{ fill: 'var(--accent-light)' }}/>
                 <path d="M9 12 Q16 14.5 23 12" fill="none" stroke="var(--accent)" strokeWidth="0.7"/>
                 <ellipse cx="13" cy="16" rx="1.2" ry="1.5" fill="var(--accent)"/>
                 <ellipse cx="19" cy="16" rx="1.2" ry="1.5" fill="var(--accent)"/>

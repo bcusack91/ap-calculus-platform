@@ -54,16 +54,16 @@ export function Footer() {
                   <rect width="32" height="32" rx="7" fill="url(#fg)"/>
                   <defs>
                     <linearGradient id="fg" x1="0" x2="1" y1="0" y2="1">
-                      <stop offset="0%" stopColor="#7C3AED"/>
-                      <stop offset="100%" stopColor="#2563EB"/>
+                      <stop offset="0%" style={{ stopColor: 'var(--accent)' }}/>
+                      <stop offset="100%" style={{ stopColor: 'var(--accent-secondary)' }}/>
                     </linearGradient>
                   </defs>
-                  <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="#7C3AED" strokeWidth="1.2"/>
-                  <rect x="9" y="12" width="14" height="8" rx="1.5" fill="#e0e7ff"/>
-                  <path d="M9 12 Q16 14.5 23 12" fill="none" stroke="#7C3AED" strokeWidth="0.7"/>
-                  <ellipse cx="13" cy="16" rx="1.2" ry="1.5" fill="#7C3AED"/>
-                  <ellipse cx="19" cy="16" rx="1.2" ry="1.5" fill="#7C3AED"/>
-                  <path d="M13.5 19 Q16 20.8 18.5 19" stroke="#7C3AED" strokeWidth="0.7" fill="none"/>
+                  <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" style={{ stroke: 'var(--accent)' }} strokeWidth="1.2"/>
+                  <rect x="9" y="12" width="14" height="8" rx="1.5" style={{ fill: 'var(--accent-light)' }}/>
+                  <path d="M9 12 Q16 14.5 23 12" fill="none" style={{ stroke: 'var(--accent)' }} strokeWidth="0.7"/>
+                  <ellipse cx="13" cy="16" rx="1.2" ry="1.5" style={{ fill: 'var(--accent)' }}/>
+                  <ellipse cx="19" cy="16" rx="1.2" ry="1.5" style={{ fill: 'var(--accent)' }}/>
+                  <path d="M13.5 19 Q16 20.8 18.5 19" style={{ stroke: 'var(--accent)' }} strokeWidth="0.7" fill="none"/>
                 </svg>
               </span>
               <span className="text-lg font-bold text-gray-900 dark:text-white">Study Mondo</span>

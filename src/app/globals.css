@@ -60,42 +60,44 @@
   background-image: linear-gradient(to bottom right, var(--accent), var(--accent-secondary));
 }
 
-/* ===== Default scheme (Purple/Blue) — Light ===== */
+/* ===== Default scheme: Ocean (Sky/Cyan) — Light =====
+   Ocean became the site default on 2026-11-12 (owner's call); the original
+   purple/blue scheme is still selectable as "Purple" (data-scheme="purple"). */
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --muted-foreground: #4b5563; /* gray-600 — AA on white */
   --card: #ffffff;
   --card-border: #e5e7eb; /* gray-200 */
-  --accent: #9333ea;
-  --accent-hover: #7e22ce;
-  --accent-secondary: #2563eb;
-  --accent-secondary-hover: #1d4ed8;
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-secondary: #0891b2;
+  --accent-secondary-hover: #0e7490;
   --accent-foreground: #ffffff;
-  --accent-subtle: #faf5ff;
-  --accent-light: #f3e8ff;
-  --accent-muted: #c084fc;
-  --accent-dark: #581c87;
-  --accent-ring: #a855f7;
+  --accent-subtle: #f0f9ff;
+  --accent-light: #e0f2fe;
+  --accent-muted: #38bdf8;
+  --accent-dark: #0c4a6e;
+  --accent-ring: #0ea5e9;
 }
 
-/* ===== Default scheme (Purple/Blue) — Dark ===== */
+/* ===== Default scheme: Ocean (Sky/Cyan) — Dark ===== */
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
   --muted-foreground: #9ca3af; /* gray-400 — AA on gray-900 */
   --card: #111827; /* gray-900 */
   --card-border: #374151; /* gray-700 */
-  --accent: #a855f7;
-  --accent-hover: #9333ea;
-  --accent-secondary: #3b82f6;
-  --accent-secondary-hover: #2563eb;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --accent-secondary: #22d3ee;
+  --accent-secondary-hover: #06b6d4;
   --accent-foreground: #ffffff;
-  --accent-subtle: #1a1028;
-  --accent-light: #2d1f4e;
-  --accent-muted: #c084fc;
-  --accent-dark: #e9d5ff;
-  --accent-ring: #a855f7;
+  --accent-subtle: #0c1929;
+  --accent-light: #0c2d4a;
+  --accent-muted: #7dd3fc;
+  --accent-dark: #e0f2fe;
+  --accent-ring: #0ea5e9;
 }
 
 /* The `.dark` class on <html> is the ONLY dark-mode switch. Don't key colors
@@ -113,7 +115,34 @@
   color-scheme: dark;
 }
 
-/* ===== Ocean scheme (Sky/Cyan) ===== */
+/* ===== Purple scheme (Purple/Blue, the original default) ===== */
+[data-scheme="purple"] {
+  --accent: #9333ea;
+  --accent-hover: #7e22ce;
+  --accent-secondary: #2563eb;
+  --accent-secondary-hover: #1d4ed8;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #faf5ff;
+  --accent-light: #f3e8ff;
+  --accent-muted: #c084fc;
+  --accent-dark: #581c87;
+  --accent-ring: #a855f7;
+}
+[data-scheme="purple"].dark {
+  --accent: #a855f7;
+  --accent-hover: #9333ea;
+  --accent-secondary: #3b82f6;
+  --accent-secondary-hover: #2563eb;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #1a1028;
+  --accent-light: #2d1f4e;
+  --accent-muted: #c084fc;
+  --accent-dark: #e9d5ff;
+  --accent-ring: #a855f7;
+}
+
+/* ===== Ocean scheme (Sky/Cyan): same as the default; kept so a saved
+   "ocean" preference still resolves ===== */
 [data-scheme="ocean"] {
   --accent: #0284c7;
   --accent-hover: #0369a1;

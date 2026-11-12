@@ -4,8 +4,8 @@ import { usePreferences } from './PreferencesProvider'
 import type { ColorScheme } from './PreferencesProvider'
 
 const schemes: { id: ColorScheme; label: string; colors: [string, string] }[] = [
-  { id: 'default', label: 'Purple', colors: ['#9333ea', '#2563eb'] },
-  { id: 'ocean', label: 'Ocean', colors: ['#0284c7', '#0891b2'] },
+  { id: 'default', label: 'Ocean', colors: ['#0284c7', '#0891b2'] },
+  { id: 'purple', label: 'Purple', colors: ['#9333ea', '#2563eb'] },
   { id: 'forest', label: 'Forest', colors: ['#16a34a', '#059669'] },
   { id: 'sunset', label: 'Sunset', colors: ['#ea580c', '#d97706'] },
   { id: 'rose', label: 'Rose', colors: ['#e11d48', '#db2777'] },

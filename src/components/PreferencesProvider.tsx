@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react'
 
-export type ColorScheme = 'default' | 'ocean' | 'forest' | 'sunset' | 'rose'
+/** 'default' is Ocean (sky/cyan) since 2026-11-12; 'purple' is the original scheme. A saved 'ocean' still means the default. */
+export type ColorScheme = 'default' | 'purple' | 'ocean' | 'forest' | 'sunset' | 'rose'
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'system'
@@ -51,6 +52,7 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as Partial<UserPreferences>
+        if (parsed.colorScheme === 'ocean') parsed.colorScheme = 'default'
         setPreferences(p => ({ ...p, ...parsed }))
       } catch { /* use defaults */ }
     }
