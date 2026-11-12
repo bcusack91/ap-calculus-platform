@@ -565,6 +565,10 @@ export default function VideoLessonPlayer({
 
   /** After a worked example: the next step is its solution clip. */
   const nextIsSolution = !!step && steps[index + 1]?.role === 'solution'
+  /** The question on screen is the step's last one (a problem may ask parts a–b, then c). */
+  const lastInStep = !!step && qPos + 1 >= step.questions.length
+  /** Every numeric question of this problem right on the first try: the solution may be skipped. */
+  const stepSolvedFirstTry = nextIsSolution && solutionSkippable(index + 1, answered)
   const skipSolution = () => {
     if (index + 2 < steps.length) advanceTo(index + 2, true)
     else {
@@ -960,12 +964,17 @@ export default function VideoLessonPlayer({
               {r.correct ? (
                 <p className="font-semibold text-green-700 dark:text-green-400">All correct. Nice work.</p>
               ) : (
-                <p className="font-semibold text-red-700 dark:text-red-400">Not quite. {nextIsSolution ? 'Watch the full solution next.' : ''}</p>
+                <p className="font-semibold text-red-700 dark:text-red-400">
+                  Not quite. {nextIsSolution ? (lastInStep ? 'Watch the full solution next.' : 'Keep going — the full solution plays after the last part.') : ''}
+                </p>
               )}
               {(!r.correct || !nextIsSolution) && r.explanation && <MathText text={r.explanation} className="mt-1 text-sm text-gray-700 dark:text-gray-300" />}
               <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
-                {nextIsSolution ? (
-                  r.correct ? (
+                {/* A problem section may hold several numeric questions (parts
+                    a–b, then c): the solution choice comes only after the LAST
+                    one, and skipping needs every question right first time. */}
+                {nextIsSolution && lastInStep ? (
+                  stepSolvedFirstTry ? (
                     <>
                       <button type="button" onClick={() => advanceTo(index + 1, true)} className={secondaryBtn}>
                         <PlayCircle className="h-4 w-4" aria-hidden /> Watch the solution anyway
