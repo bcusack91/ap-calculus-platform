@@ -1,3 +1,5 @@
+import { escapeCurrencyMath } from './escape-currency-math'
+
 /**
  * Utility to detect and render cloze deletion flashcards
  *
@@ -110,6 +112,71 @@ export function mathizeClozeAnswer(answer: string): string {
   if (answer.includes('$')) return answer
   if (/\\[a-zA-Z]+|[_^]\{/.test(answer)) return `$${answer}$`
   return answer
+}
+
+/**
+ * True when a deletion opens INSIDE an unclosed `$…$` span, e.g.
+ * `$R = {{c1::\rho L/A}}$`. The cloze parser splits the text at the deletion
+ * first, so the prose part `$R = ` is left with a dangling delimiter and the
+ * student sees literal `$` signs around a half-rendered formula. Author the
+ * math around the deletion instead: `$R =$ {{c1::$\rho L/A$}}`.
+ */
+export function clozeInsideMath(raw: string): boolean {
+  // Currency dollars ("$5 and {{c1::$7}}") are not delimiters: escape them
+  // first, the way the render pipeline does.
+  const text = escapeCurrencyMath(raw)
+  let inMath = false
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i]
+    if (ch === '\\') { i++; continue }
+    if (ch === '$') { inMath = !inMath; continue }
+    if (inMath && text.startsWith('{{', i)) {
+      const re = new RegExp(CLOZE_RE.source, 'y')
+      re.lastIndex = i
+      if (re.test(text)) return true
+    }
+  }
+  return false
+}
+
+/**
+ * Rewrite `$pre {{cN::ans}} post$` as `$pre$ {{cN::$ans$}} $post$` so every
+ * part the cloze parser produces is balanced math on its own. An answer that
+ * already carries `$` is kept as written; text with no deletion inside math
+ * comes back unchanged.
+ */
+export function liftClozeOutOfMath(text: string): string {
+  if (!clozeInsideMath(text)) return text
+  let out = ''
+  let i = 0
+  while (i < text.length) {
+    const ch = text[i]
+    if (ch === '\\') { out += text.slice(i, i + 2); i += 2; continue }
+    if (ch !== '$') { out += ch; i++; continue }
+    // Find the matching close of this math span.
+    let j = i + 1
+    while (j < text.length && text[j] !== '$') j += text[j] === '\\' ? 2 : 1
+    if (j >= text.length) { out += text.slice(i); break }
+    const inner = text.slice(i + 1, j)
+    const matches = [...inner.matchAll(new RegExp(CLOZE_RE.source, 'g'))]
+    if (matches.length === 0) { out += text.slice(i, j + 1); i = j + 1; continue }
+    const pieces: string[] = []
+    let last = 0
+    for (const m of matches) {
+      const start = m.index ?? 0
+      const pre = inner.slice(last, start).trim()
+      if (pre) pieces.push(`$${pre}$`)
+      const answer = m[2].trim()
+      const wrapped = answer.includes('$') ? answer : `$${answer}$`
+      pieces.push(`{{${m[1] !== undefined ? `c${m[1]}::` : ''}${wrapped}}}`)
+      last = start + m[0].length
+    }
+    const post = inner.slice(last).trim()
+    if (post) pieces.push(`$${post}$`)
+    out += pieces.join(' ')
+    i = j + 1
+  }
+  return out
 }
 
 /**

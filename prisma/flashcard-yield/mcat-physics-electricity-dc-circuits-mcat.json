@@ -72,8 +72,8 @@
   "why": "Restates the series addition formula"
  },
  {
-  "front": "Wire resistance is $R = {{c1::\\rho L/A}}$, so doubling the radius cuts resistance to one fourth.",
-  "fp": "d5431d6f22ff",
+  "front": "Wire resistance is $R =$ {{c1::$\\rho L/A$}}, so doubling the radius cuts resistance to one fourth.",
+  "fp": "49f920b48229",
   "yield": "ULTRA_HIGH",
   "why": "R = rho L/A is a calculation equation tested every year"
  },
@@ -138,8 +138,8 @@
   "why": "Biology-framed geometry scaling with a fluid-flow trap; secondary to the basic formula."
  },
  {
-  "front": "Conductance is $G = {{c1::1/R}}$, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
-  "fp": "a168bc8768e0",
+  "front": "Conductance is $G =$ {{c1::$1/R$}}, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
+  "fp": "73f0794a39cc",
   "yield": "MEDIUM",
   "why": "Conductance appears mostly in passages, such as membrane conductance."
  },

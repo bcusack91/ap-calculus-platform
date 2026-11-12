@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { detectCloze, clozeRevealOrder, maskClozeText, revealClozeText, mathizeClozeAnswer } from '@/lib/cloze-utils'
+import { detectCloze, clozeRevealOrder, maskClozeText, revealClozeText, mathizeClozeAnswer, clozeInsideMath, liftClozeOutOfMath } from '@/lib/cloze-utils'
 
 describe('detectCloze', () => {
   it('parses a basic deletion', () => {
@@ -102,5 +102,49 @@ describe('mathizeClozeAnswer', () => {
   it('wraps bare LaTeX commands and sub/superscript groups', () => {
     expect(mathizeClozeAnswer('V_{peak}/\\sqrt{2}')).toBe('$V_{peak}/\\sqrt{2}$')
     expect(mathizeClozeAnswer('pE\\sin\\theta')).toBe('$pE\\sin\\theta$')
+  })
+})
+
+describe('clozeInsideMath', () => {
+  it('flags a deletion that opens inside $…$', () => {
+    expect(clozeInsideMath('Wire resistance is $R = {{c1::\\rho L/A}}$, so doubling the radius cuts resistance to one fourth.')).toBe(true)
+    expect(clozeInsideMath('$\\log 2 \\approx {{c1::0.3}}$ and $\\log 3 \\approx {{c2::0.48}}$')).toBe(true)
+  })
+
+  it('accepts math inside a deletion and deletions beside math', () => {
+    expect(clozeInsideMath('ATP synthase: {{c1::$F_0$}} is the proton channel')).toBe(false)
+    expect(clozeInsideMath('$R =$ {{c1::$\\rho L/A$}}')).toBe(false)
+    expect(clozeInsideMath('Capacitance is $C = Q/V$, measured in {{c1::farads}}')).toBe(false)
+    expect(clozeInsideMath('Costs $5 and {{c1::$7}} today')).toBe(false)
+  })
+
+  it('ignores escaped dollars and nested LaTeX braces', () => {
+    expect(clozeInsideMath('Costs \\$5 and {{c1::more}}')).toBe(false)
+    expect(clozeInsideMath('$\\frac{a^{2}}{b^{3}}$ and {{c1::x}}')).toBe(false)
+  })
+})
+
+describe('liftClozeOutOfMath', () => {
+  it('moves the delimiters around the deletion', () => {
+    expect(liftClozeOutOfMath('Wire resistance is $R = {{c1::\\rho L/A}}$, so doubling the radius cuts resistance to one fourth.')).toBe(
+      'Wire resistance is $R =$ {{c1::$\\rho L/A$}}, so doubling the radius cuts resistance to one fourth.',
+    )
+    expect(liftClozeOutOfMath('$\\log 2 \\approx {{c1::0.3}}$ and $\\log 3 \\approx {{c2::0.48}}$')).toBe(
+      '$\\log 2 \\approx$ {{c1::$0.3$}} and $\\log 3 \\approx$ {{c2::$0.48$}}',
+    )
+    expect(liftClozeOutOfMath('$K_a \\times K_b = {{c1::K_w}}$, so $pK_a + pK_b = {{c2::14}}$ at 25 degrees C.')).toBe(
+      '$K_a \\times K_b =$ {{c1::$K_w$}}, so $pK_a + pK_b =$ {{c2::$14$}} at 25 degrees C.',
+    )
+  })
+
+  it('keeps math on both sides of the deletion and a bare {{answer}}', () => {
+    expect(liftClozeOutOfMath('$a = {{c1::b}} + c$')).toBe('$a =$ {{c1::$b$}} $+ c$')
+    expect(liftClozeOutOfMath('$a = {{b}}$')).toBe('$a =$ {{$b$}}')
+  })
+
+  it('leaves well-formed text untouched', () => {
+    const ok = 'ATP synthase: {{c1::$F_0$}} is the proton channel; $\\Delta G = 0$ at {{c2::equilibrium}}.'
+    expect(liftClozeOutOfMath(ok)).toBe(ok)
+    expect(detectCloze(liftClozeOutOfMath('$R = {{c1::\\rho L/A}}$')).parts?.map((p) => p.text)).toEqual(['$R =$ ', '$\\rho L/A$'])
   })
 })

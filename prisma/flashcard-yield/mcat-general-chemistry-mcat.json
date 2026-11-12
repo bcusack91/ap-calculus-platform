@@ -90,8 +90,8 @@
   "why": "Cs lowest IE is a direct application of the trend card; second-tier example"
  },
  {
-  "front": "For calculator-free logs, memorize $\\log 2 \\approx {{c1::0.3}}$ and $\\log 3 \\approx {{c2::0.48}}$.",
-  "fp": "982c991b768f",
+  "front": "For calculator-free logs, memorize $\\log 2 \\approx$ {{c1::$0.3$}} and $\\log 3 \\approx$ {{c2::$0.48$}}.",
+  "fp": "6a2a510ab6eb",
   "yield": "HIGH",
   "why": "log 2 and log 3 shortcuts are needed for calculator-free pH and Nernst work"
  },

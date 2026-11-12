@@ -60,8 +60,8 @@
   "why": "Zero-order half-life depends on [A]0; common discrete"
  },
  {
-  "front": "For first-order kinetics $t_{1/2} = {{c1::0.693/k}}$, which is why drug elimination is quoted as a single fixed half-life.",
-  "fp": "eb299922e39f",
+  "front": "For first-order kinetics $t_{1/2} =$ {{c1::$0.693/k$}}, which is why drug elimination is quoted as a single fixed half-life.",
+  "fp": "0ef84c6977d3",
   "yield": "ULTRA_HIGH",
   "why": "t1/2 = 0.693/k for first order; calculation used every year"
  },

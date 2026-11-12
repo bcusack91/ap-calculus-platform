@@ -54,8 +54,8 @@
   "why": "Restates the capacitor wire-then-open card"
  },
  {
-  "front": "Capacitors in parallel add directly: $C_{eq} = {{c1::C_1 + C_2}}$.",
-  "fp": "6ba2d0c7132d",
+  "front": "Capacitors in parallel add directly: $C_{eq} =$ {{c1::$C_1 + C_2$}}.",
+  "fp": "7066fa1c92af",
   "yield": "ULTRA_HIGH",
   "why": "Parallel capacitor addition rule is used in calculations every year"
  },
@@ -66,8 +66,8 @@
   "why": "Restates the parallel capacitor cloze card"
  },
  {
-  "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} = {{c1::1/C_1 + 1/C_2}}$.",
-  "fp": "b588baf16441",
+  "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} =$ {{c1::$1/C_1 + 1/C_2$}}.",
+  "fp": "d5e860cf99be",
   "yield": "ULTRA_HIGH",
   "why": "Series capacitor reciprocal rule is used in calculations every year"
  },
@@ -114,8 +114,8 @@
   "why": "Defibrillator pulse estimate is a passage-style application"
  },
  {
-  "front": "The RC time constant is $\\tau = {{c1::RC}}$ and carries units of seconds.",
-  "fp": "cb39c0547f73",
+  "front": "The RC time constant is $\\tau =$ {{c1::$RC$}} and carries units of seconds.",
+  "fp": "142bc3062c8c",
   "yield": "ULTRA_HIGH",
   "why": "tau = RC is a calculation equation and appears every year"
  },

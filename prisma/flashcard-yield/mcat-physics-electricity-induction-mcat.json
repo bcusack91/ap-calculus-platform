@@ -36,8 +36,8 @@
   "why": "Motor-vs-no-work paradox is conceptual depth beyond typical questions"
  },
  {
-  "front": "A rod of length $L$ moving at speed $v$ perpendicular to field $B$ generates motional emf $\\varepsilon = {{c1::BLv}}$.",
-  "fp": "30715de30502",
+  "front": "A rod of length $L$ moving at speed $v$ perpendicular to field $B$ generates motional emf $\\varepsilon =$ {{c1::$BLv$}}.",
+  "fp": "02a8089b4bed",
   "yield": "MEDIUM",
   "why": "Motional emf BLv is prep-book detail; induction is tested qualitatively"
  },
@@ -90,8 +90,8 @@
   "why": "TMS is an off-outline application a passage would explain"
  },
  {
-  "front": "In a velocity selector, undeflected particles satisfy $qE = qvB$, so the selected speed is $v = {{c1::E/B}}$.",
-  "fp": "81ad14b4524b",
+  "front": "In a velocity selector, undeflected particles satisfy $qE = qvB$, so the selected speed is $v =$ {{c1::$E/B$}}.",
+  "fp": "a8bf90474f8e",
   "yield": "ULTRA_HIGH",
   "why": "Velocity selector v = E/B is a standard calculation"
  },
@@ -114,8 +114,8 @@
   "why": "Flux definition; restates the cloze flux card"
  },
  {
-  "front": "Magnetic flux through a loop is $\\Phi = {{c1::BA\\cos\\theta}}$, where $\\theta$ is measured from the surface normal.",
-  "fp": "2456c607b0de",
+  "front": "Magnetic flux through a loop is $\\Phi =$ {{c1::$BA\\cos\\theta$}}, where $\\theta$ is measured from the surface normal.",
+  "fp": "cf2161ced166",
   "yield": "ULTRA_HIGH",
   "why": "Phi = BA cos(theta) with theta from the normal is the flux definition"
  },

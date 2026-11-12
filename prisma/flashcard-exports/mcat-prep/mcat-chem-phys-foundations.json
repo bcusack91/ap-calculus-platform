@@ -2325,7 +2325,7 @@
  },
  {
   "topicSlug": "mcat-general-chemistry-titrations-equilibrium-mcat",
-  "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} = {{c1::4s^3}}$.",
+  "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} =$ {{c1::$4s^3$}}.",
   "back": "Each formula unit releases one $A^{2+}$ and two $B^-$, so $K_{sp} = (s)(2s)^2$. Getting the stoichiometric coefficient inside the exponent right is where most solubility calculations fail."
  },
  {
@@ -2335,7 +2335,7 @@
  },
  {
   "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
-  "front": "For any conjugate pair, $K_a \\times K_b = {{c1::K_w}}$, so $pK_a + pK_b = {{c2::14}}$ at 25 degrees C.",
+  "front": "For any conjugate pair, $K_a \\times K_b =$ {{c1::$K_w$}}, so $pK_a + pK_b =$ {{c2::$14$}} at 25 degrees C.",
   "back": "This converts any tabulated $K_a$ into its partner's $K_b$ instantly. It also encodes the rule that the stronger an acid, the weaker its conjugate base."
  },
  {
@@ -2960,7 +2960,7 @@
  },
  {
   "topicSlug": "mcat-general-chemistry-kinetics-mcat",
-  "front": "For first-order kinetics $t_{1/2} = {{c1::0.693/k}}$, which is why drug elimination is quoted as a single fixed half-life.",
+  "front": "For first-order kinetics $t_{1/2} =$ {{c1::$0.693/k$}}, which is why drug elimination is quoted as a single fixed half-life.",
   "back": "The 0.693 is $\\ln 2$. Five half-lives clear roughly 97 percent of a drug, the standard clinical benchmark both for washout and for reaching steady state on repeated dosing."
  },
  {
@@ -3215,7 +3215,7 @@
  },
  {
   "topicSlug": "mcat-general-chemistry-mcat",
-  "front": "For calculator-free logs, memorize $\\log 2 \\approx {{c1::0.3}}$ and $\\log 3 \\approx {{c2::0.48}}$.",
+  "front": "For calculator-free logs, memorize $\\log 2 \\approx$ {{c1::$0.3$}} and $\\log 3 \\approx$ {{c2::$0.48$}}.",
   "back": "So $[H^{+}] = 2 \\times 10^{-5}$ gives pH $= 5 - 0.3 = 4.7$, and $3 \\times 10^{-4}$ gives 3.52. The same two values carry you through Nernst problems and $\\Delta G^{\\circ} = -2.303RT\\log K$ estimates."
  },
  {
@@ -6633,7 +6633,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
-  "front": "Capacitors in parallel add directly: $C_{eq} = {{c1::C_1 + C_2}}$.",
+  "front": "Capacitors in parallel add directly: $C_{eq} =$ {{c1::$C_1 + C_2$}}.",
   "back": "They share the same voltage and the total stored charge is the sum, so capacitances add like resistors in series. It is equivalent to enlarging the plate area."
  },
  {
@@ -6643,7 +6643,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
-  "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} = {{c1::1/C_1 + 1/C_2}}$.",
+  "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} =$ {{c1::$1/C_1 + 1/C_2$}}.",
   "back": "Series capacitors carry the same charge but split the voltage, so the equivalent is less than the smallest one. The rule is the exact reverse of resistors."
  },
  {
@@ -6668,12 +6668,12 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
-  "front": "For elements in series, compare power with $P = {{c1::I^2R}}$, so the larger resistor dissipates more.",
+  "front": "For elements in series, compare power with $P =$ {{c1::$I^2R$}}, so the larger resistor dissipates more.",
   "back": "Series elements share the same current, making power directly proportional to resistance. Do not apply $V^2/R$ intuition to series comparisons."
  },
  {
   "topicSlug": "mcat-physics-electricity-kirchhoff-power-mcat",
-  "front": "For household AC, $V_{rms} = {{c1::V_{peak}/\\sqrt{2}}}$, so a $120$ V outlet actually peaks near $170$ V.",
+  "front": "For household AC, $V_{rms} =$ {{c1::$V_{peak}/\\sqrt{2}$}}, so a $120$ V outlet actually peaks near $170$ V.",
   "back": "Rms values are defined so that $P = V_{rms}I_{rms}$ and $P = V_{rms}^2/R$ give the true average power. Quoted voltages and current ratings are rms unless a problem says otherwise."
  },
  {
@@ -6770,7 +6770,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-rc-circuits-mcat",
-  "front": "The RC time constant is $\\tau = {{c1::RC}}$ and carries units of seconds.",
+  "front": "The RC time constant is $\\tau =$ {{c1::$RC$}} and carries units of seconds.",
   "back": "Ohms times farads gives seconds. It sets how quickly a capacitor charges or discharges and does not depend on the battery voltage."
  },
  {
@@ -6986,7 +6986,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
-  "front": "Wire resistance is $R = {{c1::\\rho L/A}}$, so doubling the radius cuts resistance to one fourth.",
+  "front": "Wire resistance is $R =$ {{c1::$\\rho L/A$}}, so doubling the radius cuts resistance to one fourth.",
   "back": "Cross-sectional area scales as the radius squared. Longer, thinner wires resist more, which is why long extension cords lose voltage."
  },
  {
@@ -7041,7 +7041,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-dc-circuits-mcat",
-  "front": "Conductance is $G = {{c1::1/R}}$, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
+  "front": "Conductance is $G =$ {{c1::$1/R$}}, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
   "back": "More conductance means more current per volt. Parallel branches act like added cross-sectional area, which is why $1/R_{eq}$ is a sum."
  },
  {
@@ -7466,7 +7466,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
-  "front": "A dipole in a uniform field feels zero net force but a torque $\\tau = {{c1::pE\\sin\\theta}}$.",
+  "front": "A dipole in a uniform field feels zero net force but a torque $\\tau =$ {{c1::$pE\\sin\\theta$}}.",
   "back": "The equal and opposite forces on the two ends cancel but do not act along the same line. The resulting torque rotates the dipole into alignment with the field."
  },
  {
@@ -7526,7 +7526,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
-  "front": "Coulomb's constant is $k = 1/(4\\pi\\epsilon_0) = 9\\times 10^9$, with permittivity of free space $\\epsilon_0 = {{c1::8.85\\times 10^{-12}}}$ in SI units.",
+  "front": "Coulomb's constant is $k = 1/(4\\pi\\epsilon_0) = 9\\times 10^9$, with permittivity of free space $\\epsilon_0 =$ {{c1::$8.85\\times 10^{-12}$}} in SI units.",
   "back": "The units of $\\epsilon_0$ are $C^2/(N\\cdot m^2)$. It reappears in capacitance, $C = \\kappa\\epsilon_0 A/d$. For calculations the MCAT only needs $k = 9\\times 10^9$."
  },
  {
@@ -7673,7 +7673,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
-  "front": "The field of a point charge is $E = {{c1::kQ/r^2}}$, with units written either N/C or V/m.",
+  "front": "The field of a point charge is $E =$ {{c1::$kQ/r^2$}}, with units written either N/C or V/m.",
   "back": "The field exists whether or not a test charge is present. A charge $q$ placed there feels $F = qE$."
  },
  {
@@ -7769,7 +7769,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-magnetism-mcat",
-  "front": "A charge moving perpendicular to a uniform field travels in a circle of radius $r = {{c1::mv/(qB)}}$.",
+  "front": "A charge moving perpendicular to a uniform field travels in a circle of radius $r =$ {{c1::$mv/(qB)$}}.",
   "back": "Set the magnetic force equal to the centripetal requirement $mv^2/r$. Heavier or faster particles curve less sharply."
  },
  {
@@ -7824,7 +7824,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-induction-mcat",
-  "front": "A rod of length $L$ moving at speed $v$ perpendicular to field $B$ generates motional emf $\\varepsilon = {{c1::BLv}}$.",
+  "front": "A rod of length $L$ moving at speed $v$ perpendicular to field $B$ generates motional emf $\\varepsilon =$ {{c1::$BLv$}}.",
   "back": "Magnetic force separates charges along the rod until an internal electric field balances it. This principle underlies electromagnetic blood flowmeters."
  },
  {
@@ -7909,7 +7909,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-induction-mcat",
-  "front": "In a velocity selector, undeflected particles satisfy $qE = qvB$, so the selected speed is $v = {{c1::E/B}}$.",
+  "front": "In a velocity selector, undeflected particles satisfy $qE = qvB$, so the selected speed is $v =$ {{c1::$E/B$}}.",
   "back": "Charge cancels, so the selected speed is independent of both charge and mass. Only particles at that exact speed pass straight through."
  },
  {
@@ -7919,7 +7919,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-magnetism-mcat",
-  "front": "Inside a long solenoid the field is $B = {{c1::\\mu_0 nI}}$, uniform and directed along the axis.",
+  "front": "Inside a long solenoid the field is $B =$ {{c1::$\\mu_0 nI$}}, uniform and directed along the axis.",
   "back": "Here $n$ is turns per unit length, so the field does not depend on the solenoid's radius. MRI bore magnets exploit exactly this uniformity."
  },
  {
@@ -7934,7 +7934,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-induction-mcat",
-  "front": "Magnetic flux through a loop is $\\Phi = {{c1::BA\\cos\\theta}}$, where $\\theta$ is measured from the surface normal.",
+  "front": "Magnetic flux through a loop is $\\Phi =$ {{c1::$BA\\cos\\theta$}}, where $\\theta$ is measured from the surface normal.",
   "back": "Flux is maximal when the loop faces the field squarely and zero when the loop is edge-on. Only a changing flux induces an emf."
  },
  {
@@ -8199,12 +8199,12 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-mcat",
-  "front": "Energy stored in a capacitor is $U = {{c1::\\frac12 CV^2}}$, equivalently $\\frac12 QV$ or $Q^2/(2C)$.",
+  "front": "Energy stored in a capacitor is $U =$ {{c1::$\\frac12 CV^2$}}, equivalently $\\frac12 QV$ or $Q^2/(2C)$.",
   "back": "Pick the form containing the quantity being held fixed: use $\\frac12 CV^2$ when a battery holds $V$, and $Q^2/(2C)$ when the capacitor is disconnected."
  },
  {
   "topicSlug": "mcat-physics-electricity-mcat",
-  "front": "For two point charges the potential energy is $U = {{c1::kQq/r}}$, while a single charge sets up potential $V = kQ/r$.",
+  "front": "For two point charges the potential energy is $U =$ {{c1::$kQq/r$}}, while a single charge sets up potential $V = kQ/r$.",
   "back": "$U$ needs two charges and is measured in joules; $V$ is a property of a location and is measured in volts. They are linked by $U = qV$."
  },
  {
@@ -8269,12 +8269,12 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-mcat",
-  "front": "In vacuum every electromagnetic wave travels at $c = {{c1::3\\times 10^8}}$ m/s; in a medium of index $n$ the speed drops to $c/n$.",
+  "front": "In vacuum every electromagnetic wave travels at $c =$ {{c1::$3\\times 10^8$}} m/s; in a medium of index $n$ the speed drops to $c/n$.",
   "back": "Memorize $3.0\\times 10^8$ m/s. In water ($n = 1.33$) light slows to about $2.3\\times 10^8$ m/s, while frequency stays fixed and wavelength shortens by the same factor."
  },
  {
   "topicSlug": "mcat-physics-electricity-mcat",
-  "front": "Inserting a dielectric with constant $\\kappa$ changes the capacitance to $C' = {{c1::\\kappa C}}$.",
+  "front": "Inserting a dielectric with constant $\\kappa$ changes the capacitance to $C' =$ {{c1::$\\kappa C$}}.",
   "back": "Dielectrics always raise capacitance because $\\kappa > 1$. Vacuum has $\\kappa = 1$ while water is near $80$, which is why aqueous environments screen charges so effectively."
  },
  {
@@ -8304,7 +8304,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-mcat",
-  "front": "Photon energy is $E = hf = {{c1::hc/\\lambda}}$, so shorter wavelength light carries more energy per photon.",
+  "front": "Photon energy is $E = hf =$ {{c1::$hc/\\lambda$}}, so shorter wavelength light carries more energy per photon.",
   "back": "With $h = 6.63 \\times 10^{-34}$ joule-seconds, a $400$ nm photon beats a $700$ nm photon. This is why ultraviolet damages tissue while infrared mostly heats it."
  },
  {
@@ -8324,7 +8324,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-mcat",
-  "front": "The work required to move a charge $q$ through a potential difference $\\Delta V$ is $W = {{c1::q\\Delta V}}$.",
+  "front": "The work required to move a charge $q$ through a potential difference $\\Delta V$ is $W =$ {{c1::$q\\Delta V$}}.",
   "back": "This is path independent because the electric force is conservative. Moving a proton through $+1$ V costs $1.6 \\times 10^{-19}$ J."
  },
  {
@@ -8564,7 +8564,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-optics-mcat",
-  "front": "In double-slit interference, bright fringes satisfy $d\\sin\\theta = {{c1::m\\lambda}}$ for integer $m$.",
+  "front": "In double-slit interference, bright fringes satisfy $d\\sin\\theta =$ {{c1::$m\\lambda$}} for integer $m$.",
   "back": "Constructive interference means the path lengths differ by a whole number of wavelengths. Fringe spacing grows with wavelength and shrinks as slit separation increases."
  },
  {
@@ -8574,7 +8574,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-optics-mcat",
-  "front": "Lens power in diopters is $P = {{c1::1/f}}$, with $f$ expressed in meters.",
+  "front": "Lens power in diopters is $P =$ {{c1::$1/f$}}, with $f$ expressed in meters.",
   "back": "A $+4$ D lens has a $25$ cm focal length. Positive power converges light while negative power diverges it."
  },
  {
@@ -8589,7 +8589,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-optics-mcat",
-  "front": "Magnification is $m = {{c1::-i/o}}$, so a negative value means the image is inverted.",
+  "front": "Magnification is $m =$ {{c1::$-i/o$}}, so a negative value means the image is inverted.",
   "back": "The magnitude gives the ratio of image height to object height. For a single lens or mirror, inverted and real always occur together."
  },
  {
@@ -8609,7 +8609,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-optics-mcat",
-  "front": "Snell's law states $n_1\\sin\\theta_1 = {{c1::n_2\\sin\\theta_2}}$, with angles measured from the normal.",
+  "front": "Snell's law states $n_1\\sin\\theta_1 =$ {{c1::$n_2\\sin\\theta_2$}}, with angles measured from the normal.",
   "back": "Light entering a higher-index medium slows and bends toward the normal. Always measure the angle from the normal, never from the surface."
  },
  {
@@ -8641,7 +8641,7 @@
  },
  {
   "topicSlug": "mcat-physics-electricity-optics-mcat",
-  "front": "The index of refraction is $n = {{c1::c/v}}$, so it is always at least $1$.",
+  "front": "The index of refraction is $n =$ {{c1::$c/v$}}, so it is always at least $1$.",
   "back": "It measures how much light slows in a medium. Water is about $1.33$, glass about $1.5$, and the cornea near $1.38$."
  },
  {

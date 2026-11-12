@@ -18,8 +18,8 @@
   "why": "Parabolic path in uniform E field is a common projectile-analogy question"
  },
  {
-  "front": "A dipole in a uniform field feels zero net force but a torque $\\tau = {{c1::pE\\sin\\theta}}$.",
-  "fp": "e6aac1932413",
+  "front": "A dipole in a uniform field feels zero net force but a torque $\\tau =$ {{c1::$pE\\sin\\theta$}}.",
+  "fp": "ed2f3a5cbdbf",
   "yield": "MEDIUM",
   "why": "Dipole torque formula is prep-book detail; alignment behavior is what gets tested"
  },
@@ -90,8 +90,8 @@
   "why": "Coulomb vs gravity comparison is useful context, rarely a point"
  },
  {
-  "front": "Coulomb's constant is $k = 1/(4\\pi\\epsilon_0) = 9\\times 10^9$, with permittivity of free space $\\epsilon_0 = {{c1::8.85\\times 10^{-12}}}$ in SI units.",
-  "fp": "8bb8f30aa175",
+  "front": "Coulomb's constant is $k = 1/(4\\pi\\epsilon_0) = 9\\times 10^9$, with permittivity of free space $\\epsilon_0 =$ {{c1::$8.85\\times 10^{-12}$}} in SI units.",
+  "fp": "2d70d20b67b8",
   "yield": "LOW",
   "why": "Numeric value of epsilon_0 is trivia; the exam supplies k"
  },
@@ -264,8 +264,8 @@
   "why": "Near-restatement of the sharp-points charge card"
  },
  {
-  "front": "The field of a point charge is $E = {{c1::kQ/r^2}}$, with units written either N/C or V/m.",
-  "fp": "7b44a2b26240",
+  "front": "The field of a point charge is $E =$ {{c1::$kQ/r^2$}}, with units written either N/C or V/m.",
+  "fp": "2b47953866b0",
   "yield": "HIGH",
   "why": "Cloze restatement of the point-charge field; concept is core"
  },

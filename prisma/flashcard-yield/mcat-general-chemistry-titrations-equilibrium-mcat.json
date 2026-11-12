@@ -78,8 +78,8 @@
   "why": "Endpoint vs equivalence point; useful definition rarely costing a point"
  },
  {
-  "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} = {{c1::4s^3}}$.",
-  "fp": "e936dc7b57a6",
+  "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} =$ {{c1::$4s^3$}}.",
+  "fp": "41cef999cd35",
   "yield": "ULTRA_HIGH",
   "why": "Ksp = 4s^3 for AB2 salts; molar solubility calculation appears every year"
  },

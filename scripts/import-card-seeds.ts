@@ -16,6 +16,7 @@ import fs from 'fs'
 import { globSync } from 'glob'
 import katex from 'katex'
 import { PrismaClient } from '@prisma/client'
+import { clozeInsideMath } from '../src/lib/cloze-utils'
 
 const DRY = !!process.env.DRY_RUN
 
@@ -58,6 +59,9 @@ function validateText(text: string): string | null {
     // Same capture as the runtime parser (src/lib/cloze-utils.ts): one level of
     // nested braces so LaTeX survives inside a deletion.
     if (!/\{\{(?:c\d+::)?(?:[^{}]|\{[^{}]*\})+\}\}/.test(text)) return 'malformed cloze'
+    // `$R = {{c1::\rho L/A}}$` renders with literal `$` signs: the runtime
+    // splits at the deletion before the math is parsed. Author `$R =$ {{c1::$\rho L/A$}}`.
+    if (clozeInsideMath(text)) return 'cloze inside $…$ (write $pre$ {{cN::$ans$}})'
   }
   return null
 }

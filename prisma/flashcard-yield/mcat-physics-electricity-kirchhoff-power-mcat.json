@@ -30,14 +30,14 @@
   "why": "kWh vs W unit distinction is secondary"
  },
  {
-  "front": "For elements in series, compare power with $P = {{c1::I^2R}}$, so the larger resistor dissipates more.",
-  "fp": "e07952b01829",
+  "front": "For elements in series, compare power with $P =$ {{c1::$I^2R$}}, so the larger resistor dissipates more.",
+  "fp": "7ec45a72d8d6",
   "yield": "ULTRA_HIGH",
   "why": "Choosing I^2R for series comparisons is a required step nearly every year"
  },
  {
-  "front": "For household AC, $V_{rms} = {{c1::V_{peak}/\\sqrt{2}}}$, so a $120$ V outlet actually peaks near $170$ V.",
-  "fp": "c50ec4601bea",
+  "front": "For household AC, $V_{rms} =$ {{c1::$V_{peak}/\\sqrt{2}$}}, so a $120$ V outlet actually peaks near $170$ V.",
+  "fp": "0a3e353c0b2e",
   "yield": "MEDIUM",
   "why": "rms voltage is on the outline but rarely tested"
  },

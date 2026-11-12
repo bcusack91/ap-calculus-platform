@@ -174,8 +174,8 @@
   "why": "Restates the dispersion card (violet bends most)"
  },
  {
-  "front": "In double-slit interference, bright fringes satisfy $d\\sin\\theta = {{c1::m\\lambda}}$ for integer $m$.",
-  "fp": "15a130575fbb",
+  "front": "In double-slit interference, bright fringes satisfy $d\\sin\\theta =$ {{c1::$m\\lambda$}} for integer $m$.",
+  "fp": "988b212316e8",
   "yield": "HIGH",
   "why": "Double-slit bright-fringe condition; outline interference basic"
  },
@@ -186,8 +186,8 @@
   "why": "Index values for water/glass; useful numbers but rarely the point tested"
  },
  {
-  "front": "Lens power in diopters is $P = {{c1::1/f}}$, with $f$ expressed in meters.",
-  "fp": "31009a1b4133",
+  "front": "Lens power in diopters is $P =$ {{c1::$1/f$}}, with $f$ expressed in meters.",
+  "fp": "b3f1fe9b1f9b",
   "yield": "ULTRA_HIGH",
   "why": "P=1/f in diopters; used in every vision-correction calculation"
  },
@@ -204,8 +204,8 @@
   "why": "Bend direction restated; covered by the Snell's law cards"
  },
  {
-  "front": "Magnification is $m = {{c1::-i/o}}$, so a negative value means the image is inverted.",
-  "fp": "51b0241d5d8f",
+  "front": "Magnification is $m =$ {{c1::$-i/o$}}, so a negative value means the image is inverted.",
+  "fp": "fc2f7b8f0518",
   "yield": "ULTRA_HIGH",
   "why": "m=-i/o with sign meaning; core equation used every year"
  },
@@ -228,8 +228,8 @@
   "why": "Presbyopia definition; secondary vision defect"
  },
  {
-  "front": "Snell's law states $n_1\\sin\\theta_1 = {{c1::n_2\\sin\\theta_2}}$, with angles measured from the normal.",
-  "fp": "93a8d77d4e7f",
+  "front": "Snell's law states $n_1\\sin\\theta_1 =$ {{c1::$n_2\\sin\\theta_2$}}, with angles measured from the normal.",
+  "fp": "5485ead545ba",
   "yield": "ULTRA_HIGH",
   "why": "Snell's law equation; on essentially every administration"
  },
@@ -264,8 +264,8 @@
   "why": "Neural perception of orientation is trivia, not physics"
  },
  {
-  "front": "The index of refraction is $n = {{c1::c/v}}$, so it is always at least $1$.",
-  "fp": "b75f6afe7f5b",
+  "front": "The index of refraction is $n =$ {{c1::$c/v$}}, so it is always at least $1$.",
+  "fp": "9f386a7f8b55",
   "yield": "ULTRA_HIGH",
   "why": "n=c/v definition; foundation of refraction questions"
  },

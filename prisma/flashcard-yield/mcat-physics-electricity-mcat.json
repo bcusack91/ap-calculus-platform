@@ -144,14 +144,14 @@
   "why": "Potential as a scalar that adds algebraically, unlike vector fields, is commonly tested"
  },
  {
-  "front": "Energy stored in a capacitor is $U = {{c1::\\frac12 CV^2}}$, equivalently $\\frac12 QV$ or $Q^2/(2C)$.",
-  "fp": "1815b38ad67a",
+  "front": "Energy stored in a capacitor is $U =$ {{c1::$\\frac12 CV^2$}}, equivalently $\\frac12 QV$ or $Q^2/(2C)$.",
+  "fp": "5eece0b68755",
   "yield": "ULTRA_HIGH",
   "why": "U = 1/2 CV^2 and its equivalent forms are calculation equations tested every year"
  },
  {
-  "front": "For two point charges the potential energy is $U = {{c1::kQq/r}}$, while a single charge sets up potential $V = kQ/r$.",
-  "fp": "69d19e22b956",
+  "front": "For two point charges the potential energy is $U =$ {{c1::$kQq/r$}}, while a single charge sets up potential $V = kQ/r$.",
+  "fp": "3a6d771f8192",
   "yield": "ULTRA_HIGH",
   "why": "U = kQq/r and V = kQ/r are core equations used in calculations on essentially every exam"
  },
@@ -228,14 +228,14 @@
   "why": "Terminal drift velocity in a gel balances qE and drag; applied reasoning, second-tier"
  },
  {
-  "front": "In vacuum every electromagnetic wave travels at $c = {{c1::3\\times 10^8}}$ m/s; in a medium of index $n$ the speed drops to $c/n$.",
-  "fp": "c95f55558e8f",
+  "front": "In vacuum every electromagnetic wave travels at $c =$ {{c1::$3\\times 10^8$}} m/s; in a medium of index $n$ the speed drops to $c/n$.",
+  "fp": "b0b2527a65c9",
   "yield": "ULTRA_HIGH",
   "why": "c = 3e8 m/s and v = c/n are used in calculations on essentially every exam"
  },
  {
-  "front": "Inserting a dielectric with constant $\\kappa$ changes the capacitance to $C' = {{c1::\\kappa C}}$.",
-  "fp": "6733bc49618e",
+  "front": "Inserting a dielectric with constant $\\kappa$ changes the capacitance to $C' =$ {{c1::$\\kappa C$}}.",
+  "fp": "945e64cca3c2",
   "yield": "HIGH",
   "why": "C' = kappa C is a commonly tested capacitor relation"
  },
@@ -270,8 +270,8 @@
   "why": "EM spectrum order by frequency is tested on nearly every exam"
  },
  {
-  "front": "Photon energy is $E = hf = {{c1::hc/\\lambda}}$, so shorter wavelength light carries more energy per photon.",
-  "fp": "febe9ac936cf",
+  "front": "Photon energy is $E = hf =$ {{c1::$hc/\\lambda$}}, so shorter wavelength light carries more energy per photon.",
+  "fp": "d75dd43a4867",
   "yield": "ULTRA_HIGH",
   "why": "E = hf = hc/lambda is a calculation equation tested every year"
  },
@@ -294,8 +294,8 @@
   "why": "Zero work along an equipotential is a commonly tested consequence of W = q delta V"
  },
  {
-  "front": "The work required to move a charge $q$ through a potential difference $\\Delta V$ is $W = {{c1::q\\Delta V}}$.",
-  "fp": "8b9fa21275c6",
+  "front": "The work required to move a charge $q$ through a potential difference $\\Delta V$ is $W =$ {{c1::$q\\Delta V$}}.",
+  "fp": "2d638ddda23e",
   "yield": "ULTRA_HIGH",
   "why": "W = q delta V is the core energy equation of electrostatics, used in calculations every year"
  },

@@ -96,8 +96,8 @@
   "why": "[H+] = sqrt(KaC) weak-acid shortcut; core calculation used on essentially every exam"
  },
  {
-  "front": "For any conjugate pair, $K_a \\times K_b = {{c1::K_w}}$, so $pK_a + pK_b = {{c2::14}}$ at 25 degrees C.",
-  "fp": "00b4c60ee3be",
+  "front": "For any conjugate pair, $K_a \\times K_b =$ {{c1::$K_w$}}, so $pK_a + pK_b =$ {{c2::$14$}} at 25 degrees C.",
+  "fp": "fc2545a73e46",
   "yield": "ULTRA_HIGH",
   "why": "Ka x Kb = Kw, pKa + pKb = 14; foundational conjugate-pair relation"
  },

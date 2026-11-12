@@ -1,7 +1,7 @@
 [
  {
-  "front": "A charge moving perpendicular to a uniform field travels in a circle of radius $r = {{c1::mv/(qB)}}$.",
-  "fp": "fd3cd9dc7225",
+  "front": "A charge moving perpendicular to a uniform field travels in a circle of radius $r =$ {{c1::$mv/(qB)$}}.",
+  "fp": "bcbf9cd08bcc",
   "yield": "ULTRA_HIGH",
   "why": "r = mv/(qB) is the core equation for charges in B fields and mass spec"
  },
@@ -84,8 +84,8 @@
   "why": "Cyclotron period independence is a secondary derivation"
  },
  {
-  "front": "Inside a long solenoid the field is $B = {{c1::\\mu_0 nI}}$, uniform and directed along the axis.",
-  "fp": "b2d55beddeb9",
+  "front": "Inside a long solenoid the field is $B =$ {{c1::$\\mu_0 nI$}}, uniform and directed along the axis.",
+  "fp": "a8f02d96a0d0",
   "yield": "MEDIUM",
   "why": "Solenoid B = mu0 n I is prep-book detail, rarely calculated"
  },

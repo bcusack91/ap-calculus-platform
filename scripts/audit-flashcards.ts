@@ -29,6 +29,7 @@ import { PrismaClient } from '@prisma/client'
 import katex from 'katex'
 import { formatFlashcardContent } from '../src/lib/format-flashcard-content'
 import { escapeCurrencyMath } from '../src/lib/escape-currency-math'
+import { clozeInsideMath } from '../src/lib/cloze-utils'
 
 const prisma = new PrismaClient()
 
@@ -69,6 +70,10 @@ function auditSide(card: { id: string }, meta: { course: string; category: strin
   if (raw.includes('�')) push('mojibake', 'contains U+FFFD replacement char')
   if (/\\n/.test(raw) && !/\\ne|\\nu|\\nabla|\\not|\\neq|\\newline/.test(raw)) push('literal-backslash-n', 'literal \\n in text')
   if (/<\/?(div|span|p|br|table|img|b|i)\b/i.test(raw)) push('html-tag', 'raw HTML tag in markdown card')
+  // A deletion opened inside $…$ splits the math at render time: the prose
+  // part keeps a dangling `$` and the student sees literal dollar signs.
+  // Fix with scripts/fix-cloze-in-math.ts (liftClozeOutOfMath).
+  if (clozeInsideMath(raw)) push('cloze-inside-math', '{{cN::…}} opens inside $…$; write $pre$ {{cN::$ans$}} instead')
 
   // Replay the production pipeline
   let processed: string
