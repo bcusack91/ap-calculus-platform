@@ -542,11 +542,11 @@ export default function TopicEntranceQuiz({
               <StudyPlanNextUp
                 topicSlug={topicSlug}
                 completion="entrance"
-                fallback={({ cardsToReview }) => (
+                fallback={({ hasPrimary }) => (
                   <button
                     onClick={() => handleFinish('course')}
                     className={
-                      cardsToReview > 0
+                      hasPrimary
                         ? 'w-full py-3 rounded-xl font-semibold border-2 border-accent-light dark:border-accent-hover text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors'
                         : 'w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors shadow-lg'
                     }

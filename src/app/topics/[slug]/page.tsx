@@ -10,6 +10,7 @@ import { isPlaceholderContent } from '@/lib/placeholder-content'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { hasVideoLesson } from '@/lib/video-lessons-server'
+import { getTopicNeighbors } from '@/lib/topic-sequence'
 
 function TopicBottomAd() {
   const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
@@ -232,17 +233,18 @@ export default async function TopicPage(props: TopicPageProps) {
     notFound()
   }
 
-  // Query adjacent topics in the same category for next/prev navigation
-  const siblingTopics = await prisma.topic.findMany({
-    where: { categoryId: topic.categoryId },
-    select: { slug: true, title: true, order: true },
-    orderBy: { order: 'asc' },
-  })
-  const currentIdx = siblingTopics.findIndex((t) => t.slug === topic.slug)
-  const prevTopic = currentIdx > 0 ? siblingTopics[currentIdx - 1] : null
-  const nextTopic = currentIdx < siblingTopics.length - 1 ? siblingTopics[currentIdx + 1] : null
+  // Previous / next topic in the COURSE's study order (one definition for
+  // every surface — src/lib/topic-sequence.ts), not the category's raw rows.
+  const neighbors = await getTopicNeighbors(topic.slug).catch(() => null)
+  const prevTopic = neighbors?.prev ?? null
+  const nextTopic = neighbors?.next ?? null
 
   // Related topics: other topics in the same category (excluding current), limited to 6
+  const siblingTopics = await prisma.topic.findMany({
+    where: { categoryId: topic.categoryId },
+    select: { slug: true, title: true },
+    orderBy: { order: 'asc' },
+  })
   const relatedTopics = siblingTopics
     .filter((t) => t.slug !== topic.slug)
     .slice(0, 6)

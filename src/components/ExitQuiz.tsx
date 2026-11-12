@@ -446,12 +446,12 @@ export default function ExitQuiz({
                   topicSlug={topicSlug}
                   completion="quiz"
                   quizPassed
-                  fallback={({ cardsToReview }) => (
+                  fallback={({ hasPrimary }) => (
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                       <Link
                         href={courseHref}
                         className={
-                          cardsToReview > 0
+                          hasPrimary
                             ? 'px-6 py-3 rounded-xl font-semibold border-2 border-accent-light dark:border-accent-hover text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 text-center'
                             : 'px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg text-center'
                         }

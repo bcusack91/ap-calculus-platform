@@ -656,7 +656,7 @@ function FlashcardReviewSession() {
                   </Link>
                 </>
               ) : (
-                <NextStudyStepButton />
+                <NextStudyStepButton topicSlug={topicSlug} />
               )}
             </div>
           </div>
@@ -739,7 +739,7 @@ function FlashcardReviewSession() {
             )}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <NextStudyStepButton fallbackLabel="Continue learning" />
+              <NextStudyStepButton topicSlug={topicSlug} fallbackLabel="Continue learning" />
               {topicSlug ? (
                 <Link
                   href="/flashcards/review/start"

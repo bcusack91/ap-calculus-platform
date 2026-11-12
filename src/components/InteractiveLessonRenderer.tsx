@@ -1849,7 +1849,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
               // owed, e.g. a pass recorded under an older threshold): the panel
               // then leads with the exit quiz, opened in place.
               onTakeExitQuiz={() => { void openExitQuiz() }}
-              fallback={({ cardsToReview }) => lessonCompleteFallback(cardsToReview > 0)}
+              fallback={({ hasPrimary }) => lessonCompleteFallback(hasPrimary)}
             />
           ) : (
             <div className="mt-4">{lessonCompleteFallback(false)}</div>

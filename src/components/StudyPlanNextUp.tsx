@@ -188,10 +188,85 @@ export interface StudyPlanNextUpProps {
   /**
    * Rendered when this topic is in no diagnostic plan (or the student is
    * signed out / the fetch failed), so the surface still leads with a next
-   * step. `cardsToReview` > 0 means a "Review your N flashcards" button was
-   * already rendered as the primary action above it.
+   * step. `hasPrimary` means a primary action was already rendered above it
+   * ("Review your N flashcards", or the course's next topic), so the
+   * fallback should style itself as secondary. `cardsToReview` is that
+   * flashcard count.
    */
-  fallback?: (ctx: { cardsToReview: number }) => ReactNode
+  fallback?: (ctx: { cardsToReview: number; hasPrimary: boolean }) => ReactNode
+}
+
+/** /api/topics/<slug>/neighbors: the topic's course and its next topic in course order. */
+export interface TopicNeighborsPayload {
+  course?: { slug: string; name: string } | null
+  prev?: { slug: string; title: string; href: string } | null
+  next?: { slug: string; title: string; href: string } | null
+}
+
+async function fetchNeighbors(topicSlug: string): Promise<TopicNeighborsPayload | null> {
+  try {
+    const res = await fetch(`/api/topics/${encodeURIComponent(topicSlug)}/neighbors`)
+    if (!res.ok) return null
+    const body = (await res.json()) as TopicNeighborsPayload
+    return body && typeof body === 'object' ? body : null
+  } catch {
+    return null
+  }
+}
+
+export interface NextStudyStep {
+  href: string
+  label: string
+}
+
+/**
+ * The one "go study next" choice for a surface that knows which topic the
+ * student just worked on (owner rule 2026-11-12: after Circuits Part 1 the
+ * next step is Circuits Part 2, never a pending topic from some other
+ * course's plan):
+ *   1. the diagnostic plan that CONTAINS this topic → its next pending topic;
+ *   2. else a plan for this topic's course → its first pending topic;
+ *   3. else the next topic in the course's study order;
+ *   4. else (no topic context at all) the first pending topic of any plan,
+ *      then that plan's course page.
+ * Pure, so the surfaces share it and it is unit-tested.
+ */
+export function pickNextStudyStep(
+  plans: PlanPayload[],
+  topicSlug: string | null | undefined,
+  neighbors: TopicNeighborsPayload | null | undefined,
+): NextStudyStep | null {
+  const courseSlug = neighbors?.course?.slug ?? null
+  const fromPlan = (p: PlanPayload, justCompleted: string | null): NextStudyStep | null => {
+    const next = pickNextPendingTopic(Array.isArray(p?.topics) ? p.topics : [], justCompleted)
+    return next ? { href: studyPlanTopicHref(next, typeof p.courseKey === 'string' ? p.courseKey : ''), label: `Next topic: ${next.name}` } : null
+  }
+  if (topicSlug) {
+    const containing = plans.find((p) => Array.isArray(p?.topics) && p.topics.some((t) => t?.slug === topicSlug))
+    if (containing) {
+      const step = fromPlan(containing, topicSlug)
+      if (step) return step
+    }
+    if (courseSlug) {
+      for (const p of plans) {
+        if (p === containing || p?.courseSlug !== courseSlug) continue
+        const step = fromPlan(p, topicSlug)
+        if (step) return step
+      }
+    }
+    if (neighbors?.next) return { href: neighbors.next.href, label: `Next topic: ${neighbors.next.title}` }
+    if (courseSlug) return { href: `/courses/${courseSlug}`, label: neighbors?.course?.name ? `Back to ${neighbors.course.name}` : 'Back to your course' }
+    return null
+  }
+  for (const p of plans) {
+    const step = fromPlan(p, null)
+    if (step) return step
+  }
+  const withCourse = plans.find((p) => typeof p?.courseSlug === 'string' && p.courseSlug)
+  if (withCourse?.courseSlug) {
+    return { href: `/courses/${withCourse.courseSlug}`, label: withCourse.label ? `Go to ${withCourse.label}` : 'Go to your course' }
+  }
+  return null
 }
 
 type PlanState = { status: 'loading' } | { status: 'none'; signedIn: boolean } | { status: 'plan'; data: PanelData }
@@ -207,6 +282,19 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, onT
   // count couldn't be fetched), which degrades to "nothing is being withheld".
   const [cardsRemaining, setCardsRemaining] = useState<number | null>(null)
   const [cardsChecked, setCardsChecked] = useState(false)
+  // Course-order neighbour, for a topic in no diagnostic plan: the next
+  // lesson in THIS course (Circuits Part 1 → Part 2), never another plan's.
+  const [neighbors, setNeighbors] = useState<TopicNeighborsPayload | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    fetchNeighbors(topicSlug).then((n) => {
+      if (!cancelled) setNeighbors(n)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [topicSlug])
 
   useEffect(() => {
     let cancelled = false
@@ -360,9 +448,13 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, onT
   // fallback next step.
   if (plan.status === 'none') {
     if (!fallback || !cardsChecked) return null
+    const cardsFirst = flashcardsUnlocked && cardsDue > 0
+    // The course's next topic (course order) is the study step once this
+    // topic's cards are done; while cards are owed it waits as secondary.
+    const courseNext = neighbors?.next ?? null
     return (
       <div className="mt-6 space-y-3 text-left">
-        {flashcardsUnlocked && cardsDue > 0 && (
+        {cardsFirst && (
           <div className="flex justify-center">
             <Link href={reviewHref} className={PRIMARY_BUTTON}>
               <Layers className="w-4 h-4" aria-hidden="true" />
@@ -371,7 +463,16 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, onT
             </Link>
           </div>
         )}
-        {fallback({ cardsToReview: flashcardsUnlocked ? cardsDue : 0 })}
+        {courseNext && (
+          <div className="flex justify-center">
+            <Link href={courseNext.href} className={cardsFirst ? SECONDARY_BUTTON : PRIMARY_BUTTON}>
+              <BookOpen className="w-4 h-4" aria-hidden="true" />
+              Next topic: {courseNext.title}
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          </div>
+        )}
+        {fallback({ cardsToReview: flashcardsUnlocked ? cardsDue : 0, hasPrimary: cardsFirst || !!courseNext })}
       </div>
     )
   }
@@ -717,49 +818,43 @@ function DoneForToday({ course, nextName, pendingAfter }: { course: FullLengthCo
 }
 
 /**
- * One "go study next" button for flashcard empty states: the first pending
- * topic in the student's diagnostic plan, else their plan's course, else
- * `fallbackHref`. Renders the fallback immediately and upgrades it once the
- * plan loads, so the button is never missing.
+ * One "go study next" button for flashcard end/empty states. With `topicSlug`
+ * (the topic the session was filtered to) it follows pickNextStudyStep: the
+ * plan holding that topic, else a plan for its course, else the next topic in
+ * the course's study order. Without one: the first pending topic of any plan,
+ * else that plan's course, else `fallbackHref`. Renders the fallback
+ * immediately and upgrades it once the data loads, so the button is never
+ * missing.
  */
 export function NextStudyStepButton({
+  topicSlug = null,
   fallbackHref = '/topics',
   fallbackLabel = 'Find a topic to start',
   className = PRIMARY_BUTTON,
 }: {
+  topicSlug?: string | null
   fallbackHref?: string
   fallbackLabel?: string
   className?: string
 }) {
-  const [target, setTarget] = useState<{ href: string; label: string } | null>(null)
+  const [target, setTarget] = useState<NextStudyStep | null>(null)
 
   useEffect(() => {
     let cancelled = false
-    fetch('/api/study-plan/plan-status')
+    const plansReq = fetch('/api/study-plan/plan-status')
       .then((res) => (res.ok ? res.json() : null))
-      .then((body) => {
-        if (cancelled || !body) return
-        const plans: PlanPayload[] = Array.isArray(body?.plans) ? body.plans : []
-        for (const p of plans) {
-          const next = pickNextPendingTopic(Array.isArray(p?.topics) ? p.topics : [])
-          if (next) {
-            setTarget({ href: studyPlanTopicHref(next, typeof p.courseKey === 'string' ? p.courseKey : ''), label: `Next topic: ${next.name}` })
-            return
-          }
-        }
-        const withCourse = plans.find((p) => typeof p?.courseSlug === 'string' && p.courseSlug)
-        if (withCourse?.courseSlug) {
-          setTarget({
-            href: `/courses/${withCourse.courseSlug}`,
-            label: withCourse.label ? `Go to ${withCourse.label}` : 'Go to your course',
-          })
-        }
-      })
-      .catch(() => {})
+      .then((body) => (Array.isArray(body?.plans) ? (body.plans as PlanPayload[]) : []))
+      .catch(() => [] as PlanPayload[])
+    const neighborsReq = topicSlug ? fetchNeighbors(topicSlug) : Promise.resolve(null)
+    Promise.all([plansReq, neighborsReq]).then(([plans, neighbors]) => {
+      if (cancelled) return
+      const step = pickNextStudyStep(plans, topicSlug, neighbors)
+      if (step) setTarget(step)
+    })
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [topicSlug])
 
   return (
     <Link href={target?.href ?? fallbackHref} className={className}>

@@ -29,13 +29,17 @@ import StudyPlanNextUp, {
   completedTopicCleared,
   defaultCycleTargetDate,
   pickNextPendingTopic,
+  pickNextStudyStep,
   studyPlanTopicHref,
+  NextStudyStepButton,
   type PlanTopic,
+  type TopicNeighborsPayload,
 } from '@/components/StudyPlanNextUp'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
-type Plan = { courseKey: string; label: string; topics: PlanTopic[] }
+type Plan = { courseKey: string; label: string; topics: PlanTopic[]; courseSlug?: string | null }
 let plans: Plan[] = []
+let neighbors: Record<string, TopicNeighborsPayload> = {}
 let cardsDue = 0
 let cycleDue: { dueDate: string | null; source: 'class' | 'self' | null } = { dueDate: null, source: null }
 let targetStatus = 200
@@ -43,6 +47,7 @@ let fetchMock: ReturnType<typeof vi.fn>
 
 beforeEach(() => {
   plans = []
+  neighbors = {}
   cardsDue = 0
   cycleDue = { dueDate: null, source: null }
   targetStatus = 200
@@ -57,6 +62,11 @@ beforeEach(() => {
     if (url.startsWith('/api/calendar?')) return json({ events: [], cycles: [{ course: 'ap-chem', label: 'AP Chemistry', ...cycleDue, classroomName: null, pending: 0, hasDiagnostic: true }] })
     if (url.startsWith('/api/study-plan/plan-status')) return json({ plans })
     if (url.startsWith('/api/flashcards/review?')) return json({ cards: [], stats: { due: cardsDue } })
+    const nb = url.match(/^\/api\/topics\/([^/]+)\/neighbors$/)
+    if (nb) {
+      const n = neighbors[decodeURIComponent(nb[1])]
+      return n ? json(n) : json({ error: 'Topic not found' }, 404)
+    }
     return json({}, 404)
   })
   vi.stubGlobal('fetch', fetchMock)
@@ -71,6 +81,89 @@ const gases: PlanTopic = { slug: 'ap-chem-gases', name: 'Gases', isSatisfied: fa
 const chemPlan = (topics: PlanTopic[] = [moles, gases]): Plan => ({ courseKey: 'ap-chem', label: 'AP Chemistry', topics })
 
 const putCalls = () => fetchMock.mock.calls.filter(([u, init]) => String(u) === '/api/calendar/target' && (init as RequestInit)?.method === 'PUT')
+
+const circuits1 = 'mcat-physics-electricity-dc-circuits-mcat'
+const mcatNeighbors: TopicNeighborsPayload = {
+  course: { slug: 'mcat-prep', name: 'MCAT Prep' },
+  prev: { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics', href: '/topics/mcat-physics-electricity-electrostatics-mcat' },
+  next: { slug: 'mcat-physics-electricity-kirchhoff-power-mcat', title: "Circuits Part 2: Kirchhoff's Rules & Power", href: '/topics/mcat-physics-electricity-kirchhoff-power-mcat' },
+}
+const precalcPlan: Plan = {
+  courseKey: 'precalc',
+  label: 'AP Precalculus',
+  courseSlug: 'ap-precalculus',
+  topics: [{ slug: 'rational-functions-precalc', name: 'Rational Functions', isSatisfied: false, topicPath: '/topics/rational-functions-precalc' }],
+}
+
+describe('#12 next topic follows the course the student is working in (owner, 2026-11-12)', () => {
+  it('pickNextStudyStep: an unrelated plan never outranks the course order after a topic', () => {
+    expect(pickNextStudyStep([precalcPlan], circuits1, mcatNeighbors)).toEqual({
+      href: '/topics/mcat-physics-electricity-kirchhoff-power-mcat',
+      label: "Next topic: Circuits Part 2: Kirchhoff's Rules & Power",
+    })
+  })
+
+  it('pickNextStudyStep: the plan that contains the topic wins, then a plan for its course', () => {
+    const mcatPlan: Plan = {
+      courseKey: 'mcat',
+      label: 'MCAT',
+      courseSlug: 'mcat-prep',
+      topics: [
+        { slug: circuits1, name: 'Circuits Part 1', isSatisfied: false, topicPath: `/topics/${circuits1}` },
+        { slug: 'mcat-biochemistry-enzymes-kinetics-mcat', name: 'Enzymes & Kinetics', isSatisfied: false, topicPath: '/topics/mcat-biochemistry-enzymes-kinetics-mcat' },
+      ],
+    }
+    expect(pickNextStudyStep([precalcPlan, mcatPlan], circuits1, mcatNeighbors)?.label).toBe('Next topic: Enzymes & Kinetics')
+    const mcatPlanElsewhere: Plan = { ...mcatPlan, topics: [mcatPlan.topics[1]] }
+    expect(pickNextStudyStep([precalcPlan, mcatPlanElsewhere], circuits1, mcatNeighbors)?.label).toBe('Next topic: Enzymes & Kinetics')
+  })
+
+  it('pickNextStudyStep: last topic of a course with no plan → back to the course; no topic context → any plan', () => {
+    expect(pickNextStudyStep([precalcPlan], circuits1, { ...mcatNeighbors, next: null })).toEqual({ href: '/courses/mcat-prep', label: 'Back to MCAT Prep' })
+    expect(pickNextStudyStep([precalcPlan], null, null)?.label).toBe('Next topic: Rational Functions')
+    expect(pickNextStudyStep([], circuits1, null)).toBeNull()
+  })
+
+  it('NextStudyStepButton with a topic shows the course’s next topic, not the other plan’s', async () => {
+    plans = [precalcPlan]
+    neighbors = { [circuits1]: mcatNeighbors }
+    render(<NextStudyStepButton topicSlug={circuits1} fallbackLabel="Continue learning" />)
+    const link = await screen.findByRole('link', { name: /Next topic: Circuits Part 2/ })
+    expect(link).toHaveAttribute('href', '/topics/mcat-physics-electricity-kirchhoff-power-mcat')
+    expect(screen.queryByText(/Rational Functions/)).toBeNull()
+  })
+
+  it('NextStudyStepButton without a topic keeps the plan-first behaviour', async () => {
+    plans = [precalcPlan]
+    render(<NextStudyStepButton />)
+    expect(await screen.findByRole('link', { name: /Next topic: Rational Functions/ })).toHaveAttribute('href', '/topics/rational-functions-precalc/interactive')
+  })
+
+  it('post-completion panel with no plan for the topic leads with the course’s next topic (cards first when due)', async () => {
+    plans = [precalcPlan]
+    neighbors = { [circuits1]: mcatNeighbors }
+    cardsDue = 0
+    render(
+      <StudyPlanNextUp
+        topicSlug={circuits1}
+        completion="quiz"
+        quizPassed
+        fallback={({ hasPrimary }) => <button type="button" data-primary={hasPrimary ? 'no' : 'yes'}>Back to course</button>}
+      />,
+    )
+    const next = await screen.findByRole('link', { name: /Next topic: Circuits Part 2/ })
+    expect(next.className).toContain('bg-gradient')
+    expect(screen.getByText('Back to course')).toHaveAttribute('data-primary', 'no')
+    expect(screen.queryByText(/Rational Functions/)).toBeNull()
+
+    cleanup()
+    cardsDue = 5
+    render(<StudyPlanNextUp topicSlug={circuits1} completion="quiz" quizPassed fallback={() => null} />)
+    const cards = await screen.findByRole('link', { name: /Review your 5 flashcards/ })
+    expect(cards.className).toContain('bg-gradient')
+    expect(screen.getByRole('link', { name: /Next topic: Circuits Part 2/ }).className).not.toContain('bg-gradient')
+  })
+})
 
 describe('#9 lesson finished, exit quiz still owed', () => {
   it('leads with "Take the exit quiz for <this topic>" (opened in place), topic 2 secondary, nothing unlocked yet', async () => {
