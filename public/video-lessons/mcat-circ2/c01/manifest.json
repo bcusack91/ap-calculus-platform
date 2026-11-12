@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ2",
+ "video": 1,
+ "stem": "mcat_circ2_c01_kirchhoff",
+ "topic": "circuits-part2-kirchhoff-power",
+ "clips": [
+  {
+   "section": "02-junction",
+   "file": "02-junction.mp4",
+   "seconds": 37.5,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-loop-rule",
+   "file": "03-loop-rule.mp4",
+   "seconds": 53.1,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-signs",
+   "file": "04-signs.mp4",
+   "seconds": 66.4,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-guess",
+   "file": "05-guess.mp4",
+   "seconds": 73.2,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-two-sources",
+   "file": "06-two-sources.mp4",
+   "seconds": 45.3,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-staircase",
+   "file": "07-staircase.mp4",
+   "seconds": 47.5,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 31.7,
+   "source": "p2 c01 Kirchhoff v1.mov",
+   "voiced": true
+  }
+ ]
+}

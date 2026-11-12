@@ -10,13 +10,9 @@
 import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics-electricity-dc-circuits-mcat'
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
 
-export type SectionSpec = {
-  id: string
-  title: string
-  role: 'teach' | 'problem' | 'solution'
-  questions?: CheckpointQuestion[]
-}
-export type VideoSpec = { video: number; sections: SectionSpec[] }
+import type { LessonSpec } from './lesson-spec'
+
+export type { SectionSpec, VideoSpec } from './lesson-spec'
 
 const plan = (video: number, index: number): CheckpointQuestion => {
   const q = shotList.clips[video - 1]?.checkpoint[index]
@@ -24,7 +20,7 @@ const plan = (video: number, index: number): CheckpointQuestion => {
   return q
 }
 
-export const LESSON = {
+export const LESSON: LessonSpec = {
   key: 'mcat-circ1',
   topicSlug: 'mcat-physics-electricity-dc-circuits-mcat',
   courseSlug: 'mcat-prep',
@@ -294,5 +290,5 @@ export const LESSON = {
         { id: '06-recap', title: 'Remember: the two recipes', role: 'teach', questions: [plan(8, 0), plan(8, 1), plan(8, 2)] },
       ],
     },
-  ] as VideoSpec[],
+  ],
 }
