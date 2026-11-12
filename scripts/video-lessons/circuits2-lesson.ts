@@ -4,7 +4,7 @@
  * question, and the worked examples' numeric answer keys. This is the
  * question → section map; `sync-circuits2.ts` writes it to the database.
  *
- * Videos 1–4 are live. A new video's section files go to
+ * All eight videos are live. A new video's section files go to
  * public/video-lessons/mcat-circ2/c0N/ (cut with _manim/tools/web_clips.py)
  * and its block is added here.
  */
@@ -416,6 +416,189 @@ export const LESSON: LessonSpec = {
         },
         { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
         { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(4, 0), plan(4, 1), plan(4, 2)] },
+      ],
+    },
+    {
+      video: 5,
+      sections: [
+        { id: '02-power', title: 'Where electrical power comes from', role: 'teach' },
+        { id: '03-what-is-fixed', title: 'Pick the form by what is fixed', role: 'teach', questions: [plan(5, 0)] },
+        { id: '04-factors', title: 'Factor changes and conservation', role: 'teach', questions: [plan(5, 1)] },
+        { id: '05-kilowatt-hour', title: 'Energy and the kilowatt-hour', role: 'teach' },
+        { id: '06-joule-heating', title: 'Joule heating and power lines', role: 'teach' },
+        { id: '07-body', title: 'Current through the body', role: 'teach', questions: [plan(5, 2)] },
+        { id: '08-recap', title: 'Remember', role: 'teach' },
+      ],
+    },
+    {
+      video: 6,
+      sections: [
+        {
+          id: '02-ex1-problem',
+          title: 'Example 1: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question: 'Example 1. A 1500 W electric kettle runs on a 120 V outlet for 12 minutes.',
+              parts: [
+                { label: 'a', prompt: 'Current the kettle draws', answer: 12.5, unit: 'A', expected: '12.5 A' },
+                { label: 'b', prompt: 'Resistance while running', answer: 9.6, unit: 'Ω', expected: '9.6 Ω' },
+                { label: 'c', prompt: 'Energy used, in kilowatt-hours', answer: 0.30, unit: 'kWh', expected: '0.30 kWh' },
+                { label: 'c', prompt: 'The same energy in joules', answer: 1.08e6, unit: 'J', expected: '1.1 × 10⁶ J' },
+              ],
+              explanation:
+                '(a) The rating gives power and voltage, so I = P/V = 1500/120 = 12.5 A. (b) R = V/I = 120/12.5 = 9.6 Ω; check: V²/R = 14400/9.6 = 1500 W. (c) Convert first: 12 min = 0.20 h and 1500 W = 1.5 kW, so E = Pt = 1.5 kW × 0.20 h = 0.30 kWh. In joules, 0.30 × 3.6 × 10⁶ ≈ 1.1 × 10⁶ J (or 1500 W × 720 s = 1.08 × 10⁶ J). A common trap is leaving watts as watts or minutes as minutes.',
+            },
+            {
+              kind: 'numeric',
+              question: 'Example 1, part (d). Electricity costs 20 cents per kilowatt-hour. What does the 12-minute run cost?',
+              parts: [{ label: 'd', prompt: 'Cost of the run', answer: 6, unit: 'cents', expected: '6 cents' }],
+              explanation: '0.30 kWh × 20 cents per kWh = 6 cents. The utility bills energy (kilowatt-hours), not power.',
+            },
+          ],
+        },
+        { id: '03-ex1-solution', title: 'Example 1: the solution', role: 'solution' },
+        {
+          id: '04-ex2-problem',
+          title: 'Example 2: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              question: 'Example 2. A person grips a 120 V conductor with one hand while touching a grounded pipe with the other. The hand-to-hand body path is 1 × 10⁵ Ω with dry skin and 1 × 10³ Ω with wet skin.',
+              parts: [
+                { label: 'a', prompt: 'Current with dry skin', answer: 1.2, unit: 'mA', expected: '1.2 mA' },
+                { label: 'a', prompt: 'Current with wet skin', answer: 120, unit: 'mA', expected: '120 mA (0.12 A)' },
+                { label: 'b', prompt: 'Power in the body with dry skin', answer: 0.144, unit: 'W', expected: '0.144 W' },
+                { label: 'b', prompt: 'Power in the body with wet skin', answer: 14.4, unit: 'W', expected: '14.4 W' },
+              ],
+              explanation:
+                '(a) I = V/R: dry, 120/10⁵ = 1.2 × 10⁻³ A = 1.2 mA; wet, 120/10³ = 0.12 A = 120 mA, a hundred times larger. (b) The voltage is fixed, so P = V²/R = 14400/R: dry 0.144 W, wet 14.4 W. A hundredth of the resistance means a hundred times the current and a hundred times the power.',
+            },
+            {
+              question: 'Example 2, part (c). A passage puts the fibrillation threshold near 0.1 A. Which case is potentially lethal?',
+              options: [
+                'Wet skin only: 0.12 A is above the threshold, dry skin is far below it',
+                'Dry skin only: the higher resistance means more energy is deposited',
+                'Both: 120 V exceeds any safe voltage whatever the skin resistance',
+                'Neither: the body path is far too resistive at this voltage',
+              ],
+              correctAnswer: 0,
+              explanation:
+                'What disrupts the heart is the CURRENT through the body. Wet skin gives 0.12 A, above the 0.1 A threshold; dry skin gives 1.2 mA, nearly a hundred times below it. The voltage never changed, only the resistance. Higher resistance means less current and less power, not more; and a fixed voltage is dangerous only when the resistance lets enough current flow.',
+            },
+          ],
+        },
+        { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
+        { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(6, 0), plan(6, 1), plan(6, 2)] },
+      ],
+    },
+    {
+      video: 7,
+      sections: [
+        { id: '02-power', title: 'Brightness is power', role: 'teach' },
+        { id: '03-two-bulbs', title: 'Two identical bulbs: series vs parallel', role: 'teach' },
+        { id: '04-table', title: 'n bulbs in series or in parallel', role: 'teach', questions: [plan(7, 0)] },
+        { id: '05-ratings', title: 'What a rating tells you', role: 'teach' },
+        { id: '06-routine', title: 'Rank without computing', role: 'teach' },
+        { id: '07-mixed', title: 'A mixed circuit', role: 'teach' },
+        { id: '08-burnout', title: 'When a bulb burns out', role: 'teach' },
+        { id: '09-mixed-burnout', title: 'Burnout in a mixed circuit', role: 'teach', questions: [plan(7, 1)] },
+        { id: '10-adding', title: 'Adding a bulb', role: 'teach', questions: [plan(7, 2)] },
+        { id: '11-household', title: 'How a house is wired', role: 'teach' },
+        { id: '12-recap', title: 'Remember', role: 'teach' },
+      ],
+    },
+    {
+      video: 8,
+      sections: [
+        {
+          id: '02-ex1-problem',
+          title: 'Example 1: the problem',
+          role: 'problem',
+          questions: [
+            {
+              kind: 'numeric',
+              figure: FIG.v8_ex1,
+              question: 'Example 1. A 60 W bulb and a 100 W bulb, both rated at 120 V, are wired in series across a 120 V outlet. Treat them as ohmic.',
+              parts: [
+                { label: 'a', prompt: 'Resistance of the 60 W bulb', answer: 240, unit: 'Ω', expected: '240 Ω' },
+                { label: 'a', prompt: 'Resistance of the 100 W bulb', answer: 144, unit: 'Ω', expected: '144 Ω' },
+                { label: 'b', prompt: 'Current through the series pair', answer: 0.3125, unit: 'A', expected: '0.31 A' },
+                { label: 'b', prompt: 'Power the 60 W bulb actually dissipates', answer: 23.4, unit: 'W', expected: '23 W' },
+              ],
+              explanation:
+                '(a) A rating is the power at the rated voltage, so R = V²/P: 14400/60 = 240 Ω and 14400/100 = 144 Ω. The lower wattage has the larger resistance. (b) In series the resistances add to 384 Ω and one current flows: 120/384 ≈ 0.31 A. Same current, so P = I²R with each bulb’s own R: (0.3125)² × 240 ≈ 23.4 W for the 60 W bulb. A common trap is using the other bulb’s resistance.',
+            },
+            {
+              kind: 'numeric',
+              figure: FIG.v8_ex1,
+              question: 'Example 1, part (b) continued. The same 0.31 A flows through the 100 W bulb.',
+              parts: [{ label: 'b', prompt: 'Power the 100 W bulb actually dissipates', answer: 14.06, unit: 'W', expected: '14 W' }],
+              explanation: 'P = I²R = (0.3125)² × 144 ≈ 14.1 W. Check: 23.4 + 14.1 = 37.5 W = (120 V)(0.3125 A), the outlet’s V × I.',
+            },
+            {
+              figure: FIG.v8_ex1,
+              question: 'Example 1, part (c). In this series circuit, which bulb glows brighter, and how does that compare with the two plugged in separately, in parallel?',
+              options: [
+                'In series the 60 W bulb is brighter; in parallel the 100 W bulb is brighter',
+                'In series the 100 W bulb is brighter; in parallel the 60 W bulb is brighter',
+                'The 100 W bulb is brighter either way, since its rating is higher',
+                'The 60 W bulb is brighter either way, since its resistance is larger',
+              ],
+              correctAnswer: 0,
+              explanation:
+                'In series the bulbs share one current, so P = I²R and the larger resistance (the 60 W bulb, 240 Ω) wins: 23 W against 14 W, and neither reaches its rating. In parallel each has the full 120 V, so P = V²/R and the smaller resistance wins: the 100 W bulb at 100 W against 60 W. The order swaps; a higher rating wins only at the rated voltage.',
+            },
+          ],
+        },
+        { id: '03-ex1-solution', title: 'Example 1: the solution', role: 'solution' },
+        {
+          id: '04-ex2-problem',
+          title: 'Example 2: the problem',
+          role: 'problem',
+          questions: [
+            {
+              figure: FIG.v8_ex2,
+              question: 'Example 2, part (a). Identical 6 Ω bulbs: A is in series with a parallel pair B and C across an 18 V ideal battery. Rank the brightness without computing.',
+              options: [
+                'A is brightest, four times B; B and C tie',
+                'B and C are brightest and tie; A is dimmest',
+                'All three tie, since the bulbs are identical',
+                'A is brightest, twice B; B is brighter than C',
+              ],
+              correctAnswer: 0,
+              explanation:
+                'All the current passes through A; at the junction it splits evenly, half through B and half through C. Power goes as I², so twice the current means four times the power: A is four times as bright as B, and B and C tie. Identical bulbs tie only when they carry the same current; and B and C share the split evenly, so neither beats the other.',
+            },
+            {
+              kind: 'numeric',
+              figure: FIG.v8_ex2,
+              question: 'Example 2, part (b). Find each bulb’s power.',
+              parts: [
+                { label: 'b', prompt: 'Power of bulb A', answer: 24, unit: 'W', expected: '24 W' },
+                { label: 'b', prompt: 'Power of bulb B', answer: 6, unit: 'W', expected: '6 W' },
+                { label: 'b', prompt: 'Power of bulb C', answer: 6, unit: 'W', expected: '6 W' },
+              ],
+              explanation:
+                'The pair B ∥ C is 3 Ω, in series with A’s 6 Ω: 9 Ω, so I = 18/9 = 2.0 A. A takes (2.0)(6) = 12 V and dissipates I²R = (2)²(6) = 24 W. B and C each carry 1.0 A at 6 V: 6 W each. Check: 24 + 6 + 6 = 36 W = (18 V)(2.0 A).',
+            },
+            {
+              kind: 'numeric',
+              figure: FIG.v8_ex2c,
+              question: 'Example 2, part (c). Bulb C burns out. Find the new powers of A and B.',
+              parts: [
+                { label: 'c', prompt: 'New power of bulb A', answer: 13.5, unit: 'W', expected: '13.5 W (it dims)' },
+                { label: 'c', prompt: 'New power of bulb B', answer: 13.5, unit: 'W', expected: '13.5 W (it brightens)' },
+              ],
+              explanation:
+                'With C gone, A and B are simply in series: 12 Ω, so I = 18/12 = 1.5 A. Each bulb now drops 9 V and dissipates (1.5)²(6) = 13.5 W. A dims (from 24 W) and B brightens (from 6 W); now they tie, and 27 W checks against (18 V)(1.5 A). A common trap is keeping the old 2.0 A: the resistance changed, so re-solve.',
+            },
+          ],
+        },
+        { id: '05-ex2-solution', title: 'Example 2: the solution', role: 'solution' },
+        { id: '06-recap', title: 'Remember: the method', role: 'teach', questions: [plan(8, 0), plan(8, 1), plan(8, 2)] },
       ],
     },
   ],

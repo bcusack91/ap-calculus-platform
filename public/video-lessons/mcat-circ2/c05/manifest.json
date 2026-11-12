@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ2",
+ "video": 5,
+ "stem": "mcat_circ2_c05_power",
+ "topic": "circuits-part2-kirchhoff-power",
+ "clips": [
+  {
+   "section": "02-power",
+   "file": "02-power.mp4",
+   "seconds": 62.1,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-what-is-fixed",
+   "file": "03-what-is-fixed.mp4",
+   "seconds": 50.9,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-factors",
+   "file": "04-factors.mp4",
+   "seconds": 80.7,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-kilowatt-hour",
+   "file": "05-kilowatt-hour.mp4",
+   "seconds": 47.2,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-joule-heating",
+   "file": "06-joule-heating.mp4",
+   "seconds": 52.5,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-body",
+   "file": "07-body.mp4",
+   "seconds": 58.7,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 34.0,
+   "source": "p2 c05 power v1.mov",
+   "voiced": true
+  }
+ ]
+}

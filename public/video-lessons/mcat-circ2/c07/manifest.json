@@ -1,0 +1,85 @@
+{
+ "key": "mcat-circ2",
+ "video": 7,
+ "stem": "mcat_circ2_c07_bulbs",
+ "topic": "circuits-part2-kirchhoff-power",
+ "clips": [
+  {
+   "section": "02-power",
+   "file": "02-power.mp4",
+   "seconds": 36.5,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-two-bulbs",
+   "file": "03-two-bulbs.mp4",
+   "seconds": 35.0,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-table",
+   "file": "04-table.mp4",
+   "seconds": 34.5,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ratings",
+   "file": "05-ratings.mp4",
+   "seconds": 45.0,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-routine",
+   "file": "06-routine.mp4",
+   "seconds": 38.2,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-mixed",
+   "file": "07-mixed.mp4",
+   "seconds": 34.2,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-burnout",
+   "file": "08-burnout.mp4",
+   "seconds": 33.9,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-mixed-burnout",
+   "file": "09-mixed-burnout.mp4",
+   "seconds": 45.4,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "10-adding",
+   "file": "10-adding.mp4",
+   "seconds": 32.7,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "11-household",
+   "file": "11-household.mp4",
+   "seconds": 39.4,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "12-recap",
+   "file": "12-recap.mp4",
+   "seconds": 26.4,
+   "source": "p2 c07 Brightness v1.mov",
+   "voiced": true
+  }
+ ]
+}

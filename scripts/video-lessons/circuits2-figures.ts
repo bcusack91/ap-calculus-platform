@@ -81,4 +81,17 @@ export const FIG = {
     { I: '8.0 mA', branches: [{ r: '2 kΩ' }, { r: '6 kΩ' }] },
     'Panel (a): a 15 V source across a 2 kΩ and a 3 kΩ resistor in series. Panel (b): 8.0 mA entering a parallel pair of 2 kΩ and 6 kΩ.',
   ),
+  // Video 8: bulb brightness worked examples
+  v8_ex1: network(
+    { V: '120 V', series: ['60 W', '100 W'], bulbs: true },
+    'A 120 V outlet, drawn as a source, with a 60 W bulb and a 100 W bulb (both rated 120 V) in series along the top wire.',
+  ),
+  v8_ex2: network(
+    { V: '18 V', series: ['A'], bank: [{ r: ['B'] }, { r: ['C'] }], bulbs: true },
+    'An 18 V battery feeds bulb A on the top wire, then a parallel pair of bulbs B and C; all three are identical 6 Ω bulbs.',
+  ),
+  v8_ex2c: network(
+    { V: '18 V', series: ['A'], bank: [{ r: ['B'] }, { r: ['C'], opens: true, note: 'burned out' }], bulbs: true },
+    'The same circuit: bulb A in series with the pair B and C, but bulb C has burned out, drawn as an open switch at the top of its branch.',
+  ),
 }

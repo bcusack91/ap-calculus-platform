@@ -9,7 +9,7 @@
  * bare wire) RED (fig-accent-2), notes grey (fig-muted). Output is the
  * lesson-figure shape {svg, alt, size} and must pass isSafeSvg.
  */
-import { ARROW, BATV, LINE, RES, SVG_OPEN, T } from '../../src/data/deck-figures/mcat-cp-circuits'
+import { ARROW, BATV, BULB, LINE, RES, SVG_OPEN, T } from '../../src/data/deck-figures/mcat-cp-circuits'
 import type { QuestionFigure } from '../../src/lib/video-lesson-core'
 
 type Branch = {
@@ -38,6 +38,15 @@ export type NetworkOpts = {
   current?: string
   /** Mark the battery's − terminal as ground (0 V). */
   ground?: boolean
+  /** Draw every element as a bulb (circle with a cross filament) instead of a resistor zigzag. */
+  bulbs?: boolean
+}
+
+/** One element on the segment (x1,y1)→(x2,y2): a resistor zigzag, or a bulb when `bulb`. */
+function ELEM(x1: number, y1: number, x2: number, y2: number, bulb: boolean): string {
+  if (!bulb) return RES(x1, y1, x2, y2)
+  const cx = (x1 + x2) / 2, cy = (y1 + y2) / 2
+  return `${LINE(x1, y1, x2, y2)}${BULB(cx, cy)}`
 }
 
 const TOP = 60, BOT = 240, BX = 112, SEG = 96, GAP = 86
@@ -62,7 +71,7 @@ function networkInner(o: NetworkOpts, ox = 0, idSuffix = ''): { inner: string; w
   parts.push(LINE(x0, TOP, x0 + 40, TOP))
   x = x0 + 40
   for (const label of series) {
-    parts.push(RES(x, TOP, x + SEG, TOP), T(x + SEG / 2, TOP - 18, 17, label, 'middle'))
+    parts.push(ELEM(x, TOP, x + SEG, TOP, !!o.bulbs), T(x + SEG / 2, TOP - (o.bulbs ? 24 : 18), 17, label, 'middle'))
     x += SEG
   }
   // The bank (or a plain right wire).
@@ -80,10 +89,10 @@ function networkInner(o: NetworkOpts, ox = 0, idSuffix = ''): { inner: string; w
         // Open switch at the top of the branch, then the resistor(s) below it.
         g.push(LINE(bx, TOP, bx, TOP + 22), `<circle cx="${bx}" cy="${TOP + 24}" r="3" fill="currentColor"/>`, LINE(bx, TOP + 50, bx + 18, TOP + 28, 2.5))
         g.push(LINE(bx, TOP + 50, bx, TOP + 56))
-        g.push(...branchResistors(bx, TOP + 56, BOT, b.r))
+        g.push(...branchResistors(bx, TOP + 56, BOT, b.r, !!o.bulbs))
         g.push(`<g class="fig-muted">${T(bx + 24, TOP + 24, 14, 'opens')}</g>`)
       } else {
-        g.push(...branchResistors(bx, TOP, BOT, b.r))
+        g.push(...branchResistors(bx, TOP, BOT, b.r, !!o.bulbs))
       }
       if (b.note) g.push(`<g class="fig-muted">${T(bx, BOT + 22, 14, b.note, 'middle')}</g>`)
       if (b.added) {
@@ -114,13 +123,14 @@ function networkInner(o: NetworkOpts, ox = 0, idSuffix = ''): { inner: string; w
 }
 
 /** A vertical branch from y1 to y2 at x carrying one or two resistors with labels to the right. */
-function branchResistors(x: number, y1: number, y2: number, labels: string[]): string[] {
+function branchResistors(x: number, y1: number, y2: number, labels: string[], bulb = false): string[] {
   const out: string[] = []
+  const dx = bulb ? 24 : 16
   if (labels.length === 1) {
-    out.push(RES(x, y1, x, y2), T(x + 16, (y1 + y2) / 2 + 6, 17, labels[0]))
+    out.push(ELEM(x, y1, x, y2, bulb), T(x + dx, (y1 + y2) / 2 + 6, 17, labels[0]))
   } else {
     const mid = (y1 + y2) / 2
-    out.push(RES(x, y1, x, mid), RES(x, mid, x, y2), T(x + 16, (y1 + mid) / 2 + 6, 17, labels[0]), T(x + 16, (mid + y2) / 2 + 6, 17, labels[1]))
+    out.push(ELEM(x, y1, x, mid, bulb), ELEM(x, mid, x, y2, bulb), T(x + dx, (y1 + mid) / 2 + 6, 17, labels[0]), T(x + dx, (mid + y2) / 2 + 6, 17, labels[1]))
   }
   return out
 }

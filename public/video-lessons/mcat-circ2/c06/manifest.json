@@ -1,0 +1,43 @@
+{
+ "key": "mcat-circ2",
+ "video": 6,
+ "stem": "mcat_circ2_c06_power_examples",
+ "topic": "circuits-part2-kirchhoff-power",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 35.1,
+   "source": "p2 c06 power examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 110.3,
+   "source": "p2 c06 power examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 39.6,
+   "source": "p2 c06 power examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 77.9,
+   "source": "p2 c06 power examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 28.6,
+   "source": "p2 c06 power examples v1.mov",
+   "voiced": true
+  }
+ ]
+}
