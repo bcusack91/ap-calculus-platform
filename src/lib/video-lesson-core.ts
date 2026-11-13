@@ -205,7 +205,12 @@ export type StoredStep = {
 }
 
 /** Per-clip progress (VideoLessonProgress.steps[clipId]). */
-export type AnsweredRecord = { correct: boolean; at: string; attempts?: number; parts?: boolean[] }
+/**
+ * `exempt`: the question was added to a section this student had already
+ * finished, and the owner waived it (scripts/video-lessons/exempt-recap-questions.ts).
+ * It counts as settled and is left out of the checkpoint score.
+ */
+export type AnsweredRecord = { correct: boolean; at: string; attempts?: number; parts?: boolean[]; exempt?: boolean }
 export type ClipProgress = {
   /** When the clip's review flashcards were finished (recap sections with a deck). */
   cardsDone?: string
@@ -242,7 +247,7 @@ export function gradeNumericQuestion(q: NumericQuestion, values: readonly string
  */
 export function questionSettled(q: CheckpointQuestion, a: AnsweredRecord | undefined): boolean {
   if (!a) return false
-  if (a.correct) return true
+  if (a.correct || a.exempt) return true
   return isNumericQuestion(q) || (a.attempts ?? 1) >= 2
 }
 
@@ -306,8 +311,9 @@ export function checkpointScore(steps: readonly VisibleStep[], progress: Progres
   let total = 0
   for (const s of steps) {
     for (const { index } of s.visibleQuestions) {
-      total++
       const a = progress[s.clipId]?.answered?.[String(index)]
+      if (a?.exempt && !a.correct) continue
+      total++
       if (a?.correct && (a.attempts ?? 1) === 1) correct++
     }
   }

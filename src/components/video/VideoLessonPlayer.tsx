@@ -88,7 +88,7 @@ export type VideoLessonPlayerProps = {
   openCheckpointOnLoad?: boolean
 }
 
-type AnswerState = { correct: boolean; attempts: number; settled: boolean }
+type AnswerState = { correct: boolean; attempts: number; settled: boolean; exempt?: boolean }
 type Answered = Record<string, Record<string, AnswerState>>
 type Phase = 'video' | 'checkpoint' | 'done' | 'cards'
 type Result =
@@ -162,7 +162,7 @@ function initialAnswered(steps: StudentStep[], progress: ProgressSteps): Answere
       const a = progress[s.clipId]?.answered?.[String(q.index)]
       if (!a) continue
       const attempts = a.attempts ?? 1
-      ;(out[s.clipId] ??= {})[String(q.index)] = { correct: !!a.correct, attempts, settled: settledFor(q, !!a.correct, attempts) }
+      ;(out[s.clipId] ??= {})[String(q.index)] = { correct: !!a.correct, attempts, settled: !!a.exempt || settledFor(q, !!a.correct, attempts), ...(a.exempt && !a.correct ? { exempt: true } : {}) }
     }
   }
   return out
@@ -658,8 +658,9 @@ export default function VideoLessonPlayer({
   let scoreTotal = 0
   for (const s of steps) {
     for (const q of s.questions) {
-      scoreTotal++
       const a = answered[s.clipId]?.[String(q.index)]
+      if (a?.exempt) continue
+      scoreTotal++
       if (a?.correct && a.attempts === 1) scoreCorrect++
     }
   }

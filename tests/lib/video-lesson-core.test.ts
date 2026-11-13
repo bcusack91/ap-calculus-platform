@@ -129,6 +129,14 @@ describe('video lesson rules', () => {
     expect(stepMeta(undefined)).toEqual({ role: 'teach', video: null, section: null, lesson: null })
   })
 
+  it('an exempt question is settled and left out of the score', () => {
+    const steps = visibleSteps([{ order: 0, clipId: 'c1', yield: null, questions: [q('one'), q('two')], clip: { title: 'Remember', provider: 'FILE', providerId: '/x.mp4', durationSec: 10 } }], false)
+    const progress: ProgressSteps = { c1: { ranges: [[0, 10]], answered: { '0': { correct: false, at: 'now', attempts: 2, exempt: true }, '1': { correct: true, at: 'now', attempts: 1 } } } }
+    expect(questionSettled(steps[0].visibleQuestions[0].q, progress.c1.answered!['0'])).toBe(true)
+    expect(isLessonComplete(steps, progress)).toBe(true)
+    expect(checkpointScore(steps, progress)).toEqual({ correct: 1, total: 1 })
+  })
+
   it('grades numeric parts and settles them after one attempt', () => {
     expect(gradeNumericQuestion(numeric, ['1.6e-2', '1.0 × 10¹⁷'])).toEqual({ correct: true, parts: [true, true] })
     expect(gradeNumericQuestion(numeric, ['0.016 C', '1e16'])).toEqual({ correct: false, parts: [true, false] })
