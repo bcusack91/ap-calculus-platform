@@ -10,7 +10,8 @@ import { decks as mcatCirc2 } from './mcat-circ2'
  *
  * STANDARD for every new lesson: add `<key>.ts` here with one deck per video
  * (about 5–11 cards: every equation the video introduces, then its key facts
- * or method steps) and register it below. The lesson sync refuses to publish
+ * or method steps) and register it below. Any answer that shows an equation must
+ * also say what each symbol in it stands for. The lesson sync refuses to publish
  * a video that has a recap section and no deck.
  */
 export const REVIEW_DECKS: Record<string, Record<number, ReviewCard[]>> = {
