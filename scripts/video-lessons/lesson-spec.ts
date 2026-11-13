@@ -1,4 +1,10 @@
-/** Shape of a section-based video lesson spec (circuits1-lesson.ts, circuits2-lesson.ts, …). */
+/**
+ * Shape of a section-based video lesson spec (circuits1-lesson.ts, circuits2-lesson.ts, …).
+ *
+ * Every video ends on a recap section (id `NN-recap`), and every video needs a
+ * deck of review flashcards in src/data/video-lesson-flashcards/<key>.ts: the
+ * player offers them before the recap, and the sync refuses a video without one.
+ */
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
 
 export type SectionSpec = {

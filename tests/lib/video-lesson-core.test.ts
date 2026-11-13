@@ -125,8 +125,8 @@ describe('video lesson rules', () => {
   })
 
   it('reads clip roles from tags', () => {
-    expect(stepMeta(['lesson-mcat-circ1', 'video-2', 'section-03-ex1-solution', 'role-solution'])).toEqual({ role: 'solution', video: 2, section: '03-ex1-solution' })
-    expect(stepMeta(undefined)).toEqual({ role: 'teach', video: null, section: null })
+    expect(stepMeta(['lesson-mcat-circ1', 'video-2', 'section-03-ex1-solution', 'role-solution'])).toEqual({ role: 'solution', video: 2, section: '03-ex1-solution', lesson: 'mcat-circ1' })
+    expect(stepMeta(undefined)).toEqual({ role: 'teach', video: null, section: null, lesson: null })
   })
 
   it('grades numeric parts and settles them after one attempt', () => {

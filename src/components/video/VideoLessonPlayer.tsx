@@ -6,13 +6,14 @@ import { useRouter } from 'next/navigation'
 import { ArrowRight, BookOpen, CheckCircle2, Circle, Layers, Lock, PlayCircle, RotateCcw, SkipForward, Users, XCircle } from 'lucide-react'
 import VideoPlayer, { type VideoPlayerHandle } from './VideoPlayer'
 import { PreferVideoToggle } from './PreferVideoToggle'
+import ReviewFlashcards from './ReviewFlashcards'
 import { InstructorAvatar } from './InstructorAvatar'
 import { MathText } from '@/components/MathText'
 import { LessonFigure } from '@/components/lesson/LessonFigure'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { addPlayback, isClipWatched, mergeRanges, watchedFraction, type WatchRange } from '@/lib/video-watch'
-import type { ProgressSteps, StudentQuestion, StudentStep } from '@/lib/video-lesson-core'
+import { PART_NOUN, type ProgressSteps, type ReviewCard, type StudentQuestion, type StudentStep } from '@/lib/video-lesson-core'
 
 /**
  * The student video-lesson player (/topics/<slug>/video/<instructor>).
@@ -37,8 +38,12 @@ import type { ProgressSteps, StudentQuestion, StudentStep } from '@/lib/video-le
  * every clip and checkpoint completes the lesson (TopicProgress COMPLETED on
  * the server); credit comes from the topic's exit quiz.
  *
+ * Before a video's "Remember" section the student is offered that video's
+ * flashcards (`step.reviewCards`): optional, never saved, and reopenable from
+ * the Flashcards button while the recap's questions are up.
+ *
  * A lesson cut from YouTube videos is shown one PART per page (a concept
- * video and its worked examples). `steps` are then only this part's
+ * video and its worked examples; students see it called a "Module"). `steps` are then only this part's
  * sections; the part navigator links the others, a part opens once every
  * part before it is done, and a part's end screen leads to the next part
  * (the last part's leads to the exit quiz).
@@ -74,13 +79,15 @@ export type VideoLessonPlayerProps = {
   pickerHref: string | null
   readHref: string
   exitQuizHref: string | null
+  /** Every review flashcard of the lesson: offered on the last end screen, before the exit quiz. */
+  allReviewCards?: ReviewCard[]
   /** Arrived from a short link (/v/<code>): open this clip's checkpoint straight away. */
   openCheckpointOnLoad?: boolean
 }
 
 type AnswerState = { correct: boolean; attempts: number; settled: boolean }
 type Answered = Record<string, Record<string, AnswerState>>
-type Phase = 'video' | 'checkpoint' | 'done'
+type Phase = 'video' | 'checkpoint' | 'done' | 'cards'
 type Result =
   | { kind: 'choice'; correct: boolean; reveal: boolean; correctIndex: number | null; explanation: string; chosen: number }
   | { kind: 'numeric'; correct: boolean; parts: { correct: boolean; expected: string }[]; explanation: string }
@@ -203,13 +210,24 @@ export default function VideoLessonPlayer({
   pickerHref,
   readHref,
   exitQuizHref,
+  allReviewCards = [],
   openCheckpointOnLoad = false,
 }: VideoLessonPlayerProps) {
   const [index, setIndex] = useState(() => Math.min(Math.max(initialIndex, 0), Math.max(steps.length - 1, 0)))
   const [ranges, setRanges] = useState(() => initialRanges(steps, initialProgress))
   const [answered, setAnswered] = useState<Answered>(() => initialAnswered(steps, initialProgress))
   const router = useRouter()
-  const [phase, setPhase] = useState<Phase>((partInitiallyComplete ?? initiallyComplete) && !openCheckpointOnLoad ? 'done' : 'video')
+  const [phase, setPhase] = useState<Phase>(() => {
+    if ((partInitiallyComplete ?? initiallyComplete) && !openCheckpointOnLoad) return 'done'
+    // Resuming on a recap that hasn't been started: offer its flashcards first.
+    const s = steps[Math.min(Math.max(initialIndex, 0), Math.max(steps.length - 1, 0))]
+    const started = s ? watchedFraction(mergeRanges(initialProgress[s.clipId]?.ranges ?? [], s.durationSec), s.durationSec) > 0.05 : true
+    return s?.reviewCards?.length && !started && !openCheckpointOnLoad ? 'cards' : 'video'
+  })
+  /** Flashcards: opened by the student (straight to the cards) or offered on arrival, and where to go back to. */
+  const [cardsAsked, setCardsAsked] = useState(false)
+  const cardsReturnRef = useRef<'video' | 'checkpoint' | 'done'>('video')
+  const cardsOfferedRef = useRef(new Set<string>(phase === 'cards' && steps[index] ? [steps[index].clipId] : []))
   const [playing, setPlaying] = useState(false)
   const [autoPlay, setAutoPlay] = useState(false)
   const [skipNotice, setSkipNotice] = useState(false)
@@ -275,7 +293,9 @@ export default function VideoLessonPlayer({
   const unlocked = (i: number) => steps.slice(0, i).every((_, k) => stepIsDone(k))
   const allDone = steps.length > 0 && steps.every((_, i) => stepIsDone(i))
 
-  useActivitySurface(playing ? { surface: 'VIDEO', topicSlug, timed: true } : { surface: 'VIDEO', topicSlug })
+  useActivitySurface(
+    phase === 'cards' ? { surface: 'FLASHCARDS', topicSlug } : playing ? { surface: 'VIDEO', topicSlug, timed: true } : { surface: 'VIDEO', topicSlug },
+  )
 
   const applyRanges = (next: Record<string, WatchRange[]>) => {
     rangesRef.current = next
@@ -432,9 +452,50 @@ export default function VideoLessonPlayer({
     indexRef.current = i
     setIndex(i)
     setAutoPlay(play)
-    setPhase('video')
     setSkipNotice(false)
     resetCard()
+    // Arriving at a recap that hasn't been started: offer the video's flashcards first, once.
+    const s = steps[i]
+    const started = s ? watchedFraction(rangesRef.current[s.clipId] ?? [], s.durationSec) > 0.05 : true
+    if (s?.reviewCards?.length && !started && !cardsOfferedRef.current.has(s.clipId)) {
+      cardsOfferedRef.current.add(s.clipId)
+      cardsReturnRef.current = 'video'
+      setCardsAsked(false)
+      setPlaying(false)
+      activeRef.current.lastTick = null
+      setPhase('cards')
+      return
+    }
+    setPhase('video')
+  }
+
+  /** The Flashcards button on a recap section: open the cards, then come back to where the student was. */
+  const openCards = () => {
+    if (!step?.reviewCards?.length) return
+    playerRef.current?.pause()
+    void save()
+    cardsReturnRef.current = phase === 'checkpoint' ? 'checkpoint' : 'video'
+    setCardsAsked(true)
+    setPlaying(false)
+    activeRef.current.lastTick = null
+    setPhase('cards')
+  }
+  /** The last end screen: the whole lesson's cards before the exit quiz. */
+  const openAllCards = () => {
+    cardsReturnRef.current = 'done'
+    setCardsAsked(true)
+    setPhase('cards')
+  }
+  const closeCards = () => {
+    const back = cardsReturnRef.current
+    if (back === 'done' && exitQuizHref) {
+      router.push(exitQuizHref)
+      return
+    }
+    // After the offer the recap starts playing; reopened mid-section it waits for the student.
+    setAutoPlay(back === 'video' && !cardsAsked)
+    if (back === 'checkpoint') shownAtRef.current = Date.now()
+    setPhase(back)
   }
 
   const handleEnded = (clipId: string, duration: number) => {
@@ -647,7 +708,7 @@ export default function VideoLessonPlayer({
         </div>
       </div>
       {multiPart && (
-        <nav aria-label="Lesson parts" className="mt-4">
+        <nav aria-label={`Lesson ${PART_NOUN.toLowerCase()}s`} className="mt-4">
           <ol className="flex flex-wrap gap-2">
             {parts.map((p, k) => {
               const current = k === partIndex
@@ -661,7 +722,7 @@ export default function VideoLessonPlayer({
                     aria-hidden
                   />
                   <span className="min-w-0">
-                    <span className="block text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Part {k + 1}</span>
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">{PART_NOUN} {k + 1}</span>
                     <span className="block text-sm font-semibold text-gray-900 dark:text-gray-100">{p.title}</span>
                     <span className="block text-xs text-gray-500 dark:text-gray-400">
                       {p.videoTitles.length} {p.videoTitles.length === 1 ? 'video' : 'videos'} · {p.minutes} min
@@ -737,6 +798,7 @@ export default function VideoLessonPlayer({
                       <span className="block text-xs text-gray-500 dark:text-gray-400">
                         {fmtClock(s.durationSec)}
                         {s.questions.length > 0 ? ` · ${s.questions.length === 1 ? '1 question' : `${s.questions.length} questions`}` : ''}
+                        {s.reviewCards?.length ? ` · ${s.reviewCards.length} flashcards first` : ''}
                         {!done && pct > 0 ? ` · ${pct}% watched` : ''}
                         {!open ? ' · locked' : ''}
                         {done ? (skipped ? ' · skipped, solved' : ' · done') : ''}
@@ -752,14 +814,17 @@ export default function VideoLessonPlayer({
     </nav>
   )
 
+  const primaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover'
+  const secondaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-5 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800'
+
   const endScreen = (
     <div ref={endRef} className="scroll-mt-20 rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm dark:border-gray-700 dark:bg-gray-900 sm:p-8" data-testid="video-lesson-end">
       <CheckCircle2 className="mx-auto mb-3 h-12 w-12 text-green-600 dark:text-green-400" aria-hidden />
       <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-        {nextPart ? (allDone ? `Part ${partIndex + 1} complete: ${parts[partIndex].title}` : 'Almost there') : lessonDone ? 'Video lesson complete' : 'Almost there'}
+        {nextPart ? (allDone ? `${PART_NOUN} ${partIndex + 1} complete: ${parts[partIndex].title}` : 'Almost there') : lessonDone ? 'Video lesson complete' : 'Almost there'}
       </h2>
       {nextPart && !allDone && (
-        <p className="mx-auto mt-2 max-w-md text-sm text-gray-600 dark:text-gray-400">Finish every section in this part to open Part {partIndex + 2}.</p>
+        <p className="mx-auto mt-2 max-w-md text-sm text-gray-600 dark:text-gray-400">Finish every section in this {PART_NOUN.toLowerCase()} to open {PART_NOUN} {partIndex + 2}.</p>
       )}
       <div className="mx-auto mt-5 grid max-w-sm grid-cols-2 gap-3">
         <div className="rounded-xl bg-gray-50 p-3 dark:bg-gray-800">
@@ -789,7 +854,7 @@ export default function VideoLessonPlayer({
             disabled={!allDone || leaving}
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
           >
-            Next: Part {partIndex + 2} · {nextPart.title} <ArrowRight className="h-5 w-5" aria-hidden />
+            Next: {PART_NOUN} {partIndex + 2} · {nextPart.title} <ArrowRight className="h-5 w-5" aria-hidden />
           </button>
           <p className="mx-auto mt-3 max-w-md text-sm text-gray-600 dark:text-gray-400">
             {nextPart.videoTitles.join(' and ')} · {nextPart.minutes} min
@@ -806,6 +871,14 @@ export default function VideoLessonPlayer({
           <p className="mx-auto mt-3 max-w-md text-sm text-gray-600 dark:text-gray-400">
             You get credit for {topicTitle} by scoring {TOPIC_CLEAR_PERCENT}% or higher on the exit quiz.
           </p>
+          {allReviewCards.length > 0 && (
+            <div className="mx-auto mt-4 max-w-md rounded-xl bg-accent-subtle p-4 dark:bg-accent-light/20">
+              <p className="text-sm text-gray-700 dark:text-gray-300">Want the equations fresh first? Run through this lesson&apos;s flashcards, then take the quiz.</p>
+              <button type="button" onClick={openAllCards} className={`mt-3 w-full sm:w-auto ${secondaryBtn} bg-white dark:bg-gray-900`}>
+                <Layers className="h-4 w-4" aria-hidden /> Study the flashcards first · {allReviewCards.length}
+              </button>
+            </div>
+          )}
         </>
       ) : (
         <Link
@@ -837,8 +910,6 @@ export default function VideoLessonPlayer({
       : 'border-gray-200 hover:border-accent-muted dark:border-gray-700 dark:hover:border-accent-hover'
   }
 
-  const primaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover'
-  const secondaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-5 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800'
 
   const choiceCard = (q: Extract<StudentQuestion, { kind: 'choice' }>) => {
     const r = result && result.kind === 'choice' ? result : null
@@ -1037,7 +1108,7 @@ export default function VideoLessonPlayer({
               </button>
             )}
             <button type="button" onClick={finishCheckpoint} className={primaryBtn}>
-              {index + 1 < steps.length ? (sectioned ? 'Next section' : 'Next clip') : nextPart ? 'Finish this part' : 'Finish'} <ArrowRight className="h-4 w-4" aria-hidden />
+              {index + 1 < steps.length ? (sectioned ? 'Next section' : 'Next clip') : nextPart ? `Finish this ${PART_NOUN.toLowerCase()}` : 'Finish'} <ArrowRight className="h-4 w-4" aria-hidden />
             </button>
           </div>
         </div>
@@ -1072,6 +1143,15 @@ export default function VideoLessonPlayer({
           </p>
         ) : null}
       </div>
+      {!!step.reviewCards?.length && (
+        <button
+          type="button"
+          onClick={openCards}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800 sm:w-auto"
+        >
+          <Layers className="h-4 w-4" aria-hidden /> Flashcards · {step.reviewCards.length}
+        </button>
+      )}
       {phase === 'video' && (
         <button
           type="button"
@@ -1092,6 +1172,18 @@ export default function VideoLessonPlayer({
         <div className="min-w-0">
           {phase === 'done' ? (
             endScreen
+          ) : phase === 'cards' && cardsReturnRef.current === 'done' && allReviewCards.length > 0 ? (
+            <ReviewFlashcards key="all" cards={allReviewCards} videoTitle={title} continueTo="the exit quiz" startStudying onContinue={closeCards} />
+          ) : phase === 'cards' && step.reviewCards?.length ? (
+            <ReviewFlashcards
+              key={`${step.clipId}-${cardsAsked ? 'asked' : 'offer'}`}
+              cards={step.reviewCards}
+              videoTitle={step.videoTitle}
+              continueTo={cardsReturnRef.current === 'checkpoint' ? 'the questions' : 'the recap'}
+              startStudying={cardsAsked}
+              doneNote="You can open these cards again with the Flashcards button under the video."
+              onContinue={closeCards}
+            />
           ) : (
             <>
               <VideoPlayer

@@ -96,22 +96,52 @@ export type LessonDraft = z.infer<typeof lessonDraftSchema>
 // ── Clip roles (from VideoClip.tags) ──────────────────────────────────────
 
 export type StepRole = 'teach' | 'problem' | 'solution'
-export type StepMeta = { role: StepRole; video: number | null; section: string | null }
+export type StepMeta = { role: StepRole; video: number | null; section: string | null; lesson: string | null }
 
-/** What a clip's tags say about it: `role-<r>`, `video-<n>`, `section-<id>`. */
+/** What a clip's tags say about it: `role-<r>`, `video-<n>`, `section-<id>`, `lesson-<key>`. */
 export function stepMeta(tags: readonly string[] | undefined): StepMeta {
   let role: StepRole = 'teach'
   let video: number | null = null
   let section: string | null = null
+  let lesson: string | null = null
   for (const t of tags ?? []) {
     if (t === 'role-problem' || t === 'role-solution' || t === 'role-teach') role = t.slice(5) as StepRole
     else if (/^video-\d+$/.test(t)) video = Number(t.slice(6))
     else if (t.startsWith('section-')) section = t.slice(8)
+    else if (t.startsWith('lesson-')) lesson = t.slice(7)
   }
-  return { role, video, section }
+  return { role, video, section, lesson }
 }
 
-// ── Parts (pages of a section lesson) ─────────────────────────────────────
+// ── Review flashcards (before a video's "Remember" section) ───────────────
+
+/**
+ * Every source video ends on a recap section ("Remember", "Remember: the
+ * method", …; section id `NN-recap`). Before it, the student is offered an
+ * OPTIONAL run through that video's flashcards (its equations and key facts),
+ * so the recap questions, which span several sections, come after a chance to
+ * memorize. The cards are lesson data, not SRS cards: nothing is saved and
+ * nothing is gated. They live in src/data/video-lesson-flashcards/<key>.ts,
+ * one deck per source video, and every lesson spec must supply them
+ * (scripts/video-lessons/sync-lesson.ts refuses a video without a deck).
+ */
+export type ReviewCard = { front: string; back: string }
+
+export function isRecapSection(section: string | null | undefined): boolean {
+  return !!section && /(^|-)recap$/.test(section)
+}
+
+/** Looks up one source video's deck: (lesson key, video number) → cards. */
+export type ReviewCardLookup = (lessonKey: string, video: number) => readonly ReviewCard[] | undefined
+
+// ── Modules (pages of a section lesson) ───────────────────────────────────
+
+/**
+ * What students see these pages called. The topics are already named
+ * "Circuits Part 1…4", so the pages inside one are MODULES (owner, Nov 2026:
+ * "Part 2 of Part 1" was confusing). Code and the ?part=N address keep "part".
+ */
+export const PART_NOUN = 'Module'
 
 /**
  * A lesson cut from YouTube videos is shown a PART at a time, one page per
@@ -302,9 +332,15 @@ export type StudentStep = {
   video: number | null
   videoTitle: string | null
   questions: StudentQuestion[]
+  /** On a recap section: the video's flashcards, offered before it. */
+  reviewCards?: ReviewCard[]
 }
 
-export function studentSteps(steps: readonly VisibleStep[], videoTitles: Readonly<Record<number, string>> = {}): StudentStep[] {
+export function studentSteps(
+  steps: readonly VisibleStep[],
+  videoTitles: Readonly<Record<number, string>> = {},
+  reviewCards?: ReviewCardLookup,
+): StudentStep[] {
   return steps.map((s) => ({
     clipId: s.clipId,
     title: s.clip.title,
@@ -315,10 +351,36 @@ export function studentSteps(steps: readonly VisibleStep[], videoTitles: Readonl
     role: s.meta.role,
     video: s.meta.video,
     videoTitle: s.meta.video !== null ? videoTitles[s.meta.video] ?? null : null,
+    ...recapCards(s.meta, reviewCards),
     questions: s.visibleQuestions.map(({ index, q }) =>
       isNumericQuestion(q)
         ? { index, kind: 'numeric' as const, question: q.question, ...(q.figure ? { figure: q.figure } : {}), parts: q.parts.map((p) => ({ label: p.label, prompt: p.prompt, unit: p.unit ?? null })), lowYield: q.yield === 'LOW' }
         : { index, kind: 'choice' as const, question: q.question, ...(q.figure ? { figure: q.figure } : {}), options: shuffledQuestion(q).options, lowYield: q.yield === 'LOW' },
     ),
   }))
+}
+
+/** Every review card of a lesson, in video order, each front once: the deck offered before the exit quiz. */
+export function lessonReviewCards(steps: readonly VisibleStep[], lookup: ReviewCardLookup): ReviewCard[] {
+  const seenVideos = new Set<string>()
+  const seenFronts = new Set<string>()
+  const out: ReviewCard[] = []
+  for (const s of steps) {
+    if (s.meta.lesson === null || s.meta.video === null) continue
+    const key = `${s.meta.lesson}:${s.meta.video}`
+    if (seenVideos.has(key)) continue
+    seenVideos.add(key)
+    for (const c of lookup(s.meta.lesson, s.meta.video) ?? []) {
+      if (seenFronts.has(c.front)) continue
+      seenFronts.add(c.front)
+      out.push({ front: c.front, back: c.back })
+    }
+  }
+  return out
+}
+
+function recapCards(meta: StepMeta, lookup: ReviewCardLookup | undefined): { reviewCards?: ReviewCard[] } {
+  if (!lookup || meta.lesson === null || meta.video === null || !isRecapSection(meta.section)) return {}
+  const cards = lookup(meta.lesson, meta.video)
+  return cards && cards.length > 0 ? { reviewCards: cards.map((c) => ({ front: c.front, back: c.back })) } : {}
 }

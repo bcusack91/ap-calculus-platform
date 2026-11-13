@@ -30,6 +30,8 @@ import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 import { Prisma, PrismaClient } from '@prisma/client'
 import type { LessonSpec } from './lesson-spec'
+import { isRecapSection } from '../../src/lib/video-lesson-core'
+import { reviewCardsFor } from '../../src/data/video-lesson-flashcards'
 
 const IS_PROD = process.env.SEED_DB === 'prod'
 const APPLY = process.env.APPLY === '1'
@@ -57,6 +59,13 @@ export async function syncLesson(LESSON: LessonSpec) {
     const m = JSON.parse(readFileSync(path, 'utf8')) as Manifest
     for (const c of m.clips) seconds.set(`${v.video}:${c.section}`, { seconds: c.seconds, voiced: c.voiced })
     for (const s of v.sections) if (!seconds.has(`${v.video}:${s.id}`)) throw new Error(`video ${v.video}: section ${s.id} is in the lesson spec but not in ${path}`)
+  }
+
+  // Standard: every video's recap section is preceded by that video's review flashcards.
+  for (const v of LESSON.videos) {
+    if (!v.sections.some((sec) => isRecapSection(sec.id))) continue
+    const n = reviewCardsFor(LESSON.key, v.video)?.length ?? 0
+    if (n < 3) throw new Error(`video ${v.video} has a recap section but ${n} review flashcards: add its deck to src/data/video-lesson-flashcards/${LESSON.key}.ts`)
   }
 
   // Instructor (the owner), linked to their account when it exists.
