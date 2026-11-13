@@ -106,6 +106,20 @@ describe('flashcards before a recap section', () => {
   })
 })
 
+describe('moving to the next section', () => {
+  it('scrolls the video back into view, but not on first load', () => {
+    const scroll = vi.fn()
+    Element.prototype.scrollIntoView = scroll
+    const next: StudentStep = { ...teach, clipId: 'c-next', title: 'Next section' }
+    render(<VideoLessonPlayer {...base} steps={[teach, next]} initialProgress={{ 'c-teach': { ranges: [[0, 40]] } }} initialIndex={0} initiallyComplete={false} />)
+    expect(scroll).not.toHaveBeenCalled()
+    fireEvent.click(screen.getByRole('button', { name: /2\. Next section/ }))
+    const target = scroll.mock.instances.at(-1) as unknown as HTMLElement
+    expect(target.querySelector('[data-testid="stub-player"]')).toBeTruthy()
+    expect(scroll).toHaveBeenLastCalledWith({ behavior: 'smooth', block: 'start' })
+  })
+})
+
 describe('flashcards before the exit quiz', () => {
   it('the last end screen offers the whole lesson deck, which leads on to the quiz', () => {
     const done = { 'c-teach': { ranges: [[0, 40]] as [number, number][] }, 'c-recap': { ranges: [[0, 40]] as [number, number][] } }

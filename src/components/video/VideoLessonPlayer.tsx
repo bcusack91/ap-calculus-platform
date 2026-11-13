@@ -257,6 +257,7 @@ export default function VideoLessonPlayer({
   const playerRef = useRef<VideoPlayerHandle>(null)
   const checkpointRef = useRef<HTMLDivElement>(null)
   const endRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLDivElement>(null)
 
   // Save bookkeeping (refs: read by timers and unload handlers).
   const rangesRef = useRef(ranges)
@@ -383,6 +384,17 @@ export default function VideoLessonPlayer({
   useEffect(() => {
     if (phase === 'checkpoint') checkpointRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }, [phase, qPos])
+
+  // Moving on to another section (after a checkpoint, the flashcards, a skip,
+  // or a click in the section list) brings the video back to the top of the
+  // screen: the student was just reading a card below it. Not on first load.
+  const videoShownRef = useRef({ index, phase })
+  useEffect(() => {
+    const prev = videoShownRef.current
+    videoShownRef.current = { index, phase }
+    if (phase !== 'video' || (prev.index === index && prev.phase === 'video')) return
+    videoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [index, phase])
 
   // A finished part's end screen (with "Next part") replaces a card further down the page: bring it into view.
   const loadedRef = useRef(false)
@@ -1202,6 +1214,7 @@ export default function VideoLessonPlayer({
             />
           ) : (
             <>
+              <div ref={videoRef} className="scroll-mt-20">
               <VideoPlayer
                 ref={playerRef}
                 provider={step.provider}
@@ -1213,6 +1226,7 @@ export default function VideoLessonPlayer({
                 onEnded={() => handleEnded(step.clipId, step.durationSec)}
                 onPlayingChange={handlePlayingChange}
               />
+              </div>
               {statusBar}
               {phase === 'checkpoint' && checkpointCard}
             </>
