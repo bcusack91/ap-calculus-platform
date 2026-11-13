@@ -9,9 +9,11 @@ import { decks as mcatCirc2 } from './mcat-circ2'
  * src/lib/video-lesson-core.ts).
  *
  * STANDARD for every new lesson: add `<key>.ts` here with one deck per video
- * (about 5–11 cards: every equation the video introduces, then its key facts
+ * (about 5–15 cards: every equation the video introduces, then its key facts
  * or method steps) and register it below. Any answer that shows an equation must
- * also say what each symbol in it stands for. The lesson sync refuses to publish
+ * also say what each symbol in it stands for. Open each concept video's deck with
+ * "what symbol stands for X, and what is its SI unit?" cards for every quantity
+ * the video introduces. The lesson sync refuses to publish
  * a video that has a recap section and no deck.
  */
 export const REVIEW_DECKS: Record<string, Record<number, ReviewCard[]>> = {

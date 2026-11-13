@@ -10,6 +10,7 @@ const r = String.raw
 export const decks: Record<number, ReviewCard[]> = {
   // 1 · Kirchhoff's Rules
   1: [
+    { front: r`Give the symbol and the SI unit for current, for voltage and for resistance.`, back: r`Current: $I$, in amperes (A). Voltage: $V$, in volts (V). Resistance: $R$, in ohms (Ω). They are tied together by $V = IR$, so $1\ \text{V} = 1\ \text{A} \cdot \Omega$.` },
     { front: r`State Kirchhoff's junction rule. Which conservation law is it?`, back: r`$\sum I_{\text{in}} = \sum I_{\text{out}}$ at every node. It is conservation of charge: charge cannot pile up in a wire. Here $\sum I_{\text{in}}$ is the total current flowing into the node and $\sum I_{\text{out}}$ is the total flowing out.` },
     { front: r`State Kirchhoff's loop rule. Which conservation law is it?`, back: r`$\sum \Delta V = 0$ around any closed loop. It is conservation of energy: every volt gained in a source is dropped somewhere along the way. Here $\sum \Delta V$ is the sum of every potential change (rises positive, drops negative) met on one trip around the loop.` },
     { front: r`Walking a loop, what do you record when you cross a resistor?`, back: r`WITH the current: $-IR$. AGAINST the current: $+IR$. Here $I$ is the current through that resistor and $R$ is its resistance.` },
@@ -29,6 +30,7 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 3 · Networks and Dividers
   3: [
+    { front: r`What do the prefixes in mA and kΩ mean, and what do you get when you multiply mA by kΩ?`, back: r`$1\ \text{mA} = 10^{-3}$ A and $1\ \text{k}\Omega = 10^{3}\ \Omega$. Their product is in volts, because the $10^{-3}$ and $10^{3}$ cancel: $(2\ \text{mA})(3\ \text{k}\Omega) = 6$ V.` },
     { front: r`How do you trace a network by its nodes?`, back: r`Points joined by bare wire are one node. Two elements between the same two nodes are in parallel. Two are in series only if no junction lies between them.` },
     { front: r`What is the order for solving a network?`, back: r`Collapse the innermost group and repeat down to one $R_{eq}$. Find $I = V/R_{eq}$. Walk back out, splitting voltage through series pieces and current across parallel ones. Finish with a junction check and a loop check. Here $R_{eq}$ is the equivalent resistance of the whole network, $V$ is the source voltage and $I$ is the total current from the source.` },
     { front: r`Write the voltage divider for two resistors in series.`, back: r`$V_1 = V\,\dfrac{R_1}{R_1 + R_2}$. Series resistors share the voltage in proportion to $R$. Here $V$ is the total voltage across both resistors and $V_1$ is the voltage across $R_1$.` },
@@ -51,6 +53,8 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 5 · Power, Energy and Safety
   5: [
+    { front: r`What symbol stands for power, and what is its SI unit?`, back: r`$P$. The SI unit is the watt, W, and $1\ \text{W} = 1\ \text{J/s} = 1\ \text{V} \cdot \text{A}$: one joule each second.` },
+    { front: r`What symbol stands for energy, and what is its SI unit? What other energy unit do electricity bills use?`, back: r`$E$. The SI unit is the joule, J. Bills use the kilowatt-hour, kWh, which is also energy: $1\ \text{kWh} = 3.6 \times 10^6$ J.` },
     { front: r`Write the three forms of electrical power, with the unit.`, back: r`$P = IV = I^2R = \dfrac{V^2}{R}$, in watts: $1\ \text{W} = 1\ \text{J/s}$. Here $P$ is the power (W), $I$ is the current through the element (A), $V$ is the voltage across it (V) and $R$ is its resistance (Ω).` },
     { front: r`Two resistors carry the same current (series). Which form of power do you use, and which resistor dissipates more?`, back: r`$P = I^2R$. The LARGER resistor dissipates more. Here $P$ is the power (W), $I$ is the shared current (A) and $R$ is that resistor's resistance (Ω).` },
     { front: r`Two resistors have the same voltage (parallel, or any outlet). Which form do you use, and which dissipates more?`, back: r`$P = \dfrac{V^2}{R}$. The SMALLER resistor dissipates more. Here $P$ is the power (W), $V$ is the shared voltage (V) and $R$ is that resistor's resistance (Ω).` },
@@ -73,6 +77,7 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 7 · Ranking Bulb Brightness
   7: [
+    { front: r`A bulb is marked "60 W, 120 V". What do the two numbers mean, with their symbols and units?`, back: r`$P = 60$ W is the power it dissipates, in watts, but only when it runs at its rated voltage, $V = 120$ V, in volts.` },
     { front: r`What does a bulb's brightness measure? What is $P_0$?`, back: r`Brightness is power. For one bulb alone on an ideal source, $P_0 = \dfrac{V^2}{R}$. Here $V$ is the source voltage and $R$ is the bulb's resistance.` },
     { front: r`$n$ identical bulbs are in series. What does each one get, and what is the total power?`, back: r`Each gets $V/n$ and $P_0/n^2$; the total is $P_0/n$. Two in series each glow at one QUARTER of solo power. Here $n$ is the number of bulbs, $V$ is the source voltage and $P_0$ is the power of one bulb alone on that source.` },
     { front: r`$n$ identical bulbs are in parallel across the source. What does each one get, and what is the total power?`, back: r`Each keeps $V$ and $P_0$; the total is $nP_0$. Here $n$ is the number of bulbs, $V$ is the source voltage and $P_0$ is the power of one bulb alone on that source.` },

@@ -143,7 +143,7 @@ describe('review decks', () => {
       if (!v.sections.some((s) => isRecapSection(s.id))) continue
       const deck = reviewCardsFor(lesson.key, v.video) ?? []
       expect(deck.length, `${lesson.key} video ${v.video}`).toBeGreaterThanOrEqual(5)
-      expect(deck.length).toBeLessThanOrEqual(12)
+      expect(deck.length).toBeLessThanOrEqual(16)
       for (const c of deck) {
         expect(c.front.trim().length).toBeGreaterThan(10)
         expect(c.back.trim().length).toBeGreaterThan(0)
@@ -152,6 +152,8 @@ describe('review decks', () => {
         expect((c.back.match(/\$/g) ?? []).length % 2, c.back).toBe(0)
       }
       expect(new Set(deck.map((c) => c.front)).size).toBe(deck.length)
+      // Owner rule: each concept video's deck has at least one "symbol + SI unit" card.
+      if (v.video % 2 === 1) expect(deck.some((c) => /SI unit|with their symbols and units|prefixes/.test(c.front)), `${lesson.key} video ${v.video} unit card`).toBe(true)
     }
   })
 

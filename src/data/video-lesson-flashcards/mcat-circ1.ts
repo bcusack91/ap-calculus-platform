@@ -6,7 +6,9 @@ import type { ReviewCard } from '@/lib/video-lesson-core'
  * "Remember" section. Each deck holds the equations and key facts of the
  * sections that come before the recap, so the student can memorize them
  * before the recap questions. Whenever an answer shows an equation, the
- * card also says what every symbol in it stands for (owner rule). Concept videos (odd) carry the ideas; worked-
+ * card also says what every symbol in it stands for, and each concept deck
+ * opens with "what symbol, what SI unit?" cards for the quantities that video
+ * introduces (owner rules). Concept videos (odd) carry the ideas; worked-
  * example videos (even) carry the method and the equations it uses.
  */
 const r = String.raw
@@ -14,6 +16,9 @@ const r = String.raw
 export const decks: Record<number, ReviewCard[]> = {
   // 1 · Current: Charge on the Move
   1: [
+    { front: r`What symbol stands for electric charge, and what is its SI unit?`, back: r`$Q$ (or $q$ for a single charge). The SI unit is the coulomb, C.` },
+    { front: r`What symbol stands for current, and what is its SI unit?`, back: r`$I$. The SI unit is the ampere, A, and $1\ \text{A} = 1\ \text{C/s}$: one coulomb passing each second.` },
+    { front: r`What symbol stands for time, and what is its SI unit?`, back: r`$t$ (a time interval is $\Delta t$). The SI unit is the second, s. Convert ms and minutes to seconds before using an equation.` },
     { front: r`What is the elementary charge, $e$?`, back: r`$e = 1.6 \times 10^{-19}$ C. Every charge is a whole multiple of $e$, and one coulomb is about $6.25 \times 10^{18}$ elementary charges. Here $e$ is the size of the charge on one proton or one electron.` },
     { front: r`Write current as an equation, with its unit.`, back: r`$I = \dfrac{\Delta Q}{\Delta t}$. Current is a rate: $1\ \text{A} = 1\ \text{C/s}$. Here $I$ is the current (A), $\Delta Q$ is the charge that passes (C) and $\Delta t$ is the time it takes (s).` },
     { front: r`Rearrange $I = \Delta Q/\Delta t$ for the charge that passes in a time $\Delta t$.`, back: r`$\Delta Q = I\,\Delta t$ Here $I$ is the current (A), $\Delta Q$ is the charge that passes (C) and $\Delta t$ is the time it takes (s).` },
@@ -35,6 +40,9 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 3 · Voltage: Energy per Charge
   3: [
+    { front: r`What symbol stands for voltage (potential difference), and what is its SI unit?`, back: r`$V$, or $\Delta V$ for a difference between two points. The SI unit is the volt, V, and $1\ \text{V} = 1\ \text{J/C}$: one joule for each coulomb.` },
+    { front: r`What symbols stand for energy (work) and potential energy, and what is the SI unit?`, back: r`$W$ for work or energy delivered, and $U$ for potential energy. The SI unit of both is the joule, J.` },
+    { front: r`Is the electron-volt a unit of voltage or of energy?`, back: r`Energy. It is not an SI unit, but it is convenient for single charges: $1\ \text{eV} = 1.6 \times 10^{-19}$ J.` },
     { front: r`Write voltage as an equation, with its unit.`, back: r`$\Delta V = \dfrac{W}{q}$: energy per charge. $1\ \text{V} = 1\ \text{J/C}$, so a 9 V battery gives every coulomb 9 J. Here $\Delta V$ is the voltage (V), $W$ is the energy given to the charge (J) and $q$ is the charge (C).` },
     { front: r`What is the change in potential energy of a charge $q$ that moves through $\Delta V$?`, back: r`$\Delta U = q\,\Delta V$, with the signs of both $q$ and $\Delta V$ kept. Here $\Delta U$ is the change in potential energy (J), $q$ is the charge (C) and $\Delta V$ is the potential difference it moves through (V).` },
     { front: r`Which way do positive and negative charges move on their own?`, back: r`Positive charges move from high to low potential; negative charges move from low to high. Both LOSE potential energy.` },
@@ -56,6 +64,10 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 5 · Resistance and Ohm's Law
   5: [
+    { front: r`What symbol stands for resistance, and what is its SI unit?`, back: r`$R$. The SI unit is the ohm, Ω, and $1\ \Omega = 1\ \text{V/A}$: one volt for each ampere.` },
+    { front: r`What symbol stands for resistivity, and what is its SI unit?`, back: r`$\rho$ (the Greek letter rho). The SI unit is the ohm-meter, Ω·m. Resistivity belongs to the material; resistance belongs to one particular wire.` },
+    { front: r`What symbol stands for conductance, and what is its SI unit?`, back: r`$G$. The SI unit is the siemens, S, and $1\ \text{S} = 1/\Omega = 1\ \text{A/V}$.` },
+    { front: r`In $R = \rho L/A$, what are the SI units of $L$ and $A$?`, back: r`$L$ is the wire's length in meters, m. $A$ is its cross-sectional area in square meters, m². It is an area, not the current unit ampere.` },
     { front: r`State Ohm's law and the unit of resistance.`, back: r`$V = IR$, with $1\ \Omega = 1\ \text{V/A}$. Here $V$ is the voltage across the element (V), $I$ is the current through it (A) and $R$ is its resistance (Ω).` },
     { front: r`What is conductance?`, back: r`$G = \dfrac{1}{R}$, in siemens: the current per volt. Here $G$ is the conductance (S) and $R$ is the resistance (Ω).` },
     { front: r`Read $V = IR$ three ways: fixed $R$, fixed $V$, fixed $I$.`, back: r`Fixed $R$: $I \propto V$. Fixed $V$: $I \propto 1/R$. Fixed $I$ (one series path): $V \propto R$. Here $V$ is the voltage across the element, $I$ is the current through it and $R$ is its resistance.` },
@@ -77,6 +89,7 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 7 · Series vs. Parallel Resistors
   7: [
+    { front: r`What does $R_{eq}$ stand for, and what is its SI unit?`, back: r`The equivalent resistance: the single resistance that could replace a group of resistors without changing the current from the battery. Its SI unit is the ohm, Ω.` },
     { front: r`In series, what is the same for every element, and what adds?`, back: r`The current is the same; the voltages add.` },
     { front: r`What is the equivalent resistance of resistors in series?`, back: r`$R_{eq} = R_1 + R_2 + \cdots$, always larger than the largest resistor. Here $R_{eq}$ is the single resistance that could replace the group, and $R_1$, $R_2$ are the individual resistances.` },
     { front: r`In parallel, what is the same for every element, and what adds?`, back: r`The voltage is the same; the currents add.` },
