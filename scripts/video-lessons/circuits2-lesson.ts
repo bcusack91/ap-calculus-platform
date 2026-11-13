@@ -11,6 +11,7 @@
 import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics-electricity-kirchhoff-power-mcat'
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
 import type { LessonSpec } from './lesson-spec'
+import { RECAP } from './circuits2-recap-questions'
 import { FIG } from './circuits2-figures'
 
 const plan = (video: number, index: number): CheckpointQuestion => {
@@ -43,7 +44,7 @@ export const LESSON: LessonSpec = {
         { id: '05-guess', title: 'Guess a direction, then trust the sign', role: 'teach', questions: [plan(1, 1)] },
         { id: '06-two-sources', title: 'Two sources in one loop', role: 'teach' },
         { id: '07-staircase', title: 'The potential staircase', role: 'teach', questions: [plan(1, 2)] },
-        { id: '08-recap', title: 'Remember', role: 'teach' },
+        { id: '08-recap', title: 'Remember', role: 'teach', questions: RECAP[1] },
       ],
     },
     {
@@ -353,6 +354,7 @@ export const LESSON: LessonSpec = {
               explanation:
                 'Series splits VOLTAGE in proportion to R: V₂ = 24 × 2/8 = 6 V, V₆ = 24 × 6/8 = 18 V; the bigger resistor takes the bigger share. Parallel splits CURRENT inversely, other resistor on top: I₂ = 24 × 6/8 = 18 mA, I₆ = 24 × 2/8 = 6 mA; the smaller resistor takes the bigger share. The shares are mirror images: 1 : 3 for voltage, 3 : 1 for current. Check: (18 mA)(2 kΩ) = (6 mA)(6 kΩ) = 36 V.',
             },
+            RECAP[3][0],
           ],
         },
       ],
@@ -427,7 +429,7 @@ export const LESSON: LessonSpec = {
         { id: '05-kilowatt-hour', title: 'Energy and the kilowatt-hour', role: 'teach' },
         { id: '06-joule-heating', title: 'Joule heating and power lines', role: 'teach' },
         { id: '07-body', title: 'Current through the body', role: 'teach', questions: [plan(5, 2)] },
-        { id: '08-recap', title: 'Remember', role: 'teach' },
+        { id: '08-recap', title: 'Remember', role: 'teach', questions: RECAP[5] },
       ],
     },
     {
@@ -507,7 +509,7 @@ export const LESSON: LessonSpec = {
         { id: '09-mixed-burnout', title: 'Burnout in a mixed circuit', role: 'teach', questions: [plan(7, 1)] },
         { id: '10-adding', title: 'Adding a bulb', role: 'teach', questions: [plan(7, 2)] },
         { id: '11-household', title: 'How a house is wired', role: 'teach' },
-        { id: '12-recap', title: 'Remember', role: 'teach' },
+        { id: '12-recap', title: 'Remember', role: 'teach', questions: RECAP[7] },
       ],
     },
     {

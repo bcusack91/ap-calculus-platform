@@ -10,10 +10,13 @@ import type { ReviewCard } from '@/lib/video-lesson-core'
  * equations and key facts from the sections just watched, so the recap
  * questions (which span several sections) come after a chance to memorize.
  *
- * It opens on an offer (study or skip). Studying shows one card at a time:
- * the front, then the answer, then "Still learning" (the card comes back at
- * the end of the pile) or "Got it" (it leaves the pile). Nothing is saved and
- * nothing is required; `onContinue` is always one click away.
+ * Studying shows one card at a time: the front, then the answer, then "Still
+ * learning" (the card comes back at the end of the pile) or "Got it" (it
+ * leaves the pile). The run is finished when the pile is empty (`onComplete`).
+ *
+ * Before a recap the run is REQUIRED (owner, 2026-11-13): there is no skip,
+ * and the recap opens once every card is marked "Got it". Reopened later, or
+ * before the exit quiz, it is optional and `onContinue` is one click away.
  */
 export type ReviewFlashcardsProps = {
   cards: ReviewCard[]
@@ -23,6 +26,10 @@ export type ReviewFlashcardsProps = {
   continueTo: string
   /** Skip the offer and open on the first card (the student asked for the cards). */
   startStudying?: boolean
+  /** No skipping: the student must finish the pile to continue. */
+  required?: boolean
+  /** The pile was emptied (every card marked "Got it"). */
+  onComplete?: () => void
   /** Under "All cards done". */
   doneNote?: string
   onContinue: () => void
@@ -31,7 +38,7 @@ export type ReviewFlashcardsProps = {
 const primaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover'
 const secondaryBtn = 'inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-5 py-2.5 font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800'
 
-export default function ReviewFlashcards({ cards, videoTitle, continueTo, startStudying = false, doneNote, onContinue }: ReviewFlashcardsProps) {
+export default function ReviewFlashcards({ cards, videoTitle, continueTo, startStudying = false, required = false, onComplete, doneNote, onContinue }: ReviewFlashcardsProps) {
   const [studying, setStudying] = useState(startStudying)
   /** Card indexes still to learn, in order; the first one is on screen. */
   const [pile, setPile] = useState<number[]>(() => cards.map((_, i) => i))
@@ -56,6 +63,7 @@ export default function ReviewFlashcards({ cards, videoTitle, continueTo, startS
     setFlipped(false)
   }
   const gotIt = () => {
+    if (pile.length === 1) onComplete?.()
     setPile((p) => p.slice(1))
     setFlipped(false)
   }
@@ -66,18 +74,20 @@ export default function ReviewFlashcards({ cards, videoTitle, continueTo, startS
     return (
       <div ref={rootRef} className={`${shell} text-center`} data-testid="review-flashcards-offer">
         <Layers className="mx-auto mb-3 h-10 w-10 text-accent dark:text-accent-muted" aria-hidden />
-        <p className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">Optional · before {continueTo}</p>
-        <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">Review the flashcards first?</h2>
+        <p className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">{required ? 'Next' : 'Optional'} · before {continueTo}</p>
+        <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">{required ? 'Flashcards first' : 'Review the flashcards first?'}</h2>
         <p className="mx-auto mt-2 max-w-md text-sm text-gray-600 dark:text-gray-400 sm:text-base">
-          {total} cards with the equations and key ideas from {videoTitle ? <span className="font-medium text-gray-800 dark:text-gray-200">{videoTitle}</span> : 'this video'}. Lock them in now, and the recap questions get easier.
+          {total} cards with the equations and key ideas from {videoTitle ? <span className="font-medium text-gray-800 dark:text-gray-200">{videoTitle}</span> : 'this video'}. {required ? `Mark every card "Got it" to open ${continueTo} and its questions.` : 'Lock them in now, and the questions get easier.'}
         </p>
         <div className="mt-5 flex flex-col justify-center gap-2 sm:flex-row">
           <button type="button" onClick={() => setStudying(true)} className={primaryBtn}>
             <Layers className="h-4 w-4" aria-hidden /> Study the flashcards
           </button>
-          <button type="button" onClick={onContinue} className={secondaryBtn}>
-            Skip to {continueTo} <ArrowRight className="h-4 w-4" aria-hidden />
-          </button>
+          {!required && (
+            <button type="button" onClick={onContinue} className={secondaryBtn}>
+              Skip to {continueTo} <ArrowRight className="h-4 w-4" aria-hidden />
+            </button>
+          )}
         </div>
       </div>
     )
@@ -129,9 +139,13 @@ export default function ReviewFlashcards({ cards, videoTitle, continueTo, startS
       </div>
 
       <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
-        <button type="button" onClick={onContinue} className="order-last text-sm font-medium text-accent hover:text-accent-hover dark:text-accent-muted sm:order-first">
-          Skip to {continueTo}
-        </button>
+        {required ? (
+          <p className="order-last text-sm text-gray-500 dark:text-gray-400 sm:order-first">Mark every card &ldquo;Got it&rdquo; to continue.</p>
+        ) : (
+          <button type="button" onClick={onContinue} className="order-last text-sm font-medium text-accent hover:text-accent-hover dark:text-accent-muted sm:order-first">
+            Skip to {continueTo}
+          </button>
+        )}
         <span className="hidden flex-1 sm:block" />
         {flipped ? (
           <>

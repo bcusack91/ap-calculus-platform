@@ -6,7 +6,7 @@
  * so each recap section in a lesson spec must have a deck.
  */
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen, fireEvent, cleanup } from '@testing-library/react'
+import { render, screen, fireEvent, cleanup, waitFor } from '@testing-library/react'
 import type { ReactNode } from 'react'
 
 const push = vi.fn()
@@ -21,7 +21,7 @@ vi.mock('@/components/video/InstructorAvatar', () => ({ InstructorAvatar: () => 
 vi.mock('@/components/video/VideoPlayer', () => ({ default: () => <div data-testid="stub-player" /> }))
 
 import VideoLessonPlayer from '@/components/video/VideoLessonPlayer'
-import { isRecapSection, lessonReviewCards, studentSteps, visibleSteps, type StoredStep, type StudentStep } from '@/lib/video-lesson-core'
+import { checkpointQuestionSchema, isNumericQuestion, isRecapSection, lessonReviewCards, studentSteps, visibleSteps, type StoredStep, type StudentStep } from '@/lib/video-lesson-core'
 import { REVIEW_DECKS, reviewCardsFor } from '@/data/video-lesson-flashcards'
 import { LESSON as CIRC1 } from '../../scripts/video-lessons/circuits1-lesson'
 import { LESSON as CIRC2 } from '../../scripts/video-lessons/circuits2-lesson'
@@ -38,10 +38,13 @@ const base = {
   pickerHref: null, readHref: '/topics/t', exitQuizHref: '/topics/t/interactive?exitQuiz=1',
 }
 
+let fetchMock: ReturnType<typeof vi.fn>
+
 beforeEach(() => {
   Element.prototype.scrollIntoView = vi.fn()
   push.mockClear()
-  vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, status: 200, json: async () => ({}) })))
+  fetchMock = vi.fn(async () => ({ ok: true, status: 200, json: async () => ({}) }))
+  vi.stubGlobal('fetch', fetchMock)
 })
 afterEach(() => {
   cleanup()
@@ -49,22 +52,16 @@ afterEach(() => {
 })
 
 describe('flashcards before a recap section', () => {
-  it('offers the deck when the student lands on an unstarted recap, and skipping goes to the video', () => {
-    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={{ 'c-teach': { ranges: [[0, 40]] } }} initialIndex={1} initiallyComplete={false} />)
+  const watchedTeach = { 'c-teach': { ranges: [[0, 40]] as [number, number][] } }
+  it('are required: no skip, and the recap opens only after every card is "Got it"', async () => {
+    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={watchedTeach} initialIndex={1} initiallyComplete={false} />)
     expect(screen.getByTestId('review-flashcards-offer')).toBeTruthy()
     expect(screen.queryByTestId('stub-player')).toBeNull()
-    fireEvent.click(screen.getByRole('button', { name: /Skip to the recap/ }))
-    expect(screen.getByTestId('stub-player')).toBeTruthy()
-    // Still reachable from the status bar.
-    fireEvent.click(screen.getByRole('button', { name: /Flashcards · 2/ }))
-    expect(screen.getByTestId('review-flashcards')).toBeTruthy()
-  })
-
-  it('runs the pile: "Still learning" brings a card back, "Got it" retires it', () => {
-    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={{ 'c-teach': { ranges: [[0, 40]] } }} initialIndex={1} initiallyComplete={false} />)
+    expect(screen.queryByRole('button', { name: /Skip/ })).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: /Study the flashcards/ }))
+    expect(screen.queryByRole('button', { name: /Skip/ })).toBeNull()
+    // "Still learning" brings the card back, so the pile is not finished by it.
     expect(screen.getByText('Front one')).toBeTruthy()
-    expect(screen.queryByText('Back one')).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: /Show the answer/ }))
     expect(screen.getByText('Back one')).toBeTruthy()
     fireEvent.click(screen.getByRole('button', { name: /Still learning/ }))
@@ -75,12 +72,32 @@ describe('flashcards before a recap section', () => {
     fireEvent.click(screen.getByRole('button', { name: /Show the answer/ }))
     fireEvent.click(screen.getByRole('button', { name: /Got it/ }))
     expect(screen.getByTestId('review-flashcards-done')).toBeTruthy()
+    // Finishing is saved on the recap clip, so a reload does not ask again.
+    await waitFor(() => {
+      const saved = fetchMock.mock.calls.map(([url, init]) => ({ url: String(url), body: JSON.parse(String((init as RequestInit).body)) }))
+      expect(saved.some((c) => c.url.endsWith('/progress') && c.body.clipId === 'c-recap' && c.body.cardsDone === true)).toBe(true)
+    })
     fireEvent.click(screen.getByRole('button', { name: /Continue to the recap/ }))
     expect(screen.getByTestId('stub-player')).toBeTruthy()
+    // Reopened from the button they are optional.
+    fireEvent.click(screen.getByRole('button', { name: /Flashcards · 2/ }))
+    expect(screen.getByRole('button', { name: /Skip to the recap/ })).toBeTruthy()
   })
 
-  it('does not interrupt a recap already under way, or a section with no deck', () => {
-    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={{ 'c-teach': { ranges: [[0, 40]] }, 'c-recap': { ranges: [[0, 20]] } }} initialIndex={1} initiallyComplete={false} />)
+  it('cannot be dodged by clicking the recap in the section list', () => {
+    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={watchedTeach} initialIndex={0} initiallyComplete={false} />)
+    expect(screen.getByTestId('stub-player')).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: /2\. Remember/ }))
+    expect(screen.getByTestId('review-flashcards-offer')).toBeTruthy()
+    expect(screen.queryByTestId('stub-player')).toBeNull()
+  })
+
+  it('are not asked again once finished, and never on a recap started before the rule', () => {
+    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={{ ...watchedTeach, 'c-recap': { cardsDone: '2026-11-13T00:00:00.000Z' } }} initialIndex={1} initiallyComplete={false} />)
+    expect(screen.queryByTestId('review-flashcards-offer')).toBeNull()
+    expect(screen.getByTestId('stub-player')).toBeTruthy()
+    cleanup()
+    render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={{ ...watchedTeach, 'c-recap': { ranges: [[0, 20]] } }} initialIndex={1} initiallyComplete={false} />)
     expect(screen.queryByTestId('review-flashcards-offer')).toBeNull()
     cleanup()
     render(<VideoLessonPlayer {...base} steps={[teach, recap]} initialProgress={{}} initialIndex={0} initiallyComplete={false} />)
@@ -136,5 +153,36 @@ describe('review decks', () => {
       }
       expect(new Set(deck.map((c) => c.front)).size).toBe(deck.length)
     }
+  })
+
+  it.each([CIRC1, CIRC2])('every recap of $key asks exactly three valid questions with no answer-length tell', (lesson) => {
+    const stems = new Set<string>()
+    for (const v of lesson.videos) {
+      for (const sec of v.sections) {
+        for (const q of sec.questions ?? []) {
+          expect(stems.has(q.question), `repeated stem: ${q.question}`).toBe(false)
+          stems.add(q.question)
+        }
+        if (!isRecapSection(sec.id)) continue
+        const qs = sec.questions ?? []
+        expect(qs.length, `${lesson.key} video ${v.video} ${sec.id}`).toBe(3)
+        for (const q of qs) {
+          expect(checkpointQuestionSchema.safeParse(q).success, q.question).toBe(true)
+          if (isNumericQuestion(q)) continue
+          expect(new Set(q.options).size).toBe(4)
+          const lens = q.options.map((o) => o.length)
+          const right = lens[q.correctAnswer]
+          const others = lens.filter((_, i) => i !== q.correctAnswer)
+          // The key is never the clearly longest or clearly shortest option.
+          expect(right, `key too long: ${q.question}`).toBeLessThanOrEqual(Math.max(...others) * 1.2)
+          expect(right, `key too short: ${q.question}`).toBeGreaterThanOrEqual(Math.min(...others) * 0.8)
+        }
+      }
+    }
+  })
+
+  it.each([CIRC1, CIRC2])('the new recap questions of $key spread the key across positions', (lesson) => {
+    const keys = lesson.videos.filter((v) => v.video % 2 === 1).flatMap((v) => v.sections.filter((s) => isRecapSection(s.id)).flatMap((s) => (s.questions ?? []).filter((q) => !isNumericQuestion(q)).map((q) => (q as { correctAnswer: number }).correctAnswer)))
+    expect(new Set(keys).size).toBe(4)
   })
 })

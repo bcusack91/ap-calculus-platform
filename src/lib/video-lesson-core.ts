@@ -118,10 +118,13 @@ export function stepMeta(tags: readonly string[] | undefined): StepMeta {
 /**
  * Every source video ends on a recap section ("Remember", "Remember: the
  * method", …; section id `NN-recap`). Before it, the student is offered an
- * OPTIONAL run through that video's flashcards (its equations and key facts),
- * so the recap questions, which span several sections, come after a chance to
- * memorize. The cards are lesson data, not SRS cards: nothing is saved and
- * nothing is gated. They live in src/data/video-lesson-flashcards/<key>.ts,
+ * run through that video's flashcards (its equations and key facts), so the
+ * recap questions, which span several sections, come after a chance to
+ * memorize. The run is REQUIRED before the recap can be watched (owner,
+ * 2026-11-13): finishing it sets `cardsDone` on the recap clip's progress, and
+ * the progress route banks no watch time for the recap until then. A recap
+ * already started before this rule existed is left alone, so nobody is sent
+ * back. The cards are lesson data, not SRS cards. They live in src/data/video-lesson-flashcards/<key>.ts,
  * one deck per source video, and every lesson spec must supply them
  * (scripts/video-lessons/sync-lesson.ts refuses a video without a deck).
  */
@@ -204,6 +207,8 @@ export type StoredStep = {
 /** Per-clip progress (VideoLessonProgress.steps[clipId]). */
 export type AnsweredRecord = { correct: boolean; at: string; attempts?: number; parts?: boolean[] }
 export type ClipProgress = {
+  /** When the clip's review flashcards were finished (recap sections with a deck). */
+  cardsDone?: string
   ranges?: WatchRange[]
   answered?: Record<string, AnsweredRecord>
 }

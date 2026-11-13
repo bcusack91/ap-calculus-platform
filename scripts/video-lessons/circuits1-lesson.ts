@@ -11,6 +11,7 @@ import { shotList } from '../../src/data/video-shot-lists/mcat-prep/mcat-physics
 import type { CheckpointQuestion } from '../../src/lib/video-lesson-core'
 
 import type { LessonSpec } from './lesson-spec'
+import { RECAP } from './circuits1-recap-questions'
 
 export type { SectionSpec, VideoSpec } from './lesson-spec'
 
@@ -48,7 +49,7 @@ export const LESSON: LessonSpec = {
         { id: '08-electrolytes', title: 'Ions carry current too', role: 'teach', questions: [plan(1, 0)] },
         { id: '09-heating', title: 'Heating: metals vs solutions', role: 'teach', questions: [plan(1, 1)] },
         { id: '10-compare', title: 'Metal vs electrolyte', role: 'teach' },
-        { id: '11-recap', title: 'Remember', role: 'teach' },
+        { id: '11-recap', title: 'Remember', role: 'teach', questions: RECAP[1] },
       ],
     },
     {
@@ -103,7 +104,7 @@ export const LESSON: LessonSpec = {
         { id: '06-water-analogy', title: 'The water analogy', role: 'teach' },
         { id: '07-analogy-breaks', title: 'Where the analogy breaks', role: 'teach', questions: [plan(3, 2)] },
         { id: '08-open-switch', title: 'The open switch', role: 'teach', questions: [plan(3, 1)] },
-        { id: '09-recap', title: 'Remember', role: 'teach' },
+        { id: '09-recap', title: 'Remember', role: 'teach', questions: RECAP[3] },
       ],
     },
     {
@@ -161,7 +162,7 @@ export const LESSON: LessonSpec = {
         { id: '06-stretching', title: 'Stretching a wire', role: 'teach' },
         { id: '07-temperature', title: 'Temperature', role: 'teach' },
         { id: '08-axon', title: 'Axons: 1/r², not 1/r⁴', role: 'teach', questions: [plan(5, 2)] },
-        { id: '09-recap', title: 'Remember', role: 'teach' },
+        { id: '09-recap', title: 'Remember', role: 'teach', questions: RECAP[5] },
       ],
     },
     {
@@ -232,7 +233,7 @@ export const LESSON: LessonSpec = {
         { id: '05-shortcuts', title: 'Shortcuts', role: 'teach' },
         { id: '06-nodes', title: 'Judge by the nodes, not the drawing', role: 'teach' },
         { id: '07-short', title: 'A short and an open', role: 'teach', questions: [plan(7, 0)] },
-        { id: '08-recap', title: 'Remember', role: 'teach' },
+        { id: '08-recap', title: 'Remember', role: 'teach', questions: RECAP[7] },
       ],
     },
     {

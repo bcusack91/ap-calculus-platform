@@ -38,9 +38,12 @@ import { PART_NOUN, type ProgressSteps, type ReviewCard, type StudentQuestion, t
  * every clip and checkpoint completes the lesson (TopicProgress COMPLETED on
  * the server); credit comes from the topic's exit quiz.
  *
- * Before a video's "Remember" section the student is offered that video's
- * flashcards (`step.reviewCards`): optional, never saved, and reopenable from
- * the Flashcards button while the recap's questions are up.
+ * Before a video's "Remember" section the student works through that video's
+ * flashcards (`step.reviewCards`). The run is REQUIRED: the recap clip opens
+ * once every card is marked "Got it" (saved as `cardsDone` on the clip's
+ * progress). A recap already started before this rule is left alone. The
+ * cards reopen, optionally, from the Flashcards button under the video, and
+ * the last end screen offers the whole lesson's cards before the exit quiz.
  *
  * A lesson cut from YouTube videos is shown one PART per page (a concept
  * video and its worked examples; students see it called a "Module"). `steps` are then only this part's
@@ -217,17 +220,22 @@ export default function VideoLessonPlayer({
   const [ranges, setRanges] = useState(() => initialRanges(steps, initialProgress))
   const [answered, setAnswered] = useState<Answered>(() => initialAnswered(steps, initialProgress))
   const router = useRouter()
+  /** Recap clips whose flashcards are finished (kept in a ref too: saves read it). */
+  const cardsDoneRef = useRef(new Set<string>(steps.filter((s) => !!initialProgress[s.clipId]?.cardsDone).map((s) => s.clipId)))
+  /**
+   * A recap's flashcards must be finished before its clip plays. A recap whose
+   * clip was already started (before this rule, or with the cards done) is not gated.
+   */
+  const cardsRequiredFor = (s: StudentStep | undefined, rg: WatchRange[]) =>
+    !!s?.reviewCards?.length && !cardsDoneRef.current.has(s.clipId) && rg.length === 0
   const [phase, setPhase] = useState<Phase>(() => {
     if ((partInitiallyComplete ?? initiallyComplete) && !openCheckpointOnLoad) return 'done'
-    // Resuming on a recap that hasn't been started: offer its flashcards first.
     const s = steps[Math.min(Math.max(initialIndex, 0), Math.max(steps.length - 1, 0))]
-    const started = s ? watchedFraction(mergeRanges(initialProgress[s.clipId]?.ranges ?? [], s.durationSec), s.durationSec) > 0.05 : true
-    return s?.reviewCards?.length && !started && !openCheckpointOnLoad ? 'cards' : 'video'
+    return cardsRequiredFor(s, s ? mergeRanges(initialProgress[s.clipId]?.ranges ?? [], s.durationSec) : []) ? 'cards' : 'video'
   })
-  /** Flashcards: opened by the student (straight to the cards) or offered on arrival, and where to go back to. */
+  /** Flashcards opened by the student from the button (optional), and where to go back to. */
   const [cardsAsked, setCardsAsked] = useState(false)
   const cardsReturnRef = useRef<'video' | 'checkpoint' | 'done'>('video')
-  const cardsOfferedRef = useRef(new Set<string>(phase === 'cards' && steps[index] ? [steps[index].clipId] : []))
   const [playing, setPlaying] = useState(false)
   const [autoPlay, setAutoPlay] = useState(false)
   const [skipNotice, setSkipNotice] = useState(false)
@@ -330,7 +338,7 @@ export default function VideoLessonPlayer({
             const res = await fetch(`/api/video-lessons/${encodeURIComponent(lessonId)}/progress`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ clipId, ranges: send, ...(activeLeft > 0 ? { activeSeconds: activeLeft } : {}) }),
+              body: JSON.stringify({ clipId, ranges: send, ...(activeLeft > 0 ? { activeSeconds: activeLeft } : {}), ...(cardsDoneRef.current.has(clipId) ? { cardsDone: true } : {}) }),
               keepalive,
             })
             if (!res.ok) throw new Error(String(res.status))
@@ -454,11 +462,9 @@ export default function VideoLessonPlayer({
     setAutoPlay(play)
     setSkipNotice(false)
     resetCard()
-    // Arriving at a recap that hasn't been started: offer the video's flashcards first, once.
+    // Arriving at a recap: its flashcards come first, until they are finished.
     const s = steps[i]
-    const started = s ? watchedFraction(rangesRef.current[s.clipId] ?? [], s.durationSec) > 0.05 : true
-    if (s?.reviewCards?.length && !started && !cardsOfferedRef.current.has(s.clipId)) {
-      cardsOfferedRef.current.add(s.clipId)
+    if (cardsRequiredFor(s, s ? rangesRef.current[s.clipId] ?? [] : [])) {
       cardsReturnRef.current = 'video'
       setCardsAsked(false)
       setPlaying(false)
@@ -485,6 +491,13 @@ export default function VideoLessonPlayer({
     cardsReturnRef.current = 'done'
     setCardsAsked(true)
     setPhase('cards')
+  }
+  /** Every card of the recap's deck marked "Got it": record it, so the recap opens (and stays open on reload). */
+  const completeCards = () => {
+    if (!step?.reviewCards?.length || cardsReturnRef.current === 'done') return
+    cardsDoneRef.current.add(step.clipId)
+    dirtyRef.current.add(step.clipId)
+    void save()
   }
   const closeCards = () => {
     const back = cardsReturnRef.current
@@ -1181,6 +1194,8 @@ export default function VideoLessonPlayer({
               videoTitle={step.videoTitle}
               continueTo={cardsReturnRef.current === 'checkpoint' ? 'the questions' : 'the recap'}
               startStudying={cardsAsked}
+              required={!cardsAsked && !cardsDoneRef.current.has(step.clipId)}
+              onComplete={completeCards}
               doneNote="You can open these cards again with the Flashcards button under the video."
               onContinue={closeCards}
             />

@@ -61,11 +61,15 @@ export async function syncLesson(LESSON: LessonSpec) {
     for (const s of v.sections) if (!seconds.has(`${v.video}:${s.id}`)) throw new Error(`video ${v.video}: section ${s.id} is in the lesson spec but not in ${path}`)
   }
 
-  // Standard: every video's recap section is preceded by that video's review flashcards.
+  // Standard: every video's recap section is preceded by that video's review flashcards (required for the student)…
   for (const v of LESSON.videos) {
     if (!v.sections.some((sec) => isRecapSection(sec.id))) continue
     const n = reviewCardsFor(LESSON.key, v.video)?.length ?? 0
     if (n < 3) throw new Error(`video ${v.video} has a recap section but ${n} review flashcards: add its deck to src/data/video-lesson-flashcards/${LESSON.key}.ts`)
+    // …and the recap asks three questions about them (conceptual on a concept video, look-alikes on a worked-examples video).
+    for (const sec of v.sections) {
+      if (isRecapSection(sec.id) && (sec.questions?.length ?? 0) !== 3) throw new Error(`video ${v.video}: recap section ${sec.id} has ${sec.questions?.length ?? 0} questions; a recap carries exactly 3`)
+    }
   }
 
   // Instructor (the owner), linked to their account when it exists.
