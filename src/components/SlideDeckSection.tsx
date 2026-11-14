@@ -9,6 +9,7 @@ import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, t
 import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlideView, QuizSlideView, PollSlideView, type PollOptionState } from '@/components/SlideVisuals'
 import { lockStageView, needsAnswerStrip, stageView, toLogicalScene } from '@/lib/slide-stage'
 import type { SlideFigure } from '@/lib/slide-deck'
+import { hasNoteSheets } from '@/data/note-sheets'
 import { classCourseCount, orderLauncherCourses, type LauncherCourse } from '@/lib/deck-launcher-courses'
 import { useRelay, useRelayMessages } from '@/components/live/LiveRelayProvider'
 import { changedElements, LASER_MIN_INTERVAL_MS, LASER_STALE_MS, STROKE_FLUSH_MS, type RelayMessage } from '@/lib/live-relay-messages'
@@ -407,6 +408,12 @@ export default function SlideDeckSection({
             🖥️ Presenting
           </span>
           <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{deck.title}</span>
+          {/* Guided notes that follow these slides (src/lib/note-sheets.ts); a new tab, so nobody leaves class. */}
+          {hasNoteSheets(deck.topicSlug) && (
+            <Link href={`/topics/${deck.topicSlug}/notes`} target="_blank" className="text-xs font-semibold text-accent hover:text-accent-hover dark:text-accent-muted">
+              Printable notes
+            </Link>
+          )}
           {youAreTeacher ? (
             // Jump to any slide: a native select, so it works with a keyboard,
             // on a phone and inside full screen without a popover of our own.

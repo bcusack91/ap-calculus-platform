@@ -10,6 +10,7 @@ import { isPlaceholderContent } from '@/lib/placeholder-content'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { hasVideoLesson } from '@/lib/video-lessons-server'
+import { hasNoteSheets } from '@/data/note-sheets'
 import { getTopicNeighbors } from '@/lib/topic-sequence'
 
 function TopicBottomAd() {
@@ -24,7 +25,7 @@ import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
-import { Video } from 'lucide-react'
+import { Video, Printer } from 'lucide-react'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
@@ -551,6 +552,18 @@ export default async function TopicPage(props: TopicPageProps) {
                     className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border-2 border-white px-5 py-2 font-semibold text-white hover:bg-white/10 transition-colors"
                   >
                     <Video className="h-4 w-4" aria-hidden /> Learn by video
+                  </Link>
+                </div>
+              )}
+              {/* Printable guided notes for the live class (src/lib/note-sheets.ts). */}
+              {hasNoteSheets(topic.slug) && (
+                <div className="mt-4 flex flex-col gap-2 border-t border-white/30 pt-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-accent-light">Taking this in a live class? Print the guided notes and fill them in as you go.</p>
+                  <Link
+                    href={`/topics/${topic.slug}/notes`}
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border-2 border-white px-5 py-2 font-semibold text-white hover:bg-white/10 transition-colors"
+                  >
+                    <Printer className="h-4 w-4" aria-hidden /> Printable class notes
                   </Link>
                 </div>
               )}

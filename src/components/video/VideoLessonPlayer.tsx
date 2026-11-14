@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { ArrowRight, BookOpen, CheckCircle2, Circle, Layers, Lock, PlayCircle, RotateCcw, SkipForward, Users, XCircle } from 'lucide-react'
+import { ArrowRight, BookOpen, CheckCircle2, Circle, Layers, Lock, PlayCircle, Printer, RotateCcw, SkipForward, Users, XCircle } from 'lucide-react'
 import VideoPlayer, { type VideoPlayerHandle } from './VideoPlayer'
 import { PreferVideoToggle } from './PreferVideoToggle'
 import ReviewFlashcards from './ReviewFlashcards'
@@ -81,6 +81,8 @@ export type VideoLessonPlayerProps = {
   /** The instructor picker, when there's more than one instructor to choose. */
   pickerHref: string | null
   readHref: string
+  /** The lesson's printable note sheets for this module, when the topic has them. */
+  notesHref?: string | null
   exitQuizHref: string | null
   /** Every review flashcard of the lesson: offered on the last end screen, before the exit quiz. */
   allReviewCards?: ReviewCard[]
@@ -212,6 +214,7 @@ export default function VideoLessonPlayer({
   initiallyComplete,
   pickerHref,
   readHref,
+  notesHref = null,
   exitQuizHref,
   allReviewCards = [],
   openCheckpointOnLoad = false,
@@ -717,6 +720,11 @@ export default function VideoLessonPlayer({
         {pickerHref && (
           <Link href={pickerHref} className="inline-flex items-center gap-1 font-medium text-accent hover:text-accent-hover dark:text-accent-muted">
             <Users className="h-4 w-4" aria-hidden /> Change instructor
+          </Link>
+        )}
+        {notesHref && (
+          <Link href={notesHref} target="_blank" className="inline-flex items-center gap-1 font-medium text-accent hover:text-accent-hover dark:text-accent-muted">
+            <Printer className="h-4 w-4" aria-hidden /> Print notes
           </Link>
         )}
         <Link href={readHref} className="inline-flex items-center gap-1 font-medium text-accent hover:text-accent-hover dark:text-accent-muted">

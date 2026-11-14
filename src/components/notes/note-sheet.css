@@ -1,0 +1,494 @@
+/*
+ * Printable note sheets (src/lib/note-sheets.ts). The sheet is PAPER: white
+ * with black ink in both site themes, letter size, and it prints as it looks.
+ * Lines a student writes on are real borders (browsers drop backgrounds when
+ * printing); the graph-paper work space asks for exact colour instead.
+ */
+.ns-root {
+  background: #e5e7eb;
+  padding: 20px 12px 64px;
+  min-height: 100vh;
+}
+.dark .ns-root {
+  background: #0b0f19;
+}
+.ns-sheet {
+  background: #fff;
+  color: #111;
+  max-width: 8.5in;
+  margin: 0 auto 28px;
+  padding: 0.55in 0.6in;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.2), 0 10px 28px rgb(0 0 0 / 0.14);
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.42;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media (max-width: 640px) {
+  .ns-sheet {
+    padding: 20px 16px;
+    font-size: 10pt;
+  }
+}
+.ns-sheet h1,
+.ns-sheet h2,
+.ns-sheet h3,
+.ns-sheet p,
+.ns-sheet td,
+.ns-sheet th,
+.ns-sheet li {
+  color: #111;
+}
+.ns-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6px 24px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.ns-eyebrow {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #555 !important;
+}
+.ns-head h1 {
+  font-size: 17pt;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 2px 0 0;
+}
+.ns-head .ns-sub {
+  font-size: 9.5pt;
+  color: #444;
+  margin: 3px 0 0;
+}
+.ns-name {
+  font-size: 9.5pt;
+  white-space: nowrap;
+  color: #333;
+}
+.ns-fill {
+  display: inline-block;
+  border-bottom: 1px solid #111;
+  min-width: 1.6in;
+  height: 1.1em;
+  vertical-align: bottom;
+}
+.ns-fill.ns-short {
+  min-width: 0.7in;
+}
+.ns-how {
+  font-size: 9pt;
+  color: #444 !important;
+  margin: 0 0 12px;
+}
+
+/* sections */
+.ns-section {
+  margin-top: 16px;
+}
+.ns-section > h2 {
+  font-size: 12.5pt;
+  font-weight: 800;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+  margin: 0 0 8px;
+  break-after: avoid;
+}
+.ns-keep {
+  break-inside: avoid;
+}
+.ns-keep > h2 {
+  font-size: 12.5pt;
+  font-weight: 800;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+  margin: 0 0 8px;
+}
+.ns-keep + .ns-items:not(:empty) {
+  margin-top: 7px;
+}
+.ns-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.ns-text {
+  margin: 0;
+}
+.ns-text.ns-bullet {
+  padding-left: 1.1em;
+  position: relative;
+}
+.ns-text.ns-bullet::before {
+  content: '•';
+  position: absolute;
+  left: 0.2em;
+}
+.ns-sheet .katex {
+  font-size: 1.05em;
+  color: #111;
+}
+.ns-blank {
+  display: inline-block;
+  border-bottom: 1.2px solid #111;
+  min-height: 1.15em;
+  margin: 0 0.15em;
+  vertical-align: baseline;
+  text-align: center;
+  line-height: 1.15;
+}
+.ns-key,
+.ns-sheet .ns-key,
+.ns-sheet .ns-key * {
+  color: #1d4ed8 !important;
+}
+.ns-blank.ns-key {
+  font-weight: 700;
+  padding: 0 0.3em;
+}
+.ns-keynote {
+  font-size: 9.5pt;
+}
+
+/* equation */
+.ns-eq {
+  border: 1.5px solid #111;
+  padding: 6px 10px 8px;
+  break-inside: avoid;
+}
+.ns-eq-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  min-height: 0.5in;
+  font-size: 12pt;
+}
+.ns-eq-space {
+  flex: 1;
+  border-bottom: 1.2px solid #111;
+  min-height: 0.4in;
+}
+.ns-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555 !important;
+}
+.ns-eq-units {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+.ns-eq-units > span:last-child {
+  flex: 1;
+  border-bottom: 1px solid #999;
+  height: 1.1em;
+}
+
+/* rules + work space */
+.ns-rules {
+  display: flex;
+  flex-direction: column;
+}
+.ns-rule {
+  border-bottom: 1px solid #b6bcc8;
+  height: 0.3in;
+}
+.ns-grid {
+  border: 1px solid #b6bcc8;
+  background-image: linear-gradient(#d5d9e2 1px, transparent 1px), linear-gradient(90deg, #d5d9e2 1px, transparent 1px);
+  background-size: 0.2in 0.2in;
+  break-inside: avoid;
+}
+
+/* table */
+.ns-table {
+  border-collapse: collapse;
+  width: 100%;
+  break-inside: avoid;
+}
+.ns-table th,
+.ns-table td {
+  border: 1px solid #555;
+  padding: 4px 8px;
+  text-align: left;
+  vertical-align: middle;
+  height: 0.36in;
+}
+.ns-table th {
+  font-size: 8.5pt;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #444;
+  height: auto;
+}
+.ns-table td:first-child {
+  font-weight: 600;
+  width: 24%;
+}
+
+/* figure */
+.ns-figure {
+  margin: 2px auto;
+  max-width: 4.4in;
+  width: 100%;
+  break-inside: avoid;
+  color: #1f2937;
+}
+.ns-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 2.7in;
+  margin: 0 auto;
+}
+.ns-figure .fig-accent {
+  color: #2563eb;
+}
+.ns-figure .fig-accent-2 {
+  color: #dc2626;
+}
+.ns-figure .fig-muted {
+  color: #9ca3af;
+}
+.ns-figure .fig-bg {
+  fill: #fff;
+}
+.ns-figure figcaption {
+  font-size: 8.5pt;
+  text-align: center;
+  color: #444;
+  margin-top: 2px;
+}
+
+/* poll */
+.ns-poll {
+  border: 1px solid #555;
+  border-left-width: 4px;
+  padding: 6px 10px 8px;
+  break-inside: avoid;
+}
+.ns-opts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 16px;
+  margin: 5px 0 6px;
+  font-size: 9.5pt;
+}
+@media (max-width: 640px) {
+  .ns-opts {
+    grid-template-columns: 1fr;
+  }
+}
+.ns-opt {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+.ns-bubble {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35em;
+  height: 1.35em;
+  border: 1.2px solid #111;
+  border-radius: 50%;
+  font-size: 8pt;
+  font-weight: 700;
+}
+.ns-pollrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  font-size: 9.5pt;
+  align-items: flex-end;
+}
+.ns-pollrow .ns-why {
+  flex: 1;
+  min-width: 2.4in;
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.ns-pollrow .ns-why > span:last-child {
+  flex: 1;
+  border-bottom: 1px solid #111;
+  height: 1.1em;
+}
+
+/* recall grid */
+.ns-recall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 18px;
+}
+@media (max-width: 640px) {
+  .ns-recall {
+    grid-template-columns: 1fr;
+  }
+}
+.ns-recall > div {
+  break-inside: avoid;
+}
+.ns-recall b {
+  font-size: 10.5pt;
+}
+
+/* worked example */
+.ns-problem {
+  border: 1.5px solid #111;
+  padding: 8px 10px;
+  break-inside: avoid;
+}
+.ns-problem p {
+  margin: 0 0 4px;
+}
+.ns-part {
+  margin-top: 8px;
+  break-inside: avoid;
+}
+.ns-part > p {
+  margin: 0 0 4px;
+}
+.ns-try {
+  border: 1.5px dashed #111;
+  text-align: center;
+  font-weight: 700;
+  font-size: 9.5pt;
+  padding: 4px 8px;
+  margin: 8px 0;
+}
+.ns-solution {
+  border-left: 3px solid #1d4ed8;
+  padding: 2px 0 2px 10px;
+}
+
+/* video tracker */
+.ns-clip {
+  margin-top: 12px;
+  break-inside: avoid;
+}
+.ns-clip-head {
+  break-after: avoid;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 11pt;
+}
+.ns-check {
+  flex: none;
+  display: inline-block;
+  width: 0.16in;
+  height: 0.16in;
+  border: 1.3px solid #111;
+  transform: translateY(2px);
+}
+.ns-clip-head .ns-time {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 9pt;
+  color: #555;
+  font-variant-numeric: tabular-nums;
+}
+.ns-cp {
+  font-size: 9pt;
+  color: #333;
+  margin: 2px 0 0 0.24in;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  align-items: center;
+}
+.ns-cp .ns-check {
+  width: 0.12in;
+  height: 0.12in;
+  border-radius: 50%;
+  margin-right: 4px;
+  transform: translateY(1px);
+}
+.ns-box {
+  border: 1.5px solid #111;
+  padding: 8px 10px 10px;
+  margin-top: 14px;
+  break-inside: avoid;
+}
+.ns-steps {
+  display: grid;
+  grid-template-columns: 1.05in 1fr;
+  margin-top: 8px;
+  border: 1px solid #b6bcc8;
+}
+.ns-steps > span {
+  font-size: 9pt;
+  font-weight: 700;
+  padding: 5px 8px;
+  border-bottom: 1px solid #b6bcc8;
+  border-right: 1px solid #b6bcc8;
+}
+.ns-steps > i {
+  min-height: 0.62in;
+  border-bottom: 1px solid #b6bcc8;
+}
+.ns-steps > :nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+.ns-numbered {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  align-items: end;
+}
+.ns-numbered > b {
+  font-size: 10pt;
+  height: 0.3in;
+  display: flex;
+  align-items: flex-end;
+}
+
+@page {
+  size: letter;
+  margin: 0.55in 0.6in;
+}
+@media print {
+  .ns-root {
+    background: none !important;
+    padding: 0;
+    min-height: 0;
+  }
+  .ns-sheet {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    break-after: page;
+  }
+  .ns-sheet:last-of-type {
+    break-after: auto;
+  }
+  .ns-sheet a::after {
+    content: none !important;
+  }
+  .ns-screen {
+    display: none !important;
+  }
+}
+
+/* Nothing that floats over the site (cookie bar, toasts, dev overlay) belongs on paper. */
+@media print {
+  body:has(.ns-root) .fixed,
+  body:has(.ns-root) .tsqd-parent-container,
+  body:has(.ns-root) nextjs-portal {
+    display: none !important;
+  }
+}

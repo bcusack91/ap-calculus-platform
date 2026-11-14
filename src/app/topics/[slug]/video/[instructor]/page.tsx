@@ -9,6 +9,7 @@ import { PART_NOUN, isLessonComplete, lessonParts, lessonReviewCards, partIndexO
 import { reviewCardsFor } from '@/data/video-lesson-flashcards'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { hasNoteSheets } from '@/data/note-sheets'
 import VideoLessonPlayer, { type PartNav } from '@/components/video/VideoLessonPlayer'
 import { InstructorAvatar } from '@/components/video/InstructorAvatar'
 
@@ -177,6 +178,7 @@ export default async function VideoLessonPage(props: Props) {
           partInitiallyComplete={partDone[partIdx] ?? false}
           pickerHref={pickerHref}
           readHref={readHref}
+          notesHref={hasNoteSheets(topic.slug) ? `${lessonHref}/notes${parts.length > 1 ? `?part=${partIdx + 1}` : ''}` : null}
           allReviewCards={lessonReviewCards(lesson.steps, reviewCardsFor)}
           exitQuizHref={hasExitQuiz(topic.slug) ? `/topics/${topic.slug}/interactive?exitQuiz=1` : null}
         />
