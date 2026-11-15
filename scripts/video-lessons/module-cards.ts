@@ -29,7 +29,11 @@ async function main() {
   console.log('DB:', IS_PROD ? 'PROD' : 'local', host, '| mode:', APPLY ? 'APPLY' : 'dry run')
 
   // Imported after the env file is loaded so the client connects to the right database.
+  // src/lib/load-env re-loads .env.local outside production, so a prod run must say so.
+  if (IS_PROD) (process.env as Record<string, string>).NODE_ENV = 'production'
   const { prisma } = await import('../../src/lib/prisma')
+  const after = new URL(process.env.DATABASE_URL!).hostname
+  if (after !== host) throw new Error(`database switched to ${after} while loading the client`)
   const { finishedModules, unlockVideoModuleCards } = await import('../../src/lib/video-lesson-cards')
   const { visibleSteps, videoDeckKey, lessonParts } = await import('../../src/lib/video-lesson-core')
 
