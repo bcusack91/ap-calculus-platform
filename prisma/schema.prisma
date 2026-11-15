@@ -413,6 +413,11 @@ model Flashcard {
   // AAMC exam yield. NULL = never judged, which every non-MCAT card is, and
   // unlabeled cards are always served (see src/lib/flashcard-yield.ts).
   examYield  ExamYield?
+  // Set on a video lesson's review card: "<lesson key>:<video number>", e.g.
+  // "mcat-circ1:3" (src/data/video-lesson-flashcards). These cards join a
+  // student's deck as they finish each MODULE of the video lesson
+  // (src/lib/video-lesson-cards.ts), never through the topic-wide unlock.
+  videoDeck  String?
   createdAt  DateTime            @default(now())
   updatedAt  DateTime            @updatedAt
   topic      Topic               @relation(fields: [topicId], references: [id], onDelete: Cascade)
@@ -420,6 +425,7 @@ model Flashcard {
 
   @@index([topicId])
   @@index([topicId, examYield])
+  @@index([topicId, videoDeck])
 }
 
 model FlashcardProgress {

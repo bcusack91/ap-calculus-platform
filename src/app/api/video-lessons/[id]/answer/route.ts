@@ -17,6 +17,7 @@ import {
 import { questionKey, optionKey } from '@/lib/question-key'
 import { recordQuestions } from '@/lib/study-tracking'
 import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progress'
+import { newlyFinishedModules, unlockVideoModuleCards } from '@/lib/video-lesson-cards'
 
 /**
  * POST /api/video-lessons/[id]/answer
@@ -33,7 +34,8 @@ import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progre
  * a miss sends the student into the solution clip, which is the explanation.
  * Every attempt is logged as a VIDEO_CHECK answer, so misses reach the
  * mistake log and the teacher's study report; the first attempt is what the
- * checkpoint score counts.
+ * checkpoint score counts. Finishing a MODULE adds its review cards to the
+ * student's deck (src/lib/video-lesson-cards.ts).
  */
 
 const bodySchema = z.object({
@@ -74,6 +76,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       select: { steps: true, completedAt: true },
     })
     const steps = parseProgressSteps(row?.steps)
+    const stepsBefore = { ...steps }
     const prev = steps[clipId] ?? {}
     const before = prev.answered?.[String(questionIndex)]
     const attempts = (before?.attempts ?? (before ? 1 : 0)) + 1
@@ -91,14 +94,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       },
     }
     const user = await tx.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } })
-    const complete = isLessonComplete(visibleSteps(lesson.steps as StoredStep[], !!user?.lessonIncludeLowYield), steps)
+    const visible = visibleSteps(lesson.steps as StoredStep[], !!user?.lessonIncludeLowYield)
+    const complete = isLessonComplete(visible, steps)
     const completedNow = complete && !row?.completedAt
     await tx.videoLessonProgress.upsert({
       where: { userId_lessonId: { userId, lessonId: lesson.id } },
       update: { steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
       create: { userId, lessonId: lesson.id, steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
     })
-    return { complete, completedNow, attempts }
+    return { complete, completedNow, attempts, modulesDone: newlyFinishedModules(visible, stepsBefore, steps) }
   })
 
   await recordQuestions(userId, [{
@@ -120,11 +124,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }])
 
   let flashcards: ReturnType<typeof flashcardUnlockPayload>
-  if (result.completedNow) {
-    const topic = await prisma.topic.findUnique({ where: { slug: lesson.topicSlug }, select: { id: true, slug: true } })
-    if (topic) {
+  if (result.completedNow || result.modulesDone.length > 0) {
+    const topic = await prisma.topic.findUnique({ where: { slug: lesson.topicSlug }, select: { id: true, slug: true, title: true } })
+    if (topic && result.completedNow) {
       const { unlock } = await applyLessonProgress({ userId, topic, masteryLevel: 0, status: 'COMPLETED', isPartCompletion: true })
       flashcards = flashcardUnlockPayload(unlock)
+    }
+    // A module just finished: its review cards join the student's deck.
+    if (topic && result.modulesDone.length > 0) {
+      const added = await unlockVideoModuleCards(userId, topic, lesson.courseSlug, result.modulesDone).catch(() => null)
+      if (added && added.newCards > 0 && !flashcards) flashcards = { created: true, newCards: added.newCards, totalActive: 0, totalPossible: 0, topicTitle: added.topicTitle }
     }
   }
 

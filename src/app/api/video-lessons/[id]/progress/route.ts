@@ -8,6 +8,7 @@ import { isLessonComplete, isRecapSection, mergeClipRanges, parseProgressSteps, 
 import { reviewCardsFor } from '@/data/video-lesson-flashcards'
 import { newlyWatchedSeconds } from '@/lib/video-watch'
 import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progress'
+import { newlyFinishedModules, unlockVideoModuleCards } from '@/lib/video-lesson-cards'
 
 /**
  * POST /api/video-lessons/[id]/progress
@@ -23,6 +24,8 @@ import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progre
  * visible step is watched and answered, the lesson completes: TopicProgress
  * becomes COMPLETED (mastery untouched, so the text lesson keeps its place)
  * and the flashcard unlock runs. Credit still comes from the exit quiz.
+ * Finishing a MODULE adds that module's review cards to the student's deck
+ * (src/lib/video-lesson-cards.ts).
  */
 
 const bodySchema = z.object({
@@ -49,7 +52,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!lesson) return NextResponse.json({ error: 'Lesson not found' }, { status: 404 })
   const step = lesson.steps.find((s) => s.clipId === clipId)
   if (!step) return NextResponse.json({ error: 'Clip is not in this lesson' }, { status: 400 })
-  const topic = await prisma.topic.findUnique({ where: { slug: lesson.topicSlug }, select: { id: true, slug: true } })
+  const topic = await prisma.topic.findUnique({ where: { slug: lesson.topicSlug }, select: { id: true, slug: true, title: true } })
 
   const result = await prisma.$transaction(async (tx) => {
     await tx.$queryRaw`SELECT id FROM "VideoLessonProgress" WHERE "userId" = ${userId} AND "lessonId" = ${lesson.id} FOR UPDATE`
@@ -58,6 +61,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       select: { steps: true, completedAt: true, updatedAt: true },
     })
     const steps = parseProgressSteps(row?.steps)
+    const before = { ...steps }
     const prev = steps[clipId]
     const duration = step.clip.durationSec
 
@@ -74,14 +78,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     steps[clipId] = { ...prev, ranges: merged, ...(cardsDoneAt ? { cardsDone: cardsDoneAt } : {}) }
 
     const user = await tx.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } })
-    const complete = isLessonComplete(visibleSteps(lesson.steps as StoredStep[], !!user?.lessonIncludeLowYield), steps)
+    const visible = visibleSteps(lesson.steps as StoredStep[], !!user?.lessonIncludeLowYield)
+    const complete = isLessonComplete(visible, steps)
     const completedNow = complete && !row?.completedAt
     await tx.videoLessonProgress.upsert({
       where: { userId_lessonId: { userId, lessonId: lesson.id } },
       update: { steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
       create: { userId, lessonId: lesson.id, steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
     })
-    return { merged, complete, completedNow, accepted, cardsRequired }
+    return { merged, complete, completedNow, accepted, cardsRequired, modulesDone: newlyFinishedModules(visible, before, steps) }
   })
 
   // Topic progress: time always; COMPLETED once the whole lesson is done.
@@ -96,6 +101,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       isPartCompletion: result.completedNow,
     })
     flashcards = flashcardUnlockPayload(unlock)
+  }
+  // A module just finished: its review cards join the student's deck.
+  if (topic && result.modulesDone.length > 0) {
+    const added = await unlockVideoModuleCards(userId, topic, lesson.courseSlug, result.modulesDone).catch(() => null)
+    if (added && added.newCards > 0 && !flashcards) flashcards = { created: true, newCards: added.newCards, totalActive: 0, totalPossible: 0, topicTitle: added.topicTitle }
   }
 
   return NextResponse.json({

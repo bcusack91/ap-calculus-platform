@@ -130,6 +130,11 @@ export function stepMeta(tags: readonly string[] | undefined): StepMeta {
  */
 export type ReviewCard = { front: string; back: string }
 
+/** A video's review-card deck as stored on Flashcard.videoDeck: "<lesson key>:<video>". */
+export function videoDeckKey(lessonKey: string, video: number): string {
+  return `${lessonKey}:${video}`
+}
+
 export function isRecapSection(section: string | null | undefined): boolean {
   return !!section && /(^|-)recap$/.test(section)
 }

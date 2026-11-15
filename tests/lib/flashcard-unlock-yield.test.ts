@@ -54,6 +54,14 @@ beforeEach(() => {
   mockCreateMany.mockResolvedValue({ count: 6 })
 })
 
+describe('maybeUnlockFlashcards and video lesson cards', () => {
+  it('never hands out video lesson review cards (they join module by module)', async () => {
+    const { maybeUnlockFlashcards } = await import('@/lib/flashcard-unlock')
+    await maybeUnlockFlashcards('user-1', 'mcat-organ-systems-renal-mcat')
+    expect(mockTopicFindUnique.mock.calls[0][0].select.flashcards.where).toEqual({ videoDeck: null })
+  })
+})
+
 describe('maybeUnlockFlashcards ordering', () => {
   it('drips high-yield first, low-yield last, with a deterministic tiebreak', async () => {
     const { maybeUnlockFlashcards } = await import('@/lib/flashcard-unlock')

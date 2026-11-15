@@ -32,6 +32,7 @@ import { Prisma, PrismaClient } from '@prisma/client'
 import type { LessonSpec } from './lesson-spec'
 import { isRecapSection } from '../../src/lib/video-lesson-core'
 import { reviewCardsFor } from '../../src/data/video-lesson-flashcards'
+import { syncReviewCards } from './review-cards'
 
 const IS_PROD = process.env.SEED_DB === 'prod'
 const APPLY = process.env.APPLY === '1'
@@ -97,6 +98,8 @@ export async function syncLesson(LESSON: LessonSpec) {
   }
   console.log(`${total} live sections, ${voicedCount} voiced${liveVideos.length < LESSON.videos.length ? `; left out until exported: video ${LESSON.videos.filter((v) => !liveVideos.includes(v)).map((v) => v.video).join(', ')}` : ''}`)
   if (liveVideos.length === 0) throw new Error('no video has a voiced export yet: nothing to publish (INCLUDE_PLACEHOLDERS=1 to publish the placeholders)')
+  // Review decks as Flashcard rows, so students' decks can take them module by module.
+  await syncReviewCards(prisma, { topicSlug: LESSON.topicSlug, lessonKey: LESSON.key, videos: liveVideos.map((v) => v.video), apply: APPLY })
   if (!APPLY) {
     console.log('Dry run: nothing written. Set APPLY=1 to write.')
     await prisma.$disconnect()

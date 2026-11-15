@@ -107,7 +107,9 @@ export async function maybeUnlockFlashcards(
       id: true,
       title: true,
       textContent: true,
-      flashcards: { select: { id: true, examYield: true, createdAt: true } },
+      // Video lesson review cards join a deck module by module instead
+      // (src/lib/video-lesson-cards.ts), never through this unlock.
+      flashcards: { where: { videoDeck: null }, select: { id: true, examYield: true, createdAt: true } },
       exampleProblems: { select: { question: true, solution: true } },
       category: { select: { course: { select: { slug: true } } } },
     },
@@ -176,7 +178,7 @@ export async function maybeUnlockFlashcards(
         })),
       })
       cards = await prisma.flashcard.findMany({
-        where: { topicId: topic.id },
+        where: { topicId: topic.id, videoDeck: null },
         select: { id: true, examYield: true, createdAt: true },
       })
     }
