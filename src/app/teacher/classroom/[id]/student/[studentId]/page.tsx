@@ -57,6 +57,7 @@ const SOURCE_ROWS: { key: keyof StudentMetrics['questions']['bySource']; label: 
   { key: 'UNIT_TEST', label: 'Unit test' },
   { key: 'MISTAKE_REVIEW', label: 'Mistake review' },
   { key: 'VIDEO_CHECK', label: 'Video checkpoints' },
+  { key: 'CARD_CHECK', label: 'Daily card check' },
 ]
 
 const STATUS_LABEL: Record<string, string> = {

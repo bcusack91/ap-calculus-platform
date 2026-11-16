@@ -179,7 +179,7 @@ export function ClassActivityTable({ classroomId }: { classroomId: string }) {
 interface StudentRow { userId: string; name: string; totalSeconds: number; completedLessons: number; flaggedLessons: number }
 interface TopicRow { title: string; course: string | null; status: string; seconds: number; lastAccessed: string | null; flagged: boolean }
 interface SessionRow { id: string; mode: string; status: string; startedAt: string; endedAt: string | null; attendees: { name: string; minutes: number }[] }
-interface FlashcardRow { userId: string; name: string; days: number[]; activeDays: number; totalReviews: number }
+interface FlashcardRow { userId: string; name: string; days: number[]; checkDays?: ({ done: boolean; score: string | null } | null)[]; activeDays: number; totalReviews: number }
 
 interface UnitTestAttempt { id: string; correct: number; total: number; percentage: number; passed: boolean; completedAt: string }
 interface UnitTestCycle { diagnosticId: string; course: string; cycle: number; lessons: number; attempts: UnitTestAttempt[]; inProgress: boolean }
@@ -512,7 +512,8 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
           Days each student reviewed flashcards over the last 7 days (any deck). Goal:{' '}
           <span className="font-medium text-green-600 dark:text-green-400">5+ days a week</span>. A filled dot = at least one
-          review that day; the number under each dot is cards reviewed.
+          review that day; the number in each dot is cards reviewed. An amber ring means the student reviewed cards but did not take that day&apos;s card check, so
+          the day does not count; a score under a dot (for example 9/12) is their card check.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -532,20 +533,31 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
               {flashcards.map(row => (
                 <tr key={row.userId} className="border-b border-gray-100 dark:border-gray-700/50">
                   <td className="py-2 pr-4 font-medium text-gray-900 dark:text-white">{row.name}</td>
-                  {row.days.map((n, i) => (
-                    <td key={i} className="py-2 pr-2 text-center">
-                      <span
-                        className={`mx-auto flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-semibold ${
-                          n > 0
-                            ? 'bg-green-500 text-white'
-                            : 'bg-gray-100 text-gray-400 dark:bg-gray-700 dark:text-gray-500'
-                        }`}
-                        title={n > 0 ? `${n} card${n === 1 ? '' : 's'} reviewed` : 'No reviews'}
-                      >
-                        {n > 0 ? (n > 99 ? '99' : n) : '·'}
-                      </span>
-                    </td>
-                  ))}
+                  {row.days.map((n, i) => {
+                    const check = row.checkDays?.[i] ?? null
+                    const checkMissing = n > 0 && check?.done === false
+                    return (
+                      <td key={i} className="py-2 pr-2 text-center">
+                        <span
+                          className={`mx-auto flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-semibold ${
+                            checkMissing
+                              ? 'border-2 border-amber-500 bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300'
+                              : n > 0
+                                ? 'bg-green-500 text-white'
+                                : 'bg-gray-100 text-gray-400 dark:bg-gray-700 dark:text-gray-500'
+                          }`}
+                          title={
+                            n > 0
+                              ? `${n} card${n === 1 ? '' : 's'} reviewed${checkMissing ? '; card check not taken, so the day does not count' : check?.score ? `; card check ${check.score}` : ''}`
+                              : 'No reviews'
+                          }
+                        >
+                          {n > 0 ? (n > 99 ? '99' : n) : '·'}
+                        </span>
+                        {check?.score && <span className="mt-0.5 block text-[10px] tabular-nums text-gray-500 dark:text-gray-400">{check.score}</span>}
+                      </td>
+                    )
+                  })}
                   <td className="py-2 pr-4 text-center">
                     <span
                       className={`rounded-full px-2 py-0.5 text-xs font-semibold ${

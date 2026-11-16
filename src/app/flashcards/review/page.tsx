@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Layers } from 'lucide-react'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 import FlashcardDailyLimits from '@/components/FlashcardDailyLimits'
+import { CardCheckBanner } from '@/components/CardCheckBanner'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { NextStudyStepButton } from '@/components/StudyPlanNextUp'
 import { FLASHCARD_UNLOCK_RULE } from '@/lib/flashcard-links'
@@ -128,6 +129,9 @@ export default function FlashcardReviewDashboard() {
             They&apos;ll be first in line tomorrow — or raise your max reviews per day below.
           </div>
         )}
+
+        {/* The daily card check: required before today's flashcards count as done */}
+        <CardCheckBanner refreshKey={stats?.due} className="mb-8" />
 
         {/* Action Buttons */}
         {stats && stats.due > 0 ? (

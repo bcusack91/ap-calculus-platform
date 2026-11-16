@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { CardCheckBanner } from '@/components/CardCheckBanner'
 import dynamic from 'next/dynamic'
 import { ClipboardCheck, ClipboardList, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, School, Mail, AlertTriangle, Gamepad2, CheckCircle2, Circle, Target, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
@@ -580,6 +581,9 @@ function DashboardContent() {
             each input loads from its own endpoint, so a failure of the
             /api/dashboard stats payload must not hide a live session, an
             assigned diagnostic, or due work. */}
+
+        {/* The daily card check, once it can be taken: today's flashcards don't count as done without it. */}
+        <CardCheckBanner onlyWhenEligible refreshKey={dueFlashcards} className="mb-6" />
 
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />

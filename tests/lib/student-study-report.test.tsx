@@ -49,7 +49,7 @@ function emptyMetrics(): StudentMetrics {
       bySource: {
         ENTRANCE: { ...zeroTally }, LESSON: { ...zeroTally }, EXIT: { ...zeroTally }, DIAGNOSTIC: { ...zeroTally },
         PRACTICE: { ...zeroTally }, FULL_LENGTH: { ...zeroTally }, DAILY: { ...zeroTally }, COMPETITIVE: { ...zeroTally },
-        UNIT_TEST: { ...zeroTally }, MISTAKE_REVIEW: { ...zeroTally }, VIDEO_CHECK: { ...zeroTally },
+        UNIT_TEST: { ...zeroTally }, MISTAKE_REVIEW: { ...zeroTally }, VIDEO_CHECK: { ...zeroTally }, CARD_CHECK: { ...zeroTally },
       },
     },
     weakAreas: [],

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { checkedDays } from '@/lib/flashcard-check'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 
 interface Ctx { params: Promise<{ id: string }> }
@@ -114,13 +115,26 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   for (const r of flashcardDays) {
     reviewsByUserDay.set(`${r.userId}|${r.day.toISOString().slice(0, 10)}`, r.reviews)
   }
+  // The daily card check: a day with reviewed cards that have check questions
+  // counts as done only when a completed check covers it (owner, Nov 2026).
+  // Per day: null = no check needed, else whether it was taken and its score.
+  const checks = await checkedDays(userIds, new Date(`${dayKeys[0]}T00:00:00Z`)).catch((err) => {
+    console.error('[engagement] card check days failed (non-fatal):', err)
+    return new Map<string, { day: string; done: boolean; score: string | null }[]>()
+  })
   const flashcards = members.map(m => {
     const days = dayKeys.map(k => reviewsByUserDay.get(`${m.userId}|${k}`) ?? 0)
-    const activeDays = days.filter(n => n > 0).length
+    const mine = checks.get(m.userId) ?? []
+    const checkDays = dayKeys.map(k => {
+      const c = mine.find(x => x.day === k)
+      return c ? { done: c.done, score: c.score } : null
+    })
+    const activeDays = days.filter((n, i) => n > 0 && checkDays[i]?.done !== false).length
     return {
       userId: m.userId,
       name: nameOf.get(m.userId) ?? 'Student',
       days,
+      checkDays,
       activeDays,
       totalReviews: days.reduce((a, b) => a + b, 0),
     }

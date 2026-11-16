@@ -57,6 +57,7 @@ model User {
   flashcardProgress           FlashcardProgress[]
   flashcardDailyActivity      FlashcardDailyActivity[]
   flashcardReviewLogs         FlashcardReviewLog[]
+  flashcardCheckAttempts      FlashcardCheckAttempt[]
   activeTimeDaily             ActiveTimeDaily[]
   questionActivity            QuestionActivity[]
   learningPath                LearningPath?
@@ -452,6 +453,29 @@ model FlashcardProgress {
   @@index([userId, context, nextReview])
 }
 
+/// One daily card check: the multiple-choice quiz on the cards a student
+/// reviewed since their last check (src/lib/flashcard-check.ts). A day's
+/// flashcards count as done only once the check covering them is completed.
+model FlashcardCheckAttempt {
+  id            String    @id @default(cuid())
+  userId        String
+  /// Reviews after this moment are the ones this check covers.
+  windowStart   DateTime
+  /// [{ flashcardId, context, front, topicSlug, rating, order: number[4], chosen: number | null, correct: boolean | null }]
+  /// `order` is the shown order of the authored option indexes.
+  items         Json
+  total         Int
+  correct       Int?
+  /// Cards rated Good or Easy that the student then missed (pulled back to the next day).
+  overconfident Int?
+  startedAt     DateTime  @default(now())
+  completedAt   DateTime?
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, completedAt])
+  @@index([userId, startedAt])
+}
+
 // Teacher-authored flashcard sets (manual, CSV/paste import, or AI-generated).
 // Distinct from the global Flashcard model (which is keyed to a Topic and shared
 // site-wide): a FlashcardSet is OWNED by a teacher and optionally scoped to one
@@ -651,6 +675,8 @@ enum QuestionSource {
   MISTAKE_REVIEW
   /// A checkpoint question after a clip in a video lesson.
   VIDEO_CHECK
+  /// A daily card-check question (the multiple-choice check on that day's flashcards).
+  CARD_CHECK
 }
 
 /// Answered questions. One row per answer where the source knows each answer
@@ -1348,18 +1374,21 @@ model SixSigmaMetrics {
 // ==========================================================================
 
 model Classroom {
-  id          String   @id @default(cuid())
-  name        String
-  description String?
-  joinCode    String   @unique // 6-char code students use to join
-  teacherId   String
-  schoolId    String?
-  subject     String? // e.g., "AP Calculus", "Algebra 1"
-  grade       String? // e.g., "9th", "10th"
-  section     String? // e.g., "Period 3", "Section A" — free-text label for teachers with multiple sections
-  isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id                    String   @id @default(cuid())
+  name                  String
+  description           String?
+  joinCode              String   @unique // 6-char code students use to join
+  teacherId             String
+  schoolId              String?
+  subject               String? // e.g., "AP Calculus", "Algebra 1"
+  grade                 String? // e.g., "9th", "10th"
+  section               String? // e.g., "Period 3", "Section A" — free-text label for teachers with multiple sections
+  isActive              Boolean  @default(true)
+  /// Reviews in a day (repeats count) after which a student with a backlog may
+  /// take the daily card check. NULL = the site default (flashcard-check-core).
+  cardCheckAfterReviews Int?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
 
   teacher           User                   @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
   school            School?                @relation(fields: [schoolId], references: [id])

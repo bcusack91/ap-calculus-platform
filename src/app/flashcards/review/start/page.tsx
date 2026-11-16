@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { NextStudyStepButton } from '@/components/StudyPlanNextUp'
+import { CardCheckBanner } from '@/components/CardCheckBanner'
 import { FLASHCARD_UNLOCK_RULE, topicFlashcardBrowseHref } from '@/lib/flashcard-links'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
@@ -712,6 +713,8 @@ function FlashcardReviewSession() {
               </div>
             )}
 
+            {!topicSlug && !ownOnly && <CardCheckBanner refreshKey={moreToday} className="mb-6" />}
+
             {moreToday === 0 && nextDueLabel && (
               <p className="mb-6 text-gray-700 dark:text-gray-300">
                 Your next review is {nextDueLabel}.
@@ -791,6 +794,8 @@ function FlashcardReviewSession() {
 
         {offlineBanner}
         {noticeBanner}
+        {/* With a backlog, the card check opens after enough reviews (150 unless the class sets another number). */}
+        {!topicSlug && !ownOnly && <CardCheckBanner onlyWhenEligible refreshKey={Math.floor(currentIndex / 10)} className="mb-6" />}
 
         {/* Progress Bar */}
         <div className="mb-8">

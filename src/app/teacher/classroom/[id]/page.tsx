@@ -18,6 +18,7 @@ import StudentReportModal from '@/components/StudentReportModal'
 import ConfirmDialog, { type ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import GroupsPanel from '@/components/teacher/GroupsPanel'
 import ClassFlashcardLimits, { ClassFlashcardLimitsSummary } from '@/components/teacher/ClassFlashcardLimits'
+import ClassCardCheckSetting from '@/components/teacher/ClassCardCheckSetting'
 import ClassGameOptions, {
   DEFAULT_CLASS_GAME,
   classGameRequestBody,
@@ -2155,6 +2156,7 @@ export default function ClassroomDetailPage() {
           {/* Class-wide flashcard daily limits (moved here from Engagement:
               it changes what students get, so it is a setting). */}
           <ClassFlashcardLimits classroomId={classroomId} />
+          <ClassCardCheckSetting classroomId={classroomId} />
           </div>
         )}
       </div>

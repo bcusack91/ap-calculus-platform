@@ -51,6 +51,7 @@ const SOURCE_LABELS: Record<string, string> = {
   DAILY: 'Daily question',
   COMPETITIVE: 'Competitive',
   VIDEO_CHECK: 'Video checkpoint',
+  CARD_CHECK: 'Daily card check',
 }
 
 /** Attempt kinds whose label differs from their answer-log source. */

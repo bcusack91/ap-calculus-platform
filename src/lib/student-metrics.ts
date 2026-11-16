@@ -68,7 +68,7 @@ const SURFACES: ActivitySurface[] = [
   'VIDEO',
   'OTHER',
 ]
-const SOURCES: QuestionSource[] = ['ENTRANCE', 'LESSON', 'EXIT', 'DIAGNOSTIC', 'PRACTICE', 'FULL_LENGTH', 'DAILY', 'COMPETITIVE', 'UNIT_TEST', 'MISTAKE_REVIEW', 'VIDEO_CHECK']
+const SOURCES: QuestionSource[] = ['ENTRANCE', 'LESSON', 'EXIT', 'DIAGNOSTIC', 'PRACTICE', 'FULL_LENGTH', 'DAILY', 'COMPETITIVE', 'UNIT_TEST', 'MISTAKE_REVIEW', 'VIDEO_CHECK', 'CARD_CHECK']
 const RATINGS: FlashcardRating[] = ['AGAIN', 'HARD', 'GOOD', 'EASY']
 
 const zeroBy = <K extends string>(keys: readonly K[]) => Object.fromEntries(keys.map((k) => [k, 0])) as Record<K, number>
