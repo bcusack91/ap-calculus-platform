@@ -1,0 +1,64 @@
+{
+ "key": "mcat-circ3",
+ "video": 5,
+ "stem": "mcat_circ3_c05_capacitance",
+ "topic": "circuits-part3-emf-capacitance",
+ "clips": [
+  {
+   "section": "02-charging",
+   "file": "02-charging.mp4",
+   "seconds": 46.1,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-each-plate",
+   "file": "03-each-plate.mp4",
+   "seconds": 33.7,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-capacitance",
+   "file": "04-capacitance.mp4",
+   "seconds": 50.6,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-fixed",
+   "file": "05-fixed.mp4",
+   "seconds": 43.9,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-plate-geometry",
+   "file": "06-plate-geometry.mp4",
+   "seconds": 52.0,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-change-table",
+   "file": "07-change-table.mp4",
+   "seconds": 53.5,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-uniform-field",
+   "file": "08-uniform-field.mp4",
+   "seconds": 69.2,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-recap",
+   "file": "09-recap.mp4",
+   "seconds": 39.3,
+   "source": "p3 c05 narration v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ3",
+ "video": 3,
+ "stem": "mcat_circ3_c03_meters",
+ "topic": "circuits-part3-emf-capacitance",
+ "clips": [
+  {
+   "section": "02-series",
+   "file": "02-series.mp4",
+   "seconds": 59.5,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-parallel",
+   "file": "03-parallel.mp4",
+   "seconds": 66.0,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-capacity",
+   "file": "04-capacity.mp4",
+   "seconds": 71.6,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-meters",
+   "file": "05-meters.mp4",
+   "seconds": 56.6,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-swapped",
+   "file": "06-swapped.mp4",
+   "seconds": 68.6,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-emf-source",
+   "file": "07-emf-source.mp4",
+   "seconds": 55.6,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 42.1,
+   "source": "p3 c03 Cells v1.mov",
+   "voiced": true
+  }
+ ]
+}

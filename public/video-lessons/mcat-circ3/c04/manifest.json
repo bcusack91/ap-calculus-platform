@@ -1,0 +1,43 @@
+{
+ "key": "mcat-circ3",
+ "video": 4,
+ "stem": "mcat_circ3_c04_meters_examples",
+ "topic": "circuits-part3-emf-capacitance",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 49.7,
+   "source": "p3 c04 Cells Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 141.8,
+   "source": "p3 c04 Cells Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 47.5,
+   "source": "p3 c04 Cells Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 107.6,
+   "source": "p3 c04 Cells Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 30.184,
+   "source": "p3 c04 Cells Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -1,6 +1,7 @@
 import type { ReviewCard, ReviewCardLookup } from '@/lib/video-lesson-core'
 import { decks as mcatCirc1 } from './mcat-circ1'
 import { decks as mcatCirc2 } from './mcat-circ2'
+import { decks as mcatCirc3 } from './mcat-circ3'
 
 /**
  * Review flashcards for section-based video lessons, by lesson key (the
@@ -19,6 +20,7 @@ import { decks as mcatCirc2 } from './mcat-circ2'
 export const REVIEW_DECKS: Record<string, Record<number, ReviewCard[]>> = {
   'mcat-circ1': mcatCirc1,
   'mcat-circ2': mcatCirc2,
+  'mcat-circ3': mcatCirc3,
 }
 
 export const reviewCardsFor: ReviewCardLookup = (lessonKey, video) => REVIEW_DECKS[lessonKey]?.[video]

@@ -1,0 +1,71 @@
+{
+ "key": "mcat-circ3",
+ "video": 7,
+ "stem": "mcat_circ3_c07_dielectrics",
+ "topic": "circuits-part3-emf-capacitance",
+ "clips": [
+  {
+   "section": "02-polarize",
+   "file": "02-polarize.mp4",
+   "seconds": 44.4,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-kappa",
+   "file": "03-kappa.mp4",
+   "seconds": 55.8,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-breakdown",
+   "file": "04-breakdown.mp4",
+   "seconds": 45.3,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-energy",
+   "file": "05-energy.mp4",
+   "seconds": 60.5,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-what-is-fixed",
+   "file": "06-what-is-fixed.mp4",
+   "seconds": 59.2,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-table",
+   "file": "07-table.mp4",
+   "seconds": 49.1,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-pull-apart",
+   "file": "08-pull-apart.mp4",
+   "seconds": 38.9,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-half-heat",
+   "file": "09-half-heat.mp4",
+   "seconds": 42.4,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "10-recap",
+   "file": "10-recap.mp4",
+   "seconds": 43.6,
+   "source": "p3 c07 Dielectrics and Energy v1.mov",
+   "voiced": true
+  }
+ ]
+}
