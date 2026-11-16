@@ -42,13 +42,15 @@ export const LESSON: LessonSpec = {
       video: 1,
       sections: [
         { id: '02-opening', title: 'Making the battery real', role: 'teach' },
-        { id: '03-emf', title: 'EMF: the work done per coulomb', role: 'teach' },
+        { id: '03-emf', title: 'EMF: the work done per coulomb', role: 'teach', questions: [RECAP[1][0]] },
+        // One question per regular section, spread over the 2nd, 4th and 6th clips
+        // (owner, 2026-11-16); each sits on the clip that teaches it. The loaded
+        // (headlights), shorted and energy-split questions are the recap.
         { id: '04-internal-r', title: 'A real battery: EMF plus internal resistance', role: 'teach' },
-        // The section walks open → loaded (headlights) → shorted → charging; the questions follow that order.
-        { id: '05-four-cases', title: 'Four cases: open, loaded, shorted, charging', role: 'teach', questions: [plan(1, 0), plan(1, 2), plan(1, 1)] },
+        { id: '05-four-cases', title: 'Four cases: open, loaded, shorted, charging', role: 'teach', questions: [plan(1, 1)] },
         { id: '06-energy', title: 'Where the energy goes', role: 'teach' },
-        { id: '07-aging', title: 'Why an old battery fools a voltmeter', role: 'teach' },
-        { id: '08-recap', title: 'Remember', role: 'teach', questions: RECAP[1] },
+        { id: '07-aging', title: 'Why an old battery fools a voltmeter', role: 'teach', questions: [RECAP[1][2]] },
+        { id: '08-recap', title: 'Remember', role: 'teach', questions: [plan(1, 0), plan(1, 2), RECAP[1][1]] },
       ],
     },
     {

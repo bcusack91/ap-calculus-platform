@@ -41,15 +41,17 @@ export const LESSON: LessonSpec = {
       video: 1,
       sections: [
         { id: '02-charge', title: 'Charge comes in packets', role: 'teach' },
-        { id: '03-rate', title: 'Current is a rate', role: 'teach' },
+        // Questions sit on the 2nd, 4th and 6th clips so they are spread through the
+        // video (owner, 2026-11-16); the two later ones moved into the recap.
+        { id: '03-rate', title: 'Current is a rate', role: 'teach', questions: [RECAP[1][0]] },
         { id: '04-rearrange', title: 'Rearranging I = ΔQ/Δt', role: 'teach' },
-        { id: '05-direction', title: 'Which way current points', role: 'teach' },
+        { id: '05-direction', title: 'Which way current points', role: 'teach', questions: [RECAP[1][1]] },
         { id: '06-same-current', title: 'Same current, opposite carriers', role: 'teach' },
         { id: '07-instant', title: 'Why a lamp lights instantly', role: 'teach', questions: [plan(1, 2)] },
-        { id: '08-electrolytes', title: 'Ions carry current too', role: 'teach', questions: [plan(1, 0)] },
-        { id: '09-heating', title: 'Heating: metals vs solutions', role: 'teach', questions: [plan(1, 1)] },
+        { id: '08-electrolytes', title: 'Ions carry current too', role: 'teach' },
+        { id: '09-heating', title: 'Heating: metals vs solutions', role: 'teach' },
         { id: '10-compare', title: 'Metal vs electrolyte', role: 'teach' },
-        { id: '11-recap', title: 'Remember', role: 'teach', questions: RECAP[1] },
+        { id: '11-recap', title: 'Remember', role: 'teach', questions: [RECAP[1][2], plan(1, 0), plan(1, 1)] },
       ],
     },
     {
