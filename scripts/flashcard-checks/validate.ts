@@ -1,21 +1,21 @@
 /**
- * Gate for a video deck's card-check questions (src/data/flashcard-checks/<key>.ts):
+ * Gate for one set of card-check questions (a video deck or a topic's cards; see sets.ts):
  * one question per card, well formed, no answer-length tell, keys spread over
  * the four positions, and not a copy of a question the student already meets
  * (run dump-context.ts first; it writes <outDir>/<key>-existing-questions.json).
  *
- *   npx tsx scripts/flashcard-checks/validate.ts mcat-circ1 <outDir>
+ *   npx tsx scripts/flashcard-checks/validate.ts <lessonKey | topicSlug> <outDir>
  */
 import { readFileSync } from 'fs'
-import { REVIEW_DECKS } from '../../src/data/video-lesson-flashcards'
+import { loadChecks, loadFronts } from './sets'
 import { checkKey, type CardCheck } from '../../src/lib/flashcard-check-core'
 import { termsOf } from '../../src/lib/text-terms'
 
 async function main() {
   const [key, out] = process.argv.slice(2)
-  const { checks } = (await import(`../../src/data/flashcard-checks/${key}`)) as { checks: Record<string, CardCheck> }
+  const checks = await loadChecks(key)
   const existing = JSON.parse(readFileSync(`${out}/${key}-existing-questions.json`, 'utf8')) as { src: string; question: string }[]
-  const fronts = [...new Set(Object.values(REVIEW_DECKS[key]).flat().map((c) => checkKey(c.front)))]
+  const fronts = [...new Set(loadFronts(key, out).map((f) => checkKey(f)))]
   const byKey = new Map(Object.entries(checks).map(([f, c]) => [checkKey(f), c]))
   const errs: string[] = []
   const warns: string[] = []

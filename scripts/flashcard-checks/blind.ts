@@ -8,11 +8,11 @@
  * with the key, or a solver note that a question is ambiguous, is reviewed by hand.
  */
 import { readFileSync, writeFileSync } from 'fs'
-import type { CardCheck } from '../../src/lib/flashcard-check-core'
+import { loadChecks } from './sets'
 
 async function main() {
   const [mode, key, out] = process.argv.slice(2)
-  const { checks } = (await import(`../../src/data/flashcard-checks/${key}`)) as { checks: Record<string, CardCheck> }
+  const checks = await loadChecks(key)
   const list = Object.entries(checks)
   if (mode === 'export') {
     writeFileSync(`${out}/${key}-keyless.json`, JSON.stringify(list.map(([, c], n) => ({ n, question: c.question, options: c.options })), null, 1))
