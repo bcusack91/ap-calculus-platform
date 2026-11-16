@@ -1,0 +1,572 @@
+import type { CardCheck } from '@/lib/flashcard-check-core'
+
+/**
+ * Card-check questions for the cards of `mcat-molecular-biology-biotechnology-mcat`:
+ * one per card, keyed by the card's exact front text. Each asks the student to use
+ * the card's idea in a new situation. Gate: scripts/flashcard-checks/validate.ts.
+ */
+const r = String.raw
+
+export const checks: Record<string, CardCheck> = {
+  [r`What are the three steps of a PCR cycle?`]: {
+    question: r`A thermal cycler is programmed so that each cycle runs 55 C, then 72 C, then 95 C, in that order. Starting from double-stranded genomic DNA, why does the first cycle produce almost no product?`,
+    options: [
+      r`The primers have no single-stranded template to anneal to until the strands are separated`,
+      r`The polymerase cannot add nucleotides to a primer at a temperature as high as 72 C`,
+      r`The free nucleotides are destroyed at 55 C before the polymerase can use them`,
+      r`The target sequence is copied twice in one cycle, so the products cancel out`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Denaturation must come first: at 55 C the genomic DNA is still double-stranded, so primers cannot find an exposed complementary strand and extension has nothing to start from. 72 C is the polymerase's optimum, not a temperature that stops it, and nucleotides are stable at 55 C. Each cycle doubles the target at most, so nothing "cancels out".`,
+  },
+  [r`How does Sanger sequencing work?`]: {
+    question: r`A sequencing reaction is assembled with template, one primer, polymerase, and all four normal dNTPs, but the labeled dideoxynucleotides are accidentally left out. What does the separation step show?`,
+    options: [
+      r`A ladder of fragments of every length, but none of them carrying a label`,
+      r`Four products, one ending at each kind of base near the primer`,
+      r`One long product of full template length, which reports no sequence`,
+      r`No product at all, because synthesis cannot start without a terminator`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Sanger sequencing reads the base at each position from fragments that stop there, and only a ddNTP can stop extension. With dNTPs alone, every strand is copied to the end of the template, giving a single full-length product and no positional information. Synthesis still starts normally, so "no product" is wrong, and without terminators there is no ladder to label.`,
+  },
+  [r`What do restriction enzymes and ligase do?`]: {
+    question: r`A gene is cut out with a different enzyme at each end, and the vector is cut with those same two enzymes. Compared with using one enzyme on both ends, this change mainly:`,
+    options: [
+      r`Removes the need for ligase, since matched overhangs seal themselves`,
+      r`Forces the insert in one orientation and blocks simple vector re-closing`,
+      r`Converts the sticky overhangs to blunt ends before the joining step`,
+      r`Raises the number of plasmid copies each transformed cell will carry`,
+    ],
+    correctAnswer: 1,
+    explanation: r`With two different ends, each end of the insert can pair with only one end of the vector, so the gene goes in one way round, and the vector's own two ends are not complementary to each other. Ligase is still needed to form the phosphodiester bonds, the ends stay sticky, and copy number is set by the origin of replication, not by the cutting scheme.`,
+  },
+  [r`What is reverse transcriptase used for in the lab?`]: {
+    question: r`A human gene spans 8 kb of chromosomal DNA, but the clone made from that gene's mature mRNA is only 1.5 kb. The best explanation for the difference is that the clone:`,
+    options: [
+      r`Was copied by an enzyme that stops after about 1,500 nucleotides`,
+      r`Represents one of the two strands, so it holds half the sequence`,
+      r`Lost the regions that are removed from the message before export`,
+      r`Was shortened during electrophoresis, which underestimates its size`,
+    ],
+    correctAnswer: 2,
+    explanation: r`cDNA is made by reverse-transcribing mature mRNA, from which introns have already been spliced out, so it holds only the exons and is much shorter than the genomic locus. Reverse transcriptase has no 1.5 kb limit, length in base pairs is not halved by considering one strand, and a gel measures size rather than changing it.`,
+  },
+  [r`How does CRISPR-Cas9 achieve targeted editing?`]: {
+    question: r`A guide RNA is designed against a 20-nucleotide stretch that, unknown to the designer, appears at three separate places in the genome, each with a suitable adjacent motif. The expected result is:`,
+    options: [
+      r`Breaks at all three sites, since the guide cannot distinguish them`,
+      r`A break only at the intended gene, because the others are not expressed`,
+      r`A break at whichever of the three sites the enzyme reaches first`,
+      r`No cutting anywhere, because the guide has more than one partner`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Targeting is decided by base pairing between the guide and the DNA, so every site that matches the guide is a substrate, which is exactly why off-target cutting is a design worry. Transcription does not shield a sequence from the nuclease, many enzyme molecules act at many sites rather than just one, and a repeated match does not block binding.`,
+  },
+  [r`What is a knockout vs. transgenic organism?`]: {
+    question: r`Line 1 mice carry an added human amyloid gene and develop plaques. Line 2 mice have their own amyloid gene disrupted and make no plaques. These two lines are, in order:`,
+    options: [
+      r`Both knockouts, since each line's amyloid phenotype was changed`,
+      r`A knockout and then a transgenic line, judged by the plaque result`,
+      r`A transgenic line and then a knockout line, judged by the change made`,
+      r`Both transgenic, since both were produced by genetic engineering`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Adding a foreign gene makes a transgenic animal, while disabling an endogenous gene makes a knockout, so line 1 is transgenic and line 2 is a knockout. The labels describe the genetic change, not which line shows the striking phenotype, and not every engineered animal is transgenic.`,
+  },
+  [r`Why are plasmids useful vectors?`]: {
+    question: r`After transformation, a student spreads the bacteria on plain nutrient agar with no antibiotic added. The main problem with the plate that results is that:`,
+    options: [
+      r`The plasmid cannot replicate unless the antibiotic is present`,
+      r`The inserted gene is lost from every colony within one generation`,
+      r`Colonies grow only where two plasmids entered the same cell`,
+      r`Cells that took up no plasmid grow too, so carriers cannot be told apart`,
+    ],
+    correctAnswer: 3,
+    explanation: r`A plasmid's selectable marker is useful only when the selective agent is in the plate: without it, the overwhelming majority of cells, which took up nothing, form colonies alongside the rare transformants. Replication depends on the origin rather than on the drug, the insert is copied along with the plasmid, and a single plasmid per cell is enough.`,
+  },
+  [r`What does ELISA detect and how?`]: {
+    question: r`In an antibody-based plate assay for one protein, the positive control well turns deep yellow while a patient well stays colorless. The best reading of that patient well is:`,
+    options: [
+      r`The enzyme-linked antibody was left out of the whole plate`,
+      r`The target protein is absent or below the assay's detection limit`,
+      r`The target was so abundant that the enzyme used up the substrate`,
+      r`The plate was read before any antibody could bind its target`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Color is produced by an enzyme carried in on an antibody that binds the target, so signal tracks the amount of target and a colorless well means very little target was captured. The strong positive control proves the detection antibody, the substrate, and the reading time were all fine, which rules out the three failure explanations.`,
+  },
+  [r`Which antibiotic targets the bacterial 30S ribosomal subunit?`]: {
+    question: r`A bacterial strain carries an altered small (30S) subunit that no longer binds tetracycline, while its large subunit is unchanged. Which drug should still block translation in this strain?`,
+    options: [
+      r`Tetracycline, provided the dose given is raised several fold`,
+      r`No drug, because both subunits are needed for any inhibitor to work`,
+      r`A macrolide such as erythromycin, which acts on the large subunit`,
+      r`A second tetracycline-class drug, since the class has many members`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Tetracyclines act on the 30S subunit, so a 30S change that abolishes binding protects the ribosome from the whole class however much is given. Macrolides bind the 50S subunit, which this strain has not altered, so they remain effective; inhibitors act at one subunit, not at both.`,
+  },
+  [r`Order the secretory pathway correctly:`]: {
+    question: r`A drug blocks vesicles from budding off the trans face of the Golgi. A protein made with a signal sequence after the drug is added will most likely be found:`,
+    options: [
+      r`In the Golgi, having already moved there from the rough ER`,
+      r`Free in the cytosol, since entry into the pathway also fails`,
+      r`Inside the nucleus, which receives the stalled protein instead`,
+      r`Outside the cell, by a route that bypasses the blocked step`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Traffic runs rough ER to Golgi to vesicle to membrane, so blocking the exit from the trans face traps the protein at the Golgi after normal ER entry and transfer. The signal sequence still sends it into the ER rather than leaving it in the cytosol, nuclear import is unrelated, and a blocked exit means it cannot be released.`,
+  },
+  [r`Homologous chromosomes differ from sister chromatids in that homologs:`]: {
+    question: r`A cell heterozygous at a locus (alleles B and b) has just finished copying its DNA. Comparing the two sister chromatids of one chromosome with the two homologs of that pair:`,
+    options: [
+      r`Both sisters and both homologs carry one copy of B and one of b`,
+      r`The sisters carry the same allele, while the homologs differ at that locus`,
+      r`The sisters differ at that locus, while the two homologs match each other`,
+      r`Only the homologs are attached at a centromere, so only they can differ`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Sister chromatids are the two identical products of copying one chromosome, so both carry whichever allele that chromosome had, while homologs came from different parents and can carry different alleles. Replication copies rather than mixes alleles, so the sisters cannot differ, and sister chromatids are the pair joined at a centromere.`,
+  },
+  [r`Alternative splicing allows one gene to:`]: {
+    question: r`Two tissues make proteins of 320 and 280 amino acids that share their first and last stretches, and the gene's DNA sequence is identical in both tissues. The best explanation is that:`,
+    options: [
+      r`Each tissue expresses a different allele of this gene`,
+      r`A frameshift in one tissue removed 40 codons from the message`,
+      r`Two separate genes with similar ends are expressed in the two tissues`,
+      r`One transcript is processed two ways, so different exon sets are kept`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Alternative splicing lets one gene yield several isoforms, which fits shared ends, a size difference in the middle, and identical DNA. Different alleles would not change protein length this way, a frameshift would scramble the downstream sequence rather than trim a block, and identical DNA plus shared ends points to one locus rather than two.`,
+  },
+  [r`Prokaryotes lack:`]: {
+    question: r`A biologist notes that in bacteria a ribosome can start translating a message while that message is still being made. The structural feature that makes this possible is that bacteria have no:`,
+    options: [
+      r`Envelope separating the DNA from the ribosomes in the cytoplasm`,
+      r`Ribosomes small enough to bind a message before it is finished`,
+      r`Enzyme capable of copying DNA into a message at a steady rate`,
+      r`Need for a message, since their ribosomes can read DNA directly`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Bacterial DNA sits in the cytoplasm as a nucleoid with no nuclear envelope, so transcription and translation happen in the same compartment and can overlap in time. Eukaryotes must export the message first. Bacteria do have ribosomes and an RNA polymerase, and ribosomes read RNA rather than DNA.`,
+  },
+  [r`Gap junctions permit:`]: {
+    question: r`A compound that plugs the channels linking adjacent cardiac muscle cells is applied to a strip of heart tissue. The most direct consequence is that:`,
+    options: [
+      r`The cells pull apart, since these channels are what holds them together`,
+      r`Secreted hormones can no longer reach the surface of the cells`,
+      r`A wave of depolarization no longer passes directly from cell to cell`,
+      r`Large proteins stop moving between the cytoplasms of the cells`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Gap junctions let ions and small molecules pass straight between cytoplasms, which is how cardiac cells are electrically coupled, so plugging them stops the spread of depolarization. Mechanical attachment is the job of desmosomes, hormone diffusion outside the cells is unaffected, and these channels never passed large proteins to begin with.`,
+  },
+  [r`Which membrane is impermeable to most ions, creating the proton gradient?`]: {
+    question: r`A compound inserted into mitochondria lets protons cross the inner membrane freely without passing through ATP synthase. The expected result is that:`,
+    options: [
+      r`Oxygen consumption stops while the proton gradient keeps building`,
+      r`The outer membrane becomes the barrier that stores the gradient instead`,
+      r`Protons accumulate in the matrix, raising ATP output per oxygen used`,
+      r`The gradient collapses, so electron transport continues but yields less ATP`,
+    ],
+    correctAnswer: 3,
+    explanation: r`The gradient exists only because the inner membrane is impermeable to protons, so a leak path dissipates it and the energy appears as heat rather than driving ATP synthase, while electron transport runs on. Oxygen use actually rises, the outer membrane is leaky by virtue of porins, and protons are pumped out of the matrix, not into it.`,
+  },
+  [r`How does RFLP analysis reveal the sickle cell mutation on a Southern blot?`]: {
+    question: r`In a family study, the normal beta-globin allele gives bands of 1.1 kb and 0.2 kb after digestion, while the mutant allele gives a single 1.3 kb band. A person whose blot shows only a 1.3 kb band is:`,
+    options: [
+      r`Homozygous for the mutant allele, having no intact cut site`,
+      r`A carrier, since one allele still provides the larger fragment`,
+      r`Homozygous normal, with the two smaller pieces run together`,
+      r`Untypeable, because a single band means the DNA was degraded`,
+    ],
+    correctAnswer: 0,
+    explanation: r`The mutation destroys the internal cut site, so an allele carrying it stays as one 1.3 kb piece; seeing that band alone means both alleles lack the site. A carrier would show 1.3, 1.1 and 0.2 kb together, a homozygous normal person only 1.1 and 0.2 kb, and degraded DNA gives a smear rather than one sharp band of the expected mutant size.`,
+  },
+  [r`Sanger sequencing terminates chains because ddNTPs lack a {{c1::3'-OH group}}, so no further phosphodiester bond can form.`]: {
+    question: r`A nucleotide analog has a normal triphosphate but no hydroxyl on the sugar carbon used to attack the next incoming nucleotide. During copying of a template, this analog:`,
+    options: [
+      r`Cannot be joined to the growing strand at any position`,
+      r`Is joined to the strand, after which that strand cannot be extended`,
+      r`Is joined, then removed again, so the strand keeps growing normally`,
+      r`Blocks only the opposite strand, which is copied in the other direction`,
+    ],
+    correctAnswer: 1,
+    explanation: r`The incoming nucleotide's triphosphate is attacked by the 3'-OH of the strand already built, so an analog with an intact triphosphate can be added but then offers no 3'-OH for the next bond, ending that chain. That is exactly why these analogs are incorporated and why termination is permanent in a reaction with no proofreading removal.`,
+  },
+  [r`What distinguishes next-generation sequencing from Sanger sequencing in design and throughput?`]: {
+    question: r`A student needs to confirm that a single 600 bp insert in one plasmid clone has no unintended changes. Which choice fits the job best, and why?`,
+    options: [
+      r`Massively parallel short-read sequencing, since more reads means more accuracy`,
+      r`Massively parallel sequencing, because short inserts cannot be read any other way`,
+      r`One classic dideoxy reaction, which reads this length accurately in a single run`,
+      r`Neither method, because sequencing cannot detect single-base changes in a clone`,
+    ],
+    correctAnswer: 2,
+    explanation: r`A classic dideoxy reaction reads one template per reaction and gives a long, accurate read, which is all a single 600 bp insert needs. Parallel short-read platforms are built for millions of fragments at once and would be wasted effort here, short inserts read perfectly well by the classic method, and sequencing is precisely how point changes are found.`,
+  },
+  [r`Cas9 cuts DNA only where the guide RNA matches a sequence immediately adjacent to a {{c1::PAM (protospacer adjacent motif, e.g., NGG)}}.`]: {
+    question: r`A candidate target matches a designed guide over all 20 bases, but the three bases just downstream read AAT. Editing fails at this site. The most sensible next design step is to:`,
+    options: [
+      r`Lengthen the guide so that it covers the AAT bases as well`,
+      r`Keep the guide and supply more of the nuclease to force a cut`,
+      r`Mutate the guide's final bases so they pair with AAT instead`,
+      r`Pick a nearby stretch whose downstream bases read NGG and retarget it`,
+    ],
+    correctAnswer: 3,
+    explanation: r`The nuclease requires a short recognition motif such as NGG right beside the matched sequence, so a site flanked by AAT is not cut no matter how good the pairing is. Shifting the guide to an overlapping stretch with a proper motif solves it; lengthening the guide, adding more enzyme, or changing the guide to pair with those bases does not create the motif.`,
+  },
+  [r`Why is Taq polymerase used in PCR, and what fidelity trade-off does it carry?`]: {
+    question: r`A group will amplify a 2 kb exon and sequence the product to look for a patient's single-base change. Relying on the standard thermostable polymerase from a hot-spring bacterium is risky mainly because it:`,
+    options: [
+      r`Introduces its own errors, which can appear as a change in the product`,
+      r`Is destroyed by the high-temperature step and must be added each cycle`,
+      r`Cannot copy a template as long as two thousand base pairs in one pass`,
+      r`Needs a separate enzyme to open the strands before it can copy them`,
+    ],
+    correctAnswer: 0,
+    explanation: r`That polymerase has no 3' to 5' proofreading exonuclease, so misincorporated bases stay in the product and can be mistaken for a patient's variant, which is why error-critical work uses a proofreading enzyme. Its selling point is surviving repeated denaturation, 2 kb is well within its reach, and the heat step, not a helicase, separates the strands.`,
+  },
+  [r`How do the two PCR primers define exactly which region gets amplified?`]: {
+    question: r`On a long template, the forward primer pairs with bases 101 to 120 and the reverse primer pairs with bases 581 to 600. How long is the amplified product?`,
+    options: [
+      r`420 base pairs, the gap between the two primer binding sites`,
+      r`500 base pairs, measured from base 101 through base 600`,
+      r`480 base pairs, measured from base 121 through base 600`,
+      r`460 base pairs, measured from base 121 through base 580`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Each primer is incorporated into the product and is extended across the target, so the amplicon runs from the 5' end of one primer to the 5' end of the other, here base 101 to base 600, giving 500 bp. The other values come from leaving out one or both primer sequences, or from counting only the unprimed gap between them.`,
+  },
+  [r`RT-PCR first uses {{c1::reverse transcriptase}} to copy RNA into cDNA before amplification.`]: {
+    question: r`In an experiment measuring a transcript, a control tube receives the RNA sample and all amplification components but no reverse transcriptase. That tube gives a strong product band. The best conclusion is that:`,
+    options: [
+      r`Reverse transcriptase is not needed, since RNA primes the reaction`,
+      r`The amplifying polymerase supplied the missing activity in that tube`,
+      r`The RNA preparation is contaminated with DNA from the same gene`,
+      r`The transcript is unusually abundant in the tissue that was sampled`,
+    ],
+    correctAnswer: 2,
+    explanation: r`The amplifying polymerase needs a DNA template, so with no reverse transcription step a product can only come from DNA already in the sample, which marks the preparation as contaminated with genomic DNA. That is the whole point of the no-enzyme control: a clean RNA sample gives no band, and abundance of the transcript cannot rescue a reaction that cannot read RNA.`,
+  },
+  [r`After $n$ PCR cycles the theoretical yield is {{c1::$2^n$}} copies per template molecule.`]: {
+    question: r`A reaction starts with 5 molecules of target and runs 10 cycles with all components in excess throughout. About how many copies of the target are present at the end?`,
+    options: [
+      r`About 5,000 copies, since each starting molecule yields about a thousand`,
+      r`About 1,000 copies in total, set by the number of cycles alone`,
+      r`About 50 copies, since each cycle adds one copy per molecule`,
+      r`About 500,000 copies, since yield grows with the square of the cycles`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Each template gives 2^n copies, and 2^10 is about 1,000, so 5 templates give roughly 5,000 copies. Ignoring the starting number gives 1,000, treating growth as additive gives about 50, and yield rises exponentially with cycle number rather than as a power of it.`,
+  },
+  [r`During gel electrophoresis, DNA migrates toward the {{c1::anode (positive electrode)}} because its phosphate backbone is uniformly negative.`]: {
+    question: r`A student pours a gel but seats the comb at the end nearest the positive electrode, then loads samples and runs the gel as usual. What happens to the DNA?`,
+    options: [
+      r`It stays in the wells, since the pull from each electrode cancels out`,
+      r`It separates normally, because size sorting does not depend on direction`,
+      r`It migrates out of the gel at the near edge, leaving no bands to read`,
+      r`It moves toward the far electrode but the largest fragments run first`,
+    ],
+    correctAnswer: 2,
+    explanation: r`DNA's backbone is negative at the usual buffer pH, so it always travels toward the positive electrode; with the wells placed on that side, the samples run off the near edge instead of through the matrix. Nothing cancels the field, the gel cannot sort what has left it, and small fragments always lead, not large ones.`,
+  },
+  [r`SDS coats proteins with uniform negative charge and denatures them, so SDS-PAGE separates by {{c1::molecular mass}} alone.`]: {
+    question: r`A 120 kDa protein is two 60 kDa subunits held together by one disulfide bond. It is run twice in the detergent gel system, once with a reducing agent added and once without. The two lanes show:`,
+    options: [
+      r`120 kDa with the reducing agent, and 60 kDa without it`,
+      r`60 kDa with the reducing agent, and 120 kDa without it`,
+      r`60 kDa in both lanes, since the detergent alone splits subunits`,
+      r`120 kDa in both lanes, since reducing agents do not alter mass`,
+    ],
+    correctAnswer: 1,
+    explanation: r`The detergent coats and unfolds the protein so migration reports mass, but only a reducing agent breaks the covalent disulfide, releasing two 60 kDa subunits that each run at 60 kDa. Without reduction the link holds and the complex runs at 120 kDa, so neither lane is unchanged and the two results are not the other way round.`,
+  },
+  [r`In a Western blot, what do the primary and secondary antibodies each do?`]: {
+    question: r`A protein blot is incubated with the enzyme-linked secondary antibody but the primary antibody is deliberately left out. Several bands still appear. The result shows that:`,
+    options: [
+      r`The secondary antibody binds something on the membrane on its own`,
+      r`The primary antibody is unnecessary whenever the target is abundant`,
+      r`The bands represent the target, detected directly by the secondary`,
+      r`The enzyme on the secondary antibody has lost its specificity for substrate`,
+    ],
+    correctAnswer: 0,
+    explanation: r`The secondary antibody is meant to bind only the primary, so signal without a primary means it is sticking to blotted proteins or the membrane itself, and any real experiment's bands are suspect until that is fixed. The secondary has no affinity for the target, so the bands are not a valid readout, and substrate specificity is not what this control tests.`,
+  },
+  [r`How does a bacterium avoid shredding its own genome with the restriction enzymes it produces?`]: {
+    question: r`A bacterium makes a restriction enzyme and the paired methyltransferase that marks the host's own sites. If the methyltransferase gene is deleted but the enzyme is still made, the cell will:`,
+    options: [
+      r`Lose the ability to cut incoming phage DNA while its genome is spared`,
+      r`Cut its own chromosome at those sites, since the protective mark is gone`,
+      r`Continue as before, because the mark is added by the enzyme itself`,
+      r`Stop making the enzyme, which is only expressed alongside the mark`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Self-protection comes from methylating the host's recognition sites, so without that mark the cell's own chromosome becomes a substrate for the enzyme it is still producing. Phage DNA arrives unmethylated and is cut either way, the nuclease does not add the mark, and the two genes are separate functions rather than one being required for the other's expression.`,
+  },
+  [r`DNA ligase seals the nick between fragments by forming a phosphodiester bond, consuming {{c1::ATP (or NAD+ in E. coli)}}.`]: {
+    question: r`Insert and vector with matching sticky ends are mixed with ligase, but the reaction is set up in a buffer that contains no ATP. The most likely outcome is that:`,
+    options: [
+      r`The overhangs pair but the backbone nicks stay open, so few clones appear`,
+      r`The overhangs cannot pair at all, because pairing is what needs the energy`,
+      r`Joining proceeds normally, since base pairing holds the junction together`,
+      r`The ligase instead cuts the overhangs back, leaving blunt ends behind`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Ligase uses ATP to activate the 5' phosphate before the adjacent 3'-OH attacks it, so with no ATP the complementary overhangs still pair transiently but the covalent bonds are never formed and the molecule falls apart. Base pairing itself needs no ATP, so pairing is not the failed step, and ligase has no cutting activity.`,
+  },
+  [r`To overexpress a human protein in E. coli, what must the vector add beyond ori and marker — and why must the insert be cDNA?`]: {
+    question: r`A human cDNA is cloned into a plasmid carrying only an origin, an ampicillin resistance gene, and a cloning site. Transformed colonies grow and contain the insert, but make none of the protein. The reason is that the construct lacks:`,
+    options: [
+      r`An origin positioned upstream of the insert rather than downstream`,
+      r`A second resistance gene to keep the insert from being lost`,
+      r`The introns the bacterium needs in order to process the message`,
+      r`A bacterial promoter and ribosome binding site ahead of the insert`,
+    ],
+    correctAnswer: 3,
+    explanation: r`A cloning plasmid only propagates and selects; expression also needs a promoter the bacterial polymerase recognizes plus a Shine-Dalgarno sequence so a ribosome can initiate. The origin's position is irrelevant to transcription, one marker suffices under selection, and bacteria cannot splice, which is why intron-free cDNA was the right insert.`,
+  },
+  [r`Why does an oligo-dT primer selectively initiate reverse transcription of mRNA?`]: {
+    question: r`A team wants cDNA from a bacterial transcript. They use a primer made of about 20 T residues, as in their usual human work, and recover almost no cDNA. The best fix is to:`,
+    options: [
+      r`Prime with random short oligonucleotides, as these transcripts lack poly-A`,
+      r`Lengthen the T primer so that it can pair with the transcript's 3' end`,
+      r`Add the T primer in large excess and extend the reaction time`,
+      r`Treat the sample to add a poly-T tail to each transcript first`,
+    ],
+    correctAnswer: 0,
+    explanation: r`A string of T residues primes by pairing with the poly-A tail, which bacterial transcripts do not carry, so random hexamers that anneal anywhere along the RNA are the standard alternative. A longer T primer has nothing to pair with, more primer and time cannot create a missing site, and the tail that is absent is poly-A, not poly-T.`,
+  },
+  [r`In an indirect ELISA (e.g., HIV screen), the plate is coated with {{c1::antigen}}; bound patient antibody is detected by an enzyme-linked secondary antibody.`]: {
+    question: r`A clinic wants to know whether vaccinated people have mounted an antibody response to one viral protein. Which plate design answers that question?`,
+    options: [
+      r`Coat the wells with the patient's serum, then add enzyme-linked viral protein`,
+      r`Coat the wells with antibody to the virus, then add the patient's serum`,
+      r`Coat the wells with the patient's serum, then add unlabeled viral protein`,
+      r`Coat the wells with the viral protein, then detect bound patient antibody`,
+    ],
+    correctAnswer: 3,
+    explanation: r`The indirect format puts the antigen on the plate so that any patient antibody against it is captured, and an enzyme-linked antibody against human immunoglobulin reports how much was bound. Coating with serum or with anti-viral antibody instead turns the assay into a search for antigen, and an unlabeled reagent produces no color at all.`,
+  },
+  [r`How does a sandwich ELISA quantify an antigen such as hCG?`]: {
+    question: r`A sandwich-format assay is developed for a 300 Da steroid drug, but it gives no signal at any drug concentration, while the same antibodies detect the drug on a protein carrier. The best explanation is that the free drug:`,
+    options: [
+      r`Is destroyed by the enzyme on the detection antibody during the assay`,
+      r`Is too small to be held by a capture and a detection antibody at once`,
+      r`Diffuses out of the well faster than either antibody can bind it`,
+      r`Binds the plate surface directly, so no antibody is needed to hold it`,
+    ],
+    correctAnswer: 1,
+    explanation: r`The sandwich design needs an analyte large enough to present two epitopes simultaneously, one for the plate-bound capture antibody and one for the labeled detection antibody, which a few-hundred-dalton molecule cannot do; on a carrier it can. The reporting enzyme acts on its own substrate, and washing and plate binding are not what sets this limit.`,
+  },
+  [r`In a competitive ELISA, signal is {{c1::inversely}} proportional to analyte concentration.`]: {
+    question: r`Four patient samples are run in a competitive-format assay for a hormone. Sample W is deep colored, X is moderate, Y is faint, and Z is nearly colorless. Which sample contains the most hormone?`,
+    options: [
+      r`Sample W, because the strongest color marks the most captured label`,
+      r`Sample X, because mid-range color marks the middle of the curve`,
+      r`Sample Z, because its hormone displaced nearly all of the label`,
+      r`None can be ranked, since color is not related to concentration here`,
+    ],
+    correctAnswer: 2,
+    explanation: r`In a competitive assay the patient's analyte competes with labeled antigen for a limited amount of antibody, so the more analyte present, the less label is captured and the weaker the color: the nearly colorless well holds the most hormone. Reading the strongest color as the most analyte applies the sandwich logic by mistake, and the relationship is real, just inverse.`,
+  },
+  [r`Raising temperature or lowering salt during hybridization increases {{c1::stringency}}, so probes remain bound only to perfect matches.`]: {
+    question: r`A labeled probe for one gene is used on a blot and gives six bands, most of them from related family members. To see only the exact target, the washes should be done:`,
+    options: [
+      r`At lower temperature in higher salt, so that only strong pairs survive`,
+      r`At the same temperature but for a much shorter total wash time`,
+      r`At lower temperature in lower salt, which weakens every duplex equally`,
+      r`At higher temperature in lower salt, which melts the mismatched duplexes`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Higher temperature and lower salt raise stringency: mismatched probe-target duplexes are the least stable and come apart first, leaving only the perfect match bound. Lower temperature with more salt does the opposite and keeps the related bands, shortening the wash does not change which duplexes are stable, and dropping temperature while dropping salt sends the two factors in opposite directions.`,
+  },
+  [r`Contrast a transgenic mouse with a knockout mouse at the DNA level.`]: {
+    question: r`A human gene driven by a strong promoter is injected into a fertilized mouse egg and ends up integrated at an unknown chromosomal position. The resulting line is best described as:`,
+    options: [
+      r`A knockout line, because the integration disrupts the mouse's own gene`,
+      r`A transgenic gain-of-function line whose insertion site was not chosen`,
+      r`A knock-in line, since the human sequence replaced the mouse version`,
+      r`Neither kind, because an added gene must be targeted to count as a model`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Adding extra genetic material that lands at a random site makes a transgenic, gain-of-function animal; whether it happens to interrupt some local gene is incidental and not the design. A knockout requires a targeted disruption of an endogenous gene, and a knock-in replaces a specific locus using homologous sequences.`,
+  },
+  [r`In blue-white screening, colonies that carry an insert are {{c1::white}}, because the insert disrupts lacZ-alpha and X-gal is not cleaved.`]: {
+    question: r`After a ligation and transformation, a selective plate carries about 300 blue colonies and 4 white ones. The best reading of this plate, and the right colonies to grow, are:`,
+    options: [
+      r`Most vectors took up the insert, so any of the blue colonies will do`,
+      r`Both colors carry the insert, so the colors reflect only growth rate`,
+      r`Most vectors re-closed empty, so the four white colonies are the candidates`,
+      r`Nothing was transformed, since untransformed cells form the white colonies`,
+    ],
+    correctAnswer: 2,
+    explanation: r`An insert interrupts the lacZ fragment, so X-gal is not cleaved and insert-bearing colonies are white, while blue colonies carry religated empty vector; a mostly blue plate means the ligation worked poorly, and the few white colonies are what to grow. The antibiotic in the plate prevents untransformed cells from forming any colony at all.`,
+  },
+  [r`Distinguish selection from screening in a cloning workflow.`]: {
+    question: r`In one workflow, bacteria are plated on ampicillin, and the surviving colonies are then tested individually by a quick amplification of the cloning site. These two steps are, in order:`,
+    options: [
+      r`Two rounds of selection, since each removes unwanted cells from the plate`,
+      r`Screening and then selection, because the color step comes before growth`,
+      r`Two rounds of screening, since both ask which colonies carry the insert`,
+      r`Selection of plasmid-bearing cells, then screening of those for the insert`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Selection kills cells that lack the vector outright, so only transformants form colonies on ampicillin; screening then asks, among the survivors, which colonies actually carry the desired insert, which is what the colony amplification test does. The amplification step kills nothing, and the antibiotic step cannot distinguish insert from empty vector.`,
+  },
+  [r`A {{c1::Northern}} blot detects a specific RNA with a labeled nucleic acid probe, making it the classic readout of gene expression level.`]: {
+    question: r`A labeled probe for gene X is used on RNA blotted from three tissues, with equal loading confirmed by a control probe. The X band is strong in liver, faint in kidney, and absent in brain. This supports the conclusion that X is:`,
+    options: [
+      r`Present in the liver genome but deleted from the brain genome`,
+      r`Transcribed at different levels, heavily in liver and not detectably in brain`,
+      r`Translated most efficiently in liver, where its message works fastest`,
+      r`Carried at a higher copy number per cell in liver than in the other tissues`,
+    ],
+    correctAnswer: 1,
+    explanation: r`A blot probed against RNA reports how much of that transcript each tissue contains, so the pattern is a statement about transcript abundance, not about the gene's presence. Gene copy number and deletions would be addressed by probing DNA, and nothing here measures how well the message is translated into protein.`,
+  },
+  [r`Restriction enzyme recognition sites are typically {{c1::palindromic}} — reading the same 5' to 3' on both strands.`]: {
+    question: r`Enzyme P recognizes a 4-base palindromic site and enzyme Q an 8-base palindromic site. Digesting the same large plasmid separately with each enzyme is expected to give:`,
+    options: [
+      r`More and smaller fragments with P, whose shorter site occurs far more often`,
+      r`More and smaller fragments with Q, since a longer site is easier to find`,
+      r`The same number of fragments, because both sites read alike on both strands`,
+      r`One fragment with each enzyme, since palindromes occur only once per plasmid`,
+    ],
+    correctAnswer: 0,
+    explanation: r`A specific 4-base sequence is expected roughly every few hundred base pairs while a specific 8-base sequence is expected only every tens of thousands, so the shorter site cuts far more often and gives many small fragments. Being a palindrome says how the site reads, not how often it occurs, and such sites are certainly not limited to one per molecule.`,
+  },
+  [r`After a Cas9 double-strand break, which repair pathway creates knockouts and which enables precise knock-ins?`]: {
+    question: r`A team wants to change one base in a gene rather than disable it. Beyond the nuclease and its guide, what does the edit require in order to succeed?`,
+    options: [
+      r`A second guide so that the break is made twice at the same position`,
+      r`An inhibitor of the cell's repair enzymes, so the break stays open longer`,
+      r`A nuclease variant that cuts a single strand rather than both strands`,
+      r`A donor sequence matching the region, used by cells copying a template`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Precise changes come from homology-directed repair, which copies a supplied donor template carrying the desired base and operates mainly in dividing cells; without a donor, error-prone end joining leaves small insertions or deletions and a knockout. Cutting twice, blocking repair, or nicking one strand does not provide the sequence information the edit needs.`,
+  },
+  [r`You need a gene's promoter and an intronic enhancer — which library do you screen, and why is cDNA useless here?`]: {
+    question: r`A variant sits in the middle of a gene's second intron and is suspected of changing the gene's regulation. To obtain a clone containing that variant's region, the right source is:`,
+    options: [
+      r`A cDNA library from the tissue in which the gene is most active`,
+      r`A genomic library, which keeps introns and the sequences between genes`,
+      r`A cDNA library from several tissues pooled to increase the coverage`,
+      r`Either library, since both are built from the same starting chromosomes`,
+    ],
+    correctAnswer: 1,
+    explanation: r`A genomic library is made from chromosomal DNA and so contains introns, promoters, and intergenic sequence, which is where this variant lies. cDNA comes from mature spliced message, so the intron is missing no matter which tissue is used or how many are pooled, and cDNA is built from RNA rather than directly from chromosomes.`,
+  },
+  [r`In each PCR cycle, denaturation near 95 C is followed by primer annealing at roughly {{c1::50-65}} C (set by primer $T_m$), then extension at 72 C.`]: {
+    question: r`A reaction using primers with melting temperatures near 60 C is run with the annealing step set to 42 C. The gel shows the expected band plus many unexpected ones. The best correction is to:`,
+    options: [
+      r`Lower the annealing step further, which sharpens primer pairing`,
+      r`Raise the annealing step to the upper 50s, just below the primers' Tm`,
+      r`Raise the extension step above 72 C to destroy the extra products`,
+      r`Shorten the denaturation step so that less template is available`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Annealing a long way below the primers' melting temperature lets them pair at partly matched sites, so extra products appear; setting the step a few degrees below Tm keeps only well-matched pairing. Going lower makes it worse, the extension temperature matches the polymerase's optimum rather than selecting products, and limiting denaturation only lowers overall yield.`,
+  },
+  [r`Name the three elements every basic cloning plasmid must carry.`]: {
+    question: r`A vector carries an origin of replication and an ampicillin resistance gene, but the designer removed its stretch of unique restriction sites. Working with this vector, a researcher can:`,
+    options: [
+      r`Insert a fragment, but cannot keep the plasmid in a growing culture`,
+      r`Insert a fragment and propagate it, but cannot identify transformed cells`,
+      r`Propagate and select the plasmid, but has no defined place to put an insert`,
+      r`Do none of these, since all three functions depend on the removed sites`,
+    ],
+    correctAnswer: 2,
+    explanation: r`The origin lets the plasmid replicate and the resistance gene lets transformants be selected, so both of those jobs still work; what the removed multiple cloning site provided was a set of unique sites at which the vector could be opened so that a fragment lands in a known place. Replication and selection do not depend on those sites.`,
+  },
+  [r`In qPCR, what does a lower Ct (threshold cycle) value tell you about the sample?`]: {
+    question: r`Measuring one transcript, an untreated sample crosses the fluorescence threshold at cycle 24 and a treated sample at cycle 26. Assuming the product doubles each cycle, the treated sample started with about:`,
+    options: [
+      r`One quarter as much of that transcript as the untreated sample`,
+      r`One half as much, since the threshold was crossed two cycles later`,
+      r`Four times as much, because more cycles means more product made`,
+      r`The same amount, since both samples eventually crossed the threshold`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Each extra cycle needed to reach the threshold means half as much starting material, so two extra cycles means about a quarter as much. Halving only once ignores the second cycle, reading a later crossing as more template inverts the relationship, and crossing at different cycles is exactly what distinguishes the two amounts.`,
+  },
+  [r`In isoelectric focusing, where does a protein stop migrating, and how is this exploited in 2D electrophoresis?`]: {
+    question: r`Two proteins both have a mass of 45 kDa, but their isoelectric points are 5.2 and 8.1. Which separation gives them different positions?`,
+    options: [
+      r`A detergent gel alone, where the charge difference still moves them apart`,
+      r`Neither method, since proteins of equal mass always travel together`,
+      r`A pH-gradient run, in which each stops where the pH equals its own pI`,
+      r`A detergent gel run twice, the second time for a much longer period`,
+    ],
+    correctAnswer: 2,
+    explanation: r`In a pH gradient each protein migrates until its net charge reaches zero, which happens at its own pI, so proteins of identical mass but different pI come to rest at different places; this is why two-dimensional gels run focusing first and a mass separation second. A detergent gel coats both proteins with uniform charge, so equal masses co-migrate however long it runs.`,
+  },
+  [r`Why do sticky-end restriction fragments ligate far more efficiently than blunt ends?`]: {
+    question: r`A cloning plan uses an enzyme that cuts both vector and insert to leave blunt ends. Compared with an overhang-generating enzyme, the main drawbacks of this plan are that joining is:`,
+    options: [
+      r`Impossible, since ligase can only seal a nick within a paired duplex`,
+      r`Faster but less accurate, so the insert often loses terminal base pairs`,
+      r`Inefficient and non-directional, since any two blunt ends can be joined`,
+      r`Efficient but reversible, so the enzyme re-cuts the junction it just made`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Complementary overhangs hold the two ends aligned long enough for ligase to act and only allow matching partners, whereas blunt ends depend on chance collisions and any blunt end can join any other in either orientation. Blunt ligation is possible, just slow, it does not chew back the insert, and ligase has no cutting activity.`,
+  },
+  [r`On an agarose gel, how does migration distance relate quantitatively to fragment size, and how is an unknown sized?`]: {
+    question: r`On one gel, 100 bp and 200 bp fragments are clearly separated, while 9,500 bp and 10,000 bp fragments run as a single band. The relationship behind this is that migration distance varies with:`,
+    options: [
+      r`The logarithm of length, so equal ratios, not equal differences, separate`,
+      r`Length directly, so any two fragments differing by 500 bp resolve alike`,
+      r`The square of length, which exaggerates differences among large fragments`,
+      r`Charge per fragment, which rises faster for small fragments than large ones`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Distance tracks the logarithm of length in base pairs, so a two-fold difference such as 100 against 200 bp is easily resolved while a 5 percent difference such as 9,500 against 10,000 bp is not. A direct or squared dependence would predict the opposite behavior, and DNA's charge-to-mass ratio is essentially constant, which is why the matrix sorts by size.`,
+  },
+  [r`A {{c1::Southwestern}} blot identifies proteins that bind a specific DNA sequence.`]: {
+    question: r`Nuclear proteins are separated on a gel, transferred to a membrane, and probed with a labeled double-stranded sequence from a promoter. A band appears. That band most likely represents:`,
+    options: [
+      r`A transcript made from the promoter region used as the probe`,
+      r`An antibody in the extract that recognizes the labeled probe`,
+      r`A protein of the extract that binds that promoter sequence`,
+      r`A fragment of chromosomal DNA that pairs with the probe`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Separating proteins and then probing them with labeled DNA detects DNA-binding proteins such as transcription factors, so a band is a protein with affinity for that sequence. Transcripts and chromosomal fragments are nucleic acids and are not what was blotted here, and an antibody response to a promoter sequence is not what this method reports.`,
+  },
+  [r`Bacteria are made competent for transformation using {{c1::CaCl2 plus heat shock}} (or electroporation).`]: {
+    question: r`Calcium treatment with a brief heat pulse and a brief electrical pulse are two routes to the same end. What do the two share, and what follows from it?`,
+    options: [
+      r`Both digest the cell wall completely, so every treated cell takes up DNA`,
+      r`Both copy the plasmid into the cell, so no replication origin is needed`,
+      r`Both attract DNA by making the cell interior positively charged overall`,
+      r`Both briefly breach the envelope, and only a minority of cells take up DNA`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Each route transiently makes the envelope passable to DNA, but uptake remains a rare event, which is why a selectable marker is needed to find the few transformants. The wall is not fully digested, uptake does not replace the plasmid's own origin for propagation, and neither route works by charging the cytoplasm positive.`,
+  },
+  [r`A cDNA library contains only the {{c1::exons of genes actively expressed}} in the source tissue.`]: {
+    question: r`A library built from adult liver is screened with a probe for a gene expressed only in neurons, and no clone is found, although the gene is intact in the liver cells' chromosomes. The best conclusion is that:`,
+    options: [
+      r`The library reflects liver transcripts, and this gene is silent there`,
+      r`The probe cannot work on cloned sequences from a different tissue`,
+      r`The gene is lost from liver cells as they differentiate from precursors`,
+      r`The gene's introns block the probe from pairing with the clone`,
+    ],
+    correctAnswer: 0,
+    explanation: r`A cDNA library is reverse-transcribed from the mRNA present in one tissue, so genes not transcribed there are simply absent from it, which is why such libraries differ between tissues. The chromosomes are stated to be intact, so no loss occurred, probes work regardless of tissue of origin, and cDNA contains no introns to interfere.`,
+  },
+  [r`In a Sanger trace, why does reading from the shortest fragment to the longest yield the new strand's 5' to 3' sequence?`]: {
+    question: r`In one run, fragments of 31, 32, 33, and 34 nucleotides end in labeled G, T, T, and A respectively. Reading that stretch of the newly made strand from its 5' side gives:`,
+    options: [
+      r`5'-ATTG-3', reading the longest fragment first toward the shortest`,
+      r`5'-GTTA-3', reading the shortest fragment first toward the longest`,
+      r`5'-CAAT-3', the bases complementary to the labeled terminal bases`,
+      r`5'-TTGA-3', placing the repeated bases closest to the primer`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Shorter fragments stopped nearer the primer, which is the 5' end of the synthesized region, so reading shortest to longest gives 5'-GTTA-3' for positions 31 to 34. Reading longest first reverses the strand, converting each base to its complement reports the template instead of the new strand, and the fourth option reorders the positions.`,
+  },
+}
