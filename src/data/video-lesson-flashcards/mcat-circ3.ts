@@ -10,12 +10,14 @@ const r = String.raw
 export const decks: Record<number, ReviewCard[]> = {
   // 1 · EMF and Terminal Voltage
   1: [
-    { front: r`Give the symbol and the SI unit for EMF, for internal resistance and for terminal voltage.`, back: r`EMF: $\varepsilon$, in volts (V), where $1\ \text{V} = 1\ \text{J/C}$. Internal resistance: $r$, in ohms (Ω). Terminal voltage: $V_{\text{term}}$, in volts.` },
-    { front: r`What is a battery's EMF?`, back: r`The work its chemistry does per coulomb it pushes from the − terminal to the + terminal: $\varepsilon = W/q$. Here $W$ is that work and $q$ is the charge moved. It is the battery's voltage when no current flows. Despite the name, it is not a force.` },
-    { front: r`How is a real battery modelled, and what current does it drive through a load?`, back: r`An ideal EMF in series with a small internal resistance, so one current flows through both: $I = \dfrac{\varepsilon}{R + r}$. Here $\varepsilon$ is the EMF, $r$ the internal resistance and $R$ the external load.` },
+    { front: r`What symbol stands for EMF, and what is its SI unit?`, back: r`$\varepsilon$ (the Greek letter epsilon). The SI unit is the volt, V, and $1\ \text{V} = 1\ \text{J/C}$: one joule of work for each coulomb.` },
+    { front: r`What symbol stands for internal resistance, and what is its SI unit?`, back: r`$r$ (lower case, to keep it apart from the load $R$). The SI unit is the ohm, Ω.` },
+    { front: r`What symbol stands for terminal voltage, and what is its SI unit?`, back: r`$V_{\text{term}}$, the voltage measured between the battery's terminals. The SI unit is the volt, V.` },
+    { front: r`What is a battery's EMF?`, back: r`$\varepsilon = W/q$: the work its chemistry does per coulomb it pushes from the − terminal to the + terminal. Here $W$ is that work and $q$ is the charge moved. It is the battery's voltage when no current flows. Despite the name, it is not a force.` },
+    { front: r`How is a real battery modelled, and what current does it drive through a load?`, back: r`$I = \dfrac{\varepsilon}{R + r}$: the battery is an ideal EMF in series with a small internal resistance, so one current flows through both. Here $\varepsilon$ is the EMF, $r$ the internal resistance and $R$ the external load.` },
     { front: r`What is a battery's terminal voltage while it supplies current?`, back: r`$V_{\text{term}} = \varepsilon - Ir$: lower than the EMF by the drop across the internal resistance. Here $\varepsilon$ is the EMF, $I$ the current and $r$ the internal resistance. More current, more sag.` },
     { front: r`What is the terminal voltage of a battery that is being charged?`, back: r`$V_{\text{term}} = \varepsilon + Ir$, more than the EMF: the charger must beat the EMF and also push the current through $r$. Here $\varepsilon$ is the EMF, $I$ the charging current and $r$ the internal resistance.` },
-    { front: r`What happens when a bare wire shorts a battery's terminals?`, back: r`Only $r$ limits the current, so $I_{\max} = \varepsilon / r$; the terminal voltage is 0, and all of the power heats the battery. Here $\varepsilon$ is the EMF and $r$ the internal resistance.` },
+    { front: r`What happens when a bare wire shorts a battery's terminals?`, back: r`$I_{\max} = \varepsilon / r$, since only $r$ limits the current; the terminal voltage is 0, and all of the power heats the battery. Here $\varepsilon$ is the EMF and $r$ the internal resistance.` },
     { front: r`Where does the power the battery's chemistry supplies go?`, back: r`$\varepsilon I = I^2 R + I^2 r$: part reaches the load, part heats the battery. Here $\varepsilon I$ is the power the chemistry supplies, $I^2R$ the power delivered to the load $R$, and $I^2 r$ the power wasted in the internal resistance $r$. The load's share is also $V_{\text{term}} I$.` },
     { front: r`Is charge used up in the load?`, back: r`No. Every coulomb returns to the battery; only its energy is converted in the load.` },
     { front: r`Why can an old battery still read its full voltage on a voltmeter?`, back: r`Its EMF has not changed; its internal resistance has risen. An ideal voltmeter draws almost no current, so there is no $Ir$ drop to reveal the large $r$. Under a real load the terminal voltage sags badly.` },
@@ -31,14 +33,15 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 3 · Cells and Meters
   3: [
-    { front: r`What do the symbols $n$ and $F$ stand for in $\Delta G = -nFE$, and what are their units?`, back: r`$n$ is the moles of electrons transferred per mole of reaction (mol). $F$ is Faraday's constant, the charge on a mole of electrons: about 96 500 C/mol.` },
+    { front: r`What symbol stands for Faraday's constant, and what is its SI unit?`, back: r`$F$, the charge on one mole of electrons: about 96 500 C/mol. The SI unit is the coulomb per mole, C/mol.` },
+    { front: r`What symbol stands for the moles of electrons transferred in a redox reaction, and what is its SI unit?`, back: r`$n$, counted per mole of reaction. The SI unit is the mole, mol.` },
     { front: r`How do cells combine in series?`, back: r`Their EMFs add and their internal resistances add. A cell inserted backward SUBTRACTS its EMF, but its internal resistance still adds.` },
     { front: r`How do identical cells combine in parallel?`, back: r`The pack keeps one cell's EMF, and the internal resistances are in parallel: $r/2$ for two cells. Here $r$ is one cell's internal resistance. The pack sags less and lasts longer.` },
     { front: r`What does a milliamp-hour (mAh) rating measure, and how do you convert it?`, back: r`Charge, since $Q = It$. $1\ \text{mAh} = 3.6\ \text{C}$, so multiply mAh by 3.6 to get coulombs. The energy stored is about $QV$, where $Q$ is that charge and $V$ the battery's voltage.` },
     { front: r`How is an ammeter connected, and what is its ideal resistance?`, back: r`In series, so the current passes through it. Ideally about 0 Ω, so it does not change the current.` },
     { front: r`How is a voltmeter connected, and what is its ideal resistance?`, back: r`In parallel, across the element. Ideally nearly infinite, so it draws almost no current.` },
     { front: r`What happens if the meters are swapped?`, back: r`An ammeter across an element is a short: the element goes dark and the surge can blow the meter's fuse. A voltmeter in series chokes the current to nearly zero and reads almost the full EMF.` },
-    { front: r`Where does a battery's EMF come from?`, back: r`From the redox reaction in its galvanic cells: $\Delta G = -nFE$. Here $\Delta G$ is the reaction's free-energy change, $n$ the moles of electrons transferred, $F$ Faraday's constant and $E$ the cell potential, the EMF. A spontaneous reaction ($\Delta G < 0$) gives a positive EMF.` },
+    { front: r`Where does a battery's EMF come from?`, back: r`$\Delta G = -nFE$, from the redox reaction in its galvanic cells. Here $\Delta G$ is the reaction's free-energy change, $n$ the moles of electrons transferred, $F$ Faraday's constant and $E$ the cell potential, the EMF. A spontaneous reaction ($\Delta G < 0$) gives a positive EMF.` },
     { front: r`In a galvanic cell, which electrode is the battery's + terminal?`, back: r`The cathode, where reduction happens. Electrons leave the anode (oxidation), run through the wire and arrive at the cathode.` },
   ],
   // 4 · Cells and Meters: Worked Examples
@@ -52,15 +55,17 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 5 · Capacitance
   5: [
-    { front: r`Give the symbol and the SI unit for capacitance and for charge.`, back: r`Capacitance: $C$, in farads (F), where $1\ \text{F} = 1\ \text{C/V}$. Charge: $Q$, in coulombs (C). Real capacitors are microfarads ($10^{-6}$ F) down to picofarads ($10^{-12}$ F).` },
+    { front: r`What symbol stands for capacitance, and what is its SI unit?`, back: r`$C$. The SI unit is the farad, F, and $1\ \text{F} = 1\ \text{C/V}$. A farad is huge: real capacitors are microfarads ($10^{-6}$ F) down to picofarads ($10^{-12}$ F).` },
+    { front: r`What symbol stands for the charge on a capacitor, and what is its SI unit?`, back: r`$Q$, the charge on EACH plate. The SI unit is the coulomb, C.` },
+    { front: r`What symbol stands for electric field, and what is its SI unit?`, back: r`$E$. The SI unit is the volt per meter, V/m, which is the same as the newton per coulomb, N/C.` },
     { front: r`What happens when a battery charges a capacitor?`, back: r`It moves charge from one plate to the other through the wires: $+Q$ on one plate, $-Q$ on the other. No charge crosses the gap, the net charge stays zero, and charging stops when the plates' voltage equals the battery's.` },
     { front: r`What does "the charge on a capacitor" mean?`, back: r`$Q$, the charge on EACH plate. The capacitor's net charge is always zero.` },
-    { front: r`Define capacitance.`, back: r`Charge stored per volt: $C = Q/V$. Here $Q$ is the charge on each plate and $V$ the voltage across the plates. Handy: μF × V = μC.` },
+    { front: r`Define capacitance.`, back: r`$C = Q/V$: the charge stored per volt. Here $Q$ is the charge on each plate and $V$ the voltage across the plates. Handy: μF × V = μC.` },
     { front: r`The voltage across a capacitor doubles. What happens to $C$ and to $Q$?`, back: r`$C$ is fixed by how the capacitor is built, so it stays the same, and $Q$ doubles. $C = Q/V$ does not mean more voltage gives less capacitance.` },
     { front: r`What sets the capacitance of a parallel-plate capacitor?`, back: r`$C = \dfrac{\kappa \varepsilon_0 A}{d}$. Here $\kappa$ is the dielectric constant of what fills the gap (1 for a vacuum, about 1 for air), $\varepsilon_0$ the permittivity of free space, $A$ the plate area and $d$ the gap.` },
     { front: r`How do you rescale a parallel-plate capacitance?`, back: r`Multiply by the area factor, divide by the gap factor, multiply by $\kappa$. Double both $A$ and $d$ and $C$ is unchanged. A wider gap LOWERS $C$.` },
-    { front: r`What is the field between parallel plates?`, back: r`Uniform: $E = V/d$, pointing from the + plate to the − plate, and essentially zero outside. Here $V$ is the voltage across the plates and $d$ the gap.` },
-    { front: r`How does a charge move between the plates?`, back: r`It feels a constant force $F = qE$, so it accelerates uniformly, like a ball in gravity. Here $q$ is its charge and $E$ the field. A proton heads for the − plate, an electron for the + plate, and the much lighter electron accelerates far more.` },
+    { front: r`What is the field between parallel plates?`, back: r`$E = V/d$, uniform, pointing from the + plate to the − plate, and essentially zero outside. Here $V$ is the voltage across the plates and $d$ the gap.` },
+    { front: r`How does a charge move between the plates?`, back: r`$F = qE$, a constant force, so it accelerates uniformly, like a ball in gravity. Here $q$ is its charge and $E$ the field. A proton heads for the − plate, an electron for the + plate, and the much lighter electron accelerates far more.` },
   ],
   // 6 · Capacitance: Worked Examples
   6: [
@@ -72,7 +77,8 @@ export const decks: Record<number, ReviewCard[]> = {
   ],
   // 7 · Dielectrics and Energy
   7: [
-    { front: r`Give the symbol and the unit for the dielectric constant and for stored energy.`, back: r`Dielectric constant: $\kappa$, a pure number, at least 1 (1 for a vacuum). Stored energy: $U$, in joules (J).` },
+    { front: r`What symbol stands for the dielectric constant, and what is its SI unit?`, back: r`$\kappa$ (the Greek letter kappa). It has no unit: it is a pure number, at least 1 (1 for a vacuum, about 1 for air).` },
+    { front: r`What symbol stands for the energy stored in a capacitor, and what is its SI unit?`, back: r`$U$. The SI unit is the joule, J.` },
     { front: r`What does a dielectric do inside a capacitor?`, back: r`Its molecules polarize: a thin negative layer lines up beside the + plate and a positive layer beside the − plate. Their field opposes the plates' field, so the field inside is weaker.` },
     { front: r`How does a dielectric change the capacitance?`, back: r`$C = \kappa C_0$. Here $C_0$ is the capacitance with a vacuum (or air) in the gap and $\kappa \ge 1$ the dielectric constant. Water's $\kappa$ is unusually large, for the same reason it dissolves salts.` },
     { front: r`What is dielectric breakdown, and why does a good dielectric help?`, back: r`Above its dielectric strength an insulator ionizes, conducts, and a spark jumps the gap. A good dielectric raises $C$ AND lets the plates sit closer or reach a higher voltage without breaking down.` },
