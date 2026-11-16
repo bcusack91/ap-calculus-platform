@@ -8,4 +8,6 @@ For every question: solve it from scratch, carefully and one at a time (do the a
 
 Write `SP/<set>-solved.json` for each set: a JSON array of `{ "n": <number>, "answer": <0-3>, "note": "<only if there is a problem>" }`, one entry per question, valid JSON.
 
+Write each output file with your file-writing tool, not a shell command. That one JSON file per set is your only permitted write. After writing, list the file to confirm it is really on disk; if a write was blocked, say so plainly instead of reporting success.
+
 Reply with just: for each set, how many questions you answered and the `n` of any you flagged.
