@@ -690,7 +690,7 @@ export const checks: Record<string, CardCheck> = {
     correctAnswer: 0,
     explanation: r`The haploid genome is about 3.2 billion base pairs, or 3,200 stretches of 1 million, and holds roughly 20,000 protein-coding genes, so 20,000 ÷ 3,200 is about 6 per million base pairs. The larger answers come from overestimating the gene count or underestimating the genome size by a factor of 10 or more.`,
   },
-  [r`About 2 meters of DNA fits in a nucleus 6 micrometers across, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.`]: {
+  [r`A chromosome's DNA, centimeters long, packs into a mitotic chromosome micrometers long, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.`]: {
     question: r`The DNA of one human chromosome would be about 5 cm long if stretched out as a naked double helix. At the overall compaction typical of a fully condensed chromosome, about how long is the chromosome?`,
     options: [
       r`About 50 μm long`,

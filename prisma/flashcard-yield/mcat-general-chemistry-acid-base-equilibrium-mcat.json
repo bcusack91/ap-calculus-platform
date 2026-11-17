@@ -193,7 +193,7 @@
  },
  {
   "front": "When does the 'x is small' approximation in a weak-acid ICE table break down?",
-  "fp": "afd74ad91816",
+  "fp": "a9e753074693",
   "yield": "LOW",
   "why": "5% rule for the x-is-small approximation; the MCAT never requires the quadratic"
  },

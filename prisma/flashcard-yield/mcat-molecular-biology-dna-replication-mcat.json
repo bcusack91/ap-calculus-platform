@@ -115,7 +115,7 @@
  },
  {
   "front": "Eukaryotic priming is done by {{c1::Pol alpha-primase}}: ~10 nt of RNA extended with ~20 nt of DNA before polymerase switching.",
-  "fp": "a8fec15b6d3a",
+  "fp": "3c04d0990e18",
   "yield": "LOW",
   "why": "Primer nt lengths and polymerase switch: numeric/named trivia"
  },

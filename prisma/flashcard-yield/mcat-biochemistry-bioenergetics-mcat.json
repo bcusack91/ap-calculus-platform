@@ -67,7 +67,7 @@
  },
  {
   "front": "Complete oxidation of glucose releases about $-2870$ kJ/mol, of which roughly {{c1::one-third}} is captured as ATP.",
-  "fp": "bbcdd6470ff2",
+  "fp": "f19c06883f63",
   "yield": "LOW",
   "why": "Exact kJ/mol of glucose and efficiency fraction are numeric trivia"
  },
@@ -223,7 +223,7 @@
  },
  {
   "front": "Oxidative phosphorylation produces approximately how many ATP per glucose?",
-  "fp": "f548917a0a16",
+  "fp": "679434d0551b",
   "yield": "LOW",
   "why": "Restates the ~30-32 ATP card"
  },

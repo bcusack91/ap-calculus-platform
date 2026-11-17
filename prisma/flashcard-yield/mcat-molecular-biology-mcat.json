@@ -30,8 +30,8 @@
   "why": "Nucleosome octamer (H2A/H2B/H3/H4) composition: commonly tested chromatin structure"
  },
  {
-  "front": "About 2 meters of DNA fits in a nucleus 6 micrometers across, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.",
-  "fp": "ceb2bf546566",
+  "front": "A chromosome's DNA, centimeters long, packs into a mitotic chromosome micrometers long, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.",
+  "fp": "b85804dbafb8",
   "yield": "LOW",
   "why": "Compaction-fold number is trivia; chromatin levels covered elsewhere"
  },

@@ -422,7 +422,7 @@
  {
   "topicSlug": "mcat-biochemistry-bioenergetics-mcat",
   "front": "Complete oxidation of glucose releases about $-2870$ kJ/mol, of which roughly {{c1::one-third}} is captured as ATP.",
-  "back": "Thirty to thirty-two ATP at roughly 50 kJ/mol under cellular conditions accounts for the captured share; the remainder leaves as heat. That efficiency still beats a typical heat engine."
+  "back": "Thirty to thirty-two ATP at the standard 30.5 kJ/mol is about 950 kJ, roughly one-third of 2870; the remainder leaves as heat. Under cellular conditions each ATP is worth nearer 50 kJ/mol, so the real efficiency is higher still, and either figure beats a typical heat engine."
  },
  {
   "topicSlug": "mcat-biochemistry-bioenergetics-mcat",
@@ -553,7 +553,7 @@
  {
   "topicSlug": "mcat-biochemistry-bioenergetics-mcat",
   "front": "Oxidative phosphorylation produces approximately how many ATP per glucose?",
-  "back": "**30-32**\n\nOxidative phosphorylation (ETC + ATP synthase) using NADH and $FADH_{2}$ from glycolysis, pyruvate dehydrogenase, and the TCA cycle produces ~30-32 ATP per glucose (including substrate-level phosphorylation)."
+  "back": "**About 26-28**\n\nComplete oxidation of glucose yields ~30-32 ATP in all. Four of those come from substrate-level phosphorylation (2 in glycolysis, 2 as GTP in the TCA cycle), so oxidative phosphorylation (ETC + ATP synthase), using the NADH and $FADH_{2}$ from glycolysis, pyruvate dehydrogenase, and the TCA cycle, supplies the other ~26-28."
  },
  {
   "topicSlug": "mcat-biochemistry-bioenergetics-mcat",
@@ -2451,7 +2451,7 @@
  {
   "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
   "front": "When does the 'x is small' approximation in a weak-acid ICE table break down?",
-  "back": "When dissociation exceeds roughly 5 percent of the initial concentration, which happens for relatively strong weak acids or very dilute solutions. The quadratic is then needed and the true pH is lower than the shortcut predicts."
+  "back": "When dissociation exceeds roughly 5 percent of the initial concentration, which happens for relatively strong weak acids or very dilute solutions. The quadratic is then needed, and because the shortcut overestimates how much acid dissociates, the true pH is slightly higher than the shortcut predicts."
  },
  {
   "topicSlug": "mcat-general-chemistry-acid-base-equilibrium-mcat",
@@ -2936,7 +2936,7 @@
  {
   "topicSlug": "mcat-general-chemistry-kinetics-mcat",
   "front": "Ethanol is cleared by zero-order kinetics. What does that mean clinically?",
-  "back": "Alcohol dehydrogenase is saturated at ordinary blood levels, so a fixed amount is removed per hour regardless of concentration and there is no fixed half-life. Doubling the dose more than doubles the sobering time, which is why overdose escalates so sharply."
+  "back": "Alcohol dehydrogenase is saturated at ordinary blood levels, so a fixed amount is removed per hour regardless of concentration and there is no fixed half-life. Doubling the dose doubles the sobering time, whereas for a first-order drug it would add only one half-life; that is why large amounts take so long to clear."
  },
  {
   "topicSlug": "mcat-general-chemistry-kinetics-mcat",
@@ -4060,7 +4060,7 @@
  {
   "topicSlug": "mcat-general-chemistry-thermodynamics-mcat",
   "front": "The first law of thermodynamics states:",
-  "back": "**$\\Delta U = q - w$; energy is conserved**\n\nEnergy changes form but is neither created nor destroyed."
+  "back": "**$\\Delta U = q - w$, with $w$ the work done BY the system; energy is conserved**\n\nEnergy changes form but is neither created nor destroyed. Chemistry texts often write $\\Delta U = q + w$ with $w$ the work done ON the system: the same law with the sign of $w$ flipped."
  },
  {
   "topicSlug": "mcat-general-chemistry-thermodynamics-mcat",

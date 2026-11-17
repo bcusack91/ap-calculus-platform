@@ -3764,7 +3764,7 @@
  {
   "topicSlug": "mcat-genetics-evolution-mcat",
   "front": "Distinguish sex-limited from sex-influenced autosomal traits, with an example of each.",
-  "back": "Sex-limited traits are expressed in only one sex despite both carrying the genes (milk yield, unicorn-antler analogs); sex-influenced traits show sex-dependent dominance, like pattern baldness, dominant in males but recessive in females due to hormonal milieu."
+  "back": "Sex-limited traits are expressed in only one sex despite both carrying the genes (milk yield, beard growth); sex-influenced traits show sex-dependent dominance, like pattern baldness, dominant in males but recessive in females due to hormonal milieu."
  },
  {
   "topicSlug": "mcat-genetics-evolution-mcat",
@@ -7033,7 +7033,7 @@
  {
   "topicSlug": "mcat-molecular-biology-dna-replication-mcat",
   "front": "Eukaryotic priming is done by {{c1::Pol alpha-primase}}: ~10 nt of RNA extended with ~20 nt of DNA before polymerase switching.",
-  "back": "Pol alpha lacks proofreading and low processivity, so after its short RNA-DNA primer, RFC loads PCNA and hands synthesis to the processive Pol delta or epsilon — the polymerase switch."
+  "back": "Pol alpha lacks proofreading and has low processivity, so after its short RNA-DNA primer, RFC loads PCNA and hands synthesis to the processive Pol delta or epsilon — the polymerase switch."
  },
  {
   "topicSlug": "mcat-molecular-biology-dna-replication-mcat",
@@ -7302,7 +7302,7 @@
  },
  {
   "topicSlug": "mcat-molecular-biology-mcat",
-  "front": "About 2 meters of DNA fits in a nucleus 6 micrometers across, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.",
+  "front": "A chromosome's DNA, centimeters long, packs into a mitotic chromosome micrometers long, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.",
   "back": "Nucleosomes supply the first roughly sevenfold packing, and the 30 nm fiber, loop domains, and mitotic condensation supply the rest. Compaction is also regulatory, since packaged DNA is inaccessible to polymerases."
  },
  {
