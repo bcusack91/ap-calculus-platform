@@ -17,6 +17,10 @@ const VIDEO_DECKS: Record<string, Record<string, CardCheck>[]> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': [mcatCirc2],
   'mcat-physics-electricity-emf-capacitors-mcat': [mcatCirc3],
   'mcat-physics-electricity-rc-circuits-mcat': [mcatCirc4],
+  // AP Physics 2 reuses the MCAT circuits videos and their review cards (video-lesson-flashcards/ap2-circ.ts).
+  'current-resistance-ohms-law': [mcatCirc1, mcatCirc2, mcatCirc3],
+  'series-parallel-circuits': [mcatCirc1, mcatCirc2, mcatCirc3, mcatCirc4],
+  'kirchhoffs-laws': [mcatCirc2, mcatCirc3, mcatCirc4],
 }
 
 // A topic's own cards (topics/, registered by scripts/flashcard-checks/register.ts)

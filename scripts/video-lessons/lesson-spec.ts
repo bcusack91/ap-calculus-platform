@@ -13,7 +13,16 @@ export type SectionSpec = {
   role: 'teach' | 'problem' | 'solution'
   questions?: CheckpointQuestion[]
 }
-export type VideoSpec = { video: number; sections: SectionSpec[] }
+export type VideoSpec = {
+  video: number
+  sections: SectionSpec[]
+  /**
+   * Where the clip files live when this lesson REUSES another lesson's videos
+   * (AP Physics 2 reusing the MCAT circuits clips): that lesson's key and its
+   * video number. Omitted, the files are this lesson's own.
+   */
+  source?: { key: string; video: number }
+}
 
 export type LessonSpec = {
   /** Folder under public/video-lessons/ and the lesson-<key> clip tag. */

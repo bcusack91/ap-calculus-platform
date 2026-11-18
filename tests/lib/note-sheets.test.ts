@@ -6,6 +6,11 @@ import { NOTE_SHEET_TOPICS } from '@/data/note-sheets'
 import { REVIEW_DECKS } from '@/data/video-lesson-flashcards'
 
 describe('blankText', () => {
+  it('keeps callout labels printed: a bold that opens with a pictograph or is followed by a colon', () => {
+    expect(blankText('> **💡 Example**: If 2 A enters a junction, 2 A must leave.').answers).toEqual([])
+    expect(blankText('**Rules**: the current is the same everywhere.').answers).toEqual([])
+    expect(blankText('**Conservation of charge** - charge cannot pile up.').answers).toEqual(['Conservation of charge'])
+  })
   it('blanks bold terms and capitalised emphasis, and keeps the answers in order', () => {
     const r = blankText('**Conventional current** is the direction POSITIVE charge would flow.')
     expect(r.md).toBe(`${blankToken(0)} is the direction ${blankToken(1)} charge would flow.`)

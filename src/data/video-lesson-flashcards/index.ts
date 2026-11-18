@@ -3,6 +3,7 @@ import { decks as mcatCirc1 } from './mcat-circ1'
 import { decks as mcatCirc2 } from './mcat-circ2'
 import { decks as mcatCirc3 } from './mcat-circ3'
 import { decks as mcatCirc4 } from './mcat-circ4'
+import { ap2Circ1, ap2Circ2, ap2Circ3 } from './ap2-circ'
 
 /**
  * Review flashcards for section-based video lessons, by lesson key (the
@@ -23,6 +24,9 @@ export const REVIEW_DECKS: Record<string, Record<number, ReviewCard[]>> = {
   'mcat-circ2': mcatCirc2,
   'mcat-circ3': mcatCirc3,
   'mcat-circ4': mcatCirc4,
+  'ap2-circ1': ap2Circ1,
+  'ap2-circ2': ap2Circ2,
+  'ap2-circ3': ap2Circ3,
 }
 
 export const reviewCardsFor: ReviewCardLookup = (lessonKey, video) => REVIEW_DECKS[lessonKey]?.[video]

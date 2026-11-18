@@ -37,6 +37,9 @@ import { syncReviewCards } from './review-cards'
 const IS_PROD = process.env.SEED_DB === 'prod'
 const APPLY = process.env.APPLY === '1'
 
+/** The folder under public/video-lessons/ holding a video's clips: the lesson's own, or the lesson it reuses. */
+const folderOf = (lesson: LessonSpec, v: LessonSpec['videos'][number]) => `${v.source?.key ?? lesson.key}/c${String(v.source?.video ?? v.video).padStart(2, '0')}`
+
 type Manifest = { video: number; clips: { section: string; file: string; seconds: number; voiced: boolean }[] }
 
 export async function syncLesson(LESSON: LessonSpec) {
@@ -55,7 +58,7 @@ export async function syncLesson(LESSON: LessonSpec) {
   // Section lengths from the manifests the encoder wrote.
   const seconds = new Map<string, { seconds: number; voiced: boolean }>()
   for (const v of LESSON.videos) {
-    const path = join(process.cwd(), 'public', 'video-lessons', LESSON.key, `c${String(v.video).padStart(2, '0')}`, 'manifest.json')
+    const path = join(process.cwd(), 'public', 'video-lessons', folderOf(LESSON, v), 'manifest.json')
     if (!existsSync(path)) throw new Error(`missing ${path}: run _manim/tools/web_clips.py for video ${v.video} first`)
     const m = JSON.parse(readFileSync(path, 'utf8')) as Manifest
     for (const c of m.clips) seconds.set(`${v.video}:${c.section}`, { seconds: c.seconds, voiced: c.voiced })
@@ -75,7 +78,8 @@ export async function syncLesson(LESSON: LessonSpec) {
 
   // Instructor (the owner), linked to their account when it exists.
   const user = await prisma.user.findUnique({ where: { email: LESSON.instructor.email }, select: { id: true } })
-  const existing = await prisma.instructor.findUnique({ where: { slug: LESSON.instructor.slug }, select: { id: true, userId: true } })
+  const existing = await prisma.instructor.findUnique({ where: { slug: LESSON.instructor.slug }, select: { id: true, userId: true, courses: true } })
+  const existingCourses = existing?.courses
   const takenBy = user ? await prisma.instructor.findFirst({ where: { userId: user.id, NOT: { slug: LESSON.instructor.slug } }, select: { slug: true } }) : null
   const userId = user && !takenBy ? user.id : existing?.userId ?? null
   console.log(`Instructor ${LESSON.instructor.slug}: ${existing ? 'update' : 'create'}${userId ? ` (account ${LESSON.instructor.email})` : ' (no account linked)'}`)
@@ -111,7 +115,8 @@ export async function syncLesson(LESSON: LessonSpec) {
     headline: LESSON.instructor.headline,
     bio: LESSON.instructor.bio,
     photoUrl: LESSON.instructor.photoUrl ?? null,
-    courses: LESSON.instructor.courses,
+    // Keep courses other lessons already listed: each spec names only its own.
+    courses: [...new Set([...(existingCourses ?? []), ...LESSON.instructor.courses])],
     isActive: true,
     ...(userId ? { userId } : {}),
   }
@@ -130,7 +135,7 @@ export async function syncLesson(LESSON: LessonSpec) {
       const data = {
         title: s.title,
         provider: 'FILE',
-        providerId: `/video-lessons/${LESSON.key}/c${String(v.video).padStart(2, '0')}/${s.id}.mp4`,
+        providerId: `/video-lessons/${folderOf(LESSON, v)}/${s.id}.mp4`,
         durationSec: Math.max(1, Math.round(d.seconds)),
         tags,
         status: 'APPROVED',

@@ -11,6 +11,11 @@ export const NOTE_SHEET_TOPICS: Record<string, { lessonKey: string }> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': { lessonKey: 'mcat-circ2' },
   'mcat-physics-electricity-emf-capacitors-mcat': { lessonKey: 'mcat-circ3' },
   'mcat-physics-electricity-rc-circuits-mcat': { lessonKey: 'mcat-circ4' },
+  // AP Physics 2 circuits: the video lessons reuse the MCAT circuits videos (ap2-circ*), so the video
+  // notes cover capacitance, capacitor networks and RC circuits module by module.
+  'current-resistance-ohms-law': { lessonKey: 'ap2-circ1' },
+  'series-parallel-circuits': { lessonKey: 'ap2-circ2' },
+  'kirchhoffs-laws': { lessonKey: 'ap2-circ3' },
 }
 
 export const hasNoteSheets = (topicSlug: string): boolean => Object.prototype.hasOwnProperty.call(NOTE_SHEET_TOPICS, topicSlug)

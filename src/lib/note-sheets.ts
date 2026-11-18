@@ -45,11 +45,13 @@ const INLINE_MATH = /(?<!\\)\$(?:[^$\\]|\\.)+\$/g
 export function blankText(md: string, max = 3): Blanked {
   const answers: string[] = []
   const fill = (plain: string) =>
-    plain.replace(/\*\*([^*]+)\*\*|\b[A-Z]{3,}\b/g, (m: string, bold: string | undefined) => {
+    plain.replace(/\*\*([^*]+)\*\*|\b[A-Z]{3,}\b/g, (m: string, bold: string | undefined, offset: number, whole: string) => {
       if (answers.length >= max) return m
       if (bold !== undefined) {
         // Labels, part letters and long phrases stay printed: a blank is one term.
         if (/[.:?!]$/.test(bold.trim()) || /^\(\w+\)/.test(bold) || /^Problem\b/.test(bold) || bold.trim().split(/\s+/).length > 3) return m
+        // So do callout labels: a bold that opens with a pictograph ("💡 Example") or is followed by a colon ("**Rules**:").
+        if (/^\p{Extended_Pictographic}/u.test(bold.trim()) || whole[offset + m.length] === ':') return m
         answers.push(bold.trim())
         return blankToken(answers.length - 1)
       }
