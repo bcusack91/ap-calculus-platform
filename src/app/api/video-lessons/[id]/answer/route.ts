@@ -17,7 +17,7 @@ import {
 import { questionKey, optionKey } from '@/lib/question-key'
 import { recordQuestions } from '@/lib/study-tracking'
 import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progress'
-import { newlyFinishedModules, unlockVideoModuleCards } from '@/lib/video-lesson-cards'
+import { newlyFinishedVideos, unlockVideoModuleCards } from '@/lib/video-lesson-cards'
 
 /**
  * POST /api/video-lessons/[id]/answer
@@ -102,7 +102,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       update: { steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
       create: { userId, lessonId: lesson.id, steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
     })
-    return { complete, completedNow, attempts, modulesDone: newlyFinishedModules(visible, stepsBefore, steps) }
+    return { complete, completedNow, attempts, modulesDone: newlyFinishedVideos(visible, stepsBefore, steps) }
   })
 
   await recordQuestions(userId, [{
@@ -130,7 +130,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const { unlock } = await applyLessonProgress({ userId, topic, masteryLevel: 0, status: 'COMPLETED', isPartCompletion: true })
       flashcards = flashcardUnlockPayload(unlock)
     }
-    // A module just finished: its review cards join the student's deck.
+    // A video just finished: its review cards join the student's deck.
     if (topic && result.modulesDone.length > 0) {
       const added = await unlockVideoModuleCards(userId, topic, lesson.courseSlug, result.modulesDone).catch(() => null)
       if (added && added.newCards > 0 && !flashcards) flashcards = { created: true, newCards: added.newCards, totalActive: 0, totalPossible: 0, topicTitle: added.topicTitle }

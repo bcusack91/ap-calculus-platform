@@ -1,15 +1,17 @@
 import { prisma } from '@/lib/prisma'
 import { resolveUnlockContexts } from '@/lib/study-context'
 import { effectiveDailyLimits } from '@/lib/flashcard-daily-limits'
-import { lessonParts, stepDone, videoDeckKey, type ProgressSteps, type VisibleStep } from '@/lib/video-lesson-core'
+import { lessonParts, partOfVideo, stepDone, videoDeckKey, type ProgressSteps, type VisibleStep } from '@/lib/video-lesson-core'
 import { REVIEW_DECKS } from '@/data/video-lesson-flashcards'
 
 /**
  * Video lesson review cards in the student's spaced-repetition deck (owner,
  * Nov 2026): a student learning a topic from its video lesson gets that
- * lesson's review cards a MODULE at a time — each time they finish a module
- * (both of its videos: every section watched and every checkpoint settled),
- * the cards of those videos join their deck.
+ * lesson's review cards one VIDEO at a time. Each time they finish a video
+ * (every one of its sections watched and every checkpoint settled), that
+ * video's cards join their deck: the concept video's cards as soon as the
+ * concept video is done, the worked-examples video's cards after the examples.
+ * (Until 2026-11-18 cards waited for both videos of a module.)
  *
  * The cards are the same decks the player offers before each recap
  * (src/data/video-lesson-flashcards), stored as Flashcard rows on the topic
@@ -19,7 +21,7 @@ import { REVIEW_DECKS } from '@/data/video-lesson-flashcards'
  * them, so live-class and text-lesson students' decks are unchanged.
  */
 
-/** A finished module: its position (1-based) and the source videos it holds. */
+/** Finished source videos, with the module (1-based) they belong to. */
 export type FinishedModule = { module: number; lessonKey: string; videos: number[] }
 
 /** Every module of the lesson whose steps are all watched and answered. */
@@ -37,6 +39,38 @@ export function finishedModules(steps: readonly VisibleStep[], progress: Progres
     out.push({ module: k + 1, lessonKey, videos: part.videos })
   })
   return out
+}
+
+/**
+ * Every source video of the lesson whose steps are all watched and answered,
+ * one entry per video (`videos` has that one video). This is what hands out
+ * review cards.
+ */
+export function finishedVideos(steps: readonly VisibleStep[], progress: ProgressSteps): FinishedModule[] {
+  const byVideo = new Map<number, { module: number; lessonKey: string; done: boolean }>()
+  steps.forEach((step, i) => {
+    const video = step.meta.video
+    const lessonKey = step.meta.lesson
+    if (video === null || !lessonKey) return
+    const d = stepDone(step, progress, steps[i - 1])
+    const cur = byVideo.get(video) ?? { module: partOfVideo(video), lessonKey, done: true }
+    cur.done = cur.done && d.watched && d.answered
+    byVideo.set(video, cur)
+  })
+  return [...byVideo.entries()]
+    .filter(([, v]) => v.done)
+    .sort(([a], [b]) => a - b)
+    .map(([video, v]) => ({ module: v.module, lessonKey: v.lessonKey, videos: [video] }))
+}
+
+/** Videos finished in `after` that were not finished in `before`. */
+export function newlyFinishedVideos(
+  steps: readonly VisibleStep[],
+  before: ProgressSteps,
+  after: ProgressSteps,
+): FinishedModule[] {
+  const had = new Set(finishedVideos(steps, before).map((m) => m.videos[0]))
+  return finishedVideos(steps, after).filter((m) => !had.has(m.videos[0]))
 }
 
 /** Modules finished in `after` that were not finished in `before`. */
@@ -110,6 +144,11 @@ export async function unlockVideoModuleCards(
     })
     if (ctx === reportContext) newInActive = res.count
   }
-  const label = modules.length === 1 ? `Module ${modules[0].module} of ${topic.title}` : topic.title
+  const label =
+    modules.length === 1 && modules[0].videos.length === 1
+      ? `Video ${modules[0].videos[0]} of ${topic.title}`
+      : modules.length === 1
+        ? `Module ${modules[0].module} of ${topic.title}`
+        : topic.title
   return { newCards: newInActive, topicTitle: label }
 }

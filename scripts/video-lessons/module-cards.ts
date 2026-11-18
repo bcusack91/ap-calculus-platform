@@ -2,9 +2,10 @@
  * Video lesson review cards in students' decks, module by module (see
  * src/lib/video-lesson-cards.ts). Two jobs:
  *
- * BACKFILL (default): every student's finished modules get their cards — the
- * live rule only fires when a module is finished, so modules finished before
- * it shipped need this once.
+ * BACKFILL (default): every student's finished videos get their cards. The
+ * live rule only fires as a video is finished, so videos finished before it
+ * shipped (or before cards went per-video on 2026-11-18) need this once.
+ * Idempotent: cards already in a deck are skipped.
  *
  *   npx tsx scripts/video-lessons/module-cards.ts                       # dry run, local
  *   SEED_DB=prod npx tsx scripts/video-lessons/module-cards.ts          # dry run, prod
@@ -34,7 +35,7 @@ async function main() {
   const { prisma } = await import('../../src/lib/prisma')
   const after = new URL(process.env.DATABASE_URL!).hostname
   if (after !== host) throw new Error(`database switched to ${after} while loading the client`)
-  const { finishedModules, unlockVideoModuleCards } = await import('../../src/lib/video-lesson-cards')
+  const { finishedVideos, unlockVideoModuleCards } = await import('../../src/lib/video-lesson-cards')
   const { visibleSteps, videoDeckKey, lessonParts } = await import('../../src/lib/video-lesson-core')
 
   const lessons = await prisma.videoLesson.findMany({
@@ -86,11 +87,11 @@ async function main() {
       if (!lesson) continue
       const topic = await topicOf(lesson.topicSlug)
       if (!topic) continue
-      const done = finishedModules(visibleSteps(lesson.steps, !!row.user.lessonIncludeLowYield), (row.steps ?? {}) as never)
+      const done = finishedVideos(visibleSteps(lesson.steps, !!row.user.lessonIncludeLowYield), (row.steps ?? {}) as never)
       if (done.length === 0) continue
       const keys = done.flatMap((m) => m.videos.map((v) => videoDeckKey(m.lessonKey, v)))
       const have = await prisma.flashcardProgress.count({ where: { userId: row.userId, flashcard: { topicId: topic.id, videoDeck: { in: keys } } } })
-      console.log(`${row.user.name}: ${topic.title} modules ${done.map((m) => m.module).join(', ')} → ${await countCards(topic.id, keys)} cards (${have} deck rows already)`)
+      console.log(`${row.user.name}: ${topic.title} videos ${done.map((m) => m.videos[0]).join(', ')} → ${await countCards(topic.id, keys)} cards (${have} deck rows already)`)
       if (APPLY) console.log('   added', (await unlockVideoModuleCards(row.userId, topic, lesson.courseSlug, done))?.newCards ?? 0)
     }
   }

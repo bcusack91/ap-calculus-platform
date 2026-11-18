@@ -1,8 +1,8 @@
 /**
- * Video lesson review cards join a student's deck one MODULE at a time (owner,
- * Nov 2026): a module (two source videos) counts as finished once every one
- * of its sections is watched and every checkpoint settled. The topic-wide
- * unlock (lesson + exit quiz) never hands these cards out.
+ * Video lesson review cards join a student's deck one VIDEO at a time (owner,
+ * 2026-11-18; until then one module of two videos at a time): a video counts
+ * as finished once every one of its sections is watched and every checkpoint
+ * settled. The topic-wide unlock (lesson + exit quiz) never hands these cards out.
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { visibleSteps, type ProgressSteps, type StoredStep } from '@/lib/video-lesson-core'
@@ -49,6 +49,33 @@ describe('finishedModules', () => {
     const after = progress('v1-01-a', 'v2-02-a', 'v3-03-a', 'v4-04-a')
     expect(newlyFinishedModules(STEPS, before, after)).toEqual([{ module: 2, lessonKey: 'mcat-circ1', videos: [3, 4] }])
     expect(newlyFinishedModules(STEPS, after, after)).toEqual([])
+  })
+})
+
+describe('finishedVideos', () => {
+  it('releases each video on its own: the concept video before its examples video', async () => {
+    const { finishedVideos } = await import('@/lib/video-lesson-cards')
+    expect(finishedVideos(STEPS, progress())).toEqual([])
+    expect(finishedVideos(STEPS, progress('v1-01-a'))).toEqual([{ module: 1, lessonKey: 'mcat-circ1', videos: [1] }])
+    expect(finishedVideos(STEPS, progress('v1-01-a', 'v3-03-a'))).toEqual([
+      { module: 1, lessonKey: 'mcat-circ1', videos: [1] },
+      { module: 2, lessonKey: 'mcat-circ1', videos: [3] },
+    ])
+  })
+
+  it('waits for every section of the video, recap included', async () => {
+    const { finishedVideos } = await import('@/lib/video-lesson-cards')
+    const twoSections = visibleSteps([step(0, 7, '02-a'), step(1, 7, '08-recap'), step(2, 8, '02-b')], false)
+    expect(finishedVideos(twoSections, progress('v7-02-a'))).toEqual([])
+    expect(finishedVideos(twoSections, progress('v7-02-a', 'v7-08-recap'))).toEqual([{ module: 4, lessonKey: 'mcat-circ1', videos: [7] }])
+  })
+
+  it('reports only the videos this save finished', async () => {
+    const { newlyFinishedVideos } = await import('@/lib/video-lesson-cards')
+    const before = progress('v1-01-a')
+    const after = progress('v1-01-a', 'v2-02-a')
+    expect(newlyFinishedVideos(STEPS, before, after)).toEqual([{ module: 1, lessonKey: 'mcat-circ1', videos: [2] }])
+    expect(newlyFinishedVideos(STEPS, after, after)).toEqual([])
   })
 })
 
