@@ -1,0 +1,71 @@
+{
+ "key": "mcat-circ4",
+ "video": 5,
+ "stem": "mcat_circ4_c05_membrane",
+ "topic": "circuits-part4-capacitor-networks-bioelectricity",
+ "clips": [
+  {
+   "section": "02-membrane-circuit",
+   "file": "02-membrane-circuit.mp4",
+   "seconds": 43.9,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-field",
+   "file": "03-field.mp4",
+   "seconds": 50.5,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-stored-charge",
+   "file": "04-stored-charge.mp4",
+   "seconds": 48.7,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-time-constant",
+   "file": "05-time-constant.mp4",
+   "seconds": 50.0,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-summation",
+   "file": "06-summation.mp4",
+   "seconds": 37.9,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-myelin",
+   "file": "07-myelin.mp4",
+   "seconds": 41.1,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-saltatory",
+   "file": "08-saltatory.mp4",
+   "seconds": 40.6,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-diameter-ms",
+   "file": "09-diameter-ms.mp4",
+   "seconds": 42.9,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "10-recap",
+   "file": "10-recap.mp4",
+   "seconds": 41.0,
+   "source": "p4 c05 The Membrane v1.mov",
+   "voiced": true
+  }
+ ]
+}

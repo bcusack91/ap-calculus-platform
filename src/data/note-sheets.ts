@@ -10,6 +10,7 @@ export const NOTE_SHEET_TOPICS: Record<string, { lessonKey: string }> = {
   'mcat-physics-electricity-dc-circuits-mcat': { lessonKey: 'mcat-circ1' },
   'mcat-physics-electricity-kirchhoff-power-mcat': { lessonKey: 'mcat-circ2' },
   'mcat-physics-electricity-emf-capacitors-mcat': { lessonKey: 'mcat-circ3' },
+  'mcat-physics-electricity-rc-circuits-mcat': { lessonKey: 'mcat-circ4' },
 }
 
 export const hasNoteSheets = (topicSlug: string): boolean => Object.prototype.hasOwnProperty.call(NOTE_SHEET_TOPICS, topicSlug)

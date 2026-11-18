@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ4",
+ "video": 1,
+ "stem": "mcat_circ4_c01_capnet",
+ "topic": "circuits-part4-capacitor-networks-bioelectricity",
+ "clips": [
+  {
+   "section": "02-reverse",
+   "file": "02-reverse.mp4",
+   "seconds": 43.5,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-parallel",
+   "file": "03-parallel.mp4",
+   "seconds": 82.8,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-series",
+   "file": "04-series.mp4",
+   "seconds": 92.2,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-smaller-c",
+   "file": "05-smaller-c.mp4",
+   "seconds": 67.7,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-shortcuts",
+   "file": "06-shortcuts.mp4",
+   "seconds": 50.1,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-compare",
+   "file": "07-compare.mp4",
+   "seconds": 52.9,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 39.2,
+   "source": "p4 c01 Capacitor Networks v1.mov",
+   "voiced": true
+  }
+ ]
+}

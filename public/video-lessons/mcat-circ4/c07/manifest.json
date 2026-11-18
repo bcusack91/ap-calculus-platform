@@ -1,0 +1,71 @@
+{
+ "key": "mcat-circ4",
+ "video": 7,
+ "stem": "mcat_circ4_c07_defib",
+ "topic": "circuits-part4-capacitor-networks-bioelectricity",
+ "clips": [
+  {
+   "section": "02-fibrillation",
+   "file": "02-fibrillation.mp4",
+   "seconds": 35.9,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-battery-limit",
+   "file": "03-battery-limit.mp4",
+   "seconds": 44.0,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-charge-store",
+   "file": "04-charge-store.mp4",
+   "seconds": 34.7,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-discharge",
+   "file": "05-discharge.mp4",
+   "seconds": 49.6,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-power",
+   "file": "06-power.mp4",
+   "seconds": 43.9,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-connected-isolated",
+   "file": "07-connected-isolated.mp4",
+   "seconds": 42.2,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-held-constant",
+   "file": "08-held-constant.mp4",
+   "seconds": 56.1,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "09-units",
+   "file": "09-units.mp4",
+   "seconds": 38.9,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "10-recap",
+   "file": "10-recap.mp4",
+   "seconds": 41.8,
+   "source": "p4 c07 Defibrillators v1.mov",
+   "voiced": true
+  }
+ ]
+}

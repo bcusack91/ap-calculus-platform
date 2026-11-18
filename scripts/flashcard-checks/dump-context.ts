@@ -22,6 +22,7 @@ const VIDEO_LESSON_OF_TOPIC: Record<string, string> = {
   'mcat-physics-electricity-dc-circuits-mcat': 'mcat-circ1',
   'mcat-physics-electricity-kirchhoff-power-mcat': 'mcat-circ2',
   'mcat-physics-electricity-emf-capacitors-mcat': 'mcat-circ3',
+  'mcat-physics-electricity-rc-circuits-mcat': 'mcat-circ4',
 }
 
 async function videoQuestions(lessonKey: string, topicSlug: string): Promise<{ src: string; question: string; options?: string[] }[]> {

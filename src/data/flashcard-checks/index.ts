@@ -2,6 +2,7 @@ import { checkKey, type CardCheck } from '@/lib/flashcard-check-core'
 import { checks as mcatCirc1 } from './mcat-circ1'
 import { checks as mcatCirc2 } from './mcat-circ2'
 import { checks as mcatCirc3 } from './mcat-circ3'
+import { checks as mcatCirc4 } from './mcat-circ4'
 import { TOPIC_CHECKS } from './topics'
 
 /**
@@ -15,6 +16,7 @@ const VIDEO_DECKS: Record<string, Record<string, CardCheck>[]> = {
   'mcat-physics-electricity-dc-circuits-mcat': [mcatCirc1],
   'mcat-physics-electricity-kirchhoff-power-mcat': [mcatCirc2],
   'mcat-physics-electricity-emf-capacitors-mcat': [mcatCirc3],
+  'mcat-physics-electricity-rc-circuits-mcat': [mcatCirc4],
 }
 
 // A topic's own cards (topics/, registered by scripts/flashcard-checks/register.ts)

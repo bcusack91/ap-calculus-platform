@@ -1,0 +1,57 @@
+{
+ "key": "mcat-circ4",
+ "video": 3,
+ "stem": "mcat_circ4_c03_tau",
+ "topic": "circuits-part4-capacitor-networks-bioelectricity",
+ "clips": [
+  {
+   "section": "02-t-zero",
+   "file": "02-t-zero.mp4",
+   "seconds": 45.9,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-steady-state",
+   "file": "03-steady-state.mp4",
+   "seconds": 62.5,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-no-jump",
+   "file": "04-no-jump.mp4",
+   "seconds": 47.4,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-time-constant",
+   "file": "05-time-constant.mp4",
+   "seconds": 96.7,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-one-tau",
+   "file": "06-one-tau.mp4",
+   "seconds": 73.4,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-what-sets-tau",
+   "file": "07-what-sets-tau.mp4",
+   "seconds": 60.6,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.0,
+   "source": "p4 c03 RC Circuits and Time Constant v1.mov",
+   "voiced": true
+  }
+ ]
+}

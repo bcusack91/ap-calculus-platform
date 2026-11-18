@@ -1,0 +1,43 @@
+{
+ "key": "mcat-circ4",
+ "video": 8,
+ "stem": "mcat_circ4_c08_defib_examples",
+ "topic": "circuits-part4-capacitor-networks-bioelectricity",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 34.6,
+   "source": "p4 c08 Defibrillator examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 167.4,
+   "source": "p4 c08 Defibrillator examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 23.6,
+   "source": "p4 c08 Defibrillator examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 110.8,
+   "source": "p4 c08 Defibrillator examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 38.3,
+   "source": "p4 c08 Defibrillator examples v1.mov",
+   "voiced": true
+  }
+ ]
+}
