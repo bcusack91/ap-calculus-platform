@@ -15,7 +15,7 @@ export default function TermsPage() {
       
       <div className="prose prose-slate dark:prose-invert max-w-none">
         <p className="text-muted-foreground">
-          <strong>Last Updated:</strong> February 17, 2026
+          <strong>Last Updated:</strong> November 20, 2026
         </p>
 
         <section className="mt-8">
@@ -103,6 +103,20 @@ export default function TermsPage() {
           <p>
             We grant you a limited, non-exclusive, non-transferable license to access and use the Service and its educational content 
             for personal, non-commercial educational purposes only.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6 mb-3">6.3 YouTube Videos</h3>
+          <p>
+            Some lessons include videos played through YouTube, and Study Mondo uses YouTube API Services. By watching these
+            videos you also agree to be bound by the{" "}
+            <a href="https://www.youtube.com/t/terms" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              YouTube Terms of Service
+            </a>
+            . How YouTube handles information is described in the{" "}
+            <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              Google Privacy Policy
+            </a>
+            .
           </p>
         </section>
 

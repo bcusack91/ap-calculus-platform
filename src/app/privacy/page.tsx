@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       
       <div className="prose prose-slate dark:prose-invert max-w-none">
         <p className="text-muted-foreground">
-          <strong>Last Updated:</strong> February 17, 2026
+          <strong>Last Updated:</strong> November 20, 2026
         </p>
 
         <section className="mt-8">
@@ -123,6 +123,26 @@ export default function PrivacyPage() {
               </a>
             </li>
           </ul>
+
+          <h3 className="text-xl font-semibold mt-6 mb-3">3.3 YouTube API Services</h3>
+          <p>
+            Study Mondo uses YouTube API Services. Our video lessons play through the embedded YouTube player, and we use the
+            YouTube Data API to publish our own lesson videos to the Study Mondo YouTube channel. When you watch a video
+            lesson, YouTube may collect information about your device and viewing as described in the{" "}
+            <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              Google Privacy Policy
+            </a>
+            , and YouTube&apos;s own terms apply (see our Terms of Service).
+          </p>
+          <p className="mt-4">
+            Study Mondo does not access, collect, store or share any information from your YouTube or Google account through
+            YouTube API Services. If you have ever authorized an app to use your Google account, you can review or revoke that
+            access at any time from your{" "}
+            <a href="https://security.google.com/settings/security/permissions" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              Google security settings
+            </a>
+            .
+          </p>
         </section>
 
         <section className="mt-8">
