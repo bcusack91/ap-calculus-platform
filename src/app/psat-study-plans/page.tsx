@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function Page() {
   const plans = await getContentItems(CONTENT_TYPES.studyPlanTemplate, 'psat', PSAT_PLANS)

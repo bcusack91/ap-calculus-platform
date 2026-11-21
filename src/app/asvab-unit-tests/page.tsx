@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function AsvabUnitTestsPage() {
   const units = await getUnitTestUnits(ASVAB_UNIT_TESTS_CONFIG.courseSlug, ASVAB_UNIT_TESTS_CONFIG.units)

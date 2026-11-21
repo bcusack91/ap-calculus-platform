@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function Algebra2PracticePage() {
   const examConfig = await getPracticeExamConfig('algebra-2', config)

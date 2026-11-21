@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function Grade8MathUnitTestsPage() {
   const units = await getUnitTestUnits(GRADE_8_UNIT_TESTS_CONFIG.courseSlug, GRADE_8_UNIT_TESTS_CONFIG.units)

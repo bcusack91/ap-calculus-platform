@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
 }
 
-// ISR: cache the rendered page but pick up content-store edits within the window.
-export const revalidate = 300
+// ISR: cache the rendered page but pick up content-store edits within a day (admin edits refresh at once).
+export const revalidate = 86400
 
 export default async function McatUnitTestsPage() {
   const units = await getUnitTestUnits(MCAT_UNIT_TESTS_CONFIG.courseSlug, MCAT_UNIT_TESTS_CONFIG.units)

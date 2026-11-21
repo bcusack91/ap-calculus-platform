@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function PreAlgebraUnitTestsPage() {
   const units = await getUnitTestUnits(PRE_ALGEBRA_UNIT_TESTS_CONFIG.courseSlug, PRE_ALGEBRA_UNIT_TESTS_CONFIG.units)

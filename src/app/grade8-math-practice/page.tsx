@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function Grade8MathPracticePage() {
   const examConfig = await getPracticeExamConfig('grade-8-math', config)

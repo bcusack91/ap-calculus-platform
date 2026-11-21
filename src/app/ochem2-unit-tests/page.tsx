@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 300
+export const revalidate = 86400
 
 export default async function Ochem2UnitTestsPage() {
   const units = await getUnitTestUnits(OCHEM_2_UNIT_TESTS_CONFIG.courseSlug, OCHEM_2_UNIT_TESTS_CONFIG.units)
