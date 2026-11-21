@@ -12,6 +12,8 @@ const SHOT_LISTS: Record<string, () => Promise<ShotList>> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': () => import('./mcat-prep/mcat-physics-electricity-kirchhoff-power-mcat').then((m) => m.shotList),
   'mcat-physics-electricity-emf-capacitors-mcat': () => import('./mcat-prep/mcat-physics-electricity-emf-capacitors-mcat').then((m) => m.shotList),
   'mcat-physics-electricity-rc-circuits-mcat': () => import('./mcat-prep/mcat-physics-electricity-rc-circuits-mcat').then((m) => m.shotList),
+  'mcat-physics-mechanics-fluids-mcat': () => import('./mcat-prep/fluids').then((m) => m.fluidsAtRest),
+  'mcat-physics-mechanics-fluid-dynamics-mcat': () => import('./mcat-prep/fluids').then((m) => m.fluidsInMotion),
   'current-resistance-ohms-law': () => import('./ap-physics-2/circuits').then((m) => m.currentResistance),
   'series-parallel-circuits': () => import('./ap-physics-2/circuits').then((m) => m.seriesParallel),
   'kirchhoffs-laws': () => import('./ap-physics-2/circuits').then((m) => m.kirchhoff),

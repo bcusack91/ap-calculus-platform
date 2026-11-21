@@ -18,6 +18,16 @@ export type ShotListClip = {
   lessonParts: number[]    // which lesson part(s) it covers
   mcatTags: string[]       // real MCAT topic slugs this clip could be reused in
   checkpoint: CheckpointQuestion[]  // 2–3 questions answerable from THIS clip alone
+  /**
+   * Reuse across courses (fluids onward). A clip is cut into sections, and a
+   * second course (AP Physics 1) builds its lesson from the SHARED sections
+   * only. List here the key points (copied word for word from keyPoints) that
+   * only the MCAT lesson keeps; each becomes a section of its own. Omitted or
+   * empty, every section is shared. `mcatOnly: 'all'` marks a whole clip.
+   */
+  mcatOnly?: string[] | 'all'
+  /** Indexes into `checkpoint` of questions that belong to an MCAT-only section. */
+  mcatOnlyQuestions?: number[]
 }
 
 export type ShotList = { courseSlug: string; topicSlug: string; title: string; overview: string; clips: ShotListClip[] }

@@ -60,6 +60,42 @@ export const VIDEO_SHORT_LINKS: Record<string, VideoShortLink> = {
   membrane2: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 6, campaign: 'mcat-circuits4' },
   defib1: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 7, campaign: 'mcat-circuits4' },
   defib2: { topicSlug: 'mcat-physics-electricity-rc-circuits-mcat', clip: 8, campaign: 'mcat-circuits4' },
+  // MCAT · Fluids Part 1: Density & Pressure (Fluids at Rest clips 1–8)
+  density1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 1, campaign: 'mcat-fluids1' },
+  density2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 2, campaign: 'mcat-fluids1' },
+  depth1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 3, campaign: 'mcat-fluids1' },
+  depth2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 4, campaign: 'mcat-fluids1' },
+  gauge1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 5, campaign: 'mcat-fluids1' },
+  gauge2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 6, campaign: 'mcat-fluids1' },
+  pascal1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 7, campaign: 'mcat-fluids1' },
+  pascal2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 8, campaign: 'mcat-fluids1' },
+  // MCAT · Fluids Part 2: Buoyancy & Surface Tension (Fluids at Rest clips 9–16)
+  buoy1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 9, campaign: 'mcat-fluids2' },
+  buoy2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 10, campaign: 'mcat-fluids2' },
+  float1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 11, campaign: 'mcat-fluids2' },
+  float2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 12, campaign: 'mcat-fluids2' },
+  sink1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 13, campaign: 'mcat-fluids2' },
+  sink2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 14, campaign: 'mcat-fluids2' },
+  surface1: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 15, campaign: 'mcat-fluids2' },
+  surface2: { topicSlug: 'mcat-physics-mechanics-fluids-mcat', clip: 16, campaign: 'mcat-fluids2' },
+  // MCAT · Fluids Part 3: Continuity & Bernoulli (Fluids in Motion clips 1–8)
+  flow1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 1, campaign: 'mcat-fluids3' },
+  flow2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 2, campaign: 'mcat-fluids3' },
+  bernoulli1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 3, campaign: 'mcat-fluids3' },
+  bernoulli2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 4, campaign: 'mcat-fluids3' },
+  tank1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 5, campaign: 'mcat-fluids3' },
+  tank2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 6, campaign: 'mcat-fluids3' },
+  venturi1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 7, campaign: 'mcat-fluids3' },
+  venturi2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 8, campaign: 'mcat-fluids3' },
+  // MCAT · Fluids Part 4: Viscosity & Blood Flow (Fluids in Motion clips 9–16)
+  viscous1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 9, campaign: 'mcat-fluids4' },
+  viscous2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 10, campaign: 'mcat-fluids4' },
+  pipe1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 11, campaign: 'mcat-fluids4' },
+  pipe2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 12, campaign: 'mcat-fluids4' },
+  blood1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 13, campaign: 'mcat-fluids4' },
+  blood2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 14, campaign: 'mcat-fluids4' },
+  stenosis1: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 15, campaign: 'mcat-fluids4' },
+  stenosis2: { topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat', clip: 16, campaign: 'mcat-fluids4' },
 }
 
 export function lookupShortLink(code: string): (VideoShortLink & { code: string }) | null {
