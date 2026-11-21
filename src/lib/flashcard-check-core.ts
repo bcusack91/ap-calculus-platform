@@ -1,15 +1,44 @@
 /**
  * The daily card check (owner, Nov 2026): a short multiple-choice quiz on the
- * cards a student reviewed that day. Each card has ONE check question, written
- * for that card (src/data/flashcard-checks), that asks the student to USE the
- * card's idea in a new situation, so pressing "Good" on recognition alone
- * shows up as a miss. Pure types and rules; safe on the client.
+ * cards a student reviewed that day. Each card has check questions written for
+ * that card (src/data/flashcard-checks) that ask the student to USE the card's
+ * idea in a new situation, so pressing "Good" on recognition alone shows up as
+ * a miss. A card may hold SEVERAL questions (its first, plus `more` in
+ * src/data/flashcard-checks/variants): each check asks the one the student has
+ * seen least recently, so the answers can't be memorised from the results
+ * screen. Pure types and rules; safe on the client.
  */
 export type CardCheck = {
   question: string
   options: [string, string, string, string]
   correctAnswer: 0 | 1 | 2 | 3
   explanation: string
+}
+
+/**
+ * A card's further questions (owner, 2026-11-21). `calc` = the card is used to
+ * calculate a number: its questions change the numbers and the setting.
+ * `concept` = everything else: its questions come at the idea from another angle.
+ */
+export type CardCheckKind = 'calc' | 'concept'
+export type CardCheckVariants = { kind: CardCheckKind; more: CardCheck[] }
+/** Questions per card, counting the first one: 7 for a calculation card, 3 for a concept card. */
+export const CARD_CHECK_QUESTIONS: Record<CardCheckKind, number> = { calc: 7, concept: 3 }
+
+/**
+ * Which of a card's `count` questions to ask: one the student has never been
+ * asked (at random, so classmates don't get the same order), else the one
+ * asked longest ago. `lastSeen[i]` is when question i was last asked (ms), or
+ * undefined.
+ */
+export function pickVariant(count: number, lastSeen: readonly (number | undefined)[], rand: () => number): number {
+  if (count <= 1) return 0
+  const unseen: number[] = []
+  for (let i = 0; i < count; i++) if (lastSeen[i] === undefined) unseen.push(i)
+  if (unseen.length > 0) return unseen[Math.min(unseen.length - 1, Math.floor(rand() * unseen.length))]
+  let best = 0
+  for (let i = 1; i < count; i++) if (lastSeen[i]! < lastSeen[best]!) best = i
+  return best
 }
 
 /** Most questions in one check. */
@@ -31,12 +60,17 @@ export type CheckRating = 'AGAIN' | 'HARD' | 'GOOD' | 'EASY'
 /** A card reviewed in the check's window that has a check question. */
 export type CheckCandidate = { flashcardId: string; context: string; front: string; topicSlug: string; rating: CheckRating; wasNew: boolean }
 
-/** One question of a stored check attempt. `order[i]` is the authored option index shown in position i. */
+/**
+ * One question of a stored check attempt. `order[i]` is the authored option
+ * index shown in position i. `variant` is which of the card's questions was
+ * asked (absent on attempts stored before cards had several = the first).
+ */
 export type CheckItem = {
   flashcardId: string
   context: string
   front: string
   topicSlug: string
+  variant?: number
   rating: CheckRating
   order: number[]
   chosen: number | null

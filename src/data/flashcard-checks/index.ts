@@ -4,6 +4,7 @@ import { checks as mcatCirc2 } from './mcat-circ2'
 import { checks as mcatCirc3 } from './mcat-circ3'
 import { checks as mcatCirc4 } from './mcat-circ4'
 import { TOPIC_CHECKS } from './topics'
+import { VARIANTS } from './variants'
 
 /**
  * Card-check questions by TOPIC, then by the card's front text. A card has a
@@ -12,34 +13,53 @@ import { TOPIC_CHECKS } from './topics'
  * see scripts/flashcard-checks/AUTHOR-BRIEF.md (write, validate, blind-solve,
  * then register.ts for a topic's cards, or add a video deck below).
  */
-const VIDEO_DECKS: Record<string, Record<string, CardCheck>[]> = {
-  'mcat-physics-electricity-dc-circuits-mcat': [mcatCirc1],
-  'mcat-physics-electricity-kirchhoff-power-mcat': [mcatCirc2],
-  'mcat-physics-electricity-emf-capacitors-mcat': [mcatCirc3],
-  'mcat-physics-electricity-rc-circuits-mcat': [mcatCirc4],
+const VIDEO_FILES: Record<string, Record<string, CardCheck>> = {
+  'mcat-circ1': mcatCirc1,
+  'mcat-circ2': mcatCirc2,
+  'mcat-circ3': mcatCirc3,
+  'mcat-circ4': mcatCirc4,
+}
+/** Topic → the video decks (set names) whose review cards it holds. */
+const VIDEO_DECKS: Record<string, string[]> = {
+  'mcat-physics-electricity-dc-circuits-mcat': ['mcat-circ1'],
+  'mcat-physics-electricity-kirchhoff-power-mcat': ['mcat-circ2'],
+  'mcat-physics-electricity-emf-capacitors-mcat': ['mcat-circ3'],
+  'mcat-physics-electricity-rc-circuits-mcat': ['mcat-circ4'],
   // AP Physics 2 reuses the MCAT circuits videos and their review cards (video-lesson-flashcards/ap2-circ.ts).
-  'current-resistance-ohms-law': [mcatCirc1, mcatCirc2, mcatCirc3],
-  'series-parallel-circuits': [mcatCirc1, mcatCirc2, mcatCirc3, mcatCirc4],
-  'kirchhoffs-laws': [mcatCirc2, mcatCirc3, mcatCirc4],
+  'current-resistance-ohms-law': ['mcat-circ1', 'mcat-circ2', 'mcat-circ3'],
+  'series-parallel-circuits': ['mcat-circ1', 'mcat-circ2', 'mcat-circ3', 'mcat-circ4'],
+  'kirchhoffs-laws': ['mcat-circ2', 'mcat-circ3', 'mcat-circ4'],
+}
+
+/**
+ * One set (a topic's own cards, named by its slug, or a video deck) as
+ * front → the card's questions: its first, then any further ones written for
+ * it (variants/, same set name).
+ */
+function questionsOf(set: string, checks: Record<string, CardCheck>): [string, CardCheck[]][] {
+  const more = new Map(Object.entries(VARIANTS[set] ?? {}).map(([front, v]) => [checkKey(front), v.more]))
+  return Object.entries(checks).map(([front, c]) => [checkKey(front), [c, ...(more.get(checkKey(front)) ?? [])]])
 }
 
 // A topic's own cards (topics/, registered by scripts/flashcard-checks/register.ts)
-// sit beside its video decks; a front in both keeps the video deck's question.
-const BY_TOPIC: Record<string, Record<string, CardCheck>[]> = {}
-for (const [topic, checks] of Object.entries(TOPIC_CHECKS)) BY_TOPIC[topic] = [checks]
-for (const [topic, files] of Object.entries(VIDEO_DECKS)) BY_TOPIC[topic] = [...(BY_TOPIC[topic] ?? []), ...files]
+// sit beside its video decks; a front in both keeps the video deck's questions.
+const BY_TOPIC: Record<string, [string, CardCheck[]][]> = {}
+for (const [topic, checks] of Object.entries(TOPIC_CHECKS)) BY_TOPIC[topic] = questionsOf(topic, checks)
+for (const [topic, sets] of Object.entries(VIDEO_DECKS)) {
+  BY_TOPIC[topic] = [...(BY_TOPIC[topic] ?? []), ...sets.flatMap((s) => questionsOf(s, VIDEO_FILES[s]))]
+}
 
-const INDEX = new Map<string, Map<string, CardCheck>>(
-  Object.entries(BY_TOPIC).map(([topic, files]) => [
-    topic,
-    new Map(files.flatMap((f) => Object.entries(f).map(([front, c]) => [checkKey(front), c] as const))),
-  ]),
-)
+const INDEX = new Map<string, Map<string, CardCheck[]>>(Object.entries(BY_TOPIC).map(([topic, list]) => [topic, new Map(list)]))
 
 /** Topics with at least one card-check question. */
 export const CARD_CHECK_TOPICS: string[] = Object.keys(BY_TOPIC)
 
-/** The check question for a card, or null when none has been written. */
-export function cardCheckFor(topicSlug: string, front: string): CardCheck | null {
-  return INDEX.get(topicSlug)?.get(checkKey(front)) ?? null
+/** Every check question written for a card (the first, then its further ones); empty when none has been written. */
+export function cardChecksFor(topicSlug: string, front: string): CardCheck[] {
+  return INDEX.get(topicSlug)?.get(checkKey(front)) ?? []
+}
+
+/** One of a card's check questions (the first unless `variant` says otherwise), or null when it doesn't exist. */
+export function cardCheckFor(topicSlug: string, front: string, variant: number = 0): CardCheck | null {
+  return cardChecksFor(topicSlug, front)[variant] ?? null
 }

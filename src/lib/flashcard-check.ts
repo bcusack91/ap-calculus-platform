@@ -1,11 +1,13 @@
 import { prisma } from '@/lib/prisma'
-import { cardCheckFor, CARD_CHECK_TOPICS } from '@/data/flashcard-checks'
+import { cardCheckFor, cardChecksFor, CARD_CHECK_TOPICS } from '@/data/flashcard-checks'
 import {
   CARD_CHECK_MAX,
+  checkKey,
   effectiveAfterReviews,
   gradeChoice,
   nextStudyDayStart,
   pickCheckCards,
+  pickVariant,
   ratedConfident,
   shuffledOrder,
   type CheckCandidate,
@@ -22,7 +24,8 @@ import { isOwnCardId } from '@/lib/user-flashcard-ids'
  *
  * - A check COVERS the reviews since the student's last completed check,
  *   looking back at most WINDOW_MS. It asks one question per reviewed card
- *   that has a check question (src/data/flashcard-checks), at most 15.
+ *   that has a check question (src/data/flashcard-checks), at most 15. A card
+ *   with several questions is asked the one this student saw least recently.
  * - It is REQUIRED whenever that window holds such a card: the day's
  *   flashcards don't count as done until it is taken (the teacher's 7-day
  *   grid reads this through `checkedDays`).
@@ -135,6 +138,35 @@ export async function getCardCheckState(userId: string, now: Date = new Date()):
   }
 }
 
+/** How many past checks are read to see which of a card's questions a student has already been asked. */
+const VARIANT_HISTORY = 300
+
+/**
+ * When this student was last asked each question of each card, from their
+ * completed checks: `topic|front` → per question index, the time (ms). Keyed
+ * by the card's text, so the same card met through another deck counts.
+ */
+async function variantsSeen(userId: string): Promise<Map<string, (number | undefined)[]>> {
+  const past = await prisma.flashcardCheckAttempt.findMany({
+    where: { userId, completedAt: { not: null } },
+    orderBy: { completedAt: 'desc' },
+    take: VARIANT_HISTORY,
+    select: { completedAt: true, items: true },
+  })
+  const seen = new Map<string, (number | undefined)[]>()
+  for (const a of past) {
+    const at = a.completedAt!.getTime()
+    for (const it of a.items as unknown as CheckItem[]) {
+      const k = `${it.topicSlug}|${checkKey(it.front)}`
+      const list = seen.get(k) ?? []
+      const v = it.variant ?? 0
+      if (list[v] === undefined || list[v]! < at) list[v] = at
+      seen.set(k, list)
+    }
+  }
+  return seen
+}
+
 export type ServedCheckQuestion = { question: string; options: string[] }
 export type ServedCheck = { attemptId: string; questions: ServedCheckQuestion[] }
 
@@ -142,7 +174,7 @@ function serve(attemptId: string, items: CheckItem[]): ServedCheck {
   return {
     attemptId,
     questions: items.map((it) => {
-      const check = cardCheckFor(it.topicSlug, it.front)!
+      const check = cardCheckFor(it.topicSlug, it.front, it.variant ?? 0)!
       return { question: check.question, options: it.order.map((i) => check.options[i]) }
     }),
   }
@@ -159,16 +191,18 @@ export async function startCardCheck(userId: string, now: Date = new Date()): Pr
   })
   if (open) {
     const items = open.items as unknown as CheckItem[]
-    if (items.length > 0 && items.every((it) => cardCheckFor(it.topicSlug, it.front))) return serve(open.id, items)
+    if (items.length > 0 && items.every((it) => cardCheckFor(it.topicSlug, it.front, it.variant ?? 0))) return serve(open.id, items)
   }
   const { candidates } = await candidatesSince(userId, windowStart)
   const picked = pickCheckCards(candidates, Math.random)
   if (picked.length === 0) return null
+  const seen = await variantsSeen(userId)
   const items: CheckItem[] = picked.map((c) => ({
     flashcardId: c.flashcardId,
     context: c.context,
     front: c.front,
     topicSlug: c.topicSlug,
+    variant: pickVariant(cardChecksFor(c.topicSlug, c.front).length, seen.get(`${c.topicSlug}|${checkKey(c.front)}`) ?? [], Math.random),
     rating: c.rating,
     order: shuffledOrder(Math.random),
     chosen: null,
@@ -203,7 +237,7 @@ async function graded(attemptId: string, items: CheckItem[]): Promise<GradedChec
     (await prisma.flashcard.findMany({ where: { id: { in: items.map((i) => i.flashcardId) } }, select: { id: true, back: true } })).map((c) => [c.id, c.back]),
   )
   const questions = items.map((it): GradedCheckQuestion => {
-    const check = cardCheckFor(it.topicSlug, it.front)
+    const check = cardCheckFor(it.topicSlug, it.front, it.variant ?? 0)
     const correct = !!it.correct
     return {
       question: check?.question ?? '(this question is no longer available)',
@@ -247,7 +281,7 @@ export async function submitCardCheck(
   if (attempt.completedAt) return graded(attempt.id, stored)
 
   const items: CheckItem[] = stored.map((it, i) => {
-    const check = cardCheckFor(it.topicSlug, it.front)
+    const check = cardCheckFor(it.topicSlug, it.front, it.variant ?? 0)
     const a = answers[i]
     const chosen = typeof a === 'number' && Number.isInteger(a) && a >= 0 && a < 4 ? a : null
     return { ...it, chosen, correct: check ? gradeChoice(it.order, check.correctAnswer, chosen) : false }
