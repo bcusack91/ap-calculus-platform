@@ -1,0 +1,106 @@
+[
+ {
+  "front": "A plastic comb picks up $2.0 \\times 10^{10}$ extra electrons. What is its net charge? ($e = 1.6 \\times 10^{-19}$ C)",
+  "back": "$-3.2 \\times 10^{-9}$ C, or $-3.2$ nC. $q = -ne = -(2.0 \\times 10^{10})(1.6 \\times 10^{-19})$. Extra electrons make the charge negative. Going the other way, $n = |q|/e$ counts the extra or missing electrons.",
+  "hint": "Use $q = \\pm ne$, and get the sign from gained or lost.",
+  "yield": "HIGH",
+  "why": "Counting electrons with $q = ne$ is a commonly tested calculation.",
+  "part": 1
+ },
+ {
+  "front": "A neutral rubber rod is rubbed with neutral fur and ends with $-5$ nC. The fur ends with {{c1::$+5$ nC}}, because charge is moved, never created.",
+  "back": "Friction moves electrons from one object to the other, so the two end with equal and opposite charges and the total stays zero. Here electrons went from the fur to the rod. No protons moved.",
+  "hint": "The total charge of the pair was zero before rubbing.",
+  "yield": "HIGH",
+  "why": "Charge conservation in charging by friction is commonly tested.",
+  "part": 1
+ },
+ {
+  "front": "A negatively charged rod is used to charge a neutral metal sphere. What sign does the sphere end with by conduction, and what sign by induction?",
+  "back": "Conduction (touching): negative, the SAME sign as the rod, because the rod shares its own charge. Induction (rod held near while the sphere is grounded): positive, the OPPOSITE sign, and the rod loses none of its charge.",
+  "hint": "Contact shares charge; induction drives electrons to or from the ground.",
+  "yield": "HIGH",
+  "why": "The sign left by conduction versus induction is a commonly tested contrast.",
+  "part": 1
+ },
+ {
+  "front": "A positive rod is held near a metal sphere that is connected to ground. Which way do electrons flow in the ground wire, and which is removed first, the wire or the rod?",
+  "back": "Electrons flow UP from the ground onto the sphere, pulled toward the positive rod. Remove the ground wire first, then the rod, and the sphere keeps a negative charge. Remove the rod first and the extra electrons flow back down, leaving the sphere neutral.",
+  "hint": "A ground supplies or accepts electrons. Trap them before the rod leaves.",
+  "yield": "MEDIUM",
+  "why": "The step order of induction is secondary to knowing the final sign.",
+  "part": 1
+ },
+ {
+  "front": "Why does a charged rod attract a neutral scrap of paper?",
+  "back": "Polarization. The paper's charges shift so that charge opposite to the rod sits on the near side and like charge on the far side. The electric force is stronger at shorter distance, so the near-side attraction beats the far-side repulsion. No charge is transferred, and it works for a rod of either sign.",
+  "hint": "Which side of the paper is closer to the rod?",
+  "yield": "HIGH",
+  "why": "Polarization of a neutral object is a commonly tested concept.",
+  "part": 1
+ },
+ {
+  "front": "A charged object attracts both oppositely charged objects and neutral ones, so only {{c1::repulsion}} proves that two objects are both charged.",
+  "back": "Repulsion needs two charges of the same sign. Attraction is ambiguous: the second object may carry the opposite charge, or it may be neutral and polarized.",
+  "hint": "Which interaction can a neutral object never show?",
+  "yield": "HIGH",
+  "why": "Attraction of neutral objects is a common trap in charge-identification questions.",
+  "part": 1
+ },
+ {
+  "front": "Two identical metal spheres carry $-10$ nC and $+2$ nC. They touch and are separated. What is the charge on each?",
+  "back": "$-4$ nC each. Identical conductors share the total equally: $q_{\\text{each}} = (q_1 + q_2)/2 = (-10 + 2)/2$. Add the charges with their signs before splitting, and for several contacts take one contact at a time.",
+  "hint": "Add the charges with their signs, then split.",
+  "yield": "HIGH",
+  "why": "Charge sharing between identical spheres is a commonly tested setup.",
+  "part": 1
+ },
+ {
+  "front": "How do conductors and insulators differ, and which one is a cell membrane?",
+  "back": "In a conductor (metals, salt solutions) charges move freely, so excess charge spreads over the outer surface. In an insulator (rubber, glass, plastic) charge stays where it is put. Body fluids conduct because their ions move; the lipid bilayer and myelin insulate.",
+  "hint": "Can charges move through the material?",
+  "yield": "MEDIUM",
+  "why": "Conductor versus insulator behavior is background for charging and membrane questions.",
+  "part": 1
+ },
+ {
+  "front": "A $+8$ μC charge pushes a $+1$ μC charge with a force of $6$ N. The force that the $+1$ μC charge exerts on the $+8$ μC charge is {{c1::$6$ N}}.",
+  "back": "Newton's third law: the two forces are equal in size and opposite in direction. The product $q_1 q_2$ in $|F| = k|q_1 q_2|/r^2$ belongs to the pair, so the larger charge feels neither a larger nor a smaller force.",
+  "hint": "Coulomb's law gives one force size for the pair.",
+  "yield": "HIGH",
+  "why": "Equal forces on unequal charges is a commonly tested trap.",
+  "part": 2
+ },
+ {
+  "front": "To make the Coulomb force between two charges $9$ times larger by changing only the distance, the separation must become {{c1::one third}} of its original value.",
+  "back": "$F \\propto 1/r^2$, so working backward takes a square root: $r_{\\text{new}} = r/\\sqrt{9} = r/3$. Cutting the distance to one ninth would make the force $81$ times larger.",
+  "hint": "The force goes as $1/r^2$, so undo the square.",
+  "yield": "HIGH",
+  "why": "Inverse-square ratio reasoning run backward is commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "A charge feels a $5.0$ N force along $+x$ from one neighbor and a $12$ N force along $+y$ from another. What is the size of the net force on it?",
+  "back": "$13$ N. Perpendicular forces are the legs of a right triangle: $F = \\sqrt{5.0^2 + 12^2} = 13$ N, at $\\tan\\theta = 12/5.0$, about $67^\\circ$ above $+x$. Adding the magnitudes to get $17$ N works only when the forces point the same way.",
+  "hint": "Add the components, then use the Pythagorean theorem.",
+  "yield": "HIGH",
+  "why": "Vector addition of perpendicular forces is commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "Four equal positive charges sit at the corners of a square. What net force does a charge at the exact center feel, and why?",
+  "back": "Zero. Charges on opposite corners are the same distance away and push in opposite directions, so the forces cancel in pairs. Check for symmetry before calculating: matching charges at matching distances cancel each other's opposing components.",
+  "hint": "Pair up the corners that face each other.",
+  "yield": "MEDIUM",
+  "why": "Symmetry shortcuts are a secondary skill that saves time on superposition questions.",
+  "part": 2
+ },
+ {
+  "front": "Charges of $+1.0$ μC and $+4.0$ μC are fixed $0.60$ m apart. Where does a third charge feel zero net force?",
+  "back": "Between them, $0.20$ m from the $+1.0$ μC charge. Like charges push a third charge in opposite directions only between them, and balance needs $|q_1|/r_1^2 = |q_2|/r_2^2$, so $r_2 = 2r_1$ with $r_1 + r_2 = 0.60$ m. The point is nearer the smaller charge and does not depend on the third charge's sign or size.",
+  "hint": "Four times the charge needs twice the distance.",
+  "yield": "HIGH",
+  "why": "Locating a zero-force point between like charges is commonly tested.",
+  "part": 2
+ }
+]

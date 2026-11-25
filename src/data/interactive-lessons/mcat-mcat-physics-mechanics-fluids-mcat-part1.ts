@@ -6,11 +6,11 @@ export const fluidsAtRestMcatPart1: LessonData = {
     {
       id: 'fl1-intro',
       type: 'text' as const,
-      content: `# Fluids at Rest
+      content: `# Fluids Part 1: Density & Pressure
 
-**Part 1 of 2 — Density, Pressure & Pascal's Principle**
+**Part 1 of 1 — Density, Pressure & Pascal's Principle**
 
-**Where this fits.** This lesson starts the fluids-and-waves sequence with fluids that are not moving at all: density and pressure, Pascal's principle, buoyancy and surface tension. The next lesson, *Fluids in Motion*, sets the fluid flowing with continuity, Bernoulli, viscosity and blood flow.
+**Where this fits.** This is the first of four fluids lessons. It covers fluids that are not moving at all: density, pressure and depth, gauge pressure and Pascal's principle. *Fluids Part 2: Buoyancy & Surface Tension* stays with fluids at rest; *Fluids Part 3: Continuity & Bernoulli* and *Fluids Part 4: Viscosity & Blood Flow* then set the fluid flowing.
 
 A **fluid** is any substance that flows: liquids and gases. A fluid at rest cannot hold a sideways (shear) force, so it can only push perpendicular to any surface it touches. That one fact is the root of everything about pressure.
 
@@ -20,7 +20,7 @@ A **fluid** is any substance that flows: liquids and gases. A fluid at rest cann
 
 $$\\rho = \\frac{m}{V}$$
 
-The SI unit is $\\text{kg/m}^3$; labs and clinics often use $\\text{g/cm}^3$, which is the same as g/mL. Water is the anchor: $1\\;\\text{g/cm}^3 = 1000\\;\\text{kg/m}^3 = 1\\;\\text{kg/L}$. To convert a density from $\\text{g/cm}^3$ to $\\text{kg/m}^3$, multiply by 1000.
+The SI unit is $\\text{kg/m}^3$; labs and clinics often use $\\text{g/cm}^3$, which is the same as g/mL. Water is the anchor: $1\\;\\text{g/cm}^3 = 1000\\;\\text{kg/m}^3 = 1\\;\\text{kg/L}$. To convert a density from $\\text{g/cm}^3$ to $\\text{kg/m}^3$, multiply by 1000. Density belongs to the material, not the sample: cut a block in half and both $m$ and $V$ halve, so $\\rho$ is unchanged.
 
 **Specific gravity** (SG) is a substance's density divided by the density of water:
 
@@ -38,7 +38,7 @@ It is a ratio of two densities, so it has no units. $SG = 0.8$ means 80% as dens
 
 Memorize water and mercury; the others are useful for estimates and are usually given in a passage.
 
-Two more facts you will use constantly. Weight follows from density: $W = mg = \\rho V g$. And liquids barely compress, so the MCAT treats them as **incompressible** (constant density); gases are compressible, and their density rises with pressure.
+Two more facts you will use constantly. Mass and weight follow from density: $m = \\rho V$ and $W = mg = \\rho V g$, with matching units ($\\text{kg/m}^3$ with $\\text{m}^3$, or $\\text{g/cm}^3$ with $\\text{cm}^3$; $1\\;\\text{L} = 1000\\;\\text{cm}^3 = 10^{-3}\\;\\text{m}^3$). A specific gravity is a density in disguise: 2.0 L of a liquid with $SG = 0.8$ has a mass of $(0.8\\;\\text{g/cm}^3)(2000\\;\\text{cm}^3) = 1600\\;\\text{g}$. And liquids barely compress, so the MCAT treats them as **incompressible** (constant density); gases are compressible, and their density rises with pressure.
 
 ### Pressure
 
@@ -56,10 +56,14 @@ Here $h$ is the depth below the surface and $g \\approx 10\\;\\text{m/s}^2$.
 
 - **Depth, not shape.** Only $\\rho$, $g$ and $h$ appear. A narrow tube and a wide lake have the same pressure at the same depth; the container's shape and the total volume of liquid do not matter.
 - **Same level, same pressure.** In one connected fluid at rest, every point at the same depth has the same pressure.
-- **Linear in depth.** Doubling the depth doubles $\\rho g h$, but not the total $P$, because $P_0$ does not double.
+- **Linear in depth.** A graph of $P$ against $h$ is a straight line of slope $\\rho g$ that starts at $P_0$, not at zero. Doubling the depth doubles $\\rho g h$, but not the total $P$, because $P_0$ does not double.
+- **Between two depths.** In the same liquid, two points a vertical distance $\\Delta h$ apart differ in pressure by $\\rho g \\Delta h$; $P_0$ cancels.
+- **From pressure to force.** A pressure pushes on a surface with force $F = PA$, with the area in $\\text{m}^2$: the extra $10^5\\;\\text{Pa}$ at a depth of 10 m pushes on a $0.5\\;\\text{m}^2$ hatch with $5 \\times 10^4\\;\\text{N}$.
 - **Rule of thumb.** In water, $\\rho g h = (1000)(10)(10) = 10^5\\;\\text{Pa}$ for every $10\\;\\text{m}$: about one extra atmosphere per 10 m of depth.
 
-**Gauge vs. absolute pressure.** **Absolute pressure** is the total $P$. **Gauge pressure** is the amount above atmospheric: $P_{\\text{gauge}} = P - P_{\\text{atm}}$, which for an open liquid is just $\\rho g h$. Tire gauges and blood-pressure cuffs report GAUGE pressure, and it can be negative: the thin fluid layer between the lungs and the chest wall sits at about $-4\\;\\text{mmHg}$, 4 mmHg below atmospheric.
+### Gauge vs. Absolute Pressure
+
+**Absolute pressure** is the total $P$, and it is never below zero. **Gauge pressure** is the amount above atmospheric: $P_{\\text{gauge}} = P - P_{\\text{atm}}$, which for an open liquid is just $\\rho g h$. Tire gauges and blood-pressure cuffs report GAUGE pressure, and it can be negative, meaning below atmospheric. Sucking on a drinking straw lowers the pressure in the mouth below atmospheric, and the atmosphere pushes the drink up. In the body, the thin fluid layer between the lungs and the chest wall sits at about $-4\\;\\text{mmHg}$, 4 mmHg below atmospheric.
 
 | Unit | Equivalent |
 |---|---|
@@ -68,7 +72,9 @@ Here $h$ is the depth below the surface and $g \\approx 10\\;\\text{m/s}^2$.
 | 1 mmHg | about 133 Pa |
 | 1 atm | about 10 m of water |
 
-A millimetre of mercury (mmHg) is literally the pressure under a 1 mm column of mercury: $\\rho g h = (13{,}600)(9.8)(0.001) \\approx 133\\;\\text{Pa}$.`
+A millimeter of mercury (mmHg) is literally the pressure under a 1 mm column of mercury: $\\rho g h = (13{,}600)(9.8)(0.001) \\approx 133\\;\\text{Pa}$.
+
+**Converting.** Work through the anchors: pascals divided by 133 gives mmHg, mmHg divided by 760 gives atm, and atm times $10^5$ gives pascals. A systolic blood pressure of 120 mmHg is $120 \\times 133 \\approx 1.6 \\times 10^4\\;\\text{Pa}$, or $120/760 \\approx 0.16\\;\\text{atm}$, above atmospheric. Clinical pressures are gauge readings in mmHg; add 760 mmHg for the absolute pressure.`
     },
     {
       id: 'fl1-quiz1',
@@ -88,10 +94,10 @@ A millimetre of mercury (mmHg) is literally the pressure under a 1 mm column of 
             options: [`About $6\\;\\text{atm}$`, `About $3\\;\\text{atm}$`, `About $4\\;\\text{atm}$`, `About $2\\;\\text{atm}$`],
             correctAnswer: 2,
             yield: 'ULTRA_HIGH',
-            explanation: `Each 10 m of water adds about 1 atm of gauge pressure, so 30 m adds 3 atm on top of the 1 atm already pressing on the surface: 4 atm absolute. Tripling the 2 atm to 6 atm treats the total pressure as proportional to depth, when only the $\\rho g h$ part is. 3 atm is the gauge pressure alone, and 2 atm would mean pressure stops rising with depth, though every extra metre adds the weight of another metre of water.`
+            explanation: `Each 10 m of water adds about 1 atm of gauge pressure, so 30 m adds 3 atm on top of the 1 atm already pressing on the surface: 4 atm absolute. Tripling the 2 atm to 6 atm treats the total pressure as proportional to depth, when only the $\\rho g h$ part is. 3 atm is the gauge pressure alone, and 2 atm would mean pressure stops rising with depth, though every extra meter adds the weight of another meter of water.`
           },
           {
-            question: `Three open containers are filled with water to the same depth of $30\\;\\text{cm}$: a tall narrow cylinder, a wide shallow basin, and a vase whose walls flare outward toward the top. How do the pressures at the centre of each container's floor compare?`,
+            question: `Three open containers are filled with water to the same depth of $30\\;\\text{cm}$: a tall narrow cylinder, a wide shallow basin, and a vase whose walls flare outward toward the top. How do the pressures at the center of each container's floor compare?`,
             options: [`Greatest in the wide basin, which holds the most water`, `Equal in all three, because depth and density decide it`, `Greatest in the narrow cylinder, focusing the weight`, `Least in the flared vase, whose walls carry some water`],
             correctAnswer: 1,
             yield: 'HIGH',
@@ -118,14 +124,16 @@ A millimetre of mercury (mmHg) is literally the pressure under a 1 mm column of 
 - A water barometer would need a column 13.6 times taller, about $10.3\\;\\text{m}$, which is why mercury is used.
 - At high altitude the air above is thinner and the column is shorter.
 
-**Open-tube manometer (measures gauge pressure).** A U-shaped tube of liquid has one arm connected to the gas or vessel and the other arm open to the air. The liquid is pushed DOWN on the higher-pressure side, and the height difference $\\Delta h$ between the two surfaces gives $P - P_{\\text{atm}} = \\rho g \\Delta h$. Because the open arm already carries atmospheric pressure, the reading is a gauge pressure.
+**Open-tube manometer (measures gauge pressure).** A U-shaped tube of liquid has one arm connected to the gas or vessel and the other arm open to the air. The liquid is pushed DOWN on the higher-pressure side, so it stands higher in the arm with the LOWER pressure, and the height difference $\\Delta h$ between the two surfaces gives $P - P_{\\text{atm}} = \\rho g \\Delta h$. Because the open arm already carries atmospheric pressure, the reading is a gauge pressure; add $P_{\\text{atm}}$ for the absolute pressure. If the liquid stands higher on the vessel's side, the vessel is BELOW atmospheric pressure and the gauge pressure is negative.
+
+The same pressure difference holds up a taller column of a less dense liquid: $\\rho_1 \\Delta h_1 = \\rho_2 \\Delta h_2$. A water manometer shows 13.6 times the height difference of a mercury one, which makes it the better choice for small pressures.
 
 **Blood pressure.** A reading of "120/80" means a peak (systolic) pressure of 120 mmHg and a minimum (diastolic) pressure of 80 mmHg, both measured ABOVE atmospheric. The cuff is kept at heart level because blood is a fluid and obeys $\\rho g h$ too:
 
 - In a standing adult, arteries in the feet sit about $1.2\\;\\text{m}$ below the heart, so (taking blood's density as about $1000\\;\\text{kg/m}^3$) their pressure is higher by roughly $\\rho g h = (1000)(10)(1.2) = 1.2 \\times 10^4\\;\\text{Pa} \\approx 90\\;\\text{mmHg}$.
 - Arteries in the head, above the heart, have LOWER pressure than at heart level, for the same reason.
 - An IV bag works by hydrostatics: hung above the arm, the column of fluid in the line makes the pressure at the needle higher than the pressure in the vein, so fluid flows in.
-- Pressure also falls ALONG the circulation as blood flows, but that is resistance, not gravity: see the *Fluids in Motion* lesson.
+- Pressure also falls ALONG the circulation as blood flows, but that is resistance, not gravity: see *Fluids Part 4: Viscosity & Blood Flow*.
 
 ### Pascal's Principle
 
@@ -211,7 +219,14 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
             options: [`Twice as high in the narrow syringe`, `Four times as high in the narrow syringe`, `Sixteen times as high in the narrow syringe`, `The same in both, as forces are equal`],
             correctAnswer: 1,
             yield: 'MEDIUM',
-            explanation: `$P = F/A$, and half the diameter means one-quarter of the area, so the same force produces four times the pressure in the narrow syringe. "Twice as high" forgets to square the diameter ratio, "sixteen times" uses the fourth power that belongs to Poiseuille's law for flow (the *Fluids in Motion* lesson), not to pressure on a piston, and equal forces give equal pressures only on equal areas.`,
+            explanation: `$P = F/A$, and half the diameter means one-quarter of the area, so the same force produces four times the pressure in the narrow syringe. "Twice as high" forgets to square the diameter ratio, "sixteen times" uses the fourth power that belongs to Poiseuille's law for flow (*Fluids Part 4: Viscosity & Blood Flow*), not to pressure on a piston, and equal forces give equal pressures only on equal areas.`,
+          },
+          {
+            question: `An open-tube mercury manometer is connected to a tank of gas. The mercury stands $15\\;\\text{cm}$ higher in the open arm than in the arm joined to the tank. If atmospheric pressure is $760\\;\\text{mmHg}$, what is the absolute pressure of the gas?`,
+            options: [`$775\\;\\text{mmHg}$`, `$910\\;\\text{mmHg}$`, `$150\\;\\text{mmHg}$`, `$610\\;\\text{mmHg}$`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `The mercury is pushed down on the gas side, so the gas is above atmospheric by a column of $15\\;\\text{cm} = 150\\;\\text{mm}$ of mercury: a gauge pressure of 150 mmHg. Absolute pressure adds the atmosphere, $760 + 150 = 910\\;\\text{mmHg}$. Stopping at 150 mmHg reports the gauge pressure, 610 mmHg subtracts as if the mercury stood higher on the gas side, and 775 mmHg adds the 15 without converting centimeters to millimeters.`
           }
         ]
       }
@@ -223,7 +238,7 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
 
 - **Density and specific gravity.** $\\rho = m/V$; water is $1000\\;\\text{kg/m}^3$, and $SG = \\rho/\\rho_{\\text{water}}$ has no units (mercury 13.6).
 - **Pressure grows with depth.** $P = P_0 + \\rho g h$ depends on depth, never container shape: about +1 atm per 10 m of water.
-- **Gauge versus absolute.** Barometers read absolute pressure; manometers and blood pressure read gauge; absolute = gauge + 760 mmHg.
+- **Gauge versus absolute.** Barometers read absolute pressure; open-tube manometers and blood pressure read gauge; absolute = gauge + 760 mmHg.
 - **Pascal's principle.** $F_1/A_1 = F_2/A_2$: a hydraulic lift multiplies force, divides distance and conserves work.
 
 **Common traps**
@@ -231,7 +246,9 @@ Pascal's principle and $\\rho g h$ work together. Pushing on a piston raises the
 - **Gauge or absolute.** Check which one is asked: absolute pressure is the gauge reading PLUS atmospheric pressure.
 - **Wider container, more pressure.** A wider or fuller container adds nothing at the same depth; only $\\rho$, $g$ and $h$ count.
 - **Scaling the total pressure.** Doubling the depth doubles only the $\\rho g h$ part, not the total $P$, since $P_0$ stays fixed.
-- **Pistons and diameters.** Pascal transmits PRESSURE, not force, and a diameter ratio must be squared to give the area ratio.`
+- **Pistons and diameters.** Pascal transmits PRESSURE, not force, and a diameter ratio must be squared to give the area ratio.
+
+**Next up:** the *Fluids Part 2: Buoyancy & Surface Tension* lesson — Archimedes' principle, floating and sinking, apparent weight, and surface tension and capillary action.`
     }
   ]
 }

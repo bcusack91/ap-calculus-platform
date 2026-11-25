@@ -1,16 +1,16 @@
 import type { LessonData } from './registry'
 
-export const fluidsAtRestMcatPart2: LessonData = {
-  topicSlug: 'mcat-physics-mechanics-fluids-mcat',
+export const buoyancyMcatPart1: LessonData = {
+  topicSlug: 'mcat-physics-mechanics-buoyancy-mcat',
   sections: [
     {
       id: 'fl2-intro',
       type: 'text' as const,
-      content: `# Fluids at Rest
+      content: `# Fluids Part 2: Buoyancy & Surface Tension
 
-**Part 2 of 2 — Buoyancy, Archimedes & Surface Tension**
+**Part 1 of 1 — Buoyancy, Archimedes & Surface Tension**
 
-Earlier in this lesson we saw that pressure grows with depth: $P = P_0 + \\rho g h$. That single fact explains why things float.
+**Where this fits.** This is the second of four fluids lessons. *Fluids Part 1: Density & Pressure* showed that pressure grows with depth: $P = P_0 + \\rho g h$. That single fact explains why things float. This lesson finishes fluids at rest with buoyancy and surface tension; *Fluids Part 3: Continuity & Bernoulli* then sets the fluid moving.
 
 ### Archimedes' Principle
 
@@ -27,8 +27,10 @@ $$F_B = \\rho_{\\text{fluid}} \\, V_{\\text{sub}} \\, g$$
 where $V_{\\text{sub}}$ is the submerged volume of the object, which is the volume of fluid pushed aside.
 
 - It uses the FLUID's density, not the object's: equal submerged volumes in the same fluid feel equal buoyant forces, whether the object is lead or cork.
-- Only the submerged volume counts.
+- Only the submerged volume counts, so $F_B$ grows as more of an object goes under and stops growing once it is fully under.
 - For a fully submerged object it does **not depend on depth**: a liquid is incompressible, so the top-to-bottom pressure difference is the same at any depth.
+
+**Two routes, one answer.** For a block you can add up the face forces ($F = PA$, using the gauge pressure $\\rho g h$ at each face, because $P_0$ pushes on both faces and cancels) or use Archimedes in one line. Take a cube of side $0.10\\;\\text{m}$ with its top face $0.20\\;\\text{m}$ under water: the bottom face feels $(3000)(0.01) = 30\\;\\text{N}$ up and the top face $(2000)(0.01) = 20\\;\\text{N}$ down, a net $10\\;\\text{N}$ up. Archimedes agrees: $(1000)(10^{-3})(10) = 10\\;\\text{N}$.
 
 **Float, hover or sink?** Compare the object's **average density** (its total mass divided by its total volume, including any air inside) with the fluid's density.
 
@@ -46,9 +48,18 @@ where $V_{\\text{sub}}$ is the submerged volume of the object, which is the volu
 
 $$\\frac{V_{\\text{sub}}}{V} = \\frac{\\rho_{\\text{object}}}{\\rho_{\\text{fluid}}}$$
 
-In water, the fraction submerged equals the object's specific gravity. Keep the two cases apart: a FLOATING object displaces its own WEIGHT of fluid; a fully SUBMERGED object displaces its own VOLUME of fluid.
+In water, the fraction submerged equals the object's specific gravity: ice ($920\\;\\text{kg/m}^3$) floats with 92% of its volume below the surface. Keep the two cases apart: a FLOATING object displaces its own WEIGHT of fluid; a fully SUBMERGED object displaces its own VOLUME of fluid.
 
-**Apparent weight.** An object hung from a scale while fully submerged reads lighter by the buoyant force: $W_{\\text{apparent}} = W - F_B$. This is why patients recovering muscle strength often exercise in a pool: the water supports part of their weight.`
+**Loading a boat.** Start every floating problem with $F_B = W$; the $g$ cancels, leaving $\\rho_{\\text{fluid}} V_{\\text{sub}} = m$. A flat-bottomed hull of base area $A$ sitting a depth $d$ into the water displaces $V_{\\text{sub}} = Ad$. The greatest load is reached when the whole hull is under: the total mass is then $\\rho_{\\text{fluid}} V_{\\text{hull}}$, and the load is that minus the hull's own mass.
+
+### Sinking, Apparent Weight and Free-Body Diagrams
+
+A fully submerged object's weight, $\\rho_{\\text{object}} V g$, and the buoyant force on it, $\\rho_{\\text{fluid}} V g$, share the same $V$. If the object is denser than the fluid, its weight beats $F_B$ at every depth, so it sinks all the way to the bottom. Being under water never changes the weight itself. Every submerged problem is a free-body diagram: the weight $W$ down, $F_B$ up, then whatever else touches the object.
+
+- **Hung from a scale:** $T + F_B = W$, so the scale reads the **apparent weight**, $W_{\\text{apparent}} = W - F_B$. The object has not become lighter; the fluid carries part of its weight. This is why patients recovering muscle strength often exercise in a pool: the water supports part of their weight.
+- **Resting on the bottom:** $N + F_B = W$, so the floor supplies $N = W - F_B$, the same as the scale would read.
+- **A floater held under** by a string or a push: $F_B = W + T$, so the downward pull is $T = F_B - W$, the same at any depth.
+- **Released:** remove the third force and the other two no longer balance. The net force, $F_B - W$, gives the acceleration through $F_{\\text{net}} = ma$, with the OBJECT's mass.`
     },
     {
       id: 'fl2-quiz1',
@@ -83,6 +94,13 @@ In water, the fraction submerged equals the object's specific gravity. Keep the 
             correctAnswer: 1,
             yield: 'HIGH',
             explanation: `The mass is unchanged, but crushing removes the enclosed volume, so the can's average density (mass over total volume) rises above water's and it can no longer displace its own weight of water. The steel's density never changed; it was always greater than water's. A flat plate of steel still sinks, and air has weight, so it never made the can lighter; it only made the can bigger.`
+          },
+          {
+            question: `A cork ball of volume $2.0 \\times 10^{-3}\\;\\text{m}^3$ and mass $0.50\\;\\text{kg}$ is held completely under water by a string tied to the bottom of a tank. What is the tension in the string? ($g = 10\\;\\text{m/s}^2$)`,
+            options: [`$25\\;\\text{N}$`, `$15\\;\\text{N}$`, `$5\\;\\text{N}$`, `$20\\;\\text{N}$`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `The ball is at rest, so the buoyant force up balances the weight and the string tension down. $F_B = (1000)(2.0 \\times 10^{-3})(10) = 20\\;\\text{N}$ and $W = (0.50)(10) = 5\\;\\text{N}$, so $T = 20 - 5 = 15\\;\\text{N}$. 20 N leaves out the weight, 5 N is the weight alone, and 25 N adds the two forces as if the weight also pulled the ball upward.`
           }
         ]
       }
@@ -96,7 +114,9 @@ In water, the fraction submerged equals the object's specific gravity. Keep the 
 
 $$SG = \\frac{W}{F_B} = \\frac{W}{W - W_{\\text{apparent}}}$$
 
-This is how Archimedes could test a crown for gold without melting it down.
+The TRUE weight goes on top, never the apparent weight. This is how Archimedes could test a crown for gold (specific gravity about 19) without melting it down.
+
+The same two readings also give a volume and a density step by step: $F_B = W - W_{\\text{apparent}}$; then $V = F_B/(\\rho_{\\text{fluid}} g)$, because a submerged object displaces its own volume; then $\\rho_{\\text{object}} = m/V$ with $m = W/g$. In any fluid, $\\rho_{\\text{object}}/\\rho_{\\text{fluid}} = W/F_B$.
 
 **Hydrometer.** A **hydrometer** is a weighted float with a scale on its narrow stem. Its weight is fixed, so it always displaces the same WEIGHT of liquid. In a denser liquid that weight is a smaller volume, so the hydrometer rides HIGHER; the liquid's SG is read where the surface meets the stem. Clinically, a higher urine specific gravity means more concentrated urine, as in dehydration.
 
@@ -104,14 +124,14 @@ This is how Archimedes could test a crown for gold without melting it down.
 - Normal urine specific gravity runs from roughly 1.005 to 1.030.
 <!-- /yield -->
 
-**One object, two fluids.** The submerged fraction is $\\rho_{\\text{object}}/\\rho_{\\text{fluid}}$, so the same object rides higher in a denser fluid: a swimmer floats more easily in seawater (SG about 1.03) than in a pool. An object whose density lies between two liquids that do not mix, such as oil floating on water, comes to rest at the boundary, partly in each layer.
+**One object, two fluids.** The submerged fraction is $\\rho_{\\text{object}}/\\rho_{\\text{fluid}}$, so the same object rides higher in a denser fluid: a swimmer floats more easily in seawater (SG about 1.03) than in a pool. The buoyant force itself is unchanged, still equal to the swimmer's weight; the denser fluid supplies it with less submerged volume. An object whose density lies between two liquids that do not mix, such as oil floating on water, comes to rest at the boundary, partly in each layer.
 
 **Melting ice.** An ice cube floating in a glass of water displaces exactly its own weight of water. When it melts it becomes exactly that weight of water, so the water level does not change.
 
 ### Surface Tension, Cohesion and Adhesion
 
 - **Cohesion** is the attraction between molecules of the same substance (water to water, through hydrogen bonds). **Adhesion** is the attraction between a liquid and a different material (water to glass).
-- A molecule inside a liquid is pulled equally in every direction; a molecule at the surface has neighbours only below and beside it, so it feels a net inward pull. The surface behaves like a stretched elastic skin.
+- A molecule inside a liquid is pulled equally in every direction; a molecule at the surface has neighbors only below and beside it, so it feels a net inward pull. The surface behaves like a stretched elastic skin.
 - **Surface tension** $\\gamma$ (Greek "gamma") measures that skin's strength as a force per unit length along the surface (N/m), or equivalently the energy needed to create a unit area of new surface. Water's is high because of hydrogen bonding.
 - Consequences: droplets pull into spheres (the shape with the least surface area); a water strider or a carefully placed steel needle rests ON the surface, held up by surface tension rather than buoyancy; soaps and other **surfactants** (surface-active agents) lower $\\gamma$.
 
@@ -157,12 +177,15 @@ The submerged fraction IS the specific gravity: 0.6.
 - **(a)** What buoyant force acts on the block?
 - **(b)** What does the block weigh?
 - **(c)** What downward push holds it under, and does that push change with depth?
+- **(d)** If the push is removed, what is the block's acceleration at that instant?
 
 **(a) Buoyant force.** Fully submerged in water, $F_B = (1000)(0.01)(10) = 100\\;\\text{N}$.
 
 **(b) Weight.** $W = (600)(0.01)(10) = 60\\;\\text{N}$.
 
 **(c) Pushing it under.** With $F_B = 100\\;\\text{N}$ from (a) and $W = 60\\;\\text{N}$ from (b), holding it under takes a downward push of $100 - 60 = 40\\;\\text{N}$. That push is the same at any depth, because the buoyant force on a fully submerged object does not change with depth.
+
+**(d) Let go.** The net force is $F_B - W = 100 - 60 = 40\\;\\text{N}$ upward, acting on the block's mass of $60/10 = 6.0\\;\\text{kg}$, so $a = 40/6.0 \\approx 6.7\\;\\text{m/s}^2$ upward.
 
 ### Worked Example — Weighing an Ore Sample
 
@@ -214,6 +237,13 @@ The submerged fraction IS the specific gravity: 0.6.
             correctAnswer: 2,
             yield: 'MEDIUM',
             explanation: `Surfactant LOWERS the surface tension of the fluid lining the alveoli; without it the surface tension stays high and pulls inward, collapsing small alveoli (respiratory distress syndrome). Saying surface tension falls has surfactant's role backwards. Surfactant acts on surface tension, not on viscosity or turbulence, and the problem is collapse of the air sacs, not fluid climbing the airways.`
+          },
+          {
+            question: `A loaded cargo ship sails from a freshwater river into the denser water of the sea. How do the buoyant force on the ship and its submerged volume change?`,
+            options: [`The buoyant force increases and the submerged volume stays the same`, `The buoyant force increases and the submerged volume decreases`, `The buoyant force stays the same and the submerged volume decreases`, `The buoyant force stays the same and the submerged volume increases`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `A floating ship is in equilibrium, so the buoyant force equals its weight in both waters and does not change. Because $F_B = \\rho_{\\text{fluid}} V_{\\text{sub}} g$ is fixed while the fluid's density rises, the submerged volume must fall, and the ship rides higher. A larger buoyant force would exceed the weight and accelerate the ship upward, and a larger submerged volume is what a LESS dense fluid would require.`
           }
         ]
       }
@@ -225,7 +255,7 @@ The submerged fraction IS the specific gravity: 0.6.
 
 - **Archimedes' principle.** $F_B = \\rho_{\\text{fluid}} V_{\\text{sub}} g$, the displaced fluid's weight, whatever the depth or material.
 - **Average density decides.** Less dense than the fluid floats, with submerged fraction $\\rho_{\\text{object}}/\\rho_{\\text{fluid}}$; equal hovers; denser sinks.
-- **Weighing under water.** Apparent weight $= W - F_B$, and $SG = W/F_B$, which is how a crown or an ore sample is tested.
+- **Weighing under water.** Apparent weight $= W - F_B$ and $SG = W/F_B$; a floater held under needs a pull of $F_B - W$.
 - **Surface tension.** Cohesion makes a surface skin; water rises in glass by adhesion; lung surfactant lowers tension so alveoli stay open.
 
 **Common traps**
@@ -239,7 +269,9 @@ The submerged fraction IS the specific gravity: 0.6.
 **Low-yield extras**
 
 - the normal urine specific-gravity range; the law of Laplace formula $\\Delta P = 2\\gamma/r$; Jurin's law for capillary rise
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Fluids Part 3: Continuity & Bernoulli* lesson — flow rate, the continuity equation, Bernoulli's equation, Torricelli's theorem, and the Venturi and pitot tubes.`
     }
   ]
 }

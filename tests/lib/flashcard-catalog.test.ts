@@ -1,11 +1,13 @@
 import { describe, expect, it } from 'vitest'
 import { FLASHCARD_AREAS, MCAT_SUBJECTS, areaOfCourse, flashcardCatalogHref, groupCoursesByArea, groupIntoUnits, subjectOfTopic } from '@/lib/flashcard-catalog'
 
-/** Every MCAT topic slug in the database on 2026-11-13 (117). */
+/** Every MCAT topic slug in the database on 2026-11-13 (117), plus the four split topics of 2026-11-24. */
 const MCAT_TOPICS = [
   'mcat-organic-chemistry-functional-groups-mcat',
   'mcat-biochemistry-amino-acids-proteins-mcat',
   'mcat-physics-electricity-electrostatics-mcat',
+  'mcat-physics-electricity-electric-fields-mcat',
+  'mcat-physics-electricity-electric-potential-mcat',
   'mcat-general-chemistry-mcat',
   'mcat-physics-mechanics-kinematics-mcat',
   'mcat-general-chemistry-atomic-structure-mcat',
@@ -36,6 +38,8 @@ const MCAT_TOPICS = [
   'mcat-lab-methods-mcat',
   'mcat-physics-electricity-magnetism-mcat',
   'mcat-physics-mechanics-fluid-dynamics-mcat',
+  'mcat-physics-mechanics-buoyancy-mcat',
+  'mcat-physics-mechanics-viscosity-mcat',
   'mcat-general-chemistry-kinetics-mcat',
   'mcat-lab-methods-spectroscopy-assays-mcat',
   'mcat-physics-waves-interference-mcat',

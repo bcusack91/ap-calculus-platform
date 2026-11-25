@@ -54,9 +54,12 @@ import { mcatWorkEnergyFigures } from './mcat-cp-work-energy'
 import { mcatMomentumFigures } from './mcat-cp-momentum'
 import { mcatFluidsFigures, mcatWavesSoundFigures } from './mcat-cp-fluids-waves'
 import { mcatFluidsExtraFigures } from './mcat-cp-fluids'
+import { mcatFluidsPartsFigures } from './mcat-cp-fluids-parts'
 import { mcatWavesSoundExtraFigures } from './mcat-cp-waves-sound'
 import { mcatMechanicsFigures } from './mcat-cp-mechanics'
 import { mcatElectrostaticsFigures } from './mcat-cp-electrostatics'
+import { mcatElectricFieldsFigures } from './mcat-cp-electric-fields'
+import { mcatElectricPotentialFigures } from './mcat-cp-electric-potential'
 import { mcatDcCircuitsFigures, mcatEmfCapacitorsFigures } from './mcat-cp-circuits'
 import { mcatDcCircuitsExtraFigures } from './mcat-cp-dc-circuits'
 import { circuits1Loops } from './mcat-cp-circuits1-loops'
@@ -131,6 +134,13 @@ import { mcatSciencePassageStrategyFigures } from './mcat-st-science-passage-str
 export interface DeckFigurePlacement {
   /** Section title prefix to find (case-insensitive). */
   at: string
+  /**
+   * Match the WHOLE section title instead of a prefix. Needed when an earlier
+   * slide starts with the same words — usually the part-intro slide, which is
+   * titled like the lesson part ("Coulomb's Law & Superposition" in front of
+   * the section "Coulomb's Law").
+   */
+  exact?: boolean
   figure: SlideFigure
   mode?: 'lead' | 'after' | 'replace' | 'replace-table' | 'beside'
   /** Short lines shown with the figure (see each mode). Same block syntax as deck slides. */
@@ -155,6 +165,8 @@ export interface SlideLoop {
   blocks?: string[]
   /** Always a NEW placement, even when the section already has a figure (e.g. a second animation 'after' it). */
   add?: boolean
+  /** As DeckFigurePlacement.exact: the section must be named `at`, not merely start with it. */
+  exact?: boolean
 }
 
 export function withSlideLoops(placements: DeckFigurePlacement[], folder: string, loops: readonly SlideLoop[]): DeckFigurePlacement[] {
@@ -167,11 +179,12 @@ export function withSlideLoops(placements: DeckFigurePlacement[], folder: string
       out[i] = {
         ...p,
         mode: loop.mode ?? p.mode,
+        exact: loop.exact ?? p.exact,
         blocks: loop.blocks ?? p.blocks,
         figure: { ...p.figure, alt: loop.alt, caption: loop.caption ?? p.figure.caption, video },
       }
     } else {
-      out.push({ at: loop.at, mode: loop.mode ?? 'lead', blocks: loop.blocks ?? [], figure: { svg: '', alt: loop.alt, caption: loop.caption, video } })
+      out.push({ at: loop.at, exact: loop.exact, mode: loop.mode ?? 'lead', blocks: loop.blocks ?? [], figure: { svg: '', alt: loop.alt, caption: loop.caption, video } })
     }
   }
   return out
@@ -185,11 +198,15 @@ function figuresAt(figs: DeckFigurePlacement[], ats: readonly string[], keep: bo
   return figs.filter((f) => ats.includes(f.at) === keep)
 }
 const DC_ALL = [...mcatDcCircuitsFigures, ...mcatDcCircuitsExtraFigures]
-const KIRCHHOFF_POWER_AT = ['Kirchhoff', 'Worked Example — A Two-Step Network', 'Voltage Dividers and Current Dividers', 'Electrical Power', 'When a Bulb Burns Out or One Is Added', 'Electricity and the Body']
+const KIRCHHOFF_POWER_AT = ["Kirchhoff's Rules", 'Worked Example — A Two-Step Network', 'Voltage Dividers and Current Dividers', 'Electrical Power', 'When a Bulb Burns Out or One Is Added', 'Electricity and the Body']
 const EC_ALL = [...mcatEmfCapacitorsFigures, ...mcatEmfCapacitorsExtraFigures]
 const RC_CIRCUITS_AT = ['Capacitor Networks', 'The Time Constant', 'Worked Example — Steady-State Voltage', 'The Cell Membrane Is an RC Circuit', 'Myelin and Conduction Speed', 'Defibrillators and Capacitor Discharge']
-const FL_ALL = [...mcatFluidsFigures, ...mcatFluidsExtraFigures]
-const FLUIDS_IN_MOTION_AT = ['Continuity: Mass In = Mass Out', 'Worked Example — A Venturi Meter', 'Viscosity: When Fluids Are Real', 'The Circulation as a Fluids Problem', 'Grading a Stenosis: Which Law Applies?']
+const FL_ALL = [...mcatFluidsFigures, ...mcatFluidsExtraFigures, ...mcatFluidsPartsFigures]
+// Fluids is four topics (Nov 2026, one per part of the fluids video series);
+// Part 1 keeps every figure not listed for Parts 2–4.
+const BUOYANCY_AT = ["Archimedes' Principle", 'Sinking, Apparent Weight and Free-Body Diagrams', 'Specific Gravity Reasoning', 'Surface Tension, Cohesion and Adhesion', 'Worked Example — The Block That Floats 60% Submerged']
+const FLUID_DYNAMICS_AT = ['Continuity: Mass In = Mass Out', 'Bernoulli: Energy Conservation for Ideal Fluids', "Torricelli's Theorem", 'Venturi and Pitot Tubes', 'Worked Example — A Venturi Meter']
+const VISCOSITY_AT = ['Viscosity: When Fluids Are Real', "Poiseuille's Law", 'The Circulation as a Fluids Problem', 'Grading a Stenosis: Which Law Applies?', 'Worked Example — The Circulation as a Circuit']
 const WS_ALL = [...mcatWavesSoundFigures, ...mcatWavesSoundExtraFigures]
 const PERIODIC_AT = ['Describing Anything That Repeats', 'Simple Harmonic Motion', 'The Wave Equation and Who Controls What']
 const INTERFERENCE_AT = ['Path Difference Decides the Phase', 'Worked Example — Tuning by Beats', 'Superposition and Standing Waves']
@@ -266,12 +283,17 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-mechanics-forces-newton-laws-mcat': mcatForcesFigures,
   'mcat-physics-mechanics-work-energy-power-mcat': mcatWorkEnergyFigures,
   'mcat-physics-mechanics-momentum-collisions-mcat': mcatMomentumFigures,
-  'mcat-physics-mechanics-fluids-mcat': figuresAt(FL_ALL, FLUIDS_IN_MOTION_AT, false),
-  'mcat-physics-mechanics-fluid-dynamics-mcat': figuresAt(FL_ALL, FLUIDS_IN_MOTION_AT, true),
+  'mcat-physics-mechanics-fluids-mcat': figuresAt(FL_ALL, [...BUOYANCY_AT, ...FLUID_DYNAMICS_AT, ...VISCOSITY_AT], false),
+  'mcat-physics-mechanics-buoyancy-mcat': figuresAt(FL_ALL, BUOYANCY_AT, true),
+  'mcat-physics-mechanics-fluid-dynamics-mcat': figuresAt(FL_ALL, FLUID_DYNAMICS_AT, true),
+  'mcat-physics-mechanics-viscosity-mcat': figuresAt(FL_ALL, VISCOSITY_AT, true),
   'mcat-physics-waves-interference-mcat': figuresAt(WS_ALL, [...PERIODIC_AT, ...INTERFERENCE_AT], true),
   'mcat-physics-waves-sound-mcat': figuresAt(figuresAt(WS_ALL, PERIODIC_AT, false), INTERFERENCE_AT, false),
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
+  // Electrostatics is three topics (Nov 2026): Part 1 Charge & Coulomb's Law keeps the slug.
   'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
+  'mcat-physics-electricity-electric-fields-mcat': mcatElectricFieldsFigures,
+  'mcat-physics-electricity-electric-potential-mcat': mcatElectricPotentialFigures,
   'mcat-physics-electricity-dc-circuits-mcat': withSlideLoops(figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, false), 'circuits-1', circuits1Loops),
   'mcat-physics-electricity-kirchhoff-power-mcat': withSlideLoops(figuresAt(DC_ALL, KIRCHHOFF_POWER_AT, true), 'circuits-2', circuits2Loops),
   'mcat-physics-electricity-emf-capacitors-mcat': withSlideLoops(figuresAt(EC_ALL, RC_CIRCUITS_AT, false), 'circuits-3', circuits3Loops),

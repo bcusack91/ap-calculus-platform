@@ -557,7 +557,8 @@ const circuitsFigures: DeckFigurePlacement[] = [
     ],
   },
   {
-    at: 'Kirchhoff',
+    at: "Kirchhoff's Rules",
+    exact: true, // not the part-intro slide "Kirchhoff's Rules & Reducing Networks"
     mode: 'lead',
     figure: {
       svg: kirchhoffSvg,
@@ -614,6 +615,7 @@ const circuitsFigures: DeckFigurePlacement[] = [
   },
   {
     at: 'Capacitor Networks',
+    exact: true, // not the part-intro slide "Capacitor Networks & RC Circuits"
     mode: 'replace-table',
     figure: {
       svg: capNetSvg,

@@ -7,12 +7,13 @@ import type { SlideLoop } from './index'
  */
 export const circuits2Loops: SlideLoop[] = [
   {
-    at: 'Kirchhoff',
+    at: "Kirchhoff's Rules",
     name: 'circ2-junction',
     alt: 'Wires carrying 1 A and 2 A merge at a junction into one wire carrying 3 A, whose charges move three times as fast: the current in equals the current out.',
   },
   {
     at: "Kirchhoff's Rules",
+    exact: true, // the part-intro slide "Kirchhoff's Rules & Reducing Networks" starts with the same words
     name: 'circ2-loop-rule',
     mode: 'after',
     add: true,

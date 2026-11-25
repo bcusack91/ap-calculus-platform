@@ -500,7 +500,7 @@ const CONT = ' (cont.)'
  */
 export function applyDeckFigures<T extends Slide>(
   slides: readonly T[],
-  placements: readonly { at: string; figure: SlideFigure; mode?: 'lead' | 'after' | 'replace' | 'replace-table' | 'beside'; blocks?: string[] }[] | undefined,
+  placements: readonly { at: string; exact?: boolean; figure: SlideFigure; mode?: 'lead' | 'after' | 'replace' | 'replace-table' | 'beside'; blocks?: string[] }[] | undefined,
 ): T[] {
   if (!placements?.length) return [...slides]
   // Works on a pure content list (the generator) and on a whole deck (a
@@ -508,7 +508,14 @@ export function applyDeckFigures<T extends Slide>(
   const out = [...slides] as Slide[]
   for (const p of placements) {
     const needle = p.at.trim().toLowerCase()
-    const idx = out.findIndex((s) => s.kind === 'content' && !s.title.endsWith(CONT.trim()) && slideUnitKey(s.title).toLowerCase().startsWith(needle))
+    // `exact`: the section must be NAMED `at`, not merely start with it —
+    // "Coulomb's Law" has to lead its own section, not the part-intro slide
+    // "Coulomb's Law & Superposition" that comes first (2026-11-25).
+    const idx = out.findIndex((s) => {
+      if (s.kind !== 'content' || s.title.endsWith(CONT.trim())) return false
+      const key = slideUnitKey(s.title).toLowerCase()
+      return p.exact ? key === needle : key.startsWith(needle)
+    })
     if (idx < 0) throw new Error(`deck figure "${p.at}" matches no section`)
     const target = out[idx] as ContentSlide
     const base = slideUnitKey(target.title)

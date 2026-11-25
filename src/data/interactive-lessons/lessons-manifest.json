@@ -3357,10 +3357,24 @@
     "slug": "mcat-physics-electricity-electrostatics-mcat",
     "importPath": "./mcat-mcat-physics-electricity-electrostatics-mcat",
     "partTitles": [
-      "Charge & Field Concepts",
-      "The Quantitative Toolkit",
-      "Membranes & Electrophoresis",
-      "MCAT Integration"
+      "Charge, Conductors & Charging",
+      "Coulomb's Law & Superposition"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-electric-fields-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-electric-fields-mcat",
+    "partTitles": [
+      "The Electric Field & Null Points",
+      "Field Lines, Dipoles & Uniform Fields"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-electric-potential-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-electric-potential-mcat",
+    "partTitles": [
+      "Potential Energy & Potential",
+      "Equipotentials & Energy Conservation"
     ]
   },
   {
@@ -3495,7 +3509,13 @@
     "slug": "mcat-physics-mechanics-fluids-mcat",
     "importPath": "./mcat-mcat-physics-mechanics-fluids-mcat",
     "partTitles": [
-      "Density, Pressure & Pascal's Principle",
+      "Density, Pressure & Pascal's Principle"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-buoyancy-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-buoyancy-mcat",
+    "partTitles": [
       "Buoyancy, Archimedes & Surface Tension"
     ]
   },
@@ -3503,7 +3523,13 @@
     "slug": "mcat-physics-mechanics-fluid-dynamics-mcat",
     "importPath": "./mcat-mcat-physics-mechanics-fluid-dynamics-mcat",
     "partTitles": [
-      "Fluid Dynamics: Continuity & Bernoulli",
+      "Continuity, Bernoulli & Torricelli"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-viscosity-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-viscosity-mcat",
+    "partTitles": [
       "Viscosity, Poiseuille & Blood Flow"
     ]
   },

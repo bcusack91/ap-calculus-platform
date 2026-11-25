@@ -3068,10 +3068,22 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'mcat-physics-electricity-electrostatics-mcat': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Charge & Field Concepts', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[0]) },
-      { title: 'The Quantitative Toolkit', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[1]) },
-      { title: 'Membranes & Electrophoresis', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[2]) },
-      { title: 'MCAT Integration', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[3]) },
+      { title: 'Charge, Conductors & Charging', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[0]) },
+      { title: 'Coulomb\'s Law & Superposition', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[1]) },
+    ],
+  },
+  'mcat-physics-electricity-electric-fields-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Electric Field & Null Points', loader: () => import('./mcat-mcat-physics-electricity-electric-fields-mcat').then((m) => m.parts[0]) },
+      { title: 'Field Lines, Dipoles & Uniform Fields', loader: () => import('./mcat-mcat-physics-electricity-electric-fields-mcat').then((m) => m.parts[1]) },
+    ],
+  },
+  'mcat-physics-electricity-electric-potential-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Potential Energy & Potential', loader: () => import('./mcat-mcat-physics-electricity-electric-potential-mcat').then((m) => m.parts[0]) },
+      { title: 'Equipotentials & Energy Conservation', loader: () => import('./mcat-mcat-physics-electricity-electric-potential-mcat').then((m) => m.parts[1]) },
     ],
   },
   'mcat-physics-electricity-circuits-mcat': {
@@ -3192,14 +3204,24 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'competitive',
     parts: [
       { title: 'Density, Pressure & Pascal\'s Principle', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[0]) },
-      { title: 'Buoyancy, Archimedes & Surface Tension', loader: () => import('./mcat-mcat-physics-mechanics-fluids-mcat').then((m) => m.parts[1]) },
+    ],
+  },
+  'mcat-physics-mechanics-buoyancy-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Buoyancy, Archimedes & Surface Tension', loader: () => import('./mcat-mcat-physics-mechanics-buoyancy-mcat').then((m) => m.parts[0]) },
     ],
   },
   'mcat-physics-mechanics-fluid-dynamics-mcat': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Fluid Dynamics: Continuity & Bernoulli', loader: () => import('./mcat-mcat-physics-mechanics-fluid-dynamics-mcat').then((m) => m.parts[0]) },
-      { title: 'Viscosity, Poiseuille & Blood Flow', loader: () => import('./mcat-mcat-physics-mechanics-fluid-dynamics-mcat').then((m) => m.parts[1]) },
+      { title: 'Continuity, Bernoulli & Torricelli', loader: () => import('./mcat-mcat-physics-mechanics-fluid-dynamics-mcat').then((m) => m.parts[0]) },
+    ],
+  },
+  'mcat-physics-mechanics-viscosity-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Viscosity, Poiseuille & Blood Flow', loader: () => import('./mcat-mcat-physics-mechanics-viscosity-mcat').then((m) => m.parts[0]) },
     ],
   },
   'mcat-physics-waves-interference-mcat': {

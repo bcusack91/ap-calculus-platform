@@ -6,13 +6,13 @@ export const fluidsInMotionMcatPart1: LessonData = {
     {
       id: 'fl3-intro',
       type: 'text' as const,
-      content: `# Fluids in Motion
+      content: `# Fluids Part 3: Continuity & Bernoulli
 
-**Part 1 of 2 — Fluid Dynamics: Continuity & Bernoulli**
+**Part 1 of 1 — Fluid Dynamics: Continuity & Bernoulli**
 
-**Where this fits.** The previous lesson, *Fluids at Rest*, covered density, pressure, buoyancy and surface tension. This lesson sets the fluid moving: continuity and Bernoulli for ideal flow, then viscosity, Poiseuille's law and blood flow. The next lesson, *Waves & Interference*, turns from fluids to oscillations and waves.
+**Where this fits.** This is the third of four fluids lessons. *Fluids Part 1: Density & Pressure* and *Fluids Part 2: Buoyancy & Surface Tension* covered fluids at rest. This lesson sets the fluid moving, with continuity and Bernoulli for ideal flow; *Fluids Part 4: Viscosity & Blood Flow* then adds friction for real fluids such as blood.
 
-Throughout this part we assume an **ideal fluid**, with three properties (Part 2 drops "non-viscous" to handle real blood flow):
+Throughout this lesson we assume an **ideal fluid**, with three properties (*Fluids Part 4* drops "non-viscous" to handle real blood flow):
 
 - **incompressible**: its density stays constant;
 - **non-viscous**: no internal friction between layers of fluid;
@@ -26,7 +26,7 @@ $$Q = Av$$
 
 where $A$ is the cross-sectional area and $v$ is the fluid's average speed. Why $Av$: in a time $t$, a slug of fluid of length $vt$ passes the cross-section, which is a volume $A(vt)$; divide by $t$.
 
-- Units: $\\text{m}^3/\\text{s}$ in SI; mL/min or L/min in medicine (resting cardiac output is about 5 L/min).
+- Units: $\\text{m}^3/\\text{s}$ in SI; mL/min or L/min in medicine (resting cardiac output is about 5 L/min, which is $5000\\;\\text{cm}^3$ per 60 s, about $83\\;\\text{cm}^3/\\text{s}$).
 - Conversions: $1\\;\\text{mL} = 1\\;\\text{cm}^3$; $1\\;\\text{L} = 1000\\;\\text{cm}^3 = 10^{-3}\\;\\text{m}^3$. Convert per minute to per second before mixing with speeds in m/s or cm/s.
 - **Mass flow rate** is $\\rho Q$, in kg/s.
 - Flow RATE is not SPEED. $Q$ is volume per time; $v$ is distance per time. A wide, slow river carries far more water per second than a narrow, fast stream.
@@ -116,26 +116,38 @@ Every term is an **energy per unit volume** ($\\text{J/m}^3$, which is the same 
 | $\\tfrac{1}{2}\\rho v^2$ | kinetic energy per unit volume |
 | $\\rho g h$ | gravitational potential energy per unit volume |
 
-Here $h$ is HEIGHT above a chosen reference level, so pressure falls as the fluid rises. (In the *Fluids at Rest* lesson $h$ was depth.) Bernoulli is simply conservation of energy, which is why it needs the ideal-fluid assumptions: with viscosity, energy leaks away as heat.
+Here $h$ is HEIGHT above a chosen reference level, so pressure falls as the fluid rises. (In *Fluids Part 1: Density & Pressure* $h$ was depth.) Bernoulli is simply conservation of energy, which is why it needs the ideal-fluid assumptions: with viscosity, energy leaks away as heat.
 
-- **Fluid at rest:** $v = 0$, so $P + \\rho g h$ is constant, which is the hydrostatic result from the *Fluids at Rest* lesson.
+- **Fluid at rest:** $v = 0$, so $P + \\rho g h$ is constant: going down a depth $d$ raises the pressure by $\\rho g d$, the hydrostatic result from *Fluids Part 1*.
 - **Horizontal flow:** the $\\rho g h$ terms cancel, leaving $P + \\tfrac{1}{2}\\rho v^2 = \\text{constant}$. **Where the fluid moves faster, its pressure is lower.**
 - **Why it feels backwards.** Fast fluid hits hard when something STOPS it, but the pressure it exerts on the walls alongside it is lower. In fact, the fluid speeds up into a narrowing BECAUSE the pressure behind it is higher: the pressure difference is what accelerates it.
 - **The standard chain:** area down, so speed up (continuity), so pressure down (Bernoulli).
+- **Narrowing and climbing.** Rising also lowers the pressure, so in a pipe that both narrows and climbs the two drops add: $P_1 - P_2 = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) + \\rho g(h_2 - h_1)$.
+- **In blood vessels** the chain runs both ways: through a short narrowing of an artery the blood moves faster and presses less on the wall; in a widened segment it moves slower and presses harder.
+- **Method.** Label points 1 and 2 and list $P$, $v$ and $h$ at each. Continuity gives the unknown speed first; Bernoulli then gives the pressure. Check with the fluid at rest: the speed terms vanish and only $\\rho g(h_2 - h_1)$ is left.
 
-**Venturi effect and the Venturi meter.** Pressure drops in a constriction. A **Venturi meter** is a horizontal pipe with a narrow throat; open vertical tubes above the wide section and the throat show the pressure difference as a difference in liquid heights ($\\Delta P = \\rho g \\Delta h$, from the *Fluids at Rest* lesson). From $\\Delta P$ and the two areas, the flow speed follows.
+### Torricelli's Theorem
 
-The same effect lets an atomizer or aspirator pull liquid up a tube: a fast air stream across the tube's top lowers the pressure there.
-
-**Torricelli's theorem.** Liquid leaks from a small hole a depth $h$ below the open surface of a wide tank. The surface and the jet are both at atmospheric pressure, and the surface barely moves, so Bernoulli reduces to
+Liquid leaks from a small hole a depth $h$ below the open surface of a wide tank. Take point 1 at the surface and point 2 in the jet just outside the hole. Both are open to the air, so both are at atmospheric pressure, and because the tank is far wider than the hole the surface barely moves ($v_1 \\approx 0$). Bernoulli then reduces to $\\rho g h = \\tfrac{1}{2}\\rho v^2$, so
 
 $$v = \\sqrt{2gh}$$
 
-the speed of an object dropped from height $h$: each parcel cashes in the potential energy of its fall. Twice the depth gives $\\sqrt{2}$ times the speed, not twice.
+the speed of an object dropped from height $h$: each parcel cashes in the potential energy of its fall.
 
-**Pitot tube.** A **pitot tube** points straight into a flow. Fluid entering its open tip is brought to rest there, so the pressure at the tip (the **stagnation pressure**) is $P + \\tfrac{1}{2}\\rho v^2$, where $P$ is the ordinary (static) pressure of the moving fluid. Measuring both gives $\\Delta P = \\tfrac{1}{2}\\rho v^2$, so $v = \\sqrt{2\\Delta P/\\rho}$.
+- **The density cancels.** Water, oil and mercury all leave at the same speed from the same depth; only $g$ and the depth below the surface matter.
+- **Square root of the depth.** Twice the depth gives $\\sqrt{2}$ times the speed, not twice; doubling the speed takes four times the depth.
+- **A draining tank slows down.** As $h$ shrinks, the exit speed falls, and so does the flow rate $Q = A_{\\text{hole}} v$.
+- **The jet is a projectile.** Leaving horizontally from a hole a height $H$ above the ground, it falls for $t = \\sqrt{2H/g}$ and lands a distance $R = vt = 2\\sqrt{hH}$ from the tank.
 
-**Lift.** A wing is shaped and tilted so that air flows faster over its top than beneath it. Faster flow on top means lower pressure on top, and the pressure difference times the wing's area is an upward force.
+### Venturi and Pitot Tubes
+
+**Venturi effect and the Venturi meter.** Pressure drops in a constriction, and it recovers when the pipe widens again. A **Venturi meter** is a horizontal pipe with a narrow throat; open vertical tubes above the wide section and the throat show the pressure difference as a difference in liquid heights ($\\Delta P = \\rho g \\Delta h$, from *Fluids Part 1*), with the liquid standing lower over the throat. From $\\Delta P$ and the two areas, the flow speed follows: continuity gives $v_2 = v_1(A_1/A_2)$ and Bernoulli gives $\\Delta P = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2)$, two equations for the two speeds. Because $\\Delta P$ goes as $v^2$, doubling the flow makes the height difference four times as large.
+
+The same effect lets an atomizer or aspirator pull liquid up a tube: a fast air stream across the tube's top lowers the pressure there, and atmospheric pressure on the liquid below pushes it up the tube and into the stream.
+
+**Pitot tube.** A **pitot tube** points straight into a flow. Fluid entering its open tip is brought to rest there, so the pressure at the tip (the **stagnation pressure**) is $P + \\tfrac{1}{2}\\rho v^2$, where $P$ is the ordinary (static) pressure of the moving fluid, read by a port on the side. Measuring both gives $\\Delta P = \\tfrac{1}{2}\\rho v^2$, so $v = \\sqrt{2\\Delta P/\\rho}$. Use the density of the fluid that is moving (air is about $1.2\\;\\text{kg/m}^3$).
+
+**Lift.** A wing is shaped and tilted so that air flows faster over its top than beneath it. Faster flow on top means lower pressure on top, $\\Delta P = \\tfrac{1}{2}\\rho(v_{\\text{top}}^2 - v_{\\text{bottom}}^2)$, and the pressure difference times the wing's area is an upward force, $F = \\Delta P \\cdot A$. Air at $1.2\\;\\text{kg/m}^3$ moving at $50\\;\\text{m/s}$ over a wing and $40\\;\\text{m/s}$ under it gives $\\Delta P = (0.6)(2500 - 1600) = 540\\;\\text{Pa}$, or $5400\\;\\text{N}$ on a $10\\;\\text{m}^2$ wing.
 
 <!-- yield:low -->
 - Aircraft airspeed indicators are pitot-static probes, and hospital "Venturi masks" use the Venturi effect to draw in room air and deliver a fixed oxygen concentration.
@@ -167,17 +179,20 @@ The narrow, fast section is LOWER in pressure by $12\\;\\text{kPa}$. Squaring th
 
 ### Worked Example — Torricelli's Tank
 
-**Problem.** A wide open drum of water has a small hole of area $1.0\\;\\text{cm}^2$, $5\\;\\text{m}$ below the water surface. Use $g = 10\\;\\text{m/s}^2$.
+**Problem.** A wide open drum of water has a small hole of area $1.0\\;\\text{cm}^2$, $5\\;\\text{m}$ below the water surface and $1.25\\;\\text{m}$ above the ground. Use $g = 10\\;\\text{m/s}^2$.
 
 - **(a)** How fast does the water leave the hole?
 - **(b)** How much water flows out each second?
 - **(c)** As the tank drains, how fast does the water leave when the depth above the hole is $1.25\\;\\text{m}$?
+- **(d)** While the tank is still full, how far from the hole does the horizontal jet land?
 
 **(a) Exit speed.** $v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10\\;\\text{m/s}$, the same speed a stone reaches after falling 5 m.
 
 **(b) Flow out.** With $v = 10\\;\\text{m/s}$ from (a), $Q = Av = (1.0 \\times 10^{-4}\\;\\text{m}^2)(10\\;\\text{m/s}) = 1.0 \\times 10^{-3}\\;\\text{m}^3/\\text{s}$, about 1 L/s.
 
-**(c) As the tank drains.** $v = \\sqrt{2(10)(1.25)} = \\sqrt{25} = 5\\;\\text{m/s}$: a quarter of the depth gives half of (a)'s speed. The exit speed and the flow both fall as the depth above the hole shrinks.`
+**(c) As the tank drains.** $v = \\sqrt{2(10)(1.25)} = \\sqrt{25} = 5\\;\\text{m/s}$: a quarter of the depth gives half of (a)'s speed. The exit speed and the flow both fall as the depth above the hole shrinks.
+
+**(d) Range.** The jet leaves horizontally at $10\\;\\text{m/s}$, from (a), and falls $1.25\\;\\text{m}$ to the ground: $t = \\sqrt{2H/g} = \\sqrt{2(1.25)/10} = 0.5\\;\\text{s}$, so $R = vt = (10)(0.5) = 5\\;\\text{m}$. Check: $2\\sqrt{hH} = 2\\sqrt{(5)(1.25)} = 5\\;\\text{m}$.`
     },
     {
       id: 'fl3-quiz2',
@@ -219,6 +234,13 @@ The narrow, fast section is LOWER in pressure by $12\\;\\text{kPa}$. Squaring th
             correctAnswer: 1,
             yield: 'MEDIUM',
             explanation: `The tip pressure exceeds the static pressure by the kinetic term: $\\tfrac{1}{2}\\rho v^2 = 250$, so $v^2 = 2(250)/1.25 = 400$ and $v = 20\\;\\text{m/s}$. 400 m/s stops at $v^2$, 14 m/s omits the factor of 2 ($\\sqrt{200}$), and 28 m/s uses the factor of 2 twice ($\\sqrt{800}$).`
+          },
+          {
+            question: `Three identical wide, open tanks are filled to the same depth: one with water, one with oil (SG $0.8$) and one with mercury (SG $13.6$). Each has a small hole the same distance below its surface. Treating all three as ideal fluids, how do the speeds of the three jets compare?`,
+            options: [`Fastest for mercury, which has the most pressure at the hole`, `Fastest for oil, which is the lightest and easiest to move`, `Equal for all three, because the density cancels out of the result`, `Slowest for oil, which has the least weight pushing it out`],
+            correctAnswer: 2,
+            yield: 'MEDIUM',
+            explanation: `Bernoulli between the surface and the jet gives $\\rho g h = \\tfrac{1}{2}\\rho v^2$, and the density divides out: $v = \\sqrt{2gh}$ for any liquid. Mercury does have a larger pressure at the hole, but it also has proportionally more mass to accelerate, so the two effects cancel exactly. The same cancellation is why objects of every mass fall at the same rate.`
           }
         ]
       }
@@ -244,7 +266,9 @@ The narrow, fast section is LOWER in pressure by $12\\;\\text{kPa}$. Squaring th
 **Low-yield extras**
 
 - aircraft pitot-static airspeed indicators; Venturi oxygen masks
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Fluids Part 4: Viscosity & Blood Flow* lesson — viscosity and turbulence, Poiseuille's law, blood flow as a circuit, and how to grade a stenosis.`
     }
   ]
 }

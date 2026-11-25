@@ -88,7 +88,7 @@ export const mcatThermoPart5Data = {
             ],
             correctAnswer: 1,
             yield: 'MEDIUM',
-            explanation: `Water's solid–liquid line has a negative slope: ice is less dense than liquid water, so raising the pressure favors the denser liquid, and enough pressure lowers the melting point below −1°C. The ice melts. Pressure raises the melting point for most substances, but not water; added pressure favors denser phases, never the gas; and the triple point is a single low-pressure point, not a threshold for compression.`
+            explanation: `Water's solid–liquid line has a negative slope: ice is less dense than liquid water, so raising the pressure favors the denser liquid, and enough pressure (roughly 130 atm) lowers the melting point below −1°C. The ice melts. Pressure raises the melting point for most substances, but not water; added pressure favors denser phases, never the gas; and the triple point is a single low-pressure point, not a threshold for compression.`
           },
           {
             question: `The reaction $\\text{A}(g) \\to 2\\text{B}(g)$ is endothermic. At low temperature, $\\Delta G > 0$. Which statement explains why the reaction becomes spontaneous at high temperature?`,

@@ -1,0 +1,206 @@
+[
+ {
+  "front": "A charged particle enters a uniform field moving perpendicular to it. Describe its trajectory.",
+  "fp": "0f2548a4330a",
+  "yield": "HIGH",
+  "why": "Parabolic path in uniform E field is a common projectile-analogy question"
+ },
+ {
+  "front": "A dipole in a uniform field feels zero net force but a torque $\\tau =$ {{c1::$pE\\sin\\theta$}}.",
+  "fp": "ed2f3a5cbdbf",
+  "yield": "MEDIUM",
+  "why": "Dipole torque formula is prep-book detail; alignment behavior is what gets tested"
+ },
+ {
+  "front": "An electric dipole moment points from:",
+  "fp": "f993ef60f9f2",
+  "yield": "HIGH",
+  "why": "Dipole moment direction convention is a classic physics-vs-chemistry trap"
+ },
+ {
+  "front": "An electron is placed in an electric field pointing east. Which way does it accelerate and why?",
+  "fp": "cf1d9c2bbc43",
+  "yield": "ULTRA_HIGH",
+  "why": "F = qE direction for a negative charge is asked on essentially every exam"
+ },
+ {
+  "front": "Between large parallel plates the field is {{c1::uniform}}, so a test charge feels the same force near either plate.",
+  "fp": "59d6ad469fc7",
+  "yield": "ULTRA_HIGH",
+  "why": "Uniform field between plates and E = V/d underlie many passage questions"
+ },
+ {
+  "front": "By Gauss-law reasoning, the net electric flux through a closed surface depends only on the {{c1::enclosed charge}}.",
+  "fp": "ddf39cd38c0c",
+  "yield": "LOW",
+  "why": "Gauss law flux is off the MCAT outline"
+ },
+ {
+  "front": "Charge concentrates most at what part of an irregular conductor?",
+  "fp": "a9e877a93026",
+  "yield": "MEDIUM",
+  "why": "Charge at sharp points is a supporting conductor fact"
+ },
+ {
+  "front": "Define the electric dipole moment and give its magnitude for charges $\\pm q$ separated by $d$.",
+  "fp": "7774c6d64c7c",
+  "yield": "HIGH",
+  "why": "p = qd definition and direction are outline dipole content"
+ },
+ {
+  "front": "Does a charged particle always travel along an electric field line?",
+  "fp": "5bb68faa4cfe",
+  "yield": "MEDIUM",
+  "why": "Field-line-vs-trajectory nuance is secondary reasoning"
+ },
+ {
+  "front": "Each ECG lead records the {{c1::projection}} of the heart's dipole vector onto that lead's axis, so a deflection inverts when the vector points away.",
+  "fp": "3d4db2afcf7e",
+  "yield": "MEDIUM",
+  "why": "ECG lead projection is passage context, not outline"
+ },
+ {
+  "front": "Electric field lines never:",
+  "fp": "6213ac90dfe2",
+  "yield": "HIGH",
+  "why": "Field lines never cross is a standard field-line rule"
+ },
+ {
+  "front": "Excess charge on an isolated conductor resides:",
+  "fp": "0b94b1401696",
+  "yield": "HIGH",
+  "why": "Excess charge on conductor surface is a common conductor discrete"
+ },
+ {
+  "front": "How do field lines look between two large, oppositely charged parallel plates?",
+  "fp": "d03e5f54fec2",
+  "yield": "HIGH",
+  "why": "Parallel-plate field-line picture supports E = V/d questions"
+ },
+ {
+  "front": "How does a dipole's field fall off with distance compared with a point charge's?",
+  "fp": "64c3cdbb8729",
+  "yield": "LOW",
+  "why": "Dipole 1/r^3 falloff is off-outline detail"
+ },
+ {
+  "front": "How does electrospray ionization use an electric field to prepare a sample for mass spectrometry?",
+  "fp": "3fbea797ed3b",
+  "yield": "LOW",
+  "why": "Electrospray ionization is off-outline; a passage would explain it"
+ },
+ {
+  "front": "How does field magnitude vary with distance for a long charged line versus a large charged sheet?",
+  "fp": "47344777aa7b",
+  "yield": "LOW",
+  "why": "Line and sheet field falloff require Gauss law; off outline"
+ },
+ {
+  "front": "How does the field outside a uniformly charged sphere compare with that of a point charge?",
+  "fp": "62dbdbd458cd",
+  "yield": "MEDIUM",
+  "why": "Sphere-as-point-charge equivalence is a secondary reasoning step"
+ },
+ {
+  "front": "How is electric field defined, and what field does a point charge produce?",
+  "fp": "7491f205015a",
+  "yield": "ULTRA_HIGH",
+  "why": "E = F/q and E = kQ/r^2 are the core field equations"
+ },
+ {
+  "front": "If one charge has three times the magnitude of another, it has {{c1::three times}} as many field lines drawn on it.",
+  "fp": "50534ee5ef5b",
+  "yield": "MEDIUM",
+  "why": "Field-line count proportional to charge is a diagram convention"
+ },
+ {
+  "front": "In isoelectric focusing a protein stops migrating where the pH equals its {{c1::pI}}, because net charge and therefore $F = qE$ go to zero.",
+  "fp": "51b86588dc79",
+  "yield": "HIGH",
+  "why": "Isoelectric focusing via F = qE at pI is frequently tested"
+ },
+ {
+  "front": "The electric field everywhere inside a uniformly charged spherical shell is {{c1::zero}}.",
+  "fp": "df0cdadd7f38",
+  "yield": "HIGH",
+  "why": "Zero field inside a charged shell is a common conductor/shell discrete"
+ },
+ {
+  "front": "The field just outside a conductor is proportional to the local {{c1::surface charge density}}, which peaks where the surface curves most sharply.",
+  "fp": "dbcbe38691e6",
+  "yield": "LOW",
+  "why": "Near-restatement of the sharp-points charge card"
+ },
+ {
+  "front": "The field of a point charge is $E =$ {{c1::$kQ/r^2$}}, with units written either N/C or V/m.",
+  "fp": "2b47953866b0",
+  "yield": "HIGH",
+  "why": "Cloze restatement of the point-charge field; concept is core"
+ },
+ {
+  "front": "Two equal positive charges sit $10$ cm apart. What is the electric field at the midpoint?",
+  "fp": "512875cbae49",
+  "yield": "ULTRA_HIGH",
+  "why": "Vector cancellation of fields vs scalar potential at midpoint is a classic"
+ },
+ {
+  "front": "Two fields of $300$ N/C each act at right angles at a point. What is the net field?",
+  "fp": "6ff1a780052c",
+  "yield": "HIGH",
+  "why": "Vector superposition of perpendicular fields is a common calculation"
+ },
+ {
+  "front": "What do the starting points, ending points, and spacing of field lines tell you?",
+  "fp": "96649d0fb1c9",
+  "yield": "HIGH",
+  "why": "Field-line start, end and density rules are standard"
+ },
+ {
+  "front": "Why does a dipole feel a net force in a nonuniform field but not in a uniform one?",
+  "fp": "6872eb149335",
+  "yield": "MEDIUM",
+  "why": "Dipole net force in nonuniform field is a secondary distinction"
+ },
+ {
+  "front": "Why does SDS-PAGE separate proteins essentially by size alone?",
+  "fp": "25dee105512f",
+  "yield": "MEDIUM",
+  "why": "SDS-PAGE mechanism belongs to biochem and is covered there [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Why is the peptide bond described as having a dipole, and what does that mean physically?",
+  "fp": "75c6ac9043ca",
+  "yield": "MEDIUM",
+  "why": "Peptide bond dipole belongs to biochem, not electrostatics [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "For two charges of opposite sign and unequal size, the electric field is zero only {{c1::outside the pair, beyond the smaller charge}}.",
+  "fp": "54acfe58e891",
+  "yield": "HIGH",
+  "why": "Choosing the region of a null point is commonly tested."
+ },
+ {
+  "front": "Charges $+9Q$ and $+Q$ are fixed a distance $d$ apart. Where is the electric field zero?",
+  "fp": "45a7c97dab69",
+  "yield": "HIGH",
+  "why": "The square-root step in null-point calculations is commonly tested."
+ },
+ {
+  "front": "Swapping a positive test charge for a negative one reverses the force on it, but the electric field at that point is {{c1::unchanged}}.",
+  "fp": "c8666aff2117",
+  "yield": "HIGH",
+  "why": "Field as a property of the point, not the test charge, is a commonly tested distinction."
+ },
+ {
+  "front": "An ion with charge $3.2 \\times 10^{-19}$ C and mass $6.4 \\times 10^{-27}$ kg is in a uniform field of $2.0 \\times 10^{3}$ N/C. What is its acceleration?",
+  "fp": "35e789a0ce3d",
+  "yield": "HIGH",
+  "why": "$a = qE/m$ in a uniform field is commonly tested."
+ },
+ {
+  "front": "In gel electrophoresis, toward which electrode does DNA migrate, and which fragments travel farthest?",
+  "fp": "9768b3a31988",
+  "yield": "HIGH",
+  "why": "Electrophoresis direction and size sorting are commonly tested lab knowledge."
+ }
+]

@@ -50,8 +50,11 @@ const mcatSubtopics: ParentSeed[] = [
       { slug: 'mcat-physics-mechanics-momentum-collisions-mcat', title: 'Momentum & Collisions', description: 'Impulse, conservation of momentum, and collision analysis' },
       // Fluids & Waves was split in two (Nov 2026, one live-class session each);
       // the old 'mcat-physics-mechanics-fluids-waves-mcat' row is retired.
-      { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids at Rest', description: 'Density, hydrostatic pressure, Pascal\'s principle, buoyancy, and surface tension' },
-      { slug: 'mcat-physics-mechanics-fluid-dynamics-mcat', title: 'Fluids in Motion', description: 'Continuity, Bernoulli, viscosity, Poiseuille flow, and blood flow' },
+      // Fluids then became four topics (Nov 2026, one per part of the fluids video series).
+      { slug: 'mcat-physics-mechanics-fluids-mcat', title: 'Fluids Part 1: Density & Pressure', description: 'Density and specific gravity, pressure and depth, gauge and absolute pressure, and Pascal\'s principle' },
+      { slug: 'mcat-physics-mechanics-buoyancy-mcat', title: 'Fluids Part 2: Buoyancy & Surface Tension', description: 'Archimedes\' principle, floating, sinking and apparent weight, and surface tension' },
+      { slug: 'mcat-physics-mechanics-fluid-dynamics-mcat', title: 'Fluids Part 3: Continuity & Bernoulli', description: 'Flow rate and continuity, Bernoulli\'s equation, Torricelli\'s theorem, and Venturi and pitot tubes' },
+      { slug: 'mcat-physics-mechanics-viscosity-mcat', title: 'Fluids Part 4: Viscosity & Blood Flow', description: 'Viscosity, Poiseuille\'s law, blood flow as a circuit, and stenosis' },
       { slug: 'mcat-physics-waves-interference-mcat', title: 'Waves & Interference', description: 'Periodic motion, simple harmonic motion, wave speed, superposition, beats, standing waves, and resonance' },
       { slug: 'mcat-physics-waves-sound-mcat', title: 'Sound, Doppler & Ultrasound', description: 'Sound intensity and decibels, the Doppler effect, ultrasound, and shock waves' }
     ]
@@ -59,7 +62,10 @@ const mcatSubtopics: ParentSeed[] = [
   {
     parentSlug: 'mcat-physics-electricity-mcat',
     subtopics: [
-      { slug: 'mcat-physics-electricity-electrostatics-mcat', title: 'Electrostatics', description: 'Electric force, fields, potential, and capacitance' },
+      // Electrostatics was split in three by lesson part (Nov 2026; src/lib/mcat-topic-split.ts MCAT_PART_SPLITS).
+      { slug: 'mcat-physics-electricity-electrostatics-mcat', title: "Electrostatics Part 1: Charge & Coulomb's Law", description: 'Electric charge, conductors and insulators, charging, Coulomb\'s law, and superposition of forces' },
+      { slug: 'mcat-physics-electricity-electric-fields-mcat', title: 'Electrostatics Part 2: Electric Fields', description: 'The electric field, superposition and null points, field lines, dipoles, conductors, and charges in a uniform field' },
+      { slug: 'mcat-physics-electricity-electric-potential-mcat', title: 'Electrostatics Part 3: Electric Potential & Energy', description: 'Electric potential energy, electric potential, equipotentials, E = ΔV/d, and energy conservation for charges' },
       // Circuits was split in two (Nov 2026, one live-class session each); the
       // old 'mcat-physics-electricity-circuits-mcat' row is retired.
       { slug: 'mcat-physics-electricity-dc-circuits-mcat', title: 'Circuits Part 1: Current & Resistance', description: 'Current, voltage, conduction, Ohm\'s law, resistivity, and series and parallel resistors' },

@@ -65,37 +65,71 @@ The cell membrane is a capacitor (the bilayer) in parallel with resistors (the i
 - Capacitor combination rules are the reverse of resistor rules.
 - Steady state: no current through a capacitor branch.`,
   },
+  // Fluids: four topics (Nov 2026), one per part of the fluids video series.
   'mcat-physics-mechanics-fluids-mcat': {
-    description: "Density, hydrostatic pressure, Pascal's principle, buoyancy, and surface tension",
-    textContent: `# Fluids at Rest
+    description: "Density and specific gravity, pressure and depth, gauge and absolute pressure, and Pascal's principle",
+    textContent: `# Fluids Part 1: Density & Pressure
 
-## Pressure
-Pressure in a static fluid grows with depth, not container shape:
+## Density and Pressure
+Density is mass per volume, $\\rho = m/V$; specific gravity compares it with water's $1000\;\\text{kg/m}^3$. Pressure in a static fluid grows with depth, not container shape:
 $$P = P_0 + \\rho gh$$
-Gauge pressure leaves out the atmosphere; absolute pressure includes it. Pascal's principle transmits a pressure change undiminished, so a hydraulic lift multiplies force by the area ratio.
+Every 10 m of water adds about 1 atm. Gauge pressure leaves out the atmosphere and absolute pressure includes it; blood pressure is a gauge reading.
 
-## Buoyancy and Surface Tension
-The buoyant force equals the weight of the fluid displaced, $F_b = \\rho_{fluid}V_{sub}g$. An object floats when its average density is below the fluid's, and the submerged fraction equals the density ratio. Cohesion at a surface gives surface tension; adhesion to the walls drives capillary rise.
+## Pascal's Principle
+A pressure change applied to an enclosed fluid reaches every part of it undiminished, so a hydraulic lift multiplies force by the area ratio while the small piston moves farther.
 
 ## Key Takeaways
 - Depth, not shape, sets static pressure.
-- Buoyancy depends on the fluid displaced, not on the object's weight.`,
+- Absolute = atmospheric + gauge.
+- A hydraulic lift trades distance for force; it never makes energy.`,
+  },
+  'mcat-physics-mechanics-buoyancy-mcat': {
+    description: "Archimedes' principle, floating, sinking and apparent weight, and surface tension",
+    textContent: `# Fluids Part 2: Buoyancy & Surface Tension
+
+## Buoyancy
+The buoyant force equals the weight of the fluid displaced:
+$$F_b = \\rho_{fluid} V_{sub} g$$
+An object floats when its average density is below the fluid's, and the submerged fraction equals the density ratio. A sunken object's apparent weight is its true weight minus the buoyant force, which is how specific gravity is measured with a spring scale.
+
+## Surface Tension
+Cohesion at a liquid's surface makes it act like a stretched film. Adhesion to the walls stronger than cohesion makes water climb a narrow tube with a concave meniscus; mercury, more cohesive, is pushed down.
+
+## Key Takeaways
+- Buoyancy depends on the fluid displaced, not on the object's weight.
+- Fraction submerged = object density / fluid density.
+- A narrower tube gives a larger capillary rise.`,
   },
   'mcat-physics-mechanics-fluid-dynamics-mcat': {
-    description: 'Continuity, Bernoulli, viscosity, Poiseuille flow, and blood flow',
-    textContent: `# Fluids in Motion
+    description: "Flow rate and continuity, Bernoulli's equation, Torricelli's theorem, and Venturi and pitot tubes",
+    textContent: `# Fluids Part 3: Continuity & Bernoulli
 
-## Ideal Flow
-Continuity, $A_1v_1 = A_2v_2$, makes a fluid speed up where a pipe narrows. Bernoulli's equation,
+## Continuity
+Volume flow rate is $Q = Av$. For an incompressible fluid it is the same everywhere along a pipe, $A_1v_1 = A_2v_2$, so the fluid speeds up where the pipe narrows. Across many branches the TOTAL area counts, which is why blood is slowest in the capillaries.
+
+## Bernoulli
 $$P + \\tfrac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}$$
-is energy conservation for ideal flow: faster means lower pressure.
-
-## Real Flow and the Circulation
-Viscous flow obeys Poiseuille's law: flow scales with $r^4$, so small changes in vessel radius control blood flow. Blood is slowest in the capillaries, where the total cross-sectional area is largest, and the biggest pressure drop is across the arterioles.
+Bernoulli's equation is energy conservation for ideal flow: where the fluid moves faster, its pressure is lower. Torricelli's theorem, $v = \\sqrt{2gh}$, gives the speed of fluid leaving a hole a depth $h$ below the surface. A Venturi meter reads flow from the pressure drop at a constriction; a pitot tube reads speed from the stagnation pressure.
 
 ## Key Takeaways
 - Narrower means faster means lower pressure (ideal flow).
-- Halving a vessel's radius cuts flow 16-fold (viscous flow).`,
+- Efflux speed matches free fall from the surface.`,
+  },
+  'mcat-physics-mechanics-viscosity-mcat': {
+    description: "Viscosity, Poiseuille's law, blood flow as a circuit, and stenosis",
+    textContent: `# Fluids Part 4: Viscosity & Blood Flow
+
+## Viscous Flow
+Real fluids have internal friction, so a pressure difference is needed just to keep them flowing. Laminar flow through a tube obeys Poiseuille's law:
+$$Q = \\frac{\\pi r^4 \\Delta P}{8\\eta L}$$
+Flow scales with $r^4$, so small changes in vessel radius control blood flow.
+
+## The Circulation as a Circuit
+$\\Delta P = QR$ is Ohm's law for blood: pressure difference drives flow against resistance. Vessels in series add resistance; the parallel organ beds lower it. The biggest pressure drop is across the arterioles. A stenosis raises resistance (Poiseuille) and, at the narrowing itself, speeds the blood and drops its pressure (continuity and Bernoulli).
+
+## Key Takeaways
+- Halving a vessel's radius cuts flow 16-fold at the same pressure difference.
+- Pick the regime first: ideal flow (Bernoulli) or viscous flow (Poiseuille).`,
   },
   'mcat-physics-waves-interference-mcat': {
     description: 'Periodic motion, simple harmonic motion, wave speed, superposition, beats, standing waves, and resonance',
@@ -368,6 +402,54 @@ A stereotype is a belief, prejudice an attitude and discrimination a behavior, a
 - Back stage is relative to an audience, not a fixed place.
 - Goal displacement is structural: staff follow the rules and the system still defeats its goal.
 - Behavior in a randomized audit outranks self-reported attitudes.`,
+  },
+  // Electrostatics: three topics (Nov 2026 part split), one per part of the electrostatics video series.
+  'mcat-physics-electricity-electrostatics-mcat': {
+    description: "Electric charge, conductors and insulators, charging, Coulomb's law, and superposition of forces",
+    textContent: `# Electrostatics Part 1: Charge & Coulomb's Law
+
+## Charge
+Charge is quantized in units of $e = 1.6 \\times 10^{-19}\;\\text{C}$ and conserved: charging moves electrons, it never creates charge. Charges move freely in conductors and stay put in insulators. Objects charge by friction, by conduction (contact) and by induction (a nearby charge plus a ground connection); a charged object attracts a neutral one by polarizing it.
+
+## Coulomb's Law
+$$|F| = k\\frac{|q_1q_2|}{r^2} \\qquad k = 9.0 \\times 10^9\;\\text{N·m}^2/\\text{C}^2$$
+Use magnitudes for the size and like/unlike charges for the direction. The two charges feel equal and opposite forces. With several charges, add the forces as vectors.
+
+## Key Takeaways
+- Doubling the distance quarters the force.
+- Like charges repel; unlike charges attract.
+- Add force vectors component by component; symmetry often cancels some.`,
+  },
+  'mcat-physics-electricity-electric-fields-mcat': {
+    description: 'The electric field, superposition and null points, field lines, dipoles, conductors, and charges in a uniform field',
+    textContent: `# Electrostatics Part 2: Electric Fields
+
+## The Field
+The electric field is force per charge, $\\vec{E} = \\vec{F}/q$, in N/C. A point charge makes $|E| = k|q|/r^2$, pointing away from a positive charge and toward a negative one; a negative charge is pushed against the field. Fields add as vectors, and a null point lies where they cancel.
+
+## Field Lines, Dipoles and Conductors
+Field lines start on positive charges and end on negative ones, never cross, and crowd where the field is strong. A dipole ($p = qd$) feels no net force in a uniform field but a torque that aligns it with the field. Inside a conductor in equilibrium the field is zero, and the excess charge sits on the surface.
+
+## Uniform Fields
+Between charged parallel plates the field is uniform, so a charge feels a constant force $F = qE$ and accelerates at $a = qE/m$, just like a projectile. Gel electrophoresis uses a field to pull charged molecules through a gel; smaller fragments move farther.
+
+## Key Takeaways
+- Field direction is the force on a POSITIVE test charge.
+- Two like charges have a null point between them; unlike charges, outside the smaller one.`,
+  },
+  'mcat-physics-electricity-electric-potential-mcat': {
+    description: 'Electric potential energy, electric potential, equipotentials, E = ΔV/d, and energy conservation for charges',
+    textContent: `# Electrostatics Part 3: Electric Potential & Energy
+
+## Potential Energy and Potential
+Two charges store $U = kq_1q_2/r$ (joules). Electric potential is energy per charge, $V = kq/r$ (volts = J/C), a signed scalar that adds as plain numbers. The two are linked by $\\Delta U = q\\Delta V$; keep them apart, since a high potential is a low energy for a negative charge.
+
+## Equipotentials and Energy Conservation
+Equipotentials are perpendicular to field lines, and moving along one takes no work. In a uniform field $|E| = \\Delta V/d$, so V/m equals N/C. Released charges trade potential energy for kinetic energy, $q\\Delta V = -\\Delta K$: positive charges move toward lower potential, negative charges toward higher, and both lose potential energy. One electron-volt is the energy one elementary charge gains across 1 V, $1.6 \\times 10^{-19}$ J. A cell membrane holds about $-70$ mV across a few nanometres, a field of millions of volts per metre.
+
+## Key Takeaways
+- Potential (V) is per charge; potential energy (U) is for the charge you have.
+- Field lines point toward lower potential.`,
   },
   // Magnetism part split (owner decision 2026-11-04): both halves.
   'mcat-physics-electricity-magnetism-mcat': {

@@ -1,0 +1,104 @@
+[
+ {
+  "front": "A vessel narrows to half its radius at constant driving pressure. By what factor does flow drop?",
+  "fp": "cfa455c69983",
+  "yield": "HIGH",
+  "why": "Poiseuille r^4 numeric application (half radius, 1/16 flow)"
+ },
+ {
+  "front": "Continuity or Poiseuille: which explains slow capillary flow, and which explains high resistance in a stenosis?",
+  "fp": "e4e5b4644cad",
+  "yield": "HIGH",
+  "why": "Continuity vs Poiseuille for capillaries vs stenosis; common circulation passage step"
+ },
+ {
+  "front": "How does raising hematocrit affect cardiac workload?",
+  "fp": "34ac96f7324b",
+  "yield": "MEDIUM",
+  "why": "Hematocrit and viscosity in Poiseuille; secondary physiology link"
+ },
+ {
+  "front": "How does vessel radius affect flow (Poiseuille)?",
+  "fp": "b9cb4b959fdd",
+  "yield": "ULTRA_HIGH",
+  "why": "Poiseuille r^4 dependence; the qualitative Poiseuille fact tested every year"
+ },
+ {
+  "front": "In Poiseuille's law, flow rate is proportional to {{c1::the fourth power of the radius}}.",
+  "fp": "59bca7febc02",
+  "yield": "HIGH",
+  "why": "Poiseuille r^4 cloze; restates the main Poiseuille card"
+ },
+ {
+  "front": "Vascular resistance is {{c1::$8\\eta L/(\\pi r^4)$}}, so viscosity and length enter {{c1::linearly}}.",
+  "fp": "a5dd0b44fab8",
+  "yield": "HIGH",
+  "why": "Resistance 8*eta*L/(pi*r^4); viscosity and length linear vs r^4"
+ },
+ {
+  "front": "What distinguishes turbulent from laminar flow, and why does it matter clinically?",
+  "fp": "314d94b4009d",
+  "yield": "MEDIUM",
+  "why": "Turbulent vs laminar and Reynolds number; secondary qualitative detail"
+ },
+ {
+  "front": "What happens to pressure inside an arterial stenosis?",
+  "fp": "150eae6c957a",
+  "yield": "HIGH",
+  "why": "Pressure drop inside a stenosis; standard Bernoulli application"
+ },
+ {
+  "front": "Which raises resistance more: halving a vessel's radius, or doubling its length?",
+  "fp": "dd61d304468f",
+  "yield": "MEDIUM",
+  "why": "Radius vs length effect on resistance; restates the Poiseuille cards"
+ },
+ {
+  "front": "Why can a forced expiration collapse an airway (dynamic compression)?",
+  "fp": "0290888c01e6",
+  "yield": "LOW",
+  "why": "Dynamic airway compression is respiratory-physiology detail"
+ },
+ {
+  "front": "Why does an aneurysm tend to enlarge once it forms?",
+  "fp": "130c88ab8a08",
+  "yield": "LOW",
+  "why": "Aneurysm growth combines Bernoulli and Laplace; off-outline clinical detail"
+ },
+ {
+  "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
+  "fp": "67c3cf47859b",
+  "yield": "ULTRA_HIGH",
+  "why": "Poiseuille's $r^4$ dependence is tested on every MCAT."
+ },
+ {
+  "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
+  "fp": "6bab07922d57",
+  "yield": "HIGH",
+  "why": "Where pressure falls in the circulation is a commonly tested physics-physiology link."
+ },
+ {
+  "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
+  "fp": "4e491c757308",
+  "yield": "HIGH",
+  "why": "Series vs parallel vascular beds and $MAP = CO \\times TPR$ are commonly tested."
+ },
+ {
+  "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
+  "fp": "81e2e3db484e",
+  "yield": "HIGH",
+  "why": "Choosing the right law for a stenosis is a frequent passage question."
+ },
+ {
+  "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
+  "fp": "eb074bf076a9",
+  "yield": "HIGH",
+  "why": "Regime selection is the gateway step for fluids passages."
+ },
+ {
+  "front": "Why can severe anemia produce a heart murmur even with normal valves?",
+  "fp": "1ac24722098d",
+  "yield": "MEDIUM",
+  "why": "Reynolds-number reasoning appears mainly in clinical passages."
+ }
+]

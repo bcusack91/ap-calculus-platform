@@ -1,0 +1,104 @@
+[
+ {
+  "front": "An object floats when its density is:",
+  "fp": "6534f4eaae6a",
+  "yield": "ULTRA_HIGH",
+  "why": "Float/sink by density comparison; foundational buoyancy fact"
+ },
+ {
+  "front": "Does the buoyant force on a fully submerged object increase with depth?",
+  "fp": "4dc9fd6f3bcd",
+  "yield": "HIGH",
+  "why": "Buoyancy independent of depth for incompressible fluid; classic conceptual"
+ },
+ {
+  "front": "How does hydrostatic weighing determine body composition?",
+  "fp": "c78b51020305",
+  "yield": "MEDIUM",
+  "why": "Hydrostatic weighing application; plausible passage context"
+ },
+ {
+  "front": "Laplace's law for an alveolus gives $P = 2\\gamma/r$. What does it predict?",
+  "fp": "8c027c226714",
+  "yield": "MEDIUM",
+  "why": "Laplace's law for alveoli; respiratory physiology crossover"
+ },
+ {
+  "front": "State Archimedes' principle.",
+  "fp": "ee0c21883644",
+  "yield": "ULTRA_HIGH",
+  "why": "Archimedes' principle; on essentially every administration"
+ },
+ {
+  "front": "Surface tension arises from {{c1::cohesive forces between liquid molecules}} at an interface.",
+  "fp": "38ab8b55114c",
+  "yield": "MEDIUM",
+  "why": "Surface tension origin; outline item but rarely more than context"
+ },
+ {
+  "front": "The buoyant force equals the weight of {{c1::the fluid displaced}}, not the weight of the object.",
+  "fp": "89c494122405",
+  "yield": "HIGH",
+  "why": "Buoyant force equals displaced fluid weight; restates Archimedes card"
+ },
+ {
+  "front": "What fraction of a floating object sits below the surface?",
+  "fp": "ae4e6e1b52f6",
+  "yield": "ULTRA_HIGH",
+  "why": "Submerged fraction equals density ratio; classic buoyancy calculation"
+ },
+ {
+  "front": "Why does a person float higher in salt water than in fresh water?",
+  "fp": "113d1bf552c6",
+  "yield": "HIGH",
+  "why": "Floating higher in denser fluid; common Archimedes conceptual"
+ },
+ {
+  "front": "Why does a person with a higher body fat fraction float more easily?",
+  "fp": "03f636b6251b",
+  "yield": "LOW",
+  "why": "Restates float/sink by density using body-fat trivia"
+ },
+ {
+  "front": "A rock weighs $50$ N in air and $40$ N when hung fully submerged in water. What is its specific gravity?",
+  "fp": "89871d7f6af1",
+  "yield": "HIGH",
+  "why": "Apparent-weight SG problems are a common Archimedes application."
+ },
+ {
+  "front": "A floating object displaces its own {{c1::weight}} of fluid; a fully submerged object displaces its own {{c2::volume}} of fluid.",
+  "fp": "06b4c8dbcf24",
+  "yield": "ULTRA_HIGH",
+  "why": "Core Archimedes reasoning tested on every MCAT."
+ },
+ {
+  "front": "A block floats in water with $60\\%$ of its volume submerged. What fraction is submerged when it floats in oil of SG $0.8$?",
+  "fp": "d0b1d67d33f5",
+  "yield": "HIGH",
+  "why": "Moving a floater between fluids is a common quantitative buoyancy question."
+ },
+ {
+  "front": "An object denser than oil but less dense than water is dropped into a beaker of oil floating on water. Where does it come to rest?",
+  "fp": "edbafccad836",
+  "yield": "MEDIUM",
+  "why": "Two-fluid floating shows up mainly in passage or lab scenarios."
+ },
+ {
+  "front": "When an ice cube floating in a glass of water melts completely, the water level {{c1::stays the same}}.",
+  "fp": "2ad30d461443",
+  "yield": "HIGH",
+  "why": "Classic buoyancy conceptual question."
+ },
+ {
+  "front": "In a narrow glass tube, water forms a {{c1::concave}} meniscus and rises, while mercury forms a {{c2::convex}} meniscus and is depressed.",
+  "fp": "b28565bbe526",
+  "yield": "MEDIUM",
+  "why": "Capillary action is secondary content, usually seen in passages."
+ },
+ {
+  "front": "Normal urine specific gravity runs from about {{c1::$1.005$ to $1.030$}}.",
+  "fp": "788177ba0d51",
+  "yield": "LOW",
+  "why": "The lesson marks the normal urine SG range as low-yield."
+ }
+]

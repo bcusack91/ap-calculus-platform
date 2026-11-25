@@ -1,0 +1,42 @@
+[
+ {
+  "front": "For two charges of opposite sign and unequal size, the electric field is zero only {{c1::outside the pair, beyond the smaller charge}}.",
+  "back": "Between opposite charges both fields point toward the negative charge, so they add. Beyond the larger charge, that charge is also the nearer one and always wins. Only beyond the smaller charge can nearness make up for less charge. For like charges the null point is between them, nearer the smaller one.",
+  "hint": "Find where the two fields point opposite ways and the weaker source is closer.",
+  "yield": "HIGH",
+  "why": "Choosing the region of a null point is commonly tested.",
+  "part": 1
+ },
+ {
+  "front": "Charges $+9Q$ and $+Q$ are fixed a distance $d$ apart. Where is the electric field zero?",
+  "back": "Between them, $d/4$ from the $+Q$ charge. Setting $k|q_1|/r_1^2 = k|q_2|/r_2^2$ gives $r_1/r_2 = \\sqrt{9} = 3$, and $r_1 + r_2 = d$. The distance ratio is the SQUARE ROOT of the charge ratio, not the ratio itself.",
+  "hint": "$r_1/r_2 = \\sqrt{|q_1|/|q_2|}$",
+  "yield": "HIGH",
+  "why": "The square-root step in null-point calculations is commonly tested.",
+  "part": 1
+ },
+ {
+  "front": "Swapping a positive test charge for a negative one reverses the force on it, but the electric field at that point is {{c1::unchanged}}.",
+  "back": "The field $\\vec{E} = \\vec{F}/q_0$ belongs to the point and is set by the source charges. Doubling the test charge doubles the force and leaves $F/q_0$ the same. A negative charge feels a force opposite to $\\vec{E}$.",
+  "hint": "Does the field depend on what you put in it?",
+  "yield": "HIGH",
+  "why": "Field as a property of the point, not the test charge, is a commonly tested distinction.",
+  "part": 1
+ },
+ {
+  "front": "An ion with charge $3.2 \\times 10^{-19}$ C and mass $6.4 \\times 10^{-27}$ kg is in a uniform field of $2.0 \\times 10^{3}$ N/C. What is its acceleration?",
+  "back": "$1.0 \\times 10^{11}$ m/s$^2$. $a = qE/m = (3.2 \\times 10^{-19})(2.0 \\times 10^{3})/(6.4 \\times 10^{-27})$. The force $qE$ is the same everywhere in a uniform field, so the acceleration is constant. In the same field an electron accelerates about 1836 times more than a proton, because the forces match but the masses do not.",
+  "hint": "$F = qE$, then Newton's second law.",
+  "yield": "HIGH",
+  "why": "$a = qE/m$ in a uniform field is commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "In gel electrophoresis, toward which electrode does DNA migrate, and which fragments travel farthest?",
+  "back": "Toward the positive electrode (the anode): the phosphate backbone makes DNA negative, and a negative charge is pushed against the field. Shorter fragments travel farthest. The force per unit charge is the same for all fragments, but the gel's mesh holds longer ones back more.",
+  "hint": "DNA is negative; the gel sorts by size.",
+  "yield": "HIGH",
+  "why": "Electrophoresis direction and size sorting are commonly tested lab knowledge.",
+  "part": 2
+ }
+]

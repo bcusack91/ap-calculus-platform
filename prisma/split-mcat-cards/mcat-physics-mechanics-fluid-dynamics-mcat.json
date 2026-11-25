@@ -46,53 +46,5 @@
   "yield": "MEDIUM",
   "why": "Pitot tubes appear as passage-context applications of Bernoulli.",
   "part": 1
- },
- {
-  "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
-  "back": "Poiseuille flow scales as $r^4$, and $0.84^4 \\approx 0.50$. That is why small changes in arteriolar tone produce large changes in flow.",
-  "hint": "Which radius factor, raised to the fourth power, gives one-half?",
-  "yield": "ULTRA_HIGH",
-  "why": "Poiseuille's $r^4$ dependence is tested on every MCAT.",
-  "part": 2
- },
- {
-  "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
-  "back": "Billions of capillaries sit in parallel, so their combined resistance is lower than the arterioles'. Pressure falls from about 90 to about 35 mmHg across the arterioles, whose smooth muscle sets resistance.",
-  "hint": "Series vs parallel resistance.",
-  "yield": "HIGH",
-  "why": "Where pressure falls in the circulation is a commonly tested physics-physiology link.",
-  "part": 2
- },
- {
-  "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
-  "back": "Both rise. Parallel resistances combine to less than any single branch, so removing one raises the total; since $MAP \\approx CO \\times TPR$, MAP rises too.",
-  "hint": "$1/R_{\\text{total}} = 1/R_1 + 1/R_2 + \\dots$",
-  "yield": "HIGH",
-  "why": "Series vs parallel vascular beds and $MAP = CO \\times TPR$ are commonly tested.",
-  "part": 2
- },
- {
-  "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
-  "back": "Bernoulli fits a SHORT narrowing: speed changes quickly and friction is small, explaining the pressure dip in the jet. Poiseuille fits a LONG narrowing or a fixed driving pressure: resistance rises as $1/r^4$ and flow falls.",
-  "hint": "How long is the narrowed segment?",
-  "yield": "HIGH",
-  "why": "Choosing the right law for a stenosis is a frequent passage question.",
-  "part": 2
- },
- {
-  "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
-  "back": "Static (depth, floating, pistons): $P = P_0 + \\rho g h$, Pascal, Archimedes. Ideal flow (non-viscous, short constrictions): continuity, Bernoulli, Torricelli. Viscous flow (long vessels, viscosity given): Poiseuille, $Q = \\Delta P/R$. If turbulent, neither equation holds.",
-  "hint": "Is anything flowing? Does viscosity matter?",
-  "yield": "HIGH",
-  "why": "Regime selection is the gateway step for fluids passages.",
-  "part": 2
- },
- {
-  "front": "Why can severe anemia produce a heart murmur even with normal valves?",
-  "back": "Low hematocrit lowers blood viscosity, and cardiac output rises to compensate, so blood moves faster. Both raise the Reynolds number $Re = \\rho v D/\\eta$, pushing flow toward turbulence, which is audible.",
-  "hint": "Which two factors in $Re$ change?",
-  "yield": "MEDIUM",
-  "why": "Reynolds-number reasoning appears mainly in clinical passages.",
-  "part": 2
  }
 ]

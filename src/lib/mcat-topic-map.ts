@@ -112,11 +112,16 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-physics-mechanics-fluids-waves-mcat': ['mcat-physics-mechanics-fluids-mcat', 'mcat-physics-waves-sound-mcat'],
   // Its successors (Nov 2026) are the bank's own subtopics.
   'mcat-physics-mechanics-fluids-mcat': ['mcat-physics-mechanics-fluids-mcat'],
+  'mcat-physics-mechanics-buoyancy-mcat': ['mcat-physics-mechanics-fluids-mcat'],
   'mcat-physics-mechanics-fluid-dynamics-mcat': ['mcat-physics-mechanics-fluids-mcat'],
+  'mcat-physics-mechanics-viscosity-mcat': ['mcat-physics-mechanics-fluids-mcat'],
   'mcat-physics-waves-interference-mcat': ['mcat-physics-waves-sound-mcat'],
   'mcat-physics-waves-sound-mcat': ['mcat-physics-waves-sound-mcat'],
   'mcat-physics-electricity-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   'mcat-physics-electricity-electrostatics-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
+  // Electrostatics Parts 2 and 3 (Nov 2026 part split) play Part 1's bank subtopic.
+  'mcat-physics-electricity-electric-fields-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
+  'mcat-physics-electricity-electric-potential-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   // Retired Nov 2026 (split in two); kept so legacy assignments still complete.
   'mcat-physics-electricity-circuits-mcat': ['mcat-physics-electricity-circuits-mcat'],
   'mcat-physics-electricity-dc-circuits-mcat': ['mcat-physics-electricity-circuits-mcat'],

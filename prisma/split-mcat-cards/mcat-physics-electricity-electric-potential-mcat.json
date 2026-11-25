@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Released from rest, which way does a positive charge move in terms of potential? Which way does a negative charge move? What happens to the potential energy of each?",
+  "back": "A positive charge moves toward LOWER $V$; a negative charge moves toward HIGHER $V$. Both lose potential energy, because every released charge moves toward lower $U = qV$, and the lost $U$ becomes kinetic energy.",
+  "hint": "$U = qV$, and the sign of $q$ matters.",
+  "yield": "ULTRA_HIGH",
+  "why": "Which way charges move through a potential difference is tested on essentially every exam.",
+  "part": 1
+ },
+ {
+  "front": "An electron moves from a point at $+20$ V to a point at $+50$ V. What is the change in its potential energy? ($e = 1.6 \\times 10^{-19}$ C)",
+  "back": "$-4.8 \\times 10^{-18}$ J. $\\Delta U = q\\,\\Delta V = (-1.6 \\times 10^{-19})(+30)$, with both signs kept. The potential rose but the electron's energy fell: a negative charge loses $U$ moving to higher $V$, so the field does positive work on it.",
+  "hint": "$\\Delta V = V_{\\text{final}} - V_{\\text{initial}}$, and $q$ is negative.",
+  "yield": "HIGH",
+  "why": "Sign handling in $\\Delta U = q\\,\\Delta V$ for a negative charge is commonly tested.",
+  "part": 1
+ },
+ {
+  "front": "Point P is $0.30$ m from a $+6.0$ nC charge and $0.30$ m from a $-2.0$ nC charge. What is the potential at P? ($k = 9.0 \\times 10^{9}$ N·m$^2$/C$^2$)",
+  "back": "$+120$ V. Potential is a scalar, so add signed numbers: $V = kq_1/r_1 + kq_2/r_2 = 54/0.30 - 18/0.30 = 180 - 60$. No components or angles are needed, only each charge's sign and its own distance to the point.",
+  "hint": "$V = kq/r$ for each charge, with its sign, then add.",
+  "yield": "HIGH",
+  "why": "Adding point-charge potentials as signed scalars is commonly tested.",
+  "part": 1
+ },
+ {
+  "front": "At a point where $V = -100$ V, a $+2.0$ nC charge has a potential energy of {{c1::$-2.0 \\times 10^{-7}$ J}}.",
+  "back": "$U = qV = (2.0 \\times 10^{-9})(-100)$, with both signs kept. $V$ (volts, J/C) belongs to the point; $U$ (joules) belongs to the charge placed there. A $-2.0$ nC charge at the same point would have $U = +2.0 \\times 10^{-7}$ J.",
+  "hint": "$U = qV$, and a volt is a joule per coulomb.",
+  "yield": "HIGH",
+  "why": "Potential versus potential energy, linked by $U = qV$, is a commonly tested distinction.",
+  "part": 1
+ },
+ {
+  "front": "The electric field always points toward {{c1::lower}} potential, and it crosses every equipotential at right angles.",
+  "back": "$E$ points downhill in $V$, the steepest way down. If the field had any part along an equipotential, moving a charge along it would take work, so the two must be perpendicular. The field's size is $|E| = |\\Delta V/\\Delta r|$: closely spaced equipotentials mean a strong field.",
+  "hint": "Think of contour lines on a hiking map.",
+  "yield": "HIGH",
+  "why": "Field direction relative to equipotentials is commonly tested.",
+  "part": 2
+ },
+ {
+  "front": "An electron accelerated from rest through $250$ V gains a kinetic energy of $250$ eV, which is {{c1::$4.0 \\times 10^{-17}$ J}}.",
+  "back": "$1\\;\\text{eV} = 1.6 \\times 10^{-19}$ J, the energy a charge $e$ gains crossing $1$ V, so $250 \\times 1.6 \\times 10^{-19} = 4.0 \\times 10^{-17}$ J. In eV, $\\Delta U = q\\,\\Delta V$ is the charge in units of $e$ times the volts. The eV is a unit of energy, not of potential.",
+  "hint": "Multiply the eV by $1.6 \\times 10^{-19}$.",
+  "yield": "HIGH",
+  "why": "Electron-volt conversions are commonly needed in energy calculations.",
+  "part": 2
+ }
+]

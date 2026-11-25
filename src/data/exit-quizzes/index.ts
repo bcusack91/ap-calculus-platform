@@ -133,9 +133,15 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-physics-waves-sound-mcat': () => import('./lesson-built/mcat-physics-waves-sound-mcat'),
   'mcat-physics-mechanics-fluid-dynamics-mcat': () => import('./lesson-built/mcat-physics-mechanics-fluid-dynamics-mcat'),
   'mcat-physics-waves-interference-mcat': () => import('./lesson-built/mcat-physics-waves-interference-mcat'),
+  // Fluids into four (Nov 2026, one topic per part of the fluids video series).
+  'mcat-physics-mechanics-buoyancy-mcat': () => import('./lesson-built/mcat-physics-mechanics-buoyancy-mcat'),
+  'mcat-physics-mechanics-viscosity-mcat': () => import('./lesson-built/mcat-physics-mechanics-viscosity-mcat'),
   'mcat-physics-electricity': () => import('./mcat-physics-electricity'),
   'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias
   'mcat-physics-electricity-electrostatics-mcat': () => import('./lesson-built/mcat-physics-electricity-electrostatics-mcat'),
+  // Electrostatics Parts 2 and 3 (Nov 2026 part split, one topic per part of the electrostatics video series).
+  'mcat-physics-electricity-electric-fields-mcat': () => import('./lesson-built/mcat-physics-electricity-electric-fields-mcat'),
+  'mcat-physics-electricity-electric-potential-mcat': () => import('./lesson-built/mcat-physics-electricity-electric-potential-mcat'),
   'mcat-physics-electricity-circuits-mcat': () => import('./mcat-physics-electricity'),
   // Circuits split in two (Nov 2026); the old slug's loader stays for attempt history.
   'mcat-physics-electricity-dc-circuits-mcat': () => import('./lesson-built/mcat-physics-electricity-dc-circuits-mcat'),

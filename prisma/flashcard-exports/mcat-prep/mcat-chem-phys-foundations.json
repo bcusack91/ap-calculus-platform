@@ -7450,42 +7450,42 @@
   "back": "The log of about $1/28$ is roughly $-1.45$. The steep potassium gradient maintained by the sodium-potassium pump is what pulls the resting potential down toward $-70$ mV."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "A charge accelerated from rest through potential difference $V$ reaches a speed proportional to {{c1::the square root of $V$}}.",
   "back": "Energy conservation gives $qV = \\frac12 mv^2$, so $v = \\sqrt{2qV/m}$. Quadrupling the accelerating voltage therefore only doubles the final speed."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "A charge is carried in a circle around a fixed point charge at constant radius. How much work is done?",
   "back": "Zero, because the path lies on an equipotential and the force stays perpendicular to the motion. The potential energy is unchanged."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "A charged particle enters a uniform field moving perpendicular to it. Describe its trajectory.",
   "back": "A parabola, exactly like projectile motion, because a constant force acts perpendicular to the initial velocity. The velocity component along the original direction stays constant."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "A dipole in a uniform field feels zero net force but a torque $\\tau =$ {{c1::$pE\\sin\\theta$}}.",
   "back": "The equal and opposite forces on the two ends cancel but do not act along the same line. The resulting torque rotates the dipole into alignment with the field."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "A resting membrane potential of $-70$ mV means the {{c1::inside}} of the cell is negative relative to the outside.",
   "back": "The convention always states inside relative to outside. The value arises mainly from potassium leak channels plus the sodium-potassium pump."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Along the perpendicular bisector of a dipole, the electric potential is {{c1::zero}} but the field is not.",
   "back": "Equal and opposite potentials cancel as scalars, while the two field vectors add to a nonzero resultant parallel to the dipole axis."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "An electric dipole moment points from:",
   "back": "**Negative to positive charge (physics convention)**\n\nChemistry often uses the opposite convention — read carefully."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "An electron is placed in an electric field pointing east. Which way does it accelerate and why?",
   "back": "West, opposite the field, because $F = qE$ with negative $q$ reverses direction. Field direction is defined by the force on a positive test charge."
  },
@@ -7495,22 +7495,22 @@
   "back": "$F$ is proportional to $1/r^2$, so any change in $r$ enters squared. Tripling the distance cuts the force to $1/9$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Between large parallel plates the field is {{c1::uniform}}, so a test charge feels the same force near either plate.",
   "back": "$E = V/d$ depends only on voltage and spacing, not on position. Potential, by contrast, varies linearly across the gap, which is exactly why $E$ and $V$ must be tracked as separate quantities."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "By Gauss-law reasoning, the net electric flux through a closed surface depends only on the {{c1::enclosed charge}}.",
   "back": "Charges outside contribute equal inward and outward flux that cancels. This makes symmetry arguments powerful without any calculus."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Capacitance of a parallel-plate capacitor increases when:",
   "back": "**A dielectric is inserted**\n\n$C = \\kappa\\varepsilon_0 A/d$; dielectrics reduce the internal field, storing more charge per volt."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Charge concentrates most at what part of an irregular conductor?",
   "back": "**Sharp points**\n\nThe basis of lightning rods."
  },
@@ -7530,88 +7530,88 @@
   "back": "The units of $\\epsilon_0$ are $C^2/(N\\cdot m^2)$. It reappears in capacitance, $C = \\kappa\\epsilon_0 A/d$. For calculations the MCAT only needs $k = 9\\times 10^9$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Define the electric dipole moment and give its magnitude for charges $\\pm q$ separated by $d$.",
   "back": "It is a vector of magnitude $p = qd$ pointing from the negative toward the positive charge in physics convention. Chemistry diagrams often draw the arrow the opposite way."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Does a charged particle always travel along an electric field line?",
   "back": "No. It accelerates along the local field, but its path follows a field line only if it is released from rest in a straight-line field. A charge entering a uniform field sideways follows a parabola that crosses field lines."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Does establishing a resting potential require moving a large fraction of the cell's ions?",
   "back": "No. The membrane's capacitance is tiny, so only a very small number of ions must separate across it. Bulk intracellular ion concentrations are essentially unchanged."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Each ECG lead records the {{c1::projection}} of the heart's dipole vector onto that lead's axis, so a deflection inverts when the vector points away.",
   "back": "Depolarization moving toward a lead's positive electrode gives an upward deflection. Lead aVR normally shows an inverted QRS because its axis points opposite the mean depolarization direction."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Electric field lines never:",
   "back": "**Cross each other**\n\nCrossing would imply two field directions at one point."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Excess charge on an isolated conductor resides:",
   "back": "**On the surface**\n\nMutual repulsion pushes charges as far apart as possible."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "How do field lines look between two large, oppositely charged parallel plates?",
   "back": "Parallel, evenly spaced, and perpendicular to the plates, running from the positive plate to the negative one. This uniform region is where $E = V/d$ applies, with fringing only at the edges."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "How does a dipole's field fall off with distance compared with a point charge's?",
   "back": "A dipole's field falls as $1/r^3$, faster than the $1/r^2$ of a point charge. Partial cancellation between the two opposite charges accelerates the falloff."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "How does electrospray ionization use an electric field to prepare a sample for mass spectrometry?",
   "back": "A strong field at a charged capillary tip pulls liquid into a cone and sprays charged droplets. Solvent evaporates until Coulomb repulsion exceeds surface tension, releasing intact charged analyte ions."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "How does field magnitude vary with distance for a long charged line versus a large charged sheet?",
   "back": "A long line gives $E$ proportional to $1/r$, and a large sheet gives a field essentially independent of distance. More extended geometries produce slower falloff than a point charge's $1/r^2$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "How does the field outside a uniformly charged sphere compare with that of a point charge?",
   "back": "It is identical to a point charge of the same total charge sitting at the center, so $E = kQ/r^2$. Spherical symmetry lets you collapse the whole distribution to its center."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "How is electric field defined, and what field does a point charge produce?",
   "back": "Definition: $E = \\frac{F}{q}$, the force per unit positive test charge, in N/C (equivalently V/m).\n\nFor a point charge, $E = k\\frac{Q}{r^{2}}$, pointing **away from** a positive charge and **toward** a negative one.",
   "hint": "Force per unit test charge."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "How much energy does it take to move one $Na^+$ ion across a $70$ mV membrane?",
   "back": "$W = qV = (1.6\\times 10^{-19})(0.070) \\approx 1.1\\times 10^{-20}$ J, or about $0.07$ eV. ATP hydrolysis supplies roughly $0.3$ eV per molecule, so one ATP can move several ions."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "How much work does the field do moving charge $q$ a distance $d$ along a uniform field $E$?",
   "back": "$W = qEd$, since $F = qE$ is constant and parallel to the displacement. Equivalently $W = q\\Delta V$ with $\\Delta V = Ed$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "If one charge has three times the magnitude of another, it has {{c1::three times}} as many field lines drawn on it.",
   "back": "Line count is proportional to charge magnitude, which keeps line density proportional to field strength everywhere in the diagram."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "In a voltage clamp experiment, why does the recorded current directly report channel opening?",
   "back": "Membrane voltage is held fixed, so by $I = V/R$ the current tracks membrane conductance $1/R$. Every change in recorded current reflects channels opening or closing, not a changing driving voltage."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "In isoelectric focusing a protein stops migrating where the pH equals its {{c1::pI}}, because net charge and therefore $F = qE$ go to zero.",
   "back": "Above its pI the protein is net negative and drifts toward the anode; below its pI it is net positive and drifts toward the cathode. It parks at the pH where the electric force vanishes."
  },
@@ -7621,17 +7621,17 @@
   "back": "**Repel; attract**\n\nFundamental to ionic bonding and membrane potentials."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Moving membrane potential from $-70$ mV toward $0$ is {{c1::depolarization}}, while going more negative is hyperpolarization.",
   "back": "Sodium influx depolarizes; potassium efflux or chloride influx hyperpolarizes. Reaching threshold triggers the all-or-none action potential."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Myelin increases the effective separation between the conducting fluids. What does that do to membrane capacitance?",
   "back": "$C = \\kappa\\epsilon_0 A/d$, so larger $d$ lowers $C$. Less charge is needed to swing the membrane voltage since $Q = CV$, so the segment charges faster and conduction speeds up."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Myelin speeds conduction largely by {{c1::decreasing membrane capacitance}} and increasing membrane resistance.",
   "back": "Less capacitance means less charge is needed to change local voltage, so signals propagate faster and leak less between the nodes of Ranvier."
  },
@@ -7641,7 +7641,7 @@
   "back": "It becomes $3/4$ of the original. Tripling a charge multiplies $F$ by $3$, and doubling $r$ divides it by $2^2 = 4$."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Only potential {{c1::differences}} are physically measurable; the location where $V = 0$ is a chosen reference.",
   "back": "Voltmeters, ECG leads, and membrane potentials all report differences. Setting $V = 0$ at infinity for point charges, or at the extracellular fluid for membranes, is a convention rather than a physical fact."
  },
@@ -7652,27 +7652,27 @@
   "hint": "Inverse square law for electric force."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "The electric field between two parallel plates separated by 2 cm with a potential difference of 200 V is:",
   "back": "**10000 V/m**\n\nE = V/d = 200/(0.02) = 10,000 V/m. The electric field between parallel plates is uniform."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "The electric field everywhere inside a uniformly charged spherical shell is {{c1::zero}}.",
   "back": "An interior Gaussian sphere encloses no charge, so the symmetric field must vanish. The potential inside is constant but not zero."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "The electric force is conservative, so the work it does moving a charge between two points is {{c1::independent of path}}.",
   "back": "Only the endpoints matter, which is exactly what allows a potential energy to be defined. Any closed loop gives zero net work."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "The field just outside a conductor is proportional to the local {{c1::surface charge density}}, which peaks where the surface curves most sharply.",
   "back": "Charge crowds onto points and sharp edges, producing the strongest field there. This underlies lightning rods, corona discharge from fine tips, and the design of blunt high-voltage terminals."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "The field of a point charge is $E =$ {{c1::$kQ/r^2$}}, with units written either N/C or V/m.",
   "back": "The field exists whether or not a test charge is present. A charge $q$ placed there feels $F = qE$."
  },
@@ -7682,12 +7682,12 @@
   "back": "$F = kq_1q_2/r^2 = 9\\times 10^9$ N, comparable to the weight of a mountain. A coulomb of static charge is enormous, so realistic problems use $\\mu$C or nC."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Two equal positive charges sit $10$ cm apart. What is the electric field at the midpoint?",
   "back": "Zero. The two contributions are equal in magnitude and opposite in direction, so they cancel. The potential there is not zero, since potentials add as scalars."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Two fields of $300$ N/C each act at right angles at a point. What is the net field?",
   "back": "About $424$ N/C, at $45$ degrees between them, from $\\sqrt{300^2 + 300^2}$. Fields superpose as vectors, so perpendicular components must be combined by Pythagoras."
  },
@@ -7702,28 +7702,28 @@
   "back": "The force becomes $q_1q_2/(4\\pi\\kappa\\epsilon_0 r^2)$. This is why ionic solids dissociate in water but not in nonpolar solvents, and why charge pairing is weak on a protein's solvated surface."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "What do the starting points, ending points, and spacing of field lines tell you?",
   "back": "Lines begin on positive charge and end on negative charge or at infinity, and their density is proportional to field strength. Closely packed lines mark a strong field."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "What does the Nernst equilibrium potential for an ion represent?",
   "back": "The membrane voltage at which the electrical force on that ion exactly balances its concentration gradient, so net flux is zero. Potassium's is near $-90$ mV in neurons."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "What is the electric potential energy of two point charges, and what does its sign mean?",
   "back": "$U = k\\frac{q_1q_2}{r}$ — note $1/r$, not $1/r^{2}$ (that is the force).\n\n$U > 0$ for like charges (energy stored by pushing them together); $U < 0$ for opposite charges (bound — work is required to pull them apart).",
   "hint": "No square in the denominator — unlike force."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "What is the energy stored in a 10 μF capacitor charged to 100 V?",
   "back": "**0.05 J**\n\nU = $\\tfrac{1}{2} CV^{2}$ = ½ × $10\\times 10^{-6}$ × $(100)^{2}$ = ½ × $10^{-5}$ × $10^{4}$ = 0.05 J."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Why are defibrillator paddles large and pressed firmly against gel-coated skin?",
   "back": "Large contact area lowers both current density and contact resistance, spreading current through the whole chest instead of concentrating it at small spots where the local field would burn the skin."
  },
@@ -7733,12 +7733,12 @@
   "back": "The hydrocarbon core has a very low dielectric constant, so stripping an ion's hydration shell and placing bare charge there costs enormous electrostatic energy. Channels line the path with polar groups that substitute for water."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Why does a dipole feel a net force in a nonuniform field but not in a uniform one?",
   "back": "In a nonuniform field the two ends sit where the field strengths differ, so the forces no longer cancel. This is why polar water molecules are pulled toward dissolved ions."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Why does a larger axon diameter increase conduction velocity?",
   "back": "A wider cylinder has more cross-sectional area, so longitudinal internal resistance falls as $R = \\rho L/A$. Current spreads farther before decaying, reaching threshold sooner downstream."
  },
@@ -7748,19 +7748,139 @@
   "back": "The interior behaves like a low-dielectric medium, roughly $2$ to $4$, while water screens surface charges with $\\kappa$ near $80$. Identical charges therefore attract far more strongly when buried."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Why does SDS-PAGE separate proteins essentially by size alone?",
   "back": "SDS coats the unfolded chain with a nearly constant negative charge per unit mass, so electric force scales with size just as drag does. What remains is sieving by the gel, and smaller proteins travel farther."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
   "front": "Why is the electric field across a neuron's membrane enormous despite only $70$ mV?",
   "back": "The membrane is about $7$ nm thick, so $E = V/d$ gives roughly $10^7$ V/m. Voltage-gated channels are built to sense exactly this field."
  },
  {
-  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
   "front": "Why is the peptide bond described as having a dipole, and what does that mean physically?",
   "back": "Unequal electron sharing leaves partial negative charge on the carbonyl oxygen and partial positive charge on the amide nitrogen. Aligned peptide dipoles help stabilize the alpha helix."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A plastic comb picks up $2.0 \\times 10^{10}$ extra electrons. What is its net charge? ($e = 1.6 \\times 10^{-19}$ C)",
+  "back": "$-3.2 \\times 10^{-9}$ C, or $-3.2$ nC. $q = -ne = -(2.0 \\times 10^{10})(1.6 \\times 10^{-19})$. Extra electrons make the charge negative. Going the other way, $n = |q|/e$ counts the extra or missing electrons."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A neutral rubber rod is rubbed with neutral fur and ends with $-5$ nC. The fur ends with {{c1::$+5$ nC}}, because charge is moved, never created.",
+  "back": "Friction moves electrons from one object to the other, so the two end with equal and opposite charges and the total stays zero. Here electrons went from the fur to the rod. No protons moved."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A negatively charged rod is used to charge a neutral metal sphere. What sign does the sphere end with by conduction, and what sign by induction?",
+  "back": "Conduction (touching): negative, the SAME sign as the rod, because the rod shares its own charge. Induction (rod held near while the sphere is grounded): positive, the OPPOSITE sign, and the rod loses none of its charge."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A positive rod is held near a metal sphere that is connected to ground. Which way do electrons flow in the ground wire, and which is removed first, the wire or the rod?",
+  "back": "Electrons flow UP from the ground onto the sphere, pulled toward the positive rod. Remove the ground wire first, then the rod, and the sphere keeps a negative charge. Remove the rod first and the extra electrons flow back down, leaving the sphere neutral."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "Why does a charged rod attract a neutral scrap of paper?",
+  "back": "Polarization. The paper's charges shift so that charge opposite to the rod sits on the near side and like charge on the far side. The electric force is stronger at shorter distance, so the near-side attraction beats the far-side repulsion. No charge is transferred, and it works for a rod of either sign."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A charged object attracts both oppositely charged objects and neutral ones, so only {{c1::repulsion}} proves that two objects are both charged.",
+  "back": "Repulsion needs two charges of the same sign. Attraction is ambiguous: the second object may carry the opposite charge, or it may be neutral and polarized."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "Two identical metal spheres carry $-10$ nC and $+2$ nC. They touch and are separated. What is the charge on each?",
+  "back": "$-4$ nC each. Identical conductors share the total equally: $q_{\\text{each}} = (q_1 + q_2)/2 = (-10 + 2)/2$. Add the charges with their signs before splitting, and for several contacts take one contact at a time."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "How do conductors and insulators differ, and which one is a cell membrane?",
+  "back": "In a conductor (metals, salt solutions) charges move freely, so excess charge spreads over the outer surface. In an insulator (rubber, glass, plastic) charge stays where it is put. Body fluids conduct because their ions move; the lipid bilayer and myelin insulate."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A $+8$ μC charge pushes a $+1$ μC charge with a force of $6$ N. The force that the $+1$ μC charge exerts on the $+8$ μC charge is {{c1::$6$ N}}.",
+  "back": "Newton's third law: the two forces are equal in size and opposite in direction. The product $q_1 q_2$ in $|F| = k|q_1 q_2|/r^2$ belongs to the pair, so the larger charge feels neither a larger nor a smaller force."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "To make the Coulomb force between two charges $9$ times larger by changing only the distance, the separation must become {{c1::one third}} of its original value.",
+  "back": "$F \\propto 1/r^2$, so working backward takes a square root: $r_{\\text{new}} = r/\\sqrt{9} = r/3$. Cutting the distance to one ninth would make the force $81$ times larger."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "A charge feels a $5.0$ N force along $+x$ from one neighbor and a $12$ N force along $+y$ from another. What is the size of the net force on it?",
+  "back": "$13$ N. Perpendicular forces are the legs of a right triangle: $F = \\sqrt{5.0^2 + 12^2} = 13$ N, at $\\tan\\theta = 12/5.0$, about $67^\\circ$ above $+x$. Adding the magnitudes to get $17$ N works only when the forces point the same way."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "Four equal positive charges sit at the corners of a square. What net force does a charge at the exact center feel, and why?",
+  "back": "Zero. Charges on opposite corners are the same distance away and push in opposite directions, so the forces cancel in pairs. Check for symmetry before calculating: matching charges at matching distances cancel each other's opposing components."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electrostatics-mcat",
+  "front": "Charges of $+1.0$ μC and $+4.0$ μC are fixed $0.60$ m apart. Where does a third charge feel zero net force?",
+  "back": "Between them, $0.20$ m from the $+1.0$ μC charge. Like charges push a third charge in opposite directions only between them, and balance needs $|q_1|/r_1^2 = |q_2|/r_2^2$, so $r_2 = 2r_1$ with $r_1 + r_2 = 0.60$ m. The point is nearer the smaller charge and does not depend on the third charge's sign or size."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
+  "front": "For two charges of opposite sign and unequal size, the electric field is zero only {{c1::outside the pair, beyond the smaller charge}}.",
+  "back": "Between opposite charges both fields point toward the negative charge, so they add. Beyond the larger charge, that charge is also the nearer one and always wins. Only beyond the smaller charge can nearness make up for less charge. For like charges the null point is between them, nearer the smaller one."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
+  "front": "Charges $+9Q$ and $+Q$ are fixed a distance $d$ apart. Where is the electric field zero?",
+  "back": "Between them, $d/4$ from the $+Q$ charge. Setting $k|q_1|/r_1^2 = k|q_2|/r_2^2$ gives $r_1/r_2 = \\sqrt{9} = 3$, and $r_1 + r_2 = d$. The distance ratio is the SQUARE ROOT of the charge ratio, not the ratio itself."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
+  "front": "Swapping a positive test charge for a negative one reverses the force on it, but the electric field at that point is {{c1::unchanged}}.",
+  "back": "The field $\\vec{E} = \\vec{F}/q_0$ belongs to the point and is set by the source charges. Doubling the test charge doubles the force and leaves $F/q_0$ the same. A negative charge feels a force opposite to $\\vec{E}$."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
+  "front": "An ion with charge $3.2 \\times 10^{-19}$ C and mass $6.4 \\times 10^{-27}$ kg is in a uniform field of $2.0 \\times 10^{3}$ N/C. What is its acceleration?",
+  "back": "$1.0 \\times 10^{11}$ m/s$^2$. $a = qE/m = (3.2 \\times 10^{-19})(2.0 \\times 10^{3})/(6.4 \\times 10^{-27})$. The force $qE$ is the same everywhere in a uniform field, so the acceleration is constant. In the same field an electron accelerates about 1836 times more than a proton, because the forces match but the masses do not."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-fields-mcat",
+  "front": "In gel electrophoresis, toward which electrode does DNA migrate, and which fragments travel farthest?",
+  "back": "Toward the positive electrode (the anode): the phosphate backbone makes DNA negative, and a negative charge is pushed against the field. Shorter fragments travel farthest. The force per unit charge is the same for all fragments, but the gel's mesh holds longer ones back more."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
+  "front": "Released from rest, which way does a positive charge move in terms of potential? Which way does a negative charge move? What happens to the potential energy of each?",
+  "back": "A positive charge moves toward LOWER $V$; a negative charge moves toward HIGHER $V$. Both lose potential energy, because every released charge moves toward lower $U = qV$, and the lost $U$ becomes kinetic energy."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
+  "front": "An electron moves from a point at $+20$ V to a point at $+50$ V. What is the change in its potential energy? ($e = 1.6 \\times 10^{-19}$ C)",
+  "back": "$-4.8 \\times 10^{-18}$ J. $\\Delta U = q\\,\\Delta V = (-1.6 \\times 10^{-19})(+30)$, with both signs kept. The potential rose but the electron's energy fell: a negative charge loses $U$ moving to higher $V$, so the field does positive work on it."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
+  "front": "Point P is $0.30$ m from a $+6.0$ nC charge and $0.30$ m from a $-2.0$ nC charge. What is the potential at P? ($k = 9.0 \\times 10^{9}$ N·m$^2$/C$^2$)",
+  "back": "$+120$ V. Potential is a scalar, so add signed numbers: $V = kq_1/r_1 + kq_2/r_2 = 54/0.30 - 18/0.30 = 180 - 60$. No components or angles are needed, only each charge's sign and its own distance to the point."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
+  "front": "At a point where $V = -100$ V, a $+2.0$ nC charge has a potential energy of {{c1::$-2.0 \\times 10^{-7}$ J}}.",
+  "back": "$U = qV = (2.0 \\times 10^{-9})(-100)$, with both signs kept. $V$ (volts, J/C) belongs to the point; $U$ (joules) belongs to the charge placed there. A $-2.0$ nC charge at the same point would have $U = +2.0 \\times 10^{-7}$ J."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
+  "front": "The electric field always points toward {{c1::lower}} potential, and it crosses every equipotential at right angles.",
+  "back": "$E$ points downhill in $V$, the steepest way down. If the field had any part along an equipotential, moving a charge along it would take work, so the two must be perpendicular. The field's size is $|E| = |\\Delta V/\\Delta r|$: closely spaced equipotentials mean a strong field."
+ },
+ {
+  "topicSlug": "mcat-physics-electricity-electric-potential-mcat",
+  "front": "An electron accelerated from rest through $250$ V gains a kinetic energy of $250$ eV, which is {{c1::$4.0 \\times 10^{-17}$ J}}.",
+  "back": "$1\\;\\text{eV} = 1.6 \\times 10^{-19}$ J, the energy a charge $e$ gains crossing $1$ V, so $250 \\times 1.6 \\times 10^{-19} = 4.0 \\times 10^{-17}$ J. In eV, $\\Delta U = q\\,\\Delta V$ is the charge in units of $e$ times the volts. The eV is a unit of energy, not of potential."
  },
  {
   "topicSlug": "mcat-physics-electricity-induction-mcat",
@@ -8760,7 +8880,7 @@
   "back": "**$1.005 \\times 10^{6}$ Pa**\n\nGauge pressure = ρgh = 1025 × 9.8 × 100 = 1,004,500 Pa ≈ $1.005 \\times 10^{6}$ Pa. This is the pressure due to the water column above, not including atmospheric pressure."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "A vessel narrows to half its radius at constant driving pressure. By what factor does flow drop?",
   "back": "Sixteenfold, because Poiseuille flow scales with $r^4$. This sensitivity is why arteriolar radius dominates blood pressure regulation, and why plaque can grow substantially before flow limitation becomes clinically obvious."
  },
@@ -8775,7 +8895,7 @@
   "back": "For a venous pressure near 10 mmHg, about 1300 Pa, the minimum height is $1300/(1000 \\times 10) \\approx 0.13$ m above the vein. Bags hang near a meter so flow stays adequate; raising the bag raises driving pressure and flow rate."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "An object floats when its density is:",
   "back": "**Less than the fluid density**\n\nIt sinks when denser and hovers when equal."
  },
@@ -8790,7 +8910,7 @@
   "back": "The sum $P + \\rho gh + \\frac{1}{2}\\rho v^2$ stays constant along a streamline, so kinetic energy per unit volume rises at the expense of pressure energy."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Continuity or Poiseuille: which explains slow capillary flow, and which explains high resistance in a stenosis?",
   "back": "Continuity, with $Av$ constant, explains capillary speed: their enormous combined cross-sectional area forces low velocity. Poiseuille explains resistance through a narrowed vessel. Continuity is about conserved volume flow; Poiseuille is about pressure cost."
  },
@@ -8805,7 +8925,7 @@
   "back": "Approaching source → higher observed frequency (compressed wavefronts); receding → lower."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "Does the buoyant force on a fully submerged object increase with depth?",
   "back": "No. In an incompressible fluid, displaced volume and density are unchanged, so buoyancy is constant. Pressure rises on both the top and bottom surfaces, leaving the difference the same."
  },
@@ -8840,12 +8960,12 @@
   "back": "Absolute pressure is $P = P_0 + \\rho g h$, including atmospheric pressure; gauge pressure is just the $\\rho g h$ excess above atmosphere. Clinical blood pressure readings are gauge pressures."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "How does hydrostatic weighing determine body composition?",
   "back": "Apparent weight underwater equals true weight minus buoyant force, which yields body volume and thus density. Fat is less dense than water and lean tissue is denser, so density predicts body fat fraction."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "How does raising hematocrit affect cardiac workload?",
   "back": "It raises blood viscosity, and Poiseuille resistance is proportional to viscosity, so a larger pressure gradient is needed for the same flow. The heart must generate more pressure per beat."
  },
@@ -8855,7 +8975,7 @@
   "back": "It falls as $1/r^2$, since the same power spreads over a sphere of area $4\\pi r^2$. Doubling the distance quarters intensity but lowers the level by only about 6 dB."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "How does vessel radius affect flow (Poiseuille)?",
   "back": "Flow $\\propto r^{4}$ — halving the radius cuts flow to $\\frac{1}{16}$. Small arterial narrowing has outsized effect."
  },
@@ -8865,7 +8985,7 @@
   "back": "Only the velocity component along the beam produces a shift, so the measured value scales with $\\cos\\theta$. A beam perpendicular to the vessel yields no shift at all, and a poorly aligned probe systematically underestimates flow velocity."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "In Poiseuille's law, flow rate is proportional to {{c1::the fourth power of the radius}}.",
   "back": "Halving a vessel's radius cuts flow to one-sixteenth at fixed pressure gradient, which is why small changes in arteriolar tone dominate total peripheral resistance."
  },
@@ -8875,7 +8995,7 @@
   "back": "Speed peaks at the equilibrium position where the restoring force is zero; acceleration peaks at the extremes where displacement and restoring force are largest. The two are exactly out of phase."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "Laplace's law for an alveolus gives $P = 2\\gamma/r$. What does it predict?",
   "back": "At fixed surface tension, smaller alveoli generate higher collapsing pressure and would empty into larger ones. Surfactant lowers tension more in small alveoli, stabilizing the whole lung."
  },
@@ -8925,7 +9045,7 @@
   "back": "**Solids**\n\nStiffer media transmit compressions faster; sound cannot travel in vacuum."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "State Archimedes' principle.",
   "back": "Buoyant force equals the weight of displaced fluid: $F_b = \\rho_{fluid}Vg$. An object floats if it can displace its own weight."
  },
@@ -8940,12 +9060,12 @@
   "back": "Pressure applied to an enclosed fluid is transmitted undiminished throughout, so $F_1/A_1 = F_2/A_2$. A small force on a small piston balances a large force on a large piston."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "Surface tension arises from {{c1::cohesive forces between liquid molecules}} at an interface.",
   "back": "Surface molecules have unbalanced attractions pulling them inward, so the liquid minimizes surface area. Pulmonary surfactant lowers alveolar surface tension so small alveoli resist collapse."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "The buoyant force equals the weight of {{c1::the fluid displaced}}, not the weight of the object.",
   "back": "In symbols $F_B = \\rho_{fluid}V_{displaced}g$, so buoyancy depends on the fluid's density and the submerged volume, never on the object's own density or composition."
  },
@@ -8965,7 +9085,7 @@
   "back": "**Reflection at tissue interfaces of differing impedance**\n\nEcho timing localizes structures."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Vascular resistance is {{c1::$8\\eta L/(\\pi r^4)$}}, so viscosity and length enter {{c1::linearly}}.",
   "back": "Flow rate equals the pressure difference divided by that resistance. Polycythemia raises viscosity and therefore resistance proportionally, while even a small radius change dominates everything else through the fourth power."
  },
@@ -8975,7 +9095,7 @@
   "back": "Higher tension or lower linear mass density raises wave speed, and with length fixed, $f_1 = v/(2L)$ rises with it. Thicker strings have larger mass per length and sound lower."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "What distinguishes turbulent from laminar flow, and why does it matter clinically?",
   "back": "Turbulence appears above a critical Reynolds number, favored by high velocity, large diameter, high density, and low viscosity. It produces sound, which is why murmurs, bruits, and Korotkoff sounds are audible."
  },
@@ -8985,12 +9105,12 @@
   "back": "Steady, laminar flow of an incompressible, nonviscous fluid along one streamline. Real blood is viscous, so pressure also falls steadily along a vessel of uniform diameter."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "What fraction of a floating object sits below the surface?",
   "back": "The density ratio $\\rho_{obj}/\\rho_{fluid}$. Ice near $920$ kg/m$^3$ floats with roughly 92 percent of its volume submerged in fresh water."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "What happens to pressure inside an arterial stenosis?",
   "back": "Flow accelerates through the narrowing, so pressure drops there, which can partly collapse a compliant vessel and generate turbulence and an audible bruit just downstream."
  },
@@ -9005,12 +9125,12 @@
   "back": "**Frequency**\n\nThe source sets frequency; speed and wavelength adjust together."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Which raises resistance more: halving a vessel's radius, or doubling its length?",
   "back": "Halving the radius, by a factor of 16, versus only a factor of 2 for doubled length. Radius carries the fourth power in Poiseuille's law, making vasoconstriction a far more powerful control than any change in length or viscosity."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Why can a forced expiration collapse an airway (dynamic compression)?",
   "back": "Fast flow lowers the pressure inside the airway by Bernoulli's principle, while pleural pressure outside rises during the effort. Once outside exceeds inside, the compliant airway narrows, which raises velocity further, a self-reinforcing collapse prominent in COPD."
  },
@@ -9025,17 +9145,17 @@
   "back": "Pressure is force per unit area. The same 600 N spread over a 100 cm$^2$ sole is about 60 kPa, but concentrated on a 1 cm$^2$ heel it is 6 MPa. Force sets the total load; pressure decides whether a surface, or skin, fails."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "Why does a person float higher in salt water than in fresh water?",
   "back": "Denser fluid means less volume must be displaced to match body weight, so the submerged fraction $\\rho_{body}/\\rho_{fluid}$ falls. Body density near $985$ kg/m$^3$ leaves little above water in either case."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "Why does a person with a higher body fat fraction float more easily?",
   "back": "Fat has density near 0.9 g/cm$^3$ while lean tissue and bone run near 1.1. More fat pulls whole-body density toward or below water's 1.0, so a larger fraction floats above the surface. Hydrostatic weighing converts that buoyancy into a body-fat estimate."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Why does an aneurysm tend to enlarge once it forms?",
   "back": "The widened segment slows the flow, so Bernoulli predicts higher local pressure pushing the wall outward. Laplace's law compounds it, since wall tension rises with radius at fixed pressure."
  },
@@ -9080,37 +9200,37 @@
   "back": "$5000$ N. Area scales with diameter squared, so the area ratio is $5^2 = 25$ and $F_2 = 200 \\times 25$. Using the diameter ratio without squaring gives the 1000 N trap."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "A rock weighs $50$ N in air and $40$ N when hung fully submerged in water. What is its specific gravity?",
   "back": "$5$. $F_B = 50 - 40 = 10$ N, the weight of an equal volume of water, so $SG = W/F_B = 50/10 = 5$ (density $5000$ kg/m$^3$). Divide the TRUE weight, not the apparent weight, by $F_B$."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "A floating object displaces its own {{c1::weight}} of fluid; a fully submerged object displaces its own {{c2::volume}} of fluid.",
   "back": "Floating is equilibrium, so $F_B = W$ and the displaced fluid weighs as much as the object. A submerged object pushes aside its full volume of fluid, whatever its weight."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "A block floats in water with $60\\%$ of its volume submerged. What fraction is submerged when it floats in oil of SG $0.8$?",
   "back": "$75\\%$. The submerged fraction in water is the SG, so $\\rho_{\\text{block}} = 600$ kg/m$^3$; in oil the fraction is $0.6/0.8 = 0.75$. It rides lower in the less dense fluid and would sink in any fluid with SG below 0.6."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "An object denser than oil but less dense than water is dropped into a beaker of oil floating on water. Where does it come to rest?",
   "back": "At the oil-water boundary, partly in each layer. It sinks through the oil but cannot sink fully into the water, so it settles where the displaced oil and water together weigh as much as it does."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "When an ice cube floating in a glass of water melts completely, the water level {{c1::stays the same}}.",
   "back": "Floating ice displaces exactly its own weight of water, and melting turns it into exactly that weight of water, which fills the volume it had displaced."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "In a narrow glass tube, water forms a {{c1::concave}} meniscus and rises, while mercury forms a {{c2::convex}} meniscus and is depressed.",
   "back": "Water's adhesion to glass exceeds its cohesion, so it climbs the walls; mercury's cohesion wins, so it domes up and sits below the outside level. Narrower tubes give a larger rise or fall."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluids-mcat",
+  "topicSlug": "mcat-physics-mechanics-buoyancy-mcat",
   "front": "Normal urine specific gravity runs from about {{c1::$1.005$ to $1.030$}}.",
   "back": "Measured with a hydrometer, which rides higher in denser urine. Values near the top of the range mean concentrated urine, as in dehydration."
  },
@@ -9145,32 +9265,32 @@
   "back": "$20$ m/s. Bringing the flow to rest at the tip turns the kinetic term into pressure: $\\tfrac{1}{2}\\rho v^2 = 250$, so $v^2 = 2(250)/1.25 = 400$."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Cutting a vessel's radius by only about {{c1::16%}} halves its flow at a fixed pressure difference.",
   "back": "Poiseuille flow scales as $r^4$, and $0.84^4 \\approx 0.50$. That is why small changes in arteriolar tone produce large changes in flow."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Each capillary is narrower than an arteriole, so why is the largest systemic pressure drop across the arterioles?",
   "back": "Billions of capillaries sit in parallel, so their combined resistance is lower than the arterioles'. Pressure falls from about 90 to about 35 mmHg across the arterioles, whose smooth muscle sets resistance."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "After a leg amputation removes one parallel vascular bed, with cardiac output unchanged, what happens to TPR and MAP?",
   "back": "Both rise. Parallel resistances combine to less than any single branch, so removing one raises the total; since $MAP \\approx CO \\times TPR$, MAP rises too."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "For a stenosis, when does Bernoulli apply and when does Poiseuille?",
   "back": "Bernoulli fits a SHORT narrowing: speed changes quickly and friction is small, explaining the pressure dip in the jet. Poiseuille fits a LONG narrowing or a fixed driving pressure: resistance rises as $1/r^4$ and flow falls."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Name the three fluids regimes to identify first in a passage, with the tools for each.",
   "back": "Static (depth, floating, pistons): $P = P_0 + \\rho g h$, Pascal, Archimedes. Ideal flow (non-viscous, short constrictions): continuity, Bernoulli, Torricelli. Viscous flow (long vessels, viscosity given): Poiseuille, $Q = \\Delta P/R$. If turbulent, neither equation holds."
  },
  {
-  "topicSlug": "mcat-physics-mechanics-fluid-dynamics-mcat",
+  "topicSlug": "mcat-physics-mechanics-viscosity-mcat",
   "front": "Why can severe anemia produce a heart murmur even with normal valves?",
   "back": "Low hematocrit lowers blood viscosity, and cardiac output rises to compensate, so blood moves faster. Both raise the Reynolds number $Re = \\rho v D/\\eta$, pushing flow toward turbulence, which is audible."
  },

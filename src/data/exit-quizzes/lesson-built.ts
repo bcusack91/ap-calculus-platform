@@ -153,6 +153,12 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-anatomy-physiology-organogenesis-mcat',
   'mcat-sociology-interaction-organizations-mcat',
   'mcat-physics-electricity-induction-mcat',
+  // Fluids into four (Nov 2026, one topic per part of the fluids video series).
+  'mcat-physics-mechanics-buoyancy-mcat',
+  'mcat-physics-mechanics-viscosity-mcat',
+  // Electrostatics Parts 2 and 3 (Nov 2026 part split).
+  'mcat-physics-electricity-electric-fields-mcat',
+  'mcat-physics-electricity-electric-potential-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

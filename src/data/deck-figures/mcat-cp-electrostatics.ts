@@ -1,24 +1,31 @@
 import type { DeckFigurePlacement } from './index'
 
 /**
- * Electrostatics (MCAT C/P) — figures for the in-class deck. Authored 2026-10-29.
+ * Electrostatics Part 1: Charge & Coulomb's Law (MCAT C/P) — figures for the
+ * in-class deck, plus the drawing helpers shared by the three electrostatics
+ * decks. Authored 2026-10-29 as one deck; split 2026-11-25 when the topic
+ * became three (Part 2 is in mcat-cp-electric-fields.ts, Part 3 in
+ * mcat-cp-electric-potential.ts).
  *
- * Every drawing below is ours, drawn from the concept (two charges with force
- * arrows for Coulomb's law and the inverse square, radial field lines of a +
- * and a − point charge with a test charge in a uniform field, a potential
- * "hill" with E pointing downhill, concentric equipotentials and a dipole in a
- * uniform field, the Core Four as a 2×2 grid, the parallel-plate worked example
- * with its numbers, the membrane as a capacitor, a gel with three lanes, and
- * the two midpoint superposition cases) — no textbook, prep-company or AAMC
- * figure was copied. The only numbers drawn are the ones the lesson states
- * (6.0 V / 2.0 mm / 3.0 × 10³ V/m; 70 mV / 7 nm / 10⁷ V/m; 5–10 nm; −70 mV;
- * +4.0 nC, 2.0 m, 72 V).
+ * Every drawing below is ours, drawn from the concept (an atom sketch with a
+ * ladder of allowed charges, a metal and a plastic ball beside a membrane, the
+ * three ways to charge, a rod polarizing a neutral ball, spheres sharing
+ * charge, the four steps of induction, two charges with force arrows for
+ * Coulomb's law, a force triangle with the zero-force points on a line, and
+ * the two superposition worked examples) — no textbook, prep-company or AAMC
+ * figure was copied. The only numbers drawn are the ones the lesson states:
+ * e = 1.6 × 10⁻¹⁹ C; 5.0 × 10⁹ electrons → −0.80 nC and the impossible 2.5e;
+ * −12 and +4.0 μC → −4.0 each (5.0 × 10¹³ electrons) → −2.0 each;
+ * 2.0 × 10¹⁰ electrons → +3.2 nC; 3 N and 4 N → 5 N (1 N to 7 N); +1.0, −4.0
+ * and +2.0 μC at 0, 0.40 and 0.10 m → 1.8 N + 0.80 N = 2.6 N, balance at
+ * −0.40 m; 0.20 N and 0.15 N → 0.25 N at 37°. Positions on the number lines,
+ * the zero-force points and the 37° are computed from those numbers in code.
  *
- * Colours are consistent across the deck: POSITIVE charges and plates RED
- * (fig-accent-2), NEGATIVE charges and plates BLUE (fig-accent); field lines,
- * E arrows and the forces in the Coulomb figure in the text colour; a force on
- * a test charge takes that charge's colour; equipotentials, dimension lines,
- * the insulating bilayer and the gel's travel arrows grey (fig-muted).
+ * Colours are consistent across the three decks: POSITIVE charges and plates
+ * RED (fig-accent-2), NEGATIVE charges and plates BLUE (fig-accent); field
+ * lines, E arrows and the forces in the Coulomb figure in the text colour; a
+ * force on a test charge takes that charge's colour, and a NET force or field
+ * is red; equipotentials, dimension lines and guides grey (fig-muted).
  *
  * Arrowheads: a <marker> inherits colour from ITS OWN ancestors, not from the
  * line that uses it, so each coloured arrow has its marker defined inside the
@@ -26,39 +33,39 @@ import type { DeckFigurePlacement } from './index'
  * figure (arr-es-<figure>-<colour>).
  */
 
-const SVG_OPEN = '<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif"'
+export const SVG_OPEN = '<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif"'
 
-const ARROW = (id: string) =>
+export const ARROW = (id: string) =>
   `<marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>`
 
 /** A text element in the current colour. `weight` is the font-weight attribute as a string ('400' | '700'). */
-const T = (x: number, y: number, size: number, text: string, anchor: 'start' | 'middle' | 'end' = 'start', weight = '400') =>
+export const T = (x: number, y: number, size: number, text: string, anchor: 'start' | 'middle' | 'end' = 'start', weight = '400') =>
   `<text x="${x}" y="${y}" font-size="${size}"${weight !== '400' ? ` font-weight="${weight}"` : ''}${anchor !== 'start' ? ` text-anchor="${anchor}"` : ''} fill="currentColor">${text}</text>`
 
 /** A rounded box outlined in the current colour; `fillOpacity` > 0 tints it with the same colour. */
-const BOX = (x: number, y: number, w: number, h: number, rx = 12, sw = 2.5, fillOpacity = 0) =>
+export const BOX = (x: number, y: number, w: number, h: number, rx = 12, sw = 2.5, fillOpacity = 0) =>
   `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${fillOpacity ? 'currentColor' : 'none'}"${fillOpacity ? ` fill-opacity="${fillOpacity}"` : ''} stroke="currentColor" stroke-width="${sw}"/>`
 
 /** A straight arrow in the current colour ending in the given marker. */
-const ARR = (x1: number, y1: number, x2: number, y2: number, marker: string, sw = 3, dashed = false) =>
+export const ARR = (x1: number, y1: number, x2: number, y2: number, marker: string, sw = 3, dashed = false) =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="7 5"' : ''} marker-end="url(#${marker})"/>`
 
 /** A plain line in the current colour. */
-const LINE = (x1: number, y1: number, x2: number, y2: number, sw = 2, dashed = false) =>
+export const LINE = (x1: number, y1: number, x2: number, y2: number, sw = 2, dashed = false) =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="7 5"' : ''}/>`
 
 /** A horizontal dimension line with end ticks. */
-const DIM = (x1: number, x2: number, y: number) =>
+export const DIM = (x1: number, x2: number, y: number) =>
   `<path d="M${x1} ${y - 6} L${x1} ${y + 6} M${x1} ${y} L${x2} ${y} M${x2} ${y - 6} L${x2} ${y + 6}" fill="none" stroke="currentColor" stroke-width="2"/>`
 
 /** A point charge: red disc with + or blue disc with −, optional label underneath. */
-const CHARGE = (cx: number, cy: number, r: number, sign: '+' | '−', label = '') => {
+export const CHARGE = (cx: number, cy: number, r: number, sign: '+' | '−', label = '') => {
   const size = Math.round(r * 1.5)
   return `<g class="${sign === '+' ? 'fig-accent-2' : 'fig-accent'}"><circle cx="${cx}" cy="${cy}" r="${r}" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="2.5"/>${T(cx, cy + Math.round(size * 0.34), size, sign, 'middle', '700')}${label ? T(cx, cy + r + 22, 17, label, 'middle', '700') : ''}</g>`
 }
 
 /** n radial field lines around (cx, cy) from radius r1 to r2, arrowheads outward or inward. */
-const RADIAL = (cx: number, cy: number, r1: number, r2: number, n: number, marker: string, outward: boolean) => {
+export const RADIAL = (cx: number, cy: number, r1: number, r2: number, n: number, marker: string, outward: boolean) => {
   const out: string[] = []
   for (let i = 0; i < n; i++) {
     const a = (2 * Math.PI * i) / n
@@ -70,7 +77,91 @@ const RADIAL = (cx: number, cy: number, r1: number, r2: number, n: number, marke
 }
 
 /** A faint panel background (three-panel lead figures). */
-const PANEL = (ox: number) => `<g class="fig-muted"><rect x="${ox}" y="20" width="310" height="420" rx="14" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.5"/></g>`
+export const PANEL = (ox: number) => `<g class="fig-muted"><rect x="${ox}" y="20" width="310" height="420" rx="14" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.5"/></g>`
+
+/** Wraps drawing code in one of the theme colour groups. */
+export const G = (cls: 'accent' | 'accent-2' | 'muted', inner: string) => `<g class="fig-${cls}">${inner}</g>`
+
+/** A circle outlined in the current colour; `fillOpacity` > 0 tints it. */
+export const CIRC = (cx: number, cy: number, r: number, sw = 2.5, fillOpacity = 0, dashed = false) =>
+  `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fillOpacity ? 'currentColor' : 'none'}"${fillOpacity ? ` fill-opacity="${fillOpacity}"` : ''} stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="7 5"' : ''}/>`
+
+/** Bold + or − glyphs at the given points, in the charge colours (red +, blue −). */
+export const SIGNS = (sign: '+' | '−', pts: readonly (readonly [number, number])[], size = 20) =>
+  G(sign === '+' ? 'accent-2' : 'accent', pts.map(([x, y]) => T(+x.toFixed(1), +(y + size * 0.34).toFixed(1), size, sign, 'middle', '700')).join(''))
+
+/** n points evenly spaced on a circle (angles in degrees, clockwise from +x on screen). */
+export const RING = (cx: number, cy: number, r: number, n: number, startDeg = 0, spanDeg = 360): [number, number][] =>
+  Array.from({ length: n }, (_, i) => {
+    const a = ((startDeg + (spanDeg === 360 ? (360 * i) / n : (spanDeg * i) / Math.max(1, n - 1))) * Math.PI) / 180
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as [number, number]
+  })
+
+/** A disc in the figure's background colour: hides an axis line where a charge sits on it. */
+export const MASK = (cx: number, cy: number, r: number) => `<circle class="fig-bg" cx="${cx}" cy="${cy}" r="${r}" stroke="none"/>`
+
+/** A label on a background-coloured plate, so lines behind it do not run through the text. */
+export const TAG = (x: number, y: number, size: number, text: string, w: number, weight = '700') =>
+  `<rect class="fig-bg" x="${x - w / 2}" y="${y - size}" width="${w}" height="${size + 6}" stroke="none"/>${T(x, y, size, text, 'middle', weight)}`
+
+/** A path in the current colour (no fill). */
+export const PATH = (d: string, sw = 2.5, dashed = false, marker = '') =>
+  `<path d="${d}" fill="none" stroke="currentColor" stroke-width="${sw}"${dashed ? ' stroke-dasharray="7 5"' : ''}${marker ? ` marker-end="url(#${marker})"` : ''}/>`
+
+/** A panel background at any position (PANEL is the three-across version). */
+export const PANEL_AT = (x: number, y: number, w: number, h: number) =>
+  `<g class="fig-muted"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.5"/></g>`
+
+/**
+ * Field lines are TRACED, not sketched: `traceLine` follows a field function
+ * numerically (fixed-step midpoint rule) from (x, y) along E (`dir` = 1) or
+ * against it (−1) until it leaves the box or `stop` says so, and returns the
+ * points. `pointField` is the field of a set of point charges (only its
+ * direction matters here, so k and the units are dropped).
+ */
+export type Src = { x: number; y: number; q: number }
+export type Field = (x: number, y: number) => [number, number]
+export const pointField = (src: readonly Src[]): Field => (x, y) => {
+  let ex = 0, ey = 0
+  for (const s of src) {
+    const dx = x - s.x, dy = y - s.y
+    const r3 = Math.pow(dx * dx + dy * dy, 1.5) || 1e-9
+    ex += (s.q * dx) / r3
+    ey += (s.q * dy) / r3
+  }
+  return [ex, ey]
+}
+export const nearAny = (src: readonly Src[], r: number) => (x: number, y: number) => src.some((s) => Math.hypot(x - s.x, y - s.y) < r)
+export const traceLine = (field: Field, x: number, y: number, dir: 1 | -1, box: readonly [number, number, number, number], stop: (x: number, y: number) => boolean, step = 3): [number, number][] => {
+  const pts: [number, number][] = [[x, y]]
+  for (let i = 0; i < 1500; i++) {
+    const [ex, ey] = field(x, y)
+    const m = Math.hypot(ex, ey)
+    if (m < 1e-12) break
+    const [fx, fy] = field(x + (dir * ex * step) / (2 * m), y + (dir * ey * step) / (2 * m))
+    const n = Math.hypot(fx, fy)
+    if (n < 1e-12) break
+    x += (dir * fx * step) / n
+    y += (dir * fy * step) / n
+    if (x < box[0] || x > box[2] || y < box[1] || y > box[3]) break
+    pts.push([x, y])
+    if (stop(x, y)) break
+  }
+  return pts
+}
+/**
+ * Draws a traced line (points ordered ALONG the field) with one arrowhead at
+ * the fraction `at` of its length. Points are thinned to keep the SVG small.
+ */
+export const fieldPath = (pts: readonly (readonly [number, number])[], marker: string, at = 0.5, sw = 2) => {
+  if (pts.length < 4) return ''
+  const k = Math.max(2, Math.min(pts.length - 2, Math.round(pts.length * at)))
+  const d = (seg: readonly (readonly [number, number])[]) => {
+    const keep = seg.filter((_, i) => i % 3 === 0 || i === seg.length - 1)
+    return keep.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ')
+  }
+  return `${PATH(d(pts.slice(0, k + 1)), sw, false, marker)}${PATH(d(pts.slice(k)), sw)}`
+}
 
 /* 1 — Coulomb's law: like repel, unlike attract, inverse square (lead, 1000×460) */
 const coulombSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
@@ -110,262 +201,356 @@ ${T(825, 380, 18, 'triple one charge → force × 3', 'middle')}
 <g class="fig-muted">${T(825, 410, 16, 'ratio reasoning, not plug-and-chug', 'middle')}</g>
 </svg>`
 
-/* 2 — Field lines of + and − point charges; force on a test charge in a uniform field (lead, 1000×460) */
-const fieldSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-es-fld')}</defs>
-<g class="fig-muted">${LINE(340, 30, 340, 440, 1.5)}${LINE(670, 30, 670, 440, 1.5)}</g>
-${T(170, 40, 22, '+Q: lines point away', 'middle', '700')}
-${RADIAL(170, 235, 36, 150, 8, 'arr-es-fld', true)}
-${CHARGE(170, 235, 26, '+')}
-${T(170, 415, 17, 'denser lines = stronger field', 'middle')}
-<g class="fig-muted">${T(170, 442, 15, 'the field is there with or without a test charge', 'middle')}</g>
-${T(505, 40, 22, '−Q: lines point toward', 'middle', '700')}
-${RADIAL(505, 235, 36, 150, 8, 'arr-es-fld', false)}
-${CHARGE(505, 235, 26, '−')}
-${T(505, 415, 17, 'E = F/q — force per unit + charge', 'middle')}
-<g class="fig-muted">${T(505, 442, 15, 'N/C = V/m', 'middle')}</g>
-${T(825, 40, 22, 'force on a test charge', 'middle', '700')}
-${T(825, 80, 18, 'uniform E →', 'middle', '700')}
-${[100, 150, 200, 250, 300, 350].map((y) => ARR(700, y, 955, y, 'arr-es-fld', 1.5)).join('\n')}
-${CHARGE(760, 125, 16, '+')}
-<g class="fig-accent-2">
-<defs>${ARROW('arr-es-fld-r')}</defs>
-${ARR(778, 125, 870, 125, 'arr-es-fld-r', 3.5)}
-${T(882, 131, 18, 'F', 'start', '700')}
-${T(825, 392, 17, '+q: force along E', 'middle', '700')}
-</g>
-${CHARGE(880, 275, 16, '−')}
-<g class="fig-accent">
-<defs>${ARROW('arr-es-fld-b')}</defs>
-${ARR(862, 275, 770, 275, 'arr-es-fld-b', 3.5)}
-${T(756, 281, 18, 'F', 'end', '700')}
-${T(825, 418, 17, '−q: force opposite E', 'middle', '700')}
-</g>
-<g class="fig-muted">${T(825, 444, 15, 'same |F| = qE for the same |q|', 'middle')}</g>
+/** A neutral ball (text colour, faint fill). */
+const BALL = (cx: number, cy: number, r: number) => CIRC(cx, cy, r, 2.5, 0.06)
+/** A charged rod drawn as a rounded bar with its sign repeated along it. */
+const ROD = (x: number, y: number, w: number, sign: '+' | '−') =>
+  G(sign === '+' ? 'accent-2' : 'accent', `<rect x="${x}" y="${y}" width="${w}" height="30" rx="8" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2.5"/>${(w < 80 ? [0.3, 0.7] : [0.2, 0.5, 0.8]).map((f) => T(Math.round(x + w * f), y + 22, 20, sign, 'middle', '700')).join('')}`)
+/** The ground symbol hanging from (x, y). */
+const GROUND = (x: number, y: number) => `${LINE(x - 16, y, x + 16, y, 2.5)}${LINE(x - 10, y + 7, x + 10, y + 7, 2.5)}${LINE(x - 4, y + 14, x + 4, y + 14, 2.5)}`
+
+/* 2 — Electric charge: the atom, quantized charge, conserved charge (lead, 1000×460) */
+const ELECTRONS = RING(175, 185, 82, 3, -35)
+const LADDER = [3, 2, 1, 0, -1, -2, -3]
+const chargeSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+${PANEL(20)}${PANEL(345)}${PANEL(670)}
+${T(175, 52, 22, 'two kinds of charge', 'middle', '700')}
+${G('muted', CIRC(175, 185, 82, 2, 0, true))}
+${G('muted', `<circle cx="187" cy="174" r="12" fill="currentColor" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="164" cy="197" r="12" fill="currentColor" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/>`)}
+${CHARGE(164, 174, 12, '+')}${CHARGE(187, 197, 12, '+')}
+${ELECTRONS.map(([x, y]) => CHARGE(Math.round(x), Math.round(y), 10, '−')).join('')}
+${G('accent-2', T(175, 312, 18, 'proton +e', 'middle', '700'))}
+${T(175, 338, 16, 'and neutron (0): locked in the nucleus', 'middle')}
+${G('accent', T(175, 376, 18, 'electron −e', 'middle', '700'))}
+${T(175, 402, 16, 'outside the nucleus, able to move', 'middle')}
+${G('muted', T(175, 428, 15, 'e = 1.6 × 10⁻¹⁹ C', 'middle'))}
+${T(500, 52, 22, 'quantized: q = ±ne', 'middle', '700')}
+${LINE(430, 84, 430, 306, 2.5)}
+${LADDER.map((n, i) => `${LINE(420, 90 + 35 * i, 440, 90 + 35 * i, 2.5)}${T(452, 96 + 35 * i, 17, n === 0 ? '0' : `${n > 0 ? '+' : '−'}${Math.abs(n) === 1 ? '' : Math.abs(n)}e`, 'start', n === 0 ? '700' : '400')}`).join('')}
+${G('accent-2', `${LINE(420, 107.5, 440, 107.5, 2.5, true)}${T(530, 113, 17, '2.5e — never', 'start', '700')}`)}
+${G('muted', T(530, 201, 15, 'only these steps'))}
+${T(500, 348, 17, '5.0 × 10⁹ extra electrons:', 'middle')}
+${T(500, 374, 16, 'q = −(5.0 × 10⁹)(1.6 × 10⁻¹⁹ C)', 'middle')}
+${G('accent', T(500, 402, 18, '= −0.80 nC', 'middle', '700'))}
+${G('muted', T(500, 428, 15, 'n is always a whole number', 'middle'))}
+${T(825, 52, 22, 'conserved: moved, not made', 'middle', '700')}
+<rect x="700" y="120" width="86" height="100" rx="20" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="2.5"/>
+${T(743, 108, 16, 'hair', 'middle')}
+<ellipse cx="900" cy="170" rx="46" ry="54" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="2.5"/>
+${T(900, 104, 16, 'balloon', 'middle')}
+${SIGNS('+', [[725, 150], [760, 172], [728, 196]])}
+${SIGNS('−', [[884, 148], [916, 170], [888, 196]])}
+<g class="fig-accent"><defs>${ARROW('arr-es-ch-b')}</defs>${ARR(792, 170, 846, 170, 'arr-es-ch-b', 3)}${T(819, 158, 15, 'e⁻', 'middle', '700')}</g>
+${G('accent-2', T(743, 248, 18, '+Q', 'middle', '700'))}${G('accent', T(900, 252, 18, '−Q', 'middle', '700'))}
+${T(825, 300, 18, 'total charge is still 0', 'middle', '700')}
+${G('accent', T(825, 344, 17, 'gain electrons → negative', 'middle', '700'))}
+${G('accent-2', T(825, 372, 17, 'lose electrons → positive', 'middle', '700'))}
+${G('muted', `${T(825, 404, 15, 'in a solid only electrons move;', 'middle')}${T(825, 426, 15, 'protons stay in their nuclei', 'middle')}`)}
 </svg>`
 
-/* 3 — Potential as a hill: E downhill, + falls, − climbs, both lower U = qV (replace-table, 560×440) */
-const potentialSvg = `${SVG_OPEN} viewBox="0 0 560 440">
-<defs>${ARROW('arr-es-pot')}</defs>
-${T(280, 28, 17, 'potential as a hill — E points downhill', 'middle', '700')}
-<g class="fig-muted"><polygon points="60,120 500,300 500,330 60,330" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.5"/></g>
-${LINE(60, 120, 500, 300, 3)}
-${T(62, 106, 16, 'high V', 'start', '700')}
-${T(506, 312, 15, 'low V', 'start', '700')}
-${ARR(221, 126, 351, 179, 'arr-es-pot', 3.5)}
-${T(296, 146, 16, 'E (downhill in V)', 'start', '700')}
-${CHARGE(158, 142, 16, '+')}
-<g class="fig-accent-2">
-<defs>${ARROW('arr-es-pot-r')}</defs>
-${ARR(175, 149, 233, 173, 'arr-es-pot-r', 3.5)}
-${T(150, 352, 16, '+q falls to low V', 'middle', '700')}
-</g>
-${CHARGE(388, 237, 16, '−')}
-<g class="fig-accent">
-<defs>${ARROW('arr-es-pot-b')}</defs>
-${ARR(371, 230, 313, 206, 'arr-es-pot-b', 3.5)}
-${T(405, 352, 16, '−q climbs to high V', 'middle', '700')}
-</g>
-${T(280, 380, 17, 'both moves lower U = qV', 'middle', '700')}
-${T(280, 408, 15, 'E: vector at a point (N/C) · V: scalar at a point (volts)', 'middle')}
-${T(280, 432, 15, 'U = qV: joules — belongs to the charge AT that point', 'middle')}
+/* 3 — Conductors and insulators: where a dab of charge ends up; the membrane (lead, 1000×460) */
+const DAB: [number, number][] = [[212, 128], [228, 146], [206, 150], [222, 166], [236, 162], [198, 134], [214, 178], [240, 180], [230, 124], [196, 164]]
+const FACE = [706, 748, 790, 832, 874, 916, 944]
+const conductorsSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+${PANEL(20)}${PANEL(345)}${PANEL(670)}
+${T(175, 52, 22, 'conductor (metal)', 'middle', '700')}
+${BALL(175, 180, 82)}
+${SIGNS('−', RING(175, 180, 68, 10, 18))}
+${T(175, 300, 17, 'charges move freely', 'middle')}
+${T(175, 334, 17, 'extra charge spreads over', 'middle', '700')}
+${T(175, 358, 17, 'the whole OUTER surface', 'middle', '700')}
+${G('muted', `${T(175, 396, 15, 'like charges repel, so they get', 'middle')}${T(175, 418, 15, 'as far apart as they can', 'middle')}`)}
+${T(500, 52, 22, 'insulator (plastic)', 'middle', '700')}
+${BALL(500, 180, 82)}
+${SIGNS('−', DAB.map(([x, y]) => [x + 325, y] as [number, number]))}
+${T(500, 300, 17, 'charges stay where they are put', 'middle')}
+${T(500, 334, 17, 'the same dab of charge', 'middle', '700')}
+${T(500, 358, 17, 'stays in one spot', 'middle', '700')}
+${G('muted', `${T(500, 396, 15, 'rubber, glass, plastic, dry air', 'middle')}`)}
+${T(825, 52, 22, 'the same split in a cell', 'middle', '700')}
+${T(825, 104, 16, 'outside fluid: conducts', 'middle')}
+${SIGNS('+', FACE.map((x) => [x, 132] as [number, number]))}
+<g class="fig-muted"><rect x="690" y="148" width="270" height="64" rx="4" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="2"/></g>
+${T(825, 186, 16, 'lipid bilayer: insulates', 'middle', '700')}
+${SIGNS('−', FACE.map((x) => [x, 228] as [number, number]), 22)}
+${T(825, 266, 16, 'inside fluid: conducts', 'middle')}
+${T(825, 320, 17, 'body fluids conduct,', 'middle', '700')}
+${T(825, 344, 17, 'membranes insulate', 'middle', '700')}
+${G('muted', `${T(825, 380, 15, 'in a salt solution the ions move;', 'middle')}${T(825, 402, 15, 'the membrane keeps the two faces', 'middle')}${T(825, 424, 15, 'of charge apart (so does myelin)', 'middle')}`)}
 </svg>`
 
-/* 4 — Equipotentials around a point charge; a dipole in a uniform field (lead, 1000×460) */
-const equipotentialSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-es-eq')}</defs>
-<g class="fig-muted">
-${LINE(500, 30, 500, 440, 1.5)}
-<circle cx="240" cy="250" r="55" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 5"/>
-<circle cx="240" cy="250" r="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 5"/>
-<circle cx="240" cy="250" r="145" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 5"/>
-</g>
-${T(250, 40, 22, 'equipotentials ⊥ field lines', 'middle', '700')}
-${RADIAL(240, 250, 34, 170, 8, 'arr-es-eq', true)}
-${CHARGE(240, 250, 24, '+')}
-${T(301, 225, 15, 'V high', 'start')}
-${T(386, 190, 15, 'V low', 'start')}
-<g class="fig-accent">
-<defs>${ARROW('arr-es-eq-b')}</defs>
-<path d="M334 284 A100 100 0 0 1 282 341" fill="none" stroke="currentColor" stroke-width="3.5" marker-end="url(#arr-es-eq-b)"/>
-${T(395, 300, 17, 'W = 0', 'start', '700')}
-</g>
-${T(250, 447, 16, 'along an equipotential the field does no work', 'middle')}
-${T(750, 40, 22, 'a dipole in a uniform field', 'middle', '700')}
-${[100, 150, 200, 250, 300, 350].map((y) => ARR(540, y, 955, y, 'arr-es-eq', 1.5)).join('\n')}
-${T(963, 256, 18, 'E', 'start', '700')}
-<g class="fig-muted">
-${LINE(676, 235, 824, 235, 3, true)}
-${T(664, 241, 16, '−', 'middle', '700')}${T(836, 241, 16, '+', 'middle', '700')}
-${T(880, 241, 15, 'aligned', 'start')}
-</g>
-${LINE(690, 290, 810, 180, 5)}
-<path d="M733.6 280.1 A48 48 0 0 1 702.7 243.3" fill="none" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-es-eq)"/>
-${T(752, 282, 18, 'τ', 'start', '700')}
-${CHARGE(810, 180, 18, '+')}${CHARGE(690, 290, 18, '−')}
-<g class="fig-accent-2">
-<defs>${ARROW('arr-es-eq-r')}</defs>
-${ARR(830, 180, 900, 180, 'arr-es-eq-r', 3.5)}
-${T(908, 186, 18, 'F', 'start', '700')}
-</g>
-<g class="fig-accent">
-<defs>${ARROW('arr-es-eq-b2')}</defs>
-${ARR(670, 290, 600, 290, 'arr-es-eq-b2', 3.5)}
-${T(592, 296, 18, 'F', 'end', '700')}
-</g>
-${T(750, 400, 18, 'net force = 0: equal and opposite F', 'middle')}
-${T(750, 428, 18, 'torque ≠ 0 → rotates to align with E', 'middle', '700')}
-<g class="fig-muted">${T(750, 452, 15, 'think of a polar molecule like water', 'middle')}</g>
+/* 4 — Three ways to charge: friction, conduction, induction (lead, 1000×460) */
+const chargingSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+${PANEL(20)}${PANEL(345)}${PANEL(670)}
+${T(175, 52, 22, '1  friction', 'middle', '700')}
+<rect x="48" y="96" width="92" height="92" rx="26" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="2.5"/>
+${T(94, 210, 15, 'fur', 'middle')}
+${SIGNS('+', [[72, 124], [108, 140], [78, 162]])}
+${ROD(196, 127, 110, '−')}
+${T(251, 180, 15, 'rubber rod', 'middle')}
+<g class="fig-accent"><defs>${ARROW('arr-es-cg-b')}</defs>${ARR(146, 142, 190, 142, 'arr-es-cg-b', 3)}${T(168, 130, 15, 'e⁻', 'middle', '700')}</g>
+${T(175, 258, 17, 'rubbing moves electrons', 'middle')}
+${T(175, 282, 17, 'from one material to the other', 'middle')}
+${T(175, 326, 17, 'the two end OPPOSITE', 'middle', '700')}
+${T(175, 352, 17, 'and equal: +Q and −Q', 'middle')}
+${G('muted', `${T(175, 396, 15, 'the question tells you which', 'middle')}${T(175, 418, 15, 'material takes the electrons', 'middle')}`)}
+${T(500, 52, 22, '2  conduction (contact)', 'middle', '700')}
+${BALL(456, 142, 44)}${BALL(544, 142, 44)}
+${SIGNS('−', RING(456, 142, 28, 3, 90))}${SIGNS('−', RING(544, 142, 28, 3, 90))}
+${G('muted', T(500, 214, 15, 'touching: charge flows between them', 'middle'))}
+${T(500, 258, 17, 'both end with the', 'middle')}
+${T(500, 282, 17, 'SAME sign', 'middle', '700')}
+${T(500, 326, 17, 'identical spheres share equally:', 'middle')}
+${T(500, 354, 18, 'q each = (q₁ + q₂) / 2', 'middle', '700')}
+${G('muted', `${T(500, 396, 15, 'add the charges with their signs,', 'middle')}${T(500, 418, 15, 'then split; one contact at a time', 'middle')}`)}
+${T(825, 52, 22, '3  induction (no contact)', 'middle', '700')}
+${ROD(688, 115, 84, '−')}
+${BALL(850, 130, 44)}
+${SIGNS('+', RING(850, 130, 28, 3, 135, 90))}
+${LINE(850, 174, 850, 204, 2.5)}${GROUND(850, 204)}
+<g class="fig-accent"><defs>${ARROW('arr-es-cg-b2')}</defs>${ARR(872, 172, 872, 204, 'arr-es-cg-b2', 3)}${T(884, 194, 15, 'e⁻', 'start', '700')}</g>
+${T(825, 258, 17, 'rod near → ground → remove', 'middle')}
+${T(825, 282, 17, 'the ground → remove the rod', 'middle')}
+${T(825, 326, 17, 'sphere ends OPPOSITE to the rod', 'middle', '700')}
+${T(825, 352, 17, 'the rod loses none of its charge', 'middle')}
+${G('muted', `${T(825, 396, 15, 'take the rod away first and the', 'middle')}${T(825, 418, 15, 'electrons just flow back', 'middle')}`)}
 </svg>`
 
-/* 5 — The Core Four as a 2×2 grid: pair vs field, 1/r² vs 1/r (replace-table, 560×440) */
-const cell = (x: number, y: number, formula: string, desc: string, kind: string) =>
-  `${BOX(x, y, 190, 130, 12, 2.5, 0.05)}${T(x + 95, y + 58, 23, formula, 'middle', '700')}${T(x + 95, y + 90, 14, desc, 'middle')}<g class="fig-muted">${T(x + 95, y + 112, 13, kind, 'middle')}</g>`
-const coreFourSvg = `${SVG_OPEN} viewBox="0 0 560 440">
-${T(280, 26, 17, 'the Core Four — one grid', 'middle', '700')}
-${T(190, 62, 16, 'pair: both charges', 'middle', '700')}
-${T(420, 62, 16, 'field: one charge', 'middle', '700')}
-${T(50, 135, 18, '1/r²', 'middle', '700')}${T(50, 158, 13, 'force-', 'middle')}${T(50, 174, 13, 'flavored', 'middle')}
-${T(50, 295, 18, '1/r', 'middle', '700')}${T(50, 318, 13, 'energy-', 'middle')}${T(50, 334, 13, 'flavored', 'middle')}
-${cell(95, 80, 'F = kq₁q₂ / r²', 'force between two charges', 'vector')}
-${cell(325, 80, 'E = kQ / r²', 'field of one charge', 'vector')}
-${cell(95, 240, 'U = kq₁q₂ / r', 'energy of a pair', 'scalar')}
-${cell(325, 240, 'V = kQ / r', 'potential of one charge', 'scalar')}
-<g class="fig-muted">
-<defs>${ARROW('arr-es-c4-m')}</defs>
-${ARR(288, 145, 322, 145, 'arr-es-c4-m', 2.5)}${T(305, 136, 13, '÷ q', 'middle')}
-${ARR(288, 305, 322, 305, 'arr-es-c4-m', 2.5)}${T(305, 296, 13, '÷ q', 'middle')}
-${ARR(190, 213, 190, 237, 'arr-es-c4-m', 2.5)}${T(204, 230, 13, '× r', 'start')}
-${ARR(420, 213, 420, 237, 'arr-es-c4-m', 2.5)}${T(434, 230, 13, '× r', 'start')}
-</g>
-${T(280, 400, 15, 'F = qE, U = qV; for a point charge V = E·r and U = F·r', 'middle')}
-<g class="fig-muted">${T(280, 426, 14, '1/r² pair (F, E) are vectors; 1/r pair (V, U) are scalars', 'middle')}</g>
+/* 5 — Polarization: why a charged rod attracts a neutral object (after, 1000×460) */
+const pairRow = (y: number, right: '+' | '−' | '0', toward: boolean, text: string, bold = false) => {
+  const a = toward ? [[598, 640], [708, 666]] : [[592, 562], [716, 746]]
+  return `${CHARGE(612, y, 18, '−')}${right === '0' ? `${BALL(694, y, 18)}${T(694, y + 5, 14, '0', 'middle', '700')}` : CHARGE(694, y, 18, right)}
+${right === '−' ? ARR(a[0][0], y, a[0][1], y, 'arr-es-pz', 3) + ARR(a[1][0], y, a[1][1], y, 'arr-es-pz', 3) : ARR(a[0][0], y - 30, a[0][1], y - 30, 'arr-es-pz', 3) + ARR(a[1][0], y - 30, a[1][1], y - 30, 'arr-es-pz', 3)}
+${T(770, y + 6, 17, text, 'start', bold ? '700' : '400')}`
+}
+const polarizationSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+<defs>${ARROW('arr-es-pz')}</defs>
+${G('muted', LINE(530, 30, 530, 440, 1.5))}
+${T(270, 44, 22, 'a charged rod attracts a NEUTRAL ball', 'middle', '700')}
+${ROD(40, 165, 130, '−')}
+${T(105, 222, 15, 'charged rod', 'middle')}
+${BALL(330, 180, 78)}
+${SIGNS('+', RING(330, 180, 58, 3, 150, 60))}
+${SIGNS('−', RING(330, 180, 58, 3, -30, 60))}
+${T(330, 186, 15, 'neutral', 'middle')}
+<g class="fig-accent-2"><defs>${ARROW('arr-es-pz-r')}</defs>${ARR(250, 300, 140, 300, 'arr-es-pz-r', 4)}${T(264, 306, 16, 'pull on the near side', 'start', '700')}</g>
+<g class="fig-accent"><defs>${ARROW('arr-es-pz-b')}</defs>${ARR(200, 340, 240, 340, 'arr-es-pz-b', 4)}${T(264, 346, 16, 'push on the far side: weaker', 'start', '700')}</g>
+${T(270, 394, 18, 'net force: toward the rod', 'middle', '700')}
+${G('muted', T(270, 422, 15, 'nothing is transferred — the charges only shift', 'middle'))}
+${T(765, 44, 22, 'what does attraction prove?', 'middle', '700')}
+${pairRow(130, '+', true, 'opposite charges: attract')}
+${pairRow(225, '0', true, 'charged and neutral: attract')}
+${pairRow(310, '−', false, 'like charges: repel')}
+${T(765, 394, 18, 'only REPULSION proves both are charged', 'middle', '700')}
+${G('muted', T(765, 422, 15, 'a neutral object is attracted too', 'middle'))}
 </svg>`
 
-/* 6 — Worked example: parallel plates, 6.0 V across 2.0 mm (after, 1000×460) */
-const platesSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-es-pl')}</defs>
-${LINE(200, 80, 200, 40, 2)}${LINE(200, 40, 372, 40, 2)}
-${LINE(372, 24, 372, 56, 3)}${LINE(388, 32, 388, 48, 6)}
-${LINE(388, 40, 560, 40, 2)}${LINE(560, 40, 560, 80, 2)}
-${T(380, 18, 18, '6.0 V', 'middle', '700')}
-<g class="fig-accent-2">
-<rect x="190" y="80" width="20" height="300" rx="3" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="2.5"/>
-${T(200, 404, 18, '+ plate', 'middle', '700')}
-</g>
-<g class="fig-accent">
-<rect x="550" y="80" width="20" height="300" rx="3" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="2.5"/>
-${T(560, 404, 18, '− plate', 'middle', '700')}
-</g>
-${[110, 150, 190, 230, 270, 310, 350].map((y) => ARR(214, y, 545, y, 'arr-es-pl', 2)).join('\n')}
-${T(380, 98, 20, 'E', 'middle', '700')}
-<g class="fig-muted">${DIM(200, 560, 428)}</g>
-${T(380, 452, 18, 'd = 2.0 mm', 'middle', '700')}
-${T(620, 120, 22, 'E = V / d', 'start', '700')}
-${T(620, 160, 20, '= 6.0 V / (2.0 × 10⁻³ m)')}
-${T(620, 200, 22, '= 3.0 × 10³ V/m', 'start', '700')}
-${T(620, 260, 18, 'uniform between the plates')}
-${T(620, 290, 18, 'points from + plate to − plate')}
-${T(620, 320, 18, '(N/C = V/m)')}
-<g class="fig-muted">${T(620, 370, 16, 'evenly spaced lines = uniform E')}${T(620, 396, 16, 'convert mm → m before dividing')}</g>
+/* 6 — Worked example: sharing charge between identical spheres (after, 1000×460) */
+const ball = (cx: number, name: string, q: string, sign: '+' | '−' | '0', r = 40) =>
+  `${BALL(cx, 170, r)}${T(cx, 178, 22, name, 'middle', '700')}${sign === '0' ? T(cx, 170 + r + 28, 17, q, 'middle', '700') : G(sign === '+' ? 'accent-2' : 'accent', T(cx, 170 + r + 28, 17, q, 'middle', '700'))}`
+const sharingSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+<defs>${ARROW('arr-es-sh')}</defs>
+${T(162, 56, 21, 'before', 'middle', '700')}
+${ball(110, 'A', '−12 μC', '−')}${ball(215, 'B', '+4.0 μC', '+')}
+${T(162, 296, 17, '(−12) + (+4.0) = −8.0 μC', 'middle')}
+${G('muted', T(162, 322, 15, 'the total, added with signs', 'middle'))}
+${ARR(282, 170, 362, 170, 'arr-es-sh', 3)}
+${T(492, 56, 21, 'A and B touch', 'middle', '700')}
+${ball(440, 'A', '−4.0 μC', '−')}${ball(545, 'B', '−4.0 μC', '−')}
+${T(492, 296, 17, '−8.0 / 2 = −4.0 μC each', 'middle')}
+<g class="fig-accent"><defs>${ARROW('arr-es-sh-b')}</defs>${ARR(458, 104, 527, 104, 'arr-es-sh-b', 3)}${T(492, 92, 15, '5.0 × 10¹³ electrons', 'middle', '700')}</g>
+${G('muted', T(492, 322, 15, 'B changed by −8.0 μC: n = 8.0 × 10⁻⁶ / e', 'middle'))}
+${ARR(612, 170, 682, 170, 'arr-es-sh', 3)}
+${T(835, 56, 21, 'then B touches neutral C', 'middle', '700')}
+${ball(742, 'A', '−4.0 μC', '−', 36)}${ball(835, 'B', '−2.0 μC', '−', 36)}${ball(928, 'C', '−2.0 μC', '−', 36)}
+${T(835, 296, 17, '(−4.0 + 0) / 2 = −2.0 μC each', 'middle')}
+${G('muted', T(835, 322, 15, 'still −8.0 μC in total', 'middle'))}
+${T(500, 392, 18, 'identical spheres share equally:  q each = (q₁ + q₂) / 2', 'middle', '700')}
+${G('muted', T(500, 422, 16, 'add with signs, take one contact at a time, and count electrons from the CHANGE in one sphere', 'middle'))}
 </svg>`
 
-/* 7 — The membrane as a parallel-plate capacitor (lead, 1000×460) */
-const plusRow = [90, 140, 190, 240, 290, 440, 490, 540]
-const membraneSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-es-mem')}</defs>
-<g class="fig-muted">
-<rect x="60" y="190" width="285" height="80" rx="4" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2"/>
-<rect x="385" y="190" width="215" height="80" rx="4" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2"/>
-<path d="M618 190 L630 190 M624 190 L624 270 M618 270 L630 270" fill="none" stroke="currentColor" stroke-width="2"/>
-${T(624, 180, 16, 'd ≈ 5–10 nm', 'middle')}
-</g>
-<rect x="345" y="190" width="8" height="80" fill="currentColor" fill-opacity="0.5"/>
-<rect x="377" y="190" width="8" height="80" fill="currentColor" fill-opacity="0.5"/>
-<g class="fig-accent-2">${plusRow.map((x) => T(x, 181, 22, '+', 'middle', '700')).join('')}</g>
-<g class="fig-accent">${plusRow.map((x) => T(x, 300, 24, '−', 'middle', '700')).join('')}</g>
-${T(90, 237, 17, 'lipid bilayer (insulator)', 'start', '700')}
-${ARR(440, 198, 440, 262, 'arr-es-mem', 3)}${ARR(500, 198, 500, 262, 'arr-es-mem', 3)}${ARR(560, 198, 560, 262, 'arr-es-mem', 3)}
-${T(578, 241, 18, 'E', 'start', '700')}
-${T(340, 145, 20, 'outside: 0 mV — conducting fluid', 'middle')}
-${T(340, 352, 20, 'inside: −70 mV — conducting fluid', 'middle')}
-${CHARGE(365, 205, 14, '+')}
-<g class="fig-accent-2">
-<defs>${ARROW('arr-es-mem-r')}</defs>
-${ARR(365, 222, 365, 296, 'arr-es-mem-r', 3.5)}
-${T(384, 318, 16, 'Na⁺ in an open channel: pushed inward', 'start', '700')}
-</g>
-${T(700, 110, 22, 'a capacitor in the cell', 'start', '700')}
-${T(700, 150, 15, 'positive charge lines the outer face')}
-${T(700, 178, 15, 'negative charge lines the inner face')}
-${T(700, 220, 20, 'E = V/d', 'start', '700')}
-${T(700, 250, 17, '70 mV over 7 nm (worked example)')}
-${T(700, 282, 20, '≈ 1 × 10⁷ V/m', 'start', '700')}
-${T(700, 325, 17, 'tiny voltage, giant field')}
-<g class="fig-muted">${T(700, 358, 15, 'depolarizing toward 0: |V| and E shrink')}${T(700, 384, 15, 'E points outside → inside at rest')}</g>
+/* 7 — Worked example: charging a sphere by induction, four steps (after, 1000×460) */
+const STEP_X = [12, 259, 506, 753]
+const step = (i: number, title: string, rod: boolean, inner: string, l1: string, l2: string, bold = false) => {
+  const ox = STEP_X[i]
+  return `${PANEL_AT(ox, 20, 235, 370)}${T(ox + 117, 52, 19, title, 'middle', '700')}${rod ? ROD(ox + 10, 165, 62, '−') : ''}${BALL(ox + 150, 180, 56)}${inner}${T(ox + 117, 336, bold ? 15 : 16, l1, 'middle', bold ? '700' : '400')}${T(ox + 117, 360, bold ? 15 : 16, l2, 'middle', bold ? '700' : '400')}`
+}
+const nearPlus = (ox: number) => SIGNS('+', RING(ox + 150, 180, 38, 3, 140, 80))
+const inductionSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+${step(0, '1  rod near', true, `${nearPlus(STEP_X[0])}${SIGNS('−', RING(STEP_X[0] + 150, 180, 38, 3, -40, 80))}`, 'electrons pushed to the', 'far side; still neutral')}
+${step(1, '2  connect to ground', true, `${nearPlus(STEP_X[1])}${LINE(STEP_X[1] + 150, 236, STEP_X[1] + 150, 276, 2.5)}${GROUND(STEP_X[1] + 150, 276)}<g class="fig-accent"><defs>${ARROW('arr-es-in-b')}</defs>${ARR(STEP_X[1] + 172, 240, STEP_X[1] + 172, 278, 'arr-es-in-b', 3)}${T(STEP_X[1] + 184, 266, 15, 'e⁻', 'start', '700')}</g>`, '2.0 × 10¹⁰ electrons flow', 'DOWN into the ground')}
+${step(2, '3  remove the ground', true, nearPlus(STEP_X[2]), 'rod still in place:', 'the shortage is trapped')}
+${step(3, '4  remove the rod', false, SIGNS('+', RING(STEP_X[3] + 150, 180, 38, 6, 30)), 'q = +(2.0 × 10¹⁰)(1.6 × 10⁻¹⁹)', '= +3.2 nC, spread evenly', true)}
+${T(500, 420, 17, 'induction leaves the sphere OPPOSITE to the rod; touching the rod instead would leave it the SAME sign', 'middle', '700')}
+${G('muted', T(500, 446, 15, 'the rod never touches the sphere and loses none of its own charge', 'middle'))}
 </svg>`
 
-/* 8 — Gel electrophoresis: uniform field, DNA runs to the anode, gel sorts by size (lead, 1000×460) */
-const lane = (cx: number, bandY: number, label: string) =>
-  `<rect x="${cx - 28}" y="88" width="56" height="14" fill="none" stroke="currentColor" stroke-width="2"/>
-<g class="fig-muted">${T(cx, 75, 14, label, 'middle')}${ARR(cx, 106, cx, bandY, 'arr-es-gel-m', 2, true)}</g>
-<rect x="${cx - 28}" y="${bandY}" width="56" height="10" rx="2" fill="currentColor" fill-opacity="0.85"/>`
-const gelSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-es-gel')}</defs>
-<g class="fig-muted"><defs>${ARROW('arr-es-gel-m')}</defs></g>
-<g class="fig-accent">
-<rect x="180" y="44" width="300" height="14" rx="4" fill="currentColor" fill-opacity="0.6"/>
-${T(330, 36, 17, '− electrode (cathode)', 'middle', '700')}
-</g>
-<g class="fig-accent-2">
-<rect x="180" y="420" width="300" height="14" rx="4" fill="currentColor" fill-opacity="0.6"/>
-${T(330, 452, 17, '+ electrode (anode)', 'middle', '700')}
-</g>
-${BOX(180, 80, 300, 334, 8, 2.5, 0.04)}
-${ARR(205, 400, 205, 110, 'arr-es-gel', 3)}
-${T(214, 258, 18, 'E', 'start', '700')}
-${lane(260, 160, 'large')}
-${lane(340, 250, 'medium')}
-${lane(420, 350, 'small')}
-${T(510, 110, 21, 'same force per charge, drag sorts by size', 'start', '700')}
-${T(510, 150, 18, 'phosphate backbone → DNA uniformly negative')}
-${T(510, 180, 18, 'F = qE toward the + electrode (anode)')}
-${T(510, 230, 18, 'drag in the gel grows with size →')}
-${T(510, 260, 18, 'small fragments travel farthest in the same time')}
-${T(510, 310, 18, 'SDS-PAGE: the SDS coat gives proteins a uniform')}
-${T(510, 340, 18, 'negative charge-to-mass → again sorted by size')}
-<g class="fig-muted">${T(510, 390, 16, 'the field pulls; the gel sieves')}</g>
+/* 8 — Superposition of forces: vectors add; where the net force is zero (lead, 1000×460) */
+const L_ROW = 200
+const between = (q1: number, q2: number) => (L_ROW * Math.sqrt(q1)) / (Math.sqrt(q1) + Math.sqrt(q2)) // from the smaller charge
+const outside = (q1: number, q2: number) => (L_ROW * Math.sqrt(q1)) / (Math.sqrt(q2) - Math.sqrt(q1)) // beyond the smaller charge
+const zeroRow = (y: number, title: string, xs: number, signs: ['+' | '−', '+' | '−'], labels: [string, string], zero: number | null, note: string) =>
+  `${T(410, y - 36, 17, title, 'start', '700')}${G('muted', LINE(410, y, 975, y, 1.5))}
+${MASK(xs, y, 13)}${MASK(xs + L_ROW, y, 19)}${CHARGE(xs, y, 13, signs[0], labels[0])}${CHARGE(xs + L_ROW, y, 19, signs[1], labels[1])}
+${zero === null ? '' : G('accent-2', `<circle cx="${zero.toFixed(1)}" cy="${y}" r="6" fill="currentColor"/>${T(+zero.toFixed(1), y - 14, 16, 'F = 0', 'middle', '700')}`)}
+${T(975, y - 36, 16, note, 'end')}`
+const superForcesSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+<defs>${ARROW('arr-es-sf')}</defs>
+${G('muted', LINE(385, 30, 385, 440, 1.5))}
+${T(195, 44, 22, 'forces add as VECTORS', 'middle', '700')}
+${G('muted', `${LINE(290, 300, 290, 150, 2, true)}${LINE(90, 150, 290, 150, 2, true)}`)}
+${ARR(90, 300, 284, 300, 'arr-es-sf', 3.5)}${T(190, 326, 17, '4 N', 'middle', '700')}
+${ARR(90, 300, 90, 156, 'arr-es-sf', 3.5)}${T(78, 230, 17, '3 N', 'end', '700')}
+<circle cx="90" cy="300" r="6" fill="currentColor"/>
+<g class="fig-accent-2"><defs>${ARROW('arr-es-sf-r')}</defs>${ARR(90, 300, 285, 153.8, 'arr-es-sf-r', 4)}${T(170, 212, 18, '5 N', 'end', '700')}</g>
+${T(195, 368, 17, 'at right angles: √(3² + 4²) = 5 N', 'middle', '700')}
+${T(195, 396, 16, 'aligned: 7 N · opposite: 1 N', 'middle')}
+${G('muted', T(195, 424, 15, 'magnitudes add only when parallel', 'middle'))}
+${T(692, 44, 22, 'where is the net force zero?', 'middle', '700')}
+${zeroRow(132, 'same sign', 560, ['+', '+'], ['q', '4q'], 560 + between(1, 4), 'between, nearer the smaller')}
+${zeroRow(248, 'opposite, unequal', 680, ['+', '−'], ['q', '−4q'], 680 - outside(1, 4), 'outside, beyond the smaller')}
+${zeroRow(364, 'opposite, equal', 560, ['+', '−'], ['q', '−q'], null, 'nowhere')}
+${T(692, 432, 16, 'balance: |q₁| / r₁² = |q₂| / r₂² — true for any third charge put there', 'middle')}
 </svg>`
 
-/* 9 — Superposition at the midpoint: +Q +Q (E = 0, V adds) vs +Q −Q (V = 0, E adds) (lead, 1000×460) */
-const superpositionSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-es-sup')}</defs>
-<g class="fig-muted">${LINE(500, 30, 500, 440, 1.5)}</g>
-${T(250, 40, 22, 'midpoint between +Q and +Q', 'middle', '700')}
-${CHARGE(100, 200, 22, '+', '+Q')}${CHARGE(400, 200, 22, '+', '+Q')}
-<circle cx="250" cy="200" r="5" fill="currentColor"/>
-${ARR(252, 188, 330, 188, 'arr-es-sup', 3.5)}${T(292, 176, 16, 'E from left +Q', 'middle')}
-${ARR(248, 212, 170, 212, 'arr-es-sup', 3.5)}${T(208, 236, 16, 'E from right +Q', 'middle')}
-<g class="fig-muted">${DIM(122, 245, 270)}${T(184, 292, 16, 'r', 'middle')}${DIM(255, 378, 270)}${T(316, 292, 16, 'r', 'middle')}</g>
-${T(250, 335, 19, 'E = 0 — the two fields cancel', 'middle', '700')}
-${T(250, 365, 18, 'V = kQ/r + kQ/r = 2kQ/r ≠ 0', 'middle')}
-<g class="fig-muted">${T(250, 398, 15, 'worked example: +4.0 nC each, 2.0 m apart → V = 72 V, E = 0', 'middle')}</g>
-${T(250, 428, 16, 'scalars add; vectors can cancel', 'middle')}
-${T(750, 40, 22, 'midpoint between +Q and −Q', 'middle', '700')}
-${CHARGE(600, 200, 22, '+', '+Q')}${CHARGE(900, 200, 22, '−', '−Q')}
-<circle cx="750" cy="200" r="5" fill="currentColor"/>
-${ARR(752, 188, 830, 188, 'arr-es-sup', 3.5)}${T(792, 176, 16, 'E from +Q (away)', 'middle')}
-${ARR(752, 212, 830, 212, 'arr-es-sup', 3.5)}${T(792, 236, 16, 'E from −Q (toward)', 'middle')}
-<g class="fig-muted">${DIM(622, 745, 270)}${T(684, 292, 16, 'r', 'middle')}${DIM(755, 878, 270)}${T(816, 292, 16, 'r', 'middle')}</g>
-${T(750, 335, 19, 'E ≠ 0 — both point + → −, they add', 'middle', '700')}
-${T(750, 365, 18, 'V = kQ/r − kQ/r = 0', 'middle')}
-${T(750, 398, 16, 'E = 0 and V = 0 are independent facts', 'middle', '700')}
-<g class="fig-muted">${T(750, 428, 15, 'never assume one is zero because the other is', 'middle')}</g>
+/* 9 — Worked example: three charges on a line (after, 1000×460) */
+const X3 = (x: number) => 420 + 800 * x
+const F3 = 80 // px per newton
+const lineSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+<defs>${ARROW('arr-es-ln')}</defs>
+${T(500, 40, 22, 'forces on C: a push from A and a pull from B, both toward +x', 'middle', '700')}
+${ARR(50, 250, 900, 250, 'arr-es-ln', 2)}${T(912, 256, 17, 'x', 'start', '700')}
+
+${T(X3(-0.4), 286, 15, '−0.40 m', 'middle')}${T(X3(0), 286, 15, '0', 'middle')}${T(X3(0.1), 286, 15, '0.10 m', 'middle')}${T(X3(0.4), 286, 15, '0.40 m', 'middle')}
+${[0, 0.1, 0.4].map((x) => MASK(X3(x), 250, 16)).join('')}${CHARGE(X3(0), 250, 16, '+')}${CHARGE(X3(0.1), 250, 16, '+')}${CHARGE(X3(0.4), 250, 16, '−')}
+${T(X3(0), 310, 16, 'A', 'middle', '700')}${T(X3(0.1), 310, 16, 'C', 'middle', '700')}${T(X3(0.4), 310, 16, 'B', 'middle', '700')}
+${G('accent-2', `${T(X3(0) - 4, 332, 15, '+1.0 μC', 'middle')}${T(X3(0.1) + 6, 332, 15, '+2.0 μC', 'middle')}`)}${G('accent', T(X3(0.4), 332, 15, '−4.0 μC', 'middle'))}
+${G('muted', LINE(X3(0.1), 232, X3(0.1), 96, 1.5, true))}
+${ARR(X3(0.1), 200, X3(0.1) + 1.8 * F3, 200, 'arr-es-ln', 3.5)}${T(X3(0.1) + 1.8 * F3 + 12, 206, 16, '1.8 N from A (like: repels)', 'start')}
+${ARR(X3(0.1), 160, X3(0.1) + 0.8 * F3, 160, 'arr-es-ln', 3.5)}${T(X3(0.1) + 0.8 * F3 + 12, 166, 16, '0.80 N from B (unlike: attracts), r = 0.30 m', 'start')}
+<g class="fig-accent-2"><defs>${ARROW('arr-es-ln-r')}</defs>${ARR(X3(0.1), 112, X3(0.1) + 2.6 * F3, 112, 'arr-es-ln-r', 4.5)}${T(X3(0.1) + 2.6 * F3 + 12, 118, 17, 'net 2.6 N', 'start', '700')}
+<circle cx="${X3(-0.4)}" cy="250" r="6" fill="currentColor"/>${T(X3(-0.4), 226, 16, 'F = 0 here', 'middle', '700')}</g>
+${G('muted', `${DIM(X3(-0.4), X3(0), 356)}${T((X3(-0.4) + X3(0)) / 2, 378, 15, 'd', 'middle')}${DIM(X3(-0.4), X3(0.4), 394)}${T((X3(-0.4) + X3(0.4)) / 2, 416, 15, 'd + 0.40 m', 'middle')}`)}
+${T(500, 446, 16, 'part (d): 1.0 / d² = 4.0 / (d + 0.40)²  →  d + 0.40 = 2d  →  d = 0.40 m, outside the pair, beyond the smaller charge A', 'middle')}
+</svg>`
+
+/* 10 — Worked example: forces at right angles (after, 1000×460) */
+const THETA = (Math.atan(0.15 / 0.2) * 180) / Math.PI // 36.87°
+const FV = 1000 // px per newton in the vector triangle
+const ARC_R = 62
+const rightAngleSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+<defs>${ARROW('arr-es-ra')}</defs>
+${G('muted', LINE(480, 30, 480, 440, 1.5))}
+${T(245, 44, 21, 'two forces on the charge at the origin', 'middle', '700')}
+${G('muted', `${LINE(150, 250, 330, 250, 1.5, true)}${LINE(150, 250, 150, 84, 1.5, true)}${T(296, 240, 15, '0.30 m', 'middle')}${T(138, 150, 15, '0.30 m', 'end')}`)}
+${CHARGE(150, 250, 18, '+')}${G('accent-2', T(126, 282, 16, '+1.0 μC', 'end', '700'))}
+${CHARGE(350, 250, 18, '−', '−2.0 μC')}
+${CHARGE(150, 84, 18, '+')}${G('accent-2', T(176, 90, 16, '+1.5 μC', 'start', '700'))}
+${ARR(170, 250, 250, 250, 'arr-es-ra', 3)}${T(214, 232, 16, '0.20 N', 'middle', '700')}
+${ARR(150, 270, 150, 330, 'arr-es-ra', 3)}${T(168, 312, 16, '0.15 N', 'start', '700')}
+${T(245, 392, 16, 'unlike → pulled toward the −2.0 μC charge (+x)', 'middle')}
+${T(245, 418, 16, 'like → pushed away from the +1.5 μC charge (−y)', 'middle')}
+${T(740, 44, 21, 'add them as vectors', 'middle', '700')}
+${G('muted', `${LINE(600 + 0.2 * FV, 120, 600 + 0.2 * FV, 120 + 0.15 * FV, 2, true)}${LINE(600, 120 + 0.15 * FV, 600 + 0.2 * FV, 120 + 0.15 * FV, 2, true)}`)}
+${ARR(600, 120, 600 + 0.2 * FV - 6, 120, 'arr-es-ra', 3.5)}${T(700, 106, 17, '0.20 N', 'middle', '700')}
+${ARR(600, 120, 600, 120 + 0.15 * FV - 6, 'arr-es-ra', 3.5)}${T(588, 200, 17, '0.15 N', 'end', '700')}
+<circle cx="600" cy="120" r="6" fill="currentColor"/>
+${PATH(`M${600 + ARC_R} 120 A${ARC_R} ${ARC_R} 0 0 1 ${(600 + ARC_R * Math.cos((THETA * Math.PI) / 180)).toFixed(1)} ${(120 + ARC_R * Math.sin((THETA * Math.PI) / 180)).toFixed(1)}`, 2)}
+${T(674, 146, 16, `${Math.round(THETA)}°`, 'start', '700')}
+<g class="fig-accent-2"><defs>${ARROW('arr-es-ra-r')}</defs>${ARR(600, 120, 600 + 0.2 * FV - 6, 120 + 0.15 * FV - 4.5, 'arr-es-ra-r', 4.5)}${T(724, 196, 18, '0.25 N', 'start', '700')}</g>
+${T(740, 330, 18, 'F = √(0.20² + 0.15²) = 0.25 N', 'middle', '700')}
+${T(740, 362, 17, `tan θ = 0.15 / 0.20 → θ ≈ ${Math.round(THETA)}° below the +x axis`, 'middle')}
+${G('muted', `${T(740, 398, 15, 'a 3-4-5 triangle scaled by 0.05;', 'middle')}${T(740, 420, 15, 'adding 0.20 + 0.15 = 0.35 N would be wrong', 'middle')}`)}
 </svg>`
 
 export const mcatElectrostaticsFigures: DeckFigurePlacement[] = [
   {
+    at: 'Electric Charge',
+    mode: 'lead',
+    figure: {
+      svg: chargeSvg,
+      alt:
+        'Three panels. Left, two kinds of charge: an atom sketch with two red protons and two grey neutrons in the nucleus and three blue electrons on a dashed ring around it — proton +e and neutron (0), locked in the nucleus; electron −e, outside the nucleus and able to move; e = 1.6 × 10⁻¹⁹ C. Middle, quantized, q = ±ne: a ladder of allowed charges from +3e down through 0 to −3e, with a dashed red mark at 2.5e labelled never; 5.0 × 10⁹ extra electrons give q = −(5.0 × 10⁹)(1.6 × 10⁻¹⁹ C) = −0.80 nC; n is always a whole number. Right, conserved, moved not made: a patch of hair with plus signs and a balloon with minus signs, an arrow of electrons from hair to balloon; the hair ends +Q and the balloon −Q, total charge still 0; gain electrons → negative, lose electrons → positive; in a solid only electrons move, protons stay in their nuclei.',
+      caption: 'Charge in three facts: it comes in two kinds carried by protons and electrons, it comes in whole multiples of e, and it is moved from one object to another but never created.',
+    },
+    blocks: [
+      '- Like charges repel, unlike attract; proton $+e$, electron $-e$, $e = 1.6 \\times 10^{-19}$ C',
+      '- **Quantized:** $q = \\pm ne$ · **conserved:** rubbing moves electrons, so the two objects end $+Q$ and $-Q$',
+    ],
+  },
+  {
+    at: 'Conductors and Insulators',
+    mode: 'lead',
+    figure: {
+      svg: conductorsSvg,
+      alt:
+        'Three panels. Left, conductor (metal): a ball with ten minus signs spaced evenly all the way round just inside its surface — charges move freely, so extra charge spreads over the whole outer surface; like charges repel and get as far apart as they can. Middle, insulator (plastic): the same ball with the ten minus signs bunched in one patch at the upper right — charges stay where they are put, so the same dab of charge stays in one spot; rubber, glass, plastic, dry air. Right, the same split in a cell: a grey band, the lipid bilayer, which insulates, with red plus signs along its outer face under the outside fluid, which conducts, and blue minus signs along its inner face above the inside fluid, which conducts. Body fluids conduct, membranes insulate; in a salt solution the ions move, and the membrane keeps the two faces of charge apart, as does myelin.',
+      caption: 'A dab of charge spreads over a conductor’s outer surface but stays put on an insulator; in a cell the salty fluids conduct and the lipid membrane insulates.',
+    },
+    blocks: [
+      '- **Conductor:** charges move freely, so extra charge spreads over the whole outer surface',
+      '- **Insulator:** charge stays where it is put · body fluids conduct, membranes (and myelin) insulate',
+    ],
+  },
+  {
+    at: 'Charging by Friction, Conduction and Induction',
+    mode: 'lead',
+    figure: {
+      svg: chargingSvg,
+      alt:
+        'Three panels, one for each way to charge an object. 1, friction: a piece of fur carrying plus signs and a rubber rod carrying minus signs, with an arrow of electrons from the fur to the rod — rubbing moves electrons from one material to the other, and the two end opposite and equal, +Q and −Q; the question tells you which material takes the electrons. 2, conduction (contact): two touching metal spheres, both carrying minus signs — charge flows between them and both end with the same sign; identical spheres share equally, q each = (q₁ + q₂)/2; add the charges with their signs, then split, one contact at a time. 3, induction (no contact): a negative rod held near a metal sphere whose near side carries plus signs, with a wire from the sphere to a ground symbol and an arrow of electrons running down the wire — rod near, ground, remove the ground, remove the rod; the sphere ends opposite to the rod and the rod loses none of its charge; take the rod away first and the electrons just flow back.',
+      caption: 'Three ways to charge an object: friction leaves the two materials opposite, contact leaves the same sign as the charged object, and induction (with a ground) leaves the opposite sign.',
+    },
+    blocks: [
+      '- **Friction:** the pair end opposite · **conduction:** same sign as the charged object',
+      '- **Induction:** no contact, a ground is needed, and the sphere ends **opposite** to the rod',
+    ],
+  },
+  {
+    at: 'Charging by Friction, Conduction and Induction',
+    mode: 'after',
+    figure: {
+      svg: polarizationSvg,
+      alt:
+        'Left: a blue negative rod beside a neutral metal ball. Inside the ball, red plus signs have gathered on the side nearest the rod and blue minus signs on the far side. A long red arrow pointing toward the rod is labelled pull on the near side; a short blue arrow pointing away is labelled push on the far side: weaker. Net force: toward the rod; nothing is transferred, the charges only shift. Right, what does attraction prove? Three rows of small spheres: a negative and a positive with arrows pointing toward each other, opposite charges attract; a negative and a neutral one with arrows pointing toward each other, charged and neutral attract; two negatives with arrows pointing apart, like charges repel. Only repulsion proves both are charged; a neutral object is attracted too.',
+      caption: 'Polarization: the opposite charge shifts nearer the rod, so the pull beats the push and a neutral object is attracted — which is why only repulsion proves both objects are charged.',
+    },
+    blocks: [
+      '- **Polarization:** opposite charge shifts to the near side, where the force is stronger → net attraction',
+      '- A charged object attracts opposite AND neutral objects, so only **repulsion** proves both are charged',
+    ],
+  },
+  {
+    at: 'Worked Example — Sharing Charge Between Identical Spheres',
+    mode: 'after',
+    figure: {
+      svg: sharingSvg,
+      alt:
+        'Three stages left to right. Before: sphere A at −12 μC and sphere B at +4.0 μC; (−12) + (+4.0) = −8.0 μC in total, added with signs. A and B touch: both now −4.0 μC, since −8.0/2 = −4.0 μC each; a blue arrow from A to B is labelled 5.0 × 10¹³ electrons, because B changed by −8.0 μC and n = 8.0 × 10⁻⁶/e. Then B touches neutral C: A stays at −4.0 μC while B and C each hold −2.0 μC, (−4.0 + 0)/2 = −2.0 μC each, still −8.0 μC in total. Underneath: identical spheres share equally, q each = (q₁ + q₂)/2; add with signs, take one contact at a time, and count electrons from the change in one sphere.',
+      caption: 'The worked example drawn: −12 and +4.0 μC share to −4.0 μC each (5.0 × 10¹³ electrons move from A to B), then B shares with neutral C to leave −2.0 μC on each.',
+    },
+    blocks: [
+      '- Total $-8.0\\;\\mu$C → $-4.0\\;\\mu$C each; $5.0 \\times 10^{13}$ electrons moved from A to B',
+      '- B then shares with neutral C: $-2.0\\;\\mu$C each — the total is still $-8.0\\;\\mu$C',
+    ],
+  },
+  {
+    at: 'Worked Example — Charging a Sphere by Induction',
+    mode: 'after',
+    figure: {
+      svg: inductionSvg,
+      alt:
+        'Four panels in order. 1, rod near: a blue negative rod beside a metal sphere with red plus signs on the near side and blue minus signs on the far side — electrons pushed to the far side; still neutral. 2, connect to ground: the same rod and sphere with only the plus signs left, a wire from the sphere down to a ground symbol and a blue arrow of electrons pointing down the wire — 2.0 × 10¹⁰ electrons flow down into the ground. 3, remove the ground: rod still in place, plus signs still on the near side, no wire — the shortage is trapped. 4, remove the rod: the sphere alone with six plus signs spaced evenly around it — q = +(2.0 × 10¹⁰)(1.6 × 10⁻¹⁹) = +3.2 nC, spread evenly. Underneath: induction leaves the sphere opposite to the rod; touching the rod instead would leave it the same sign; the rod never touches the sphere and loses none of its own charge.',
+      caption: 'The worked example drawn: a negative rod drives 2.0 × 10¹⁰ electrons to ground, the ground is removed first, and the sphere keeps +3.2 nC — opposite to the rod.',
+    },
+    blocks: [
+      '- Rod near → ground → remove the ground → remove the rod: the order traps the charge',
+      '- $q = +(2.0 \\times 10^{10})(1.6 \\times 10^{-19}) = +3.2$ nC, **opposite** to the rod',
+    ],
+  },
+  {
     at: "Coulomb's Law",
+    exact: true,
     mode: 'lead',
     figure: {
       svg: coulombSvg,
@@ -374,122 +559,50 @@ export const mcatElectrostaticsFigures: DeckFigurePlacement[] = [
       caption: 'Coulomb’s law as pictures: like charges push apart, unlike charges pull together with equal force on each, and doubling the separation cuts the force to a quarter.',
     },
     blocks: [
-      '- $F = kq_1q_2/r^2$: like charges repel, unlike attract; each charge feels the same magnitude (3rd law)',
+      '- $|F| = k|q_1q_2|/r^2$: like charges repel, unlike attract; each charge feels the same size of force',
       '- Scale factor by factor: double $r$ → $F/4$; triple one charge → $3F$ — ratio reasoning, not plug-and-chug',
     ],
   },
   {
-    at: 'Electric Field',
+    at: 'Superposition of Forces',
     mode: 'lead',
     figure: {
-      svg: fieldSvg,
+      svg: superForcesSvg,
       alt:
-        'Three panels. Left: a positive point charge with eight radial field lines whose arrowheads point away from it; denser lines mean a stronger field, and the field is there with or without a test charge. Middle: a negative point charge with eight radial lines whose arrowheads point toward it; E = F/q is the force per unit positive charge, N/C = V/m. Right: six evenly spaced horizontal field lines of a uniform field pointing right; a positive test charge has a red force arrow F pointing right, along E, and a negative test charge has a blue force arrow F pointing left, opposite E — the same magnitude F = qE for the same size of charge.',
-      caption: 'Field lines leave positive charges and enter negative ones; a positive charge is pushed along the field and a negative charge against it.',
+        'Left, forces add as vectors: from one point a 4 N arrow points right and a 3 N arrow points up; a red diagonal arrow labelled 5 N completes the rectangle. At right angles √(3² + 4²) = 5 N; aligned they would give 7 N and opposite 1 N; magnitudes add only when parallel. Right, where is the net force zero? Three number lines. Same sign, +q and +4q: a red dot marked F = 0 sits between them, one third of the way from the smaller charge — between, nearer the smaller. Opposite and unequal, +q and −4q: the red dot sits outside the pair on the side of +q, as far beyond it as the charges are apart — outside, beyond the smaller. Opposite and equal, +q and −q: no dot — nowhere. Balance: |q₁|/r₁² = |q₂|/r₂², true for any third charge put there.',
+      caption: 'Forces from several charges add as vectors, and a third charge feels zero net force only where the two forces are opposite and equal: between like charges or beyond the smaller of two unlike ones.',
     },
     blocks: [
-      '- $\\vec E = \\vec F/q$ (N/C = V/m): lines leave $+$, enter $-$; denser lines = stronger field',
-      '- A $+$ charge is pushed along $\\vec E$, a $-$ charge against it — same $|F| = qE$ for the same $|q|$',
+      '- Net force = **vector** sum of independent pair forces: 3 N and 4 N at right angles make 5 N',
+      '- Zero net force: between like charges, or beyond the smaller of two unlike ones — $|q_1|/r_1^2 = |q_2|/r_2^2$',
     ],
   },
   {
-    at: 'Potential vs. Potential Energy',
-    mode: 'replace-table',
-    figure: {
-      svg: potentialSvg,
-      alt:
-        'A slope drawn as a hill falling from high V at the top left to low V at the bottom right. An arrow E runs parallel to the slope pointing downhill in V. A red positive charge on the slope has an arrow pointing downhill: +q falls to low V. A blue negative charge has an arrow pointing uphill: −q climbs to high V. Both moves lower U = qV. Below: E is a vector at a point (N/C); V is a scalar at a point (volts); U = qV is in joules and belongs to the charge at that point.',
-      caption: 'Potential as a hill: the field points downhill in V, a positive charge rolls down and a negative charge climbs up — both ways the energy U = qV drops.',
-    },
-    blocks: [
-      '- **E**: vector at a point (N/C) · **V**: scalar at a point (volts) · **U = qV**: joules, belongs to the charge',
-      '- Positive charges fall from high $V$ to low $V$; negative charges climb from low $V$ to high $V$',
-      '- Both moves **lower** $U = qV$ — switch to energy language whenever the signs get confusing',
-    ],
-  },
-  {
-    at: 'Equipotentials and Dipoles',
-    mode: 'lead',
-    figure: {
-      svg: equipotentialSvg,
-      alt:
-        'Left: a positive point charge with eight radial field lines pointing outward and three dashed concentric circles — the equipotentials, V high near the charge and V low farther out — which cross every field line at right angles. A blue arrow runs along the middle circle labelled W = 0: along an equipotential the field does no work. Right: a uniform field of horizontal lines pointing right, labelled E, with a tilted dipole rod carrying a positive charge at its upper-right end and a negative charge at its lower-left end. A red force F on the positive end points right, a blue force F on the negative end points left; a curved arrow τ shows the rod turning, and a dashed horizontal ghost of the rod shows the aligned position. Net force = 0 (equal and opposite F); torque ≠ 0, so it rotates to align with E — think of a polar molecule like water.',
-      caption: 'Equipotentials are perpendicular to field lines (no work along one); a dipole in a uniform field feels no net force but a torque that turns it into line with E.',
-    },
-    blocks: [
-      '- Equipotentials cut field lines at right angles; moving a charge along one costs zero work from the field',
-      '- A dipole in a uniform field: zero net force, but a torque that turns it into line with $\\vec E$',
-    ],
-  },
-  {
-    at: 'The Core Four',
-    mode: 'replace-table',
-    figure: {
-      svg: coreFourSvg,
-      alt:
-        'A two-by-two grid. Columns: pair quantities (both charges) and field quantities (one charge). Rows: 1/r² force-flavored and 1/r energy-flavored. Top left F = kq₁q₂/r², the force between two charges, a vector; top right E = kQ/r², the field of one charge, a vector; bottom left U = kq₁q₂/r, the energy of a pair, a scalar; bottom right V = kQ/r, the potential of one charge, a scalar. Grey arrows link the cells: divide by q to go from F to E and from U to V; multiply by r to go from F to U and from E to V. Below: F = qE, U = qV; for a point charge V = E·r and U = F·r; the 1/r² pair are vectors, the 1/r pair scalars.',
-      caption: 'The Core Four on one grid: pair quantities use both charges, field quantities one; force-flavored F and E fall as 1/r², energy-flavored U and V as 1/r.',
-    },
-    blocks: [
-      '- **Pair** quantities ($F$, $U$) contain both charges; **field** quantities ($E$, $V$) contain one',
-      '- **Force-flavored** $F, E \\propto 1/r^2$ (vectors); **energy-flavored** $U, V \\propto 1/r$ (scalars)',
-      '- Bridges: $F = qE$, $U = qV$; for a point charge $V = E \\cdot r$ — a quick consistency check',
-    ],
-  },
-  {
-    at: 'Worked Example — Parallel Plates',
+    at: 'Worked Example — Three Charges on a Line',
     mode: 'after',
     figure: {
-      svg: platesSvg,
+      svg: lineSvg,
       alt:
-        'Two vertical plates, a red positive plate on the left and a blue negative plate on the right, joined by a wire through a battery symbol labelled 6.0 V. Seven evenly spaced horizontal field lines labelled E run from the positive plate to the negative plate. A dimension line under the plates reads d = 2.0 mm. Right: E = V/d = 6.0 V / (2.0 × 10⁻³ m) = 3.0 × 10³ V/m, uniform between the plates, pointing from the + plate to the − plate (N/C = V/m); evenly spaced lines mean a uniform field; convert mm to m before dividing.',
-      caption: 'The worked example drawn: 6.0 V across plates 2.0 mm apart gives a uniform field E = V/d = 3.0 × 10³ V/m from the positive plate to the negative plate.',
+        'An x-axis with A (+1.0 μC) at 0, C (+2.0 μC) at 0.10 m and B (−4.0 μC) at 0.40 m. Above C three arrows all point toward +x: 1.8 N from A (like charges repel), 0.80 N from B (unlike charges attract, r = 0.30 m), and a longer red arrow for their sum, net 2.6 N. A red dot at x = −0.40 m is marked F = 0 here; grey dimension lines show its distance d from A and d + 0.40 m from B. Part (d): 1.0/d² = 4.0/(d + 0.40)², so d + 0.40 = 2d and d = 0.40 m, outside the pair, beyond the smaller charge A.',
+      caption: 'The worked example drawn to scale: A pushes C and B pulls it the same way, 1.8 N + 0.80 N = 2.6 N, and the only balance point is at x = −0.40 m, beyond the smaller charge.',
     },
     blocks: [
-      '- $E = V/d = 6.0\\ \\text{V} / (2.0 \\times 10^{-3}\\ \\text{m}) = 3.0 \\times 10^3$ V/m — convert mm to m first',
-      '- Uniform between the plates (evenly spaced lines), pointing from the $+$ plate to the $-$ plate',
+      '- On C: $1.8$ N from A and $0.80$ N from B both point $+x$ → net $2.6$ N (use each pair’s own $r$)',
+      '- Balance point: $1.0/d^2 = 4.0/(d + 0.40)^2$ → $d = 0.40$ m left of A, at $x = -0.40$ m',
     ],
   },
   {
-    at: 'Worked Example — Field Inside a Membrane',
+    at: 'Worked Example — Forces at Right Angles',
     mode: 'after',
     figure: {
-      svg: membraneSvg,
+      svg: rightAngleSvg,
       alt:
-        'A horizontal grey band, the lipid bilayer (insulator), with conducting fluid above (outside: 0 mV) and below (inside: −70 mV). Red plus signs line the outer face and blue minus signs the inner face, like capacitor plates. Three arrows E inside the band point downward, from outside to inside; a dimension line gives the thickness d ≈ 5–10 nm. An open channel breaks the band and a red Na⁺ ion in it has an arrow pointing inward: pushed inward by the field. Right: a capacitor in the cell — positive charge lines the outer face, negative the inner face; E = V/d, 70 mV over 7 nm (worked example) ≈ 1 × 10⁷ V/m: tiny voltage, giant field; depolarizing toward 0: |V| and E shrink; E points outside → inside at rest.',
-      caption: 'The resting membrane as a parallel-plate capacitor: charge on the two faces of an insulating bilayer gives a uniform field E = V/d of about 10⁷ V/m pointing inward.',
+        'Left: a +1.0 μC charge at the origin with a −2.0 μC charge 0.30 m to its right and a +1.5 μC charge 0.30 m above it. From the origin charge a 0.20 N arrow points right, toward the negative charge, and a 0.15 N arrow points down, away from the positive charge: unlike → pulled toward the −2.0 μC charge (+x); like → pushed away from the +1.5 μC charge (−y). Right, add them as vectors: the 0.20 N arrow to the right and the 0.15 N arrow down drawn from one point, with a red diagonal arrow, 0.25 N, across the rectangle they make and the angle 37° marked below the horizontal. F = √(0.20² + 0.15²) = 0.25 N; tan θ = 0.15/0.20, θ ≈ 37° below the +x axis; a 3-4-5 triangle scaled by 0.05 — adding 0.20 + 0.15 = 0.35 N would be wrong.',
+      caption: 'The worked example drawn to scale: a 0.20 N pull along +x and a 0.15 N push along −y combine to 0.25 N, 37° below the +x axis.',
     },
     blocks: [
-      '- Insulating bilayer between two conducting fluids = parallel plates: $E = V/d$, pointing outside → inside',
-      '- 70 mV over 7 nm: $E \\approx 10^7$ V/m, a giant field; depolarizing toward 0 mV shrinks |V| and with it E',
-    ],
-  },
-  {
-    at: 'Gel Electrophoresis',
-    mode: 'lead',
-    figure: {
-      svg: gelSvg,
-      alt:
-        'A vertical gel with a blue negative electrode (cathode) along the top and a red positive electrode (anode) along the bottom; an arrow E points upward from the + anode to the − cathode; negative DNA moves against E, toward the anode. Three wells at the top, labelled large, medium and small, each with a dashed travel arrow down to a band: the large fragment has moved least, the medium one farther, the small one farthest. Right: same force per charge, drag sorts by size — the phosphate backbone makes DNA uniformly negative, so F = qE drives it toward the positive electrode; drag in the gel grows with size, so small fragments travel farthest in the same time; in SDS-PAGE the SDS coat gives proteins a uniform negative charge-to-mass, so they are again sorted by size. The field pulls; the gel sieves.',
-      caption: 'Gel electrophoresis: a uniform field pulls negatively charged DNA toward the anode with the same force per charge, and the gel’s size-dependent drag does the sorting.',
-    },
-    blocks: [
-      '- DNA’s phosphate backbone is uniformly negative, so $F = qE$ drives it toward the $+$ electrode (anode)',
-      '- The field gives the same force per charge; gel drag grows with size, so small fragments travel farthest',
-    ],
-  },
-  {
-    at: 'Strategy 2 — Superposition',
-    mode: 'lead',
-    figure: {
-      svg: superpositionSvg,
-      alt:
-        'Two panels, each with two charges a distance r either side of a midpoint dot. Left, +Q and +Q: at the midpoint the field from the left charge points right and the field from the right charge points left, equal and opposite — E = 0, the two fields cancel — while V = kQ/r + kQ/r = 2kQ/r is not zero; the worked example, +4.0 nC each 2.0 m apart, gives V = 72 V and E = 0; scalars add, vectors can cancel. Right, +Q and −Q: the field from +Q (away from it) and the field from −Q (toward it) both point right, so E ≠ 0 and they add, while V = kQ/r − kQ/r = 0. E = 0 and V = 0 are independent facts; never assume one is zero because the other is.',
-      caption: 'Superposition at the midpoint: two equal positive charges give E = 0 but V = 2kQ/r; a positive and a negative charge give V = 0 but a doubled field pointing from + to −.',
-    },
-    blocks: [
-      '- Fields add as **vectors**, potentials as **signed numbers**: one being zero says nothing about the other',
-      '- $+Q,+Q$ midpoint: $E = 0$, $V = 2kQ/r$ · $+Q,-Q$ midpoint: $V = 0$, $E$ adds, pointing from $+$ to $-$',
+      '- $0.20$ N along $+x$ (attracted) and $0.15$ N along $-y$ (repelled): perpendicular, so use Pythagoras',
+      '- $F = \\sqrt{0.20^2 + 0.15^2} = 0.25$ N, $\\theta \\approx 37^\\circ$ below $+x$ — not $0.35$ N',
     ],
   },
 ]

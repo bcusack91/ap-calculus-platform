@@ -73,49 +73,53 @@ import { checks as t70 } from './mcat-organic-chemistry-sn1-sn2-e1-e2-mcat'
 import { checks as t71 } from './mcat-organic-chemistry-spectroscopy-mcat'
 import { checks as t72 } from './mcat-organic-chemistry-stereochemistry-mcat'
 import { checks as t73 } from './mcat-physics-electricity-dc-circuits-mcat'
-import { checks as t74 } from './mcat-physics-electricity-electrochemistry-mcat'
-import { checks as t75 } from './mcat-physics-electricity-electrostatics-mcat'
-import { checks as t76 } from './mcat-physics-electricity-emf-capacitors-mcat'
-import { checks as t77 } from './mcat-physics-electricity-induction-mcat'
-import { checks as t78 } from './mcat-physics-electricity-kirchhoff-power-mcat'
-import { checks as t79 } from './mcat-physics-electricity-magnetism-mcat'
-import { checks as t80 } from './mcat-physics-electricity-mcat'
-import { checks as t81 } from './mcat-physics-electricity-optics-mcat'
-import { checks as t82 } from './mcat-physics-electricity-rc-circuits-mcat'
-import { checks as t83 } from './mcat-physics-mechanics-fluid-dynamics-mcat'
-import { checks as t84 } from './mcat-physics-mechanics-fluids-mcat'
-import { checks as t85 } from './mcat-physics-mechanics-forces-newton-laws-mcat'
-import { checks as t86 } from './mcat-physics-mechanics-kinematics-mcat'
-import { checks as t87 } from './mcat-physics-mechanics-mcat'
-import { checks as t88 } from './mcat-physics-mechanics-momentum-collisions-mcat'
-import { checks as t89 } from './mcat-physics-mechanics-work-energy-power-mcat'
-import { checks as t90 } from './mcat-physics-waves-interference-mcat'
-import { checks as t91 } from './mcat-physics-waves-sound-mcat'
-import { checks as t92 } from './mcat-psychology-behavior-cognition-language-mcat'
-import { checks as t93 } from './mcat-psychology-behavior-development-mcat'
-import { checks as t94 } from './mcat-psychology-behavior-disorders-mcat'
-import { checks as t95 } from './mcat-psychology-behavior-learning-memory-mcat'
-import { checks as t96 } from './mcat-psychology-behavior-mcat'
-import { checks as t97 } from './mcat-psychology-behavior-sensation-perception-mcat'
-import { checks as t98 } from './mcat-quantitative-skills-mcat'
-import { checks as t99 } from './mcat-research-methods-mcat'
-import { checks as t100 } from './mcat-science-passage-strategy-discrete-questions-mcat'
-import { checks as t101 } from './mcat-science-passage-strategy-experimental-design-mcat'
-import { checks as t102 } from './mcat-science-passage-strategy-figures-mcat'
-import { checks as t103 } from './mcat-science-passage-strategy-mcat'
-import { checks as t104 } from './mcat-science-passage-strategy-reading-mcat'
-import { checks as t105 } from './mcat-social-psychology-mcat'
-import { checks as t106 } from './mcat-sociology-culture-socialization-mcat'
-import { checks as t107 } from './mcat-sociology-groups-interaction-mcat'
-import { checks as t108 } from './mcat-sociology-health-disparities-mcat'
-import { checks as t109 } from './mcat-sociology-interaction-organizations-mcat'
-import { checks as t110 } from './mcat-sociology-mcat'
-import { checks as t111 } from './mcat-sociology-structure-stratification-mcat'
-import { checks as t112 } from './mcat-test-day-strategy-format-scoring-mcat'
-import { checks as t113 } from './mcat-test-day-strategy-mcat'
-import { checks as t114 } from './mcat-test-day-strategy-section-specific-mcat'
-import { checks as t115 } from './mcat-test-day-strategy-study-planning-mcat'
-import { checks as t116 } from './mcat-test-day-strategy-test-day-logistics-mcat'
+import { checks as t74 } from './mcat-physics-electricity-electric-fields-mcat'
+import { checks as t75 } from './mcat-physics-electricity-electric-potential-mcat'
+import { checks as t76 } from './mcat-physics-electricity-electrochemistry-mcat'
+import { checks as t77 } from './mcat-physics-electricity-electrostatics-mcat'
+import { checks as t78 } from './mcat-physics-electricity-emf-capacitors-mcat'
+import { checks as t79 } from './mcat-physics-electricity-induction-mcat'
+import { checks as t80 } from './mcat-physics-electricity-kirchhoff-power-mcat'
+import { checks as t81 } from './mcat-physics-electricity-magnetism-mcat'
+import { checks as t82 } from './mcat-physics-electricity-mcat'
+import { checks as t83 } from './mcat-physics-electricity-optics-mcat'
+import { checks as t84 } from './mcat-physics-electricity-rc-circuits-mcat'
+import { checks as t85 } from './mcat-physics-mechanics-buoyancy-mcat'
+import { checks as t86 } from './mcat-physics-mechanics-fluid-dynamics-mcat'
+import { checks as t87 } from './mcat-physics-mechanics-fluids-mcat'
+import { checks as t88 } from './mcat-physics-mechanics-forces-newton-laws-mcat'
+import { checks as t89 } from './mcat-physics-mechanics-kinematics-mcat'
+import { checks as t90 } from './mcat-physics-mechanics-mcat'
+import { checks as t91 } from './mcat-physics-mechanics-momentum-collisions-mcat'
+import { checks as t92 } from './mcat-physics-mechanics-viscosity-mcat'
+import { checks as t93 } from './mcat-physics-mechanics-work-energy-power-mcat'
+import { checks as t94 } from './mcat-physics-waves-interference-mcat'
+import { checks as t95 } from './mcat-physics-waves-sound-mcat'
+import { checks as t96 } from './mcat-psychology-behavior-cognition-language-mcat'
+import { checks as t97 } from './mcat-psychology-behavior-development-mcat'
+import { checks as t98 } from './mcat-psychology-behavior-disorders-mcat'
+import { checks as t99 } from './mcat-psychology-behavior-learning-memory-mcat'
+import { checks as t100 } from './mcat-psychology-behavior-mcat'
+import { checks as t101 } from './mcat-psychology-behavior-sensation-perception-mcat'
+import { checks as t102 } from './mcat-quantitative-skills-mcat'
+import { checks as t103 } from './mcat-research-methods-mcat'
+import { checks as t104 } from './mcat-science-passage-strategy-discrete-questions-mcat'
+import { checks as t105 } from './mcat-science-passage-strategy-experimental-design-mcat'
+import { checks as t106 } from './mcat-science-passage-strategy-figures-mcat'
+import { checks as t107 } from './mcat-science-passage-strategy-mcat'
+import { checks as t108 } from './mcat-science-passage-strategy-reading-mcat'
+import { checks as t109 } from './mcat-social-psychology-mcat'
+import { checks as t110 } from './mcat-sociology-culture-socialization-mcat'
+import { checks as t111 } from './mcat-sociology-groups-interaction-mcat'
+import { checks as t112 } from './mcat-sociology-health-disparities-mcat'
+import { checks as t113 } from './mcat-sociology-interaction-organizations-mcat'
+import { checks as t114 } from './mcat-sociology-mcat'
+import { checks as t115 } from './mcat-sociology-structure-stratification-mcat'
+import { checks as t116 } from './mcat-test-day-strategy-format-scoring-mcat'
+import { checks as t117 } from './mcat-test-day-strategy-mcat'
+import { checks as t118 } from './mcat-test-day-strategy-section-specific-mcat'
+import { checks as t119 } from './mcat-test-day-strategy-study-planning-mcat'
+import { checks as t120 } from './mcat-test-day-strategy-test-day-logistics-mcat'
 
 /**
  * Card-check questions for each topic's own cards, by topic slug.
@@ -196,47 +200,51 @@ export const TOPIC_CHECKS: Record<string, Record<string, CardCheck>> = {
   'mcat-organic-chemistry-spectroscopy-mcat': t71,
   'mcat-organic-chemistry-stereochemistry-mcat': t72,
   'mcat-physics-electricity-dc-circuits-mcat': t73,
-  'mcat-physics-electricity-electrochemistry-mcat': t74,
-  'mcat-physics-electricity-electrostatics-mcat': t75,
-  'mcat-physics-electricity-emf-capacitors-mcat': t76,
-  'mcat-physics-electricity-induction-mcat': t77,
-  'mcat-physics-electricity-kirchhoff-power-mcat': t78,
-  'mcat-physics-electricity-magnetism-mcat': t79,
-  'mcat-physics-electricity-mcat': t80,
-  'mcat-physics-electricity-optics-mcat': t81,
-  'mcat-physics-electricity-rc-circuits-mcat': t82,
-  'mcat-physics-mechanics-fluid-dynamics-mcat': t83,
-  'mcat-physics-mechanics-fluids-mcat': t84,
-  'mcat-physics-mechanics-forces-newton-laws-mcat': t85,
-  'mcat-physics-mechanics-kinematics-mcat': t86,
-  'mcat-physics-mechanics-mcat': t87,
-  'mcat-physics-mechanics-momentum-collisions-mcat': t88,
-  'mcat-physics-mechanics-work-energy-power-mcat': t89,
-  'mcat-physics-waves-interference-mcat': t90,
-  'mcat-physics-waves-sound-mcat': t91,
-  'mcat-psychology-behavior-cognition-language-mcat': t92,
-  'mcat-psychology-behavior-development-mcat': t93,
-  'mcat-psychology-behavior-disorders-mcat': t94,
-  'mcat-psychology-behavior-learning-memory-mcat': t95,
-  'mcat-psychology-behavior-mcat': t96,
-  'mcat-psychology-behavior-sensation-perception-mcat': t97,
-  'mcat-quantitative-skills-mcat': t98,
-  'mcat-research-methods-mcat': t99,
-  'mcat-science-passage-strategy-discrete-questions-mcat': t100,
-  'mcat-science-passage-strategy-experimental-design-mcat': t101,
-  'mcat-science-passage-strategy-figures-mcat': t102,
-  'mcat-science-passage-strategy-mcat': t103,
-  'mcat-science-passage-strategy-reading-mcat': t104,
-  'mcat-social-psychology-mcat': t105,
-  'mcat-sociology-culture-socialization-mcat': t106,
-  'mcat-sociology-groups-interaction-mcat': t107,
-  'mcat-sociology-health-disparities-mcat': t108,
-  'mcat-sociology-interaction-organizations-mcat': t109,
-  'mcat-sociology-mcat': t110,
-  'mcat-sociology-structure-stratification-mcat': t111,
-  'mcat-test-day-strategy-format-scoring-mcat': t112,
-  'mcat-test-day-strategy-mcat': t113,
-  'mcat-test-day-strategy-section-specific-mcat': t114,
-  'mcat-test-day-strategy-study-planning-mcat': t115,
-  'mcat-test-day-strategy-test-day-logistics-mcat': t116,
+  'mcat-physics-electricity-electric-fields-mcat': t74,
+  'mcat-physics-electricity-electric-potential-mcat': t75,
+  'mcat-physics-electricity-electrochemistry-mcat': t76,
+  'mcat-physics-electricity-electrostatics-mcat': t77,
+  'mcat-physics-electricity-emf-capacitors-mcat': t78,
+  'mcat-physics-electricity-induction-mcat': t79,
+  'mcat-physics-electricity-kirchhoff-power-mcat': t80,
+  'mcat-physics-electricity-magnetism-mcat': t81,
+  'mcat-physics-electricity-mcat': t82,
+  'mcat-physics-electricity-optics-mcat': t83,
+  'mcat-physics-electricity-rc-circuits-mcat': t84,
+  'mcat-physics-mechanics-buoyancy-mcat': t85,
+  'mcat-physics-mechanics-fluid-dynamics-mcat': t86,
+  'mcat-physics-mechanics-fluids-mcat': t87,
+  'mcat-physics-mechanics-forces-newton-laws-mcat': t88,
+  'mcat-physics-mechanics-kinematics-mcat': t89,
+  'mcat-physics-mechanics-mcat': t90,
+  'mcat-physics-mechanics-momentum-collisions-mcat': t91,
+  'mcat-physics-mechanics-viscosity-mcat': t92,
+  'mcat-physics-mechanics-work-energy-power-mcat': t93,
+  'mcat-physics-waves-interference-mcat': t94,
+  'mcat-physics-waves-sound-mcat': t95,
+  'mcat-psychology-behavior-cognition-language-mcat': t96,
+  'mcat-psychology-behavior-development-mcat': t97,
+  'mcat-psychology-behavior-disorders-mcat': t98,
+  'mcat-psychology-behavior-learning-memory-mcat': t99,
+  'mcat-psychology-behavior-mcat': t100,
+  'mcat-psychology-behavior-sensation-perception-mcat': t101,
+  'mcat-quantitative-skills-mcat': t102,
+  'mcat-research-methods-mcat': t103,
+  'mcat-science-passage-strategy-discrete-questions-mcat': t104,
+  'mcat-science-passage-strategy-experimental-design-mcat': t105,
+  'mcat-science-passage-strategy-figures-mcat': t106,
+  'mcat-science-passage-strategy-mcat': t107,
+  'mcat-science-passage-strategy-reading-mcat': t108,
+  'mcat-social-psychology-mcat': t109,
+  'mcat-sociology-culture-socialization-mcat': t110,
+  'mcat-sociology-groups-interaction-mcat': t111,
+  'mcat-sociology-health-disparities-mcat': t112,
+  'mcat-sociology-interaction-organizations-mcat': t113,
+  'mcat-sociology-mcat': t114,
+  'mcat-sociology-structure-stratification-mcat': t115,
+  'mcat-test-day-strategy-format-scoring-mcat': t116,
+  'mcat-test-day-strategy-mcat': t117,
+  'mcat-test-day-strategy-section-specific-mcat': t118,
+  'mcat-test-day-strategy-study-planning-mcat': t119,
+  'mcat-test-day-strategy-test-day-logistics-mcat': t120,
 }

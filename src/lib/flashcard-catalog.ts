@@ -95,10 +95,10 @@ export const MCAT_SUBJECTS: DeckSubject[] = [
     prefixes: ['mcat-physics-'],
     units: [
       { name: 'Mechanics', slugs: ['physics-mechanics', 'physics-mechanics-kinematics', 'physics-mechanics-forces-newton-laws', 'physics-mechanics-work-energy-power', 'physics-mechanics-momentum-collisions'].map(m) },
-      { name: 'Fluids', slugs: ['physics-mechanics-fluids', 'physics-mechanics-fluid-dynamics'].map(m) },
+      { name: 'Fluids', slugs: ['physics-mechanics-fluids', 'physics-mechanics-buoyancy', 'physics-mechanics-fluid-dynamics', 'physics-mechanics-viscosity'].map(m) },
       {
         name: 'Electricity & Circuits',
-        slugs: ['physics-electricity', 'physics-electricity-electrostatics', 'physics-electricity-dc-circuits', 'physics-electricity-kirchhoff-power', 'physics-electricity-emf-capacitors', 'physics-electricity-rc-circuits'].map(m),
+        slugs: ['physics-electricity', 'physics-electricity-electrostatics', 'physics-electricity-electric-fields', 'physics-electricity-electric-potential', 'physics-electricity-dc-circuits', 'physics-electricity-kirchhoff-power', 'physics-electricity-emf-capacitors', 'physics-electricity-rc-circuits'].map(m),
       },
       { name: 'Magnetism', slugs: ['physics-electricity-magnetism', 'physics-electricity-induction'].map(m) },
       { name: 'Waves, Sound & Light', slugs: ['physics-waves-interference', 'physics-waves-sound', 'physics-electricity-optics'].map(m) },

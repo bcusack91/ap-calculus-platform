@@ -75,6 +75,17 @@ describe('applyDeckFigures', () => {
     expect(withBlocks[0].blocks).toEqual(['- FR', '- VR'])
   })
 
+  it('exact: the anchor must be the whole section title, so a part-intro slide that starts with it is skipped', () => {
+    const slides = [c("Coulomb's Law & Superposition", ['part intro']), c("Coulomb's Law", ['the law'])]
+    const out = applyDeckFigures(slides, [{ at: "Coulomb's Law", exact: true, figure: fig }])
+    expect(out.map((s) => s.title)).toEqual(["Coulomb's Law & Superposition", "Coulomb's Law", "Coulomb's Law (cont.)"])
+    expect(out[0].figure).toBeUndefined()
+    expect(out[1].figure).toBe(fig)
+    // Without it the first title that STARTS with the anchor is used, as before.
+    expect(applyDeckFigures(slides, [{ at: "Coulomb's Law", figure: fig }])[0].figure).toBe(fig)
+    expect(() => applyDeckFigures([c("Coulomb's Law & Superposition")], [{ at: "Coulomb's Law", exact: true, figure: fig }])).toThrow(/matches no section/)
+  })
+
   it('never matches a continuation page, and fails loudly when a section is missing', () => {
     expect(() => applyDeckFigures([c('Memory (cont.)')], [{ at: 'Memory', figure: fig }])).toThrow(/matches no section/)
     expect(() => applyDeckFigures([c('Memory')], [{ at: 'Forgetting', figure: fig }])).toThrow(/Forgetting/)

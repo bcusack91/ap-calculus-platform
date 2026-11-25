@@ -483,7 +483,19 @@
     "aamc": [
       "4C"
     ],
-    "tested": "Coulomb's law, electric field and potential, work in fields, capacitors and dielectrics, equipotentials."
+    "tested": "Charge quantization and conservation, conductors and insulators, charging and polarization, Coulomb's law with ratio reasoning, superposition of forces."
+  },
+  "mcat-physics-electricity-electric-fields-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Electric field of point charges and its direction, field superposition and null points, field lines, dipoles, conductors in equilibrium, charges in a uniform field, electrophoresis."
+  },
+  "mcat-physics-electricity-electric-potential-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Electric potential energy and potential (V vs U), work by the field, equipotentials, E = ΔV/d, energy conservation for accelerated charges, electron-volts, membrane potential."
   },
   "mcat-physics-electricity-magnetism-mcat": {
     "aamc": [
@@ -514,13 +526,26 @@
     "aamc": [
       "4B"
     ],
-    "tested": "Density and specific gravity, hydrostatic pressure, gauge vs absolute, Pascal, buoyancy and floating fraction, apparent weight, surface tension."
+    "tested": "Density and specific gravity, hydrostatic pressure and depth, gauge vs absolute pressure, manometers and barometers, Pascal and the hydraulic lift."
+  },
+  "mcat-physics-mechanics-buoyancy-mcat": {
+    "aamc": [
+      "4B"
+    ],
+    "tested": "Archimedes' principle, floating fraction, apparent weight and specific gravity by weighing, surface tension, cohesion and adhesion, capillary rise."
   },
   "mcat-physics-mechanics-fluid-dynamics-mcat": {
     "aamc": [
       "4B"
     ],
-    "tested": "Flow rate, continuity, Bernoulli, Venturi, Torricelli, pitot, viscosity and Poiseuille r^4, turbulence, circulation, stenosis."
+    "tested": "Flow rate and continuity (total area across branches), Bernoulli's equation and its assumptions, Torricelli efflux, Venturi and pitot tubes."
+  },
+  "mcat-physics-mechanics-viscosity-mcat": {
+    "aamc": [
+      "4B",
+      "3B"
+    ],
+    "tested": "Viscosity, laminar vs turbulent flow, Poiseuille r^4 dependence, vascular resistance and the circulation as a circuit (series/parallel beds, arterioles), stenosis regimes."
   },
   "mcat-physics-waves-interference-mcat": {
     "aamc": [

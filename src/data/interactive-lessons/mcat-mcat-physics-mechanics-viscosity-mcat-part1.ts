@@ -1,16 +1,16 @@
 import type { LessonData } from './registry'
 
-export const fluidsInMotionMcatPart2: LessonData = {
-  topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat',
+export const viscosityMcatPart1: LessonData = {
+  topicSlug: 'mcat-physics-mechanics-viscosity-mcat',
   sections: [
     {
       id: 'fl4-intro',
       type: 'text' as const,
-      content: `# Fluids in Motion
+      content: `# Fluids Part 4: Viscosity & Blood Flow
 
-**Part 2 of 2 — Viscosity, Poiseuille & Blood Flow**
+**Part 1 of 1 — Viscosity, Poiseuille & Blood Flow**
 
-Part 1 of this lesson assumed a fluid with no internal friction. Real fluids, blood included, have friction, and that friction is why the heart has to keep pumping.
+**Where this fits.** This is the last of four fluids lessons. *Fluids Part 3: Continuity & Bernoulli* assumed a fluid with no internal friction. Real fluids, blood included, have friction, and that friction is why the heart has to keep pumping. This lesson adds viscosity, Poiseuille's law and blood flow as a circuit.
 
 ### Viscosity: When Fluids Are Real
 
@@ -19,7 +19,7 @@ Part 1 of this lesson assumed a fluid with no internal friction. Real fluids, bl
 - Blood is about 3 to 4 times as viscous as water. Its viscosity rises with **hematocrit**, the fraction of blood volume occupied by red cells: polycythemia (too many red cells) thickens blood, and anemia (too few) thins it.
 - A liquid's viscosity falls as it warms: warm syrup pours easily.
 - **Viscosity costs energy.** Friction between layers turns mechanical energy into heat, so pressure falls steadily along even a uniform, horizontal tube. Bernoulli's equation cannot predict that drop, because it assumes no energy is lost. A pressure difference is needed just to keep a viscous fluid moving at constant speed.
-- **Velocity profile.** In smooth flow through a tube, the fluid touching the wall is at rest and the fluid at the centre moves fastest, giving a bullet-shaped (parabolic) profile. The "speed" in $Q = Av$ is the average across the tube.
+- **Velocity profile.** In smooth flow through a tube, the fluid touching the wall is at rest and the fluid at the center moves fastest, giving a bullet-shaped (parabolic) profile. The "speed" in $Q = Av$ is the average across the tube.
 
 | | Laminar | Turbulent |
 |---|---|---|
@@ -28,6 +28,7 @@ Part 1 of this lesson assumed a fluid with no internal friction. Real fluids, bl
 | Sound | silent | noisy |
 
 - Turbulence becomes more likely with **higher speed**, **larger diameter**, **higher density** and **lower viscosity**. These four factors combine into one dimensionless number, the **Reynolds number** $Re = \\rho v D/\\eta$, where $D$ is the tube diameter: the larger $Re$, the more likely turbulence, and flow turns turbulent above a critical value. Once it does, neither Bernoulli's equation nor Poiseuille's law holds.
+- **Using $Re$.** It has no units; use the DIAMETER, in meters, and the average speed. Blood (density about $1000\\;\\text{kg/m}^3$, viscosity about $4 \\times 10^{-3}$ Pa·s) moving at $0.3\\;\\text{m/s}$ through an aorta $0.02\\;\\text{m}$ across has $Re = (1000)(0.3)(0.02)/(4 \\times 10^{-3}) = 1500$.
 - Blood flow is mostly laminar. Turbulence appears where blood moves fast: past a narrowed valve or vessel, in the aorta during heavy exercise, and in severe anemia (thin blood plus a high cardiac output). It is heard with a stethoscope as a **murmur** over the heart or a **bruit** (a whooshing sound) over an artery.
 - A blood-pressure cuff uses this. When the cuff pressure lies between systolic and diastolic pressure, the squeezed artery snaps open briefly with each beat and the jet is turbulent, making tapping sounds. As the cuff deflates, the sounds begin when cuff pressure falls to systolic and disappear when it falls below diastolic, when flow becomes smooth again.
 
@@ -53,10 +54,11 @@ $$R = \\frac{8\\eta L}{\\pi r^4}$$
 | viscosity doubled | ×2 | ÷2 |
 | $\\Delta P$ doubled | unchanged | ×2 |
 
-- **The fourth power of the radius** is the tested fact. A radius cut of only about 16% halves the flow, because $0.84^4 \\approx 0.5$.
-- If the flow must stay the same (the heart maintaining output), the driving pressure must rise in proportion to the resistance.
+- **The fourth power of the radius** is the tested fact. A radius cut of only about 16% halves the flow, because $0.84^4 \\approx 0.5$. A wider tube wins twice: more area, and more of the fluid far from the wall, where it moves fastest.
+- If the flow must stay the same (the heart maintaining output), the driving pressure must rise in proportion to the resistance: half the radius needs 16 times the pressure.
 - Do not confuse Poiseuille with continuity. Continuity relates speed and area when $Q$ is FIXED; Poiseuille tells you what $Q$ will BE for a given pressure difference and tube.
-- Assumptions: laminar, steady flow of a fluid with constant viscosity through a rigid tube. Vessels flex and blood is a suspension, but the $r^4$ conclusion holds well enough to be the MCAT's favourite.`
+- **Ask what is held fixed.** Fixed pressure: flow goes as $r^4$, average speed as $r^2$. Fixed flow: pressure goes as $1/r^4$, speed as $1/r^2$.
+- Assumptions: laminar, steady flow of a fluid with constant viscosity through a rigid tube. Vessels flex and blood is a suspension, but the $r^4$ conclusion holds well enough to be the MCAT's favorite.`
     },
     {
       id: 'fl4-quiz1',
@@ -102,13 +104,15 @@ $$R = \\frac{8\\eta L}{\\pi r^4}$$
 
 The MCAT rarely asks about pipes; it asks about blood vessels. The physiology is in Part 2 of the *Cardiovascular System* lesson; here is the physics behind it.
 
-- **$Q = \\Delta P/R$ for the whole circuit.** For the systemic circulation, $Q$ is the cardiac output (CO, about 5 L/min at rest), $\\Delta P$ is the mean arterial pressure (MAP, the average pressure in the aorta, about 93 mmHg) minus the near-zero pressure in the right atrium, and $R$ is the total peripheral resistance (TPR) of all the systemic vessels. So $MAP \\approx CO \\times TPR$.
-- **Series and parallel.** Blood passes through vessel types in SERIES (artery, arteriole, capillary, venule, vein): their resistances add, and the same flow $Q$ passes through each level. The organs branch off the aorta in PARALLEL: $1/R_{\\text{total}} = 1/R_1 + 1/R_2 + \\dots$, so the total is lower than any single organ's resistance. Opening more beds lowers TPR; closing or removing one raises it.
-- **Total cross-sectional area sets speed.** Continuity applies to the SUMMED area at each level (worked in Part 1 of this lesson). Each capillary is microscopic, but there are billions of them, so the capillaries have by far the largest total area and the slowest blood (giving time for exchange). The aorta has the smallest total area and the fastest blood, and blood speeds up again as veins merge.
+**Blood flow as a circuit.** Poiseuille's law is Ohm's law for fluids: $\\Delta P = QR$. The pressure difference plays the part of voltage, the flow rate the part of current, and the heart is the battery.
+
+- **$Q = \\Delta P/R$ for the whole circuit.** For the systemic circulation, $Q$ is the cardiac output (CO, about 5 L/min at rest), $\\Delta P$ is the mean arterial pressure (MAP, the average pressure in the aorta, about 93 mmHg) minus the near-zero pressure in the right atrium, and $R$ is the total peripheral resistance (TPR) of all the systemic vessels. So $MAP \\approx CO \\times TPR$, and $TPR = MAP/CO$ comes out in mmHg·min/L.
+- **Series and parallel.** Blood passes through vessel types in SERIES (artery, arteriole, capillary, venule, vein): their resistances add, and the same flow $Q$ passes through each level, so each level's pressure drop is $QR$ and the level with the most resistance takes the largest drop. The organs branch off the aorta in PARALLEL: $1/R_{\\text{total}} = 1/R_1 + 1/R_2 + \\dots$, so the total is lower than any single organ's resistance. Each bed sees the same pressure difference, so its flow is $\\Delta P/R$, and the flows add. Opening more beds lowers TPR; closing or removing one raises it.
+- **Total cross-sectional area sets speed.** Continuity applies to the SUMMED area at each level (worked in *Fluids Part 3: Continuity & Bernoulli*). Each capillary is microscopic, but there are billions of them, so the capillaries have by far the largest total area and the slowest blood (giving time for exchange). The aorta has the smallest total area and the fastest blood, and blood speeds up again as veins merge.
 - **Where pressure falls.** The largest pressure drop is across the **arterioles** (from about 90 to about 35 mmHg). Each capillary is narrower than an arteriole, but so many capillaries sit in parallel that their combined resistance is lower.
-- **Why radius control is so powerful.** Arteriole walls contain smooth muscle, and because $R \\propto 1/r^4$, a small change in radius makes a large change in resistance. Constricting one organ's arterioles also diverts flow to the other parallel beds.
+- **Why radius control is so powerful.** Arteriole walls contain smooth muscle, and because $R \\propto 1/r^4$, a small change in radius makes a large change in resistance. Constricting one organ's arterioles cuts that organ's flow and diverts blood to the other parallel beds.
 - **Viscosity counts too.** A higher hematocrit raises $\\eta$, raising resistance and the heart's workload.
-- **Gravity still applies.** Standing adds $\\rho g h$ to pressures below the heart, as in the *Fluids at Rest* lesson.
+- **Gravity still applies.** Standing adds $\\rho g h$ to pressures below the heart, as in *Fluids Part 1: Density & Pressure*.
 - **Air in the lungs.** Airflow obeys the same $Q = \\Delta P/R$ logic: the pressure difference between the alveoli and the atmosphere drives air through the airways, and airway radius dominates resistance through $r^4$. Narrowing of the airways in asthma therefore sharply cuts airflow. Passages supply the details; reason with $r^4$.
 
 <!-- yield:low -->
@@ -127,7 +131,7 @@ A **stenosis** is an abnormal narrowing of a vessel or valve. Three laws answer 
 
 - **Continuity** applies whenever the flow is known or assumed unchanged, as in a mild stenosis where the body maintains flow.
 - **Bernoulli** fits a SHORT narrowing, where the speed changes quickly and friction in the brief segment is small. It explains the pressure dip in the jet. Downstream, the jet breaks into turbulence, which causes the bruit.
-- **Poiseuille** fits a LONG narrowing, or any question about whether flow can be maintained at a fixed driving pressure. A severe or long stenosis raises resistance steeply, and flow falls.
+- **Poiseuille** fits a LONG narrowing, or any question about whether flow can be maintained at a fixed driving pressure. A severe or long stenosis raises resistance steeply, and flow falls. To put numbers on it, scale only the narrowed LENGTH by $1/r^4$, then add it in series with the rest of the vessel.
 - **The reverse case: an aneurysm** (an abnormal widening of an artery). Continuity says blood slows in the wider segment; Bernoulli says slower blood means higher pressure on the wall there; that pressure stretches the wall further, a vicious cycle that lets an aneurysm keep growing.
 - They do not contradict each other. Continuity assumes $Q$ stays fixed; Poiseuille tells you what it costs (a larger $\\Delta P$) to keep $Q$ fixed, or how far $Q$ falls if $\\Delta P$ cannot rise.
 
@@ -146,13 +150,30 @@ Then ask three follow-up questions: a single tube or a branching network (use to
     {
       id: 'fl4-worked',
       type: 'text' as const,
-      content: `### Worked Example — Grading a Stenosis
+      content: `### Worked Example — The Circulation as a Circuit
+
+**Problem.** A resting patient has a cardiac output of $5\\;\\text{L/min}$ and a mean arterial pressure of $90\\;\\text{mmHg}$; take the right atrial pressure as zero. Resistances are in mmHg·min/L, and the arterioles supply 11 of the total.
+
+- **(a)** What is the total peripheral resistance?
+- **(b)** How much pressure is lost across the arterioles?
+- **(c)** Two organs in parallel, with resistances of 30 and 60, each see the full $90\\;\\text{mmHg}$. What flow does each receive, and what is their combined resistance?
+- **(d)** The first organ's resistance lies in its arterioles, which widen by about 19% in radius. What is its new flow?
+
+**(a) Whole circuit.** $TPR = MAP/CO = 90/5 = 18$ mmHg·min/L.
+
+**(b) Series drop.** The same $5\\;\\text{L/min}$ passes through every level, so the arterioles take $QR = (5)(11) = 55\\;\\text{mmHg}$ of the 90.
+
+**(c) Parallel beds.** The same $\\Delta P$ acts on each: $90/30 = 3\\;\\text{L/min}$ and $90/60 = 1.5\\;\\text{L/min}$, together $4.5\\;\\text{L/min}$. Combined, $R = 90/4.5 = 20$, below either one ($1/30 + 1/60 = 1/20$).
+
+**(d) Radius acts through the fourth power.** $1.19^4 \\approx 2$, so the resistance halves from 30 to 15 and the flow doubles to $90/15 = 6\\;\\text{L/min}$.
+
+### Worked Example — Grading a Stenosis
 
 **Problem.** A carotid ultrasound shows peak blood speed rising from $60\\;\\text{cm/s}$ upstream to $240\\;\\text{cm/s}$ inside a short stenosis. Take blood's density as $1000\\;\\text{kg/m}^3$ and $1\\;\\text{mmHg} \\approx 133\\;\\text{Pa}$.
 
 - **(a)** By how much has the vessel's radius (and diameter) been reduced?
 - **(b)** How much lower is the pressure in the jet, in mmHg?
-- **(c)** If the narrowing were long rather than short, how would each centimetre of it compare in resistance with a normal centimetre of the vessel?
+- **(c)** If the narrowing were long rather than short, how would each centimeter of it compare in resistance with a normal centimeter of the vessel?
 - **(d)** What happens to the blood just beyond the stenosis, and how is it detected?
 
 **(a) Continuity, run backwards.** At roughly constant flow, a 4-fold rise in speed means the area has fallen to one-quarter ($A \\propto 1/v$). Since $A \\propto r^2$, the radius is HALVED: a 50% reduction in diameter.
@@ -163,7 +184,7 @@ $$\\Delta P = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = \\tfrac{1}{2}(1000)(5.76 - 0.3
 
 That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 
-**(c) Poiseuille's warning.** With the radius halved, from (a), and $R \\propto 1/r^4$, each centimetre would have $2^4 = 16$ times the resistance of a normal centimetre of the vessel. "Half the diameter" sounds mild; to a viscous fluid it is severe.
+**(c) Poiseuille's warning.** With the radius halved, from (a), and $R \\propto 1/r^4$, each centimeter would have $2^4 = 16$ times the resistance of a normal centimeter of the vessel. "Half the diameter" sounds mild; to a viscous fluid it is severe.
 
 **(d) Downstream.** The fast jet becomes turbulent beyond the stenosis, and the turbulence is heard as a bruit.`
     },
@@ -193,6 +214,20 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
             correctAnswer: 3,
             yield: 'HIGH',
             explanation: `Parallel resistances combine to a total LOWER than any one branch, so removing a branch raises the total: TPR rises. With $MAP \\approx CO \\times TPR$ and CO unchanged, MAP rises too. Saying TPR goes down treats the beds as if they were in series, where removing one would lower the total, and any pairing with opposite changes in TPR and MAP contradicts $MAP \\approx CO \\times TPR$ at fixed CO.`
+          },
+          {
+            question: `A model of the systemic circuit has three levels in series: arteries (resistance 2 mmHg·min/L), arterioles (12 mmHg·min/L) and all the remaining vessels (6 mmHg·min/L). With a cardiac output of $5\\;\\text{L/min}$, how much pressure is lost across the arterioles?`,
+            options: [`$100\\;\\text{mmHg}$`, `$17\\;\\text{mmHg}$`, `$60\\;\\text{mmHg}$`, `$2.4\\;\\text{mmHg}$`],
+            correctAnswer: 2,
+            yield: 'HIGH',
+            explanation: `In series the same flow passes through every level, so each level's pressure drop is $\\Delta P = QR$: $(5)(12) = 60\\;\\text{mmHg}$ across the arterioles. 100 mmHg is the drop across the whole circuit, $5 \\times 20$; 2.4 mmHg divides the resistance by the flow; 17 mmHg adds the two numbers.`
+          },
+          {
+            question: `Two vascular beds branch in parallel from the same artery and drain into the same vein, with a pressure difference of $80\\;\\text{mmHg}$ across them. Their resistances are 20 and 80 mmHg·min/L. What total flow passes through the pair?`,
+            options: [`$0.8\\;\\text{L/min}$`, `$5\\;\\text{L/min}$`, `$4\\;\\text{L/min}$`, `$1\\;\\text{L/min}$`],
+            correctAnswer: 1,
+            yield: 'HIGH',
+            explanation: `Parallel beds share the same pressure difference, so each carries $Q = \\Delta P/R$: $80/20 = 4\\;\\text{L/min}$ and $80/80 = 1\\;\\text{L/min}$, and the flows add to $5\\;\\text{L/min}$. 0.8 L/min adds the resistances as if the beds were in series, and 4 L/min or 1 L/min counts only one bed.`
           }
         ]
       }
@@ -204,7 +239,7 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 
 - **Viscosity costs pressure.** Internal friction makes pressure fall along even a uniform tube, a drop Bernoulli cannot see.
 - **Poiseuille's fourth power.** $Q = \\pi\\Delta P r^4/(8\\eta L)$ and $R = 8\\eta L/(\\pi r^4)$: double the radius, 16 times the flow.
-- **Circulation as a circuit.** $MAP \\approx CO \\times TPR$; parallel beds keep TPR low, and the arterioles take the largest pressure drop.
+- **Circulation as a circuit.** $\\Delta P = QR$, so $MAP \\approx CO \\times TPR$; parallel beds keep TPR low, and the arterioles take the largest drop.
 - **Grading a stenosis.** Faster (continuity), lower jet pressure (Bernoulli), higher resistance (Poiseuille), then a turbulent bruit.
 
 **Common traps**
@@ -218,7 +253,9 @@ That is $2700/133 \\approx 20\\;\\text{mmHg}$ lower in the jet.
 **Low-yield extras**
 
 - the critical Reynolds number (about 2000); the Korotkoff name; airway resistance peaking in the medium bronchi; the Fåhræus–Lindqvist effect.
-<!-- /yield -->`
+<!-- /yield -->
+
+**Next up:** the *Waves & Interference* lesson — periodic motion, the wave equation, and superposition and standing waves.`
     }
   ]
 }

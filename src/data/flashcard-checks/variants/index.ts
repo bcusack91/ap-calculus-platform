@@ -17,9 +17,12 @@ import { variants as v14 } from './mcat-physics-electricity-kirchhoff-power-mcat
 import { variants as v15 } from './mcat-physics-electricity-kirchhoff-power-mcat.p2'
 import { variants as v16 } from './mcat-physics-electricity-rc-circuits-mcat.p1'
 import { variants as v17 } from './mcat-physics-electricity-rc-circuits-mcat.p2'
-import { variants as v18 } from './mcat-physics-mechanics-fluid-dynamics-mcat.p1'
-import { variants as v19 } from './mcat-physics-mechanics-fluids-mcat.p1'
-import { variants as v20 } from './mcat-physics-mechanics-fluids-mcat.p2'
+import { variants as v18 } from './mcat-physics-mechanics-buoyancy-mcat.p1'
+import { variants as v19 } from './mcat-physics-mechanics-buoyancy-mcat.p2'
+import { variants as v20 } from './mcat-physics-mechanics-fluid-dynamics-mcat.p1'
+import { variants as v21 } from './mcat-physics-mechanics-fluids-mcat.p1'
+import { variants as v22 } from './mcat-physics-mechanics-fluids-mcat.p2'
+import { variants as v23 } from './mcat-physics-mechanics-viscosity-mcat.p1'
 
 /**
  * Further check questions per card, by set (a topic slug or a video deck key).
@@ -34,6 +37,8 @@ export const VARIANTS: Record<string, Record<string, CardCheckVariants>> = {
   'mcat-physics-electricity-emf-capacitors-mcat': { ...v13 },
   'mcat-physics-electricity-kirchhoff-power-mcat': { ...v14, ...v15 },
   'mcat-physics-electricity-rc-circuits-mcat': { ...v16, ...v17 },
-  'mcat-physics-mechanics-fluid-dynamics-mcat': { ...v18 },
-  'mcat-physics-mechanics-fluids-mcat': { ...v19, ...v20 },
+  'mcat-physics-mechanics-buoyancy-mcat': { ...v18, ...v19 },
+  'mcat-physics-mechanics-fluid-dynamics-mcat': { ...v20 },
+  'mcat-physics-mechanics-fluids-mcat': { ...v21, ...v22 },
+  'mcat-physics-mechanics-viscosity-mcat': { ...v23 },
 }

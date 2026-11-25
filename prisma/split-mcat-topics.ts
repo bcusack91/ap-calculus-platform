@@ -59,7 +59,7 @@ config({ path: process.env.SEED_DB === 'prod' ? '.env' : '.env.local', override:
 import fs from 'node:fs'
 import path from 'node:path'
 import { PrismaClient, type ExamYield, type ProgressStatus } from '@prisma/client'
-import { MCAT_PART_SPLITS, MCAT_SPLIT_TITLES, MCAT_SPLIT_TOPICS } from '../src/lib/mcat-topic-split'
+import { MCAT_PART_SPLITS, MCAT_SPLIT_TITLES, MCAT_SPLIT_TOPICS, partSplitAdds } from '../src/lib/mcat-topic-split'
 import { fingerprint } from '../src/lib/flashcard-yield-artifact'
 import { SUCCESSOR_META } from './split-mcat-topics.meta'
 
@@ -79,9 +79,12 @@ const PART_MOVES: { from: string; to: string }[] = [
   { from: 'mcat-physics-electricity-dc-circuits-mcat', to: 'mcat-physics-electricity-kirchhoff-power-mcat' },
   { from: 'mcat-physics-electricity-emf-capacitors-mcat', to: 'mcat-physics-electricity-rc-circuits-mcat' },
   { from: 'mcat-physics-mechanics-fluids-mcat', to: 'mcat-physics-mechanics-fluid-dynamics-mcat' },
+  // Fluids into four (Nov 2026): each of the two fluids topics gave its second lesson part away.
+  { from: 'mcat-physics-mechanics-fluids-mcat', to: 'mcat-physics-mechanics-buoyancy-mcat' },
+  { from: 'mcat-physics-mechanics-fluid-dynamics-mcat', to: 'mcat-physics-mechanics-viscosity-mcat' },
   { from: 'mcat-physics-waves-sound-mcat', to: 'mcat-physics-waves-interference-mcat' },
   // Part splits (Nov 2026): the kept topic's pre-split credit covers the new half too.
-  ...MCAT_PART_SPLITS.map(({ keep, add }) => ({ from: keep, to: add })),
+  ...MCAT_PART_SPLITS.flatMap((split) => partSplitAdds(split).map((to) => ({ from: split.keep, to }))),
 ]
 
 /**
@@ -92,7 +95,7 @@ const PART_MOVES: { from: string; to: string }[] = [
 type Family = { key: string; oldSlug: string | null; successors: readonly string[] }
 const FAMILIES: Family[] = [
   ...Object.entries(MCAT_SPLIT_TOPICS).map(([old, successors]) => ({ key: old, oldSlug: old, successors })),
-  ...MCAT_PART_SPLITS.map(({ keep, add }) => ({ key: keep, oldSlug: null, successors: [keep, add] })),
+  ...MCAT_PART_SPLITS.map((split) => ({ key: split.keep, oldSlug: null, successors: [split.keep, ...partSplitAdds(split)] })),
 ]
 
 type NewCard = { front: string; back: string; hint?: string; yield: ExamYield; part?: number }

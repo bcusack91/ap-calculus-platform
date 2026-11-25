@@ -219,7 +219,7 @@ ${T(892, 282, 14, 'r/2', 'middle')}
 ${T(880, 236, 15, 'A = πr²', 'middle')}
 ${T(880, 334, 15, 'A/4', 'middle')}
 ${T(880, 380, 16, '¼ area ⇒ 4× speed', 'middle', '700')}
-${T(410, 405, 18, '(10 cm²)(1 m/s) = (2 cm²)(5 m/s) = 10 cm³/s', 'middle')}
+${T(410, 405, 18, '(10 cm²)(1 m/s) = (2 cm²)(5 m/s) = 1000 cm³/s = 1 L/s', 'middle')}
 <g class="fig-muted">${T(410, 440, 15, 'continuity converts AREAS into SPEEDS — it says nothing about pressure (that is Bernoulli)', 'middle')}</g>
 </svg>`
 
@@ -488,7 +488,7 @@ const fluidsWavesFigures: DeckFigurePlacement[] = [
     figure: {
       svg: continuitySvg,
       alt:
-        'A horizontal pipe that narrows from a wide section (A₁ = 10 cm²) through a taper to a narrow section (A₂ = 2 cm²), with grey streamlines that converge where the pipe narrows. A short red velocity arrow in the wide part is labelled v₁ = 1 m/s and a long red arrow in the narrow part v₂ = 5 m/s. Heading: Q = A₁v₁ = A₂v₂ — the same volume per second everywhere; below: (10 cm²)(1 m/s) = (2 cm²)(5 m/s) = 10 cm³/s. At the right, two cross-section circles of radius r (A = πr²) and r/2 (A/4) with the note ¼ area ⇒ 4× speed. Footnote: continuity converts areas into speeds — it says nothing about pressure (that is Bernoulli).',
+        'A horizontal pipe that narrows from a wide section (A₁ = 10 cm²) through a taper to a narrow section (A₂ = 2 cm²), with grey streamlines that converge where the pipe narrows. A short red velocity arrow in the wide part is labelled v₁ = 1 m/s and a long red arrow in the narrow part v₂ = 5 m/s. Heading: Q = A₁v₁ = A₂v₂ — the same volume per second everywhere; below: (10 cm²)(1 m/s) = (2 cm²)(5 m/s) = 1000 cm³/s = 1 L/s. At the right, two cross-section circles of radius r (A = πr²) and r/2 (A/4) with the note ¼ area ⇒ 4× speed. Footnote: continuity converts areas into speeds — it says nothing about pressure (that is Bernoulli).',
       caption: 'Continuity: volumetric flow Q is the same everywhere, so a narrowing pipe forces the fluid to speed up — worked-example numbers, schematic.',
     },
     blocks: [
