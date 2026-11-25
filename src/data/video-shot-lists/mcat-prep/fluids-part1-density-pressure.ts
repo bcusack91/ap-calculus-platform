@@ -2,7 +2,7 @@ import type { ShotList } from '../types'
 
 /**
  * Shot list: MCAT Physics — Fluids Part 1: Density & Pressure
- * (topic mcat-physics-mechanics-fluids-mcat, "Fluids at Rest"; the first of four Fluids video parts).
+ * (topic mcat-physics-mechanics-fluids-mcat, "Fluids Part 1: Density & Pressure"; the first of four Fluids video parts).
  *
  * Source: lesson Part 1 only (src/data/interactive-lessons/mcat-mcat-physics-mechanics-fluids-mcat-part1.ts),
  * its deck figures (hydrostatic pressure and Pascal's lift in src/data/deck-figures/mcat-cp-fluids-waves.ts;

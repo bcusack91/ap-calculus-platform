@@ -8,7 +8,7 @@ export const FIG = {
     'One loop: a 30 V battery, + terminal at the top, feeds 3 Ω, 5 Ω and 7 Ω resistors in series along the top wire; the − terminal is grounded at 0 V.',
   ),
   v2_ex2: twoSourceLoop(
-    'One loop with a 12 V battery on the left (+ on top) and a 4 V battery on the right (+ on the bottom, so it pushes the opposite way), a 2 Ω resistor on the top wire and a 6 Ω resistor on the bottom wire.',
+    'One loop with a 12 V battery on the left (+ on top) and a 4 V battery on the right (+ also on top, so it pushes the opposite way around the loop), a 2 Ω resistor on the top wire and a 6 Ω resistor on the bottom wire.',
   ),
   // Video 3: networks and dividers (practice)
   v3_nodes_1: network(

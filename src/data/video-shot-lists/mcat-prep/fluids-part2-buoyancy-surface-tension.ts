@@ -2,7 +2,7 @@ import type { ShotList } from '../types'
 
 /**
  * Shot list: MCAT Physics — Fluids Part 2: Buoyancy & Surface Tension
- * (topic mcat-physics-mechanics-fluids-mcat, "Fluids at Rest"; the second of four Fluids video parts).
+ * (topic mcat-physics-mechanics-buoyancy-mcat, "Fluids Part 2: Buoyancy & Surface Tension"; the second of four Fluids video parts).
  *
  * Source: lesson part 2 (src/data/interactive-lessons/mcat-mcat-physics-mechanics-fluids-mcat-part2.ts),
  * its deck figures (the Archimedes, specific-gravity/hydrometer and capillary figures in
@@ -39,7 +39,7 @@ import type { ShotList } from '../types'
  */
 export const shotList: ShotList = {
   courseSlug: 'mcat-prep',
-  topicSlug: 'mcat-physics-mechanics-fluids-mcat',
+  topicSlug: 'mcat-physics-mechanics-buoyancy-mcat',
   title: 'Fluids Part 2: Buoyancy & Surface Tension',
   overview:
     'Eight animated clips in four pairs that take a fluid at rest from "pressure grows with depth" to everything that floats, sinks or sits on a surface: where the buoyant force comes from and why it equals the weight of the displaced fluid, how much of a floating object lies below the surface, what a scale reads when an object hangs under water, and how cohesion and adhesion produce surface tension, capillary action and the need for surfactant in the lungs. Each idea gets a concept clip followed by a worked-examples clip in which every problem is shown in full, with a moment to pause and try it before the solution. The buoyancy clips are cut into sections so that an introductory physics course can reuse them; the surface-tension pair carries the biology. Each clip ends with three checkpoint questions; the topic exit quiz follows the last clip.',

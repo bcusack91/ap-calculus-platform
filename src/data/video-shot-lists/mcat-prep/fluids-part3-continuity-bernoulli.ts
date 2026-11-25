@@ -2,11 +2,11 @@ import type { ShotList } from '../types'
 
 /**
  * Shot list: MCAT Physics — Fluids Part 3: Continuity & Bernoulli
- * (topic mcat-physics-mechanics-fluid-dynamics-mcat, "Fluids in Motion"; the third of
+ * (topic mcat-physics-mechanics-fluid-dynamics-mcat, "Fluids Part 3: Continuity & Bernoulli"; the third of
  * four Fluids video parts).
  *
  * Source: lesson Part 1 only (src/data/interactive-lessons/mcat-mcat-physics-mechanics-fluid-dynamics-mcat-part1.ts),
- * its deck figures (FL_ALL at FLUIDS_IN_MOTION_AT in src/data/deck-figures/index.ts) and
+ * its deck figures (FL_ALL at FLUID_DYNAMICS_AT in src/data/deck-figures/index.ts) and
  * its lesson-built exit pool. Lesson Part 2 (viscosity, Poiseuille, blood-flow
  * resistance, grading a stenosis) belongs to Fluids Part 4 and is not taught here.
  * Eight Manim clips in four pairs (owner format, Nov 2026): a CONCEPT clip that teaches

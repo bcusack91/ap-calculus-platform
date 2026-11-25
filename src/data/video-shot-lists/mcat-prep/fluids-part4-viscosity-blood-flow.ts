@@ -2,10 +2,10 @@ import type { ShotList } from '../types'
 
 /**
  * Shot list: MCAT Physics — Fluids Part 4: Viscosity & Blood Flow
- * (topic mcat-physics-mechanics-fluid-dynamics-mcat, "Fluids in Motion"; the last of four Fluids video parts).
+ * (topic mcat-physics-mechanics-viscosity-mcat, "Fluids Part 4: Viscosity & Blood Flow"; the last of four Fluids video parts).
  *
  * Source: lesson Part 2 (src/data/interactive-lessons/mcat-mcat-physics-mechanics-fluid-dynamics-mcat-part2.ts),
- * its deck figures (FL_ALL at FLUIDS_IN_MOTION_AT in src/data/deck-figures/index.ts) and its
+ * its deck figures (FL_ALL at VISCOSITY_AT in src/data/deck-figures/index.ts) and its
  * lesson-built exit pool (the part-2 items of src/data/exit-quizzes/lesson-built/mcat-physics-mechanics-fluid-dynamics-mcat.ts).
  * Eight Manim clips in four pairs (owner format, Nov 2026): a CONCEPT clip that teaches the
  * idea and ends on the "Remember" recap, then a WORKED-EXAMPLES clip with two examples, each
@@ -34,7 +34,7 @@ import type { ShotList } from '../types'
  */
 export const shotList: ShotList = {
   courseSlug: 'mcat-prep',
-  topicSlug: 'mcat-physics-mechanics-fluid-dynamics-mcat',
+  topicSlug: 'mcat-physics-mechanics-viscosity-mcat',
   title: 'Fluids Part 4: Viscosity & Blood Flow',
   overview:
     'Eight animated clips in four pairs that take fluids from the ideal to the real: what viscosity is and why it costs pressure, how Poiseuille\'s law ties flow to the fourth power of a tube\'s radius, how the circulation works as a circuit with the heart as its battery, and how to choose the right law for a narrowed vessel. Each idea gets a concept clip followed by a worked-examples clip in which every problem is shown in full, with a moment to pause and try it before the solution. The clips assume the flow rate, continuity and Bernoulli ideas from Fluids Part 3 and the series and parallel rules from the Circuits videos. The biology runs deep here: hematocrit, murmurs and bruits, the blood-pressure cuff, cardiac output and total peripheral resistance, arterioles as the body\'s control valves, stenoses and aneurysms. Each clip ends with three checkpoint questions; the topic exit quiz follows the last clip.',

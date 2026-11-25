@@ -207,10 +207,11 @@ export function twoSourceLoop(alt: string): QuestionFigure {
   const parts = [
     LINE(xL, top, xL, 144), LINE(xL, 156, xL, bot), BATV(xL, 150),
     T(xL - 34, 146, 17, '+', 'middle', '700'), T(xL - 34, 168, 19, '−', 'middle', '700'), T(xL - 50, 156, 19, '12 V', 'end', '700'),
-    // Right battery reversed: long (+) plate BELOW, short (−) plate above.
+    // Right battery opposes the left one: its + plate is ALSO on top, so going
+    // clockwise the loop enters it at + and leaves at − (a 4 V drop).
     LINE(xR, top, xR, 144), LINE(xR, 156, xR, bot),
-    `<path d="M${xR - 9} ${144} L${xR + 9} ${144}" stroke="currentColor" stroke-width="5.5"/><path d="M${xR - 18} ${156} L${xR + 18} ${156}" stroke="currentColor" stroke-width="3"/>`,
-    T(xR + 34, 146, 19, '−', 'middle', '700'), T(xR + 34, 170, 17, '+', 'middle', '700'), T(xR + 46, 156, 19, '4 V', 'start', '700'),
+    BATV(xR, 150),
+    T(xR + 34, 146, 17, '+', 'middle', '700'), T(xR + 34, 168, 19, '−', 'middle', '700'), T(xR + 46, 156, 19, '4 V', 'start', '700'),
     LINE(xL, top, 190, top), RES(190, top, 390, top), LINE(390, top, xR, top), T(290, top - 18, 17, '2 Ω', 'middle'),
     LINE(xL, bot, 190, bot), RES(190, bot, 390, bot), LINE(390, bot, xR, bot), T(290, bot + 30, 17, '6 Ω', 'middle'),
   ]
