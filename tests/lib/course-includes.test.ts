@@ -222,7 +222,8 @@ describe('guard: course topic queries go through course-includes', () => {
       if (ALLOWED_COURSE_QUERIES[f]) continue
       const lines = fs.readFileSync(f, 'utf8').split('\n')
       lines.forEach((line, i) => {
-        if (/course:\s*\{\s*slug\s*:/.test(line) && !/coursesIn\(/.test(line)) offenders.push(`${f}:${i + 1}: ${line.trim()}`)
+        // `course: { slug: string … }` is a TYPE declaration (topic-sequence.ts TopicNeighbors), not a query.
+        if (/course:\s*\{\s*slug\s*:/.test(line) && !/coursesIn\(/.test(line) && !/course:\s*\{\s*slug\s*:\s*string\b/.test(line)) offenders.push(`${f}:${i + 1}: ${line.trim()}`)
       })
     }
     expect(offenders).toEqual([])

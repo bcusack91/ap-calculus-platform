@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { REAL_PLAYER_PROFILE } from '@/lib/ai-opponent'
 import { NextResponse } from 'next/server'
 import { publicDisplayName } from '@/lib/display-name'
 import { cached } from '@/lib/redis'
@@ -11,7 +12,7 @@ export const revalidate = 3600 // 1 hour
 // Falls through to a direct query when Redis isn't configured.
 async function computeLeaderboard() {
   const profiles = await prisma.competitiveProfile.findMany({
-    where: { totalMatches: { gte: 1 } },
+    where: { totalMatches: { gte: 1 }, ...REAL_PLAYER_PROFILE },
     orderBy: { overallMMR: 'desc' },
     take: 100,
     select: {

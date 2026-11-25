@@ -17,3 +17,15 @@
 export function isAIOpponent(userId: string, email?: string | null): boolean {
   return email === 'ai-opponent@studyai.com' || userId === 'ai-bot'
 }
+
+/**
+ * The practice bots' accounts (AI Practice Bot, AI Teammate, AI Opponent 2)
+ * all use this domain. They play practice matches, so they build up MMR, but
+ * they are not competitors: rankings leave them out.
+ */
+export const AI_BOT_EMAIL_DOMAIN = '@studyai.com'
+
+/** Prisma `where` fragment for a CompetitiveProfile that belongs to a real player, not a bot. */
+export const REAL_PLAYER_PROFILE = {
+  user: { NOT: { email: { endsWith: AI_BOT_EMAIL_DOMAIN } } },
+} as const

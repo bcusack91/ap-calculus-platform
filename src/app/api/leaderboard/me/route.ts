@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { REAL_PLAYER_PROFILE } from '@/lib/ai-opponent'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 
@@ -29,7 +30,7 @@ export async function GET() {
     // Position = players strictly above this MMR + 1 (ties share a position,
     // which is the friendliest reading for the viewer).
     const higher = await prisma.competitiveProfile.count({
-      where: { totalMatches: { gte: 1 }, overallMMR: { gt: profile.overallMMR } },
+      where: { totalMatches: { gte: 1 }, overallMMR: { gt: profile.overallMMR }, ...REAL_PLAYER_PROFILE },
     })
 
     return NextResponse.json({

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { REAL_PLAYER_PROFILE } from '@/lib/ai-opponent'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { Trophy, Gamepad2 } from 'lucide-react'
@@ -97,7 +98,7 @@ function PodiumSpot({ entry }: { entry: Entry }) {
 
 export default async function LeaderboardPage() {
   const profiles = await prisma.competitiveProfile.findMany({
-    where: { totalMatches: { gte: 1 } },
+    where: { totalMatches: { gte: 1 }, ...REAL_PLAYER_PROFILE },
     orderBy: { overallMMR: 'desc' },
     take: 100,
     select: {
