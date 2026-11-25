@@ -34,13 +34,13 @@ $$\\boxed{\\text{Only method: separation of variables + integration}}$$`
           },
           {
             question: 'For $y\' = (3 - y)$, as $t \\to \\infty$ with $y(0) = 0$:',
-            options: ['$y \\to 3$ (stable equilibrium)', '$y \\to 0$', '$y \\to \\infty$', '$y \\to -3$'],
+            options: ['$y \\to 3$', '$y \\to 0$', '$y \\to \\infty$', '$y \\to -3$'],
             correctAnswer: 0,
             explanation: '$y\' = 3 - y > 0$ when $y < 3$. The solution increases toward $y = 3$. Solve: $y = 3(1 - e^{-t})$.'
           },
           {
             question: 'To verify $y = \\sin x$ solves $y\'\' + y = 0$:',
-            options: ['$y\' = \\cos x$, $y\'\' = -\\sin x$. Then $-\\sin x + \\sin x = 0$ ✓', 'Integrate $y\'\' + y$ and check if you get $\\sin x$', 'Plot both sides', 'This cannot be verified algebraically'],
+            options: ['Differentiate twice, substitute into $y\'\' + y$, and check for $0$', 'Integrate $y\'\' + y$ and check if you get $\\sin x$', 'Plot both sides', 'This cannot be verified algebraically'],
             correctAnswer: 0,
             explanation: 'Compute $y\'\'$ and substitute into the DE. Both sides equal zero.'
           }
@@ -61,7 +61,7 @@ $$\\boxed{\\text{Only method: separation of variables + integration}}$$`
           },
           {
             question: 'Which is NOT separable?',
-            options: ['$y\' = x + y$ (sum, not product)', '$y\' = xy$', '$y\' = x/y$', '$y\' = y\\cos x$'],
+            options: ['$y\' = x + y$', '$y\' = xy$', '$y\' = x/y$', '$y\' = y\\cos x$'],
             correctAnswer: 0,
             explanation: '$x + y$ cannot be written as $g(x) \\cdot h(y)$.'
           }

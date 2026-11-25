@@ -169,12 +169,12 @@ For $y = -2(x-3)^2+7$:
             correctAnswer: 1
           },
           {
-            label: '$y = -3\\sqrt{x+2}-5$: the graph opens:',
-            options: ['Upward', 'Downward (reflected)', 'Left', 'Right'],
+            label: '$y = -3\\sqrt{x+2}-5$: starting at $(-2, -5)$ and moving right, the graph goes:',
+            options: ['Upward', 'Downward', 'Neither (it stays level)', 'Up, then back down'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Horizontal shift', 'Vertical stretch/reflect', 'Applied in reverse', 'Downward (reflected)'],
+        correctAnswers: ['Horizontal shift', 'Vertical stretch/reflect', 'Applied in reverse', 'Downward'],
         hint1: '$h$ appears in $(x-h)$: horizontal.',
         hint2: '$a$ multiplies the whole function: vertical.',
         hint3: 'Inside = horizontal = reversed.',

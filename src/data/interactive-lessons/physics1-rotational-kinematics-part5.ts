@@ -121,7 +121,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
 
 1) Three masses (2 kg each) are arranged on a light rod at distances 0.1 m, 0.3 m, and 0.5 m from the rotation axis. What is the total rotational inertia? (in $kg\\cdot m^{2}$, round to 3 significant figures)
 
-2) A solid disk has mass 4 kg and radius 0.3 m. What is its rotational inertia about its central axis? $(in kg\\cdot m^{2})$
+2) A solid disk has mass 4 kg and radius 0.3 m. What is its rotational inertia about its central axis? (in $kg\\cdot m^{2}$)
 
 3) A solid sphere has $I = 0.8$ $kg\\cdot m^{2}$ and radius 0.2 m. What is its mass? (in kg)
       `,

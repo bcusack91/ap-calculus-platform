@@ -60,12 +60,12 @@ This is a general principle: for rare recessive disorders, **most copies of the 
             question: 'What is the probability that a randomly selected healthy person from this population is a PKU carrier?',
             options: [
               '0.0582',
-              '0.0584',
+              '0.0583',
               '0.0300',
               '0.9409'
             ],
             correctAnswer: 1,
-            explanation: 'Here $q^{2}$ = 0.0009, so q = 0.03 and p = 0.97. Among healthy individuals (PP + Pp), the probability of being a carrier is 2pq / $(p^{2} + 2pq)$ = 0.0582 / (0.9409 + 0.0582) = 0.0582/0.9991 ≈ 0.0584, or about 1 in 17. The value 0.0582 is the carrier frequency in the WHOLE population (2pq), before restricting to healthy people.'
+            explanation: 'Here $q^{2}$ = 0.0009, so q = 0.03 and p = 0.97. Among healthy individuals (PP + Pp), the probability of being a carrier is 2pq / $(p^{2} + 2pq)$ = 0.0582 / (0.9409 + 0.0582) = 0.0582/0.9991 ≈ 0.0583, or about 1 in 17. The value 0.0582 is the carrier frequency in the WHOLE population (2pq), before restricting to healthy people.'
           }
         ]
       }

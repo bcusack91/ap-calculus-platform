@@ -305,7 +305,7 @@ for the same $n$, $P$, and $T$. The gas cannot be squeezed as small as an ideal 
             explanation: 'At very high pressures, the finite volume of the gas molecules themselves becomes significant. Because the particles take up space that the ideal gas law ignores, the actual volume exceeds the ideal prediction.'
           },
           {
-            question: 'On the AP Chemistry exam, a student is given P in kPa, V in L, T in K, and is asked to find n. Which value of R should they use?',
+            question: 'On the AP Chemistry exam, a student is given P in kPa, V in L, T in K, and is asked to find n. Which value of R lets them use these units directly, with no conversion?',
             options: [
               '0.0821 L·atm/(mol·K)',
               '8.314 L·kPa/(mol·K)',

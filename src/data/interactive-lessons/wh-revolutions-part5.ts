@@ -160,17 +160,17 @@ The formula: selectively adopt Western technology and institutions while preserv
           {
             label: 'The Meiji formula of adopting Western technology while preserving Japanese culture was called ___',
             options: [
-            'Wakon yōsai (Japanese spirit, Western techniques)',
+            'Wakon yōsai',
             'Realpolitik',
             'Social Darwinism',
-            'Selective borrowing',
+            'Self-Strengthening',
             ]
           }
         ],
         correctAnswers: [
           'The Iwakura Mission',
           'Russia',
-          'Wakon yōsai (Japanese spirit, Western techniques)',
+          'Wakon yōsai',
         ],
         hint1: '1871-1873 — Japanese officials — studied USA Britain France Germany Russia — selective adoption',
         hint2: 'Russo-Japanese War 1904-05 — first Asian defeat of European great power — shocked world',
@@ -187,7 +187,7 @@ The formula: selectively adopt Western technology and institutions while preserv
           {
             question: 'Comparing Japan\'s Meiji modernization to Latin American independence movements reveals:',
             options: [
-              'Japan won both political and economic independence, but Latin America stayed dependent on Western markets',
+              'Japan kept its political independence and gained economic autonomy, but Latin America stayed dependent on Western markets',
               'Japan and Latin America won the same kind of independence, both political and economic, from Western powers',
               'Latin American modernization succeeded more fully than Japan\'s, giving its new states stronger industries by 1900',
               'Both avoided Western influence altogether, building their states on purely indigenous models and institutions',

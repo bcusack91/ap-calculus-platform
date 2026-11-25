@@ -63,7 +63,7 @@ Rules for electric field lines:
 
 1) The number of lines is proportional to charge. If $+q$ is drawn with 4 lines, how many lines should $+2q$ have?
 
-2) At a point where field lines are absent, the field strength is ___ N/C.
+2) In a whole region that no field lines enter (such as the interior of a conductor in equilibrium), the field strength is ___ N/C.
 
 3) A $+2q$ charge has 8 field lines. A $-q$ charge has 4 field lines entering. How many lines escape to infinity?
     
@@ -72,9 +72,9 @@ Rules for electric field lines:
         boxes: 3,
         correctAnswers: ["8","0","4"],
         hint1: "Proportional to charge: $2 \\times 4$.",
-        hint2: "No field lines means no field.",
+        hint2: "A region no field lines enter has no field. (A gap between drawn lines is NOT zero field; the drawing only samples the field.)",
         hint3: "8 leave, 4 end on $-q$, so $8 - 4 = ?$ escape.",
-        explanation: "1) $2 \\times 4 = 8$ lines. 2) 0 N/C. 3) 8 lines leave $+2q$ and 4 end on $-q$, so $8 - 4 = 4$ lines escape to infinity."
+        explanation: "1) $2 \\times 4 = 8$ lines. 2) 0 N/C: a region that no lines enter has zero field, but a mere gap between drawn lines does not. 3) 8 lines leave $+2q$ and 4 end on $-q$, so $8 - 4 = 4$ lines escape to infinity."
       }
     },
     {

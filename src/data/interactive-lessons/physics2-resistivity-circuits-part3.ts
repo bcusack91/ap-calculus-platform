@@ -82,7 +82,7 @@ Two batteries ($\\mathcal{E}_1 = 12$ V, $\\mathcal{E}_2 = 6$ V) connected throug
 - $12 = 4I_1 + 2(I_1 + I_2) = 6I_1 + 2I_2$
 - $6 = 6I_2 + 2(I_1 + I_2) = 2I_1 + 8I_2$
 
-Solving: $I_1 = 2.25$ A, $I_2 = 0.25$ A, $I_3 = 2.50$ A ✓
+Solving: $I_1 = 21/11 \\approx 1.91$ A, $I_2 = 3/11 \\approx 0.27$ A, $I_3 = 24/11 \\approx 2.18$ A ✓
 
 **Step 5:** All positive — our assumed directions were correct.
 
@@ -161,18 +161,18 @@ Two batteries ($\\mathcal{E}_1 = 12$ V, $\\mathcal{E}_2 = 6$ V) with $R_1 = 4$ �
 
 **2)** Solve for $I_2$ through $R_2$. (in A, round to 2 decimal places)
 
-**3)** Voltage across $R_3$. (in V)
+**3)** Voltage across $R_3$. (in V, round to 2 decimal places)
 
-**4)** Power delivered by battery 1. (in W)
+**4)** Power delivered by battery 1. (in W, round to 1 decimal place)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['2.25', '0.25', '5', '27'],
+        correctAnswers: ['1.91', '0.27', '4.36', '22.9'],
         hint1: 'Junction: $I_3 = I_1 + I_2$. Loop 1: $12 = 6I_1 + 2I_2$',
         hint2: 'Loop 2: $6 = 2I_1 + 8I_2$. Solve the 2×2 system',
         hint3: '$V_3 = I_3 R_3 = (I_1 + I_2)(2)$',
         hint4: '$P_1 = \\mathcal{E}_1 I_1$',
-        explanation: '1) $I_1 = 2.25$ A. 2) $I_2 = 0.25$ A. 3) $V_3 = 2.50 \\times 2 = 5$ V. 4) $P_1 = 12 \\times 2.25 = 27$ W.'
+        explanation: 'From $12 = 6I_1 + 2I_2$ and $6 = 2I_1 + 8I_2$: 1) $I_1 = 21/11 \\approx 1.91$ A. 2) $I_2 = 3/11 \\approx 0.27$ A. 3) $V_3 = I_3 R_3 = (24/11)(2) = 48/11 \\approx 4.36$ V. 4) $P_1 = \\mathcal{E}_1 I_1 = 12 \\times 21/11 \\approx 22.9$ W.'
       }
     }
   ]

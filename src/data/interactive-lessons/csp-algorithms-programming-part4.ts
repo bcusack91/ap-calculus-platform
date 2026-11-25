@@ -99,6 +99,7 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
       exercise: {
         boxes: 3,
         correctAnswers: ["abstraction", "data", "bias"],
+        acceptableAnswers: [[], [], ["fairness"]],
         hint1: "Big Idea 3 vocabulary: hiding the how.",
         hint2: "The kind of abstraction a list provides.",
         hint3: "Systematic skew in outcomes.",

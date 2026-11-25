@@ -204,8 +204,8 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
         inputs: [
           {
             label: 'Moles of $SO_{4}^{2-}$',
-            correctAnswer: '0.0020',
-            explanation: '$n = 0.466/233.43 = 1.997 \\times 10^{-3} \\approx 0.0020$ mol. One mole of $BaSO_{4}$ contains one mole of $SO_{4}^{2-}$.'
+            correctAnswer: '0.00200',
+            explanation: '$n = 0.466/233.43 = 1.997 \\times 10^{-3} \\approx 2.00 \\times 10^{-3}$ mol. One mole of $BaSO_{4}$ contains one mole of $SO_{4}^{2-}$.'
           },
           {
             label: 'Molarity of $H_{2}SO_{4}$ (M)',

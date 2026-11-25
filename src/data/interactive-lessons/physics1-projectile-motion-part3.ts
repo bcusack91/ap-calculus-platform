@@ -170,7 +170,7 @@ A ball is launched from ground level at 30 m/s at 53° above horizontal. Use $g 
 
 A projectile is launched at 20 m/s at 45° from ground level. Use $g = 10$ $m/s^{2}$, $\\sin 45° \\approx 0.707$.
 
-1) Time of flight (in seconds, round to 1 decimal)
+1) Time of flight (in seconds)
 
 2) Range using $R = \\frac{v_0^2\\sin 2\\theta}{g}$ (in meters)
 

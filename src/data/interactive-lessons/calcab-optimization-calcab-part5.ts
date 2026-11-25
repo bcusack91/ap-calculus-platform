@@ -50,7 +50,7 @@ $$x = \\frac{20\\pi}{\\pi + 4} \\approx 8.80$$
       exercise: {
         questions: [
           {
-            question: 'Find the point on $y = x^2$ closest to $(0, 1)$.',
+            question: 'Find a point on $y = x^2$ closest to $(0, 1)$.',
             options: ['$(\\frac{1}{\\sqrt{2}},\\frac{1}{2})$', '$(0, 0)$', '$(\\sqrt{2}, 2)$', '$(\\frac{1}{2}, \\frac{1}{4})$'],
             correctAnswer: 0,
             explanation: '$D^2 = x^2 + (x^2-1)^2 = x^4 - x^2 + 1$. $\\frac{d}{dx}D^2 = 4x^3 - 2x = 2x(2x^2-1) = 0$. $x = 0$ or $x = \\pm 1/\\sqrt{2}$. $D^2(0)=1$, $D^2(1/\\sqrt{2}) = 3/4 < 1$. So $(1/\\sqrt{2}, 1/2)$ is closest (as is its mirror image). The point $(0,0)$ is the other critical point, solving $2x^2 = 1$ as $x^2 = 2$ gives $(\\sqrt{2}, 2)$, and taking $x = \\frac{1}{2}$ instead of $x^2 = \\frac{1}{2}$ gives $(\\frac{1}{2}, \\frac{1}{4})$.'

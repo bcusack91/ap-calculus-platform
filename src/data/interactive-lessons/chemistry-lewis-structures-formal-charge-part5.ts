@@ -103,7 +103,7 @@ export const chemLewisStructuresFormalChargePart5Data = {
           },
           {
             id: 'ls-5-7-dd2',
-            label: '$CH_{4}$ (methane) has _______',
+            label: 'Does $CH_{4}$ (methane) have resonance?',
             options: ['Has resonance', 'No resonance'],
             correctIndex: 1,
             explanation: '$CH_{4}$ (methane) has no resonance. All four C—H bonds are single bonds and there are no lone pairs or multiple bonds to rearrange.'

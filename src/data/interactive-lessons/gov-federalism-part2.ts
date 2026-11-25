@@ -174,7 +174,7 @@ The CED ranks the four tools that distribute power between national and state go
             explanation: 'The National Minimum Drinking Age Act (1984) is a CED illustrative example for EK 1.7.A: Congress attached a CONDITION to federal highway money instead of commanding the states, and the Supreme Court upheld the condition in 1987. It shows how national funding (EK 1.7.A.5) shifts the balance of power even over reserved powers. No amendment was proposed, Congress did not create a federal crime for underage drinking, and the Supremacy Clause applies only when a valid federal law conflicts with state law.'
           },
           {
-            question: "AP scenario: A state legislature passes a stricter motor-vehicle emissions standard than the federal Clean Air Act standard, citing a state goal of reducing air pollution. A national auto manufacturers\' association argues the state law is preempted. What is the most likely outcome under federalism doctrine?",
+            question: "AP scenario: A state legislature adopts California\'s motor-vehicle emissions standard, which is stricter than the federal Clean Air Act standard and which EPA has approved under a Clean Air Act waiver, citing a state goal of reducing air pollution. A national auto manufacturers\' association argues the state law is preempted. What is the most likely outcome under federalism doctrine?",
             options: [
               "The state law is likely valid, since the Clean Air Act lets California set stricter standards with a federal waiver that other states may then adopt",
               "The state law is likely invalid, since the Clean Air Act occupies the field and preempts any state rule stricter than the federal one",
@@ -182,7 +182,7 @@ The CED ranks the four tools that distribute power between national and state go
               "The state law is likely invalid, since the dormant Commerce Clause forbids states from regulating cars that are made in other states"
             ],
             correctAnswer: 0,
-            explanation: 'State stricter emissions VALID = anti-preemption through congressional preservation: federal Clean Air Act expressly authorizes states to adopt stricter standards (CA unique statutory authority since 1966 predates federal CAA, adopted by ~14 other states) → federal FLOOR not field preemption. Congress chose federal-floor approach. Express preemption OR field preemption would have produced different result.'
+            explanation: 'State law VALID = anti-preemption through congressional preservation: the Clean Air Act generally bars states from setting their own new-vehicle emissions standards, but it expressly lets California set stricter standards under an EPA waiver and lets other states adopt California\'s waived standards (~14 states have). Because Congress itself preserved this state role, the law is not preempted. A state writing its own, different vehicle standard WOULD be expressly preempted; the Tenth Amendment does not bar federal emissions rules, and the dormant Commerce Clause does not forbid regulating cars made in other states.'
           }
         ]
       }

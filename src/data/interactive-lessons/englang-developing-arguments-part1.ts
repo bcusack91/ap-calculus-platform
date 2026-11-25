@@ -133,6 +133,7 @@ Ask: If my argument is accepted, what follows?
       exercise: {
         boxes: 3,
         correctAnswers: ['reasoning', 'qualification', 'rebuttal'],
+        acceptableAnswers: [[], ['qualifiers', 'qualifier', 'qualifications', 'hedges', 'hedging', 'modifiers'], ['refutation']],
         hint1: 'Logical chain in argument.',
         hint2: 'Adds conditions/limits.',
         hint3: 'Response that defends your position.',

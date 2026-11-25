@@ -95,7 +95,7 @@ Arc length $\\ge$ displacement, with equality only for straight-line motion.
             explanation: 'Speed $= \\sqrt{2e^{2t}} = e^t\\sqrt{2}$. This is a logarithmic spiral.'
           },
           {
-            label: 'Is the integrand for arc length always positive?',
+            label: 'Is the integrand for arc length always non-negative?',
             options: ['Yes, a square root is never negative', 'No, speed can be negative', 'Only when $dx/dt, dy/dt > 0$', 'Only on intervals where $t > 0$'],
             correctAnswers: ['Yes, a square root is never negative'],
             hints: ['$(dx/dt)^2 + (dy/dt)^2 \\ge 0$, and $= 0$ only at stationary points.'],

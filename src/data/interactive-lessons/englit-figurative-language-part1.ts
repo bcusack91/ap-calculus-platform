@@ -45,7 +45,7 @@ export const englitFigurativeLanguagePart1Data = {
     {
       id: "englitfi1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the term for each description.\n\n1) An implied comparison that reframes meaning: _______\n\n2) Sensory details that shape the reader's experience: _______\n\n3) An object or pattern that carries layered significance across a text: _______",
       exercise: {
       "boxes": 3,
       "correctAnswers": [

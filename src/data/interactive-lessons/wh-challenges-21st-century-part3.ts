@@ -112,7 +112,7 @@ KC-6.1.I.C: "Medical innovations, including vaccines and antibiotics, increased 
       exercise: {
         questions: [
           {
-            prompt: 'The UN agency that led the campaign declared to have eradicated smallpox in 1980 (initials: WHO).',
+            prompt: 'The UN agency that led the campaign declared to have eradicated smallpox in 1980.',
             answer: 'World Health Organization',
             acceptableAnswers: ['World Health Organization', 'WHO', 'the World Health Organization'],
             hint: 'A UN specialized agency founded in 1948 and based in Geneva.'

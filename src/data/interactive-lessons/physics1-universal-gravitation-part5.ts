@@ -109,7 +109,7 @@ Use $g = 10$ $m/s^{2}$, $R_E = 6.4 \\times 10^6$ m, $M_E = 6.0 \\times 10^{24}$ 
 3) The Moon orbits at $r = 3.84 \\times 10^8$ m. What is the Moon's orbital speed (in m/s, round to nearest 10)?
       `,
       exercise: {
-        questions: [{ question: '1) Orbital speed at h = 200 km (m/s, nearest 100)', answer: '7800', acceptableAnswers: ['7800', '7790'] }, { question: '2) Escape speed from Earth\'s surface (km/s, 3 s.f.)', answer: '11.3', acceptableAnswers: ['11.3', '11.2'] }, { question: '3) The Moon\'s orbital speed (m/s, nearest 10)', answer: '1020', acceptableAnswers: ['1020', '1021'] }],
+        questions: [{ question: '1) Orbital speed at h = 200 km (m/s, nearest 100)', answer: '7800', acceptableAnswers: ['7800', '7790', '7900'] }, { question: '2) Escape speed from Earth\'s surface (km/s, 3 s.f.)', answer: '11.3', acceptableAnswers: ['11.3', '11.2'] }, { question: '3) The Moon\'s orbital speed (m/s, nearest 10)', answer: '1020', acceptableAnswers: ['1020', '1021', '1030'] }],
         hint1: '$r = R_E + h = 6.6 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$v_{esc} = \\sqrt{2gR_E}$. Convert to km/s.',
         hint3: '$v = \\sqrt{GM_E/r}$.',

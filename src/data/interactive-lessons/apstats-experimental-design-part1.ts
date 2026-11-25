@@ -80,6 +80,7 @@ A researcher wants to test whether a new teaching method improves test scores. S
       exercise: {
         boxes: 3,
         correctAnswers: ['teaching method', 'test scores', '2'],
+        acceptableAnswers: [['teaching methods', 'method', 'method of teaching', 'type of teaching method', 'new vs. traditional method', 'new or traditional method', 'teaching method (new vs. traditional)'], ['test score', 'scores', 'exam scores', 'exam score', 'exam results', 'test results'], ['two']],
         hint1: 'What is being manipulated?',
         hint2: 'What is being measured?',
         hint3: 'New method vs. traditional method',

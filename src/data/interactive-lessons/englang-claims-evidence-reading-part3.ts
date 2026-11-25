@@ -154,6 +154,7 @@ Notice also the phrase "North and South." Speaking to a chamber with powerful So
       exercise: {
         boxes: 3,
         correctAnswers: ['analogy', 'value', 'inference'],
+        acceptableAnswers: [['comparison'], ['values', 'principle', 'principles', 'belief', 'beliefs'], []],
         hint1: 'One situation is likened to another to transfer its significance.',
         hint2: 'The opposite of a fact claim in the fact/value pairing.',
         hint3: 'A reasoned step from what is shown to what must follow.',

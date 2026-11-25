@@ -142,7 +142,7 @@ Some honest signals are reliable precisely because they are **costly to produce*
             options: ['handicap principle', 'marginal value theorem', 'competitive exclusion principle', 'founder effect']
           },
           {
-            label: 'The honeybee waggle dance communicates direction and distance using ___ signals',
+            label: 'In the dark hive, follower bees pick up the waggle dance\'s direction and distance mainly through ___ signals',
             options: ['tactile', 'chemical', 'electrical', 'visual']
           },
           {

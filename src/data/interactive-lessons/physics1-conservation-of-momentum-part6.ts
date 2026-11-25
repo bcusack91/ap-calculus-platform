@@ -70,7 +70,7 @@ Car A (1500 kg) travels east at 20 m/s. Car B (2000 kg) travels west at 15 m/s. 
 
 1) What is the total initial momentum of the system? (in kg·m/s, take east as positive)
 
-2) What is the final velocity of the wreckage? (in m/s, to 3 significant figures, include sign)
+2) What is the final velocity of the wreckage? (in m/s, include sign)
 
 3) In which direction does the wreckage move? (type "east", "west", or "neither")
       `,

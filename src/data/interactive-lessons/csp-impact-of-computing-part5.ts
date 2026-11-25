@@ -114,6 +114,7 @@ These are exactly the kinds of "evaluate the impact" scenarios the AP exam's mul
       exercise: {
         boxes: 3,
         correctAnswers: ["continuous", "generative", "routine"],
+        acceptableAnswers: [["constant", "ongoing", "passive", "pervasive", "ubiquitous"], [], ["repetitive", "simple"]],
         hint1: "Not occasional.",
         hint2: "They generate new outputs.",
         hint3: "Repetitive tasks.",

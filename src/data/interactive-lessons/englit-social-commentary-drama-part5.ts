@@ -262,7 +262,7 @@ Type one standard term for each description.
           {
             question: `The 1861 reform in Russia that Fiers calls "the misfortune"`,
             answer: 'Emancipation',
-            acceptableAnswers: ['emancipation', 'the emancipation', 'emancipation of the serfs', 'Emancipation']
+            acceptableAnswers: ['emancipation', 'the emancipation', 'emancipation of the serfs', 'Emancipation', 'emancipation reform', 'serf emancipation']
           }
         ],
         hint1: 'The prefix means "under"; the root is what an actor reads.',

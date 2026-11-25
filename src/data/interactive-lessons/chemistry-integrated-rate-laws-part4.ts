@@ -116,7 +116,7 @@ Given this data:
               'Cannot determine'
             ],
             correctAnswer: 0,
-            explanation: 'Δ[B] = −0.100 M per 100 s, consistently. Constant decrease in [A] → zero-order. [B] vs t is linear.'
+            explanation: 'Δ[B] = −0.100 M per 100 s, consistently. Constant decrease in [B] → zero-order. [B] vs t is linear.'
           },
           {
             question: 'What is the value of k?',

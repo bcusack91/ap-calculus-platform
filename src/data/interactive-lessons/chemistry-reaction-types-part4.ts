@@ -244,7 +244,7 @@ Balance each equation. Enter the coefficient of the indicated substance.
           },
           {
             label: 'The Law of Conservation of Mass requires that balanced equations have equal',
-            options: ['numbers of molecules on both sides', 'masses of each element on both sides', 'numbers of each type of atom on both sides', 'volumes on both sides']
+            options: ['numbers of molecules on both sides', 'states of matter on both sides', 'numbers of each type of atom on both sides', 'volumes on both sides']
           }
         ],
         correctAnswers: ['last', 'multiply all coefficients by 2', 'identity of the substance', 'numbers of each type of atom on both sides'],

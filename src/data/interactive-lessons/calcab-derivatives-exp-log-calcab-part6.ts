@@ -66,7 +66,7 @@ export const calcabDerivExpLogPart6Data = {
     {
       "id": "del6-input",
       "type": "input-boxes" as const,
-      "content": "**Graphing Practice** 🧮\n\n**1)** $f(x) = xe^{-x}$ max value: (enter as 1/e)\n\n**2)** $f(x) = \\ln x / x$ max value: (enter as 1/e)",
+      "content": "**Graphing Practice** 🧮\n\n**1)** $f(x) = xe^{-x}$ max value: (exact, e.g. 3/e)\n\n**2)** $f(x) = \\ln x / x$ max value: (exact, e.g. 3/e)",
       "exercise": {
         "questions": [{ "question": "(1)", "answer": "1/e", "acceptableAnswers": ["1/e", "e^-1", "e^(-1)", "0.3679"] }, { "question": "(2)", "answer": "1/e", "acceptableAnswers": ["1/e", "e^-1", "e^(-1)", "0.3679"] }],
         "hint1": "Max at $x = 1$: $f(1) = 1 \\cdot e^{-1} = 1/e$.",

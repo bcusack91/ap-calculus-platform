@@ -87,7 +87,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
             explanation: 'As the reaction proceeds, $Q$ increases toward $K$ and the driving force shrinks, so $E$ falls toward zero. $E°$ is fixed for the reaction, and the salt bridge and electrode surfaces affect how much current flows, not the equilibrium-driven potential.'
           },
           {
-            question: 'A cell with a very large K is run until its potential has fallen to 0.50 V from an initial 1.10 V. Which statement is correct?',
+            question: 'A cell with a very large K and E° = 1.10 V is assembled at standard conditions and run until its potential has fallen from 1.10 V to 0.50 V. Which statement is correct?',
             options: [
               'Q has risen all the way to K',
               'Q has dropped to a value below 1',
@@ -182,7 +182,7 @@ At 7 h, $Q = K$: the reaction is at equilibrium and $E = 0$.
             explanation: 'As $[\\text{Ag}^{+}]$ approaches zero, the squared term in the denominator of $Q$ shrinks rapidly, $Q$ climbs toward $K$, and $E$ falls steeply. Nitrate is a spectator ion and solid nickel does not appear in $Q$.'
           },
           {
-            question: 'A dead Zn/Cu²⁺ cell is connected to a power supply that drives Zn²⁺ back to Zn. During recharging, the zinc electrode is the',
+            question: 'A dead Zn/Cu²⁺ cell is connected to a power supply that drives Zn²⁺ back to Zn. During recharging, what is the zinc electrode?',
             options: [
               'The anode, since zinc atoms lose electrons there',
               'The cathode, since Zn²⁺ gains electrons there',

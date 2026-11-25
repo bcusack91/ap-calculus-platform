@@ -200,7 +200,7 @@ Choose the big idea each Section I stem is testing.
             question: 'Which of the following best describes the structure of the sentence "Be respectful to your superiors, if you have any, also to strangers, and sometimes to others"?',
             options: [
               'A rule that grows broader with each phrase until it covers everyone',
-              'A rule that each added phrase weakens until little of it is left',
+              'A rule that its added qualifiers weaken until little of it is left',
               'A rule that is stated and then defended with a short example',
               'A rule that contrasts the duties owed to superiors and strangers'
             ],

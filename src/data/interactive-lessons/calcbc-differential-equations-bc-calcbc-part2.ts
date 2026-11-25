@@ -81,7 +81,7 @@ $$y = \\frac{1}{\\frac{1}{2} - \\ln x} = \\frac{2}{1 - 2\\ln x}$$
           },
           {
             question: 'The general solution to $y\' = -y$ is $y = Ce^{-x}$. With $y(0) = 7$, the particular solution is:',
-            options: ['$y = 7e^{-x}$', '$y = Ce^{-x}$ with $C = 7$', '$y = e^{-7x}$', '$y = -7e^{-x}$'],
+            options: ['$y = 7e^{-x}$', '$y = 7e^{x}$', '$y = e^{-7x}$', '$y = -7e^{-x}$'],
             correctAnswer: 0,
             explanation: '$y(0) = Ce^0 = C = 7$, so $y = 7e^{-x}$.'
           },

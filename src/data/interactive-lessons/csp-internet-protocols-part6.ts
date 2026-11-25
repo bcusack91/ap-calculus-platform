@@ -89,11 +89,12 @@ Network: Home–R1, Home–R2, R1–R3, R2–R3, R3–Server.
 
 2) A banking page is sent with HTTPS so that the data are _______.
 
-3) A message is split into 6 packets, and only packets 1, 2, 4, and 6 arrive. With TCP, the receiver requests _______ packets again.
+3) A message is split into 6 packets, and only packets 1, 2, 4, and 6 arrive. With TCP, how many packets does the receiver request again? _______
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["UDP", "encrypted", "2"],
+        acceptableAnswers: [[], [], ["two"]],
         hint1: "No waiting for resends.",
         hint2: "The \"S\" means secure.",
         hint3: "Which numbers from 1 to 6 are missing?",

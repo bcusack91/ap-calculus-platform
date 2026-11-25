@@ -71,6 +71,7 @@ A poll finds 52% of 1000 voters favor a candidate. Test $H_0: p = 0.50$ vs. $H_a
       exercise: {
         boxes: 3,
         correctAnswers: ['1.26', '0.104', 'fail to reject'],
+        acceptableAnswers: [[], ['0.103'], ['fail to reject H0', 'fail to reject the null', 'do not reject']],
         hint1: '$0.02/\\sqrt{0.00025} = 0.02/0.01581$',
         hint2: '$P(Z > 1.26) \\approx 1 - 0.8962$',
         hint3: 'Is $0.104 \\leq 0.05$?',

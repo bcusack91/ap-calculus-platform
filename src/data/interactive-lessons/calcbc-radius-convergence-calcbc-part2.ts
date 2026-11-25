@@ -75,13 +75,13 @@ Harmonic → **diverges**.
           },
           {
             question: 'At an endpoint you get $\\sum (-1)^n \\sqrt{n}$. This:',
-            options: ['Diverges (terms $\\to \\infty$, fails Divergence Test)', 'Converges by AST', 'Converges absolutely', 'Is inconclusive'],
+            options: ['Diverges by the Divergence Test', 'Converges by AST', 'Converges absolutely', 'Is inconclusive'],
             correctAnswer: 0,
             explanation: '$|(-1)^n\\sqrt{n}| = \\sqrt{n} \\to \\infty \\neq 0$. Diverges by Divergence Test.'
           },
           {
             question: 'For $\\sum n! x^n$, $R = 0$. How many endpoints to check?',
-            options: ['None — $R = 0$ means the series converges only at $x = 0$', 'Two', 'One', 'Infinitely many'],
+            options: ['None', 'Two', 'One', 'Infinitely many'],
             correctAnswer: 0,
             explanation: 'When $R = 0$, the IOC is just $\\{0\\}$. No endpoints to check.'
           }
@@ -95,7 +95,7 @@ Harmonic → **diverges**.
       exercise: {
         dropdowns: [
           {
-            label: '$\\sum_{n=1}^{\\infty} \\frac{(x-5)^n}{n\\sqrt{n} \\cdot 2^n}$, $R = 2$. At $x = 7$ ($= 5 + 2$):: $\\sum 1/(n\\sqrt{n})$. This:',
+            label: '$\\sum_{n=1}^{\\infty} \\frac{(x-5)^n}{n\\sqrt{n} \\cdot 2^n}$, $R = 2$. At $x = 7$ ($= 5 + 2$): $\\sum 1/(n\\sqrt{n})$. This:',
             options: ['Converges ($p$-series with $p = 3/2 > 1$)', 'Diverges (harmonic-like)', 'Inconclusive', 'Alternates'],
             correctAnswers: ['Converges ($p$-series with $p = 3/2 > 1$)'],
             hints: ['$1/(n \\cdot n^{1/2}) = 1/n^{3/2}$, a $p$-series.'],
@@ -103,8 +103,8 @@ Harmonic → **diverges**.
           },
           {
             label: 'Same series at $x = 3$ ($= 5 - 2$): $\\sum (-1)^n/(n^{3/2})$. This:',
-            options: ['Converges (AST or absolutely since $\\sum 1/n^{3/2}$ converges)', 'Diverges', 'Inconclusive', 'Need more terms'],
-            correctAnswers: ['Converges (AST or absolutely since $\\sum 1/n^{3/2}$ converges)'],
+            options: ['Converges', 'Diverges', 'Inconclusive', 'Need more terms'],
+            correctAnswers: ['Converges'],
             hints: ['If $\\sum |a_n|$ converges, then $\\sum a_n$ converges absolutely.'],
             explanation: '$\\sum |a_n| = \\sum 1/n^{3/2}$ converges, so the series converges absolutely. IOC: $[3, 7]$.'
           }

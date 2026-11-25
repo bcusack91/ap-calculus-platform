@@ -70,7 +70,7 @@ export const apesBiodiversityPart7Data = {
             explanation: 'Being near the mainland raises immigration, and being large lowers extinction, so a large, near island has the highest equilibrium species number. A small, distant island has the lowest.'
           },
           {
-            question: 'A forest fire that strikes a pine forest every few decades, to which several species are adapted, is best described as which kind of disruption?',
+            question: 'A forest fire that returns to a pine forest at fairly regular intervals, about every 30 years, so that several species are adapted to it, is best described as which kind of disruption?',
             options: [
               'Periodic',
               'Random',

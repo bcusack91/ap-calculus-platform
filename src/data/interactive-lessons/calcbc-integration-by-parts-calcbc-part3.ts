@@ -99,7 +99,7 @@ $$\\boxed{\\int e^{ax}\\cos(bx)\\,dx = \\frac{e^{ax}(a\\cos(bx) + b\\sin(bx))}{a
             explanation: 'Both factors regenerate under differentiation/integration. This cycles after 2 applications. Denominator = $3^2 + 5^2 = 34$.'
           },
           {
-            label: 'After two IBP applications on $\\int e^{-x}\\sin(2x)\\,dx$, the equation becomes $I = \\ldots - I$. The denominator in the final answer is:',
+            label: 'After two IBP applications on $\\int e^{-x}\\sin(2x)\\,dx$, the equation becomes $I = \\ldots - 4I$ (taking $u = \\sin(2x)$ both times). The denominator in the final answer is:',
             options: ['2', '3', '4', '5'],
             correctAnswers: ['5'],
             hints: ['$a = -1$, $b = 2$. The denominator is $a^2 + b^2$.'],

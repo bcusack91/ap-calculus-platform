@@ -123,6 +123,7 @@ These three are the only escape sequences in the AP Java subset.
       exercise: {
         boxes: 3,
         correctAnswers: ['0', 'immutable', '.equals()'],
+        acceptableAnswers: [[], [], ['equals', 'equals()', '.equals', 'equals method']],
         hint1: 'Zero-based indexing.',
         hint2: 'Once created, the characters in a String cannot be modified.',
         hint3: 'A method that returns true if the Strings have the same characters.',

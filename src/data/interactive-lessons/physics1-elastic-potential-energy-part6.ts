@@ -86,7 +86,7 @@ $$d = 4 \\text{ m up the ramp}$$
             explanation: '$\\frac{1}{2}kx^2 = mgh$. $\\frac{1}{2}(800)(0.01) = 0.4(10)h$. $4 = 4h$. $h = 1.0$ m. Dropping the $\\frac{1}{2}$ gives 2.0 m, leaving out $g$ gives 10 m, and using the force $kx$ instead of the energy gives 20 m.'
           },
           {
-            question: 'A 1 kg block is dropped from 2 m above a vertical spring ($k = 1000$ N/m). The maximum compression of the spring is closest to:',
+            question: 'A 1 kg block is dropped from 2 m above a vertical spring ($k = 1000$ N/m, $g = 10$ $m/s^{2}$). The maximum compression of the spring is closest to:',
             options: [
               '0.15 m',
               '0.20 m',

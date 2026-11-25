@@ -75,7 +75,7 @@ where $W_{\\text{mech}}$ is the work done pulling the dielectric in.`
     {
       id: 'dielec2-mcq3',
       type: 'mcq' as const,
-      question: 'A capacitor connected to a 12 V battery has $C_0 = 20$ nF. A dielectric ($\\kappa = 4$) is inserted. What charge does the battery deliver to the capacitor?',
+      question: 'A capacitor connected to a 12 V battery has $C_0 = 20$ nF. A dielectric ($\\kappa = 4$) is inserted. How much additional charge does the battery deliver to the capacitor as the dielectric goes in?',
       options: ['$720$ nC', '$240$ nC', '$960$ nC', '$60$ nC'],
       correctAnswer: 0,
       explanation: '$Q_0 = C_0 V = 20 \\times 12 = 240$ nC. After: $Q = \\kappa Q_0 = 960$ nC. Additional charge $= 960 - 240 = 720$ nC.'

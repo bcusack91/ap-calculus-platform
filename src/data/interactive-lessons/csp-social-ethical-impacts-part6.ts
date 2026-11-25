@@ -94,6 +94,7 @@ Programmers should take action to reduce bias in the algorithms they write. One 
       exercise: {
         boxes: 3,
         correctAnswers: ["people", "divide", "data"],
+        acceptableAnswers: [["stakeholders", "users", "groups", "individuals"], [], ["training data", "datasets"]],
         hint1: "Or even by the same person.",
         hint2: "An access gap.",
         hint3: "What the innovation learns from.",

@@ -160,7 +160,7 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'The formula for water potential:',
             answer: 'psi = psi_s + psi_p',
-            acceptableAnswers: ['psi = psi_s + psi_p', 'water potential = solute potential + pressure potential', 'Psi = Psi_s + Psi_p'],
+            acceptableAnswers: ['psi = psi_s + psi_p', 'water potential = solute potential + pressure potential', 'Psi = Psi_s + Psi_p', 'Ψ = Ψs + Ψp', 'Ψ = Ψp + Ψs', 'Ψ = Ψ_s + Ψ_p', 'Ψ = Ψ_p + Ψ_s', 'psi = psis + psip', 'psi = psi_p + psi_s', 'psi = psip + psis', 'water potential = pressure potential + solute potential'],
             placeholder: 'e.g. PV = nRT'
           },
           {

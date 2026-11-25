@@ -104,7 +104,7 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
             hint: 'Named for Secretary of State George Marshall.'
           },
           {
-            prompt: 'The first major African colony to gain independence (1957), led by Kwame Nkrumah.',
+            prompt: 'The first sub-Saharan African colony to gain independence (1957), led by Kwame Nkrumah.',
             answer: 'Ghana',
             acceptableAnswers: ['Ghana'],
             hint: 'Formerly the British Gold Coast.'

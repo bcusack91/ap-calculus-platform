@@ -143,7 +143,7 @@ export const govJudiciaryPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: "Judicial review lets courts OVERTURN precedent or INVALIDATE legislative and executive acts: ___",
+            label: "Courts readily use judicial review to OVERTURN precedent or INVALIDATE legislative and executive acts: ___",
             options: ['Originalism', 'Living Constitution', 'Judicial Activism', 'Stare Decisis']
           },
           {

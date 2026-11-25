@@ -192,7 +192,7 @@ The allusion works because readers know the motto. Allusion always depends on sh
             options: ['allegory', 'allusion', 'extended simile', 'elegy']
           },
           {
-            label: `Young soldiers described as "old beggars" and "hags" is an example of ___`,
+            label: `Soldiers, supposedly heroic young men, shown as "old beggars" and "hags": this gap between expectation and reality is ___`,
             options: ['situational irony', 'verbal irony', 'personification', 'synecdoche']
           }
         ],

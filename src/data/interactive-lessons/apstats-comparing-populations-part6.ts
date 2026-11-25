@@ -133,9 +133,9 @@ Since $P < 0.001 < 0.05 = \\alpha$, we reject $H_0$.
           },
           {
             question: 'A study measures reaction time with the dominant hand and non-dominant hand for 40 participants. This is:',
-            options: ['A two-sample design', 'A paired design', 'A chi-square design', 'An observational study'],
+            options: ['A two-sample design', 'A paired design', 'A chi-square design', 'A completely randomized design'],
             correctAnswer: 1,
-            explanation: 'Each participant provides two measurements (dominant and non-dominant) — the data is naturally paired by participant.'
+            explanation: 'Each participant provides two measurements (dominant and non-dominant) — the data is naturally paired by participant. No subjects are randomly split into separate treatment groups, so it is not a two-sample or completely randomized design.'
           }
         ]
       }

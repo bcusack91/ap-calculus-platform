@@ -169,7 +169,7 @@ Two kinds of failure appear again and again: **the process inside the compartmen
       exercise: {
         questions: [
           {
-            question: 'Insulin is made on ribosomes of the rough ER and released by exocytosis. After the growing insulin chain enters the ER lumen, how many membranes does it cross before reaching the blood?',
+            question: 'Insulin is made on ribosomes of the rough ER and released by exocytosis. After the growing insulin chain enters the ER lumen, how many membranes does it cross before it leaves the cell?',
             options: [
               'Zero membranes',
               'One membrane',

@@ -53,7 +53,7 @@ For a **uniform** dielectric in a uniform field, $\\nabla \\cdot \\vec{P} = 0$, 
     {
       id: 'dielec3-mcq2',
       type: 'mcq' as const,
-      question: 'A parallel-plate capacitor with field $E = 1000$ V/m is filled with a dielectric ($\\kappa = 4$). What is the bound surface charge density $\\sigma_b$?',
+      question: 'A parallel-plate capacitor is filled with a dielectric ($\\kappa = 4$), and the field inside the dielectric is $E = 1000$ V/m. What is the bound surface charge density $\\sigma_b$?',
       options: [
         '$3\\varepsilon_0 \\times 1000$ $C/m^{2}$',
         '$4\\varepsilon_0 \\times 1000$ $C/m^{2}$',

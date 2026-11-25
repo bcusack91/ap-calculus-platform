@@ -32,8 +32,8 @@ export const physCEMPwrCircPart7Data = {
     {
       id: 'pwr7-mcq2',
       type: 'mcq' as const,
-      question: 'Two batteries: $\\mathcal{E}_1 = 10$ V ($r_1 = 1\\,\\Omega$) and $\\mathcal{E}_2 = 4$ V ($r_2 = 1\\,\\Omega$) are connected in series with a $4\\,\\Omega$ resistor. The power dissipated in the external resistor is:',
-      options: ['$\\frac{196}{36} \\cdot 4 \\approx 5.44$ W — actually: $I = (10-4)/(4+2) = 1$ A, $P = 1^2 \\times 4 = 4$ W', '4 W', '6 W', '8 W'],
+      question: 'Two batteries: $\\mathcal{E}_1 = 10$ V ($r_1 = 1\\,\\Omega$) and $\\mathcal{E}_2 = 4$ V ($r_2 = 1\\,\\Omega$) are connected in series, with their EMFs opposing each other, with a $4\\,\\Omega$ resistor. The power dissipated in the external resistor is:',
+      options: ['21.8 W', '4 W', '6 W', '8 W'],
       correctAnswer: 1,
       explanation: 'EMFs oppose: net EMF $= 10 - 4 = 6$ V. Total $R = 4 + 1 + 1 = 6\\,\\Omega$. $I = 1$ A. $P = I^2 R = 4$ W.'
     },
@@ -75,8 +75,8 @@ As load resistance decreases, battery life decreases proportionally.`
       type: 'mcq' as const,
       question: 'A variable resistor $R$ is connected to a battery with $\\mathcal{E} = 12$ V and $r = 3\\,\\Omega$. For what value of $R$ does the battery deliver 12 W to $R$?',
       options: ['$R = 3\\,\\Omega$ or $R = 12\\,\\Omega$', '$R = 6\\,\\Omega$ only', '$R = 3\\,\\Omega$ only', '$R = 9\\,\\Omega$ only'],
-      correctAnswer: 0,
-      explanation: '$P = \\frac{144R}{(R+3)^2} = 12$. $12(R+3)^2 = 144R$, $(R+3)^2 = 12R$, $R^2 + 6R + 9 = 12R$, $R^2 - 6R + 9 = 0$... Actually $(R-3)^2 = 0$ gives $R = 3$. Let me redo: $12R^2 + 72R + 108 = 144R$, $12R^2 - 72R + 108 = 0$, $R^2 - 6R + 9 = 0$, $(R-3)^2 = 0$, so $R = 3\\,\\Omega$ only (the maximum power point). The quadratic has a double root.'
+      correctAnswer: 2,
+      explanation: '$P = \\frac{144R}{(R+3)^2} = 12$, so $(R+3)^2 = 12R$, $R^2 - 6R + 9 = 0$, $(R-3)^2 = 0$: $R = 3\\,\\Omega$ only. The quadratic has a double root because 12 W is the maximum power, $P_{\\max} = \\mathcal{E}^2/(4r) = 144/12 = 12$ W, reached at $R = r$.'
     },
     {
       id: 'pwr7-mcq5',

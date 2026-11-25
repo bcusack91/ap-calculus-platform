@@ -63,7 +63,7 @@ Sometimes you can convert a parametric curve to Cartesian form and differentiate
           },
           {
             question: 'After eliminating $t$ from $x = t+1$, $y = \\sqrt{t}$, the domain restriction is:',
-            options: ['$x \\ge 1$ (since $t \\ge 0$)', '$x > 0$', 'All real $x$', '$x \\ge 0$'],
+            options: ['$x \\ge 1$', '$x > 0$', 'All real $x$', '$x \\ge 0$'],
             correctAnswer: 0,
             explanation: '$t = x - 1 \\ge 0$ requires $x \\ge 1$. Cartesian: $y = \\sqrt{x-1}$ for $x \\ge 1$.'
           }
@@ -78,17 +78,17 @@ Sometimes you can convert a parametric curve to Cartesian form and differentiate
         dropdowns: [
           {
             label: 'For $x = \\sin t$, $y = \\sin 2t$, eliminating $t$ gives:',
-            options: ['$y = 2x\\sqrt{1-x^2}$ (complicated; stay parametric)', '$y = 2x$', '$y = x^2$', 'Cannot eliminate'],
-            correctAnswers: ['$y = 2x\\sqrt{1-x^2}$ (complicated; stay parametric)'],
-            hints: ['$\\sin 2t = 2\\sin t\\cos t = 2x\\cos t$, and $\\cos t = \\sqrt{1-x^2}$.'],
-            explanation: '$y = 2\\sin t\\cos t = 2x\\sqrt{1-x^2}$ for $0 \\le t \\le \\pi/2$. The parametric form is much easier to differentiate.'
+            options: ['$y^2 = 4x^2(1-x^2)$', '$y = 2x$', '$y = x^2$', 'Cannot eliminate'],
+            correctAnswers: ['$y^2 = 4x^2(1-x^2)$'],
+            hints: ['$\\sin 2t = 2\\sin t\\cos t = 2x\\cos t$, and $\\cos t = \\pm\\sqrt{1-x^2}$, so square both sides.'],
+            explanation: '$y = 2\\sin t\\cos t = \\pm 2x\\sqrt{1-x^2}$, with the sign set by $\\cos t$. Squaring covers every $t$: $y^2 = 4x^2(1-x^2)$. The parametric form is much easier to differentiate.'
           },
           {
             label: 'The parametric curve $x = t^3 - t$, $y = t^2$ has a self-intersection. Eliminating the parameter:',
-            options: ['Loses information about the crossing point', 'Gives a clean Cartesian equation', 'Is not possible', 'Preserves all information'],
-            correctAnswers: ['Loses information about the crossing point'],
+            options: ['Loses the $t$-values at the crossing point', 'Gives a function $y = f(x)$', 'Is not possible', 'Preserves all information'],
+            correctAnswers: ['Loses the $t$-values at the crossing point'],
             hints: ['The curve crosses itself when two different $t$-values give the same $(x,y)$.'],
-            explanation: 'At $t = 1$ and $t = -1$: $x(1) = 0$, $x(-1) = 0$, $y(1) = 1$, $y(-1) = 1$. Same point, two $t$-values. Cartesian form cannot show two tangent directions at one point.'
+            explanation: 'At $t = 1$ and $t = -1$: $x(1) = 0$, $x(-1) = 0$, $y(1) = 1$, $y(-1) = 1$. Same point, two $t$-values. Eliminating gives $x^2 = y(y-1)^2$, which still contains $(0, 1)$ but not when the particle passes it or the two tangent directions there, and it is not a function of $x$.'
           }
         ]
       }

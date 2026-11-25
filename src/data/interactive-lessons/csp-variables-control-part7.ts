@@ -91,6 +91,7 @@ Final review.
       exercise: {
         boxes: 3,
         correctAnswers: ["1", "infinite", "off"],
+        acceptableAnswers: [["one"], [], []],
         hint1: "1-indexed.",
         hint2: "Never stops.",
         hint3: "Common boundary bug.",

@@ -164,6 +164,7 @@ A source's purpose sets the boundaries of what you can fairly use it for. Riis's
       exercise: {
         boxes: 3,
         correctAnswers: ['position', 'purpose', 'currency'],
+        acceptableAnswers: [['stance'], [], []],
         hint1: 'Its stance on the question, not its evidence.',
         hint2: 'The reason behind the writing.',
         hint3: 'A word that also means money in circulation.',

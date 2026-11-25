@@ -68,13 +68,13 @@ $$\\frac{|x|^2}{4(n+1)^2} \\to 0 \\quad \\Rightarrow \\quad R = \\infty$$
         questions: [
           {
             question: '$\\sum_{n=0}^{\\infty} \\frac{x^{2n}}{9^n}$. The radius of convergence (in $x$) is:',
-            options: ['$3$ (since $|x^2| < 9$ gives $|x| < 3$)', '$9$', '$1/9$', '$81$'],
+            options: ['$3$', '$9$', '$1/9$', '$81$'],
             correctAnswer: 0,
             explanation: 'In $u = x^2$: $\\sum (u/9)^n$, geometric, $R_u = 9$. In $x$: $|x| < \\sqrt{9} = 3$.'
           },
           {
             question: 'For $\\sum n! (x-2)^n$, the IOC is:',
-            options: ['$\\{2\\}$ only ($R = 0$)', '$(1, 3)$', '$(-\\infty, \\infty)$', '$[1, 3]$'],
+            options: ['$\\{2\\}$ only', '$(1, 3)$', '$(-\\infty, \\infty)$', '$[1, 3]$'],
             correctAnswer: 0,
             explanation: '$|c_{n+1}/c_n| = (n+1) \\to \\infty$. $R = 0$. Converges only at $x = 2$.'
           },
@@ -95,15 +95,15 @@ $$\\frac{|x|^2}{4(n+1)^2} \\to 0 \\quad \\Rightarrow \\quad R = \\infty$$
         dropdowns: [
           {
             label: '$\\sum_{n=0}^{\\infty} \\frac{(x+1)^{3n}}{8^n}$. Let $u = (x+1)^3$. $R_u = 8$, so $R_x =$',
-            options: ['$2$ (since $|x+1| < 8^{1/3} = 2$)', '$8$', '$8^{1/3} = 2$', '$512$'],
-            correctAnswers: ['$2$ (since $|x+1| < 8^{1/3} = 2$)'],
+            options: ['$2$', '$8$', '$8/3$', '$512$'],
+            correctAnswers: ['$2$'],
             hints: ['Geometric in $u$: $|u| < 8$. Then $|(x+1)^3| < 8 \\Rightarrow |x+1| < 2$.'],
             explanation: '$|x+1|^3 < 8 \\Rightarrow |x+1| < 2$. $R = 2$, IOC centered at $-1$: $(-3, 1)$ (check endpoints).'
           },
           {
-            label: '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n \\cdot (\\ln n)^2}$ ($n \\ge 2$). At $x = 1$: $\\sum 1/(n(\\ln n)^2)$. This:',
-            options: ['Converges (Integral Test: $\\int 1/(x(\\ln x)^2)\\,dx$ converges)', 'Diverges', 'Inconclusive', 'Converges by AST'],
-            correctAnswers: ['Converges (Integral Test: $\\int 1/(x(\\ln x)^2)\\,dx$ converges)'],
+            label: '$\\sum_{n=2}^{\\infty} \\frac{x^n}{n \\cdot (\\ln n)^2}$. At $x = 1$: $\\sum 1/(n(\\ln n)^2)$. This:',
+            options: ['Converges by the Integral Test', 'Diverges', 'Inconclusive', 'Converges by AST'],
+            correctAnswers: ['Converges by the Integral Test'],
             hints: ['$\\int_2^{\\infty} 1/(x(\\ln x)^2)\\,dx$: let $u = \\ln x$, $du = dx/x$. Get $\\int 1/u^2\\,du$.'],
             explanation: '$\\int 1/u^2\\,du = -1/u$, which converges. So $\\sum 1/(n(\\ln n)^2)$ converges.'
           }

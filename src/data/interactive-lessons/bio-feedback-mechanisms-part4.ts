@@ -200,10 +200,10 @@ Each step deepens the oxygen shortage, which is a positive-feedback spiral. This
               'Adding more phosphorus fertilizer to farms in the watershed',
               'Cutting nutrient runoff, so fewer algal blooms form each summer',
               'Warming the lake water so it holds less dissolved oxygen',
-              'Removing the lake\'s fish so bacteria have less to decompose'
+              'Stocking the lake with more fish, so more animals use oxygen'
             ],
             correctAnswer: 1,
-            explanation: 'Cutting nutrient runoff removes the trigger for algal blooms, so less dead algae fuels oxygen-consuming decomposition. Removing fish does not stop the bloom, and more fertilizer or warmer water would make the hypoxia worse.'
+            explanation: 'Cutting nutrient runoff removes the trigger for algal blooms, so less dead algae fuels oxygen-consuming decomposition. More fertilizer, warmer water or more oxygen-using fish would all make the hypoxia worse.'
           },
           {
             question: 'Why is Arctic sea-ice loss described as a positive-feedback process?',

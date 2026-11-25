@@ -90,10 +90,10 @@ The velocity vector $(x'(t), y'(t))$ points in the direction the particle is mov
           },
           {
             label: 'The direction of motion at $t = t_0$ is given by:',
-            options: ['The angle $\\theta = \\arctan(y\'(t_0)/x\'(t_0))$', 'The slope $dy/dx$', 'The acceleration direction', 'The curvature'],
-            correctAnswers: ['The angle $\\theta = \\arctan(y\'(t_0)/x\'(t_0))$'],
+            options: ['The velocity vector $(x\'(t_0), y\'(t_0))$', 'The slope $dy/dx$', 'The acceleration direction', 'The curvature'],
+            correctAnswers: ['The velocity vector $(x\'(t_0), y\'(t_0))$'],
             hints: ['The velocity vector gives the direction of motion.'],
-            explanation: 'The velocity vector $(x\', y\')$ points in the direction of motion. Its angle from the positive $x$-axis is $\\arctan(y\'/x\')$ (with quadrant adjustment).'
+            explanation: 'The velocity vector $(x\', y\')$ points in the direction of motion. The slope $dy/dx$ gives only the tangent line, not which way along it the particle moves, and the acceleration and curvature describe how the motion changes.'
           }
         ]
       }

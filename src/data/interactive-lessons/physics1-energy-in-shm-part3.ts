@@ -127,7 +127,7 @@ A 2.0 kg block on a spring ($k = 200$ N/m) oscillates with amplitude $A = 0.20$ 
 
 2) What is the speed at $x = 0.12$ m? (in m/s)
 
-3) At what displacement is the speed 1.0 m/s? (in m)
+3) At what positive displacement is the speed 1.0 m/s? (in m)
 
 *Round all answers to 3 significant figures.*
       `,

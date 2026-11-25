@@ -216,7 +216,7 @@ The 10% rule is a rounded model; feed-to-beef efficiency in real feedlots is oft
             explanation: 'After four transfers only about 0.01 percent of producer energy is left, which cannot support a viable population at a fifth level. Nutrients cycle rather than running out, so they are not what limits chain length.'
           },
           {
-            question: 'A farm grows 3,000,000 kcal of corn. Using the 10% rule, how much more food energy reaches people if they eat the corn directly instead of eating corn-fed beef?',
+            question: 'A farm grows 3,000,000 kcal of corn. Using the 10% rule, how much more food energy do people eat if they eat the corn directly instead of eating corn-fed beef?',
             options: [
               '2,700,000 kcal',
               '300,000 kcal',

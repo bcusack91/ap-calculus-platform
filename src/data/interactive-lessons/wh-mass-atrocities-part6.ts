@@ -112,7 +112,7 @@ Strong response model:
             hint: 'A foundational postwar UN document.'
           },
           {
-            prompt: 'The Holocaust survivor memoir, originally published in 1958 in Yiddish and later in French and English, by a Romanian-born survivor of Auschwitz and Buchenwald.',
+            prompt: 'The Holocaust survivor memoir, first written in Yiddish (1956) and published in shorter form in French (1958) and English (1960), by a Romanian-born survivor of Auschwitz and Buchenwald.',
             answer: 'Night',
             acceptableAnswers: ['Night', 'Night by Elie Wiesel', 'Elie Wiesel Night'],
             hint: 'A short title; one English word.'
@@ -120,7 +120,7 @@ Strong response model:
           {
             prompt: 'The 1942 bureaucratic record of the meeting at which senior Nazi officials coordinated the implementation of the Final Solution.',
             answer: 'Wannsee Protocol',
-            acceptableAnswers: ['Wannsee Protocol', 'Wannsee', 'Wannsee Conference Protocol'],
+            acceptableAnswers: ['Wannsee Protocol', 'Wannsee', 'Wannsee Conference Protocol', 'Wannsee minutes', 'Wannsee Conference minutes'],
             hint: 'Named for the Berlin suburb where the meeting was held.'
           }
         ]

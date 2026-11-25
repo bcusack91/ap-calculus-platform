@@ -84,9 +84,9 @@ The residual is $+3$: the observed value is 3 units above the predicted value, s
           },
           {
             question: 'A residual plot for a linear model shows apparent random scatter around 0. This:',
-            options: ['Shows that $x$ causes changes in $y$', 'Confirms that the form is linear', 'Shows that every residual is exactly 0', 'Means the linear correlation must equal 1'],
+            options: ['Shows that $x$ causes changes in $y$', 'Suggests that the form is linear', 'Shows that every residual is exactly 0', 'Means the linear correlation must equal 1'],
             correctAnswer: 1,
-            explanation: 'Apparent randomness in the residual plot confirms the linear form, so the linear model is appropriate. It says nothing about causation, and residuals can be scattered without being 0 or giving $r = 1$.'
+            explanation: 'Apparent randomness in the residual plot supports the linear form, so the linear model is appropriate. It says nothing about causation, and residuals can be scattered without being 0 or giving $r = 1$.'
           }
         ]
       }

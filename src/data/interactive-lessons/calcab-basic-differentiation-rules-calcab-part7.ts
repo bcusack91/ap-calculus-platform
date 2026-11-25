@@ -196,7 +196,7 @@ $$\\boxed{y - f(c) = -\\frac{1}{f'(c)}(x - c)}$$
       type: 'input-box' as const,
       content: '**Final challenge problem.** ✍️',
       exercise: {
-        question: 'Given $f(2) = 3$, $f\'(2) = -1$, $g(2) = 4$, $g\'(2) = 2$, find $\\left(\\frac{f}{g}\\right)\'(2)$. Write as a fraction (e.g., -5/8).',
+        question: 'Given $f(2) = 3$, $f\'(2) = -1$, $g(2) = 4$, $g\'(2) = 2$, find $\\left(\\frac{f}{g}\\right)\'(2)$. Write as a fraction (e.g., -3/7).',
         correctAnswer: '-10/16',
         acceptableAnswers: ['-10/16', '-5/8', '-0.625'],
         hints: [

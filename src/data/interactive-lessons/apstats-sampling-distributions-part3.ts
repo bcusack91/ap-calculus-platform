@@ -219,7 +219,7 @@ $$P(\\hat{p} < 0.65) = P(z < -1.34) = 0.0901$$
       exercise: {
         questions: [
           {
-            question: 'The formula $\\sigma_{\\hat{p}} = \\sqrt{p(1-p)/n}$ gives the:',
+            question: 'The formula $\\sigma_{\\hat{p}} = \\sqrt{p(1-p)/n}$ gives:',
             options: ['The standard deviation of the population', 'The standard deviation of the sample mean', 'The standard deviation of the statistic $\\hat{p}$', 'The margin of error for estimating $p$'],
             correctAnswer: 2,
             explanation: 'This formula gives the standard deviation (spread) of the sampling distribution of the sample proportion $\\hat{p}$. It is not the SD of individual values, does not apply to $\\bar{x}$, and a margin of error also includes a critical value.'
@@ -243,7 +243,7 @@ $$P(\\hat{p} < 0.65) = P(z < -1.34) = 0.0901$$
             explanation: '$np = 40 \\times 0.15 = 6 < 10$. The condition $np \\geq 10$ fails, so the normal approximation is NOT valid.'
           },
           {
-            question: 'Increasing the sample size from 100 to 400 will ___ the standard deviation of $\\hat{p}$ by a factor of:',
+            question: 'Increasing the sample size from 100 to 400 does what to the standard deviation of $\\hat{p}$?',
             options: ['Double it', 'Halve it', 'Quarter it', 'Leave it unchanged'],
             correctAnswer: 1,
             explanation: '$\\sigma_{\\hat{p}} \\propto 1/\\sqrt{n}$. When $n$ quadruples (100 → 400), $\\sqrt{n}$ doubles, so $\\sigma_{\\hat{p}}$ is halved, not quartered.'

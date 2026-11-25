@@ -83,7 +83,7 @@ $W = \\int_0^2 3x^2\\,dx = x^3\\Big|_0^2 = 8$ J ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Work done by a spring force $F = -kx$ stretching from 0 to $x_0$ is","options":["$-\\frac{1}{2}kx_0^2$","$\\frac{1}{2}kx_0^2$","$kx_0$","$kx_0^2$"]},{"label":"When force and displacement are in opposite directions, work is","options":["Negative","Positive","Zero","Undefined"]}],
+        dropdowns: [{"label":"Work done by the spring force $F = -kx$ as the spring is stretched from 0 to $x_0$ is","options":["$-\\frac{1}{2}kx_0^2$","$\\frac{1}{2}kx_0^2$","$kx_0$","$kx_0^2$"]},{"label":"When force and displacement are in opposite directions, work is","options":["Negative","Positive","Zero","Undefined"]}],
         correctAnswers: ["$-\\frac{1}{2}kx_0^2$","Negative"],
         hint1: "$W = \\int_0^{x_0} (-kx)\\,dx$.",
         hint2: "$\\cos 180° = -1$.",

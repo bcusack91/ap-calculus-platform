@@ -151,7 +151,7 @@ $$x = \\frac{\\pi}{3},\\ \\pi,\\ \\frac{5\\pi}{3}$$
       exercise: {
         questions: [
           {
-            question: '**1)** $\\cos^2 \\frac{\\pi}{12} + \\sin^2 \\frac{\\pi}{12}$ = ? Write as an integer. (e.g., $\\cos^2 1.3 + \\sin^2 1.3 = 1$ by the Pythagorean identity)',
+            question: '**1)** $\\cos^2 \\frac{\\pi}{12} + \\sin^2 \\frac{\\pi}{12}$ = ? Write as an integer. (e.g., $4\\cos^2 1.3 + 4\\sin^2 1.3 = 4$ by the Pythagorean identity)',
             answer: '1',
           },
           {

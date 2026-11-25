@@ -163,6 +163,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
           {
             label: 'The δ+ end of one polar molecule is attracted to the δ_____ end of another (+/-)',
             correctAnswer: '-',
+            acceptableAnswers: ['negative', 'minus'],
             explanation: 'Opposite partial charges attract. The δ+ end of one molecule is attracted to the δ- end of a neighboring polar molecule.'
           }
         ]

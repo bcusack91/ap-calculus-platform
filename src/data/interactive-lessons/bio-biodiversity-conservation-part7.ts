@@ -157,9 +157,9 @@ This predicts ~44% species loss from a 90% habitat reduction.
             question: 'An island originally covered by 1,000 $km^{2}$ of forest containing an estimated 200 bird species is reduced to 100 $km^{2}$ of forest. Using $z = 0.30$, the predicted number of remaining bird species is approximately:',
             options: [
               '200 (no change)',
-              '100 (50% loss)',
+              '140 (30% loss)',
               '20 (90% loss)',
-              '100 (using $S_{new} = 200 \\times 0.1^{0.30} ≈ 100$)'
+              '100 (50% loss)'
             ],
             correctAnswer: 3,
             explanation: '$S_{new} = S_{original} \\times (A_{new}/A_{original})^z = 200 \\times (100/1000)^{0.30} = 200 \\times 0.1^{0.30} = 200 \\times 0.501 ≈ 100$ species. A 90% reduction in forest area predicts roughly a 50% loss of bird species when $z = 0.30$.'

@@ -68,7 +68,7 @@ $\\sum (-1)^n(-2)^n/(n \\cdot 2^n) = \\sum (-1)^n(-1)^n 2^n/(n \\cdot 2^n) = \\s
           },
           {
             question: 'A student applies the Ratio Test to $\\sum 1/n^3$ and gets $L = 1$. The series:',
-            options: ['Converges (by $p$-Series Test, $p = 3 > 1$), but Ratio Test cannot show this', 'Diverges since $L = 1$', 'Converges since $L = 1$', 'Cannot be determined by any test'],
+            options: ['Converges, but the Ratio Test cannot show this', 'Diverges since $L = 1$', 'Converges since $L = 1$', 'Cannot be determined by any test'],
             correctAnswer: 0,
             explanation: '$L = 1$ is inconclusive. Switch to $p$-Series Test: $p = 3 > 1$, so it converges.'
           },
@@ -89,15 +89,15 @@ $\\sum (-1)^n(-2)^n/(n \\cdot 2^n) = \\sum (-1)^n(-1)^n 2^n/(n \\cdot 2^n) = \\s
         dropdowns: [
           {
             label: '$\\sum_{n=0}^{\\infty} \\frac{n! \\cdot x^n}{100^n}$. Without computing, $R$ is likely:',
-            options: ['$0$ (factorial growth beats exponential)', '$100$', '$\\infty$', '$1$'],
-            correctAnswers: ['$0$ (factorial growth beats exponential)'],
+            options: ['$0$', '$100$', '$\\infty$', '$1$'],
+            correctAnswers: ['$0$'],
             hints: ['$n!$ grows faster than $c^n$ for any constant $c$.'],
             explanation: '$|a_{n+1}/a_n| = (n+1)|x|/100 \\to \\infty$ unless $x = 0$. $R = 0$.'
           },
           {
             label: '$\\sum x^n/n^{100}$: $R =$',
-            options: ['$1$ (like geometric with polynomial adjustment)', '$100$', '$\\infty$', '$1/100$'],
-            correctAnswers: ['$1$ (like geometric with polynomial adjustment)'],
+            options: ['$1$', '$100$', '$\\infty$', '$1/100$'],
+            correctAnswers: ['$1$'],
             hints: ['$|c_{n+1}/c_n| = (n/(n+1))^{100} \\to 1$. $R = 1/1 = 1$.'],
             explanation: '$\\lim |c_{n+1}/c_n| = 1$. $R = 1$. The polynomial factor does not affect $R$.'
           }

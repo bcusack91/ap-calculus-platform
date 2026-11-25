@@ -185,7 +185,7 @@ Write the expected PES peak heights (from highest to lowest binding energy) for 
       exercise: {
         inputs: [
           {
-            label: 'Peak heights for argon (Ar, Z = 18): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$',
+            label: 'Peak heights for argon (Ar, Z = 18):',
             correctAnswer: '2,2,6,2,6',
             explanation: 'Argon has 5 occupied subshells: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$. The peak heights from left to right are: 2, 2, 6, 2, 6.'
           }

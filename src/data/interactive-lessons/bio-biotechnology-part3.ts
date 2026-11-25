@@ -77,7 +77,7 @@ This is a clear case of **structure determining function**, and of evolution: th
           {
             question: 'A student replaces the heat-stable polymerase with a polymerase purified from human cells. What result is most likely?',
             options: [
-              'Copies form only in the first cycle and then stop',
+              'Few or no copies form, since the first heating step ruins it',
               'Copies form normally, since all DNA polymerases are alike',
               'Copies form faster, since the human enzyme matches human DNA',
               'Copies form, but each one carries RNA nucleotides instead'

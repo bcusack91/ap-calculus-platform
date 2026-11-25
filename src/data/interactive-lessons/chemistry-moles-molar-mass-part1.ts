@@ -234,7 +234,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
             options: ['Boltzmann\'s constant', 'Avogadro\'s number', 'Planck\'s constant', 'the gas constant']
           },
           {
-            label: '2 mol of helium atoms contains ______ atoms than 2 mol of lead atoms',
+            label: 'Compared with 2 mol of lead atoms, 2 mol of helium atoms contains ______ atoms',
             options: ['about 52 times more', 'fewer', 'the same number of', 'double the']
           },
           {

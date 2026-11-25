@@ -227,7 +227,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
           {
             id: 'gl5-dd3',
             label: 'Partial pressure of a gas depends on the ___',
-            options: ['moles of that gas', 'mass of that gas', 'its own volume'],
+            options: ['moles of that gas', 'mass of that gas', 'volume of that gas'],
             correctIndex: 0,
             explanation: 'Partial pressure depends on the number of moles (not mass) of each gas: $P_i = n_iRT/V$. Every gas in the mixture fills the whole container, so each one has the same volume.'
           }

@@ -93,7 +93,7 @@ Forces at the pivot have zero moment arm → zero torque about the pivot. This m
     {
       id: 'am4-mcq3',
       type: 'mcq' as const,
-      question: 'A $0.01$ kg bullet at $400$ m/s embeds in a $2$ kg rod of length $1$ m, pivoted at one end. The angular velocity after impact is approximately:',
+      question: 'A $0.01$ kg bullet at $400$ m/s embeds perpendicularly in the free end of a $2$ kg rod of length $1$ m, pivoted at its other end. The angular velocity after impact is approximately:',
       options: ['$5.91$ rad/s', '$6.00$ rad/s', '$1.99$ rad/s', '$4.00$ rad/s'],
       correctAnswer: 0,
       explanation: '$L_i = 0.01 \\times 400 \\times 1 = 4$ $kg\\cdot m^{2}/s$. $I_f = \\frac{1}{3}(2)(1)^2 + 0.01(1)^2 = 0.667 + 0.01 = 0.677$ $kg\\cdot m^{2}$. $\\omega = 4/0.677 \\approx 5.91$ rad/s. Leaving the bullet out of $I$ gives 6.00 rad/s.'
@@ -116,7 +116,7 @@ The satellite moves fastest where it is closest to the central body.`
     {
       id: 'am4-mcq4',
       type: 'mcq' as const,
-      question: 'A satellite in an elliptical orbit has speed $v_1 = 8000$ m/s at distance $r_1 = 7000$ km. At $r_2 = 14\\,000$ km, its speed is:',
+      question: 'A satellite in an elliptical orbit has speed $v_1 = 8000$ m/s at its closest point, $r_1 = 7000$ km from the center of the planet. At its farthest point, $r_2 = 14\\,000$ km, its speed is:',
       options: ['$4000$ m/s', '$8000$ m/s', '$16\\,000$ m/s', '$2000$ m/s'],
       correctAnswer: 0,
       explanation: 'At perigee and apogee, $v \\perp r$. Conservation: $r_1 v_1 = r_2 v_2$. $v_2 = r_1 v_1/r_2 = 7000(8000)/14000 = 4000$ m/s.'

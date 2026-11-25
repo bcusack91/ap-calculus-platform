@@ -97,6 +97,7 @@ Consultation and communication with users are an important part of development. 
       exercise: {
         boxes: 3,
         correctAnswers: ["building", "miss", "resolution"],
+        acceptableAnswers: [[], ["overlook", "ignore", "not notice", "not see"], []],
         hint1: "Building agreement.",
         hint2: "Blind spots.",
         hint3: "Resolving it.",

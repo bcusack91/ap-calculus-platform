@@ -143,7 +143,7 @@ where $N_0$ is the initial number of template molecules.
             options: ['hydrogen', 'covalent', 'ionic', 'peptide']
           },
           {
-            label: 'Primers anneal to the template during the _____ step.',
+            label: 'Primers bind to complementary sequences on the template during the _____ step.',
             options: ['annealing', 'denaturation', 'extension', 'ligation']
           },
           {

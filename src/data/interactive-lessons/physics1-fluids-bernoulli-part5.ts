@@ -99,7 +99,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
       content: `
 **Application Calculations** 🧮 ($\\rho_{air} = 1.2$, $\\rho_w = 1000$, g = 10)
 
-1) A Pitot tube on an airplane reads $P_{stag} - P_{static} = 600$ Pa. Airspeed (m/s)?
+1) A Pitot tube on an airplane reads $P_{stag} - P_{static} = 600$ Pa. Airspeed (m/s, 3 sig figs)?
 
 2) An airfoil has $v_{top} = 80$ m/s, $v_{bot} = 60$ m/s. Pressure difference $\\Delta P = P_{bot} - P_{top}$ (Pa)?
 

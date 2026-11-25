@@ -45,18 +45,29 @@ export const englitToneSpeakerPart1Data = {
     {
       id: "englitto1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "tone",
-            "speaker position",
-            "shift"
+      "questions": [
+            {
+                  "question": "The attitude conveyed through a speaker's language",
+                  "answer": "tone",
+                  "acceptableAnswers": ["the tone"]
+            },
+            {
+                  "question": "The speaker's relationship to the subject and audience (two words)",
+                  "answer": "speaker position",
+                  "acceptableAnswers": ["speaker's position", "speakers position", "position"]
+            },
+            {
+                  "question": "A change in tone or stance",
+                  "answer": "shift",
+                  "acceptableAnswers": ["a shift", "tonal shift", "turn"]
+            }
       ],
-      "hint1": "Concept 1: Tone",
-      "hint2": "Concept 2: Speaker Position",
-      "hint3": "Concept 3: Shift",
-      "explanation": "Tone, Speaker Position, and Shift are core vocabulary for this unit."
+      "hint1": "Concept 1: the attitude.",
+      "hint2": "Concept 2: where the speaker stands.",
+      "hint3": "Concept 3: a change partway through.",
+      "explanation": "Tone, speaker position and shift are core vocabulary for this unit."
 }
     },
     {

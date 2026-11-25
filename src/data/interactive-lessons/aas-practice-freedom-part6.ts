@@ -120,7 +120,7 @@ export const aasPracticeFreedomPart6Data = {
               "hair-care products",
               "hair",
               "hair products",
-              "beauty products"
+              "beauty products", "cosmetics"
             ]
           }
         ],

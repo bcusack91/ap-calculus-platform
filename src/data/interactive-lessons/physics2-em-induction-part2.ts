@@ -106,7 +106,7 @@ Even with $B$ and $A$ fixed, tilting the loop changes how much of the field pass
             explanation: '$|\\varepsilon| = N\\frac{|\\Delta\\Phi|}{\\Delta t} = 50 \\times \\frac{|0.02 - 0.08|}{0.2} = 50 \\times \\frac{0.06}{0.2} = 50 \\times 0.3 = 15$ V.'
           },
           {
-            question: 'Doubling the number of turns in a coil while keeping everything else the same will:',
+            question: 'If the number of turns in a coil is doubled while everything else stays the same, then:',
             options: [
               'The EMF is four times as large',
               'The EMF is twice as large',
@@ -148,7 +148,7 @@ Even modest changes in flux through many-turn coils can produce significant volt
 
 A square coil has 80 turns, each with side length 10 cm. The coil sits in a uniform field ($\\theta = 0°$) that decreases from 0.6 T to 0.2 T in 0.05 s.
 
-1) Area of each turn $(in m^{2})$
+1) Area of each turn (in $m^{2}$)
 
 2) Change in flux per turn $|\\Delta\\Phi|$ (in Wb)
 

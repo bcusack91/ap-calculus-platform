@@ -156,6 +156,7 @@ Use a number or the standard name.
       exercise: {
         boxes: 3,
         correctAnswers: ['8802', 'Bracero', 'Double V'],
+        acceptableAnswers: [['Executive Order 8802', 'EO 8802', 'E.O. 8802'], ['Bracero Program', 'Bracero Program of 1942', 'braceros'], ['Double Victory', 'Double V campaign', 'Double Victory campaign']],
         hint1: 'It was issued on June 25, 1941.',
         hint2: 'The name comes from the Spanish word for a manual laborer.',
         hint3: 'Two victories, each marked with a V.',

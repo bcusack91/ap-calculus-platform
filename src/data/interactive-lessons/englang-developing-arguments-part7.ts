@@ -132,6 +132,7 @@ export const englangDevelopingArgumentsPart7Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ['invention', 'stipulation', 'implication'],
+        acceptableAnswers: [[], ['stipulative definition', 'definition', 'stipulating'], []],
         hint1: 'It shares a root with "invent."',
         hint2: 'The noun form of "stipulate."',
         hint3: 'The answer to "so what?"',

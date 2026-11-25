@@ -125,7 +125,7 @@ Britain tried to protect its lead, for example by banning the emigration of skil
       id: 'hgindust2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Classify the Diffusion** 🔍
+**Classify the Process** 🔍
       `,
       exercise: {
         dropdowns: [

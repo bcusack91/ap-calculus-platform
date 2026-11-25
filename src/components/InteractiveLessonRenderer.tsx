@@ -4537,12 +4537,18 @@ function InputBoxExercise({
 
   // Per-box list of ALL accepted answers: the primary plus any explicit
   // alternatives (e.g. ['-3/4','-0.75'] — fraction/decimal pairs the numeric
-  // matcher can't equate on its own). For Formats A and B there are no
-  // alternatives, so this is just [correctAnswer] and matching is unchanged.
+  // matcher can't equate on its own, or word synonyms like 'qualifier'/'modifier').
+  // Format A: optional `exercise.acceptableAnswers[i]` (one list per box).
+  // Format B: optional `inputs[i].acceptableAnswers`.
+  const formatAAlts = (exercise as { acceptableAnswers?: unknown }).acceptableAnswers
   const acceptedByBox: string[][] = Array.from({ length: numBoxes }).map((_, i) => {
-    const alts = hasQuestionsArray
+    const alts: unknown[] = hasQuestionsArray
       ? (questionsFmt![i]?.acceptableAnswers ?? [])
-      : (isSingleQuestionFormat && i === 0 && Array.isArray(singleQ.acceptableAnswers) ? singleQ.acceptableAnswers : [])
+      : isSingleQuestionFormat
+        ? (i === 0 && Array.isArray(singleQ.acceptableAnswers) ? singleQ.acceptableAnswers : [])
+        : exercise.inputs && exercise.inputs.length > 0
+          ? ((exercise.inputs[i] as ExerciseInput & { acceptableAnswers?: string[] })?.acceptableAnswers ?? [])
+          : (Array.isArray(formatAAlts) && Array.isArray(formatAAlts[i]) ? (formatAAlts[i] as unknown[]) : [])
     return [correctAnswersList[i], ...alts].filter((a): a is string => typeof a === 'string' && a.length > 0)
   })
   const isBoxCorrect = (index: number, answer: string): boolean =>
@@ -5043,7 +5049,7 @@ function DropdownExercise({
           </p>
           <ul className="space-y-2 text-lg text-green-800 dark:text-green-300">
             {dropdowns.map((dropdown: ExerciseDropdown, index: number) => {
-              const rawLabel = dropdown.label || ''
+              const rawLabel = dropdown.label || dropdown.text || ''
               const cleanLabel = rawLabel
                 .replace(/[\s:]*_{2,}\s*$/g, '')
                 .replace(/[\s:]+$/g, '')

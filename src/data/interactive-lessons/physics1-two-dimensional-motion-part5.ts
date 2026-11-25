@@ -55,7 +55,7 @@ A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground.
 
 2) Horizontal distance traveled (in meters)
 
-3) Final speed just before hitting the ground (in m/s)
+3) Final speed just before hitting the ground (in m/s, to 3 significant figures)
       `,
       exercise: {
         questions: [{ question: '(1)', answer: '1', acceptableAnswers: ['1'] }, { question: '(2)', answer: '8', acceptableAnswers: ['8'] }, { question: '(3)', answer: '12.8', acceptableAnswers: ['12.8', '~12.8', '12.81', 'sqrt(164)', '√164'] }],

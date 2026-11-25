@@ -60,7 +60,7 @@ $t = \\frac{\\ln(3/13)}{k} = \\frac{\\ln(3/13)}{\\frac{1}{10}\\ln(8/13)} \\appro
       exercise: {
         questions: [
           {
-            question: 'A $98\u00b0F$ body is found in a $65\u00b0F$ room. After 1 hour it\u2019s $90\u00b0F$. The cooling constant $k$ is:',
+            question: 'A $98\u00b0F$ body is found in a $65\u00b0F$ room. After 1 hour it\u2019s $90\u00b0F$. Using $T(t) = T_s + (T_0 - T_s)e^{kt}$, the cooling constant $k$ is:',
             options: ['$\\ln(25/33)$', '$-\\ln(25/33)$', '$\\frac{\\ln(25/33)}{65}$', '$-\\frac{8}{33}$'],
             correctAnswer: 0,
             explanation: '$90 = 65 + 33e^{k}$. $25 = 33e^k$. $e^k = 25/33$. $k = \\ln(25/33) \\approx -0.278$. Flipping the ratio gives $-\\ln(25/33) = \\ln(33/25) > 0$, which would mean the body warms up. Dividing by $65$ mixes in the room temperature, and $-\\frac{8}{33}$ treats the cooling as linear.'

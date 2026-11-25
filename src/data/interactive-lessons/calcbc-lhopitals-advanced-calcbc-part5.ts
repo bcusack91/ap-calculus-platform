@@ -60,7 +60,7 @@ $$\\boxed{\\text{Memorize these common limits:}}$$
           },
           {
             question: '$\\lim_{x \\to \\infty} \\frac{x^{100}}{e^x}$',
-            options: ['$0$ (exponential always beats polynomial)', '$\\infty$', '$100$', '$1$'],
+            options: ['$0$', '$\\infty$', '$100$', '$1$'],
             correctAnswer: 0,
             explanation: 'Growth hierarchy: $e^x$ dominates $x^{100}$. (L\'H 100 times gives $100!/e^x \\to 0$.)'
           }
@@ -75,15 +75,15 @@ $$\\boxed{\\text{Memorize these common limits:}}$$
         dropdowns: [
           {
             label: '$\\lim_{x \\to 0} \\frac{x - \\sin x}{x^3}$:',
-            options: ['$1/6$ (Taylor: $x - (x - x^3/6 + \\cdots) = x^3/6$)', '$0$', '$1/3$', '$1/2$'],
-            correctAnswers: ['$1/6$ (Taylor: $x - (x - x^3/6 + \\cdots) = x^3/6$)'],
+            options: ['$1/6$', '$0$', '$1/3$', '$1/2$'],
+            correctAnswers: ['$1/6$'],
             hints: ['Taylor expansion of $\\sin x$: $x - x^3/6 + \\cdots$'],
             explanation: 'Numerator $= x^3/6 + \\cdots$. Limit $= 1/6$.'
           },
           {
             label: '$\\lim_{x \\to 0^+} x^2 \\ln x$:',
-            options: ['$0$ ($0 \\cdot (-\\infty)$; rewrite as $\\ln x / (1/x^2)$ and L\'H)', '$-\\infty$', '$1$', 'DNE'],
-            correctAnswers: ['$0$ ($0 \\cdot (-\\infty)$; rewrite as $\\ln x / (1/x^2)$ and L\'H)'],
+            options: ['$0$', '$-\\infty$', '$1$', 'DNE'],
+            correctAnswers: ['$0$'],
             hints: ['$= \\lim \\frac{\\ln x}{x^{-2}} = \\frac{-\\infty}{\\infty}$. L\'H: $\\frac{1/x}{-2x^{-3}} = -x^2/2 \\to 0$.'],
             explanation: 'L\'H: $\\lim (-x^2/2) = 0$.'
           }

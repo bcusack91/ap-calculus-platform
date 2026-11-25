@@ -65,6 +65,7 @@ Brown-headed cowbirds are **edge** species that lay their eggs in other birds' n
       exercise: {
         boxes: 3,
         correctAnswers: ['70', '96', '14'],
+        acceptableAnswers: [[], [], ['13.5']],
         hint1: 'Cowbirds ÷ total birds in Plot B × 100.',
         hint2: '480 of the 500 hectares were cleared.',
         hint3: 'Rule of 70: 70 ÷ the percent rate of decline.',

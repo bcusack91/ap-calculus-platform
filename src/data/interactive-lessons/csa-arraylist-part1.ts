@@ -121,6 +121,7 @@ for (String name : list) {
       exercise: {
         boxes: 3,
         correctAnswers: ['object', 'size()', 'autoboxing'],
+        acceptableAnswers: [['reference', 'objects', 'Object'], ['size', '.size()'], []],
         hint1: 'Wrapper classes wrap primitives into these.',
         hint2: 'Similar to length but with parentheses.',
         hint3: 'Auto + boxing the primitive into a wrapper.',

@@ -143,12 +143,12 @@ The telegraph was the first technology where information itself (not goods) was 
       exercise: {
         dropdowns: [
           {
-            label: 'The 1866 permanent submarine telegraph cable connecting Britain and North America, laid by the SS Great Eastern, was ___',
+            label: 'The 1866 submarine telegraph cable connecting Britain and North America, laid by the SS Great Eastern, was ___',
             options: [
             'The permanent transatlantic cable (Atlantic Telegraph Company)',
             'The Pacific Telegraph Cable',
             'The Imperial Cable Route',
-            'The Anglo-American Cable',
+            'The Indo-European Telegraph Line',
             ]
           },
           {
@@ -161,7 +161,7 @@ The telegraph was the first technology where information itself (not goods) was 
             ]
           },
           {
-            label: 'The 1865 international organization to regulate global telegraph networks, the oldest surviving international organization, was ___',
+            label: 'The 1865 international organization to regulate global telegraph networks, today the oldest specialized agency of the United Nations, was ___',
             options: [
             'International Telegraph Union',
             'Universal Postal Union',

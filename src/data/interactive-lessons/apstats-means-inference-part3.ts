@@ -41,7 +41,7 @@ Since $0.032 < 0.05$, reject $H_0$.`
       exercise: {
         questions: [
           {
-            question: 'In a one-sample t-test, the test statistic uses:',
+            question: 'In a one-sample t-test, the standard error in the test statistic uses:',
             options: ['$\\sigma$ (population SD)', '$s$ (sample SD)', '$\\mu$ (population mean)', '$\\bar{x}$ (sample mean) only'],
             correctAnswer: 1,
             explanation: 'The t-test uses $s$ because $\\sigma$ is unknown.'

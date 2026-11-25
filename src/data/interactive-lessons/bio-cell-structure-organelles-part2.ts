@@ -135,10 +135,17 @@ Eukaryotic cells are 10–100× larger than prokaryotic cells. Membrane-bound co
 **Key Terms — Fill in the Blanks** ✏️
 
 Enter the correct term for each description.
+
+1) The region in a prokaryotic cell where the circular chromosome is located (not enclosed by a membrane).
+
+2) The polymer that makes up bacterial cell walls, a target of antibiotics like penicillin.
+
+3) The process by which prokaryotic cells reproduce, splitting into two identical daughter cells.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['nucleoid', 'peptidoglycan', 'binary fission'],
+        acceptableAnswers: [['nucleoid region'], [], ['fission']],
         hint1: 'The region in a prokaryotic cell where the circular chromosome is located (not enclosed by a membrane).',
         hint2: 'The polymer that makes up bacterial cell walls — a target of antibiotics like penicillin.',
         hint3: 'The process by which prokaryotic cells reproduce — splitting into two identical daughter cells.',

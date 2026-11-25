@@ -51,7 +51,7 @@ export const apStatsErrorsPart7Data = {
           },
           {
             question: 'Increasing sample size from 50 to 200 will:',
-            options: ['Only decrease $\\alpha$', 'Only decrease $\\beta$', 'Decrease both $\\alpha$ and $\\beta$', 'Decrease $\\beta$ but not change $\\alpha$'],
+            options: ['Only decrease $\\alpha$', 'Increase $\\beta$ but not change $\\alpha$', 'Decrease both $\\alpha$ and $\\beta$', 'Decrease $\\beta$ but not change $\\alpha$'],
             correctAnswer: 3,
             explanation: '$\\alpha$ is set by the researcher. Increasing $n$ decreases $\\beta$ (increases power) but $\\alpha$ stays fixed.'
           }

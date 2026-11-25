@@ -78,7 +78,7 @@ This simplifies to $y = -x + \\sqrt{2}$, tangent to the unit circle.`
           },
           {
             question: 'The WRONG way to compute $d^2y/dx^2$ for parametric curves is:',
-            options: ['$y\'\'(t)/x\'\'(t)$ (this is NOT correct)', '$\\frac{d}{dt}(dy/dx) \\div (dx/dt)$', 'Using the formula $\\frac{(d/dt)(y\'/x\')}{x\'(t)}$', 'All of the correct methods involve $x\'(t)$ in the denominator'],
+            options: ['$y\'\'(t)/x\'\'(t)$', '$\\frac{d}{dt}(dy/dx) \\div (dx/dt)$', 'Using the formula $\\frac{(d/dt)(y\'/x\')}{x\'(t)}$', '$\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right) \\cdot \\frac{dt}{dx}$'],
             correctAnswer: 0,
             explanation: '$d^2y/dx^2 \\neq y\'\'/x\'\'$. You must use $\\frac{(d/dt)(dy/dx)}{dx/dt}$.'
           },

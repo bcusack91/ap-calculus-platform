@@ -124,6 +124,7 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
       exercise: {
         boxes: 3,
         correctAnswers: ['exigence', 'conciliatory', 'Tone'],
+        acceptableAnswers: [['exigency'], ['measured', 'diplomatic', 'respectful'], []],
         hint1: 'The trigger or urgency behind the text.',
         hint2: 'Trying to reconcile rather than confront.',
         hint3: 'The final letter in SOAPSTone.',

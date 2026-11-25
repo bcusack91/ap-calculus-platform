@@ -86,7 +86,7 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
             explanation: 'The null hypothesis is the status quo: no change, no effect, no difference. The research claim goes in $H_a$, and hypotheses are about parameters, not statistics.'
           },
           {
-            question: 'A researcher believes a diet reduces weight. The alternative hypothesis should be:',
+            question: 'A researcher believes a diet reduces weight. Let $\\mu$ be the true mean change in weight (after minus before). The alternative hypothesis should be:',
             options: ['$H_a: \\mu = 0$', '$H_a: \\mu > 0$', '$H_a: \\mu < 0$', '$H_a: \\mu \\neq 0$'],
             correctAnswer: 2,
             explanation: 'If the diet reduces weight, the mean change is negative (weight goes down), so $H_a: \\mu < 0$.'
@@ -223,7 +223,7 @@ Before testing, we choose a significance level $\\alpha$ (usually 0.05):
             explanation: 'Failing to reject $H_0$ does NOT prove it is true — we simply lack evidence against it.'
           },
           {
-            question: 'A one-tailed test is more powerful than a two-tailed test because:',
+            question: 'When the true effect is in the direction stated by $H_a$, a one-tailed test is more powerful than a two-tailed test because:',
             options: ['It always uses a larger sample size', 'Its p-value is half the two-sided p-value', 'It uses a higher significance level', 'It uses the median instead of the mean'],
             correctAnswer: 1,
             explanation: 'When the data fall in the direction stated by $H_a$, the one-sided p-value is half the two-sided p-value, so it is easier to reject $H_0$ in that direction. The sample size, $\\alpha$ and the parameter are the same in both tests.'

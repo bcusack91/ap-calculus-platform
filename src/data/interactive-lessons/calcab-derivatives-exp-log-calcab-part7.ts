@@ -66,7 +66,7 @@ export const calcabDerivExpLogPart7Data = {
     {
       "id": "del7-input",
       "type": "input-boxes" as const,
-      "content": "**Final Challenge** 🧮\n\n**1)** $\\frac{d}{dx}[e^x \\cdot \\ln x]$ at $x = 1$: (enter as e)\n\n**2)** $\\frac{d}{dx}[3^x]$ at $x = 0$: (enter as ln3)",
+      "content": "**Final Challenge** 🧮\n\n**1)** $\\frac{d}{dx}[e^x \\cdot \\ln x]$ at $x = 1$: (exact, e.g. 4e)\n\n**2)** $\\frac{d}{dx}[3^x]$ at $x = 0$: (exact, e.g. ln7)",
       "exercise": {
         "questions": [{ "question": "(1)", "answer": "e", "acceptableAnswers": ["e", "2.718"] }, { "question": "(2)", "answer": "ln3", "acceptableAnswers": ["ln3", "ln(3)", "ln 3", "1.099"] }],
         "hint1": "Product rule: $e^x \\ln x + e^x/x$. At $x = 1$: $e(0) + e(1) = e$.",

@@ -122,7 +122,7 @@ From May 2027 all three SAQs are required and all three are sourced: Q1 gives a 
           {
             question: 'The 1803 Supreme Court case that established judicial review.',
             answer: 'Marbury v. Madison',
-            acceptableAnswers: ['Marbury v. Madison', 'Marbury v Madison', 'Marbury vs Madison', 'Marbury vs. Madison'],
+            acceptableAnswers: ['Marbury v. Madison', 'Marbury v Madison', 'Marbury vs Madison', 'Marbury vs. Madison', 'Marbury versus Madison'],
             hint: 'Decided by Chief Justice John Marshall.'
           },
           {
@@ -134,7 +134,7 @@ From May 2027 all three SAQs are required and all three are sourced: Q1 gives a 
           {
             question: 'The 1832 Supreme Court case that recognized Cherokee national sovereignty within their treaty-defined territory.',
             answer: 'Worcester v. Georgia',
-            acceptableAnswers: ['Worcester v. Georgia', 'Worcester v Georgia', 'Worcester vs Georgia', 'Worcester vs. Georgia'],
+            acceptableAnswers: ['Worcester v. Georgia', 'Worcester v Georgia', 'Worcester vs Georgia', 'Worcester vs. Georgia', 'Worcester versus Georgia'],
             hint: 'Brought by a jailed missionary; Georgia ignored it and Jackson declined to enforce it.'
           }
         ]
@@ -151,7 +151,7 @@ From May 2027 all three SAQs are required and all three are sourced: Q1 gives a 
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing Tocqueville was a liberal French aristocrat using America to argue about post-Revolutionary French politics is most useful for: ___",
+            label: "Knowing Tocqueville was a liberal French aristocrat whose family had suffered in the French Revolution is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
@@ -161,7 +161,7 @@ From May 2027 all three SAQs are required and all three are sourced: Q1 gives a 
         ],
         correctAnswers: ['historical context', 'point of view', 'intended audience'],
         hint1: 'U.S. military weakness situates the moment — that is context.',
-        hint2: 'Liberal French aristocrat arguing about French politics names the writer\'s position — that is POV.',
+        hint2: 'Liberal French aristocrat shaped by the Revolution names the writer\'s position — that is POV.',
         hint3: 'Jacksonian Democratic voters before 1832 election names the rhetorical target — that is audience.',
         explanation: 'Each HIPP element does different work: situation → context; identity → POV; rhetorical target → audience.'
       }

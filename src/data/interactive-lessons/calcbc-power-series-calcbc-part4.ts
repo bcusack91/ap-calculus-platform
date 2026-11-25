@@ -60,7 +60,7 @@ This is related to the error function $\\text{erf}(x)$ — the series lets you a
         questions: [
           {
             question: 'The first three nonzero terms of the Maclaurin series for $x \\sin x$ are:',
-            options: ['$x^2 - x^4/6 + x^6/120$', '$x - x^3/6 + x^5/120$', '$x^2 - x^4/3! + x^6/5!$', '$1 - x^2/2 + x^4/24$'],
+            options: ['$x^2 - x^4/6 + x^6/120$', '$x - x^3/6 + x^5/120$', '$x^2 - x^4/2 + x^6/24$', '$1 - x^2/2 + x^4/24$'],
             correctAnswer: 0,
             explanation: '$\\sin x = x - x^3/3! + x^5/5! - \\cdots$. Multiply by $x$: $x\\sin x = x^2 - x^4/6 + x^6/120 - \\cdots$.'
           },

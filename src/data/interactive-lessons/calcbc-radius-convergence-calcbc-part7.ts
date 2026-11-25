@@ -45,7 +45,7 @@ $$\\boxed{\\text{Ratio Test} \\to R \\to \\text{Check endpoints} \\to \\text{Sta
           },
           {
             question: 'True or false: if a power series converges at $x = 8$ and diverges at $x = 12$, then $R \\ge 8$.',
-            options: ['False — $R \\ge |8 - a|$, which depends on center $a$', 'True', 'Cannot determine', 'True only if $a = 0$'],
+            options: ['False', 'True', 'Cannot determine', 'True only if $a = 0$'],
             correctAnswer: 0,
             explanation: 'If center $a = 5$, convergence at $x = 8$ means $R \\ge 3$, not $R \\ge 8$. $R \\ge |8 - a|$.'
           },

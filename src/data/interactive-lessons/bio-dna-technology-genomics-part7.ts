@@ -54,13 +54,13 @@ The sickle cell mutation (Glu → Val in β-globin) **eliminates an MstII restri
           {
             question: 'On a gel, the DNA ladder shows bands at 10 kb, 5 kb, 2 kb, and 1 kb. A sample shows a single bright band running between the 2 kb and 1 kb markers. The fragment is approximately:',
             options: [
-              '1.5 kb — migration distance is inversely proportional to log(size)',
+              '1.5 kb — migration distance falls roughly linearly with log(size)',
               '3 kb — midway between 2 kb and 1 kb on a linear scale',
               '0.5 kb — smaller than any marker',
               '2 kb — it co-migrates with the 2 kb marker'
             ],
             correctAnswer: 0,
-            explanation: 'In agarose gel electrophoresis, migration distance is approximately proportional to -log(molecular weight). A band running between 2 kb and 1 kb markers is approximately 1.5 kb. The relationship is logarithmic, not linear.'
+            explanation: 'In agarose gel electrophoresis, migration distance decreases roughly linearly with log(fragment size). A band running between the 2 kb and 1 kb markers is roughly 1.5 kb (about 1.4 kb if it sits exactly midway). The relationship is logarithmic, not linear.'
           }
         ]
       }

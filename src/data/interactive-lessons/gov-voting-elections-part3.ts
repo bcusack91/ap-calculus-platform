@@ -234,7 +234,7 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
           {
             prompt: "Theory by V.O. Key Jr. (1955) that argues American politics has been periodically reshaped by ___ ELECTIONS that durably reorder coalitions.",
             answer: 'critical',
-            acceptableAnswers: ['critical', 'Critical', 'CRITICAL'],
+            acceptableAnswers: ['critical', 'Critical', 'CRITICAL', 'realigning', 'Realigning', 'realignment', 'critical realigning'],
             hint: 'CRITICAL ELECTIONS (V.O. Key Jr. "A Theory of Critical Elections" 1955; expanded by Walter Dean Burnham CRITICAL ELECTIONS AND THE MAINSPRINGS OF AMERICAN POLITICS 1970); REALIGNMENT THEORY holds that ~30-40 year cycles produce critical elections that durably reshape coalitions + dominant party; classic examples 1800 Jefferson + 1828 Jackson + 1860 Lincoln + 1896 McKinley + 1932 FDR + 1968 Nixon; MAYHEW 2002 + Levendusky 2009 + Mason 2018 critique theory as overhyped + cherry-picked.'
           },
           {

@@ -209,7 +209,7 @@ $$K_p = \\frac{(0.40)^2}{(2.0)(1.0)^3} = \\frac{0.16}{2.0} = 0.080$$
             options: ['mol/L', 'atm', 'g/L', 'Pascals']
           },
           {
-            label: '$K_p$ is used for reactions involving',
+            label: 'A $K_p$ expression includes the partial pressures of',
             options: ['only aqueous species', 'only gases', 'only solids', 'only liquids']
           },
           {

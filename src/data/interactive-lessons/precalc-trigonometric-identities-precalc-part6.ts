@@ -163,7 +163,7 @@ $$x = \\frac{5\\pi}{6} - \\frac{\\pi}{3} = \\frac{\\pi}{2} \\qquad x = \\frac{13
 
 Enter angles as a coefficient of $\\pi$ (type \`7/6\` for $\\frac{7\\pi}{6}$).
 
-**1)** Solve $\\cos 2x + \\cos x = 0$ on $[0, 2\\pi)$. Enter the **largest** solution: $x = \\,?\\cdot\\pi$
+**1)** Solve $\\cos 2x - \\cos x = 0$ on $[0, 2\\pi)$. Enter the **largest** solution: $x = \\,?\\cdot\\pi$
 
 **2)** How many solutions does $\\sin 2\\theta = \\cos\\theta$ have on $[0, 2\\pi)$? (Enter a whole number.)
 
@@ -171,11 +171,11 @@ Enter angles as a coefficient of $\\pi$ (type \`7/6\` for $\\frac{7\\pi}{6}$).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5/3', '4', '1/6'],
-        hint1: 'Worked Example 2: $(2\\cos x - 1)(\\cos x + 1) = 0$ gives $\\frac{\\pi}{3}, \\pi, \\frac{5\\pi}{3}$.',
+        correctAnswers: ['4/3', '4', '1/6'],
+        hint1: 'As in Worked Example 2: $2\\cos^2 x - \\cos x - 1 = (2\\cos x + 1)(\\cos x - 1) = 0$.',
         hint2: '$2\\sin\\theta\\cos\\theta - \\cos\\theta = \\cos\\theta(2\\sin\\theta - 1) = 0$. Count the solutions of $\\cos\\theta = 0$ and of $\\sin\\theta = \\frac{1}{2}$.',
         hint3: 'Replace $\\cos^2 x$ with $1 - \\sin^2 x$: $2 - 2\\sin^2 x - \\sin x - 1 = 0$, i.e. $2\\sin^2 x + \\sin x - 1 = 0 = (2\\sin x - 1)(\\sin x + 1)$.',
-        explanation: '1) Solutions $\\frac{\\pi}{3}, \\pi, \\frac{5\\pi}{3}$; the largest is $\\frac{5\\pi}{3}$. 2) $\\cos\\theta = 0$ gives $\\frac{\\pi}{2}, \\frac{3\\pi}{2}$ and $\\sin\\theta = \\frac{1}{2}$ gives $\\frac{\\pi}{6}, \\frac{5\\pi}{6}$: four solutions. 3) $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$ gives $\\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{3\\pi}{2}$; the smallest is $\\frac{\\pi}{6}$.'
+        explanation: '1) $(2\\cos x + 1)(\\cos x - 1) = 0$ gives $\\cos x = -\\frac{1}{2}$ ($x = \\frac{2\\pi}{3}, \\frac{4\\pi}{3}$) or $\\cos x = 1$ ($x = 0$); the largest is $\\frac{4\\pi}{3}$. 2) $\\cos\\theta = 0$ gives $\\frac{\\pi}{2}, \\frac{3\\pi}{2}$ and $\\sin\\theta = \\frac{1}{2}$ gives $\\frac{\\pi}{6}, \\frac{5\\pi}{6}$: four solutions. 3) $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$ gives $\\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{3\\pi}{2}$; the smallest is $\\frac{\\pi}{6}$.'
       }
     },
     {

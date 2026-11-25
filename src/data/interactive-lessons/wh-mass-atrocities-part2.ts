@@ -103,9 +103,9 @@ In each case below, a regime facing war or crisis moved from singling out a grou
             hint: 'Named for the Berlin suburb where senior SS and ministry officials met.'
           },
           {
-            prompt: 'The April 1915 arrest and execution of Armenian intellectuals in Istanbul, now commemorated as the start of the Armenian Genocide.',
+            prompt: 'The exact date in April 1915 when Ottoman authorities arrested Armenian intellectuals in Istanbul, now commemorated as the start of the Armenian Genocide.',
             answer: 'April 24, 1915',
-            acceptableAnswers: ['April 24 1915', 'April 24, 1915', 'Red Sunday', 'Armenian Genocide Remembrance Day'],
+            acceptableAnswers: ['April 24 1915', 'April 24, 1915', 'April 24', '24 April 1915', '24 April', '4/24/1915', 'Red Sunday', 'Armenian Genocide Remembrance Day'],
             hint: 'A specific spring date in the second year of WWI.'
           },
           {

@@ -265,7 +265,7 @@ The key principle of motif analysis: **the meaning is in the difference.** A mot
           {
             question: `At what time of night does Dimmesdale climb the scaffold in Chapter 12?`,
             answer: 'midnight',
-            acceptableAnswers: ['Midnight', 'the midnight']
+            acceptableAnswers: ['Midnight', 'the midnight', '12 am', '12 a.m.', '12:00 am', '12:00 a.m.']
           },
           {
             question: `The standard term for a recurring element that develops across a work`,

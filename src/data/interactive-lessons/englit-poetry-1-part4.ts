@@ -189,7 +189,7 @@ Type one standard term for each description.
           {
             question: `A word or phrase that supports more than one meaning at once, like Frost's "sigh"`,
             answer: 'ambiguity',
-            acceptableAnswers: ['ambiguous']
+            acceptableAnswers: ['ambiguous', 'double meaning']
           }
         ],
         hint1: 'The opposite of denotation.',

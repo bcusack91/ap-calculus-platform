@@ -175,7 +175,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
         dropdowns: [
           {
             label: 'The Henderson-Hasselbalch equation is a rearranged form of',
-            options: ['the K_w expression', 'the $K_{a}$ expression', 'the K_b expression only', 'the $K_{sp}$ expression']
+            options: ['the $K_{w}$ expression', 'the $K_{a}$ expression', 'the $K_{b}$ expression only', 'the $K_{sp}$ expression']
           },
           {
             label: 'A buffer with $[A^-] = 10[HA]$ has pH =',

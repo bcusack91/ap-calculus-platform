@@ -116,6 +116,7 @@ export const psychClassicalPart6Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ['UCS', 'generalization', 'discrimination'],
+        acceptableAnswers: [['US'], ['stimulus generalization'], ['stimulus discrimination']],
         hint1: 'The sting naturally causes pain — no learning required.',
         hint2: 'The fear spreads to similar stimuli.',
         hint3: 'The child learns to tell the difference between threatening and non-threatening stimuli.',

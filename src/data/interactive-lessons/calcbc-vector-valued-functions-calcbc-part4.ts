@@ -92,7 +92,7 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
       type: 'input-box' as const,
       content: '**Arc Length Computation**',
       exercise: {
-        question: 'Find the arc length of $\\vec{r}(t) = \\langle 5\\cos t, 5\\sin t \\rangle$ from $t = 0$ to $t = \\pi$. Give your answer as a multiple of $\\pi$ (e.g. "5pi").',
+        question: 'Find the arc length of $\\vec{r}(t) = \\langle 5\\cos t, 5\\sin t \\rangle$ from $t = 0$ to $t = \\pi$. Give your answer as a multiple of $\\pi$ (e.g. "3pi").',
         correctAnswer: '5pi',
         acceptableAnswers: ['5pi', '5π', '5 pi', '15.71', '15.707'],
         hints: ['$\\|\\vec{r}\\,\'\\| = 5$ (constant, like the radius).', 'Half the circumference of radius-5 circle.'],

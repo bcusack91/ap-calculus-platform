@@ -83,7 +83,7 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2(10)(2.5)} = \\sqrt{50} \\approx 7
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The work done by kinetic friction on a block sliding across a fixed floor is","options":["Negative","Positive","Zero","Undefined"]},{"label":"Energy conservation applies when","options":["Only conservative forces do work","Friction is present","External forces do work on the system","The speed stays constant"]}],
+        dropdowns: [{"label":"The work done by kinetic friction on a block sliding across a fixed floor is","options":["Negative","Positive","Zero","Undefined"]},{"label":"Mechanical energy conservation applies when","options":["Only conservative forces do work","Friction is present","External forces do work on the system","The speed stays constant"]}],
         correctAnswers: ["Negative","Only conservative forces do work"],
         hint1: "Friction opposes motion.",
         hint2: "Conservative forces have a potential energy function.",

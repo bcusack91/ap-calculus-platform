@@ -127,6 +127,7 @@ Adaptation should persuade ethically, not manipulate:
       exercise: {
         boxes: 3,
         correctAnswers: ['adaptation', 'concession', 'claim'],
+        acceptableAnswers: [[], [], ['thesis', 'position', 'argument']],
         hint1: 'You adapt rhetoric to readers.',
         hint2: 'You concede part of opposing view.',
         hint3: 'Your central thesis remains stable.',

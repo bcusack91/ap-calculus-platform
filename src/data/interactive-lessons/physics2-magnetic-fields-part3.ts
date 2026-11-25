@@ -138,17 +138,17 @@ A proton ($m = 1.67 \\times 10^{-27}$ kg, $q = 1.6 \\times 10^{-19}$ C) moves at
 
 1) Radius of the circular path (in m, to 3 significant figures)
 
-2) Cyclotron period (in s, use scientific notation like 3.3e-7)
+2) Cyclotron period (in s, to 3 significant figures, scientific notation like 4.5e-8)
 
-3) Cyclotron frequency (in Hz, use scientific notation like 3.0e6)
+3) Cyclotron frequency (in Hz, to 3 significant figures, scientific notation like 7.2e5)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.21', '3.3e-7', '3.0e6'],
+        correctAnswers: ['0.209', '3.28e-7', '3.05e6'],
         hint1: '$r = mv/(qB) = (1.67 \\times 10^{-27})(4.0 \\times 10^6)/((1.6 \\times 10^{-19})(0.20))$.',
         hint2: '$T = 2\\pi m/(qB)$. Note: the period is independent of speed!',
         hint3: '$f = 1/T = qB/(2\\pi m)$.',
-        explanation: '$r = (1.67 \\times 10^{-27})(4 \\times 10^6)/((1.6 \\times 10^{-19})(0.2)) = 6.68 \\times 10^{-21}/(3.2 \\times 10^{-20}) = 0.209$ m ≈ 0.21 m. $T = 2\\pi(1.67 \\times 10^{-27})/((1.6 \\times 10^{-19})(0.2)) = 1.049 \\times 10^{-26}/(3.2 \\times 10^{-20}) = 3.28 \\times 10^{-7}$ s ≈ $3.3 \\times 10^{-7}$ s. $f = 1/T ≈ 3.0 \\times 10^6$ Hz.'
+        explanation: '$r = (1.67 \\times 10^{-27})(4 \\times 10^6)/((1.6 \\times 10^{-19})(0.2)) = 6.68 \\times 10^{-21}/(3.2 \\times 10^{-20}) = 0.209$ m. $T = 2\\pi(1.67 \\times 10^{-27})/((1.6 \\times 10^{-19})(0.2)) = 1.049 \\times 10^{-26}/(3.2 \\times 10^{-20}) = 3.28 \\times 10^{-7}$ s. $f = 1/T ≈ 3.05 \\times 10^6$ Hz.'
       }
     },
     {

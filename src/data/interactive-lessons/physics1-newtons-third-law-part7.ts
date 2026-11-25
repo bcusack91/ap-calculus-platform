@@ -127,8 +127,8 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
             explanation: 'As $m_2 \\gg m_1$: $a = (m_2 - m_1)g/(m_1 + m_2) \\approx m_2 g/m_2 = g$. The lighter mass is essentially in free fall.'
           },
           {
-            label: 'Action-reaction pairs are always the same _____ of force.',
-            options: ['Magnitude', 'Direction', 'Type', 'Duration'],
+            label: 'Besides matching in magnitude and timing, the two forces in an action-reaction pair always share the same _____.',
+            options: ['Target object', 'Direction', 'Type', 'Effect'],
             correctIndex: 2,
             explanation: 'Both forces in a Third Law pair are the same type: both gravitational, both normal, both friction, etc.'
           },

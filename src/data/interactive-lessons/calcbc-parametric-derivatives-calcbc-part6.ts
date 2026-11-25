@@ -29,7 +29,7 @@ Mixed practice covering tangent lines, concavity, velocity, speed, and curvature
             explanation: '$x\'=-3\\cos^2 t\\sin t$, $y\'=3\\sin^2 t\\cos t$. Speed $= 3|\\sin t\\cos t|\\sqrt{\\cos^2 t + \\sin^2 t} = 3|\\sin t\\cos t|$.'
           },
           {
-            question: 'The tangent to $x = t^2$, $y = t^3$ at the origin ($t = 0$) is:',
+            question: 'Using $\\lim_{t \\to 0} dy/dx$, the tangent line to $x = t^2$, $y = t^3$ at the origin ($t = 0$) is:',
             options: ['Horizontal ($y = 0$)', 'Vertical ($x = 0$)', 'Has slope $1$', 'Does not exist'],
             correctAnswer: 0,
             explanation: '$dy/dx = 3t^2/(2t) = 3t/2$. As $t \\to 0$, $dy/dx \\to 0$. The tangent line at the origin is $y = 0$ (horizontal).'

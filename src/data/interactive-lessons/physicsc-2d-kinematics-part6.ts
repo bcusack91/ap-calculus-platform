@@ -102,8 +102,8 @@ The key insight: both balls experience the same gravitational acceleration, so i
       type: 'mcq' as const,
       question: 'A particle has $\\vec{r}(t) = (4t)\\,\\hat{i} + (3t - 5t^2)\\,\\hat{j}$. At what time does the velocity make a $45°$ angle below the positive $x$-axis?',
       options: ['$t = 1.4$ s', '$t = 1$ s', '$t = 0.7$ s', '$t = 2$ s'],
-      correctAnswer: 0,
-      explanation: '$v_x = 4$, $v_y = 3 - 10t$. For $45°$ below horizontal: $v_y/v_x = -\\tan 45° = -1$, so $\\frac{3-10t}{4} = -1 \\implies 3-10t = -4 \\implies t = 0.7$ s. Wait, let me recheck. $(3-10t)/4 = -1$ gives $3 - 10t = -4$, so $10t = 7$, $t = 0.7$. So the answer should be $t = 0.7$ s, not $1.4$.'
+      correctAnswer: 2,
+      explanation: '$v_x = 4$, $v_y = 3 - 10t$. For $45°$ below horizontal: $v_y/v_x = -\\tan 45° = -1$, so $\\frac{3-10t}{4} = -1 \\implies 3-10t = -4 \\implies t = 0.7$ s. Check: at $t = 0.7$ s, $\\vec{v} = 4\\,\\hat{i} - 4\\,\\hat{j}$ m/s, which points $45°$ below the $+x$-axis.'
     },
     {
       id: '2dkin6-mcq4',

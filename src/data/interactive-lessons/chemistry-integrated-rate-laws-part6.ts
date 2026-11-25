@@ -76,7 +76,7 @@ Use the appropriate integrated rate law to find:
 
 **1)** What is the order of the reaction? (enter 0, 1, or 2)
 
-**2)** What is k? (to 3 significant figures)
+**2)** What is k? (in $min^{-1}$, to 3 significant figures)
 
 **3)** What is [A] at t = 50 min? (in M, to 3 significant figures)
       `,

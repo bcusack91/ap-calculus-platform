@@ -302,7 +302,7 @@ The strong version explains **how** each event made the next one more dangerous,
             explanation: 'Southern Democrats read the Freeport Doctrine as a way to evade Dred Scott, and they abandoned Douglas in 1860. Republicans and abolitionists already opposed him, and the passage says nothing about immigration.'
           },
           {
-            question: 'The split described above contributed most directly to which of the following?',
+            question: 'The rift between Douglas and Southern Democrats that this argument widened contributed most directly to which of the following?',
             options: [
               'The adoption of the Crittenden Compromise by Congress in early 1861',
               'The admission of Kansas to the Union as a slave state under Lecompton',

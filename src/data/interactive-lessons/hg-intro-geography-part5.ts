@@ -201,7 +201,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
             explanation: "Spread that jumps between large urban nodes before trickling down to smaller places is hierarchical diffusion. The air-travel network defines the hierarchy."
           },
           {
-            question: "A geographer notes that a Skype call between London and Sydney in 2020 felt 'closer' than a steamship voyage in 1880. The single concept that BEST captures this perceived shrinking of the world is:",
+            question: "A geographer notes that a Skype call between London and Sydney in 2020 felt 'closer' than a steamship voyage in 1880. The single concept that BEST captures this effective shrinking of distance is:",
             options: [
               "Distance decay",
               "Time-space convergence",

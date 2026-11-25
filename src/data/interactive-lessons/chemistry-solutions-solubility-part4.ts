@@ -97,7 +97,7 @@ Count the charges in the diagram. For $CaCl_{2}$, three $Ca^{2+}$ ions (total $+
             explanation: 'Glucose is a molecular compound and a nonelectrolyte. It dissolves as whole molecules surrounded by water and does not break into ions or atoms. A clump at the bottom would be undissolved solid, not a solution.'
           },
           {
-            question: 'A student draws $K_{3}PO_{4}$(aq) as 6 $K^{+}$ ions and 2 $PO_{4}^{3-}$ ions. What is wrong with the drawing?',
+            question: 'A student draws $K_{3}PO_{4}$(aq) as 6 $K^{+}$ ions and 2 $PO_{4}^{3-}$ ions. What, if anything, is wrong with the drawing?',
             options: [
               'Phosphate should be drawn as P and O atoms',
               'There is no error in the ion ratio or the charges',

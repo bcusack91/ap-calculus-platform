@@ -73,9 +73,9 @@ $$\\boxed{\\lim_{n \\to \\infty} a_n \\neq 0 \\quad \\Longrightarrow \\quad \\su
           },
           {
             question: 'The Divergence Test can NEVER prove:',
-            options: ['Convergence', 'Divergence', 'That $a_n \\to 0$', 'Divergence of an alternating series'],
+            options: ['Convergence', 'Divergence', 'Divergence of $\\sum \\frac{n}{n+1}$', 'Divergence of an alternating series'],
             correctAnswer: 0,
-            explanation: '$\\lim a_n = 0$ is necessary but not sufficient for convergence: $\\sum 1/n$ has $1/n \\to 0$ but diverges. The test can prove divergence of any series, alternating or not, whose terms do not approach $0$ (for example $\\sum (-1)^n$).'
+            explanation: '$\\lim a_n = 0$ is necessary but not sufficient for convergence: $\\sum 1/n$ has $1/n \\to 0$ but diverges. The test can prove divergence of any series, alternating or not, whose terms do not approach $0$ (for example $\\sum (-1)^n$), and it proves $\\sum \\frac{n}{n+1}$ diverges because its terms approach $1$.'
           }
         ]
       }

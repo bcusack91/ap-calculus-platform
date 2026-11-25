@@ -161,6 +161,7 @@ for (int i = 0; i < arr.length - 1; i++) {
       exercise: {
         boxes: 3,
         correctAnswers: ['n', '1', 'temp'],
+        acceptableAnswers: [[], [], ['temporary', 'tmp']],
         hint1: 'It may need to check every single element.',
         hint2: 'Stopping one before the end prevents going out of bounds.',
         hint3: 'A holding variable for the swap.',

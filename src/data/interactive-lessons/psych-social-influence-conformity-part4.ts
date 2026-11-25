@@ -130,8 +130,8 @@ Groupthink occurs when the desire for unanimity in a cohesive group overrides th
       `,
       exercise: {
         inputs: [
-          { label: 'Social facilitation improves performance on ___ tasks but hurts on complex tasks', answer: 'simple' },
-          { label: 'Groupthink occurs when desire for ___ overrides critical thinking', answer: 'harmony' },
+          { label: 'Social facilitation improves performance on ___ tasks but hurts on complex tasks', answer: 'simple', acceptableAnswers: ['easy', 'well-learned', 'well-practiced', 'familiar'] },
+          { label: 'Groupthink occurs when desire for ___ overrides critical thinking', answer: 'harmony', acceptableAnswers: ['unanimity', 'consensus', 'agreement', 'group harmony'] },
           { label: 'Group ___ means group attitudes become more extreme after discussion', answer: 'polarization' }
         ]
       }
@@ -200,7 +200,7 @@ Groupthink occurs when the desire for unanimity in a cohesive group overrides th
             explanation: 'This is group polarization: the group already leaned one direction (belief in climate change as serious), and through continued discussion they became MORE extreme. Key: no mention of suppressing dissent (which would be groupthink). The mechanism is exposure to one-sided persuasive arguments + social comparison (wanting to be at least as committed as other members). Online echo chambers are textbook examples of group polarization.'
           },
           {
-            question: 'A student who studies well alone struggles to focus during a study group where each person is responsible for summarizing different chapters. Which group phenomenon BEST explains the student\'s REDUCED effort?',
+            question: 'A student who works hard when studying alone puts in much less effort in a study group where everyone\'s notes are merged into one shared guide with no names attached. Which group phenomenon BEST explains the student\'s REDUCED effort?',
             options: [
               'Social facilitation — studying is a complex task, so performance worsens',
               'Social loafing — pooled contributions reduce individual effort',

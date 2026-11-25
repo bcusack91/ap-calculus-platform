@@ -151,12 +151,12 @@ The indicator changes color over approximately **2 pH units** centered on its $p
       exercise: {
         dropdowns: [
           {
-            label: 'For $HCl + NaOH$ (equivalence pH = 7), use',
+            label: 'For $HCl + NaOH$ (equivalence pH = 7), the indicator whose range brackets the equivalence pH is',
             options: ['methyl orange', 'bromothymol blue', 'phenolphthalein', 'alizarin yellow']
           },
           {
             label: 'For $HCOOH + NaOH$ (equivalence pH ≈ 8.4), use',
-            options: ['methyl orange', 'methyl red', 'phenolphthalein', 'thymol blue']
+            options: ['methyl orange', 'methyl red', 'phenolphthalein', 'bromothymol blue']
           },
           {
             label: 'For $NH_3 + HCl$ (equivalence pH ≈ 5.1), use',

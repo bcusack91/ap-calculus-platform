@@ -131,7 +131,7 @@ Scientists have created:
       content: `
 **Applications Problems** 🧮
 
-**1)** A glass surface is tested for flatness using $\\lambda = 632.8$ nm (He-Ne laser). You count 8 dark fringes across a 1.5 cm region. What is the total height variation? (in nm, round to 1 decimal place)
+**1)** A glass surface is tested for flatness using $\\lambda = 632.8$ nm (He-Ne laser). You count 8 dark fringes across a 1.5 cm region, each fringe marking a $\\lambda/2$ change in height. What is the total height variation? (in nm, round to 1 decimal place)
 
 **2)** A dielectric mirror uses quarter-wave layers of $n = 2.3$ material for $\\lambda = 1064$ nm (Nd:YAG laser). Thickness of each layer? (in nm, round to 1 decimal place)
 

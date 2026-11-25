@@ -147,7 +147,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
       exercise: {
         dropdowns: [
           {
-            label: "Knowing the Declaration of Independence was drafted to recruit French support and justify independence to European powers is most useful for: ___",
+            label: "Knowing the Declaration of Independence was drafted to justify the break with Britain and make a foreign military alliance possible is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
@@ -160,7 +160,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
           }
         ],
         correctAnswers: ['purpose', 'point of view', 'historical context'],
-        hint1: 'Recruiting French support and justifying to European powers names what the document was trying to do — that is purpose.',
+        hint1: 'Justifying the break and opening the way to a foreign alliance names what the document was trying to do — that is purpose.',
         hint2: 'Politically literate Patriot wife pressing logic on a male political class names her position — that is POV.',
         hint3: 'Pamphlet between Lexington/Concord and independence situates the moment — that is context.',
         explanation: 'Each HIPP element does different work: function → purpose; identity → POV; situation → context.'

@@ -45,18 +45,29 @@ export const englitNarrativePerspectivePart1Data = {
     {
       id: "englitna1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "focalization",
-            "bias",
-            "interpretive gap"
+      "questions": [
+            {
+                  "question": "The consciousness through which a story's events are filtered and framed",
+                  "answer": "focalization",
+                  "acceptableAnswers": ["focalisation", "the focalization"]
+            },
+            {
+                  "question": "Selective emphasis and judgment that affect how credible a narrator seems",
+                  "answer": "bias",
+                  "acceptableAnswers": ["the bias", "narrative bias", "narrator bias", "biases"]
+            },
+            {
+                  "question": "The distance between what a narrative shows and what is actually true",
+                  "answer": "interpretive gap",
+                  "acceptableAnswers": ["interpretive gaps", "the interpretive gap", "interpretative gap"]
+            }
       ],
-      "hint1": "Concept 1: Focalization",
-      "hint2": "Concept 2: Bias",
-      "hint3": "Concept 3: Interpretive Gap",
-      "explanation": "Focalization, Bias, and Interpretive Gap are core vocabulary for this unit."
+      "hint1": "Concept 1: whose mind the events pass through (an -ization word).",
+      "hint2": "Concept 2: a narrator's one-sided leaning.",
+      "hint3": "Concept 3 (two words): the space a reader must fill by inference.",
+      "explanation": "Focalization, bias and the interpretive gap are core vocabulary for this unit; together they explain how narrative framing creates distance between appearance and reality."
 }
     },
     {

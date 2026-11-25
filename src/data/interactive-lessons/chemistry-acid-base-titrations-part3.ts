@@ -232,7 +232,7 @@ Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
             options: ['excess HA and $Na^{+}$', 'excess NaOH and $A^{-}$', '$A^{-}$ and $Na^{+}$ only', 'equal HA and $A^{-}$']
           },
           {
-            label: 'A suitable indicator for this titration changes color near pH',
+            label: 'A suitable indicator for this weak acid–strong base titration changes color near pH',
             options: ['4', '7', '9', '1']
           }
         ],

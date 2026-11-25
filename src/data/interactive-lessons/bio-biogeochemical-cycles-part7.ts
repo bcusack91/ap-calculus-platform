@@ -191,7 +191,7 @@ Use the **CLAIM → EVIDENCE → REASONING** structure:
             options: ['greatest abundance', 'shortest supply relative to demand', 'the atmosphere', 'the highest concentration']
           },
           {
-            label: 'In an AP FRQ, the recommended response structure is ___',
+            label: 'For an AP FRQ that asks you to justify a claim, a useful response structure is ___',
             options: ['Introduction-Body-Conclusion', 'Claim-Evidence-Reasoning', 'Hypothesis-Experiment-Results', 'Question-Answer-Discussion']
           },
           {

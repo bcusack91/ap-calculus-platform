@@ -26,7 +26,7 @@ AP Environmental Science free-response questions are scored point by point, and 
 | **Identify** | A specific term or value, no explanation needed | "Identify the trophic level of the heron." → "Tertiary consumer (level 4)." |
 | **Describe** | The relevant characteristics of something | "Describe how energy moves between levels." |
 | **Explain** | A cause-and-effect link: what happens **and why** | "Explain why less energy reaches level 3 than level 2." |
-| **Calculate** | Setup with units, then the answer with units | "Calculate the NPP." → "30,000 − 18,000 = 12,000 $kcal/m^{2}/yr$" |
+| **Calculate** | Setup with units, then the answer with units | "Calculate the NPP." → "25,000 − 16,000 = 9,000 $kcal/m^{2}/yr$" |
 | **Justify** | Evidence or reasoning that supports a claim | "Justify your prediction with one piece of data." |
 | **Propose a solution** | A specific, realistic action that addresses the stated problem | "Propose one way to reduce the loss of marsh productivity." |
 

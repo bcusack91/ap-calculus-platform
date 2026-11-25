@@ -132,15 +132,15 @@ Build your program in small pieces, testing each piece before adding more. This 
       exercise: {
         dropdowns: [
           {
-            label: 'Dividing by zero during execution causes a ___ error',
+            label: 'Dividing by zero during execution causes a ___',
             options: ['Runtime error', 'Syntax error', 'Logic error', 'Overflow error']
           },
           {
-            label: 'A program that calculates area as length + width instead of length * width has a ___ error',
+            label: 'A program that calculates area as length + width instead of length * width has a ___',
             options: ['Logic error', 'Syntax error', 'Runtime error', 'Overflow error']
           },
           {
-            label: 'When a number exceeds the maximum value a variable can store, it is a(n) ___ error',
+            label: 'When a number exceeds the maximum value a variable can store, it is a(n) ___',
             options: ['Overflow error', 'Syntax error', 'Logic error', 'Underflow error']
           }
         ],

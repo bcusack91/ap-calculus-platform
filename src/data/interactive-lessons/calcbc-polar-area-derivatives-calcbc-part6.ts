@@ -89,7 +89,7 @@ $$A = \\frac{1}{2}\\left[3\\theta + 2\\sin 2\\theta - 2\\sin\\theta\\right]_{-\\
       type: 'input-box' as const,
       content: '**Workshop Computation**',
       exercise: {
-        question: 'Find the area of one petal of $r = 4\\sin(2\\theta)$. The petal from $\\theta = 0$ to $\\theta = \\pi/2$ gives $A = \\frac{1}{2}\\int_0^{\\pi/2}16\\sin^2(2\\theta)\\,d\\theta$. Evaluate this integral. Give your answer as a multiple of $\\pi$ (e.g. enter $2\\pi$ as "2pi").',
+        question: 'Find the area of one petal of $r = 4\\sin(2\\theta)$. The petal from $\\theta = 0$ to $\\theta = \\pi/2$ gives $A = \\frac{1}{2}\\int_0^{\\pi/2}16\\sin^2(2\\theta)\\,d\\theta$. Evaluate this integral. Give your answer as a multiple of $\\pi$ (e.g. enter $3\\pi$ as "3pi").',
         correctAnswer: '2pi',
         acceptableAnswers: ['2pi', '2π', '2 pi', '6.28', '6.283'],
         hints: ['$\\sin^2(2\\theta) = \\frac{1}{2}(1 - \\cos 4\\theta)$.', '$\\frac{1}{2}\\int_0^{\\pi/2} 8(1-\\cos 4\\theta)\\,d\\theta$.'],

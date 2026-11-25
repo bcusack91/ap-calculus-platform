@@ -121,7 +121,7 @@ Not all DEs are separable. For example, $y' = x + y$ is NOT separable. On the BC
           },
           {
             label: 'The particular solution is:',
-            options: ['$y^2 = 2x^2 + 14$ (or equivalently $y = \\sqrt{2x^2 + 14}$)', '$y = x^2 + 7$', '$y^2 = x^2 + 7$', '$y^2/2 = x^2 + 7$ only'],
+            options: ['$y^2 = 2x^2 + 14$ (or equivalently $y = \\sqrt{2x^2 + 14}$)', '$y = x^2 + 7$', '$y^2 = x^2 + 7$', '$y = \\sqrt{x^2 + 15}$'],
             correctAnswers: ['$y^2 = 2x^2 + 14$ (or equivalently $y = \\sqrt{2x^2 + 14}$)'],
             hints: ['Multiply $y^2/2 = x^2 + 7$ by 2.'],
             explanation: '$y^2 = 2x^2 + 14$. Since $y(1) = 4 > 0$, $y = \\sqrt{2x^2 + 14}$ near $x = 1$.'

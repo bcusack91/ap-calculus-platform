@@ -125,6 +125,7 @@ Alfred Weber argued that industries locate where **costs are minimized**:
       exercise: {
         boxes: 3,
         correctAnswers: ['tertiary', '5', 'Dependency'],
+        acceptableAnswers: [['tertiary sector'], ['five'], ['dependency theory']],
         hint1: 'The dominant sector in core countries.',
         hint2: 'From traditional society to age of mass consumption.',
         hint3: 'The opposite of Rostow optimistic view.',

@@ -140,7 +140,7 @@ A \`final\` variable is a **constant** — its value cannot change after initial
             options: ['4', '5', '4.9', 'Compile error']
           },
           {
-            label: 'The variable declaration double x = 10; performs a ___ cast',
+            label: 'The variable declaration double x = 10; performs a ___ conversion',
             options: ['Widening (implicit)', 'Narrowing (implicit)', 'Narrowing (explicit)', 'Widening (explicit)']
           },
           {

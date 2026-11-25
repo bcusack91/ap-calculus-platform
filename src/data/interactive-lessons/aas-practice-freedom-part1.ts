@@ -58,6 +58,7 @@ export const aasPracticeFreedomPart1Data = {
           "Mutual aid",
           "ASNLH"
         ],
+        "acceptableAnswers": [["HBCUs"], ["mutual aid society", "mutual aid societies", "mutual benefit society"], ["ASALH"]],
         "hint1": "The term covers colleges founded mainly to educate Black students, most of them after 1865.",
         "hint2": "Philadelphia's Free African Society (1787) practiced it, and some burial societies grew into insurance companies.",
         "hint3": "It published the *Journal of Negro History* (from 1916) and launched Negro History Week in 1926.",

@@ -210,6 +210,7 @@ Socrates lets Euthyphro reach each problem through his own answers ("I quite rem
       exercise: {
         boxes: 3,
         correctAnswers: ['consistently', 'example', 'circular'],
+        acceptableAnswers: [['universally', 'uniformly', 'equally', 'impartially', 'evenhandedly'], [], []],
         hint1: 'The opposite of applying a rule only when it suits you: the same way every time.',
         hint2: 'Socrates says he did not ask for "two or three" of these.',
         hint3: 'Socrates says the argument goes "round in a ___."',
@@ -243,7 +244,7 @@ Socrates lets Euthyphro reach each problem through his own answers ("I quite rem
           {
             question: 'When Socrates says "I did not ask you to give me two or three examples of piety," he is objecting that Euthyphro has',
             options: [
-              'used his own case as a standard that all other cases must follow',
+              'offered one example of piety instead of the idea all pious acts share',
               'answered with stories about the gods that Socrates rejects as false',
               'refused to reply until Socrates has stated his own definition first',
               'given a definition so broad that it includes impious acts as well'

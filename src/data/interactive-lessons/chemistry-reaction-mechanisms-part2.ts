@@ -254,7 +254,7 @@ Step 2: C + B → E + F (fast)
 Step 3: E → G + H (fast)
 Step 4: H + D → P + A (fast)
 
-**1)** How many intermediates? (count species that cancel)
+**1)** How many intermediates? (count species produced in one step and consumed in a later one)
 
 **2)** Is A a catalyst, intermediate, or reactant? (enter: catalyst, intermediate, or reactant)
 
@@ -263,7 +263,7 @@ Step 4: H + D → P + A (fast)
       exercise: {
         boxes: 3,
         correctAnswers: ['4', 'catalyst', '4'],
-        hint1: 'Cancel species appearing on both sides: C (produced Step 1, consumed Step 2), D (produced Step 1, consumed Step 4), E (produced Step 2, consumed Step 3), H (produced Step 3, consumed Step 4). That\'s 4 intermediates.',
+        hint1: 'Count species produced in one step and consumed in a later one: C (produced Step 1, consumed Step 2), D (produced Step 1, consumed Step 4), E (produced Step 2, consumed Step 3), H (produced Step 3, consumed Step 4). That\'s 4 intermediates.',
         hint2: 'A appears as reactant in Step 1 and product in Step 4 — consumed then regenerated = catalyst.',
         hint3: '4 elementary steps = 4 transition states (one peak per step).',
         explanation: '1) C, D, E, H all cancel → 4 intermediates. 2) A is consumed in Step 1 and regenerated in Step 4 → catalyst. 3) 4 steps = 4 transition states.'

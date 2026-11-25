@@ -50,10 +50,10 @@ export const calcbcPolarAreaPart7Data = {
             explanation: 'For $r = a(1+\\sin\\theta)$, area $= 3\\pi a^2/2 = 3\\pi(4)/2 = 6\\pi$. Or compute: $\\frac{1}{2}\\int_0^{2\\pi}4(1+\\sin\\theta)^2\\,d\\theta = 2\\int_0^{2\\pi}(1+2\\sin\\theta+\\sin^2\\theta)\\,d\\theta = 2(2\\pi + 0 + \\pi) = 6\\pi$.'
           },
           {
-            question: 'For $r = \\cos(2\\theta)$, how many points of intersection with $r = 1/2$ lie in $[0, 2\\pi)$?',
+            question: 'How many distinct points do the graphs of $r = \\cos(2\\theta)$ and $r = 1/2$ have in common?',
             options: ['8', '4', '2', '6'],
             correctAnswer: 0,
-            explanation: '$\\cos(2\\theta) = 1/2 \\implies 2\\theta = \\pm\\pi/3 + 2k\\pi$. In $[0, 2\\pi)$: $\\theta = \\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$ from $+\\pi/3$ branch, and $\\theta = \\pi/3, 2\\pi/3, 4\\pi/3, 5\\pi/3$ from $-\\pi/3$ branch. That gives 8 intersections.'
+            explanation: '$\\cos(2\\theta) = 1/2$ gives $\\theta = \\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$. The circle also contains the points where $\\cos(2\\theta) = -1/2$, because $(-1/2, \\theta)$ is the same point as $(1/2, \\theta + \\pi)$: $\\theta = \\pi/3, 2\\pi/3, 4\\pi/3, 5\\pi/3$. That gives 8 intersections, two on each of the 4 petals.'
           },
           {
             question: 'If $r(\\theta_0) = 0$ and $r\'(\\theta_0) \\ne 0$, the tangent line at the pole makes angle:',
@@ -78,11 +78,11 @@ export const calcbcPolarAreaPart7Data = {
             explanation: 'One loop: $\\theta \\in [-\\pi/4, \\pi/4]$. $A = \\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}8\\cos(2\\theta)\\,d\\theta = 4[\\frac{1}{2}\\sin(2\\theta)]_{-\\pi/4}^{\\pi/4} = 4(\\frac{1}{2} - (-\\frac{1}{2})) = 4$.'
           },
           {
-            label: 'At a cusp of a cardioid, the tangent line:',
-            options: ['Does not exist (both $dy/d\\theta = 0$ and $dx/d\\theta = 0$)', 'Is vertical', 'Is horizontal', 'Has slope 1'],
-            correctAnswers: ['Does not exist (both $dy/d\\theta = 0$ and $dx/d\\theta = 0$)'],
+            label: 'At the cusp of the cardioid $r = 1 + \\cos\\theta$ ($\\theta = \\pi$), the tangent line (found as a limit):',
+            options: ['Does not exist', 'Is vertical', 'Is horizontal', 'Has slope 1'],
+            correctAnswers: ['Is horizontal'],
             hints: ['A cusp is where $r = 0$ and $r\' = 0$ simultaneously.'],
-            explanation: 'At the cusp (e.g., $\\theta = \\pi$ for $r = 1+\\cos\\theta$), both numerator and denominator of $dy/dx$ are zero. L\'H\u00f4pital\'s rule or limits are needed for further analysis.'
+            explanation: 'At $\\theta = \\pi$, $r = 0$ and $r\' = -\\sin\\pi = 0$, so both numerator and denominator of $dy/dx$ are zero. The limit of $dy/dx$ is $0$: the curve reaches the pole along the direction $\\theta = \\pi$, so the tangent there is the line $y = 0$ (horizontal), just as for $r = 1 - \\cos\\theta$ at $\\theta = 0$ in Part 3.'
           }
         ]
       }
@@ -92,7 +92,7 @@ export const calcbcPolarAreaPart7Data = {
       type: 'input-box' as const,
       content: '**Final Computation**',
       exercise: {
-        question: 'Find the total area enclosed by $r = 3\\cos\\theta$ (a circle of diameter 3). Give your answer as a fraction times $\\pi$ (e.g. "9/4 pi").',
+        question: 'Find the total area enclosed by $r = 3\\cos\\theta$ (a circle of diameter 3). Give your answer as a fraction times $\\pi$ (e.g. "5/3 pi").',
         correctAnswer: '9/4 pi',
         acceptableAnswers: ['9/4 pi', '9pi/4', '9/4pi', '9π/4', '2.25pi', '2.25 pi', '9/4 π'],
         hints: ['$A = \\frac{1}{2}\\int_0^\\pi 9\\cos^2\\theta\\,d\\theta$.', '$\\cos^2\\theta = \\frac{1}{2}(1+\\cos 2\\theta)$.'],

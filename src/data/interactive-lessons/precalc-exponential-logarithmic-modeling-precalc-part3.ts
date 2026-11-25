@@ -134,15 +134,15 @@ Positive, negative, negative, positive — a **U-shape**. The line is too low at
 
 **2)** The model is $y = 4(1.2)^x$ and the actual value at $x = 2$ is $6.0$. Residual $=$ ? (e.g., model $2(1.5)^x$, actual $4.4$ at $x = 2$: $4.4 - 4.5 = -0.1$)
 
-**3)** The model is $y = 16.8x - 5.2$ and the actual value at $x = 2$ is $18$. Residual $=$ ?
+**3)** The model is $y = 16.8x - 5.2$ and the actual value at $x = 1.5$ is $10.4$. Residual $=$ ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-0.6', '0.24', '-10.4'],
+        correctAnswers: ['-0.6', '0.24', '-9.6'],
         hint1: 'Actual minus predicted: $7.5 - 8.1$.',
         hint2: 'Predicted: $4(1.2)^2 = 4(1.44) = 5.76$. Then $6.0 - 5.76$.',
-        hint3: 'Predicted: $16.8(2) - 5.2 = 28.4$. Then $18 - 28.4$.',
-        explanation: '1) $7.5 - 8.1 = -0.6$ (the model overestimates). 2) $6.0 - 5.76 = 0.24$ (underestimates). 3) $18 - 28.4 = -10.4$ (the line is far too high here).'
+        hint3: 'Predicted: $16.8(1.5) - 5.2 = 20.0$. Then $10.4 - 20.0$.',
+        explanation: '1) $7.5 - 8.1 = -0.6$ (the model overestimates). 2) $6.0 - 5.76 = 0.24$ (underestimates). 3) $10.4 - 20.0 = -9.6$ (the line is far too high here).'
       }
     },
     {

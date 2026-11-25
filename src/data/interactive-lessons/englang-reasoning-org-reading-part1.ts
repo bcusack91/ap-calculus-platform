@@ -124,6 +124,7 @@ Weak passages often:
       exercise: {
         boxes: 3,
         correctAnswers: ['reasoning', 'argument', 'compare'],
+        acceptableAnswers: [[], [], ['comparison', 'comparing']],
         hint1: 'Claim -> evidence -> conclusion chain.',
         hint2: 'The other side of the issue.',
         hint3: 'Comparing similarities and differences.',

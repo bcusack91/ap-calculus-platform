@@ -60,10 +60,10 @@ export const calcbcDiffEqPart5Data = {
             explanation: '$dy/y = dx/x \\Rightarrow \\ln|y| = \\ln|x| + C_1 \\Rightarrow y = Ax$ where $A = \\pm e^{C_1}$.'
           },
           {
-            question: 'On an FRQ, after finding $\\ln|y| = 3x + C$ and $y(0) = 5$, the correct next step is:',
-            options: ['$\\ln 5 = 0 + C$, so $C = \\ln 5$, giving $\\ln|y| = 3x + \\ln 5$, hence $y = 5e^{3x}$', 'Take $e$ of both sides first: $y = e^{3x+C}$, then plug in', 'Both approaches work, but showing the $C$ step earns more credit', 'Skip $C$ and write $y = 5e^{3x}$ directly'],
+            question: 'On an FRQ, after finding $\\ln|y| = 3x + C$ and $y(0) = 5$, which way of finishing earns full credit?',
+            options: ['$\\ln 5 = 0 + C$, so $C = \\ln 5$, giving $\\ln|y| = 3x + \\ln 5$, hence $y = 5e^{3x}$', 'Take $e$ of both sides first: $y = e^{3x+C}$, then plug in', 'Either approach, as long as $C$ is found from $y(0) = 5$', 'Skip $C$ and write $y = 5e^{3x}$ directly'],
             correctAnswer: 2,
-            explanation: 'Both are mathematically valid. Showing the $+C$ step and substituting the IC demonstrates complete understanding and earns full AP credit.'
+            explanation: 'Both are mathematically valid: finding $C$ before or after exponentiating gives $y = 5e^{3x}$. What earns the points is keeping the $+C$ and using $y(0) = 5$ to find it; skipping $C$ loses that credit.'
           },
           {
             question: 'A slope field has horizontal segments along $y = 2$. The DE could be:',

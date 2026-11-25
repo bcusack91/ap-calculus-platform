@@ -180,6 +180,7 @@ export const englangSynthesisEssayPart7Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ['counter-source', 'reframe', 'tension'],
+        acceptableAnswers: [[], ['reframing', 'reframed', 'reframes'], []],
         hint1: 'Part 4 used this term for sources like Newman in a career-first essay.',
         hint2: 'One of four moves: concede, refute, qualify, and this one.',
         hint3: 'The word for sources pulling against one another.',

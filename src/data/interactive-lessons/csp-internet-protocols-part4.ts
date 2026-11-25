@@ -97,7 +97,7 @@ Big Idea 5 examines these consequences.
       content: `
 **Applied Recall** ✍️
 
-1) The "S" in HTTPS stands for _______ (the protocol that adds encryption).
+1) The "S" in HTTPS stands for _______ (the word that tells you the connection is encrypted).
 
 2) An open _______ enables any device to join the Internet.
 
@@ -106,6 +106,7 @@ Big Idea 5 examines these consequences.
       exercise: {
         boxes: 3,
         correctAnswers: ["secure", "standard", "redundant"],
+        acceptableAnswers: [[], ["standards", "protocol", "protocols"], []],
         hint1: "HTTP + secure = HTTPS.",
         hint2: "Like TCP/IP standards.",
         hint3: "Extra, backup paths.",

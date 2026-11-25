@@ -140,15 +140,15 @@ export const govPresidencyPart1Data = {
             hint: 'Same number as years of Resident requirement.'
           },
           {
-            prompt: "Constitutional fraction of senators required to ratify a treaty per Article II § 2 (e.g., '2/3').",
+            prompt: "Constitutional fraction of senators required to ratify a treaty per Article II § 2 (e.g., '3/5').",
             answer: '2/3',
             acceptableAnswers: ['2/3', 'two-thirds', 'two thirds'],
             hint: 'Supermajority — same fraction as required to override a veto.'
           },
           {
-            prompt: "Article + section of the Take Care Clause requiring the President to faithfully execute the laws (e.g., 'II § 3').",
+            prompt: "Article + section of the Take Care Clause requiring the President to faithfully execute the laws (e.g., 'I § 8').",
             answer: 'II § 3',
-            acceptableAnswers: ['II § 3', 'II Section 3', 'Article II Section 3', 'Article II § 3', 'Art II § 3', 'II 3', 'Article 2 Section 3'],
+            acceptableAnswers: ['II § 3', 'II Section 3', 'Article II Section 3', 'Article II § 3', 'Art II § 3', 'II 3', 'Article 2 Section 3', 'Article II, Section 3', 'Art. II, Sec. 3', 'Art. II § 3', 'Article II, § 3'],
             hint: 'Same Article + section that includes State of the Union, recommendation, and receive ambassadors clauses.'
           }
         ]

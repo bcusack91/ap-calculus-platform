@@ -154,7 +154,7 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
             placeholder: 'e.g. antiporter'
           },
           {
-            question: 'Transport that uses an existing ion gradient, rather than ATP directly, to move another substance against its gradient (two words):',
+            question: 'Transport that uses an existing ion gradient, rather than ATP directly, to move another substance against its gradient:',
             answer: 'secondary active',
             acceptableAnswers: ['secondary active', 'secondary active transport', 'Secondary active transport', 'cotransport'],
             placeholder: 'e.g. simple diffusion'

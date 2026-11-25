@@ -116,7 +116,7 @@ $$c_{\\text{metal}} = \\frac{-(0.400)(4{,}186)(3)}{(0.200)(-125)}$$
 
 $$c_{\\text{metal}} = \\frac{-5{,}023.2}{-25} = 201 \\text{ J/(kg}\\cdot\\text{°C)}$$
 
-This is close to the specific heat of tin (210 J/(kg·°C)), so the metal is likely tin.
+This is closest to the specific heat of tin (about 228 J/(kg·°C)), so the metal is probably tin. Real measurements tend to come out a little low, because some heat escapes to the cup and the air instead of warming the water.
       `
     },
     {

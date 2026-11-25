@@ -77,9 +77,9 @@ What really matters in physics is the **potential difference** between two point
 
 $$\\Delta V = V_B - V_A$$
 
-This tells us the work done per unit charge to move a charge from A to B:
+ΔV is the work YOU (an outside agent) must do per unit charge to move a charge slowly from A to B. Multiply by the charge and you get that work, which equals the charge's change in potential energy. The field itself does the opposite amount of work, $W_{\\text{field}} = -q\\Delta V$:
 
-$$W = q\\Delta V$$
+$$W_{\\text{you}} = \\Delta U = q\\Delta V$$
 
 ### Sign Conventions
 
@@ -89,7 +89,7 @@ $$W = q\\Delta V$$
 
 ### "Voltage" in Everyday Language
 
-When someone says "a 9-volt battery," they mean $\\Delta V = 9$ V between the terminals. The actual potential at each terminal is undefined — only the difference matters.
+When someone says "a 9-volt battery," they mean $\\Delta V = 9$ V between the terminals. The potential at each terminal depends on where you put zero (ground); only the difference is physical.
       `
     },
     {
@@ -120,7 +120,7 @@ When someone says "a 9-volt battery," they mean $\\Delta V = 9$ V between the te
               'Is unaffected because both potentials are positive'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta V = V_B - V_A = 50 - 200 = -150$ V. Work = $q\\Delta V = (+e)(-150) = -150$ eV. The proton *loses* potential energy = *gains* kinetic energy = 150 eV.'
+            explanation: '$\\Delta V = V_B - V_A = 50 - 200 = -150$ V. $\\Delta U = q\\Delta V = (+e)(-150) = -150$ eV, so the field does +150 eV of work on it. The proton *loses* potential energy = *gains* kinetic energy = 150 eV.'
           },
           {
             question: 'Electric potential is a scalar. This means:',

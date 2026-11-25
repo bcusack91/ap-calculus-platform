@@ -142,7 +142,7 @@ export const physics2EmWavesPart7Data = {
             explanation: 'When Maxwell calculated the propagation speed from his equations using only electrical ($\\epsilon_0$) and magnetic ($\\mu_0$) constants, he got $1/\\sqrt{\\mu_0 \\epsilon_0} = 3 \\times 10^8$ m/s — exactly the speed of light! This was strong evidence that light IS an electromagnetic wave.'
           },
           {
-            question: 'If you could somehow make a polarizer that only transmits the component of light at 45° to horizontal, and you shine vertically-polarized light through it, the transmitted intensity would be:',
+            question: 'A polarizer has its transmission axis at 45° to horizontal. If you shine vertically-polarized light of intensity $I_0$ through it, the transmitted intensity would be:',
             options: [
               'Zero',
               '$I_0/2$',

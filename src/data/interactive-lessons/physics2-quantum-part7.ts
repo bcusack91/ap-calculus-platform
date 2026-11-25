@@ -127,7 +127,7 @@ Quantum phenomena don't exist in isolation — they connect to nearly every othe
       content: `
 **Final Challenge** 🧮
 
-**1)** Minimum wavelength of X-rays from a 50 kV tube? ($\\lambda_{min} = hc/(eV)$, answer in pm)
+**1)** Minimum wavelength of X-rays from a 50 kV tube? ($\\lambda_{min} = hc/(eV)$, in pm, round to 1 decimal place)
 
 **2)** De Broglie wavelength of an electron accelerated through 50 kV? (in pm, round to 1 decimal place)
 

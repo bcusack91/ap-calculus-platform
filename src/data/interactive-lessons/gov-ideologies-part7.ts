@@ -231,7 +231,7 @@ export const govIdeologiesPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: "FEDERALIST 10 (Madison Nov 22 1787) — large republic controls ___ better than small republic by enabling more diverse interests preventing majority oppression: ___",
+            label: "FEDERALIST 10 (Madison Nov 22 1787) — large republic controls this danger better than small republic by enabling more diverse interests preventing majority oppression: ___",
             options: ['Faction', 'Separation of powers + checks', 'Energetic single executive', 'Judicial review', 'Anti-Federalist warning about large republic', 'Civil disobedience + nonviolent direct action']
           },
           {

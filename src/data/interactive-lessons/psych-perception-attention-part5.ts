@@ -111,7 +111,7 @@ What we perceive depends not just on what's "out there" — it depends on what's
         inputs: [
           { label: 'A mental predisposition to perceive one thing and not another is called a perceptual ___', answer: 'set' },
           { label: 'Exposure to one stimulus influencing response to a later stimulus is called ___', answer: 'priming' },
-          { label: 'Mental frameworks that organize and interpret information are called ___', answer: 'schemas' }
+          { label: 'Mental frameworks that organize and interpret information are called ___', answer: 'schemas', acceptableAnswers: ['schema', 'schemata'] }
         ]
       }
     },

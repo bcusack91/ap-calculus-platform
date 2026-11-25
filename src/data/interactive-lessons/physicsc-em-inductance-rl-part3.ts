@@ -64,7 +64,7 @@ Note: $V_L = -V_R$ (KVL with no EMF source). The inductor drives current through
       id: 'indrl3-mcq2',
       type: 'mcq' as const,
       question: 'During RL decay, the initial magnitude of the voltage across the inductor equals:',
-      options: ['$I_0 R$', '$I_0 L$', '$\\mathcal{E}$', '$L/R$'],
+      options: ['$I_0 R$', '$I_0 L$', '$0$', '$L/R$'],
       correctAnswer: 0,
       explanation: '$|V_L(0)| = |{-I_0 R e^0}| = I_0 R$. The inductor initially maintains the full current, so the full voltage appears across $R$ (and equally across $L$).'
     },

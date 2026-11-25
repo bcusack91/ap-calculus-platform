@@ -152,7 +152,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing EO 9066\'s purpose was to authorize the forced removal of ~120,000 Japanese Americans (two-thirds U.S. citizens) from the West Coast is most useful for: ___",
+            label: "Knowing EO 9066 was issued to authorize the forced removal of ~120,000 Japanese Americans (two-thirds U.S. citizens) from the West Coast is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

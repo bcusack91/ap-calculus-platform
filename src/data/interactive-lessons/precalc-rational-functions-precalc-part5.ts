@@ -134,12 +134,12 @@ Follow these steps for **any** rational function $f(x) = \\frac{p(x)}{q(x)}$:
             question: 'The graph of $f(x) = \\frac{-1}{x}$ compared to $g(x) = \\frac{1}{x}$:',
             options: [
               'Is shifted left 1 unit',
-              'Is reflected across the $x$-axis (lives in quadrants II and IV)',
-              'Is reflected across the $y$-axis',
+              'Is reflected across the $x$-axis',
+              'Is shifted down 1 unit',
               'Is identical'
             ],
             correctAnswer: 1,
-            explanation: 'Multiplying by $-1$ reflects the graph across the $x$-axis. The parent $\\frac{1}{x}$ is in quadrants I and III; $\\frac{-1}{x}$ is in quadrants II and IV.'
+            explanation: 'Multiplying by $-1$ reflects the graph across the $x$-axis. The parent $\\frac{1}{x}$ is in quadrants I and III; $\\frac{-1}{x}$ is in quadrants II and IV. (Since $\\frac{-1}{x} = \\frac{1}{-x}$, it is also the reflection across the $y$-axis.)'
           }
         ]
       }

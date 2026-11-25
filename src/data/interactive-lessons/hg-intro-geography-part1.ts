@@ -116,7 +116,7 @@ Tobler's First Law is the foundation of **spatial autocorrelation**: nearby plac
 
 2) Two New York City restaurants both occupy roughly the same lot, but one is at the corner of a busy subway exit and the other is on a quiet side street. What term describes a location's relationship to *other* places (transport, hubs, surrounding city)?
 
-3) NYC and London were 6 weeks apart by sail in 1840 and are 7 hours apart by jet today. What term describes the apparent "shrinking" of distance over time as transport improves?
+3) NYC and London were 6 weeks apart by sail in 1840 and are 7 hours apart by jet today. What term describes this measurable drop in travel time between places as transport improves?
 
 Use the exact term from the lesson.
       `,
@@ -125,7 +125,7 @@ Use the exact term from the lesson.
         correctAnswers: ["Distance decay", "Situation", "Time-space convergence"],
         hint1: "Two words. The principle that 'the farther away, the less interaction.'",
         hint2: "The opposite of 'site.' Describes a place's relational geography.",
-        hint3: "Three words separated by hyphens. Coined to describe the shrinking world.",
+        hint3: "Two words, the first hyphenated. Measures how travel time between places falls.",
         explanation: "Distance decay — interaction falls with distance. Situation — a place's position relative to other places. Time-space convergence — distance shrinks as transport/communication improves."
       }
     },

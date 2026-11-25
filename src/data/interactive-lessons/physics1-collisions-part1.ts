@@ -100,7 +100,7 @@ If you can calculate $KE_i$ and $KE_f$ and they\'re equal → elastic. If $KE_f 
       exercise: {
         questions: [
           {
-            question: 'In an elastic collision between two objects of equal mass (one initially at rest), the first object:',
+            question: 'In a head-on elastic collision between two objects of equal mass (one initially at rest), the first object:',
             options: [
               'Continues forward at half speed',
               'Bounces backward at the original speed',

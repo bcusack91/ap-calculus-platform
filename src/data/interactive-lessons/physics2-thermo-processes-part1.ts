@@ -143,7 +143,7 @@ If a gas expands from the same initial state:
             explanation: 'Adiabatic: $Q = 0$. Expansion: the work done on the gas is negative, $W < 0$. First Law: $\\Delta U = 0 + W < 0$ → temperature drops.'
           },
           {
-            question: 'For a gas expanding from the same initial state, which process produces the MOST work?',
+            question: 'For a gas expanding from the same initial state to the same final volume, which process produces the MOST work?',
             options: ['Adiabatic', 'Isothermal', 'Isobaric', 'Isochoric'],
             correctAnswer: 2,
             explanation: 'Isobaric keeps $P$ constant (highest), so the area under the PV curve is largest. Adiabatic produces the least because pressure drops fastest.'

@@ -97,6 +97,7 @@ If a message:
       exercise: {
         boxes: 3,
         correctAnswers: ["MFA", "apps", "antivirus"],
+        acceptableAnswers: [["multifactor authentication", "multifactor", "2FA", "two-factor authentication"], ["applications"], ["anti-malware", "malware", "virus"]],
         hint1: "Reset second factor.",
         hint2: "Third-party access.",
         hint3: "Malware scan.",

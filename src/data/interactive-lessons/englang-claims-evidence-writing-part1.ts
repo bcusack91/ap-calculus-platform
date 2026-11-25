@@ -134,6 +134,7 @@ Strong AP essays include an opposing view and response.
       exercise: {
         boxes: 3,
         correctAnswers: ['qualified', 'commentary', 'concession'],
+        acceptableAnswers: [['nuanced'], ['analysis'], []],
         hint1: 'Not all-or-nothing.',
         hint2: 'Your analytical bridge.',
         hint3: 'Acknowledging part of the opposing view.',

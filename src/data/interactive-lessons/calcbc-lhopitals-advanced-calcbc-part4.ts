@@ -71,7 +71,7 @@ $$\\lim \\frac{1 + e^{-2x}}{1 - e^{-2x}} = \\frac{1 + 0}{1 - 0} = 1$$
         questions: [
           {
             question: 'A student writes: $\\lim_{x \\to 0} \\frac{x}{e^x} = \\lim \\frac{1}{e^x} = 1$. What\'s wrong?',
-            options: ['The original limit is $0/1 = 0$, not indeterminate — L\'Hôpital doesn\'t apply', 'The derivative of $e^x$ is wrong', 'Should use the quotient rule', 'Nothing — the answer is 1'],
+            options: ['The original limit is $0/1 = 0$, not indeterminate — L\'Hôpital doesn\'t apply', 'The derivative of $e^x$ is wrong — it should be $xe^{x-1}$, not $e^x$', 'L\'Hôpital needs the quotient rule here, not separate derivatives', 'Nothing — the form is $0/0$, so L\'Hôpital gives 1'],
             correctAnswer: 0,
             explanation: '$x/e^x \\to 0/1 = 0$ as $x \\to 0$. Not $0/0$ or $\\infty/\\infty$. L\'Hôpital is invalid here.'
           },
@@ -92,8 +92,8 @@ $$\\lim \\frac{1 + e^{-2x}}{1 - e^{-2x}} = \\frac{1 + 0}{1 - 0} = 1$$
         dropdowns: [
           {
             label: '$\\lim_{x \\to \\infty} \\frac{x^2}{x^2 + 1}$:',
-            options: ['Yes ($\\infty/\\infty$), but dividing by $x^2$ is faster → $1$', 'No (not indeterminate)', 'Yes, and it gives $0$', 'Cannot determine'],
-            correctAnswers: ['Yes ($\\infty/\\infty$), but dividing by $x^2$ is faster → $1$'],
+            options: ['Yes ($\\infty/\\infty$), and it gives $1$', 'No (not indeterminate)', 'Yes ($\\infty/\\infty$), and it gives $0$', 'Cannot determine'],
+            correctAnswers: ['Yes ($\\infty/\\infty$), and it gives $1$'],
             hints: ['$\\infty/\\infty$ form, so L\'H is valid. But algebra is simpler.'],
             explanation: 'L\'H: $\\lim 2x/(2x) = 1$. Algebra: $\\lim 1/(1+1/x^2) = 1$. Both give 1.'
           },

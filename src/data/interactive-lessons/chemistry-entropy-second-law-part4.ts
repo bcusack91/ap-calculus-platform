@@ -162,7 +162,7 @@ The large positive value is the "big jump at the boiling point" from the list ab
       content: `
 **Compare Standard Entropies** 🧮
 
-Which substance has the HIGHER standard molar entropy? Type the chemical formula.
+Which substance has the HIGHER standard molar entropy? Type it as written above, including its phase or form in parentheses.
 
 **1)** $\\text{H}_2\\text{O}(l)$ or $\\text{H}_2\\text{O}(g)$?
 

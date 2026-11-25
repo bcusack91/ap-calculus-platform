@@ -136,8 +136,8 @@ A concave mirror has $R = 40$ cm. An object is 30 cm from the mirror.
           {
             question: 'In the previous problem ($f = 20$ cm, $d_o = 30$ cm, $d_i = 60$ cm), the object is:',
             options: [
-              'Beyond $C$ — so image should be between $F$ and $C$, smaller. Wait, $d_i = 60 > 40 = 2f = C$. Something is wrong!',
-              'Between $C$ and $F$ — image beyond $C$, magnified. $d_o = 30$ is between $f = 20$ and $C = 40$. $d_i = 60 > C$. Correct!',
+              'Beyond $C$ — image between $F$ and $C$, real, inverted, smaller',
+              'Between $C$ and $F$ — image beyond $C$, real, inverted, magnified',
               'Inside $F$ — image should be virtual',
               'At $C$ — image should be same size'
             ],

@@ -45,18 +45,29 @@ export const englitNarrativeComplexityPart1Data = {
     {
       id: "englitna1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "ambiguity",
-            "contradiction",
-            "layered meaning"
+      "questions": [
+            {
+                  "question": "A text's capacity to support more than one plausible reading at once",
+                  "answer": "ambiguity",
+                  "acceptableAnswers": ["the ambiguity", "ambiguities"]
+            },
+            {
+                  "question": "Competing details or perspectives that pull against each other and reveal how complicated the truth is",
+                  "answer": "contradiction",
+                  "acceptableAnswers": ["the contradiction", "contradictions"]
+            },
+            {
+                  "question": "Several interpretive levels operating within a single moment of the text",
+                  "answer": "layered meaning",
+                  "acceptableAnswers": ["layered meanings", "layers of meaning", "multiple layers of meaning", "multiple meanings"]
+            }
       ],
-      "hint1": "Concept 1: Ambiguity",
-      "hint2": "Concept 2: Contradiction",
-      "hint3": "Concept 3: Layered Meaning",
-      "explanation": "Ambiguity, Contradiction, and Layered Meaning are core vocabulary for this unit."
+      "hint1": "Concept 1: the evidence fits more than one reading.",
+      "hint2": "Concept 2: details that seem to cancel each other out.",
+      "hint3": "Concept 3 (two words): one moment, several levels stacked together.",
+      "explanation": "Ambiguity, contradiction and layered meaning are core vocabulary for this unit; each invites a nuanced claim rather than a single-sentence reading."
 }
     },
     {

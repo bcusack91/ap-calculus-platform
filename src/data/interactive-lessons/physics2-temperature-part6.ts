@@ -32,7 +32,7 @@ where:
 
 2. At the same temperature, a helium atom and a nitrogen molecule have the **same average kinetic energy**.
 
-3. At absolute zero ($T = 0$ K), the classical kinetic energy is zero — all molecular translational motion ceases.
+3. At absolute zero ($T = 0$ K), the classical kinetic energy is zero — in the classical model, all molecular translational motion ceases (quantum mechanics leaves a small zero-point motion).
 
 ### For One Mole of Gas
 

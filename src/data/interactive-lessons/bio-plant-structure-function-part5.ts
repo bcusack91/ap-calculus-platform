@@ -68,7 +68,7 @@ The **Cholodny-Went model** explains phototropism:
               'Stopped growing entirely',
               'Grew straight upward',
               'Bent away from the side with the agar block',
-              'Bent toward the side without the agar block'
+              'Bent toward the side with the agar block'
             ],
             correctAnswer: 2,
             explanation: 'The agar block released auxin on one side, causing greater cell elongation on that side. This differential growth made the coleoptile bend away from the side with more auxin (since that side grew longer).'

@@ -193,7 +193,7 @@ AP questions often ask you to connect a plant's response to its **survival and r
       exercise: {
         questions: [
           {
-            question: 'A short-day plant receives 8 h of light and 16 h of darkness, longer than its critical night length. On some nights a brief light flash is given at hour 8 of the dark period; on others, a brief dark period is given at hour 4 of the light period. Which result is expected?',
+            question: 'A short-day plant receives 8 h of light and 16 h of darkness; its critical night length is 12 h. On some nights a brief light flash is given at hour 8 of the dark period; on others, a brief dark period is given at hour 4 of the light period. Which result is expected?',
             options: [
               'It flowers with the daytime dark break but not with the night flash',
               'It flowers with the night flash but not with the daytime dark break',

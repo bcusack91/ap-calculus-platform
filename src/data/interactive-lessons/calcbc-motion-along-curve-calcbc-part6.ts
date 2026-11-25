@@ -24,13 +24,13 @@ Work through these problems as you would on the AP exam. Show setups before comp
           },
           {
             question: 'For $x(t) = t^2 - 1$, $y(t) = 3t$, horizontal tangent occurs when:',
-            options: ['Never — $y\'(t) = 3 \\neq 0$ for all $t$', '$t = 0$', '$t = 1$', '$t = -1$'],
+            options: ['Never', '$t = 0$', '$t = 1$', '$t = -1$'],
             correctAnswer: 0,
             explanation: 'Horizontal tangent needs $y\' = 0$ and $x\' \\neq 0$. Since $y\' = 3$ always, no horizontal tangent.'
           },
           {
             question: 'Vertical tangent for the same curve occurs at:',
-            options: ['$t = 0$ (where $x\'(0) = 0$ and $y\'(0) = 3 \\neq 0$)', 'Never', '$t = 1$', '$t = -1$'],
+            options: ['$t = 0$', 'Never', '$t = 1$', '$t = -1$'],
             correctAnswer: 0,
             explanation: '$x\'(t) = 2t = 0$ at $t = 0$. $y\'(0) = 3 \\neq 0$. Vertical tangent at $t = 0$.'
           }
@@ -59,8 +59,8 @@ Work through these problems as you would on the AP exam. Show setups before comp
           },
           {
             label: 'The displacement from $t = 0$ to $t = 2\\pi$ is:',
-            options: ['$\\langle 0, 0 \\rangle$ (returns to start)', '$\\langle 2\\pi, 0 \\rangle$', '$\\langle 0, 2\\pi \\rangle$', '$\\langle 1, 0 \\rangle$'],
-            correctAnswers: ['$\\langle 0, 0 \\rangle$ (returns to start)'],
+            options: ['$\\langle 0, 0 \\rangle$', '$\\langle 2\\pi, 0 \\rangle$', '$\\langle 0, 2\\pi \\rangle$', '$\\langle 1, 0 \\rangle$'],
+            correctAnswers: ['$\\langle 0, 0 \\rangle$'],
             hints: ['$\\int_0^{2\\pi} \\cos t\\,dt = 0$, $\\int_0^{2\\pi} \\sin t\\,dt = 0$.'],
             explanation: 'Both component integrals are zero over a full period. The particle returns to its starting point.'
           }
@@ -70,7 +70,7 @@ Work through these problems as you would on the AP exam. Show setups before comp
     {
       id: 'mc6-input',
       type: 'input-box' as const,
-      content: '**Calculator Problem**',
+      content: '**Practice**',
       exercise: {
         question: 'A particle has $x\'(t) = 3$ and $y\'(t) = 4$ for $0 \\le t \\le 10$. Starting at $(2, 1)$, what is the $x$-coordinate at $t = 10$?',
         correctAnswer: '32',

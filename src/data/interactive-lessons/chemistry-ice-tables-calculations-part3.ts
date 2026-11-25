@@ -208,7 +208,7 @@ $$0.25 = \\frac{x \\cdot x}{1.00 - x} = \\frac{x^2}{1.00 - x}$$
           },
           {
             label: 'If you get a negative value of x, it means',
-            options: ['the answer is correct with a sign change', 'you assumed the wrong direction of shift', 'K is wrong', 'the reaction doesn\'t occur']
+            options: ['the reaction goes to completion', 'you assumed the wrong direction of shift', 'K is wrong', 'the reaction doesn\'t occur']
           }
         ],
         correctAnswers: [

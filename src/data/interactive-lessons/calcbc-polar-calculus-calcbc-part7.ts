@@ -99,7 +99,7 @@ export const calcbcPolarPart7Data = {
       exercise: {
         question: 'The area enclosed by the cardioid $r = 1 + \\cos\\theta$ is $\\frac{3\\pi}{2}$. What is the area enclosed by $r = 3(1 + \\cos\\theta)$? Give an exact answer in terms of $\\pi$.',
         correctAnswer: '27pi/2',
-        acceptableAnswers: ['27pi/2', '27π/2', '13.5pi', '13.5π', '42.412', '42.41'],
+        acceptableAnswers: ['27pi/2', '27π/2', '27/2pi', '27/2π', '13.5pi', '13.5π', '42.412', '42.41'],
         hints: ['Area uses $\\frac{1}{2}\\int r^2\\,d\\theta$, so scaling $r$ by $3$ scales $r^2$ by $9$.', '$9 \\times \\frac{3\\pi}{2}$.'],
         explanation: '$\\frac{1}{2}\\int_0^{2\\pi} 9(1 + \\cos\\theta)^2\\,d\\theta = 9 \\cdot \\frac{3\\pi}{2} = \\frac{27\\pi}{2}$. Area scales by the square of the factor, not by the factor itself, so the answer is not $\\frac{9\\pi}{2}$.'
       }

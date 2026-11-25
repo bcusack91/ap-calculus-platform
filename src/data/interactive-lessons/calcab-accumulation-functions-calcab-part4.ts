@@ -127,7 +127,7 @@ Water enters a tank at $R_{\\text{in}}(t) = 5 + 4\\sin(t^2)$ gal/min and drains 
     {
       id: 'acc4-input',
       type: 'input-box' as const,
-      content: '**Compute net change.** ✍️',
+      content: '**Compute total distance.** ✍️',
       exercise: {
         question: 'A particle has velocity $v(t) = 3t^2 - 12t + 9$ for $0 \\le t \\le 4$. Find the total distance traveled.\n\n(Enter an integer.)',
         correctAnswer: '12',

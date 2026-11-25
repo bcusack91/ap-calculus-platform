@@ -179,11 +179,11 @@ Because each step is so much weaker than the one before, a solution of a weak di
 **3)** If the HF solution in (1) is diluted to 0.0050 M, does its percent ionization **increase** or **decrease**?
       `,
       exercise: {
-        questions: [{ question: '1)', answer: '11.0', acceptableAnswers: ['11.0'] }, { question: '2)', answer: '4.7', acceptableAnswers: ['4.7', '4.70'] }, { question: '3)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }],
+        questions: [{ question: '1)', answer: '11.0', acceptableAnswers: ['11.0', '11.7'] }, { question: '2)', answer: '4.7', acceptableAnswers: ['4.7', '4.70'] }, { question: '3)', answer: 'increase', acceptableAnswers: ['increase', 'increases'] }],
         hint1: '$[H^+] = \\sqrt{K_a \\cdot C}$, then divide by $C$ and multiply by 100.',
         hint2: 'Percent ionization = (equilibrium $[H_3O^+]$ / initial concentration) × 100.',
         hint3: 'Dilution shifts the ionization equilibrium toward more ions.',
-        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.050)} = 5.83 \\times 10^{-3}$; $\\% = (5.83 \\times 10^{-3}/0.050) \\times 100 = 11.7\\%$. Since >5%, use the quadratic $x^2 + (6.8 \\times 10^{-4})x - 3.4 \\times 10^{-5} = 0$: $x = 5.50 \\times 10^{-3}$; $\\% = 11.0\\%$. 2) $(9.4 \\times 10^{-3}/0.20) \\times 100 = 4.7\\%$ (CED 8.3.A.5). 3) Increase: percent ionization rises as a weak acid is diluted (roughly in proportion to $1/\\sqrt{C}$).'
+        explanation: '1) $[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.050)} = 5.83 \\times 10^{-3}$; $\\% = (5.83 \\times 10^{-3}/0.050) \\times 100 = 11.7\\%$. Since >5%, use the quadratic $x^2 + (6.8 \\times 10^{-4})x - 3.4 \\times 10^{-5} = 0$: $x = 5.50 \\times 10^{-3}$; $\\% = 11.0\\%$ (the approximation\'s 11.7% is also accepted). 2) $(9.4 \\times 10^{-3}/0.20) \\times 100 = 4.7\\%$ (CED 8.3.A.5). 3) Increase: percent ionization rises as a weak acid is diluted (roughly in proportion to $1/\\sqrt{C}$).'
       }
     },
     {

@@ -108,6 +108,7 @@ The Internet allows false information to spread as quickly as true information. 
       exercise: {
         boxes: 3,
         correctAnswers: ["aggregated", "transparency", "data"],
+        acceptableAnswers: [["combined", "aggregate", "linked", "merged"], ["explainability", "interpretability"], []],
         hint1: "Gathered together into one record.",
         hint2: "Open about how it decides.",
         hint3: "What the innovation learns from.",

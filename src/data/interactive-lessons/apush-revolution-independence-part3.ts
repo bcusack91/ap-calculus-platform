@@ -237,7 +237,7 @@ The grievances are addressed to "He," the king, never to Parliament by name. Tha
             question: 'The fact that the Declaration\'s grievances are addressed to the king rather than to Parliament best reflects which development?',
             options: [
               'The colonists\' belief that Parliament had always been their lawful legislature',
-              'The colonial claim that Parliament never had authority over the colonies',
+              'The colonial claim that Parliament had no rightful authority over the colonies',
               'An agreement with Parliament to share blame for colonial policies equally',
               'A royal decision to dissolve Parliament in 1775 and rule by decree alone'
             ],

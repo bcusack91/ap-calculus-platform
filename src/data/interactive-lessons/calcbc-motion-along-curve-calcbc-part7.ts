@@ -32,9 +32,9 @@ $$\\boxed{\\text{At rest: } x'(t) = 0 \\text{ AND } y'(t) = 0 \\text{ simultaneo
         questions: [
           {
             question: 'A particle has $x(t) = \\sin t$, $y(t) = \\cos t$. $\\frac{d^2y}{dx^2}$ at $t = \\pi/2$ is:',
-            options: ['$-1$ ($dy/dx = -\\sin t/\\cos t$; $\\frac{d}{dt}(-\\tan t) = -\\sec^2 t$; $(-\\sec^2(\\pi/2))/(\\cos(\\pi/2))$ → undefined at $\\pi/2$. Let me recalculate...)', 'Wait — undefined since $x\'(\\pi/2) = \\cos(\\pi/2) = 0$', '$0$', '$1$'],
+            options: ['$-1$', 'Undefined', '$0$', '$1$'],
             correctAnswer: 1,
-            explanation: '$x\'(\\pi/2) = \\cos(\\pi/2) = 0$, so the second derivative formula has division by zero. The curve has a vertical tangent here.'
+            explanation: '$dy/dx = -\\sin t/\\cos t = -\\tan t$, so $\\frac{d^2y}{dx^2} = \\frac{-\\sec^2 t}{\\cos t} = -\\sec^3 t$. At $t = \\pi/2$, $x\'(\\pi/2) = \\cos(\\pi/2) = 0$, so the formula divides by zero and $d^2y/dx^2$ is undefined. The curve has a vertical tangent here.'
           },
           {
             question: '$x(t) = 2t + 1$, $y(t) = t^2 - t$. Find the slope at $t = 3$.',
@@ -59,13 +59,13 @@ $$\\boxed{\\text{At rest: } x'(t) = 0 \\text{ AND } y'(t) = 0 \\text{ simultaneo
         questions: [
           {
             question: 'At $t = 4$: $\\vec{v} = \\langle -1, -3 \\rangle$, $\\vec{a} = \\langle 2, 1 \\rangle$. The particle is:',
-            options: ['Slowing down ($\\vec{v} \\cdot \\vec{a} = -2 - 3 = -5 < 0$)', 'Speeding up', 'At rest', 'Moving at constant speed'],
+            options: ['Slowing down', 'Speeding up', 'At rest', 'Moving at constant speed'],
             correctAnswer: 0,
             explanation: '$\\vec{v} \\cdot \\vec{a} = (-1)(2) + (-3)(1) = -5 < 0$. Slowing down.'
           },
           {
-            question: 'If $\\vec{v}(t) = \\langle t - 1, t^2 - 4 \\rangle$, the particle reverses $y$-direction at:',
-            options: ['$t = 2$ (where $y\' = t^2 - 4$ changes from negative to positive)', '$t = 1$', '$t = -2$ only', '$t = 1$ and $t = 2$'],
+            question: 'If $\\vec{v}(t) = \\langle t - 1, t^2 - 4 \\rangle$ for $t \\ge 0$, the particle reverses $y$-direction at:',
+            options: ['$t = 2$', '$t = 1$', '$t = -2$ only', '$t = 1$ and $t = 2$'],
             correctAnswer: 0,
             explanation: '$y\'(t) = t^2 - 4 = (t-2)(t+2)$. For $t \\ge 0$, changes sign at $t = 2$.'
           }
@@ -80,8 +80,8 @@ $$\\boxed{\\text{At rest: } x'(t) = 0 \\text{ AND } y'(t) = 0 \\text{ simultaneo
         dropdowns: [
           {
             label: 'The particle is at rest at:',
-            options: ['$t = 2$ (both $x\'(2) = 0$ and $y\'(2) = 0$)', 'Never', '$t = 2$ and $t = -2$', '$t = 2$ (only $x\' = 0$)'],
-            correctAnswers: ['$t = 2$ (both $x\'(2) = 0$ and $y\'(2) = 0$)'],
+            options: ['$t = 2$ (both components zero)', 'Never', '$t = 2$ and $t = -2$', '$t = 2$ (only $x\' = 0$)'],
+            correctAnswers: ['$t = 2$ (both components zero)'],
             hints: ['$x\'(2) = 4 - 4 = 0$, $y\'(2) = 6 - 6 = 0$.'],
             explanation: 'Both components are zero at $t = 2$. The particle is at rest.'
           },

@@ -102,7 +102,7 @@ The AST bound is about **12× tighter** here because it skips the zero $x^5$ coe
       type: 'input-box' as const,
       content: '**Bound Comparison**',
       exercise: {
-        question: 'For $\\sin(0.5)$ using $T_5(0.5)$ at $c = 0$: compute the Lagrange bound $|R_5|$. Express as a fraction.',
+        question: 'For $\\sin(0.5)$ using $T_5(0.5)$ at $c = 0$ (with $M = 1$): compute the Lagrange bound $|R_5|$. Express as a fraction.',
         correctAnswer: '1/46080',
         acceptableAnswers: ['1/46080', '0.0000217', '2.17e-5'],
         hints: ['$M = 1$, $|R_5| \\le 1 \\cdot (0.5)^6/6!$.', '$(0.5)^6 = 1/64$, $6! = 720$.'],

@@ -162,7 +162,7 @@ $$f(x) = \\frac{3(x - 1)}{x + 2}$$
             options: ['is in the numerator', 'is in the denominator', 'cancels completely out of the denominator', 'makes the function positive']
           },
           {
-            label: 'Given a complete graph, the first thing to identify is the',
+            label: 'When writing an equation from a graph, the features that give the factors of the denominator are the',
             options: ['slant asymptote', 'domain restrictions (VAs and holes)', '$y$-intercept', 'end behavior']
           },
           {
@@ -178,7 +178,7 @@ $$f(x) = \\frac{3(x - 1)}{x + 2}$$
         hint1: 'Hole = factor gone from the denominator. VA = a copy of the factor survives in the denominator.',
         hint2: 'Asymptotes and holes define the skeleton of the graph.',
         hint3: 'A function cannot equal $0$ at an $x$-value where it is undefined.',
-        explanation: 'Factor gone from the denominator → hole; a copy survives → VA. Read VAs/holes from a graph first. A shared numerator/denominator zero is a hole, not a zero. $y$-intercept is always $f(0)$.'
+        explanation: 'Factor gone from the denominator → hole; a copy survives → VA. VAs and holes give the factors of the denominator. A shared numerator/denominator zero is a hole, not a zero. $y$-intercept is always $f(0)$.'
       }
     },
     {

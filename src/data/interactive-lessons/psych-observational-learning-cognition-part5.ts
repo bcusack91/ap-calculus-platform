@@ -114,9 +114,9 @@ Biological preparedness means animals, humans included, are predisposed to learn
       `,
       exercise: {
         inputs: [
-          { label: 'Who demonstrated taste aversion learning in rats?', answer: 'Garcia' },
+          { label: 'Who demonstrated taste aversion learning in rats?', answer: 'Garcia', acceptableAnswers: ['Garcia and Koelling', 'Garcia & Koelling', 'John Garcia'] },
           { label: 'When trained behaviors revert to innate species-typical patterns, it\'s called instinctive ___', answer: 'drift' },
-          { label: 'Who coined the term "instinctive drift" after training animals for shows?', answer: 'Breland and Breland' }
+          { label: 'Who coined the term "instinctive drift" after training animals for shows?', answer: 'Breland and Breland', acceptableAnswers: ['Breland & Breland', 'Breland', 'Brelands', 'the Brelands', 'Keller and Marian Breland', 'Marian and Keller Breland'] }
         ]
       }
     },

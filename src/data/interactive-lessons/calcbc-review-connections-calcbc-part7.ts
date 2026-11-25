@@ -93,7 +93,7 @@ export const calcbcReviewPart7Data = {
       type: 'input-box' as const,
       content: '**Final Question**',
       exercise: {
-        question: 'The third-degree Maclaurin polynomial for $e^x$ is $P_3(x) = 1 + x + x^2/2 + x^3/6$. The Lagrange error bound for $|e^{0.1} - P_3(0.1)|$ uses $M = e^{0.1} < 3$. Compute the bound (as a fraction).',
+        question: 'The third-degree Maclaurin polynomial for $e^x$ is $P_3(x) = 1 + x + x^2/2 + x^3/6$. The Lagrange error bound for $|e^{0.1} - P_3(0.1)|$ uses $M = 3$ (since $e^{0.1} < 3$). Compute the bound (as a fraction).',
         correctAnswer: '1/80000',
         acceptableAnswers: ['1/80000', '0.0000125'],
         hints: ['$|R_3| \\leq M \\cdot |0.1|^4 / 4! = 3 \\cdot 10^{-4}/24$.'],

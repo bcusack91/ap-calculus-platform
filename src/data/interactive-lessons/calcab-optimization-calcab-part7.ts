@@ -75,7 +75,7 @@ export const calcabOptimizationPart7Data = {
             explanation: '$P = x(100-x)$. $P\'=100-2x=0$ at $x=50$. $P = 50 \\times 50 = 2500$. Multiplying the sum by $50$ gives $5000$, squaring the sum gives $10000$, and $x = 50$ is where the maximum occurs, not the product.'
           },
           {
-            question: '$f(x) = x^3 - 12x$ on $[-3, 3]$. The absolute max is:',
+            question: '$f(x) = x^3 - 12x$ on $[-3, 3]$. The absolute maximum value is:',
             options: ['$16$', '$x = -2$', '$-16$', '$x = 2$'],
             correctAnswer: 0,
             explanation: '$f\'=3x^2-12=0$ at $x=\\pm 2$. $f(-2)=16$, $f(2)=-16$, $f(-3)=9$, $f(3)=-9$. Max $= 16$. The value $-16$ is the absolute minimum, and $x = -2$ and $x = 2$ are locations, not values of $f$.'

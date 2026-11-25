@@ -178,7 +178,7 @@ export const psychClassicalPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A student associates the smell of a particular room freshener with test anxiety because their classroom always smells like it during exams. After graduation, the student walks into a store selling the same freshener and suddenly feels anxious. Later that year, the student enters the store again and feels no anxiety. This sequence illustrates:',
+            question: 'A student associates the smell of a particular room freshener with test anxiety because their classroom always smells like it during exams. After graduation, the student walks into a store selling the same freshener and suddenly feels anxious. After many more visits to the store with no exams, the student enters again and feels no anxiety. This sequence illustrates:',
             options: [
               'conditioning (freshener → anxiety), then extinction (repeated exposure without tests reduces anxiety)',
               'generalization (anxiety spreads to stores), then discrimination (learning stores differ from exam rooms)',

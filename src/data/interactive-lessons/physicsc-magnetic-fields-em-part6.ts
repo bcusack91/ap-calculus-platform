@@ -80,7 +80,7 @@ A long straight wire carries $I_1 = 6.0\\text{ A}$. A second long parallel wire,
             explanation: '$\\frac{F}{L} = B_1 I_2 = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$ — this relation historically defined the ampere.'
           },
           {
-            question: 'To find the force on a single point charge moving through a known field, use:',
+            question: 'To find the force on a single point charge moving through a known magnetic field, use:',
             options: ['$\\vec{F} = I\\vec{L}\\times\\vec{B}$', '$\\vec{F} = q\\vec{v}\\times\\vec{B}$', '$\\vec{F} = q\\vec{E}$', '$\\mathcal{E} = -d\\Phi_B/dt$'],
             correctAnswer: 1,
             explanation: 'The magnetic force on a moving point charge is $\\vec{F} = q\\vec{v}\\times\\vec{B}$; the $I\\vec{L}\\times\\vec{B}$ form is its continuum (current) version.'

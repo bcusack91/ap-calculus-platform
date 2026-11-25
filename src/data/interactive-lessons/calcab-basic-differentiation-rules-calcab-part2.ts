@@ -183,7 +183,7 @@ $$= e^x(2x\\sin x + x^2 \\cos x + x^2 \\sin x)$$
       type: 'input-box' as const,
       content: '**Product Rule computation.** ✍️',
       exercise: {
-        question: 'Let $h(x) = x^2 \\ln x$. Find $h\'(e)$. Give your answer in terms of $e$ (write the coefficient of $e$ — for example, if the answer is $3e$, type 3).',
+        question: 'Let $h(x) = x^2 \\ln x$. Find $h\'(e)$. Give your answer in terms of $e$ (write the coefficient of $e$ — for example, if the answer is $5e$, type 5).',
         correctAnswer: '3',
         acceptableAnswers: ['3', '3.0'],
         hints: [

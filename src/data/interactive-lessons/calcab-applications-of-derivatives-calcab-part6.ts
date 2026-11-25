@@ -157,7 +157,7 @@ $$\\boxed{\\text{Closest points: } \\left(\\pm\\frac{1}{\\sqrt{2}},\\, \\frac{1}
       exercise: {
         dropdowns: [
           {
-            label: 'The domain of $x$ is:',
+            label: 'For a real box (every dimension positive), the domain of $x$ is:',
             options: ['$0 < x < 6$', '$0 < x < 12$', '$0 \\le x \\le 6$', '$x > 0$, $x \\neq 6$'],
             correctAnswers: ['$0 < x < 6$'],
             hints: ['The side length $12 - 2x$ must be positive.'],

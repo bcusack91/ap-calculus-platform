@@ -225,10 +225,17 @@ The cytoskeleton is a network of protein fibers that gives the cell its shape, a
 **Key Terms** ✏️
 
 Enter the correct term for each description.
+
+1) The infoldings of the inner mitochondrial membrane that increase surface area for ATP synthesis.
+
+2) The flattened membrane sacs inside chloroplasts where the light reactions occur.
+
+3) The hollow cytoskeletal fibers that form the mitotic spindle.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['cristae', 'thylakoid', 'microtubules'],
+        acceptableAnswers: [['crista'], ['thylakoids', 'thylakoid membranes'], ['microtubule', 'spindle microtubules']],
         hint1: 'The infoldings of the inner mitochondrial membrane that increase surface area for ATP synthesis.',
         hint2: 'The flattened membrane sacs inside chloroplasts where the light reactions occur.',
         hint3: 'The hollow cytoskeletal fibers that form the mitotic spindle.',

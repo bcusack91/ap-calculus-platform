@@ -197,7 +197,7 @@ Use the Geometry and Thermostat documentation.
 
 2) \`Geometry.perimeter(2, 9)\` returns ___
 
-3) After \`Thermostat t = new Thermostat();\`, then \`t.adjust(3);\`, then \`t.adjust(-10);\`, the call \`t.getTarget()\` returns ___
+3) The no-argument constructor sets the target to 68. After \`Thermostat t = new Thermostat();\`, then \`t.adjust(3);\`, then \`t.adjust(-10);\`, the call \`t.getTarget()\` returns ___
       `,
       exercise: {
         boxes: 3,

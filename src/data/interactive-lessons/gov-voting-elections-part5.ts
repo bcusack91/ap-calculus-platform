@@ -239,7 +239,7 @@ Following Compromise of 1877 + federal abandonment of enforcement:
             hint: 'FOX NEWS (1996) — launched by Rupert Murdoch + Roger Ailes (former Republican media consultant); fundamentally changed cable news with explicit conservative editorial stance; ~2.4M primetime viewers (2024); central to Republican political ecosystem; Sean Hannity + Tucker Carlson (until 2023) + Laura Ingraham + Jesse Watters; transformed news from mostly neutral broadcast network era to partisan cable era; matched by MSNBC 1996 (Dem-aligned ~1.2M).'
           },
           {
-            prompt: "1948 election won unexpectedly by HARRY TRUMAN through whistle-stop 'GIVE \\'EM HELL HARRY' tour; defeated Tom DEWEY who pollsters predicted would win.",
+            prompt: "Democratic president who won the 1948 election in an upset after a whistle-stop tour, defeating Tom DEWEY, whom pollsters predicted would win.",
             answer: 'Truman',
             acceptableAnswers: ['Truman', 'Harry Truman', 'TRUMAN', 'truman', 'President Truman'],
             hint: 'HARRY TRUMAN 1948 — defeated Tom DEWEY in upset (Chicago Daily Tribune\'s "DEWEY DEFEATS TRUMAN" headline became iconic); famous WHISTLE-STOP TOUR through Midwest with "Give \'em Hell, Harry" rallying cry; pollsters used FLAWED QUOTA SAMPLING + stopped polling weeks before election; 1948 marked end of pre-scientific quota polling + transition to systematic random sampling; 303-189 EC + 49.6-45.1 popular vote.'
@@ -258,7 +258,7 @@ Following Compromise of 1877 + federal abandonment of enforcement:
             options: ['Candidates did not actively campaign; voters came to candidate; Garfield + Harrison + McKinley exemplars', 'FDR Fireside Chats transformed presidential communication; first political radio ads; Long + Coughlin populist voices', 'Kennedy-Nixon 1960 first televised debate; Daisy Ad 1964; Reagan Great Communicator; negative ads explosion (Horton 1988; Swift Boat 2004)', 'Obama 2008 transformative digital operation; small donor Internet fundraising; social media; Big Data analytics', 'Joe Rogan + manosphere podcast circuit + TikTok + Musk\'s X + AI deepfakes; Trump 2024 sharp young-men shift']
           },
           {
-            label: "TELEVISION ERA (1960-2000) — _______:",
+            label: "TELEVISION ERA (1960-2004) — _______:",
             options: ['Candidates did not actively campaign; voters came to candidate; Garfield + Harrison + McKinley exemplars', 'FDR Fireside Chats transformed presidential communication; first political radio ads; Long + Coughlin populist voices', 'Kennedy-Nixon 1960 first televised debate; Daisy Ad 1964; Reagan Great Communicator; negative ads explosion (Horton 1988; Swift Boat 2004)', 'Obama 2008 transformative digital operation; small donor Internet fundraising; social media; Big Data analytics', 'Joe Rogan + manosphere podcast circuit + TikTok + Musk\'s X + AI deepfakes; Trump 2024 sharp young-men shift']
           },
           {

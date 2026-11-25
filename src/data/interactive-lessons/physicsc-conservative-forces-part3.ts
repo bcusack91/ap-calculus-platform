@@ -32,7 +32,7 @@ $$\\text{Force} = -\\text{(slope of } U\\text{)}$$`
     {
       id: 'cf3-mcq1',
       type: 'mcq' as const,
-      question: 'At a point where the potential energy graph $U(x)$ has a positive slope and is concave down, the force is:',
+      question: 'At a point where the potential energy graph $U(x)$ has a positive slope and is concave down, the force (as $x$ increases) is:',
       options: [
         'Negative and increasing in magnitude',
         'Positive and decreasing in magnitude',

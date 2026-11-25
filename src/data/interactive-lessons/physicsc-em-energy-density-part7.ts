@@ -111,7 +111,7 @@ $$B_0 = E_0/c \\approx 3.4 \\times 10^{-6} \\text{ T}$$
     {
       id: 'eden7-mcq4',
       type: 'mcq' as const,
-      question: 'An LC circuit has $L = 4$ mH and $C = 1$ μF. The oscillation frequency is:',
+      question: 'An LC circuit has $L = 4$ mH and $C = 40$ μF. The oscillation frequency is:',
       options: [
         '$\\approx 2500$ rad/s (or $\\approx 400$ Hz)',
         '$\\approx 250$ rad/s',
@@ -119,7 +119,7 @@ $$B_0 = E_0/c \\approx 3.4 \\times 10^{-6} \\text{ T}$$
         '$\\approx 500$ rad/s'
       ],
       correctAnswer: 0,
-      explanation: '$\\omega = 1/\\sqrt{LC} = 1/\\sqrt{(4 \\times 10^{-3})(10^{-6})} = 1/\\sqrt{4 \\times 10^{-9}} = 1/(2 \\times 10^{-4.5}) \\approx 1/(6.32 \\times 10^{-5}) ... $ Actually: $\\sqrt{4 \\times 10^{-9}} = 2 \\times 10^{-4.5} = 6.32 \\times 10^{-5}$, no. $\\sqrt{4 \\times 10^{-9}} = 2 \\times 10^{-4.5}$. But $10^{-4.5} \\approx 3.16 \\times 10^{-5}$, so $\\sqrt{LC} = 6.32 \\times 10^{-5}$, giving $\\omega \\approx 15{,}800$ rad/s. Hmm, let me restate: $\\omega = 1/\\sqrt{LC}$. With a different numerical answer the idea is $\\omega = 1/\\sqrt{4 \\times 10^{-9}}$.'
+      explanation: '$\\omega = 1/\\sqrt{LC} = 1/\\sqrt{(4 \\times 10^{-3})(40 \\times 10^{-6})} = 1/\\sqrt{1.6 \\times 10^{-7}} = 1/(4 \\times 10^{-4}) = 2500$ rad/s, so $f = \\omega/2\\pi \\approx 400$ Hz.'
     },
     {
       id: 'eden7-summary',

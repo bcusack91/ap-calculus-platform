@@ -117,7 +117,7 @@ above the $x$-axis.
             explanation: 'The $y$-momentum was zero initially, so the $y$-momenta must cancel after collision. The first ball goes above the $x$-axis. The exact angle depends on the masses and speeds.'
           },
           {
-            question: 'In a 2D collision, the number of independent conservation equations is:',
+            question: 'In a 2D collision that is not necessarily elastic, the number of conservation equations you can always rely on is:',
             options: [
               '1',
               '2 (x and y momentum)',

@@ -189,7 +189,7 @@ Similar triangles: $\\frac{r}{h} = \\frac{3}{6} = \\frac{1}{2}$, so $r = \\frac{
       type: 'input-box' as const,
       content: '**Related Rates computation.** ✍️',
       exercise: {
-        question: "A circle's radius is increasing at $3$ cm/s. How fast is the area increasing (in terms of $\\pi$) when the radius is $5$ cm? Give the coefficient of $\\pi$ only (e.g., if the answer is $30\\pi$, enter 30).",
+        question: "A circle's radius is increasing at $3$ cm/s. How fast is the area increasing (in terms of $\\pi$) when the radius is $5$ cm? Give the coefficient of $\\pi$ only (e.g., if the answer is $12\\pi$, enter 12).",
         correctAnswer: '30',
         acceptableAnswers: ['30', '30.0'],
         hints: [

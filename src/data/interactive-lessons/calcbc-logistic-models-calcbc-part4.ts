@@ -73,7 +73,7 @@ Notice: $\\Delta P$ increases until $P$ passes $L/2 = 50$, then decreases.`
       exercise: {
         questions: [
           {
-            question: 'A rumor spreads through a school of 800 students at rate $dN/dt = 0.02N(800 - N)$. In standard form, $k =$',
+            question: 'A rumor spreads through a school of 800 students at rate $dN/dt = 0.02N(800 - N)$. In the standard form $dN/dt = kN(1 - N/L)$, $k =$',
             options: ['$k = 0.02(800) = 16$', '$k = 0.02$, read from $0.02N$', '$k = 800$, the school size', '$k = 0.02/800 = 0.000025$'],
             correctAnswer: 0,
             explanation: '$0.02N(800 - N) = 0.02 \\cdot 800 \\cdot N(1 - N/800) = 16N(1 - N/800)$, so $k = 16$ and $L = 800$. The 0.02 must be multiplied by 800, not read off alone or divided by 800.'
@@ -121,7 +121,7 @@ Notice: $\\Delta P$ increases until $P$ passes $L/2 = 50$, then decreases.`
       type: 'input-box' as const,
       content: '**Solve for Time**',
       exercise: {
-        question: '$P(t) = 500/(1 + 4e^{-t})$. When does $P = 400$? Enter the exact expression using ln (e.g., "ln(16)").',
+        question: '$P(t) = 500/(1 + 4e^{-t})$. When does $P = 400$? Enter the exact expression using ln (e.g., "ln(5)").',
         correctAnswer: 'ln(16)',
         acceptableAnswers: ['ln(16)', 'ln16', '4ln(2)', '4ln2', '\\ln(16)', '\\ln 16'],
         hints: ['$400 = 500/(1+4e^{-t})$ → $1+4e^{-t} = 5/4$ → $e^{-t} = 1/16$ → $t = \\ln(16)$.'],

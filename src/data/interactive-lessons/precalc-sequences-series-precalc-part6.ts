@@ -123,7 +123,7 @@ $(x - 2)^3 = x^3 - 6x^2 + 12x - 8$
 
 **1)** $\\binom{8}{3}$ = ?
 
-**2)** The coefficient of $x^4$ in $(x+2)^5$ is: (include the power of 2)
+**2)** The coefficient of $x^4$ in $(x+2)^5$ is: (multiply the binomial coefficient by the matching power of $2$)
 
 **3)** The coefficient of $x^2$ in $(x+3)^4$:
       `,

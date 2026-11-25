@@ -70,7 +70,7 @@ $$W = \\int F\\,dx = \\int_0^{\\infty} (-bv)\\,v\\,dt = -bv_0^2\\int_0^{\\infty}
     {
       id: 'varaccel7-mcq2',
       type: 'mcq' as const,
-      question: 'In the problem above, what are the SI units of the constant $b$?',
+      question: 'In the problem above, what are the SI units of the constant $b$ in $F = -bv$?',
       options: [
         'kg/s',
         'N/m',

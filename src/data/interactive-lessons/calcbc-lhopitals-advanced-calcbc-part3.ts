@@ -83,7 +83,7 @@ $$= \\lim_{x \\to 0} \\frac{x^2}{3x^2} = \\frac{1}{3}$$
           },
           {
             question: '$\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$ is:',
-            options: ['$f\'(a)$ (the definition of derivative — no L\'Hôpital needed)', 'Requires L\'Hôpital', 'Always $0$', 'Undefined'],
+            options: ['$f\'(a)$', 'Requires L\'Hôpital', 'Always $0$', 'Undefined'],
             correctAnswer: 0,
             explanation: 'This IS the derivative definition. L\'Hôpital on $0/0$ gives $f\'(a)/1 = f\'(a)$, which is consistent but circular.'
           }
@@ -105,8 +105,8 @@ $$= \\lim_{x \\to 0} \\frac{x^2}{3x^2} = \\frac{1}{3}$$
           },
           {
             label: 'Same limit by L\'Hôpital (how many applications?):',
-            options: ['Two ($0/0$ → $\\sin x / 2x$ → $\\cos x / 2 = 1/2$)', 'One', 'Three', 'Cannot use L\'Hôpital'],
-            correctAnswers: ['Two ($0/0$ → $\\sin x / 2x$ → $\\cos x / 2 = 1/2$)'],
+            options: ['Two', 'One', 'Three', 'Cannot use L\'Hôpital'],
+            correctAnswers: ['Two'],
             hints: ['First: $\\sin x/(2x)$, still $0/0$. Second: $\\cos x/2 = 1/2$.'],
             explanation: 'Two applications needed. Taylor was faster here.'
           }

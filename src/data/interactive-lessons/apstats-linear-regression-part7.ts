@@ -216,7 +216,7 @@ Technology gives $b = 1.5$ and $r = 0.75$. The means are $\\bar{x} = 10$ and $\\
           },
           {
             question: 'If the intercept is $-50$ and the data range for $x$ is $[100, 500]$, you should:',
-            options: ['Say the predicted $y$ is $-50$ when $x = 0$', 'Say the intercept has no reasonable meaning here', 'Drop the intercept from the regression line', 'Refit the line forcing the intercept to 0'],
+            options: ['Report $-50$ as a trustworthy prediction at $x = 0$', 'Say the intercept has no reasonable meaning here', 'Drop the intercept from the regression line', 'Refit the line forcing the intercept to 0'],
             correctAnswer: 1,
             explanation: '$x = 0$ is far outside the data range, so interpreting the intercept is an extrapolation. The intercept still belongs in the equation for making predictions.'
           },

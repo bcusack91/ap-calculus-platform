@@ -120,6 +120,7 @@ Material created on a computer is the **intellectual property** of its creator o
       exercise: {
         boxes: 3,
         correctAnswers: ["PII", "bias", "crowdsourcing"],
+        acceptableAnswers: [["personally identifiable information"], [], []],
         hint1: "Personally Identifiable Information.",
         hint2: "A systematic skew.",
         hint3: "Wikipedia is the canonical example.",

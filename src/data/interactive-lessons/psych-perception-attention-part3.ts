@@ -101,8 +101,8 @@ Illusions reveal HOW our perceptual system works by showing when it fails. Each 
       `,
       exercise: {
         inputs: [
-          { label: 'The constancy that allows a white shirt to look white in any lighting is ___ constancy', answer: 'color' },
-          { label: 'The Müller-Lyer illusion uses arrows to make equal ___ appear different', answer: 'lines' },
+          { label: 'The constancy that allows a white shirt to look white in any lighting is ___ constancy', answer: 'color', acceptableAnswers: ['colour'] },
+          { label: 'The Müller-Lyer illusion uses arrows to make equal ___ appear different', answer: 'lines', acceptableAnswers: ['lengths', 'line lengths', 'line segments'] },
           { label: 'Rubin\'s vase demonstrates the Gestalt principle of figure and ___', answer: 'ground' }
         ]
       }

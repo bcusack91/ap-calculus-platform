@@ -45,7 +45,7 @@ export const calcabDerivExpLogPart4Data = {
             "explanation": "$k = -3$, so $y = Ce^{-3t}$. Without the constant $C$ you get only the one solution with $y(0) = 1$."
           },
           {
-            "question": "Carbon-14 has half-life 5730 years. $k \\approx $",
+            "question": "Carbon-14 has half-life 5730 years. For $y = Ce^{kt}$, $k \\approx $",
             "options": [
               "$-0.000121$",
               "$-5730$",

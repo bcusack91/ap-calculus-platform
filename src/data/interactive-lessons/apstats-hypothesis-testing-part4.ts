@@ -131,6 +131,7 @@ The justice system sets a very low $\\alpha$ ("beyond reasonable doubt") because
           {
             label: 'Error type for rejecting true $H_{0}$',
             correctAnswer: '1',
+            acceptableAnswers: ['I', 'one', 'Type I', 'Type 1'],
             explanation: 'Type I error = false positive = rejecting a true null.'
           },
           {

@@ -62,10 +62,10 @@ Check: at $t = 0$, $x = 5$ ✓, $v = 0$ ✓`
     {
       id: 'varaccel3-mcq2',
       type: 'mcq' as const,
-      question: 'For the problem above ($a = 4-2t$, $v(0) = 0$, $x(0) = 5$), during what interval is the particle speeding up?',
+      question: 'For the problem above ($a = 4-2t$, $v(0) = 0$, $x(0) = 5$), during what interval before $t = 4$ s is the particle speeding up?',
       options: ['$0 < t < 2$', '$0 < t < 4$', '$2 < t < 4$', '$t > 4$'],
       correctAnswer: 0,
-      explanation: '$v(t) = 4t - t^2 \\ge 0$ for $0 \\le t \\le 4$. $a(t) = 4 - 2t \\ge 0$ for $t \\le 2$ and $< 0$ for $t > 2$. Same sign ($v > 0$ and $a > 0$) for $0 < t < 2$. For $2 < t < 4$: $v > 0$ but $a < 0$, so slowing down.'
+      explanation: '$v(t) = 4t - t^2 \\ge 0$ for $0 \\le t \\le 4$. $a(t) = 4 - 2t \\ge 0$ for $t \\le 2$ and $< 0$ for $t > 2$. Same sign ($v > 0$ and $a > 0$) for $0 < t < 2$. For $2 < t < 4$: $v > 0$ but $a < 0$, so slowing down. (After $t = 4$ both are negative, so it speeds up again.)'
     },
     {
       id: 'varaccel3-sinusoidal',

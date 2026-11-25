@@ -77,7 +77,7 @@ $|c_{n+1}/c_n| = (n+1) \\to \\infty$. $R = 0$.
           },
           {
             question: 'The interval $(a - R, a + R)$ is called the:',
-            options: ['Open interval of convergence (endpoints not yet checked)', 'Radius of convergence', 'Domain of the series', 'Divergence region'],
+            options: ['Open interval of convergence', 'Radius of convergence', 'Domain of the series', 'Divergence region'],
             correctAnswer: 0,
             explanation: 'The Ratio Test gives the open interval. Endpoints need separate testing to determine the full IOC.'
           },
@@ -105,8 +105,8 @@ $|c_{n+1}/c_n| = (n+1) \\to \\infty$. $R = 0$.
           },
           {
             label: '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$: $R =$',
-            options: ['$\\infty$ (this is $\\cos x$)', '$1$', '$2$', '$0$'],
-            correctAnswers: ['$\\infty$ (this is $\\cos x$)'],
+            options: ['$\\infty$', '$1$', '$2$', '$0$'],
+            correctAnswers: ['$\\infty$'],
             hints: ['This is the Maclaurin series for $\\cos x$, which converges everywhere.'],
             explanation: 'Ratio of consecutive nonzero terms: $x^2/((2n+2)(2n+1)) \\to 0$. $R = \\infty$.'
           }

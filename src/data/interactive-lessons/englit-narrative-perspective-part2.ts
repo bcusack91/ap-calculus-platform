@@ -208,7 +208,7 @@ Type one standard term for each description.
           {
             question: `The character whose perceptions filter what is told (as opposed to the voice that tells)`,
             answer: 'focalizer',
-            acceptableAnswers: ['focaliser', 'the focalizer', 'reflector']
+            acceptableAnswers: ['focaliser', 'the focalizer', 'reflector', 'focal character']
           },
           {
             question: `Focalization that stays with one character throughout a work: internal ___`,

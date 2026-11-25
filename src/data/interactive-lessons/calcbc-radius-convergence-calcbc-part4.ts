@@ -69,13 +69,13 @@ At $x = \\pm 1$: both diverge. IOC becomes $(-1, 1)$.
           },
           {
             question: 'If a power series converges at both endpoints, its derivative:',
-            options: ['May converge at fewer endpoints (differentiation can remove convergence)', 'Converges at both endpoints', 'Diverges everywhere', 'Has $R = 0$'],
+            options: ['May converge at fewer endpoints', 'Converges at both endpoints', 'Diverges everywhere', 'Has $R = 0$'],
             correctAnswer: 0,
             explanation: 'Differentiation can turn $\\sum 1/n^2$ (converges) into $\\sum 1/n$ (diverges) at an endpoint.'
           },
           {
             question: '$\\frac{1}{1-x} = \\sum x^n$ ($R = 1$, IOC $(-1,1)$). Integrating gives $-\\ln(1-x) = \\sum x^{n+1}/(n+1)$. The new IOC:',
-            options: ['$[-1, 1)$ (gains left endpoint, right still diverges)', '$(-1, 1)$', '$[-1, 1]$', '$(-1, 1]$'],
+            options: ['$[-1, 1)$', '$(-1, 1)$', '$[-1, 1]$', '$(-1, 1]$'],
             correctAnswer: 0,
             explanation: '$x = -1$: $\\sum (-1)^{n+1}/(n+1)$ converges (AST). $x = 1$: $\\sum 1/(n+1)$ diverges. IOC: $[-1, 1)$.'
           }
@@ -90,15 +90,15 @@ At $x = \\pm 1$: both diverge. IOC becomes $(-1, 1)$.
         dropdowns: [
           {
             label: "$f(x) = \\sum_{n=1}^{\\infty} x^n/n^3$, IOC $[-1, 1]$. IOC of $f'(x) = \\sum x^{n-1}/n^2$:",
-            options: ['$[-1, 1]$ (still $p$-series with $p = 2 > 1$ at endpoints)', '$[-1, 1)$', '$(-1, 1)$', '$(-1, 1]$'],
-            correctAnswers: ['$[-1, 1]$ (still $p$-series with $p = 2 > 1$ at endpoints)'],
+            options: ['$[-1, 1]$', '$[-1, 1)$', '$(-1, 1)$', '$(-1, 1]$'],
+            correctAnswers: ['$[-1, 1]$'],
             hints: ['At $x = 1$: $\\sum 1/n^2$ converges. At $x = -1$: $\\sum (-1)^{n-1}/n^2$ converges.'],
             explanation: 'Both endpoints still give convergent $p$-series. IOC stays $[-1, 1]$.'
           },
           {
-            label: 'Same $f(x)$. IOC of $\\int f(x)\\,dx = \\sum x^{n+1}/(n(n+1) \\cdot 3) \\approx \\sum x^{n+1}/n^4$:',
-            options: ['$[-1, 1]$ (even stronger convergence at endpoints)', '$(-1, 1)$', '$[-1, 1)$', '$(-1, 1]$'],
-            correctAnswers: ['$[-1, 1]$ (even stronger convergence at endpoints)'],
+            label: 'Same $f(x)$. IOC of $\\int f(x)\\,dx = \\sum x^{n+1}/(n^3(n+1)) \\approx \\sum x^{n+1}/n^4$:',
+            options: ['$[-1, 1]$', '$(-1, 1)$', '$[-1, 1)$', '$(-1, 1]$'],
+            correctAnswers: ['$[-1, 1]$'],
             hints: ['Integration adds a factor of $1/(n+1)$, making endpoint convergence stronger.'],
             explanation: 'Integration improves convergence at endpoints. $\\sum 1/n^4$ converges. IOC: $[-1, 1]$.'
           }

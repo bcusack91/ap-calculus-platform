@@ -65,7 +65,7 @@ This is the hallmark of uniform circular motion!
       exercise: {
         questions: [
           {
-            question: 'A ball moves counterclockwise in a horizontal circle. When the ball is at the leftmost point of the circle, its velocity points:',
+            question: 'A ball moves counterclockwise around a circle drawn on the page. When the ball is at the leftmost point of the circle, its velocity points:',
             options: [
               'To the left',
               'To the right',

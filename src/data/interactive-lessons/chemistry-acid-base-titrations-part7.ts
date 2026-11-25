@@ -99,12 +99,12 @@ $$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equ
             question: 'Which indicator is best for the $HF/NaOH$ titration (equivalence ≈ pH 8)?',
             options: [
               'Methyl orange (3.1 – 4.4)',
-              'Bromothymol blue (6.0 – 7.6)',
+              'Alizarin yellow (10.1 – 12.0)',
               'Phenolphthalein (8.2 – 10.0)',
               'Methyl red (4.4 – 6.2)'
             ],
             correctAnswer: 2,
-            explanation: 'The equivalence point is at pH ≈ 8. Phenolphthalein changes in the range 8.2-10.0, which best matches this equivalence pH.'
+            explanation: 'The equivalence point is at pH ≈ 8. Phenolphthalein starts to change at 8.2, on the steep rise just past equivalence, so it best matches this equivalence pH. Methyl orange and methyl red change far too early (acidic range), and alizarin yellow changes only after the steep rise is over.'
           }
         ]
       }

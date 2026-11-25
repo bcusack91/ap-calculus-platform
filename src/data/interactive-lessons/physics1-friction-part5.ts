@@ -165,7 +165,7 @@ Plot $a$ vs. $F/m$:
 
 2) A block slides at constant velocity down a ramp inclined at 20°. What is $\\mu_k$? ($\\tan 20° = 0.364$, round to 3 significant figures)
 
-3) In an experiment, doubling the mass of a block doubles the measured friction force. This confirms that friction is proportional to what variable?
+3) In an experiment, doubling the mass of a block doubles the measured friction force. This confirms that friction is proportional to which force that the surface exerts on the block?
       `,
       exercise: {
         questions: [{ question: '1)', answer: '0.4', acceptableAnswers: ['0.4', '0.40'] }, { question: '2)', answer: '0.364', acceptableAnswers: ['0.364', '0.36'] }, { question: '3)', answer: 'normal force', acceptableAnswers: ['normal force', 'normal', 'the normal force', 'N', 'normal force N', 'normal force (N)', 'normal-force', 'the normal'] }],

@@ -139,7 +139,7 @@ $$eV_s = hf - \\phi$$
       exercise: {
         questions: [
           {
-            question: 'A metal has work function $\\phi = 2.0$ eV. Light of frequency $6.0 \\times 10^{14}$ Hz shines on it. The maximum KE of ejected electrons is: (Use $h = 4.14 \\times 10^{-15}$ eV·s)',
+            question: 'A metal has work function $\\phi = 2.0$ eV. Light of frequency $6.0 \\times 10^{14}$ Hz shines on it. The maximum KE of ejected electrons is: (Use $h = 4.15 \\times 10^{-15}$ eV·s)',
             options: [
               '0.49 eV',
               '2.49 eV',
@@ -147,7 +147,7 @@ $$eV_s = hf - \\phi$$
               'No electrons are ejected'
             ],
             correctAnswer: 0,
-            explanation: '$E = hf = (4.14 \\times 10^{-15})(6.0 \\times 10^{14}) = 2.49$ eV. $KE_{\\max} = E - \\phi = 2.49 - 2.0 = 0.49$ eV. Taking the full photon energy as the KE forgets the work function, and adding $\\phi$ instead of subtracting it gives 4.49 eV.'
+            explanation: '$E = hf = (4.15 \\times 10^{-15})(6.0 \\times 10^{14}) = 2.49$ eV. $KE_{\\max} = E - \\phi = 2.49 - 2.0 = 0.49$ eV. Taking the full photon energy as the KE forgets the work function, and adding $\\phi$ instead of subtracting it gives 4.49 eV.'
           },
           {
             question: 'Doubling the intensity of light above the threshold frequency will:',

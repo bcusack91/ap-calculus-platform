@@ -237,11 +237,11 @@ Adding inert gas at constant pressure:
       content: `
 **Quick Checks** 🧮
 
-**1)** Does a catalyst change the value of K? (Enter "no")
+**1)** Does a catalyst change the value of K? (Enter "yes" or "no")
 
-**2)** Does adding an inert gas at constant volume shift the equilibrium? (Enter "no")
+**2)** Does adding an inert gas at constant volume shift the equilibrium? (Enter "yes" or "no")
 
-**3)** If a catalyst is removed from a system at equilibrium, does the position shift? (Enter "no")
+**3)** If a catalyst is removed from a system at equilibrium, does the position shift? (Enter "yes" or "no")
       `,
       exercise: {
         boxes: 3,

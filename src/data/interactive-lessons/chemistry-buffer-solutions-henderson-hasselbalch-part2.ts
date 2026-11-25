@@ -212,7 +212,7 @@ Buffer: 0.15 mol $HA$ + 0.15 mol $A^-$
           {
             question: 'Equal small amounts of HCl are added to 1.0 L of pure water and to 1.0 L of an acetic acid/acetate buffer. Which statement best explains the different pH changes?',
             options: [
-              'Its conjugate base consumes the added $H_3O^+$',
+              'In the buffer, acetate (the conjugate base) consumes the added $H_3O^+$',
               'In the buffer, acetic acid molecules absorb the added $H_3O^+$ and become $H_2A^+$',
               'Water reacts with HCl to form a buffer, so both pH changes are equally small',
               'The buffer has a higher $K_w$, so its pH cannot change'

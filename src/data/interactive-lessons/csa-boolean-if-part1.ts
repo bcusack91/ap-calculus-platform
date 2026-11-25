@@ -128,6 +128,7 @@ age < 18 || !hasID
       exercise: {
         boxes: 3,
         correctAnswers: ['.equals()', '||', 'not'],
+        acceptableAnswers: [['equals', 'equals()', '.equals'], ['or'], ['never']],
         hint1: 'A method call on String objects.',
         hint2: 'AND flips to the other logical operator.',
         hint3: 'Short-circuit means skipping unnecessary evaluation.',

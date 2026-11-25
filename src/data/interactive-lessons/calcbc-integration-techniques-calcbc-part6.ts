@@ -28,7 +28,7 @@ Mixed practice requiring you to select and execute the correct technique. Work e
             explanation: 'Despite the $\\sqrt{a^2-x^2}$ form, this is a simple $u$-sub! Let $u = 9-x^2$, $du = -2x\\,dx$: $-\\frac{1}{2}\\int u^{-1/2}du = -\\sqrt{u} + C$.'
           },
           {
-            question: '$\\int \\frac{dx}{x^2 - 4}\\,dx =$',
+            question: '$\\int \\frac{dx}{x^2 - 4} =$',
             options: [
               '$\\frac{1}{4}\\ln\\left|\\frac{x-2}{x+2}\\right| + C$',
               '$\\frac{1}{2}\\ln|x^2-4| + C$',

@@ -45,18 +45,29 @@ export const englitPlotConflictThemePart1Data = {
     {
       id: "englitpl1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "plot",
-            "conflict",
-            "theme"
+      "questions": [
+            {
+                  "question": "The causal sequence of events in a story, whose ordering creates emphasis",
+                  "answer": "plot",
+                  "acceptableAnswers": ["the plot", "plot structure", "plotline"]
+            },
+            {
+                  "question": "The forces set in opposition in a story, which reveal its values and stakes",
+                  "answer": "conflict",
+                  "acceptableAnswers": ["the conflict", "conflicts"]
+            },
+            {
+                  "question": "A text's insight about human experience, which emerges through pattern rather than slogan",
+                  "answer": "theme",
+                  "acceptableAnswers": ["the theme", "themes"]
+            }
       ],
-      "hint1": "Concept 1: Plot",
-      "hint2": "Concept 2: Conflict",
-      "hint3": "Concept 3: Theme",
-      "explanation": "Plot, Conflict, and Theme are core vocabulary for this unit."
+      "hint1": "Concept 1: what happens, and in what cause-and-effect order.",
+      "hint2": "Concept 2: what the characters are up against.",
+      "hint3": "Concept 3: what the work ultimately suggests about people.",
+      "explanation": "Plot, conflict and theme are core vocabulary for this unit; theme grows out of plot pressure and the way conflicts resolve, not out of a stated moral."
 }
     },
     {

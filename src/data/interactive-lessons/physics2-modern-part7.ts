@@ -134,7 +134,7 @@ $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17
       content: `
 **AP FRQ-Style Problem**
 
-Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4.20$ eV. Use $h = 6.63 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s, $1 \\text{ eV} = 1.60 \\times 10^{-19}$ J.
+Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4.20$ eV. Use $hc = 1240$ eV·nm for the photon energy, $h = 6.63 \\times 10^{-34}$ J·s, and $1 \\text{ eV} = 1.60 \\times 10^{-19}$ J.
 
 1) Photon energy in eV (3 significant figures)
 
@@ -146,11 +146,11 @@ Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['6.20', '2.00', '2.00', '8.7'],
+        correctAnswers: ['6.20', '2.00', '2.00', '8.68'],
         hint1: '$E = 1240/200 = 6.20$ eV.',
         hint2: '$KE_{\\max} = E - \\phi = 6.20 - 4.20 = 2.00$ eV. $V_s = KE_{\\max}/e = 2.00$ V.',
         hint3: 'Convert $KE$ to joules: $2.00 \\times 1.60 \\times 10^{-19} = 3.20 \\times 10^{-19}$ J. $v = \\sqrt{2KE/m_e}$. Then $\\lambda = h/(m_e v)$.',
-        explanation: '$E = 1240/200 = 6.20$ eV. $KE_{\\max} = 6.20 - 4.20 = 2.00$ eV $= 3.20 \\times 10^{-19}$ J. $V_s = 2.00$ V. $v = \\sqrt{2(3.20 \\times 10^{-19})/(9.11 \\times 10^{-31})} = \\sqrt{7.025 \\times 10^{11}} = 8.38 \\times 10^5$ m/s. $\\lambda = 6.63 \\times 10^{-34}/[(9.11 \\times 10^{-31})(8.38 \\times 10^5)] = 8.68 \\times 10^{-10} \\approx 8.7 \\times 10^{-10}$ m.'
+        explanation: '$E = 1240/200 = 6.20$ eV. $KE_{\\max} = 6.20 - 4.20 = 2.00$ eV $= 3.20 \\times 10^{-19}$ J. $V_s = 2.00$ V. $v = \\sqrt{2(3.20 \\times 10^{-19})/(9.11 \\times 10^{-31})} = \\sqrt{7.025 \\times 10^{11}} = 8.38 \\times 10^5$ m/s. $\\lambda = 6.63 \\times 10^{-34}/[(9.11 \\times 10^{-31})(8.38 \\times 10^5)] = 8.68 \\times 10^{-10}$ m.'
       }
     },
     {

@@ -206,10 +206,17 @@ Lysosomes are membrane-bound organelles containing **hydrolytic enzymes** (hydro
 **Key Terms** ✏️
 
 Enter the correct term for each description.
+
+1) The organelle that modifies, sorts, and packages proteins received from the ER.
+
+2) The membrane-bound organelle with an acidic interior that contains digestive enzymes.
+
+3) The process by which a cell degrades and recycles its own damaged organelles.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['Golgi apparatus', 'lysosome', 'autophagy'],
+        acceptableAnswers: [['Golgi', 'Golgi body', 'Golgi complex'], ['lysosomes'], []],
         hint1: 'The organelle that modifies, sorts, and packages proteins received from the ER.',
         hint2: 'The membrane-bound organelle with an acidic interior that contains digestive enzymes.',
         hint3: 'The process by which a cell degrades and recycles its own damaged organelles.',

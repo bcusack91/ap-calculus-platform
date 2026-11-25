@@ -153,7 +153,7 @@ Match each AP vocabulary term to its correct definition.
           },
           {
             label: 'The 1260 battle where Mamluk forces stopped Mongol westward expansion into North Africa was ___',
-            options: ['Ain Jalut', 'Baghdad', 'Ain Jalut', 'Tours']
+            options: ['Ain Jalut', 'Baghdad', 'Manzikert', 'Tours']
           },
           {
             label: 'The system dividing the Mongol Empire among Genghis Khan\'s sons — creating competing khanates — was the ___',
@@ -178,13 +178,13 @@ Match each AP vocabulary term to its correct definition.
           {
             question: 'An AP essay asks you to connect Silk Roads & Mongols content to the Age of Exploration (Unit 4). What is the strongest connection argument?',
             options: [
-              'Mongol-era diffusion of the compass and gunpowder and later Ottoman tolls set up Europe\'s sea voyages',
+              'Mongol-era diffusion of gunpowder and demand for Asian goods, then Ottoman tolls, set up Europe\'s sea voyages',
               'The two periods are unconnected, since the Mongol Empire collapsed long before 1492',
               'Europeans knew nothing of Asian wealth before the voyages, so Mongol-era contact with Asia is irrelevant',
               'Ottoman rule had no effect on European trade, because Mongol routes stayed open until 1600'
             ],
             correctAnswer: 0,
-            explanation: 'This connection argument earns maximum complexity/contextualization credit: it identifies a multi-step causal chain (Mongol technology diffusion → navigation tools; Ottoman expansion → commercial motivation → exploration), explains the mechanism (not just that there\'s a connection, but HOW), and connects across AP units. This is the kind of cross-unit reasoning that separates 4s from 5s.'
+            explanation: 'This connection argument earns maximum complexity/contextualization credit: it identifies a multi-step causal chain (Mongol-era diffusion → gunpowder weapons and demand for Asian goods; Ottoman expansion → commercial motivation → exploration), explains the mechanism (not just that there\'s a connection, but HOW), and connects across AP units. This is the kind of cross-unit reasoning that separates 4s from 5s.'
           },
           {
             question: 'For AP DBQ analysis, a document showing a Mongol ruler granting commercial privileges to merchants is MOST useful for arguing:',

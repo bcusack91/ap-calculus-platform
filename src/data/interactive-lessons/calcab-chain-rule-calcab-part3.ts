@@ -214,7 +214,7 @@ $$\\boxed{\\frac{d^2y}{dx^2} = -\\frac{25}{y^3}}$$
       type: 'input-box' as const,
       content: '**Implicit Differentiation computation.** ✍️',
       exercise: {
-        question: 'For the curve $x^2 + y^2 = 25$, find $\\frac{dy}{dx}$ at the point $(3, 4)$. Enter your answer as a fraction (e.g., -3/4).',
+        question: 'For the curve $x^2 + y^2 = 25$, find $\\frac{dy}{dx}$ at the point $(3, 4)$. Enter your answer as a fraction (e.g., -2/5).',
         correctAnswer: '-3/4',
         acceptableAnswers: ['-3/4', '-0.75'],
         hints: [

@@ -139,9 +139,9 @@ $$x = 200\\tan\\theta = 200\\tan\\left(\\frac{\\pi}{5}t\\right)$$
       content: `
 **Cross-Topic Computations** 🧮
 
-Give exact values; write $\\pi$ as \`pi\` and square roots with \`sqrt\` (e.g. \`100pi/3\`, \`sqrt(3)/2\`).
+Give exact values; write $\\pi$ as \`pi\` and square roots with \`sqrt\` (e.g. \`25pi/4\`, \`sqrt(5)/3\`).
 
-**1)** Evaluate $\\cos\\frac{11\\pi}{6}$. (e.g., $\\cos\\frac{7\\pi}{6}$: Q III, ref $\\frac{\\pi}{6}$, $\\cos\\frac{\\pi}{6} = \\sqrt{3}/2$, negative in Q III → \`-sqrt(3)/2\`)
+**1)** Evaluate $\\cos\\frac{11\\pi}{6}$. (e.g., $\\cos\\frac{3\\pi}{4}$: Q II, ref $\\frac{\\pi}{4}$, $\\cos\\frac{\\pi}{4} = \\sqrt{2}/2$, negative in Q II → \`-sqrt(2)/2\`)
 
 **2)** Given $\\sec\\theta = -\\frac{5}{3}$ with $\\theta$ in Q II, find $\\tan\\theta$. Write as a fraction with sign. (e.g., $\\sec\\alpha = 13/5$ in Q I: $\\tan^2\\alpha = (13/5)^2 - 1 = 144/25$, so $\\tan\\alpha = 12/5$)
 

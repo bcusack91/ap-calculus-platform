@@ -338,6 +338,7 @@ $$\\boxed{\\text{Molecular} < \\text{Metallic (varies)} < \\text{Ionic} < \\text
           {
             label: 'Ionic solids conduct electricity when _____ or dissolved in water (one word)',
             correctAnswer: 'melted',
+            acceptableAnswers: ['molten', 'liquid', 'liquefied'],
             explanation: 'When an ionic solid is melted (or dissolved), the ions are freed from the lattice and can move to carry electric current. As a solid, ions are locked in place and cannot conduct.'
           }
         ]

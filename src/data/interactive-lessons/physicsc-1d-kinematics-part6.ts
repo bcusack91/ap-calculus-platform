@@ -20,7 +20,7 @@ This workshop focuses on developing systematic problem-solving skills for AP Phy
     {
       id: '1dkin6-mcq1',
       type: 'mcq' as const,
-      question: 'A particle moves along the $x$-axis with $v(t) = 4t - t^2$ m/s. If $x(0) = 2$ m, what is the maximum displacement from the origin?',
+      question: 'A particle moves along the $x$-axis with $v(t) = 4t - t^2$ m/s. If $x(0) = 2$ m, what is its maximum distance from the origin during $0 \\le t \\le 6$ s?',
       options: ['$12\\frac{2}{3}$ m', '$10$ m', '$14$ m', '$2$ m'],
       correctAnswer: 0,
       explanation: 'Max displacement occurs when $v = 0$: $4t - t^2 = 0 \\implies t(4-t) = 0 \\implies t = 4$ s. $x(4) = 2 + \\int_0^4 (4t - t^2)\\,dt = 2 + [2t^2 - t^3/3]_0^4 = 2 + 32 - 64/3 = 2 + 32/3 = 38/3 \\approx 12.67$ m.'

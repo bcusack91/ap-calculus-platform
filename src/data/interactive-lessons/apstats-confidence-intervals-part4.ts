@@ -236,7 +236,7 @@ $$\\boxed{n = 62}$$`
           },
           {
             question: 'The key takeaway from sample size planning is:',
-            options: ['Larger samples are always better, regardless of cost', 'You can determine the exact $n$ needed before collecting data', 'Cost, precision and confidence must be balanced', 'Use $n = 30$ for everything'],
+            options: ['Larger samples are always better, regardless of cost', 'You must collect the data before you can choose $n$', 'Cost, precision and confidence must be balanced', 'Use $n = 30$ for everything'],
             correctAnswer: 2,
             explanation: 'Sample size planning involves trade-offs: higher confidence and smaller ME require more data, which costs more time and money.'
           }

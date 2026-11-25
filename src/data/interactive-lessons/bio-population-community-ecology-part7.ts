@@ -156,12 +156,12 @@ AP ecology free-response questions usually combine a **graph or data table** wit
             question: 'An ecologist removes a single predatory sea star from a tide pool. Over the next year, one mussel species spreads and the number of other species drops from 15 to 8. Which two concepts BEST explain this result?',
             options: [
               'Density-independent regulation and genetic drift',
-              'Keystone predator removal and a trophic cascade',
-              'Removal of a mutualist and competitive exclusion',
+              'Keystone predator removal and competitive exclusion',
+              'Removal of a mutualist and a trophic cascade',
               'Predator-prey cycling and resource partitioning'
             ],
             correctAnswer: 1,
-            explanation: 'The sea star is a keystone predator; removing it lets a dominant competitor (mussels) monopolize space, and the indirect ripple that lowers other species is a trophic cascade — together collapsing diversity. The trap "removal of a mutualist" misreads the interaction: the sea star and mussels are predator-prey (+/−), not mutualists (+/+), so no mutualism was lost. Loss of a keystone PREDATOR, not a mutualist, drives this classic Paine result.'
+            explanation: 'The sea star is a keystone predator; removing it lets a dominant competitor (mussels) monopolize space and exclude other species by competitive exclusion — together collapsing diversity. The trap "removal of a mutualist" misreads the interaction: the sea star and mussels are predator-prey (+/−), not mutualists (+/+), so no mutualism was lost. Loss of a keystone PREDATOR, not a mutualist, drives this classic Paine result.'
           }
         ]
       }

@@ -154,6 +154,7 @@ Without the last sentence, the letter could be read as indifference to slavery. 
       exercise: {
         boxes: 3,
         correctAnswers: ['modifier', 'refutation', 'paramount'],
+        acceptableAnswers: [['qualifier'], [], []],
         hint1: 'It modifies the claim; it is the first of the three qualification tools.',
         hint2: 'It is stronger than a rebuttal, which only offers a contrasting view.',
         hint3: 'It is the first adjective in the letter\'s thesis sentence.',

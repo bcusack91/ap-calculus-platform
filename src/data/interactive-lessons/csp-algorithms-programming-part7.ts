@@ -95,6 +95,7 @@ Cheat sheet of the patterns most likely to appear on exam day.
       exercise: {
         boxes: 3,
         correctAnswers: ["caller", "45", "return"],
+        acceptableAnswers: [["caller's variable", "argument", "arguments", "original variable", "calling code"], [], ["stop", "exit"]],
         hint1: "Parameters hold copies of the arguments.",
         hint2: "9 + 8 + 7 + … + 1.",
         hint3: "Don't keep iterating.",

@@ -44,7 +44,7 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
       exercise: {
         questions: [
           {
-            question: 'A rubber ball and a clay ball of equal mass are thrown at a wall with equal speeds. The rubber ball bounces; the clay ball sticks. Which exerts a greater force on the wall?',
+            question: 'A rubber ball and a clay ball of equal mass are thrown at a wall with equal speeds. The rubber ball bounces; the clay ball sticks. Which exerts a greater average force on the wall?',
             options: [
               'The clay ball, because it stays in contact with the wall',
               'The rubber ball, because its momentum reverses direction',

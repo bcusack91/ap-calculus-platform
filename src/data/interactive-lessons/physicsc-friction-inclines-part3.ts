@@ -92,7 +92,7 @@ Notice: $v_{\\text{return}} < v_0$ because friction dissipated energy.`
     {
       id: 'fri3-mcq2',
       type: 'mcq' as const,
-      question: 'A block slides down a rough $45°$ incline with $\\mu_k = 0.3$. What is its acceleration?',
+      question: 'A block slides down a rough $45°$ incline with $\\mu_k = 0.3$. What is its acceleration? ($g = 10$ $m/s^{2}$)',
       options: [
         '$g(\\sin 45° - 0.3\\cos 45°) \\approx 4.95$ $m/s^{2}$',
         '$g\\sin 45° \\approx 7.07$ $m/s^{2}$',

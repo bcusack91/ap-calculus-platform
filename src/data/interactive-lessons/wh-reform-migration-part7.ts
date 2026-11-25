@@ -140,7 +140,7 @@ export const whReformMigrationPart7Data = {
             ]
           },
           {
-            label: 'W.E.B. Du Bois\'s concept describing the psychological division experienced by colonized people who see themselves through both their own eyes and society\'s distorting racial lens was ___',
+            label: 'W.E.B. Du Bois\'s concept describing the psychological division experienced by African Americans (later applied to colonized peoples) who see themselves through both their own eyes and society\'s distorting racial lens was ___',
             options: [
             'Double consciousness',
             'The Color Line',

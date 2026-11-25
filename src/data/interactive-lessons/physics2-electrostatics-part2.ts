@@ -47,7 +47,7 @@ $$F_g = G\\frac{m_1 m_2}{r^2}$$
 
 Same mathematical form! But key differences:
 - Gravity is **always attractive**; electric force can be attractive **or** repulsive
-- Electric force is vastly stronger ($\\sim 10^{36}$ times for an electron-proton pair)
+- Electric force is vastly stronger ($\\sim 10^{39}$ times for an electron-proton pair)
       `
     },
     {
@@ -168,12 +168,12 @@ Use fractions like \`1/4\` or whole numbers like \`4\`.
             question: 'How does the electric force between an electron and proton compare to their gravitational force?',
             options: [
               'They are roughly equal in strength at atomic distances',
-              'Gravity is about $10^{36}$ times stronger',
-              'Electric force is about $10^{36}$ times stronger',
+              'Gravity is about $10^{39}$ times stronger',
+              'Electric force is about $10^{39}$ times stronger',
               'Electric force is about 2000 times stronger'
             ],
             correctAnswer: 2,
-            explanation: 'The electric force between fundamental particles is vastly stronger than gravity — by about $10^{36}$. About 2000 is the proton-to-electron mass ratio, not the force ratio. This is why electrostatics dominates at atomic scales.'
+            explanation: 'The electric force between fundamental particles is vastly stronger than gravity — by about $10^{39}$ for an electron and a proton. About 2000 is the proton-to-electron mass ratio, not the force ratio. This is why electrostatics dominates at atomic scales.'
           }
         ]
       }

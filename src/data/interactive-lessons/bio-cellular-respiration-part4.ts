@@ -156,9 +156,9 @@ Because so many fuels converge here, the cycle is often called a **metabolic hub
             placeholder: 'e.g. O2'
           },
           {
-            question: 'The 2-carbon molecule that delivers the acetyl group into the cycle:',
+            question: 'The molecule that carries the 2-carbon acetyl group into the cycle:',
             answer: 'acetyl-CoA',
-            acceptableAnswers: ['acetyl-CoA', 'Acetyl-CoA', 'acetyl CoA', 'Acetyl CoA', 'acetyl coA'],
+            acceptableAnswers: ['acetyl-CoA', 'Acetyl-CoA', 'acetyl CoA', 'Acetyl CoA', 'acetyl coA', 'acetyl coenzyme A'],
             placeholder: 'e.g. pyruvate'
           }
         ]

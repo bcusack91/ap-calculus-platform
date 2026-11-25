@@ -135,7 +135,7 @@ export const apushConstitutionEarlyRepublicPart7Data = {
           {
             question: "The 1786–87 Massachusetts farmer uprising that helped convince leaders of the need for a stronger national government.",
             answer: "Shays' Rebellion",
-            acceptableAnswers: ["Shays' Rebellion", "Shays Rebellion", "Shay's Rebellion"],
+            acceptableAnswers: ["Shays' Rebellion", "Shays Rebellion", "Shay's Rebellion", "Shays's Rebellion"],
             hint: 'Led by Daniel Shays; centered around debt, taxes, and farm foreclosures in western Massachusetts.'
           },
           {

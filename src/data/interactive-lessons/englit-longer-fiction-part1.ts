@@ -45,7 +45,7 @@ export const englitLongerFictionPart1Data = {
     {
       id: "englitlo1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the term for each description.\n\n1) A character's development across the major plot stages (two words): _______\n\n2) The arrangement of chapters and perspective: _______\n\n3) The complex central concerns that emerge through sustained patterns: _______",
       exercise: {
       "boxes": 3,
       "correctAnswers": [

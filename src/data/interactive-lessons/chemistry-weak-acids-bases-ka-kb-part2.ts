@@ -198,7 +198,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
 **3)** What is the percent ionization of 0.10 M acetic acid ($[H^+] = 1.34 \\times 10^{-3}$ M)? (1 decimal place, enter number only)
       `,
       exercise: {
-        questions: [{ question: '1)', answer: '1.88', acceptableAnswers: ['1.88', '1.89'] }, { question: '2)', answer: '5.6e-6', acceptableAnswers: ['5.6e-6', '5.57e-6'] }, { question: '3)', answer: '1.3', acceptableAnswers: ['1.3', '1.34'] }],
+        questions: [{ question: '1)', answer: '1.88', acceptableAnswers: ['1.88', '1.89', '1.90'] }, { question: '2)', answer: '5.6e-6', acceptableAnswers: ['5.6e-6', '5.57e-6'] }, { question: '3)', answer: '1.3', acceptableAnswers: ['1.3', '1.34'] }],
         hint1: '$[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.25)}$, then $pH = -\\log[H^+]$.',
         hint2: '$[H^+] = \\sqrt{(6.2 \\times 10^{-10})(0.050)}$.',
         hint3: 'Percent ionization = $([H^+]/C) \\times 100\\%$.',

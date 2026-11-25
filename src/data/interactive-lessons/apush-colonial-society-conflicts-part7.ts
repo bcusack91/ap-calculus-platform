@@ -134,7 +134,7 @@ export const apushColonialSocietyConflictsPart7Data = {
           {
             question: 'The 1740 South Carolina law that imposed harsher restrictions on enslaved people in response to the Stono Rebellion.',
             answer: 'Negro Act of 1740',
-            acceptableAnswers: ['Negro Act of 1740', 'Negro Act', 'Negro Act 1740', 'Bill for the Better Ordering and Governing of Negroes and Other Slaves in this Province'],
+            acceptableAnswers: ['Negro Act of 1740', 'Negro Act', 'Negro Act 1740', 'Slave Code of 1740', 'South Carolina Slave Code of 1740', 'Bill for the Better Ordering and Governing of Negroes and Other Slaves in this Province'],
             hint: 'Restricted enslaved people\'s movement, education, assembly, and ability to earn money.'
           }
         ]

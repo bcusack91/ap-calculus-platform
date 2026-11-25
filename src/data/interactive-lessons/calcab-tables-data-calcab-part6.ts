@@ -58,7 +58,7 @@ Since $T''(t) > 0$, the graph of $T$ is concave up on $[0, 20]$. The top of each
       exercise: {
         questions: [
           {
-            question: 'Estimate $f\'(6)$.',
+            question: 'Estimate $f\'(6)$ using the nearest data points on each side.',
             options: ['$2$', '$\\frac{3}{2}$', '$3$', '$4$'],
             correctAnswer: 0,
             explanation: '$f\'(6) \\approx \\frac{f(10)-f(2)}{10-2} = \\frac{21-5}{8} = 2$. $\\frac{3}{2}$ divides $f(6)$ by $6$; $3$ is the one-sided slope $\\frac{21-9}{4}$; dividing $16$ by $4$ instead of $8$ gives $4$.'
@@ -81,7 +81,7 @@ Since $T''(t) > 0$, the graph of $T$ is concave up on $[0, 20]$. The top of each
     {
       id: 'td6-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Work through an FRQ.** \ud83d\udd0d\n\nWater flows into a tank at rate $R(t)$ liters/min.\n\n| $t$ (min) | 0 | 4 | 9 | 15 |\n|:---:|:---:|:---:|:---:|:---:|\n| $R(t)$ (L/min) | 8 | 6 | 10 | 4 |',
+      content: '**Work through an FRQ.** \ud83d\udd0d\n\nWater flows into a tank at rate $R(t)$ liters/min, where $R$ is differentiable.\n\n| $t$ (min) | 0 | 4 | 9 | 15 |\n|:---:|:---:|:---:|:---:|:---:|\n| $R(t)$ (L/min) | 8 | 6 | 10 | 4 |',
       exercise: {
         dropdowns: [
           {

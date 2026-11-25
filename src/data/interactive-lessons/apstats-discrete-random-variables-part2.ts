@@ -79,11 +79,11 @@ Let $X$ = net gain (winnings minus cost).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-5', '-1', 'no'],
+        correctAnswers: ['-5', '0.5', 'yes'],
         hint1: 'Win \\$0 minus \\$5 cost = ?',
         hint2: '$E(X) = 15(0.2) + 0(0.3) + (-5)(0.5)$',
-        hint3: 'Negative expected value means you lose money on average.',
-        explanation: '1) \\$0 - \\$5 = -\\$5. 2) $E(X) = 15(0.2) + 0(0.3) + (-5)(0.5) = 3 + 0 - 2.5 = -1$. 3) No — negative expected value.'
+        hint3: 'A positive expected value means the player gains money on average.',
+        explanation: '1) \\$0 - \\$5 = -\\$5. 2) $E(X) = 15(0.2) + 0(0.3) + (-5)(0.5) = 3 + 0 - 2.5 = 0.5$. 3) Yes — the expected net gain is positive, about \\$0.50 per play.'
       }
     }
   ]

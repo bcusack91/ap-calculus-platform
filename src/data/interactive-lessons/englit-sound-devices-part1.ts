@@ -45,18 +45,29 @@ export const englitSoundDevicesPart1Data = {
     {
       id: "englitso1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "alliteration",
-            "assonance",
-            "rhythm"
+      "questions": [
+            {
+                  "question": "Repetition of initial consonant sounds",
+                  "answer": "alliteration",
+                  "acceptableAnswers": []
+            },
+            {
+                  "question": "Repetition of vowel sounds",
+                  "answer": "assonance",
+                  "acceptableAnswers": []
+            },
+            {
+                  "question": "The pattern of stress and pacing in a line",
+                  "answer": "rhythm",
+                  "acceptableAnswers": ["the rhythm"]
+            }
       ],
-      "hint1": "Concept 1: Alliteration",
-      "hint2": "Concept 2: Assonance",
-      "hint3": "Concept 3: Rhythm",
-      "explanation": "Alliteration, Assonance, and Rhythm are core vocabulary for this unit."
+      "hint1": "Concept 1: the same first consonant.",
+      "hint2": "Concept 2: the same vowel sound.",
+      "hint3": "Concept 3: the beat of the line.",
+      "explanation": "Alliteration, assonance and rhythm are core vocabulary for this unit."
 }
     },
     {

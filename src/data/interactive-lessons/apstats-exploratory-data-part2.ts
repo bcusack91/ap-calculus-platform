@@ -74,7 +74,7 @@ To compare distributions, use:
 
 Choose the best graph type for each:
 
-**1)** Comparing test score distributions of two classes (histogram/boxplot/stemplot)
+**1)** Comparing the five-number summaries of test scores for two classes of 300 students each (histogram/boxplot/stemplot)
 
 **2)** Showing individual values of 20 measurements (histogram/dotplot/boxplot)
 

@@ -70,7 +70,7 @@ export const aasFreedomEnslavementPart2Data = {
             "answer": "Elizabeth Freeman",
             "acceptableAnswers": [
               "Elizabeth Freeman",
-              "Mum Bett",
+              "Mum Bett", "Mumbet",
               "Bett",
               "Freeman",
               "Elizabeth Freeman (Mum Bett)"

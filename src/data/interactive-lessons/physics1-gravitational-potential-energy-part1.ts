@@ -184,7 +184,7 @@ Use $g = 10$ $m/s^{2}$.
             explanation: 'Changing the reference level changes the PE value at each point, but the change in PE ($\\Delta PE$) between two points stays the same.'
           },
           {
-            label: 'For a problem involving a ball thrown upward and caught at the same height, the best reference level is:',
+            label: 'For a problem involving a ball thrown upward and caught at the same height, which reference level gives correct results?',
             options: ['The top of the throw', 'The launch/catch height', 'The ground below the thrower', 'It doesn\'t matter'],
             correctIndex: 3,
             explanation: 'Any reference level works! The launch/catch height is convenient ($h_i = h_f = 0$), but all give the same physical results.'

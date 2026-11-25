@@ -94,7 +94,7 @@ $$\\sum_{n=0}^\\infty r^n = \\frac{1}{1-r} \\quad \\text{if } |r| < 1$$
       type: 'input-box' as const,
       content: '**Computation**',
       exercise: {
-        question: '$\\sum_{n=1}^\\infty \\left(\\frac{1}{3}\\right)^n = \\frac{1/3}{1-1/3} = ?$ Give your answer as a fraction.',
+        question: '$\\sum_{n=1}^\\infty \\left(\\frac{1}{3}\\right)^n = ?$ Give your answer as a fraction.',
         correctAnswer: '1/2',
         acceptableAnswers: ['1/2', '0.5'],
         hints: ['Geometric series starting at $n = 1$: first term is $1/3$, ratio is $1/3$.'],

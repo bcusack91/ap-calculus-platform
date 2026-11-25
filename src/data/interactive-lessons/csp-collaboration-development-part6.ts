@@ -92,6 +92,7 @@ Give specific feedback: the failing input, the expected result, and the actual r
       exercise: {
         boxes: 3,
         correctAnswers: ["negotiation", "incremental", "output"],
+        acceptableAnswers: [[], [], ["outputs", "result", "results"]],
         hint1: "One of the four interpersonal skills.",
         hint2: "Small increments, each one working.",
         hint3: "What the program should produce.",

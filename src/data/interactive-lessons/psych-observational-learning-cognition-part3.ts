@@ -104,9 +104,9 @@ Sources of self-efficacy (strongest → weakest):
       `,
       exercise: {
         inputs: [
-          { label: 'Who demonstrated that rats form mental representations of maze layouts?', answer: 'Tolman' },
+          { label: 'Who demonstrated that rats form mental representations of maze layouts?', answer: 'Tolman', acceptableAnswers: ['Edward Tolman', 'Edward C. Tolman'] },
           { label: 'Learning that occurs but is not shown until motivation is present is called ___ learning', answer: 'latent' },
-          { label: 'Who discovered learned helplessness using inescapable electric shocks with dogs?', answer: 'Seligman' }
+          { label: 'Who discovered learned helplessness using inescapable electric shocks with dogs?', answer: 'Seligman', acceptableAnswers: ['Martin Seligman'] }
         ]
       }
     },
@@ -164,7 +164,7 @@ Sources of self-efficacy (strongest → weakest):
       exercise: {
         questions: [
           {
-            question: 'A new employee is told by an encouraging manager, "You\'re going to do great here!" According to Bandura, this would be LEAST effective at building self-efficacy because:',
+            question: 'A new employee is told by an encouraging manager, "You\'re going to do great here!" According to Bandura, this would be relatively weak at building self-efficacy because:',
             options: [
               'Encouragement has no measurable effect on self-efficacy',
               'Verbal persuasion is weaker than mastery experiences at building self-efficacy',

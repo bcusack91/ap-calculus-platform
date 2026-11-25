@@ -94,8 +94,8 @@ $$\\frac{1}{6}\\int_0^6 (6t-t^2)\\,dt = \\frac{36}{6} = 6 \\text{ L/min}$$`
           },
           {
             label: '$r(t)$ changes from positive to negative at $t = 4$:',
-            options: ['Amount is greatest at $t=4$', 'Amount is zero at $t=4$', 'Rate is greatest at $t=4$', 'Rate is zero at $t=4$'],
-            correctAnswers: ['Amount is greatest at $t=4$'],
+            options: ['Amount has a relative maximum at $t=4$', 'Amount is zero at $t=4$', 'Rate is greatest at $t=4$', 'Amount has a relative minimum at $t=4$'],
+            correctAnswers: ['Amount has a relative maximum at $t=4$'],
             hints: ['When the rate changes from $+$ to $-$, accumulation switches to depletion.'],
             explanation: 'First derivative test: rate positive then negative means the accumulated amount peaks.'
           },

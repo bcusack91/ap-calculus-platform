@@ -95,7 +95,7 @@ $$\\boxed{f' > 0: \\uparrow \\quad f' < 0: \\downarrow \\quad f'' > 0: \\cup \\q
             explanation: '$f\'(1) = 0$. For $x$ just below 1 (say $x = 0.9$): $(-.1)^3(-4.1) = (-.001)(-4.1) = +$. For $x$ just above 1 (say $x = 1.1$): $(.1)^3(-3.9) = (.001)(-3.9) = -$. $f\'$ changes from $+$ to $-$: local maximum at $x = 1$.'
           },
           {
-            question: 'Minimize the sum of a positive number and its reciprocal.',
+            question: 'What is the minimum value of the sum of a positive number and its reciprocal?',
             options: ['$2$', '$1$', '$\\sqrt{2}$', 'Does not exist'],
             correctAnswer: 0,
             explanation: 'Minimize $f(x) = x + \\frac{1}{x}$ for $x > 0$. $f\' = 1 - \\frac{1}{x^2} = 0$ at $x = 1$. $f(1) = 2$. $f\'\' = \\frac{2}{x^3} > 0$: minimum.'

@@ -184,7 +184,7 @@ MOE = statistical range around poll result reflecting RANDOM SAMPLING ERROR; typ
             hint: 'First + most enduring agent; transmits party identification + ideology + religious affiliation; explains why children typically inherit parents\' partisanship; weakened by college experience + generational events + new media environments.'
           },
           {
-            prompt: "Polling methodology element requiring specific and unbiased wording of questions, one of the features that makes a poll more precise (EK 4.5.A.2): ___ framing.",
+            prompt: "Quality of poll-question wording that avoids loaded or leading language, one of the features that makes a poll more precise (EK 4.5.A.2): ___ framing.",
             answer: 'neutral',
             acceptableAnswers: ['neutral', 'neutral framing', 'Neutral', 'neutral wording', 'unbiased'],
             hint: 'Compare "assistance to the poor" with "welfare" — loaded wording shifts answers.'

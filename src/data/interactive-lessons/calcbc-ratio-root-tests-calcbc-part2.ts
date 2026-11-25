@@ -88,8 +88,8 @@ $$L = e > 1 \\quad \\Rightarrow \\quad \\text{Diverges}$$
         dropdowns: [
           {
             label: 'For $\\sum n^n/3^n$: $|a_n|^{1/n} = n/3$. So $L =$',
-            options: ['$\\infty$, diverges (since $n/3 \\to \\infty$)', '$1/3$, converges', '$1$, inconclusive', '$3$, diverges'],
-            correctAnswers: ['$\\infty$, diverges (since $n/3 \\to \\infty$)'],
+            options: ['$\\infty$, diverges', '$1/3$, converges', '$1$, inconclusive', '$3$, diverges'],
+            correctAnswers: ['$\\infty$, diverges'],
             hints: ['$\\lim n/3 = \\infty$.'],
             explanation: '$L = \\lim n/3 = \\infty > 1$. The series diverges.'
           },

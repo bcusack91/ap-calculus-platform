@@ -122,7 +122,7 @@ export const aasOriginsDiasporaPart2Data = {
               "St. Augustine",
               "Saint Augustine",
               "San Agustin",
-              "San Agustín"
+              "San Agustín", "St Augustine"
             ]
           },
           {

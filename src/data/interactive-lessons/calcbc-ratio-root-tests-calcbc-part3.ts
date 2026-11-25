@@ -64,19 +64,19 @@ $\\sum ar^n$: Ratio gives $|r|$, Root gives $|r|$. Same answer, equally easy.
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n!}{e^n}$ — best first test:',
-            options: ['Ratio Test ($n!$ present)', 'Root Test', 'Integral Test', 'Comparison Test'],
+            options: ['Ratio Test', 'Root Test', 'Integral Test', 'Comparison Test'],
             correctAnswer: 0,
             explanation: 'Factorial → Ratio Test. $L = \\lim (n+1)/e = \\infty$. Diverges.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{n}{n+1}\\right)^{n^2}$ — best first test:',
-            options: ['Root Test ($n$th power structure)', 'Ratio Test', 'Divergence Test', 'Integral Test'],
+            options: ['Root Test', 'Ratio Test', 'Divergence Test', 'Integral Test'],
             correctAnswer: 0,
             explanation: 'Root: $|a_n|^{1/n} = (n/(n+1))^n \\to 1/e < 1$. Converges.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n^3}{5^n}$ — Ratio Test gives $L =$',
-            options: ['$1/5$ (polynomial part ratio $\\to 1$, exponential gives $1/5$)', '$1/5^3$', '$3/5$', '$5$'],
+            options: ['$1/5$', '$1/5^3$', '$3/5$', '$5$'],
             correctAnswer: 0,
             explanation: '$|a_{n+1}/a_n| = ((n+1)^3/5^{n+1})(5^n/n^3) = (1/5)((n+1)/n)^3 \\to 1/5$. Converges.'
           }

@@ -227,7 +227,7 @@ Growing partisan gaps like these are a form of POLARIZATION — political attitu
             hint: 'Civil Rights Act 1964 + Voting Rights Act 1965 (LBJ Dem) cemented Dem loyalty; Black Protestant churches central mobilization; Trump made gains with Black men 2024 (~21%) but Black women 90%+ Dem; central to Dem primary (SC firewall propelled Biden 2020).'
           },
           {
-            prompt: "Phenomenon (gender + Dem + ~4-12 pts since 1980) where WOMEN vote more Democratic than MEN; widened post-Dobbs 2022.",
+            prompt: "Phenomenon (about 4-12 points since 1980) in which WOMEN vote more Democratic than MEN; widened post-Dobbs 2022.",
             answer: 'gender gap',
             acceptableAnswers: ['gender gap', 'Gender gap', 'Gender Gap', 'gender voting gap', 'gendergap'],
             hint: 'First emerged Reagan-Mondale 1980; women voted Dem ~4-12 pts more than men; widened post-Dobbs 2022 mobilizing women on abortion; 2024 Harris won women 53-45 + Trump won men 55-43 = ~20-pt gap; Gen Z gender gap = ~24 pts (margins); manosphere podcasts (Joe Rogan, Theo Von) shifted young men Republican.'

@@ -200,7 +200,7 @@ Type one standard term for each description.
           {
             question: `Reversing normal word order, as in "Leáves ... you ... care for"`,
             answer: 'inversion',
-            acceptableAnswers: ['anastrophe', 'syntactic inversion']
+            acceptableAnswers: ['anastrophe', 'syntactic inversion', 'hyperbaton']
           },
           {
             question: `A sustained story in which characters and places consistently stand for abstract ideas`,

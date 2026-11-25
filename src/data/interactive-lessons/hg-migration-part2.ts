@@ -275,7 +275,7 @@ Causes look different at different scales:
 
 **1)** The tendency for migration and other interaction to decline as distance increases is called distance _______.
 
-**2)** In which year did Ravenstein publish his laws of migration? Enter the year.
+**2)** In which year did Ravenstein first publish his laws of migration? Enter the year.
 
 **3)** Air travel and the internet make distant places feel closer. Geographers call this time-space _______.
       `,

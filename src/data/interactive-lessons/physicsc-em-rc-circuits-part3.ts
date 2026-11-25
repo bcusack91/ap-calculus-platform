@@ -95,7 +95,7 @@ where $R_{\\text{eq}}$ is the resistance between the capacitor's terminals with 
     {
       id: 'rc3-mcq3',
       type: 'mcq' as const,
-      question: 'A circuit has $R_1 = 10$ kΩ in series with a parallel combination of $R_2 = 20$ kΩ and $C = 5$ μF. What is $\\tau$?',
+      question: 'A battery charges a capacitor through a circuit in which $R_1 = 10$ kΩ is in series with a parallel combination of $R_2 = 20$ kΩ and $C = 5$ μF. What is $\\tau$ for the charging?',
       options: [
         '$0.033$ s',
         '$0.1$ s',

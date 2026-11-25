@@ -267,7 +267,7 @@ Type one standard term for each description.
           {
             question: `An outcome that turns out to be the opposite of what the characters intended, like the paste necklace`,
             answer: 'reversal',
-            acceptableAnswers: ['ironic reversal', 'a reversal', 'irony']
+            acceptableAnswers: ['ironic reversal', 'a reversal', 'irony', 'situational irony']
           }
         ],
         hint1: 'Forster contrasts it with "story."',

@@ -138,6 +138,7 @@ Use the exact historical term.
       exercise: {
         boxes: 3,
         correctAnswers: ['Timbuktu', 'civil service examinations', 'Mansa Musa'],
+        acceptableAnswers: [['Tombouctou', 'Timbuctoo'], ['civil service examination system', 'civil service examination', 'civil service exams', 'civil service exam', 'civil service exam system', 'imperial examinations', 'imperial examination system', 'imperial examination'], ['Musa', 'Mansa Musa I']],
         hint1: 'A city in modern-day Mali — famous for libraries and scholars',
         hint2: 'Exams testing knowledge of Confucian classics — civil service ___',
         hint3: 'His hajj demonstrated Mali\'s extraordinary wealth',

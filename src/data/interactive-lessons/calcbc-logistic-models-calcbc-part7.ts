@@ -32,10 +32,10 @@ $$\\boxed{P(t) = \\frac{L}{1 + \\frac{L - P_0}{P_0}e^{-kt}}}$$`
       exercise: {
         questions: [
           {
-            question: '$dP/dt = 5P(1 - P/200)$. The population when $d^2P/dt^2 = 0$ is:',
+            question: '$dP/dt = 5P(1 - P/200)$. The population at the inflection point (where $d^2P/dt^2$ changes sign) is:',
             options: ['$P = 100$', '$P = 200$', '$P = 50$', '$P = 0$'],
             correctAnswer: 0,
-            explanation: 'Inflection (where $d^2P/dt^2 = 0$) occurs at $P = L/2 = 100$.'
+            explanation: 'Inflection (where $d^2P/dt^2$ changes sign) occurs at $P = L/2 = 100$. $d^2P/dt^2$ is also $0$ at the equilibria $P = 0$ and $P = 200$, but there $P$ is constant, so concavity does not change.'
           },
           {
             question: '$P(t) = 1200/(1 + 11e^{-0.3t})$. What is $P(0)$?',
@@ -108,7 +108,7 @@ $$\\boxed{P(t) = \\frac{L}{1 + \\frac{L - P_0}{P_0}e^{-kt}}}$$`
       type: 'input-box' as const,
       content: '**Final Challenge**',
       exercise: {
-        question: '$P(t) = 400/(1 + 3e^{-2t})$. At what time is the population growing fastest? Give an exact answer as a decimal to two places.',
+        question: '$P(t) = 400/(1 + 3e^{-2t})$. At what time is the population growing fastest? Give your answer as a decimal to two places.',
         correctAnswer: '0.55',
         acceptableAnswers: ['0.55', '0.549', '0.5493', 'ln(3)/2'],
         hints: ['Max growth at $P = L/2 = 200$. $t = \\ln(A)/k = \\ln(3)/2$.'],

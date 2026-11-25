@@ -158,9 +158,9 @@ export const whRevolutionsPart6Data = {
             label: 'The 1857 revolt by Indian soldiers against the British East India Company was ___',
             options: [
             'The Sepoy Mutiny',
-            'The Great Rebellion',
+            'The Boxer Rebellion',
             'The Indian Revolution',
-            'The Sepoy War',
+            'The Maji Maji Rebellion',
             ]
           }
         ],

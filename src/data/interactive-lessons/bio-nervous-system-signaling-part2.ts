@@ -37,7 +37,7 @@ The resting potential (−70 mV) is closest to the equilibrium potential of $K^{
       exercise: {
         questions: [
           {
-            question: 'The resting membrane potential of a neuron is approximately −70 mV. This value is closest to the equilibrium potential of which ion?',
+            question: 'A neuron rests at about −70 mV. Leak channels for which ion dominate the resting membrane\'s permeability, pulling the potential toward that ion\'s equilibrium potential?',
             options: [
               '$Na^{+}$ (+60 mV)',
               '$K^{+}$ (−90 mV)',
@@ -45,7 +45,7 @@ The resting potential (−70 mV) is closest to the equilibrium potential of $K^{
               '$Ca^{2+}$ (+120 mV)'
             ],
             correctAnswer: 1,
-            explanation: 'The resting potential (−70 mV) is closest to the $K^{+}$ equilibrium potential (−90 mV) because the resting membrane is most permeable to $K^{+}$ through leak channels. It is not exactly −90 mV because there is a small permeability to $Na^{+}$, which pulls the potential slightly positive.'
+            explanation: 'The resting potential (−70 mV) is closest to the $K^{+}$ equilibrium potential (−90 mV) because the resting membrane is most permeable to $K^{+}$ through leak channels. It is not exactly −90 mV because there is a small permeability to $Na^{+}$, which pulls the potential slightly positive. $Cl^{-}$ happens to have an equilibrium potential near −70 mV, but the resting membrane is far less permeable to it, so it does not set the resting value.'
           },
           {
             question: 'Which of the following best explains why the inside of a resting neuron is negatively charged?',

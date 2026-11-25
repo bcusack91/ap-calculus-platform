@@ -96,6 +96,7 @@ Lossless compression takes a bit pattern and produces a shorter one that decodes
       exercise: {
         boxes: 3,
         correctAnswers: ["bits", "interprets", "abstraction"],
+        acceptableAnswers: [["bit", "binary", "binary digits", "binary data", "0s and 1s", "ones and zeros"], [], []],
         hint1: "The base-2 universal layer.",
         hint2: "Reading-side decision.",
         hint3: "Hiding details to focus on the main idea.",

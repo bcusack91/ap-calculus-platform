@@ -179,7 +179,7 @@ Current concentrations: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.10$ M, $[\\
           },
           {
             label: 'Pure solids in Q expressions are',
-            options: ['included in the numerator', 'included in the denominator', 'excluded', 'set equal to 1']
+            options: ['included in the numerator', 'included in the denominator', 'excluded', 'set equal to 0']
           }
         ],
         correctAnswers: [

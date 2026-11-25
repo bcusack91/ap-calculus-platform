@@ -69,7 +69,7 @@ Data: 3, 5, 7, 8, 9, 10, 12, 14, 50
 
 **2)** Median = ?
 
-**3)** Is 50 an outlier by the 1.5×IQR rule? ($Q_1 = 6$, $Q_3 = 13$, so $IQR = ?$ and upper fence = ?)
+**3)** Is 50 an outlier by the 1.5×IQR rule? Use $Q_1 = 6$ and $Q_3 = 13$. (yes/no)
       `,
       exercise: {
         boxes: 3,

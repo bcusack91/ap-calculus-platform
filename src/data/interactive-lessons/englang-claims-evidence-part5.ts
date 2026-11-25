@@ -140,7 +140,7 @@ Each claim is paired with evidence. Choose the main problem with the evidence.
             options: ['the sample is too narrow', 'the source is outdated', 'it supports a different claim', 'it is a hypothetical case']
           },
           {
-            label: 'Claim: "Smartphone use now harms teenagers\' sleep." Evidence: a 1995 study of teenagers who watched late-night television. Problem: ___',
+            label: 'Claim: "Most teenagers today own a smartphone." Evidence: a 2005 survey of phone ownership among teenagers. Problem: ___',
             options: ['the sample is too narrow', 'the source is outdated', 'it supports a different claim', 'it is a hypothetical case']
           },
           {
@@ -150,9 +150,9 @@ Each claim is paired with evidence. Choose the main problem with the evidence.
         ],
         correctAnswers: ['the sample is too narrow', 'the source is outdated', 'it supports a different claim'],
         hint1: 'Does one team speak for "most American teenagers"?',
-        hint2: 'Was there a smartphone in 1995?',
+        hint2: 'How much has phone ownership changed since 2005?',
         hint3: 'Is cost the same issue as bullying?',
-        explanation: 'Forty debaters at one school cannot represent most teenagers in the country. A study from before smartphones existed cannot show what smartphones do now. Lower cost may be true, but it supports a claim about affordability, not bullying, so it is irrelevant to this claim.'
+        explanation: 'Forty debaters at one school cannot represent most teenagers in the country. A survey from 2005, before smartphones were common, cannot show how many teenagers own one today. Lower cost may be true, but it supports a claim about affordability, not bullying, so it is irrelevant to this claim.'
       }
     },
     {

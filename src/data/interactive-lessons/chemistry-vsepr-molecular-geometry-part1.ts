@@ -234,7 +234,7 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
         dropdowns: [
           {
             id: 'vg-1-8-dd1',
-            label: 'A double bond counts as one electron domain. Two double bonds',
+            label: 'A central atom with two double bonds and no lone pairs has how many electron domains?',
             options: ['1', '2', '3', '4'],
             correctIndex: 1,
             explanation: 'A double bond counts as one electron domain. Two double bonds = 2 electron domains.'
@@ -248,7 +248,7 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
           },
           {
             id: 'vg-1-8-dd3',
-            label: 'An electron domain can be a bond (single, double, or triple) or a lone pair',
+            label: 'Which can count as an electron domain?',
             options: ['Bonds only, not lone pairs', 'Lone pairs only, not bonds', 'Bonds or lone pairs', 'Single bonds only'],
             correctIndex: 2,
             explanation: 'An electron domain can be a bond (single, double, or triple) or a lone pair. Both kinds count, and a multiple bond counts as one domain.'

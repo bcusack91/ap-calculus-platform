@@ -122,7 +122,7 @@ Type one term for each blank.
           {
             question: 'Changes in the genetic material a child carries, such as the difference behind Down syndrome, are called genetic ______.',
             answer: 'mutations',
-            acceptableAnswers: ['mutation'],
+            acceptableAnswers: ['mutation', 'abnormalities', 'abnormality'],
             explanation: 'The CED lists genetic mutations alongside teratogens, maternal illness, hormones and environmental factors as prenatal influences.'
           },
           {

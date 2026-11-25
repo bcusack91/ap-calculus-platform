@@ -45,18 +45,29 @@ export const englitSocialCommentaryDramaPart1Data = {
     {
       id: "englitso1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "satire",
-            "power dynamics",
-            "public vs private"
+      "questions": [
+            {
+                  "question": "Critique of society through irony, exaggeration or inversion",
+                  "answer": "satire",
+                  "acceptableAnswers": ["a satire"]
+            },
+            {
+                  "question": "Who controls speech, space and outcomes in a scene (two words)",
+                  "answer": "power dynamics",
+                  "acceptableAnswers": ["power dynamic", "the power dynamics"]
+            },
+            {
+                  "question": "The tension between a character's social performance and inner reality (three words)",
+                  "answer": "public vs private",
+                  "acceptableAnswers": ["public vs. private", "public versus private", "public and private", "public/private"]
+            }
       ],
-      "hint1": "Concept 1: Satire",
-      "hint2": "Concept 2: Power Dynamics",
-      "hint3": "Concept 3: Public vs Private",
-      "explanation": "Satire, Power Dynamics, and Public vs Private are core vocabulary for this unit."
+      "hint1": "Concept 1: mockery with a social target.",
+      "hint2": "Concept 2: who holds control.",
+      "hint3": "Concept 3: the face shown to others versus the inner life.",
+      "explanation": "Satire, power dynamics and public vs private are core vocabulary for this unit."
 }
     },
     {

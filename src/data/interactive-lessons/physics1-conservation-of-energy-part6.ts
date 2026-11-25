@@ -224,7 +224,7 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         questions: [
           {
-            question: 'A block ($m = 2$ kg) is released from rest at the top of a frictionless ramp of height 5 m, slides down, and compresses a spring ($k = 1000$ N/m) at the bottom. The maximum compression is:',
+            question: 'A block ($m = 2$ kg) is released from rest at the top of a frictionless ramp of height 5 m, slides down, and compresses a spring ($k = 1000$ N/m) at the bottom. Use $g = 10$ $m/s^{2}$. The maximum compression is:',
             options: [
               '0.14 m',
               '0.32 m',
@@ -235,7 +235,7 @@ Use $g = 10$ $m/s^{2}$.
             explanation: '$mgh = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2mgh/k} = \\sqrt{2(2)(10)(5)/1000} = \\sqrt{0.2} \\approx 0.447$ m $\\approx 0.45$ m.'
           },
           {
-            question: 'A spring ($k = 400$ N/m) compressed $0.5$ m launches a 1 kg block up a $30°$ frictionless ramp. The distance along the ramp is:',
+            question: 'A spring ($k = 400$ N/m) compressed $0.5$ m launches a 1 kg block up a $30°$ frictionless ramp. Use $g = 10$ $m/s^{2}$. The distance along the ramp is:',
             options: [
               '5 m',
               '10 m',

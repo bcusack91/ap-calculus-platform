@@ -80,7 +80,7 @@ So combinations of "nice" functions stay nice.
       exercise: {
         questions: [
           {
-            question: 'Where is $f(x) = \\sqrt{x - 5}$ continuous?',
+            question: 'Where is $f(x) = \\sqrt{x - 5}$ continuous (counting one-sided continuity at an endpoint)?',
             options: ['All $x$', '$x \\ge 5$', '$x > 5$', '$x \\ne 5$'],
             correctAnswer: 1,
             explanation: 'Defined for $x \\ge 5$; continuous on its entire domain (right-continuous at $x = 5$).'

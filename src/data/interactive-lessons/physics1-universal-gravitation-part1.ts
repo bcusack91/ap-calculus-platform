@@ -108,13 +108,13 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$.
 
 1) Find the gravitational force between Earth ($5.97 \\times 10^{24}$ kg) and the Moon ($7.35 \\times 10^{22}$ kg) separated by $3.84 \\times 10^8$ m. Express in scientific notation as $X \\times 10^{20}$ N. What is $X$ (round to 3 significant figures)?
 
-2) Two 70 kg people stand 2 m apart. What is the gravitational force between them (in N, express in scientific notation, give the coefficient to 3 significant figures, e.g., "8.17" for $8.17 \\times 10^{-8}$ N)?
+2) Two 70 kg people stand 2 m apart. What is the gravitational force between them (in N, express in scientific notation, give the coefficient to 3 significant figures, e.g., "5.42" for $5.42 \\times 10^{-6}$ N)?
 
 3) At Earth's surface, $r = 6.37 \\times 10^6$ m. Calculate $g = GM/r^2$ where $M = 5.97 \\times 10^{24}$ kg. What value do you get (in $m/s^{2}$, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.98', '8.17', '9.8'],
+        correctAnswers: ['1.98', '8.17', '9.81'],
         hint1: '$F = Gm_1m_2/r^2$. Compute numerator and denominator separately.',
         hint2: '$F = G(70)(70)/4$.',
         hint3: '$g = GM/r^2$. This should give the familiar $9.8$ $m/s^{2}$!',

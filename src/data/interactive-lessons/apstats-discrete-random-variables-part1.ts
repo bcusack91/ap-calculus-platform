@@ -56,7 +56,7 @@ From the table above:
             explanation: 'The probabilities of all possible values must add to exactly 1. A total of 100 only works if the probabilities are written as percents, and the total never depends on how many values there are.'
           },
           {
-            question: 'If $P(X=1) = 0.3$, $P(X=2) = 0.4$, and $P(X=3) = 0.2$, then $P(X=0)$ equals:',
+            question: 'A random variable $X$ takes only the values 0, 1, 2 and 3. If $P(X=1) = 0.3$, $P(X=2) = 0.4$, and $P(X=3) = 0.2$, then $P(X=0)$ equals:',
             options: ['0', '0.1', '0.9', 'Cannot be determined'],
             correctAnswer: 1,
             explanation: 'The probabilities must sum to 1, so $P(X=0) = 1 - 0.3 - 0.4 - 0.2 = 0.1$. 0.9 is the sum of the given probabilities, not what is left over, and 0 would make the total only 0.9.'

@@ -106,8 +106,8 @@ The acceleration increases by nearly $10\\times$ from launch to burnout!`
       type: 'mcq' as const,
       question: 'A 500 kg rocket has $v_e = 2000$ m/s and must achieve initial acceleration $3g$ upward (net). The required mass flow rate is:',
       options: ['$14.7$ kg/s', '$7.35$ kg/s', '$9.8$ kg/s', '$4.9$ kg/s'],
-      correctAnswer: 0,
-      explanation: 'Net acceleration $= 3g$, so total acceleration needed $= 3g + g = 4g$ (accounting for gravity). $F = m \\cdot 4g = 500(39.2) = 19{,}600$ N. $\\dot{m} = F/v_e = 19{,}600/2000 \\approx 9.8$ kg/s. Wait: $a_{\\text{net}} = v_e\\dot{m}/m - g = 3g$, so $v_e\\dot{m}/m = 4g$. $\\dot{m} = 4gm/v_e = 4(9.8)(500)/2000 = 9.8$ kg/s. Actually for $3g$ net: $\\dot{m} = 4(9.8)(500)/2000 = 9.8$ kg/s. Hmm, with $14.7$: that would be $6g \\cdot 500/2000 = 14.7$. Recheck: for $3g$ net upward, $a = 3(9.8) = 29.4$. $v_e\\dot{m}/m - g = 29.4$. $\\dot{m} = (29.4 + 9.8)(500)/2000 = 39.2(500)/2000 = 9.8$. So $9.8$ is correct. Among the choices the closest match depends on exact computation.'
+      correctAnswer: 2,
+      explanation: 'Net: $a = v_e\\dot{m}/m - g = 3g$, so the thrust must supply $v_e\\dot{m}/m = 4g$. Then $\\dot{m} = 4gm/v_e = 4(9.8)(500)/2000 = 9.8$ kg/s. Forgetting gravity (thrust supplies only $3g$) gives $7.35$ kg/s; subtracting $g$ instead of adding it gives $4.9$ kg/s.'
     },
     {
       id: 'vm3-mcq4',

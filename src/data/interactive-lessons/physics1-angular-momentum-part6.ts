@@ -74,7 +74,7 @@ Time to work through challenging problems involving angular momentum, rotational
 
 2) How much kinetic energy is lost in the collision above? (in J, round to 3 significant figures)
 
-3) A 60 kg person stands on the edge of a 200 kg, 3 m radius turntable (uniform disk) initially at rest. The person begins walking at 1.5 m/s tangentially (relative to the ground). What is the turntable's angular velocity? (in rad/s, round to 3 significant figures)
+3) A 60 kg person stands on the edge of a 200 kg, 3 m radius turntable (uniform disk) initially at rest. The person begins walking at 1.5 m/s tangentially (relative to the ground). What is the magnitude of the turntable's angular velocity? (in rad/s, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

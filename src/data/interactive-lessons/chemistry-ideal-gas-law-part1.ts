@@ -277,7 +277,7 @@ Convert the following gas measurements:
             explanation: '$T(K) = -40 + 273.15 = 233.15$ K. Dropping the minus sign on −40 gives 313.15 K, subtracting 273.15 gives −313.15 K, and −40 K is impossible because Kelvin temperatures are never negative.'
           },
           {
-            question: 'Which of the following is NOT a measurable property of a gas?',
+            question: 'Which of the following is NOT one of the four variables (P, V, T, n) used to describe a gas?',
             options: [
               'Pressure',
               'Color',

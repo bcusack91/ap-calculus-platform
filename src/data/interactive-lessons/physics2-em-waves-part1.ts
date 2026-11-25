@@ -141,7 +141,7 @@ This chain reaction propagates through space at speed $c = 1/\\sqrt{\\mu_0 \\eps
 
 **1)** Wavelength of a 100 MHz radio wave? (in meters)
 
-**2)** If $E_{max} = 600$ V/m, find $B_{max}$ in Tesla. (use scientific notation like 2e-6)
+**2)** If $E_{max} = 600$ V/m, find $B_{max}$ in Tesla. (use scientific notation like 5e-7)
 
 **3)** What region of the EM spectrum has $\\lambda = 0.5$ nm?
       `,

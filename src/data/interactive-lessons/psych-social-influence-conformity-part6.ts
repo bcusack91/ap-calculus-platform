@@ -123,9 +123,9 @@ A tech company is deciding whether to launch a risky new product. Analyze each e
       `,
       exercise: {
         inputs: [
-          { label: 'Conformity is adjusting to match a group; obedience is following a direct ___ from authority', answer: 'order' },
+          { label: 'Conformity is adjusting to match a group; obedience is following a direct ___ from authority', answer: 'order', acceptableAnswers: ['orders', 'command', 'commands', 'instruction', 'instructions', 'directive', 'demand'] },
           { label: 'Normative influence is about social acceptance; ___ influence is about gaining accurate information', answer: 'informational' },
-          { label: 'Groupthink involves suppressed ___; group polarization involves becoming more extreme', answer: 'dissent' }
+          { label: 'Groupthink involves suppressed ___; group polarization involves becoming more extreme', answer: 'dissent', acceptableAnswers: ['disagreement', 'doubts', 'criticism', 'objections', 'dissenting opinions'] }
         ]
       }
     },

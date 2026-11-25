@@ -218,7 +218,7 @@ $= 2\\int_0^1 x^4\\,dx + 0 = 2 \\cdot \\frac{1}{5} = \\frac{2}{5}$
       type: 'input-box' as const,
       content: '**Geometric Evaluation** ✍️',
       exercise: {
-        question: 'Evaluate $\\int_{-4}^{4} \\sqrt{16-x^2}\\,dx$.\n\nGive your exact answer in terms of $\\pi$.\n\n(Enter as: 8pi, 16pi, etc.)',
+        question: 'Evaluate $\\int_{-4}^{4} \\sqrt{16-x^2}\\,dx$.\n\nGive your exact answer in terms of $\\pi$.\n\n(Enter as: 3pi, 12pi, etc.)',
         correctAnswer: '8pi',
         acceptableAnswers: ['8pi', '8π', '8 pi', '25.13'],
         hints: [

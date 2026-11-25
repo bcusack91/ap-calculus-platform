@@ -72,11 +72,11 @@ where $\\hat{p} = \\frac{x_1 + x_2}{n_1 + n_2}$ is the **pooled proportion**.
 
 Treatment group: 45 successes out of 150. Control group: 30 successes out of 150.
 
-**1)** $\\hat{p}_1 = 45/150 = $? (Express as a decimal)
+**1)** $\\hat{p}_1 = $? (Express as a decimal)
 
-**2)** $\\hat{p}_2 = 30/150 = $?
+**2)** $\\hat{p}_2 = $?
 
-**3)** Pooled $\\hat{p} = (45+30)/(150+150) = $?
+**3)** Pooled $\\hat{p} = $?
       `,
       exercise: {
         boxes: 3,

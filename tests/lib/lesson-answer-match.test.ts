@@ -170,3 +170,13 @@ describe('isAnswerMatch — non-numeric keys keep exact matching', () => {
     expect(isAnswerMatch('   ', '0')).toBe(false)
   })
 })
+
+describe('isAnswerMatch — accents are ignored in word answers', () => {
+  it('names typed without diacritics match accented keys (and the reverse)', () => {
+    expect(isAnswerMatch('Kohler', 'Köhler')).toBe(true)
+    expect(isAnswerMatch('Pope', 'Popé')).toBe(true)
+    expect(isAnswerMatch('Mladić', 'Mladic')).toBe(true)
+    expect(isAnswerMatch('Sahagun', 'Sahagún')).toBe(true)
+    expect(isAnswerMatch('Kohl', 'Köhler')).toBe(false)
+  })
+})

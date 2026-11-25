@@ -180,6 +180,7 @@ But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{
           {
             label: 'What type of IMF explains why $H_{2}O$ has a much higher boiling point than $H_{2}S$? (two words)',
             correctAnswer: 'hydrogen bonding',
+            acceptableAnswers: ['hydrogen bonds', 'H bonding', 'H bonds'],
             explanation: '$H_{2}O$ has O–H bonds where oxygen is one of the three hydrogen-bonding atoms (F, O, N). $H_{2}S$ has S–H bonds, but sulfur is not F, O, or N, so $H_{2}S$ cannot form hydrogen bonds. The strong H-bonding in water gives it a much higher boiling point.'
           },
           {
@@ -204,28 +205,28 @@ But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{
         dropdowns: [
           {
             id: 'sm7-dd1',
-            label: 'Water\'s unusually high boiling point, surface tension, and specific heat are',
+            label: 'Water\'s unusually high boiling point, surface tension, and specific heat are all attributed to',
             options: ['London Dispersion Forces', 'dipole-dipole forces', 'hydrogen bonding', 'ionic bonding'],
             correctIndex: 2,
             explanation: 'Water\'s unusually high boiling point, surface tension, and specific heat are all attributed to its extensive hydrogen bonding network.'
           },
           {
             id: 'sm7-dd2',
-            label: 'As temperature increases, molecules have more kinetic energy to overcome IMFs',
+            label: 'As temperature increases, molecules have more kinetic energy to overcome IMFs, so the viscosity of a liquid',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 1,
             explanation: 'As temperature increases, molecules have more kinetic energy to overcome IMFs and escape to the gas phase, so viscosity decreases (liquid flows more easily).'
           },
           {
             id: 'sm7-dd3',
-            label: '_______ solids (like diamond and $SiO_{2}$) typically have the highest melting',
+            label: 'The type of solid (like diamond and $SiO_{2}$) that typically has the highest melting points is',
             options: ['ionic', 'molecular', 'metallic', 'network covalent'],
             correctIndex: 3,
             explanation: 'Network covalent solids (like diamond and $SiO_{2}$) typically have the highest melting points because melting requires breaking strong, continuous covalent bonds throughout the solid.'
           },
           {
             id: 'sm7-dd4',
-            label: 'At higher altitudes, atmospheric pressure is lower',
+            label: 'At higher altitudes, atmospheric pressure is lower, so water boils at a temperature _______ 100°C',
             options: ['the same as', 'higher than', 'lower than'],
             correctIndex: 2,
             explanation: 'At higher altitudes, atmospheric pressure is lower. A liquid boils when its vapor pressure equals external pressure, so less vapor pressure is needed → the liquid boils at a lower temperature.'

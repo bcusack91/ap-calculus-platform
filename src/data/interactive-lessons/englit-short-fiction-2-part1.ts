@@ -45,18 +45,29 @@ export const englitShortFiction2Part1Data = {
     {
       id: "englitsh1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "irony",
-            "perspective",
-            "implication"
+      "questions": [
+            {
+                  "question": "A gap between appearance and reality",
+                  "answer": "irony",
+                  "acceptableAnswers": ["the irony"]
+            },
+            {
+                  "question": "The narrative angle through which events are filtered, shaping sympathy and judgment",
+                  "answer": "perspective",
+                  "acceptableAnswers": ["point of view", "narrative perspective", "pov"]
+            },
+            {
+                  "question": "Meaning a text suggests but does not fully state",
+                  "answer": "implication",
+                  "acceptableAnswers": ["implied meaning", "the implication"]
+            }
       ],
-      "hint1": "Concept 1: Irony",
-      "hint2": "Concept 2: Perspective",
-      "hint3": "Concept 3: Implication",
-      "explanation": "Irony, Perspective, and Implication are core vocabulary for this unit."
+      "hint1": "Concept 1: what seems versus what is.",
+      "hint2": "Concept 2: the angle of narration.",
+      "hint3": "Concept 3: meaning that is suggested, not stated.",
+      "explanation": "Irony, perspective and implication are core vocabulary for this unit."
 }
     },
     {

@@ -86,7 +86,7 @@ $$\\chi^2 = 0.047 + 0.110 + 0.065 = 0.222$$
       exercise: {
         questions: [
           {
-            question: 'In a Hardy-Weinberg chi-square test with three genotype categories, the degrees of freedom equals:',
+            question: 'Using the AP Biology formula-sheet rule, a Hardy-Weinberg chi-square test with three genotype categories has degrees of freedom equal to:',
             options: ['3', '2', '1', '0'],
             correctAnswer: 1,
             explanation: 'On the AP exam, degrees of freedom = number of categories − 1. Three genotype categories (for example AA, Aa, aa) give df = 3 − 1 = 2, so the critical value at p = 0.05 is 5.99.'

@@ -261,7 +261,7 @@ Most modern political scientists use a MODIFIED PLURALIST framework:
             options: ['Multiple competing groups balance each other; democratic + diverse + no dominant group; Robert Dahl 1961 Who Governs + Madison Federalist 10', 'Small interlocking elite (corporate + military + political) controls major decisions; C. Wright Mills 1956 The Power Elite', 'Too many competing groups paralyze government + serve no clear public interest; Theodore Lowi 1969 The End of Liberalism', 'Power has 2 faces — visible (decisions made) + invisible (issues kept OFF agenda); Bachrach + Baratz 1962 Two Faces of Power', 'Average voter preferences correlate ~0 with policy outcomes; economic elite + business interest groups correlate strongly; Gilens + Page 2014']
           },
           {
-            label: "ELITISM — _______:",
+            label: "ELITISM (classic mid-century statement) — _______:",
             options: ['Multiple competing groups balance each other; democratic + diverse + no dominant group; Robert Dahl 1961 Who Governs + Madison Federalist 10', 'Small interlocking elite (corporate + military + political) controls major decisions; C. Wright Mills 1956 The Power Elite', 'Too many competing groups paralyze government + serve no clear public interest; Theodore Lowi 1969 The End of Liberalism', 'Power has 2 faces — visible (decisions made) + invisible (issues kept OFF agenda); Bachrach + Baratz 1962 Two Faces of Power', 'Average voter preferences correlate ~0 with policy outcomes; economic elite + business interest groups correlate strongly; Gilens + Page 2014']
           },
           {

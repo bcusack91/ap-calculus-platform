@@ -60,7 +60,7 @@ export const aasBlackPowerBeyondPart4Data = {
       exercise: {
         "questions": [
           {
-            "question": "1) The California college where a 1968–69 strike by the Black Student Union and Third World Liberation Front won a Black Studies department (two words, without \"College\")",
+            "question": "1) The California college where a 1968–69 strike by the Black Student Union and Third World Liberation Front won a Black Studies department (without \"College\")",
             "answer": "San Francisco State",
             "acceptableAnswers": [
               "San Francisco State",

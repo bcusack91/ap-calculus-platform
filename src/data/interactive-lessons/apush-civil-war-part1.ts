@@ -130,6 +130,7 @@ Use the exact historical term.
       exercise: {
         boxes: 3,
         correctAnswers: ['Emancipation Proclamation', 'Battle of Gettysburg', '13th Amendment'],
+        acceptableAnswers: [['the Emancipation Proclamation'], ['Gettysburg', 'the Battle of Gettysburg'], ['Thirteenth Amendment', 'the 13th Amendment', 'the Thirteenth Amendment', '13th', 'Thirteenth', 'Amendment XIII', 'XIII Amendment']],
         hint1: 'Two words — Lincoln\'s proclamation about emancipation',
         hint2: 'A battle in Pennsylvania — about 50,000 casualties over 3 days',
         hint3: 'The ___th Amendment',
@@ -145,7 +146,7 @@ Use the exact historical term.
       exercise: {
         dropdowns: [
           {
-            label: 'The 1857 Supreme Court case that ruled enslaved people could never be citizens was ___',
+            label: 'The 1857 Supreme Court case that ruled Black Americans, enslaved or free, could not be U.S. citizens was ___',
             options: ['Dred Scott v. Sandford', 'Marbury v. Madison', 'McCulloch v. Maryland', 'Worcester v. Georgia']
           },
           {

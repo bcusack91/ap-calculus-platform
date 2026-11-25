@@ -108,7 +108,7 @@ White light containing wavelengths from 400 nm (violet) to 700 nm (red) falls on
 
 2) Angle of the 1st-order maximum for 700 nm light (in degrees, to 3 significant figures)
 
-3) Angular width of the 1st-order spectrum, from violet to red (in degrees, to 3 significant figures)
+3) Angular width of the 1st-order spectrum, from violet to red (in degrees, to 3 significant figures; subtract your unrounded angles)
       `,
       exercise: {
         boxes: 3,

@@ -34,7 +34,7 @@ A thermos is brilliantly designed to block ALL three heat transfer mechanisms:
 - The inner walls are coated with reflective silver
 - Shiny surfaces are poor emitters and poor absorbers of thermal radiation
 - Most infrared radiation is reflected back rather than absorbed/emitted
-- This reduces radiative loss by ~98%
+- This cuts radiative loss to a small fraction of what bare glass walls would lose
 
 ### Result
 A good thermos can keep coffee hot for 12+ hours because all three pathways are severely restricted. The small remaining heat loss comes from conduction through the lid and neck, and the tiny amount of radiation not reflected by the silvered walls.
@@ -63,7 +63,7 @@ A good thermos can keep coffee hot for 12+ hours because all three pathways are 
 
 ### Microwave Ovens
 - Microwaves directly excite water molecules (radiation at 2.45 GHz)
-- Unlike conventional ovens, they heat food from within — no conduction through layers needed
+- Unlike conventional ovens, they deposit energy directly in the outer few centimeters of the food, not just at the surface; in thick food the center still warms by conduction (which is why "let stand" times matter)
 - Dry materials (ceramics) barely absorb microwaves, so the plate stays relatively cool
       `
     },

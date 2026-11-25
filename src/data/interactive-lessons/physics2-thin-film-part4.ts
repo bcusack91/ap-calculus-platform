@@ -158,7 +158,7 @@ A plano-convex lens ($R = 2.0$ m) on a flat glass plate, illuminated with sodium
 
 **3)** Ratio $r_4/r_1$?
 
-**4)** How many dark rings fit within a radius of 5 mm? (round down to nearest whole number)
+**4)** How many dark rings ($m \\geq 1$, not counting the dark central spot) fit within a radius of 5 mm? (round down to nearest whole number)
       `,
       exercise: {
         boxes: 4,

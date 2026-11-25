@@ -132,7 +132,7 @@ export const whTransoceanicPart2Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'The 1869 completion of the first transcontinental railroad in the United States was the ___',
+            label: 'The rail line completed at Promontory Summit, Utah, in 1869, linking the U.S. east and west coasts, was the ___',
             options: [
             'Union Pacific-Central Pacific transcontinental railroad',
             'Baltimore and Ohio Railroad',
@@ -150,7 +150,7 @@ export const whTransoceanicPart2Data = {
             ]
           },
           {
-            label: 'The 1880s technology that allowed perishable food (meat, dairy) to be shipped globally in refrigerated ships was ___',
+            label: 'The 1880s technology that let fresh meat and dairy from Australia, New Zealand, and Argentina reach European markets was ___',
             options: [
             'Refrigerated shipping (reefer technology)',
             'Canning technology',

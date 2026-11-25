@@ -194,7 +194,7 @@ export const whNewlyIndependentStatesPart7Data = {
           {
             question: 'Which best summarizes the post-1945 transformation of newly independent states in a way that an AP reader would credit as a "complexity" claim?',
             options: [
-              "Shared borders and Cold War politics constrained new states, yet democratic India, authoritarian South Korea, and single-party Tanzania took divergent paths",
+              "Inherited colonial borders and Cold War politics constrained new states, yet democratic India, authoritarian South Korea, and single-party Tanzania took divergent paths",
               "Post-1945 newly independent states followed nearly identical political and economic paths regardless of region, religion, or leadership from 1945 to 2000 across the whole world",
               "Post-1945 newly independent states were shaped entirely by either the United States or the Soviet Union and had no autonomous political or economic agency of their own after 1945",
               "Post-1945 newly independent states were democratic capitalist economies integrated into Western markets from independence, with no experiments in socialism or non-alignment"

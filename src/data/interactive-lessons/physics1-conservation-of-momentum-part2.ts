@@ -138,14 +138,14 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
 
 2) A 0.010 kg bullet at +400 m/s embeds in a 2.0 kg block at rest. What is the final speed of the block+bullet? (in m/s, to 3 significant figures)
 
-3) A 8 kg ball at +3 m/s hits a 2 kg ball at +1 m/s. The 8 kg ball slows to +2 m/s. What is the final velocity of the 2 kg ball? (in m/s)
+3) A 8 kg ball at +3 m/s hits a 2 kg ball at +1 m/s. The 8 kg ball slows to +2.5 m/s. What is the final velocity of the 2 kg ball? (in m/s)
       `,
       exercise: {
-        questions: [{ question: '1) Final velocity (m/s)', answer: '0.8', acceptableAnswers: ['0.8', '0.80', '+0.8'] }, { question: '2) Final speed of block+bullet (m/s)', answer: '1.99', acceptableAnswers: ['1.99', '1.990', '2.0', '2'] }, { question: '3) Final velocity of the 2 kg ball (m/s)', answer: '5', acceptableAnswers: ['5', '5.0', '+5'] }],
+        questions: [{ question: '1) Final velocity (m/s)', answer: '0.8', acceptableAnswers: ['0.8', '0.80', '+0.8'] }, { question: '2) Final speed of block+bullet (m/s)', answer: '1.99', acceptableAnswers: ['1.99', '1.990', '2.0', '2'] }, { question: '3) Final velocity of the 2 kg ball (m/s)', answer: '3', acceptableAnswers: ['3', '3.0', '+3'] }],
         hint1: '$(4)(5) + (6)(-2) = (10)v_f$. $20 - 12 = 10v_f$.',
         hint2: '$(0.010)(400) + (2.0)(0) = (2.010)v_f$.',
-        hint3: '$(8)(3) + (2)(1) = (8)(2) + (2)(v_2)$. $26 = 16 + 2v_2$.',
-        explanation: '1) $8 = 10v_f$. $v_f = 0.8$ m/s. 2) $4 = 2.010 v_f$. $v_f = 4/2.010 \\approx 1.99$ m/s. 3) $26 = 16 + 2v_2$. $v_2 = 10/2 = 5$ m/s.'
+        hint3: '$(8)(3) + (2)(1) = (8)(2.5) + (2)(v_2)$. $26 = 20 + 2v_2$.',
+        explanation: '1) $8 = 10v_f$. $v_f = 0.8$ m/s. 2) $4 = 2.010 v_f$. $v_f = 4/2.010 \\approx 1.99$ m/s. 3) $26 = 20 + 2v_2$. $v_2 = 6/2 = 3$ m/s. (Kinetic energy falls from 37 J to 34 J, so this collision is possible.)'
       }
     },
     {

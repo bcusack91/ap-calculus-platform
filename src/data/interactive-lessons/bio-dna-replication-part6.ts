@@ -130,7 +130,7 @@ Starting with one double-stranded DNA molecule where BOTH strands are labeled wi
       exercise: {
         questions: [
           {
-            question: 'BrdU (bromodeoxyuridine) is a thymidine analog that is incorporated into newly synthesized DNA and can be detected by antibodies. If cells replicate once in BrdU, then once without BrdU, what pattern of BrdU labeling would be seen in the daughter chromosomes?',
+            question: 'BrdU (bromodeoxyuridine) is a thymidine analog that is incorporated into newly synthesized DNA and can be detected by antibodies. If cells replicate once in BrdU, then once without BrdU, what pattern of BrdU labeling would the chromosomes show at the next metaphase?',
             options: [
               'Both chromatids of every chromosome labeled, since BrdU strands persist',
               'One chromatid of each chromosome labeled and its sister unlabeled',

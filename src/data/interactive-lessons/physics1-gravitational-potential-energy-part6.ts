@@ -80,7 +80,7 @@ $$200{,}000 = 250v_f^2 + 75{,}000$$
             explanation: '$PE_i = mgh = m(10)(3) = 30m$. $KE_f = \\frac{1}{2}m(36) = 18m$. Energy lost = $30m - 18m = 12m$. Fraction = $12m/30m = 0.4 = 40\\%$. 60% is the fraction that remains as KE, and 67% comes from dividing the loss by the final KE instead of the initial PE.'
           },
           {
-            question: 'A 2 kg ball is released from rest on a frictionless track at height 5 m. It goes through a loop. At the top of the 3 m loop, its speed is ($g = 10$ $m/s^{2}$):',
+            question: 'A 2 kg ball is released from rest on a frictionless track at height 5 m. It goes through a loop. At the top of the loop, 3 m above the ground, its speed is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{60}$ m/s',
               '$\\sqrt{20}$ m/s',
@@ -112,7 +112,7 @@ $$200{,}000 = 250v_f^2 + 75{,}000$$
 
 Use $g = 10$ $m/s^{2}$.
 
-1) A skier starts from rest at the top of a 50 m hill and reaches the bottom of a 10 m hill at 20 m/s. How much energy per kg was lost to friction (in J/kg)?
+1) A skier starts from rest at the top of a 50 m hill and reaches the top of a 10 m hill at 20 m/s. How much energy per kg was lost to friction (in J/kg)?
 
 2) A 0.5 kg ball is thrown upward at 12 m/s from a 10 m tall building. What is its speed when it reaches a height of 16.4 m above the ground (in m/s)?
 

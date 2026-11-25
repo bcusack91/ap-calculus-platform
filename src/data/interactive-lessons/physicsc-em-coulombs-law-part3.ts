@@ -70,7 +70,7 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["0","2","3"],
+        correctAnswers: ["0","2","1"],
         hint1: "Symmetry: equal forces from each side cancel.",
         hint2: "Add the forces: $3 + (-1)$.",
         hint3: "Set $kq/x^2 = k(4q)/(3d - x)^2$ and take square roots.",

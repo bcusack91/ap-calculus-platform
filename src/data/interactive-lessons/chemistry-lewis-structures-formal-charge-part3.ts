@@ -53,7 +53,7 @@ export const chemLewisStructuresFormalChargePart3Data = {
             explanation: '2 bonds × 2 $e^{-}$ = 4 electrons used. 16 − 4 = 12 electrons remain.'
           },
           {
-            label: '**3.** After placing 3 lone pairs on each O (12 $e^{-}$ used), how many electrons does the central carbon have?',
+            label: '**3.** After placing 3 lone pairs on each O (12 $e^{-}$ used), how many electrons surround the central carbon?',
             correctAnswer: '4',
             explanation: 'Carbon has only 2 $e^{-}$ from each single bond = 4 $e^{-}$ total. It needs 8, so it\'s short by 4 electrons. We need to form double bonds.'
           },

@@ -97,7 +97,7 @@ New World crops transformed Old World agriculture:
               'Periodization, dating the start of the slave trade to Columbus\'s first voyage in 1492',
               'Contextualization, placing the slave trade within the European Reformation and its wars',
             ],
-            correctAnswer: 0,
+            correctAnswer: 1,
             explanation: 'The causal chain is essential AP knowledge: (1) European diseases arrive → (2) indigenous populations collapse → (3) colonial labor shortage → (4) demand for replacement labor → (5) existing African slave-trading networks → (6) Atlantic slave trade expands from hundreds to millions per century. AP questions about causation reward tracing these chains rather than treating the slave trade as simply "caused by European greed" without structural explanation.'
           },
           {
@@ -171,7 +171,7 @@ New World crops transformed Old World agriculture:
           {
             question: 'Comparing the Columbian Exchange to the Black Death (1347-1353), which analysis is most sophisticated?',
             options: [
-              'Each spread disease along exchange routes, but one emptied Eurasia and the other emptied the Americas',
+              'Each spread disease along exchange routes, but one ravaged Eurasia and the other ravaged the Americas',
               'Each spread disease along exchange routes, but neither changed population totals for more than a decade',
               'Each spread disease along trade routes, but only the Black Death reached densely populated regions',
               'Each began in the Americas and moved east, but only the Columbian Exchange reached Asia and Africa',

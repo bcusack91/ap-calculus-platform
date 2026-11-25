@@ -180,7 +180,7 @@ Two species competing for the **exact same niche** cannot coexist indefinitely â
             explanation: 'Maximum growth occurs at K/2 = 800/2 = 400. At this point, resources are still ample enough to support high birth rates, but the population is large enough for significant total reproduction.'
           },
           {
-            question: 'An invasive species introduced to an island with no predators initially shows J-shaped exponential growth. What will MOST likely happen next?',
+            question: 'An invasive herbivore is introduced to a small island with no predators, where its food plants regrow far more slowly than it eats them. It initially shows J-shaped exponential growth. What will MOST likely happen next?',
             options: [
               'Growth will continue exponentially with no limit',
               'It will overshoot carrying capacity and then crash',

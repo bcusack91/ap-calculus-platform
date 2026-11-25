@@ -212,7 +212,7 @@ Since $P = 0.016 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidenc
           },
           {
             question: 'A two-tailed test requires you to:',
-            options: ['Use only the right tail', 'Double the one-tail P-value', 'Halve $\\alpha$', 'Ignore the sign of $t$'],
+            options: ['Use only the right tail', 'Double the one-tail P-value', 'Halve the one-tail P-value', 'Ignore the sign of $t$'],
             correctAnswer: 1,
             explanation: 'Two-tailed: $P = 2 \\times P(t \\geq |t_{obs}|)$.'
           },

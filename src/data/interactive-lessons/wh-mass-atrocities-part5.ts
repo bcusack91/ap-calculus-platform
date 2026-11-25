@@ -111,7 +111,7 @@ export const whMassAtrocitiesPart5Data = {
           {
             prompt: 'The 1999 NATO intervention in the Federal Republic of Yugoslavia in response to ethnic cleansing of ethnic Albanians by Serb forces.',
             answer: 'Kosovo War',
-            acceptableAnswers: ['Kosovo War', 'Kosovo', 'NATO Kosovo intervention', 'Kosovo intervention'],
+            acceptableAnswers: ['Kosovo War', 'Kosovo', 'NATO Kosovo intervention', 'Kosovo intervention', 'Operation Allied Force', 'Allied Force', 'NATO bombing of Yugoslavia', 'Kosovo conflict'],
             hint: 'A southern province of the former Yugoslavia.'
           }
         ]
@@ -133,7 +133,7 @@ export const whMassAtrocitiesPart5Data = {
           },
           {
             label: 'The creation of international criminal tribunals (ICTY, ICTR) compared to interwar impunity represents: ___',
-            options: ['continuity across the century', 'major change from early to late century', 'discontinuity that reversed the early pattern']
+            options: ['continuity across the century', 'major change from early to late century', 'a return to the interwar pattern']
           }
         ],
         correctAnswers: ['continuity across the century', 'major change from early to late century', 'major change from early to late century'],

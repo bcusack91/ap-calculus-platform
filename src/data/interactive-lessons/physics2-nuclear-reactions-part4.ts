@@ -95,12 +95,12 @@ That's equivalent to about 21 megatons of TNT — roughly 1,000 Hiroshima bombs 
             question: 'The mass of a carbon-12 nucleus is exactly 12 u. True or false?',
             options: [
               'True — that\'s the definition of the atomic mass unit',
-              'False — the nuclear mass is LESS than 12 u due to mass defect',
+              'False — the nuclear mass is LESS than 12 u; the electrons are left out',
               'False — the nuclear mass is MORE than 12 u',
               'True — but only for carbon-12'
             ],
             correctAnswer: 1,
-            explanation: 'The ATOMIC mass of C-12 is exactly 12 u (by definition). But the NUCLEAR mass is less because binding energy has been "released" as mass defect. The atomic mass includes electron masses. The nuclear mass = atomic mass - $Z \\times m_e$.'
+            explanation: 'The ATOMIC mass of C-12 is exactly 12 u (by definition). The atomic mass includes the 6 electrons, so the NUCLEAR mass = atomic mass - $Z \\times m_e = 12 - 6(0.000549) \\approx 11.9967$ u, LESS than 12 u. (Mass defect is a different comparison: the nucleus versus its separate protons and neutrons.)'
           },
           {
             question: 'A reaction has $Q = -5$ MeV. This means:',
@@ -137,9 +137,9 @@ A nuclear reaction has a mass defect of 0.025 u.
 
 **1)** Energy released in MeV? (to 2 decimal places)
 
-**2)** Energy in joules? ($1\\text{ MeV} = 1.6 \\times 10^{-13}$ J, answer like "3.73e-12")
+**2)** Energy in joules? ($1\\text{ MeV} = 1.6 \\times 10^{-13}$ J, answer like "2.18e-12")
 
-**3)** Mass defect in kg? ($1\\text{ u} = 1.66 \\times 10^{-27}$ kg, answer like "4.15e-29")
+**3)** Mass defect in kg? ($1\\text{ u} = 1.66 \\times 10^{-27}$ kg, answer like "7.06e-29")
       `,
       exercise: {
         boxes: 3,

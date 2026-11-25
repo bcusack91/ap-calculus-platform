@@ -58,7 +58,7 @@ The sum of all initial bars must equal the sum of all final bars (including ther
       exercise: {
         questions: [
           {
-            question: 'A ball is thrown upward. At the maximum height, the energy bar chart shows:',
+            question: 'A ball is thrown upward; the launch angle is not given. At the maximum height, the energy bar chart shows:',
             options: [
               'All KE and no PE_g, for any launch angle',
               'All PE_g and no KE, for any launch angle',
@@ -236,7 +236,7 @@ Use $g = 10$ $m/s^{2}$.
 
 2) A 4 kg block slides 5 m down a $37°$ ramp ($\\mu_k = 0.25$), then 3 m across a frictionless floor, then up a frictionless $53°$ ramp. What height does it reach on the second ramp (in m, to 3 significant figures)?
 
-3) In an AP FRQ, a 2 kg block is pushed against a spring ($k = 800$ N/m), compressing it 0.3 m. The block is released and slides across a rough surface ($\\mu_k = 0.4$) for 5 m before reaching a frictionless ramp. What maximum height does it reach (in m)?
+3) In an AP FRQ, a 2 kg block is pushed against a spring ($k = 800$ N/m), compressing it 0.3 m. The block is released onto a rough surface ($\\mu_k = 0.4$), and a frictionless ramp begins 5 m ahead. What maximum height does the block reach on the ramp (in m)?
       `,
       exercise: {
         questions: [{ question: '1)', answer: '0.643', acceptableAnswers: ['0.643', '0.64'] }, { question: '2)', answer: '2.01', acceptableAnswers: ['2.01', '2', '2.0', '2.00'] }, { question: '3)', answer: '0', acceptableAnswers: ['0', '0.0', '0 m'] }],

@@ -180,7 +180,7 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
             explanation: '1 H–C single bond = 0π. 1 C≡N triple bond = 2π. Total pi bonds = 2.'
           },
           {
-            label: 'Hybridization of each carbon in $C_{2}H_{2}$ — how many electron domains per carbon?',
+            label: 'Number of electron domains on each carbon in $C_{2}H_{2}$ (enter a number)',
             correctAnswer: '2',
             explanation: 'Each carbon has 1 C–H bond + 1 C≡C triple bond = 2 electron domains → sp hybridization.'
           }
@@ -210,7 +210,7 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
           },
           {
             id: 'hy-5-7-dd3',
-            label: 'Triple bonds are the shortest',
+            label: 'The shortest carbon–carbon bond is the _______',
             options: ['C–C in ethane', 'C=C in ethene', 'C≡C in acetylene', 'All three are equal'],
             correctIndex: 2,
             explanation: 'Triple bonds are the shortest. Higher bond order = more electron density pulling nuclei together = shorter bond.'

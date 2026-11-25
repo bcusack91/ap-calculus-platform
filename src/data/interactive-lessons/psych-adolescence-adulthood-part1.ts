@@ -137,7 +137,7 @@ Both decline as the prefrontal cortex matures and perspective-taking improves.
           },
           {
             label: 'A teen says "You don\'t understand what I\'m going through — no one has ever felt this way" — this reflects the ___',
-            options: ['personal fable', 'imaginary audience', 'identity diffusion', 'egocentrism']
+            options: ['personal fable', 'imaginary audience', 'identity diffusion', 'role confusion']
           },
           {
             label: 'Risk-taking in adolescence is partly explained by the late development of the ___',

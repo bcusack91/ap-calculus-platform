@@ -145,7 +145,7 @@ The period goes from ~30 days to **milliseconds**! This explains why pulsars (ro
             explanation: 'When a skater pulls arms in, $I$ decreases. With $L$ conserved, $\\omega$ must increase.'
           },
           {
-            label: 'While a diver is in the air, what is the source of their angular momentum?',
+            label: 'While a diver is in the air, what changes their angular momentum?',
             options: ['the diver\'s muscles, which keep supplying it', 'gravity, which exerts a torque about the center of mass', 'air resistance pushing on the limbs', 'none, because it is conserved'],
             correctIndex: 3,
             explanation: 'Angular momentum is conserved while the diver is in the air (gravity acts at the CM, producing no torque about it).'

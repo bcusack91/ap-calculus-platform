@@ -183,11 +183,18 @@ A biologist treats cells with a drug that causes the Golgi apparatus to collapse
       content: `
 **Organelle Identification** ✏️
 
-Identify the organelle described.
+Identify the organelle described in each line.
+
+1) Contains thylakoid membranes organized into grana; site of photosynthesis.
+
+2) Membrane-bound vesicle with an acidic interior (pH ~5) containing hydrolytic enzymes.
+
+3) Stack of flattened cisternae with a cis (receiving) face and a trans (shipping) face.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['chloroplast', 'lysosome', 'Golgi apparatus'],
+        acceptableAnswers: [['chloroplasts'], ['lysosomes'], ['Golgi', 'Golgi body', 'Golgi complex']],
         hint1: 'Contains thylakoid membranes organized into grana; site of photosynthesis.',
         hint2: 'Membrane-bound vesicle with acidic interior (pH ~5) containing hydrolytic enzymes.',
         hint3: 'Stack of flattened cisternae with a cis (receiving) face and trans (shipping) face.',

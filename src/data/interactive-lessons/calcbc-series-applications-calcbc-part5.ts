@@ -66,7 +66,7 @@ OR (if built from known series):
             explanation: 'After integrating term by term and evaluating, the error is bounded by the first omitted term of the resulting alternating sum — not a term of the original series, not the last term you kept, and not a derivative bound (that is Lagrange).'
           },
           {
-            question: 'On the AP FRQ, writing "by the AST error bound" instead of showing the computation:',
+            question: 'On the AP FRQ, writing "by the AST error bound" and stating the first omitted term, instead of proving the theorem:',
             options: ['Is acceptable — cite the theorem and state the bound', 'Loses points — you must prove the theorem', 'Is never accepted without the full computation', 'Is only accepted on multiple-choice questions'],
             correctAnswer: 0,
             explanation: 'AP readers accept citing the Alternating Series Estimation Theorem. State the bound value and verify it\'s less than the required tolerance.'

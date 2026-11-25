@@ -175,7 +175,7 @@ Pressure at depth $h$ is the same whether you're at the bottom of a thin tube or
             explanation: '$P = \\rho g h = 1000(10)(25) = 250{,}000$ Pa = 250 kPa.'
           },
           {
-            question: 'A swimming pool, lake, and ocean inlet all have water 4 m deep at one location. The gauge pressure at the bottom of the:',
+            question: 'A swimming pool and a lake (fresh water) and an ocean inlet (salt water) all have water 4 m deep at one location. The gauge pressure at the bottom of the:',
             options: [
               'Lake is greatest because it has more water',
               'Ocean is greatest only because of saltwater density',

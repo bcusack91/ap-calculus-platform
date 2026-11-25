@@ -93,10 +93,10 @@ Backward: $f'(8) \\approx \\frac{f(8) - f(5)}{8 - 5} = \\frac{20 - 10}{3} = \\fr
         dropdowns: [
           {
             label: 'The best estimate for $s\'(4)$ uses which method?',
-            options: ['Symmetric: $\\frac{s(10)-s(0)}{10-0}$', 'Forward: $\\frac{s(10)-s(4)}{6}$', 'Backward: $\\frac{s(4)-s(0)}{4}$', 'Symmetric: $\\frac{s(15)-s(0)}{15-0}$'],
-            correctAnswers: ['Symmetric: $\\frac{s(10)-s(0)}{10-0}$'],
+            options: ['Both sides (nearest): $\\frac{s(10)-s(0)}{10-0}$', 'Forward: $\\frac{s(10)-s(4)}{6}$', 'Backward: $\\frac{s(4)-s(0)}{4}$', 'Both sides (widest): $\\frac{s(15)-s(0)}{15-0}$'],
+            correctAnswers: ['Both sides (nearest): $\\frac{s(10)-s(0)}{10-0}$'],
             hints: ['$t = 4$ is an interior point with neighbors $t = 0$ and $t = 10$.'],
-            explanation: 'Symmetric difference is best for interior points: $\\frac{30 - 0}{10} = 3$ m/s. It uses the closest neighbors $t = 0$ and $t = 10$, not $t = 15$.'
+            explanation: 'At an interior point, use the nearest data points on both sides: $\\frac{30 - 0}{10} = 3$ m/s. That means $t = 0$ and $t = 10$, not $t = 15$.'
           },
           {
             label: '$s\'(4) \\approx$',
@@ -120,7 +120,7 @@ Backward: $f'(8) \\approx \\frac{f(8) - f(5)}{8 - 5} = \\frac{20 - 10}{3} = \\fr
       type: 'input-box' as const,
       content: '**Estimate the derivative.** \u270d\ufe0f\n\n| $x$ | 1 | 3 | 6 | 10 |\n|:---:|:---:|:---:|:---:|:---:|\n| $g(x)$ | 4 | 10 | 22 | 38 |',
       exercise: {
-        question: 'Estimate $g\'(6)$ using the symmetric difference quotient with $x = 3$ and $x = 10$.\n\nEnter the integer value.',
+        question: 'Estimate $g\'(6)$ using the difference quotient across $x = 6$, with $x = 3$ and $x = 10$.\n\nEnter the integer value.',
         correctAnswer: '4',
         acceptableAnswers: ['4'],
         hints: [

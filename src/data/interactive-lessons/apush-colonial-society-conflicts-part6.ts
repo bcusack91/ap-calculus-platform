@@ -116,7 +116,7 @@ From May 2027, all three SAQs are **required** and all are **sourced**: Q1 uses 
     {
       id: 'apushcol6-input',
       type: 'input-boxes' as const,
-      content: `**Term Sprint — match the document to its conflict**`,
+      content: `**Term Sprint — name each conflict**`,
       exercise: {
         questions: [
           {
@@ -134,7 +134,7 @@ From May 2027, all three SAQs are **required** and all are **sourced**: Q1 uses 
           {
             question: 'The 1739 South Carolina slave uprising that led to the Negro Act of 1740.',
             answer: 'Stono Rebellion',
-            acceptableAnswers: ['Stono Rebellion', 'Stono Uprising', 'Stono'],
+            acceptableAnswers: ['Stono Rebellion', 'Stono Uprising', 'Stono', 'Stono Revolt'],
             hint: 'Largest slave rebellion in British North America before the American Revolution.'
           }
         ]

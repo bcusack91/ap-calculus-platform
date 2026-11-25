@@ -157,9 +157,9 @@ $$A = \\frac{1}{2}\\left(\\frac{5\\pi}{2} - \\frac{\\pi}{2}\\right) = \\pi$$
       type: 'input-box' as const,
       content: '**Compute**',
       exercise: {
-        question: 'Find the area of one petal of $r = 4\\cos(2\\theta)$. The first petal spans $-\\pi/4 \\le \\theta \\le \\pi/4$. The area is $\\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}16\\cos^2(2\\theta)\\,d\\theta$. Evaluate and enter as a multiple of $\\pi$ (e.g., enter "2" for $2\\pi$).',
+        question: 'Find the area of one petal of $r = 4\\cos(2\\theta)$. The first petal spans $-\\pi/4 \\le \\theta \\le \\pi/4$. The area is $\\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}16\\cos^2(2\\theta)\\,d\\theta$. Evaluate and enter as a multiple of $\\pi$ (e.g., enter "3" for $3\\pi$).',
         correctAnswer: '2',
-        acceptableAnswers: ['2'],
+        acceptableAnswers: ['2', '2pi', '2π'],
         hints: ['$\\cos^2(2\\theta) = \\frac{1+\\cos 4\\theta}{2}$.', '$\\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}16 \\cdot \\frac{1+\\cos 4\\theta}{2}\\,d\\theta = 4\\int_{-\\pi/4}^{\\pi/4}(1+\\cos 4\\theta)\\,d\\theta$.'],
         explanation: '$= 4[\\theta + \\frac{\\sin 4\\theta}{4}]_{-\\pi/4}^{\\pi/4} = 4[(\\pi/4 + 0) - (-\\pi/4 + 0)] = 4 \\cdot \\pi/2 = 2\\pi$.'
       }

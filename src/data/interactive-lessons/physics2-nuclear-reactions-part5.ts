@@ -137,7 +137,7 @@ Example: $^{238}\\text{U} \\to \\text{(14 decays)} \\to ^{206}\\text{Pb}$ (stabl
       content: `
 **Binding Energy Calculations** 🧮
 
-A nucleus has 26 protons and 30 neutrons. Mass = 55.935 u.
+A nucleus has 26 protons and 30 neutrons. Nuclear mass = 55.920 u.
 ($m_p = 1.00728$ u, $m_n = 1.00866$ u)
 
 **1)** What element is this? (symbol)
@@ -150,9 +150,9 @@ A nucleus has 26 protons and 30 neutrons. Mass = 55.935 u.
         boxes: 3,
         correctAnswers: ['Fe', '0.529', '492.8'],
         hint1: '$Z = 26$ corresponds to which element?',
-        hint2: '$\\Delta m = 26(1.00728) + 30(1.00866) - 55.935$',
+        hint2: '$\\Delta m = 26(1.00728) + 30(1.00866) - 55.920$',
         hint3: '$BE = \\Delta m \\times 931.5$',
-        explanation: '1) $Z = 26$ = Iron (Fe). This is Fe-56! 2) $\\Delta m = 26(1.00728) + 30(1.00866) - 55.935 = 26.189 + 30.260 - 55.935 = 0.529$ u. 3) $BE = 0.529 \\times 931.5 = 492.8$ MeV. Per nucleon: $492.8/56 = 8.80$ MeV — the peak of the curve!'
+        explanation: '1) $Z = 26$ = Iron (Fe). This is Fe-56! 2) $\\Delta m = 26(1.00728) + 30(1.00866) - 55.935 = 26.189 + 30.260 - 55.920 = 0.529$ u. 3) $BE = 0.529 \\times 931.5 = 492.8$ MeV. Per nucleon: $492.8/56 = 8.80$ MeV — the peak of the curve!'
       }
     }
   ]

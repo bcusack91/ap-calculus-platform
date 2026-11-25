@@ -254,7 +254,7 @@ Compare reduction potentials again: the couple with the **lower** $E°$ has the 
 >
 > **Anode:** $Br^{-}$ and $I^{-}$ → oxidized (couples below +1.23 V). Oxyanions ($NO_{3}^{-}$, $SO_{4}^{2-}$) → $O_{2}$ forms.
 
-What gas or metal is produced at the cathode during electrolysis of:
+What product forms at the named electrode during electrolysis of:
 
 **1)** Molten $MgCl_{2}$ (cathode product)?
 

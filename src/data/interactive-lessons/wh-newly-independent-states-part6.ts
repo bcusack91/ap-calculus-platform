@@ -102,7 +102,7 @@ For a post-independence SAQ:
           {
             question: "Which best identifies the intended audience and purpose of Nyerere's 1967 Arusha Declaration?",
             options: [
-              'A founding statement of Tanzania\'s ruling TANU party; its audience was Tanzanians and African socialists; its purpose was to commit Tanzania to Ujamaa socialism and self-reliance',
+              'A policy declaration of Tanzania\'s ruling TANU party; its audience was Tanzanians and African socialists; its purpose was to commit Tanzania to Ujamaa socialism and self-reliance',
               'A diplomatic protest to the UN General Assembly; its audience was the global community of states; its purpose was to accuse Britain of keeping control over East Africa',
               'A speech to the World Bank and IMF; its audience was international lenders; its purpose was to negotiate a structural adjustment loan for Tanzania in the 1960s',
               'A military order to the armed forces; its audience was Tanzanian officers; its purpose was to launch an invasion of neighboring Uganda during a border crisis'

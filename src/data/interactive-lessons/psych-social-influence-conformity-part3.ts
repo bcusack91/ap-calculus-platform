@@ -67,10 +67,10 @@ Obedience is changing behavior in response to a direct command from an authority
           {
             question: 'Which variation of Milgram\'s experiment produced the LOWEST obedience rate?',
             options: [
-              'Authority figure gave instructions by phone (21%)',
-              'The experiment was conducted in an ordinary office building (48%)',
-              'Other "teachers" (confederates) refused to continue (10%)',
-              'The learner was in the same room as the teacher (40%)'
+              'Authority figure gave instructions by phone',
+              'The experiment was conducted in an ordinary office building',
+              'Other "teachers" (confederates) refused to continue',
+              'The learner was in the same room as the teacher'
             ],
             correctAnswer: 2,
             explanation: 'When other "teachers" (confederates) refused to continue, obedience dropped to only 10%. This is the LOWEST rate across all variations. It parallels Asch\'s finding that one dissenter dramatically reduces conformity. The principle: SOCIAL SUPPORT for resistance is the most powerful factor in reducing obedience. Having even one ally who models disobedience gives people permission to follow their conscience.'
@@ -125,8 +125,8 @@ Obedience is changing behavior in response to a direct command from an authority
       exercise: {
         inputs: [
           { label: 'In Milgram\'s original study, ___% of participants obeyed to the maximum 450 volts', answer: '65' },
-          { label: 'Zimbardo\'s Stanford Prison Experiment was stopped after only ___ days', answer: '6' },
-          { label: 'The strongest factor reducing obedience in Milgram\'s variations was dissenting ___', answer: 'peers' }
+          { label: 'Zimbardo\'s Stanford Prison Experiment was stopped after only ___ days', answer: '6', acceptableAnswers: ['six'] },
+          { label: 'The strongest factor reducing obedience in Milgram\'s variations was dissenting ___', answer: 'peers', acceptableAnswers: ['peer', 'teachers', 'teacher', 'confederates', 'confederate', 'peer teachers'] }
         ]
       }
     },

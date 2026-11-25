@@ -45,18 +45,29 @@ export const englitShortFiction3Part1Data = {
     {
       id: "englitsh1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "motif",
-            "shift",
-            "inference"
+      "questions": [
+            {
+                  "question": "A recurring element with interpretive significance",
+                  "answer": "motif",
+                  "acceptableAnswers": ["a motif"]
+            },
+            {
+                  "question": "A change in tone, perspective or emphasis",
+                  "answer": "shift",
+                  "acceptableAnswers": ["a shift", "turn"]
+            },
+            {
+                  "question": "A conclusion drawn from textual clues",
+                  "answer": "inference",
+                  "acceptableAnswers": ["an inference"]
+            }
       ],
-      "hint1": "Concept 1: Motif",
-      "hint2": "Concept 2: Shift",
-      "hint3": "Concept 3: Inference",
-      "explanation": "Motif, Shift, and Inference are core vocabulary for this unit."
+      "hint1": "Concept 1: something that keeps coming back.",
+      "hint2": "Concept 2: a change partway through.",
+      "hint3": "Concept 3: reading between the lines.",
+      "explanation": "Motif, shift and inference are core vocabulary for this unit."
 }
     },
     {

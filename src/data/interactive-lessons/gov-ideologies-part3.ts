@@ -173,7 +173,7 @@ Voters tend to elect parties when their OWNED issues become salient — Republic
           {
             prompt: "Type of polarization measuring Americans' growing emotional DISLIKE of opposing party (e.g., would be upset if a child married someone from the other party — about 5% in 1960, a far larger share in recent surveys).",
             answer: 'affective polarization',
-            acceptableAnswers: ['affective polarization', 'Affective polarization', 'Affective Polarization'],
+            acceptableAnswers: ['affective polarization', 'Affective polarization', 'Affective Polarization', 'affective'],
             hint: 'Beyond mere policy disagreement; sees opposing partisans as immoral, dangerous, ignorant; drives democratic backsliding concerns; distinct from issue + ideological polarization.'
           }
         ]

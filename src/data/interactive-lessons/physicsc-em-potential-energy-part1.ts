@@ -144,7 +144,7 @@ This is about $13\\%$ of the speed of light — relativistic corrections would b
     {
       id: 'pe1-mcq4',
       type: 'mcq' as const,
-      question: 'An electron is at distance $r$ from a proton. The minimum energy to free the electron to infinity is:',
+      question: 'An electron is held at rest at distance $r$ from a proton. The minimum energy to free the electron to infinity is:',
       options: ['$ke^2/r$', '$ke^2/(2r)$', '$2ke^2/r$', '$ke^2/r^2$'],
       correctAnswer: 0,
       explanation: '$U = -ke^2/r$ (attractive). To reach $U = 0$ at infinity, need $K = |U| = ke^2/r$.'

@@ -54,7 +54,7 @@ $$= \\pi - \\frac{3\\sqrt{3}}{2}$$
       exercise: {
         questions: [
           {
-            question: 'The area between the outer and inner loops of $r = 1 + 2\\cos\\theta$ equals:',
+            question: 'Call $\\frac{1}{2}\\int_0^{2\\pi}r^2\\,d\\theta$ the total area. The area between the outer and inner loops of $r = 1 + 2\\cos\\theta$ equals:',
             options: ['Total area minus $2 \\times$ inner loop area', 'Total area minus inner loop area', 'Total area plus inner loop area', 'Just the total area'],
             correctAnswer: 0,
             explanation: 'The total $\\frac{1}{2}\\int_0^{2\\pi}r^2\\,d\\theta$ counts the inner loop area TWICE (once when $r < 0$). So the area between loops $= $ total $- 2 \\times$ inner loop.'
@@ -81,7 +81,7 @@ $$= \\pi - \\frac{3\\sqrt{3}}{2}$$
       exercise: {
         dropdowns: [
           {
-            label: 'The total area enclosed by $r = 1 + 2\\cos\\theta$ (including inner loop counted once) is:',
+            label: 'The area between the outer and inner loops of $r = 1 + 2\\cos\\theta$ (inside the outer loop, outside the inner loop) is:',
             options: ['$\\frac{1}{2}\\int_0^{2\\pi}(1+2\\cos\\theta)^2\\,d\\theta - 2A_{\\text{inner}}$', '$\\frac{1}{2}\\int_0^{2\\pi}(1+2\\cos\\theta)^2\\,d\\theta$', '$\\pi$', 'Undefined'],
             correctAnswers: ['$\\frac{1}{2}\\int_0^{2\\pi}(1+2\\cos\\theta)^2\\,d\\theta - 2A_{\\text{inner}}$'],
             hints: ['The full integral double-counts the inner loop.'],

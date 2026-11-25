@@ -190,6 +190,7 @@ Write the full electron configuration. Remember: 4s fills before 3d!`,
           {
             label: 'Zinc (Zn, Z = 30):',
             correctAnswer: '1s2 2s2 2p6 3s2 3p6 4s2 3d10',
+            acceptableAnswers: ['1s2 2s2 2p6 3s2 3p6 3d10 4s2'],
             explanation: 'Zinc has 30 electrons. After $4s^{2}$ (20 electrons), the 3d subshell fills completely: $3d^{10}$ (30). Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$. Total = 30 ✓.'
           }
         ]

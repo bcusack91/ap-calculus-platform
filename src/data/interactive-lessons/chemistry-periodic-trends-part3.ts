@@ -237,7 +237,7 @@ If you see successive IE data, the **location of the big jump** tells you the **
       type: 'input-box' as const,
       content: `### Practice Problems
 
-**1.** Rank these elements from lowest to highest $IE_1$: Na, Mg, K. Type your answer as three symbols separated by commas with the lowest first (e.g., "K, Na, Mg").
+**1.** Rank these elements from lowest to highest $IE_1$: Na, Mg, K. Type your answer as three symbols separated by commas with the lowest first (e.g., "Cs, Li, Be").
 
 **2.** An element has successive IEs (kJ/mol): 786, 1,577, 3,232, 4,356, 16,091. How many valence electrons does this element have? (Enter a number.)`,
       exercise: {

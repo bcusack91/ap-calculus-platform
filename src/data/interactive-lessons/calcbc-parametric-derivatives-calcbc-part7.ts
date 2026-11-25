@@ -41,7 +41,7 @@ Master all parametric derivative concepts for the AP exam.
           },
           {
             question: 'When $x\'(t_0) = 0$, $y\'(t_0) = 0$, $x\'\'(t_0) \\ne 0$, and $y\'\'(t_0) \\ne 0$, the point is:',
-            options: ['A cusp (use limits to find tangent direction)', 'A horizontal tangent', 'A vertical tangent', 'An inflection point'],
+            options: ['A cusp', 'A horizontal tangent', 'A vertical tangent', 'An inflection point'],
             correctAnswer: 0,
             explanation: 'Both velocity components vanish: the standard formula gives $0/0$. We use L\'H\\^opital: $\\lim dy/dx = y\'\'(t_0)/x\'\'(t_0)$. The point is typically a cusp or stationary point.'
           },

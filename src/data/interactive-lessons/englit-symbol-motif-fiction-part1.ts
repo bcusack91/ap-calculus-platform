@@ -45,18 +45,29 @@ export const englitSymbolMotifFictionPart1Data = {
     {
       id: "englitsy1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "symbol",
-            "motif",
-            "pattern development"
+      "questions": [
+            {
+                  "question": "A concrete element that carries abstract significance",
+                  "answer": "symbol",
+                  "acceptableAnswers": ["a symbol"]
+            },
+            {
+                  "question": "A recurring symbol or image cluster",
+                  "answer": "motif",
+                  "acceptableAnswers": ["a motif"]
+            },
+            {
+                  "question": "A change in a symbol's meaning across a text (two words)",
+                  "answer": "pattern development",
+                  "acceptableAnswers": ["development of pattern", "the pattern development"]
+            }
       ],
-      "hint1": "Concept 1: Symbol",
-      "hint2": "Concept 2: Motif",
-      "hint3": "Concept 3: Pattern Development",
-      "explanation": "Symbol, Motif, and Pattern Development are core vocabulary for this unit."
+      "hint1": "Concept 1: a thing that stands for an idea.",
+      "hint2": "Concept 2: it keeps recurring.",
+      "hint3": "Concept 3: how the meaning grows over the text.",
+      "explanation": "Symbol, motif and pattern development are core vocabulary for this unit."
 }
     },
     {

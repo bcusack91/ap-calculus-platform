@@ -63,7 +63,7 @@ Always compare both distributions on ALL four features. Use comparative language
 
 Test scores: Min=45, $Q_1=65$, Med=75, $Q_3=85$, Max=98. Roughly symmetric, no outliers.
 
-**1)** Best measure of center? (mean/median) and its approximate value?
+**1)** Estimate the center of the distribution (enter a number).
 
 **2)** $IQR = ?$
 

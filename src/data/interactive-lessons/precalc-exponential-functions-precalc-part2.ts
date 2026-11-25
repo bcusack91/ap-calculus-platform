@@ -114,12 +114,12 @@ This has a solution only when $-\\frac{k}{a} > 0$ (i.e., $k$ and $a$ have opposi
             question: 'The graph of $g(x) = 2^{-x}$ is the same as:',
             options: [
               '$-2^x$ (reflection over $x$-axis)',
-              '$\\left(\\frac{1}{2}\\right)^x$ (reflection over $y$-axis)',
+              '$-\\left(\\frac{1}{2}\\right)^x$ (reflection over both axes)',
               '$2^x - 1$ (shift down)',
               '$\\frac{1}{2^x}$ and $\\left(\\frac{1}{2}\\right)^x$ (both correct)'
             ],
             correctAnswer: 3,
-            explanation: '$2^{-x} = (2^{-1})^x = \\left(\\frac{1}{2}\\right)^x = \\frac{1}{2^x}$. Replacing $x$ with $-x$ reflects over the $y$-axis, converting growth into decay.'
+            explanation: '$2^{-x} = (2^{-1})^x = \\left(\\frac{1}{2}\\right)^x = \\frac{1}{2^x}$. Replacing $x$ with $-x$ reflects over the $y$-axis, converting growth into decay. $-\\left(\\frac{1}{2}\\right)^x$ is negative everywhere, so it is a different graph.'
           },
           {
             question: 'Which transformation shifts the $y$-intercept of $2^x$ from $(0, 1)$ to $(0, 4)$ WITHOUT changing the HA?',

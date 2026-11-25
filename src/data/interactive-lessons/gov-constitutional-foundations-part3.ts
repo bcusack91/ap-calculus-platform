@@ -118,13 +118,13 @@ export const govConstitutionalFoundationsPart3Data = {
           {
             prompt: 'The Federalist Papers number that argues a large republic is the best protection against the mischiefs of faction.',
             answer: 'Federalist No. 10',
-            acceptableAnswers: ['Federalist No. 10', 'Federalist 10', 'Federalist No 10', 'Federalist Number 10'],
+            acceptableAnswers: ['Federalist No. 10', 'Federalist 10', 'Federalist No 10', 'Federalist Number 10', 'No. 10', '10'],
             hint: 'Madison, Nov 22, 1787 — the most-cited Federalist Paper.'
           },
           {
             prompt: 'The Federalist Papers number that argues separation of powers and federalism create a "double security" for the rights of the people.',
             answer: 'Federalist No. 51',
-            acceptableAnswers: ['Federalist No. 51', 'Federalist 51', 'Federalist No 51', 'Federalist Number 51'],
+            acceptableAnswers: ['Federalist No. 51', 'Federalist 51', 'Federalist No 51', 'Federalist Number 51', 'No. 51', '51'],
             hint: '"If men were angels, no government would be necessary."'
           }
         ]

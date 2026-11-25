@@ -18,13 +18,13 @@ Apply the Ratio and Root Tests to a variety of series.`
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(2n)!}{(n!)^2 \\cdot 4^n}$. Ratio Test: $L =$',
-            options: ['$1$ (inconclusive — this is a central binomial coefficient series)', '$1/4$', '$4$', '$1/2$'],
+            options: ['$1$', '$1/4$', '$4$', '$1/2$'],
             correctAnswer: 0,
             explanation: '$a_{n+1}/a_n = (2n+2)(2n+1)/((n+1)^2 \\cdot 4) = (2n+1)/(2(n+1)) \\to 1$. Inconclusive.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{3n+1}{2n-1}\\right)^n$. Best test and result:',
-            options: ['Root: $L = 3/2 > 1$, diverges', 'Ratio: $L = 3/2$, diverges', 'Root: $L = 1$, inconclusive', 'Divergence Test only'],
+            options: ['Root: $L = 3/2 > 1$, diverges', 'Ratio: $L = 2/3$, converges', 'Root: $L = 1$, inconclusive', 'Divergence Test only'],
             correctAnswer: 0,
             explanation: 'Root: $|a_n|^{1/n} = (3n+1)/(2n-1) \\to 3/2 > 1$. Diverges.'
           },
@@ -51,15 +51,15 @@ Apply the Ratio and Root Tests to a variety of series.`
         dropdowns: [
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{5^n + 3^n}{7^n}$: best approach:',
-            options: ['Split: $\\sum (5/7)^n + \\sum (3/7)^n$, both geometric with $|r| < 1$', 'Ratio Test on the combined expression', 'Root Test', 'Integral Test'],
-            correctAnswers: ['Split: $\\sum (5/7)^n + \\sum (3/7)^n$, both geometric with $|r| < 1$'],
+            options: ['Split: $\\sum (5/7)^n + \\sum (3/7)^n$', 'Ratio Test on the combined expression', 'Root Test', 'Integral Test'],
+            correctAnswers: ['Split: $\\sum (5/7)^n + \\sum (3/7)^n$'],
             hints: ['When terms can be split, recognize geometric series directly.'],
             explanation: 'Both are convergent geometric series ($|r| < 1$). Sum converges.'
           },
           {
             label: '$\\sum (n^2 + 1)^n / (2n^2)^n$: best test:',
-            options: ['Root: $|a_n|^{1/n} = (n^2+1)/(2n^2) \\to 1/2$, converges', 'Ratio Test', 'Comparison with $1/2^n$', 'Divergence Test'],
-            correctAnswers: ['Root: $|a_n|^{1/n} = (n^2+1)/(2n^2) \\to 1/2$, converges'],
+            options: ['Root Test', 'Ratio Test', 'Comparison with $1/2^n$', 'Divergence Test'],
+            correctAnswers: ['Root Test'],
             hints: ['Term has the form $(\\cdot)^n$.'],
             explanation: 'Root: $(n^2+1)/(2n^2) \\to 1/2 < 1$. Converges.'
           }

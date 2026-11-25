@@ -108,7 +108,7 @@ A model is a simplified map that makes testable predictions. The multi-store mod
       exercise: {
         dropdowns: [
           {
-            label: 'For a split second after a camera flash, you still "see" the outline of the room.',
+            label: 'For a split second after the lights suddenly go out, you still "see" the outline of the room.',
             options: ['Iconic memory', 'Echoic memory', 'Working memory', 'Long-term memory']
           },
           {

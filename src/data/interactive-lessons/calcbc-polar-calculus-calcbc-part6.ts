@@ -88,7 +88,7 @@ From part (b), $r = \\sqrt{3} > 0$ and $dr/d\\theta = -1 < 0$. The signs are opp
       exercise: {
         question: 'Find the total area enclosed by the four-petal rose $r = \\cos(2\\theta)$. Each petal has area $\\pi/8$, and there are $4$ petals. What is the total area? Enter as a fraction times $\\pi$.',
         correctAnswer: '1/2',
-        acceptableAnswers: ['1/2', 'pi/2'],
+        acceptableAnswers: ['1/2', 'pi/2', '1/2pi', '1/2π'],
         hints: ['$4 \\times \\pi/8 = \\pi/2$.'],
         explanation: 'Each petal: $\\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}\\cos^2(2\\theta)\\,d\\theta = \\pi/8$. Four petals: $4 \\times \\pi/8 = \\pi/2$.'
       }

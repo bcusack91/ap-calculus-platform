@@ -120,7 +120,7 @@ This gives you a map of the argument before answering questions.
 
 1) A claim that recommends action using words like "should" is a _______ claim.
 
-2) Evidence must be both relevant and _______ to be persuasive.
+2) Evidence must be relevant, and there must be enough of it to support the claim. Enough evidence is called _______ evidence.
 
 3) In annotation shorthand, the letter pair used for counterargument is _______.
       `,

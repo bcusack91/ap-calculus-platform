@@ -53,22 +53,22 @@ $$\\underbrace{\\mathcal{E}I}_{\\text{source}} = \\underbrace{I^2R}_{\\text{diss
 
 ### Total Energy Budget Over Time
 
-For an RL circuit charging from $t = 0$ to $t \\to \\infty$:
+For an RL circuit charging from $t = 0$:
 
 - Final current: $I_f = \\mathcal{E}/R$
 - Energy stored: $U_L = \\frac{1}{2}LI_f^2 = \\frac{L\\mathcal{E}^2}{2R^2}$
-- Energy from source: $U_{\\text{source}} = \\int_0^\\infty \\mathcal{E} I\\,dt = \\frac{L\\mathcal{E}^2}{R^2}$
-- Energy dissipated: $U_R = U_{\\text{source}} - U_L = \\frac{L\\mathcal{E}^2}{2R^2}$
+- Once $I = I_f$ the inductor stores no more energy, but the resistor keeps dissipating $\\mathcal{E}I_f = \\mathcal{E}^2/R$ every second for as long as the source stays connected
+- If the source is then removed and the current decays through $R$: $U_R = U_L = \\frac{L\\mathcal{E}^2}{2R^2}$
 
-> Just like RC circuits: exactly half the source energy is stored, half is dissipated.`
+> Unlike an RC circuit, an RL circuit never stops drawing current, so there is no "half stored, half dissipated" split while charging. All of the stored $U_L$ is dissipated in $R$ when the current decays.`
     },
     {
       id: 'pwr5-mcq2',
       type: 'mcq' as const,
-      question: 'An RL circuit with $\\mathcal{E} = 10$ V, $R = 5\\,\\Omega$, $L = 0.2$ H reaches steady state. The total energy dissipated in $R$ during the charging process is:',
+      question: 'An RL circuit with $\\mathcal{E} = 10$ V, $R = 5\\,\\Omega$, $L = 0.2$ H reaches steady state. The battery is then removed and the current decays through $R$. The total energy dissipated in $R$ during the decay is:',
       options: ['0.4 J', '0.2 J', '0.8 J', '2 J'],
       correctAnswer: 0,
-      explanation: '$I_f = 10/5 = 2$ A. $U_L = \\frac{1}{2}(0.2)(4) = 0.4$ J. By energy conservation, $U_R = U_L = 0.4$ J.'
+      explanation: '$I_f = 10/5 = 2$ A, so the inductor stores $U_L = \\frac{1}{2}(0.2)(4) = 0.4$ J. With no source, that stored energy is the only energy available, and all of it ends up as heat in $R$: $U_R = U_L = 0.4$ J.'
     },
     {
       id: 'pwr5-poynting',
@@ -123,7 +123,7 @@ $$P = |S| \\cdot (2\\pi a \\ell) = \\frac{V}{\\ell} \\cdot \\frac{\\mu_0 I}{2\\p
 | Principle | Expression |
 |:---:|:---:|
 | Power balance | $\\mathcal{E}I = I^2R + \\frac{d}{dt}(\\frac{1}{2}LI^2)$ |
-| RL energy split | $U_R = U_L = \\frac{L\\mathcal{E}^2}{2R^2}$ |
+| RL decay (source removed) | $U_R = U_L = \\frac{L\\mathcal{E}^2}{2R^2}$ |
 | Poynting vector | $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$ |
 | Energy density | $u = \\frac{1}{2}\\epsilon_0 E^2 + \\frac{B^2}{2\\mu_0}$ |
 

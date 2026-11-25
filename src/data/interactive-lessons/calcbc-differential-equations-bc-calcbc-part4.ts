@@ -121,7 +121,7 @@ For $y' = y(1 - y)$: equilibria at $y = 0$ (unstable) and $y = 1$ (stable).`
       type: 'input-box' as const,
       content: '**Practice**',
       exercise: {
-        question: 'For $dy/dx = 2y - 6$, at what value of $y$ is the slope field horizontal? (Solve $2y - 6 = 0$.)',
+        question: 'For $dy/dx = 2y - 6$, at what value of $y$ is the slope field horizontal?',
         correctAnswer: '3',
         acceptableAnswers: ['3', '3.0'],
         hints: ['$2y - 6 = 0 \\Rightarrow y = 3$.'],

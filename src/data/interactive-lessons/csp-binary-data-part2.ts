@@ -116,6 +116,7 @@ Memorize $2^{8}$ = 256 and $2^{16}$ = 65,536 — both appear constantly on the A
       exercise: {
         boxes: 3,
         correctAnswers: ["bit", "n", "0101"],
+        acceptableAnswers: [[], ["nth"], []],
         hint1: "Short for \"binary digit\".",
         hint2: "The exponent equals the number of bits.",
         hint3: "4 + 1 with place values 8, 4, 2, 1.",

@@ -96,11 +96,11 @@ Each link uses **one** shift, and the direction comes from the table above.
             options: [
               'Bus pass price rises as demand for this substitute increases',
               'Bus pass price rises as more people will ride the city buses',
-              'Bus pass price rises as bus companies pay more to run buses',
+              'Bus pass price rises as the supply of bus passes increases',
               'Bus pass price falls as fewer drivers are left to take buses'
             ],
             correctAnswer: 0,
-            explanation: 'The scoring explanation names the shift in the bus-pass market and the reason: bus passes are a substitute for driving, so demand increases. "More people will ride" restates the outcome without the curve, and the fuel-cost story is a supply effect the prompt did not set up.'
+            explanation: 'The scoring explanation names the shift in the bus-pass market and the reason: bus passes are a substitute for driving, so demand increases. "More people will ride" restates the outcome without the curve, and an increase in supply would lower the price, not raise it.'
           }
         ]
       }

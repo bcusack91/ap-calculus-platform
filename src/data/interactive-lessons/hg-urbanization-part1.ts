@@ -173,7 +173,7 @@ The AP exam frequently asks you to compare these models and apply them to real c
       exercise: {
         questions: [
           {
-            question: 'France largest city, Paris, has about 5 times the population of its second-largest city, Marseille. This pattern is best described by:',
+            question: 'France\'s largest metropolitan area, Paris (about 13 million), has more than 5 times the population of its second-largest, Lyon (about 2.3 million). This pattern is best described by:',
             options: [
               'The rank-size rule',
               'A primate city distribution',
@@ -181,7 +181,7 @@ The AP exam frequently asks you to compare these models and apply them to real c
               'The gravity model'
             ],
             correctAnswer: 1,
-            explanation: 'When one city is disproportionately larger than the next (5x in this case), it is a primate city. The rank-size rule would predict Marseille at half the population of Paris.'
+            explanation: 'When one city is disproportionately larger than the next (more than 5x in this case), it is a primate city. The rank-size rule would predict Lyon at half the population of Paris.'
           },
           {
             question: 'Which factor most directly explains rapid urbanization in sub-Saharan Africa today?',

@@ -124,7 +124,7 @@ DNA replication begins at specific sequences called **origins of replication**:
           {
             question: 'The isotope of nitrogen used to make heavy DNA in the Meselson-Stahl experiment:',
             answer: '15N',
-            acceptableAnswers: ['15N', 'N-15', 'nitrogen-15', '15-N'],
+            acceptableAnswers: ['15N', 'N-15', 'nitrogen-15', '15-N', 'N15', 'nitrogen 15', 'nitrogen15'],
             placeholder: 'e.g. 14C'
           }
         ]
@@ -139,7 +139,7 @@ DNA replication begins at specific sequences called **origins of replication**:
       exercise: {
         questions: [
           {
-            question: 'A human genome has about 6 billion base pairs, yet a human cell copies all of it in a few hours of S phase. Which feature of eukaryotic replication best explains this?',
+            question: 'A diploid human cell has about 6 billion base pairs of DNA, yet the cell copies all of it in a few hours of S phase. Which feature of eukaryotic replication best explains this?',
             options: [
               'Helicase unwinds the DNA so quickly that one fork covers the genome',
               'Copying starts at many origins, so many forks work at the same time',

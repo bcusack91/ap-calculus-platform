@@ -113,7 +113,7 @@ export const whNewlyIndependentStatesPart4Data = {
     {
       id: 'whnis4-input',
       type: 'input-boxes' as const,
-      content: `**Term Sprint — connections terms`,
+      content: `**Term Sprint — connections terms**`,
       exercise: {
         questions: [
           {
@@ -131,7 +131,7 @@ export const whNewlyIndependentStatesPart4Data = {
           {
             prompt: 'The 1956 Tunisian law (under Bourguiba) banning polygamy and giving women divorce rights — the most progressive in the Arab world.',
             answer: 'Code of Personal Status',
-            acceptableAnswers: ['Code of Personal Status', 'Tunisian Code of Personal Status'],
+            acceptableAnswers: ['Code of Personal Status', 'Tunisian Code of Personal Status', 'Personal Status Code', 'CSP'],
             hint: 'Sometimes abbreviated CSP from the French Code du Statut Personnel.'
           }
         ]
@@ -145,18 +145,18 @@ export const whNewlyIndependentStatesPart4Data = {
         dropdowns: [
           {
             label: 'Algerian migration to France during the 1950s–70s is most directly an example of: ___',
-            options: ['postcolonial migration to former metropoles', 'religious mobilization in newly independent states', 'conditional lending leverage', 'post-independence civil war']
+            options: ['postcolonial migration to former metropoles', 'religious mobilization against secular regimes', 'conditional lending leverage', 'post-independence civil war']
           },
           {
             label: 'The 1979 Iranian Revolution under Khomeini is most directly an example of: ___',
-            options: ['postcolonial migration to former metropoles', 'religious mobilization in newly independent states', 'conditional lending leverage', 'post-independence civil war']
+            options: ['postcolonial migration to former metropoles', 'religious mobilization against secular regimes', 'conditional lending leverage', 'post-independence civil war']
           },
           {
             label: 'IMF Structural Adjustment Programs in 1980s Africa is most directly an example of: ___',
-            options: ['postcolonial migration to former metropoles', 'religious mobilization in newly independent states', 'conditional lending leverage', 'post-independence civil war']
+            options: ['postcolonial migration to former metropoles', 'religious mobilization against secular regimes', 'conditional lending leverage', 'post-independence civil war']
           }
         ],
-        correctAnswers: ['postcolonial migration to former metropoles', 'religious mobilization in newly independent states', 'conditional lending leverage'],
+        correctAnswers: ['postcolonial migration to former metropoles', 'religious mobilization against secular regimes', 'conditional lending leverage'],
         hint1: 'Algerian migration was directed mainly to France, the former colonial power.',
         hint2: 'Khomeini\'s revolution mobilized Shia Islamist religious authority against a secular monarchy.',
         hint3: 'SAPs were conditional loans that forced spending cuts in exchange for IMF support.',

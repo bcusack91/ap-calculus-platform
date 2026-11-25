@@ -104,11 +104,11 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
       content: `
 **AP Synthesis Calculations** 🧮 ($\\rho_w = 1000$, $\\rho_{air} = 1.2$, g = 10)
 
-1) A large open tank's water surface is 10 m above a small hole. Exit speed (m/s)?
+1) A large open tank's water surface is 10 m above a small hole. Exit speed (m/s, round to 3 significant figures)?
 
 2) Horizontal pipe: $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $P_1 = 200$ kPa; $A_2 = 0.01$ $m^{2}$. Find $P_2$ (kPa).
 
-3) A Pitot tube on a small drone reads $\\Delta P = 24$ Pa ($\\rho_{air} = 1.2$). Airspeed (m/s)?
+3) A Pitot tube on a small drone reads $\\Delta P = 24$ Pa ($\\rho_{air} = 1.2$). Airspeed (m/s, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,

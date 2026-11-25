@@ -46,8 +46,8 @@ $$= \\frac{1}{2}\\left[\\theta - \\sin 2\\theta\\right]_{\\pi/6}^{5\\pi/6} = \\f
       exercise: {
         questions: [
           {
-            question: 'For the area INSIDE both $r = \\cos\\theta$ and $r = \\sin\\theta$, how many integrals are needed?',
-            options: ['Two (different outer curves on different intervals)', 'One', 'Three', 'None (use subtraction)'],
+            question: 'For the area INSIDE both $r = \\cos\\theta$ and $r = \\sin\\theta$, how many integrals are needed if you do not use symmetry?',
+            options: ['Two', 'One', 'Three', 'None (use subtraction)'],
             correctAnswer: 0,
             explanation: 'The curves intersect at $\\theta = \\pi/4$. On $[0, \\pi/4]$, $\\sin\\theta$ is inner. On $[\\pi/4, \\pi/2]$, $\\cos\\theta$ is inner. Two separate integrals needed.'
           },
@@ -88,10 +88,10 @@ $$= \\frac{1}{2}\\left[\\theta - \\sin 2\\theta\\right]_{\\pi/6}^{5\\pi/6} = \\f
       type: 'input-box' as const,
       content: '**Compute**',
       exercise: {
-        question: 'The curves $r = 2$ and $r = 2 + 2\\cos\\theta$ intersect when $\\cos\\theta = 0$. The area inside the cardioid but outside the circle is $\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}[(2+2\\cos\\theta)^2 - 4]\\,d\\theta$. This evaluates to $8 + \\pi$. What is the numerical value of $8 + \\pi$ rounded to 1 decimal?',
+        question: 'The curves $r = 2$ and $r = 2 + 2\\cos\\theta$ intersect when $\\cos\\theta = 0$. The area inside the cardioid but outside the circle is $\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}[(2+2\\cos\\theta)^2 - 4]\\,d\\theta$. Evaluate this integral and give the area rounded to 1 decimal.',
         correctAnswer: '11.1',
         acceptableAnswers: ['11.1', '11.14'],
-        hints: ['$\\pi \\approx 3.14159$.', '$8 + \\pi \\approx 11.14$.'],
+        hints: ['Expand: $(2+2\\cos\\theta)^2 - 4 = 8\\cos\\theta + 4\\cos^2\\theta$, and $\\cos^2\\theta = \\frac{1}{2}(1+\\cos 2\\theta)$.', 'The integral equals $8 + \\pi \\approx 11.14$.'],
         explanation: '$\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}(8\\cos\\theta + 4\\cos^2\\theta)\\,d\\theta = 8 + \\pi \\approx 11.14$, which rounds to $11.1$.'
       }
     },

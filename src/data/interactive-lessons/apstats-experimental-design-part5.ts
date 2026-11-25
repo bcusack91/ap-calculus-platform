@@ -69,19 +69,20 @@ $$\\text{Explanatory} \\leftarrow \\text{Confounder} \\rightarrow \\text{Respons
       content: `
 **Bias Identification** 🧮
 
-**1)** A study finds coffee drinkers live longer. Name a possible confounding variable.
+**1)** A study finds coffee drinkers live longer, but the coffee drinkers in it also had higher incomes. What kind of variable is income in this study? (confounding/response/explanatory)
 
-**2)** In a drug trial, patients know whether they get the real drug. What kind of blinding is missing? (single/double)
+**2)** In a drug trial, the patients do not know whether they get the real drug, but the doctors who evaluate them do. What kind of blinding does the trial have? (single/double)
 
 **3)** A magazine asks readers to mail in a survey. What type of bias is this? (voluntary response/undercoverage/nonresponse)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['socioeconomic status', 'single', 'voluntary response'],
-        hint1: 'What else differs between coffee drinkers and non-drinkers?',
-        hint2: 'Patients should not know their treatment',
+        correctAnswers: ['confounding', 'single', 'voluntary response'],
+        acceptableAnswers: [['confounding variable', 'lurking', 'lurking variable'], ['single-blind', 'single blinding'], ['voluntary response bias', 'voluntary']],
+        hint1: 'Income is linked to both coffee drinking and lifespan.',
+        hint2: 'Count who is kept unaware: the patients, the evaluators or both.',
         hint3: 'Only motivated readers respond',
-        explanation: '1) Socioeconomic status (or income, lifestyle, etc.). 2) Single-blinding is missing. 3) Voluntary response bias — only interested readers participate.'
+        explanation: '1) Confounding: income is associated with both coffee drinking and lifespan, so its effect cannot be separated from the effect of coffee. 2) Single-blind: only the patients are unaware of their treatment. 3) Voluntary response bias — only interested readers participate.'
       }
     }
   ]

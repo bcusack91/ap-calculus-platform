@@ -208,10 +208,17 @@ The ER is the largest membrane system in the cell — a network of interconnecte
 **Key Terms** ✏️
 
 Enter the correct term for each description.
+
+1) The ER region without ribosomes that synthesizes lipids and detoxifies the cell.
+
+2) The dense structure within the nucleus where ribosomal RNA is produced.
+
+3) The organelle studded with ribosomes that synthesizes secretory proteins.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['smooth ER', 'nucleolus', 'rough ER'],
+        acceptableAnswers: [['smooth endoplasmic reticulum', 'SER'], [], ['rough endoplasmic reticulum', 'RER']],
         hint1: 'The ER region without ribosomes that synthesizes lipids and detoxifies the cell.',
         hint2: 'The dense structure within the nucleus where ribosomal RNA is produced.',
         hint3: 'The organelle studded with ribosomes that synthesizes secretory proteins.',

@@ -84,10 +84,10 @@ L'H again: $\\lim \\frac{-\\sin x}{\\cos x + \\cos x - x\\sin x} = \\frac{0}{2} 
             explanation: 'Base $\\to 0^+$, exponent $\\to 0$. $0^0$ form.'
           },
           {
-            question: '$\\lim_{x \\to 0^+} (\\sin x) \\cdot (\\csc x)$. Is this indeterminate?',
-            options: ['No — it equals 1 (not indeterminate)', '$0 \\cdot \\infty$', '$0/0$', '$1^\\infty$'],
+            question: '$\\lim_{x \\to 0^+} (\\sin x) \\cdot (\\csc x)$. Which statement is true?',
+            options: ['It has the form $0 \\cdot \\infty$, but the limit is $1$', 'It has the form $0 \\cdot \\infty$, so the limit is $0$', 'It has the form $0/0$, so the limit is undefined', 'It has the form $1^\\infty$, so the limit is $e$'],
             correctAnswer: 0,
-            explanation: '$\\sin x \\cdot \\csc x = \\sin x / \\sin x = 1$. Not indeterminate at all!'
+            explanation: 'As $x \\to 0^+$, $\\sin x \\to 0$ and $\\csc x \\to \\infty$, so the form is $0 \\cdot \\infty$ — indeterminate, meaning the form alone does not decide the value. Here $\\sin x \\cdot \\csc x = \\sin x / \\sin x = 1$ for every $x$ near $0$, so the limit is $1$.'
           }
         ]
       }
@@ -120,7 +120,7 @@ L'H again: $\\lim \\frac{-\\sin x}{\\cos x + \\cos x - x\\sin x} = \\frac{0}{2} 
       type: 'input-box' as const,
       content: '**Evaluate**',
       exercise: {
-        question: '$\\lim_{x \\to 0^+} x^x$. Take $\\ln$: $\\lim x \\ln x = 0$ (from Part 2 intro). So $\\lim x^x = e^0 = ?$',
+        question: '$\\lim_{x \\to 0^+} x^x$. Take $\\ln$ and use $\\lim_{x \\to 0^+} x \\ln x = 0$ from the intro above. Enter the value of the limit.',
         correctAnswer: '1',
         acceptableAnswers: ['1', '1.0', 'e^0'],
         hints: ['$\\ln y = x \\ln x \\to 0$. So $y = e^0$.'],

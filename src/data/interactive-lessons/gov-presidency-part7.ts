@@ -205,7 +205,7 @@ export const govPresidencyPart7Data = {
             options: ['Art II § 1 (Vesting Clause)', 'Art II § 2 cl. 1 (Commander-in-Chief)', 'Art II § 2 cl. 2 (Treaty + Appointment)', 'Art II § 3 (Take Care Clause)']
           },
           {
-            label: "Source of presidential authority to direct executive-branch officials + supervise bureaucracy: ___",
+            label: "Source of presidential duty to see that federal laws are carried out + supervise bureaucracy: ___",
             options: ['Art II § 1 (Vesting Clause)', 'Art II § 2 cl. 1 (Commander-in-Chief)', 'Art II § 2 cl. 2 (Treaty + Appointment)', 'Art II § 3 (Take Care Clause)']
           },
           {

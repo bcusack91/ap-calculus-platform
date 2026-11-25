@@ -18,7 +18,7 @@ Determine the radius and interval of convergence for each series.`
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(x+3)^n}{\\sqrt{n} \\cdot 2^n}$. IOC:',
-            options: ['$(-5, -1)$ with left endpoint check needed: $\\sum (-1)^n/\\sqrt{n}$ converges (AST); right: $\\sum 1/\\sqrt{n}$ diverges ($p = 1/2$). IOC: $[-5, -1)$', '$[-5, -1]$', '$(-5, -1)$', '$(-5, -1]$'],
+            options: ['$[-5, -1)$', '$[-5, -1]$', '$(-5, -1)$', '$(-5, -1]$'],
             correctAnswer: 0,
             explanation: '$R = 2$, center $-3$. $x = -1$: $\\sum 2^n/(\\sqrt{n} \\cdot 2^n) = \\sum 1/\\sqrt{n}$, $p = 1/2 < 1$, diverges. $x = -5$: $\\sum (-2)^n/(\\sqrt{n} \\cdot 2^n) = \\sum (-1)^n/\\sqrt{n}$, converges by AST. IOC: $[-5, -1)$.'
           },
@@ -30,13 +30,13 @@ Determine the radius and interval of convergence for each series.`
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n!(x-2)^n}{10^n}$. IOC:',
-            options: ['$\\{2\\}$ only ($R = 0$)', '$(1.9, 2.1)$', '$(-8, 12)$', '$(-\\infty, \\infty)$'],
+            options: ['$\\{2\\}$ only', '$(1.9, 2.1)$', '$(-8, 12)$', '$(-\\infty, \\infty)$'],
             correctAnswer: 0,
             explanation: '$|c_{n+1}/c_n| = (n+1)/10 \\to \\infty$. $R = 0$. Converges only at center $x = 2$.'
           },
           {
             question: '$\\sum_{n=0}^{\\infty} \\frac{(x-1)^n}{n!}$. IOC:',
-            options: ['$(-\\infty, \\infty)$ ($R = \\infty$)', '$[0, 2]$', '$(0, 2)$', '$\\{1\\}$'],
+            options: ['$(-\\infty, \\infty)$', '$[0, 2]$', '$(0, 2)$', '$\\{1\\}$'],
             correctAnswer: 0,
             explanation: '$|c_{n+1}/c_n| = 1/(n+1) \\to 0$. $R = \\infty$. This is $e^{x-1}$, converges everywhere.'
           }
@@ -51,15 +51,15 @@ Determine the radius and interval of convergence for each series.`
         dropdowns: [
           {
             label: '$\\sum_{n=2}^{\\infty} \\frac{x^n}{n \\ln n}$, $R = 1$. At $x = 1$: $\\sum 1/(n \\ln n)$:',
-            options: ['Diverges (Integral Test: $\\int 1/(x \\ln x)\\,dx = \\ln(\\ln x) \\to \\infty$)', 'Converges', 'Inconclusive', 'Need LCT'],
-            correctAnswers: ['Diverges (Integral Test: $\\int 1/(x \\ln x)\\,dx = \\ln(\\ln x) \\to \\infty$)'],
+            options: ['Diverges', 'Converges', 'Inconclusive', 'Need LCT'],
+            correctAnswers: ['Diverges'],
             hints: ['$\\int_2^{\\infty} 1/(x \\ln x)\\,dx$, let $u = \\ln x$.'],
             explanation: '$\\int du/u = \\ln u \\to \\infty$. Diverges by Integral Test.'
           },
           {
             label: 'Same series at $x = -1$: $\\sum (-1)^n/(n \\ln n)$:',
-            options: ['Converges (AST: $1/(n \\ln n)$ decreases to $0$)', 'Diverges', 'Converges absolutely', 'Inconclusive'],
-            correctAnswers: ['Converges (AST: $1/(n \\ln n)$ decreases to $0$)'],
+            options: ['Converges conditionally', 'Diverges', 'Converges absolutely', 'Inconclusive'],
+            correctAnswers: ['Converges conditionally'],
             hints: ['Alternating, $b_n = 1/(n \\ln n)$ decreasing, $\\to 0$.'],
             explanation: 'AST conditions met. Converges conditionally. IOC: $[-1, 1)$.'
           }

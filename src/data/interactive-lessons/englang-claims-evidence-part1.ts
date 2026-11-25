@@ -124,6 +124,7 @@ Strong arguments **acknowledge and refute** opposing views:
       exercise: {
         boxes: 3,
         correctAnswers: ['policy', 'commentary', 'concession'],
+        acceptableAnswers: [[], ['analysis', 'reasoning'], []],
         hint1: 'Policy = what should be done.',
         hint2: 'Your voice analyzing the evidence.',
         hint3: 'Conceding a point before arguing against it.',

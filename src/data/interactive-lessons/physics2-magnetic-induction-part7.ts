@@ -88,7 +88,7 @@ export const physics2MagInductPart7Data = {
             explanation: 'Net voltage across resistance = $120 - 110 = 10$ V. $I = 10/2 = 5$ A. When the motor first starts (back-EMF = 0), $I = 120/2 = 60$ A — this is why motors draw high starting current!'
           },
           {
-            question: 'Two identical loops are near an electromagnet. Loop A is twice as far away. If the magnet is turned off, which loop has a larger induced EMF?',
+            question: 'Two identical loops, A and B, are near an electromagnet. Loop A is twice as far from it as loop B. If the magnet is turned off, which loop has a larger induced EMF?',
             options: [
               'Loop A (farther away)',
               'Loop B (closer) — experiences larger flux change',

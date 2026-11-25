@@ -64,7 +64,7 @@ export const calcbcMotionPart5Data = {
           },
           {
             question: 'A common error on AP FRQs: students compute $\\int_0^5 x\'(t)\\,dt$ and $\\int_0^5 y\'(t)\\,dt$ separately, then $\\sqrt{(\\Delta x)^2 + (\\Delta y)^2}$. This gives:',
-            options: ['The displacement magnitude, NOT the total distance traveled', 'The total distance traveled', 'The average speed', 'The arc length'],
+            options: ['The displacement magnitude', 'The total distance traveled', 'The average speed', 'The arc length'],
             correctAnswer: 0,
             explanation: 'Integrating components separately gives displacement. Total distance requires integrating SPEED $|\\vec{v}|$.'
           }

@@ -138,6 +138,7 @@ When you identify an appeal, always follow this pattern:
       exercise: {
         boxes: 3,
         correctAnswers: ['established', 'manipulative', 'purpose'],
+        acceptableAnswers: [['prior', 'extrinsic', 'existing', 'inherited'], ['exploitative'], []],
         hint1: 'Already existing credibility.',
         hint2: 'The audience feels manipulated.',
         hint3: 'Why is the writer making this choice?',

@@ -116,7 +116,7 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
       exercise: {
         dropdowns: [
           {
-            label: 'A garden hose has flow rate $Q$. You squeeze the end so the area shrinks to 1/3. The water exits at speed:',
+            label: 'A garden hose has flow rate $Q$ and the water leaves it at speed $v$. You squeeze the end so the area shrinks to 1/3. The water now exits at speed:',
             options: ['$v/3$', '$v$', '$3v$', '$9v$'],
             correctIndex: 2,
             explanation: 'Constant $Q = Av$ — area ÷ 3 means speed × 3.'

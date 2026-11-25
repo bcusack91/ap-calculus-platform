@@ -60,7 +60,7 @@ The correct process:
           },
           {
             question: 'The curve $x = \\cos t$, $y = \\sin t$ ($0 < t < \\pi$) is:',
-            options: ['Always concave down (toward center)', 'Always concave up', 'Changes concavity', 'Linear'],
+            options: ['Always concave down', 'Always concave up', 'Changes concavity', 'Linear'],
             correctAnswer: 0,
             explanation: '$dy/dx = -\\cot t$. $\\frac{d}{dt}(-\\cot t) = \\csc^2 t$. $d^2y/dx^2 = \\frac{\\csc^2 t}{-\\sin t} = -\\csc^3 t < 0$. Always concave down.'
           },
@@ -81,8 +81,8 @@ The correct process:
         dropdowns: [
           {
             label: 'For $x = t + 1$, $y = t^2 - 4t$, the curve changes concavity:',
-            options: ['Never (always concave up since $d^2y/dx^2 = 2$)', 'At $t = 2$', 'At $t = 0$', 'At $t = -1$'],
-            correctAnswers: ['Never (always concave up since $d^2y/dx^2 = 2$)'],
+            options: ['Never', 'At $t = 2$', 'At $t = 0$', 'At $t = -1$'],
+            correctAnswers: ['Never'],
             hints: ['$dy/dx = (2t-4)/1 = 2t-4$. Differentiate again.'],
             explanation: '$dy/dx = 2t - 4$. $d/dt(2t-4) = 2$. $d^2y/dx^2 = 2/1 = 2 > 0$ always. This is a parabola $y = (x-1)^2 - 4(x-1)$.'
           },

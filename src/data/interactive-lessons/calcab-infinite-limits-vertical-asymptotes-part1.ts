@@ -106,11 +106,12 @@ For $f(x) = \\dfrac{1}{(x - 5)^2}$:
 
 **2)** $\\lim_{x \\to 5^-} f(x) = ?$
 
-**3)** $\\lim_{x \\to 5} f(x) = ?$
+**3)** $\\lim_{x \\to 5} f(x) = ?$ (if both sides go to the same infinity, enter that infinity)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['infinity', 'infinity', 'infinity'],
+        acceptableAnswers: [['+infinity'], ['+infinity'], ['+infinity']],
         hint1: 'Squared denominator is always positive — both sides go up.',
         hint2: 'Same.',
         hint3: 'Both sides agree on $+\\infty$, so the two-sided limit equals $+\\infty$.',

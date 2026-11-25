@@ -87,8 +87,8 @@ $$C_B = \\frac{\\kappa\\varepsilon_0 (A/2)}{d} + \\frac{\\varepsilon_0 (A/2)}{d}
         '$2$',
         '$4/3$'
       ],
-      correctAnswer: 0,
-      explanation: '$C_A = 2\\kappa\\varepsilon_0 A/[d(\\kappa+1)] = 6\\varepsilon_0 A/(4d) = 3\\varepsilon_0 A/(2d)$. $C_B = \\varepsilon_0 A(\\kappa+1)/(2d) = 4\\varepsilon_0 A/(2d)$. Ratio $= 4/(3/2) \\cdot (1/2)/(1) = (4\\varepsilon_0 A/2d)/(3\\varepsilon_0 A/2d) = 4/3$... Let me recalculate: $C_A = 2(3)\\varepsilon_0 A/[d(4)] = 6\\varepsilon_0 A/(4d) = 3\\varepsilon_0 A/(2d)$. $C_B = \\varepsilon_0 A(4)/(2d) = 2\\varepsilon_0 A/d$. $C_B/C_A = [2\\varepsilon_0 A/d]/[3\\varepsilon_0 A/(2d)] = 4/3$. Wait: $C_B/C_A = (\\kappa+1)^2/(4\\kappa) = 16/12 = 4/3$. Hmm, that gives $4/3$. Let me recheck with the general formula: $C_B/C_A = [(\\kappa+1)/2]^2 / [2\\kappa/(\\kappa+1)] \\cdot ...$. Actually $C_B/C_A = [\\varepsilon_0 A(\\kappa+1)/(2d)] / [2\\kappa\\varepsilon_0 A/(d(\\kappa+1))] = (\\kappa+1)^2/(4\\kappa) = 16/12 = 4/3$. So the answer is $4/3$.'
+      correctAnswer: 3,
+      explanation: 'With $\\kappa = 3$: $C_A = 2\\kappa\\varepsilon_0 A/[d(\\kappa+1)] = 6\\varepsilon_0 A/(4d) = 3\\varepsilon_0 A/(2d)$ and $C_B = \\varepsilon_0 A(\\kappa+1)/(2d) = 4\\varepsilon_0 A/(2d) = 2\\varepsilon_0 A/d$. So $C_B/C_A = (2\\varepsilon_0 A/d)/(3\\varepsilon_0 A/(2d)) = 4/3$. In general $C_B/C_A = (\\kappa+1)^2/(4\\kappa)$, which is greater than 1 for any $\\kappa > 1$.'
     },
     {
       id: 'dielec6-mcq4',
@@ -106,7 +106,7 @@ $$C_B = \\frac{\\kappa\\varepsilon_0 (A/2)}{d} + \\frac{\\varepsilon_0 (A/2)}{d}
     {
       id: 'dielec6-mcq5',
       type: 'mcq' as const,
-      question: 'A capacitor stores $U = 50$ μJ with a vacuum gap. The capacitor is isolated and a dielectric ($\\kappa = 2$) is inserted. How much mechanical work is done pulling the dielectric into the gap?',
+      question: 'A capacitor stores $U = 50$ μJ with a vacuum gap. The capacitor is isolated and a dielectric ($\\kappa = 2$) is inserted. How much work does the capacitor\'s electric field do pulling the dielectric into the gap?',
       options: ['$25$ μJ', '$50$ μJ', '$12.5$ μJ', '$100$ μJ'],
       correctAnswer: 0,
       explanation: 'At constant $Q$: $U_{\\text{after}} = U/\\kappa = 25$ μJ. Energy lost $= 50 - 25 = 25$ μJ. This energy went into mechanical work pulling the dielectric in.'

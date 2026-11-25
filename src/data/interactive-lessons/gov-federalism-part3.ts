@@ -129,7 +129,7 @@ Only *McCulloch* and *Lopez* are required cases; the others show how Supreme Cou
       exercise: {
         questions: [
           {
-            prompt: "The 1980s push to return power and program control from the national government to the states (a CED illustrative example): the ___ revolution.",
+            prompt: "The 1980s-1990s push to return power and program control from the national government to the states (a CED illustrative example): the ___ revolution.",
             answer: 'devolution',
             acceptableAnswers: ['devolution', 'Devolution'],
             hint: 'Reagan-era block grants consolidated dozens of categorical grants.'

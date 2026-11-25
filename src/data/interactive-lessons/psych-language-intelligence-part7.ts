@@ -112,7 +112,7 @@ export const psychLanguagePart7Data = {
           {
             question: 'What stage of language development produces two-word phrases such as "want juice"?',
             answer: 'telegraphic speech',
-            acceptableAnswers: ['telegraphic', 'telegraphic stage', 'two-word stage'],
+            acceptableAnswers: ['telegraphic', 'telegraphic stage', 'two-word stage', 'two-word', 'two-word speech'],
             explanation: 'Telegraphic speech keeps the key nouns and verbs and leaves out small words.'
           },
           {

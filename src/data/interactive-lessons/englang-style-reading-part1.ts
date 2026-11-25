@@ -122,6 +122,7 @@ Strong: "After a series of layered periodic sentences, the abrupt declaration 'W
       exercise: {
         boxes: 3,
         correctAnswers: ['parallelism', 'emphasis', 'purpose'],
+        acceptableAnswers: [[], [], ['purposes', 'effect', 'effects']],
         hint1: 'Parallel grammatical form.',
         hint2: 'What the reader is left holding when the point arrives last.',
         hint3: 'Why the author made the choice.',

@@ -143,6 +143,7 @@ for (int value : arr) {
       exercise: {
         boxes: 3,
         correctAnswers: ['0', 'length', 'ArrayIndexOutOfBoundsException'],
+        acceptableAnswers: [[], [], ['ArrayIndexOutOfBounds', 'IndexOutOfBounds', 'IndexOutOfBoundsException']],
         hint1: 'Zero-based indexing.',
         hint2: 'A field property, not a method.',
         hint3: 'The index is out of bounds of the array.',

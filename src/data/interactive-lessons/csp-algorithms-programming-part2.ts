@@ -101,13 +101,14 @@ The call evaluates each argument **before** entering the procedure. Inside the p
 
 1) A reusable named block of code is called a _______.
 
-2) In w ← w + 1, the operator ← means _______.
+2) In w ← w + 1, the operator ← is called the _______ operator.
 
 3) Values that are given to a procedure when it is called are called _______.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["procedure", "assignment", "arguments"],
+        acceptableAnswers: [[], ["assign"], ["argument"]],
         hint1: "AP CSP word for function.",
         hint2: "It is not equality.",
         hint3: "Caller-side word; \"parameters\" is the procedure-side word.",

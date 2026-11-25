@@ -61,7 +61,7 @@ $$\\int \\sqrt[3]{x^2}\\,dx = \\int x^{2/3}\\,dx = \\frac{x^{5/3}}{5/3} + C = \\
           },
           {
             question: 'Evaluate $\\int (2x - 1)^2\\,dx$.',
-            options: ['$\\frac{(2x-1)^3}{6} + C$', '$\\frac{4x^3}{3} - 2x^2 + x + C$', '$4x^2 - 4x + 1 + C$', '$\\frac{(2x-1)^3}{3} + C$'],
+            options: ['$\\frac{4x^3}{3} - 4x^2 + x + C$', '$\\frac{4x^3}{3} - 2x^2 + x + C$', '$4x^2 - 4x + 1 + C$', '$\\frac{(2x-1)^3}{3} + C$'],
             correctAnswer: 1,
             explanation: 'Expand: $(2x-1)^2 = 4x^2 - 4x + 1$. Then $\\int (4x^2 - 4x + 1)\\,dx = \\frac{4x^3}{3} - 2x^2 + x + C$.'
           },

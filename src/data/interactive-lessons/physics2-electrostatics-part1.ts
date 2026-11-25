@@ -37,7 +37,7 @@ Electric charge is a **fundamental property of matter** — just like mass, but 
 
 | Property | Value |
 |----------|-------|
-| Electron charge | $e = 1.6 \\times 10^{-19}$ C |
+| Electron charge | $-e = -1.6 \\times 10^{-19}$ C |
 | Proton charge | $+e = 1.6 \\times 10^{-19}$ C |
 | Neutron charge | 0 |
 | SI unit | Coulomb (C) |

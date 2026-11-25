@@ -159,7 +159,7 @@ Match each post-Mongol development to its correct description.
             options: ['Ottoman Empire', 'Timurid Empire', 'Mamluk Sultanate', 'Safavid Empire']
           },
           {
-            label: 'The Chinese technology that spread west via Silk Road networks and eventually enabled both European naval dominance and printed books was ___',
+            label: 'The Chinese technology that spread west via Silk Road networks and eventually transformed both European warfare and the making of books was ___',
             options: ['Gunpowder and printing', 'The compass alone', 'Paper money', 'Porcelain']
           }
         ],

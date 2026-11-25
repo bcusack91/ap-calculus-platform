@@ -156,7 +156,7 @@ Comprehensive AP-exam-style questions integrating all DNA replication concepts.
           {
             question: 'The enzyme that relieves overwinding ahead of the replication fork:',
             answer: 'topoisomerase',
-            acceptableAnswers: ['topoisomerase', 'Topoisomerase', 'DNA topoisomerase'],
+            acceptableAnswers: ['topoisomerase', 'Topoisomerase', 'DNA topoisomerase', 'DNA gyrase', 'gyrase', 'topoisomerase II'],
             placeholder: 'e.g. ligase'
           }
         ]

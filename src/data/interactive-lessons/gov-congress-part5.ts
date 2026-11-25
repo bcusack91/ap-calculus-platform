@@ -146,9 +146,9 @@ export const govCongressPart5Data = {
             hint: 'Progressive Era democratic reform; replaced original Article I § 3.'
           },
           {
-            prompt: "The 1974 statute (a CED illustrative example) that created the Congressional Budget Office and limited presidential impoundment of funds. Two words: the ___ Act.",
-            answer: 'Budget Act',
-            acceptableAnswers: ['Budget Act', 'budget act', 'Congressional Budget Act', 'Congressional Budget and Impoundment Control Act'],
+            prompt: "The 1974 statute (a CED illustrative example) that created the Congressional Budget Office and limited presidential impoundment of funds. Its common short name: the Congressional ___ Act (one word).",
+            answer: 'Budget',
+            acceptableAnswers: ['Budget', 'Budget Act', 'Congressional Budget', 'Congressional Budget Act', 'Budget and Impoundment Control', 'Budget and Impoundment Control Act', 'Congressional Budget and Impoundment Control Act'],
             hint: 'Watergate-era reform; addressed Nixon impoundment + congressional budget capacity.'
           },
           {
@@ -176,10 +176,10 @@ export const govCongressPart5Data = {
           },
           {
             label: "17th Amendment establishes direct popular election of senators: ___",
-            options: ['1870', '1913', '1920', '1971']
+            options: ['1870s', '1910s', '1920s', '1970s']
           }
         ],
-        correctAnswers: ['1910s', '1930s', '1913'],
+        correctAnswers: ['1910s', '1930s', '1910s'],
         hint1: 'March 1910; led by Progressive Republican George Norris.',
         hint2: 'Same year FDR\'s court-packing plan failed; coalition lasted until 1960s.',
         hint3: 'Progressive Era — same year as the 16th Amendment (EK 5.1.A.1.iii).'

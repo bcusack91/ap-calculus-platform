@@ -246,7 +246,7 @@ Notice also the verbs: God's gentle "knocke, breathe, shine" are answered by the
       exercise: {
         questions: [
           {
-            question: `In "Much madness is divinest sense," the final four lines chiefly shift the poem from`,
+            question: `In "Much madness is divinest sense," the closing lines chiefly shift the poem from`,
             options: [
               `a celebration of madness to a warning against all forms of reason`,
               `a paradox about perception to a criticism of how the majority enforces conformity`,

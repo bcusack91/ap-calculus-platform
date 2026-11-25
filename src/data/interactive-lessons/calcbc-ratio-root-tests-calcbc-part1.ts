@@ -66,7 +66,7 @@ $$L = \\frac{1}{2} \\cdot 1 = \\frac{1}{2} < 1 \\quad \\Rightarrow \\quad \\text
           },
           {
             question: 'For $\\sum 1/n^2$: $L = \\lim n^2/(n+1)^2 = 1$. The Ratio Test:',
-            options: ['Is inconclusive (use another test)', 'Shows convergence', 'Shows divergence', 'Does not apply'],
+            options: ['Is inconclusive', 'Shows convergence', 'Shows divergence', 'Does not apply'],
             correctAnswer: 0,
             explanation: '$L = 1$ is inconclusive. For $p$-series, use the $p$-Series Test instead ($p = 2 > 1$, converges).'
           },

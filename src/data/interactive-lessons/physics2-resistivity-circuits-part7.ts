@@ -126,7 +126,7 @@ export const physics2ResCircPart7Data = {
 
 **3)** Battery ($\\mathcal{E} = 6$ V, $r = 0.5$ Ω) drives $I = 2$ A. Terminal voltage? (in V)
 
-**4)** Two identical bulbs in parallel are connected to a battery. If one burns out, does the other get brighter or dimmer? (brighter/dimmer/same)
+**4)** Two identical bulbs in parallel are connected to a battery that has internal resistance. If one burns out, does the other get brighter or dimmer? (brighter/dimmer/same)
       `,
       exercise: {
         boxes: 4,

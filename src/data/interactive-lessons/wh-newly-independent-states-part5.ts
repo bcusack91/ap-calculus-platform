@@ -122,13 +122,13 @@ export const whNewlyIndependentStatesPart5Data = {
           {
             prompt: 'The 1991 reforms (under Indian finance minister Manmohan Singh) that ended the License Raj and opened India to global investment.',
             answer: 'economic liberalization',
-            acceptableAnswers: ['economic liberalization', 'liberalization', '1991 reforms', 'Indian economic liberalization'],
+            acceptableAnswers: ['economic liberalization', 'economic liberalisation', 'liberalization', 'liberalisation', '1991 reforms', 'Indian economic liberalization', 'LPG reforms'],
             hint: 'Sometimes called "the 1991 reforms" or "opening of the Indian economy."'
           },
           {
             prompt: 'The 1994 South African event that ended apartheid and elected Nelson Mandela president.',
             answer: 'first multiracial election',
-            acceptableAnswers: ['first multiracial election', 'first democratic election', '1994 election', 'South African election'],
+            acceptableAnswers: ['first multiracial election', 'first multiracial elections', 'first democratic election', 'first democratic elections', 'first all-race election', 'first all-race elections', '1994 election', '1994 elections', '1994 general election', 'South African election', '1994 South African general election'],
             hint: 'A landmark vote ending decades of legal racial segregation.'
           },
           {

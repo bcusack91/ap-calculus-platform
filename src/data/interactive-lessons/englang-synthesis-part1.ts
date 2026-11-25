@@ -128,6 +128,7 @@ AP synthesis requires use of at least **three** sources. Strong essays integrate
       exercise: {
         boxes: 3,
         correctAnswers: ['claim', 'synthesize', 'three'],
+        acceptableAnswers: [['claims', 'idea', 'ideas', 'reason', 'reasons'], ['synthesise', 'combine'], ['3']],
         hint1: 'Your line of reasoning drives structure.',
         hint2: 'Blend source insights into one argument move.',
         hint3: 'Minimum number required by task.',

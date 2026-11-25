@@ -208,7 +208,7 @@ When exchange can't keep up, organisms add surface without adding much volume: m
       id: 'cs1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Microscopy Classification** 🔍
+**Surface Area, Volume, and Size** 🔍
       `,
       exercise: {
         dropdowns: [
@@ -243,10 +243,17 @@ When exchange can't keep up, organisms add surface without adding much volume: m
 **Key Terms — Fill in the Blanks** ✏️
 
 Enter the correct term for each description.
+
+1) Finger-like projections on intestinal cells that increase the absorptive surface.
+
+2) As a cell grows, the measurement that increases as the cube of its length.
+
+3) As a cell grows, the measurement that increases only as the square of its length.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['microvilli', 'volume', 'surface area'],
+        acceptableAnswers: [['microvillus'], [], ['SA']],
         hint1: 'Finger-like projections on intestinal cells that increase the absorptive surface.',
         hint2: 'As a cell grows, this measurement increases as the cube of its length.',
         hint3: 'As a cell grows, which measurement increases more slowly than volume?',

@@ -143,7 +143,7 @@ The Faraday cage demonstrates that electrostatic equilibrium is not just a theor
     {
       id: 'ce4-mcq4',
       type: 'mcq' as const,
-      question: 'A microwave oven door has a metal mesh with holes smaller than 12 cm. This mesh blocks microwaves because:',
+      question: 'A microwave oven door has a metal mesh with holes about 1–2 mm across. This mesh blocks microwaves because:',
       options: [
         'The holes are much smaller than the microwave wavelength, so the mesh acts as a continuous conductor',
         'Metal absorbs all electromagnetic radiation',

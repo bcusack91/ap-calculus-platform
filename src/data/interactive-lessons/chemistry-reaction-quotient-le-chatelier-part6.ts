@@ -90,7 +90,7 @@ Current: $[\\text{N}_2\\text{O}_4] = 0.500$ M, $[\\text{NO}_2] = 0.100$ M
 
 **3)** Which direction does the reaction shift? (Enter "right" or "left")
 
-*Round all answers to 3 significant figures.*
+*Answer part 1 to 2 decimal places; type parts 2 and 3 exactly as shown.*
       `,
       exercise: {
         boxes: 3,

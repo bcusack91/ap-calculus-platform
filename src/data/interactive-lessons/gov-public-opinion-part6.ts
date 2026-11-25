@@ -246,7 +246,7 @@ Climate is a leading example of PARTISAN POLARIZATION (EK 2.3.A.1) — once bipa
           {
             prompt: "Madison's Federalist essay (1787) on FACTIONS, MAJORITY TYRANNY, and the EXTENDED REPUBLIC remedy through representation + diversity.",
             answer: 'Federalist 10',
-            acceptableAnswers: ['Federalist 10', 'Federalist No. 10', 'Federalist No 10', 'Federalist Number 10', 'Federalist Paper 10', 'Federalist Paper No. 10', 'F10'],
+            acceptableAnswers: ['Federalist 10', 'Federalist No. 10', 'Federalist No 10', 'Federalist Number 10', 'Federalist Paper 10', 'Federalist Paper No. 10', 'F10', '10', 'No. 10'],
             hint: 'Famous defense of large republic; defined faction = "number of citizens... united and actuated by some common impulse of passion, or of interest, adversed to the rights of other citizens, or to the permanent and aggregate interests of the community"; rejected eliminating factions (would require destroying liberty); argued large republic + representation + diversity controls faction effects via multiple checking factions.'
           },
           {

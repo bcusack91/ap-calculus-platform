@@ -109,7 +109,7 @@ export const bioWaterPropertiesPart7Data = {
             options: ['cohesion', 'high specific heat', 'adhesion', 'low density of ice']
           },
           {
-            label: 'Enzymes function within narrow ___ ranges',
+            label: 'Enzymes function only within narrow ranges of two conditions: ___',
             options: ['temperature', 'pH', 'both temperature and pH', 'salinity']
           },
           {

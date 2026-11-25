@@ -119,9 +119,9 @@ $$\\int \\frac{x}{x+1}\\,dx = \\int \\frac{(x+1) - 1}{x+1}\\,dx = \\int \\left(1
       type: 'input-box' as const,
       content: '**Practice**',
       exercise: {
-        question: '$\\int \\frac{x}{x-3}\\,dx$. Rewrite as $\\frac{(x-3)+3}{x-3}$ and integrate. Give the antiderivative. (Use ln for natural log.)',
+        question: '$\\int \\frac{x}{x-3}\\,dx$. Rewrite as $\\frac{(x-3)+3}{x-3}$ and integrate. Give the antiderivative in the form x + a ln|x - b| + C. (Use ln for natural log and |...| for absolute value.)',
         correctAnswer: 'x + 3ln|x-3| + C',
-        acceptableAnswers: ['x + 3ln|x-3| + C', 'x+3ln|x-3|+C', 'x + 3*ln|x-3| + C'],
+        acceptableAnswers: ['x + 3ln|x-3| + C', 'x+3ln|x-3|+C', 'x + 3*ln|x-3| + C', 'x+3ln(|x-3|)+C', 'x+3*ln(|x-3|)+C', '3ln|x-3|+x+C'],
         hints: ['$\\frac{x}{x-3} = 1 + \\frac{3}{x-3}$.'],
         explanation: '$\\int (1 + 3/(x-3))\\,dx = x + 3\\ln|x-3| + C$.'
       }

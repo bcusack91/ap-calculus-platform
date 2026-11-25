@@ -125,11 +125,12 @@ In a 1-indexed list this is fine; in a 0-indexed language, you'd need 0 to LENGT
 
 2) To swap two variables you need a _______ variable.
 
-3) Tracing a loop step by step is called _______.
+3) Stepping through a loop by hand and recording each variable's value is called _______.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["1", "temporary", "tracing"],
+        acceptableAnswers: [[], ["temp"], ["code tracing", "hand tracing", "trace"]],
         hint1: "1-indexed.",
         hint2: "Holds intermediate value.",
         hint3: "Walk through.",

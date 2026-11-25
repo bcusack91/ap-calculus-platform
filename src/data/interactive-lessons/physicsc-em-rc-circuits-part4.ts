@@ -141,7 +141,7 @@ The graph shows a kink at the switching time — the voltage is continuous but t
       type: 'mcq' as const,
       question: 'When a charging RC circuit is suddenly switched to discharge through a larger resistor, $V_C$ at the switching instant:',
       options: [
-        'Stays the same but then changes more slowly',
+        'Stays the same, then decays with a larger $\\tau$',
         'Jumps to a lower value at that instant',
         'Keeps its value and its slope',
         'Drops to zero at that instant'

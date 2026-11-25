@@ -163,7 +163,7 @@ if (k > 5) {
 System.out.println(k);
 \`\`\`
 
-3) What does \`ticketPrice(65, false, true)\` from Part 6 return?
+3) Part 6's \`ticketPrice(age, isStudent, tuesday)\` charges 0 under age 5, 10 for visitors 65 or older or students, and 15 for everyone else, then takes 2 off any ticket that is not free on a Tuesday. What does \`ticketPrice(65, false, true)\` return?
       `,
       exercise: {
         boxes: 3,

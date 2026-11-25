@@ -147,7 +147,7 @@ AP free-response questions often ask how errors affect results:
 
 **2)** 25.00 mL of a $Ba(OH)_{2}$ solution is titrated with 0.1000 M HCl. It takes 35.60 mL of HCl to reach the equivalence point. The reaction is $Ba(OH)_{2}$ + 2HCl → $BaCl_{2}$ + $2H_{2}O$. What is the molarity of $Ba(OH)_{2}$? (to 3 significant figures)
 
-**3)** A calibration curve for $Fe^{3+}$ (using thiocyanate complex) has slope 4500 L/(mol·cm) at $b = 1.00$ cm. An unknown solution has $A = 0.900$. What is $[\\text{Fe}^{3+}]$? (in M, in scientific notation as X.Xe-4, write just the coefficient to 3 significant figures, e.g., "2.0")
+**3)** A calibration curve for $Fe^{3+}$ (using thiocyanate complex) has slope 4500 L/(mol·cm) at $b = 1.00$ cm. An unknown solution has $A = 0.900$. What is $[\\text{Fe}^{3+}]$? (in M, in scientific notation as X.XXe-4, write just the coefficient to 3 significant figures, e.g., "3.50")
       `,
       exercise: {
         inputs: [
@@ -163,8 +163,8 @@ AP free-response questions often ask how errors affect results:
           },
           {
             label: '[$Fe^{3+}$] coefficient $(\\times 10^{-4} M)$',
-            correctAnswer: '2.0',
-            explanation: '$c = A/(\\varepsilon b) = 0.900/(4500 \\times 1.00) = 2.0 \\times 10^{-4}$ M.'
+            correctAnswer: '2.00',
+            explanation: '$c = A/(\\varepsilon b) = 0.900/(4500 \\times 1.00) = 2.00 \\times 10^{-4}$ M.'
           }
         ]
       }

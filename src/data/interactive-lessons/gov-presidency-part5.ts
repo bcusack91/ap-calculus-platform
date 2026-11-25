@@ -169,7 +169,7 @@ export const govPresidencyPart5Data = {
             hint: 'Same year as "switch in time" with NLRB v. Jones & Laughlin Steel.'
           },
           {
-            prompt: "Year of the 22nd Amendment limiting the President to two elected terms (in response to FDR's 4 terms).",
+            prompt: "Year the 22nd Amendment was ratified, limiting the President to two elected terms (in response to FDR's 4 terms).",
             answer: '1951',
             acceptableAnswers: ['1951'],
             hint: 'Two years before Korean War armistice (1953).'

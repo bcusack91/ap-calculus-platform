@@ -153,7 +153,7 @@ $= \\frac{1}{2}\\arctan\\left(\\frac{x+3}{2}\\right) + C$
       type: 'input-box' as const,
       content: '**Evaluate the definite integral.** ✍️',
       exercise: {
-        question: 'Find $\\int_0^1 \\frac{1}{1+x^2}\\,dx$.\n\nGive your answer as a fraction of $\\pi$.\n\n(Enter as: pi/4, pi/3, etc.)',
+        question: 'Find $\\int_0^1 \\frac{1}{1+x^2}\\,dx$.\n\nGive your answer as a fraction of $\\pi$.\n\n(Enter as: pi/6, pi/3, etc.)',
         correctAnswer: 'pi/4',
         acceptableAnswers: ['pi/4', 'π/4', '0.785', '0.7854'],
         hints: [

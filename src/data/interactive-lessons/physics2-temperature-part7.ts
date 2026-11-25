@@ -73,7 +73,7 @@ The Maxwell–Boltzmann distribution shows a **range** of speeds. The rms speed 
             explanation: 'At constant volume $P \\propto T$, so the pressure is multiplied by $450/300 = 1.5$. The factor 1.22 is the change in rms speed ($\\sqrt{1.5}$), and 2.25 wrongly squares the temperature ratio.'
           },
           {
-            question: 'Two identical containers hold equal volumes of gas at the same temperature. Container A holds helium and container B holds oxygen. Which statement is correct?',
+            question: 'Two identical containers hold equal volumes of gas at the same temperature. Container A holds helium and container B holds oxygen. Considering translational kinetic energy, which statement is correct?',
             options: [
               'Helium atoms have the greater average kinetic energy',
               'Oxygen molecules have the greater average kinetic energy',

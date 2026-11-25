@@ -158,7 +158,7 @@ Enter numbers only.
 
 1) A country of 50,000,000 people records 1,100,000 births, 400,000 deaths, 100,000 immigrants and 50,000 emigrants in a year. What is its growth rate, in percent?
 
-2) Using your answer to question 1, what is the country's doubling time in years?
+2) Using your answer to question 1, what is the country's doubling time in years? Round to one decimal place.
 
 3) A town of 30,000 grows at 2% per year. If the rate holds, how many people will it have after 105 years?
       `,

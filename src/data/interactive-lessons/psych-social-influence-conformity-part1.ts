@@ -108,7 +108,7 @@ Social psychology studies how people's thoughts, feelings, and behaviors are inf
         inputs: [
           { label: 'The FAE involves overestimating ___ (dispositional/situational) causes for others\' behavior', answer: 'dispositional' },
           { label: 'Attributing your success to ability but failure to bad luck is the self-___ bias', answer: 'serving' },
-          { label: 'The FAE is stronger in ___ (individualist/collectivist) cultures', answer: 'individualist' }
+          { label: 'The FAE is stronger in ___ (individualist/collectivist) cultures', answer: 'individualist', acceptableAnswers: ['individualistic'] }
         ]
       }
     },

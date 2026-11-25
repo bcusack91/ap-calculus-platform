@@ -77,17 +77,17 @@ You have 40 volunteers for a study with 2 treatments.
 
 **1)** In a completely randomized design, how many subjects per group?
 
-**2)** If you use a random number table with numbers 01-40, what range goes to Treatment A? (e.g., 01-20)
+**2)** You label the volunteers 01-40 and read two-digit numbers (00-99) from a random number table. How many of the 100 possible two-digit numbers are not labels and must be skipped?
 
 **3)** What is the purpose of randomization? (bias/replication/control)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '01-20', 'bias'],
+        correctAnswers: ['20', '60', 'bias'],
         hint1: '40 total ÷ 2 groups',
-        hint2: 'First 20 unique numbers',
+        hint2: 'Only 01-40 are labels. Count 00 and 41-99.',
         hint3: 'Randomization eliminates what?',
-        explanation: '1) 20 per group. 2) Numbers 01-20 go to Treatment A (21-40 to B). 3) Purpose is to eliminate bias in assignment.'
+        explanation: '1) 20 per group. 2) 00 and 41-99 are not labels: 1 + 59 = 60 numbers skipped. The first 20 distinct labels read go to Treatment A, the rest to B. 3) Purpose is to eliminate bias in assignment.'
       }
     }
   ]

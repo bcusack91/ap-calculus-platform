@@ -156,7 +156,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
             explanation: '$\\alpha = \\tau/I = 8/4 = 2$ $rad/s^{2}$. $\\omega_f = \\omega_i + \\alpha t = 5 + 2(3) = 11$ rad/s.'
           },
           {
-            question: 'Planet A has twice the mass and half the orbital radius of Planet B. Both are in circular orbits. The ratio $L_A/L_B$ is:',
+            question: 'Planet A has twice the mass and half the orbital radius of Planet B. Both are in circular orbits around the same star. The ratio $L_A/L_B$ is:',
             options: [
               '$\\sqrt{2}$',
               '$1$',

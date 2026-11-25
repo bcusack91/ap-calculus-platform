@@ -63,8 +63,8 @@ A typical "Find the interval of convergence" FRQ awards points for:
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n(x-4)^n}{n \\cdot 2^n}$. The IOC is:',
             options: ['$[2, 6)$', '$(2, 6)$', '$(2, 6]$', '$[2, 6]$'],
-            correctAnswer: 0,
-            explanation: '$R = 2$, center $4$. $x = 6$: $\\sum 1/n$ diverges. $x = 2$: $\\sum (-1)^n(-1)^n/n = \\sum 1/n$... Wait: $(-1)^n(2-4)^n/n \\cdot 2^n = (-1)^n(-2)^n/(n \\cdot 2^n) = (-1)^n(-1)^n/n = 1/n$. Diverges. Actually: $(-1)^n(-2)^n = (-1)^n \\cdot (-1)^n \\cdot 2^n = 2^n$. So $2^n/(n \\cdot 2^n) = 1/n$. Diverges. Let me reconsider: $x = 6$: $(-1)^n(2)^n/(n \\cdot 2^n) = (-1)^n/n$. Converges (AST). IOC: $(2, 6]$.'
+            correctAnswer: 2,
+            explanation: '$R = 2$, center $4$. $x = 6$: $\\frac{(-1)^n 2^n}{n \\cdot 2^n} = \\frac{(-1)^n}{n}$, the alternating harmonic series, converges (AST). $x = 2$: $\\frac{(-1)^n(-2)^n}{n \\cdot 2^n} = \\frac{2^n}{n \\cdot 2^n} = \\frac{1}{n}$, the harmonic series, diverges. IOC: $(2, 6]$.'
           },
           {
             question: 'On an FRQ, which response earns the endpoint point?',
@@ -74,7 +74,7 @@ A typical "Find the interval of convergence" FRQ awards points for:
           },
           {
             question: 'If you find $R = 4$ but skip endpoint testing, how many points do you likely lose?',
-            options: ['2-3 points (one per endpoint plus possibly the IOC statement)', '0 points', '1 point', 'All points'],
+            options: ['2-3 points', '0 points', '1 point', 'All points'],
             correctAnswer: 0,
             explanation: 'Skipping endpoints means losing the left endpoint point, right endpoint point, and possibly the IOC statement point.'
           }
@@ -89,15 +89,15 @@ A typical "Find the interval of convergence" FRQ awards points for:
         dropdowns: [
           {
             label: 'At an endpoint, you get $\\sum 1/(n \\cdot 3^n) \\cdot 3^n = \\sum 1/n$. The test to cite:',
-            options: ['Harmonic series (diverges) or $p$-Series Test with $p = 1$', 'Ratio Test', 'Root Test', 'Comparison Test'],
-            correctAnswers: ['Harmonic series (diverges) or $p$-Series Test with $p = 1$'],
+            options: ['$p$-Series Test', 'Ratio Test', 'Root Test', 'Comparison Test'],
+            correctAnswers: ['$p$-Series Test'],
             hints: ['$\\sum 1/n$ is the harmonic series, $p = 1 \\le 1$.'],
             explanation: 'Cite the $p$-Series Test or name it as the divergent harmonic series.'
           },
           {
             label: 'At an endpoint, you get $\\sum (-1)^n/(2n+1)$. The test:',
-            options: ['AST: terms decrease to $0$, so converges', '$p$-Series', 'Integral Test', 'Divergence Test'],
-            correctAnswers: ['AST: terms decrease to $0$, so converges'],
+            options: ['Alternating Series Test', '$p$-Series', 'Integral Test', 'Divergence Test'],
+            correctAnswers: ['Alternating Series Test'],
             hints: ['$1/(2n+1)$ is positive, decreasing, $\\to 0$.'],
             explanation: 'Alternating Series Test: $b_n = 1/(2n+1)$ decreases to $0$. Converges.'
           }
@@ -109,7 +109,7 @@ A typical "Find the interval of convergence" FRQ awards points for:
       type: 'input-box' as const,
       content: '**Full IOC Problem**',
       exercise: {
-        question: '$\\sum_{n=1}^{\\infty} \\frac{(x-1)^n}{n^2 \\cdot 4^n}$. $R = 4$. State the IOC. (Use brackets/parens, e.g., [-3, 5].)',
+        question: '$\\sum_{n=1}^{\\infty} \\frac{(x-1)^n}{n^2 \\cdot 4^n}$. $R = 4$. State the IOC. (Use brackets/parens, e.g., (-2, 4].)',
         correctAnswer: '[-3, 5]',
         acceptableAnswers: ['[-3, 5]', '[-3,5]'],
         hints: ['$x = 5$: $\\sum 1/n^2$ converges ($p = 2$).', '$x = -3$: $\\sum (-1)^n/n^2$ converges (absolutely).'],

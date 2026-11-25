@@ -83,15 +83,15 @@ The regression always produces *some* exponential curve. Whether that curve is a
             explanation: 'The model is $y = 50.2(0.934)^x$. Each unit of input multiplies the output by $0.934$, which keeps $93.4\\%$ and so loses about $6.6\\%$. A subtraction of $0.934$ per unit would describe a linear model.'
           },
           {
-            question: 'Using the model $S(t) = 11.98(1.192)^t$, which is the best prediction for $t = 7$?',
+            question: 'Using the model $S(t) = 11.98(1.192)^t$, which is the best prediction for $t = 6$?',
             options: [
-              'About $41.0$ thousand units',
-              'About $100.0$ thousand units',
+              'About $34.4$ thousand units',
+              'About $85.7$ thousand units',
               'About $28.6$ thousand units',
               'About $14.3$ thousand units'
             ],
             correctAnswer: 0,
-            explanation: '$11.98(1.192)^7 \\approx 11.98(3.419) \\approx 41.0$. Multiplying $11.98 \\cdot 1.192 \\cdot 7$ (treating the growth as linear) gives $100.0$; $28.6$ is the last data value, and $14.3$ is $S(1)$.'
+            explanation: '$11.98(1.192)^6 \\approx 11.98(2.869) \\approx 34.4$. Multiplying $11.98 \\cdot 1.192 \\cdot 6$ (treating the growth as linear) gives $85.7$; $28.6$ is the last data value, and $14.3$ is $S(1)$.'
           },
           {
             question: 'The sales data cover $0 \\leq t \\leq 5$. Which prediction is an extrapolation?',

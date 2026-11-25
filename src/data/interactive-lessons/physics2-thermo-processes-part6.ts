@@ -112,7 +112,7 @@ Find the work done, heat absorbed, and efficiency.
             question: 'A gas undergoes a process where $P$ increases and $V$ decreases. Which type of process could this be?',
             options: ['Adiabatic compression', 'Isothermal expansion', 'Isobaric expansion', 'Free expansion'],
             correctAnswer: 0,
-            explanation: 'In adiabatic compression, $V$ decreases and $P$ increases (steeper than isothermal). Isothermal: $P$ increases as $V$ decreases, but we\'re told $P$ increases AND $V$ decreases, which is compression. Adiabatic compression satisfies both conditions.'
+            explanation: 'Only a compression can lower $V$ while raising $P$, and adiabatic compression is the only compression listed: $V$ decreases and $P$ increases, more steeply than in an isothermal compression because the gas also heats up. (An isothermal compression would fit too, but it is not an option.) The other three choices are expansions, so $V$ increases.'
           },
           {
             question: 'An ideal gas completes a clockwise cycle on a PV diagram. Taking $W$ as the work done on the gas, which is true?',
@@ -141,6 +141,8 @@ Find the work done, heat absorbed, and efficiency.
       content: `
 **Calculation Practice** 🧮
 
+Use $R = 8.314$ J/(mol·K).
+
 **1)** 3 mol of a monatomic ideal gas is heated at constant volume from 200 K to 500 K. What is $Q$? (in J, round to nearest whole number)
 
 **2)** The same gas (3 mol monatomic) is heated at constant pressure over the same $\\Delta T$. What is $Q$ now? (in J, round to nearest whole number)
@@ -149,11 +151,11 @@ Find the work done, heat absorbed, and efficiency.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['11213', '18688', '5000'],
+        correctAnswers: ['11224', '18707', '5000'],
         hint1: '$Q = nC_v\\Delta T = 3 \\times \\frac{3}{2}(8.314) \\times 300$',
         hint2: '$Q = nC_p\\Delta T = 3 \\times \\frac{5}{2}(8.314) \\times 300$',
         hint3: 'Isothermal: $\\Delta U = 0$, so $Q = -W$',
-        explanation: '1) $Q = 3 \\times 1.5 \\times 8.314 \\times 300 = 11213$ J. 2) $Q = 3 \\times 2.5 \\times 8.314 \\times 300 = 18688$ J. Note the ratio is $5/3 = \\gamma$. 3) Isothermal: $\\Delta U = 0$, so $Q = -W = -5000$ J. The gas releases 5000 J of heat.'
+        explanation: '1) $Q = 3 \\times 1.5 \\times 8.314 \\times 300 = 11224$ J. 2) $Q = 3 \\times 2.5 \\times 8.314 \\times 300 = 18707$ J. Note the ratio is $5/3 = \\gamma$. 3) Isothermal: $\\Delta U = 0$, so $Q = -W = -5000$ J. The gas releases 5000 J of heat.'
       }
     }
   ]

@@ -151,7 +151,7 @@ Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
 
 1) A copper wire is 10.0 m long with cross-sectional area $2.0 \\times 10^{-6}$ $m^{2}$. What is its resistance? (in $\\Omega$)
 
-2) A copper wire has resistance 0.50 $\\Omega$ and length 5.0 m. What is its cross-sectional area? (in $m^{2}$, scientific notation like 1.7e-7)
+2) A copper wire has resistance 0.50 $\\Omega$ and length 5.0 m. What is its cross-sectional area? (in $m^{2}$, scientific notation like 3.2e-5)
 
 3) You need a copper wire with resistance exactly 1.0 $\\Omega$ and diameter 1.0 mm. How long must it be? (in m, round to nearest whole number)
       `,

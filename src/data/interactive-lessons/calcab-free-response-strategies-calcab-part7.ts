@@ -78,7 +78,7 @@ This section simulates exam conditions with mixed-topic questions covering all m
             explanation: '$\\int x^{-1/2}\\,dx = 2\\sqrt{x}$. $[2\\sqrt{x}]_1^4 = 4-2 = 2$. Integrating $\\sqrt{x}$ instead gives $\\frac{14}{3}$; subtracting integrand values gives $\\frac{1}{2} - 1 = -\\frac{1}{2}$; using the derivative $-\\frac{1}{2}x^{-3/2}$ gives $\\frac{7}{16}$.'
           },
           {
-            question: 'If $\\frac{dy}{dx} = 2y$ and $y(0)=5$, then $y(t) =$',
+            question: 'If $\\frac{dy}{dt} = 2y$ and $y(0)=5$, then $y(t) =$',
             options: ['$5e^{2t}$', '$2e^{5t}$', '$5 + 2t$', '$e^{10t}$'],
             correctAnswer: 0,
             explanation: '$y\' = 2y \\implies y = Ce^{2t}$. $y(0)=5 \\implies C=5$.'

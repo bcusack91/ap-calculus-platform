@@ -122,8 +122,8 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
       exercise: {
         inputs: [
           { label: 'The Elaboration ___ Model describes central and peripheral routes to persuasion', answer: 'Likelihood' },
-          { label: 'In Festinger & Carlsmith (1959), the \\$___ group showed MORE attitude change because of insufficient justification', answer: '1' },
-          { label: 'Foot-in-the-door works through the principle of ___ (wanting actions to align)', answer: 'consistency' }
+          { label: 'In Festinger & Carlsmith (1959), the \\$___ group showed MORE attitude change because of insufficient justification', answer: '1', acceptableAnswers: ['$1', 'one', '1 dollar'] },
+          { label: 'Foot-in-the-door works through the principle of ___ (wanting actions to align)', answer: 'consistency', acceptableAnswers: ['commitment', 'consistency principle', 'commitment and consistency'] }
         ]
       }
     },

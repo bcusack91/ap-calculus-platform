@@ -45,7 +45,7 @@ export const englitNarrationPovPart1Data = {
     {
       id: "englitna1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the term for each description.\n\n1) The perspective from which a story is told (three words): _______\n\n2) The degree of trust a reader can place in the narrator's account: _______\n\n3) The closeness between the narrator and the events: _______",
       exercise: {
       "boxes": 3,
       "correctAnswers": [
@@ -53,6 +53,7 @@ export const englitNarrationPovPart1Data = {
             "reliability",
             "distance"
       ],
+      "acceptableAnswers": [["POV", "perspective"], [], ["narrative distance"]],
       "hint1": "Concept 1: Point of View",
       "hint2": "Concept 2: Reliability",
       "hint3": "Concept 3: Distance",

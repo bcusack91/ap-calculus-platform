@@ -134,7 +134,7 @@ EK 1.9.A.1-2: dividing power between national and state governments creates MULT
       exercise: {
         dropdowns: [
           {
-            label: "Restricts federal action only (until selective incorporation begins 1925) and was originally the only constitutional protection of individual liberty: the ___.",
+            label: "Restricts federal action only (until selective incorporation begins 1925) and was added as a concession to Anti-Federalist demands: the ___.",
             options: ['Bill of Rights (1791)', '14th Amendment (1868)', '10th Amendment (1791)', 'Necessary and Proper Clause']
           },
           {
@@ -142,7 +142,7 @@ EK 1.9.A.1-2: dividing power between national and state governments creates MULT
             options: ['Bill of Rights (1791)', '14th Amendment (1868)', '10th Amendment (1791)', 'Necessary and Proper Clause']
           },
           {
-            label: "Reserves to states all powers not delegated to federal government and not prohibited to states; centerpiece of modern federalism revival (Lopez 1995): the ___.",
+            label: "Reserves to states all powers not delegated to federal government and not prohibited to states; invoked in the modern federalism revival (Printz v. US 1997): the ___.",
             options: ['Bill of Rights (1791)', '14th Amendment (1868)', '10th Amendment (1791)', 'Necessary and Proper Clause']
           }
         ],

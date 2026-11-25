@@ -75,6 +75,7 @@ A researcher has power = 0.60 and doesn’t reject $H_0$.
       exercise: {
         boxes: 3,
         correctAnswers: ['60%', '0.40', 'no'],
+        acceptableAnswers: [['0.60', '0.6', '60', '60 percent'], ['40%'], []],
         hint1: 'Power = probability of detecting truth',
         hint2: '$\\beta = 1 - \\text{Power}$',
         hint3: 'Absence of evidence is not...',

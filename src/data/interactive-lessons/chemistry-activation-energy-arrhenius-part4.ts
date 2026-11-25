@@ -202,7 +202,7 @@ AP free-response questions often ask you to "explain, in terms of collisions" wh
             options: ['a taller curve', 'moving the Ea line to the left', 'moving the Ea line to the right', 'a curve shifted to higher energy']
           },
           {
-            label: 'Increasing the concentration of a reactant changes the fraction of collisions above Ea by',
+            label: 'Increasing the concentration of a reactant does what to the fraction of collisions above Ea?',
             options: ['increasing it', 'decreasing it', 'not changing it', 'doubling it']
           },
           {

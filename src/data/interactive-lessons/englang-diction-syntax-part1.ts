@@ -134,6 +134,7 @@ Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declarativ
       exercise: {
         boxes: 3,
         correctAnswers: ['choice', 'structure', 'parallelism'],
+        acceptableAnswers: [['selection'], ['arrangement', 'order'], ['tricolon', 'parallel structure', 'parallel syntax']],
         hint1: 'Which words are selected.',
         hint2: 'How those words are arranged.',
         hint3: 'Same grammatical pattern repeated.',

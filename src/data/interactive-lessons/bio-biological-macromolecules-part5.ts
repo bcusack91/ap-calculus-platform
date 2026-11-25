@@ -46,7 +46,7 @@ If a DNA sample is 30% adenine, then:
       exercise: {
         questions: [
           {
-            question: 'If a DNA strand is 22% guanine, what percentage is adenine?',
+            question: 'If a double-stranded DNA molecule is 22% guanine, what percentage is adenine?',
             options: [
               '22%',
               '28%',

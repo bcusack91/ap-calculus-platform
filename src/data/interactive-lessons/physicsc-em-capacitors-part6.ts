@@ -62,7 +62,7 @@ $Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
       content: `
 **Problem-Solving Workshop** 🧮
 
-1) 2 μF and 3 μF in series → 1.2 μF. In parallel with 5 μF → $C_{eq}$ (μF)? (Round to nearest integer.)
+1) 2 μF and 3 μF in series → 1.2 μF. In parallel with 5 μF → $C_{eq}$ (μF)? (Round to 1 decimal place.)
 
 2) $C_{eq} = 6.2$ μF, $V = 12$ V. $Q$ (μC)? (Round to nearest integer.)
 
@@ -71,11 +71,11 @@ $Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["6","74","50"],
-        hint1: "$1.2 + 5 = 6.2 \\approx 6$ μF.",
+        correctAnswers: ["6.2","74","50"],
+        hint1: "$1.2 + 5 = 6.2$ μF.",
         hint2: "$Q = CV = 6.2(12) \\approx 74$ μC.",
         hint3: "$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10^{-5})(10^4) = 0.05$ J.",
-        explanation: "1) $\\approx 6$ μF. 2) $\\approx 74$ μC. 3) $50$ mJ."
+        explanation: "1) $6.2$ μF. 2) $\\approx 74$ μC. 3) $50$ mJ."
       }
     },
     {

@@ -89,9 +89,9 @@ An SRS of size $n$ means every set of $n$ individuals has an **equal chance** of
 
 A school has 600 students: 200 freshmen, 150 sophomores, 150 juniors, and 100 seniors. A stratified sample of 60 students is taken proportionally.
 
-**1)** How many freshmen should be sampled? (200/600 × 60)
+**1)** How many freshmen should be sampled?
 
-**2)** How many seniors should be sampled? (100/600 × 60)
+**2)** How many seniors should be sampled?
 
 **3)** In a systematic sample of every 10th student from a list of 600, how many students are in the sample?
       `,

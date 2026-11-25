@@ -154,7 +154,7 @@ The other sections: 55 multiple-choice questions in 55 minutes (40 percent), one
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing Sinclair\'s purpose was to expose worker exploitation and build sympathy for socialism (not regulate food safety) is most useful for: ___",
+            label: "Knowing Sinclair wrote *The Jungle* to expose worker exploitation and build sympathy for socialism (not to regulate food safety) is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

@@ -81,7 +81,7 @@ $$\\sum F_r = ma_c = m\\frac{v^2}{r} = m\\omega^2 r$$
     {
       id: 'cm1-mcq2',
       type: 'mcq' as const,
-      question: 'A 0.5 kg ball on a 1.2 m string moves in a horizontal circle at 3 m/s. What is the tension in the string?',
+      question: 'A 0.5 kg ball on a 1.2 m string moves in a horizontal circle on a frictionless table at 3 m/s. What is the tension in the string?',
       options: [
         '$3.75$ N',
         '$7.5$ N',

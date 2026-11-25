@@ -215,14 +215,14 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
           },
           {
             id: 'hy-4-7-dd3',
-            label: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → _______ electron and molecular',
+            label: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → electron and molecular geometry:',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal pyramidal'],
             correctIndex: 1,
             explanation: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → trigonal planar electron and molecular geometry.'
           },
           {
             id: 'hy-4-7-dd4',
-            label: 'Adding a lone pair changes the steric number from 3 to 4',
+            label: 'An $sp^{2}$ atom that gains a lone pair goes from steric number 3 to 4, so its hybridization',
             options: ['Stays $sp^{2}$', 'Changes to $sp^{3}$', 'Changes to sp', 'Becomes unhybridized'],
             correctIndex: 1,
             explanation: 'Adding a lone pair changes the steric number from 3 to 4, changing the hybridization from $sp^{2}$ to $sp^{3}$.'

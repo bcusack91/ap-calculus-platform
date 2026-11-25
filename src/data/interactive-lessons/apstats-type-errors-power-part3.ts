@@ -76,11 +76,12 @@ A test has $\\beta = 0.25$.
 
 **2)** Is this power considered adequate by the 80% standard? (yes/no)
 
-**3)** Name one way to increase power without changing $\\alpha$.
+**3)** Without changing $\\alpha$, what can the researcher increase before collecting data to raise power?
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.75', 'no', 'increase sample size'],
+        acceptableAnswers: [['75%'], [], ['sample size', 'the sample size', 'increase the sample size', 'n', 'increase n', 'larger sample size', 'larger sample', 'a larger sample']],
         hint1: 'Power = $1 - \\beta$',
         hint2: 'Is $0.75 \\geq 0.80$?',
         hint3: 'More data means...',

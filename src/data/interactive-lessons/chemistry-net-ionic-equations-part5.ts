@@ -188,7 +188,7 @@ $$\\boxed{\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)}$$
       content: `
 **Acid-Base Classification** 🧮
 
-For each net ionic equation scenario, type **strong-strong**, **weak-strong**, or **strong-weak**.
+For each net ionic equation scenario, type **strong-strong**, **weak-strong**, or **strong-weak** (acid strength first, then base strength).
 
 **1)** HCl(aq) + NaOH(aq) → NaCl(aq) + $H_{2}O(l)$
 

@@ -156,7 +156,7 @@ In every case, the object accelerates because the **net external force on that o
       content: `
 **System and Object Analysis** 🧮
 
-A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system accelerates at 2 $m/s^{2}$.
+A person (80 kg) pushes a cart (40 kg) along level ground; friction on the cart's wheels is negligible. The person and cart accelerate together at 2 $m/s^{2}$.
 
 1) What is the net external force on the system (in N)?
 

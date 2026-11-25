@@ -97,6 +97,7 @@ Information placed online can be used in ways that were not intended: an email c
       exercise: {
         boxes: 3,
         correctAnswers: ["plagiarism", "all", "credit"],
+        acceptableAnswers: [[], [], ["attribution", "acknowledgment", "acknowledgement"]],
         hint1: "It may have legal consequences.",
         hint2: "Not just one stage.",
         hint3: "Attribution.",

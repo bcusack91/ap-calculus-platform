@@ -170,7 +170,7 @@ LSRL: $\\hat{y} = 5.2 + 1.3x$, $r = 0.85$
           {
             id: 'lr6-dd2',
             label: 'Intercept $= 50$. If $x = 0$ is outside the data range, the intercept ___',
-            options: ['is the predicted $y$ at $x = 0$', 'has no reasonable interpretation here', 'equals the mean of the $y$ values', 'gives the predicted change in $y$'],
+            options: ['is a reliable prediction of $y$ at $x = 0$', 'has no reasonable interpretation here', 'equals the mean of the $y$ values', 'gives the predicted change in $y$'],
             correctIndex: 1,
             explanation: 'When $x = 0$ falls outside the observed $x$ values, interpreting the intercept is an extrapolation. The mean of $y$ is $\\bar{y}$, and the change in $y$ is the slope.'
           },

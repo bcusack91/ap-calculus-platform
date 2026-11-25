@@ -177,7 +177,7 @@ export const govCivilRightsPart5Data = {
       exercise: {
         dropdowns: [
           {
-            label: "13th + 14th + 15th Amendments + Civil Rights Acts 1866 + 1875 + Civil Rights Cases 1883: ___",
+            label: "13th + 14th + 15th Amendments + Civil Rights Acts 1866 + 1875: ___",
             options: ['Reconstruction Era (1865-1877)', 'Jim Crow Era (1877-1954)', 'CRM Era (1954-1968)', 'Post-CRM Expansion (1968-2000s)', 'Marriage Equality + Backlash Era (2003-present)']
           },
           {

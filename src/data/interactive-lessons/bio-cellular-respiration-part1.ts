@@ -168,7 +168,7 @@ $$\\text{ATP} + \\text{H}_2\\text{O} \\longrightarrow \\text{ADP} + \\text{P}_i 
       exercise: {
         questions: [
           {
-            question: 'The electron carrier reduced during the earlier stages of respiration that delivers electrons to the ETC (abbreviation):',
+            question: 'The electron carrier reduced in glycolysis, pyruvate oxidation and the citric acid cycle that delivers electrons to the ETC (abbreviation):',
             answer: 'NADH',
             acceptableAnswers: ['NADH', 'nadh'],
             placeholder: 'e.g. FAD'

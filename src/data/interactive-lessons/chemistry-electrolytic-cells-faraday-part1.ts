@@ -165,14 +165,14 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
           },
           {
             label: 'The minimum voltage needed for electrolysis equals',
-            options: ['E°_cell (a negative number)', '|E°_cell| (its absolute value)', 'twice |E°_cell|', 'any small voltage']
+            options: ['E°cell (a negative number)', '|E°cell| (its absolute value)', 'twice |E°cell|', 'any small voltage']
           },
           {
             label: 'Electrons from the power source are pushed into the',
             options: ['cathode', 'anode', 'salt bridge', 'electrolyte']
           }
         ],
-        correctAnswers: ['anode', 'positive', '|E°_cell| (its absolute value)', 'cathode'],
+        correctAnswers: ['anode', 'positive', '|E°cell| (its absolute value)', 'cathode'],
         hint1: 'AN OX applies to all electrochemical cells.',
         hint2: 'Non-spontaneous reaction = ΔG > 0.',
         hint3: 'The applied voltage must overcome the unfavorable cell potential.',

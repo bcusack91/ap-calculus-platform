@@ -184,7 +184,7 @@ export const microLaborMarketsPart7Data = {
             explanation: 'Equilibrium is 600 − 20W = 30W − 150, so W = \\$15 and L = 300; the \\$18 floor binds. Employment is labor demanded: 600 − 20(18) = 240. Labor supplied is 390, so the surplus is 150, and 300 is the employment level before the floor.'
           },
           {
-            question: 'A country lets many more skilled software engineers immigrate. What happens to the wage and employment of software engineers already in that country\'s market?',
+            question: 'A country lets many more skilled software engineers immigrate. What happens to the market wage and total employment of software engineers in that country?',
             options: [
               'The market wage falls and total employment rises',
               'The market wage rises and total employment rises',

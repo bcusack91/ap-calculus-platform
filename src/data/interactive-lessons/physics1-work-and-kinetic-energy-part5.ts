@@ -105,7 +105,7 @@ Work can be negative, so power can be too. A force that points **opposite** the 
             explanation: 'Both do the same work ($W = mgh$, same mass and height). But Motor B does it in half the time, so $P_B = W/5$ vs. $P_A = W/10$. Motor B has twice the power.'
           },
           {
-            question: 'A car travels at constant velocity on a flat road against a drag force. If the car doubles its speed, the power required:',
+            question: 'A car travels at constant velocity on a flat road against a constant drag force. If the car doubles its speed, the power required:',
             options: [
               'Stays the same',
               'Twice as much',

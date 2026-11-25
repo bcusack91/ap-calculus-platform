@@ -125,7 +125,7 @@ $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(
 
 **2)** Calculate the molar solubility in 0.010 M NaOH, where $[\\text{OH}^-] = 0.010$ M comes from the fully dissociated NaOH. (Enter in scientific notation, e.g. 2.5e-9)
 
-**3)** In the 0.010 M NaOH, what percentage of the pure-water solubility remains? (Enter as a percentage, e.g. 0.005)
+**3)** In the 0.010 M NaOH, what percentage of the pure-water solubility remains? (Enter as a percentage, e.g. 0.37)
       `,
       exercise: {
         questions: [{ question: '1)', answer: '1.12e-4', acceptableAnswers: ['1.12e-4', '1.1e-4'] }, { question: '2)', answer: '5.6e-8', acceptableAnswers: ['5.6e-8'] }, { question: '3)', answer: '0.050', acceptableAnswers: ['0.050', '0.051'] }],

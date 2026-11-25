@@ -134,7 +134,7 @@ A 4 kg block at rest has a force applied to it. The force is +20 N from $t = 0$ 
       content: `
 **Problem 4: Bouncing Ball** 🏀
 
-A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward). It bounces back up at 6.0 m/s (upward). The contact time with the floor is 0.015 s. Take upward as positive.
+A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward). It bounces back up at 6.0 m/s (upward). The contact time with the floor is 0.015 s. Take upward as positive, and ignore the ball\'s weight during the brief contact.
 
 1) What is the impulse from the floor on the ball? (in N·s)
 

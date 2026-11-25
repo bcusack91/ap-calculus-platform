@@ -97,9 +97,9 @@ $$\\boxed{r = \\sqrt{x^2+y^2}, \\quad \\tan\\theta = \\frac{y}{x}}$$
       type: 'input-box' as const,
       content: '**Compute**',
       exercise: {
-        question: 'Convert the Cartesian point $(0, -5)$ to polar coordinates $(r, \\theta)$. What is $\\theta$ in radians as a multiple of $\\pi$? Enter as a fraction times $\\pi$ (e.g., enter "3/2" for $3\\pi/2$).',
+        question: 'Convert the Cartesian point $(0, -5)$ to polar coordinates $(r, \\theta)$. What is $\\theta$ in radians as a multiple of $\\pi$? Enter as a fraction times $\\pi$ (e.g., enter "5/4" for $5\\pi/4$).',
         correctAnswer: '3/2',
-        acceptableAnswers: ['3/2'],
+        acceptableAnswers: ['3/2', '3pi/2', '3/2pi', '3/2π', '-1/2', '-pi/2', '-1/2pi', '-1/2π'],
         hints: ['The point is on the negative $y$-axis.', '$r = 5$, $\\theta = 3\\pi/2$ (or $-\\pi/2$).'],
         explanation: '$r = \\sqrt{0+25} = 5$. The point $(0, -5)$ is on the negative $y$-axis: $\\theta = 3\\pi/2$.'
       }

@@ -122,7 +122,7 @@ KC-6.1.I.A: "New modes of communication—including radio communication, cellula
           {
             prompt: 'The innovation, introduced in 1956, that drastically cut shipping costs by standardizing cargo handling.',
             answer: 'containerization',
-            acceptableAnswers: ['containerization', 'shipping containers', 'container shipping', 'the shipping container'],
+            acceptableAnswers: ['containerization', 'containerisation', 'shipping containers', 'shipping container', 'container shipping', 'the shipping container', 'container', 'containers', 'intermodal container', 'intermodal containers'],
             hint: 'Standardized steel boxes that move between ships, trucks and trains.'
           }
         ]

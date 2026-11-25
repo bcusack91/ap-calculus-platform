@@ -137,7 +137,7 @@ Country V (illustrative data) has 10 million people. In one year it records 300,
 
 2) What is Country V's infant mortality rate per 1,000 live births?
 
-3) What is Country V's doubling time, in years?
+3) What is Country V's doubling time, in years? Round to one decimal place.
       `,
       exercise: {
         boxes: 3,

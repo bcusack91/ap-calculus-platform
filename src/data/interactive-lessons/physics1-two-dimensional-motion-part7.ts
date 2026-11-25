@@ -181,7 +181,7 @@ A cannon fires a shell at 50 m/s at 53° above horizontal from ground level. Use
       content: `
 **AP Free-Response Style** 📝
 
-A rescue helicopter hovers at 80 m altitude. It drops a supply package while a person on the ground is 120 m away horizontally. The package must be dropped with a horizontal velocity to reach the person. Use $g = 10$ $m/s^{2}$.
+A rescue helicopter flies level at 80 m altitude. It drops a supply package while a person on the ground is 120 m ahead horizontally. The package leaves with the helicopter's horizontal velocity and must land on the person. Use $g = 10$ $m/s^{2}$.
 
 1) Time for the package to fall 80 m (in seconds)
 

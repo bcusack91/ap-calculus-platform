@@ -104,15 +104,15 @@ The dot product $\\vec{v} \\cdot \\vec{a} = x'x'' + y'y''$ measures whether acce
           },
           {
             label: 'The particle is at rest at:',
-            options: ['Never (components zero at different times)', '$t = 2$', '$t = 5$', '$t = 3.5$'],
-            correctAnswers: ['Never (components zero at different times)'],
+            options: ['Never', '$t = 2$', '$t = 5$', '$t = 3.5$'],
+            correctAnswers: ['Never'],
             hints: ['Both components must be zero at the SAME time.'],
             explanation: '$x\'(t) = 0$ at $t = 2$, $y\'(t) = 0$ at $t = 5$. Different times, so never at rest.'
           },
           {
             label: 'At $t = 3$, $\\vec{v}(3) = \\langle 1, -2 \\rangle$, $\\vec{a}(3) = \\langle 1, 1 \\rangle$. The particle is:',
-            options: ['Slowing down ($\\vec{v} \\cdot \\vec{a} = 1 - 2 = -1 < 0$)', 'Speeding up', 'Moving at constant speed', 'At rest'],
-            correctAnswers: ['Slowing down ($\\vec{v} \\cdot \\vec{a} = 1 - 2 = -1 < 0$)'],
+            options: ['Slowing down', 'Speeding up', 'Moving at constant speed', 'At rest'],
+            correctAnswers: ['Slowing down'],
             hints: ['Compute $\\vec{v} \\cdot \\vec{a} = (1)(1) + (-2)(1)$.'],
             explanation: '$\\vec{v} \\cdot \\vec{a} = 1 - 2 = -1 < 0$, so slowing down.'
           }

@@ -47,7 +47,7 @@ export const precalcExamReviewPart3Data = {
 | the rule changes at certain inputs (fees, tax brackets, speed limits) | piecewise-defined |
 | domain restricted by the context | state the domain with the model: lengths positive, counts whole numbers |
 
-> **Key Fact:** For a hole, cancel first, then evaluate: $r(x) = \\dfrac{(x - 2)(x + 2)}{(x - 2)(x + 1)}$ has a hole at $\\left(2, \\dfrac{4}{3}\\right)$ and a vertical asymptote only at $x = -1$.`
+> **Key Fact:** For a hole, cancel first, then evaluate: $r(x) = \\dfrac{(x - 1)(x + 3)}{(x - 1)(x - 2)}$ has a hole at $(1, -4)$ and a vertical asymptote only at $x = 2$.`
     },
     {
       id: 'per3-mc',

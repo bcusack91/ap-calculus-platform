@@ -209,7 +209,7 @@ in.close();
 
 2) If the first line held \`3\` instead of \`5\`, what would \`vals[2]\` be? _______
 
-3) A different loop, \`while (in.hasNext()) { in.next(); count++; }\`, runs on the original file with count starting at 0. What is count at the end? _______
+3) A different loop, \`while (in.hasNext()) { in.next(); count++; }\`, runs on a new Scanner for the original file with count starting at 0. What is count at the end? _______
       `,
       exercise: {
         boxes: 3,

@@ -163,7 +163,7 @@ export const govPresidencyPart4Data = {
             hint: 'Passed after Nixon withheld appropriated funds.'
           },
           {
-            prompt: "Approximate number of staff in the modern Executive Office of the President (EOP) — round to the nearest hundred.",
+            prompt: "Approximate number of staff in the modern Executive Office of the President (EOP), as given in the lesson table — round to the nearest hundred.",
             answer: '1800',
             acceptableAnswers: ['1800', '~1800', '1,800', '~1,800'],
             hint: 'EOP grew from ~50 (1939, when created by Brownlow Committee) to nearly 2000 modern.'

@@ -71,7 +71,7 @@ $\\alpha = \\tau / I = 10 / 0.5 = 20$ $rad/s^{2}$ ✅
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["20","10","2"],
+        correctAnswers: ["20","5","2"],
         hint1: "$\\tau = Fr = 10$ N·m. $\\alpha = \\tau/I = 10/0.5$.",
         hint2: "$\\alpha = \\tau/I$.",
         hint3: "Final $\\omega = 4(3) = 12$ rad/s. Then $t = \\omega/\\alpha = 12/6$.",

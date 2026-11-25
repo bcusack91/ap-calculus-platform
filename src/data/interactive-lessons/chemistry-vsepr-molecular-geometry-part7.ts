@@ -71,9 +71,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             explanation: '$BeCl_{2}$ has 2 electron domains → linear → bond angle = 180°.'
           },
           {
-            label: 'Approximate bond angle in $H_{2}S$ (bent, from tetrahedral parent, in degrees; use ideal tetrahedral value)',
+            label: 'Ideal angle of the tetrahedral parent geometry of bent $H_{2}S$ (in degrees)',
             correctAnswer: '109.5',
-            explanation: '$H_{2}S$ has steric number 4 (2 bonds + 2 lone pairs) → bent geometry derived from tetrahedral. The ideal parent angle is 109.5° (actual is slightly less due to lone pair compression, but the ideal tetrahedral angle is the reference).'
+            explanation: '$H_{2}S$ has steric number 4 (2 bonds + 2 lone pairs) → bent geometry derived from tetrahedral. The ideal parent angle is 109.5° (the measured H–S–H angle is much smaller, about 92°, because the two lone pairs compress it; 109.5° is only the reference angle).'
           },
           {
             label: 'Equatorial bond angle in $PCl_{5}$ (trigonal bipyramidal, in degrees)',
@@ -97,35 +97,35 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
         dropdowns: [
           {
             id: 'vg-7-4-dd1',
-            label: '$BCl_{3}$ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric',
+            label: '$BCl_{3}$ has a trigonal planar geometry with 3 identical Cl atoms and 0 lone pairs on B.',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: '$BCl_{3}$ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric → nonpolar.'
           },
           {
             id: 'vg-7-4-dd2',
-            label: '$SCl_{2}$ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric',
+            label: '$SCl_{2}$ has a bent geometry (2 bonds + 2 lone pairs).',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: '$SCl_{2}$ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric → polar.'
           },
           {
             id: 'vg-7-4-dd3',
-            label: '$PCl_{5}$ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone...',
+            label: '$PCl_{5}$ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone pairs on P.',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: '$PCl_{5}$ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone pairs. Symmetric → nonpolar.'
           },
           {
             id: 'vg-7-4-dd4',
-            label: '$AsF_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric',
+            label: '$AsF_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair).',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: '$AsF_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric → polar.'
           },
           {
             id: 'vg-7-4-dd5',
-            label: '$XeF_{2}$ has a linear molecular geometry (2 bonds + 3 lone pairs',
+            label: '$XeF_{2}$ has a linear molecular geometry (2 bonds + 3 lone pairs).',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: '$XeF_{2}$ has a linear molecular geometry (2 bonds + 3 lone pairs, axial bonds). The two Xe–F dipoles cancel → nonpolar.'
@@ -220,6 +220,7 @@ AP Chemistry FRQs often ask you to:
           {
             label: 'Molecular geometry of $ClF_{5}$ (Cl: 5 bonds, 1 lone pair)',
             correctAnswer: 'square pyramidal',
+            acceptableAnswers: ['square pyramid', 'square-based pyramidal'],
             explanation: '$ClF_{5}$ has steric number 6 (5 bonds + 1 lone pair) → octahedral ED → square pyramidal molecular geometry.'
           },
           {
@@ -230,6 +231,7 @@ AP Chemistry FRQs often ask you to:
           {
             label: 'Molecular geometry of $SO_{2}$ (S: 2 double bonds, 1 lone pair)',
             correctAnswer: 'bent',
+            acceptableAnswers: ['V-shaped', 'angular'],
             explanation: '$SO_{2}$ has steric number 3 (2 bonds + 1 lone pair) → trigonal planar ED → bent molecular geometry.'
           }
         ]

@@ -34,7 +34,7 @@ export const whRevolutionsPart7Data = {
           {
             question: 'For an AP LEQ on 19th-century nationalism\'s methods and outcomes, which thesis earns the highest score?',
             options: [
-              'Nationalism failed in 1848 without armies but won through state-led wars in Germany and Italy, yielding authoritarian states',
+              'Nationalism failed in 1848 without armies but won through state-led wars in Germany and Italy, yielding conservative, elite-led states',
               'Nationalist movements of the 19th century succeeded nearly everywhere they arose, creating new democratic nations',
               'Nationalism produced democratic governments wherever it succeeded, as Germany and Italy both showed after 1871',
               'The 1848 revolutions and Bismarck\'s unification used the same methods and produced the same kinds of states',

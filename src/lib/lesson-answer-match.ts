@@ -50,6 +50,9 @@ export function normalizeSuperscripts(text: string): string {
 
 function normalizeForString(s: string): string {
   return normalizeSuperscripts(s)
+    // Accents never decide a typed answer: Köhler = Kohler, Popé = Pope, Mladić = Mladic.
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
     .trim()
     .toLowerCase()
     .replace(/\s+/g, '')

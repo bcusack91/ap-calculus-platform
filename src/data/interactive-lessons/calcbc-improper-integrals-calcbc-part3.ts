@@ -133,7 +133,7 @@ $$\\boxed{\\text{Every verdict comes from an antiderivative and a limit}}$$
       type: 'input-box' as const,
       content: '**$p$-Test Application**',
       exercise: {
-        question: 'For what value of $p$ does $\\int_1^{\\infty} \\frac{1}{x^p}\\,dx$ equal exactly $\\frac{1}{3}$? The formula gives $\\frac{1}{p-1} = \\frac{1}{3}$, so $p = ?$',
+        question: 'For what value of $p$ does $\\int_1^{\\infty} \\frac{1}{x^p}\\,dx$ equal exactly $\\frac{1}{3}$?',
         correctAnswer: '4',
         acceptableAnswers: ['4', '4.0'],
         hints: ['$\\frac{1}{p-1} = \\frac{1}{3}$ means $p - 1 = 3$.', 'So $p = 4$.'],

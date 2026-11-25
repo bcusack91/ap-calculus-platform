@@ -76,7 +76,7 @@ $$\\boxed{K_b(C_6H_5COO^-) = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{6.3
       content: `
 **Your Turn: Complete Analysis** 🧮
 
-Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
+Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$), including the 5% check:
 
 **1)** What is $[H^+]$? (Enter in scientific notation, e.g. 3.6e-4)
 
@@ -86,11 +86,11 @@ Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.2e-3', '2.09', '5.5'],
+        correctAnswers: ['8.0e-3', '2.10', '5.3'],
         hint1: '$[H^+] = \\sqrt{(4.5 \\times 10^{-4})(0.15)}$.',
         hint2: '$pH = -\\log[H^+]$.',
-        hint3: 'Percent = $[H^+]/C \\times 100$. Note: this may be close to 5%!',
-        explanation: '1) $[H^+] = \\sqrt{(4.5 \\times 10^{-4})(0.15)} = \\sqrt{6.75 \\times 10^{-5}} = 8.22 \\times 10^{-3}$ M. 2) $pH = -\\log(8.22 \\times 10^{-3}) = 2.09$. 3) $\\% = (8.22 \\times 10^{-3}/0.15) \\times 100 = 5.5\\%$. This exceeds 5%, so technically the quadratic should be used for more accuracy.'
+        hint3: 'The approximation gives 5.5%, which fails the 5% check, so solve $x^2 + (4.5 \\times 10^{-4})x - 6.75 \\times 10^{-5} = 0$ and use that $x$.',
+        explanation: '1) The approximation gives $\\sqrt{(4.5 \\times 10^{-4})(0.15)} = 8.22 \\times 10^{-3}$ M, which is 5.5% of 0.15 M and fails the 5% check. Solving $x^2 + (4.5 \\times 10^{-4})x - 6.75 \\times 10^{-5} = 0$ gives $[H^+] = 7.99 \\times 10^{-3} \\approx 8.0 \\times 10^{-3}$ M. 2) $pH = -\\log(7.99 \\times 10^{-3}) = 2.10$. 3) $\\% = (7.99 \\times 10^{-3}/0.15) \\times 100 = 5.3\\%$. Because the approximation failed the 5% check, the quadratic values are the answers.'
       }
     },
     {
@@ -178,7 +178,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
 **3)** What is the $pK_a$? (2 decimal places)
       `,
       exercise: {
-        questions: [{ question: '1)', answer: '1.9e-3', acceptableAnswers: ['1.9e-3', '1.91e-3'] }, { question: '2)', answer: '1.5e-5', acceptableAnswers: ['1.5e-5', '1.45e-5', '1.46e-5'] }, { question: '3)', answer: '4.84', acceptableAnswers: ['4.84', '4.83'] }],
+        questions: [{ question: '1)', answer: '1.9e-3', acceptableAnswers: ['1.9e-3', '1.91e-3'] }, { question: '2)', answer: '1.5e-5', acceptableAnswers: ['1.5e-5', '1.45e-5', '1.46e-5', '1.44e-5'] }, { question: '3)', answer: '4.84', acceptableAnswers: ['4.84', '4.83'] }],
         hint1: '$[H^+] = 10^{-pH} = 10^{-2.72}$.',
         hint2: '$K_a = [H^+]^2/C$ (using the approximation).',
         hint3: '$pK_a = -\\log K_a$.',

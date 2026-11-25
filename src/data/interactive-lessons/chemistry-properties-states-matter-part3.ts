@@ -320,6 +320,7 @@ Vapor pressure is the **pressure exerted by a vapor in equilibrium with its liqu
           {
             label: 'A liquid boils when its vapor pressure equals the _____ pressure (one word)',
             correctAnswer: 'atmospheric',
+            acceptableAnswers: ['external', 'surrounding', 'ambient', 'applied'],
             explanation: 'Boiling occurs when the vapor pressure of the liquid equals the external (atmospheric) pressure. This is why the boiling point changes with altitude.'
           }
         ]

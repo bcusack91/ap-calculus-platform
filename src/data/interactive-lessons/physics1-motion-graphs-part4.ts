@@ -127,7 +127,7 @@ If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
             explanation: 'A parabola\'s slope changes at a steady rate, so the velocity changes linearly: the $v$-$t$ graph is a straight line.'
           },
           {
-            label: '$v$-$t$ graph is a horizontal line → $x$-$t$ graph is a:',
+            label: '$v$-$t$ graph is a horizontal line at a nonzero value → $x$-$t$ graph is a:',
             options: ['horizontal line', 'straight line', 'parabola', 'curve'],
             correctIndex: 1,
             explanation: 'Constant velocity (horizontal $v$-$t$) means position changes linearly (straight line $x$-$t$).'

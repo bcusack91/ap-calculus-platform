@@ -43,7 +43,7 @@ export const hgIntroGeographyPart6Data = {
 | **Define** | The textbook definition | Use exact AP vocab |
 | **Describe** | A feature/pattern/trend in your own words | Must use quantitative or place-specific detail from the stimulus |
 | **Explain** | Why it happens — cause/effect | Must connect cause → effect with a connector word |
-| **Compare** | Similarities AND differences | Earn the point only if you say "both…" or "while X…, Y…" |
+| **Compare** | Similarities and/or differences | Earn the point only with an explicit comparison: "both…" or "while X…, Y…" |
 
 > ⚠️ **AP Alert:** A *describe* answer cites the stimulus; an *explain* answer adds **a mechanism** (because…, which leads to…). Confusing the two is the #1 lost-point error.
       `
@@ -121,7 +121,7 @@ When given any APHG map (choropleth, dot, isoline, flow-line, cartogram):
 
 2) Which AP verb requires citing direct evidence from a stimulus, but not necessarily explaining causes? (one word)
 
-3) Which AP verb requires both similarities and differences between two cases? (one word)
+3) Which AP verb asks for similarities and/or differences between two cases? (one word)
       `,
       exercise: {
         boxes: 3,
@@ -129,7 +129,7 @@ When given any APHG map (choropleth, dot, isoline, flow-line, cartogram):
         hint1: "Cause → effect language. \"Because…\"",
         hint2: "What you *see* in the stimulus.",
         hint3: "Both… while X… Y…",
-        explanation: "Explain = mechanism (cause/effect). Describe = use stimulus evidence. Compare = similarities AND differences (use 'both' / 'while')."
+        explanation: "Explain = mechanism (cause/effect). Describe = use stimulus evidence. Compare = similarities and/or differences (use 'both' / 'while')."
       }
     },
     {

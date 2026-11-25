@@ -29,8 +29,8 @@ export const physCEMCondPart7Data = {
       type: 'mcq' as const,
       question: 'A solid conductor has a cavity containing charge $+Q$. The conductor has net charge $-3Q$. The charge on the outer surface is:',
       options: ['$-4Q$', '$-3Q$', '$-2Q$', '$+Q$'],
-      correctAnswer: 0,
-      explanation: 'Inner cavity wall: $-Q$ (induced by $+Q$ in cavity). Total conductor charge: $-3Q$. Outer surface: $-3Q - (-Q) = -4Q$. Alternatively: outer surface = total conductor charge + (minus interior induced charge).'
+      correctAnswer: 2,
+      explanation: 'Inner cavity wall: $-Q$ (induced by $+Q$ in cavity). Total conductor charge: $-3Q$. Outer surface: $-3Q - (-Q) = -2Q$. Alternatively: outer surface = net conductor charge + charge in the cavity $= -3Q + Q = -2Q$.'
     },
     {
       id: 'ce7-worked1',

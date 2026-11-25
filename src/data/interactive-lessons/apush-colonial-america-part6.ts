@@ -156,7 +156,7 @@ From May 2027, all three SAQs are **required** and all are **sourced**: Q1 uses 
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing Penn's Frame of Government was published to recruit prospective European settlers (especially Quakers and German Pietists) is most useful for: ___",
+            label: "Knowing Penn's Frame of Government was written to be read by prospective European settlers (especially Quakers and German Pietists) is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           }
         ],

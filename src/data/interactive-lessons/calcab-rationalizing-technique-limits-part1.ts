@@ -104,9 +104,9 @@ Now you can substitute $x = 4$: $\\dfrac{1}{2 + 2} = \\dfrac{1}{4}$.
 
 Write down what each multiplication produces (use the difference-of-squares identity):
 
-**1)** $(\\sqrt{x} - 5)(\\sqrt{x} + 5) = ?$ (answer in form like \`x-25\`)
+**1)** $(\\sqrt{x} - 5)(\\sqrt{x} + 5) = ?$ (answer in form like \`x-16\`)
 
-**2)** $(\\sqrt{x + 7} - 3)(\\sqrt{x + 7} + 3) = ?$ (simplify completely; e.g. \`x-2\`)
+**2)** $(\\sqrt{x + 7} - 3)(\\sqrt{x + 7} + 3) = ?$ (simplify completely; e.g. \`x-6\`)
       `,
       exercise: {
         boxes: 2,

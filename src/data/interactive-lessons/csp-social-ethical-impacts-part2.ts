@@ -109,6 +109,7 @@ Bias is rarely intentional but always real. The CSP-aligned response is to test 
       exercise: {
         boxes: 3,
         correctAnswers: ["beneficial", "stakeholders", "bias"],
+        acceptableAnswers: [["positive", "helpful"], [], ["algorithmic bias", "discrimination"]],
         hint1: "Positive side.",
         hint2: "Affected parties.",
         hint3: "Unequal outcomes.",

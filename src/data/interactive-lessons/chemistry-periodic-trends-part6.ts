@@ -208,13 +208,13 @@ $$\\text{N}^{3-} > \\text{O}^{2-} > \\text{F}^- > \\text{Na}^+ > \\text{Mg}^{2+}
       type: 'input-box' as const,
       content: `### Ranking Exercises
 
-**1.** Rank the following isoelectronic species from **smallest to largest** radius: $K^{+}$, $Cl^{-}$, $Ca^{2+}$, $S^{2-}$. All have 18 electrons. Type your answer as symbols separated by commas (smallest first).
+**1.** Rank the following isoelectronic species from **smallest to largest** radius: $K^{+}$, $Cl^{-}$, $Ca^{2+}$, $S^{2-}$. All have 18 electrons. Type your answer as ion symbols separated by commas (smallest first), writing charges like "Al3+" or "N3-".
 
 **2.** Consider the pair $Mg^{2+}$ and $O^{2-}$. Both have 10 electrons. Which has the larger radius? (Type the ion, e.g., "Mg2+" or "O2-".)`,
       exercise: {
         inputs: [
           {
-            label: 'Smallest to largest $(18e^{-} series)$:',
+            label: 'Smallest to largest (18 $e^{-}$ series):',
             correctAnswer: 'Ca2+, K+, Cl-, S2-',
             explanation: 'All have 18 electrons. Proton counts: $Ca^{2+}$ = 20, $K^{+}$ = 19, $Cl^{-}$ = 17, $S^{2-}$ = 16. More protons = smaller radius. So $Ca^{2+}$ < $K^{+}$ < $Cl^{-}$ < $S^{2-}$.'
           },

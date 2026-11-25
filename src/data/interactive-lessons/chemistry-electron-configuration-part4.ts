@@ -156,7 +156,7 @@ What is the correct noble gas shorthand notation for phosphorus (P, Z = 15)?`,
       type: 'input-box' as const,
       content: `### Convert to Shorthand
 
-Convert the following full electron configurations to noble gas shorthand (e.g., [Ne] 3s2 3p5). A formatted preview will appear as you type.`,
+Convert the following full electron configurations to noble gas shorthand (e.g., [He] 2s2 2p4). A formatted preview will appear as you type.`,
       exercise: {
         inputs: [
           {
@@ -167,7 +167,8 @@ Convert the following full electron configurations to noble gas shorthand (e.g.,
           {
             label: 'Titanium — Full: 1s2 2s2 2p6 3s2 3p6 4s2 3d2',
             correctAnswer: '[Ar] 4s2 3d2',
-            explanation: 'Argon accounts for the first 18 electrons $(through 3p^{6})$. The remaining 4 electrons are $4s^{2}$ $3d^{2}$, giving [Ar] $4s^{2}$ $3d^{2}$.'
+            acceptableAnswers: ['[Ar] 3d2 4s2'],
+            explanation: 'Argon accounts for the first 18 electrons (through $3p^{6}$). The remaining 4 electrons are $4s^{2}$ $3d^{2}$, giving [Ar] $4s^{2}$ $3d^{2}$.'
           }
         ]
       }

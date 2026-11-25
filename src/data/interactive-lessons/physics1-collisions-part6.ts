@@ -140,7 +140,7 @@ A 4 kg ball at +6 m/s collides with a 2 kg ball at rest. Afterward the 4 kg ball
       content: `
 **Problem 4: Head-On Inelastic** 💥
 
-A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves at +1 m/s after.
+A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves at −2 m/s after.
 
 1) What is the velocity of the 3 kg ball after? (in m/s, include sign)
 
@@ -149,11 +149,11 @@ A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves a
 3) Is this collision elastic, inelastic, or perfectly inelastic? (type "elastic", "inelastic", or "perfectly inelastic")
       `,
       exercise: {
-        questions: [{ question: '1) Velocity of the 3 kg ball (m/s)', answer: '-1', acceptableAnswers: ['-1', '-1.0'] }, { question: '2) Kinetic energy lost (J)', answer: '90', acceptableAnswers: ['90', '90.0'] }, { question: '3) Collision type', answer: 'inelastic', acceptableAnswers: ['inelastic', 'inelastic collision', 'partially inelastic', 'it is inelastic'] }],
-        hint1: '$(5)(4) + (3)(-6) = (5)(1) + (3)(v_2)$. $20 - 18 = 5 + 3v_2$. $3v_2 = -3$.',
-        hint2: '$KE_i = \\frac{1}{2}(5)(16) + \\frac{1}{2}(3)(36) = 40 + 54 = 94$ J. $KE_f = \\frac{1}{2}(5)(1) + \\frac{1}{2}(3)(1) = 2.5 + 1.5 = 4$ J.',
+        questions: [{ question: '1) Velocity of the 3 kg ball (m/s)', answer: '4', acceptableAnswers: ['4', '4.0', '+4'] }, { question: '2) Kinetic energy lost (J)', answer: '60', acceptableAnswers: ['60', '60.0'] }, { question: '3) Collision type', answer: 'inelastic', acceptableAnswers: ['inelastic', 'inelastic collision', 'partially inelastic', 'it is inelastic'] }],
+        hint1: '$(5)(4) + (3)(-6) = (5)(-2) + (3)(v_2)$. $20 - 18 = -10 + 3v_2$. $3v_2 = 12$.',
+        hint2: '$KE_i = \\frac{1}{2}(5)(16) + \\frac{1}{2}(3)(36) = 40 + 54 = 94$ J. $KE_f = \\frac{1}{2}(5)(4) + \\frac{1}{2}(3)(16) = 10 + 24 = 34$ J.',
         hint3: 'Objects separate (not stuck together), and $KE_f < KE_i$.',
-        explanation: '1) $2 = 5 + 3v_2$. $3v_2 = -3$. $v_2 = -1$ m/s. 2) $KE_i = 40 + 54 = 94$ J. $KE_f = 2.5 + 1.5 = 4$ J. Lost = 90 J. 3) Objects separate and $KE_f < KE_i$, so inelastic.'
+        explanation: '1) $2 = -10 + 3v_2$. $3v_2 = 12$. $v_2 = +4$ m/s, so the balls move apart. 2) $KE_i = 40 + 54 = 94$ J. $KE_f = 10 + 24 = 34$ J. Lost = 60 J. 3) Objects separate and $KE_f < KE_i$, so inelastic.'
       }
     },
     {

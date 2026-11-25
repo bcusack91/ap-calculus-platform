@@ -109,7 +109,7 @@ $$U''(x) = 10 - 12x^2$$
     {
       id: 'cf6-mcq3',
       type: 'mcq' as const,
-      question: 'For $U(x) = 5x^2 - x^4$, a particle with $E = 6.25$ J released at $x = 0$ will:',
+      question: 'For $U(x) = 5x^2 - x^4$, a particle with $E = 6.25$ J starting at $x = 0$ will:',
       options: [
         'Approach $x = \\pm 1.58$ m, slowing to zero speed there',
         'Oscillate between about $x = -1$ and $x = 1$',

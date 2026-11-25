@@ -126,7 +126,7 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
         inputs: [
           { label: 'In Asch\'s study, approximately ___% of participants conformed at least once', answer: '75' },
           { label: 'Conforming to be liked/accepted is called ___ social influence', answer: 'normative' },
-          { label: 'Having just ONE ___ dramatically reduces conformity in Asch\'s paradigm', answer: 'dissenter' }
+          { label: 'Having just ONE ___ dramatically reduces conformity in Asch\'s paradigm', answer: 'dissenter', acceptableAnswers: ['dissenters', 'ally', 'partner', 'supporter', 'nonconformer', 'non-conformer', 'dissenting confederate'] }
         ]
       }
     },

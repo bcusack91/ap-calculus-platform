@@ -160,12 +160,12 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'A student calculates ΔG° = −20 kJ/mol at 298 K but finds Q = $10^{8}$. The forward reaction is:',
+            question: 'A student calculates ΔG° = −20 kJ/mol at 298 K but finds Q = $10^{8}$. Which way does the net reaction run?',
             options: [
-              'Favored, because ΔG° < 0 sets the direction',
+              'Forward, because ΔG° < 0 sets the direction',
               'Reverse, because Q is far greater than K',
               'At equilibrium, since both Q and K are very large',
-              'Favored, because a large Q pushes it forward'
+              'Forward, because a large Q pushes it forward'
             ],
             correctAnswer: 1,
             explanation: '$K = e^{20000/2478} = e^{8.07} \\approx 3200$. Since $Q = 10^8 \\gg K \\approx 3200$, the mixture has far more product than at equilibrium, so the net reaction proceeds in reverse until Q = K.'

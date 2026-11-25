@@ -72,7 +72,7 @@ export const aasReconstructionJimCrowPart2Data = {
             ]
           },
           {
-            "question": "What the family owes the merchant at settlement, in dollars",
+            "question": "The store account the merchant charges at settlement, with the 25% added, in dollars",
             "answer": "150",
             "acceptableAnswers": [
               "150",

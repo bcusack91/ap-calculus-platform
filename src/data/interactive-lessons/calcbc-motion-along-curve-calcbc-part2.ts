@@ -69,7 +69,7 @@ The particle travels distance $3\\pi \\approx 9.42$ along a semicircle but ends 
           },
           {
             question: 'For the same particle, the displacement magnitude is:',
-            options: ['$10$ (same as distance since path is a straight line)', '$14$', '$5$', 'Cannot determine'],
+            options: ['$10$', '$14$', '$5$', 'Cannot determine'],
             correctAnswer: 0,
             explanation: 'Displacement $= \\langle 8, 6 \\rangle$, $|\\langle 8,6 \\rangle| = \\sqrt{64+36} = 10$. Straight-line motion: distance = displacement magnitude.'
           },

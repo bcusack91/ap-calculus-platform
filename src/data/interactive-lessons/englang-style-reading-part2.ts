@@ -191,6 +191,7 @@ The second passage is not simply "negative." The squalid details mock the **shee
       exercise: {
         boxes: 3,
         correctAnswers: ['tone', 'mood', 'elegiac'],
+        acceptableAnswers: [[], [], ['mournful']],
         hint1: 'It belongs to the writer, not the reader.',
         hint2: 'It belongs to the reader, not the writer.',
         hint3: 'From the name of a poem of mourning, an elegy.',

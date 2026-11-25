@@ -109,7 +109,7 @@ Disinflation is **not** falling prices. In the example, the inflation rate fell 
             explanation: 'The inflation rate is (159 − 150) ÷ 150 × 100 = 6%. Treating the 9-point rise as 9% ignores the starting value, 59% measures change from the base year of 100, and 5.7% divides by the ending CPI instead of the starting one.'
           },
           {
-            question: 'Over three years, the annual inflation rate goes from 7% to 5% to 2%. During this period, the economy experienced',
+            question: 'Over three years, the annual inflation rate goes from 7% to 5% to 2%. Which statement describes this period?',
             options: [
               'The price level kept falling, so this is deflation',
               'The price level kept falling, so this is disinflation',

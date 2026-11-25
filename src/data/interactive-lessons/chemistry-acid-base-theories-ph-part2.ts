@@ -224,7 +224,7 @@ Identify the conjugate partners:
 
 **1)** What is the conjugate base of $H_2CO_3$? (Enter the chemical formula, e.g. Cl-)
 
-**2)** What is the conjugate acid of $PO_4^{3-}$? (Enter the chemical formula, e.g. H2SO4)
+**2)** What is the conjugate acid of $PO_4^{3-}$? (Enter the formula with the charge typed after it, e.g. SO42- for $SO_4^{2-}$)
 
 **3)** What is the conjugate base of $H_2O$? (Enter the chemical formula, e.g. F-)
       `,

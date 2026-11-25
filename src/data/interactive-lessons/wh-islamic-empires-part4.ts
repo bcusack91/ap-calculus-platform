@@ -205,6 +205,7 @@ CED 3.3 pairs the Islamic world with Europe, where **Martin Luther's** challenge
       exercise: {
         boxes: 3,
         correctAnswers: ['1699', 'Ibadat Khana', 'Amasya'],
+        acceptableAnswers: [[], ['Ibadat Khaneh', 'Ibadat Khanah', 'Ibadat Kahna', 'Ibadat-Khana'], ['Peace of Amasya', 'Treaty of Amasya', 'Amasia', 'Peace of Amasia']],
         hint1: 'One year before 1700.',
         hint2: 'It means "House of Worship."',
         hint3: 'It shares its name with a town in northern Anatolia; enter just the town.',

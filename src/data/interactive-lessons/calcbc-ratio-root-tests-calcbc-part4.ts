@@ -70,7 +70,7 @@ $R = \\infty$: converges for all $x$ (this is $e^x$).
           },
           {
             question: 'For $\\sum_{n=0}^{\\infty} \\frac{(2x)^n}{n!}$, $R =$',
-            options: ['$\\infty$ (converges for all $x$)', '$1/2$', '$2$', '$0$'],
+            options: ['$\\infty$', '$1/2$', '$2$', '$0$'],
             correctAnswer: 0,
             explanation: 'This is $e^{2x}$. $|a_{n+1}/a_n| = 2|x|/(n+1) \\to 0$ for any $x$. $R = \\infty$.'
           },

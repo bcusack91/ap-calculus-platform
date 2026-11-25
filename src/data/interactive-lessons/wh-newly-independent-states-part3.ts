@@ -136,7 +136,7 @@ export const whNewlyIndependentStatesPart3Data = {
           {
             prompt: 'The 1971 war in which East Pakistan separated from West Pakistan to form a new state, with Indian military intervention.',
             answer: 'Bangladesh Liberation War',
-            acceptableAnswers: ['Bangladesh Liberation War', 'Bangladesh War', 'Bangladesh War of Independence'],
+            acceptableAnswers: ['Bangladesh Liberation War', 'Bangladesh War', 'Bangladesh War of Independence', 'Bangladesh Independence War', 'Liberation War', 'Indo-Pakistani War of 1971', '1971 Indo-Pakistani War', 'Indo-Pakistan War of 1971'],
             hint: 'Created Bangladesh as an independent nation in 1971.'
           },
           {

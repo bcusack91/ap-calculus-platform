@@ -58,6 +58,7 @@ export const aasResistanceAbolitionPart1Data = {
           "Gradualism",
           "Immediatism"
         ],
+        "acceptableAnswers": [[], ["gradual emancipation", "gradual abolition"], ["immediate emancipation", "immediate abolition"]],
         "hint1": "Its 'conductors' and 'stations' borrowed the language of a new technology of the 1830s.",
         "hint2": "Pennsylvania's 1780 law, which freed children only at age 28, is an example of it.",
         "hint3": "It is the opposite of the answer to question 2; David Walker's *Appeal* had already demanded it in 1829.",

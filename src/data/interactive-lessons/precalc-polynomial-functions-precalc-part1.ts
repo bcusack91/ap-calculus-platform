@@ -208,15 +208,15 @@ A table has equally spaced inputs $x = 0, 1, 2, 3, 4$ and outputs $3, 5, 11, 21,
 
 **2)** What is the degree of the polynomial that produced this table?
 
-**3)** For the table $p(x) = 1, 2, 9, 28, 65$ above, what constant value do the third differences take?
+**3)** Another table with inputs $x = 0, 1, 2, 3, 4$ has outputs $0, 2, 16, 54, 128$. What constant value do the third differences take?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '2', '6'],
+        correctAnswers: ['4', '2', '12'],
         hint1: '$6 - 2$, $10 - 6$, $14 - 10$.',
         hint2: 'Constant $n$th differences means degree $n$.',
-        hint3: 'Second differences $6, 12, 18$; subtract neighbors.',
-        explanation: '1) The second differences are $4, 4, 4$. 2) Constant second differences means a quadratic, degree $2$ (the table is $2x^2 + 3$). 3) $12 - 6 = 6$ and $18 - 12 = 6$.'
+        hint3: 'First differences $2, 14, 38, 74$; second differences $12, 24, 36$; subtract neighbors.',
+        explanation: '1) The second differences are $4, 4, 4$. 2) Constant second differences means a quadratic, degree $2$ (the table is $2x^2 + 3$). 3) $24 - 12 = 12$ and $36 - 24 = 12$ (the table is $2x^3$).'
       }
     },
     {

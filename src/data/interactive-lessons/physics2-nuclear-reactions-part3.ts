@@ -139,7 +139,7 @@ In the D-T fusion reaction: $^2_1\\text{H} + ^3_1\\text{H} \\to ^4_2\\text{He} +
 
 **2)** Total charge number on the left side?
 
-**3)** Energy released = 17.6 MeV. In joules? ($1\\text{ MeV} = 1.6 \\times 10^{-13}$ J, answer in scientific notation like "2.82e-12")
+**3)** Energy released = 17.6 MeV. In joules? ($1\\text{ MeV} = 1.6 \\times 10^{-13}$ J, answer in scientific notation like "4.15e-11")
       `,
       exercise: {
         boxes: 3,

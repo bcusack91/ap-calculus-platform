@@ -95,7 +95,7 @@ export const englangClaimsEvidenceWritingPart4Data = {
             question: 'The commentary "A nobleman cannot object to a question addressed to him as \'my Lord\' without seeming to admit its point" is an example of which move?',
             options: [
               'interpreting the image',
-              'linking to the reader',
+              'connecting to the audience',
               'summarizing the passage',
               'identifying the device'
             ],

@@ -198,7 +198,7 @@ Match each Silk Road trade concept to its correct description.
           {
             question: 'How did the Silk Roads differ from the Indian Ocean trade network in their primary form of cultural exchange?',
             options: [
-              'The Silk Roads carried relatively more religion and ideas, the Indian Ocean more cargo',
+              'The Silk Roads carried more religion and ideas per unit of trade, the Indian Ocean far more cargo',
               'The Indian Ocean served mainly naval warfare, while the Silk Roads carried nearly all trade',
               'The Silk Roads moved far more total cargo by volume than all Indian Ocean shipping combined',
               'The Silk Roads and the Indian Ocean carried identical goods and spread identical religions'

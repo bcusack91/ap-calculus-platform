@@ -120,9 +120,9 @@ These components are always perpendicular, so we use the Pythagorean theorem.
 
 1) A wheel of radius 0.3 m rotates at 20 rad/s. What is the tangential speed of a point on the rim? (in m/s)
 
-2) A disk accelerates at $\\alpha = 4$ $rad/s^{2}$. What is the tangential acceleration of a point 0.5 m from the center? $(in m/s^{2})$
+2) A disk accelerates at $\\alpha = 4$ $rad/s^{2}$. What is the tangential acceleration of a point 0.5 m from the center? (in $m/s^{2}$)
 
-3) A point on a spinning wheel has tangential velocity 12 m/s and is 0.6 m from the center. What is the centripetal acceleration? $(in m/s^{2})$
+3) A point on a spinning wheel has tangential velocity 12 m/s and is 0.6 m from the center. What is the centripetal acceleration? (in $m/s^{2}$)
       `,
       exercise: {
         boxes: 3,

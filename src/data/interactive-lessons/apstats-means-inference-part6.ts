@@ -66,13 +66,18 @@ Name the correct procedure for each:
 
 **1)** Estimating the mean GPA of all students at a school based on a random sample of 50.
 
-**2)** Comparing mean test scores between students who used a study app vs. those who didn’t.
+**2)** Testing whether mean test scores differ between students who used a study app vs. those who didn’t.
 
 **3)** Testing whether a training program improved employees’ productivity (measured before and after).
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['one-sample t interval', 'two-sample t test', 'matched pairs t test'],
+        acceptableAnswers: [
+          ['one-sample t interval for a mean', 'one-sample t interval for the mean', 'one-sample t interval for a population mean', '1-sample t interval', 't interval', 't interval for a mean'],
+          ['two-sample t test for a difference in means', 'two-sample t test for the difference in means', 'two-sample t test for the difference of means', '2-sample t test', '2-sample t test for a difference in means'],
+          ['matched pairs t test for a mean difference', 'matched pairs t test for the mean difference', 'paired t test', 'paired t test on the differences', 'matched pairs t test (paired t test on the differences)', 'one-sample t test on the differences', 'paired t test for a mean difference']
+        ],
         hint1: 'One group, estimating $\\mu$',
         hint2: 'Two independent groups',
         hint3: 'Same people, before and after',

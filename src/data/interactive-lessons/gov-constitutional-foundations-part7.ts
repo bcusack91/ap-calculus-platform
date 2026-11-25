@@ -243,7 +243,7 @@ export const govConstitutionalFoundationsPart7Data = {
           {
             question: 'Which response best demonstrates the AP "alternative perspective" point for the same prompt?',
             options: [
-              "Supermajorities guard against rash changes such as Prohibition, which had to be repealed by the 21st Amendment",
+              "Supermajorities guard against rash changes and ensure that amendments reflect a broad, lasting national consensus",
               "Some people may disagree with this view, which shows that the question of amending the Constitution remains controversial today",
               "Judges should stop interpreting the Constitution, which would force Congress to propose more amendments under the Article V process",
               "The Article V process was copied from the Articles of Confederation, which required only a majority of states to approve amendments"

@@ -117,7 +117,9 @@ $$\\boxed{\\Delta EN = |EN_A - EN_B|}$$
 | $0$ | Nonpolar covalent | $\\text{H}_2$ ($\\Delta EN = 0$) |
 | $0.1 - 0.4$ | Slightly polar covalent | $\\text{C-H}$ ($\\Delta EN = 0.4$) |
 | $0.5 - 1.7$ | Polar covalent | $\\text{H-Cl}$ ($\\Delta EN = 0.9$) |
-| $> 1.7$ | Ionic | $\\text{NaCl}$ ($\\Delta EN = 2.1$) |
+| $> 1.7$ | Usually ionic (metal + nonmetal) | $\\text{NaCl}$ ($\\Delta EN = 2.1$) |
+
+> ⚠️ These cutoffs are only a rough guide. AP Chemistry classifies a bond between two nonmetals as **covalent**, even when $\\Delta EN$ is above 1.7, and a bond between a metal and a nonmetal as **ionic**.
 
 
 ---
@@ -177,13 +179,13 @@ The dipole arrow points **toward** the more electronegative atom.`
       type: 'input-box' as const,
       content: `### Bond Polarity Practice
 
-Calculate the electronegativity difference ($\\Delta EN$) for each bond and classify it. Use the values: H = 2.1, C = 2.5, O = 3.5, F = 4.0, Na = 0.9, Cl = 3.0.
+Calculate the electronegativity difference ($\\Delta EN$) for each bond. Use the values: H = 2.1, C = 2.5, O = 3.5, F = 4.0, Na = 0.9, Cl = 3.0.
 
-**1.** $\\text{C-O}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
+**1.** $\\text{C-O}$ bond: What is $\\Delta EN$? (Give your answer to one decimal place.)
 
-**2.** $\\text{Na-Cl}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
+**2.** $\\text{Na-Cl}$ bond: What is $\\Delta EN$? (Give your answer to one decimal place.)
 
-**3.** $\\text{C-H}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)`,
+**3.** $\\text{C-H}$ bond: What is $\\Delta EN$? (Give your answer to one decimal place.)`,
       exercise: {
         inputs: [
           {

@@ -120,6 +120,7 @@ ELSE
       exercise: {
         boxes: 3,
         correctAnswers: ["iteration", "arrow", "1"],
+        acceptableAnswers: [[], ["left arrow", "assignment arrow", "leftward arrow", "←", "assignment operator"], ["one", "once"]],
         hint1: "It means \"repetition\".",
         hint2: "A leftward-pointing symbol like ←.",
         hint3: "It is set when the loop begins.",

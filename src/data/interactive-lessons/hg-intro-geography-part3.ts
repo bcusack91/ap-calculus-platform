@@ -127,6 +127,7 @@ Use the exact term from the lesson.
       exercise: {
         boxes: 3,
         correctAnswers: ["Formal", "Functional", "MAUP"],
+        acceptableAnswers: [["Formal region", "Uniform", "Uniform region"], ["Functional region", "Nodal", "Nodal region"], ["Modifiable areal unit problem", "Modifiable Areal Unit Problem (MAUP)", "the modifiable areal unit problem"]],
         hint1: "Also called 'uniform.' One measurable trait across the area.",
         hint2: "Also called 'nodal.' Centered on a hub with distance decay.",
         hint3: "Acronym. Modifiable ___ ___ Problem.",
@@ -189,7 +190,7 @@ Use the exact term from the lesson.
       exercise: {
         questions: [
           {
-            question: "Census data show that the 'Rust Belt' has lost 1.4 million manufacturing jobs since 2000. The 'Rust Belt' as commonly mapped is BEST classified as a:",
+            question: "Census data show that the 'Rust Belt' has lost 1.4 million manufacturing jobs since 2000. The 'Rust Belt' as commonly mapped is BEST classified as:",
             options: [
               "A functional region organized around Detroit's auto plants",
               "A formal region defined by a shared decline in factory jobs",

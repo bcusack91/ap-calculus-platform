@@ -186,7 +186,7 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
       exercise: {
         dropdowns: [
           {
-            label: "ACLU — civil liberties + civil rights litigation; defends 1st Am, 4th Am, 14th Am rights regardless of speaker (including KKK Skokie 1977 + Citizens United): ___",
+            label: "ACLU — civil liberties + civil rights litigation; sides with liberals on most policy fights (abortion rights, immigrant rights, criminal-justice reform), though it has defended unpopular speakers such as the neo-Nazi Skokie march 1977: ___",
             options: ['Right (Republican-leaning)', 'Left (Democratic-leaning)', 'Bipartisan']
           },
           {
@@ -194,12 +194,12 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
             options: ['Right (Republican-leaning)', 'Left (Democratic-leaning)', 'Bipartisan']
           },
           {
-            label: "AARP — represents 50+ Americans; defends Social Security + Medicare (often aligns with Democrats on entitlement preservation but officially nonpartisan): ___",
+            label: "AARP — represents 50+ Americans; defends Social Security + Medicare (officially nonpartisan; endorses no candidates and lobbies both parties): ___",
             options: ['Right (Republican-leaning)', 'Left (Democratic-leaning)', 'Bipartisan']
           }
         ],
         correctAnswers: ['Left (Democratic-leaning)', 'Right (Republican-leaning)', 'Bipartisan'],
-        hint1: 'ACLU — left/Democratic-leaning on policy advocacy but defends civil liberties of all (KKK Skokie 1977 free speech + Citizens United 2010 corporate speech for nonprofit advocacy); roots in 1920 founding to defend WWI dissenters.',
+        hint1: 'ACLU — left/Democratic-leaning on policy advocacy but defends civil liberties of all (neo-Nazi Skokie march 1977 free speech + Citizens United 2010 corporate speech for nonprofit advocacy); roots in 1920 founding to defend WWI dissenters.',
         hint2: 'FEDERALIST SOCIETY — right/Republican-leaning; founded 1982; trains conservative law students; screens + recommends judicial nominees for Republican administrations; pipeline produced Roberts/Thomas/Alito/Gorsuch/Kavanaugh/Barrett.',
         hint3: 'AARP — bipartisan officially; ~38M members 50+; defends Social Security + Medicare; aligns with Dems on entitlement preservation; aligns with Reps on prescription drug coverage at times; powerful interest group given older voter turnout.'
       }

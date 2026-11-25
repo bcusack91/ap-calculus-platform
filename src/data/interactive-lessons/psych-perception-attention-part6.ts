@@ -65,12 +65,12 @@ This workshop applies all perception and attention concepts to AP-style scenario
             question: 'While watching a movie in a dimly lit room, the screen shows a bright outdoor scene. A character\'s white shirt appears white on screen despite your room being dark. However, the actual light emitted by the "white shirt" pixels is dimmer than a flashlight shone at the wall. This demonstrates:',
             options: [
               'Inattentional blindness — you don\'t notice the actual light levels on the screen',
-              'Color constancy — the brain judges color relative to on-screen lighting',
+              'Brightness constancy — the brain judges lightness relative to on-screen lighting',
               'Size constancy — on-screen objects keep their perceived size despite the screen\'s scale',
               'The Gestalt principle of figure-ground — the shirt stands out against the background'
             ],
             correctAnswer: 1,
-            explanation: 'Color constancy operates WITHIN the scene\'s context. Your brain processes the movie scene as a whole: the sky is bright, shadows are dark, so the shirt (being the brightest object relative to the on-screen context) is perceived as "white." Your visual system doesn\'t compare the shirt to your actual dark room — it compares it to the other elements in the scene. This is why movies "work" in dark theaters.'
+            explanation: 'Brightness constancy operates WITHIN the scene\'s context. Your brain processes the movie scene as a whole: the sky is bright, shadows are dark, so the shirt (being the brightest object relative to the on-screen context) is perceived as "white." Your visual system doesn\'t compare the shirt to your actual dark room — it compares it to the other elements in the scene. This is why movies "work" in dark theaters.'
           }
         ]
       }
@@ -117,7 +117,7 @@ A bank robbery occurs. The witness was texting when the robber entered (attentio
       `,
       exercise: {
         inputs: [
-          { label: 'A person misses a obvious stop sign while focused on GPS directions — this is ___ blindness', answer: 'inattentional' },
+          { label: 'A person misses an obvious stop sign while focused on GPS directions — this is ___ blindness', answer: 'inattentional' },
           { label: 'Railroad tracks appearing to converge in the distance is the monocular cue called linear ___', answer: 'perspective' },
           { label: 'After watching a horror movie, you perceive shadows as threats — this is a perceptual ___', answer: 'set' }
         ]

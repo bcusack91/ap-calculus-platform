@@ -66,7 +66,7 @@ This is a restoring force (like a spring with $k = 10$ N/m).
 
 2) A spring ($k = 200$ N/m) is compressed 1 m. Elastic PE (J)?
 
-3) If $U(x) = 5x^2$, what is $F(x)$ at $x = 1$? (Give the numerical value in N.)
+3) If $U(x) = 5x^2$, what is $F(x)$ at $x = 1$? (Give the value in N, including its sign.)
     
     `,
       exercise: {

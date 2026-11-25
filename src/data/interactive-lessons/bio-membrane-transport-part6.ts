@@ -43,7 +43,7 @@ A student fills a dialysis tubing bag (selectively permeable — allows water an
       exercise: {
         questions: [
           {
-            question: 'Why was glucose found in the beaker after 30 minutes even though it started at a higher concentration in the beaker?',
+            question: 'Glucose was still found in the beaker after 30 minutes, even though it had been diffusing into the bag. Which statement best explains this?',
             options: [
               'Starch leaked out and was broken down into glucose in the beaker',
               'Glucose moves both ways, but net movement was into the bag',
@@ -138,7 +138,7 @@ Since the potato is in a hypotonic solution at 0.2 M (gains mass), water enters.
           {
             question: 'In the potato experiment, the approximate sucrose concentration that is isotonic to the potato cells (in M):',
             answer: '0.38',
-            acceptableAnswers: ['0.38', '0.4', '0.38 M', '0.4 M', 'about 0.4'],
+            acceptableAnswers: ['0.38', '0.4', '0.38 M', '0.4 M', 'about 0.4', '0.378', '0.37', '0.39'],
             placeholder: 'e.g. 0.5'
           },
           {

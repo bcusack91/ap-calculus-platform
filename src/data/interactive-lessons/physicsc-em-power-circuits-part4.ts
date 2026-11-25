@@ -98,8 +98,8 @@ This equals the energy stored in the capacitor: $U_C = \\frac{1}{2}CV^2 = \\frac
       type: 'mcq' as const,
       question: 'Two identical resistors $R$ are in parallel, then connected in series with a third identical resistor $R$ and a battery $\\mathcal{E}$. The power dissipated in the series resistor compared to each parallel resistor is:',
       options: ['Twice as much', 'Four times as much', 'The same', 'Half as much'],
-      correctAnswer: 0,
-      explanation: 'Parallel pair has $R/2$, so $R_{\\text{eq}} = R + R/2 = 3R/2$. Current $I = 2\\mathcal{E}/(3R)$ flows through the series $R$. Each parallel resistor carries $I/2$. $P_{\\text{series}} = I^2 R$, $P_{\\text{each}} = (I/2)^2 R = I^2 R/4$. Ratio = $4:1$... Actually: $P_{\\text{series}} / P_{\\text{each}} = I^2 R / (I^2 R/4) = 4$. So it is four times. Let me reconsider: the series resistor carries $I$; each parallel carries $I/2$. $P_s = I^2R$, $P_p = (I/2)^2 R = I^2R/4$. Ratio = 4. The answer should be four times. But using $P=I^2R$ for series R and $P_{\\text{each parallel}} = (I/2)^2 R$, ratio is 4. However this needs checking — the answer is twice as much is wrong. The correct ratio is 4.'
+      correctAnswer: 1,
+      explanation: 'Parallel pair has $R/2$, so $R_{\\text{eq}} = R + R/2 = 3R/2$, and the full current $I = 2\\mathcal{E}/(3R)$ flows through the series $R$. Each parallel resistor carries $I/2$. $P_{\\text{series}} = I^2 R$ and $P_{\\text{each}} = (I/2)^2 R = I^2 R/4$, so the series resistor dissipates four times as much.'
     },
     {
       id: 'pwr4-summary',

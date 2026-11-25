@@ -147,7 +147,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
       exercise: {
         dropdowns: [
           {
-            label: "Knowing Columbus's October 1492 journal entries were written days after first contact and addressed to Ferdinand and Isabella is most useful for: ___",
+            label: "Knowing Columbus's October 1492 journal entries were written days after first contact, before any Spanish settlement existed, is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

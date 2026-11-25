@@ -222,7 +222,7 @@ Beyond the big three, AP pedigrees occasionally feature two less common modes. K
       exercise: {
         questions: [
           {
-            question: 'In a pedigree, an affected man has 3 affected daughters and 2 unaffected sons; the trait appears in every generation. His unaffected wife had an affected father. Which mode of inheritance is most consistent?',
+            question: 'In a pedigree, an affected man has 3 affected daughters and 2 unaffected sons; the trait appears in every generation. His unaffected wife has no family history of the trait. Which mode of inheritance is most consistent?',
             options: [
               'X-linked recessive',
               'X-linked dominant',

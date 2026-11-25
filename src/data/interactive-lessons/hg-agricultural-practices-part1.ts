@@ -111,6 +111,7 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
       exercise: {
         boxes: 3,
         correctAnswers: ['subsistence', 'commercial', 'Von Thunen'],
+        acceptableAnswers: [['subsistence agriculture'], ['commercial agriculture'], ['von Thünen', 'Thünen', 'Thunen', 'von Thuenen', 'Von Thunen Model', 'von Thünen Model']],
         hint1: 'The opposite of commercial farming.',
         hint2: 'Sold on markets for money.',
         hint3: 'Named after a German economist.',
@@ -178,7 +179,7 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
             explanation: 'Highways reduce transportation costs, extending the distance that perishable goods can profitably travel. This stretches the rings along the transportation corridor, distorting the concentric pattern.'
           },
           {
-            question: 'Which pair of agricultural practices would you most likely find in Stage 2 (developing) vs Stage 4 (developed) countries respectively?',
+            question: 'Which pair of agricultural practices would you most likely find in developing vs. developed countries respectively?',
             options: [
               'Commercial grain farming and pastoral nomadism',
               'Shifting cultivation and commercial dairy farming',
@@ -186,7 +187,7 @@ Johann von Thunen proposed that agricultural land use forms concentric rings aro
               'Livestock ranching and intensive subsistence farming'
             ],
             correctAnswer: 1,
-            explanation: 'Stage 2 developing countries rely on subsistence methods like shifting cultivation. Stage 4 developed countries use commercial, technology-intensive methods like dairy farming.'
+            explanation: 'Developing countries rely on subsistence methods like shifting cultivation. Developed countries use commercial, technology-intensive methods like dairy farming.'
           }
         ]
       }

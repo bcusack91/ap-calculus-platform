@@ -106,7 +106,7 @@ Symmetric about the $x$-axis (since $\\cos(-\\theta) = \\cos\\theta$).
       exercise: {
         question: 'For the cardioid $r = 1 + \\sin\\theta$, the maximum value of $r$ is $2$ and occurs at $\\theta = \\pi/2$. At what angle does $r = 0$? Express as a fraction times $\\pi$.',
         correctAnswer: '3/2',
-        acceptableAnswers: ['3/2'],
+        acceptableAnswers: ['3/2', '3pi/2', '3/2pi', '3/2π', '-1/2', '-pi/2'],
         hints: ['$1 + \\sin\\theta = 0$ when $\\sin\\theta = -1$.'],
         explanation: '$r = 0$ when $\\sin\\theta = -1$, which occurs at $\\theta = 3\\pi/2$.'
       }

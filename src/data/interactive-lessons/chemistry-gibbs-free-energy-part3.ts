@@ -165,7 +165,7 @@ Both methods give the same answer at 25°C.
 
 **2)** Is this reaction spontaneous under standard conditions? (type "yes" or "no")
 
-*Round all answers to 3 significant figures.*
+
       `,
       exercise: {
         boxes: 2,

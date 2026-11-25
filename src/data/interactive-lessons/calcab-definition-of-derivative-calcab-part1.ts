@@ -152,7 +152,7 @@ Answer: $f'(\\pi/6) = \\cos(\\pi/6) = \\frac{\\sqrt{3}}{2}$
           },
           {
             question: '$\\lim_{x \\to 5} \\frac{x^2 - 25}{x - 5}$ represents which derivative?',
-            options: ['$f\'(5)$ where $f(x) = x^2$', '$f\'(5)$ where $f(x) = x^2-25$', '$f\'(25)$ where $f(x) = x$', '$f\'(0)$ where $f(x) = x^2$'],
+            options: ['$f\'(5)$ where $f(x) = x^2$', '$f\'(10)$ where $f(x) = x^2$', '$f\'(25)$ where $f(x) = x$', '$f\'(0)$ where $f(x) = x^2$'],
             correctAnswer: 0,
             explanation: 'This is $\\frac{f(x) - f(5)}{x-5}$ where $f(x)=x^2$ and $f(5)=25$. So $f\'(5)=2(5)=10$.'
           }

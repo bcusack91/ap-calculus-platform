@@ -204,7 +204,7 @@ The nervous system explains the **instant** reaction. The endocrine system expla
             explanation: 'Ghrelin signals hunger, so blocking it should weaken hunger, especially before mealtimes. Trust relates to oxytocin and evening sleepiness to melatonin.'
           },
           {
-            question: 'Compared with a message carried by neurons, a message carried by the endocrine system typically:',
+            question: 'Compared with a message carried by neurons, how does a message carried by the endocrine system typically behave?',
             options: [
               'It acts faster and its effects fade sooner',
               'It acts faster and its effects also last longer',

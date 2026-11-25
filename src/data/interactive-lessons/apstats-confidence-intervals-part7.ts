@@ -170,7 +170,7 @@ export const apStatsConfIntPart7Data = {
           },
           {
             id: 'ci7-dd4',
-            label: 'Increasing $n$ from 100 to 400 will ___ the ME by a factor of',
+            label: 'Increasing $n$ from 100 to 400 has this effect on the ME: ___',
             options: ['Halve it', 'Quarter it', 'Double it', 'Leave it unchanged'],
             correctIndex: 0,
             explanation: '$ME \\propto 1/\\sqrt{n}$. Going from 100 to 400: $\\sqrt{100}/\\sqrt{400} = 10/20 = 0.5$. ME is halved.'

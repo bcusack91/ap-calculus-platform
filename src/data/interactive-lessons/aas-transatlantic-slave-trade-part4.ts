@@ -54,23 +54,23 @@ export const aasTransatlanticSlaveTradePart4Data = {
       exercise: {
         "questions": [
           {
-            "question": "1) What percent of all embarkations (1501–1866) took place in 1701–1800? (nearest whole percent, number only)",
-            "answer": "52",
+            "question": "1) What percent of all embarkations (1501–1866) took place in 1801–1866? (nearest whole percent, number only)",
+            "answer": "31",
             "acceptableAnswers": [
-              "52",
-              "52%",
-              "51.8",
-              "51.8%"
+              "31",
+              "31%",
+              "30.9",
+              "30.9%"
             ]
           },
           {
-            "question": "2) What percent of all embarkations were carried on British ships? (nearest whole percent, number only)",
-            "answer": "26",
+            "question": "2) What percent of all embarkations were carried on British or French ships combined? (nearest whole percent, number only)",
+            "answer": "37",
             "acceptableAnswers": [
-              "26",
-              "26%",
-              "26.0",
-              "26.0%"
+              "37",
+              "37%",
+              "37.1",
+              "37.1%"
             ]
           },
           {
@@ -86,9 +86,9 @@ export const aasTransatlanticSlaveTradePart4Data = {
           }
         ],
         "hint1": "Share = part ÷ whole, then multiply by 100.",
-        "hint2": "Britain's figure in Table C is 3.26 million; the total is 12.52 million.",
+        "hint2": "Add Britain's 3.26 million and France's 1.38 million from Table C, then divide by the 12.52 million total.",
         "hint3": "Deaths at sea = embarked − disembarked.",
-        "explanation": "6.49 ÷ 12.52 ≈ 0.52, so about 52 percent of embarkations took place in the 1700s. 3.26 ÷ 12.52 ≈ 0.26, so British ships carried about 26 percent. 12.52 − 10.70 = 1.82, so about 1.8 million people died at sea."
+        "explanation": "3.87 ÷ 12.52 ≈ 0.31, so about 31 percent of embarkations took place after 1800. (3.26 + 1.38) ÷ 12.52 = 4.64 ÷ 12.52 ≈ 0.37, so British and French ships together carried about 37 percent. 12.52 − 10.70 = 1.82, so about 1.8 million people died at sea."
       }
     },
     {

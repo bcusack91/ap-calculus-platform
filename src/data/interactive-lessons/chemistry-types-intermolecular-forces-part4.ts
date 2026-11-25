@@ -141,6 +141,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
           {
             label: 'A cation attracts the δ_____ end of a water molecule (+/-)',
             correctAnswer: '-',
+            acceptableAnswers: ['negative', 'minus'],
             explanation: 'A cation is positive, so it attracts the δ- (negative) end of water — the oxygen atom. Opposite charges attract.'
           }
         ]

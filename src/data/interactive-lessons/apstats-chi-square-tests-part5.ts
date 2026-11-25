@@ -113,7 +113,7 @@ Use the partial table above.
 
 **1)** $\\chi^2 = 6.0$, $df = 2$. Is $p$ less than or greater than 0.05? Enter "less" or "greater".
 
-**2)** $\\chi^2 = 10.5$, $df = 5$. The p-value is between which two table values? Enter the larger $\\alpha$ boundary (e.g., "0.10").
+**2)** $\\chi^2 = 10.5$, $df = 5$. The p-value is between which two table values? Enter the larger $\\alpha$ boundary (e.g., "0.025").
 
 **3)** For $df = 1$, what $\\chi^2$ value gives $p = 0.05$?
       `,

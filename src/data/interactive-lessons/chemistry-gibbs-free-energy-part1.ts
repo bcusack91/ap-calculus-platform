@@ -176,11 +176,11 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-114.9', '-50', '300'],
+        correctAnswers: ['-115', '-50', '300'],
         hint1: '$\\Delta G = -100 - (298)(0.050)$. Remember to convert $\\Delta S$ to kJ/K!',
         hint2: '$\\Delta G = 200 - (500)(0.500)$.',
         hint3: '$\\Delta G = 0 \\Rightarrow T = \\Delta H/\\Delta S = 30{,}000/100$.',
-        explanation: '1) $\\Delta G = -100 - (298)(0.050) = -100 - 14.9 = -114.9$ kJ. 2) $\\Delta G = 200 - (500)(0.500) = 200 - 250 = -50$ kJ (spontaneous at 500 K!). 3) $T = 30{,}000/100 = 300$ K.'
+        explanation: '1) $\\Delta G = -100 - (298)(0.050) = -100 - 14.9 = -114.9 \\approx -115$ kJ. 2) $\\Delta G = 200 - (500)(0.500) = 200 - 250 = -50$ kJ (spontaneous at 500 K!). 3) $T = 30{,}000/100 = 300$ K.'
       }
     },
     {

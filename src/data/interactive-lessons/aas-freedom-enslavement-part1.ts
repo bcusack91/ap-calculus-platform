@@ -58,6 +58,7 @@ export const aasFreedomEnslavementPart1Data = {
           "Black Laws",
           "Colonization"
         ],
+        "acceptableAnswers": [[], ["Black Codes"], ["American Colonization Society", "ACS", "colonization movement", "African colonization"]],
         "hint1": "Virginia's 1782 law made this easier; its 1806 law forced the people freed this way to leave the state.",
         "hint2": "They were the pre-Civil War, Northern relatives of the Black Codes of 1865–1866, and Ohio repealed most of them in 1849.",
         "hint3": "The society behind it founded the settlement that became Liberia; James Forten chaired the 1817 Philadelphia meeting against it.",

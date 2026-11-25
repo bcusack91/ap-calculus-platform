@@ -61,7 +61,7 @@ This is why a car protects you during a lightning strike — it's a conducting s
 ### 3. Charging by Induction
 - Bring a charged object **near** (but not touching) a conductor
 - Charge in the conductor **redistributes** (polarizes)
-- Ground the conductor → one sign of charge drains away
+- Ground the conductor → electrons flow between it and the ground (only electrons move in a metal)
 - Remove ground, then remove charged object
 - Result: conductor has charge **opposite** to the inducing object
 - **No contact needed!**
@@ -120,8 +120,8 @@ This is why a charged balloon sticks to a neutral wall!
         correctAnswers: ['only on the outer surface', 'zero', 'opposite sign to inducing charge'],
         hint1: 'Charges repel — they spread as far apart as possible.',
         hint2: 'If E ≠ 0 inside, charges would move, contradicting equilibrium.',
-        hint3: 'In induction, the grounding step drains away the same-sign charges.',
-        explanation: 'Conductors in equilibrium have zero internal field and surface-only charge. Induction produces opposite-sign charge because grounding removes the same-sign charges.'
+        hint3: 'In induction, grounding lets electrons flow to or from the ground; only electrons move in a metal.',
+        explanation: 'Conductors in equilibrium have zero internal field and surface-only charge. Induction produces opposite-sign charge because electrons flow to or from the ground while the inducing charge is near.'
       }
     },
     {
@@ -163,7 +163,7 @@ This is why a charged balloon sticks to a neutral wall!
               'Depends on the sphere size'
             ],
             correctAnswer: 1,
-            explanation: 'Charging by induction: (1) Rod polarizes sphere — negative charges move toward rod. (2) Grounding drains positive charges away. (3) Remove ground — negative charges are trapped. (4) Remove rod — sphere is left with net negative charge.'
+            explanation: 'Charging by induction: (1) Rod polarizes sphere — negative charges move toward rod. (2) Grounding lets electrons flow UP from the ground, pulled by the positive rod (only electrons move in a metal). (3) Remove ground — negative charges are trapped. (4) Remove rod — sphere is left with net negative charge.'
           },
           {
             question: 'Why is the electric field zero inside a conductor at electrostatic equilibrium?',

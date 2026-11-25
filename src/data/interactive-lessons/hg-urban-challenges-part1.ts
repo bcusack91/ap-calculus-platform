@@ -119,11 +119,11 @@ export const hgUrbanChallengesPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'Curitiba, Brazil rapid bus transit system is an example of ___',
+            label: 'Curitiba, Brazil\'s rapid bus transit system is an example of ___',
             options: ['Transit-oriented development', 'Edge city development', 'Gentrification', 'Suburban sprawl']
           },
           {
-            label: 'Portland urban growth boundary is an example of ___',
+            label: 'Portland\'s urban growth boundary is an example of ___',
             options: ['Smart growth', 'New Urbanism', 'Gentrification', 'Edge city development']
           },
           {

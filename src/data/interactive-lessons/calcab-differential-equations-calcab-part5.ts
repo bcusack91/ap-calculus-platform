@@ -65,7 +65,7 @@ Solving for $y$ (check: $y(0) = 8^{2/3} = 4$): $y = \\left(\\frac{3x^2}{4} + 8\\
             explanation: '$\\frac{dy}{y^2} = 2x\\,dx$. $-1/y = x^2+C$. $y(0)=1$: $C=-1$. $y = \\frac{1}{1-x^2}$.'
           },
           {
-            question: 'The domain of $y = \\frac{1}{1-x^2}$ from the previous problem is:',
+            question: 'The domain of the particular solution from the previous problem is:',
             options: ['All real numbers', '$-1 < x < 1$', '$-1 \\le x \\le 1$', '$x \\neq \\pm 1$'],
             correctAnswer: 1,
             explanation: '$y$ is undefined when $1-x^2 = 0$ ($x = \\pm 1$). Since $y(0)=1 > 0$ and the solution must be continuous on an interval containing $x = 0$, the domain is the open interval $(-1, 1)$: the endpoints are excluded, and the pieces with $|x| > 1$ are not reached by this solution.'

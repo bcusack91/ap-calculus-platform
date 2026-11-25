@@ -153,7 +153,7 @@ The sodium and sulfate ions end up as dissolved $\\text{Na}_2\\text{SO}_4$; the 
       content: `
 **Predict the Key Product** 🧮
 
-Type the formula of the requested product (no charges needed for neutral compounds; write charges as + or − after the formula, e.g. NH4+).
+Type the formula of the requested product (no charges needed for neutral compounds; write charges as + or − after the formula, e.g. Ca2+).
 
 **1)** $\\text{AgNO}_3(aq)$ is mixed with $\\text{NaBr}(aq)$. Silver bromide is insoluble. What is the precipitate?
 

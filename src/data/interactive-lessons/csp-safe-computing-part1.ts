@@ -125,6 +125,7 @@ Everything you do online creates a **digital footprint** — a trail of data inc
       exercise: {
         boxes: 3,
         correctAnswers: ['Identifiable', 'multi', 'footprint'],
+        acceptableAnswers: [[], ['two', '2', 'multiple'], []],
         hint1: 'PII = Personally ___ Information.',
         hint2: 'Multiple factors combined.',
         hint3: 'Like footprints in sand, but digital.',

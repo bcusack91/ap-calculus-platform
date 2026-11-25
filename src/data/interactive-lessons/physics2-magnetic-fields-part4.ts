@@ -158,7 +158,7 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
 
 1) A 0.50 m wire carrying 8.0 A is perpendicular to a 0.30 T field. What is the force on the wire (in N)?
 
-2) Two parallel wires carry 10 A each in the same direction, separated by 5.0 cm. What is the force per unit length between them (in N/m, use scientific notation like 4.0e-4)?
+2) Two parallel wires carry 10 A each in the same direction, separated by 5.0 cm. What is the force per unit length between them (in N/m, use scientific notation like 2.5e-3)?
 
 3) Do the wires in (2) attract or repel? (Type "attract" or "repel")
 

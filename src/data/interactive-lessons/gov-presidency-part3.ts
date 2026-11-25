@@ -195,7 +195,7 @@ None of the 14 required cases is mainly about presidential power; *United States
             hint: 'Reagan\'s second term; vote was 42-58.'
           },
           {
-            prompt: "Year of the 22nd Amendment limiting the President to two elected terms (in response to FDR's 4 terms).",
+            prompt: "Year the 22nd Amendment was ratified, limiting the President to two elected terms (in response to FDR's 4 terms).",
             answer: '1951',
             acceptableAnswers: ['1951'],
             hint: 'Two years before Korean War armistice (1953).'

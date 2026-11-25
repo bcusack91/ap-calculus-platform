@@ -111,7 +111,7 @@ Use $g = 10$ $m/s^{2}$.
 
 1) A 1200 kg car rounds a flat curve of radius 80 m. If $\\mu_s = 0.6$, what is the maximum speed before the car skids (in m/s, round to 3 significant figures)?
 
-2) A 0.2 kg ball on a 0.5 m string moves in a horizontal circle. If the tension in the string is 10 N, what is the ball's speed (in m/s)?
+2) A 0.2 kg ball on a 0.5 m string moves in a horizontal circle on a frictionless table. If the tension in the string is 10 N, what is the ball's speed (in m/s)?
 
 3) A coin on a turntable sits 0.15 m from the center. If $\\mu_s = 0.4$, what is the maximum rotation frequency before the coin slides (in Hz, round to 3 significant figures)?
       `,

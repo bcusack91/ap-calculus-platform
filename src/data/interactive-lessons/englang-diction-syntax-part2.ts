@@ -141,6 +141,7 @@ The speech as delivered:
       exercise: {
         boxes: 3,
         correctAnswers: ['denotation', 'infamy', 'coordination'],
+        acceptableAnswers: [[], [], ['simultaneity']],
         hint1: 'The opposite of connotation.',
         hint2: 'It means public disgrace.',
         hint3: '"Simultaneously" means the attacks happened at once, as if planned together.',

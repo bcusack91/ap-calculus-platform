@@ -135,12 +135,12 @@ This matches the binding energy of hydrogen\'s 1s electron, 13.6 eV (that is, $2
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['2.72', '73', '5', '985'],
+        correctAnswers: ['2.73', '73', '5', '985'],
         hint1: '$E_{\\text{photon}} = BE + KE$ where $BE = 2.18 \\times 10^{-18}$ J.',
         hint2: '$\\lambda = hc/E$.',
         hint3: '$E_{\\text{final}} = E_1 + 2.09 \\times 10^{-18}$ J. Compare with the table.',
         hint4: '$E_2 - E_1$ per atom, times $6.022 \\times 10^{23}$, divided by 1000.',
-        explanation: '1) $E_{\\text{ph}} = 2.18 \\times 10^{-18} + 5.45 \\times 10^{-19} = 2.725 \\times 10^{-18}$ J ≈ $2.72 \\times 10^{-18}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.725 \\times 10^{-18}) = 7.30 \\times 10^{-8}$ m = 73 nm. 3) $E_{\\text{final}} = (-2.18 \\times 10^{-18}) + (2.09 \\times 10^{-18}) = -9 \\times 10^{-20}$ J, which matches $E_5 = -8.72 \\times 10^{-20}$ J, so $n = 5$. 4) $E_2 - E_1 = 1.635 \\times 10^{-18}$ J per atom; $(1.635 \\times 10^{-18})(6.022 \\times 10^{23}) = 9.85 \\times 10^{5}$ J/mol ≈ 985 kJ/mol.'
+        explanation: '1) $E_{\\text{ph}} = 2.18 \\times 10^{-18} + 5.45 \\times 10^{-19} = 2.725 \\times 10^{-18}$ J ≈ $2.73 \\times 10^{-18}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.725 \\times 10^{-18}) = 7.30 \\times 10^{-8}$ m = 73 nm. 3) $E_{\\text{final}} = (-2.18 \\times 10^{-18}) + (2.09 \\times 10^{-18}) = -9 \\times 10^{-20}$ J, which matches $E_5 = -8.72 \\times 10^{-20}$ J, so $n = 5$. 4) $E_2 - E_1 = 1.635 \\times 10^{-18}$ J per atom; $(1.635 \\times 10^{-18})(6.022 \\times 10^{23}) = 9.85 \\times 10^{5}$ J/mol ≈ 985 kJ/mol.'
       }
     },
     {

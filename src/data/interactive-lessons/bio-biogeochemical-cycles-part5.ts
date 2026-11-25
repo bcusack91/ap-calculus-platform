@@ -40,12 +40,12 @@ Human activities have dramatically altered every major biogeochemical cycle. Sin
             question: 'The Haber-Bosch process has allowed humans to:',
             options: [
               'Remove excess nitrogen from the atmosphere',
-              'Fix more nitrogen industrially than all natural processes combined',
+              'Fix more nitrogen industrially than natural processes on land',
               'Eliminate the need for the nitrogen cycle',
               'Convert nitrogen directly into protein'
             ],
             correctAnswer: 1,
-            explanation: 'Industrial nitrogen fixation via the Haber-Bosch process now produces ~150 million tons of reactive nitrogen per year, exceeding total natural biological fixation (~140 million tons/year). This has enabled food production for billions but has created massive nitrogen pollution.'
+            explanation: 'Industrial nitrogen fixation via the Haber-Bosch process now produces ~150 million tons of reactive nitrogen per year, exceeding natural biological fixation on land (roughly 60–130 million tons/year). This has enabled food production for billions but has created massive nitrogen pollution.'
           }
         ]
       }

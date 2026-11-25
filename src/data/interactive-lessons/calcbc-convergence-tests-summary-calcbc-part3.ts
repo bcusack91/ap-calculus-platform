@@ -105,7 +105,7 @@ $$\\sum \\frac{1}{n(\\ln n)^p}: \\quad \\begin{cases} \\text{converges} & p > 1 
       type: 'input-box' as const,
       content: '**Integral Test Evaluation**',
       exercise: {
-        question: 'Evaluate $\\int_1^{\\infty} xe^{-x^2}\\,dx$. (This determines convergence of $\\sum ne^{-n^2}$.) Give answer as a fraction.',
+        question: 'Evaluate $\\int_1^{\\infty} xe^{-x^2}\\,dx$. (This determines convergence of $\\sum ne^{-n^2}$.) Give the exact value.',
         correctAnswer: '1/(2e)',
         acceptableAnswers: ['1/(2e)', '1/2e', '0.184'],
         hints: ['Let $u = x^2$, $du = 2x\\,dx$: $\\frac{1}{2}\\int_1^{\\infty} e^{-u}\\,du$.'],

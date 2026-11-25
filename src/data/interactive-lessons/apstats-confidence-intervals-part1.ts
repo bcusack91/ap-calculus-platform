@@ -84,7 +84,7 @@ A poll finds $\\hat{p} = 0.60$ with $n = 400$.
 
 **1)** Standard error $= \\sqrt{\\hat{p}(1-\\hat{p})/n} = \\sqrt{0.24/400}$. Round to 3 decimal places.
 
-**2)** For a 95% CI, the margin of error $= 1.96 \\times SE$. Round to 3 decimal places.
+**2)** For a 95% CI, the margin of error $= 1.96 \\times SE$, using the unrounded SE. Round to 3 decimal places.
 
 **3)** The 95% CI upper bound $= 0.60 + ME$. Round to 3 decimal places.
       `,

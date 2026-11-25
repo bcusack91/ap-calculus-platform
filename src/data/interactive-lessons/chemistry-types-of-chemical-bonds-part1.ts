@@ -256,21 +256,23 @@ When a force shifts one layer of the lattice, cations end up next to cations and
 
 Determine the charge on each ion formed and the formula of the resulting ionic compound.
 
-**1.** Calcium ($Z = 20$, Group 2) loses electrons to form a cation. What is the charge on the calcium ion? (Enter as a number, e.g., 2)
+**1.** Calcium ($Z = 20$, Group 2) loses electrons to form a cation. What is the charge on the calcium ion? (Enter as a number, e.g., 3)
 
-**2.** Fluorine ($Z = 9$, Group 17) gains electrons to form an anion. What is the charge on the fluoride ion? (Enter as a number, e.g., -1)
+**2.** Fluorine ($Z = 9$, Group 17) gains electrons to form an anion. What is the charge on the fluoride ion? (Enter as a number, e.g., -3)
 
-**3.** What is the ratio of Ca ions to F ions in calcium fluoride? (Enter as a ratio like 1:2)`,
+**3.** What is the ratio of Ca ions to F ions in calcium fluoride? (Enter as a ratio like 2:3)`,
       exercise: {
         inputs: [
           {
             label: 'Charge on Ca ion:',
             correctAnswer: '2',
+            acceptableAnswers: ['2+'],
             explanation: 'Calcium is in Group 2 with configuration $[\\text{Ar}]\\,4s^2$. It loses 2 valence electrons to form $\\text{Ca}^{2+}$.'
           },
           {
             label: 'Charge on F ion:',
             correctAnswer: '-1',
+            acceptableAnswers: ['1-'],
             explanation: 'Fluorine is in Group 17 with 7 valence electrons. It gains 1 electron to achieve a noble gas configuration, forming $\\text{F}^-$ (charge $-1$).'
           },
           {

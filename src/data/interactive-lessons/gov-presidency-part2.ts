@@ -177,7 +177,7 @@ export const govPresidencyPart2Data = {
             hint: 'Excludes Sundays — typically a bit less than two calendar weeks.'
           },
           {
-            prompt: "Constitutional fraction of EACH chamber required to override a presidential veto (e.g., '2/3').",
+            prompt: "Constitutional fraction of EACH chamber required to override a presidential veto (e.g., '3/4').",
             answer: '2/3',
             acceptableAnswers: ['2/3', 'two-thirds', 'two thirds'],
             hint: 'Same fraction as Senate treaty ratification.'

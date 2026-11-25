@@ -58,6 +58,7 @@ export const aasMovementsDebatesPart1Data = {
           "Pan-Africanism",
           "Emigration"
         ],
+        "acceptableAnswers": [[], [], ["emigrationism"]],
         "hint1": "Crenshaw compared discrimination to traffic where two roads cross.",
         "hint2": "The prefix means \"all\"; the term names the movement behind the 1900–1945 congresses.",
         "hint3": "The opposite of staying to claim citizenship; the word for leaving one's country to settle in another.",

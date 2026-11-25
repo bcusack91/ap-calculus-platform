@@ -115,7 +115,7 @@ $q_1 = +2.0\\ \\mu\\text{C}$, $q_2 = +8.0\\ \\mu\\text{C}$, separated by $r = 0.
 Use $k = 9.0 \\times 10^9$ $N\\cdot m^{2}/C^{2}$ (rounded for cleaner math).
 
 Enter in order:
-1) $|q_1 q_2|$ in $C^{2}$ (use scientific notation like \\$216e-12\`)
+1) $|q_1 q_2|$ in $C^{2}$ (use scientific notation like 3.5e-12)
 2) $r^2$ in $m^{2}$
 3) Force magnitude in N (to 3 significant figures)
       `,
@@ -216,7 +216,7 @@ Enter in order:
               'A factor of 100 (too big)',
               'A factor of 10,000 (too big)'
             ],
-            correctAnswer: 3,
+            correctAnswer: 1,
             explanation: 'Using r = 20 instead of r = 0.20 means $r^{2}$ = 400 instead of 0.04. Since $r^{2}$ appears in the denominator, the denominator is 10,000× too large, making F 10,000× too small.'
           },
           {

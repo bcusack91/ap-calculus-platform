@@ -320,7 +320,7 @@ For example, mixing $AgNO_{3}(aq)$ and $NaCl(aq)$ gives the possible pairings $N
 
 **3)** Using the same conditions as problem 2, how many grams of NaCl remain undissolved at the bottom?
 
-*Round all answers to 3 significant figures.*
+*Give each answer in grams to one decimal place.*
       `,
       exercise: {
         boxes: 3,

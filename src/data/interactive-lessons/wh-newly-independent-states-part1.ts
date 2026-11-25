@@ -62,7 +62,7 @@ export const whNewlyIndependentStatesPart1Data = {
           {
             question: 'Which structural inheritance most directly shaped the political problems of post-independence African states?',
             options: [
-              'Colonial borders drawn in the Scramble for Africa cut across ethnic and linguistic groups, leaving states whose peoples shared no common identity',
+              'Colonial borders drawn in the Scramble for Africa cut across ethnic and linguistic groups, leaving states whose peoples often shared no common national identity',
               'Borders under colonial rule closely followed precolonial ethnic and political lines, so most new African states began with ethnically uniform populations',
               'Colonial powers had built dense industrial economies in Africa, leaving new states diversified manufacturing bases ready for global competition',
               'New African states inherited functioning multi-party parliaments fully staffed by experienced African politicians and senior civil servants'
@@ -126,7 +126,7 @@ export const whNewlyIndependentStatesPart1Data = {
             options: ['multi-party democracy', 'one-party state', 'military regime', 'colonial administration']
           },
           {
-            label: 'Egypt after the 1952 Free Officers coup under Nasser is an example of: ___',
+            label: 'Egypt right after the 1952 Free Officers coup, ruled directly by the army\'s Revolutionary Command Council, is an example of: ___',
             options: ['multi-party democracy', 'one-party state', 'military regime', 'colonial administration']
           }
         ],

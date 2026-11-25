@@ -53,13 +53,13 @@ When atoms of two systems collide, energy is most likely to pass from the **high
           {
             question: 'The entropy of a system can decrease when:',
             options: [
-              'Energy leaves it and the surroundings gain at least as much',
+              'Energy leaves it and the surroundings gain at least as much entropy',
               'The system is perfectly isolated from its surroundings',
               'The system is left alone long enough to reach equilibrium',
               'The atoms in the system collide with one another'
             ],
             correctAnswer: 0,
-            explanation: 'A closed system can lose entropy when energy is transferred out of it, for example a gas cooled by its surroundings, but the surroundings gain at least as much. An isolated system can never lose entropy, and reaching equilibrium maximizes it.'
+            explanation: 'A closed system can lose entropy when energy is transferred out of it, for example a gas cooled by its surroundings, but the surroundings gain at least as much entropy. An isolated system can never lose entropy, and reaching equilibrium maximizes it.'
           }
         ]
       }

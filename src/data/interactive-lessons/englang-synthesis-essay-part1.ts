@@ -130,6 +130,7 @@ Recommended 40-minute plan:
       exercise: {
         boxes: 3,
         correctAnswers: ['idea', 'commentary', 'implications'],
+        acceptableAnswers: [['ideas', 'claim', 'claims', 'reason', 'reasons', 'theme', 'themes'], [], ['implication', 'significance', 'consequences']],
         hint1: 'Group by argument reason/theme.',
         hint2: 'Your explanation of meaning.',
         hint3: 'Why your argument matters going forward.',

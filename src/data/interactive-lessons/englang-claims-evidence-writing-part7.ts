@@ -143,6 +143,7 @@ Use the last three or four minutes of each essay to run this check. Fix the firs
       exercise: {
         boxes: 3,
         correctAnswers: ['defensible', '3', 'refine'],
+        acceptableAnswers: [['arguable', 'debatable'], ['three'], []],
         hint1: 'It can be argued for and against.',
         hint2: 'Row B for synthesis names a minimum number of sources.',
         hint3: 'The claim becomes more precise.',

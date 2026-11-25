@@ -144,7 +144,7 @@ Use Practice Data Set A for question 1. Questions 2 and 3 use new practice numbe
             explanation: '9 ÷ 60 = 0.15, and 0.15 × 100 = 15 percent.'
           },
           {
-            question: 'In the same practice study, identical twins show a concordance rate of 45 percent. How many percentage points higher is the identical-twin rate than the fraternal-twin rate of 15 percent?',
+            question: 'In the same practice study, identical twins show a concordance rate of 45 percent. How many percentage points higher is the identical-twin rate than the fraternal-twin rate you just calculated?',
             answer: '30',
             acceptableAnswers: ['30%', '30 percentage points', '30 points'],
             explanation: '45 − 15 = 30 percentage points, so identical twins are three times as likely to share the disorder, which suggests a genetic contribution.'

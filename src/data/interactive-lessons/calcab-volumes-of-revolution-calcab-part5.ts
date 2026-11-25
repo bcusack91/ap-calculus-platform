@@ -52,7 +52,7 @@ $$V = \\pi\\int_0^1(y^2-y^4)\\,dy = \\pi\\left[\\frac{y^3}{3}-\\frac{y^5}{5}\\ri
             explanation: '$R = y^2$. $V = \\pi\\int_0^2 y^4\\,dy = \\pi[\\frac{y^5}{5}]_0^2 = \\frac{32\\pi}{5}$.'
           },
           {
-            question: 'Rotate $y = \\sqrt{x}$ about $x = 4$ from $y=0$ to $y=2$. Use $dy$. Radius:',
+            question: 'Rotate the region between $y = \\sqrt{x}$ and $x = 4$, from $y=0$ to $y=2$, about $x = 4$. Use $dy$. Radius:',
             options: ['$R = 4-y^2$', '$R = y^2-4$', '$R = 4-\\sqrt{y}$', '$R = y^2$'],
             correctAnswer: 0,
             explanation: '$x = y^2$. Distance from $x=y^2$ to $x=4$ is $4-y^2$.'

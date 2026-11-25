@@ -164,7 +164,7 @@ $y = f(x-h)+k$ has domain $[a+h, b+h]$ and range $[c+k, d+k]$.
             correctAnswer: 1
           },
           {
-            label: 'The asymptote of $y = \\frac{1}{x-2}+3$ is:',
+            label: 'The horizontal asymptote of $y = \\frac{1}{x-2}+3$ is:',
             options: ['$y = 2$', '$y = 3$', '$y = -3$', '$y = 0$'],
             correctAnswer: 1
           }

@@ -116,7 +116,7 @@ export const whDarAlIslamPart7Data = {
           {
             question: 'Which best explains WHY Islamic trade networks were more commercially sophisticated than contemporary European trade c. 1200–1300?',
             options: [
-              'Muslim law offered partnership contracts and bills of exchange that Europe had not yet matched',
+              'Muslim law offered partnership contracts and bills of exchange that Europe was only beginning to adopt',
               'Muslim merchants sailed larger, faster ships than any that were built in Europe during the period',
               'The Quran commanded every Muslim to make a living through long-distance trade',
               'The Church banned European merchants from commerce of every kind until about 1300'

@@ -49,7 +49,7 @@ $$\\boxed{\\text{Try } u\\text{-sub first} \\to \\text{IBP} \\to \\text{Partial 
           {
             question: '$\\int x^2 e^{3x}\\,dx$ \u2014 best approach?',
             options: [
-              'Integration by parts (tabular method, 2 rows)',
+              'Integration by parts',
               '$u$-substitution with $u = 3x$',
               'Partial fractions',
               'Trig substitution'

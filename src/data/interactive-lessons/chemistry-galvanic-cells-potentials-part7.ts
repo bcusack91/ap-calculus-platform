@@ -178,7 +178,7 @@ $$\\boxed{\\Delta G^{\\circ} = -RT\\ln K}$$
       exercise: {
         questions: [
           {
-            question: 'A student builds a cell with Zn and Ag electrodes but connects the wire backward (Ag to the terminal where Zn should connect). What happens?',
+            question: 'A student builds a Zn/Ag cell and, thinking the wire has a direction, attaches its two ends to the electrodes the opposite way around. What happens?',
             options: [
               'Electrons flow from Ag to Zn instead',
               'No current flows, since the wiring is reversed',

@@ -333,7 +333,7 @@ System.out.println(sum);
           {
             question: 'Which change makes Segment A compile and print 012345?',
             options: [
-              'Declare i before the loop',
+              'Declare i before the loop, not in the header',
               'Change the condition in the header to i <= 5',
               'Replace i++ with i += 1 in the loop header',
               'Add int i; as the first line of the loop body'

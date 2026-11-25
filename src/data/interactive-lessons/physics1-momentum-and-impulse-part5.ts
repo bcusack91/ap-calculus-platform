@@ -91,7 +91,7 @@ The elastic cord stretches over several seconds, converting the jumper\'s moment
             explanation: 'The change in momentum (and impulse) is fixed — the occupant must stop regardless. The airbag increases the time over which this happens, which reduces the average force: $F = \\Delta p / \\Delta t$.'
           },
           {
-            question: 'Two cars crash at the same speed. Car A has a crumple zone that collapses over 0.5 m; Car B is rigid and stops in 0.05 m. How do the average forces compare?',
+            question: 'Two identical cars crash at the same speed. Car A has a crumple zone that collapses over 0.5 m; Car B is rigid and stops in 0.05 m. How do the average forces compare?',
             options: [
               'Car A experiences about 10× more force',
               'Car B experiences about 10× more force',

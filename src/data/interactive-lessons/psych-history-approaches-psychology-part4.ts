@@ -121,7 +121,7 @@ Extreme scores tend to be followed by scores closer to the average, and as more 
 
       1) Which measure of central tendency is best for skewed distributions?
 
-      2) What is the common cutoff for statistical significance? (format: p < 0.__)
+      2) What is the common cutoff for statistical significance? (type the full decimal, as in p < ____)
 
       3) What statistic tells you how LARGE a difference or relationship is? (two words)
 

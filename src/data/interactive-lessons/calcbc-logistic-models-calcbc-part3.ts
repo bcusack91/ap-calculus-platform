@@ -126,7 +126,7 @@ At $t \\approx 6.93$, the population is growing fastest: $dP/dt = kL/4 = 0.2(500
       type: 'input-box' as const,
       content: '**Inflection Time**',
       exercise: {
-        question: '$P(t) = 800/(1 + 7e^{-0.5t})$. At what time does the inflection point occur? Give your answer as $\\ln(7)/0.5$. Compute to one decimal place.',
+        question: '$P(t) = 800/(1 + 7e^{-0.5t})$. At what time does the inflection point occur? Round to one decimal place.',
         correctAnswer: '3.9',
         acceptableAnswers: ['3.9', '3.89', '3.891'],
         hints: ['$t = \\ln(A)/k = \\ln(7)/0.5$. $\\ln(7) \\approx 1.946$.'],

@@ -137,6 +137,7 @@ Part 1's misstated opposing view fits here too: the arguer builds a weaker versi
       exercise: {
         boxes: 3,
         correctAnswers: ['true', 'meaning', 'sample'],
+        acceptableAnswers: [['correct', 'sound', 'good', 'right', 'valid', 'wise'], [], []],
         hint1: 'Hypocrisy tells you about the speaker, not about whether exercise is good advice.',
         hint2: 'A legal right and being "right" (correct) are two different senses of one word.',
         hint3: 'The group of people actually surveyed.',

@@ -70,7 +70,7 @@ export const whMassAtrocitiesPart3Data = {
             question: 'Which feature most clearly distinguishes the Rwandan Genocide from earlier 20th-century cases of mass killing?',
             options: [
               'The use of industrial death camps with rail transport, modeled on the system the Nazis built in occupied Poland',
-              'The speed and decentralized neighbor-on-neighbor violence, mobilized by radio rather than run mainly by a central bureaucracy',
+              'The speed and mass civilian participation in neighbor-on-neighbor killing, mobilized by radio and local officials',
               'The absence of any political organization, since the killing arose spontaneously without direction from party or state leaders',
               'The absence of colonial-era ethnic categories, since Belgian rule had never classified Rwandans as Hutu or Tutsi'
             ],

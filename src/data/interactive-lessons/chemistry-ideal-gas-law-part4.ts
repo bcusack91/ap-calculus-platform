@@ -168,7 +168,7 @@ Use $R = 0.0821$ L·atm/(mol·K).
 
 **1)** A 1.56 g sample of gas occupies 1.00 L at 27°C and 1.00 atm. What is the molar mass? (in g/mol, to 3 significant figures)
 
-**2)** What is the density of $N_{2}$ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 3 significant figures)
+**2)** What is the density of $N_{2}$ ($M = 28.02$ g/mol) at 25°C (use $T = 298$ K) and 1.00 atm? (in g/L, to 3 significant figures)
 
 **3)** A gas has a density of 3.17 g/L at STP. What is its molar mass? (in g/mol, to 3 significant figures)
       `,
@@ -182,7 +182,7 @@ Use $R = 0.0821$ L·atm/(mol·K).
           {
             label: 'Density of $N_{2}$ (g/L)',
             correctAnswer: '1.15',
-            explanation: '$T = 298.15$ K. $d = PM/(RT) = (1.00)(28.02)/((0.0821)(298.15)) = 28.02/24.47 = 1.145 \\approx 1.15$ g/L.'
+            explanation: '$T = 298$ K. $d = PM/(RT) = (1.00)(28.02)/((0.0821)(298)) = 28.02/24.47 = 1.145 \\approx 1.15$ g/L.'
           },
           {
             label: 'Molar mass from density (g/mol)',

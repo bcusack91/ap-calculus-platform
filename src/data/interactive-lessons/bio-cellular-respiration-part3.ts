@@ -159,7 +159,7 @@ $$\\text{Pyruvate} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{CO}_
           {
             question: 'The 2-carbon molecule that enters the citric acid cycle after pyruvate is oxidized:',
             answer: 'acetyl-CoA',
-            acceptableAnswers: ['acetyl-CoA', 'Acetyl-CoA', 'acetyl CoA', 'Acetyl CoA', 'acetyl coA'],
+            acceptableAnswers: ['acetyl-CoA', 'Acetyl-CoA', 'acetyl CoA', 'Acetyl CoA', 'acetyl coA', 'acetyl coenzyme A'],
             placeholder: 'e.g. lactate'
           },
           {

@@ -224,7 +224,7 @@ An AP comparison needs three moves: a **similarity**, a **difference**, and an *
       content: `
 **AP-Style Practice: Comparison** 🎯
 
-> "The old South rested everything on slavery and agriculture, unconscious that these could neither give nor maintain healthy growth."
+> "The old South rested everything on slavery and agriculture, unconscious that these could neither give nor maintain healthy growth. The new South presents a perfect democracy..."
 >
 > — Henry W. Grady, New York, December 21, 1886
       `,

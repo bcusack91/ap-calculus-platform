@@ -128,6 +128,7 @@ A model chloroplast with no thylakoids would have only its inner envelope membra
       exercise: {
         boxes: 3,
         correctAnswers: ['12', '9600', 'thylakoid'],
+        acceptableAnswers: [[], [], ['lumen', 'thylakoid space', 'thylakoid lumen', 'thylakoid interior', 'thylakoids']],
         hint1: 'Divide the thylakoid area by the envelope area.',
         hint2: 'Multiply the stacked area by the number of complexes per square micrometer.',
         hint3: 'Protons build up inside the membrane sacs, not in the surrounding stroma.',

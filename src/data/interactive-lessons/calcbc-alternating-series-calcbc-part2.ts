@@ -69,7 +69,7 @@ So **10 terms** give accuracy within $0.01$.
             explanation: 'Using 5 terms: error $\\le b_6 = 1/6! = 1/720$.'
           },
           {
-            question: 'How many terms of $\\sum (-1)^{n+1}/n$ are needed for error $< 0.001$?',
+            question: 'What is the smallest number of terms of $\\sum (-1)^{n+1}/n$ for which the alternating series error bound guarantees error $< 0.001$?',
             options: ['1000', '999', '1001', '100'],
             correctAnswer: 0,
             explanation: 'Need $1/(N+1) < 0.001$, so $N+1 > 1000$, meaning $N \\ge 1000$. Using $\\le$ instead of $<$ gives $999$; bounding by the last included term $1/N$ instead of the first omitted term $1/(N+1)$ gives $1001$. The alternating harmonic series converges slowly!'
@@ -111,7 +111,7 @@ So **10 terms** give accuracy within $0.01$.
       type: 'input-box' as const,
       content: '**Finding Number of Terms**',
       exercise: {
-        question: 'How many terms of $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n^3}$ are needed for error less than $0.001$?',
+        question: 'What is the smallest number of terms of $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n^3}$ for which the alternating series error bound guarantees error less than $0.001$?',
         correctAnswer: '10',
         acceptableAnswers: ['10'],
         hints: ['Need $1/(N+1)^3 < 0.001$, so $(N+1)^3 > 1000$.'],

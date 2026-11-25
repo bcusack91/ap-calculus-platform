@@ -189,7 +189,7 @@ The strongest thesis does not just name a feeling. It describes a **movement** (
             options: ['Row A', 'Row B', 'Row C', 'no row']
           },
           {
-            label: 'Specific evidence for every claim, consistently explained, earns ___ points in Row B',
+            label: 'Specific evidence for every claim, consistently explained, showing how several elements work together, earns ___ points in Row B',
             options: ['4', '3', '2', '1']
           },
           {

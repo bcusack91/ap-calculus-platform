@@ -108,8 +108,8 @@ $$= \\left(8 - \\frac{8}{3}\\right) + \\left(-3 - (-\\frac{16}{3})\\right) = \\f
       type: 'mcq' as const,
       question: 'A particle moves with $v(t) = 3t - 6$ for $0 \\le t \\le 4$. The total distance traveled is:',
       options: ['$10$', '$4$', '$8$', '$12$'],
-      correctAnswer: 0,
-      explanation: '$v = 0$ at $t = 2$. Distance $= \\int_0^2 |3t-6|\\,dt + \\int_2^4 (3t-6)\\,dt = \\int_0^2 (6-3t)\\,dt + \\int_2^4 (3t-6)\\,dt = [6t - \\frac{3t^2}{2}]_0^2 + [\\frac{3t^2}{2} - 6t]_2^4 = 6 + 4 = 10$.'
+      correctAnswer: 3,
+      explanation: '$v = 0$ at $t = 2$. Distance $= \\int_0^2 |3t-6|\\,dt + \\int_2^4 (3t-6)\\,dt = \\int_0^2 (6-3t)\\,dt + \\int_2^4 (3t-6)\\,dt = [6t - \\frac{3t^2}{2}]_0^2 + [\\frac{3t^2}{2} - 6t]_2^4 = 6 + 6 = 12$.'
     },
     {
       id: '1dkin4-definite',

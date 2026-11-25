@@ -61,7 +61,7 @@ If you show the setup AND get the wrong numerical answer:
         questions: [
           {
             question: 'Which statement about a correct FRQ answer written with no supporting work matches the official scoring guidelines?',
-            options: ['Some points accept it, not setup or justification points', 'It always earns full credit for every point in that part of the question', 'It never earns any credit, even on a calculator-active part', 'It earns credit only when the final value is fully simplified'],
+            options: ['It can earn some answer points, but not setup or justification points', 'It always earns full credit for every point in that part of the question', 'It never earns any credit, even on a calculator-active part', 'It earns credit only when the final value is fully simplified'],
             correctAnswer: 0,
             explanation: 'Recent scoring guidelines mark some answer points "with or without supporting work," while setup, justification, and "answer with supporting work" points need the work shown. So a bare correct answer can earn some credit but never all of it on a multi-point part, and answers need not be simplified to earn credit.'
           },

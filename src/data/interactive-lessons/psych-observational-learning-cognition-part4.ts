@@ -114,7 +114,7 @@ On the AP exam you may be asked to identify a learning process from a graph or t
       `,
       exercise: {
         inputs: [
-          { label: 'Who demonstrated insight learning with chimpanzees?', answer: 'Köhler' },
+          { label: 'Who demonstrated insight learning with chimpanzees?', answer: 'Köhler', acceptableAnswers: ['Kohler', 'Koehler', 'Wolfgang Köhler', 'Wolfgang Kohler', 'Wolfgang Koehler'] },
           { label: 'Learning through gradual repeated attempts is called ___ and error', answer: 'trial' },
           { label: 'Learning that happens without reinforcement and is not immediately evident is called ___ learning', answer: 'latent' }
         ]

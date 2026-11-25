@@ -52,14 +52,14 @@ The induced current doesn't oppose the flux itself — it opposes the **change**
 - Flux decreasing → $\\vec{B}_{\\text{ind}}$ is in the **same direction** as $\\vec{B}_{\\text{ext}}$
 
 ### Step 4: Use the right-hand rule to find the current direction.
-- Curl the fingers of your right hand in the direction of $\\vec{B}_{\\text{ind}}$ through the loop
+- Point the thumb of your right hand along $\\vec{B}_{\\text{ind}}$ through the loop
 - Your curled fingers point in the direction of the induced current
 
 ### Example: North pole of a magnet approaches a loop
 
 1. $\\vec{B}_{\\text{ext}}$ points toward the loop (from the N pole)
 2. Flux is **increasing** (magnet getting closer)
-3. $\\vec{B}_{\\text{ind}}$ must oppose → points **away** from the magnet
+3. $\\vec{B}_{\\text{ind}}$ must oppose → points **back toward** the magnet
 4. The loop acts like a magnet with its N pole facing the approaching magnet — it **repels** the magnet!
       `
     },
@@ -73,7 +73,7 @@ The induced current doesn't oppose the flux itself — it opposes the **change**
 - North pole approaches → flux into loop increases → induced current creates field pointing back at magnet → loop's near face becomes **North** → **repels** the magnet
 
 ### Magnet Retreating from a Loop
-- North pole moves away → flux into loop decreases → induced current creates field pointing toward magnet → loop's near face becomes **South** → **attracts** the magnet
+- North pole moves away → flux into loop decreases → induced current creates field pointing away from magnet (same direction as the magnet's field) → loop's near face becomes **South** → **attracts** the magnet
 
 ### Both Cases: The Loop Opposes the Motion!
 
@@ -100,13 +100,13 @@ By Lenz's Law, eddy currents always create forces that **oppose the relative mot
           {
             question: 'A magnet\'s south pole is pulled away from a conducting loop. The induced current in the loop will:',
             options: [
-              'Create a north pole facing the magnet (repel it)',
-              'Create a south pole facing the magnet (attract it)',
+              'Create a south pole facing the magnet (repel it)',
+              'Create a north pole facing the magnet (attract it)',
               'Create a north pole facing away from the magnet',
               'Not flow — south poles don\'t induce current'
             ],
             correctAnswer: 1,
-            explanation: 'S pole moving away → flux decreasing → induced field tries to maintain flux → field points toward the retreating S pole → loop creates a S pole on the near face → attracts the magnet, opposing its departure.'
+            explanation: 'S pole moving away → flux decreasing → induced field tries to maintain flux → field points toward the retreating S pole → loop\'s near face becomes a N pole → attracts the magnet\'s S pole, opposing its departure.'
           },
           {
             question: 'Why does Lenz\'s Law follow from conservation of energy?',

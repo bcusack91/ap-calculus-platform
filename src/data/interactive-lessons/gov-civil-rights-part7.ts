@@ -174,7 +174,7 @@ export const govCivilRightsPart7Data = {
           {
             prompt: "Required AP Gov SCOTUS case for civil rights (1954 desegregation case).",
             answer: 'Brown v. Board of Education',
-            acceptableAnswers: ['Brown v. Board of Education', 'Brown v. Board', 'Brown v Board of Education', 'Brown v Board', 'brown v. board of education', 'brown v. board'],
+            acceptableAnswers: ['Brown v. Board of Education', 'Brown v. Board', 'Brown v Board of Education', 'Brown v Board', 'brown v. board of education', 'brown v. board', 'Brown'],
             hint: 'Warren unanimous; overruled Plessy 1896 in education; "separate educational facilities are inherently unequal"; 14th Am Equal Protection.'
           },
           {

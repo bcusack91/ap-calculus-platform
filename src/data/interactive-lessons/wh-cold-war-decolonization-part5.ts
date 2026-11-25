@@ -120,13 +120,13 @@ export const whColdWarDecolonizationPart5Data = {
     {
       id: 'whcwd5-input',
       type: 'input-boxes' as const,
-      content: `**Term Sprint — phases and turning points`,
+      content: `**Term Sprint — phases and turning points**`,
       exercise: {
         questions: [
           {
             prompt: 'The 1972 U.S.-Soviet treaty that limited certain categories of strategic missiles — the first major arms-control achievement of détente.',
             answer: 'SALT I',
-            acceptableAnswers: ['SALT I', 'SALT 1', 'Strategic Arms Limitation Talks'],
+            acceptableAnswers: ['SALT I', 'SALT 1', 'SALT', 'Strategic Arms Limitation Talks', 'SALT I Treaty'],
             hint: 'Strategic Arms Limitation Talks; signed by Nixon and Brezhnev.'
           },
           {

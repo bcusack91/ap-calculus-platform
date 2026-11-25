@@ -229,7 +229,7 @@ A private helper method is allowed and keeps the four neighbor tests out of the 
             explanation: 'The example has only two interior locations, (1, 1) and (1, 2), and only (1, 1) is flat. The flat locations (0, 0) and (0, 1) are on the edge, so they are skipped.'
           },
           {
-            question: 'Part (a) creates the grid with new int[numRows][data.length]. What does heights look like for the example?',
+            question: 'Part (a) computes numCols as data.length instead of data.length / numRows. What does heights look like for the example?',
             options: [
               'Row 0 gets all 12 values and the other rows stay 0',
               'Each row gets 4 values, as before',

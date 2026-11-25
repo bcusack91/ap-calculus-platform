@@ -51,7 +51,7 @@ Lenz's law is a consequence of **conservation of energy**. If the induced curren
 
 A bar magnet with its N pole approaches a conducting loop:
 - External $B$ through the loop is **increasing** (field gets stronger as magnet approaches)
-- Induced $B$ opposes → points **away** from approaching magnet
+- Induced $B$ opposes → points **back toward** the approaching magnet (opposite to the magnet's field)
 - Current flows **counterclockwise** (viewed from the magnet's side) to create this opposing field
 - The loop acts like a magnet with its N pole facing the approaching N pole → repulsion
 
@@ -59,7 +59,7 @@ A bar magnet with its N pole approaches a conducting loop:
 
 The same magnet is pulled away:
 - Flux through the loop is **decreasing**
-- Induced $B$ supports → points **toward** the retreating magnet
+- Induced $B$ supports → points **away from** the retreating magnet (same direction as the magnet's field)
 - Current flows **clockwise** (viewed from the magnet's side)
 - The loop acts like a magnet with its S pole facing the retreating N pole → attraction
 

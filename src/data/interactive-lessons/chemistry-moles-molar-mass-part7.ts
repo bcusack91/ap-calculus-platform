@@ -164,7 +164,7 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot
 
 > **Given:** Cu = 63.55, S = 32.07, O = 16.00, H = 1.008
 
-**1)** Calculate the molar mass of $CuSO_{4}\\cdot 5H_{2}O$ in g/mol. (to 3 significant figures)
+**1)** Calculate the molar mass of $CuSO_{4}\\cdot 5H_{2}O$ in g/mol. (to 2 decimal places)
 
 **2)** What is the percent by mass of water in $CuSO_{4}\\cdot 5H_{2}O$? (to 3 significant figures)
 
@@ -172,11 +172,11 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['249.70', '36.1', '1.001'],
+        correctAnswers: ['249.70', '36.1', '1.00'],
         hint1: '$M = 63.55 + 32.07 + 4(16.00) + 5[2(1.008) + 16.00]$.',
         hint2: '$\\%\\text{H}_2\\text{O} = \\frac{5 \\times 18.02}{M_{\\text{total}}} \\times 100$.',
         hint3: 'Find moles of the hydrate first ($50.0/M$), then multiply by 5 since there are 5 $H_{2}O$ per formula unit.',
-        explanation: '1) $M_{\\text{CuSO}_4} = 63.55 + 32.07 + 4(16.00) = 159.62$ g/mol. $M_{5\\text{H}_2\\text{O}} = 5 \\times [2(1.008) + 16.00] = 5(18.016) = 90.08$ g/mol. Total: $159.62 + 90.08 = 249.70$ g/mol. 2) $\\%\\text{H}_2\\text{O} = 90.08/249.70 \\times 100 = 36.1\\%$. 3) Moles of hydrate: $50.0/249.70 = 0.2002$ mol. Moles of $H_{2}O$: $5 \\times 0.2002 = 1.001$ mol.'
+        explanation: '1) $M_{\\text{CuSO}_4} = 63.55 + 32.07 + 4(16.00) = 159.62$ g/mol. $M_{5\\text{H}_2\\text{O}} = 5 \\times [2(1.008) + 16.00] = 5(18.016) = 90.08$ g/mol. Total: $159.62 + 90.08 = 249.70$ g/mol. 2) $\\%\\text{H}_2\\text{O} = 90.08/249.70 \\times 100 = 36.1\\%$. 3) Moles of hydrate: $50.0/249.70 = 0.2002$ mol. Moles of $H_{2}O$: $5 \\times 0.2002 = 1.00$ mol.'
       }
     },
     {

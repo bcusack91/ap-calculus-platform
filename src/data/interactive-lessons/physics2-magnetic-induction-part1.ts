@@ -102,7 +102,7 @@ A rectangular coil (20 turns, 0.1 m × 0.2 m) is in a $B = 0.5$ T field.
 
 **2)** Maximum total flux linkage through all 20 turns? (Wb)
 
-**3)** Flux when $\\theta = 30°$? (Wb, round to 3 decimal places)
+**3)** Total flux linkage through all 20 turns when $\\theta = 30°$? (Wb, round to 3 decimal places)
       `,
       exercise: {
         boxes: 3,

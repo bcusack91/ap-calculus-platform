@@ -165,7 +165,7 @@ $$\\int x^{-1}\\,dx = \\int \\frac{1}{x}\\,dx = \\ln|x| + C$$
     {
       id: 'anti1-input',
       type: 'input-box' as const,
-      content: '**Compute the coefficient.** ✍️',
+      content: '**Find the exponent.** ✍️',
       exercise: {
         question: 'If $\\int x^{n}\\,dx = \\frac{2}{5}x^{5/2} + C$, what is $n$?',
         correctAnswer: '3/2',

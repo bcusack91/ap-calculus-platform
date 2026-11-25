@@ -155,7 +155,7 @@ The other sections: 55 multiple-choice questions in 55 minutes (40 percent), one
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing the Omaha Platform's purpose was to demand free silver, graduated income tax, government ownership of railroads, and direct election of senators is most useful for: ___",
+            label: "Knowing the Omaha Platform was written to demand free silver, graduated income tax, government ownership of railroads, and direct election of senators is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

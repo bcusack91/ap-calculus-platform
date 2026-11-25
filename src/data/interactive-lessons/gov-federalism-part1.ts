@@ -120,7 +120,7 @@ Federalism is one of three principal forms of constitutional organization for di
             hint: 'Part of the Bill of Rights (ratified 1791); centerpiece of the modern federalism revival (Lopez 1995).'
           },
           {
-            prompt: "The constitutional clause that authorizes Congress to use 'all means which are appropriate' to its enumerated powers (Article I, § 8, clause 18): the ___ Clause (also called the Elastic Clause).",
+            prompt: "The constitutional clause that authorizes Congress to make all laws needed to carry out its enumerated powers (Article I, § 8, clause 18): the ___ Clause (also called the Elastic Clause).",
             answer: 'Necessary and Proper',
             acceptableAnswers: ['Necessary and Proper', 'necessary and proper', 'necessary and proper clause', 'elastic'],
             hint: 'The constitutional basis for IMPLIED federal powers — established in McCulloch v. Maryland (1819).'

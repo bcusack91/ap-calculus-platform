@@ -155,9 +155,9 @@ export const whReformMigrationPart2Data = {
             label: 'Italian (and other) emigrants who came seasonally, worked abroad, then returned home were called ___',
             options: [
             'Birds of passage',
-            'Seasonal migrants',
-            'Circular migrants',
-            'Return emigrants',
+            'Forty-Eighters',
+            'Indentured laborers',
+            'Displaced persons',
             ]
           },
           {

@@ -125,6 +125,7 @@ Strong: "This pattern matters because it concentrates financial risk in communit
       exercise: {
         boxes: 3,
         correctAnswers: ['control', 'precision', 'concession'],
+        acceptableAnswers: [['purpose'], ['specificity', 'clarity'], []],
         hint1: 'Writers control tone and emphasis intentionally.',
         hint2: 'Specific wording quality.',
         hint3: 'You acknowledge complexity before claim.',

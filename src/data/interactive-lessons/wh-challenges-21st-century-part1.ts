@@ -112,7 +112,7 @@ The CED's wording is precise: the release of greenhouse gases and pollutants "co
             hint: 'Named after the Japanese city where it was adopted.'
           },
           {
-            prompt: 'The UN scientific body created in 1988 to assess climate research for governments (initials: IPCC).',
+            prompt: 'The UN scientific body created in 1988 to assess climate research for governments.',
             answer: 'Intergovernmental Panel on Climate Change',
             acceptableAnswers: ['Intergovernmental Panel on Climate Change', 'IPCC'],
             hint: 'Its reports summarize what scientists know about climate change.'

@@ -119,7 +119,7 @@ export const apesBiomesSuccessionPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'An abandoned parking lot gradually being overtaken by weeds, then shrubs, then trees is ___',
+            label: 'An abandoned farm field gradually being overtaken by weeds, then shrubs, then trees is ___',
             options: ['Secondary succession', 'Primary succession', 'A climax community', 'Ecological resistance']
           },
           {
@@ -132,10 +132,10 @@ export const apesBiomesSuccessionPart1Data = {
           }
         ],
         correctAnswers: ['Secondary succession', 'Primary succession', 'Boreal forest'],
-        hint1: 'Soil already exists under the pavement.',
+        hint1: 'The plowed soil is still there.',
         hint2: 'Starting from bare rock — no prior soil.',
         hint3: 'Think Canada and Russia — spruce and pine.',
-        explanation: 'Parking lot = secondary (soil present). Bare rock after glacier = primary. Coniferous + cold = taiga/boreal forest.'
+        explanation: 'Abandoned field = secondary (soil present). Bare rock after glacier = primary. Coniferous + cold = taiga/boreal forest.'
       }
     },
     {

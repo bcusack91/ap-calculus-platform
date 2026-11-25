@@ -35,7 +35,7 @@ Craik and Lockhart (1972) proposed that how well something is remembered depends
       exercise: {
         questions: [
           {
-            question: 'While studying a list of neurotransmitters, Jamal notices that "dopamine" and "serotonin" both have three syllables and checks which names end in the same sound. According to the levels of processing model, how is he encoding the list?',
+            question: 'While studying a list of neurotransmitters, Jamal notices that "dopamine" and "glutamate" both have three syllables and checks which names end in the same sound. According to the levels of processing model, how is he encoding the list?',
             options: [
               'Structurally, by attending to the visual form of the printed names',
               'Phonemically, by attending to how each of the names is pronounced',

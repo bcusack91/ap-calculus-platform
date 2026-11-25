@@ -123,10 +123,10 @@ This film would appear **dark** in reflected visible light — it's between the 
             explanation: 'By energy conservation, wavelengths strongly reflected are weakly transmitted. Blue and orange are complementary colors.'
           },
           {
-            question: 'A film appears bright red ($\\lambda = 700$ nm) at $m = 0$ and also at $m = 1$. What other wavelength is also bright at $m = 1$ thickness?',
+            question: 'A soap film in air (one phase change) reflects bright red ($\\lambda = 700$ nm) at its $m = 0$ thickness and also at its $m = 1$ thickness. Which of these wavelengths is also constructively reflected at the $m = 1$ thickness?',
             options: ['None — only $\\lambda = 700$ nm is bright at $m = 1$', '$\\lambda = 233$ nm', '$\\lambda = 350$ nm', '$\\lambda = 1400$ nm'],
-            correctAnswer: 0,
-            explanation: 'At the $m = 1$ thickness ($3\\lambda/(4n)$ for 1 shift), only $\\lambda = 700$ nm satisfies the $m = 1$ condition. Other wavelengths would need different $m$ values to be constructive at this same thickness.'
+            correctAnswer: 1,
+            explanation: 'At the $m = 1$ thickness, $2nt = (1 + 1/2)(700) = 1050$ nm. With one shift, any $\\lambda = 1050/(m + 1/2)$ is bright: 2100, 700, 420, 300 and 233 nm. Of the choices only 233 nm ($m = 4$, ultraviolet) fits; 350 nm gives $1050/350 = 3$, a whole number, so it is dark, and 1400 nm gives 0.75. (420 nm violet is bright too, so the film is not purely red.)'
           }
         ]
       }

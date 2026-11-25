@@ -45,7 +45,7 @@ export const englitLongerFiction2Part1Data = {
     {
       id: "englitlo1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the term for each description.\n\n1) A secondary storyline that interacts with the main plot: _______\n\n2) Early clues about later developments: _______\n\n3) Sustained uncertainty and stakes that drive reader engagement (two words): _______",
       exercise: {
       "boxes": 3,
       "correctAnswers": [
@@ -53,6 +53,7 @@ export const englitLongerFiction2Part1Data = {
             "foreshadowing",
             "narrative tension"
       ],
+      "acceptableAnswers": [[], [], ["tension", "suspense"]],
       "hint1": "Concept 1: Subplot",
       "hint2": "Concept 2: Foreshadowing",
       "hint3": "Concept 3: Narrative Tension",

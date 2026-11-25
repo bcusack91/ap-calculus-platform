@@ -134,9 +134,9 @@ For a Cold War SAQ, structure each part as **Claim + Evidence + Connection**:
             hint: 'Hosted by Sukarno of Indonesia; founding moment of Third World identity.'
           },
           {
-            prompt: 'The 1987 location and speech in which Reagan demanded that Gorbachev "tear down this wall."',
+            prompt: 'The Berlin landmark where Reagan, in a 1987 speech, demanded that Gorbachev "tear down this wall."',
             answer: 'Brandenburg Gate',
-            acceptableAnswers: ['Brandenburg Gate', 'Berlin Wall', 'Berlin'],
+            acceptableAnswers: ['Brandenburg Gate', 'the Brandenburg Gate', 'Berlin Wall', 'Berlin'],
             hint: 'In West Berlin, at the historic gate facing East Berlin.'
           }
         ]
@@ -153,7 +153,7 @@ For a Cold War SAQ, structure each part as **Claim + Evidence + Connection**:
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: 'Knowing that the Bandung Final Communiqué was a joint statement of 29 Asian and African countries, many recently freed from colonial rule, is most useful for: ___',
+            label: 'Knowing that the Bandung Final Communiqué was written jointly by the governments of 29 Asian and African countries is most useful for: ___',
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

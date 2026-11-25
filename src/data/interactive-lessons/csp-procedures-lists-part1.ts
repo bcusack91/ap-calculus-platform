@@ -163,6 +163,7 @@ list[j] ← temp
       exercise: {
         boxes: 3,
         correctAnswers: ['end', 'left', 'temp'],
+        acceptableAnswers: [['back'], [], ['temporary']],
         hint1: 'Appending goes to the back.',
         hint2: 'They fill the gap left behind.',
         hint3: 'Temporarily holds one value during the swap.',

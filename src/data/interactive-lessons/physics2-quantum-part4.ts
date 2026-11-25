@@ -148,18 +148,18 @@ An electron confined in a box of length $L = 1$ nm.
 
 **2)** Energy of the $n = 3$ level? (in eV, round to 1 decimal place)
 
-**3)** Wavelength of photon emitted in $n=3 \\to n=1$ transition? (in nm, round to 1 decimal place)
+**3)** Wavelength of photon emitted in $n=3 \\to n=1$ transition? (in nm, use your unrounded energies and round to the nearest nm)
 
-**4)** If the box were 10× larger ($L = 10$ nm), what would $E_1$ be? (in eV, use scientific notation)
+**4)** If the box were 10× larger ($L = 10$ nm), what would $E_1$ be? (in eV, scientific notation, 2 significant figures)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['0.38', '3.4', '157.7', '3.8e-3'],
+        correctAnswers: ['0.38', '3.4', '412', '3.8e-3'],
         hint1: '$E_1 = (6.63 \\times 10^{-34})^2/(8 \\times 9.11 \\times 10^{-31} \\times (10^{-9})^2)$',
         hint2: '$E_3 = 9E_1$',
         hint3: '$\\lambda = hc/\\Delta E = 1240/(E_3 - E_1)$',
         hint4: '$E \\propto 1/L^2$, so 10× larger box → 100× smaller energy',
-        explanation: '1) $E_1 ≈ 6.02 \\times 10^{-20}$ J $≈ 0.38$ eV. 2) $E_3 = 9(0.38) ≈ 3.4$ eV. 3) $\\Delta E = 3.4 - 0.38 = 3.02$ eV, $\\lambda = 1240/3.02 ≈ 410.6$ nm (visible violet!). 4) $E_1 = 0.38/100 = 0.0038$ eV $= 3.8 \\times 10^{-3}$ eV — larger box means much smaller energy.'
+        explanation: '1) $E_1 ≈ 6.02 \\times 10^{-20}$ J $≈ 0.38$ eV. 2) $E_3 = 9(0.38) ≈ 3.4$ eV. 3) $\\Delta E = E_3 - E_1 = 8E_1 ≈ 3.01$ eV, $\\lambda = 1240/3.01 ≈ 412$ nm (visible violet!). 4) $E_1 = 0.38/100 = 0.0038$ eV $= 3.8 \\times 10^{-3}$ eV — larger box means much smaller energy.'
       }
     }
   ]

@@ -70,6 +70,7 @@ export const apStatsProbDistPart4Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ['no', 'yes', '68-95-99.7'],
+        acceptableAnswers: [[], [], ['Empirical Rule', 'the Empirical Rule', 'Empirical', '68-95-99.7 rule', 'the 68-95-99.7 rule', 'Empirical Rule (68-95-99.7 rule)', '68-95-99.7 (Empirical) Rule']],
         hint1: 'A Normal curve has a single peak.',
         hint2: 'Central Limit Theorem with large $n$',
         hint3: 'The Empirical Rule has three numbers',

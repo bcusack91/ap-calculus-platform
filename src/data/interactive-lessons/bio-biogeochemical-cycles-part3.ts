@@ -85,7 +85,7 @@ $$N_2 + 8H^+ + 8e^- + 16ATP \\rightarrow 2NH_3 + H_2 + 16ADP + 16P_i$$
 $$N_2 + 3H_2 \\xrightarrow{\\text{high T, P, catalyst}} 2NH_3$$
 - Requires ~450°C, 200 atm pressure, iron catalyst
 - Produces ~150 million tons of $NH_{3}/year$ for fertilizer
-- Humans now fix MORE nitrogen than all natural processes combined`
+- Humans now fix MORE nitrogen than all natural processes on land combined`
     },
     {
       id: 'bgc3-content3',
@@ -137,11 +137,11 @@ $$NO_3^- \\rightarrow NO_2^- \\rightarrow NO \\rightarrow N_2O \\rightarrow N_2$
             options: [
               'It was the first discovery of nitrogen gas',
               'It converts $NO_{3}^{-}$ to $N_{2}$, removing excess nitrogen',
-              'Industrial nitrogen fixation now exceeds all natural biological fixation combined',
+              'Industrial nitrogen fixation now exceeds all natural fixation on land combined',
               'It eliminates the need for nitrogen-fixing bacteria in agriculture'
             ],
             correctAnswer: 2,
-            explanation: 'The Haber-Bosch process (developed ~1913) produces ~150 million tons of ammonia per year for fertilizer. Humans now fix more reactive nitrogen than all natural processes combined, which has dramatically increased food production but also caused significant environmental problems (eutrophication, dead zones).'
+            explanation: 'The Haber-Bosch process (developed ~1913) produces ~150 million tons of ammonia per year for fertilizer. Humans now fix more reactive nitrogen than all natural processes on land combined, which has dramatically increased food production but also caused significant environmental problems (eutrophication, dead zones).'
           }
         ]
       }

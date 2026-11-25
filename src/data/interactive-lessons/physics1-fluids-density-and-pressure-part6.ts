@@ -103,7 +103,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
       exercise: {
         dropdowns: [
           {
-            label: 'A submerged plate is moved deeper. The force on it from the water:',
+            label: 'A horizontal plate is submerged and moved deeper. The force from the water on its top face:',
             options: ['Decreases, because water pressure spreads out with depth', 'Stays the same, since the plate is already fully submerged', 'Increases', 'Depends only on the plate\'s own weight'],
             correctIndex: 2,
             explanation: '$F = PA = (\\rho g h)A$. Greater depth means greater pressure, so the force on the same plate increases.'
@@ -115,7 +115,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
             explanation: 'Atmospheric pressure transmits to all depths via the water and acts on every face of the box → net cancellation.'
           },
           {
-            label: 'In a hydraulic system that lifts a 2000 N load with a 50 N input, the area ratio is:',
+            label: 'In a hydraulic system that lifts a 2000 N load with a 50 N input, the area ratio (output piston : input piston) is:',
             options: ['1:40', '40:1', '1:50', '50:1'],
             correctIndex: 1,
             explanation: '$F_2/F_1 = A_2/A_1 = 40 \\Rightarrow A_2:A_1 = 40:1$.'
@@ -138,7 +138,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
       exercise: {
         questions: [
           {
-            question: 'A square hatch (0.5 m × 0.5 m) is in the side of a tank, with its top edge 2.0 m below the surface and its bottom 2.5 m below. Average force from water on the hatch (g = 10) is:',
+            question: 'A square hatch (0.5 m × 0.5 m) is in the side of a tank, with its top edge 2.0 m below the surface and its bottom 2.5 m below. Total force from water on the hatch (g = 10) is:',
             options: [
               '~5.6 kN',
               '~2.5 kN',

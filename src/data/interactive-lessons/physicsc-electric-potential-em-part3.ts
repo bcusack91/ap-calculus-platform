@@ -86,7 +86,7 @@ Both directions appear on the AP exam; pick the easier path for the given inform
             explanation: '$E_x = -\\partial V/\\partial x = -6x$.'
           },
           {
-            question: 'The electric field is related to potential by:',
+            question: 'In general, the electric field is related to potential by:',
             options: ['$E = V/d$', '$E_x = -dV/dx$', '$E = Vr$', '$E = V^2/q$'],
             correctAnswer: 1,
             explanation: 'Each field component is minus the rate of change of $V$ in that direction ($\\vec{E} = -\\nabla V$). $E = V/d$ is only the magnitude in the special case of a uniform field.'

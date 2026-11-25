@@ -165,7 +165,7 @@ $$F = 66.4 \\text{ N}$$
             explanation: 'Friction opposes motion, so the force and displacement are in opposite directions. Work = $Fd\\cos 180° < 0$. Negative work = kinetic energy removed.'
           },
           {
-            label: 'Two identical blocks are stacked. The friction on the bottom block from the surface is _____ the friction for a single block.',
+            label: 'Two identical blocks are stacked and slide together across the surface. The kinetic friction on the bottom block from the surface is _____ the kinetic friction on a single sliding block.',
             options: ['Half', 'The same as', 'Double', 'Four times'],
             correctIndex: 2,
             explanation: 'Stacking doubles the normal force on the surface: $N = 2mg$. Friction doubles: $f = \\mu(2mg) = 2\\mu mg$.'

@@ -229,11 +229,11 @@ Think of heat as a "reactant" (endothermic) or "product" (exothermic).
       content: `
 **K Magnitude Practice** 🧮
 
-**1)** A reaction has $K = 2.0 \\times 10^{-20}$. Is the reaction product-favored or reactant-favored? (Enter "reactant-favored")
+**1)** A reaction has $K = 2.0 \\times 10^{-20}$. Is the reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
 
-**2)** For the reaction $\\text{A} \\rightleftharpoons \\text{B}$, $K = 100$ at 300 K. If the reaction is exothermic and temperature increases to 400 K, does K increase or decrease? (Enter "decrease")
+**2)** For the reaction $\\text{A} \\rightleftharpoons \\text{B}$, $K = 100$ at 300 K. If the reaction is exothermic and temperature increases to 400 K, does K increase or decrease? (Enter "increase" or "decrease")
 
-**3)** A catalyst is added to a reaction at equilibrium. Does the value of K change? (Enter "no")
+**3)** A catalyst is added to a reaction at equilibrium. Does the value of K change? (Enter "yes" or "no")
       `,
       exercise: {
         boxes: 3,

@@ -41,7 +41,7 @@ export const whLandBasedEmpiresPart3Data = {
             explanation: 'The Ottoman-Safavid conflict was one of the defining features of the 16th-17th century Islamic world. The Safavid forced conversion of Sunni Persians to Shia Islam — often violently — created a religious fault line that made Ottoman-Safavid warfare existential rather than merely territorial. This Sunni-Shia division persists in the modern Middle East.'
           },
           {
-            question: 'Akbar\'s (r. 1556–1605) religious tolerance policy (Din-i-Ilahi) was primarily motivated by:',
+            question: 'Akbar\'s (r. 1556–1605) policy of religious tolerance was primarily motivated by:',
             options: [
               'The need to win the cooperation of a Hindu-majority population as a Muslim ruler',
               'A personal conversion to Hinduism after his marriages to several Rajput princesses',
@@ -107,9 +107,9 @@ Founded by Babur (descended from both Timur and Genghis Khan) in 1526:
       exercise: {
         questions: [
           {
-            question: 'Shah Abbas I\'s military reforms in the Safavid Empire were significant because they:',
+            question: 'Why were Shah Abbas I\'s military reforms in the Safavid Empire significant?',
             options: [
-              'They replaced Qizilbash tribal cavalry with slave soldiers loyal to the shah, much like the Ottoman janissaries',
+              'They offset Qizilbash tribal cavalry with slave soldiers loyal to the shah, much like the Ottoman janissaries',
               'They disbanded the Qizilbash and relied on Portuguese mercenaries for firearms and artillery',
               'They recruited officers through civil service exams modeled on the system used in Ming China',
               'They gave the Qizilbash chiefs hereditary provinces in exchange for supplying cavalry in wartime'

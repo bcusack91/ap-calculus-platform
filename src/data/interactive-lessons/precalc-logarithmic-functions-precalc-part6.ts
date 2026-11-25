@@ -190,7 +190,7 @@ For $y = a + b\\log_c x$, multiplying the input by $c$ adds $b$ to the output; m
 
 **2)** A sound has intensity $I = 10^{-5}\\text{ W/m}^2$. Find its decibel level. Use $I_0 = 10^{-12}$. (e.g., $I = 10^{-8}$: $dB = 10\\log(10^{-8}/10^{-12}) = 10 \\cdot 4 = 40$)
 
-**3)** How many times more intense is a $80\\text{ dB}$ sound than a $50\\text{ dB}$ sound? (e.g., $70\\text{ dB}$ vs $40\\text{ dB}$: difference $30\\text{ dB} = 10^3 = 1000\\times$)
+**3)** How many times more intense is a $80\\text{ dB}$ sound than a $50\\text{ dB}$ sound? (e.g., $70\\text{ dB}$ vs $50\\text{ dB}$: difference $20\\text{ dB} = 10^2 = 100\\times$)
       `,
       exercise: {
         boxes: 3,

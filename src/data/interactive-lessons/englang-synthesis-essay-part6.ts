@@ -273,7 +273,7 @@ Before answering, notice the problems: sentence 3 is vague, sentence 4 dismisses
               'Ruskin says old buildings "are not ours," but he wrote in 1849.',
               'Ruskin says old buildings "are not ours," but he was a critic.',
               'Ruskin says old buildings "are not ours," but no one agrees.',
-              'Ruskin says old buildings "are not ours," and neither is the future.'
+              'Ruskin says old buildings "are not ours," but the future needs homes.'
             ],
             correctAnswer: 3,
             explanation: 'This revision turns Ruskin\'s principle around: if we must leave buildings to future generations, we must also leave them homes, which answers his reasoning on its own terms. The other versions reject Ruskin because of his date, his profession, or an unsupported claim about agreement.'

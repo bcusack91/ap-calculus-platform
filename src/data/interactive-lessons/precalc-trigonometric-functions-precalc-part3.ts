@@ -184,11 +184,11 @@ $$P = \\left(3\\cos\\left(-\\frac{5\\pi}{6}\\right),\\; 3\\sin\\left(-\\frac{5\\
       content: `
 **Computation Practice** 🧮
 
-Give exact values; use \`sqrt\` for square roots (e.g. \`-5sqrt3\`, \`sqrt(3)/2\`).
+Give exact values; use \`sqrt\` for square roots (e.g. \`-4sqrt2\`, \`sqrt(3)/2\`).
 
 **1)** Given $\\sin\\theta = \\frac{8}{17}$ and $\\theta$ is in Q I, find $\\cos\\theta$. Write as a fraction (e.g., $3/5$). (e.g., $\\sin\\alpha = 5/13$ in Q I: $\\cos\\alpha = \\sqrt{1 - 25/169} = \\sqrt{144/169} = 12/13$)
 
-**2)** Evaluate $\\cos \\frac{4\\pi}{3}$. Write as a fraction (e.g., $-1/2$). (e.g., $\\cos \\frac{5\\pi}{3}$: Q IV, ref $\\frac{\\pi}{3}$, $\\cos \\frac{\\pi}{3} = 1/2$, positive in Q IV → $1/2$)
+**2)** Evaluate $\\cos \\frac{4\\pi}{3}$. Write as a fraction (e.g., $-2/3$). (e.g., $\\cos \\frac{5\\pi}{3}$: Q IV, ref $\\frac{\\pi}{3}$, $\\cos \\frac{\\pi}{3} = 1/2$, positive in Q IV → $1/2$)
 
 **3)** The terminal ray of $\\theta = \\frac{5\\pi}{3}$ meets the circle of radius $10$ centered at the origin at $P$. Find the $y$-coordinate of $P$. (e.g., for $\\frac{\\pi}{6}$ on radius $8$: $y = 8\\sin\\frac{\\pi}{6} = 8 \\cdot \\frac{1}{2} = 4$)
       `,

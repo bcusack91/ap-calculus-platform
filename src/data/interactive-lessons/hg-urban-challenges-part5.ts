@@ -116,7 +116,7 @@ A city's **ecological footprint** is the land and water area needed to supply it
       content: `
 **Calculate It** 🧮
 
-Use the runoff table and the fact that 1 inch of rain on 1 acre is about 27,000 gallons. Enter numbers only.
+Use the fact that 1 inch of rain on 1 acre is about 27,000 gallons. Enter numbers only.
 
 **1)** A 10-acre shopping center receives 1 inch of rain. About how many gallons fall on it in total?
 

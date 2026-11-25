@@ -148,7 +148,7 @@ A real lightbulb filament gets much hotter at higher potential differences, so i
 
 2) What is the resistance of that resistor? (in $\\Omega$)
 
-3) For a wire of cross-sectional area $4.0 \\times 10^{-7}\\;\\text{m}^2$, a graph of $R$ versus $L$ has slope $2.5\\;\\Omega/\\text{m}$. What is the resistivity? (in $\\Omega\\cdot$m, scientific notation like 1.0e-6)
+3) For a wire of cross-sectional area $4.0 \\times 10^{-7}\\;\\text{m}^2$, a graph of $R$ versus $L$ has slope $2.5\\;\\Omega/\\text{m}$. What is the resistivity? (in $\\Omega\\cdot$m, scientific notation like 3.5e-8)
 
 4) What length of that same wire has a resistance of $10\\;\\Omega$? (in m)
       `,

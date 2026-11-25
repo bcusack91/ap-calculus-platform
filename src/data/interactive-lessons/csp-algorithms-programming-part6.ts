@@ -142,6 +142,7 @@ PROCEDURE hasDuplicate(list)
       exercise: {
         boxes: 3,
         correctAnswers: ["return", "10", "0"],
+        acceptableAnswers: [["stop", "exit"], [], []],
         hint1: "Exit the procedure immediately.",
         hint2: "4 + 3 + 2 + 1.",
         hint3: "Dividing by this is undefined.",

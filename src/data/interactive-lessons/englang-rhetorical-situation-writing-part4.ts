@@ -204,6 +204,7 @@ A thesis written with that plan might read: *"Cities should require green roofs 
       exercise: {
         boxes: 3,
         correctAnswers: ['situation', 'defensible', 'A'],
+        acceptableAnswers: [[], ['arguable', 'debatable'], []],
         hint1: 'Writer, audience, occasion, purpose, context, and exigence together make up the ...',
         hint2: 'Row A asks for a thesis of this kind.',
         hint3: 'The rows run from thesis to evidence and commentary to sophistication.',

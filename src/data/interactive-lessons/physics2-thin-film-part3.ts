@@ -148,11 +148,11 @@ Design a coating for glass ($n = 1.52$) optimized for green light ($\\lambda = 5
 
 **1)** Ideal coating refractive index ($n_c = \\sqrt{n_{glass}}$)? (round to 2 decimal places)
 
-**2)** Minimum coating thickness using ideal $n_c$? (in nm, round to 1 decimal place)
+**2)** Minimum coating thickness using your rounded $n_c$ from part 1? (in nm, round to 1 decimal place)
 
 **3)** If $MgF_{2}$ ($n = 1.38$) is used instead, minimum thickness? (in nm, round to 1 decimal place)
 
-**4)** Uncoated glass reflects ~4% per surface. A 6-surface lens system loses approximately what % to reflection without coatings? (round to nearest whole number)
+**4)** Uncoated glass reflects ~4% per surface. A 6-surface lens system loses what % to reflection without coatings, if each surface passes 96% of the light reaching it? (round to nearest whole number)
       `,
       exercise: {
         boxes: 4,

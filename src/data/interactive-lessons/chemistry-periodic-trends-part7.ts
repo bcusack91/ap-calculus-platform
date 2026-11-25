@@ -197,7 +197,7 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
 
 **1.** Of Li, C, F, and Na — which element has the highest first ionization energy? (Type the symbol.)
 
-**2.** Rank the following from smallest to largest ionic radius: $Na^{+}$, $Mg^{2+}$, $F^{-}$. All have 10 electrons. (Type as symbols separated by commas, smallest first, e.g., "Mg2+, Na+, F-".)
+**2.** Rank the following from smallest to largest ionic radius: $Na^{+}$, $Mg^{2+}$, $F^{-}$. All have 10 electrons. (Type as symbols separated by commas, smallest first, e.g., "Al3+, O2-, N3-".)
 
 **3.** Which element in Period 3 has the smallest atomic radius (excluding noble gases)? (Type the symbol.)`,
       exercise: {

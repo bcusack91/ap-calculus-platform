@@ -130,7 +130,7 @@ export const govCongressPart4Data = {
           {
             prompt: "Term for funding for a local project in a member's district that is added to a larger appropriations bill. Two words.",
             answer: 'pork barrel',
-            acceptableAnswers: ['pork barrel', 'pork-barrel', 'pork', 'pork-barrel legislation', 'pork barrel spending'],
+            acceptableAnswers: ['pork barrel', 'pork-barrel', 'pork', 'pork-barrel legislation', 'pork barrel spending', 'earmark', 'earmarks'],
             hint: 'EK 2.2.A.5 — often paired with logrolling.'
           }
         ]
@@ -152,7 +152,7 @@ export const govCongressPart4Data = {
           },
           {
             label: "Constitutional source of Congress's oversight authority over the executive branch: ___",
-            options: ['Article I § 1 (vesting clause)', 'Article I § 8 (enumerated powers)', 'Implied power (inherent in lawmaking)', 'Tenth Amendment (reserved powers)']
+            options: ['Article II § 3 (take care clause)', 'Article I § 8 (enumerated powers)', 'Implied power (inherent in lawmaking)', 'Tenth Amendment (reserved powers)']
           }
         ],
         correctAnswers: ['Article II § 2 (advice and consent)', 'Preemption', 'Implied power (inherent in lawmaking)'],

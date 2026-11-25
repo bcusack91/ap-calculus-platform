@@ -172,7 +172,7 @@ $g(0) = a\\log_b(0 - h) + k = a\\log_b(-h) + k$
 
 **1)** Find the $x$-intercept of $f(x) = \\log_2(x - 3) - 4$. Set $f = 0$, solve for $x$. (e.g., for $\\log_3(x-1) - 2 = 0$: $\\log_3(x-1) = 2$, $x-1 = 9$, $x = 10$)
 
-**2)** The domain of $g(x) = \\ln(2x + 6)$ is $x > $ what value? (e.g., for $\\ln(3x + 9)$: set $3x + 9 > 0$, so $x > -3$)
+**2)** The domain of $g(x) = \\ln(2x + 6)$ is $x > $ what value? (e.g., for $\\ln(4x - 8)$: set $4x - 8 > 0$, so $x > 2$)
 
 **3)** If $h(x) = 5\\log(x) - 10$, find $h(100)$. (e.g., $3\\log(1000) - 6 = 3(3) - 6 = 3$)
       `,
@@ -230,11 +230,11 @@ $g(0) = a\\log_b(0 - h) + k = a\\log_b(-h) + k$
             options: [
               '$(2, 3)$',
               '$(1, 3)$',
-              '$(3, 2)$',
+              '$(3, 4)$',
               '$(2, 0)$'
             ],
             correctAnswer: 0,
-            explanation: '$g(2) = -\\log_2(2-1) + 3 = -\\log_2(1) + 3 = 0 + 3 = 3$. So $(2, 3)$ is on the graph.'
+            explanation: '$g(2) = -\\log_2(2-1) + 3 = -\\log_2(1) + 3 = 0 + 3 = 3$. So $(2, 3)$ is on the graph. The point $(3, 4)$ drops the reflection: $-\\log_2 2 + 3 = 2$, not $4$.'
           },
           {
             question: 'The range of any transformed log function $g(x) = a\\log_b(x-h)+k$ (with $a \\neq 0$) is:',

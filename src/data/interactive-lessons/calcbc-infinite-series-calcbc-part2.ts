@@ -65,7 +65,7 @@ $\\sum 1/\\sqrt{n}$ diverges ($p = 1/2$), so $\\sum \\frac{1}{\\sqrt{n}-1}$ dive
             explanation: 'For large $n$, the dominant terms give $\\frac{n}{n^3+1} \\approx \\frac{n}{n^3} = 1/n^2$. The limit $a_n/b_n \\to 1$. Since $\\sum 1/n^2$ converges ($p=2>1$), the series converges.'
           },
           {
-            question: 'DCT cannot show convergence by comparing with a divergent series. But LCT:',
+            question: 'DCT cannot show convergence by comparing with a divergent series. What about LCT?',
             options: ['Also cannot prove convergence that way', 'Can prove convergence from a divergent comparison', 'Can, as long as the limit $L$ is finite and positive', 'Only works when both series are geometric'],
             correctAnswer: 0,
             explanation: 'LCT with $L \\in (0,\\infty)$ says both series behave the same way, so if $\\sum b_n$ diverges, $\\sum a_n$ diverges too. Neither test can prove convergence from a divergent comparison.'

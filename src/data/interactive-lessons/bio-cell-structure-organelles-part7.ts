@@ -151,10 +151,17 @@ export const bioCellStructurePart7Data = {
 **Final Key Terms** ✏️
 
 Enter the correct term for each description.
+
+1) The theory that mitochondria and chloroplasts originated from engulfed prokaryotes.
+
+2) Channels through plant cell walls that allow direct cytoplasmic communication between adjacent cells.
+
+3) The process in which vesicles fuse with the plasma membrane to release their contents outside the cell.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['endosymbiosis', 'plasmodesmata', 'exocytosis'],
+        acceptableAnswers: [['endosymbiotic theory', 'endosymbiont theory', 'endosymbiotic hypothesis', 'endosymbiont hypothesis'], ['plasmodesma'], []],
         hint1: 'The theory that mitochondria and chloroplasts originated from engulfed prokaryotes.',
         hint2: 'Channels through plant cell walls that allow direct cytoplasmic communication between adjacent cells.',
         hint3: 'The process in which vesicles fuse with the plasma membrane to release their contents outside the cell.',

@@ -101,7 +101,7 @@ export const aasWwiWwiiEraPart3Data = {
       exercise: {
         "questions": [
           {
-            "question": "Supreme Court case (1923) that came out of the Elaine trials (two words, with 'v.')",
+            "question": "Supreme Court case (1923) that came out of the Elaine trials (with 'v.')",
             "answer": "Moore v. Dempsey",
             "acceptableAnswers": [
               "Moore v. Dempsey",

@@ -105,14 +105,14 @@ $$R(2) \\cdot 2 + R(5) \\cdot 3 + R(8) \\cdot 3 + R(10) \\cdot 2 = 12 + 9 + 24 +
       content: '**Calculate the Riemann sum.** \u270d\ufe0f\n\n| $t$ (s) | 0 | 5 | 8 | 14 |\n|:---:|:---:|:---:|:---:|:---:|\n| $a(t)$ (m/s\u00b2) | 2 | 6 | 4 | 10 |',
       exercise: {
         question: 'Use a left Riemann sum to estimate $\\int_0^{14} a(t)\\,dt$.\n\n(Enter an integer.)',
-        correctAnswer: '54',
-        acceptableAnswers: ['54'],
+        correctAnswer: '52',
+        acceptableAnswers: ['52'],
         hints: [
           'Subintervals: $[0,5],[5,8],[8,14]$ with widths $5, 3, 6$.',
           'Left endpoints: $a(0)=2, a(5)=6, a(8)=4$.',
-          '$2(5) + 6(3) + 4(6) = 10 + 18 + 24 = 54$.'
+          '$2(5) + 6(3) + 4(6) = 10 + 18 + 24 = 52$.'
         ],
-        explanation: '$a(0)\\cdot5 + a(5)\\cdot3 + a(8)\\cdot6 = 10 + 18 + 24 = 54$ m/s.'
+        explanation: '$a(0)\\cdot5 + a(5)\\cdot3 + a(8)\\cdot6 = 10 + 18 + 24 = 52$ m/s.'
       }
     },
     {

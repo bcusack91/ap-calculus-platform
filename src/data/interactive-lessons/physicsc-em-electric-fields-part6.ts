@@ -58,15 +58,15 @@ The field points toward the arc (in $-x$ for positive $\\lambda$).`
     {
       id: 'ef6-mcq2',
       type: 'mcq' as const,
-      question: 'A quarter-circle arc of radius $R$ with charge density $\\lambda$ subtends $\\pi/2$. By how much does $E$ at the center differ from the semicircle result?',
+      question: 'A quarter-circle arc of radius $R$ with charge density $\\lambda$ subtends $\\pi/2$. How does the magnitude of $E$ at the center compare with the semicircle result $2k\\lambda/R$?',
       options: [
-        'The components along one axis give $E = k\\lambda/(R\\sqrt{2})$ per component',
+        'It is $\\sqrt{2}\\,k\\lambda/R$, about 0.71 of the semicircle result',
         'It is exactly half the semicircle result',
         'It equals the semicircle result',
         'It is zero by symmetry'
       ],
       correctAnswer: 0,
-      explanation: 'For a quarter-circle from $\\theta = 0$ to $\\pi/2$: $E_x = -(k\\lambda/R)\\int_0^{\\pi/2}\\cos\\theta\\,d\\theta = -k\\lambda/R$ and similarly $E_y = -k\\lambda/R$. So $|E| = k\\lambda\\sqrt{2}/R$, and each component is $k\\lambda/R$.'
+      explanation: 'For a quarter-circle from $\\theta = 0$ to $\\pi/2$: $E_x = -(k\\lambda/R)\\int_0^{\\pi/2}\\cos\\theta\\,d\\theta = -k\\lambda/R$ and similarly $E_y = -k\\lambda/R$. So $|E| = k\\lambda\\sqrt{2}/R \\approx 0.71 \\times (2k\\lambda/R)$: half the charge, but more than half the field, since less of the field from a quarter arc cancels.'
     },
     {
       id: 'ef6-problem2',

@@ -152,7 +152,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing the 14th Amendment's purpose was to constitutionalize the Civil Rights Act of 1866 and prevent another Johnson-style veto from blocking civil rights is most useful for: ___",
+            label: "Knowing the 14th Amendment was framed to constitutionalize the Civil Rights Act of 1866 and prevent another Johnson-style veto from blocking civil rights is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

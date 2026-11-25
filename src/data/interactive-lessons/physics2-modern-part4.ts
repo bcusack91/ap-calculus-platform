@@ -151,7 +151,7 @@ A hydrogen atom in the $n = 4$ state can transition to several lower levels.
 
 1) How many distinct spectral lines can be emitted by a collection of hydrogen atoms all starting in $n = 4$? (Use $N(N-1)/2$ for $N$ levels.)
 
-2) Which transition produces the shortest wavelength photon? (Write as: 4to1)
+2) Which transition produces the shortest wavelength photon? (Write it in the form 3to2.)
 
 3) Wavelength of the $4 \\to 3$ transition (in nm, round to nearest whole number)
       `,

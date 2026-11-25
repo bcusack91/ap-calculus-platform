@@ -162,11 +162,12 @@ The proposal is a **method** (coordination among nation and states) rather than 
 
 2) Roosevelt compares wasteful cutting to eating the milch cow. This comparison is an _______.
 
-3) Roosevelt's proposed solution is that resource policy should be _______ as "one coherent plan."
+3) Roosevelt's proposed solution is that all uses of resources "should be _______, and should be treated as part of one coherent plan."
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['classification', 'analogy', 'coordinated'],
+        acceptableAnswers: [['division'], [], []],
         hint1: 'Sorting items into categories; also called division.',
         hint2: 'An extended comparison used to reason from a familiar case.',
         hint3: 'The past participle he pairs with "treated as part of one coherent plan."',

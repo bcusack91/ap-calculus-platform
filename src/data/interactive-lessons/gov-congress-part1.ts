@@ -112,9 +112,9 @@ The framers designed the bicameral Congress as a Great Compromise (Connecticut C
       exercise: {
         questions: [
           {
-            prompt: "The clause granting Congress power 'To make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers' (Article I § 8 cl. 18). Three words.",
+            prompt: "The clause granting Congress power 'To make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers' (Article I § 8 cl. 18).",
             answer: 'Necessary and Proper Clause',
-            acceptableAnswers: ['Necessary and Proper Clause', 'necessary and proper clause', 'Elastic Clause', 'elastic clause'],
+            acceptableAnswers: ['Necessary and Proper Clause', 'necessary and proper clause', 'Necessary and Proper', 'Elastic Clause', 'elastic clause'],
             hint: 'Foundation of implied powers; also called the Elastic Clause; basis of McCulloch v. Maryland 1819.'
           },
           {

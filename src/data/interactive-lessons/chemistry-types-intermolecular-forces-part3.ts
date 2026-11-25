@@ -163,13 +163,15 @@ export const chemTypesIntermolecularForcesPart3Data = {
       exercise: {
         inputs: [
           {
-            label: 'Hydrogen bonding requires H bonded to which three elements? (List letters: N, O, F)',
+            label: 'Hydrogen bonding requires H bonded to which three elements? (Give the element symbols, separated by commas)',
             correctAnswer: 'N, O, F',
+            acceptableAnswers: ['N, F, O', 'O, N, F', 'O, F, N', 'F, O, N', 'F, N, O', 'FON'],
             explanation: 'Hydrogen bonding specifically requires hydrogen to be covalently bonded to nitrogen (N), oxygen (O), or fluorine (F) — the three most electronegative elements with small atomic radii.'
           },
           {
-            label: 'Is a hydrogen bond a true chemical bond or an intermolecular force? (type "intermolecular force")',
+            label: 'Is a hydrogen bond a true chemical bond or an intermolecular force? (type "chemical bond" or "intermolecular force")',
             correctAnswer: 'intermolecular force',
+            acceptableAnswers: ['IMF', 'an intermolecular force'],
             explanation: 'Despite its name, a hydrogen bond is an intermolecular force — an attraction BETWEEN molecules. It is NOT a covalent, ionic, or metallic bond.'
           }
         ]

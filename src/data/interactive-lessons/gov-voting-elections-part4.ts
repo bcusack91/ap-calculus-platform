@@ -201,7 +201,7 @@ POLITICAL PARTIES perform CRITICAL FUNCTIONS in American elections:
           {
             prompt: "Term for SAME PARTY CONTROLLING WHITE HOUSE + HOUSE + SENATE simultaneously, enabling much easier major legislation passage.",
             answer: 'trifecta',
-            acceptableAnswers: ['trifecta', 'Trifecta', 'TRIFECTA', 'government trifecta', 'party trifecta'],
+            acceptableAnswers: ['trifecta', 'Trifecta', 'TRIFECTA', 'government trifecta', 'party trifecta', 'unified government', 'Unified government', 'unified'],
             hint: 'TRIFECTA — same party controls White House + House + Senate; enables much easier major legislation; recent trifectas — Bush 43 2003-07 (2003 tax cuts + Medicare Part D); Obama 2009-11 (ARRA + ACA + Dodd-Frank); Trump 2017-19 (tax cuts + Gorsuch + Kavanaugh); Biden 2021-23 (ARP + IIJA + IRA + CHIPS); Trump 2025-? (extending tax cuts + immigration + judicial confirmations + executive order ratifications); only ~12 years of unified federal government past 30 years.'
           },
           {

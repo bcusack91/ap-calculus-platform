@@ -45,18 +45,29 @@ export const englitPoetry2Part1Data = {
     {
       id: "englitpo1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "syntax",
-            "diction",
-            "tension"
+      "questions": [
+            {
+                  "question": "Sentence structure and pacing, which control emphasis and movement",
+                  "answer": "syntax",
+                  "acceptableAnswers": ["the syntax"]
+            },
+            {
+                  "question": "A writer's choice of words, whose connotations create tonal texture",
+                  "answer": "diction",
+                  "acceptableAnswers": ["the diction", "word choice"]
+            },
+            {
+                  "question": "Competing ideas or feelings held against each other in a poem",
+                  "answer": "tension",
+                  "acceptableAnswers": ["the tension"]
+            }
       ],
-      "hint1": "Concept 1: Syntax",
-      "hint2": "Concept 2: Diction",
-      "hint3": "Concept 3: Tension",
-      "explanation": "Syntax, Diction, and Tension are core vocabulary for this unit."
+      "hint1": "Concept 1: how sentences are built.",
+      "hint2": "Concept 2: which words are chosen.",
+      "hint3": "Concept 3: the pull between opposites.",
+      "explanation": "Syntax, diction and tension are core vocabulary for this unit."
 }
     },
     {

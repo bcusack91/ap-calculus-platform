@@ -95,7 +95,7 @@ For the special case $b = 0$: reduces to the Tsiolkovsky equation.`
     {
       id: 'vm6-mcq4',
       type: 'mcq' as const,
-      question: 'A 2000 kg rocket in free space ($g = 0$) has $v_e = 3000$ m/s. It needs $\\Delta v = 6000$ m/s. The mass of fuel required is:',
+      question: 'A rocket with an empty (dry) mass of 2000 kg in free space ($g = 0$) has $v_e = 3000$ m/s. It needs $\\Delta v = 6000$ m/s. The mass of fuel required is:',
       options: ['$2000(e^2 - 1) \\approx 12{,}778$ kg', '$2000e^2 \\approx 14{,}778$ kg', '$4000$ kg', '$12{,}000$ kg'],
       correctAnswer: 0,
       explanation: '$\\Delta v = v_e \\ln(m_0/m_f)$. $6000 = 3000 \\ln(m_0/2000)$. $\\ln(m_0/2000) = 2$. $m_0 = 2000e^2$. Fuel mass $= m_0 - m_f = 2000e^2 - 2000 = 2000(e^2 - 1) \\approx 12{,}778$ kg.'

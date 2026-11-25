@@ -116,13 +116,13 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
     {
       id: 'apushciv6-input',
       type: 'input-boxes' as const,
-      content: `**Term Sprint — match the document to its author/event**`,
+      content: `**Term Sprint — name each speech or document**`,
       exercise: {
         questions: [
           {
             question: 'The 1858 speech in which Lincoln declared that a house divided against itself cannot stand.',
             answer: 'House Divided',
-            acceptableAnswers: ['House Divided', 'House Divided Speech'],
+            acceptableAnswers: ['House Divided', 'House Divided Speech', 'A House Divided', 'A House Divided Speech'],
             hint: 'Delivered accepting the Illinois Republican Senate nomination.'
           },
           {

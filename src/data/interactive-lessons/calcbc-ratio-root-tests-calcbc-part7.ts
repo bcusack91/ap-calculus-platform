@@ -36,9 +36,9 @@ $$\\boxed{\\text{Ratio: } L = \\lim \\left|\\frac{a_{n+1}}{a_n}\\right| \\quad \
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{3^n n!}{(n+2)!}$. $L =$',
-            options: ['$3$ (diverges), since $3n!/(n+2)! \\cdot (n+1)!/3^n$ simplifies to $3/(n+2) \\cdot ... $ Wait: $a_{n+1}/a_n = 3(n+1)!/(n+3)! \\cdot (n+2)!/(n!) \\cdot 1/3^0$... Actually: $= 3/(n+3) \\to 0$. $L = 0$, converges', '$1$, inconclusive', '$3/(n+3)$, cannot evaluate', '$\\infty$, diverges'],
+            options: ['$3$, diverges', '$1$, inconclusive', '$3/(n+3)$, cannot evaluate', '$\\infty$, diverges'],
             correctAnswer: 0,
-            explanation: '$a_{n+1}/a_n = (3^{n+1}(n+1)!/(n+3)!) \\cdot ((n+2)!/(3^n n!)) = 3(n+1)/(n+3) \\cdot 1/1$. Wait: $(n+2)!/(n+3)! = 1/(n+3)$ and $(n+1)!/n! = n+1$. So $= 3(n+1)/(n+3) \\to 3$. $L = 3 > 1$, diverges.'
+            explanation: '$a_{n+1}/a_n = (3^{n+1}(n+1)!/(n+3)!) \\cdot ((n+2)!/(3^n n!))$. Since $(n+1)!/n! = n+1$ and $(n+2)!/(n+3)! = 1/(n+3)$, this is $3(n+1)/(n+3) \\to 3$. $L = 3 > 1$, diverges.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{3^n}$. The series:',
@@ -48,7 +48,7 @@ $$\\boxed{\\text{Ratio: } L = \\lim \\left|\\frac{a_{n+1}}{a_n}\\right| \\quad \
           },
           {
             question: 'For $\\sum_{n=1}^{\\infty} (1 - 1/n)^{n^2}$, Root Test gives $L = $',
-            options: ['$\\lim (1-1/n)^n = 1/e$, converges', '$1$, inconclusive', '$0$, converges', '$e$, diverges'],
+            options: ['$1/e$, converges', '$1$, inconclusive', '$0$, converges', '$e$, diverges'],
             correctAnswer: 0,
             explanation: '$|a_n|^{1/n} = (1-1/n)^n \\to 1/e \\approx 0.368 < 1$. Converges.'
           }
@@ -91,8 +91,8 @@ $$\\boxed{\\text{Ratio: } L = \\lim \\left|\\frac{a_{n+1}}{a_n}\\right| \\quad \
           },
           {
             label: 'Student finds $R = 5$ for $\\sum c_n(x+2)^n$ and writes IOC as $(-5, 5)$. The error:',
-            options: ['IOC should be $(-7, 3)$: center is $-2$, not $0$', 'Should be $[-5, 5]$', 'Should be $(-5, 5]$', 'No error'],
-            correctAnswers: ['IOC should be $(-7, 3)$: center is $-2$, not $0$'],
+            options: ['Should be $(-7, 3)$', 'Should be $[-5, 5]$', 'Should be $(-5, 5]$', 'No error'],
+            correctAnswers: ['Should be $(-7, 3)$'],
             hints: ['$|x - (-2)| < 5$ means $-7 < x < 3$.'],
             explanation: 'The center is $a = -2$, so $|x+2| < 5$ gives $-7 < x < 3$, not $(-5, 5)$.'
           }

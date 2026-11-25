@@ -64,7 +64,7 @@ $n = 50$, $\\bar{x} = 25.3$, $s = 4.0$. Test $H_0: \\mu = 24$ vs. $H_a: \\mu \\n
 
 **2)** $df = ?$
 
-**3)** With $|t| = 2.30$ and $df = 49$, is the result significant at $\\alpha = 0.05$? (yes/no)
+**3)** Using your $t$ and $df$, is the result significant at $\\alpha = 0.05$? (yes/no)
       `,
       exercise: {
         boxes: 3,

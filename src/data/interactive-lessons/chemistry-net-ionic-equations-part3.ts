@@ -192,7 +192,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
 
 For the reaction: $\\text{CaCl}_2(aq) + \\text{Na}_2\\text{CO}_3(aq) \\rightarrow \\text{CaCO}_3(s) + 2\\text{NaCl}(aq)$
 
-List the spectator ions (type the ion formula without charge, in alphabetical order separated by a comma — e.g., "Cl, Na"):
+List the spectator ions (type the ion formula without charge, in alphabetical order separated by a comma — e.g., "Br, K"):
 
 **1)** The two spectator ions are:
 

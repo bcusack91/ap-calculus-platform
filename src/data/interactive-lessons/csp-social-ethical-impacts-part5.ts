@@ -93,6 +93,7 @@ Computing also plays a role in **social and political issues**, which often rais
       exercise: {
         boxes: 3,
         correctAnswers: ["intellectual", "privacy", "cited"],
+        acceptableAnswers: [[], [], ["credited", "acknowledged", "attributed"]],
         hint1: "Creations of the mind.",
         hint2: "Keeping personal information to yourself.",
         hint3: "Give the source credit.",

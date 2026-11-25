@@ -194,8 +194,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             explanation: 'London Dispersion Forces are universal — every molecule and atom experiences them because all particles have electrons capable of forming temporary dipoles.'
           },
           {
-            label: 'Hydrogen bonding requires H bonded to N, O, or F. A helpful mnemonic is _____',
+            label: 'Hydrogen bonding requires H bonded to N, O, or F. The three-letter mnemonic for these atoms is _____',
             correctAnswer: 'FON',
+            acceptableAnswers: ['NOF', 'F, O, N', 'N, O, F', 'FON is fun', 'H-FON'],
             explanation: 'FON (Fluorine, Oxygen, Nitrogen) is the mnemonic for the three atoms that can participate in hydrogen bonding when bonded to hydrogen.'
           },
           {

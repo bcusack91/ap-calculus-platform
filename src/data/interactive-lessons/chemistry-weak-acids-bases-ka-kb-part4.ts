@@ -155,7 +155,7 @@ $pK_b = -\\log(5.6 \\times 10^{-10}) = 9.25$
 
 **2)** $NH_3$ has $K_b = 1.8 \\times 10^{-5}$. Find $K_a$ for $NH_4^+$. (Enter in scientific notation, e.g. 7.7e-12)
 
-**3)** A weak acid has $pK_a = 3.75$. Find $pK_b$ for its conjugate base. (3 significant figures)
+**3)** A weak acid has $pK_a = 3.75$. Find $pK_b$ for its conjugate base. (2 decimal places)
       `,
       exercise: {
         questions: [{ question: '1)', answer: '1.5e-11', acceptableAnswers: ['1.5e-11', '1.47e-11'] }, { question: '2)', answer: '5.6e-10', acceptableAnswers: ['5.6e-10', '5.56e-10'] }, { question: '3)', answer: '10.25', acceptableAnswers: ['10.25'] }],

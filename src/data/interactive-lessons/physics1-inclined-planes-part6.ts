@@ -130,7 +130,7 @@ $$a = 1.6 \\text{ m/s}^2$$
             explanation: 'At constant velocity: $\\mu_k = \\tan\\theta$. Adding mass increases both $mg\\sin\\theta$ and $\\mu_k mg\\cos\\theta$ by the same factor. The cancellation still holds!'
           },
           {
-            label: 'An applied force pushes a block up an incline at an angle to the surface. The component perpendicular to the surface:',
+            label: 'An applied force pushes a block up an incline, angled into the surface. The component perpendicular to the surface:',
             options: ['Increases friction but not the normal force', 'Increases the normal force and therefore friction', 'Decreases the normal force', 'Has no effect on friction'],
             correctIndex: 1,
             explanation: 'A perpendicular component of the applied force presses the block harder against the surface, increasing $N$ and therefore increasing $f = \\mu N$.'

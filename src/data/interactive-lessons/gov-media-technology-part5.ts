@@ -147,7 +147,7 @@ export const govMediaTechnologyPart5Data = {
       exercise: {
         questions: [
           {
-            question: "Which 1987 FCC ACTION enabled the EXPLOSION of CONSERVATIVE TALK RADIO (Rush Limbaugh 1988+) + PARTISAN CABLE NEWS (Fox 1996 + MSNBC 1996) by ELIMINATING the requirement that broadcasters present BALANCED views on controversial issues?",
+            question: "Which 1987 FCC ACTION enabled the EXPLOSION of CONSERVATIVE TALK RADIO (Rush Limbaugh 1988+) by ELIMINATING the requirement that broadcasters present BALANCED views on controversial issues?",
             options: [
               "The FCC's repeal of the Fairness Doctrine",
               "The FCC's repeal of the equal-time rule for candidates",

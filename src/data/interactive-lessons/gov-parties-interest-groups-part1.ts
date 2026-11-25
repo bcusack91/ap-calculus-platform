@@ -214,7 +214,7 @@ Despite two-party dominance, third parties have INFLUENCED American politics:
             hint: 'Under it, a party winning 15% of the vote gets about 15% of the seats, so third parties survive.'
           },
           {
-            prompt: "1992 THIRD PARTY CANDIDATE (Reform Party founder) won 18.9% popular vote highlighting BALANCED BUDGET concerns; influenced Clinton's deficit focus.",
+            prompt: "1992 INDEPENDENT CANDIDATE (later Reform Party founder) won 18.9% popular vote highlighting BALANCED BUDGET concerns; influenced Clinton's deficit focus.",
             answer: 'Ross Perot',
             acceptableAnswers: ['Ross Perot', 'Perot', 'ross perot', 'PEROT', 'H. Ross Perot', 'Henry Ross Perot'],
             hint: 'ROSS PEROT (1930-2019) — Texas billionaire (EDS founder); ran 1992 as INDEPENDENT (then Reform Party 1996); 1992 won 18.9% of popular vote (highest 3rd party since TR 1912 27.4%); zero electoral votes (uniformly spread); influenced Clinton balanced budget focus + deficit reduction; ran again 1996 as Reform Party (8.4%); famous for "giant sucking sound" criticism of NAFTA; demonstrated that 3rd parties can shift major party policies even without winning electoral votes.'
@@ -237,7 +237,7 @@ Despite two-party dominance, third parties have INFLUENCED American politics:
             options: ['US Chamber of Commerce + NFIB + NAM + Business Roundtable + AHIP + PhRMA + API', 'AFL-CIO + SEIU + UAW + Teamsters + NEA + AFT (teachers)', 'Sierra Club + NRDC + EDF + LCV + Greenpeace + Audubon', 'NAACP + ACLU + La Raza/UnidosUS + Asian Americans Advancing Justice', 'AARP (~38M members) + American Legion + VFW + IAVA']
           },
           {
-            label: "SINGLE-ISSUE — SENIOR + VETERANS groups: _______:",
+            label: "MEMBERSHIP — SENIOR + VETERANS groups: _______:",
             options: ['US Chamber of Commerce + NFIB + NAM + Business Roundtable + AHIP + PhRMA + API', 'AFL-CIO + SEIU + UAW + Teamsters + NEA + AFT (teachers)', 'Sierra Club + NRDC + EDF + LCV + Greenpeace + Audubon', 'NAACP + ACLU + La Raza/UnidosUS + Asian Americans Advancing Justice', 'AARP (~38M members) + American Legion + VFW + IAVA']
           }
         ],

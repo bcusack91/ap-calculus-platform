@@ -139,7 +139,7 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
 
 **1)** Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter an expression in x, e.g., "0.400 - x")
 
-**2)** The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Because $K$ is large, $x$ is NOT small compared with 0.400. Must you avoid the small-x approximation $0.400 - x \\approx 0.400$ here (using the quadratic or a completion-and-back-calculate approach instead)? (Enter "yes" or "no")
+**2)** The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Must you avoid the small-x approximation $0.400 - x \\approx 0.400$ here (using the quadratic or a completion-and-back-calculate approach instead)? (Enter "yes" or "no")
 
 **3)** Because $K$ is large, the reaction goes nearly to completion, so a useful approach is to let it go to completion first and then back-calculate. If the reaction goes to completion, how many moles of $COCl_{2}$ form? (Enter in mol)
 

@@ -158,7 +158,7 @@ Using the approximation $0.50 - x \\approx 0.50$:
 
 > **Solution:** First check: $Q = \\frac{(0.20)^2}{(0.50)(0.50)} = \\frac{0.04}{0.25} = 0.16$. Since $Q < K$, shift right.
 
-**1)** Using the ICE table with shift right, what is $[\\text{HI}]$ at equilibrium expressed in terms of $x$? (Enter, e.g., "0.20 + 2x")
+**1)** Using the ICE table with shift right, what is $[\\text{HI}]$ at equilibrium expressed in terms of $x$? (Enter in a form like "0.10 + 3x")
 
 **2)** This is a perfect-square case. Taking the square root: $8 = \\frac{0.20 + 2x}{0.50 - x}$. Solve for x. (Round to 3 significant figures)
 

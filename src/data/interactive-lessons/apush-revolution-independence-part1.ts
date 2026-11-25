@@ -174,7 +174,7 @@ Use the exact historical term.
             question: 'Which of the following BEST describes the historical significance of the Declaration of Independence?',
             options: [
               'It set up the framework of the federal government still used today',
-              'It stated natural-rights principles that excluded groups later invoked',
+              'It stated ideals of natural rights later invoked by excluded groups',
               'It immediately granted equal rights to all people in the colonies',
               'It laid out the military strategy for the Revolutionary War'
             ],

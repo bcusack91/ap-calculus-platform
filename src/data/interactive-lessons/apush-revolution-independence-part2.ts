@@ -141,6 +141,7 @@ Use the standard name or term.
       exercise: {
         boxes: 3,
         correctAnswers: ['Pontiac', 'Albany Plan', 'salutary neglect'],
+        acceptableAnswers: [['Chief Pontiac'], ['Albany Plan of Union', 'Albany Plan of Union of 1754', 'Plan of Union'], []],
         hint1: 'The war is named after him; he led attacks near Detroit.',
         hint2: 'Named after the New York town where delegates met.',
         hint3: 'Two words; the first means "beneficial."',

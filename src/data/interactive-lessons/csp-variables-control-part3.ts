@@ -108,6 +108,7 @@ Initialize, then update on each item — the canonical pattern for "best so far"
       exercise: {
         boxes: 3,
         correctAnswers: ["accumulator", "filter", "maximum"],
+        acceptableAnswers: [[], [], ["max", "best so far", "find max", "find maximum", "max/min"]],
         hint1: "Build up a sum.",
         hint2: "Subset.",
         hint3: "\"Best so far\".",

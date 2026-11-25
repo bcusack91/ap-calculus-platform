@@ -145,8 +145,6 @@ Enter:
 2) Force from $q_2$ on $q_3$ (magnitude in N, round to 1 decimal)
 
 3) Net force on $q_3$ (in N)
-
-*Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,

@@ -91,6 +91,7 @@ export const cspProceduresListsPart7Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ["modularity", "LENGTH", "partial"],
+        acceptableAnswers: [["decomposition", "modularization"], [], []],
         hint1: "Built from modules.",
         hint2: "List size.",
         hint3: "Not every element is accessed.",

@@ -156,7 +156,7 @@ $$\\boxed{\\text{Sign change of } f' \\text{ at } c \\implies \\text{local extre
       content: `**From $f$ to $f'$** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'At a local maximum of $f$, $f\' = $', options: ['Positive', 'Zero', 'Negative', 'Undefined'] },
+          { label: 'At a local maximum of a differentiable $f$, $f\' = $', options: ['Positive', 'Zero', 'Negative', 'Undefined'] },
           { label: 'Where $f$ is increasing, $f\'$ is', options: ['Positive', 'Zero', 'Negative', 'Undefined'] },
           { label: 'At an inflection point of $f$, $f\'$ has a', options: ['Zero', 'Maximum or minimum', 'Discontinuity', 'Vertical tangent'] },
           { label: 'Where $f$ is concave up, $f\'$ is', options: ['Positive', 'Increasing', 'Decreasing', 'Constant'] }

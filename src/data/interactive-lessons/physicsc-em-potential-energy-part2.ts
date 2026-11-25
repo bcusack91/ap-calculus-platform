@@ -28,7 +28,7 @@ $$U = qV$$
     {
       id: 'pe2-mcq1',
       type: 'mcq' as const,
-      question: 'A proton ($q = +e$) is at a point where $V = 100\\;\\text{V}$. Its potential energy is:',
+      question: 'A proton ($q = +e$) is at a point where $V = 100\\;\\text{V}$. Its potential energy, in joules, is:',
       options: [
         '$1.6 \\times 10^{-17}\\;\\text{J}$',
         '$100\\;\\text{J}$',

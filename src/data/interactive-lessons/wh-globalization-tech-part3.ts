@@ -102,7 +102,7 @@ KC-6.1.I.B: "The Green Revolution and commercial agriculture increased productiv
           {
             prompt: 'The 1978 Chinese economic program that decollectivized agriculture and created special economic zones.',
             answer: 'Reform and Opening',
-            acceptableAnswers: ['Reform and Opening', 'Reform and Opening Up', 'Gaige Kaifang', 'Deng Xiaoping reforms'],
+            acceptableAnswers: ['Reform and Opening', 'Reform and Opening Up', 'Gaige Kaifang', 'Deng Xiaoping reforms', "Deng's reforms", 'Chinese economic reform', 'Chinese economic reforms', 'Opening Up'],
             hint: 'Launched by Deng Xiaoping.'
           },
           {

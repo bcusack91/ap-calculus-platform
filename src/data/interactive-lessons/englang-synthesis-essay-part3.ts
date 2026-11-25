@@ -68,7 +68,7 @@ Notice what the plan leaves out. Source C (Huxley) is not assigned to any claim.
           {
             question: 'Why does the plan include a column for pressure on each claim?',
             options: [
-              'So the writer can prepare the step or limit the commentary will have to address',
+              'So the writer can anticipate the weakness the commentary will have to address',
               'So the writer can find the sources that disagree and leave them out of the essay',
               'So the writer can prove that the thesis is correct beyond any reasonable doubt',
               'So the writer can count how many times each source appears in the final essay'

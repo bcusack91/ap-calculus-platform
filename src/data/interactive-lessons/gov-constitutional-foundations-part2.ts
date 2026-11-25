@@ -121,13 +121,13 @@ Any proposal route can be paired with either ratification route; Congress choose
           {
             prompt: 'The Article V threshold for proposing an amendment by Congress.',
             answer: 'two-thirds',
-            acceptableAnswers: ['two-thirds', 'two thirds', '2/3', 'two-thirds vote', 'two-thirds of both houses'],
+            acceptableAnswers: ['two-thirds', 'two thirds', '2/3', 'two-thirds vote', 'two-thirds of both houses', 'two-thirds of each house', '2/3 of both houses', 'two-thirds of Congress'],
             hint: 'Same threshold as a veto override — and as Senate conviction in impeachment.'
           },
           {
             prompt: 'The Article V threshold for ratifying an amendment by state legislatures.',
             answer: 'three-fourths',
-            acceptableAnswers: ['three-fourths', 'three fourths', '3/4', 'three-fourths of states', 'three-fourths of state legislatures'],
+            acceptableAnswers: ['three-fourths', 'three fourths', '3/4', 'three-fourths of states', 'three-fourths of state legislatures', 'three-fourths of the states', 'three-fourths of the state legislatures', '3/4 of the states', '3/4 of states', 'three-quarters', 'three-quarters of the states'],
             hint: 'Currently 38 of 50 states.'
           }
         ]

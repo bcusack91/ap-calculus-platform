@@ -112,7 +112,7 @@ When females aggregate for reasons unrelated to male behavior (e.g., predator pr
             options: ['more', 'less', 'equally', 'no energy']
           },
           {
-            label: 'Male elephant seals fighting for control of a breeding beach to mate with many females illustrates ___ polygyny',
+            label: 'Male elephant seals fighting for control of a harem of females gathered on a breeding beach illustrates ___ polygyny',
             options: ['female defense', 'resource defense', 'scramble competition', 'lek']
           }
         ],

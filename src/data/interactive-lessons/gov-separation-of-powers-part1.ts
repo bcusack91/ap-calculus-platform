@@ -104,8 +104,8 @@ export const govSeparationOfPowersPart1Data = {
         questions: [
           {
             prompt: "The article and section number of the Constitution that vests 'All legislative Powers herein granted' in Congress.",
-            answer: 'Article I',
-            acceptableAnswers: ['Article I', 'Article 1', 'Art I', 'Art 1', 'article 1', 'article i'],
+            answer: 'Article I, Section 1',
+            acceptableAnswers: ['Article I, Section 1', 'Article I Section 1', 'Article I, § 1', 'Article I § 1', 'I § 1', 'Art. I, Sec. 1', 'Art I Sec 1', 'Article 1, Section 1', 'Article 1 Section 1', 'Article I', 'Article 1', 'Art I', 'Art 1'],
             hint: 'The very first article of the Constitution.'
           },
           {

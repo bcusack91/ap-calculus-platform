@@ -133,7 +133,7 @@ Use the rounded figures above.
 
 **2)** What percent of those forced onto the ships survived the crossing? Round to the nearest whole percent.
 
-**3)** Mauritius has about 1.3 million people, and about half are Hindu. About how many Hindus is that?
+**3)** Mauritius has about 1.3 million people, and about half are Hindu. About how many Hindus is that? Enter the full number, not in millions.
       `,
       exercise: {
         boxes: 3,

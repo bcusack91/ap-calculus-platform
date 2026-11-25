@@ -107,7 +107,7 @@ Both answers come from $K + U_{\\text{grav}} + U_{\\text{spring}} = \\text{const
     {
       id: 'cf7-mcq4',
       type: 'mcq' as const,
-      question: 'A 3 kg block compressed against a spring ($k = 600$ N/m, compression $x = 0.2$ m) is released on a surface. After traveling 5 m on a flat rough surface ($\\mu_k = 0.15$), its speed is:',
+      question: 'A 3 kg block compressed against a spring ($k = 600$ N/m, compression $x = 0.2$ m) is released on a surface. After traveling 5 m on a flat rough surface ($\\mu_k = 0.15$, $g = 10$ m/s²), its speed is:',
       options: [
         'It stops after about 2.67 m',
         '$\\approx 2.83$ m/s at 5 m',

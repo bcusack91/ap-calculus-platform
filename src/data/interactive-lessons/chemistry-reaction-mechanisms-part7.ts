@@ -243,7 +243,7 @@ An energy diagram for a two-step mechanism shows:
       content: `
 **Challenge Problem** 🧮
 
-**Reaction:** $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{D} + \\text{E}$
+**Reaction:** $\\text{A} + 2\\text{B} + \\text{C} \\rightarrow \\text{D} + \\text{E}$
 
 **Experimental rate law:** Rate = $k[\\text{A}][\\text{B}]^2$
 

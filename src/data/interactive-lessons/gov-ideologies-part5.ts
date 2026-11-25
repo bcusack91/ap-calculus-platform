@@ -148,7 +148,7 @@ Implementing Project 2025 + executive order surge: mass federal layoffs, dismant
       exercise: {
         questions: [
           {
-            question: "How did the FOUNDING ERA debate between FEDERALISTS (Hamilton, Adams) and ANTI-FEDERALISTS / DEMOCRATIC-REPUBLICANS (Jefferson, Madison) establish enduring American ideological divisions, and how do BRUTUS 1 + FEDERALIST 10 + 51 reflect their opposing visions?",
+            question: "How did the FOUNDING ERA debate between FEDERALISTS (Hamilton, Adams) and ANTI-FEDERALISTS / DEMOCRATIC-REPUBLICANS (Patrick Henry, Jefferson; Madison only after 1791) establish enduring American ideological divisions, and how do BRUTUS 1 + FEDERALIST 10 + 51 reflect their opposing visions?",
             options: [
               "Federalists wanted a strong national government and argued in Federalist 10 and 51 that a large republic checks faction, while Brutus 1 warned it would swallow the states and liberty.",
               "Federalists preferred strong state governments and argued in Federalist 10 and 51 that small republics check faction, while Brutus 1 praised a large national republic.",

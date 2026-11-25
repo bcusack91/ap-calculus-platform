@@ -37,7 +37,7 @@ $$q_{\\text{each}} = \\frac{q_1 + q_2}{2}$$
 **Example:** Sphere A has +6 μC, Sphere B has −2 μC. After touching:
 $$q_{\\text{each}} = \\frac{+6 + (-2)}{2} = \\frac{+4}{2} = +2\\ \\mu\\text{C each}$$
 
-For non-identical spheres, charge distributes based on capacitance (surface area), but the AP exam usually gives identical spheres.
+For non-identical spheres, charge distributes based on capacitance (proportional to each sphere's radius), but the AP exam usually gives identical spheres.
       `
     },
     {
@@ -99,7 +99,7 @@ They touch and then separate. Enter:
 Use $e = 1.6 \\times 10^{-19}$ C.
 
 1) An object has charge $-8.0 \\times 10^{-19}$ C. How many excess electrons? (integer)
-2) An object gains $5 \\times 10^{6}$ electrons. What is its charge in C? (use scientific notation like \`-8e-13\`)
+2) An object gains $5 \\times 10^{6}$ electrons. What is its charge in C? (use scientific notation like \`-3e-15\`)
 3) Is a charge of $2.0 \\times 10^{-19}$ C possible? (\`yes\` or \`no\`)
       `,
       exercise: {

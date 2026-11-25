@@ -24,7 +24,7 @@ export const aasFreedomEnslavementPart7Data = {
             "explanation": "New York ended slavery in 1827, while Pennsylvania took the vote from Black men eleven years later. The other pairs show change moving in the same direction: institution-building, Black protest, or the colonization project."
           },
           {
-            "question": "Which person's experience BEST illustrates the danger faced by free Black people living close to the slave states?",
+            "question": "Which person's experience BEST illustrates the danger faced by free Black people even in the free states?",
             "options": [
               "Absalom Jones",
               "Elizabeth Freeman",

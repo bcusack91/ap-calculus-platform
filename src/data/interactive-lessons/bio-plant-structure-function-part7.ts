@@ -39,15 +39,15 @@ $$\\Psi_s = -iCRT$$
       exercise: {
         questions: [
           {
-            question: 'A plant cell is placed in a 0.3 M NaCl solution at 22°C. The cell has a pressure potential of +3.5 bar. What is the water potential of the cell? (Use i = 2 for NaCl, R = 0.0831)',
+            question: 'A plant cell has a solute concentration equivalent to 0.3 M NaCl and a pressure potential of +3.5 bar at 22°C (295 K). What is the water potential of the cell? (Use i = 2 for NaCl, R = 0.0831)',
             options: [
-              '−11.18 bar',
-              '−14.68 bar',
+              '−11.21 bar',
+              '−14.71 bar',
               '−4.18 bar',
               '+3.5 bar'
             ],
             correctAnswer: 0,
-            explanation: 'Ψs = −iCRT = −(2)(0.3)(0.0831)(295) = −14.68 bar. Wait — the question asks about the cell, which has Ψp = +3.5 bar. If the cell is at equilibrium with the solution, the cell\'s Ψs would equal the solution\'s Ψs. Ψ(cell) = Ψs + Ψp = −14.68 + 3.5 = −11.18 bar.'
+            explanation: 'Ψs = −iCRT = −(2)(0.3)(0.0831)(295) = −14.71 bar. The cell also has Ψp = +3.5 bar, so Ψ(cell) = Ψs + Ψp = −14.71 + 3.5 = −11.21 bar. Stopping at Ψs gives −14.71 bar.'
           },
           {
             question: 'Two cells are adjacent. Cell A has Ψ = −0.5 MPa. Cell B has Ψ = −0.9 MPa. In which direction will water move, and why?',

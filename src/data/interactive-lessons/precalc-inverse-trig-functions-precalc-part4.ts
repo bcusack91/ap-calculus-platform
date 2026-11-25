@@ -85,7 +85,7 @@ $\\cos(-\\frac{\\pi}{3}) = \\frac{1}{2}$
 
 $\\arccos(\\frac{1}{2}) = \\frac{\\pi}{3}$
 
-> 💡 **Shortcut for sine:** if $\\theta$ is in Quadrant II, $\\arcsin(\\sin\\theta) = \\pi - \\theta$ (the reflection into the principal range). For cosine, if $\\theta$ is in Quadrant III or IV, $\\arccos(\\cos\\theta) = 2\\pi - \\theta$. Check: $\\arccos(\\cos\\frac{5\\pi}{3}) = 2\\pi - \\frac{5\\pi}{3} = \\frac{\\pi}{3}$.
+> 💡 **Shortcut for sine:** if $\\theta$ is in Quadrant II, $\\arcsin(\\sin\\theta) = \\pi - \\theta$ (the reflection into the principal range). For cosine, if $\\theta$ is in Quadrant III or IV, $\\arccos(\\cos\\theta) = 2\\pi - \\theta$. Check: $\\arccos(\\cos\\frac{7\\pi}{4}) = 2\\pi - \\frac{7\\pi}{4} = \\frac{\\pi}{4}$.
       `
     },
     {
@@ -140,17 +140,17 @@ $\\arccos(\\frac{1}{2}) = \\frac{\\pi}{3}$
 
 **1)** $\\cos\\!\\left(\\arcsin\\!\\left(-\\frac{3}{5}\\right)\\right)$ = ? Write as a fraction or a decimal. (e.g., $\\sin(\\arccos \\frac{4}{5}) = \\frac{3}{5}$, positive because $\\arccos$ outputs lie in $[0, \\pi]$)
 
-**2)** $\\arcsin(\\sin \\frac{7\\pi}{6}) = \\,?\\cdot\\pi$. Enter the coefficient of $\\pi$ (e.g., $\\arcsin(\\sin \\frac{5\\pi}{6}) = \\frac{\\pi}{6}$, coefficient \`1/6\`, since $\\sin \\frac{5\\pi}{6} = \\frac{1}{2}$)
+**2)** $\\arcsin(\\sin \\frac{4\\pi}{3}) = \\,?\\cdot\\pi$. Enter the coefficient of $\\pi$ (e.g., $\\arcsin(\\sin \\frac{5\\pi}{6}) = \\frac{\\pi}{6}$, coefficient \`1/6\`, since $\\sin \\frac{5\\pi}{6} = \\frac{1}{2}$)
 
-**3)** $\\arccos\\!\\left(\\cos\\!\\left(-\\frac{\\pi}{4}\\right)\\right) = \\,?\\cdot\\pi$. Enter the coefficient of $\\pi$ (e.g., $\\arctan(\\tan\\frac{3\\pi}{4}) = -\\frac{\\pi}{4}$, coefficient \`-1/4\`)
+**3)** $\\arccos\\!\\left(\\cos\\!\\left(-\\frac{\\pi}{4}\\right)\\right) = \\,?\\cdot\\pi$. Enter the coefficient of $\\pi$ (e.g., $\\arctan(\\tan\\frac{5\\pi}{6}) = -\\frac{\\pi}{6}$, coefficient \`-1/6\`)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4/5', '-1/6', '1/4'],
+        correctAnswers: ['4/5', '-1/3', '1/4'],
         hint1: '$\\theta = \\arcsin(-\\frac{3}{5})$ is in $[-\\frac{\\pi}{2}, 0)$, where cosine is **positive**: $\\cos\\theta = +\\sqrt{1 - \\frac{9}{25}}$.',
-        hint2: '$\\sin \\frac{7\\pi}{6} = -\\frac{1}{2}$. $\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$.',
+        hint2: '$\\sin \\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}$. $\\arcsin(-\\frac{\\sqrt{3}}{2}) = -\\frac{\\pi}{3}$.',
         hint3: '$\\cos(-\\frac{\\pi}{4}) = \\frac{\\sqrt{2}}{2}$, and the angle in $[0, \\pi]$ with that cosine is $\\frac{\\pi}{4}$.',
-        explanation: '1) $\\cos\\theta = \\frac{4}{5} = 0.8$ (the range of $\\arcsin$ keeps cosine positive). 2) $\\sin \\frac{7\\pi}{6} = -\\frac{1}{2}$, $\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$. 3) $\\arccos(\\frac{\\sqrt{2}}{2}) = \\frac{\\pi}{4}$, not $-\\frac{\\pi}{4}$, because $\\arccos$ never outputs a negative angle.'
+        explanation: '1) $\\cos\\theta = \\frac{4}{5} = 0.8$ (the range of $\\arcsin$ keeps cosine positive). 2) $\\sin \\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}$, $\\arcsin(-\\frac{\\sqrt{3}}{2}) = -\\frac{\\pi}{3}$. 3) $\\arccos(\\frac{\\sqrt{2}}{2}) = \\frac{\\pi}{4}$, not $-\\frac{\\pi}{4}$, because $\\arccos$ never outputs a negative angle.'
       }
     },
     {

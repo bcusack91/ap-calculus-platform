@@ -221,7 +221,7 @@ AP questions often describe a lab mistake and ask whether the calculated concent
         dropdowns: [
           {
             id: 'mx4-dd1',
-            label: 'According to Beer\'s Law ($A = \\varepsilon bc$), increasing concentration',
+            label: 'According to Beer\'s Law ($A = \\varepsilon bc$), as concentration increases, the absorbance',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 0,
             explanation: 'According to Beer\'s Law ($A = \\varepsilon bc$), increasing concentration increases absorbance proportionally.'

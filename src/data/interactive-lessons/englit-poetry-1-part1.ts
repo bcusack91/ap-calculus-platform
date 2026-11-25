@@ -45,18 +45,29 @@ export const englitPoetry1Part1Data = {
     {
       id: "englitpo1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "speaker",
-            "tone",
-            "imagery"
+      "questions": [
+            {
+                  "question": "The constructed voice in a poem, which may differ from the poet",
+                  "answer": "speaker",
+                  "acceptableAnswers": ["the speaker", "persona"]
+            },
+            {
+                  "question": "The attitude a poem conveys toward its subject or audience",
+                  "answer": "tone",
+                  "acceptableAnswers": ["the tone"]
+            },
+            {
+                  "question": "Sensory language and clusters of concrete detail",
+                  "answer": "imagery",
+                  "acceptableAnswers": ["images", "image"]
+            }
       ],
-      "hint1": "Concept 1: Speaker",
-      "hint2": "Concept 2: Tone",
-      "hint3": "Concept 3: Imagery",
-      "explanation": "Speaker, Tone, and Imagery are core vocabulary for this unit."
+      "hint1": "Concept 1: the voice, not the poet.",
+      "hint2": "Concept 2: the attitude.",
+      "hint3": "Concept 3: language that appeals to the senses.",
+      "explanation": "Speaker, tone and imagery are core vocabulary for this unit."
 }
     },
     {

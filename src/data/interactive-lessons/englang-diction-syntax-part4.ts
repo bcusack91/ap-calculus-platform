@@ -129,6 +129,7 @@ Here, **form enacts content**. Thoreau writes a cluttered sentence about clutter
       exercise: {
         boxes: 3,
         correctAnswers: ['semicolon', 'colon', 'emphasis'],
+        acceptableAnswers: [[], [], ['urgency', 'intensity', 'force', 'insistence']],
         hint1: 'Thoreau uses it in "We do not ride on the railroad; it rides upon us."',
         hint2: 'Two dots, one above the other.',
         hint3: 'Each repetition presses the same point harder.',

@@ -109,7 +109,7 @@ This says: starting value + net accumulation = current value.`
           },
           {
             label: 'If $v(t) \\ge 0$, then $\\int_a^b v(t)\\,dt$ represents:',
-            options: ['Total distance traveled', 'Net displacement', 'Average velocity', 'Acceleration'],
+            options: ['Total distance traveled', 'Final position $s(b)$', 'Average velocity', 'Acceleration'],
             correctAnswers: ['Total distance traveled'],
             hints: ['When velocity is non-negative, displacement equals distance.'],
             explanation: 'When $v \\ge 0$, $\\int v\\,dt$ gives both displacement and distance.'

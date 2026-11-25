@@ -77,7 +77,7 @@ $$\\boxed{\\ln x \\ll x^n \\ll e^x \\ll x! \\ll x^x \\quad \\text{as } x \\to \\
           },
           {
             question: '$\\lim_{x \\to \\infty} \\frac{5x^2 + 3x}{2x^2 - 1}$',
-            options: ['$5/2$ (no L\'Hôpital needed — same degree)', '$\\infty$', '$0$', '$5$'],
+            options: ['$5/2$', '$\\infty$', '$0$', '$5$'],
             correctAnswer: 0,
             explanation: 'Same-degree rational function: limit = ratio of leading coefficients = $5/2$. L\'H also works: $\\lim 10x/(4x) = 10/4 = 5/2$.'
           },

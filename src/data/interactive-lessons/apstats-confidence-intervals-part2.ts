@@ -230,7 +230,7 @@ A survey of 800 randomly selected teenagers finds that 480 use social media dail
             explanation: 'Higher confidence → larger $z^*$ → wider interval. Both intervals are centered at the same $\\hat{p}$.'
           },
           {
-            question: 'Which is a correct interpretation? "We are 95% confident that..."',
+            question: 'A poll gives a 95% CI of $(0.52, 0.68)$ for the proportion of Americans who support a policy. Which is a correct interpretation? "We are 95% confident that..."',
             options: ['...95% of Americans support the policy', '...the true proportion who support it is between 0.52 and 0.68', '...the sample proportion is between 0.52 and 0.68', '...the next sample proportion will fall between 0.52 and 0.68'],
             correctAnswer: 1,
             explanation: 'A CI estimates the population PARAMETER (the true proportion), not the sample statistic or individual data values.'

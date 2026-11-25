@@ -124,7 +124,7 @@ The other four required documents — Federalist No. 39, the Emancipation Procla
       exercise: {
         questions: [
           {
-            prompt: "A presidential directive that manages the federal government, implied by the President's vested executive power — the tool Obama used for his 2014 immigration program: an executive ___.",
+            prompt: "A presidential directive that manages the federal government, implied by the President's vested executive power — the tool Truman used in 1948 to desegregate the armed forces: an executive ___.",
             answer: 'order',
             acceptableAnswers: ['order', 'orders', 'executive order', 'executive action'],
             hint: 'EK 2.4.A.2.iv.'

@@ -96,7 +96,7 @@ $$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$$
           },
           {
             question: 'The energy in an EM wave is carried:',
-            options: ['Only by the electric field', 'Only by the magnetic field', 'Equally by both E and B fields', 'By the Poynting vector'],
+            options: ['Only by the electric field', 'Only by the magnetic field', 'Equally by both E and B fields', 'Mostly by the electric field'],
             correctAnswer: 2,
             explanation: 'Electric and magnetic field energy densities are always equal: $u_E = u_B = \\frac{1}{2}\\epsilon_0 E^2$. This is a fundamental property of EM waves in vacuum.'
           },
@@ -121,7 +121,7 @@ A 100 W light bulb radiates uniformly.
 
 **2)** At what distance is intensity 1 $W/m^{2}$? (in meters, round to 1 decimal)
 
-**3)** If intensity is 500 $W/m^{2}$ and light is fully absorbed, radiation pressure? (answer in scientific notation like 1.67e-6)
+**3)** If intensity is 500 $W/m^{2}$ and light is fully absorbed, radiation pressure? (answer in scientific notation like 4.52e-7)
       `,
       exercise: {
         boxes: 3,

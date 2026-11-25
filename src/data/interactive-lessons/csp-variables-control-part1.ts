@@ -49,7 +49,7 @@ score ← score + 10  // Update score (now 10)
       exercise: {
         questions: [
           {
-            question: 'After these statements, what is the value of x?\nx ← 5\ny ← x\nx ← 10',
+            question: 'After these statements, what are the values of x and y?\nx ← 5\ny ← x\nx ← 10',
             options: [
               'x = 5, y = 10',
               'x = 10, y = 10',

@@ -98,7 +98,7 @@ Pizarro conquered a much larger Inca Empire with similar advantages:
       exercise: {
         questions: [
           {
-            question: 'The Inca road network\'s military significance was that it:',
+            question: 'What was the military significance of the Inca road network?',
             options: [
               'It let armies move quickly from Cuzco across the Andes to crush rebellions and project power far away',
               'It was reserved for trade caravans, and Inca law banned soldiers from marching on the roads',

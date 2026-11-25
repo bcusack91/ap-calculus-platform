@@ -40,13 +40,13 @@ $$\\boxed{\\lim \\frac{f}{g} = \\lim \\frac{f'}{g'} \\quad \\text{when } \\frac{
           },
           {
             question: '$\\lim_{x \\to \\infty} \\frac{(\\ln x)^3}{x}$',
-            options: ['$0$ (logarithm always loses to polynomial)', '$\\infty$', '$1$', '$3$'],
+            options: ['$0$', '$\\infty$', '$1$', '$3$'],
             correctAnswer: 0,
             explanation: 'Growth hierarchy: $(\\ln x)^3 \\ll x$. (L\'H: $\\frac{3(\\ln x)^2/x}{1} = \\frac{3(\\ln x)^2}{x}$, repeat...eventually 0.)'
           },
           {
             question: '$\\lim_{x \\to 0} \\left(\\frac{1}{\\sin x} - \\frac{1}{x}\\right)$',
-            options: ['$0$ ($\\infty - \\infty$; combine: $\\frac{x - \\sin x}{x\\sin x} \\to 0$)', '$\\infty$', '$1$', 'DNE'],
+            options: ['$0$', '$\\infty$', '$1$', 'DNE'],
             correctAnswer: 0,
             explanation: '$\\frac{x - \\sin x}{x\\sin x} = \\frac{0}{0}$. L\'H: $\\frac{1 - \\cos x}{\\sin x + x\\cos x} \\to 0/0$. L\'H: $\\frac{\\sin x}{2\\cos x - x\\sin x} = 0/2 = 0$.'
           }
@@ -61,15 +61,15 @@ $$\\boxed{\\lim \\frac{f}{g} = \\lim \\frac{f'}{g'} \\quad \\text{when } \\frac{
         questions: [
           {
             question: '$\\lim_{n \\to \\infty} n^{1/n}$ (treating $n$ as continuous):',
-            options: ['$1$ ($\\infty^0$; $\\ln y = \\ln n/n \\to 0$, so $y \\to e^0 = 1$)', '$e$', '$0$', '$\\infty$'],
+            options: ['$1$', '$e$', '$0$', '$\\infty$'],
             correctAnswer: 0,
             explanation: '$\\ln y = \\ln n / n$. L\'H: $1/n / 1 = 1/n \\to 0$. So $y \\to e^0 = 1$.'
           },
           {
-            question: 'Which limit does NOT require L\'Hôpital?',
-            options: ['$\\lim_{x \\to 2} \\frac{x+3}{x-1} = 5$ (not indeterminate)', '$\\lim_{x \\to 0} \\frac{\\sin x}{x}$', '$\\lim_{x \\to \\infty} \\frac{e^x}{x^2}$', '$\\lim_{x \\to 0} \\frac{e^x - 1}{x}$'],
+            question: 'Which limit is NOT an indeterminate form?',
+            options: ['$\\lim_{x \\to 2} \\frac{x+3}{x-1}$', '$\\lim_{x \\to 0} \\frac{\\sin x}{x}$', '$\\lim_{x \\to \\infty} \\frac{e^x}{x^2}$', '$\\lim_{x \\to 0} \\frac{e^x - 1}{x}$'],
             correctAnswer: 0,
-            explanation: '$(2+3)/(2-1) = 5$. Direct substitution works — no indeterminate form.'
+            explanation: '$(2+3)/(2-1) = 5$. Direct substitution works — no indeterminate form, so L\'Hôpital never applies. The other three are $0/0$ or $\\infty/\\infty$.'
           }
         ]
       }
@@ -82,8 +82,8 @@ $$\\boxed{\\lim \\frac{f}{g} = \\lim \\frac{f'}{g'} \\quad \\text{when } \\frac{
         dropdowns: [
           {
             label: '$\\lim_{x \\to 0^+} x^{x^2}$. The form is:',
-            options: ['$0^0$ (take $\\ln$)', '$0$', '$1^\\infty$', 'Not indeterminate'],
-            correctAnswers: ['$0^0$ (take $\\ln$)'],
+            options: ['$0^0$', '$0$', '$1^\\infty$', 'Not indeterminate'],
+            correctAnswers: ['$0^0$'],
             hints: ['Base $\\to 0^+$, exponent $\\to 0$.'],
             explanation: '$0^0$ form.'
           },

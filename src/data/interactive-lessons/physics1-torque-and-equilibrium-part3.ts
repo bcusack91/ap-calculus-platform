@@ -111,7 +111,7 @@ For a **uniform** beam, the weight acts at the **center of mass** (geometric cen
       content: `
 **Rotational Equilibrium Problems** 🧮
 
-1) A 6 m beam is balanced on a fulcrum at its center. A 50 N weight is 2 m to the left of the fulcrum. Where (in m from the fulcrum) should a 25 N weight be placed to the right for balance?
+1) A 10 m beam is balanced on a fulcrum at its center. A 50 N weight is 2 m to the left of the fulcrum. Where (in m from the fulcrum) should a 25 N weight be placed to the right for balance?
 
 2) A see-saw has a fulcrum at its center. Child A (400 N) sits 2.5 m from the fulcrum. How far from the fulcrum (in m) must Child B (500 N) sit to balance?
 

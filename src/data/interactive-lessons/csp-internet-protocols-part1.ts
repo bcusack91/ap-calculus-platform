@@ -132,7 +132,7 @@ When you open a web page:
             options: ['TCP', 'UDP', 'HTTP only', 'IP only']
           },
           {
-            label: 'IPv4 uses ___ bits for addresses, providing about 4.3 billion unique addresses',
+            label: 'IPv4 uses ___ for addresses, providing about 4.3 billion unique addresses',
             options: ['32 bits', '64 bits', '128 bits', '16 bits']
           },
           {

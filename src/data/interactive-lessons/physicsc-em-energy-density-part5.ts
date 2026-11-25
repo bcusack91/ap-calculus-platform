@@ -100,8 +100,8 @@ The total energy is conserved—it simply sloshes back and forth between the two
         '$0.02$ A',
         '$20$ A'
       ],
-      correctAnswer: 0,
-      explanation: 'Energy conservation: $\\frac{1}{2}LI_{\\max}^2 = \\frac{Q_0^2}{2C}$. $I_{\\max} = Q_0/\\sqrt{LC} = 2 \\times 10^{-3}/\\sqrt{10^{-2} \\times 10^{-4}} = 2 \\times 10^{-3}/10^{-3} = 2 \\times ... $ Wait: $\\sqrt{LC} = \\sqrt{10^{-5}} \\approx ... $ Let me recalculate. $\\sqrt{LC} = \\sqrt{(0.01)(10^{-4})} = \\sqrt{10^{-6}} = 10^{-3}$. $I_{\\max} = Q_0/\\sqrt{LC} = 2 \\times 10^{-3}/10^{-3} = 2$ A. Hmm, checking: $I_{\\max} = \\omega Q_0 = Q_0/\\sqrt{LC} = 0.002/0.001 = 2$ A. But let me verify energy: $\\frac{1}{2}LI^2 = \\frac{1}{2}(0.01)(4) = 0.02$ J. $Q_0^2/(2C) = (4 \\times 10^{-6})/(2 \\times 10^{-4}) = 0.02$ J ✓. So $I_{\\max} = 2$ A? Let me re-examine the answer...'
+      correctAnswer: 1,
+      explanation: 'Energy conservation: $\\frac{1}{2}LI_{\\max}^2 = \\frac{Q_0^2}{2C}$. $I_{\\max} = Q_0/\\sqrt{LC} = 2 \\times 10^{-3}/\\sqrt{10^{-2} \\times 10^{-4}} = 2$ A. Check: $\\frac{1}{2}LI_{\\max}^2 = \\frac{1}{2}(0.01)(4) = 0.02$ J and $Q_0^2/(2C) = (4 \\times 10^{-6})/(2 \\times 10^{-4}) = 0.02$ J ✓.'
     },
     {
       id: 'eden5-mcq4',

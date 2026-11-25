@@ -159,9 +159,9 @@ Lasers require **population inversion** — more atoms in excited state than gro
 
 **2)** An STM tip is 1 nm from the surface with $\\kappa = 10^{10}$ $m^{-1}$. What is $2\\kappa d$?
 
-**3)** If the tip moves to 1.1 nm, by what factor does the current drop? ($e^{-2} ≈ 0.135$)
+**3)** If the tip moves to 1.1 nm, what is the ratio $I_{new}/I_{old}$ of the tunneling currents? (round to 3 significant figures)
 
-**4)** A semiconductor has band gap 2.0 eV. What color LED would it produce? (wavelength in nm)
+**4)** A semiconductor has band gap 2.0 eV. What wavelength would its LED emit? (in nm)
       `,
       exercise: {
         boxes: 4,

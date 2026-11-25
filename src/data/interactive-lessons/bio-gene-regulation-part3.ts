@@ -63,7 +63,7 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
       exercise: {
         questions: [
           {
-            question: 'A muscle-specific gene is bound by all of its required activator proteins, yet it is not transcribed in a particular cell. Sequencing shows no mutations in the gene or its enhancers. What is the most likely explanation?',
+            question: 'All of the activator proteins a muscle-specific gene requires are present in the nucleus of a particular cell, yet the gene is not transcribed there. Sequencing shows no mutations in the gene, its promoter or its enhancers. What is the most likely explanation?',
             options: [
               'The gene is part of an operon that is switched off in this cell',
               'The gene lies in tightly packed heterochromatin the machinery cannot reach',
@@ -71,7 +71,7 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
               'The gene lacks a functional promoter in this particular cell'
             ],
             correctAnswer: 1,
-            explanation: 'In eukaryotes, chromatin state is the first gate: even with activators present, a gene in heterochromatin is inaccessible and stays off. The operon option is a classic trap — eukaryotic genes are NOT in operons. The cis-element option misdefines activators (they are trans-acting diffusible proteins, not cis elements). The missing-promoter option is excluded because the gene is described as having intact enhancers and being normally transcribable elsewhere.'
+            explanation: 'In eukaryotes, chromatin state is the first gate: even with activators present, a gene in heterochromatin is inaccessible and stays off. The operon option is a classic trap — eukaryotic genes are NOT in operons. The cis-element option misdefines activators (they are trans-acting diffusible proteins, not cis elements). The missing-promoter option is excluded because sequencing found no mutations in the promoter.'
           },
           {
             question: 'How can a relatively small number of transcription factors generate thousands of distinct cell-type-specific gene-expression patterns in a human body?',

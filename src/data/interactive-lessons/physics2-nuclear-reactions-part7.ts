@@ -93,10 +93,10 @@ export const physics2NuclearPart7Data = {
           {
             question: 'Radium-226 undergoes alpha decay, then the daughter undergoes beta$ {}^{-}$ decay. The final nucleus has:',
             options: [
-              '$A = 222$, $Z = 87$',
+              '$A = 222$, $Z = 86$',
               '$A = 222$, $Z = 89$',
               '$A = 222$, $Z = 87$',
-              '$A = 222$, $Z = 87$'
+              '$A = 226$, $Z = 87$'
             ],
             correctAnswer: 2,
             explanation: 'Alpha: $A = 226 - 4 = 222$, $Z = 88 - 2 = 86$ (radon). Beta$ {}^{-}$: $A = 222$ (unchanged), $Z = 86 + 1 = 87$ (francium). Final: $^{222}_{87}\\text{Fr}$.'
@@ -136,9 +136,9 @@ Uranium-235 fission: $^{235}_{92}\\text{U} + ^1_0n \\to ^{140}_{54}\\text{Xe} + 
 
 **1)** How many neutrons $x$ are released?
 
-**2)** If each fission releases 200 MeV, how much energy from 1 mol ($6 \\times 10^{23}$) of U-235 fissions? (in MeV, scientific notation like "1.2e26")
+**2)** If each fission releases 200 MeV, how much energy from 1 mol ($6 \\times 10^{23}$) of U-235 fissions? (in MeV, scientific notation like "3.5e24")
 
-**3)** Convert to joules ($1\\text{ MeV} = 1.6 \\times 10^{-13}$ J, answer like "1.92e13")
+**3)** Convert to joules ($1\\text{ MeV} = 1.6 \\times 10^{-13}$ J, answer like "4.81e12")
       `,
       exercise: {
         boxes: 3,

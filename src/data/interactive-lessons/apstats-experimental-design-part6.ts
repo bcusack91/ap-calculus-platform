@@ -71,15 +71,16 @@ A teacher wants to test whether background music improves quiz scores. She has 4
 
 **2)** What is the explanatory variable?
 
-**3)** Should students know whether music is being played for them? (yes/no) Why?
+**3)** Students will hear the music, so they cannot be blinded. Should the person scoring the quizzes know which group each student was in? (yes/no)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['20', 'background music', 'no'],
+        acceptableAnswers: [[], ['music', 'presence of background music', 'whether music is played', 'music vs. no music', 'music or no music', 'background music (present vs. absent)'], []],
         hint1: '40 ÷ 2',
         hint2: 'What is being varied?',
-        hint3: 'Think about placebo effect',
-        explanation: '1) 20 per group. 2) Background music (present vs. absent). 3) No — to prevent the placebo effect from influencing results.'
+        hint3: 'Could knowing the groups bias the scorer?',
+        explanation: '1) 20 per group. 2) Background music (present vs. absent). 3) No — a blinded scorer keeps expectations from biasing how the quizzes are graded.'
       }
     }
   ]

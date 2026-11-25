@@ -100,9 +100,9 @@ Bandura's 1965 follow-up is crucial for AP: children who watched the model get p
       `,
       exercise: {
         inputs: [
-          { label: 'Who developed social learning theory and the Bobo doll experiment?', answer: 'Bandura' },
+          { label: 'Who developed social learning theory and the Bobo doll experiment?', answer: 'Bandura', acceptableAnswers: ['Albert Bandura'] },
           { label: 'Seeing someone ELSE get rewarded for a behavior is called vicarious ___', answer: 'reinforcement' },
-          { label: 'The Bobo doll study showed children learn through ___ even without direct reinforcement', answer: 'observation' }
+          { label: 'The Bobo doll study showed children learn through ___ even without direct reinforcement', answer: 'observation', acceptableAnswers: ['observational learning', 'observing', 'watching', 'watching others', 'modeling', 'modelling', 'imitation'] }
         ]
       }
     },

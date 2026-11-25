@@ -121,7 +121,7 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'Energy bar charts must show the same total height when:',
-            options: ['Only conservative forces act', 'Including all forms of energy', 'Mass is constant', 'Velocity is constant'],
+            options: ['Only KE and PE are counted', 'Including all forms of energy', 'Mass is constant', 'Velocity is constant'],
             correctIndex: 1,
             explanation: 'Total energy is always conserved. The bars (KE + PE + thermal + ...) must sum to the same total at every instant.'
           },

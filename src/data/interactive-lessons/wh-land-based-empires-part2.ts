@@ -41,7 +41,7 @@ export const whLandBasedEmpiresPart2Data = {
             explanation: 'Constantinople\'s fall ended a 1,000-year empire and gave the Ottomans the most strategically located city in the world — bridging Europe and Asia, controlling the Black Sea entrance. The AP exam connects this to European sea-route exploration: Ottoman control of eastern trade routes motivated Portuguese and Spanish search for maritime alternatives.'
           },
           {
-            question: 'The devshirme system (collecting Christian boys for Ottoman imperial service) was significant because it:',
+            question: 'Why was the devshirme system (collecting Christian boys for Ottoman imperial service) significant?',
             options: [
               'It produced janissaries and officials whose careers depended entirely on the sultan, bypassing the Muslim nobility',
               'It was mainly a religious conversion campaign with no real role in staffing the army or government',
@@ -125,7 +125,7 @@ Ottoman administrative innovations enabled governing a diverse empire:
             explanation: 'The millet system was pragmatic imperial administration: the empire could not possibly govern millions of Christian and Jewish subjects using only Islamic legal institutions. By delegating internal governance to religious leaders (Greek Orthodox Patriarch, Armenian Patriarch, Chief Rabbi), the Ottomans maintained control through taxation and military service while reducing costly administrative complexity.'
           },
           {
-            question: 'The Ottoman Empire\'s control of Constantinople and eastern Mediterranean trade routes after 1453 most directly caused:',
+            question: 'The Ottoman Empire\'s control of Constantinople and eastern Mediterranean trade routes after 1453 helped motivate:',
             options: [
               'Portugal and Spain to intensify their search for sea routes to Asia around Africa and across the Atlantic',
               'Venice and Genoa to abandon Mediterranean commerce and shift to overland routes through Russia',

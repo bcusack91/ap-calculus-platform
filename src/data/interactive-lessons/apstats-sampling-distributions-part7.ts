@@ -152,10 +152,10 @@ export const apStatsSamplingDistPart7Data = {
           },
           {
             id: 'sd7-dd4',
-            label: 'The quantity $\\sigma/\\sqrt{n}$ is called the ___',
+            label: 'When $\\sigma$ is unknown, the quantity $s/\\sqrt{n}$ is called the ___',
             options: ['standard deviation', 'standard error', 'margin of error', 'confidence level'],
             correctIndex: 1,
-            explanation: '$\\sigma/\\sqrt{n}$ is the standard error (or standard deviation of the sampling distribution) of $\\bar{x}$.'
+            explanation: '$s/\\sqrt{n}$ estimates $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$, the standard deviation of the sampling distribution of $\\bar{x}$, so it is called the standard error of $\\bar{x}$.'
           }
         ]
       }

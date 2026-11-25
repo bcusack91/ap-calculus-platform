@@ -52,7 +52,7 @@ The alternating bound is usually tighter and easier. Use it when available!`
       exercise: {
         questions: [
           {
-            question: 'Using the Maclaurin series for $e^{-1}$ through $n=4$ terms, the error is at most:',
+            question: 'Using the terms $n = 0$ through $n = 4$ of the Maclaurin series for $e^{-1}$, the error is at most:',
             options: ['$1/5! = 1/120$', '$1/4! = 1/24$', '$1/6! = 1/720$', '$e^{-1}/5$'],
             correctAnswer: 0,
             explanation: '$e^{-1} = \\sum (-1)^n/n!$. Through $n=4$: error $\\le |$ next term $| = 1/5! = 1/120$.'

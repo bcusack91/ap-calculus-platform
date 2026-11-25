@@ -168,6 +168,7 @@ Notice the model never says "diction" or "syntax." It quotes, describes the choi
       exercise: {
         boxes: 3,
         correctAnswers: ['petty', 'simple', 'formal'],
+        acceptableAnswers: [['trivial', 'base', 'small-minded', 'paltry'], ['bare', 'plain'], ['elevated', 'learned', 'legal', 'official']],
         hint1: 'Trivial, small-minded; the word starts with p.',
         hint2: 'The form of the sentence matches the quality it praises.',
         hint3: 'The opposite of informal or colloquial.',

@@ -58,10 +58,10 @@ Each gives a different tangent direction at the origin. The rose has 3 tangent l
             explanation: '$r = 1/2$, $r\' = -\\sin(\\pi/3) = -\\sqrt{3}/2$. Numerator: $(-\\sqrt{3}/2)(\\sqrt{3}/2) + (1/2)(1/2) = -3/4+1/4 = -1/2$. Denominator: $(-\\sqrt{3}/2)(1/2) - (1/2)(\\sqrt{3}/2) = -\\sqrt{3}/2$. Slope $= (-1/2)/(-\\sqrt{3}/2) = 1/\\sqrt{3}$.'
           },
           {
-            question: 'The number of tangent lines at the origin for $r = \\sin(4\\theta)$ is:',
+            question: 'The number of distinct tangent lines at the origin for $r = \\sin(4\\theta)$ is:',
             options: ['$4$', '$8$', '$2$', '$1$'],
             correctAnswer: 0,
-            explanation: '$\\sin(4\\theta) = 0$ at $\\theta = 0, \\pi/4, \\pi/2, 3\\pi/4$ (in $[0, \\pi)$). Due to symmetry of the 8-petal rose, there are $4$ distinct tangent directions at the origin.'
+            explanation: '$\\sin(4\\theta) = 0$ at $\\theta = 0, \\pi/4, \\pi/2, 3\\pi/4$ (in $[0, \\pi)$). Since $\\theta$ and $\\theta + \\pi$ give the same line, the 8 zeros in $[0, 2\\pi)$ of the 8-petal rose give only $4$ distinct tangent lines at the origin.'
           },
           {
             question: 'At a point where $dy/d\\theta = 0$ and $dx/d\\theta \\ne 0$, the polar curve has:',
@@ -100,11 +100,11 @@ Each gives a different tangent direction at the origin. The rose has 3 tangent l
       type: 'input-box' as const,
       content: '**Compute**',
       exercise: {
-        question: 'For the circle $r = 4\\cos\\theta$, find the slope $dy/dx$ at $\\theta = \\pi/3$. Use $r = 2$, $r\' = -2\\sqrt{3}$. The slope simplifies to $\\frac{a}{b\\sqrt{3}}$ where $a$ and $b$ are integers. What is $a/b$?',
-        correctAnswer: '1',
-        acceptableAnswers: ['1', '1.0'],
+        question: 'For the circle $r = 4\\cos\\theta$, find the slope $dy/dx$ at $\\theta = \\pi/3$. Use $r = 2$, $r\' = -2\\sqrt{3}$. Give the exact slope (for example sqrt(2)/4) or a decimal to three places.',
+        correctAnswer: '1/sqrt(3)',
+        acceptableAnswers: ['1/sqrt(3)', 'sqrt(3)/3', '0.577'],
         hints: ['Num: $(-2\\sqrt{3})(\\sqrt{3}/2) + 2(1/2) = -3+1 = -2$.', 'Den: $(-2\\sqrt{3})(1/2) - 2(\\sqrt{3}/2) = -\\sqrt{3}-\\sqrt{3} = -2\\sqrt{3}$.'],
-        explanation: 'Num $= -2$, Den $= -2\\sqrt{3}$. Slope $= -2/(-2\\sqrt{3}) = 1/\\sqrt{3}$. So $a = 1$, $b = 1$, $a/b = 1$.'
+        explanation: 'Num $= -2$, Den $= -2\\sqrt{3}$. Slope $= -2/(-2\\sqrt{3}) = 1/\\sqrt{3} = \\sqrt{3}/3 \\approx 0.577$.'
       }
     },
     {
@@ -114,7 +114,7 @@ Each gives a different tangent direction at the origin. The rose has 3 tangent l
 
 - Use the polar slope formula with $r$ and $r'$, then build the tangent line equation
 - At the origin: tangent slope is $\\tan\\theta_0$ where $f(\\theta_0) = 0$
-- Roses have multiple tangent lines at the origin (one per petal)
+- Roses have multiple tangent lines at the origin (one for each zero of $r$ in $[0, \\pi)$)
 - Always check for both horizontal ($dy/d\\theta = 0$) and vertical ($dx/d\\theta = 0$) tangents
 
 > **Next:** Part 4 covers **area of limaçon regions** and **inner loop area**.`

@@ -45,7 +45,7 @@ export const englitCharacterSettingPart1Data = {
     {
       id: "englitch1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the term for each description.\n\n1) Actions, dialogue, and narration that reveal a character's motives: _______\n\n2) Place, time, and social conditions that shape behavior: _______\n\n3) Internal and external struggles that clarify values and theme: _______",
       exercise: {
       "boxes": 3,
       "correctAnswers": [

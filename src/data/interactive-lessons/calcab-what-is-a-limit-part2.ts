@@ -156,10 +156,11 @@ For each English sentence, fill in the missing piece of the limit notation. Type
 
 **1)** "As $x$ approaches $5$ from the right, $f(x)$ approaches $9$." 
 $$\\lim_{x \\to ?} f(x) = 9$$
-Enter the missing right side of the arrow (e.g. \`5+\` or \`-2-\`):
+Enter the missing right side of the arrow (e.g. \`3-\` or \`-2+\`):
 
 **2)** "As $x$ runs to positive infinity, $g(x)$ approaches $0$."
 $$\\lim_{x \\to ?} g(x) = 0$$
+Enter \`infinity\`, \`-infinity\`, or a number:
 
 **3)** "As $x$ approaches $2$ from the left, $h(x)$ blows up to $-\\infty$."
 $$\\lim_{x \\to 2^-} h(x) = ?$$
@@ -168,6 +169,7 @@ Enter \`infinity\`, \`-infinity\`, or a number:
       exercise: {
         boxes: 3,
         correctAnswers: ['5+', 'infinity', '-infinity'],
+        acceptableAnswers: [[], ['+infinity'], []],
         hint1: 'The "+" sign as a superscript means "from the right."',
         hint2: 'Positive infinity is just $\\infty$.',
         hint3: '"Blows up to $-\\infty$" describes a negative vertical asymptote behavior.',

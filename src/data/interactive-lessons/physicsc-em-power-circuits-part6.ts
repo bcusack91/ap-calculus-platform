@@ -24,8 +24,8 @@ export const physCEMPwrCircPart6Data = {
       type: 'mcq' as const,
       question: 'A 24 V battery with $r = 1\\,\\Omega$ is connected to two resistors: $R_1 = 4\\,\\Omega$ and $R_2 = 12\\,\\Omega$ in parallel. The total power delivered to the external circuit is:',
       options: ['144 W', '108 W', '48 W', '192 W'],
-      correctAnswer: 0,
-      explanation: '$R_{\\text{eq}} = (4)(12)/(4+12) = 3\\,\\Omega$. Total: $R_T = 3 + 1 = 4\\,\\Omega$. $I = 24/4 = 6$ A. $P_{\\text{ext}} = I^2 R_{\\text{eq}} = 36 \\times 3 = 108$ W. Wait: $V_{\\text{ext}} = \\mathcal{E} - Ir = 24 - 6 = 18$ V. $P_{\\text{ext}} = V^2/R_{\\text{eq}} = 324/3 = 108$ W. But also $P_{\\text{ext}} = I \\cdot V_{\\text{ext}} = 6 \\times 18 = 108$ W. Actually checking: $P_{\\text{ext}} = I^2 \\times R_{\\text{eq}} = 36 \\times 3 = 108$ W. Hmm my first answer said 144. Let me recheck: $R_{\\text{eq,parallel}} = 48/16 = 3\\,\\Omega$. $R_{\\text{total}} = 4\\,\\Omega$. $I = 6$ A. $P_{\\text{ext}} = 6^2 \\times 3 = 108$ W. The correct answer is 108 W.'
+      correctAnswer: 1,
+      explanation: '$R_{\\text{eq}} = (4)(12)/(4+12) = 3\\,\\Omega$. Total: $R_T = 3 + 1 = 4\\,\\Omega$, so $I = 24/4 = 6$ A. $P_{\\text{ext}} = I^2 R_{\\text{eq}} = 36 \\times 3 = 108$ W. Check: $V_{\\text{ext}} = \\mathcal{E} - Ir = 24 - 6 = 18$ V and $I V_{\\text{ext}} = 6 \\times 18 = 108$ W. 144 W is the total power $\\mathcal{E} I$, which includes the 36 W lost in the internal resistance.'
     },
     {
       id: 'pwr6-problem2',
@@ -48,7 +48,7 @@ $$P = \\frac{V^2}{R_1+R_4} + \\frac{V^2}{R_2+R_3} = \\frac{100}{5} + \\frac{100}
       id: 'pwr6-mcq2',
       type: 'mcq' as const,
       question: 'In a balanced Wheatstone bridge with $R_1 = 3\\,\\Omega$, $R_2 = 6\\,\\Omega$, $R_3 = 4\\,\\Omega$, $R_4 = 8\\,\\Omega$, and $V = 12$ V, the power in $R_1$ is:',
-      options: ['$\\frac{144}{11}\\cdot\\frac{3}{121}$ — let me recalculate: $I_1 = 12/(3+8) = 12/11$ A, $P_1 = I_1^2 R_1 = (144/121)(3) = 432/121 \\approx 3.57$ W', '$\\approx 3.57$ W', '4 W', '3 W'],
+      options: ['$\\approx 5.33$ W', '$\\approx 3.57$ W', '4 W', '3 W'],
       correctAnswer: 1,
       explanation: 'Branch 1: $R_1 + R_4 = 11\\,\\Omega$, $I_1 = 12/11$ A. $P_1 = (12/11)^2 \\times 3 = 432/121 \\approx 3.57$ W.'
     },

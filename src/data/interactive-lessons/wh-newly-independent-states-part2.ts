@@ -178,7 +178,7 @@ export const whNewlyIndependentStatesPart2Data = {
             explanation: 'India = ISI = slow steady growth. South Korea = export-led growth + state coordination of chaebols = rapid industrialization. This is the canonical AP comparison for post-independence economic strategy.'
           },
           {
-            question: 'Which post-1945 case best illustrates the political costs of failed land reform?',
+            question: 'Which post-1945 case best illustrates the costs of a failed land and farm policy?',
             options: [
               "China's 1958 Great Leap Forward, in which forced collectivization and unrealistic quotas caused a famine that killed an estimated 15 to 45 million people",
               "Mexico's 1934–40 ejido distribution, which redistributed about 45 million acres and stabilized rural support for the ruling party for decades",

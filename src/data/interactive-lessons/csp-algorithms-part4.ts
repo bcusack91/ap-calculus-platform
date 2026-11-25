@@ -32,7 +32,7 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
       exercise: {
         questions: [
           {
-            question: "Which pair of changes is most likely to make a slow program faster?",
+            question: "Which change is most likely to make a slow program faster?",
             options: [
               "Switching from a quadratic-time algorithm to a linear-time one.",
               "Renaming variables and procedures so the code is easier to read.",

@@ -123,6 +123,7 @@ On Question 3 and in Section I writing questions, you are the one who must persu
       exercise: {
         boxes: 3,
         correctAnswers: ['premise', 'occasion', 'borrowed'],
+        acceptableAnswers: [['assumption', 'step'], ['kairos', 'moment', 'timing', 'context'], ['transferred', 'lent']],
         hint1: 'The unstated step is one of the statements the conclusion rests on.',
         hint2: 'The event or moment that prompts the speech.',
         hint3: 'The writer does not own this credibility; it is lent.',

@@ -83,7 +83,7 @@ $$\\boxed{\\int \\sin^2 x \\cos^2 x\\,dx = \\frac{x}{8} - \\frac{\\sin 4x}{32} +
           {
             question: 'For $\\int \\sin^2 x \\cos^4 x\\,dx$, the correct strategy is:',
             options: [
-              'Half-angle identities (both powers even)',
+              'Half-angle identities',
               'Peel off $\\sin x$, substitute $u = \\cos x$',
               'Peel off $\\cos x$, substitute $u = \\sin x$',
               'Integration by parts'
@@ -102,15 +102,15 @@ $$\\boxed{\\int \\sin^2 x \\cos^2 x\\,dx = \\frac{x}{8} - \\frac{\\sin 4x}{32} +
         dropdowns: [
           {
             label: '$\\int \\sin^5 x\\,dx$: What substitution?',
-            options: ['$u = \\cos x$ (odd power of $\\sin$)', '$u = \\sin x$', 'Half-angle', 'No substitution needed'],
-            correctAnswers: ['$u = \\cos x$ (odd power of $\\sin$)'],
+            options: ['$u = \\cos x$', '$u = \\sin x$', 'Half-angle', 'No substitution needed'],
+            correctAnswers: ['$u = \\cos x$'],
             hints: ['$\\sin^5 x = \\sin^4 x \\cdot \\sin x = (1-\\cos^2 x)^2 \\sin x$.'],
             explanation: 'Odd power of $\\sin$: peel off $\\sin x$ for $du = -\\sin x\\,dx$, convert $\\sin^4 x = (1-\\cos^2 x)^2$, let $u = \\cos x$.'
           },
           {
             label: '$\\int \\cos^6 x\\,dx$: What strategy?',
-            options: ['Half-angle (even power only)', '$u = \\sin x$', '$u = \\cos x$', 'Tabular method'],
-            correctAnswers: ['Half-angle (even power only)'],
+            options: ['Half-angle identities', '$u = \\sin x$', '$u = \\cos x$', 'Tabular method'],
+            correctAnswers: ['Half-angle identities'],
             hints: ['$\\cos^6 x = (\\cos^2 x)^3 = (\\frac{1+\\cos 2x}{2})^3$.'],
             explanation: 'Even power with no $\\sin$ factor: use $\\cos^2 x = \\frac{1+\\cos 2x}{2}$ and expand.'
           }

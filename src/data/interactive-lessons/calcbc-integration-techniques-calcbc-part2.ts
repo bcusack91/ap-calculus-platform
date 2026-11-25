@@ -127,7 +127,7 @@ After integrating in $\\theta$, you need to convert back to $x$. Draw a right tr
       type: 'input-box' as const,
       content: '**Definite Integral**',
       exercise: {
-        question: 'Evaluate $\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}}$. This is a known form. What is the exact answer? Give the numeric value (as a fraction of $\\pi$).',
+        question: 'Evaluate $\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}}$. This is a known form. What is the exact answer? Give the exact value in terms of $\\pi$.',
         correctAnswer: 'pi/2',
         acceptableAnswers: ['pi/2', '\u03c0/2'],
         hints: ['$\\int \\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C$.', '$[\\arcsin x]_0^1 = \\arcsin(1) - \\arcsin(0) = \\pi/2 - 0$.'],

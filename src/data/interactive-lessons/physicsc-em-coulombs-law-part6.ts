@@ -64,7 +64,7 @@ $E_{total} = 2 \\times 675\\,000 = 1\\,350\\,000$ N/C (toward $-$ charge) ✅
 
 1) Two identical charges $+q$ are equidistant from a point P, on opposite sides. Net field at P? (units of $kq/r^2$)
 
-2) $F = kq_1q_2/r^2$. If $k = 9 \\times 10^9$, $q_1 = q_2 = 2 \\times 10^{-6}$ C, $r = 1$ m. $F$ (N)? (Give as integer in mN, i.e., $\\times 10^{-3}$)
+2) $F = kq_1q_2/r^2$. If $k = 9 \\times 10^9$, $q_1 = q_2 = 2 \\times 10^{-6}$ C, $r = 1$ m. $F$ (in mN)?
 
 3) If the distance between charges is halved, force increases by a factor of ___
     

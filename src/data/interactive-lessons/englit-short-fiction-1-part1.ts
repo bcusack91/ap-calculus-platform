@@ -45,18 +45,29 @@ export const englitShortFiction1Part1Data = {
     {
       id: "englitsh1-input",
       type: 'input-boxes' as const,
-      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
+      content: "**Vocabulary Recall**\n\nType the core concept from the table above that matches each description.",
       exercise: {
-      "boxes": 3,
-      "correctAnswers": [
-            "compression",
-            "character revelation",
-            "ending effect"
+      "questions": [
+            {
+                  "question": "Packing high meaning into few pages, so small details carry large interpretive weight",
+                  "answer": "compression",
+                  "acceptableAnswers": ["the compression"]
+            },
+            {
+                  "question": "Brief moments that expose a character's motives or values (two words)",
+                  "answer": "character revelation",
+                  "acceptableAnswers": ["revelation of character", "the character revelation"]
+            },
+            {
+                  "question": "The final movement of a story and what it implies, often reframing earlier details (two words)",
+                  "answer": "ending effect",
+                  "acceptableAnswers": ["the ending effect", "effect of the ending"]
+            }
       ],
-      "hint1": "Concept 1: Compression",
-      "hint2": "Concept 2: Character Revelation",
-      "hint3": "Concept 3: Ending Effect",
-      "explanation": "Compression, Character Revelation, and Ending Effect are core vocabulary for this unit."
+      "hint1": "Concept 1: much meaning in little space.",
+      "hint2": "Concept 2: what a brief moment shows about a person.",
+      "hint3": "Concept 3: what the last movement does to everything before it.",
+      "explanation": "Compression, character revelation and ending effect are core vocabulary for this unit."
 }
     },
     {

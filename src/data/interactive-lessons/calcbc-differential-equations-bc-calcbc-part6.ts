@@ -18,7 +18,7 @@ Work through these problems systematically, showing all steps as you would on th
         questions: [
           {
             question: 'Solve $y\' = xy^2$, $y(0) = 1$. The particular solution is:',
-            options: ['$y = \\frac{2}{2 - x^2}$', '$y = e^{x^2/2}$', '$y = \\frac{1}{1 - x^2}$', '$y = \\frac{1}{1 - x^2/2}$'],
+            options: ['$y = \\frac{2}{2 + x^2}$', '$y = e^{x^2/2}$', '$y = \\frac{1}{1 - x^2}$', '$y = \\frac{1}{1 - x^2/2}$'],
             correctAnswer: 3,
             explanation: '$dy/y^2 = x\\,dx \\Rightarrow -1/y = x^2/2 + C$. IC: $-1 = C$. So $-1/y = x^2/2 - 1 \\Rightarrow y = 1/(1 - x^2/2)$.'
           },
@@ -52,8 +52,8 @@ Work through these problems systematically, showing all steps as you would on th
           },
           {
             label: 'Applying $y(0) = 1$: $C =$',
-            options: ['$3/2$ (since $1/2 + 1 = 0 + C$)', '$1$', '$2$', '$1/2$'],
-            correctAnswers: ['$3/2$ (since $1/2 + 1 = 0 + C$)'],
+            options: ['$3/2$', '$1$', '$2$', '$1/2$'],
+            correctAnswers: ['$3/2$'],
             hints: ['$1/2 + 1 = 0 + C$.'],
             explanation: '$1/2 + 1 = 3/2 = C$.'
           },

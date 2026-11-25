@@ -148,9 +148,9 @@ The field is zero 7.5 cm from A (2.5 cm from B). For opposite currents, the fiel
 
 Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
 
-1) A long wire carries 15 A. What is $B$ at a distance of 3.0 cm from the wire? (in T, use scientific notation like 1.0e-4)
+1) A long wire carries 15 A. What is $B$ at a distance of 3.0 cm from the wire? (in T, use scientific notation like 3.0e-6)
 
-2) Two long parallel wires 8.0 cm apart each carry 4.0 A, in **opposite** directions. What is the magnitude of $B$ at the midpoint? (in T, use scientific notation like 2.0e-5)
+2) Two long parallel wires 8.0 cm apart each carry 4.0 A, in **opposite** directions. What is the magnitude of $B$ at the midpoint? (in T, use scientific notation like 7.0e-6)
 
 3) Two long parallel wires 12 cm apart carry 9.0 A and 3.0 A in the **same** direction. How far from the 9.0 A wire, between the wires, is the net field zero? (in cm)
       `,

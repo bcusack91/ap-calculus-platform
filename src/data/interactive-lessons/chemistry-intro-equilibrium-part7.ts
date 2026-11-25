@@ -153,11 +153,11 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\text{O}_2(g)$ has $K_c = 1.6 \\times 10^{-10}$ at 900 K.
 
-**1)** Is this reaction product-favored or reactant-favored at 900 K? (Enter "reactant-favored")
+**1)** Is this reaction product-favored or reactant-favored at 900 K? (Enter "product-favored" or "reactant-favored")
 
 **2)** What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 3.2e5)
 
-**3)** The decomposition of $SO_{3}$ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
+**3)** The decomposition of $SO_{3}$ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase" or "decrease")
 
 *Round all answers to 3 significant figures.*
       `,

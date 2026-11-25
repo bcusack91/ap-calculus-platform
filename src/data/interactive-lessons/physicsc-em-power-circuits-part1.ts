@@ -104,8 +104,8 @@ $$U = \\int_0^\\infty I_0^2 e^{-2t/\\tau} R\\,dt = I_0^2 R \\cdot \\frac{\\tau}{
       type: 'mcq' as const,
       question: 'A current $I(t) = 4t$ A flows through a 5 Ω resistor. The energy dissipated from $t = 0$ to $t = 3$ s is:',
       options: ['540 J', '180 J', '720 J', '270 J'],
-      correctAnswer: 0,
-      explanation: '$U = \\int_0^3 I^2 R\\,dt = \\int_0^3 (4t)^2 \\cdot 5\\,dt = 80 \\int_0^3 t^2\\,dt = 80 \\cdot \\frac{27}{3} = 80 \\cdot 9 = 720$ J. Wait — let me recalculate: $80 \\times 9 = 720$ J. Actually $U = 80[t^3/3]_0^3 = 80(9) = 720$ J. The answer is 720 J → correcting: the correct answer is 720 J.'
+      correctAnswer: 2,
+      explanation: '$U = \\int_0^3 I^2 R\\,dt = \\int_0^3 (4t)^2 \\cdot 5\\,dt = 80 \\int_0^3 t^2\\,dt = 80 \\cdot \\frac{27}{3} = 720$ J. Using the average current (6 A) instead of integrating $I^2$ gives $6^2 \\cdot 5 \\cdot 3 = 540$ J, which is too small because $I^2$ grows faster than $I$.'
     },
     {
       id: 'pwr1-summary',

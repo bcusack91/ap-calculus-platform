@@ -163,7 +163,7 @@ if (age >= 13) {
 
 1) In Segment A, what is printed when \`n\` is 10?
 
-2) What does \`zone(51)\` from Part 2 return?
+2) Part 2's \`zone\` method returns 1 for 50 miles or less, 2 for 51 to 300, 3 for 301 to 1000, and 4 for more than 1000. What does \`zone(51)\` return?
 
 3) What does \`classify(7, 7, 7)\` return? Type the word without quotation marks.
       `,

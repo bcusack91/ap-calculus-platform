@@ -114,6 +114,7 @@ The rest, $1 - r^2$, is the proportion of variation in $y$ that the linear model
           {
             label: 'Percentage explained',
             correctAnswer: '49',
+            acceptableAnswers: ['49%', '49 percent'],
             explanation: '$r^2 = 0.49$ means 49% of the variation in $y$ is explained by the linear relationship with $x$.'
           },
           {

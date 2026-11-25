@@ -176,15 +176,15 @@ export const whConsequencesIndustrializationPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'For AP, which consequence of industrialization had the most significant long-term global impact?',
+            question: 'For AP, which claim about a long-term global consequence of industrialization is MOST defensible?',
             options: [
-              'Environmental change, because coal-era carbon emissions began the climate change that now alters the physical systems on which all other human arrangements depend',
+              'Environmental change, because coal-era carbon emissions began the climate change that still reshapes the physical systems that societies everywhere depend on',
               'Labor movements, because the trade unions and the socialist parties they produced determined the course of nearly all later political development around the world',
               'Migration, because the diasporas formed in the nineteenth century fixed the demographic distribution that still determines global power today',
               'None of them, because all consequences of industrialization were equally significant and historians cannot defend a ranking of one above another',
             ],
             correctAnswer: 0,
-            explanation: 'Comparative significance with defended ranking is AP\'s highest-level evaluation: the question asks students to make and defend a comparative judgment. The environmental answer is defensible: climate change from 19th-century coal burning is currently the most significant challenge facing human civilization — more existential than labor relations or migration patterns. But the labor movement answer is also defensible (democratic socialism shaped 20th-century politics globally) and the migration answer is defensible (current demographic distributions shape global power). AP rewards the reasoning and evidence, not just the conclusion — but the reasoning must explain why the chosen factor was more significant than alternatives.'
+            explanation: 'Comparative significance with defended ranking is AP\'s highest-level evaluation: the question asks students to make and defend a comparative judgment. The environmental claim is the most defensible: carbon emissions that began with 19th-century coal burning still drive climate change worldwide, and the evidence for that link is strong. The labor and migration answers overclaim ("nearly all later political development," "still determines global power"), and the "equally significant" answer refuses to make the judgment the question asks for. AP rewards the reasoning and evidence, not just the conclusion — but the reasoning must explain why the chosen factor was more significant than alternatives.'
           },
           {
             question: 'An AP LEQ prompt asks: "Evaluate the extent to which industrialization transformed the lives of working people in the period 1750-1900." Which thesis earns the highest mark?',

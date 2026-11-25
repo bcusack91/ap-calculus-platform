@@ -148,7 +148,7 @@ The CED (EK 2.13.A.1) names seven agencies as examples of bureaucratic discretio
           {
             prompt: "Term for the judgment agencies use, as delegated by Congress, to interpret and implement policies (two words).",
             answer: 'discretionary authority',
-            acceptableAnswers: ['discretionary authority', 'discretionary power', 'discretion', 'delegated discretion', 'delegated discretionary authority'],
+            acceptableAnswers: ['discretionary authority', 'discretionary power', 'discretion', 'delegated discretion', 'delegated discretionary authority', 'bureaucratic discretion', 'administrative discretion'],
             hint: 'EK 2.13.A.1 — Congress delegates it; agencies use it to write rules.'
           }
         ]
@@ -165,7 +165,7 @@ The CED (EK 2.13.A.1) names seven agencies as examples of bureaucratic discretio
             options: ['Rulemaking', 'Enforcement', 'Adjudication', 'Budgeting']
           },
           {
-            label: "ALJs decide ~750,000 cases/year on Social Security disability, immigration, labor disputes: ___",
+            label: "ALJs hold court-like hearings inside agencies on Social Security disability claims, labor disputes, environmental violations: ___",
             options: ['Rulemaking', 'Enforcement', 'Adjudication', 'Budgeting']
           },
           {

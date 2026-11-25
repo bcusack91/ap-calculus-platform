@@ -124,6 +124,7 @@ If the audience does not share the warrant, the argument fails — even if the e
       exercise: {
         boxes: 3,
         correctAnswers: ['warrant', 'Rogerian', 'counterargument'],
+        acceptableAnswers: [[], [], ['concession', 'counterclaim', 'contrast']],
         hint1: 'The logical bridge or underlying assumption.',
         hint2: 'Named after psychologist Carl Rogers.',
         hint3: 'The opposing side of the argument.',

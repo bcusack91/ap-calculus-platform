@@ -147,7 +147,7 @@ From May 2027 all three SAQs are required and all three are sourced: Q1 gives a 
       exercise: {
         dropdowns: [
           {
-            label: "Knowing Washington's 1796 Farewell Address was an intervention in the hardening Federalist-Republican division is most useful for: ___",
+            label: "Knowing Washington's 1796 Farewell Address appeared just as the Federalist-Republican division was hardening is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

@@ -202,7 +202,7 @@ Same period $\\frac{\\pi}{\\lvert b \\rvert}$, but asymptotes where $b(x - c) = 
     {
       id: 'p5-periodic-check',
       type: 'multiple-choice' as const,
-      figure: tfPeriodicGraph,
+      figure: { ...tfPeriodicGraph, caption: 'A periodic function that is not a sinusoid.' },
       content: `
 **Use the graph above.** The function $f$ is periodic and the graph shows its first three cycles. 📈
       `,

@@ -163,6 +163,7 @@ for (int r = 0; r < matrix.length; r++) {
       exercise: {
         boxes: 3,
         correctAnswers: ['row', 'col', 'last'],
+        acceptableAnswers: [[], ['column', 'c'], ['final', 'largest', 'maximum', 'max', 'highest', 'greatest']],
         hint1: 'Keep the row the same, vary the column.',
         hint2: 'Same row number and column number.',
         hint3: 'The maximum index (length - 1).',

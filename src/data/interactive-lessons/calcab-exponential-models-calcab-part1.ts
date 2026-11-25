@@ -122,7 +122,7 @@ $$\\boxed{t_{\\text{double}} = \\frac{\\ln 2}{k}} \\qquad \\boxed{t_{\\text{half
     {
       id: 'exp1-input',
       type: 'input-box' as const,
-      content: '**Solve for the growth constant.** \u270d\ufe0f',
+      content: '**Find the doubling time.** \u270d\ufe0f',
       exercise: {
         question: 'A population grows from 400 to 1600 in 8 hours. The doubling time (in hours) is:\n\n(Enter an integer.)',
         correctAnswer: '4',

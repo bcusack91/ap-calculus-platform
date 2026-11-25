@@ -126,7 +126,7 @@ export const aasBlackPowerBeyondPart6Data = {
               "King's book and Malcolm X's speech on human rights",
               "Chisholm's announcement and King's book on unity",
               "the breakfast photograph and Neal's essay",
-              "King's book and Chisholm's announcement"
+              "King's book and the breakfast photograph"
             ],
             "correctAnswer": 2,
             "explanation": "The breakfast program applied self-determination to community services, and Neal applied it to the arts, both outside elections. King's book criticizes Black Power's program, and Chisholm's campaign is electoral politics itself."

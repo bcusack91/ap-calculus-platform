@@ -159,7 +159,7 @@ export const cspSafeComputingPart7Data = {
             explanation: "Phishing tricks users into giving up information; explaining it and adding MFA protects the account even if a password is stolen."
           },
           {
-            question: "A school deploys 1,000 student laptops. The single most impactful safe-computing default is ___",
+            question: "A school deploys 1,000 student laptops. The most effective set of safe-computing defaults is ___",
             options: [
               "no special default — each student should configure their own laptop without any baseline policy.",
               "enforce MFA on student accounts, OS auto-updates, full-disk encryption, and unique passwords.",

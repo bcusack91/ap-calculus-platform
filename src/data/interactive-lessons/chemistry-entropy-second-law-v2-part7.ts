@@ -83,7 +83,7 @@ For the reaction: $\\text{2 SO}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\to \\tex
 
 Given: $\\Delta H° = -198$ kJ, $\\Delta S° = -187$ J/K
 
-**1)** Is this reaction spontaneous at 298 K? Calculate $\\Delta G°$ in kJ. ($\\Delta G° = \\Delta H° - T\\Delta S°$)
+**1)** Calculate $\\Delta G°$ at 298 K in kJ (a negative value means the reaction is spontaneous). ($\\Delta G° = \\Delta H° - T\\Delta S°$)
 
 **2)** At what temperature (K) does this reaction become nonspontaneous? Round to nearest whole number.
 

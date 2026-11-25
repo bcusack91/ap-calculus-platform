@@ -191,8 +191,8 @@ When two variables reference the same object, they are **aliases**. Changing the
           {
             question: 'What is printed?\nString a = "hello";\nString b = a;\na = "world";\nSystem.out.println(b);',
             options: [
-              '"world"',
-              '"hello"',
+              'world',
+              'hello',
               'null',
               'A compile error, since "hello" is immutable'
             ],

@@ -129,7 +129,7 @@ The human cost was staggering: estimates suggest the Mongol conquests killed 30�
             explanation: 'The ulus division planted the seeds of fragmentation: the khanates competed with each other (Golden Horde vs. Il-Khanate fought for control of Persia), adopted different religions (Il-Khanate → Islam; Yuan → Buddhism/Confucianism; Golden Horde → Islam), and gradually developed distinct identities. The Mongol Empire never had a stable successor to Genghis Khan\'s unified authority.'
           },
           {
-            question: 'The Mongol conquests\' demographic impact — reducing some regions\' populations by 50-75% — is most relevant to AP World History because it:',
+            question: 'The Mongol conquests\' demographic impact — reducing some regions\' populations by 50-75% — is most relevant to AP World History for which reason?',
             options: [
               'It shows how violence ruined irrigation and urban commerce in ways that lasted for centuries',
               'It shows that population data from the era are too unreliable for historians to use at all',

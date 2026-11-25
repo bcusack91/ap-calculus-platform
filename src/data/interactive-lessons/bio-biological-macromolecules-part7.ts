@@ -31,7 +31,7 @@ export const bioMacromoleculesPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which macromolecule serves as both an energy source and structural material?',
+            question: 'Which macromolecule serves both as a quick energy source and as the structural material of plant cell walls and arthropod exoskeletons?',
             options: [
               'Lipids',
               'Proteins',

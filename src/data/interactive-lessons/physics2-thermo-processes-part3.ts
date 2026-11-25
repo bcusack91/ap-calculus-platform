@@ -82,7 +82,7 @@ $$COP_{hp} = \\frac{Q_H}{W} = \\frac{Q_H}{Q_H - Q_C}$$
 
 | Device | COP | Good when |
 |--------|-----|-----------|
-| Refrigerator | $Q_C/W$ | COP > 1 (always true for Carnot) |
+| Refrigerator | $Q_C/W$ | COP > 1 (typical, not guaranteed: the Carnot limit $T_C/(T_H - T_C)$ falls below 1 when $T_H > 2T_C$) |
 | Heat pump | $Q_H/W$ | COP > 1 (always better than resistive heating!) |
 
 Note: $COP_{hp} = COP_{ref} + 1$

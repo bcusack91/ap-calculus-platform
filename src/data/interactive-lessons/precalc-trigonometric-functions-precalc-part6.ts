@@ -236,7 +236,7 @@ The table gives values of a sinusoidal function $f$ at equally spaced inputs. Us
             explanation: 'Amplitude $= (18-6)/2 = 6$, midline $= (18+6)/2 = 12$. Period $= 12.4$, so $b = 2\\pi/12.4$. High tide (max) at $t = 2$: cosine with phase shift $2$.'
           },
           {
-            question: 'A spring\'s height is modeled by $h(t) = 5\\sin(4\\pi t) + 10$. The spring returns to its midline height every ____ seconds.',
+            question: 'A spring\'s height is modeled by $h(t) = 5\\sin(4\\pi t) + 10$. The height crosses the midline (going up or going down) once every ____ seconds.',
             options: [
               '$0.25$',
               '$0.50$',

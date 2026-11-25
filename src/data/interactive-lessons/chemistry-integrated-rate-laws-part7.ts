@@ -224,7 +224,7 @@ A first-order reaction has $k = 3.46 \\times 10^{-2}$ $s^{-1}$.
       exercise: {
         questions: [
           {
-            question: 'A reaction\'s concentration data gives: ln[A] vs t is linear with slope −0.020. The half-life is:',
+            question: 'A reaction\'s concentration data gives: ln[A] vs t is linear with slope −0.020 $s^{-1}$. The half-life is:',
             options: [
               '34.7 s',
               '50.0 s',

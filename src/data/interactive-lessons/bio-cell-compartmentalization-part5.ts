@@ -125,7 +125,7 @@ The sequence evidence is especially useful because it does more than show "bacte
             options: ['Supports the model', 'Argues against it', 'Does not bear on it', 'Supports only for mitochondria']
           },
           {
-            label: 'New mitochondria arise only from the division of existing mitochondria',
+            label: 'New mitochondria and chloroplasts arise only from the division of existing ones',
             options: ['Argues against it', 'Supports the model', 'Does not bear on it', 'Supports only for mitochondria']
           }
         ],

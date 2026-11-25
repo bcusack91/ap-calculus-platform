@@ -159,7 +159,7 @@ For: $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c =
 
 Current state: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0.20$ M
 
-**1)** Calculate $Q_c$. (Enter as a decimal to 2 places)
+**1)** Calculate $Q_c$. (Enter as a decimal)
 
 **2)** Does the reaction shift right or left? (Enter "right" or "left")
 

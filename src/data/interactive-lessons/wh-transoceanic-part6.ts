@@ -140,7 +140,7 @@ The 19th century saw a second major wave of global species transfer:
       exercise: {
         dropdowns: [
           {
-            label: 'The Peruvian seabird excrement fertilizer that powered European agricultural intensification (1840s-1870s) until depletion was ___',
+            label: 'The seabird excrement fertilizer that powered European agricultural intensification (1840s-1870s) until depletion was ___',
             options: [
             'Peruvian guano',
             'Chilean nitrates',
@@ -149,7 +149,7 @@ The 19th century saw a second major wave of global species transfer:
             ]
           },
           {
-            label: 'The 1909 industrial process for producing synthetic nitrogen fertilizer from atmospheric nitrogen and natural gas, enabling modern agricultural intensification, was ___',
+            label: 'The 1909 industrial process for producing synthetic nitrogen fertilizer from atmospheric nitrogen and hydrogen, enabling modern agricultural intensification, was ___',
             options: [
             'Haber-Bosch process',
             'Leblanc process',

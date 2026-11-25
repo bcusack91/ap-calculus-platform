@@ -141,17 +141,17 @@ export const physics2ThermoProcPart7Data = {
 
 **1)** A Carnot engine operates between 800 K and 200 K. What is its efficiency? (as percent, no % sign)
 
-**2)** 1 mol of monatomic gas at 300 K expands isothermally to triple its volume. What is $W$, the work done ON the gas? (in J, with sign, round to nearest whole number)
+**2)** 1 mol of monatomic gas at 300 K expands isothermally to triple its volume. What is $W$, the work done ON the gas? Use $R = 8.314$ J/(mol·K). (in J, with sign, round to nearest whole number)
 
 **3)** If 2 mol of diatomic gas is heated at constant pressure from 300 K to 500 K, what is $\\Delta U$? (in J, round to nearest whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['75', '-2741', '8314'],
+        correctAnswers: ['75', '-2740', '8314'],
         hint1: '$e = 1 - T_C/T_H = 1 - 200/800$',
         hint2: '$W = -nRT\\ln(V_f/V_i) = -(1 \\times 8.314 \\times 300 \\times \\ln(3))$; negative because the gas expands',
         hint3: '$\\Delta U = nC_v\\Delta T = 2 \\times \\frac{5}{2}(8.314) \\times 200$ (use $C_v$ even though constant $P$!)',
-        explanation: '1) $e = 1 - 200/800 = 0.75 = 75\\%$. 2) $W = -(8.314 \\times 300 \\times 1.0986) = -2741$ J (the gas does 2741 J of work). 3) $\\Delta U = nC_v\\Delta T = 2 \\times 2.5 \\times 8.314 \\times 200 = 8314$ J. Remember: $\\Delta U = nC_v\\Delta T$ for ANY process!'
+        explanation: '1) $e = 1 - 200/800 = 0.75 = 75\\%$. 2) $W = -(8.314 \\times 300 \\times 1.0986) = -2740$ J (the gas does 2740 J of work). 3) $\\Delta U = nC_v\\Delta T = 2 \\times 2.5 \\times 8.314 \\times 200 = 8314$ J. Remember: $\\Delta U = nC_v\\Delta T$ for ANY process!'
       }
     }
   ]

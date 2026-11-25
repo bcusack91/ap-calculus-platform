@@ -225,8 +225,8 @@ All conditions are met. We may proceed with the one-proportion $z$-interval.
       exercise: {
         questions: [
           {
-            question: 'Which condition cannot be fixed by increasing the sample size?',
-            options: ['Normal/Large Sample', '10% Condition', 'Random', 'All can be fixed by increasing $n$'],
+            question: 'Which condition cannot be fixed by changing the sample size?',
+            options: ['Normal/Large Sample', '10% Condition', 'Random', 'All can be fixed by changing $n$'],
             correctAnswer: 2,
             explanation: 'If data is not randomly collected, no amount of additional data fixes the fundamental design flaw. Randomness is a property of how data is collected, not how much.'
           },

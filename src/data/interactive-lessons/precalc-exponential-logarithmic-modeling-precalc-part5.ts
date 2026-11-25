@@ -93,15 +93,15 @@ If $y = 2 + 3\\log x$, then $\\log x = \\dfrac{y - 2}{3}$ and $x = 10^{(y-2)/3}$
             explanation: '$\\log 1000 = 3$, so $y = 4 + 3(3) = 13$. The value $3004$ multiplies $x$ by $3$ instead of taking its log, $7$ uses $\\log 1000 = 1$, and $12$ drops the $4$ then adds it incorrectly.'
           },
           {
-            question: 'Logarithmic regression gives $y = 12.4 + 5.3\\ln x$. Which is the model\'s prediction for $x = 20$?',
+            question: 'Logarithmic regression gives $y = 12.4 + 5.3\\ln x$. Which is the model\'s prediction for $x = 30$?',
             options: [
-              'About $28.3$',
-              'About $118.4$',
-              'About $15.9$',
-              'About $19.3$'
+              'About $30.4$',
+              'About $171.4$',
+              'About $18.0$',
+              'About $20.2$'
             ],
             correctAnswer: 0,
-            explanation: '$\\ln 20 \\approx 2.996$, so $y \\approx 12.4 + 5.3(2.996) \\approx 28.3$. The value $118.4$ forgets the logarithm ($12.4 + 5.3 \\cdot 20$), $15.9$ is $5.3\\ln 20$ without the $12.4$, and $19.3$ uses the common log $\\log 20 \\approx 1.301$ instead of $\\ln 20$.'
+            explanation: '$\\ln 30 \\approx 3.401$, so $y \\approx 12.4 + 5.3(3.401) \\approx 30.4$. The value $171.4$ forgets the logarithm ($12.4 + 5.3 \\cdot 30$), $18.0$ is $5.3\\ln 30$ without the $12.4$, and $20.2$ uses the common log $\\log 30 \\approx 1.477$ instead of $\\ln 30$.'
           }
         ]
       }

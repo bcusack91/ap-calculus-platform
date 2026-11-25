@@ -172,6 +172,7 @@ export const englangDictionSyntaxPart7Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ['conversational', 'coordination', 'ellipsis'],
+        acceptableAnswers: [['informal', 'relaxed', 'casual', 'direct', 'loose'], [], []],
         hint1: 'It adds detail as it goes, the way people talk.',
         hint2: 'The partner term to subordination.',
         hint3: 'The same word names the three-dot mark for omitted words in a quotation.',

@@ -195,7 +195,7 @@ Use $g = 10$ $m/s^{2}$ for all problems.
             explanation: 'On the verge of moving means static friction is at its maximum: $f_s = \\mu_s N$.'
           },
           {
-            label: 'When an object slides at constant velocity, the net force is:',
+            label: 'When an object slides at constant velocity, the forces satisfy:',
             options: ['$F - f_k = ma$, with $a > 0$', '$F = f_k$', '$F > f_k$ by a constant amount', '$f_k > F$, but the block keeps sliding'],
             correctIndex: 1,
             explanation: 'Constant velocity means $a = 0$, so $F_{\\text{net}} = 0$ and the applied force equals kinetic friction.'

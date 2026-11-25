@@ -187,7 +187,7 @@ Geographers distinguish these terms:
       exercise: {
         questions: [
           {
-            question: "A planner reports that the population of two suburbs $(each 10 km^{2})$ is identical at 5,000 people, but Suburb A's residents are packed into a single high-rise district while Suburb B's homes are spread evenly. The two suburbs differ in:",
+            question: "A planner reports that the population of two suburbs (each 10 km²) is identical at 5,000 people, but Suburb A's residents are packed into a single high-rise district while Suburb B's homes are spread evenly. The two suburbs differ in:",
             options: [
               "Arithmetic density",
               "Concentration",

@@ -147,16 +147,16 @@ An electron is confined to a region $\\Delta x = 5 \\times 10^{-11}$ m (about th
 
 **3)** Is this energy comparable to hydrogen's ground state (13.6 eV)? (yes/no)
 
-**4)** If the electron were confined to a nucleus ($\\Delta x = 10^{-15}$ m), what would $KE$ be? (in MeV, round to nearest integer)
+**4)** If the electron were confined to a nucleus ($\\Delta x = 10^{-15}$ m), what would the same formula $KE = (\\Delta p)^2/(2m_e)$ give? (in MeV, round to nearest integer)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['1.05e-24', '3.8', 'yes', '9645'],
+        correctAnswers: ['1.055e-24', '3.8', 'yes', '9545'],
         hint1: '$\\Delta p = \\hbar/(2\\Delta x)$',
         hint2: '$KE = (\\Delta p)^2/(2m_e)$, convert J to eV by dividing by $1.6 \\times 10^{-19}$',
         hint3: 'Compare 3.8 eV to 13.6 eV — same order of magnitude',
         hint4: 'Same calculation with $\\Delta x = 10^{-15}$ m. Convert to MeV ($1$ MeV $= 10^6$ eV)',
-        explanation: '1) $\\Delta p = 1.055 \\times 10^{-34}/(2 \\times 5 \\times 10^{-11}) ≈ 1.055 \\times 10^{-24}$ kg·m/s. 2) $KE = (1.055 \\times 10^{-24})^2/(2 \\times 9.11 \\times 10^{-31}) ≈ 6.1 \\times 10^{-19}$ J ≈ 3.8 eV. 3) Yes — same order of magnitude, confirming the uncertainty principle governs atomic-scale physics. 4) With $\\Delta x = 10^{-15}$ m, $KE \\sim 10$ GeV — electrons cannot be confined to nuclear dimensions.'
+        explanation: '1) $\\Delta p = 1.055 \\times 10^{-34}/(2 \\times 5 \\times 10^{-11}) ≈ 1.055 \\times 10^{-24}$ kg·m/s. 2) $KE = (1.055 \\times 10^{-24})^2/(2 \\times 9.11 \\times 10^{-31}) ≈ 6.1 \\times 10^{-19}$ J ≈ 3.8 eV. 3) Yes — same order of magnitude, confirming the uncertainty principle governs atomic-scale physics. 4) With $\\Delta x = 10^{-15}$ m, $\\Delta p ≈ 5.3 \\times 10^{-20}$ kg·m/s and $KE ≈ 1.53 \\times 10^{-9}$ J ≈ 9545 MeV (about 10 GeV). At this momentum the electron is really relativistic, so the true value is closer to 100 MeV, but either way it dwarfs nuclear energies of a few MeV — electrons cannot be confined to nuclear dimensions.'
       }
     }
   ]

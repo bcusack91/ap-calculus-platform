@@ -103,17 +103,18 @@ Soils form when **parent material** is weathered, transported and deposited (CED
 
 1) The most fertile soil horizon where most plant roots grow is the _______ horizon (also called topsoil).
 
-2) The five factors of soil formation are abbreviated as _______ (Climate, Organisms, Relief, Parent material, Time).
+2) The five factors of soil formation are climate, organisms, relief (topography), parent material and _______.
 
 3) At divergent plate boundaries, plates move _______ from each other.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['A', 'ClORPT', 'apart'],
+        correctAnswers: ['A', 'time', 'apart'],
+        acceptableAnswers: [[], [], ['away']],
         hint1: 'The first mineral soil layer below the O horizon.',
-        hint2: 'An acronym for the five soil-forming factors.',
+        hint2: 'The factor that explains why soil lost to erosion takes centuries to replace.',
         hint3: 'The opposite of convergent.',
-        explanation: 'A horizon = topsoil (most fertile). ClORPT = soil formation factors. Divergent = plates moving apart (creating mid-ocean ridges).'
+        explanation: 'A horizon = topsoil (most fertile). Time is the fifth soil-forming factor (ClORPT). Divergent = plates moving apart (creating mid-ocean ridges).'
       }
     },
     {
@@ -129,7 +130,7 @@ Soils form when **parent material** is weathered, transported and deposited (CED
             options: ['Transform', 'Divergent', 'Convergent', 'Subduction']
           },
           {
-            label: 'Sandy soil has ___ permeability and ___ nutrient retention',
+            label: 'Compared with clay soil, sandy soil has ___',
             options: ['High permeability and low nutrient retention', 'Low permeability and high nutrient retention', 'High permeability and high nutrient retention', 'Low permeability and low nutrient retention']
           },
           {
