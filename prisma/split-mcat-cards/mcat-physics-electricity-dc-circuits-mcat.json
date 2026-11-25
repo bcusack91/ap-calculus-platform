@@ -80,7 +80,7 @@
   "part": 2
  },
  {
-  "front": "Conductance is $G = {{c1::1/R}}$, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
+  "front": "Conductance is $G =$ {{c1::$1/R$}}, measured in siemens, and for resistors in parallel the {{c2::conductances}} add.",
   "back": "More conductance means more current per volt. Parallel branches act like added cross-sectional area, which is why $1/R_{eq}$ is a sum.",
   "hint": "$1\\,\\text{S} = 1\\,\\Omega^{-1}$",
   "yield": "MEDIUM",
