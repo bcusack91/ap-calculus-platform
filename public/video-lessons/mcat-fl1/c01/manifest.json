@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl1",
+ "video": 1,
+ "stem": "mcat_fl1_c01_density",
+ "topic": "fluids-part1-density-pressure",
+ "clips": [
+  {
+   "section": "02-fluids",
+   "file": "02-fluids.mp4",
+   "seconds": 53.2,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-density",
+   "file": "03-density.mp4",
+   "seconds": 61.1,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-water",
+   "file": "04-water.mp4",
+   "seconds": 81.2,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-mass-weight",
+   "file": "05-mass-weight.mp4",
+   "seconds": 56.9,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-incompressible",
+   "file": "06-incompressible.mp4",
+   "seconds": 50.7,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-specific-gravity",
+   "file": "07-specific-gravity.mp4",
+   "seconds": 84.0,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p1 c01 Density and Specific Gravity v1.mov",
+   "voiced": true
+  }
+ ]
+}

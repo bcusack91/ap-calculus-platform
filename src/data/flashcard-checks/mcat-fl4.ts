@@ -1,0 +1,636 @@
+import type { CardCheck } from '@/lib/flashcard-check-core'
+
+/**
+ * Card-check questions for the Fluids Part 4 video deck (`mcat-fl4`): one
+ * per review card, keyed by the card's exact front text. Each asks the student
+ * to use the card's idea in a new situation. Gate: scripts/flashcard-checks/validate.ts.
+ */
+const r = String.raw
+
+export const checks: Record<string, CardCheck> = {
+  // Video 1
+  [r`What symbol stands for viscosity, and what is its SI unit?`]: {
+    question: r`A data sheet for a motor oil lists three values: ρ = 900 kg/m³, η = 0.25 Pa·s and P = 2.0 kPa. Water has a viscosity of 1.0 × 10⁻³ Pa·s. Which value is the oil's viscosity, and how does it compare with water's?`,
+    options: [
+      r`900 kg/m³, which is 0.90 times water's`,
+      r`0.25 Pa·s, which is 25 times water's`,
+      r`0.25 Pa·s, which is 250 times water's`,
+      r`2.0 kPa, which is 2000 times water's`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Viscosity is written η and measured in pascal-seconds, so the oil's viscosity is 0.25 Pa·s, and 0.25 ÷ 0.0010 = 250 times water's. Getting 25 slips a power of ten in that division. The value in kg/m³ is the density ρ, and the value in kPa is a pressure, which lacks the "second" of the pascal-second.`,
+  },
+  [r`What symbol stands for the Reynolds number, and what is its SI unit?`]: {
+    question: r`A student works out ρvD/η for water in a pipe, using ρ = 1000 kg/m³, v = 0.50 m/s, D = 0.020 m and η = 1.0 × 10⁻³ Pa·s, and gets 10,000. How should this result be reported?`,
+    options: [
+      r`Re = 10,000, with no unit at all`,
+      r`Re = 10,000, in pascal-seconds`,
+      r`Re = 10,000, in meters per second`,
+      r`Re = 10,000, in kilograms per m³`,
+    ],
+    correctAnswer: 0,
+    explanation: r`The Reynolds number Re is a pure number: every unit in ρvD/η cancels, so 10,000 is reported with no unit. Pascal-seconds belong to the viscosity, meters per second to the speed and kilograms per cubic meter to the density. Each of those is one of the inputs, not the result.`,
+  },
+  [r`What is viscosity, and how does warming a liquid change it?`]: {
+    question: r`Glycerin drains slowly out of a funnel through a thin stem. When the same glycerin is warmed from 20 °C to 40 °C, the funnel empties in far less time. What best explains the change?`,
+    options: [
+      r`Warming raised its viscosity, so its layers slide more easily`,
+      r`Warming lowered its density, so its weight pushes much harder`,
+      r`Warming raised its viscosity, so its layers grip the wall less`,
+      r`Warming lowered its viscosity, so its layers slide more easily`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Viscosity is a fluid's internal friction, the resistance of its layers to sliding past one another, and warming a liquid lowers it, so the glycerin drains faster. Saying the viscosity rose has the temperature effect backward, and a higher viscosity would slow the draining. A lower density would give less weight to push the liquid, not more.`,
+  },
+  [r`How viscous is blood compared with water, and what is hematocrit?`]: {
+    question: r`A 10 mL blood sample is spun in a centrifuge, and the red cells settle into 4.5 mL at the bottom. Water has a viscosity of 1.0 × 10⁻³ Pa·s. What is the hematocrit, and what is a reasonable viscosity for this blood?`,
+    options: [
+      r`0.55 and about 3.5 × 10⁻³ Pa·s`,
+      r`0.45 and about 3.5 × 10⁻³ Pa·s`,
+      r`0.45 and about 3.5 × 10⁻⁴ Pa·s`,
+      r`0.55 and about 3.5 × 10⁻⁴ Pa·s`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Hematocrit is the fraction of the blood's volume taken up by red cells: 4.5 ÷ 10 = 0.45. Blood is about 3 to 4 times as viscous as water, so about 3.5 × 10⁻³ Pa·s. A hematocrit of 0.55 is the plasma fraction instead of the red-cell fraction, and 3.5 × 10⁻⁴ Pa·s would make blood thinner than water.`,
+  },
+  [r`How do anemia and polycythemia change the viscosity of blood?`]: {
+    question: r`Three patients have hematocrits of 0.25, 0.45 and 0.60, where 0.45 is normal. Which patient has polycythemia, and how does that patient's blood compare with normal blood?`,
+    options: [
+      r`The 0.25 patient, with thicker blood than normal`,
+      r`The 0.60 patient, with thicker blood than normal`,
+      r`The 0.60 patient, with thinner blood than normal`,
+      r`The 0.25 patient, with thinner blood than normal`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Polycythemia means too many red cells, so it is the patient with the high hematocrit of 0.60, and blood's viscosity rises with hematocrit, making it thicker. The 0.25 patient has anemia, the opposite condition, with thinner blood. Calling the 0.60 blood thinner gets the link between red cells and viscosity backward.`,
+  },
+  [r`What does the velocity profile look like for smooth flow through a tube?`]: {
+    question: r`Glycerin moves in smooth layers through a glass tube. A thin straight line of dye is injected across the tube, from wall to wall. The fluid at the center moves at 6.0 cm/s. What does the dye look like 1.0 s later?`,
+    options: [
+      r`A straight line that has moved 6.0 cm along the tube`,
+      r`A curve with the wall dye ahead and the center dye behind`,
+      r`A straight line that has moved 3.0 cm along the tube`,
+      r`A curve with the center dye 6.0 cm ahead and the wall dye at rest`,
+    ],
+    correctAnswer: 3,
+    explanation: r`In smooth flow the layer touching the wall is at rest and the speed rises to its greatest value at the center, so the dye is drawn into a bullet shape, a parabolic profile, with its tip 6.0 cm ahead. A straight line would need every layer to move at one speed, which only an ideal fluid does. Putting the wall dye ahead turns the profile inside out.`,
+  },
+  [r`For a real fluid in a tube, which speed goes into $Q = Av$?`]: {
+    question: r`Oil flows smoothly through a tube of cross-sectional area 2.0 cm². Its speed is zero at the wall, 30 cm/s at the center, and 15 cm/s on average across the tube. What is the flow rate?`,
+    options: [r`30 cm³/s`, r`60 cm³/s`, r`0 cm³/s`, r`7.5 cm³/s`],
+    correctAnswer: 0,
+    explanation: r`Q = Av uses the average speed across the tube: (2.0 cm²)(15 cm/s) = 30 cm³/s. 60 cm³/s uses the center speed, which is the fastest and overstates the flow, and 0 uses the speed at the wall. 7.5 cm³/s divides the average speed by the area instead of multiplying.`,
+  },
+  [r`A viscous fluid flows steadily along a uniform, level tube. What happens to its speed and its pressure?`]: {
+    question: r`Oil is pumped steadily through a level pipe of constant diameter. Just after the pump, the oil's average speed is 0.80 m/s and a gauge reads 300 kPa. Which pair of readings could be found 50 m farther along?`,
+    options: [
+      r`0.80 m/s and 300 kPa`,
+      r`0.60 m/s and 300 kPa`,
+      r`0.80 m/s and 260 kPa`,
+      r`0.60 m/s and 260 kPa`,
+    ],
+    correctAnswer: 2,
+    explanation: r`The area is the same all along, so continuity keeps the average speed at 0.80 m/s, while friction between the layers makes the pressure fall steadily, here to 260 kPa. An unchanged 300 kPa describes an ideal fluid with no viscosity. A drop to 0.60 m/s would mean less oil passing each second downstream than upstream, which steady flow forbids.`,
+  },
+  [r`Why can Bernoulli's equation not explain the pressure drop along a uniform, level tube?`]: {
+    question: r`A student applies Bernoulli's equation to two points 10 m apart in a level pipe of constant diameter that carries oil, and predicts equal pressures. Gauges show that the pressure is 5 kPa lower at the downstream point. What did the prediction leave out?`,
+    options: [
+      r`The oil sped up between the points, which the equation ignores`,
+      r`The oil lost height between the points, which the equation ignores`,
+      r`The oil gained density between the points, which the equation ignores`,
+      r`The oil lost energy to viscosity, which the equation ignores`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Bernoulli's equation assumes no energy is lost, so with the same speed and the same height at both points it predicts no drop. The real 5 kPa drop is the cost of viscosity, which turns mechanical energy into heat. The oil cannot have sped up in a pipe of constant diameter, the pipe is level, and a liquid's density does not change along it.`,
+  },
+  [r`Why must the heart keep pumping even when blood moves at a steady speed?`]: {
+    question: r`A pump drives glycerin at a constant speed around a closed, level loop of uniform tubing. An engineer suggests switching the pump off once the glycerin is up to speed, arguing that constant speed needs no net force. What happens when the pump is switched off?`,
+    options: [
+      r`The flow dies away, since viscosity keeps turning its energy into heat`,
+      r`The flow carries on unchanged, since a steady speed needs no pressure`,
+      r`The flow speeds up, since the pump was holding the glycerin back`,
+      r`The flow dies away, since gravity acts against the glycerin's motion`,
+    ],
+    correctAnswer: 0,
+    explanation: r`A real fluid needs a pressure difference just to keep moving at constant speed, because viscosity keeps turning its mechanical energy into heat, so without the pump the flow dies away. Carrying on unchanged would be true only for an ideal fluid with no viscosity. The loop is level, so gravity does not oppose the motion, and nothing is present to speed the fluid up.`,
+  },
+  [r`How does the pressure needed for a given flow compare in laminar and turbulent flow?`]: {
+    question: r`In a certain pipe, a pressure difference of 2.0 kPa drives a laminar flow of 4.0 L/min. The pump is turned up until the flow is 8.0 L/min, and by then the flow has become turbulent. What pressure difference is the pump supplying?`,
+    options: [
+      r`Exactly 4.0 kPa, since flow stays proportional to pressure`,
+      r`Less than 4.0 kPa, since eddies help to carry the fluid`,
+      r`More than 4.0 kPa, since eddies waste the fluid's energy`,
+      r`Exactly 2.0 kPa, since the pipe itself has not changed`,
+    ],
+    correctAnswer: 2,
+    explanation: r`If the flow had stayed laminar, doubling it would take double the pressure difference, 4.0 kPa. Turbulent eddies waste energy, so the same flow needs much more pressure than that. Exactly 4.0 kPa applies the laminar proportionality where it no longer holds, and eddies never make the flow easier to drive.`,
+  },
+  [r`What is the Reynolds number?`]: {
+    question: r`Oil of density 900 kg/m³ and viscosity 0.090 Pa·s moves at an average speed of 2.0 m/s through a pipe whose diameter is 0.10 m. What is the Reynolds number of this flow?`,
+    options: [r`1000`, r`2000`, r`16.2`, r`20,000`],
+    correctAnswer: 1,
+    explanation: r`Re = ρvD/η = (900)(2.0)(0.10)/(0.090) = 180/0.090 = 2000. Getting 1000 uses the radius, 0.050 m, in place of the diameter. 16.2 multiplies by the viscosity instead of dividing by it, and 20,000 slips a power of ten in the last division.`,
+  },
+  [r`Which four changes push a flow toward turbulence?`]: {
+    question: r`Water flows smoothly through a pipe, with a Reynolds number just below the critical value. Which one of these changes would be most likely to tip the flow into turbulence?`,
+    options: [
+      r`Warming the water so that its viscosity falls`,
+      r`Using a narrower pipe at the same water speed`,
+      r`Slowing the water's average speed by half`,
+      r`Using a liquid of lower density than water`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Turbulence is favored by higher speed, larger diameter, higher density and lower viscosity, since viscosity damps eddies. Lowering the viscosity raises Re = ρvD/η past the critical value. A narrower pipe at the same speed, a slower flow and a less dense liquid each lower the Reynolds number and keep the flow smooth.`,
+  },
+  [r`Which flow laws stop working once the flow turns turbulent?`]: {
+    question: r`Water rushes steadily through a long pipe. Its Reynolds number is far above the critical value, and noisy eddies can be heard. An engineer wants to predict the pressure difference along the pipe. Which law can she rely on here?`,
+    options: [
+      r`Poiseuille's law alone, since it allows for the fluid's friction`,
+      r`Bernoulli's equation alone, since it keeps track of the energy`,
+      r`Both of the laws, since the flow is still steady on the whole`,
+      r`Neither of the laws, since eddies break what each one assumes`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Once the flow is turbulent, both laws fail: Bernoulli's equation assumes no energy is lost and Poiseuille's law assumes smooth layers, and eddies break both assumptions. Poiseuille's law does include friction, but only the friction of laminar layers. Being steady on the whole does not rescue either law.`,
+  },
+  [r`What are a murmur and a bruit, and where do they arise?`]: {
+    question: r`A clinician places a stethoscope on a patient's neck, over a carotid artery that is partly narrowed by plaque, and hears a whooshing sound with each beat. What is the sound called, and what causes it?`,
+    options: [
+      r`A murmur, caused by laminar flow through the narrowing`,
+      r`A bruit, caused by laminar flow through the narrowing`,
+      r`A bruit, caused by turbulent flow past the narrowing`,
+      r`A murmur, caused by turbulent flow past the narrowing`,
+    ],
+    correctAnswer: 2,
+    explanation: r`The sound of turbulent blood flow heard over an artery is a bruit, and it arises where blood moves fast, as it does past a narrowed vessel. A murmur is the same kind of sound heard over the heart, not over an artery in the neck. Laminar flow is silent, so it cannot be the cause of either sound.`,
+  },
+  [r`How does a blood-pressure cuff use turbulence to find systolic and diastolic pressure?`]: {
+    question: r`A cuff on the upper arm is pumped to 180 mmHg and slowly let down. Tapping sounds are first heard at 130 mmHg and vanish at 85 mmHg. What is the blood flow under the cuff like when the cuff reads 100 mmHg?`,
+    options: [
+      r`No flow at all, since the cuff holds the artery shut all beat`,
+      r`Turbulent spurts, since the artery opens only near each peak`,
+      r`Smooth flow, since the artery stays open for the whole beat`,
+      r`Turbulent spurts, since the cuff is above systolic pressure`,
+    ],
+    correctAnswer: 1,
+    explanation: r`The sounds begin at systolic pressure (130 mmHg) and vanish at diastolic (85 mmHg), so 100 mmHg lies between them: the squeezed artery opens only when the blood pressure tops the cuff pressure, and blood spurts through in a noisy turbulent jet. No flow describes a cuff above 130 mmHg, and smooth silent flow describes a cuff below 85 mmHg. A cuff at 100 mmHg is below systolic pressure, not above it.`,
+  },
+  // Video 2
+  [r`In steady flow through a uniform tube, how does the pressure change with distance?`]: {
+    question: r`Water flows steadily through a uniform, level tube 6.0 m long. The pressure is 12 kPa at the inlet and 3.0 kPa at the outlet. How much does the pressure fall over the first 2.0 m, and over the last 2.0 m?`,
+    options: [
+      r`4.5 kPa over the first and 1.5 kPa over the last`,
+      r`1.5 kPa over the first and 4.5 kPa over the last`,
+      r`4.0 kPa over the first and 1.0 kPa over the last`,
+      r`3.0 kPa over the first and 3.0 kPa over the last`,
+    ],
+    correctAnswer: 3,
+    explanation: r`The pressure falls by the same amount in every meter: 9.0 kPa ÷ 6.0 m = 1.5 kPa per meter, so any 2.0 m stretch loses 3.0 kPa. The unequal pairs assume the drop is faster where the pressure is higher, or faster near the outlet. A graph of pressure against position is a straight line, not a curve.`,
+  },
+  [r`How do you find the pressure partway along a uniform tube?`]: {
+    question: r`Water enters a level garden hose 20 m long at 250 kPa, and the total pressure drop along the hose is 100 kPa. The hose is uniform and the flow is steady. What is the pressure at a point 5.0 m before the outlet?`,
+    options: [r`225 kPa`, r`175 kPa`, r`150 kPa`, r`75 kPa`],
+    correctAnswer: 1,
+    explanation: r`The drop is 100 kPa over 20 m, or 5.0 kPa per meter, and the point is x = 15 m from the inlet, so P = 250 − (5.0)(15) = 175 kPa. 225 kPa takes x as 5.0 m, measuring from the wrong end. 150 kPa is the pressure at the outlet itself, and 75 kPa is the drop so far, not the pressure that remains.`,
+  },
+  [r`The same flow runs through a longer piece of the same tube. How does the total pressure drop change?`]: {
+    question: r`A pump needs a pressure difference of 8.0 kPa to push oil through 20 m of hose. Another 5.0 m of the same hose is added to the end, and the flow rate must stay the same. What pressure difference is needed now?`,
+    options: [r`10 kPa`, r`8.0 kPa`, r`6.4 kPa`, r`13 kPa`],
+    correctAnswer: 0,
+    explanation: r`The drop per meter is unchanged, so the total drop grows in proportion to the length: 25/20 = 1.25, and (1.25)(8.0 kPa) = 10 kPa. Leaving it at 8.0 kPa ignores the extra hose. 6.4 kPa divides by 1.25 instead of multiplying, and 13 kPa adds the 5.0 of the extra meters straight onto the pressure.`,
+  },
+  [r`Which length goes into the Reynolds number, and in what unit?`]: {
+    question: r`In a large artery of inside radius 1.0 cm, blood moves at an average speed of 0.30 m/s. Take the blood's density as 1000 kg/m³ and its viscosity as 3.0 × 10⁻³ Pa·s. What is the Reynolds number of the flow?`,
+    options: [r`1000`, r`200,000`, r`2000`, r`100,000`],
+    correctAnswer: 2,
+    explanation: r`The Reynolds number uses the diameter in meters: 2(1.0 cm) = 0.020 m, so Re = (1000)(0.30)(0.020)/(3.0 × 10⁻³) = 2000. Getting 1000 uses the radius in place of the diameter. 200,000 leaves the diameter as 2.0 in centimeters, and 100,000 makes both mistakes at once.`,
+  },
+  [r`Why does the Reynolds number have no units?`]: {
+    question: r`A student checks the units of ρvD/η. The top works out as (kg/m³)(m/s)(m) = kg/(m·s). For the Reynolds number to have no unit, the pascal-second on the bottom must be the same as which of these?`,
+    options: [r`kg/(m·s)`, r`kg·m/s`, r`kg/(m·s²)`, r`kg·m/s²`],
+    correctAnswer: 0,
+    explanation: r`A pascal-second is a kilogram per meter-second, kg/(m·s), which matches the top exactly, so every unit cancels. kg/(m·s²) is the pascal alone, before it is multiplied by the second. kg·m/s² is the newton and kg·m/s is a momentum unit, and neither would cancel the top.`,
+  },
+  [r`How do you compare the Reynolds numbers of two flows without starting over?`]: {
+    question: r`A flow in a tube has a Reynolds number of 1200. The fluid is then changed for one with the same density and twice the viscosity, the average speed is tripled, and the tube's diameter is halved. What is the new Reynolds number?`,
+    options: [r`1800`, r`3600`, r`7200`, r`900`],
+    correctAnswer: 3,
+    explanation: r`Scale Re ∝ ρvD/η factor by factor: 1200 × 3 × ½ ÷ 2 = 900. Getting 3600 multiplies by the viscosity factor instead of dividing by it, and 1800 leaves the viscosity out. 7200 multiplies by the speed and viscosity factors and forgets that the diameter was halved.`,
+  },
+  [r`At a fixed flow rate, a vessel narrows to half its diameter. What happens to the Reynolds number there?`]: {
+    question: r`Blood flows at a fixed flow rate through a vessel in which the Reynolds number is 600. The vessel then narrows to one third of its diameter. What is the Reynolds number in the narrow part?`,
+    options: [r`200`, r`5400`, r`1800`, r`600`],
+    correctAnswer: 2,
+    explanation: r`One third of the diameter is one ninth of the area, so at a fixed flow rate the speed is 9 times as great, and Re ∝ vD changes by 9 × ⅓ = 3, giving 1800. Getting 200 scales only the diameter and forgets that the blood speeds up. 5400 scales only the speed, and 600 assumes the two changes cancel.`,
+  },
+  // Video 3
+  [r`What symbol stands for volume flow rate, and what is its SI unit?`]: {
+    question: r`A pump working at a steady rate fills a 0.60 m³ tank in 5.0 minutes. What is the volume flow rate Q in SI units?`,
+    options: [r`0.12 m³/s`, r`2.0 × 10⁻³ m³/s`, r`2.0 × 10⁻³ m/s`, r`0.12 m/s`],
+    correctAnswer: 1,
+    explanation: r`Q is the volume passing each second, in m³/s: 5.0 minutes is 300 s, so Q = 0.60 m³ ÷ 300 s = 2.0 × 10⁻³ m³/s. The value 0.12 divides by 5.0 minutes without converting to seconds. An answer in m/s is a speed, not a volume flow rate.`,
+  },
+  [r`What symbol stands for the driving pressure across a tube, and what is its SI unit?`]: {
+    question: r`Blood enters a small vessel at a pressure of 16 kPa and leaves it at 10 kPa. What value of ΔP, in SI units, goes into a flow calculation for this vessel?`,
+    options: [r`16,000 Pa`, r`26,000 Pa`, r`13,000 Pa`, r`6,000 Pa`],
+    correctAnswer: 3,
+    explanation: r`ΔP is the pressure difference between the tube's two ends, in pascals: 16 kPa − 10 kPa = 6 kPa = 6,000 Pa. Using 16,000 Pa takes the inlet pressure alone, as if the outlet were at zero. 26,000 Pa adds the two pressures and 13,000 Pa averages them, and neither is a difference.`,
+  },
+  [r`Write Poiseuille's law as an equation.`]: {
+    question: r`Water of viscosity 1.0 × 10⁻³ Pa·s flows smoothly through a tube of inside radius 1.0 × 10⁻³ m and length 0.10 m. The pressure difference between the ends is 800 Pa. What is the flow rate?`,
+    options: [
+      r`π × 10⁻⁶ m³/s`,
+      r`8π × 10⁻⁶ m³/s`,
+      r`π × 10⁻⁸ m³/s`,
+      r`π × 10⁻⁴ m³/s`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Q = πr⁴ΔP/(8ηL) = π(10⁻¹²)(800)/[(8)(1.0 × 10⁻³)(0.10)] = π(8 × 10⁻¹⁰)/(8 × 10⁻⁴) = π × 10⁻⁶ m³/s. Getting 8π × 10⁻⁶ leaves the 8 out of the bottom. π × 10⁻⁸ puts the length on top instead of on the bottom, and π × 10⁻⁴ slips the powers of ten.`,
+  },
+  [r`Where do the length and the viscosity sit in Poiseuille's law, and why?`]: {
+    question: r`A nurse wants saline to run faster through an IV line while the bag stays at the same height, so the driving pressure is unchanged. Which change to the setup would do it, and why?`,
+    options: [
+      r`A longer line, since more fluid is then moving at once`,
+      r`A thicker fluid, since it holds together as it flows`,
+      r`A shorter line, since less wall then drags on the fluid`,
+      r`A longer line, since the pressure acts over more tube`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Length and viscosity sit on the bottom of Poiseuille's law, so a shorter line, with less wall to drag against, gives more flow at the same pressure difference. A longer line has more wall and so less flow, whatever reason is offered for it. A thicker fluid has more internal friction, which also cuts the flow.`,
+  },
+  [r`In Poiseuille's law, what happens to the flow when the pressure difference, the length or the viscosity is doubled?`]: {
+    question: r`A pressure difference of 4.0 kPa drives syrup smoothly through a hose at 18 mL/s. The hose is swapped for one of the same radius and double the length, and the pressure difference is raised to 8.0 kPa. What is the flow rate of the syrup now?`,
+    options: [r`72 mL/s`, r`36 mL/s`, r`18 mL/s`, r`9.0 mL/s`],
+    correctAnswer: 2,
+    explanation: r`Doubling the pressure difference doubles the flow, and doubling the length halves it, so the two changes cancel and the flow stays at 18 mL/s. 72 mL/s doubles the flow for both changes, as if length sat on top of the equation. 36 mL/s counts only the pressure change, and 9.0 mL/s counts only the longer hose.`,
+  },
+  [r`A tube's radius changes by a factor $k$ at a fixed pressure difference. By what factor does the flow change?`]: {
+    question: r`A long tube carries a smooth flow of 80 mL/s. It is replaced by a tube of the same length with half the radius, and the pressure difference between the ends is kept the same. What is the new flow rate?`,
+    options: [r`5.0 mL/s`, r`20 mL/s`, r`40 mL/s`, r`10 mL/s`],
+    correctAnswer: 0,
+    explanation: r`At a fixed pressure difference the flow goes as r⁴, so half the radius gives (½)⁴ = 1/16 of the flow: 80 ÷ 16 = 5.0 mL/s. 20 mL/s uses the square of the radius, which is how the area scales. 40 mL/s scales with the radius itself, and 10 mL/s uses the cube.`,
+  },
+  [r`Why does doubling a tube's radius multiply the flow by 16, not 4?`]: {
+    question: r`A tube is replaced by one with 3 times the radius at the same pressure difference, and the smooth flow through it becomes 81 times as great. How is that factor of 81 shared between the tube's area and the fluid's average speed?`,
+    options: [
+      r`Area × 81 and average speed × 1`,
+      r`Area × 3 and average speed × 27`,
+      r`Area × 27 and average speed × 3`,
+      r`Area × 9 and average speed × 9`,
+    ],
+    correctAnswer: 3,
+    explanation: r`A wider tube wins twice: its area goes as r², so 9 times, and more of its fluid is far from the wall, so its average speed is 9 times as great as well, and 9 × 9 = 81. Area cannot change by 81, 27 or 3 when the radius triples, because area depends on the square of the radius. Leaving the speed unchanged misses the second gain.`,
+  },
+  [r`The flow through a narrower tube must stay the same. How must the pressure difference change?`]: {
+    question: r`A catheter of inside radius 1.5 mm needs a pressure difference of 1.0 kPa to deliver a certain smooth flow. It is replaced by a catheter of the same length with an inside radius of 0.50 mm, and the flow must not change. What pressure difference is needed?`,
+    options: [r`9.0 kPa`, r`81 kPa`, r`3.0 kPa`, r`27 kPa`],
+    correctAnswer: 1,
+    explanation: r`At a fixed flow the pressure difference goes as 1/r⁴. The radius falls to one third, so the pressure difference must be 3⁴ = 81 times as great: 81 kPa. 9.0 kPa uses the square, which is the area rule, 3.0 kPa uses the first power and 27 kPa the cube.`,
+  },
+  [r`Squared or fourth power: which radius rule goes with which situation?`]: {
+    question: r`Case 1: an artery carrying a fixed flow rate narrows to half its radius along its length. Case 2: a tube is replaced by one of half the radius at the same pressure difference. What happens to the speed in Case 1 and to the flow in Case 2?`,
+    options: [
+      r`Case 1: speed × 4. Case 2: flow × 1/16`,
+      r`Case 1: speed × 16. Case 2: flow × 1/4`,
+      r`Case 1: speed × 4. Case 2: flow × 1/4`,
+      r`Case 1: speed × 16. Case 2: flow × 1/16`,
+    ],
+    correctAnswer: 0,
+    explanation: r`With the flow rate fixed, continuity gives speed ∝ 1/r², so half the radius means 4 times the speed. With the pressure difference fixed, Poiseuille's law gives flow ∝ r⁴, so half the radius means 1/16 of the flow. The other choices put the fourth power on the continuity case, the square on the Poiseuille case, or both.`,
+  },
+  [r`A tube is replaced by one of half the radius at the same pressure difference. What happens to the fluid's average speed?`]: {
+    question: r`Oil moves smoothly through a long tube at an average speed of 18 cm/s. The tube is replaced by one of the same length with one third of the radius, and the pressure difference is kept the same. What is the oil's average speed now?`,
+    options: [r`162 cm/s`, r`2.0 cm/s`, r`6.0 cm/s`, r`54 cm/s`],
+    correctAnswer: 1,
+    explanation: r`The flow falls to (⅓)⁴ = 1/81 through an area that is 1/9 as large, so the average speed falls to (1/81)/(1/9) = 1/9, which is 2.0 cm/s. 162 cm/s applies "narrower means faster", which is true only when the flow rate is held fixed. 6.0 cm/s scales with the radius itself, and 54 cm/s speeds the oil up by a factor of 3.`,
+  },
+  [r`What does Poiseuille's law assume?`]: {
+    question: r`An engineer has four flows to analyze and wants to use Poiseuille's law on one of them. For which flow is the law most trustworthy?`,
+    options: [
+      r`Steady, turbulent water flow in a long, rigid steel pipe`,
+      r`Steady, laminar oil flow through a short, wide opening`,
+      r`Pulsing, laminar oil flow in a long, soft rubber hose`,
+      r`Steady, laminar oil flow in a long, rigid steel pipe`,
+    ],
+    correctAnswer: 3,
+    explanation: r`Poiseuille's law assumes laminar, steady flow of a fluid with constant viscosity through a long, rigid, cylindrical tube, which is the steady, laminar oil flow in the steel pipe. Turbulent flow breaks the smooth-layers assumption. A short, wide opening is not a long tube, and a pulsing flow in a soft hose is neither steady nor in a rigid tube.`,
+  },
+  [r`Why is Poiseuille's law only approximate for blood in a vessel?`]: {
+    question: r`A researcher uses Poiseuille's law to predict the blood flow through a small artery, and the measured flow differs from the prediction by about 10%. Which statement best accounts for this and says how far the law can still be used?`,
+    options: [
+      r`Vessels are rigid and blood is a pure liquid, so the law is exact`,
+      r`Vessels flex and blood carries cells, so the r⁴ rule tells us nothing`,
+      r`Vessels flex and blood carries cells, but the r⁴ rule still guides us`,
+      r`Vessels are rigid and blood carries cells, so an r² rule replaces it`,
+    ],
+    correctAnswer: 2,
+    explanation: r`Vessels flex with each pulse and blood is a suspension of cells, so the law's assumptions are not met exactly, yet the fourth-power conclusion still holds well enough to reason with. Calling the law exact ignores both features of real blood flow. Throwing the r⁴ rule away, or swapping it for an r² rule, discards a conclusion that still works well.`,
+  },
+  // Video 4
+  [r`What must you convert before substituting into Poiseuille's law?`]: {
+    question: r`A tube has a radius of 2.0 mm and a length of 50 cm. The pressure difference is 3.0 kPa and the fluid's viscosity is 4.0 × 10⁻³ Pa·s. Which set of values for r, L and ΔP is ready to substitute into Poiseuille's law so that Q comes out in m³/s?`,
+    options: [
+      r`2.0 × 10⁻³ m, 0.50 m and 3.0 × 10³ Pa`,
+      r`2.0 × 10⁻² m, 0.50 m and 3.0 × 10³ Pa`,
+      r`2.0 × 10⁻³ m, 0.050 m and 3.0 × 10³ Pa`,
+      r`2.0 × 10⁻³ m, 0.50 m and 3.0 × 10⁻³ Pa`,
+    ],
+    correctAnswer: 0,
+    explanation: r`Radius and length go in meters and pressure in pascals: 2.0 mm = 2.0 × 10⁻³ m, 50 cm = 0.50 m and 3.0 kPa = 3.0 × 10³ Pa. Writing 2.0 × 10⁻² m treats millimeters as centimeters, and 0.050 m treats centimeters as millimeters. 3.0 × 10⁻³ Pa divides by 1000 when a kilopascal is 1000 pascals.`,
+  },
+  [r`How do you convert a flow rate from cubic meters per second to milliliters per second?`]: {
+    question: r`A Poiseuille's law calculation gives a flow rate of 4.5 × 10⁻⁵ m³/s through a drain hose. At this rate, how long does it take the hose to deliver 90 mL?`,
+    options: [r`0.20 s`, r`20 s`, r`2.0 s`, r`200 s`],
+    correctAnswer: 2,
+    explanation: r`1 m³/s is 10⁶ mL/s, so 4.5 × 10⁻⁵ m³/s is 45 mL/s, and 90 mL takes 90 ÷ 45 = 2.0 s. 20 s comes from multiplying by 10⁵ and 200 s from multiplying by 10⁴, the factor for square centimeters. 0.20 s multiplies by 10⁷, one power of ten too many.`,
+  },
+  [r`How do you raise a radius such as $2.0 \times 10^{-3}$ m to the fourth power?`]: {
+    question: r`A small vessel has an inside radius of 3.0 × 10⁻⁴ m. What is r⁴, the quantity that goes into Poiseuille's law?`,
+    options: [
+      r`1.2 × 10⁻¹⁵ m⁴`,
+      r`8.1 × 10⁻¹⁵ m⁴`,
+      r`8.1 × 10⁻⁷ m⁴`,
+      r`8.1 × 10⁻³ m⁴`,
+    ],
+    correctAnswer: 1,
+    explanation: r`Keep the powers of ten apart: 3.0⁴ = 81 and (10⁻⁴)⁴ = 10⁻¹⁶, so r⁴ = 81 × 10⁻¹⁶ = 8.1 × 10⁻¹⁵ m⁴. Getting 1.2 × 10⁻¹⁵ multiplies 3.0 by 4 instead of raising it to the fourth power. 8.1 × 10⁻⁷ adds 4 to the exponent's size instead of multiplying it by 4, and 8.1 × 10⁻³ leaves the power of ten untouched.`,
+  },
+  [r`What is the common trap when a problem gives a tube's diameter for Poiseuille's law?`]: {
+    question: r`A problem states that a tube has an inside diameter of 4.0 mm. A student substitutes 4.0 × 10⁻³ m for r in Poiseuille's law and gets a flow of 32 mL/s. Everything else in the working is right. What is the correct flow?`,
+    options: [r`16 mL/s`, r`8.0 mL/s`, r`512 mL/s`, r`2.0 mL/s`],
+    correctAnswer: 3,
+    explanation: r`The law needs the radius, which is half the diameter, and the flow goes as r⁴, so using the diameter makes the answer 2⁴ = 16 times too large: 32 ÷ 16 = 2.0 mL/s. 16 mL/s only halves the answer and 8.0 mL/s divides by 4, as if the flow went as r or r². 512 mL/s multiplies by 16 instead of dividing.`,
+  },
+  [r`How do you find a fluid's average speed from its flow rate in a tube?`]: {
+    question: r`A liquid flows at 1.5 × 10⁻⁶ m³/s through a tube of inside radius 1.0 × 10⁻³ m. Taking π ≈ 3, what is the liquid's average speed?`,
+    options: [r`1.5 m/s`, r`0.50 m/s`, r`0.13 m/s`, r`4.5 m/s`],
+    correctAnswer: 1,
+    explanation: r`A = πr² ≈ 3(1.0 × 10⁻³)² = 3.0 × 10⁻⁶ m², so v = Q/A = (1.5 × 10⁻⁶)/(3.0 × 10⁻⁶) = 0.50 m/s. 1.5 m/s divides by r² and leaves out π. 0.13 m/s uses the diameter, 2.0 × 10⁻³ m, in the area, and 4.5 m/s multiplies by π instead of dividing by it.`,
+  },
+  [r`A tube is changed. How do you find the new flow without recomputing everything?`]: {
+    question: r`A feeding line delivers 10 mL/s of a thick formula. The formula is swapped for one with half the viscosity, the line for one of equal length and half the inside radius, and the driving pressure is made 4 times as great. The flow stays smooth. What is the new flow?`,
+    options: [r`5.0 mL/s`, r`1.25 mL/s`, r`20 mL/s`, r`2.5 mL/s`],
+    correctAnswer: 0,
+    explanation: r`Scale Q ∝ r⁴ΔP/(ηL) factor by factor: (½)⁴ × 4 ÷ ½ = 1/16 × 4 × 2 = ½, so the flow is 5.0 mL/s. 1.25 mL/s multiplies by the viscosity factor instead of dividing by it, and 2.5 mL/s leaves the viscosity out. 20 mL/s uses r² in place of r⁴.`,
+  },
+  [r`A tube narrows while the pressure difference stays fixed. How do the flow and the speed scale with radius?`]: {
+    question: r`Deposits narrow a long tube to 70% of its original radius. The pressure difference between its ends stays the same and the flow stays smooth. To about what percentages of their original values do the flow rate and the average speed change?`,
+    options: [
+      r`Flow to about 49% and speed to about 204%`,
+      r`Flow to about 49% and speed to about 70%`,
+      r`Flow to about 24% and speed to about 204%`,
+      r`Flow to about 24% and speed to about 49%`,
+    ],
+    correctAnswer: 3,
+    explanation: r`At a fixed pressure difference the flow goes as r⁴ and the speed as r²: 0.70² = 0.49 and 0.49² ≈ 0.24, so the flow falls to about 24% and the speed to about 49%. A flow of 49% uses the square where the fourth power belongs. A speed of 204% is 1/0.49, the continuity result, which holds only when the flow rate is fixed.`,
+  },
+  [r`A tube narrows while the flow is held fixed. How do the pressure difference and the speed scale with radius?`]: {
+    question: r`A pump holds the flow rate constant through a long tube. The pressure difference is 0.50 kPa and the average speed is 0.20 m/s. The tube is then swapped for one of the same length with half the radius. What are the new pressure difference and average speed?`,
+    options: [
+      r`2.0 kPa and 0.80 m/s`,
+      r`8.0 kPa and 0.40 m/s`,
+      r`8.0 kPa and 0.80 m/s`,
+      r`8.0 kPa and 0.05 m/s`,
+    ],
+    correctAnswer: 2,
+    explanation: r`With the flow fixed, the pressure difference goes as 1/r⁴ and the speed as 1/r²: half the radius gives 16 × 0.50 = 8.0 kPa and 4 × 0.20 = 0.80 m/s. 2.0 kPa uses the square for the pressure difference, and 0.40 m/s only doubles the speed. 0.05 m/s is a quarter of the speed, the result for a fixed pressure difference, not a fixed flow.`,
+  },
+  // Video 5
+  [r`What symbol stands for a vessel's resistance to flow, and what is its SI unit?`]: {
+    question: r`A tissue bed's resistance is listed as 20 mmHg·min/L, and blood passes through it at 50 mL/s. What pressure difference is across the bed?`,
+    options: [r`1000 mmHg`, r`60 mmHg`, r`6.7 mmHg`, r`2.5 mmHg`],
+    correctAnswer: 1,
+    explanation: r`The resistance is in mmHg·min/L, so the flow must be in L/min first: 50 mL/s × 60 = 3000 mL/min = 3.0 L/min, and 3.0 × 20 = 60 mmHg. 1000 mmHg multiplies 50 by 20 without matching the units. 6.7 mmHg divides 20 by 3.0, and 2.5 mmHg divides 50 by 20, when resistance is pressure difference per unit of flow and so must be multiplied by the flow.`,
+  },
+  [r`What is Ohm's law for fluids?`]: {
+    question: r`A pump holds a pressure difference of 24 mmHg across a blood filter, and 300 mL/min passes through. Clots then triple the filter's resistance while the pump holds the same 24 mmHg. What is the new flow?`,
+    options: [r`900 mL/min`, r`300 mL/min`, r`100 mL/min`, r`33 mL/min`],
+    correctAnswer: 2,
+    explanation: r`With ΔP = QR and the pressure difference fixed, tripling R cuts Q to one-third: 300 ÷ 3 = 100 mL/min. 900 mL/min multiplies by 3, as if more resistance meant more flow. 300 mL/min would need the pump to hold the flow, but here it holds the pressure. 33 mL/min divides by 9, squaring a factor that enters only once.`,
+  },
+  [r`What is the resistance of a single vessel to laminar flow?`]: {
+    question: r`A vessel has a resistance of 6 units. Dehydration raises the blood's viscosity to 1.5 times its old value, and the vessel constricts to half its radius. Its length is unchanged and the flow stays laminar. What is its new resistance?`,
+    options: [r`144 units`, r`36 units`, r`18 units`, r`96 units`],
+    correctAnswer: 0,
+    explanation: r`In $R = 8\eta L/(\pi r^4)$ the viscosity enters once and the radius to the fourth power on the bottom, so R is multiplied by 1.5 × 16 = 24, giving 144 units. 36 units uses the square of the radius and 18 units uses the radius to the first power. 96 units applies the factor of 16 but leaves out the viscosity.`,
+  },
+  [r`How does $\Delta P = QR$ apply to the whole systemic circuit?`]: {
+    question: r`Lying down, a volunteer's heart pumps 5.0 L/min and the mean arterial pressure is 90 mmHg, with the right atrium at about 0. In a fever the total peripheral resistance drops to two-thirds of that resting value while the heart's output climbs to 6.0 L/min. What does the mean arterial pressure become?`,
+    options: [r`108 mmHg`, r`60 mmHg`, r`90 mmHg`, r`72 mmHg`],
+    correctAnswer: 3,
+    explanation: r`At rest the total peripheral resistance is 90 ÷ 5.0 = 18 mmHg·min/L. Two-thirds of that is 12, and 6.0 × 12 = 72 mmHg. 108 mmHg raises the cardiac output but keeps the old resistance, and 60 mmHg lowers the resistance but keeps the old output. 90 mmHg assumes the two changes cancel, which they do not.`,
+  },
+  [r`The body's vessels dilate while the cardiac output stays the same. What happens to the mean arterial pressure?`]: {
+    question: r`In a sauna the skin's vessels dilate, cutting a person's total peripheral resistance by 20% while the cardiac output stays at 5.0 L/min. The mean arterial pressure was 95 mmHg before, with the right atrium at about 0. What is it now?`,
+    options: [r`76 mmHg`, r`95 mmHg`, r`114 mmHg`, r`119 mmHg`],
+    correctAnswer: 0,
+    explanation: r`Mean arterial pressure is the cardiac output times the total peripheral resistance, so with the output fixed a 20% lower resistance gives a 20% lower pressure: 0.80 × 95 = 76 mmHg. 95 mmHg assumes a fixed output means a fixed pressure. 114 mmHg and 119 mmHg both make the pressure rise, as if wider vessels raised the resistance.`,
+  },
+  [r`How do the vessel levels in series (artery, arteriole, capillary, venule, vein) combine?`]: {
+    question: r`Three vessel levels lie one after another, with resistances of 3, 12 and 5 mmHg·min/L. Blood passes through the first level at 4.0 L/min. What is the pressure difference across the whole chain?`,
+    options: [r`48 mmHg`, r`12 mmHg`, r`80 mmHg`, r`5.0 mmHg`],
+    correctAnswer: 2,
+    explanation: r`Levels in series add, 3 + 12 + 5 = 20 mmHg·min/L, and the same 4.0 L/min passes through every one, so ΔP = 4.0 × 20 = 80 mmHg. 48 mmHg is the drop across the largest level alone and 12 mmHg the drop across the first alone. 5.0 mmHg divides the total resistance by the flow.`,
+  },
+  [r`How do organ beds in parallel combine?`]: {
+    question: r`The liver, the kidneys and a muscle group are supplied side by side from one artery and drain into one vein. Taken alone they would have resistances of 20, 30 and 60 mmHg·min/L. What single resistance could stand in for all three together?`,
+    options: [r`110 mmHg·min/L`, r`10 mmHg·min/L`, r`20 mmHg·min/L`, r`0.10 mmHg·min/L`],
+    correctAnswer: 1,
+    explanation: r`Beds in parallel add as reciprocals: 1/20 + 1/30 + 1/60 = 6/60 = 0.10, and flipping gives 10 mmHg·min/L, lower than any single bed. 110 adds the values directly, which is the series rule. 20 is just the smallest bed, and 0.10 is the reciprocal sum before it is flipped.`,
+  },
+  [r`What is the common trap when a parallel organ bed is opened or closed?`]: {
+    question: r`The body's vascular beds have a combined resistance of 20 mmHg·min/L. After a meal an extra gut bed of 60 mmHg·min/L opens in parallel with them. What is the total peripheral resistance now?`,
+    options: [r`80 mmHg·min/L`, r`40 mmHg·min/L`, r`20 mmHg·min/L`, r`15 mmHg·min/L`],
+    correctAnswer: 3,
+    explanation: r`A new parallel bed is one more path for the blood, so the total falls: 1/20 + 1/60 = 4/60, which flips to 15 mmHg·min/L. 80 falls into the trap of adding parallel resistances, and 40 averages them. 20 assumes that opening a bed changes nothing, but any added parallel path lowers the total.`,
+  },
+  [r`Where does the pressure fall most steeply in the systemic circuit?`]: {
+    question: r`A catheter tip in a small artery of the arm reads a mean pressure of 88 mmHg. It is advanced a short way along the path of the blood and the reading falls to 36 mmHg. Which vessels has the tip just passed through?`,
+    options: [r`The large arteries`, r`The capillaries`, r`The arterioles`, r`The large veins`],
+    correctAnswer: 2,
+    explanation: r`A fall from about 90 to about 35 mmHg is the steep drop across the arterioles, the level with the most resistance. In the large arteries the pressure barely falls, so the reading would stay near 88 mmHg. The capillaries and the veins come after that drop, where the pressure starts near 35 mmHg and slopes down gently.`,
+  },
+  [r`Why is blood slowest in the capillaries?`]: {
+    question: r`An artery with a cross-sectional area of 3.0 cm² branches into 60 smaller vessels, each with an area of 0.20 cm². The same total flow passes through both levels. How does the blood's speed in the branches compare with its speed in the artery?`,
+    options: [r`Fifteen times the speed in the artery`, r`Four times the speed in the artery`, r`The same as the speed in the artery`, r`One-quarter of the speed in the artery`],
+    correctAnswer: 3,
+    explanation: r`It is the TOTAL area that sets the speed: 60 × 0.20 = 12 cm², four times the artery's area, so by continuity the blood moves at one-quarter of the speed. Fifteen times compares the artery with a single branch, as if a narrow vessel made the blood fast. Four times inverts the relation, and equal speeds would need equal total areas.`,
+  },
+  [r`Why are the arterioles the body's control valves?`]: {
+    question: r`A circuit has three levels in series: arteries 2, arterioles 10, and the remaining vessels 6 mmHg·min/L. Smooth muscle then narrows the arterioles by about 16% in radius. Using 0.84⁴ ≈ 0.5, what is the circuit's total resistance now?`,
+    options: [r`36 mmHg·min/L`, r`28 mmHg·min/L`, r`19.6 mmHg·min/L`, r`13 mmHg·min/L`],
+    correctAnswer: 1,
+    explanation: r`Resistance goes as $1/r^4$, so 16% narrower doubles the arterioles' resistance to 20, and the total is 2 + 20 + 6 = 28 mmHg·min/L. 36 doubles every level, but only the arterioles changed. 19.6 treats a 16% narrowing as a 16% rise in resistance, and 13 halves the arterioles' resistance when narrowing raises it.`,
+  },
+  [r`One organ's arterioles constrict. Where does the blood go?`]: {
+    question: r`A swimmer dives into cold water and the arterioles of the skin constrict, while the cardiac output stays the same. How do the flows through the skin and through the other organ beds, which are in parallel with it, change?`,
+    options: [r`Skin flow falls and the other beds' flow rises`, r`Skin flow falls and the other beds' flow falls`, r`Skin flow rises and the other beds' flow falls`, r`Skin flow rises and the other beds' flow rises`],
+    correctAnswer: 0,
+    explanation: r`Constriction raises the skin bed's resistance, so less blood passes through it, and with the cardiac output unchanged that blood is diverted to the parallel beds. Both flows cannot fall, or both rise, when the total is fixed. A rise in skin flow gets the effect of narrowing backwards: a narrower arteriole has more resistance, not less.`,
+  },
+  [r`What drives air through the airways, and why does asthma cut airflow so sharply?`]: {
+    question: r`A patient normally needs a pressure difference of 1.0 cmH₂O between the atmosphere and the alveoli to breathe in at a certain rate. In an asthma attack the airways narrow to half their radius. With laminar flow, what pressure difference gives the same airflow?`,
+    options: [r`4.0 cmH₂O`, r`8.0 cmH₂O`, r`16 cmH₂O`, r`2.0 cmH₂O`],
+    correctAnswer: 2,
+    explanation: r`Airway resistance goes as $1/r^4$, so half the radius means 2⁴ = 16 times the resistance, and the same airflow needs 16 times the pressure difference: 16 cmH₂O. 2.0 cmH₂O uses the radius to the first power, 4.0 cmH₂O uses the square (the area), and 8.0 cmH₂O uses the cube.`,
+  },
+  // Video 6
+  [r`How do you find total peripheral resistance from a patient's numbers?`]: {
+    question: r`A patient has a stroke volume of 80 mL, a heart rate of 75 beats per minute and a mean arterial pressure of 96 mmHg. Cardiac output is stroke volume × heart rate, and the right atrial pressure is taken as zero. What is the total peripheral resistance?`,
+    options: [r`1.2 mmHg·min/L`, r`576 mmHg·min/L`, r`1.28 mmHg·min/L`, r`16 mmHg·min/L`],
+    correctAnswer: 3,
+    explanation: r`The cardiac output is 80 mL × 75 per minute = 6000 mL/min = 6.0 L/min, and the total peripheral resistance is 96 ÷ 6.0 = 16 mmHg·min/L. 576 multiplies the pressure by the output when it should divide. 1.2 divides by the stroke volume and 1.28 by the heart rate, and neither of those is the cardiac output in L/min.`,
+  },
+  [r`How do you find the pressure drop across each vessel level in a series circuit?`]: {
+    question: r`Four vessel levels in series have resistances of 2, 10, 4 and 2 mmHg·min/L, with the arterioles being the 10. The pressure falls by 90 mmHg in total from the first level to the last. How large is the drop across the arterioles?`,
+    options: [r`9.0 mmHg`, r`50 mmHg`, r`22.5 mmHg`, r`10 mmHg`],
+    correctAnswer: 1,
+    explanation: r`The shared flow is the total drop over the total resistance: 90 ÷ 18 = 5.0 L/min. The arterioles' drop is that flow times their own resistance, 5.0 × 10 = 50 mmHg. 9.0 mmHg divides 90 by the arterioles' resistance, and 22.5 mmHg splits the 90 equally among four levels. 10 mmHg is the resistance copied down as a pressure.`,
+  },
+  [r`How do you find the pressure at a point partway along a series of vessel levels?`]: {
+    question: r`Blood flows at 5.0 L/min from arteries at 95 mmHg through four levels in order: arteries 1.0, arterioles 10, capillaries 4.0 and veins 4.0 mmHg·min/L. What is the pressure where the blood leaves the arterioles and enters the capillaries?`,
+    options: [r`40 mmHg`, r`45 mmHg`, r`55 mmHg`, r`20 mmHg`],
+    correctAnswer: 0,
+    explanation: r`Subtract the drops upstream of that point from the arterial pressure: the arteries take 5.0 × 1.0 = 5 mmHg and the arterioles 5.0 × 10 = 50 mmHg, leaving 95 − 55 = 40 mmHg. 45 mmHg leaves out the arteries' drop, and 55 mmHg is the total drop, not what remains. 20 mmHg also subtracts the capillaries' drop, which lies downstream of the point.`,
+  },
+  [r`How do you find the flow through each of several organ beds in parallel?`]: {
+    question: r`Three tissues are each supplied from the same arterial pressure of 90 mmHg and each drains to veins near 0 mmHg, so they sit side by side. Taken alone they have resistances of 30, 45 and 90 mmHg·min/L. How much blood passes each minute through the tissue of resistance 45 mmHg·min/L?`,
+    options: [r`0.50 L/min`, r`6.0 L/min`, r`2.0 L/min`, r`3.0 L/min`],
+    correctAnswer: 2,
+    explanation: r`Every parallel bed has the same 90 mmHg across it, so this bed's flow is 90 ÷ 45 = 2.0 L/min. The other beds carry 3.0 and 1.0 L/min, and the three add up to the total of 6.0 L/min, which is not any one bed's flow. 0.50 L/min divides the resistance by the pressure difference, and 3.0 L/min belongs to the 30 mmHg·min/L bed.`,
+  },
+  [r`What is the combined resistance of $N$ identical beds in parallel?`]: {
+    question: r`A resting muscle has 2 identical capillary networks open in parallel, with a combined resistance of 120 units. During exercise 8 of these identical networks are open in parallel. What is their combined resistance?`,
+    options: [r`1920 units`, r`60 units`, r`480 units`, r`30 units`],
+    correctAnswer: 3,
+    explanation: r`Two identical networks combine to R/2 = 120, so one network is 240 units, and eight in parallel make 240 ÷ 8 = 30 units. 1920 units multiplies 240 by 8, which is the series rule. 480 units multiplies the resting value by 4, and 60 units divides it by only 2 when the number of open paths has gone up by 4 times.`,
+  },
+  [r`What change in radius halves a vessel's resistance, and what change doubles it?`]: {
+    question: r`All of an organ bed's resistance, 24 mmHg·min/L, lies in its arterioles. A drug widens those arterioles by about 19% in radius. Using 1.19⁴ ≈ 2, what is the bed's resistance now?`,
+    options: [r`12 mmHg·min/L`, r`19.4 mmHg·min/L`, r`20.2 mmHg·min/L`, r`48 mmHg·min/L`],
+    correctAnswer: 0,
+    explanation: r`Resistance goes as $1/r^4$, and 1.19⁴ ≈ 2, so 19% wider halves the resistance to 12 mmHg·min/L. 19.4 treats a 19% widening as a 19% fall in resistance, and 20.2 divides by 1.19 only once. 48 doubles the resistance, which is what a narrowing of about 16% would do.`,
+  },
+  [r`One parallel bed constricts and the heart keeps the total flow the same. How do you find the new flows?`]: {
+    question: r`The heart delivers a steady 4.5 L/min to two tissues side by side, A (30 mmHg·min/L) and B (60 mmHg·min/L), which drain to veins at 0 mmHg. The arterioles of B then tighten until B is 120 mmHg·min/L, and the heart still delivers 4.5 L/min. How much of it now goes through A?`,
+    options: [r`3.0 L/min`, r`3.6 L/min`, r`0.90 L/min`, r`2.25 L/min`],
+    correctAnswer: 1,
+    explanation: r`The new combined resistance is 1/30 + 1/120 = 5/120, or 24 mmHg·min/L, so the arterial pressure becomes 4.5 × 24 = 108 mmHg and A carries 108 ÷ 30 = 3.6 L/min. 3.0 L/min is A's old flow, which ignores the rise in arterial pressure. 0.90 L/min is B's new flow, and 2.25 L/min splits the total equally between unequal tissues.`,
+  },
+  [r`What two checks confirm an answer for a circuit of vessels?`]: {
+    question: r`Blood flows at 5.0 L/min from an artery at 100 mmHg to veins at 0 mmHg through an arterial level, then two organ beds in parallel, then a venous level. A student reports drops of 10, 70 and 20 mmHg across the three stages and bed flows of 3.5 and 2.0 L/min. Which check shows a mistake?`,
+    options: [r`The bed flows fail: they must be equal, 2.5 L/min each`, r`The drops fail: each stage must take one-third of 100 mmHg`, r`The bed flows fail: they must add up to 5.0 L/min`, r`The drops fail: they must add up to 5.0 times 100 mmHg`],
+    correctAnswer: 2,
+    explanation: r`Parallel flows must add up to the total flow, and 3.5 + 2.0 = 5.5 L/min is not 5.0, so a bed flow is wrong. The series drops pass their check, since 10 + 70 + 20 = 100 mmHg, and they need not be equal thirds because each stage has its own resistance. Parallel beds share a pressure difference, not a flow, so equal flows are not required.`,
+  },
+  // Video 7
+  [r`What symbol stands for the speed of blood in the continuity and Bernoulli equations, and what is its SI unit?`]: {
+    question: r`A Doppler report gives the speed of the jet through a narrowed valve as 300 cm/s. Taking the blood's density as 1000 kg/m³, what is the jet's $\tfrac12 \rho v^2$?`,
+    options: [r`4500 Pa`, r`4.5 × 10⁷ Pa`, r`1500 Pa`, r`9000 Pa`],
+    correctAnswer: 0,
+    explanation: r`The speed must be in m/s before it goes into the equation: 300 cm/s = 3.0 m/s, so ½ × 1000 × 3.0² = 4500 Pa. 4.5 × 10⁷ Pa puts in 300 as if it were already in m/s. 1500 Pa does not square the speed, and 9000 Pa leaves out the factor of one-half.`,
+  },
+  [r`What is a stenosis, and which three questions can be asked about one?`]: {
+    question: r`Plaque has cut the open area of a short stretch of a carotid artery to one-third of normal, and the flow through the artery is unchanged. A clinician wants the blood's speed inside the narrowing. Which tool answers this, and what does it give?`,
+    options: [r`Bernoulli, giving one-third of the upstream speed`, r`Poiseuille, giving 81 times the upstream speed`, r`Continuity, giving 9 times the upstream speed`, r`Continuity, giving 3 times the upstream speed`],
+    correctAnswer: 3,
+    explanation: r`"How fast is the blood?" is the continuity question: with the flow fixed, speed goes as 1 over the area, so one-third of the area means 3 times the speed. 9 times squares the area ratio as if it were a radius ratio. Bernoulli answers the pressure question and Poiseuille the flow question, and blood does not slow down in a narrowing.`,
+  },
+  [r`When do you use continuity for a narrowed vessel, and what does it say?`]: {
+    question: r`A short stenosis reduces an artery's open cross-section from 0.60 cm² to 0.15 cm². Blood approaches at 30 cm/s, and the flow rate is the same at both places. How fast is the blood inside the stenosis?`,
+    options: [r`60 cm/s`, r`120 cm/s`, r`7.5 cm/s`, r`480 cm/s`],
+    correctAnswer: 1,
+    explanation: r`Continuity, $A_1 v_1 = A_2 v_2$, gives 0.60 × 30 = 0.15 × v₂, so v₂ = 120 cm/s: a quarter of the area means 4 times the speed. 60 cm/s only doubles the speed, taking the square root of the area ratio. 7.5 cm/s slows the blood where it should speed up, and 480 cm/s squares the area ratio.`,
+  },
+  [r`Blood moves faster through a narrowing. Does that mean more blood gets through?`]: {
+    question: r`Upstream of a narrowing an artery's area is 0.50 cm² and the blood moves at 40 cm/s. Inside the narrowing the area is 0.10 cm² and the blood moves at 200 cm/s. How does the flow rate inside the narrowing compare with the flow rate upstream?`,
+    options: [r`It is 5 times as large in the narrowing`, r`It is one-fifth as large in the narrowing`, r`It is the same, 20 mL/s at both places`, r`It is 25 times as large in the narrowing`],
+    correctAnswer: 2,
+    explanation: r`Flow rate is area times speed: 0.50 × 40 = 20 cm³/s upstream and 0.10 × 200 = 20 cm³/s in the narrowing, so no more blood gets through. 5 times as large mistakes the speed for the flow rate. One-fifth counts only the smaller area and ignores the higher speed, and 25 times squares the speed ratio.`,
+  },
+  [r`What does Bernoulli's equation say about the pressure in the jet through a short narrowing?`]: {
+    question: r`Blood passes through a short, level narrowing at a heart valve. Just upstream the pressure is 12,000 Pa and $\tfrac12 \rho v^2$ is 100 Pa. In the jet, $\tfrac12 \rho v^2$ is 2600 Pa. Treating the blood as ideal over this short stretch, what is the pressure in the jet?`,
+    options: [r`9500 Pa`, r`14,500 Pa`, r`9400 Pa`, r`12,000 Pa`],
+    correctAnswer: 0,
+    explanation: r`$P + \tfrac12 \rho v^2$ stays constant, so 12,000 + 100 = P + 2600 and P = 9500 Pa: the faster jet is at a lower pressure. 14,500 Pa raises the pressure where the blood is faster, which is backwards. 9400 Pa forgets the 100 Pa the blood already had upstream, and 12,000 Pa assumes the pressure does not change.`,
+  },
+  [r`What happens to the jet just past a tight stenosis, and how is the jet's speed measured?`]: {
+    question: r`Through a stethoscope a clinician hears a bruit just downstream of a tight narrowing in a femoral artery. A student who knows the speed of the jet wants to calculate the pressure in the noisy region just past the narrowing. Which statement is correct?`,
+    options: [r`Bernoulli's equation gives it, since the stretch is short`, r`Poiseuille's law gives it, since the blood is viscous`, r`Continuity gives it, once the vessel's area is known`, r`Neither Bernoulli nor Poiseuille applies in turbulence`],
+    correctAnswer: 3,
+    explanation: r`A bruit is the sound of turbulence, and in those eddies neither Bernoulli's equation nor Poiseuille's law holds, so the pressure there cannot be calculated from either. Bernoulli works for the smooth jet inside a short narrowing, not for the broken-up flow beyond it. Poiseuille needs laminar flow, and continuity relates areas and speeds, never pressures.`,
+  },
+  [r`How do you model a LONG narrowing in a vessel?`]: {
+    question: r`A 6 cm stretch of an artery normally has a resistance of 0.50 mmHg·s/mL and feeds a tissue bed of 12 mmHg·s/mL. Plaque narrows the whole stretch to half its radius, and the flow stays laminar. What is the total resistance of the stretch and the bed together?`,
+    options: [r`12.5 mmHg·s/mL`, r`20 mmHg·s/mL`, r`14 mmHg·s/mL`, r`4.8 mmHg·s/mL`],
+    correctAnswer: 1,
+    explanation: r`A long narrowing is a Poiseuille resistor: half the radius makes it 16 × 0.50 = 8.0 mmHg·s/mL, and it sits in series with the bed, so the total is 8.0 + 12 = 20 mmHg·s/mL. 12.5 leaves the stretch unchanged. 14 multiplies by 4, using the area and not the fourth power, and 4.8 combines 8.0 and 12 as if they were in parallel.`,
+  },
+  [r`Continuity says blood speeds up in a stenosis; Poiseuille says the flow falls. How do the two agree?`]: {
+    question: r`A long stenosis raises a vessel's resistance from 2 to 8 mmHg·s/mL. In case 1 the body holds the flow at 5 mL/s. In case 2 the pressure difference across the vessel stays at its original 10 mmHg. What happens in each case?`,
+    options: [r`Case 1 needs 40 mmHg; in case 2 the flow falls to 1.25 mL/s`, r`Case 1 needs 40 mmHg; in case 2 the flow stays at 5.0 mL/s`, r`Case 1 needs 10 mmHg; in case 2 the flow falls to 1.25 mL/s`, r`Case 1 needs 2.5 mmHg; in case 2 the flow rises to 20 mL/s`],
+    correctAnswer: 0,
+    explanation: r`It depends on what is held fixed. With the flow fixed, ΔP = QR = 5 × 8 = 40 mmHg, the cost of keeping the flow. With the pressure difference fixed, Q = 10 ÷ 8 = 1.25 mL/s. Keeping 5.0 mL/s at 10 mmHg, or needing only 10 mmHg for 5 mL/s, ignores the added resistance, and 2.5 mmHg with 20 mL/s treats the resistance as having fallen.`,
+  },
+  [r`What is an aneurysm, and what happens to the blood's speed and pressure inside one?`]: {
+    question: r`An aneurysm widens a level stretch of an aorta from a radius of 1.0 cm to 2.0 cm. Blood approaches at 40 cm/s, the flow rate is unchanged, and the blood is treated as ideal. What are the speed and the pressure inside the aneurysm?`,
+    options: [r`20 cm/s, at a higher pressure than upstream`, r`10 cm/s, at a lower pressure than upstream`, r`10 cm/s, at a higher pressure than upstream`, r`160 cm/s, at a lower pressure than upstream`],
+    correctAnswer: 2,
+    explanation: r`Twice the radius is 4 times the area, so by continuity the speed falls to 40 ÷ 4 = 10 cm/s, and by Bernoulli slower blood presses harder on the wall. 20 cm/s scales the speed with the radius and not the area. A lower pressure at 10 cm/s gets Bernoulli backwards, and 160 cm/s with a lower pressure describes a stenosis, the reverse case.`,
+  },
+  [r`Which clues in a question point to viscous flow, and which to ideal flow?`]: {
+    question: r`A problem about oil moving through a level pipeline is first set up with continuity and Bernoulli's equation. Which added detail means it should be solved with Poiseuille's law instead?`,
+    options: [r`The oil speeds up through one short constriction`, r`The oil drains from a hole in a wide, open tank`, r`The oil is described as having no viscosity`, r`The pressure falls steadily along a uniform pipe`],
+    correctAnswer: 3,
+    explanation: r`A pressure that falls along a tube of uniform width can only be friction at work, which is the mark of viscous flow and Poiseuille's law; an ideal fluid would keep the same pressure there. A short constriction with speeds and pressures, a tank draining through a hole (Torricelli's law) and a fluid called non-viscous are all clues to ideal flow.`,
+  },
+  [r`After picking the regime, which three questions do you ask about a flow?`]: {
+    question: r`A long vessel narrows so that its resistance doubles, and the flow stays laminar. One student says the flow through it halves. Another says the flow is unchanged and the pressure difference across it doubles. What must be known to decide between them?`,
+    options: [r`Whether the vessel is one tube or a branching network`, r`Whether the flow or the driving pressure is held fixed`, r`Whether the blood is treated as viscous or as ideal`, r`Whether the speeds are given in cm/s or in m/s`],
+    correctAnswer: 1,
+    explanation: r`Both students use ΔP = QR correctly; they differ only in what they hold fixed. If the driving pressure is fixed the flow halves, and if the flow is fixed the pressure difference doubles. The vessel is already a single tube and the flow is already viscous and laminar, so those questions are settled, and a choice of speed units changes no physics.`,
+  },
+  // Video 8
+  [r`Blood speeds up by a known factor in a short stenosis. How do you find how much the radius has shrunk?`]: {
+    question: r`Doppler ultrasound shows blood speeding up from 25 cm/s to 400 cm/s as it enters a short stenosis. Taking the flow as steady, what fraction of its normal radius does the vessel have inside the stenosis?`,
+    options: [r`One-half of normal`, r`One-sixteenth of normal`, r`One-quarter of normal`, r`One-eighth of normal`],
+    correctAnswer: 2,
+    explanation: r`The speed is 400 ÷ 25 = 16 times as large, so the area is 1/16 of normal, and the radius ratio is the square root of that: one-quarter. One-sixteenth is the area ratio reported as the radius. One-half takes a square root twice, and one-eighth halves the 16 instead of taking its square root.`,
+  },
+  [r`What is the common trap when reporting how much a stenosis has narrowed a vessel?`]: {
+    question: r`Imaging shows that a stenosis has reduced the open cross-sectional area of a round artery by 84%. By what percentage has the artery's diameter been reduced?`,
+    options: [r`60%`, r`84%`, r`40%`, r`42%`],
+    correctAnswer: 0,
+    explanation: r`16% of the area is left, and diameter goes as the square root of area: √0.16 = 0.40, so 40% of the diameter is left, a 60% reduction. 84% reports the area reduction as the diameter reduction, which is the trap. 40% is the fraction of the diameter that remains, not the reduction, and 42% just halves the 84%.`,
+  },
+  [r`How do you find the pressure dip in the jet through a short stenosis?`]: {
+    question: r`An ultrasound report on a short narrowing at an aortic valve lists 100 cm/s just before the valve and 400 cm/s in the jet. With 1000 kg/m³ for the blood's density and no change in height, what pressure dip does Bernoulli's equation give for the jet?`,
+    options: [r`4500 Pa`, r`1500 Pa`, r`15,000 Pa`, r`7500 Pa`],
+    correctAnswer: 3,
+    explanation: r`In m/s the speeds are 1.0 and 4.0, and $\Delta P = \tfrac12 \rho (v_2^2 - v_1^2)$ = ½ × 1000 × (16 − 1) = 7500 Pa. 4500 Pa subtracts the speeds first and then squares the 3.0. 1500 Pa never squares anything, and 15,000 Pa leaves out the factor of one-half.`,
+  },
+  [r`How do you convert a pressure from pascals to millimeters of mercury?`]: {
+    question: r`The pressure just upstream of a narrowed valve is 100 mmHg. Bernoulli's equation gives a dip of 4000 Pa in the jet. Using 1 mmHg ≈ 133 Pa, about what is the pressure in the jet?`,
+    options: [r`60 mmHg`, r`70 mmHg`, r`96 mmHg`, r`30 mmHg`],
+    correctAnswer: 1,
+    explanation: r`Dividing by 133 turns the dip into mmHg: 4000 ÷ 133 ≈ 30 mmHg, so the jet is at about 100 − 30 = 70 mmHg. 60 mmHg divides by 100 to get a dip of 40 mmHg, and 96 mmHg divides by 1000 to get a dip of 4. 30 mmHg is the size of the dip, not the pressure that is left.`,
+  },
+  [r`Part of a vessel's length narrows. How do you find the vessel's new resistance?`]: {
+    question: r`A bypass graft has a resistance of 10 units. Scar tissue then squeezes one-fifth of its length down to half the radius it had, and the other four-fifths is untouched. If the flow stays laminar, what resistance does the graft have now?`,
+    options: [r`40 units`, r`160 units`, r`42 units`, r`32 units`],
+    correctAnswer: 0,
+    explanation: r`Split the graft: the normal four-fifths keeps 8 units, and the narrowed fifth goes from 2 units to 2 × 16 = 32 units, so the total in series is 8 + 32 = 40 units. 160 units multiplies the whole graft by 16. 42 units adds the 32 to the full 10 without removing the old 2, and 32 units is the narrowed part alone.`,
+  },
+  [r`An artery in series with a tissue bed narrows. How do you find the new flow?`]: {
+    question: r`An artery of 1.0 mmHg·s/mL feeds a tissue bed of 9.0 mmHg·s/mL in series, and 80 mmHg is held across the pair. Plaque then raises the artery's resistance to 11 mmHg·s/mL. What is the new flow through the bed?`,
+    options: [r`7.3 mL/s`, r`8.0 mL/s`, r`4.0 mL/s`, r`0.73 mL/s`],
+    correctAnswer: 2,
+    explanation: r`The flow is the driving pressure over the series total with the artery's NEW resistance: 80 ÷ (11 + 9.0) = 4.0 mL/s. 8.0 mL/s is the old flow, 80 ÷ 10. 7.3 mL/s divides by the artery's resistance alone and leaves out the bed, and 0.73 mL/s scales the old flow by 1/11 as if the artery were the only resistance.`,
+  },
+  [r`An artery feeds a tissue bed in series. How do you find the pressure difference left across the bed?`]: {
+    question: r`A narrowed artery with a resistance of 6.0 mmHg·s/mL feeds a tissue bed of 14 mmHg·s/mL in series. The pressure difference across the pair is 90 mmHg. What pressure difference is left across the bed?`,
+    options: [r`27 mmHg`, r`63 mmHg`, r`90 mmHg`, r`84 mmHg`],
+    correctAnswer: 1,
+    explanation: r`The flow is 90 ÷ (6.0 + 14) = 4.5 mL/s, so the artery takes 4.5 × 6.0 = 27 mmHg and the bed is left with 90 − 27 = 63 mmHg, which checks as 4.5 × 14. 27 mmHg is the artery's drop, not the bed's. 90 mmHg ignores the artery, and 84 mmHg subtracts the artery's resistance as if it were a pressure.`,
+  },
+}

@@ -1,0 +1,64 @@
+{
+ "key": "mcat-fl3",
+ "video": 4,
+ "stem": "mcat_fl3_c04_bernoulli_examples",
+ "topic": "fluids-part3-continuity-bernoulli",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 42.4,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-a",
+   "file": "03-ex1-solution-a.mp4",
+   "seconds": 19.6,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-b",
+   "file": "03-ex1-solution-b.mp4",
+   "seconds": 69.2,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 59.2,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-a",
+   "file": "05-ex2-solution-a.mp4",
+   "seconds": 16.0,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-b",
+   "file": "05-ex2-solution-b.mp4",
+   "seconds": 54.1,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-c",
+   "file": "05-ex2-solution-c.mp4",
+   "seconds": 34.8,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 39.1,
+   "source": "p3 c04 Bernoulli's Equation Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

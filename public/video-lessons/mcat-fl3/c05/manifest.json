@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl3",
+ "video": 5,
+ "stem": "mcat_fl3_c05_tank",
+ "topic": "fluids-part3-continuity-bernoulli",
+ "clips": [
+  {
+   "section": "02-setup",
+   "file": "02-setup.mp4",
+   "seconds": 65.1,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-speed",
+   "file": "03-speed.mp4",
+   "seconds": 70.4,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-density",
+   "file": "04-density.mp4",
+   "seconds": 53.7,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-square-root",
+   "file": "05-square-root.mp4",
+   "seconds": 60.0,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-draining",
+   "file": "06-draining.mp4",
+   "seconds": 52.8,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-range",
+   "file": "07-range.mp4",
+   "seconds": 64.2,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 42.7,
+   "source": "p3 c05 Torricelli's Theorem v1.mov",
+   "voiced": true
+  }
+ ]
+}

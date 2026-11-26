@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl2",
+ "video": 3,
+ "stem": "mcat_fl2_c03_float",
+ "topic": "fluids-part2-buoyancy-surface-tension",
+ "clips": [
+  {
+   "section": "02-float-hover-sink",
+   "file": "02-float-hover-sink.mp4",
+   "seconds": 99.3,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-equilibrium",
+   "file": "03-equilibrium.mp4",
+   "seconds": 61.1,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-fraction",
+   "file": "04-fraction.mp4",
+   "seconds": 63.3,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-denser-fluid",
+   "file": "05-denser-fluid.mp4",
+   "seconds": 84.8,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-melting-ice",
+   "file": "06-melting-ice.mp4",
+   "seconds": 47.7,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-specific-gravity",
+   "file": "07-specific-gravity.mp4",
+   "seconds": 64.2,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p2 c03 Floating v1.mov",
+   "voiced": true
+  }
+ ]
+}

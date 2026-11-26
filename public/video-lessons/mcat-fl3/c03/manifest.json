@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl3",
+ "video": 3,
+ "stem": "mcat_fl3_c03_bernoulli",
+ "topic": "fluids-part3-continuity-bernoulli",
+ "clips": [
+  {
+   "section": "02-ideal-fluid",
+   "file": "02-ideal-fluid.mp4",
+   "seconds": 45.2,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-energy",
+   "file": "03-energy.mp4",
+   "seconds": 81.5,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-at-rest",
+   "file": "04-at-rest.mp4",
+   "seconds": 52.1,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-level-flow",
+   "file": "05-level-flow.mp4",
+   "seconds": 76.5,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-chain",
+   "file": "06-chain.mp4",
+   "seconds": 46.0,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-blood-vessels",
+   "file": "07-blood-vessels.mp4",
+   "seconds": 39.6,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p3 c03 Bernoulli's Equation v1.mov",
+   "voiced": true
+  }
+ ]
+}

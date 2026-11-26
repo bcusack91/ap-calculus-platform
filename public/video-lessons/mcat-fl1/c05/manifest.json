@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl1",
+ "video": 5,
+ "stem": "mcat_fl1_c05_gauge",
+ "topic": "fluids-part1-density-pressure",
+ "clips": [
+  {
+   "section": "02-gauge-absolute",
+   "file": "02-gauge-absolute.mp4",
+   "seconds": 96.6,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-units",
+   "file": "03-units.mp4",
+   "seconds": 55.4,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-barometer",
+   "file": "04-barometer.mp4",
+   "seconds": 86.3,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-manometer",
+   "file": "05-manometer.mp4",
+   "seconds": 73.1,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-blood-pressure",
+   "file": "06-blood-pressure.mp4",
+   "seconds": 58.6,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-blood-height",
+   "file": "07-blood-height.mp4",
+   "seconds": 59.4,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p1 c05 Gauge Versus Absolute Pressure v1.mov",
+   "voiced": true
+  }
+ ]
+}

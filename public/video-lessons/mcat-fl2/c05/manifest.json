@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl2",
+ "video": 5,
+ "stem": "mcat_fl2_c05_sink",
+ "topic": "fluids-part2-buoyancy-surface-tension",
+ "clips": [
+  {
+   "section": "02-sinks",
+   "file": "02-sinks.mp4",
+   "seconds": 70.0,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-free-body",
+   "file": "03-free-body.mp4",
+   "seconds": 62.6,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-apparent-weight",
+   "file": "04-apparent-weight.mp4",
+   "seconds": 60.2,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-bottom-and-held",
+   "file": "05-bottom-and-held.mp4",
+   "seconds": 82.0,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-two-weighings",
+   "file": "06-two-weighings.mp4",
+   "seconds": 80.9,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-specific-gravity",
+   "file": "07-specific-gravity.mp4",
+   "seconds": 61.6,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 44.7,
+   "source": "p2 c05 Sinking and Apparent Weight v1.mov",
+   "voiced": true
+  }
+ ]
+}

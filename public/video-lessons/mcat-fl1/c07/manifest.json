@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl1",
+ "video": 7,
+ "stem": "mcat_fl1_c07_pascal",
+ "topic": "fluids-part1-density-pressure",
+ "clips": [
+  {
+   "section": "02-principle",
+   "file": "02-principle.mp4",
+   "seconds": 58.6,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-lift-force",
+   "file": "03-lift-force.mp4",
+   "seconds": 73.9,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-distance",
+   "file": "04-distance.mp4",
+   "seconds": 62.0,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-work",
+   "file": "05-work.mp4",
+   "seconds": 74.6,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-diameter",
+   "file": "06-diameter.mp4",
+   "seconds": 63.5,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-depth",
+   "file": "07-depth.mp4",
+   "seconds": 69.3,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 42.7,
+   "source": "p1 c07 Pascal's Principle v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -3,6 +3,10 @@ import { checks as mcatCirc1 } from './mcat-circ1'
 import { checks as mcatCirc2 } from './mcat-circ2'
 import { checks as mcatCirc3 } from './mcat-circ3'
 import { checks as mcatCirc4 } from './mcat-circ4'
+import { checks as mcatFl1 } from './mcat-fl1'
+import { checks as mcatFl2 } from './mcat-fl2'
+import { checks as mcatFl3 } from './mcat-fl3'
+import { checks as mcatFl4 } from './mcat-fl4'
 import { TOPIC_CHECKS } from './topics'
 import { VARIANTS } from './variants'
 
@@ -18,6 +22,10 @@ const VIDEO_FILES: Record<string, Record<string, CardCheck>> = {
   'mcat-circ2': mcatCirc2,
   'mcat-circ3': mcatCirc3,
   'mcat-circ4': mcatCirc4,
+  'mcat-fl1': mcatFl1,
+  'mcat-fl2': mcatFl2,
+  'mcat-fl3': mcatFl3,
+  'mcat-fl4': mcatFl4,
 }
 /** Topic → the video decks (set names) whose review cards it holds. */
 const VIDEO_DECKS: Record<string, string[]> = {
@@ -25,6 +33,10 @@ const VIDEO_DECKS: Record<string, string[]> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': ['mcat-circ2'],
   'mcat-physics-electricity-emf-capacitors-mcat': ['mcat-circ3'],
   'mcat-physics-electricity-rc-circuits-mcat': ['mcat-circ4'],
+  'mcat-physics-mechanics-fluids-mcat': ['mcat-fl1'],
+  'mcat-physics-mechanics-buoyancy-mcat': ['mcat-fl2'],
+  'mcat-physics-mechanics-fluid-dynamics-mcat': ['mcat-fl3'],
+  'mcat-physics-mechanics-viscosity-mcat': ['mcat-fl4'],
   // AP Physics 2 reuses the MCAT circuits videos and their review cards (video-lesson-flashcards/ap2-circ.ts).
   'current-resistance-ohms-law': ['mcat-circ1', 'mcat-circ2', 'mcat-circ3'],
   'series-parallel-circuits': ['mcat-circ1', 'mcat-circ2', 'mcat-circ3', 'mcat-circ4'],

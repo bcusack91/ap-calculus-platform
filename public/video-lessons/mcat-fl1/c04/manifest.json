@@ -1,0 +1,43 @@
+{
+ "key": "mcat-fl1",
+ "video": 4,
+ "stem": "mcat_fl1_c04_depth_examples",
+ "topic": "fluids-part1-density-pressure",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 58.1,
+   "source": "p1 c04 Pressure and Depth Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 89.1,
+   "source": "p1 c04 Pressure and Depth Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 55.7,
+   "source": "p1 c04 Pressure and Depth Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 93.2,
+   "source": "p1 c04 Pressure and Depth Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 39.1,
+   "source": "p1 c04 Pressure and Depth Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

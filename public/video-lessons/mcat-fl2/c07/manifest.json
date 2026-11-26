@@ -1,0 +1,50 @@
+{
+ "key": "mcat-fl2",
+ "video": 7,
+ "stem": "mcat_fl2_c07_surface",
+ "topic": "fluids-part2-buoyancy-surface-tension",
+ "clips": [
+  {
+   "section": "02-cohesion-adhesion",
+   "file": "02-cohesion-adhesion.mp4",
+   "seconds": 54.0,
+   "source": "p2 c07 Surface Tension v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-surface-tension",
+   "file": "03-surface-tension.mp4",
+   "seconds": 92.1,
+   "source": "p2 c07 Surface Tension v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-consequences",
+   "file": "04-consequences.mp4",
+   "seconds": 62.2,
+   "source": "p2 c07 Surface Tension v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-capillary-action",
+   "file": "05-capillary-action.mp4",
+   "seconds": 75.9,
+   "source": "p2 c07 Surface Tension v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-lungs-surfactant",
+   "file": "06-lungs-surfactant.mp4",
+   "seconds": 86.3,
+   "source": "p2 c07 Surface Tension v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-recap",
+   "file": "07-recap.mp4",
+   "seconds": 41.2,
+   "source": "p2 c07 Surface Tension v1.mov",
+   "voiced": true
+  }
+ ]
+}

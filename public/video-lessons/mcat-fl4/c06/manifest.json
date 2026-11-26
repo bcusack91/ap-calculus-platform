@@ -1,0 +1,85 @@
+{
+ "key": "mcat-fl4",
+ "video": 6,
+ "stem": "mcat_fl4_c06_blood_examples",
+ "topic": "fluids-part4-viscosity-blood-flow",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 61.15,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-a",
+   "file": "03-ex1-solution-a.mp4",
+   "seconds": 17.2,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-b",
+   "file": "03-ex1-solution-b.mp4",
+   "seconds": 38.7,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-c",
+   "file": "03-ex1-solution-c.mp4",
+   "seconds": 16.3,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-d",
+   "file": "03-ex1-solution-d.mp4",
+   "seconds": 25.6,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 46.2,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-a",
+   "file": "05-ex2-solution-a.mp4",
+   "seconds": 22.9,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-b",
+   "file": "05-ex2-solution-b.mp4",
+   "seconds": 27.8,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-c",
+   "file": "05-ex2-solution-c.mp4",
+   "seconds": 19.2,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-d",
+   "file": "05-ex2-solution-d.mp4",
+   "seconds": 40.4,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 39.1,
+   "source": "p4 c06 Blood Flow as a Circuit Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

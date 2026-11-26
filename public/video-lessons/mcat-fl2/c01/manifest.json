@@ -1,0 +1,50 @@
+{
+ "key": "mcat-fl2",
+ "video": 1,
+ "stem": "mcat_fl2_c01_buoy",
+ "topic": "fluids-part2-buoyancy-surface-tension",
+ "clips": [
+  {
+   "section": "02-pressure-difference",
+   "file": "02-pressure-difference.mp4",
+   "seconds": 59.9,
+   "source": "p2 c01 Archimedes' Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-size-of-force",
+   "file": "03-size-of-force.mp4",
+   "seconds": 59.5,
+   "source": "p2 c01 Archimedes' Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-archimedes",
+   "file": "04-archimedes.mp4",
+   "seconds": 63.2,
+   "source": "p2 c01 Archimedes' Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-fluid-density",
+   "file": "05-fluid-density.mp4",
+   "seconds": 72.2,
+   "source": "p2 c01 Archimedes' Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-submerged-volume",
+   "file": "06-submerged-volume.mp4",
+   "seconds": 66.8,
+   "source": "p2 c01 Archimedes' Principle v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-recap",
+   "file": "07-recap.mp4",
+   "seconds": 35.9,
+   "source": "p2 c01 Archimedes' Principle v1.mov",
+   "voiced": true
+  }
+ ]
+}

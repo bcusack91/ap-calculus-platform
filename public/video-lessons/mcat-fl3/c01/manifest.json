@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl3",
+ "video": 1,
+ "stem": "mcat_fl3_c01_flow",
+ "topic": "fluids-part3-continuity-bernoulli",
+ "clips": [
+  {
+   "section": "02-flow-rate",
+   "file": "02-flow-rate.mp4",
+   "seconds": 60.0,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-rate-vs-speed",
+   "file": "03-rate-vs-speed.mp4",
+   "seconds": 54.9,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-continuity",
+   "file": "04-continuity.mp4",
+   "seconds": 67.7,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-radius-squared",
+   "file": "05-radius-squared.mp4",
+   "seconds": 74.4,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-branching",
+   "file": "06-branching.mp4",
+   "seconds": 80.8,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-clinical-units",
+   "file": "07-clinical-units.mp4",
+   "seconds": 56.0,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p3 c01 Flow Rate and Continuity v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl3",
+ "video": 7,
+ "stem": "mcat_fl3_c07_venturi",
+ "topic": "fluids-part3-continuity-bernoulli",
+ "clips": [
+  {
+   "section": "02-venturi-effect",
+   "file": "02-venturi-effect.mp4",
+   "seconds": 60.0,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-venturi-meter",
+   "file": "03-venturi-meter.mp4",
+   "seconds": 79.8,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-pressure-to-speed",
+   "file": "04-pressure-to-speed.mp4",
+   "seconds": 74.1,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-pitot-tube",
+   "file": "05-pitot-tube.mp4",
+   "seconds": 97.2,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-atomizer",
+   "file": "06-atomizer.mp4",
+   "seconds": 66.0,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-lift",
+   "file": "07-lift.mp4",
+   "seconds": 54.5,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 42.2,
+   "source": "p3 c07 Venturi and Pitot Tubes v1.mov",
+   "voiced": true
+  }
+ ]
+}

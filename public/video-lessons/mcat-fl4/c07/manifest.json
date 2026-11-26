@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl4",
+ "video": 7,
+ "stem": "mcat_fl4_c07_stenosis",
+ "topic": "fluids-part4-viscosity-blood-flow",
+ "clips": [
+  {
+   "section": "02-three-questions",
+   "file": "02-three-questions.mp4",
+   "seconds": 56.8,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-continuity",
+   "file": "03-continuity.mp4",
+   "seconds": 58.9,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-short-narrowing",
+   "file": "04-short-narrowing.mp4",
+   "seconds": 66.3,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-long-narrowing",
+   "file": "05-long-narrowing.mp4",
+   "seconds": 61.0,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-the-laws-agree",
+   "file": "06-the-laws-agree.mp4",
+   "seconds": 81.4,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-pick-the-regime",
+   "file": "07-pick-the-regime.mp4",
+   "seconds": 85.3,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 42.7,
+   "source": "p4 c07 Stenosis - Which Law Applies v1.mov",
+   "voiced": true
+  }
+ ]
+}

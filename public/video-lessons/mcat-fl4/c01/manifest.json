@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl4",
+ "video": 1,
+ "stem": "mcat_fl4_c01_viscous",
+ "topic": "fluids-part4-viscosity-blood-flow",
+ "clips": [
+  {
+   "section": "02-viscosity",
+   "file": "02-viscosity.mp4",
+   "seconds": 47.6,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-blood-viscosity",
+   "file": "03-blood-viscosity.mp4",
+   "seconds": 51.1,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-velocity-profile",
+   "file": "04-velocity-profile.mp4",
+   "seconds": 54.6,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-pressure-drop",
+   "file": "05-pressure-drop.mp4",
+   "seconds": 65.6,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-laminar-turbulent",
+   "file": "06-laminar-turbulent.mp4",
+   "seconds": 79.0,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-murmurs-cuff",
+   "file": "07-murmurs-cuff.mp4",
+   "seconds": 67.6,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p4 c01 Viscosity and Real Fluids v1.mov",
+   "voiced": true
+  }
+ ]
+}

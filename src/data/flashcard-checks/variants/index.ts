@@ -11,18 +11,34 @@ import { variants as v8 } from './mcat-circ3.p3'
 import { variants as v9 } from './mcat-circ4.p1'
 import { variants as v10 } from './mcat-circ4.p2'
 import { variants as v11 } from './mcat-circ4.p3'
-import { variants as v12 } from './mcat-physics-electricity-dc-circuits-mcat.p1'
-import { variants as v13 } from './mcat-physics-electricity-emf-capacitors-mcat.p1'
-import { variants as v14 } from './mcat-physics-electricity-kirchhoff-power-mcat.p1'
-import { variants as v15 } from './mcat-physics-electricity-kirchhoff-power-mcat.p2'
-import { variants as v16 } from './mcat-physics-electricity-rc-circuits-mcat.p1'
-import { variants as v17 } from './mcat-physics-electricity-rc-circuits-mcat.p2'
-import { variants as v18 } from './mcat-physics-mechanics-buoyancy-mcat.p1'
-import { variants as v19 } from './mcat-physics-mechanics-buoyancy-mcat.p2'
-import { variants as v20 } from './mcat-physics-mechanics-fluid-dynamics-mcat.p1'
-import { variants as v21 } from './mcat-physics-mechanics-fluids-mcat.p1'
-import { variants as v22 } from './mcat-physics-mechanics-fluids-mcat.p2'
-import { variants as v23 } from './mcat-physics-mechanics-viscosity-mcat.p1'
+import { variants as v12 } from './mcat-fl1.p1'
+import { variants as v13 } from './mcat-fl1.p2'
+import { variants as v14 } from './mcat-fl1.p3'
+import { variants as v15 } from './mcat-fl1.p4'
+import { variants as v16 } from './mcat-fl2.p1'
+import { variants as v17 } from './mcat-fl2.p2'
+import { variants as v18 } from './mcat-fl2.p3'
+import { variants as v19 } from './mcat-fl2.p4'
+import { variants as v20 } from './mcat-fl3.p1'
+import { variants as v21 } from './mcat-fl3.p2'
+import { variants as v22 } from './mcat-fl3.p3'
+import { variants as v23 } from './mcat-fl3.p4'
+import { variants as v24 } from './mcat-fl4.p1'
+import { variants as v25 } from './mcat-fl4.p2'
+import { variants as v26 } from './mcat-fl4.p3'
+import { variants as v27 } from './mcat-fl4.p4'
+import { variants as v28 } from './mcat-physics-electricity-dc-circuits-mcat.p1'
+import { variants as v29 } from './mcat-physics-electricity-emf-capacitors-mcat.p1'
+import { variants as v30 } from './mcat-physics-electricity-kirchhoff-power-mcat.p1'
+import { variants as v31 } from './mcat-physics-electricity-kirchhoff-power-mcat.p2'
+import { variants as v32 } from './mcat-physics-electricity-rc-circuits-mcat.p1'
+import { variants as v33 } from './mcat-physics-electricity-rc-circuits-mcat.p2'
+import { variants as v34 } from './mcat-physics-mechanics-buoyancy-mcat.p1'
+import { variants as v35 } from './mcat-physics-mechanics-buoyancy-mcat.p2'
+import { variants as v36 } from './mcat-physics-mechanics-fluid-dynamics-mcat.p1'
+import { variants as v37 } from './mcat-physics-mechanics-fluids-mcat.p1'
+import { variants as v38 } from './mcat-physics-mechanics-fluids-mcat.p2'
+import { variants as v39 } from './mcat-physics-mechanics-viscosity-mcat.p1'
 
 /**
  * Further check questions per card, by set (a topic slug or a video deck key).
@@ -33,12 +49,16 @@ export const VARIANTS: Record<string, Record<string, CardCheckVariants>> = {
   'mcat-circ2': { ...v3, ...v4, ...v5 },
   'mcat-circ3': { ...v6, ...v7, ...v8 },
   'mcat-circ4': { ...v9, ...v10, ...v11 },
-  'mcat-physics-electricity-dc-circuits-mcat': { ...v12 },
-  'mcat-physics-electricity-emf-capacitors-mcat': { ...v13 },
-  'mcat-physics-electricity-kirchhoff-power-mcat': { ...v14, ...v15 },
-  'mcat-physics-electricity-rc-circuits-mcat': { ...v16, ...v17 },
-  'mcat-physics-mechanics-buoyancy-mcat': { ...v18, ...v19 },
-  'mcat-physics-mechanics-fluid-dynamics-mcat': { ...v20 },
-  'mcat-physics-mechanics-fluids-mcat': { ...v21, ...v22 },
-  'mcat-physics-mechanics-viscosity-mcat': { ...v23 },
+  'mcat-fl1': { ...v12, ...v13, ...v14, ...v15 },
+  'mcat-fl2': { ...v16, ...v17, ...v18, ...v19 },
+  'mcat-fl3': { ...v20, ...v21, ...v22, ...v23 },
+  'mcat-fl4': { ...v24, ...v25, ...v26, ...v27 },
+  'mcat-physics-electricity-dc-circuits-mcat': { ...v28 },
+  'mcat-physics-electricity-emf-capacitors-mcat': { ...v29 },
+  'mcat-physics-electricity-kirchhoff-power-mcat': { ...v30, ...v31 },
+  'mcat-physics-electricity-rc-circuits-mcat': { ...v32, ...v33 },
+  'mcat-physics-mechanics-buoyancy-mcat': { ...v34, ...v35 },
+  'mcat-physics-mechanics-fluid-dynamics-mcat': { ...v36 },
+  'mcat-physics-mechanics-fluids-mcat': { ...v37, ...v38 },
+  'mcat-physics-mechanics-viscosity-mcat': { ...v39 },
 }

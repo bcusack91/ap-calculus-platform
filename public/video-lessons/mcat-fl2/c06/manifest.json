@@ -1,0 +1,43 @@
+{
+ "key": "mcat-fl2",
+ "video": 6,
+ "stem": "mcat_fl2_c06_sink_examples",
+ "topic": "fluids-part2-buoyancy-surface-tension",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 47.2,
+   "source": "p2 c06 Sinking and Apparent Weight Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 105.6,
+   "source": "p2 c06 Sinking and Apparent Weight Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 53.9,
+   "source": "p2 c06 Sinking and Apparent Weight Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 111.0,
+   "source": "p2 c06 Sinking and Apparent Weight Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 43.1,
+   "source": "p2 c06 Sinking and Apparent Weight Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl4",
+ "video": 5,
+ "stem": "mcat_fl4_c05_blood",
+ "topic": "fluids-part4-viscosity-blood-flow",
+ "clips": [
+  {
+   "section": "02-ohms-law-for-fluids",
+   "file": "02-ohms-law-for-fluids.mp4",
+   "seconds": 85.1,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-map-co-tpr",
+   "file": "03-map-co-tpr.mp4",
+   "seconds": 65.0,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-series-and-parallel",
+   "file": "04-series-and-parallel.mp4",
+   "seconds": 78.3,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-arterioles",
+   "file": "05-arterioles.mp4",
+   "seconds": 62.3,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-control-valves",
+   "file": "06-control-valves.mp4",
+   "seconds": 51.9,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-viscosity-and-airways",
+   "file": "07-viscosity-and-airways.mp4",
+   "seconds": 46.1,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p4 c05 Blood Flow as a Circuit v1.mov",
+   "voiced": true
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "key": "mcat-fl1",
+ "video": 2,
+ "stem": "mcat_fl1_c02_density_examples",
+ "topic": "fluids-part1-density-pressure",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 44.4,
+   "source": "p1 c02 Density and Specific Gravity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution",
+   "file": "03-ex1-solution.mp4",
+   "seconds": 87.1,
+   "source": "p1 c02 Density and Specific Gravity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 40.0,
+   "source": "p1 c02 Density and Specific Gravity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution",
+   "file": "05-ex2-solution.mp4",
+   "seconds": 106.2,
+   "source": "p1 c02 Density and Specific Gravity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 39.1,
+   "source": "p1 c02 Density and Specific Gravity Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

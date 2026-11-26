@@ -1,0 +1,71 @@
+{
+ "key": "mcat-fl3",
+ "video": 2,
+ "stem": "mcat_fl3_c02_flow_examples",
+ "topic": "fluids-part3-continuity-bernoulli",
+ "clips": [
+  {
+   "section": "02-ex1-problem",
+   "file": "02-ex1-problem.mp4",
+   "seconds": 45.1,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-a",
+   "file": "03-ex1-solution-a.mp4",
+   "seconds": 35.85,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-b",
+   "file": "03-ex1-solution-b.mp4",
+   "seconds": 24.35,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-ex1-solution-c",
+   "file": "03-ex1-solution-c.mp4",
+   "seconds": 51.9,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-ex2-problem",
+   "file": "04-ex2-problem.mp4",
+   "seconds": 47.1,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-a",
+   "file": "05-ex2-solution-a.mp4",
+   "seconds": 38.0,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-b",
+   "file": "05-ex2-solution-b.mp4",
+   "seconds": 28.9,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-ex2-solution-c",
+   "file": "05-ex2-solution-c.mp4",
+   "seconds": 41.0,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-recap",
+   "file": "06-recap.mp4",
+   "seconds": 33.8,
+   "source": "p3 c02 Flow Rate and Continuity Examples v1.mov",
+   "voiced": true
+  }
+ ]
+}

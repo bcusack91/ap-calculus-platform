@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl4",
+ "video": 3,
+ "stem": "mcat_fl4_c03_pipe",
+ "topic": "fluids-part4-viscosity-blood-flow",
+ "clips": [
+  {
+   "section": "02-law",
+   "file": "02-law.mp4",
+   "seconds": 58.3,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-proportions",
+   "file": "03-proportions.mp4",
+   "seconds": 62.5,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-fourth-power",
+   "file": "04-fourth-power.mp4",
+   "seconds": 77.9,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-same-flow",
+   "file": "05-same-flow.mp4",
+   "seconds": 78.7,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-squared-or-fourth",
+   "file": "06-squared-or-fourth.mp4",
+   "seconds": 53.2,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-assumptions",
+   "file": "07-assumptions.mp4",
+   "seconds": 38.3,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.7,
+   "source": "p4 c03 Poiseuille's Law v1.mov",
+   "voiced": true
+  }
+ ]
+}

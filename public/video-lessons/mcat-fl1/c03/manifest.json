@@ -1,0 +1,57 @@
+{
+ "key": "mcat-fl1",
+ "video": 3,
+ "stem": "mcat_fl1_c03_depth",
+ "topic": "fluids-part1-density-pressure",
+ "clips": [
+  {
+   "section": "02-pressure",
+   "file": "02-pressure.mp4",
+   "seconds": 59.2,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "03-all-directions",
+   "file": "03-all-directions.mp4",
+   "seconds": 44.8,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "04-why-depth",
+   "file": "04-why-depth.mp4",
+   "seconds": 63.9,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "05-depth-not-shape",
+   "file": "05-depth-not-shape.mp4",
+   "seconds": 61.6,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "06-linear-graph",
+   "file": "06-linear-graph.mp4",
+   "seconds": 62.6,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "07-rule-of-thumb",
+   "file": "07-rule-of-thumb.mp4",
+   "seconds": 58.3,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  },
+  {
+   "section": "08-recap",
+   "file": "08-recap.mp4",
+   "seconds": 41.2,
+   "source": "p1 c03 Pressure and Depth v1.mov",
+   "voiced": true
+  }
+ ]
+}

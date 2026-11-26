@@ -23,12 +23,18 @@ const VIDEO_LESSON_OF_TOPIC: Record<string, string> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': 'mcat-circ2',
   'mcat-physics-electricity-emf-capacitors-mcat': 'mcat-circ3',
   'mcat-physics-electricity-rc-circuits-mcat': 'mcat-circ4',
+  'mcat-physics-mechanics-fluids-mcat': 'mcat-fl1',
+  'mcat-physics-mechanics-buoyancy-mcat': 'mcat-fl2',
+  'mcat-physics-mechanics-fluid-dynamics-mcat': 'mcat-fl3',
+  'mcat-physics-mechanics-viscosity-mcat': 'mcat-fl4',
 }
 
 async function videoQuestions(lessonKey: string, topicSlug: string): Promise<{ src: string; question: string; options?: string[] }[]> {
-  const n = lessonKey.replace('mcat-circ', '')
-  const { LESSON } = await import(`../video-lessons/circuits${n}-lesson`)
-  const { shotList } = await import(`../../src/data/video-shot-lists/mcat-prep/${topicSlug}`)
+  const fluids = lessonKey.startsWith('mcat-fl')
+  const n = lessonKey.replace(/^mcat-(circ|fl)/, '')
+  const { LESSON } = await import(`../video-lessons/${fluids ? 'fluids' : 'circuits'}${n}-lesson`)
+  const FLUIDS_SHOTS: Record<string, string> = {'1': 'fluids-part1-density-pressure', '2': 'fluids-part2-buoyancy-surface-tension', '3': 'fluids-part3-continuity-bernoulli', '4': 'fluids-part4-viscosity-blood-flow'}
+  const { shotList } = await import(`../../src/data/video-shot-lists/mcat-prep/${fluids ? FLUIDS_SHOTS[n] : topicSlug}`)
   const lesson: Q[] = LESSON.videos.flatMap((v: { sections: { questions?: Q[] }[] }) => v.sections.flatMap((s) => s.questions ?? []))
   const shots: Q[] = shotList.clips.flatMap((c: { checkpoint: Q[] }) => c.checkpoint)
   return [...lesson.map((q) => ({ src: 'video', question: q.question, options: q.options })), ...shots.map((q) => ({ src: 'shot-list', question: q.question, options: q.options }))]

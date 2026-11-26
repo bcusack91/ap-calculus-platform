@@ -11,6 +11,10 @@ export const NOTE_SHEET_TOPICS: Record<string, { lessonKey: string }> = {
   'mcat-physics-electricity-kirchhoff-power-mcat': { lessonKey: 'mcat-circ2' },
   'mcat-physics-electricity-emf-capacitors-mcat': { lessonKey: 'mcat-circ3' },
   'mcat-physics-electricity-rc-circuits-mcat': { lessonKey: 'mcat-circ4' },
+  'mcat-physics-mechanics-fluids-mcat': { lessonKey: 'mcat-fl1' },
+  'mcat-physics-mechanics-buoyancy-mcat': { lessonKey: 'mcat-fl2' },
+  'mcat-physics-mechanics-fluid-dynamics-mcat': { lessonKey: 'mcat-fl3' },
+  'mcat-physics-mechanics-viscosity-mcat': { lessonKey: 'mcat-fl4' },
   // AP Physics 2 circuits: the video lessons reuse the MCAT circuits videos (ap2-circ*), so the video
   // notes cover capacitance, capacitor networks and RC circuits module by module.
   'current-resistance-ohms-law': { lessonKey: 'ap2-circ1' },

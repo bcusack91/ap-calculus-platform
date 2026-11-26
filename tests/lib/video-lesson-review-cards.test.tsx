@@ -25,6 +25,10 @@ import { checkpointQuestionSchema, isNumericQuestion, isRecapSection, lessonRevi
 import { REVIEW_DECKS, reviewCardsFor } from '@/data/video-lesson-flashcards'
 import { LESSON as CIRC1 } from '../../scripts/video-lessons/circuits1-lesson'
 import { LESSON as CIRC2 } from '../../scripts/video-lessons/circuits2-lesson'
+import { LESSON as FL1 } from '../../scripts/video-lessons/fluids1-lesson'
+import { LESSON as FL2 } from '../../scripts/video-lessons/fluids2-lesson'
+import { LESSON as FL3 } from '../../scripts/video-lessons/fluids3-lesson'
+import { LESSON as FL4 } from '../../scripts/video-lessons/fluids4-lesson'
 
 const cards = [
   { front: 'Front one', back: 'Back one' },
@@ -152,7 +156,7 @@ describe('review decks', () => {
     expect(new Set(all.map((c) => c.front)).size).toBe(all.length)
   })
 
-  it.each([CIRC1, CIRC2])('every video of $key that has a recap section has a deck', (lesson) => {
+  it.each([CIRC1, CIRC2, FL1, FL2, FL3, FL4])('every video of $key that has a recap section has a deck', (lesson) => {
     for (const v of lesson.videos) {
       if (!v.sections.some((s) => isRecapSection(s.id))) continue
       const deck = reviewCardsFor(lesson.key, v.video) ?? []
@@ -171,7 +175,7 @@ describe('review decks', () => {
     }
   })
 
-  it.each([CIRC1, CIRC2])('every recap of $key asks exactly three valid questions with no answer-length tell', (lesson) => {
+  it.each([CIRC1, CIRC2, FL1, FL2, FL3, FL4])('every recap of $key asks exactly three valid questions with no answer-length tell', (lesson) => {
     const stems = new Set<string>()
     for (const v of lesson.videos) {
       for (const sec of v.sections) {
@@ -197,7 +201,7 @@ describe('review decks', () => {
     }
   })
 
-  it.each([CIRC1, CIRC2])('the new recap questions of $key spread the key across positions', (lesson) => {
+  it.each([CIRC1, CIRC2, FL1, FL2, FL3, FL4])('the new recap questions of $key spread the key across positions', (lesson) => {
     const keys = lesson.videos.filter((v) => v.video % 2 === 1).flatMap((v) => v.sections.filter((s) => isRecapSection(s.id)).flatMap((s) => (s.questions ?? []).filter((q) => !isNumericQuestion(q)).map((q) => (q as { correctAnswer: number }).correctAnswer)))
     expect(new Set(keys).size).toBe(4)
   })
