@@ -96,6 +96,14 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url)
 
+  // Only handle this site's own requests. A cross-origin request (the video
+  // CDN, analytics, ads) re-fetched from here falls under this worker's CSP
+  // connect-src, which blocked video-lesson clips from the R2 CDN until a hard
+  // refresh. The browser fetches those directly, under the page's own CSP.
+  if (url.origin !== self.location.origin) return
+  // Video and audio use byte-range requests; let the browser fetch them.
+  if (request.destination === 'video' || request.destination === 'audio' || request.headers.has('range')) return
+
   // Navigation requests: network-first. Offline-capable pages are cached on
   // success and served from cache when the network fails; everything else
   // falls back to the offline page.

@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       
       <div className="prose prose-slate dark:prose-invert max-w-none">
         <p className="text-muted-foreground">
-          <strong>Last Updated:</strong> November 20, 2026
+          <strong>Last Updated:</strong> November 26, 2026
         </p>
 
         <section className="mt-8">
@@ -77,6 +77,13 @@ export default function PrivacyPage() {
             <li><strong>Analytics Cookies:</strong> Help us understand user behavior and improve the Service</li>
             <li><strong>Preference Cookies:</strong> Remember your settings (e.g., dark mode, language)</li>
           </ul>
+          <p className="mt-4">
+            <strong>Your choice.</strong> The cookie banner lets you accept all cookies or keep essential
+            cookies only. If you are in the European Union/EEA, the United Kingdom or Switzerland, analytics
+            cookies are used only after you accept them. Elsewhere, Google Analytics measures visits by
+            default until you choose &ldquo;Essential only,&rdquo; which turns it off. Analytics cookies are
+            never used for accounts identified as under 13 or on our grade 4&ndash;8 pages.
+          </p>
         </section>
 
         <section className="mt-8">
@@ -92,7 +99,7 @@ export default function PrivacyPage() {
             We may use third-party analytics services to help us understand how users interact with our Service:
           </p>
           <ul className="list-disc pl-6 mt-2">
-            <li><strong>Google Analytics:</strong> Tracks user behavior, demographics, and interests</li>
+            <li><strong>Google Analytics:</strong> Counts visits and shows how pages are used, including broad demographics and interests where Google provides them (see section 2.3 for when it is on)</li>
             <li><strong>Vercel Analytics:</strong> Monitors Service performance and usage patterns</li>
             <li><strong>Microsoft Clarity:</strong> Session replay and heatmaps that record how pages are used (clicks, scrolls, navigation). Clarity loads only after you grant analytics consent, and is never enabled for accounts identified as under 13.</li>
           </ul>

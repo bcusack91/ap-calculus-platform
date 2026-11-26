@@ -166,7 +166,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: blob: https: http:",
               `media-src 'self' blob:${videoOrigin}`,
               "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://esm.sh",
-              `connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc${liveRelayOrigin}`,
+              `connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc${liveRelayOrigin}`,
               // Live class sessions frame video: YouTube for webcast mode,
               // 8x8.vc for the embedded JaaS conference room. Without these the
               // browser refuses the iframe ("This content is blocked").

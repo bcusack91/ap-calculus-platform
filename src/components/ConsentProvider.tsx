@@ -5,26 +5,30 @@ import { createContext, useContext, useState, useEffect, useCallback, useMemo } 
 interface ConsentState {
   analytics: boolean
   advertising: boolean
+  /** True once the visitor has chosen in the cookie banner (either button). */
+  decided: boolean
 }
 
-const ConsentContext = createContext<ConsentState>({ analytics: false, advertising: false })
+const NONE: ConsentState = { analytics: false, advertising: false, decided: false }
+const ConsentContext = createContext<ConsentState>(NONE)
 
 export function useConsent() {
   return useContext(ConsentContext)
 }
 
 function readConsent(): ConsentState {
-  if (typeof window === 'undefined') return { analytics: false, advertising: false }
+  if (typeof window === 'undefined') return NONE
   try {
     const raw = localStorage.getItem('cookie-consent')
-    if (!raw) return { analytics: false, advertising: false }
+    if (!raw) return NONE
     const parsed = JSON.parse(raw)
     return {
       analytics: !!parsed.analytics,
       advertising: !!parsed.advertising,
+      decided: true,
     }
   } catch {
-    return { analytics: false, advertising: false }
+    return NONE
   }
 }
 
@@ -34,7 +38,7 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
   const refresh = useCallback(() => {
     setConsent((prev) => {
       const next = readConsent()
-      if (prev.analytics === next.analytics && prev.advertising === next.advertising) return prev
+      if (prev.analytics === next.analytics && prev.advertising === next.advertising && prev.decided === next.decided) return prev
       return next
     })
   }, [])

@@ -112,7 +112,7 @@ export function CookieConsent() {
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                     We use cookies to enhance your learning experience and analyze site traffic.
-                    By clicking &quot;Accept All&quot;, you consent to our use of cookies.{" "}
+                    Choose &quot;Essential Only&quot; to turn analytics off, or &quot;Accept All&quot; to allow all cookies.{" "}
                     <Link 
                       href="/privacy" 
                       className="text-blue-600 hover:text-blue-700 underline font-medium"
