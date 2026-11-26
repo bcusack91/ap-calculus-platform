@@ -17,6 +17,18 @@ const analyzeBundles = withBundleAnalyzer({
 
 // Live relay (live-relay/): the browser opens a WebSocket to it during slide
 // presentations, so its host must be allowed by connect-src. Empty when unset.
+// Video-lesson clips (video-cdn/): served from the R2 Worker when
+// NEXT_PUBLIC_VIDEO_BASE_URL is set, so media-src must allow its origin.
+const videoOrigin = (() => {
+  const url = process.env.NEXT_PUBLIC_VIDEO_BASE_URL;
+  if (!url) return "";
+  try {
+    return ` ${new URL(url).origin}`;
+  } catch {
+    return "";
+  }
+})();
+
 const liveRelayOrigin = (() => {
   const url = process.env.NEXT_PUBLIC_LIVE_RELAY_URL;
   if (!url) return "";
@@ -152,6 +164,7 @@ const nextConfig: NextConfig = {
               scriptSrc,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
               "img-src 'self' data: blob: https: http:",
+              `media-src 'self' blob:${videoOrigin}`,
               "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://esm.sh",
               `connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc${liveRelayOrigin}`,
               // Live class sessions frame video: YouTube for webcast mode,

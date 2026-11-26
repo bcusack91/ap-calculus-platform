@@ -54,3 +54,8 @@ scripts/_*
 # Playwright HTML reports (local runs)
 playwright-report/
 test-results/
+
+# Video-lesson clips and posters live in the R2 bucket `studymondo-video` (see video-cdn/README.md);
+# upload with scripts/video-lessons/upload-clips.sh. Manifests stay in the repo.
+/public/video-lessons/**/*.mp4
+/public/video-lessons/**/*.jpg

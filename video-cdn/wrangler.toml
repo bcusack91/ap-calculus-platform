@@ -1,0 +1,10 @@
+name = "studymondo-video"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "studymondo-video"
+
+[observability]
+enabled = true

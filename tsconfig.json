@@ -41,6 +41,7 @@
     "prisma",
     "scripts",
     "prisma.config.ts",
-    "live-relay"
+    "live-relay",
+    "video-cdn"
   ]
 }

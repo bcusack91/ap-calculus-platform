@@ -4,6 +4,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 're
 import type { VideoPlayerHandle, VideoPlayerProps } from '../VideoPlayer'
 import { VideoUnavailable } from '../VideoUnavailable'
 import { clampVideoSpeed, readVideoSpeed, saveVideoSpeed } from '@/lib/video-speed'
+import { videoFileUrl } from '@/lib/video-file-url'
 
 /**
  * Self-hosted provider for VideoPlayer: a plain HTML5 <video> whose source is
@@ -132,7 +133,7 @@ export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(functi
     v.addEventListener('ended', onEnded)
     v.addEventListener('error', onError)
     v.addEventListener('ratechange', onRateChange)
-    v.src = providerId
+    v.src = videoFileUrl(providerId)
     v.load()
     return () => {
       v.removeEventListener('loadedmetadata', onLoaded)
@@ -162,7 +163,7 @@ export const FilePlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(functi
         controls
         playsInline
         preload="metadata"
-        poster={poster !== providerId ? poster : undefined}
+        poster={poster !== providerId ? videoFileUrl(poster) : undefined}
         controlsList="nodownload"
         disablePictureInPicture
         aria-label={title}
